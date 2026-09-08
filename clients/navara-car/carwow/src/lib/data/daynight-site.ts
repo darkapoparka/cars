@@ -26,7 +26,7 @@ export const daynightSite = {
   accountCta: 'Контакт с продавача',
   phoneCta: 'Уточни оглед по телефона',
   heroTitle: business.name,
-  heroSubtitle: 'Автомобили във Варна · Селекция от обяви към 08.09.2026 г.',
+  heroSubtitle: 'Автомобили въвъв Варна · Селекция от обяви към 08.09.2026 г.',
   reviewCount: daynightReviewCount,
   reviewCountLabel: daynightReviewCountLabel,
   reviewLinkLabel: daynightReviewLinkLabel,

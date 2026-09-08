@@ -30,23 +30,23 @@ interface ContactPageProps {
 
 const pageCopy = {
   bg: {
-    heroImageAlt: "Нощен автомобилен шоурум",
-    title: "Премиум автомобили. Внос. Лизинг.",
+    heroImageAlt: "Автомобил от селекцията на Навара кар",
+    title: "Автомобили във Варна.",
     description:
-      "Вижте автомобилите в наличност или говорете директно с Day & Night за следващия си автомобил.",
+      "Вижте автомобилите в наличност или говорете директно с Navara Car за следващия си автомобил.",
     inventoryAction: "Вижте наличностите",
     phoneAction: "Обадете се",
     contactTitle: "Говорете директно с нас.",
     contactDescription:
-      "Един телефон за автомобил, внос или финансиране. Шоурум в Студентски град.",
-    locationLabel: "Шоурум · Студентски град",
+      "Публикуван телефон за въпроси по обявите и уговорка за оглед във Варна.",
+    locationLabel: "Шоурум · Кайсиева градина",
     mapAction: "Отворете картата",
     servicesTitle: "Изберете правилната посока.",
     servicesDescription:
       "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
     sellHandoffAction: "Обадете се за оферта",
     sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Day & Night, за да уточним оглед и конкретна оферта.",
+      "Данните за автомобила са готови. Обадете се на Navara Car, за да уточним оглед и конкретна оферта.",
     sellHandoffEditAction: "Редактирайте данните",
     sellHandoffTitle: "Заявете оценка за автомобила",
     sellCategoryLabel: "Категория",
@@ -54,7 +54,7 @@ const pageCopy = {
     sellMileageLabel: "Пробег",
     sellVehicleLabel: "Автомобил",
     sellYearLabel: "Година",
-    sellLocationLabel: "Шоурум · Студентски град",
+    sellLocationLabel: "Шоурум · Кайсиева градина",
     services: [
       {
         title: "Автомобили в наличност",
@@ -69,7 +69,7 @@ const pageCopy = {
         icon: Ship,
       },
       {
-        title: "Собствен лизинг",
+        title: "Условия за лизинг",
         description: "Обсъдете вариант според автомобила и бюджета ви.",
         href: "/lease",
         icon: Landmark,
@@ -83,23 +83,23 @@ const pageCopy = {
     ],
   },
   en: {
-    heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
+    heroImageAlt: "Vehicle from the Navara Car selection",
+    title: "Vehicles in Varna.",
     description:
-      "Browse the vehicles in stock or speak directly with Day & Night about your next vehicle.",
+      "Browse the vehicles in stock or speak directly with Navara Car about your next vehicle.",
     inventoryAction: "View available vehicles",
     phoneAction: "Call us",
     contactTitle: "Speak directly with us.",
     contactDescription:
-      "One phone number for vehicles, imports, or finance. Showroom in Studentski grad.",
-    locationLabel: "Showroom · Studentski grad",
+      "Published phone number for listing questions and arranging a viewing in Varna.",
+    locationLabel: "Showroom · Kaysieva gradina",
     mapAction: "Open the map",
     servicesTitle: "Choose the right direction.",
     servicesDescription:
       "From a vehicle in stock to an import on request, our team is one call away.",
     sellHandoffAction: "Call for an offer",
     sellHandoffDescription:
-      "Your vehicle details are ready. Call Day & Night to arrange an inspection and a concrete offer.",
+      "Your vehicle details are ready. Call Navara Car to arrange an inspection and a concrete offer.",
     sellHandoffEditAction: "Edit vehicle details",
     sellHandoffTitle: "Request a vehicle appraisal",
     sellCategoryLabel: "Category",
@@ -107,7 +107,7 @@ const pageCopy = {
     sellMileageLabel: "Mileage",
     sellVehicleLabel: "Vehicle",
     sellYearLabel: "Year",
-    sellLocationLabel: "Showroom · Studentski grad",
+    sellLocationLabel: "Showroom · Kaysieva gradina",
     services: [
       {
         title: "Vehicles in stock",
@@ -123,7 +123,7 @@ const pageCopy = {
         icon: Ship,
       },
       {
-        title: "In-house leasing",
+        title: "Leasing enquiries",
         description: "Discuss an option for the vehicle and your budget.",
         href: "/lease",
         icon: Landmark,
@@ -184,14 +184,14 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? "Навара кар във Варна — селекция от публикувани обяви, контакт и уговорка за оглед."
+      : "Navara Car in Varna — dated listing samples, contact details and viewing enquiries.",
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
     title: isBg
-      ? "За нас и контакти | Day & Night"
-      : "About and contact | Day & Night",
+      ? "За нас и контакти | Navara Car"
+      : "About and contact | Navara Car",
   });
 };
 
@@ -251,7 +251,7 @@ export default async function ContactPage({
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/images/sell/day-night-sell-centered-hero-v2.webp"
+                src="/navara/vehicles/11784982235652112-1.webp"
               />
               <div
                 aria-hidden="true"
@@ -370,7 +370,7 @@ export default async function ContactPage({
               fill
               priority
               sizes="100vw"
-              src="/day-night-contact-hero-v1.png"
+              src="/navara/vehicles/21780735125049477-1.webp"
             />
           </div>
           <div

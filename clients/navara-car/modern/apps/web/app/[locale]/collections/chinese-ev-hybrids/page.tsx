@@ -44,7 +44,7 @@ const collectionCopy = {
     resultsLabel: "резултата",
     title: "Китайски електромобили и хибриди",
     truth:
-      "Day & Night не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
+      "Navara Car не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
   },
   en: {
     badge: "Editorial collection",
@@ -53,7 +53,7 @@ const collectionCopy = {
     emptyDescription:
       "Explore our import service from China and request a specific vehicle quotation.",
     emptyMessage: "There are currently no active listings in this collection.",
-    emptyTitle: "The first verified listings are coming",
+    emptyTitle: "No matching listing samples",
     heroAlt: "Electric vehicle at a delivery and logistics facility",
     heroCaption: "Verifiable stock, origin, and delivery",
     heroUnavailable: "Image unavailable",
@@ -62,7 +62,7 @@ const collectionCopy = {
     resultsLabel: "results",
     title: "Chinese EVs and hybrids",
     truth:
-      "Day & Night does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
+      "Navara Car does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
   },
 } as const;
 

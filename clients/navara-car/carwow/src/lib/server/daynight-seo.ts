@@ -16,8 +16,8 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 		.filter(Boolean);
 
 	return {
-		title: `${vehicle.title} | Day Night Auto`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Day Night Auto с опция за финансиране.`
+		title: `${vehicle.title} | Навара кар`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Обява на Навара кар към 08.09.2026 г.; потвърдете наличността и условията.`
 	};
 }
 

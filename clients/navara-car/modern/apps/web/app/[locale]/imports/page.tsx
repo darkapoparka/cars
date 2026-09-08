@@ -91,7 +91,7 @@ const importFaqs = {
     },
     {
       answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на Day & Night ще се свърже с вас, за да уточни следващата стъпка.",
+        "Подгответе въпрос по обява. Формата не изпраща съобщение; уточнете услугите и следващата стъпка по телефона.",
       question: "Трябва ли да се регистрирам?",
     },
   ],
@@ -113,7 +113,7 @@ const importFaqs = {
     },
     {
       answer:
-        "No account is required. Leave a phone number and the Day & Night team will contact you about the next step.",
+        "Prepare a listing enquiry. This form does not send a message; call to confirm services and next steps.",
       question: "Do I need to register?",
     },
   ],
@@ -186,13 +186,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. Day & Night ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. Day & Night will discuss the import request and delivery to Bulgaria.",
+      ? "Подгответе линк или данни за автомобил. Внос по заявка и доставка не са потвърдени услуги; проверете възможностите директно."
+      : "Prepare a listing link or vehicle details. Import-on-request and delivery are not confirmed services; ask directly about the options.",
     locale,
     path,
     title: isBg
-      ? "Внос на автомобил по заявка | Day & Night"
-      : "Vehicle import request | Day & Night",
+      ? "Внос на автомобил по заявка | Navara Car"
+      : "Vehicle import request | Navara Car",
   });
 };
 

@@ -34,7 +34,7 @@
 		},
 		{
 			id: 'financing',
-			title: 'Лизинг и замяна',
+			title: 'Лизинг по запитване',
 			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
 			cta: 'Поискайте условия',
 			href: '/financing',
@@ -55,25 +55,25 @@
 		{
 			id: 'stock',
 			value: String(daynightVehicles.length),
-			label: 'Налични автомобила',
+			label: 'Автомобила от обяви',
 			hasDivider: true
 		},
 		{
 			id: 'brands',
 			value: String(new Set(daynightVehicles.map((vehicle) => vehicle.brand)).size),
-			label: 'марки в наличност',
+			label: 'марки в селекцията',
 			hasDivider: true
 		},
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в София',
+			label: 'локация във Варна',
 			hasDivider: true
 		},
 		{
 			id: 'contact',
-			value: '4',
-			label: 'директни канала за контакт'
+			value: '1',
+			label: 'публикуван телефон'
 		}
 	] as const;
 </script>
@@ -117,7 +117,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
+							'/navara/vehicles/11786363468065195-1.webp',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}
@@ -128,7 +128,7 @@
 				</div>
 
 				<div class="daynight-home-why__content">
-					<h2 class="daynight-home-why__title">Лизинг и замяна</h2>
+					<h2 class="daynight-home-why__title">Лизинг по запитване</h2>
 					<p class="daynight-home-why__copy">
 						Попитайте за индивидуални условия според избрания автомобил.
 					</p>

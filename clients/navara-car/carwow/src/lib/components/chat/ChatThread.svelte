@@ -79,7 +79,7 @@
 <section class="chat-thread" aria-live="polite">
 	<header class="chat-thread__header">
 		<div>
-			<p class="chat-thread__eyebrow">Day Night Auto</p>
+			<p class="chat-thread__eyebrow">Навара кар</p>
 			<h2 id="daynight-chat-title">Чат с екипа</h2>
 		</div>
 		<span class="chat-thread__status">
@@ -95,6 +95,7 @@
 		<div class="chat-thread__loading">Зареждане...</div>
 	{:else if !conversation}
 		<form class="chat-thread__start" onsubmit={submitStart}>
+<p>Демонстрационен чат — не изпраща съобщения.</p>
 			<label>
 				<span>Име</span>
 				<input bind:value={name} name="name" autocomplete="name" maxlength="140" />
@@ -118,7 +119,7 @@
 					>
 						<p>{message.body}</p>
 						<footer>
-							<span>{message.senderType === 'staff' ? 'Day Night Auto' : message.senderName}</span>
+							<span>{message.senderType === 'staff' ? 'Навара кар' : message.senderName}</span>
 							<time datetime={message.createdAt}>{formatTime(message.createdAt)}</time>
 						</footer>
 					</article>
@@ -129,6 +130,7 @@
 		</div>
 
 		<form class="chat-thread__reply" onsubmit={submitMessage}>
+<p>Демонстрационен чат — не изпраща съобщения.</p>
 			<textarea
 				bind:value={draft}
 				name="message"

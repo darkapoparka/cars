@@ -5,6 +5,7 @@ import {
   organizationDirectoryEntriesSchema,
 } from "./directory";
 import { getMockListingById } from "./mock-data";
+import { leadSite } from "./lead-site";
 
 const getRepresentativeVehicle = (
   listingId: string,
@@ -36,7 +37,7 @@ const getRepresentativeVehicle = (
  * never presented as verified real-world businesses.
  */
 export const mockOrganizationDirectoryCoreEntries =
-  organizationDirectoryEntriesSchema.parse([
+  organizationDirectoryEntriesSchema.parse(leadSite.staticDemoMode ? [] : [
     {
       brandCoverage: [
         {
@@ -573,6 +574,8 @@ const createScaleOrganization = (index: number): OrganizationDirectoryEntry => {
 export const createMockOrganizationDirectoryScaleEntries = (
   totalOrganizations = 120
 ) => {
+  // The dealer preview replaces marketplace inventory with its own sample set.
+  if (leadSite.staticDemoMode) return [];
   if (totalOrganizations < mockOrganizationDirectoryCoreEntries.length) {
     throw new Error(
       `Directory scale fixtures require at least ${mockOrganizationDirectoryCoreEntries.length} organizations`

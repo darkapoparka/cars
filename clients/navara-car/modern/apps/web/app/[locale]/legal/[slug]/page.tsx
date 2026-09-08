@@ -26,101 +26,77 @@ interface FallbackLegalPage {
 
 const fallbackLegalSlugs = ["privacy", "terms"] as const;
 
-const getPrivacyFallback = (isBg: boolean): FallbackLegalPage => ({
-  title: isBg ? "Политика за поверителност" : "Privacy policy",
-  description: isBg
-    ? "Как Day & Night Auto Group използва и защитава данните, които предоставяте при запитване за автомобил, внос, лизинг или продажба."
-    : "How Day & Night Auto Group uses and protects information you provide when asking about a vehicle, import, leasing, or selling your car.",
-  sections: isBg
-    ? [
-        {
-          heading: "Какви данни обработваме",
-          body: "Можем да обработваме име, телефон, имейл, съдържание на запитването и данни за автомобил, които доброволно ни предоставяте. Сайтът може да обработва и ограничени технически данни, необходими за сигурност и предпочитания за бисквитки.",
-        },
-        {
-          heading: "Защо ги използваме",
-          body: "Използваме данните, за да отговорим, да организираме оглед или оферта, да обсъдим внос, лизинг или изкупуване на автомобил, да предотвратяваме злоупотреби и да изпълняваме законови задължения. Незадължителни анализи се активират само след съгласие.",
-        },
-        {
-          heading: "Споделяне и съхранение",
-          body: "Споделяме само необходимите данни с доставчици, които поддържат сайта и комуникацията, както и с транспортен, финансов или друг партньор, когато това е нужно за изрично поисканата услуга. Не продаваме лични данни и ги пазим само за необходимия срок.",
-        },
-        {
-          heading: "Вашите права",
-          body: "Можете да поискате достъп, корекция, изтриване, ограничаване, възражение или преносимост, когато съответното право се прилага. Използвайте страницата за контакт; можете също да подадете жалба до компетентния надзорен орган.",
-        },
-      ]
-    : [
-        {
-          heading: "Data we process",
-          body: "We may process your name, phone number, email address, enquiry content, and vehicle details you voluntarily provide. The site may also process limited technical information required for security and cookie preferences.",
-        },
-        {
-          heading: "Why we use it",
-          body: "We use the information to reply, arrange a viewing or quotation, discuss imports, leasing, or purchasing your vehicle, prevent abuse, and meet legal obligations. Optional analytics activate only after consent.",
-        },
-        {
-          heading: "Sharing and retention",
-          body: "We share only necessary information with providers that support the website and communications, and with a transport, finance, or other partner when required for a service you explicitly request. We do not sell personal data and retain it only for as long as necessary.",
-        },
-        {
-          heading: "Your rights",
-          body: "You may request access, correction, deletion, restriction, objection, or portability where the relevant right applies. Use the contact page; you may also complain to the competent supervisory authority.",
-        },
-      ],
-});
+const getPrivacyFallback = (isBg: boolean): FallbackLegalPage => isBg ? {
+  "title": "Поверителност в демонстрацията",
+  "description": "Какво правят контролите в този независим преглед.",
+  "sections": [
+    {
+      "heading": "Контакт",
+      "body": "Формите в тази демонстрация не доставят съобщения до автокъщата. За реален разговор използвайте публикувания телефон."
+    },
+    {
+      "heading": "Вашият браузър",
+      "body": "Избрани филтри, любими автомобили и предпочитания могат да останат в браузъра. Това не създава клиентска регистрация при Навара кар."
+    },
+    {
+      "heading": "Външни връзки",
+      "body": "Връзките към обяви, карти и телефон отварят съответната външна услуга. Нейните условия се проверяват отделно."
+    }
+  ]
+} : {
+  "title": "Privacy in this preview",
+  "description": "How controls behave in this independent preview.",
+  "sections": [
+    {
+      "heading": "Contact",
+      "body": "Forms in this preview do not deliver messages to the dealership. Use the published phone number for a real conversation."
+    },
+    {
+      "heading": "Your browser",
+      "body": "Selected filters, saved vehicles and preferences may remain in your browser. This does not register you as a Navara Car customer."
+    },
+    {
+      "heading": "External links",
+      "body": "Listing, map and phone links open the relevant external service. Check its terms separately."
+    }
+  ]
+};
 
-const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
-  title: isBg ? "Условия за ползване" : "Terms of use",
-  description: isBg
-    ? "Основните правила за използване на сайта на Day & Night Auto Group и информацията за автомобили, внос и лизинг."
-    : "The core rules for using the Day & Night Auto Group website and its vehicle, import, and leasing information.",
-  sections: isBg
-    ? [
-        {
-          heading: "Роля на Day & Night",
-          body: "Day & Night Auto Group представя собствени наличности и услуги за внос, лизинг и изкупуване на автомобили. Сайтът служи за информация и контакт; конкретните търговски условия се потвърждават в индивидуална писмена оферта или договор.",
-        },
-        {
-          heading: "Информация за автомобилите",
-          body: "Полагаме разумни усилия снимките, описанията, пробегът, оборудването и цените да са актуални. Възможни са промени или технически грешки, затова наличността, състоянието, документите и крайната цена се потвърждават преди сделка.",
-        },
-        {
-          heading: "Внос и лизинг",
-          body: "Срокове, транспорт, регистрация, гаранция, първоначална вноска и месечни плащания зависят от конкретния автомобил и избраната услуга. Те са валидни само след изрично потвърждение; финансиране може да се предоставя от отделен партньор при негово одобрение.",
-        },
-        {
-          heading: "Цени и наличност",
-          body: "Цените, ориентировъчните месечни плащания, сроковете за доставка и наличността могат да се променят. Крайната цена, включените данъци и такси, гаранцията и доставката се потвърждават писмено от Day & Night.",
-        },
-        {
-          heading: "Използване на сайта",
-          body: "Не използвайте сайта за незаконни действия, автоматизирано извличане, намеса в сигурността или злоупотреба с формите за контакт. За въпрос относно тези условия използвайте страницата за контакт.",
-        },
-      ]
-    : [
-        {
-          heading: "Day & Night's role",
-          body: "Day & Night Auto Group presents its vehicle stock and services for imports, leasing, and purchasing vehicles. The website provides information and contact options; specific commercial terms are confirmed in an individual written quotation or agreement.",
-        },
-        {
-          heading: "Vehicle information",
-          body: "We take reasonable care to keep photos, descriptions, mileage, equipment, and prices current. Changes or technical errors can occur, so availability, condition, documents, and the final price are confirmed before a transaction.",
-        },
-        {
-          heading: "Imports and leasing",
-          body: "Timelines, transport, registration, warranty, deposits, and monthly payments depend on the selected vehicle and service. They apply only after explicit confirmation; finance may be provided by a separate partner subject to that partner's approval.",
-        },
-        {
-          heading: "Prices and availability",
-          body: "Prices, indicative monthly payments, delivery times, and availability can change. Day & Night will confirm the final price, included taxes and fees, warranty, and delivery in writing.",
-        },
-        {
-          heading: "Use of the website",
-          body: "Do not use the site for unlawful activity, automated extraction, interference with security, or abuse of contact forms. Use the contact page for questions about these terms.",
-        },
-      ],
-});
+const getTermsFallback = (isBg: boolean): FallbackLegalPage => isBg ? {
+  "title": "За демонстрацията",
+  "description": "Независим дизайн с датирани примери от обяви.",
+  "sections": [
+    {
+      "heading": "Обяви",
+      "body": "Данните и снимките са примери от публикувани обяви към 08.09.2026 г. Наличност, цена, състояние и оборудване се потвърждават директно с продавача."
+    },
+    {
+      "heading": "Услуги",
+      "body": "Съдействието за регистрация и възможността за лизинг са описани в отделни обяви. Конкретните условия се уточняват с продавача. Внос по заявка, изкупуване и бартер не са потвърдени услуги в този преглед."
+    },
+    {
+      "heading": "Без сделка или доставка на съобщение",
+      "body": "Демонстрационните контроли не сключват договор, не резервират автомобил, не одобряват финансиране и не изпращат запитване до автокъщата. Това не са официални търговски условия на Навара кар."
+    }
+  ]
+} : {
+  "title": "About this preview",
+  "description": "An independent design using dated listing examples.",
+  "sections": [
+    {
+      "heading": "Listings",
+      "body": "Details and photos are samples from published listings dated 8 September 2026. Confirm availability, price, condition and equipment directly with the seller."
+    },
+    {
+      "heading": "Services",
+      "body": "Registration assistance and leasing are mentioned in individual listings. Confirm specific terms with the seller. Import-on-request, vehicle purchasing and trade-in are not confirmed services in this preview."
+    },
+    {
+      "heading": "No transaction or message delivery",
+      "body": "Preview controls do not create contracts, reserve vehicles, approve finance or deliver enquiries to the dealership. These are not official Navara Car commercial terms."
+    }
+  ]
+};
 
 const getFallbackLegalPage = (
   slug: string,
@@ -179,7 +155,7 @@ const LegalPage = async ({ params }: LegalPageProperties) => {
         >
           <Link href={getLocalizedPath(normalizedLocale, "/")}>
             <ArrowLeft aria-hidden="true" className="size-4" />
-            {isBg ? "Към Day & Night" : "Back to Day & Night"}
+            {isBg ? "Към Navara Car" : "Back to Navara Car"}
           </Link>
         </Button>
 

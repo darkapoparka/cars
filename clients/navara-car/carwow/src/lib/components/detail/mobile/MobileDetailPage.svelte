@@ -27,8 +27,8 @@
 		detailDrawerOpen = true;
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
+	const viberHref = `tel:${daynightSite.phone}`;
 	let activePhoto = $state(0);
 	const photos = $derived(vehicle.gallery.length > 0 ? vehicle.gallery : [vehicle.image]);
 	const activePhotoSrc = $derived(photos[activePhoto] ?? photos[0] ?? vehicle.image);
@@ -330,7 +330,7 @@
 							/>
 						</g>
 					</svg>
-					Viber
+					телефон
 				</a>
 			</div>
 
@@ -405,12 +405,12 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Day Night Auto предлага</strong>
+					<strong>Навара кар предлага</strong>
 					<ul class="mobile-detail-sheet__offer-list">
 						<li>Финансиране и лизинг</li>
 						<li>Бартер и замяна</li>
 						<li>Съдействие с документите</li>
-						<li>Оглед в София</li>
+						<li>Оглед във Варна</li>
 					</ul>
 				</div>
 
@@ -819,7 +819,7 @@
 	}
 
 	.mobile-detail-sheet__actions a.is-viber {
-		/* Viber purple, nudged from #7360f2 (4.48:1 white text — just under AA)
+		/* телефон purple, nudged from #7360f2 (4.48:1 white text — just under AA)
 		   to #6e5ce8 (4.82:1) so the label clears WCAG-AA while staying on-brand. */
 		background: #6e5ce8;
 		color: #fff !important;

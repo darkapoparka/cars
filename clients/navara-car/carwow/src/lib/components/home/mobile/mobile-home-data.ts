@@ -12,20 +12,6 @@ export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | '
 
 export const footerSocialLinks: FooterSocialLink[] = [
 	{
-		label: 'Facebook',
-		href: 'https://www.facebook.com/61566304063141/',
-		title: 'Facebook',
-		icon: 'facebook',
-		external: true
-	},
-	{
-		label: 'Instagram',
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
-		title: 'Instagram',
-		icon: 'instagram',
-		external: true
-	},
-	{
 		label: 'Mobile.bg',
 		href: daynightSite.sourceInventory,
 		title: 'Виж наличните автомобили в mobile.bg',
