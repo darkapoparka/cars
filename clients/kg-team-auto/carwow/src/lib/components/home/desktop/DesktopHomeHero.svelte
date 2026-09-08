@@ -74,7 +74,7 @@
 				class="daynight-home-hero__photo"
 				src={desktopOnlyImagePlaceholder}
 				srcset={desktopOnlySrcset(
-					'/dealer/11773570472954394-1.webp',
+					'/dealer/21785829117309786-1.webp',
 					1983
 				)}
 				sizes={desktopOnlySizes('100vw')}
