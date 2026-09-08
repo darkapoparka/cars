@@ -1,3 +1,5 @@
+> Consolidated on 9 September 2026: active source is now `J:/cars/clients/al-hamoor-al-thahabi` in the main Cars repository on `main`. Old session paths and publish-to-astra instructions below are historical. Do not recreate those workspaces. Application completion and owner visual review remain pending; see [the current project inventory](../../docs/PROJECTS.md).
+
 # al-hamoor-al-thahabi
 
 Status: prospect; no sale or outreach is implied.

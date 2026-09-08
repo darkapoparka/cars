@@ -1,3 +1,5 @@
+> Consolidated on 9 September 2026: active source is now `J:/cars/clients/al-hamoor-al-thahabi` in the main Cars repository on `main`. Old session paths and publish-to-astra instructions below are historical. Do not recreate those workspaces. Application completion and owner visual review remain pending; see [the current project inventory](../../docs/PROJECTS.md).
+
 # Al Hamoor ? implementation resumed
 
 Three actual independent application copies now exist: auto-best, full-workspace modern, carwow. Source: astra 57a0c9694e325747d776cfd78255b60241080a8a. This is an in-progress copy checkpoint, not completed personalization or QA. The prior assessment below is historical and is being superseded by implemented source files.

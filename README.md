@@ -4,7 +4,7 @@ Ten source baselines, stable names and independent client copies. Start with **A
 
 Read [the full browser audit](./audits/2026-09-06/REPORT.md), [the build workflow](./docs/WORKFLOW.md), [agent instructions](./AGENTS.md), or [the machine-readable catalog](./catalog.json).
 
-For an external code review, start with [the repository audit guide](./docs/REPOSITORY-AUDIT.md). The 8 September snapshot contains ten template baselines and 34 client demo applications across 12 client folders; older setup notes below describe earlier milestones.
+For the current local projects and three-design launcher, start with [Cars projects](./docs/PROJECTS.md). All active work is now in `J:\cars` on `main`; session worktrees are retired. For an external code review, see [the repository audit guide](./docs/REPOSITORY-AUDIT.md). Its 8 September snapshot and older setup notes below describe earlier milestones.
 
 ## Dealer research and three-design offers
 

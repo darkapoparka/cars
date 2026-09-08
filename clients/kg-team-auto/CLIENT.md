@@ -1,3 +1,5 @@
+> Consolidated on 9 September 2026: active source is now `J:/cars/clients/kg-team-auto` in the main Cars repository on `main`. Old session paths and publish-to-astra instructions below are historical. Do not recreate those workspaces. Application completion and owner visual review remain pending; see [the current project inventory](../../docs/PROJECTS.md).
+
 # K-G Team Auto — session 02 implementation
 
 Status: implementation in progress. These are actual independent applications copied from the assigned masters, not a generator or a completed launch.

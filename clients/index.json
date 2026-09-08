@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-09-09",
+  "root": "J:/cars",
+  "branch": "main",
+  "note": "Source inventory only. Installed dependencies, working routes, personalization and public delivery require separate verification.",
+  "projects": [
+    {
+      "slug": "al-aayan-used-cars",
+      "name": "Al Aayan Used Cars",
+      "path": "clients/al-aayan-used-cars",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "ae-sharjah-al-aayan-used-cars"
+    },
+    {
+      "slug": "al-basma-motors",
+      "name": "Al Basma Motors",
+      "path": "clients/al-basma-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "recovered-unfinished",
+      "reviewState": "pending-owner-review",
+      "leadId": "ae-sharjah-al-basma-motors"
+    },
+    {
+      "slug": "al-fareed-used-cars",
+      "name": "Al Fareed Used Cars",
+      "path": "clients/al-fareed-used-cars",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "ae-sharjah-al-fareed-used-cars"
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "name": "Al Hamoor Al Thahabi Used Cars",
+      "path": "clients/al-hamoor-al-thahabi",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "recovered-unfinished",
+      "reviewState": "pending-owner-review",
+      "leadId": "ae-sharjah-al-hamoor-al-thahabi"
+    },
+    {
+      "slug": "asko-96",
+      "name": "asko-96",
+      "path": "clients/asko-96",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "asko96",
+      "name": "asko96",
+      "path": "clients/asko96",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "aliasOf": "asko-96"
+    },
+    {
+      "slug": "astracar",
+      "name": "astracar",
+      "path": "clients/astracar",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "autolife",
+      "name": "autolife",
+      "path": "clients/autolife",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "automarket-varna",
+      "name": "automarket-varna",
+      "path": "clients/automarket-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "avangard-auto",
+      "name": "avangard-auto",
+      "path": "clients/avangard-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "cfo-auto-group",
+      "name": "CFO Auto Group",
+      "path": "clients/cfo-auto-group",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "us-fl-orlando-cfo-auto-group"
+    },
+    {
+      "slug": "champion-auto-pro",
+      "name": "champion-auto-pro",
+      "path": "clients/champion-auto-pro",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "dayandnight",
+      "name": "dayandnight",
+      "path": "clients/dayandnight",
+      "variants": [
+        "rencar"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "eliqauto",
+      "name": "eliqauto",
+      "path": "clients/eliqauto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "recovered-unfinished",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "elit-auto-import",
+      "name": "elit-auto-import",
+      "path": "clients/elit-auto-import",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "excellent-cars",
+      "name": "excellent-cars",
+      "path": "clients/excellent-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "ivo-auto",
+      "name": "ivo-auto",
+      "path": "clients/ivo-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "keen-auto-mall",
+      "name": "Keen Auto Mall",
+      "path": "clients/keen-auto-mall",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "us-fl-pompano-beach-keen-auto-mall"
+    },
+    {
+      "slug": "kg-team-auto",
+      "name": "K-G Team Auto",
+      "path": "clients/kg-team-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "recovered-unfinished",
+      "reviewState": "pending-owner-review",
+      "leadId": "bg-plovdiv-kg-team-auto"
+    },
+    {
+      "slug": "legend-auto",
+      "name": "legend-auto",
+      "path": "clients/legend-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "mg7-group",
+      "name": "MG7 Group",
+      "path": "clients/mg7-group",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "bg-burgas-mg7-group"
+    },
+    {
+      "slug": "midlands-trade-centre",
+      "name": "Midlands Trade Centre Limited",
+      "path": "clients/midlands-trade-centre",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "gb-birmingham-midlands-trade-centre"
+    },
+    {
+      "slug": "navara-car",
+      "name": "navara-car",
+      "path": "clients/navara-car",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "recovered-unfinished",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "neuhoff-auto-sales",
+      "name": "Neuhoff Auto Sales",
+      "path": "clients/neuhoff-auto-sales",
+      "variants": [],
+      "sourceState": "research-or-brief-only",
+      "reviewState": "pending-owner-review",
+      "leadId": "us-in-evansville-neuhoff-auto-sales"
+    },
+    {
+      "slug": "priselci",
+      "name": "priselci",
+      "path": "clients/priselci",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "existing-apps",
+      "reviewState": "pending-owner-review"
+    },
+    {
+      "slug": "texas-drive-auto",
+      "name": "Texas Drive Auto",
+      "path": "clients/texas-drive-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "recovered-unfinished",
+      "reviewState": "pending-owner-review",
+      "leadId": "us-tx-dallas-texas-drive-auto"
+    }
+  ],
+  "campaignCandidatesWithoutFolders": [
+    {
+      "leadId": "bg-sofia-valentino-auto-house",
+      "name": "VALENTINO AUTO HOUSE",
+      "proposedClientPath": "clients/valentino-auto-house",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-plovdiv-success-automobile",
+      "name": "Success Automobile",
+      "proposedClientPath": "clients/success-automobile",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-plovdiv-voivodov-auto-antonio",
+      "name": "VOIVODOV AUTO & ANTONIO",
+      "proposedClientPath": "clients/voivodov-auto-antonio",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-plovdiv-icars",
+      "name": "icars",
+      "proposedClientPath": "clients/icars-plovdiv",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-burgas-five-auto",
+      "name": "FIVE AUTO",
+      "proposedClientPath": "clients/five-auto",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "ae-dubai-the-dealers-point",
+      "name": "The Dealers Point",
+      "proposedClientPath": "clients/the-dealers-point",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "ae-dubai-f1rst-motors",
+      "name": "F1rst Motors",
+      "proposedClientPath": "clients/f1rst-motors",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-tx-houston-amt-auto-sales",
+      "name": "AMT AUTO SALES LLC",
+      "proposedClientPath": "clients/amt-auto-sales",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-mi-paw-paw-depue-auto-sales",
+      "name": "Depue Auto Sales Inc",
+      "proposedClientPath": "clients/depue-auto-sales",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-va-mount-crawford-my-car-outlet",
+      "name": "MY CAR OUTLET",
+      "proposedClientPath": "clients/my-car-outlet",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-ga-cornelia-good-wheels-auto-sales",
+      "name": "Good Wheels Auto Sales, Inc",
+      "proposedClientPath": "clients/good-wheels-auto-sales",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-tn-sevierville-import-truck-center",
+      "name": "Sevierville Import & Truck Center",
+      "proposedClientPath": "clients/sevierville-import-truck-center",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-ma-easthampton-nicky-ds",
+      "name": "Nicky D's",
+      "proposedClientPath": "clients/nicky-ds",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "gb-birmingham-amh-cars",
+      "name": "AMH Cars Bhm Ltd",
+      "proposedClientPath": "clients/amh-cars-bhm",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "gb-birmingham-heartlands-motor-group",
+      "name": "Heartlands Motor Group",
+      "proposedClientPath": "clients/heartlands-motor-group",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "de-gross-oesingen-autohandel-winter",
+      "name": "Autohandel Winter",
+      "proposedClientPath": "clients/autohandel-winter",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "nl-elst-autobedrijf-spinder",
+      "name": "Autobedrijf Spinder",
+      "proposedClientPath": "clients/autobedrijf-spinder",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "nl-autobedrijf-wester",
+      "name": "Autobedrijf Wester",
+      "proposedClientPath": "clients/autobedrijf-wester",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "ae-dubai-car-finder-360",
+      "name": "Car Finder 360",
+      "proposedClientPath": "clients/car-finder-360",
+      "sourceState": "not-created"
+    }
+  ]
+}

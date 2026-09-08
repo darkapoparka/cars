@@ -1,3 +1,5 @@
+> Consolidated on 9 September 2026: active source is now `J:/cars/clients/al-basma-motors` in the main Cars repository on `main`. Old session paths and publish-to-astra instructions below are historical. Do not recreate those workspaces. Application completion and owner visual review remain pending; see [the current project inventory](../../docs/PROJECTS.md).
+
 # Al Basma Motors — interrupted implementation, resume existing copies
 
 Session 04 / batch `lead-build-2026-09-08`. Updated 9 September 2026.

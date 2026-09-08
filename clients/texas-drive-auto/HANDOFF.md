@@ -1,3 +1,5 @@
+> Consolidated on 9 September 2026: active source is now `J:/cars/clients/texas-drive-auto` in the main Cars repository on `main`. Old session paths and publish-to-astra instructions below are historical. Do not recreate those workspaces. Application completion and owner visual review remain pending; see [the current project inventory](../../docs/PROJECTS.md).
+
 # Texas Drive Auto — implementation checkpoint
 
 Three independent application copies now exist: `auto-best`, full-workspace `modern`, and `carwow`. They were copied from the real masters with the repository helper after its dry run. Source commit: `57a0c9694e325747d776cfd78255b60241080a8a`. This supersedes the earlier no-apps handoff, but is **not a finished or sendable delivery**.

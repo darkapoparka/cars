@@ -1,3 +1,5 @@
+> This multi-session campaign is closed. All recovered applications now live in `J:/cars/clients` on `main`. The prompts and reports below are retained as history; use [Cars projects](../PROJECTS.md) for current work. Do not create session worktrees or publish new work to astra.
+
 # Ten-session lead implementation batch
 
 Batch ID: `lead-build-2026-09-08`. This is the owner's requested implementation campaign, not a deployment/outreach campaign. It applies the [guardrails](../LEAD-BUILD-GUARDRAILS.md) to a fixed, auditable queue.
