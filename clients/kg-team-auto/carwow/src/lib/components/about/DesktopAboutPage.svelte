@@ -44,7 +44,7 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title="За K-G Team Auto"
 		panel="light"
 		compact
 	>
@@ -126,8 +126,8 @@
 		<div class="about-container about-story">
 			<img
 				class="about-story__image"
-				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				src={resolve('/dealer/11780222156478967-1.webp')}
+				alt="Илюстративна визия на K-G Team Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -135,11 +135,11 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
+					K-G Team Auto е автокъща в Пловдив. При нас можеш да разгледаш наличните автомобили, да
 					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети в Индустриална зона – Юг. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -192,11 +192,11 @@
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title="Карта до K-G Team Auto Пловдив" height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, София</strong>
+						<strong>Индустриална зона – Юг, Пловдив</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

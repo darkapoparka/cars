@@ -56,38 +56,9 @@ export const DealerMobileBrandBar = ({
         onClick={onNavigate}
       >
         <span
-          className={cn("relative block aspect-[1780/512]", logoWidthClassName)}
+          className={cn("relative block aspect-[280/100]", logoWidthClassName)}
         >
-          <Image
-            alt={leadSite.name}
-            className="h-full w-full object-contain"
-            height={512}
-            priority
-            sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            style={
-              wordmarkTone === "original"
-                ? undefined
-                : { clipPath: "inset(0 68% 0 0)" }
-            }
-            width={1780}
-          />
-          {wordmarkTone === "original" ? null : (
-            <Image
-              alt=""
-              aria-hidden="true"
-              className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-                wordmarkTone === "light"
-                  ? "brightness-0 invert"
-                  : "brightness-0"
-              )}
-              fill
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={leadSite.logoPath}
-            />
-          )}
+          <Image alt={leadSite.name} className="h-full w-full object-contain" height={100} width={280} priority sizes="(max-width:1023px) 144px, 0px" src={wordmarkTone === "light" || (!light && !clean) ? "/dealer/logo-light.png" : leadSite.logoPath} />
         </span>
       </Link>
 

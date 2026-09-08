@@ -2,8 +2,8 @@
 	import { page } from '$app/state';
 
 	const DEFAULT_DESCRIPTION =
-		'Day Night Auto предлага проверени автомобили, финансиране и съдействие при покупка в София.';
-	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
+		'K-G Team Auto предлага автомобили от обяви, финансиране и съдействие при покупка в Пловдив.';
+	const DEFAULT_OG_IMAGE = '/dealer/11782979504874945-1.webp';
 
 	let {
 		title,
@@ -41,7 +41,7 @@
 	{/if}
 
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Day Night Auto София" />
+	<meta property="og:site_name" content="K-G Team Auto Пловдив" />
 	<meta property="og:locale" content="bg_BG" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
@@ -52,7 +52,7 @@
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:alt" content="Day Night Auto София" />
+	<meta property="og:image:alt" content="K-G Team Auto Пловдив" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />

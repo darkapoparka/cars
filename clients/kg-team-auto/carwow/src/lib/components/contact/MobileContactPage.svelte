@@ -247,13 +247,13 @@
 	<header class:mobile-contact-hero--import={isImportMode} class="mobile-contact-hero">
 		<img
 			class="mobile-contact-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-showroom-suv-v1.webp')}
+			src={resolve('/dealer/11782979504874945-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
-					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<a href={resolve('/')} aria-label="K-G Team Auto начало">
+					<img src={resolve('/dealer/logo.png')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -263,7 +263,7 @@
 		<div class="mobile-contact-hero__copy">
 			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със K-G Team Auto'}
 			</h1>
 			<p>
 				{isImportMode
@@ -483,7 +483,7 @@
 					title="Как работи вносът"
 					description="От обявата до конкретна оферта и срок."
 					label="Виж стъпките"
-					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
+					image="/dealer/hero-car-1.webp"
 					tone="red"
 					onclick={() => openImportInfo('process')}
 				/>
@@ -491,7 +491,7 @@
 					title="Какво поемаме ние"
 					description="Проверка, транспорт, документи и предаване."
 					label="Виж услугата"
-					image="/assets/images/home-promos/gclass-urus-pair-v4.webp"
+					image="/dealer/hero-car-2.webp"
 					cars
 					onclick={() => openImportInfo('coverage')}
 				/>
@@ -513,7 +513,7 @@
 			<div class="mobile-contact-map__head">
 				<div>
 					<span>Локация</span>
-					<h2>Шоурум в София</h2>
+					<h2>Шоурум в Пловдив</h2>
 				</div>
 				<a href={resolve('/inventory')}>
 					<CarFront size={18} strokeWidth={2.45} />
@@ -522,7 +522,7 @@
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Карта до K-G Team Auto Пловдив"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/brand/daynight-logo-generated.png')}
+						src={resolve('/dealer/logo.png')}
 						alt=""
 						aria-hidden="true"
 					/>

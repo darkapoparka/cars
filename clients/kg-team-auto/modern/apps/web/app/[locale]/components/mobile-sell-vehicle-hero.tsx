@@ -37,7 +37,7 @@ export const MobileSellVehicleHero = ({
             title={content.howTitle}
           />
         }
-        imageSrc="/images/sell/day-night-mobile-studio-v1.png"
+        imageSrc="/dealer/hero-car-1.webp"
         locale={locale}
         tone="sell"
       >

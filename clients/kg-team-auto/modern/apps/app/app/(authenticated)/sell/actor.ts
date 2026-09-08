@@ -24,7 +24,7 @@ export const requireListingActor = async (): Promise<ListingActorInput> => {
     "AutoMarket seller";
 
   return {
-    city: "Sofia",
+    city: "Plovdiv",
     clerkOrgId: session.orgId ?? undefined,
     clerkUserId: session.userId,
     displayName,

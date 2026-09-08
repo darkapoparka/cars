@@ -82,7 +82,7 @@ const isMatchingMinimumDraft = (
 export const createOrResumeMinimumDraft = async (formData: FormData) => {
   const actor = await requireListingActor();
   const basics = parseMinimumVehicleBasics(formData);
-  const input = toMinimumDraftInput(basics, actor.city || "Sofia");
+  const input = toMinimumDraftInput(basics, actor.city || "Plovdiv");
   const ownedListings = await listOwnedListings(actor, { limit: 100 });
   const existing = ownedListings.find((listing) =>
     isMatchingMinimumDraft(listing, input)

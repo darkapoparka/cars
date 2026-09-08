@@ -72,7 +72,7 @@ export const POST = async (request: Request) => {
         const authorization = await authorizeMediaUpload(
           { files: [candidate], listingId: payload.listingId },
           {
-            city: "Sofia",
+            city: "Plovdiv",
             clerkOrgId: session.orgId ?? undefined,
             clerkUserId: session.userId,
             displayName:

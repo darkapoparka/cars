@@ -8109,7 +8109,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 				rgba(16, 19, 23, 0.48) 46%,
 				rgba(16, 19, 23, 0.05) 76%
 			),
-			url('/assets/images/daynight-premium-banners/webp/inventory-latest-imagegen-v4.webp') !important;
+			url('/dealer/hero-car-2.webp') !important;
 	}
 
 	body.daynight-home-page .daynight-home-brand-section .daynight-home-section-banner {
@@ -8121,7 +8121,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 				rgba(63, 0, 9, 0.42) 48%,
 				rgba(15, 0, 2, 0.06) 78%
 			),
-			url('/assets/images/daynight-premium-banners/webp/brands-in-stock-imagegen-v3.webp') !important;
+			url('/dealer/hero-car-2.webp') !important;
 	}
 
 	body.daynight-home-page .daynight-home-section-banner--vehicle-types {
@@ -8133,7 +8133,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 				rgba(8, 10, 13, 0.48) 48%,
 				rgba(8, 10, 13, 0.03) 78%
 			),
-			url('/assets/images/daynight-premium-banners/webp/vehicle-types-imagegen-v3.webp') !important;
+			url('/dealer/hero-car-1.webp') !important;
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading-inner,
@@ -8607,7 +8607,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading::before {
-		background: url('/brand/daynight-logo-generated.png') center / contain no-repeat !important;
+		background: url('/dealer/logo.png') center / contain no-repeat !important;
 		content: '' !important;
 		height: 104px !important;
 		opacity: 0.96 !important;
@@ -8773,7 +8773,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading::before {
-		background: url('/brand/daynight-logo-generated.png') center / contain no-repeat !important;
+		background: url('/dealer/logo.png') center / contain no-repeat !important;
 		content: '' !important;
 		height: 72px !important;
 		opacity: 0.94 !important;

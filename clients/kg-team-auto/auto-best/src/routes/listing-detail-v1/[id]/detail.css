@@ -583,3 +583,5 @@
   .dn-detail-related__list b { color: #11151c; }
   .dn-detail-location-card h2 { font-size: 22px; }
 }
+
+.dn-detail-thumbnails{display:flex;gap:10px;padding:12px;overflow-x:auto}.dn-detail-thumbnails button{padding:3px;border:2px solid transparent;border-radius:8px;background:none;cursor:pointer}.dn-detail-thumbnails button[aria-pressed="true"]{border-color:var(--dn-red)}.dn-detail-thumbnails img{display:block;width:120px;height:80px;object-fit:cover;border-radius:5px}.dn-detail-thumbnails button:focus-visible{outline:3px solid var(--dn-red);outline-offset:2px}

@@ -120,7 +120,7 @@ export const mockOrganizationDirectoryCoreEntries =
         "Illustrative EV sourcing profile using marketplace-backed examples for delivery, inspection, and registration workflows.",
       displayName: "EV Import Network Demo",
       headquarters: {
-        city: "Sofia",
+        city: "Plovdiv",
         countryCode: "BG",
       },
       headline: "Electric vehicles sourced from Germany to Bulgaria",
@@ -185,9 +185,9 @@ export const mockOrganizationDirectoryCoreEntries =
       dealerOrgId: "dealer-sofia-premium",
       description:
         "Local dealer inventory with inspection history and finance enquiries.",
-      displayName: "Sofia Premium Cars",
+      displayName: "Plovdiv Premium Cars",
       headquarters: {
-        city: "Sofia",
+        city: "Plovdiv",
         countryCode: "BG",
       },
       headline: "Premium used cars available locally",
@@ -202,7 +202,7 @@ export const mockOrganizationDirectoryCoreEntries =
       },
       orgType: "dealer",
       profileImage: {
-        alt: "Premium vehicle showroom in Sofia",
+        alt: "Premium vehicle showroom in Plovdiv",
         url: "/images/directory/sofia-premium-cars-profile.webp",
       },
       representativeVehicles: [
@@ -278,7 +278,7 @@ export const mockOrganizationDirectoryCoreEntries =
         "Commercial van specialist with local stock, VAT-ready offers, and finance enquiries.",
       displayName: "Pro Vans Bulgaria",
       headquarters: {
-        city: "Sofia",
+        city: "Plovdiv",
         countryCode: "BG",
       },
       headline: "Passenger and commercial vans in local stock",
@@ -459,7 +459,7 @@ const scaleOrganizationTypes = [
 ] as const satisfies readonly OrganizationDirectoryType[];
 
 const scaleHeadquarters = [
-  { city: "Sofia", countryCode: "BG" },
+  { city: "Plovdiv", countryCode: "BG" },
   { city: "Plovdiv", countryCode: "BG" },
   { city: "Varna", countryCode: "BG" },
   { city: "Hamburg", countryCode: "DE" },

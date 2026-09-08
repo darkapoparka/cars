@@ -17,9 +17,9 @@
 	} = $props();
 
 	const leftCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
+		'/dealer/hero-car-2.webp';
 	const rightCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
+		'/dealer/hero-car-2.webp';
 
 	function openMap() {
 		window.open(daynightSite.mapUrl, '_blank', 'noopener,noreferrer');
@@ -74,7 +74,7 @@
 				class="daynight-home-hero__photo"
 				src={desktopOnlyImagePlaceholder}
 				srcset={desktopOnlySrcset(
-					'/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
+					'/dealer/11773570472954394-1.webp',
 					1983
 				)}
 				sizes={desktopOnlySizes('100vw')}
@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Студентски град · ул. Атанас Манчев 18</span>
+						<span>Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Day Night Auto"
+						aria-label="Отвори Google Maps до K-G Team Auto"
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,18 +120,18 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">DAY NIGHT AUTO GROUP</span>
+							<span class="daynight-home-hero__location-map-label">K-G TEAM AUTO</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Day Night Auto София</strong>
-							<span>гр. София, Студентски град, ул. Атанас Манчев 18</span>
+							<strong>K-G Team Auto Пловдив</strong>
+							<span>гр. Пловдив, Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Проверени автомобили.</span>
+						<span>Обявени автомобили.</span>
 						<strong>Ясни условия.</strong>
 					</span>
 				</h1>
