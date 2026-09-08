@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "client": "navara-car",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-08",
+  "state": "needs-personalization",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/cars"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+}
