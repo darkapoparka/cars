@@ -1,5 +1,3 @@
-# Auto Best template instructions
+# ELIQ AUTO / Auto Best
 
-Read J:/cars/AGENTS.md, this TEMPLATE.md and .template/template.json first. This is a reusable source baseline. Preserve the current UI/UX. For a lead, clone into J:/cars/clients/<client>/auto-best before changing identity, colors, assets or copy. Historic source-client instructions and task ledgers do not authorize work in this copy. Use the Cars startup helper with a free port rather than old source-specific launch commands. No sending, deployment or CRM state change is implied.
-
-For shared improvements, follow [ARCHITECTURE.md](ARCHITECTURE.md) for component, data, styling, content verification and QA ownership.
+This is an independent client copy, not a master. Read ../../../AGENTS.md and ../ASTRA-HANDOFF.md first. The owner authorized one ELIQ trial with Auto Best, Modern and Carwow. Preserve this template's existing UI; do not redesign, migrate frameworks or edit another client's project. Source TEMPLATE.md and .template notes describe the inherited baseline, not QA performed on this copy. Read .client/project.json for actual state. Run local checks and render primary routes before marking verified; scan for remaining source identity, including support routes and metadata. Never deploy, submit enquiries or send outreach from this review task.

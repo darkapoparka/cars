@@ -1,24 +1,13 @@
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
-import { DEFAULT_DESCRIPTION, DAY_SITE_TITLE, getPublicStaticRoute } from './public-routes';
-
+import { getPublicStaticRoute } from './public-routes';
 export type PageSeo = { title: string; description: string };
-
+export const DEFAULT_DESCRIPTION = 'ELIQ AUTO · Пазарджик. Независима демонстрация с архивна селекция автомобили. Потвърдете цена и наличност с автокъщата.';
 export function routeSeo(routePath: string): PageSeo {
-	const route = getPublicStaticRoute(routePath ?? '');
-	return route
-		? { title: route.title, description: route.description }
-		: { title: DAY_SITE_TITLE, description: DEFAULT_DESCRIPTION };
+  const route = getPublicStaticRoute(routePath ?? '');
+  const title = (route?.title ?? 'ELIQ AUTO').replace(/Day\s*&?\s*Night(?:\s+Auto)?(?:\s+Group)?/giu, 'ELIQ AUTO').replaceAll('София', 'Пазарджик');
+  return { title, description: DEFAULT_DESCRIPTION };
 }
-
 export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
-	const facts = [vehicle.priceEur, vehicle.mileage, vehicle.fuel, vehicle.transmission]
-		.map((value) => (value ?? '').toString().trim())
-		.filter(Boolean);
-
-	return {
-		title: `${vehicle.title} | Day Night Auto`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Day Night Auto с опция за финансиране.`
-	};
+  const facts = [vehicle.priceEur, vehicle.mileage, vehicle.fuel, vehicle.transmission].filter(Boolean).join(', ');
+  return { title: `${vehicle.shortTitle} | ELIQ AUTO`, description: `${vehicle.shortTitle}: ${facts}. Архивна обява в независима демонстрация; потвърдете актуалните условия.` };
 }
-
-export { DEFAULT_DESCRIPTION };
