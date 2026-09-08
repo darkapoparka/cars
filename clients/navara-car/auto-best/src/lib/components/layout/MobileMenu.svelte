@@ -3,7 +3,7 @@
   import { page } from '$app/state';
   import type { Attachment } from 'svelte/attachments';
   import { trapDialogTab } from '$lib/ui/overlay';
-  import { brand } from '$config/brand';
+  import { brand, dealerSource } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
@@ -15,46 +15,38 @@
   } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 </script>
-      <dialog
-        class="dn-mobile-menu"
-        id="dn-mobile-menu"
-        aria-labelledby="dn-mobile-menu-title"
-        tabindex="-1"
-        {@attach attachMobileMenu}
-        onkeydown={trapDialogTab}
-        oncancel={(event) => { event.preventDefault(); void closeMobile(); }}
-        onclick={(event) => { if (event.target === event.currentTarget) void closeMobile(); }}
-      >
-        <h2 class="dn-sr-only" id="dn-mobile-menu-title">Основна навигация</h2>
-        <div class="dn-mobile-menu__header">
-          <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — начало`} onclick={() => void closeMobile(false)}>
-            <img src={brand.logo} alt={brand.name} width="160" height="44" />
-          </a>
-        <button
-          class="dn-mobile-menu__close"
-          type="button"
-          {@attach attachMobileCloseButton}
-          aria-label="Затворете менюто"
-          onclick={() => closeMobile()}
-        ><MobileNavIcon name="close" size={20} /></button>
-        </div>
-        <div class="dn-mobile-menu__contact">
-          <a class="dn-mobile-menu__call" {...phoneLinkAttributes}><MobileNavIcon name="phone" size={20} /><strong>Обадете се</strong><span>{brand.phone}</span></a>
-          <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><strong>Локация</strong><span>{brand.city}</span></a>
-        </div>
-        <nav aria-label="Мобилна навигация">
-          <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
-        </nav>
-        <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
-          <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
-          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
-          <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
-        </div>
-        <p class="dn-mobile-menu__address">{brand.addressLine}</p>
-      </dialog>
+
+<dialog class="dn-mobile-menu" id="dn-mobile-menu" aria-labelledby="dn-mobile-menu-title" tabindex="-1"
+  {@attach attachMobileMenu} onkeydown={trapDialogTab}
+  oncancel={event => { event.preventDefault(); void closeMobile(); }}
+  onclick={event => { if (event.target === event.currentTarget) void closeMobile(); }}>
+  <h2 class="dn-sr-only" id="dn-mobile-menu-title">Основна навигация</h2>
+  <div class="dn-mobile-menu__header">
+    <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — начало`} onclick={() => void closeMobile(false)}>
+      <img src={brand.logo} alt={brand.name} width="160" height="44" />
+    </a>
+    <button class="dn-mobile-menu__close" type="button" {@attach attachMobileCloseButton} aria-label="Затворете менюто" onclick={() => closeMobile()}><MobileNavIcon name="close" size={20} /></button>
+  </div>
+  <div class="dn-mobile-menu__contact">
+    <a class="dn-mobile-menu__call" {...phoneLinkAttributes}><MobileNavIcon name="phone" size={20} /><strong>Обадете се</strong><span>{brand.phone}</span></a>
+    <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><strong>Локация</strong><span>{brand.city}</span></a>
+  </div>
+  <nav aria-label="Мобилна навигация">
+    <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
+    <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Полезно преди оглед</span><Icon name="arrow-right" size={16} /></a>
+    <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
+    <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
+  </nav>
+  {#if brand.instagramUrl || brand.youtubeUrl || brand.facebookUrl}
+    <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
+      {#if brand.instagramUrl}<a href={brand.instagramUrl} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>{/if}
+      {#if brand.youtubeUrl}<a href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>{/if}
+      {#if brand.facebookUrl}<a href={brand.facebookUrl} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>{/if}
+    </div>
+  {/if}
+  <p class="dn-mobile-menu__address">{brand.addressLine}<br />{dealerSource.previewNotice}</p>
+</dialog>
+
 <style>
   .dn-mobile-menu { top: auto; width: 100%; max-width: none; margin: 0; border: 0; }
   .dn-mobile-menu::backdrop { background: rgb(10 13 18 / .54); }

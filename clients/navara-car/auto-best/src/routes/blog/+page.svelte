@@ -12,7 +12,7 @@
 
 <svelte:head>
   <title>Полезно — {brand.name}</title>
-  <meta name="description" content={`Практични насоки от ${brand.name} за избор, оглед, внос, лизинг, бартер и следващи стъпки при покупка на автомобил.`} />
+  <meta name="description" content={`Контекст към обявите на ${brand.name}: избор, оглед, документи и въпроси към продавача. Демонстрационни материали, не официални обещания на автокъщата.`} />
 </svelte:head>
 
 <BlogHero filters={data.filters} />
@@ -20,7 +20,6 @@
 <section class="dn-blog-index" aria-labelledby="blog-results-title">
   <div class="container">
     <h2 class="dn-sr-only" id="blog-results-title">{data.posts.length} {data.posts.length === 1 ? 'статия' : 'статии'}</h2>
-
     {#if data.posts.length}
       <div class="dn-blog-grid">
         {#each data.posts as post, index (post.id)}

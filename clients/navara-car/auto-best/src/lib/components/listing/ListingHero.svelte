@@ -10,7 +10,7 @@
   <div class="container dn-listing-hero__content dn-route-hero__layout">
     <div class="dn-listing-hero__copy dn-route-hero__copy">
       <h1 id="listing-title">Намерете своя автомобил</h1>
-      <p>{count} {count === 1 ? 'автомобил' : 'автомобила'} в каталога</p>
+      <p>{count} {count === 1 ? 'обява' : 'обяви'} от селекцията към 08.09.2026 г.</p>
     </div>
   </div>
 </section>
