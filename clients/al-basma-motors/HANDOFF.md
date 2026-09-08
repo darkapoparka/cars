@@ -1,29 +1,38 @@
-# Al Basma Motors — blocked execution handoff
+# Al Basma Motors — interrupted implementation, resume existing copies
 
-Batch `lead-build-2026-09-08`, session `04`; observed 8 September 2026.
+Session 04 / batch `lead-build-2026-09-08`. Updated 9 September 2026.
 
-**No applications have been created.** This folder contains a source record, not Auto Best, Modern or Carwow implementations. There are no app or preview links and no framework/browser passes. Do not count it as three delivered demos.
+**The earlier download/DNS-only blocker is superseded. Actual independent application copies and local reference assets now exist on the owner's computer, but those application files have not been published to GitHub, personalized completely, or runtime-verified. This is not a completed three-app delivery.**
 
-## Evidence retained
+## Existing work — do not recreate
 
-`evidence/source-record.json` records the official showroom contact, eight dated advertiser samples in native AED/km, an actually observed published logo, source image references, conflicting specifications and failed asset-access attempts. These facts are not yet wired into any application. No gallery bytes or proposed/generated artwork were committed. Official-site rendered audit and full alias/domain/phone duplicate inspection remain incomplete.
+Isolated checkout: `J:/cars-session-04`, detached from `origin/astra` at `57a0c9694e325747d776cfd78255b60241080a8a`. The dirty owner checkout `J:/cars` was not edited. The helper dry run and copy both executed successfully:
 
-The official terms list Showroom 61, Souq Al Haraj and +971 54 342 2222. A similarly named maintenance workshop is not merged into that showroom identity. Source URLs and limits are in the JSON.
+```text
+node scripts/new-client.mjs --client al-basma-motors --templates auto-best,modern,carwow --dry-run
+node scripts/new-client.mjs --client al-basma-motors --templates auto-best,modern,carwow
+```
 
-## Blocking evidence
+Three independent folders exist under `J:/cars-session-04/clients/al-basma-motors/`: `auto-best`, full-workspace `modern`, and `carwow`. Fresh helper `.client/project.json` and `.template/source-manifest.json` files exist locally. Template versions: Auto Best `2026.09.08-polish-1`; Modern `2026.09.06-refresh-1`; Carwow `2026.09.08-repair-1`.
 
-The shell cannot resolve github.com; an ordinary Git read failed. The connected GitHub read and tree/commit/ref write tools are available. Official-logo, marketplace-logo and signage downloads failed; no locally usable dealership asset bytes were obtained. Published visibility does not establish reuse permission, and the inspected terms did not provide a reuse grant for this demo. No image-generation tool was available and no generation occurred. This is an execution/media gate failure, not an assertion that the dealer has poor branding or a broken website.
+## Completed local source/asset work
 
-## Masters inspected, not copied
+The live owned home, catalogue, detail and contact pages were accessible in the remote browser. The original silver AL BASMA emblem was downloaded and visually inspected, not replaced with a generic text logo. Ten actual owned-site detail records were loaded; four original photos per record were downloaded. Source URLs, observations and conflicts are retained locally. Known specifications remain native AED and km; monthly estimates and unconfirmed warranty promises were not adopted.
 
-At `4ef7edfe4c1566dcc0688bc78b87f812de1223c4` the candidate versions were Auto Best `2026.09.08-polish-1`, full-workspace Modern `2026.09.06-refresh-1`, and Carwow `2026.09.08-repair-1`. No source-copy lineage or passed QA is claimed. Proposed ports 7431/7432/7433 are not listeners and have not been checked on the owner's machine.
+`evidence/prepare-facts-assets.mjs` completed: it wrote `business-facts.json`, `stock.json`, and the same 40 stock photos plus two original-logo surface treatments into each application's `dealer/` public directory. It also created PNG icons and manifests. The logo has real alpha transparency; its trimmed PNG dimensions are 640 by 467. This is file integration, **not completed consumer wiring or visual acceptance**. Public redistribution permission for the dealer media remains unestablished; no public release is authorized.
 
-## Executed / not executed
+Local evidence paths and the ten listing URLs are retained in the committed `evidence/remote-execution.json`. The older `evidence/source-record.json` is historical evidence from the first restricted-environment attempt, not the current access status.
 
-Executed: connected-GitHub requirement and branch/tree reads; public source and published-brand-image inspection; local diagnostic Git read (failed DNS); failed image download attempts; JSON source-record consistency validation.
+## Checks actually evidenced
 
-Not executed: application copy/personalization; lockfile install; Prisma generation; framework checks/builds; app asset integration; mobile/desktop navigation, filter, gallery or enquiry tests. No enquiries, calls, external form submissions, deployments or private-record writes occurred.
+Modern: Node 22.22.0, pnpm 11.4.0; frozen-lockfile installation completed with exit 0. Carwow: Node 24.18.0; `npm ci` completed with exit 0. Its install reported 14 dependency vulnerabilities; no automatic dependency upgrade or audit fix was run. Auto Best `npm ci` ran under Node 22.22.0, but its individual exit record was not retrieved before disconnection, so it is not certified here. Prisma generation was started, but its outcome was also not retrieved.
 
-## Safe local-agent inspection
+No personalized framework checks, builds or application browser QA passed. The official website screenshots are research evidence, not app acceptance. Proposed ports 7431/7432/7433 were unoccupied when checked; no client preview was launched.
 
-In `J:/cars`, inspect `git status --short` and `git remote -v`; preserve dirty work. Fetch `origin astra` and only fast-forward the intended clean checkout. Read this handoff and `docs/lead-build/reports/session-04.json`. Do not run a creation/personalization script or install/start nonexistent app folders. There is no completed application to launch from this delivery. Resolve the documented execution/media prerequisites before resuming this same session's implementation; do not treat these evidence files as completed variants.
+## Current interruption and safe continuation
+
+Remote Desktop Commander first timed out on ordinary reads and ping, then explicitly returned **No devices available**. The working checkout, downloaded bytes and logs could no longer be read or pushed from that computer. The GitHub connector remained writable. This report does not claim that creating Git objects or recording progress publishes application files.
+
+Resume the existing isolated checkout after desktop connectivity is restored. Inspect its status and preserve all local assets, manifests, logs and partial edits; do not run `new-client` again or replace it with a new clone. Finish the actual consumers, localization, supporting pages and honest demo behavior; then run checks and publish only the owned delta onto the latest `astra` head without force. There is no completed pull/install/start handoff for a preview-only agent yet, and no public app link.
+
+The Dealers Point and F1rst Motors remain pending, not rejected or silently replaced. Astracar was inspected read-only through its existing metadata and prior QA records; no new runtime verification or repair was performed. No dealer contact, deployment, private-record write or unrelated-work modification occurred.
