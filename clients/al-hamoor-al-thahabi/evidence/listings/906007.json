@@ -1,0 +1,202 @@
+{
+    "url":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html",
+    "title":  "Chevrolet Trax LT 1.8L AWD",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html#webpage",
+                                              "url":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html",
+                                              "name":  "Chevrolet Trax LT 1.8L AWD",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html#car",
+                                              "url":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html",
+                                              "name":  "Chevrolet Trax LT 1.8L AWD",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/chevrolet#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/chevrolet/trax#model"
+                                                        },
+                                              "vehicleModelDate":  "2020",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/a3022e/960x540/al-hamoor-al-thahabi-used-cars/d21a86e5-37f0-431f-aab2-4fa40f7fe2c9.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html#offer",
+                                                             "price":  "4000",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "106000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "SUV/Crossover",
+                                              "color":  "Black",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "4",
+                                              "seatingCapacity":  "5",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/AllWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Black",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "Cheverlot trax 2020 no 2 clean car good condition please call 0507283866"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/4e4e80/w_1300x760/al-hamoor-al-thahabi-used-cars/d21a86e5-37f0-431f-aab2-4fa40f7fe2c9.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d5be4b/w_1300x760/al-hamoor-al-thahabi-used-cars/56c99242-de67-4f9f-b3ce-c756cfe5f862.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/db3129/w_1300x760/al-hamoor-al-thahabi-used-cars/b5be8ce4-e298-4a22-9f3f-240a1bf2e165.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/450342/w_1300x760/al-hamoor-al-thahabi-used-cars/48139df3-8ffa-43bb-ba31-e48582192a02.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a21428/w_1300x760/al-hamoor-al-thahabi-used-cars/522a3494-ae37-4642-be20-517ea04ac531.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/56a062/w_1300x760/al-hamoor-al-thahabi-used-cars/9aa643d6-b608-4c04-818c-12e44c8f5bf1.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/46075d/w_1300x760/al-hamoor-al-thahabi-used-cars/6c788c3c-8520-46fa-98e7-a790cfa81a59.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c49515/w_1300x760/al-hamoor-al-thahabi-used-cars/d88fab7c-4dbd-4af1-b004-8f9cdc805b43.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/fb38fa/w_1300x760/al-hamoor-al-thahabi-used-cars/10b2fc4c-4667-490f-ad2e-37fd0bf0d51f.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/10a2f1/w_1300x760/al-hamoor-al-thahabi-used-cars/ba877da1-0422-4fd8-a9a0-4b917f301d12.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5b130b/w_1300x760/al-hamoor-al-thahabi-used-cars/4e8aea46-5f4a-4b85-941e-bc8b0c789611.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c3c166/w_1300x760/al-hamoor-al-thahabi-used-cars/5d976d3b-87aa-42cf-8629-7ce734764ecb.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6a4c02/w_1300x760/al-hamoor-al-thahabi-used-cars/d181558e-a0c8-448b-90d5-d68ff0e463a2.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/381355/w_1300x760/al-hamoor-al-thahabi-used-cars/fff66477-ee24-4d9c-a777-3ab6f94c672e.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a6741b/w_1300x760/al-hamoor-al-thahabi-used-cars/f4806372-973d-4d76-a01a-cea8c1e84ff6.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/100150/w_1300x760/al-hamoor-al-thahabi-used-cars/bf91fe99-569d-418e-956d-ab6e84343ab1.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/edf476/w_1300x760/al-hamoor-al-thahabi-used-cars/1145dbb5-3ca0-486e-a3d5-85b786fa0bcb.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a75f29/130x76/al-hamoor-al-thahabi-used-cars/d21a86e5-37f0-431f-aab2-4fa40f7fe2c9.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a8dc84/130x76/al-hamoor-al-thahabi-used-cars/56c99242-de67-4f9f-b3ce-c756cfe5f862.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a558f1/130x76/al-hamoor-al-thahabi-used-cars/b5be8ce4-e298-4a22-9f3f-240a1bf2e165.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ec5d4a/130x76/al-hamoor-al-thahabi-used-cars/48139df3-8ffa-43bb-ba31-e48582192a02.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6c8898/130x76/al-hamoor-al-thahabi-used-cars/522a3494-ae37-4642-be20-517ea04ac531.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/65de55/130x76/al-hamoor-al-thahabi-used-cars/9aa643d6-b608-4c04-818c-12e44c8f5bf1.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a6aace/130x76/al-hamoor-al-thahabi-used-cars/6c788c3c-8520-46fa-98e7-a790cfa81a59.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/2d838c/130x76/al-hamoor-al-thahabi-used-cars/d88fab7c-4dbd-4af1-b004-8f9cdc805b43.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/bc63d8/130x76/al-hamoor-al-thahabi-used-cars/10b2fc4c-4667-490f-ad2e-37fd0bf0d51f.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/78277c/130x76/al-hamoor-al-thahabi-used-cars/ba877da1-0422-4fd8-a9a0-4b917f301d12.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/932ba9/130x76/al-hamoor-al-thahabi-used-cars/4e8aea46-5f4a-4b85-941e-bc8b0c789611.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c995ed/130x76/al-hamoor-al-thahabi-used-cars/5d976d3b-87aa-42cf-8629-7ce734764ecb.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0c0695/130x76/al-hamoor-al-thahabi-used-cars/d181558e-a0c8-448b-90d5-d68ff0e463a2.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/accac1/130x76/al-hamoor-al-thahabi-used-cars/fff66477-ee24-4d9c-a777-3ab6f94c672e.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d2d55d/130x76/al-hamoor-al-thahabi-used-cars/f4806372-973d-4d76-a01a-cea8c1e84ff6.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d680a1/130x76/al-hamoor-al-thahabi-used-cars/bf91fe99-569d-418e-956d-ab6e84343ab1.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7c3dfa/130x76/al-hamoor-al-thahabi-used-cars/1145dbb5-3ca0-486e-a3d5-85b786fa0bcb.jpeg",
+                       "alt":  "Chevrolet Trax LT 1.8L AWD"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiChevrolet DubaiTrax DubaiTrax 2020 DubaiChevrolet Trax LT 1.8L AWD\nChevrolet Trax LT 1.8L AWD\nSave\n1 / 17\nHighlights\nLocation\nDubai\nModel year\n2020\nKilometers\n106,000 Km\nEngine capacity\n1.8 L\nSpecs\nAmerican\nDescription\nSeller Comments\n\nCheverlot trax 2020 no 2 clean car good condition please call\n\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\n5-Star NCAP safety rating\nΓÇó\nLowest running cost in class\nΓÇó\nLowest depreciation in class\n\nThis specific SUV represents an excellent entry point into the compact crossover market, offering a balanced combination of modern styling and proven mechanical reliability. Given the regional context, the black exterior remains a highly sought-after choice in the GCC used market, ensuring strong resale interest when you eventually decide to upgrade. With mileage that aligns perfectly with the typical 25,000 km per year average for daily commuters in the UAE, this vehicle has been broken in properly for the local climate. It stands out from rivals by offering the added security of All Wheel Drive, providing extra grip during the occasional rain-slicked highway runs or when navigating gravel paths on weekend escapes. For a GCC buyer, this model is particularly compelling because it combines the durability associated with American engineering and the accessible maintenance costs of a mainstream brand. You are getting a versatile city-dweller that handles the summer heat with ease while remaining compact enough for tight parking in Downtown Dubai or Abu Dhabi\u0027s busy sectors.\n\nRead more\nSpecs \u0026 features\nMake\nChevrolet\nModel\nTrax\nTrim\nLT\nColor\nBlack\nInterior color\nBlack\nEngine capacity\n1.8 L\nCylinders\n4 Cylinders\nHorsepower\n140 HP\nTransmission\nAutomatic\nDrive type\nAll Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSUV/Crossover\nNumber of doors\n4 Doors\nSeating capacity\n5 seater\nWheel size\n16\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n05 Sep, 2026\nInterior\nInstrument cluster\nSafety\nTraction Control\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nSide airbags\nSide curtain airbags\nComfort \u0026 Convenience\nSteering wheel adjustment\nCruise Control\nAir conditioning\nParking sensors\nSteering wheel height adjustment\nInfotainment\nBluetooth connectivity\nSpeakers\n$ 4,000\n$ 5,449\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nChevrolet Trax LT\n$ 6,200\nDubai\nGCC\n2019\n93K Km\nChevrolet Trax LT\n$ 4,700\nDubai\nAmerican\n2019\n106K Km\nPremium\nChevrolet Traverse LT1\n$ 6,130\nDubai\nGCC\n2017\n192K Km\nChevrolet Equinox LT\n$ 5,500\nDubai\nAmerican\n2019\n71K Km\nChevrolet Tahoe Z71 LEATHER\n$ 4,700\nAjman\nAmerican\n2013\n117K Km\nChevrolet Equinox LT\n$ 6,000\nDubai\nAmerican\n2019\n48.4K Km\nChevrolet Trailblazer LTZ\n$ 6,300\nDubai\nJapanese\n2006\n106K Km\nMercedes Benz GL450 STANDARD\n$ 5,200\nAjman\nAmerican\n2012\n180K Km\nPeople also viewed\nKia Pegas LX\n$ 5,100\nWarranty\nSharjah\nGCC\n2020\n113K Km\nRelated links\nChevrolet Trax Information Section\nChevrolet\nChevrolet Trax\nUsed Chevrolet Trax by Location\nUsed Chevrolet Trax UAE (10)\nUsed Chevrolet Trax Dubai (7)\nUsed Chevrolet Trax Ajman (2)\nUsed Chevrolet Trax Sharjah (1)\nUsed Chevrolet Trax by Year\nUsed Chevrolet Trax 2019 (3)\nUsed Chevrolet Trax 2025 (3)\nUsed Chevrolet Trax 2015 (1)\nUsed Chevrolet Trax 2016 (1)\nUsed Chevrolet Trax 2020 (1)\nUsed Chevrolet Trax 2024 (1)\nSome other models of Chevrolet\nUsed Chevrolet Trailblazer in Dubai (76)\nUsed Chevrolet Groove in Dubai (24)\nUsed Chevrolet Captiva in Dubai (43)\nUsed Chevrolet Equinox in Dubai (8)\nUsed Chevrolet Traverse in Dubai (18)\nUsed Chevrolet Geo Tracker in Dubai (1)\nUsed Chevrolet Blazer in Dubai (10)\nUsed Chevrolet Tahoe in Dubai (74)\nUsed Chevrolet Suburban in Dubai (19)\nOther links\nAmerican Cars in Dubai\nMid Size cars for sale in Dubai\nFamily cars for sale in Dubai\nImported cars for sale in Dubai\nCheap cars for sale in Dubai\nCars under 20000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 906007\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nCheverlot trax 2020 no 2 clean car good condition please call\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\n5-Star NCAP safety rating\nLowest running cost in class\nLowest depreciation in class\nSummary\n\nThis specific SUV represents an excellent entry point into the compact crossover market, offering a balanced combination of modern styling and proven mechanical reliability. Given the regional context, the black exterior remains a highly sought-after choice in the GCC used market, ensuring strong resale interest when you eventually decide to upgrade. With mileage that aligns perfectly with the typical 25,000 km per year average for daily commuters in the UAE, this vehicle has been broken in properly for the local climate. It stands out from rivals by offering the added security of All Wheel Drive, providing extra grip during the occasional rain-slicked highway runs or when navigating gravel paths on weekend escapes. For a GCC buyer, this model is particularly compelling because it combines the durability associated with American engineering and the accessible maintenance costs of a mainstream brand. You are getting a versatile city-dweller that handles the summer heat with ease while remaining compact enough for tight parking in Downtown Dubai or Abu Dhabi\u0027s busy sectors.\n\nThis Car vs Other 2020 Traxs\n\nWhen looking at the 2020 model year in the GCC market, this vehicle sits comfortably within the expected mileage range for a four-year-old daily driver. While many vehicles of this age have been pushed hard on long cross-emirate commutes, this example shows consistent use that reflects a well-maintained service history rather than excessive highway wear. The black exterior is a significant advantage here, as it is one of the top three colors for value retention in the UAE, Saudi Arabia, and Kuwait. Compared to other units often found with front-wheel-drive configurations, the presence of the All Wheel Drive system on this specific car makes it a rarer and more capable find. It offers a level of stability and confidence that isn\u0027t always standard in this segment, making it a smarter purchase for those who value safety and versatility. This car has clearly been kept in a condition that respects the harsh regional sunlight, maintaining its aesthetic appeal and professional look.\n\nLT vs Lower Trims\n\nChoosing the LT trim over the base model provides several tangible upgrades that significantly improve the daily driving experience in the Gulf. Inside, you move away from basic materials to a more refined cabin that often includes upgraded upholstery and a more intuitive infotainment system with seamless smartphone integration. The LT typically adds convenience features like cruise control and remote start, which is a borderline necessity in the GCC to cool down the cabin before you enter during the peak of summer. You also benefit from enhanced exterior styling cues, such as roof rails and upgraded wheels, which give the car a more premium presence on the road. Safety is also stepped up in this trim, often including additional sensor-based alerts that are absent on the entry-level versions. This trim strikes the perfect balance between functionality and cost, offering the features that matter most for long-term comfort without the steep price tag of a luxury badge.\n\nTrax vs Segment Rivals\n\nIn the crowded compact crossover segment, this model competes directly with the Nissan Kicks, Kia Seltos, and Ford EcoSport. While some rivals focus purely on style, this vehicle leads with a more rugged American construction that feels more substantial on the Sheikh Zayed Road. Its 1.8-liter engine provides a more traditional, reliable power delivery compared to the smaller turbocharged or three-cylinder engines found in some European and American competitors. This model\u0027s cabin cooling system is specifically noted for its efficiency, a critical factor when compared to some Japanese rivals that can struggle to maintain a chill during mid-day heat. Additionally, the availability of All Wheel Drive in this body size is a differentiator, as many competitors in this class are strictly front-wheel drive. This makes it a more versatile choice for those who might venture onto sandy tracks or soft verges during weekend road trips to the Northern Emirates.\n\nRunning Costs \u0026 Resale\n\nOwnership costs for this crossover are among the most predictable in its class, thanks to a straightforward powertrain that doesn\u0027t require specialized high-performance fuels. Expect a real-world fuel consumption of approximately 8.5 to 9.5 liters per 100km in mixed GCC driving, which combines stop-start city traffic with high-speed highway cruising. As an American spec vehicle, it is compatible with standard petrol grades found at any ENOC or ADNOC station across the region. Parts availability is excellent, with a wide network of independent shops and authorized centers across the UAE and Saudi Arabia, ensuring that routine servicing remains affordable and fast. Historically, these vehicles experience a depreciation rate of about 12-15% annually, which is highly competitive for the American crossover segment in this region. The 1.8-liter engine is a global workhorse for the brand, meaning mechanics from Muscat to Riyadh are familiar with its maintenance requirements, protecting your investment for the long term.\n\nPerformance \u0026 Capability\n\nThe heart of this SUV is a 1.8-liter four-cylinder engine producing a reliable 140 horsepower, providing plenty of pep for navigating the fast-paced city flow. Where it truly shines is in its All Wheel Drive capability, which automatically manages power distribution to ensure maximum traction on different surfaces. This system is particularly useful when encountering the sudden sand drifts that can appear on desert highways after a windy day or for maintaining grip during rare but heavy seasonal rainstorms. With a ground clearance designed for urban obstacles, it handles speed bumps and high kerbs with much more grace than a standard sedan. The 0-100 km/h performance is smooth and linear, making it a stress-free companion for merging into heavy traffic or overtaking on the highway. It is a car designed for utility and ease of use, prioritizing consistent performance over aggressive speed, which suits the daily requirements of a GCC professional or a small family.\n\nComfort \u0026 Cabin\n\nThe interior is designed to maximize space within a compact footprint, comfortably seating five passengers with a high seating position that provides excellent visibility over traffic. In the GCC climate, the air conditioning system is the star of the show, known for its ability to drop cabin temperatures rapidly even after the car has been parked in the sun. The cabin insulation is surprisingly good for this segment, keeping out the ambient noise of the city and the wind whistle from high-speed highway travel. Storage is plentiful, with various compartments for phones, sunglasses, and water bottles, making it an ideal companion for the long drive from Dubai to Al Ain. The folding rear seats allow for a significant expansion of the cargo area, easily accommodating large grocery hauls or luggage for a weekend staycation. Materials used throughout the cabin are selected for durability, designed to withstand the wear and tear of family life and the intense heat of the region without premature fading or cracking.\n\nSafety\n\nSafety is a primary focus for this model, which holds a prestigious 5-star rating from international safety testing bodies. This LT trim comes equipped with a comprehensive suite of airbags and electronic stability control, which are vital for maintaining composure at higher GCC highway speeds. For the modern driver, features like the rearview camera make parking in tight urban malls like The Dubai Mall or Galleria much simpler and safer. The All Wheel Drive system acts as an active safety feature by providing superior control in low-grip situations, which is a major advantage over most compact SUVs. Additionally, the tire pressure monitoring system helps you keep an eye on your rubber in the extreme summer heat, which is essential for preventing blowouts on long desert stretches. It provides a protective environment that gives peace of mind whether you are commuting alone or transporting your family across the city.\n\nThe bottom line\n\nFor the pragmatist who wants the elevated view of an SUV without the high running costs of a large 4x4, this 2020 crossover is a standout choice. It is a reliable, safe, and feature-packed vehicle that fits perfectly into the fast-paced GCC lifestyle, offering great value for money in today\u0027s used market.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n5 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nBlack\nHorsepower\n140 HP\nModel year\n2020\nMake\nChevrolet\nModel\nTrax\nColor\nBlack\nCylinders\n4 Cylinders\nDrive type\nAll Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSUV/Crossover\nNumber of doors\n4 Doors\nWheel size\n16\"\nService history\nNo\nSpecs\nAmerican\nKilometers\n106,000 Km\nFuel Type\nPetrol\nEngine capacity\n1.8 L\nInterior\nInstrument cluster\nSafety\nTraction Control\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nSide airbags\nSide curtain airbags\nComfort \u0026 Convenience\nSteering wheel adjustment\nCruise Control\nAir conditioning\nParking sensors\nSteering wheel height adjustment\nInfotainment\nBluetooth connectivity\nSpeakers\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}

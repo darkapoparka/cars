@@ -1,0 +1,242 @@
+{
+    "url":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html",
+    "title":  "Toyota Rush EX 1.5L EX",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html#webpage",
+                                              "url":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html",
+                                              "name":  "Toyota Rush EX 1.5L EX",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html#car",
+                                              "url":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html",
+                                              "name":  "Toyota Rush EX 1.5L EX",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/toyota#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/toyota/rush#model"
+                                                        },
+                                              "vehicleModelDate":  "2023",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/45e6a4/960x540/al-hamoor-al-thahabi-used-cars/76cb6be6-0d43-4c16-b5e7-a8f6da8e491c.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html#offer",
+                                                             "price":  "11800",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "121000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "SUV/Crossover",
+                                              "color":  "White",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "5",
+                                              "seatingCapacity":  "7",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/RearWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Black",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "Toyota Rush 20203 1.5 full automatic\nIΓÇÖm very excellent condition\nNo need any work\nOriginal paint\nWithout any accident\nMobile or WhatsApp\n0507283866"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/31847b/w_1300x760/al-hamoor-al-thahabi-used-cars/76cb6be6-0d43-4c16-b5e7-a8f6da8e491c.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1e127e/w_1300x760/al-hamoor-al-thahabi-used-cars/f06db443-393c-40d7-a563-dcffe25dab73.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5c3d6d/w_1300x760/al-hamoor-al-thahabi-used-cars/375177b4-da54-4df6-ae1e-b50a404964e2.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8ad707/w_1300x760/al-hamoor-al-thahabi-used-cars/2db29316-fd08-4fd8-b656-c94f46c3f7ef.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/612bb2/w_1300x760/al-hamoor-al-thahabi-used-cars/81cd36f4-304d-4b50-b524-fa249625d35d.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a0c9b0/w_1300x760/al-hamoor-al-thahabi-used-cars/ae81ada0-875b-450f-ae60-0d1086ad7590.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b5e3f4/w_1300x760/al-hamoor-al-thahabi-used-cars/e2354782-a876-4118-bd34-5cf5c729edf4.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4d68c5/w_1300x760/al-hamoor-al-thahabi-used-cars/18e86338-9685-4b37-a40e-dc106bc42457.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3047ad/w_1300x760/al-hamoor-al-thahabi-used-cars/25f2f448-2969-4f0a-880e-a31ba0e43ebb.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0dbacc/w_1300x760/al-hamoor-al-thahabi-used-cars/77ba9f5d-39a4-4455-ab43-df85a28c7d1b.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/cc21ff/w_1300x760/al-hamoor-al-thahabi-used-cars/85893ade-6c4d-40fc-824e-f18813ace0df.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4889f2/w_1300x760/al-hamoor-al-thahabi-used-cars/3544b244-ff9b-4158-bed7-ec703b9b5819.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/17c621/w_1300x760/al-hamoor-al-thahabi-used-cars/f666597e-386c-4bd4-8282-f26b60b48d57.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/916bbc/w_1300x760/al-hamoor-al-thahabi-used-cars/14b3346e-17b6-4749-a443-f2b5d5ff5e92.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f26236/w_1300x760/al-hamoor-al-thahabi-used-cars/55deb13a-2a55-4cb3-9cb2-ea6bc1a797de.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/60467d/w_1300x760/al-hamoor-al-thahabi-used-cars/1d1eff31-abeb-4497-b142-6152f5363aab.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/812268/w_1300x760/al-hamoor-al-thahabi-used-cars/669ed0c4-55b1-4b38-9db2-f70ce25ce627.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/cc3b65/w_1300x760/al-hamoor-al-thahabi-used-cars/8b3c2a10-0e17-44eb-b602-a641862b2640.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c51327/w_1300x760/al-hamoor-al-thahabi-used-cars/bb58eb3b-8afc-4d83-973e-e60e57e62489.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/67b223/w_1300x760/al-hamoor-al-thahabi-used-cars/1a714a6b-d52c-4fec-9381-24a134c5047a.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3758dd/w_1300x760/al-hamoor-al-thahabi-used-cars/f04b70c0-ab4b-4899-bfad-c8f9b1d3b54f.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d2891a/w_1300x760/al-hamoor-al-thahabi-used-cars/bcec71a0-e78f-47b2-b24f-ad463cd0d2e0.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a7935a/130x76/al-hamoor-al-thahabi-used-cars/76cb6be6-0d43-4c16-b5e7-a8f6da8e491c.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4c8569/130x76/al-hamoor-al-thahabi-used-cars/f06db443-393c-40d7-a563-dcffe25dab73.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/91c605/130x76/al-hamoor-al-thahabi-used-cars/375177b4-da54-4df6-ae1e-b50a404964e2.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/dc17c0/130x76/al-hamoor-al-thahabi-used-cars/2db29316-fd08-4fd8-b656-c94f46c3f7ef.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3c7d8d/130x76/al-hamoor-al-thahabi-used-cars/81cd36f4-304d-4b50-b524-fa249625d35d.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8fcadc/130x76/al-hamoor-al-thahabi-used-cars/ae81ada0-875b-450f-ae60-0d1086ad7590.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b3369d/130x76/al-hamoor-al-thahabi-used-cars/e2354782-a876-4118-bd34-5cf5c729edf4.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f08822/130x76/al-hamoor-al-thahabi-used-cars/18e86338-9685-4b37-a40e-dc106bc42457.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/93223b/130x76/al-hamoor-al-thahabi-used-cars/25f2f448-2969-4f0a-880e-a31ba0e43ebb.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6420fe/130x76/al-hamoor-al-thahabi-used-cars/77ba9f5d-39a4-4455-ab43-df85a28c7d1b.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/52f6d8/130x76/al-hamoor-al-thahabi-used-cars/85893ade-6c4d-40fc-824e-f18813ace0df.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b5750d/130x76/al-hamoor-al-thahabi-used-cars/3544b244-ff9b-4158-bed7-ec703b9b5819.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1b88f6/130x76/al-hamoor-al-thahabi-used-cars/f666597e-386c-4bd4-8282-f26b60b48d57.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b5d793/130x76/al-hamoor-al-thahabi-used-cars/14b3346e-17b6-4749-a443-f2b5d5ff5e92.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a62dae/130x76/al-hamoor-al-thahabi-used-cars/55deb13a-2a55-4cb3-9cb2-ea6bc1a797de.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/bc2614/130x76/al-hamoor-al-thahabi-used-cars/1d1eff31-abeb-4497-b142-6152f5363aab.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f9f9bb/130x76/al-hamoor-al-thahabi-used-cars/669ed0c4-55b1-4b38-9db2-f70ce25ce627.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1ef83f/130x76/al-hamoor-al-thahabi-used-cars/8b3c2a10-0e17-44eb-b602-a641862b2640.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3bd62d/130x76/al-hamoor-al-thahabi-used-cars/bb58eb3b-8afc-4d83-973e-e60e57e62489.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4acb8d/130x76/al-hamoor-al-thahabi-used-cars/1a714a6b-d52c-4fec-9381-24a134c5047a.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5fb3cf/130x76/al-hamoor-al-thahabi-used-cars/f04b70c0-ab4b-4899-bfad-c8f9b1d3b54f.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/599cfe/130x76/al-hamoor-al-thahabi-used-cars/bcec71a0-e78f-47b2-b24f-ad463cd0d2e0.jpeg",
+                       "alt":  "Toyota Rush EX 1.5L EX"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiToyota DubaiRush DubaiRush 2023 DubaiToyota Rush EX 1.5L EX\nToyota Rush EX 1.5L EX\nSave\n1 / 22\nHighlights\nLocation\nDubai\nModel year\n2023\nKilometers\n121,000 Km\nEngine capacity\n1.5 L\nSpecs\nGCC\nDescription\nSeller Comments\n\nToyota Rush 20203 1.5 full automatic\nIΓÇÖm very excellent condition\nNo need any work\nOriginal paint\nWithout any accident\nMobile or WhatsApp\n\nSee full description\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\n7+ seat capacity with captain chairs\nΓÇó\nLowest depreciation in class\nΓÇó\n5-Star NCAP safety rating\n\nThis 2023 Toyota Rush EX is a standout choice for families in the GCC who need the versatility of seven seats combined with the legendary reliability of a Toyota powertrain. As an EX trim, this vehicle offers the premium aesthetic and interior refinements that help it retain high value in the pre-owned market. Given its white exterior, it is perfectly suited for the intense summer heat of the UAE and Saudi Arabia, which also ensures it remains one of the most liquid assets for future resale. While the mileage reflects a busy life on the road, these vehicles are engineered for high-utilization environments and long-distance highway commutes common in the region. Buyers transition to the Rush because it offers crossover agility with a rear-wheel-drive platform that handles heavy family loads more effectively than front-wheel-drive competitors. Ownership is simplified by the fact that this is a GCC-spec model, ensuring full compatibility with regional service centers and air conditioning systems optimized for 50-degree Celsius peaks.\n\nRead more\nSpecs \u0026 features\nMake\nToyota\nModel\nRush\nTrim\nEX\nColor\nWhite\nInterior color\nBlack\nEngine capacity\n1.5 L\nCylinders\n4 Cylinders\nHorsepower\n103 HP\nTransmission\nAutomatic\nDrive type\nRear Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSUV/Crossover\nNumber of doors\n5 Doors\nSeating capacity\n7 seater\nWheel size\n18\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n05 Sep, 2026\nInterior\nInstrument cluster\nExterior\nLED headlights\nRoof Rails\nDaytime running lights (DRLs)\nPower-folding side mirrors\nExterior door handles\nSafety\nTraction Control\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nSide airbags\nSide curtain airbags\nComfort \u0026 Convenience\nSteering wheel adjustment\nPush-button start\nClimate Control\nAir conditioning\nParking sensors\nSteering wheel height adjustment\nInfotainment\nUSB port\nSpeakers\n$ 11,800\n$ 14,168\nFinancing from\n618\n/ month\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nToyota Rush EX\n$ 12,806\nWarranty\nDubai\nGCC\n2023\n97.3K Km\nToyota Rush EX\n$ 13,351\nWarranty\nDubai\nGCC\n2023\n75.6K Km\nToyota Rush EX\n$ 13,000\nDubai\nGCC\n2022\n67.7K Km\nFeatured\nToyota Rush EX\n$ 12,900\nAjman\nGCC\n2023\n65K Km\nToyota Rush GX\n$ 12,806\nWarranty\nDubai\nGCC\n2023\n86.4K Km\nToyota Rush EX\n$ 12,800\nDubai\nGCC\n2022\n66.8K Km\nToyota Rush EX\n$ 12,043\nWarranty\nDubai\nGCC\n2023\n101.8K Km\nToyota Rush GX\n$ 12,888\nWarranty\nDubai\nGCC\n2023\n98.4K Km\nPeople also viewed\nPremium\nMazda CX-5 TREND\n$ 15,000\nWarranty\nDubai\nGCC\n2023\n127K Km\nFeatured\nNew Kia Seltos EX\n$ 14,400\nDubai\nChinese\n2025\n0 Km\nMazda CX-5 GS\n$ 12,200\nDubai\nGCC\n2021\n75K Km\nToyota Corolla XLI\n$ 11,200\nDubai\nGCC\n2022\n73.1K Km\nNew Suzuki Fronx GLX\n$ 11,444\nDubai\nGCC\n2024\n0 Km\nRelated links\nToyota Rush Information Section\nToyota\nToyota Rush\nToyota Rush 1.5L EX\nUsed Toyota Rush by Location\nUsed Toyota Rush UAE (45)\nUsed Toyota Rush Dubai (42)\nUsed Toyota Rush Sharjah (2)\nUsed Toyota Rush Ajman (1)\nUsed Toyota Rush by Year\nUsed Toyota Rush 2023 (25)\nUsed Toyota Rush 2022 (7)\nUsed Toyota Rush 2020 (5)\nUsed Toyota Rush 2024 (4)\nUsed Toyota Rush 2019 (2)\nUsed Toyota Rush 2021 (1)\nUsed Toyota Rush 2025 (1)\nSome other models of Toyota\nUsed Toyota Raize in Dubai (20)\nUsed Toyota Venza in Dubai (1)\nUsed Toyota Yaris Cross in Dubai (1)\nUsed Toyota Rumion in Dubai (4)\nUsed Toyota Veloz in Dubai (4)\nUsed Toyota RAV4 in Dubai (479)\nUsed Toyota Urban Cruiser in Dubai (6)\nUsed Toyota C-HR in Dubai (29)\nUsed Toyota Corolla Cross in Dubai (26)\nOther links\nJapanese Cars in Dubai\nMid Size cars for sale in Dubai\nFamily cars for sale in Dubai\nInstallment cars for sale in Dubai\nGCC cars for sale in Dubai\nCars under 60000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 916417\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nToyota Rush 20203 1.5 full automatic\nIΓÇÖm very excellent condition\nNo need any work\nOriginal paint\nWithout any accident\nMobile or WhatsApp\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\n7+ seat capacity with captain chairs\nLowest depreciation in class\n5-Star NCAP safety rating\nSummary\n\nThis 2023 Toyota Rush EX is a standout choice for families in the GCC who need the versatility of seven seats combined with the legendary reliability of a Toyota powertrain. As an EX trim, this vehicle offers the premium aesthetic and interior refinements that help it retain high value in the pre-owned market. Given its white exterior, it is perfectly suited for the intense summer heat of the UAE and Saudi Arabia, which also ensures it remains one of the most liquid assets for future resale. While the mileage reflects a busy life on the road, these vehicles are engineered for high-utilization environments and long-distance highway commutes common in the region. Buyers transition to the Rush because it offers crossover agility with a rear-wheel-drive platform that handles heavy family loads more effectively than front-wheel-drive competitors. Ownership is simplified by the fact that this is a GCC-spec model, ensuring full compatibility with regional service centers and air conditioning systems optimized for 50-degree Celsius peaks.\n\nThis Car vs Other 2023 Rushs\n\nCompared to other 2023 models in the GCC, this vehicle has been driven extensively, likely on the long highways connecting the Emirates or major cities in Saudi Arabia. In the GCC market, where the average annual mileage often exceeds 25,000 km, this vehicle sits slightly above the average but benefits from being a single-year-old model with modern safety tech. The white exterior is the gold standard for resale in the region, as it reflects the most solar heat and hides desert dust better than darker palettes. This specific example represents a newer model year at a price point that makes it accessible for those who might otherwise be looking at older 2020 or 2021 models with similar mileage. Choosing a 2023 model over an older high-mileage alternative ensures you have the latest interior materials and structural reinforcements.\n\nEX vs Lower Trims\n\nThe EX trim resides at the top of the range, offering meaningful upgrades that GCC buyers find essential for daily comfort. Unlike the base GX trim, the EX features upgraded LED headlamps and distinctive chrome accents that give it a more premium presence on the road. Inside, you will find a more sophisticated climate control system and a high-quality touchscreen interface that supports better smartphone integration, which is a major advantage for navigating the fast-changing roads of Dubai or Riyadh. The EX also benefits from enhanced interior upholstery and smart entry with a push-start button, providing a more modern and convenient experience every time you step inside. These small luxuries are exactly what help the EX trim maintain a higher percentage of its value when it is time to sell.\n\nRush vs Segment Rivals\n\nThe Toyota Rush primarily competes with the Mitsubishi Xpander and the Suzuki Ertiga, but it holds a unique mechanical advantage that regional buyers appreciate. Unlike its rivals, the Rush utilizes a rear-wheel-drive layout, which provides better traction and durability when the car is fully loaded with seven passengers and luggage. While the Xpander offers a more futuristic look, the Rush leads in terms of ground clearance, standing at 220mm, which is vital for navigating high speed bumps and uneven gravel roads in developing residential areas. Furthermore, the Toyota service network in the GCC is the most extensive in the world, meaning you are never more than a short drive from an authorized technician whether you are in a major city or a remote town. The cabin cooling performance is also widely regarded as superior to the Suzuki, making it the more sensible choice for the peak summer months.\n\nRunning Costs \u0026 Resale\n\nRunning costs for this vehicle are among the lowest in the SUV segment thanks to a highly efficient 1.5-liter four-cylinder engine. In real-world GCC conditions, you can expect an average fuel consumption of approximately 16.3 km/L, making it incredibly economical for daily school runs and city commuting. Maintenance is straightforward and predictable, with service intervals every 10,000 km that are remarkably affordable at any authorized service center across the UAE, Oman, or Qatar. As a GCC-spec Toyota, this vehicle experiences some of the lowest depreciation rates in the global automotive market, often losing only 8-10% of its value annually compared to 15-20% for European counterparts. Parts are available in every corner of the region, ensuring that even after several years of ownership, repair costs remain manageable. This vehicle is widely considered a \u0027safe bet\u0027 for any buyer concerned with long-term financial exposure.\n\nPerformance \u0026 Capability\n\nWith 103 horsepower delivered to the rear wheels, the performance is tuned for reliability and efficiency rather than raw speed. The 220mm ground clearance is a standout figure for this segment, allowing the vehicle to handle light off-road paths and poorly paved surfaces with ease. It handles the stop-and-start traffic of Sheikh Zayed Road comfortably, and the four-speed automatic transmission is geared to keep the engine in its optimal torque range for city driving. While it isn\u0027t a desert dune basher, its rear-wheel-drive platform provides a level of ruggedness that front-wheel-drive crossovers simply cannot match. For family road trips, the 1.5-liter engine maintains highway speeds efficiently, ensuring that cross-country journeys are both stable and cost-effective. The turning radius is also impressively tight, making it one of the easiest 7-seaters to park in crowded malls or residential clusters.\n\nComfort \u0026 Cabin\n\nThe cabin is intelligently designed to maximize space within a compact footprint, offering three rows of seating that can accommodate seven passengers comfortably. One of the most critical features for GCC buyers is the powerful dual-zone air conditioning system, which includes dedicated rear vents to ensure third-row passengers stay cool during August afternoons. The EX trim adds more refined touchpoints and a well-insulated cabin that helps dampen road noise during high-speed highway cruising. The flexible seating arrangement allows the third row to be folded forward, creating a cavernous boot space for grocery hauls or camping gear. Large windows and a high seating position provide excellent visibility for the driver, which is a significant safety and comfort benefit in heavy multi-lane traffic. Every aspect of the interior is built with durability in mind, using materials that can withstand the high UV exposure typical of the Arabian Peninsula.\n\nSafety\n\nSafety is a primary pillar for the Rush, which boasts a 5-Star ASEAN NCAP rating, providing peace of mind for family-oriented buyers. It comes standard with six SRS airbags, protecting occupants across all rows, which is a feature often missing in entry-level vehicles from other brands. Active safety systems including Vehicle Stability Control (VSC) and Hill-start Assist Control (HAC) are particularly useful when navigating the varying elevations of the GCC\u0027s landscape. Anti-lock Braking Systems (ABS) and Electronic Brake-force Distribution (EBD) ensure the vehicle remains stable during emergency stops on sandy or hot asphalt surfaces. The inclusion of rear parking sensors and a high-mounted stop lamp contributes to safer urban driving in the high-density traffic of cities like Abu Dhabi or Doha.\n\nThe bottom line\n\nThis 2023 Toyota Rush EX is the perfect solution for a growing family that prioritizes long-term value and mechanical peace of mind. While the mileage is higher than average, the GCC-spec Toyota pedigree and the top-tier EX trim make this a highly reliable and smart financial move in today\u0027s market.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n7 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nBlack\nHorsepower\n103 HP\nModel year\n2023\nMake\nToyota\nModel\nRush\nColor\nWhite\nCylinders\n4 Cylinders\nDrive type\nRear Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSUV/Crossover\nNumber of doors\n5 Doors\nWheel size\n18\"\nService history\nNo\nSpecs\nGCC\nKilometers\n121,000 Km\nFuel Type\nPetrol\nEngine capacity\n1.5 L\nInterior\nInstrument cluster\nExterior\nLED headlights\nRoof Rails\nDaytime running lights (DRLs)\nPower-folding side mirrors\nExterior door handles\nSafety\nTraction Control\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nSide airbags\nSide curtain airbags\nComfort \u0026 Convenience\nSteering wheel adjustment\nPush-button start\nClimate Control\nAir conditioning\nParking sensors\nSteering wheel height adjustment\nInfotainment\nUSB port\nSpeakers\nFinance this car\nLoan Calculator\n618\nEstimated monthly payment\nDown payment\n20%\n8,600\nLoan period\n60\nmonths\nPlease note\n\nWe have assumed a 2.99% interest rate. 20% is usually a minimum downpayment. This is for illustrative purposes only. Please ask your financial adviser or service for advice. Terms and condition apply.\n\nContact seller\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}

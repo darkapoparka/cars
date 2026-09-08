@@ -1,0 +1,250 @@
+{
+    "url":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html",
+    "title":  "Mercedes Benz CLA250 Premium + 2.0L",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html#webpage",
+                                              "url":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html",
+                                              "name":  "Mercedes Benz CLA250 Premium + 2.0L",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html#car",
+                                              "url":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html",
+                                              "name":  "Mercedes Benz CLA250 Premium + 2.0L",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/mercedes-benz#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/mercedes-benz/cla-250#model"
+                                                        },
+                                              "vehicleModelDate":  "2025",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/5f3661/960x540/al-hamoor-al-thahabi-used-cars/61d4dea1-5611-4c37-bf1f-6581186c1d86.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html#offer",
+                                                             "price":  "26000",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "22000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "Sedan",
+                                              "color":  "Brown",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "4",
+                                              "seatingCapacity":  "5",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/FrontWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Black",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "In very excellent condition \n0507283866"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/bbd41b/w_1300x760/al-hamoor-al-thahabi-used-cars/61d4dea1-5611-4c37-bf1f-6581186c1d86.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a2165a/w_1300x760/al-hamoor-al-thahabi-used-cars/1fe2a891-cd02-4250-82af-ea1d2100aa56.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4f9abf/w_1300x760/al-hamoor-al-thahabi-used-cars/a2603a49-97f5-47bd-851b-b75b2db08a91.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/27c4c8/w_1300x760/al-hamoor-al-thahabi-used-cars/28847673-ef3f-4f34-92b9-f926b086ad0d.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/411fc6/w_1300x760/al-hamoor-al-thahabi-used-cars/17e98ce1-970c-431c-994f-fcb2d100a4ca.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/dd638d/w_1300x760/al-hamoor-al-thahabi-used-cars/ddf68e77-fb2f-44f8-b036-f3d9e4633e04.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ab9e77/w_1300x760/al-hamoor-al-thahabi-used-cars/f7fd5e38-b650-4070-9dae-1b31c45e218a.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/077786/w_1300x760/al-hamoor-al-thahabi-used-cars/076a41a0-522b-4245-809c-1ba82184f652.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3c0f22/w_1300x760/al-hamoor-al-thahabi-used-cars/85668d74-6274-4c96-b06b-fee1113be20c.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5c0455/w_1300x760/al-hamoor-al-thahabi-used-cars/1f7552ba-121d-4097-95bc-5d1304e532aa.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/df5b33/w_1300x760/al-hamoor-al-thahabi-used-cars/b5191472-661f-4b11-b191-7290bdad8afb.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/e910de/w_1300x760/al-hamoor-al-thahabi-used-cars/177cc2e1-f063-43a8-8f46-432f7d180a4a.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/9a823b/w_1300x760/al-hamoor-al-thahabi-used-cars/b61926dc-377d-429f-ac1c-ae03c53c7f98.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ec9dc2/w_1300x760/al-hamoor-al-thahabi-used-cars/2678ec99-8525-4372-9bbd-b0b4c13d089f.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b2b9e7/w_1300x760/al-hamoor-al-thahabi-used-cars/93e5c2cb-b78d-4ddf-bc0e-a4744956af4d.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/03d741/w_1300x760/al-hamoor-al-thahabi-used-cars/40361c4c-8127-4fb1-bbe8-25f440b609bc.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/753252/w_1300x760/al-hamoor-al-thahabi-used-cars/f17ca97b-b0c1-425f-979a-f672a58847ed.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ef5ac1/w_1300x760/al-hamoor-al-thahabi-used-cars/b3716a11-abb3-4678-8888-71c5fcc628f1.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/93d0c7/w_1300x760/al-hamoor-al-thahabi-used-cars/d8b4923b-2f79-4eb0-8c5c-21f5d05126ef.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8c453b/w_1300x760/al-hamoor-al-thahabi-used-cars/fcefcbca-fa73-4d7a-ac9b-5f59f260b666.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/bde1f5/w_1300x760/al-hamoor-al-thahabi-used-cars/deb6eb69-8760-4841-aff9-2b98bdbe8b6a.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/57ff1d/w_1300x760/al-hamoor-al-thahabi-used-cars/fee3ecbd-d7b8-4bfa-85c3-82522977d91c.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a3c624/w_1300x760/al-hamoor-al-thahabi-used-cars/93af45cf-9c0c-4e5b-b939-a2c3e87d6c28.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7c675c/130x76/al-hamoor-al-thahabi-used-cars/61d4dea1-5611-4c37-bf1f-6581186c1d86.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4b8ab0/130x76/al-hamoor-al-thahabi-used-cars/1fe2a891-cd02-4250-82af-ea1d2100aa56.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/9111af/130x76/al-hamoor-al-thahabi-used-cars/a2603a49-97f5-47bd-851b-b75b2db08a91.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4e44d6/130x76/al-hamoor-al-thahabi-used-cars/28847673-ef3f-4f34-92b9-f926b086ad0d.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/cf4a7e/130x76/al-hamoor-al-thahabi-used-cars/17e98ce1-970c-431c-994f-fcb2d100a4ca.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/49659e/130x76/al-hamoor-al-thahabi-used-cars/ddf68e77-fb2f-44f8-b036-f3d9e4633e04.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/26b35a/130x76/al-hamoor-al-thahabi-used-cars/f7fd5e38-b650-4070-9dae-1b31c45e218a.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8e04dd/130x76/al-hamoor-al-thahabi-used-cars/076a41a0-522b-4245-809c-1ba82184f652.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f36c25/130x76/al-hamoor-al-thahabi-used-cars/85668d74-6274-4c96-b06b-fee1113be20c.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/25e47c/130x76/al-hamoor-al-thahabi-used-cars/1f7552ba-121d-4097-95bc-5d1304e532aa.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/595315/130x76/al-hamoor-al-thahabi-used-cars/b5191472-661f-4b11-b191-7290bdad8afb.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0df68f/130x76/al-hamoor-al-thahabi-used-cars/177cc2e1-f063-43a8-8f46-432f7d180a4a.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7e64fa/130x76/al-hamoor-al-thahabi-used-cars/b61926dc-377d-429f-ac1c-ae03c53c7f98.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7b68b7/130x76/al-hamoor-al-thahabi-used-cars/2678ec99-8525-4372-9bbd-b0b4c13d089f.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/37e001/130x76/al-hamoor-al-thahabi-used-cars/93e5c2cb-b78d-4ddf-bc0e-a4744956af4d.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/aca5cb/130x76/al-hamoor-al-thahabi-used-cars/40361c4c-8127-4fb1-bbe8-25f440b609bc.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/42cf1d/130x76/al-hamoor-al-thahabi-used-cars/f17ca97b-b0c1-425f-979a-f672a58847ed.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5bdd78/130x76/al-hamoor-al-thahabi-used-cars/b3716a11-abb3-4678-8888-71c5fcc628f1.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/39ee46/130x76/al-hamoor-al-thahabi-used-cars/d8b4923b-2f79-4eb0-8c5c-21f5d05126ef.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/173e73/130x76/al-hamoor-al-thahabi-used-cars/fcefcbca-fa73-4d7a-ac9b-5f59f260b666.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7c5524/130x76/al-hamoor-al-thahabi-used-cars/deb6eb69-8760-4841-aff9-2b98bdbe8b6a.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/58faa3/130x76/al-hamoor-al-thahabi-used-cars/fee3ecbd-d7b8-4bfa-85c3-82522977d91c.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/171c16/130x76/al-hamoor-al-thahabi-used-cars/93af45cf-9c0c-4e5b-b939-a2c3e87d6c28.jpeg",
+                       "alt":  "Mercedes Benz CLA250 Premium + 2.0L"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiMercedes Benz DubaiCLA-Class DubaiCLA250 DubaiCLA250 2025 DubaiMercedes Benz CLA250 Premium + 2.0L\nMercedes Benz CLA250 Premium + 2.0L\nSave\n1 / 23\nHighlights\nLocation\nDubai\nModel year\n2025\nKilometers\n22,000 Km\nEngine capacity\n2 L\nSpecs\nAmerican\nDescription\nSeller Comments\n\nIn very excellent condition\n\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\nMost advanced ADAS standard\nΓÇó\n5-Star NCAP safety rating\nΓÇó\nTop-tier audio system standard\n\nThis 2025 model presents a unique opportunity to own a nearly-new premium sedan with mileage that is significantly lower than the GCC annual average for executive commuters. While configured to American specifications, this vehicle offers a high-end luxury experience that typically commands a much higher price point than its local-spec counterparts, making it an excellent entry into the brand. The specific trim level ensures a sophisticated cabin environment that stands out from base models, while the unique exterior shade offers a distinguished look often favored by buyers seeking individuality. It represents a balanced choice for professionals who value agile city performance and a tech-heavy interior for their daily commute across the UAE. For a GCC buyer, the most important consideration is the significant savings realized on this import while still benefiting from a vehicle that is mechanically current with 2025 technology and design. This is a sharp, modern choice for anyone looking to upgrade their daily driving experience without the steep initial depreciation of a showroom-fresh unit.\n\nRead more\nSpecs \u0026 features\nMake\nMercedes Benz\nModel\nCLA250\nTrim\nPREMIUM\nColor\nBrown\nInterior color\nBlack\nEngine capacity\n2 L\nCylinders\n4 Cylinders\nHorsepower\n224 HP\nTransmission\nAutomatic\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nSeating capacity\n5 seater\nWheel size\n18\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n05 Sep, 2026\nExterior\nLED headlights\nPower-folding side mirrors\nSafety\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nSide airbags\nSide curtain airbags\nKnee airbags\nComfort \u0026 Convenience\nKeyless entry\nAdaptive cruise control\nParking assist\nPush-button start\nClimate Control\nCruise Control\nAir conditioning\nSmart key\nParking sensors\nInfotainment\nApple CarPlay\nBluetooth connectivity\nNavigation system\nUSB port\nAndroid Auto\nSpeakers\nDisplay screen\nTouchscreen\n$ 26,000\n$ 32,697\nFinancing from\n1,365\n/ month\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nMercedes Benz CLA250 PREMIUM\n$ 35,300\nWarranty\nSharjah\nAmerican\n2025\n5.4K Km\nMercedes Benz CLA250 PREMIUM\n$ 32,800\nDubai\nGCC\n2021\n87K Km\nPremium\nMercedes Benz CLA250\n$ 27,247\nAbu Dhabi\nGCC\n2021\n60.7K Km\nFeatured\nMercedes Benz CLA250 PREMIUM\n$ 37,738\nWarranty\nDubai\nGCC\n2024\n42.9K Km\nFeatured\nMercedes Benz CLA250 PREMIUM\n$ 37,411\nWarranty\nDubai\nGCC\n2024\n59.9K Km\nMercedes Benz CLA250 AMG\n$ 33,700\nDubai\nKorean\n2023\n13.9K Km\nFeatured\nMercedes Benz CLA250 AMG\n$ 34,800\nDubai\nAmerican\n2023\n84K Km\nFeatured\nMercedes Benz CLA250 AMG\n$ 27,100\nDubai\nOther\n2021\n49K Km\nPeople also viewed\nPremium\nMercedes Benz C250 CGI\n$ 6,600\nWarranty\nDubai\nGCC\n2012\n130K Km\nFeatured\nNew Nissan Armada SL\n$ 52,600\nDubai\nOther\n2024\n0 Km\nFeatured\nNew Land Rover Range Rover HSE P400\n$ 167,100\nDubai\nCanadian\n2025\n12 Km\nFeatured\nMercedes Benz CLA 200 PREMIUM\n$ 37,800\nAjman\nGCC\n2024\n9K Km\nLand Rover Range Rover HSE P530\n$ 131,200\nWarranty\nDubai\nGCC\n2024\n90.7K Km\nMercedes Benz CLA35 AMG 4MATIC\n$ 43,300\nWarranty\nSharjah\nOther\n2025\n8K Km\nRelated links\nMercedes Benz CLA250 Information Section\nMercedes Benz\nMercedes Benz CLA250\nMercedes Benz CLA250 4MATIC\nUsed Mercedes Benz CLA250 by Location\nUsed Mercedes Benz CLA250 UAE (38)\nUsed Mercedes Benz CLA250 Dubai (27)\nUsed Mercedes Benz CLA250 Sharjah (9)\nUsed Mercedes Benz CLA250 Abu Dhabi (1)\nUsed Mercedes Benz CLA250 Ajman (1)\nUsed Mercedes Benz CLA250 by Year\nUsed Mercedes Benz CLA250 2024 (10)\nUsed Mercedes Benz CLA250 2020 (6)\nUsed Mercedes Benz CLA250 2023 (6)\nUsed Mercedes Benz CLA250 2021 (5)\nUsed Mercedes Benz CLA250 2018 (3)\nUsed Mercedes Benz CLA250 2022 (3)\nUsed Mercedes Benz CLA250 2025 (3)\nUsed Mercedes Benz CLA250 2014 (1)\nUsed Mercedes Benz CLA250 2019 (1)\nSome other models of Mercedes Benz\nUsed Mercedes Benz CLA 45 AMG in Dubai (11)\nUsed Mercedes Benz CLA 200 in Dubai (9)\nUsed Mercedes Benz CLA35 AMG in Dubai (8)\nUsed Mercedes Benz CLA180 in Dubai (1)\nUsed Mercedes Benz CLA 220 in Dubai (1)\nUsed Mercedes Benz E220 in Dubai (4)\nUsed Mercedes Benz S560 L in Dubai (5)\nUsed Mercedes Benz C200 in Dubai (95)\nUsed Mercedes Benz C300 in Dubai (121)\nOther links\nGerman Cars in Dubai\nMid Size cars for sale in Dubai\nFamily cars for sale in Dubai\nInstallment cars for sale in Dubai\nImported cars for sale in Dubai\nCars under 125000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 965722\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nIn very excellent condition\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\nMost advanced ADAS standard\n5-Star NCAP safety rating\nTop-tier audio system standard\nSummary\n\nThis 2025 model presents a unique opportunity to own a nearly-new premium sedan with mileage that is significantly lower than the GCC annual average for executive commuters. While configured to American specifications, this vehicle offers a high-end luxury experience that typically commands a much higher price point than its local-spec counterparts, making it an excellent entry into the brand. The specific trim level ensures a sophisticated cabin environment that stands out from base models, while the unique exterior shade offers a distinguished look often favored by buyers seeking individuality. It represents a balanced choice for professionals who value agile city performance and a tech-heavy interior for their daily commute across the UAE. For a GCC buyer, the most important consideration is the significant savings realized on this import while still benefiting from a vehicle that is mechanically current with 2025 technology and design. This is a sharp, modern choice for anyone looking to upgrade their daily driving experience without the steep initial depreciation of a showroom-fresh unit.\n\nThis Car vs Other 2025 CLA250s\n\nWith just 22,000 km on the odometer, this vehicle has covered less distance than the typical 25,000 km annual average seen in the high-mileage driving environment of the UAE and Saudi Arabia. Most 2025 models currently entering the used market are either brand new or have been used heavily as rental or corporate fleet vehicles, but this example shows the light wear of a private commuter. The American regional specification allows for a highly competitive entry price compared to GCC-spec units which often carry a heavy local dealer premium. While the exterior color is a more niche, sophisticated choice, it offers better heat rejection properties than darker blacks while remaining more exclusive than the standard white seen on every corner. Finding a 2025 model at this mileage provides the mechanical peace of mind of a vehicle that is still essentially in its break-in phase. It represents a strategic purchase for a buyer who prioritizes the latest tech and model year over regional origin.\n\nPREMIUM vs Lower Trims\n\nStepping up to this specific trim introduces a suite of upgrades that significantly enhance the daily ownership experience in the Gulf. Unlike base versions, this model features an upgraded infotainment interface with dual high-resolution displays that remain legible even under the harsh midday sun common in Dubai and Riyadh. The inclusion of a premium branded audio system ensures that long highway stretches between emirates are far more enjoyable with superior sound staging and clarity. You also benefit from enhanced cabin materials, including soft-touch surfaces and ambient lighting that allows for a customizable interior mood during evening drives. Crucially for our climate, the climate control system in this trim is designed for rapid cabin cooling, a must-have for the summer months. These features not only improve comfort but also ensure the car remains a desirable asset in the secondary market when it comes time to upgrade.\n\nCLA250 vs Segment Rivals\n\nThis sedan competes directly with the BMW 2 Series Gran Coupe and the Audi A3, but it leads the pack in terms of pure aesthetic drama and interior layout. While rivals often opt for a more conservative dashboard design, the layout here feels like a scaled-down version of a flagship limousine, offering a level of prestige that resonates well in the luxury-conscious GCC market. The efficient 2.0-liter turbocharged engine provides a punchy 224 horsepower, offering better highway overtaking confidence than the base engines found in entry-level competitors. In terms of cabin technology, the user interface is widely considered the most intuitive and visually impressive in the compact segment. For the buyer who wants the status associated with a premium German badge but needs a footprint that is easy to park in crowded areas like Dubai Marina or Downtown Riyadh, this model is the clear winner. It balances the requirements of a city car with the long-distance poise required for weekend trips to Fujairah or Al Ain.\n\nRunning Costs \u0026 Resale\n\nReal-world fuel consumption for this 2.0-liter powertrain is impressive, typically averaging around 6.5 to 7.0 liters per 100km on the highway, making it ideal for the long-distance commutes between Abu Dhabi and Dubai. In heavy stop-start city traffic, you can expect figures to remain economical due to the efficient 4-cylinder architecture and smooth automatic transmission. While this is an American spec vehicle, parts availability across the GCC is excellent as the mechanical components are shared with local versions, and independent specialist garages in cities like Sharjah and Al Quoz are well-versed in maintaining this platform. Authorized service centers are plentiful across the UAE, Saudi Arabia, and Kuwait, ensuring you are never far from professional care. European sedans in this category typically see an annual depreciation of 12-15% in the local market; however, the lower entry price of an American spec unit often mitigates the initial hit, resulting in better value retention over a 3-year ownership cycle. For the best resale results, maintaining a detailed service history with a reputable specialist is highly recommended.\n\nPerformance \u0026 Capability\n\nThe standout performance figure is the 224 horsepower delivered by the turbocharged engine, which provides a 0-100 km/h sprint in the mid-6-second range. This agility is particularly useful for merging onto fast-moving UAE highways where speed limits often reach 140 km/h. The front-wheel-drive configuration is tuned for stability and predictable handling, making it a stress-free companion for both urban navigation and coastal highway cruising. The automatic transmission is calibrated to keep the engine in its power band for quick overtakes while shifting seamlessly to higher gears to save fuel during steady-state driving. Despite its sporty silhouette, the ground clearance is sufficient for typical paved roads and the occasional graded gravel path found near suburban villas. This is not a desert off-roader, but as a dedicated road car, it offers a refined and composed ride that masks its compact dimensions. The steering is light and precise, allowing for effortless maneuvering through tight multi-story parking garages in major GCC malls.\n\nComfort \u0026 Cabin\n\nInside, the focus is on a high-tech, five-seat environment that prioritizes the driver and front passenger experience. The seating is ergonomically designed to provide support during long-distance drives across the borders of the GCC, finished in durable materials that resist the wear of high temperatures. The air conditioning system is remarkably robust, engineered to maintain a chilled cabin even when exterior temperatures soar above 45┬░C. Rear passengers benefit from dedicated cooling vents, a critical feature for family use in this region. The cabin insulation is designed to minimize wind and road noise, ensuring a quiet sanctuary during high-speed highway travel. The boot space is surprisingly generous for a compact sedan, easily accommodating several suitcases for a trip to the airport or a full load of groceries. High-quality sun protection glass helps keep the interior cool and protects the premium surfaces from UV damage over time.\n\nSafety\n\nSafety is a hallmark of this model, which carries a 5-star rating from international testing bodies. This trim comes standard with an advanced suite of driver assistance systems that are particularly beneficial in the GCC\u0027s fast-paced driving environment. Blind-spot monitoring is a vital tool for navigating multi-lane highways where lane changes occur at high speeds. Adaptive cruise control makes the long, straight desert roads significantly less fatiguing by automatically maintaining a safe distance from the vehicle ahead. Collision mitigation systems and active braking assist provide an extra layer of protection against the unpredictable nature of city traffic. The chassis is constructed with high-strength steel to provide a rigid safety cell, while multiple airbags ensure comprehensive protection for all five occupants. These systems, which are often expensive options on rival vehicles, are integrated here to provide peace of mind regardless of road conditions.\n\nThe bottom line\n\nThis 2025 PREMIUM sedan is the perfect match for a young professional or a small family looking for the latest in German engineering and tech at a smarter price point. Given its low mileage and current-year status, this listing represents one of the most cost-effective ways to drive a nearly-new premium vehicle in the UAE today.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n5 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nBlack\nHorsepower\n224 HP\nModel year\n2025\nMake\nMercedes Benz\nModel\nCLA250\nColor\nBrown\nCylinders\n4 Cylinders\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nWheel size\n18\"\nService history\nNo\nSpecs\nAmerican\nKilometers\n22,000 Km\nFuel Type\nPetrol\nEngine capacity\n2 L\nExterior\nLED headlights\nPower-folding side mirrors\nSafety\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nSide airbags\nSide curtain airbags\nKnee airbags\nComfort \u0026 Convenience\nKeyless entry\nAdaptive cruise control\nParking assist\nPush-button start\nClimate Control\nCruise Control\nAir conditioning\nSmart key\nParking sensors\nInfotainment\nApple CarPlay\nBluetooth connectivity\nNavigation system\nUSB port\nAndroid Auto\nSpeakers\nDisplay screen\nTouchscreen\nFinance this car\nLoan Calculator\n1,365\nEstimated monthly payment\nDown payment\n20%\n19,000\nLoan period\n60\nmonths\nPlease note\n\nWe have assumed a 2.99% interest rate. 20% is usually a minimum downpayment. This is for illustrative purposes only. Please ask your financial adviser or service for advice. Terms and condition apply.\n\nContact seller\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}

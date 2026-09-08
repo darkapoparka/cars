@@ -1,0 +1,234 @@
+{
+    "url":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html",
+    "title":  "Nissan Sentra SV 1.6L (113 HP)",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html#webpage",
+                                              "url":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html",
+                                              "name":  "Nissan Sentra SV 1.6L (113 HP)",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html#car",
+                                              "url":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html",
+                                              "name":  "Nissan Sentra SV 1.6L (113 HP)",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/nissan#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/nissan/sentra#model"
+                                                        },
+                                              "vehicleModelDate":  "2021",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/7dafa3/960x540/al-hamoor-al-thahabi-used-cars/2c96513b-aed8-4723-a369-2acd1c42bed7.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html#offer",
+                                                             "price":  "6300",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "116000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "Sedan",
+                                              "color":  "Blue",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "4",
+                                              "seatingCapacity":  "5",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/FrontWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Black",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "In very good condition"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/af4b86/w_1300x760/al-hamoor-al-thahabi-used-cars/2c96513b-aed8-4723-a369-2acd1c42bed7.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3e0abe/w_1300x760/al-hamoor-al-thahabi-used-cars/89aad1f8-babe-4e82-9bb2-af8193ce4a9c.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/48de2c/w_1300x760/al-hamoor-al-thahabi-used-cars/0eda5261-c441-4e11-9e26-83ee56365ea6.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/db7031/w_1300x760/al-hamoor-al-thahabi-used-cars/5019831a-549a-4b56-9b44-606630cd5962.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f4706e/w_1300x760/al-hamoor-al-thahabi-used-cars/6821b19b-a412-4588-a129-c3940e5faca4.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/61690e/w_1300x760/al-hamoor-al-thahabi-used-cars/53d392cc-18b2-4b8b-b60b-00f8eb8e23bc.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d47eeb/w_1300x760/al-hamoor-al-thahabi-used-cars/5aa1bb86-9603-4696-88d7-41b5e321cf8d.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ac29eb/w_1300x760/al-hamoor-al-thahabi-used-cars/92b4abd7-b903-4dfe-927b-9a25a84751d2.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c7e691/w_1300x760/al-hamoor-al-thahabi-used-cars/737d3cc5-7fe6-44a2-83bc-0c6839804373.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/2002ea/w_1300x760/al-hamoor-al-thahabi-used-cars/978356a9-fb59-4e93-88bd-881c2c8b1ec0.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/52e238/w_1300x760/al-hamoor-al-thahabi-used-cars/2399bc40-b7b8-4b58-85d3-fc1693a6d639.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/e1d303/w_1300x760/al-hamoor-al-thahabi-used-cars/2f71e745-c488-4173-bdef-0912b712f3e0.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d3493f/w_1300x760/al-hamoor-al-thahabi-used-cars/cdfc9038-53c9-4695-8633-a1cda3724395.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/063964/w_1300x760/al-hamoor-al-thahabi-used-cars/f8d944f8-5177-47e8-ae07-12554ce13b5e.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ee083a/w_1300x760/al-hamoor-al-thahabi-used-cars/a734f49d-7287-479a-b3f9-cc8e98aef0fd.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/12293a/w_1300x760/al-hamoor-al-thahabi-used-cars/eb920376-100b-4a00-89fb-261f55d10b67.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1ccebf/w_1300x760/al-hamoor-al-thahabi-used-cars/0452b97c-20dc-4b9e-89d7-c286babdf67a.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/088b43/w_1300x760/al-hamoor-al-thahabi-used-cars/f447e59c-b6ff-45d8-a069-707a68f0f3b4.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/46025d/w_1300x760/al-hamoor-al-thahabi-used-cars/8e45049a-663f-4d45-a43b-5d4924ec0279.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4257e4/w_1300x760/al-hamoor-al-thahabi-used-cars/bcf8ad1e-d84c-4371-81a2-ba1cb5a786cf.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f60c9e/w_1300x760/al-hamoor-al-thahabi-used-cars/b3f61471-aba6-47e5-99e5-73f907e4358a.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d38f42/130x76/al-hamoor-al-thahabi-used-cars/2c96513b-aed8-4723-a369-2acd1c42bed7.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/e24202/130x76/al-hamoor-al-thahabi-used-cars/89aad1f8-babe-4e82-9bb2-af8193ce4a9c.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b575b1/130x76/al-hamoor-al-thahabi-used-cars/0eda5261-c441-4e11-9e26-83ee56365ea6.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f0b18b/130x76/al-hamoor-al-thahabi-used-cars/5019831a-549a-4b56-9b44-606630cd5962.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ca2475/130x76/al-hamoor-al-thahabi-used-cars/6821b19b-a412-4588-a129-c3940e5faca4.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/764c39/130x76/al-hamoor-al-thahabi-used-cars/53d392cc-18b2-4b8b-b60b-00f8eb8e23bc.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/bd4379/130x76/al-hamoor-al-thahabi-used-cars/5aa1bb86-9603-4696-88d7-41b5e321cf8d.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/273fe2/130x76/al-hamoor-al-thahabi-used-cars/92b4abd7-b903-4dfe-927b-9a25a84751d2.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/96ea5e/130x76/al-hamoor-al-thahabi-used-cars/737d3cc5-7fe6-44a2-83bc-0c6839804373.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d663cb/130x76/al-hamoor-al-thahabi-used-cars/978356a9-fb59-4e93-88bd-881c2c8b1ec0.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/839426/130x76/al-hamoor-al-thahabi-used-cars/2399bc40-b7b8-4b58-85d3-fc1693a6d639.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/26c9a5/130x76/al-hamoor-al-thahabi-used-cars/2f71e745-c488-4173-bdef-0912b712f3e0.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/739ce1/130x76/al-hamoor-al-thahabi-used-cars/cdfc9038-53c9-4695-8633-a1cda3724395.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ab9e3f/130x76/al-hamoor-al-thahabi-used-cars/f8d944f8-5177-47e8-ae07-12554ce13b5e.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/05880c/130x76/al-hamoor-al-thahabi-used-cars/a734f49d-7287-479a-b3f9-cc8e98aef0fd.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/11271e/130x76/al-hamoor-al-thahabi-used-cars/eb920376-100b-4a00-89fb-261f55d10b67.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6f9fb8/130x76/al-hamoor-al-thahabi-used-cars/0452b97c-20dc-4b9e-89d7-c286babdf67a.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/38753d/130x76/al-hamoor-al-thahabi-used-cars/f447e59c-b6ff-45d8-a069-707a68f0f3b4.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b716b8/130x76/al-hamoor-al-thahabi-used-cars/8e45049a-663f-4d45-a43b-5d4924ec0279.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a0e1d2/130x76/al-hamoor-al-thahabi-used-cars/bcf8ad1e-d84c-4371-81a2-ba1cb5a786cf.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3d1dcb/130x76/al-hamoor-al-thahabi-used-cars/b3f61471-aba6-47e5-99e5-73f907e4358a.jpeg",
+                       "alt":  "Nissan Sentra SV 1.6L (113 HP)"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiNissan DubaiSentra DubaiSentra 2021 DubaiNissan Sentra SV 1.6L (113 HP)\nNissan Sentra SV 1.6L (113 HP)\nSave\n1 / 21\nHighlights\nLocation\nDubai\nModel year\n2021\nKilometers\n116,000 Km\nEngine capacity\n1.6 L\nSpecs\nAmerican\nDescription\nSeller Comments\n\nIn very good condition\n\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\nMost advanced ADAS standard\nΓÇó\n5-Star NCAP safety rating\nΓÇó\nLowest running cost in class\n\nThis specific sedan represents a high-value opportunity for GCC commuters seeking a modern, technology-rich vehicle at an accessible price point. While being an American-spec model, it offers a sophisticated Blue exterior that stands out in a market often dominated by neutral tones while remaining easy to maintain. The SV trim provides a significant leap in interior quality and driver assistance tech compared to base models, making it feel several years newer than its competitors. With a highly efficient 1.6L engine, it is designed for those who prioritize long-term savings on fuel and maintenance without sacrificing modern aesthetics. This generation of the Nissan Sentra is celebrated for its dramatic redesign, offering a wider, more premium stance that rivals the comfort of much larger sedans. For a buyer in the UAE or wider GCC, this listing provides a balance of low daily operating costs and a suite of safety features that are often optional on other cars in this segment.\n\nRead more\nSpecs \u0026 features\nMake\nNissan\nModel\nSentra\nTrim\nSV\nColor\nBlue\nInterior color\nBlack\nEngine capacity\n1.6 L\nCylinders\n4 Cylinders\nHorsepower\n113 HP\nTransmission\nAutomatic\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nSeating capacity\n5 seater\nWheel size\n17\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n05 Sep, 2026\nExterior\nLED headlights\nSafety\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nComfort \u0026 Convenience\nKeyless entry\nPush-button start\nAir conditioning\nSmart key\nParking sensors\nInfotainment\nUSB port\nSpeakers\n$ 6,300\nFinancing from\n331\n/ month\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nNissan Sentra S\n$ 6,000\nWarranty\nAbu Dhabi\nGCC\n2018\n116K Km\nNissan Sentra S\n$ 4,900\nSharjah\nGCC\n2018\n193K Km\nNissan Sentra SV\n$ 6,000\nDubai\nGCC\n2018\n109K Km\nFeatured\nNissan Sentra S\n$ 6,000\nAbu Dhabi\nGCC\n2018\n112K Km\nNissan Sentra S\n$ 7,100\nAjman\nAmerican\n2020\n90K Km\nNissan Sentra SV LIMITED EDITION\n$ 5,200\nDubai\nAmerican\n2019\n190K Km\nPremium\nNissan Sentra S\n$ 6,800\nDubai\nAmerican\n2020\n37K Km\nNissan Sentra SV\n$ 5,200\nDubai\nAmerican\n2019\n198K Km\nPeople also viewed\nPremium\nNew Toyota Land Cruiser 76 VXR\nPrice on request\nDubai\nEuropean\n2026\n0 Km\nFeatured\nPeugeot 3008 ACTIVE\nPrice on request\nDubai\nGCC\n2023\n61K Km\nFeatured\nToyota Land Cruiser 70 Diesel\nPrice on request\nDubai\nGCC\n2012\n79K Km\nSuzuki Dzire GLX\n$ 6,100\nDubai\nGCC\n2023\n62.5K Km\nNissan Sunny S\n$ 5,200\nDubai\nGCC\n2022\n85.4K Km\nRelated links\nNissan Sentra Information Section\nNissan\nNissan Sentra\nNissan Sentra 2.0L SR\nUsed Nissan Sentra by Location\nUsed Nissan Sentra UAE (23)\nUsed Nissan Sentra Dubai (10)\nUsed Nissan Sentra Sharjah (8)\nUsed Nissan Sentra Abu Dhabi (3)\nUsed Nissan Sentra Ajman (2)\nUsed Nissan Sentra by Year\nUsed Nissan Sentra 2019 (7)\nUsed Nissan Sentra 2018 (4)\nUsed Nissan Sentra 2014 (3)\nUsed Nissan Sentra 2020 (3)\nUsed Nissan Sentra 2015 (1)\nUsed Nissan Sentra 2017 (1)\nUsed Nissan Sentra 2021 (1)\nUsed Nissan Sentra 2023 (1)\nUsed Nissan Sentra 2024 (1)\nUsed Nissan Sentra 2025 (1)\nSome other models of Nissan\nUsed Nissan Sunny in Dubai (105)\nUsed Nissan Altima in Dubai (165)\nUsed Nissan Versa in Dubai (20)\nUsed Nissan Fuga in Dubai (1)\nUsed Nissan Maxima in Dubai (38)\nUsed Nissan President in Dubai (3)\nUsed Nissan Note in Dubai (1)\nUsed Nissan Micra in Dubai (19)\nUsed Nissan Juke in Dubai (22)\nOther links\nJapanese Cars in Dubai\nMid Size cars for sale in Dubai\nFamily cars for sale in Dubai\nInstallment cars for sale in Dubai\nImported cars for sale in Dubai\nCheap cars for sale in Dubai\nCars under 25000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 969234\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nIn very good condition\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\nMost advanced ADAS standard\n5-Star NCAP safety rating\nLowest running cost in class\nSummary\n\nThis specific sedan represents a high-value opportunity for GCC commuters seeking a modern, technology-rich vehicle at an accessible price point. While being an American-spec model, it offers a sophisticated Blue exterior that stands out in a market often dominated by neutral tones while remaining easy to maintain. The SV trim provides a significant leap in interior quality and driver assistance tech compared to base models, making it feel several years newer than its competitors. With a highly efficient 1.6L engine, it is designed for those who prioritize long-term savings on fuel and maintenance without sacrificing modern aesthetics. This generation of the Nissan Sentra is celebrated for its dramatic redesign, offering a wider, more premium stance that rivals the comfort of much larger sedans. For a buyer in the UAE or wider GCC, this listing provides a balance of low daily operating costs and a suite of safety features that are often optional on other cars in this segment.\n\nThis Car vs Other 2021 Sentras\n\nWhen evaluating this vehicle against other 2021 Nissan Sentras in the GCC market, the mileage is slightly above the typical regional average of 20,000 to 25,000 km per year, suggesting it has been used primarily for highway commuting. In the heat of the Gulf, highway-driven cars often suffer less wear on the engine and transmission than those stuck in stop-start city traffic in Dubai or Riyadh. The Blue exterior is a refreshing find in a market where White and Silver are standard, offering a distinct personality while still retaining good heat-reflective properties for the summer months. Being an American-spec vehicle, it often includes specific technology features that were prioritized for the North American market, though buyers should ensure they are comfortable with the absence of a local agency warranty. This particular car has been maintained to a standard that ensures the 1.6L powertrain remains responsive and efficient. It presents as a well-traveled but carefully kept example of one of the worldΓÇÖs most reliable commuter platforms.\n\nSV vs Lower Trims\n\nChoosing the SV trim over the base S model is a transformative decision for any GCC driver who values daily comfort and tech. The SV adds a much more premium 8-inch NissanConnect touchscreen with Apple CarPlay and Android Auto, which is essential for navigating the complex road networks of the UAE. Beyond the screen, this trim introduces a much more refined interior with upgraded cloth upholstery and dual-zone automatic climate control, a critical feature for the intense summer heat where driver and passenger often have different cooling needs. You also benefit from the inclusion of Intelligent Cruise Control, which makes the long drives between Abu Dhabi and Dubai significantly less fatiguing. The exterior is also enhanced with 16-inch alloy wheels that provide a more stable and premium ride quality than the steel wheels found on lower trims. For the used car buyer, the SV remains the \u0027sweet spot\u0027 in the lineup, offering luxury-adjacent features without the high price tag of the SR sport trim.\n\nSentra vs Segment Rivals\n\nIn the highly competitive compact sedan segment, this model competes directly with the Toyota Corolla and the Honda Civic. While the Corolla is often seen as the utilitarian choice, this Nissan Sentra leads in offering a more premium, wider cabin feel and a more sophisticated multi-link rear suspension that absorbs road imperfections better during high-speed highway cruising. The Zero Gravity seats, inspired by NASA technology, are a major differentiator here, providing superior lumbar support that rivals simply cannot match during long cross-border drives. While some rivals use larger, more thirsty engines, the 1.6L unit here is optimized for incredible fuel efficiency, ensuring that your monthly fuel bill remains one of the lowest in its class. Additionally, the standard safety suite in this generation of Nissan often includes features like Rear Automatic Braking that are frequently missing or hidden in expensive options packages on competitors. This makes it a smarter choice for safety-conscious families and young professionals alike.\n\nRunning Costs \u0026 Resale\n\nThe running costs for this sedan are among the most budget-friendly in the GCC, with the 1.6L engine delivering excellent fuel economy in both city and highway cycles. Real-world figures for this powertrain typically hover around 6.5 to 7.0 L per 100km, making it ideal for the long commutes common in the region. Parts availability is a massive advantage; Nissan has one of the most extensive authorized service and parts networks across the UAE, Saudi Arabia, and Kuwait, ensuring that even as an American-spec car, mechanical maintenance is straightforward and affordable. While American-spec cars typically experience a different depreciation curve than GCC-spec units, the Nissan brand\u0027s reputation for reliability helps maintain a strong secondary market value. Typically, a well-maintained model of this era sees a value retention of approximately 65-70% after three years in the local market. Routine service intervals are standard 10,000 km, and generic parts are widely available at nearly every reputable garage in the region, further lowering long-term ownership costs.\n\nPerformance \u0026 Capability\n\nThe heart of this vehicle is a 113 hp 1.6-liter four-cylinder engine designed for smooth, linear power delivery via an Xtronic CVT transmission. While it isn\u0027t built for racing, it provides more than enough pep for overtaking on fast-moving highways like the E11 or the Sheikh Mohammad Bin Zayed Road. The CVT has been refined to simulate traditional gear shifts, reducing the \u0027drone\u0027 often associated with older models and making for a quieter cabin at high speeds. With a front-wheel-drive layout and a well-weighted steering rack, it feels nimble in tight city maneuvers and stable during cross- emirate trips. The suspension tuning is specifically geared toward comfort, prioritizing the filtration of road noise and vibrations which is a godsend during the long drives between major GCC cities. It handles the high ambient temperatures of the region with ease, thanks to a robust cooling system engineered for global durability. This is a car that thrives on being a reliable, everyday workhorse that gets you to your destination with zero fuss.\n\nComfort \u0026 Cabin\n\nThe interior of the SV trim is where the car truly shines, offering a 5-seat layout that feels surprisingly spacious for a compact sedan. The cabin is anchored by NissanΓÇÖs famous Zero Gravity seats, which are designed to reduce fatigue on long journeys by providing continuous support from the hips to the shoulders. For the GCC climate, the powerful air conditioning system is a standout, featuring dual-zone control that can bring cabin temperatures down from 50 degrees to a comfortable chill in a matter of minutes. Rear passengers are treated to generous legroom that rivals cars in the class above, making this a viable option for small families or those who frequently travel with friends. The trunk space is also impressive, accommodating several large suitcases or a bulk grocery shop with ease. High-quality materials are used on most touchpoints, and the noise insulation has been drastically improved over previous generations to keep the GCC\u0027s highway roar out of the cabin. It is a refined environment that belies its affordable price point.\n\nSafety\n\nSafety is a headline feature for this 2021 model, which comes standard with the Nissan Safety Shield 360 suite. This includes essential features for GCC driving like Blind Spot Warning and Rear Cross Traffic Alert, which are invaluable when navigating the fast-moving, multi-lane traffic of Dubai or Riyadh. The 5-Star NCAP safety rating is a testament to its structural integrity and the effectiveness of its comprehensive airbag system. You also get Lane Departure Warning and Intelligent Forward Collision Warning, which monitors two cars ahead to anticipate sudden brakingΓÇöa lifesaver on high-speed desert roads. The inclusion of Rear Automatic Braking is a rare standard feature in this segment, helping to prevent low-speed accidents in crowded car parks or residential areas. For a buyer looking for peace of mind, this vehicle offers a level of active protection that used to be reserved for high-end luxury sedans. It is designed to protect its five occupants with a combination of high-strength steel and proactive technology.\n\nThe bottom line\n\nThis 2021 Nissan Sentra SV is the perfect match for a savvy professional or a small family who wants a modern, fuel-efficient sedan with premium safety features. Given its great trim level and the reliability of the Nissan name in the GCC, it represents an outstanding value-for-money opportunity in the current used market.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n5 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nBlack\nHorsepower\n113 HP\nModel year\n2021\nMake\nNissan\nModel\nSentra\nColor\nBlue\nCylinders\n4 Cylinders\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nWheel size\n17\"\nService history\nNo\nSpecs\nAmerican\nKilometers\n116,000 Km\nFuel Type\nPetrol\nEngine capacity\n1.6 L\nExterior\nLED headlights\nSafety\nBrake Assist (BA)\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nComfort \u0026 Convenience\nKeyless entry\nPush-button start\nAir conditioning\nSmart key\nParking sensors\nInfotainment\nUSB port\nSpeakers\nFinance this car\nLoan Calculator\n331\nEstimated monthly payment\nDown payment\n20%\n4,600\nLoan period\n60\nmonths\nPlease note\n\nWe have assumed a 2.99% interest rate. 20% is usually a minimum downpayment. This is for illustrative purposes only. Please ask your financial adviser or service for advice. Terms and condition apply.\n\nContact seller\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}
