@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "03",
+  "updatedAt": "2026-09-08",
+  "candidates": [
+    {
+      "leadId":"bg-burgas-mg7-group","clientPath":"clients/mg7-group","state":"blocked","commitShas":[],"evidenceCommitShas":[],
+      "publicEvidencePaths":["clients/mg7-group/SOURCE-PACK.json","clients/mg7-group/HANDOFF.md"],
+      "variants":{
+        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Essential-media gate blocked before copying"],"proposedPort":7421},
+        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Essential-media gate blocked before copying"],"proposedPort":7422},
+        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Essential-media gate blocked before copying"],"proposedPort":7423}
+      },
+      "blockers":[
+        {"id":"essential-media-access","detail":"Direct downloads of the published banner and BMW X7 photo failed; no local asset pack was acquired."},
+        {"id":"media-permission","detail":"No reuse grant for dealer branding/stock photos was established. Public visibility was not treated as permission."},
+        {"id":"creative-tool-unavailable","detail":"No callable image-generation tool was available. No generation occurred or placeholder logo was substituted."}
+      ]
+    },
+    {
+      "leadId":"ae-sharjah-al-aayan-used-cars","clientPath":"clients/al-aayan-used-cars","state":"pending","commitShas":[],"evidenceCommitShas":[],"publicEvidencePaths":[],
+      "variants":{
+        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7424},
+        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7425},
+        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7426}
+      },"blockers":[]
+    },
+    {
+      "leadId":"ae-sharjah-al-fareed-used-cars","clientPath":"clients/al-fareed-used-cars","state":"pending","commitShas":[],"evidenceCommitShas":[],"publicEvidencePaths":[],
+      "variants":{
+        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7427},
+        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7428},
+        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7429}
+      },"blockers":[]
+    }
+  ],
+  "reuseInspection":{"leadId":"bg-varna-champion-auto-pro","clientPath":"clients/champion-auto-pro","state":"pending","mode":"read-only","variants":[],"checksPassed":[],"checksNotRun":["Current metadata and source inspection pending after assigned candidate outcomes"]},
+  "counts":{"applicationsImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0},
+  "publishing":{"protocol":"fresh-head-current-tree-owned-delta-non-force","applicationCommitShas":[],"evidenceCommitShas":[]}
+}
