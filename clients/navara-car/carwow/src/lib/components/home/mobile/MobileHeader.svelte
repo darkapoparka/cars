@@ -9,9 +9,9 @@
 </script>
 
 <header class="mobile-home-header">
-	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="Day Night Auto home">
+	<a class="mobile-home-header__brand" href={resolve('/')} aria-label={`${daynightSite.name} — начало`}>
 		<img
-			src={resolve('/brand/daynight-logo-generated.png')}
+			src={daynightSite.logoDark}
 			alt={daynightSite.shortName}
 		/>
 	</a>

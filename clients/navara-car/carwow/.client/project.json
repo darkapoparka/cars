@@ -12,5 +12,6 @@
   "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
   "crm": {"leadId":null,"demoProjectId":null,"registered":false},
   "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
-  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "branding": {"updatedAt":"2026-09-08","kind":"owner-requested-image-generated-refresh","asset":"/navara/wordmark.svg","generationId":"6f04e7f5-5407-4e05-96b9-3b41140c0f20","dealerApproved":false,"verification":"../../BRANDING.md"}
 }
