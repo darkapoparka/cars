@@ -11,25 +11,25 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 
 	const benefits = [
 		{
 			id: 'documents',
 			title: 'Съдействие по документи',
-			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.',
+			copy: 'Част от публикуваните обяви посочват лизинг. Лихва, срок, вноска и одобрение се уточняват директно; това не е финансова оферта.',
 			icon: ClipboardCheck
 		},
 		{
 			id: 'terms',
 			title: 'Ясни условия предварително',
-			copy: 'Ориентировъчна месечна вноска и условия още преди да дойдете за оглед.',
+			copy: 'Част от публикуваните обяви посочват лизинг. Лихва, срок, вноска и одобрение се уточняват директно; това не е финансова оферта.',
 			icon: BadgeCheck
 		},
 		{
 			id: 'fast',
-			title: 'Отнема няколко минути',
-			copy: 'Изпращате запитване с автомобил и бюджет - екипът ще Ви изпрати конкретни стъпки.',
+			title: 'Уточнете условията',
+			copy: 'Част от публикуваните обяви посочват лизинг. Лихва, срок, вноска и одобрение се уточняват директно; това не е финансова оферта.',
 			icon: Clock
 		}
 	] as const;
@@ -37,41 +37,39 @@
 	const steps = [
 		'Изпращаш запитване с автомобил и месечен бюджет.',
 		'Получаваш ориентировъчна вноска и условия.',
-		'Оглед в София и финализиране с екипа.'
+		'Оглед във Варна и финализиране с екипа.'
 	] as const;
 
 	const faqs = [
 		{
 			id: 'documents',
 			question: 'Какви документи са нужни?',
-			answer:
-				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото.'
+			answer: 'Тази възможност не е потвърдена в публичните източници. Попитайте Навара кар по телефона за конкретния автомобил и условията.'
 		},
 		{
 			id: 'trade-in',
 			question: 'Може ли с бартер?',
-			answer: 'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума.'
+			answer: 'Тази възможност не е потвърдена в публичните източници. Попитайте Навара кар по телефона за конкретния автомобил и условията.'
 		},
 		{
 			id: 'speed',
 			question: 'Колко време отнема одобрението?',
-			answer:
-				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават при огледа.'
+			answer: 'Тази възможност не е потвърдена в публичните източници. Попитайте Навара кар по телефона за конкретния автомобил и условията.'
 		}
 	] as const;
 </script>
 
-<div class="mobile-financing-app" aria-label="Финансиране от Day Night Auto">
+<div class="mobile-financing-app" aria-label="Финансиране от Навара кар">
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
-			src={resolve('/assets/images/pages/daynight-services-consultation-v1.webp')}
+			src={resolve('/navara/vehicles/11786363468065195-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-financing-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+			<a href={resolve('/')} aria-label="Навара кар начало">
+				<img src={resolve('/navara/wordmark.svg')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -81,7 +79,7 @@
 		<div class="mobile-financing-hero__copy">
 			<span>Финансиране</span>
 			<h1>Финансиране и разсрочено плащане</h1>
-			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в София.</p>
+			<p>Лизинг е посочен в част от обявите. Конкретните условия не са публикувани в този преглед.</p>
 		</div>
 
 		<div class="mobile-financing-actions">
@@ -160,7 +158,7 @@
 			<div>
 				<span>Следваща стъпка</span>
 				<h2 id="mobile-financing-cta-title">Кажи автомобил и бюджет</h2>
-				<p>Екипът ще Ви изпрати конкретни следващи стъпки в рамките на работния ден.</p>
+				<p>Обадете се, за да уточните възможностите. В този преглед няма потвърден срок за отговор.</p>
 				<a href={phoneHref}>
 					<PhoneCall size={18} strokeWidth={2.45} />
 					<span>{daynightSite.phoneLabel}</span>

@@ -8,7 +8,8 @@ import ts from 'typescript';
 const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
 for (const name of ['inventory', 'listing', 'journeys']) {
-  const source = await readFile(`src/lib/data/${name}.ts`, 'utf8');
+  const source = (await readFile(`src/lib/data/${name}.ts`, 'utf8'))
+    .replace("import source from './navara-data.json';", `const source = ${await readFile('src/lib/data/navara-data.json', 'utf8')};`);
   const code = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 } }).outputText
     .replace(/from '\.\/(inventory|listing)'/g, "from './$1.mjs'");
   await writeFile(`${out}/${name}.mjs`, code);

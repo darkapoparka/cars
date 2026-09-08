@@ -15,7 +15,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
@@ -27,7 +27,7 @@
 			cta: 'Заяви оглед',
 			href: '/contact',
 			icon: ShieldCheck,
-			points: ['Проверка на историята', 'Оглед на място', 'Следващи стъпки преди капаро']
+			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
 		},
 		{
 			id: 'documents',
@@ -37,7 +37,7 @@
 			cta: 'Попитай за документи',
 			href: '/contact',
 			icon: ClipboardCheck,
-			points: ['Договор и фактура', 'Прехвърляне и номера', 'Финални стъпки при предаване']
+			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
 		},
 		{
 			id: 'trade',
@@ -47,11 +47,7 @@
 			cta: 'Заяви оценка',
 			href: '/sell-your-car',
 			icon: Repeat,
-			points: [
-				'Оценка на Вашия автомобил',
-				'Приспадане към следваща покупка',
-				'Опция за директно изкупуване'
-			]
+			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
 		},
 		{
 			id: 'finance',
@@ -61,7 +57,7 @@
 			cta: 'Виж варианти',
 			href: '/financing',
 			icon: Banknote,
-			points: ['Ориентировъчна месечна вноска', 'Съдействие с лизинг', 'Сравнение спрямо бюджет']
+			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
 		}
 	] as const;
 
@@ -134,7 +130,7 @@
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Услуги Day Night Auto">
+<div class="mobile-services-app" aria-label="Услуги Навара кар">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -143,9 +139,9 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="Навара кар начало">
 				<img
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/navara/wordmark.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -157,7 +153,7 @@
 		<div class="mobile-services-hero__copy">
 			<span>Услуги</span>
 			<h1>Подкрепа преди и след покупка</h1>
-			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в София.</p>
+			<p>Продажба, съдействие за регистрация и лизинг са посочени в обявите. Другите възможности се уточняват.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">

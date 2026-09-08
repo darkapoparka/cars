@@ -35,14 +35,14 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Финансиране от Day & Night",
+    badge: "Лизинг по запитване",
     description:
       "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
         answer:
-          "Изберете автомобил от наличностите и изпратете заявка с предпочитания срок и първоначална вноска. Екипът ще се свърже с вас, за да уточни възможността за финансиране и конкретните условия.",
+          "Изберете обява и подгответе предпочитанията си. Обадете се, за да проверите възможността за лизинг, доставчика и писмените условия. Формата не изпраща съобщение.",
         question: "Как да започна?",
       },
       {
@@ -52,7 +52,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на Day & Night ще ви даде точен списък още при първия разговор.",
+          "Необходимите документи зависят от конкретния случай. Екипът на Navara Car ще ви даде точен списък още при първия разговор.",
         question: "Какви документи ще са ми нужни?",
       },
       {
@@ -64,14 +64,14 @@ const pageCopy = {
     title: "Финансиране за следващия ви автомобил",
   },
   en: {
-    badge: "Financing from Day & Night",
+    badge: "Ask about leasing",
     description:
       "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
         answer:
-          "Choose a vehicle from the inventory and send a request with your preferred term and initial payment. The team will contact you to confirm financing availability and the specific terms.",
+          "Choose a listing and prepare your preferences. Call to confirm leasing availability, the provider and written terms. This form does not send a message.",
         question: "How do I get started?",
       },
       {
@@ -81,7 +81,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Required documents depend on the individual case. The Day & Night team will give you an exact list during the first conversation.",
+          "Required documents depend on the individual case. The Navara Car team will give you an exact list during the first conversation.",
         question: "Which documents will I need?",
       },
       {
@@ -103,8 +103,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от Day & Night Auto Group."
-      : "A tailored vehicle financing offer from Day & Night Auto Group.",
+      ? "Уточнете дали за избраната обява се предлага лизинг и поискайте конкретни писмени условия."
+      : "Ask whether leasing is offered for the selected listing and request written terms.",
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",
@@ -186,7 +186,7 @@ export default async function LeasePage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/lease/day-night-financing-hero-v1.webp"
+              src="/navara/vehicles/11787311216769974-1.webp"
             />
             <div
               aria-hidden="true"

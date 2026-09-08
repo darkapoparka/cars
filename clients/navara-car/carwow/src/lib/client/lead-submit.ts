@@ -57,7 +57,7 @@ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmit
 				status: response.status,
 				error: readResponseMessage(
 					body,
-					'Запитването не беше изпратено. Моля, обадете се или пишете във Viber.'
+					'Запитването не беше изпратено. Моля, обадете се по публикувания телефон.'
 				),
 				details: isJsonObject(body) ? body.details : undefined
 			};
@@ -71,7 +71,7 @@ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmit
 			return {
 				ok: false,
 				status: response.status,
-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
+				error: 'Получихме неочакван отговор. Моля, обадете се по публикувания телефон.'
 			};
 		}
 
@@ -88,7 +88,7 @@ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmit
 			error:
 				error instanceof Error
 					? error.message
-					: 'Запитването не може да бъде изпратено. Моля, обадете се или пишете във Viber.'
+					: 'Запитването не може да бъде изпратено. Моля, обадете се по публикувания телефон.'
 		};
 	}
 }

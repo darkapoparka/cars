@@ -32,7 +32,7 @@
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 	type ImportInfo = 'process' | 'coverage';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const initialSearchParams = appPage.url.searchParams;
 	const contactContext = readContactIntent(initialSearchParams);
@@ -132,8 +132,8 @@
 	let importInfoDialog: HTMLDialogElement | undefined = $state();
 	let activeImportInfo = $state<ImportInfo | null>(null);
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 
 	async function revealImportForm() {
 		importExpanded = true;
@@ -247,13 +247,13 @@
 	<header class:mobile-contact-hero--import={isImportMode} class="mobile-contact-hero">
 		<img
 			class="mobile-contact-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-showroom-suv-v1.webp')}
+			src={resolve('/navara/vehicles/11786363468065195-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
-					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<a href={resolve('/')} aria-label="Навара кар начало">
+					<img src={resolve('/navara/wordmark.svg')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -263,11 +263,11 @@
 		<div class="mobile-contact-hero__copy">
 			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Попитайте за друг автомобил' : 'Свържете се със Навара кар'}
 			</h1>
 			<p>
 				{isImportMode
-					? 'Поставете линк — ние поемаме оттам.'
+					? 'Внос по заявка не е потвърден. Подгответе въпрос и се обадете.'
 					: 'Огледи, въпроси за налични автомобили, бартер, документи и посещение на място.'}
 			</p>
 		</div>
@@ -278,6 +278,7 @@
 				onsubmit={handleImportQuickStart}
 				aria-label="Начало на заявката за внос"
 			>
+<p class="demo-notice">Демонстрационна форма — не изпраща данни. За реален контакт: 0899 192 300.</p>
 				<label>
 					<Link size={18} strokeWidth={2.35} aria-hidden="true" />
 					<input
@@ -373,6 +374,7 @@
 						data-daynight-live-lead="true"
 						data-daynight-import-request={isImportMode ? 'true' : undefined}
 					>
+<p class="demo-notice">Демонстрационна форма — не изпраща данни. За реален контакт: 0899 192 300.</p>
 						<!-- Honeypot: hidden from users, populated only by bots; dropped server-side. -->
 						<div
 							aria-hidden="true"
@@ -513,7 +515,7 @@
 			<div class="mobile-contact-map__head">
 				<div>
 					<span>Локация</span>
-					<h2>Шоурум в София</h2>
+					<h2>Шоурум във Варна</h2>
 				</div>
 				<a href={resolve('/inventory')}>
 					<CarFront size={18} strokeWidth={2.45} />
@@ -522,7 +524,7 @@
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Карта до Навара кар Варна"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -558,7 +560,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/brand/daynight-logo-generated.png')}
+						src={resolve('/navara/wordmark.svg')}
 						alt=""
 						aria-hidden="true"
 					/>

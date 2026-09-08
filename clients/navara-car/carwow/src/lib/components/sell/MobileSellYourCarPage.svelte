@@ -59,8 +59,8 @@
 			.filter((field) => field.value);
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const phoneHref = `tel:${daynightSite.phone}`;
+	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 	const quickContext = $derived(
 		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
 	);
@@ -215,7 +215,7 @@
 
 		<div class="ms-hero__copy">
 			<h1>Продай или замени автомобила си</h1>
-			<p>Започнете с номера — под минута.</p>
+			<p>Подгответе въпрос — бартер и изкупуване не са потвърдени.</p>
 		</div>
 
 		{#if !isRequestStep}
@@ -229,7 +229,7 @@
 				</button>
 			</form>
 			<div class="ms-quick-meta">
-				<p>Номерът се добавя само към заявката.</p>
+				<p>Формата е демонстрационна и не изпраща данни.</p>
 				<button type="button" onclick={() => revealDetails()}>Нямам номер</button>
 			</div>
 		{/if}
@@ -284,14 +284,14 @@
 			<nav class="ms-disclosures" aria-label="Повече за услугата">
 				<MobilePromoCard
 					title="Как работи"
-					description="Три ясни стъпки до конкретна оценка."
+					description="Демонстрационни стъпки за подготовка на въпрос."
 					label="Виж стъпките"
 					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Защо Day Night"
-					description="Кристиян и екипът Ви дават ясен следващ вариант."
+					title="Защо Навара кар"
+					description="Попитайте Навара кар дали предлага тази възможност."
 					label="Виж предимствата"
 					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
 					tone="yellow"
@@ -470,7 +470,7 @@
 						src={resolve(
 							activeInfo === 'process'
 								? '/assets/images/sell/process-disclosure-list-v1.webp'
-								: '/assets/images/sell/kristian-trust-disclosure-list-v1.webp'
+								: '/navara/vehicles/11786363468065195-1.webp'
 						)}
 						alt=""
 						aria-hidden="true"
@@ -478,7 +478,7 @@
 					<div class="ms-info-hero__handle" aria-hidden="true"></div>
 					<div class="ms-info-hero__title">
 						<h2 id="ms-info-title">
-							{activeInfo === 'process' ? 'Как работи' : 'Защо Day Night'}
+							{activeInfo === 'process' ? 'Как работи' : 'Защо Навара кар'}
 						</h2>
 						<p>
 							{activeInfo === 'process'

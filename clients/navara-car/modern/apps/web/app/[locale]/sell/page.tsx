@@ -44,12 +44,12 @@ const pageCopy = {
     detailsPlaceholder:
       "Състояние, сервизна история, екстри или нещо важно за автомобила.",
     description:
-      "Дайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.",
+      "Подгответе данните за автомобила за разговор. Потвърдете по телефона дали Навара кар разглежда предложения за изкупуване или бартер.",
     faqTitle: "Как протича оценката",
     faqs: [
       {
         answer:
-          "Не. Можете да предложите автомобила за директно изкупуване, без да купувате друг.",
+          "Изкупуване и бартер не са потвърдени услуги в тази демонстрация. Уточнете възможностите директно с автокъщата.",
         question: "Задължителен ли е бартерът?",
       },
       {
@@ -59,7 +59,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+          "Снимките не заменят оглед. Уточнете с автокъщата дали предлага оценка и къде може да се направи тя.",
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -79,7 +79,7 @@ const pageCopy = {
     primaryAction: "Продължи",
     changeVehicle: "Променете автомобила",
     selectedVehicleLabel: "Избран автомобил",
-    title: "Продайте ни автомобила си",
+    title: "Предложете автомобил",
     yearLabel: "Година",
     yearPlaceholder: "2022",
   },
@@ -91,12 +91,12 @@ const pageCopy = {
     detailsPlaceholder:
       "Condition, service history, extras, or anything important about the vehicle.",
     description:
-      "Give us the essentials about your vehicle. Our team will contact you to arrange an inspection and a concrete offer.",
+      "Prepare your vehicle details for a conversation. Call Navara Car to confirm whether purchase or trade-in proposals are considered.",
     faqTitle: "How the appraisal works",
     faqs: [
       {
         answer:
-          "No. You can offer the vehicle for direct purchase without buying another car.",
+          "Purchase and trade-in services are not confirmed in this preview. Ask the dealership about the available options.",
         question: "Is a trade-in required?",
       },
       {
@@ -106,7 +106,7 @@ const pageCopy = {
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+          "Photos do not replace an inspection. Ask whether the dealership offers appraisals and where an inspection can take place.",
         question: "Can you appraise it from photos only?",
       },
       {
@@ -276,7 +276,7 @@ export default async function SellPage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
+              src="/navara/vehicles/11784982235652112-1.webp"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-black/15" />
 
@@ -295,7 +295,7 @@ export default async function SellPage({
                   <span className="lg:hidden">
                     {normalizedLocale === "bg"
                       ? "Започнете с основните данни. Ще се свържем с вас за оглед и оферта."
-                      : "Start with the essentials. We will contact you to arrange an inspection and offer."}
+                      : "Prepare the essentials, then call to discuss whether an inspection and offer are possible."}
                   </span>
                   <span className="hidden lg:inline">{copy.description}</span>
                 </p>

@@ -12,7 +12,7 @@
 			aria-label={`Обади се на ${daynightSite.phoneLabel}`}
 		>
 			<strong>{daynightSite.phoneLabel}</strong>
-			<span>Обаждане / Viber</span>
+			<span>Обаждане / телефон</span>
 		</a>
 	</li>
 </ul>

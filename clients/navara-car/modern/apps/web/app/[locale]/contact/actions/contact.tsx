@@ -1,6 +1,7 @@
 "use server";
 
 import { getReliableEmailDelivery } from "@repo/email";
+import { leadSite } from "@repo/marketplace/lead-site";
 import { ContactTemplate } from "@repo/email/templates/contact";
 import { log } from "@repo/observability/log";
 import { headers } from "next/headers";
@@ -42,12 +43,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "The form is ready, but message delivery is not configured yet. Call Day & Night directly."
+          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Navara Car.",
+          "The form is ready, but message delivery is not configured yet. Call Navara Car directly."
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "Message delivery is not configured yet. Call Day & Night directly."
+          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Navara Car.",
+          "Message delivery is not configured yet. Call Navara Car directly."
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +60,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на Day & Night."
-        : "Запитването е изпратено до екипа на Day & Night.",
-      "Your request has been sent to the Day & Night team."
+        ? "Запитването е подготвено до екипа на Navara Car."
+        : "Запитването е изпратено до екипа на Navara Car.",
+      "Your request has been sent to the Navara Car team."
     ),
   };
 };
@@ -143,6 +144,7 @@ export const submitContactRequest = async (
   const isBg = formData.get("locale") === "bg";
   const isImportRequest = formData.get("context") === "import-request";
   const copy = getCopy(isBg, isImportRequest);
+  if (leadSite.staticDemoMode) return { message: copy.notConfigured, status: "error" };
   const requestHeaders = await headers();
   const requestContext = getPublicRequestContext(requestHeaders);
   const result = await submitPublicSupportRequest(formData, requestContext, {
@@ -168,7 +170,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Day & Night: ${topic.en}`,
+          subject: `Navara Car: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

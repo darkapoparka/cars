@@ -74,7 +74,7 @@
 				class="daynight-home-hero__photo"
 				src={desktopOnlyImagePlaceholder}
 				srcset={desktopOnlySrcset(
-					'/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
+					'/navara/vehicles/11786363468065195-1.webp',
 					1983
 				)}
 				sizes={desktopOnlySizes('100vw')}
@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Студентски град · ул. Атанас Манчев 18</span>
+						<span>Кайсиева градина · ул. Атанас Манчев 18</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Day Night Auto"
+						aria-label="Отвори Google Maps до Навара кар"
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,18 +120,18 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">DAY NIGHT AUTO GROUP</span>
+							<span class="daynight-home-hero__location-map-label">НАВАРА КАР</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Day Night Auto София</strong>
-							<span>гр. София, Студентски град, ул. Атанас Манчев 18</span>
+							<strong>Навара кар Варна</strong>
+							<span>гр. Варна, Кайсиева градина, ул. Атанас Манчев 18</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Проверени автомобили.</span>
+						<span>Автомобили от обяви.</span>
 						<strong>Ясни условия.</strong>
 					</span>
 				</h1>

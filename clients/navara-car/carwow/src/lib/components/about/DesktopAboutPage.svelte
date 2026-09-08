@@ -8,7 +8,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/${string}`;
 	const brands = [
 		{ brand: 'Audi', image: 'audi' },
 		{ brand: 'BMW', image: 'bmw' },
@@ -29,7 +29,7 @@
 	] as const;
 	const support = [
 		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
-		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
+		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Тази възможност не е потвърдена в публичните източници. Попитайте Навара кар по телефона за конкретния автомобил и условията.', href: '/sell-your-car', action: 'Продай или замени' },
 		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
 	] as const;
 
@@ -44,7 +44,7 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title="За Навара кар"
 		panel="light"
 		compact
 	>
@@ -53,25 +53,13 @@
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				<a href={`tel:${daynightSite.phone}`}
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
 				<div class="about-hero-socials">
-					<a
-						href="https://www.facebook.com/61566304063141/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
-					>
-					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
-					>
-					<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-						<img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
-					</a>
+					
+					
+					
 				</div>
 			</nav>
 		{/snippet}
@@ -126,8 +114,8 @@
 		<div class="about-container about-story">
 			<img
 				class="about-story__image"
-				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				src={resolve('/navara/vehicles/11786363468065195-1.webp')}
+				alt="Автомобил от публикуваните обяви на Навара кар"
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -135,11 +123,11 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
-					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
+					Навара кар е автокъща във Варна. При нас можеш да разгледаш наличните автомобили, да
+					уточниш наличността и да попиташ за оглед по телефона.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети в Кайсиева градина. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -192,11 +180,11 @@
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Навара кар Варна" height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, София</strong>
+						<strong>Кайсиева градина, Варна</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}
@@ -244,15 +232,6 @@
 		grid-column: 1 / -1;
 		justify-content: center;
 		gap: 8px;
-	}
-	.about-hero-socials a {
-		justify-content: center;
-		width: 44px;
-		border-radius: 50%;
-		background: rgb(255 255 255 / 45%);
-	}
-	.about-hero-socials img {
-		filter: brightness(0);
 	}
 	.about-social-row {
 		display: flex;

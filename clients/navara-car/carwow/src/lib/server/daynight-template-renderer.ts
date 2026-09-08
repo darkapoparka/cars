@@ -185,7 +185,7 @@ function injectLocalBehavior(html: string, templateFile: string) {
 		['Write A Review', 'Добавете отзив'],
 		['Login To Add A Review', 'Вход за добавяне на отзив'],
 		['View More Reviews (98)', '${daynightSite.reviewLinkLabel}'],
-		['Chat via WhatsApp', 'Viber / WhatsApp'],
+		['Chat via WhatsApp', 'телефон / WhatsApp'],
 		['View details', 'Виж детайли'],
 		['See Finance', 'Финансиране'],
 		['AUDI', '${daynightVehicles[0]?.brand.toUpperCase() ?? 'CHRYSLER'}'],

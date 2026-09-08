@@ -28,11 +28,11 @@
 	// 1280) and 1500px blocks are kept for smaller desktops. Brand colours stay literal
 	// for an exact visual match.
 
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/${string}`;
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const contactBannerSrc: AssetHref =
-		'/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp';
+		'/navara/vehicles/11786363468065195-1.webp';
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const mapLinkAttributes = {
 		href: daynightSite.mapUrl,
@@ -58,8 +58,8 @@
 	let leadSubmitState = $state<LeadSubmitState>('idle');
 	let leadSubmitMessage = $state('');
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -227,18 +227,18 @@
 						loading="eager"
 						decoding="async"
 					/>
-					<span>Шоурум в София</span>
+					<span>Шоурум във Варна</span>
 				</div>
 
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
 					<div class="contact-page-info">
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
-								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Day Night Auto'}
+								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Навара кар'}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
 								{isImportMode
-									? 'Изпратете линк, модел или бюджет и ще Ви изпратим конкретни варианти за внос.'
+									? 'Внос по заявка не е потвърдена услуга в този преглед. Уточнете възможността директно.'
 									: 'Свържете се за оглед, документи, регистрация, финансиране, бартер или въпрос за наличен автомобил.'}
 							</p>
 
@@ -248,7 +248,7 @@
 									class="daynight-contact-action sa-cta sa-cta-primary"
 								>
 									{@render phoneIcon()}
-									<span>Обади се / Viber</span>
+									<span>Обади се</span>
 								</a>
 								<a
 									{...mapLinkAttributes}
@@ -265,7 +265,7 @@
 									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Телефон / Viber</p>
+									<p class="daynight-contact-detail-label">Телефон</p>
 									<a href={`tel:${daynightSite.phone}`} class="daynight-contact-detail-value">
 										{daynightSite.phoneLabel}
 									</a>
@@ -302,6 +302,7 @@
 							data-daynight-live-lead="true"
 							data-daynight-import-request={isImportMode ? 'true' : undefined}
 						>
+<p class="demo-notice">Демонстрационна форма — не изпраща данни. За реален контакт: 0899 192 300.</p>
 							<!-- Honeypot: hidden from users, populated only by bots; dropped server-side. -->
 							<div
 								aria-hidden="true"
@@ -436,7 +437,7 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title="Карта до Day Night Auto София"
+						title="Карта до Навара кар Варна"
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -444,8 +445,8 @@
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
-					<div class="daynight-contact-map__overlay" aria-label="Локация Day Night Auto">
-						<p class="daynight-contact-map__eyebrow">Day Night Auto</p>
+					<div class="daynight-contact-map__overlay" aria-label="Локация Навара кар">
+						<p class="daynight-contact-map__eyebrow">Навара кар</p>
 						<p class="daynight-contact-map__address">{daynightSite.location}</p>
 						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
 					</div>
@@ -1041,7 +1042,7 @@
 		background-color: #eef3f9;
 		background-image:
 			linear-gradient(90deg, rgba(8, 20, 42, 0.7), rgba(8, 20, 42, 0.18)),
-			url('/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp');
+			url('/navara/vehicles/11786363468065195-1.webp');
 		background-position: center;
 		background-size: cover;
 	}

@@ -57,7 +57,7 @@
 			['Login to add a Review', 'Вход за добавяне на отзив'],
 			['View More Reviews (98)', daynightSite.reviewLinkLabel],
 			['View more reviews', daynightSite.reviewLinkLabel],
-			['Chat via WhatsApp', 'Viber / WhatsApp'],
+			['Chat via WhatsApp', 'телефон / WhatsApp'],
 			['View details', 'Виж детайли'],
 			['See Finance', 'Финансиране'],
 			['You might also like', 'Подобни автомобили']

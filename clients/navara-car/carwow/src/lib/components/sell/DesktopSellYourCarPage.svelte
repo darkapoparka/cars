@@ -23,7 +23,7 @@
 	type IntakeMode = 'plate' | 'vin';
 	type SellSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
-	const phoneHref: `tel:${string}` = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref: `tel:${string}` = `tel:${daynightSite.phone}`;
 	const processIcons = [ClipboardPen, Camera, BadgeEuro, KeyRound];
 
 	let valuationDialog: HTMLDialogElement | undefined = $state();
@@ -82,7 +82,7 @@
 	let sellSubmitState = $state<SellSubmitState>('idle');
 	let sellSubmitMessage = $state('');
 
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 
 	const leadPath = $derived.by((): SellRequestHref => {
 		const params = new SvelteURLSearchParams();
@@ -339,7 +339,7 @@
 			<img
 				class="sell-benefits__image"
 				src={resolve(
-					'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
+					'/navara/vehicles/11786363468065195-1.webp'
 				)}
 				alt=""
 				width="1400"

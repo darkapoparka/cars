@@ -45,42 +45,21 @@
 		Euro
 	];
 
-	const reviews = [
-		{
-			title: 'Outstanding service',
-			body: 'The car was ready, the history was clear, and every document was handled on time.',
-			author: 'Nikolay, 1 hour ago'
-		},
-		{
-			title: 'Clear pricing',
-			body: 'I saw the price, checked the car, and got finance support without surprises.',
-			author: 'Maria, 2 hours ago'
-		},
-		{
-			title: 'Smooth part exchange',
-			body: 'I left my old car and drove away in the new one the same day. Very fair process.',
-			author: 'Georgi, 3 hours ago'
-		},
-		{
-			title: 'Inspection support',
-			body: 'They helped with inspection and registration. The whole process felt organised.',
-			author: 'Iva, 5 hours ago'
-		}
-	];
+	const reviews: {title: string; body: string; author: string}[] = [];
 
 	const guideCards = [
 		{
 			title: 'How to buy a used car with confidence',
-			image: '/assets/images/pages/daynight-services-inspection-v1.webp',
+			image: '/navara/vehicles/11786363468065195-1.webp',
 			href: '/blog'
 		},
 		{
 			title: 'Finance, registration and paperwork',
-			image: '/assets/images/pages/daynight-services-consultation-v1.webp',
+			image: '/navara/vehicles/11786363468065195-1.webp',
 			href: '/financing'
 		},
 		{
-			title: 'Sell or part exchange with Day Night Auto',
+			title: 'Sell or part exchange with Навара кар',
 			image: '/assets/images/sell/trade-in-promo-v1.webp',
 			href: '/sell-your-car'
 		}
@@ -96,10 +75,10 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Marketplace | Home2</title>
+	<title>Навара кар Marketplace | Home2</title>
 	<meta
 		name="description"
-		content="Browse, buy, sell and review verified cars from Day Night Auto София."
+		content="Demonstration of Navara Car listings observed on 8 September 2026. Confirm details with the seller."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>
@@ -108,14 +87,14 @@
 	<section class="home2-hero" aria-labelledby="home2-title">
 		<img
 			class="home2-hero__cars"
-			src="/assets/images/home2/daynight-hero-showroom-v2.webp"
+			src="/navara/vehicles/11786363468065195-1.webp"
 			alt=""
 			aria-hidden="true"
 		/>
 
 		<header class="home2-nav" aria-label="Home2 navigation">
-			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Day Night Auto Home2">
-				<img src="/brand/daynight-logo-generated.png" alt="Day Night Auto" />
+			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Навара кар Home2">
+				<img src="/navara/wordmark.svg" alt="Навара кар" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">
@@ -140,7 +119,7 @@
 
 		<h1 id="home2-title">
 			<span>Changing your car?</span>
-			<span>Day Night Auto can help</span>
+			<span>Навара кар can help</span>
 		</h1>
 
 		<form class="home2-search" onsubmit={submitSearch} aria-label="Find your next car">
@@ -194,7 +173,7 @@
 				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
 			</div>
 			<div class="home2-sell-card__media">
-				<img src="/assets/images/home2/daynight-sell-banner-v2.webp" alt="" aria-hidden="true" />
+				<img src="/navara/vehicles/11786363468065195-1.webp" alt="" aria-hidden="true" />
 				<span>ENTER REG</span>
 			</div>
 		</section>
@@ -217,7 +196,7 @@
 				<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 				<div>
 					<h2 id="trending-title">Premium is trending</h2>
-					<p>Popular Day Night Auto picks, ready to compare side by side</p>
+					<p>Popular Навара кар picks, ready to compare side by side</p>
 				</div>
 			</div>
 
@@ -262,7 +241,7 @@
 				<Star size={55} fill="currentColor" strokeWidth={1.8} />
 				<div>
 					<h2 id="reviews-title">This is how it should feel</h2>
-					<p>Customers rate Day Night Auto as excellent for buying, selling and support</p>
+					<p>No verified customer reviews are included in this demonstration.</p>
 				</div>
 			</div>
 
@@ -282,14 +261,14 @@
 				{/each}
 			</div>
 			<p class="home2-rating">
-				Rated {data.stats.rating} based on {data.stats.reviews} local reviews.
+				This preview does not publish a customer rating.
 			</p>
 		</section>
 	</section>
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/brand/daynight-team-placeholder.svg" alt="Day Night Auto consultant" />
+			<img src="/navara/wordmark.svg" alt="Навара кар consultant" />
 			<div>
 				<h2 id="easy-title">We make car changing easy</h2>
 				<p>
@@ -315,7 +294,7 @@
 			<HeartHandshake size={58} fill="currentColor" strokeWidth={2.3} />
 			<div>
 				<h2 id="explore-title">Explore cars</h2>
-				<p>Browse Day Night Auto stock by the brands and body styles customers ask for most.</p>
+				<p>Browse Навара кар stock by the brands and body styles customers ask for most.</p>
 			</div>
 		</div>
 
