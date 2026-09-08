@@ -57,8 +57,8 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/brand/daynight-logo-generated.png`,
-			logo: `${origin}/brand/daynight-logo-generated.png`,
+			image: `${origin}/brand/logo-on-light.png`,
+			logo: `${origin}/brand/logo-on-light.png`,
 			url: `${origin}/`,
 			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
@@ -66,10 +66,10 @@
 				'@type': 'PostalAddress',
 				streetAddress: daynightSite.location,
 				addressLocality: 'Dallas',
-				addressRegion: 'Dallas',
-				addressCountry: 'BG'
+				addressRegion: 'TX',
+				addressCountry: 'US'
 			},
-			areaServed: 'BG',
+			areaServed: 'US',
 			priceRange: '$$'
 		}).replaceAll('<', '\\u003c')
 	);

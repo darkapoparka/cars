@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
+import { daynightSite } from '$lib/data/daynight-site';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
 import { getRouteBodyClasses } from '$lib/data/template-routes';
 import { getAuth, hasAuthRuntimeConfig } from '$lib/server/auth/auth';
@@ -55,13 +56,17 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 }
 
 export const handle: Handle = async ({ event, resolve }) => {
-	const hasDb = hasDatabaseUrl();
-	if (!hasDb) warnMissingProductionDatabaseUrl();
+	// Local concept: do not activate inherited provider configuration or accept external-delivery submissions.
+	if (daynightSite.preview && !["GET", "HEAD", "OPTIONS"].includes(event.request.method)) {
+		return new Response(JSON.stringify({ message: "Preview only — nothing was sent or saved. Contact the dealer directly.", delivered: false, saved: false }), { status: 409, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+	}
+	const hasDb = !daynightSite.preview && hasDatabaseUrl();
+	if (!hasDb && !daynightSite.preview) warnMissingProductionDatabaseUrl();
 
 	event.locals.db = hasDb ? createDb() : null;
 	event.locals.staffProfile = null;
 
-	const { session, user } = await getAuthSession(event);
+	const { session, user } = daynightSite.preview ? { session: null, user: null } : await getAuthSession(event);
 	event.locals.session = session;
 	event.locals.user = user;
 
@@ -74,7 +79,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const resolveWithBodyClasses = (eventToResolve: RequestEvent) =>
 		resolve(eventToResolve, resolveOptions);
 
-	if (hasAuthRuntimeConfig()) {
+	if (!daynightSite.preview && hasAuthRuntimeConfig()) {
 		return svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,
