@@ -67,3 +67,15 @@ Carry forward existing license and asset provenance. Existing source notes are e
 - Do not commit, push, deploy, reset, clean, or overwrite unrelated work unless the owner asks.
 
 The source projects on M: and their historic task ledgers are provenance. Do not resume their old polishing backlogs when working in a J: template or client copy.
+
+## International three-design campaign
+
+For lead research and the owner's three-choice offer, also read [the lead index](leads/README.md), [coverage and qualification](leads/COVERAGE.md) and [the three-design workflow](docs/THREE-DESIGN-WORKFLOW.md). These extend the working rules above; they do not authorize template redesigns, a CRM migration or changes to existing client projects.
+
+For an approved dealer build in this campaign, the owner has selected **all three**: `auto-best`, `modern`, `carwow`. This is the requested three-variant case, not the default-one case. A recommended entry template means show it first, not omit the other two. Prepare one verified fact/asset pack across the variants and reuse existing projects before cloning anything.
+
+`leads/*.json` is public company research, not a private sales ledger or an automatic build queue. Apply file-level defaults when reading records. Respect each priority, dated inventory meaning, uncertainty and next action. A null website is not proof no website exists; an existing website needs a concrete current opportunity, not an unsupported negative design label. Preserve stable research IDs, existing CRM IDs and project identity; resolve duplicates across markets and aliases before work.
+
+Keep research updates in the regional JSON and readable index together. For authorized builds/QA, update the selected project's existing metadata and evidence, then synchronize the approved private project/opportunity record when available and in scope. For actual authorized messages/replies, append private activity evidence and update only justified sales states. Drafted is not contacted; silence is not declined; liking a concept is not won. Report unknown history or pending synchronization honestly.
+
+The public research index can be used independently of Agency OS. This addition does not change the existing private CRM authority or require a migration; never invent a blank contact history when it cannot be read. Do not publish private contact notes, deal amounts, rejection reasons, suppression lists or CRM exports in this public repository. Do not send, deploy, archive or delete merely because a lead appears in the list. Verify channel-specific outreach requirements and exact action approval first.
