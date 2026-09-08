@@ -1,648 +1,786 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
+// Local preview snapshot. publishedAt is snapshot ordering time, not the source advert publication date.
 export const mockListings: VehicleListing[] = [
   {
-    id: "am-1001",
-    slug: "bmw-x5-m50d-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 BMW X5 M50d",
-    description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
-    price: { amount: 89_379, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1360, currency: "BGN" },
-    images: [
+    "id": "11783754278742708",
+    "slug": "toyota-yaris-742708",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11783754278742708-toyota-yaris-1-33i-116000km-6-speed-swiss-edition",
+    "price": {
+      "amount": 7500.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "Бял BMW X5 SUV",
+        "url": "/dealer/11783754278742708-1.webp",
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION — снимка от обявата"
       },
+      {
+        "url": "/dealer/11783754278742708-2.webp",
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11783754278742708-3.webp",
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION — снимка от обявата"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    features: [
-      { bg: "360° камери", en: "360° cameras" },
-      { bg: "Панорамен покрив", en: "Panoramic roof" },
-      { bg: "Head-up display", en: "Head-up display" },
-      { bg: "Обдухване на седалките", en: "Ventilated seats" },
+    "badges": [
+      "used"
     ],
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "M50d",
-      year: 2020,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 167_000,
-      mileageUnit: "km",
-      enginePowerHp: 400,
-      colorExterior: "Черен металик",
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Yaris",
+      "trim": "1.33I 116000KM 6-SPEED SWISS EDITION",
+      "year": 2014,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 116000,
+      "mileageUnit": "km",
+      "enginePowerHp": 99,
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-28T09:00:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1010",
-    slug: "mercedes-benz-gls-400d-4matic-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
-    description:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    price: { amount: 122_629, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1870, currency: "BGN" },
-    images: [
+    "id": "21785829117309786",
+    "slug": "nissan-qashqai-309786",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-21785829117309786-nissan-qashqai-2-0i-131000km-automatic",
+    "price": {
+      "amount": 7700.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes SUV GLS",
+        "url": "/dealer/21785829117309786-1.webp",
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC — снимка от обявата"
       },
+      {
+        "url": "/dealer/21785829117309786-2.webp",
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC — снимка от обявата"
+      },
+      {
+        "url": "/dealer/21785829117309786-3.webp",
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC — снимка от обявата"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      }
+    ],
+    "spec": {
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "2.0i 131000KM AUTOMATIC",
+      "year": 2014,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 131000,
+      "mileageUnit": "km",
+      "enginePowerHp": 141,
+      "colorExterior": "Перла"
     },
-    publishedAt: "2026-07-27T10:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1011",
-    slug: "bmw-750e-xdrive-m-sport-sofia-2024",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2024 BMW 750e xDrive M Sport",
-    description:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    price: { amount: 175_436, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2680, currency: "BGN" },
-    images: [
+    "id": "11678716951277480",
+    "slug": "mitsubishi-colt-277480",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Mitsubishi Colt 1.5 I SWISS",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11678716951277480-mitsubishi-colt-1-5-i-swiss",
+    "price": {
+      "amount": 2700.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80",
-        alt: "BMW 7 Series",
+        "url": "/dealer/11678716951277480-1.webp",
+        "alt": "Mitsubishi Colt 1.5 I SWISS — снимка от обявата"
       },
+      {
+        "url": "/dealer/11678716951277480-2.webp",
+        "alt": "Mitsubishi Colt 1.5 I SWISS — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11678716951277480-3.webp",
+        "alt": "Mitsubishi Colt 1.5 I SWISS — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "7 Series",
-      trim: "750e xDrive M Sport",
-      year: 2024,
-      bodyType: "sedan",
-      fuelType: "plug_in_hybrid",
-      transmission: "automatic",
-      mileageValue: 40_000,
-      mileageUnit: "km",
-      enginePowerHp: 489,
-      colorExterior: "Черен сапфир",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "Mitsubishi",
+      "model": "Colt",
+      "trim": "1.5 I SWISS",
+      "year": 2007,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 189000,
+      "mileageUnit": "km",
+      "enginePowerHp": 109,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-26T08:40:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1012",
-    slug: "mercedes-benz-e-63-s-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz E 63 S AMG",
-    description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    price: { amount: 165_657, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2530, currency: "BGN" },
-    images: [
+    "id": "11773570472954394",
+    "slug": "mini-cooper-954394",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11773570472954394-mini-cooper-1-6i-153000km-euro-5-75ps",
+    "price": {
+      "amount": 4950.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1609703048009-d3576872b32c?w=1200&q=80",
-        alt: "Mercedes-Benz E-Class sedan",
+        "url": "/dealer/11773570472954394-1.webp",
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS. — снимка от обявата"
       },
+      {
+        "url": "/dealer/11773570472954394-2.webp",
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS. — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11773570472954394-3.webp",
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS. — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "E-Class",
-      trim: "E 63 S AMG",
-      year: 2021,
-      bodyType: "sedan",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 96_000,
-      mileageUnit: "km",
-      enginePowerHp: 612,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      }
+    ],
+    "spec": {
+      "make": "Mini",
+      "model": "Cooper",
+      "trim": "1.6i 153000km EURO-5 75PS.",
+      "year": 2013,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 153000,
+      "mileageUnit": "km",
+      "enginePowerHp": 75,
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-25T13:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1013",
-    slug: "mercedes-benz-cls-400d-4matic-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 Mercedes-Benz CLS 400d 4MATIC",
-    description:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    price: { amount: 73_733, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1125, currency: "BGN" },
-    images: [
+    "id": "11780222156478967",
+    "slug": "honda-jazz-478967",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11780222156478967-honda-jazz-1-4-si-automatic-sport-edition",
+    "price": {
+      "amount": 7950.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1624085568108-36410cfe4d24?w=1200&q=80",
-        alt: "Mercedes CLS",
+        "url": "/dealer/11780222156478967-1.webp",
+        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION — снимка от обявата"
       },
+      {
+        "url": "/dealer/11780222156478967-2.webp",
+        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11780222156478967-3.webp",
+        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "CLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2020,
-      bodyType: "coupe",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 171_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Сив металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      }
+    ],
+    "spec": {
+      "make": "Honda",
+      "model": "Jazz",
+      "trim": "1.4-SI AUTOMATIC SPORT EDITION",
+      "year": 2013,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 145000,
+      "mileageUnit": "km",
+      "enginePowerHp": 99,
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-24T15:05:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1014",
-    slug: "audi-q8-50-tdi-quattro-s-line-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Audi Q8 50 TDI quattro S line",
-    description:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    price: { amount: 99_159, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1515, currency: "BGN" },
-    images: [
+    "id": "21788253346975689",
+    "slug": "honda-cr-v-975689",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-21788253346975689-honda-cr-v-2-2-i-ctdi-177000km-executiv",
+    "price": {
+      "amount": 7500.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
-        alt: "Audi Q8",
+        "url": "/dealer/21788253346975689-1.webp",
+        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV — снимка от обявата"
       },
+      {
+        "url": "/dealer/21788253346975689-2.webp",
+        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV — снимка от обявата"
+      },
+      {
+        "url": "/dealer/21788253346975689-3.webp",
+        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Audi",
-      model: "Q8",
-      trim: "50 TDI quattro S line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 163_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Подгряване на седалките",
+        "en": "Подгряване на седалките"
+      }
+    ],
+    "spec": {
+      "make": "Honda",
+      "model": "Cr-v",
+      "trim": "2.2 I-CTDI 177000KM EXECUTIV",
+      "year": 2009,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 177000,
+      "mileageUnit": "km",
+      "enginePowerHp": 140,
+      "colorExterior": "Сив"
     },
-    publishedAt: "2026-07-23T09:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1002",
-    slug: "mercedes-benz-gle-400d-coupe-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLE 400d Coupe",
-    description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    price: { amount: 124_584, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1900, currency: "BGN" },
-    images: [
+    "id": "11782979504874945",
+    "slug": "vw-golf-874945",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11782979504874945-vw-golf-vi-tdi-swiss-edition-6-speed-4x4",
+    "price": {
+      "amount": 5999.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE SUV",
+        "url": "/dealer/11782979504874945-1.webp",
+        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4 — снимка от обявата"
       },
+      {
+        "url": "/dealer/11782979504874945-2.webp",
+        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4 — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11782979504874945-3.webp",
+        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4 — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "400d Coupe 4MATIC AMG",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "VW",
+      "model": "Golf",
+      "trim": "VI-TDI SWISS EDITION 6-SPEED 4X4",
+      "year": 2013,
+      "bodyType": "wagon",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 197000,
+      "mileageUnit": "km",
+      "enginePowerHp": 105,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-22T11:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1003",
-    slug: "mercedes-benz-gle-53-amg-coupe-sofia-2022",
-    category: "lease",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    description:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    price: { amount: 140_231, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2140, currency: "BGN" },
-    images: [
+    "id": "11778753257201470",
+    "slug": "toyota-auris-201470",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Toyota Auris 1.8 HSD 181000KM EURO5",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11778753257201470-toyota-auris-1-8-hsd-181000km-euro5",
+    "price": {
+      "amount": 7500.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE 53 AMG SUV",
+        "url": "/dealer/11778753257201470-1.webp",
+        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5 — снимка от обявата"
       },
+      {
+        "url": "/dealer/11778753257201470-2.webp",
+        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5 — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11778753257201470-3.webp",
+        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5 — снимка от обявата"
+      }
     ],
-    badges: ["used", "lease"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "53 AMG Coupe 4MATIC",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 105_000,
-      mileageUnit: "km",
-      enginePowerHp: 435,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Подгряване на седалките",
+        "en": "Подгряване на седалките"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Auris",
+      "trim": "1.8 HSD 181000KM EURO5",
+      "year": 2011,
+      "bodyType": "hatchback",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 181000,
+      "mileageUnit": "km",
+      "enginePowerHp": 99,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-21T08:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1004",
-    slug: "mercedes-benz-s-350d-long-amg-sofia-2019",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2019 Mercedes-Benz S 350d Long AMG",
-    description:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    price: { amount: 83_512, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1275, currency: "BGN" },
-    images: [
+    "id": "11777536762184091",
+    "slug": "suzuki-swift-184091",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Suzuki Swift 1.3i 151000km. SWISS EDITION",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11777536762184091-suzuki-swift-1-3i-151000km-swiss-edition",
+    "price": {
+      "amount": 4500.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?w=1200&q=80",
-        alt: "Mercedes-Benz S-Class sedan",
+        "url": "/dealer/11777536762184091-1.webp",
+        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION — снимка от обявата"
       },
+      {
+        "url": "/dealer/11777536762184091-2.webp",
+        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION — снимка от обявата"
+      },
+      {
+        "url": "/dealer/11777536762184091-3.webp",
+        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "S-Class",
-      trim: "S 350d Long AMG Optic",
-      year: 2019,
-      bodyType: "sedan",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 145_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "Suzuki",
+      "model": "Swift",
+      "trim": "1.3i 151000km. SWISS EDITION",
+      "year": 2010,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 151000,
+      "mileageUnit": "km",
+      "enginePowerHp": 92,
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-20T14:45:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1005",
-    slug: "mercedes-benz-v-250d-vip-business-sofia-2018",
-    category: "van",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2018 Mercedes-Benz V 250d VIP Business",
-    description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
+    "id": "11701247770704576",
+    "slug": "subaru-impreza-704576",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Subaru Impreza 2.0i SWISS EDITION",
+    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11701247770704576-subaru-impreza-2-0i-swiss-edition",
+    "price": {
+      "amount": 3300.0,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "/lead-sell-van-v1.png",
-        alt: "V-Class van",
+        "url": "/dealer/11701247770704576-1.webp",
+        "alt": "Subaru Impreza 2.0i SWISS EDITION — снимка от обявата"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "V-Class",
-      trim: "V 250d VIP Business",
-      year: 2018,
-      bodyType: "van",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 44_500,
-      mileageUnit: "km",
-      enginePowerHp: 190,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-19T10:20:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1006",
-    slug: "range-rover-sport-svr-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Range Rover Sport SVR",
-    description:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1679506640590-f0152786dff0?w=1200&q=80",
-        alt: "Range Rover Sport",
+        "url": "/dealer/11701247770704576-2.webp",
+        "alt": "Subaru Impreza 2.0i SWISS EDITION — снимка от обявата"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Land Rover",
-      model: "Range Rover Sport",
-      trim: "SVR",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 155_000,
-      mileageUnit: "km",
-      enginePowerHp: 600,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-18T12:10:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1007",
-    slug: "bmw-430i-xdrive-gran-coupe-sofia-2023",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2023 BMW 430i xDrive Gran Coupe",
-    description:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    price: { amount: 81_556, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1245, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=1200&q=80",
-        alt: "BMW 4 Series",
-      },
+        "url": "/dealer/11701247770704576-3.webp",
+        "alt": "Subaru Impreza 2.0i SWISS EDITION — снимка от обявата"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "4 Series",
-      trim: "430i xDrive Gran Coupe M Sport",
-      year: 2023,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 35_000,
-      mileageUnit: "km",
-      enginePowerHp: 245,
-      colorExterior: "Син металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-17T16:00:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1008",
-    slug: "bmw-m4-competition-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 BMW M4 Competition",
-    description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    price: { amount: 128_496, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1960, currency: "BGN" },
-    images: [
+    "features": [
       {
-        url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80",
-        alt: "Червено BMW M4 Competition пред модерен шоурум",
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
       },
-    ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "M4",
-      trim: "Competition",
-      year: 2021,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 165_000,
-      mileageUnit: "km",
-      enginePowerHp: 510,
-      colorExterior: "Червен металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-16T07:40:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1009",
-    slug: "bmw-x5-xdrive40d-berlin-2022",
-    category: "car",
-    status: "active",
-    title: "2022 BMW X5 xDrive40d",
-    description:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    price: { amount: 112_456, currency: "BGN" },
-    priceType: "fixed",
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "BMW X5 SUV в градска среда",
+        "bg": "4x4",
+        "en": "4x4"
       },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Подгряване на седалките",
+        "en": "Подгряване на седалките"
+      }
     ],
-    badges: ["used"],
-    location: { city: "Berlin", region: "Berlin", country: "Germany" },
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "xDrive40d",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 28_531,
-      mileageUnit: "km",
-      enginePowerHp: 340,
-      colorExterior: "Carbon Black",
+    "spec": {
+      "make": "Subaru",
+      "model": "Impreza",
+      "trim": "2.0i SWISS EDITION",
+      "year": 2007,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 207000,
+      "mileageUnit": "km",
+      "enginePowerHp": 160,
+      "colorExterior": "Светло сив"
     },
-    seller: {
-      id: "import-demo-supplier",
-      type: "dealer",
-      displayName: "AutoMarket Import Demo",
-      verificationStatus: "verified",
-      city: "Hamburg",
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo.png"
     },
-    supply: {
-      convertedPrice: { amount: 112_456, currency: "BGN" },
-      delivery: {
-        destinationCountryCode: "BG",
-        eligibleCountryCodes: ["BG", "DE", "RO"],
-        status: "quote_required",
-      },
-      documentCount: 4,
-      landedCostStatus: "quote_required",
-      nativePrice: { amount: 57_499, currency: "EUR" },
-      origin: {
-        city: "Berlin",
-        country: "Germany",
-        countryCode: "DE",
-        region: "Berlin",
-      },
-      priceConversion: {
-        convertedAt: "2026-07-12T18:00:00.000Z",
-        status: "converted_estimate",
-      },
-      provenance: {
-        externalReference: "DEMO-1009",
-        freshUntil: "2026-07-14T18:00:00.000Z",
-        freshnessStatus: "fresh",
-        lastConfirmedAt: "2026-07-12T18:00:00.000Z",
-        sourceDisplayName: "Authorized demo feed",
-        sourceKind: "https_feed",
-      },
-      supplier: {
-        kybStatus: "verified",
-        orgType: "importer",
-        trustStatus: "verified",
-        verifiedImporter: true,
-      },
-    },
-    publishedAt: "2026-07-12T18:00:00.000Z",
-    promoted: false,
-  },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
+  }
 ];
 
 const matchesText = (listing: VehicleListing, query: string) => {
