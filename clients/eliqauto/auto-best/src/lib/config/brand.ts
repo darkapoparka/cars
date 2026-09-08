@@ -1,34 +1,17 @@
 export type BrandConfig = {
-  name: string;
-  shortName: string;
-  city: string;
-  addressLine: string;
-  address: string;
-  phone: string;
-  phoneHref: `tel:${string}`;
-  appointment: string;
-  logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  name: string; shortName: string; city: string; addressLine: string; address: string;
+  phone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`;
+  youtubeUrl: string; instagramUrl: string; facebookUrl: string;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
+/** Contact fields checked against https://eliqauto.mobile.bg/contacts on 2026-09-08. */
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  name: 'ELIQ AUTO', shortName: 'ELIQ AUTO', city: 'Пазарджик',
+  addressLine: 'ул. Свобода, на гърба на Гробищен парк',
+  address: 'ул. Свобода, на гърба на Гробищен парк, Пазарджик',
+  phone: '0896 781 662', phoneHref: 'tel:+359896781662',
+  appointment: 'Пон.–пет. 09:30–19:00 · Съб.–нед. 09:30–17:00 · Потвърдете огледа по телефона',
+  logo: '/assets/eliqauto/brand/eliq-auto-wordmark-header.png',
+  youtubeUrl: 'https://www.youtube.com/channel/UCGXhr1QYqALiBBQpBYZtpmw',
+  instagramUrl: '', facebookUrl: ''
 } as const satisfies BrandConfig;
