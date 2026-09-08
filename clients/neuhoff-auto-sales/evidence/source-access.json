@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-09-08",
+  "purpose": "public-source access diagnostic, not application QA",
+  "url": "https://neuhoffauto.com/",
+  "runtime": "Python 3.13.5 / Playwright / system Chromium",
+  "executable": "/usr/bin/chromium",
+  "viewportWidth": 1440,
+  "operation": "page.goto(url, wait_until='domcontentloaded', timeout=20000)",
+  "result": "failed",
+  "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://neuhoffauto.com/",
+  "screenshotSaved": false,
+  "browserClosed": true,
+  "additionalAttempts": ["Official footer logo URL and Malibu photo URL returned web Cache miss."],
+  "applicationTestsRun": 0
+}
