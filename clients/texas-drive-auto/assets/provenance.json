@@ -1,0 +1,31 @@
+{
+  "observedAt": "2026-09-08T22:40:54.651Z",
+  "publishedBranding": "Matched published TEXAS DRIVE AUTO raster, white car silhouette and lettering, red AUTO underline.",
+  "sourceLogoUrl": "https://www.dealeressential.com/discover/api/dealerships/Texas-Drive-Auto-Dealer-3e9ce74e2568/logo",
+  "workingLogoPath": "assets/brand/logo-on-light.png",
+  "creationMethod": "Optimization of published raster; no image generation or vector claim. Background matting and intentional light/dark treatment. Favicon derived from the red AUTO part of the same artwork.",
+  "approvalStatus": "Dealer approval and external redistribution permission not established; local concept only, no deployment.",
+  "stock": [
+    {
+      "sourceId": "127361904",
+      "sourceUrl": "https://cdn05.carsforsale.com/5febdad093826dc16e51932a201d6bed/800x600/2014-bmw-x5-xdrive35i-awd-4dr-suv.jpg",
+      "localPath": "stock/127361904-1.webp",
+      "sourceSha256": "cb860043968921c669e78a56a2aa20211eeb8d546e0e85e7f82cc921474e0f65",
+      "permission": "Published dealer-listing media; no independent license/approval determination. Not approved for public redistribution."
+    },
+    {
+      "sourceId": "127361913",
+      "sourceUrl": "https://cdn05.carsforsale.com/29f2f38b2bf31ded9e8fe09bede4b3e3/800x600/2008-acura-tl.jpg",
+      "localPath": "stock/127361913-1.webp",
+      "sourceSha256": "042780719a88b1e5b73530a00f8dde19bcb22ed659d9a7bd435e66f5a12035cf",
+      "permission": "Published dealer-listing media; no independent license/approval determination. Not approved for public redistribution."
+    },
+    {
+      "sourceId": "127361925",
+      "sourceUrl": "https://cdn05.carsforsale.com/4bcfad9b0605745064f90346cf1730f4/800x600/2013-audi-q5-2-0t-quattro-premium-plus-awd-4dr-suv.jpg",
+      "localPath": "stock/127361925-1.webp",
+      "sourceSha256": "dfe6ad0c7c1d0f8ad09469135b243bdca04aba60cbb4541a5461d543174c2fd9",
+      "permission": "Published dealer-listing media; no independent license/approval determination. Not approved for public redistribution."
+    }
+  ]
+}
