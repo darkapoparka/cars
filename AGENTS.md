@@ -8,6 +8,7 @@
 - `clients/<client-slug>/<template-key>/`: independent personalized demo copies. `clients` includes prospects; the folder name never means the business has paid or agreed.
 - `catalog.json`: exact local keys, nicknames, source ports, library ports, variants and current readiness.
 - `docs/WORKFLOW.md`: build and review procedure.
+- `docs/LEAD-PUBLISHING.md`: default GitHub/Vercel delivery, `cars-<dealerkey>` naming and the working multi-variant deployment recipe.
 - `docs/RENCAR-STYLEGUIDE.md`: owner-requested Rencar polish direction and exact current scope. Applies to Rencar work, not other template families.
 - `docs/TEMPLATE-PROMOTION.md`: how a finalized client trial becomes a versioned reusable master without carrying client identity or overwriting independent copies.
 - `audits/2026-09-06/REPORT.md`: current comparative audit and future template priorities.
@@ -16,6 +17,10 @@
 For automotive work in this workspace, these user-requested J: paths supersede older M: destination defaults. Agency OS on `M:\codex\agency\os` remains the CRM/workflow source of truth. The local catalog is not a replacement CRM registry. Do not silently move existing Agency OS projects, change their records, or run its fixed-root clone/deploy scripts against J: paths.
 
 ## Start each task
+
+### Canonical workspace (owner instruction, 2026-09-09)
+
+Work only in `J:\cars` and its main Cars repository. Keep every dealer under `clients/<client-slug>/`, with its requested designs together. Do not create sibling session folders, alternate-drive copies or additional Cars worktrees. The previous ten-session `astra` campaign is closed; its allocation and publish-to-astra rules are historical. Consolidated work continues on `main`, scoped to the requested dealer or workspace operation and preserving unrelated dirty edits. Use `docs/PROJECTS.md` for recovered projects and review status. Consolidation does not make unfinished demos ready or authorize deploying the recovered backlog.
 
 1. Read the catalog and the chosen template's `TEMPLATE.md`. Resolve aliases: `5173`/`autodeal-best` = `auto-best`, `6212` = `modern`, `6517` = `carwow`, `6518` = `import`, `6404` = `showroom`. `motoria` locally means the Motors-derived source, not the old Agency OS Motoria template.
 2. State whether this is template work, a client Fast Skin, an audit, or a deployment. Do not turn a Fast Skin into redesign work.
@@ -63,7 +68,10 @@ Carry forward existing license and asset provenance. Existing source notes are e
 - Browser-check home/entry, inventory, one detail, contact, navigation, a filter/search, menu dismissal, and the main enquiry path at 390 and 1440 px. Check URLs, images, overflow and console errors. Check every homepage actually offered to the lead.
 - Forms and sample checkout behavior remain demos until real delivery is verified. Do not claim a local form sends messages because it displays success.
 - Record template/version, selected homepage(s), changes, checks, known gaps and preview link in `.client/project.json` and the client brief. Existing CRM IDs retain their identity; coordinate Agency OS updates when an actual demo is registered.
-- A localhost URL is for local review. A sendable offer needs a tested public preview. Publish or send messages only when requested; sending requires approval of the exact recipient, channel, text and links.
-- Do not commit, push, deploy, reset, clean, or overwrite unrelated work unless the owner asks.
+- A new lead build includes personalization, QA, creation or reuse of its private GitHub repository, pushing the finished demo, deployment to one Vercel project, and verification of its public preview. This is the owner's standing workflow instruction of 2026-09-08; no separate publish confirmation is needed for that requested lead. Explicit local-only, audit-only or pause instructions override this default. A template edit or this workflow change does not authorize publishing the existing lead backlog.
+- Name new repositories `cars-<dealerkey>`: lowercase ASCII, compact business name, no spaces or internal punctuation; use `and` for `&`. Examples: `cars-excellentcars`, `cars-dayandnight`, `cars-asko96`. Use the same name for the new Vercel project. Record the chosen key; reuse existing recorded identity rather than creating duplicates or silently renaming existing repositories/projects.
+- Each dealer gets its own repository and Vercel project. Put all requested designs under one public origin with a visible right-side design FAB; load only the selected application. Follow `docs/LEAD-PUBLISHING.md` and reuse the verified Excellent Cars deployment integration. Do not create one Vercel project per design or combine different dealers into one app.
+- A localhost URL is for local review. A sendable offer needs an unauthenticated, tested public preview. Publishing a preview does not authorize outreach; sending still requires approval of the exact recipient, channel, text and links. Automated QA does not complete the owner's manual-review checklist.
+- Scope commits, pushes and deployments to the requested dealer's dedicated repository. Do not commit, push, deploy, reset, clean, or overwrite unrelated work, including dirty Cars library changes.
 
 The source projects on M: and their historic task ledgers are provenance. Do not resume their old polishing backlogs when working in a J: template or client copy.
