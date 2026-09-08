@@ -20,7 +20,7 @@ function uniqueSorted(values: string[]) {
 }
 
 function normalizeBadgeLabel(value: string) {
-	return value.trim().toLocaleLowerCase('bg-BG');
+	return value.trim().toLocaleLowerCase('en-US');
 }
 
 function renderCardMetaAttributes(vehicle: DayNightVehicle) {
@@ -28,7 +28,7 @@ function renderCardMetaAttributes(vehicle: DayNightVehicle) {
 }
 
 function renderCardBadge(vehicle: DayNightVehicle, index: number, preferPrimaryBadge = false) {
-	const fallbackBadge = index % 5 === 1 ? 'Добра цена' : '';
+	const fallbackBadge = index % 5 === 1 ? 'Good price' : '';
 	const badge =
 		(preferPrimaryBadge ? vehicle.badges[0] : undefined) ??
 		vehicle.badges.find((value) => normalizeBadgeLabel(value) !== 'vip') ??
@@ -63,11 +63,11 @@ function renderCompareIcon() {
 }
 
 function renderViewDetailsLink(route: string) {
-	return `<a href="${route}" class="view-details">Виж детайли<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>`;
+	return `<a href="${route}" class="view-details">View details<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>`;
 }
 
 function renderCardPrice(value: string) {
-	return escapeHtml(value.replace(/\s*EUR\b/, ' €'));
+	return escapeHtml(value.replace(/\s*EUR\b/, ' $'));
 }
 
 function renderCardMediaStats(vehicle: DayNightVehicle) {
@@ -97,7 +97,7 @@ function renderVehicleTags(vehicle: DayNightVehicle, styleClass: string) {
 }
 
 function renderCompareLink() {
-	return `<a href="/compare" class="compare-details btn btn-small" title="Сравни автомобили">${renderCompareIcon()}Сравни</a>`;
+	return `<a href="/compare" class="compare-details btn btn-small" title="Compare vehicles">${renderCompareIcon()}Compare</a>`;
 }
 
 export function renderInventoryGridCard(vehicle: DayNightVehicle, index: number) {
@@ -122,8 +122,8 @@ ${renderCardMediaStats(vehicle)}
 <p class="h6 card-box__title mb-8"><a href="${route}">${escapeHtml(vehicle.title)}</a></p>
 ${renderVehicleTags(vehicle, 'style2 mb-10')}
 <p class="h6 card-box__price daynight-inventory-card__price-row mb-15">
-<span class="daynight-card-price__stack"><span class="daynight-card-price__value">${renderCardPrice(vehicle.priceEur)}</span><span class="daynight-card-price__monthly">${escapeHtml(vehicle.monthly)}</span></span>
-<a href="${route}" class="daynight-card-price__link daynight-inventory-card__arrow" aria-label="Виж ${escapeHtml(vehicle.shortTitle)}" title="Виж автомобила">
+<span class="daynight-card-price__stack"><span class="daynight-card-price__value">${renderCardPrice(vehicle.priceLabel)}</span><span class="daynight-card-price__monthly">${escapeHtml(vehicle.monthly)}</span></span>
+<a href="${route}" class="daynight-card-price__link daynight-inventory-card__arrow" aria-label="View ${escapeHtml(vehicle.shortTitle)}" title="View vehicle">
 <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M4.25 10H15.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10.75 5.5L15.25 10L10.75 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
 </p>
@@ -252,14 +252,14 @@ ${renderInventoryPillIcon(icon)}
 
 function renderInventoryTypePills() {
 	return [
-		renderInventoryTypePill('Всички', inventoryHref({}), 'all', true),
-		renderInventoryTypePill('Електрически', inventoryHref({ fuel: 'Електрически' }), 'electric'),
-		renderInventoryTypePill('Седан', inventoryHref({ body: 'Седан' }), 'sedan'),
-		renderInventoryTypePill('Джип', inventoryHref({ body: 'SUV' }), 'suv'),
-		renderInventoryTypePill('Комби', inventoryHref({ body: 'Комби' }), 'wagon'),
-		renderInventoryTypePill('Хечбек', inventoryHref({ body: 'Хечбек' }), 'hatchback'),
-		renderInventoryTypePill('Купе', inventoryHref({ body: 'Купе' }), 'coupe'),
-		renderInventoryTypePill('До 20 000 EUR', inventoryHref({ price: 'under-20000' }), 'price')
+		renderInventoryTypePill('All', inventoryHref({}), 'all', true),
+		renderInventoryTypePill('Electric', inventoryHref({ fuel: 'Electric' }), 'electric'),
+		renderInventoryTypePill('Sedan', inventoryHref({ body: 'Sedan' }), 'sedan'),
+		renderInventoryTypePill('SUV', inventoryHref({ body: 'SUV' }), 'suv'),
+		renderInventoryTypePill('Wagon', inventoryHref({ body: 'Wagon' }), 'wagon'),
+		renderInventoryTypePill('Hatchback', inventoryHref({ body: 'Hatchback' }), 'hatchback'),
+		renderInventoryTypePill('Coupe', inventoryHref({ body: 'Coupe' }), 'coupe'),
+		renderInventoryTypePill('Up to 20 000 USD', inventoryHref({ price: 'under-20000' }), 'price')
 	].join('\n');
 }
 
@@ -282,10 +282,10 @@ ${renderCardMediaStats(vehicle)}
 <p class="h6 card-box__title mb-4"><a href="${route}">${escapeHtml(vehicle.title)}</a></p>
 <p class="text-secondary clamp-1 clamp mb-8">${escapeHtml(vehicle.conditionLine)}</p>
 ${renderVehicleTags(vehicle, 'style3 mb-14')}
-<p class="h6 card-box__price mb-10 flex justify-between gap-8 items-center"><span class="daynight-card-price__value">${renderCardPrice(vehicle.priceEur)}</span></p>
+<p class="h6 card-box__price mb-10 flex justify-between gap-8 items-center"><span class="daynight-card-price__value">${renderCardPrice(vehicle.priceLabel)}</span></p>
 <div class="flex gap-32">
 ${renderCompareLink()}
-<a href="${route}" class="view-details">Виж детайли<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>
+<a href="${route}" class="view-details">View details<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>
 </div>
 </div>
 </div>`;
@@ -385,15 +385,15 @@ type QuickSelectOption = {
 	value: string;
 	label: string;
 	/* Brands that actually stock this option — lets the runtime scope the
-	   Модел menu to the selected Марка. */
+	   Model menu to the selected Make. */
 	brands?: string[];
 };
 
 const mileageOptions = [
-	{ value: 'under-100000', label: 'До 100 000 км' },
-	{ value: 'under-150000', label: 'До 150 000 км' },
-	{ value: 'under-200000', label: 'До 200 000 км' },
-	{ value: 'over-200000', label: 'Над 200 000 км' }
+	{ value: 'under-100000', label: 'Up to 100 000 miles' },
+	{ value: 'under-150000', label: 'Up to 150 000 miles' },
+	{ value: 'under-200000', label: 'Up to 200 000 miles' },
+	{ value: 'over-200000', label: 'Over 200 000 miles' }
 ] as const;
 
 function renderQuickSelect(
@@ -479,11 +479,11 @@ export function renderInventoryQuickFilters() {
 		label: body
 	}));
 	const priceOptions = [
-		{ value: 'under-10000', label: 'До 10 000 EUR' },
-		{ value: 'under-20000', label: 'До 20 000 EUR' },
-		{ value: 'under-30000', label: 'До 30 000 EUR' },
-		{ value: 'under-50000', label: 'До 50 000 EUR' },
-		{ value: 'over-50000', label: 'Над 50 000 EUR' }
+		{ value: 'under-10000', label: 'Up to 10 000 USD' },
+		{ value: 'under-20000', label: 'Up to 20 000 USD' },
+		{ value: 'under-30000', label: 'Up to 30 000 USD' },
+		{ value: 'under-50000', label: 'Up to 50 000 USD' },
+		{ value: 'over-50000', label: 'Over 50 000 USD' }
 	] as const;
 	const featureOptions = uniqueSorted(daynightVehicles.flatMap((vehicle) => vehicle.features)).map(
 		(feature) => ({
@@ -492,30 +492,30 @@ export function renderInventoryQuickFilters() {
 		})
 	);
 	return `<div class="col-md-12 daynight-inventory-controls">
-<h1 class="daynight-inventory-heading">Налични автомобили</h1>
-<form class="daynight-inventory-quick-form" data-daynight-inventory-filter aria-label="Бързи филтри">
+<h1 class="daynight-inventory-heading">Vehicle inventory</h1>
+<form class="daynight-inventory-quick-form" data-daynight-inventory-filter aria-label="Quick filters">
 <div class="daynight-inventory-searchbar">
 <div class="daynight-inventory-search">
-<label class="daynight-inventory-searchbar__label" for="daynight-inventory-search">Търсене</label>
-<input id="daynight-inventory-search" class="daynight-inventory-search__input" type="search" name="q" autocomplete="off" placeholder="Търси по марка, модел, година, гориво, екстри...">
+<label class="daynight-inventory-searchbar__label" for="daynight-inventory-search">Search</label>
+<input id="daynight-inventory-search" class="daynight-inventory-search__input" type="search" name="q" autocomplete="off" placeholder="Search by make, model, year, fuel, features...">
 </div>
-<button class="daynight-inventory-searchbar__submit flex items-center gap-8 justify-center" type="submit"><img src="/assets/icons/search.svg" alt="" aria-hidden="true"><span>Търси</span></button>
+<button class="daynight-inventory-searchbar__submit flex items-center gap-8 justify-center" type="submit"><img src="/assets/icons/search.svg" alt="" aria-hidden="true"><span>Search</span></button>
 </div>
 <div class="daynight-inventory-filter-group daynight-inventory-filterbar">
-<button class="daynight-inventory-filter-toggle daynight-inventory-quick-sidebar" type="button" data-daynight-open-sidebar aria-label="Филтри"><img src="/assets/icons/filter.svg" alt="" aria-hidden="true"></button>
-${renderQuickSelect('brand', 'Марка', 'Всички марки', brandOptions)}
-${renderQuickSelect('model', 'Модел', 'Всички модели', modelOptions)}
-${renderQuickSelect('price', 'Цена', 'Всички цени', priceOptions)}
-${renderQuickSelect('mileage', 'Пробег', 'Всички пробези', mileageOptions)}
-${renderQuickSelect('fuel', 'Гориво', 'Всички горива', fuelOptions)}
-${renderQuickSelect('transmission', 'Скорости', 'Всички скорости', transmissionOptions)}
-${renderQuickSelect('body', 'Купе', 'Всички купета', bodyOptions)}
-${renderQuickSelect('feature', 'Екстри', 'Всички екстри', featureOptions)}
+<button class="daynight-inventory-filter-toggle daynight-inventory-quick-sidebar" type="button" data-daynight-open-sidebar aria-label="Filters"><img src="/assets/icons/filter.svg" alt="" aria-hidden="true"></button>
+${renderQuickSelect('brand', 'Make', 'All makes', brandOptions)}
+${renderQuickSelect('model', 'Model', 'All models', modelOptions)}
+${renderQuickSelect('price', 'Price', 'All prices', priceOptions)}
+${renderQuickSelect('mileage', 'Mileage', 'All mileage', mileageOptions)}
+${renderQuickSelect('fuel', 'Fuel', 'All fuel types', fuelOptions)}
+${renderQuickSelect('transmission', 'Transmission', 'All transmissions', transmissionOptions)}
+${renderQuickSelect('body', 'Coupe', 'All body styles', bodyOptions)}
+${renderQuickSelect('feature', 'Features', 'All features', featureOptions)}
 </div>
-<div class="daynight-inventory-type-pills" aria-label="Бърз избор">
+<div class="daynight-inventory-type-pills" aria-label="Quick selection">
 ${renderInventoryTypePills()}
 </div>
 </form>
-<p class="daynight-inventory-empty" aria-live="polite" hidden>Няма автомобили по избраните филтри.</p>
+<p class="daynight-inventory-empty" aria-live="polite" hidden>No vehicles match the selected filters.</p>
 </div>`;
 }

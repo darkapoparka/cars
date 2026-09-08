@@ -32,67 +32,67 @@
 	const cards: PackageCard[] = [
 		{
 			id: 'basic-request',
-			kicker: 'Полезно',
-			title: 'Основна заявка',
-			price: 'Без такса',
+			kicker: 'Helpful',
+			title: 'Basic request',
+			price: 'No fee',
 			features: [
-				'Данни за автомобила',
-				'Apply for заявки към автокъщата',
+				'Vehicle details',
+				'Submit dealership inquiries',
 				'Access 5 Car Brochure',
-				'Контакт с консултант',
-				'Проследяване на запитване',
-				'Допълнителни снимки при нужда',
+				'Contact an advisor',
+				'Inquiry tracking',
+				'Request additional photos',
 				'Listings Active for 7 Days',
-				'Отговор от екипа на Day Night Auto'
+				'Response from the Texas Drive Auto team'
 			]
 		},
 		{
 			id: 'inspection',
-			kicker: 'Полезно',
-			title: 'Оглед',
-			price: 'По заявка',
+			kicker: 'Helpful',
+			title: 'Viewing',
+			price: 'On request',
 			features: [
-				'Снимки и описание',
-				'Apply for заявки към автокъщата',
+				'Photos and description',
+				'Submit dealership inquiries',
 				'Access 5 Car Brochure',
-				'Контакт с консултант',
-				'Проследяване на запитване',
-				'Допълнителни снимки при нужда',
+				'Contact an advisor',
+				'Inquiry tracking',
+				'Request additional photos',
 				'Expiry 1 month',
-				'Контакт с екипа'
+				'Contact the team'
 			]
 		},
 		{
 			id: 'full-support',
-			kicker: 'Полезно',
-			title: 'Пълно съдействие',
-			price: 'По заявка',
+			kicker: 'Helpful',
+			title: 'Ask about available assistance',
+			price: 'On request',
 			active: true,
 			features: [
-				'Оценка от екипа',
-				'Apply for 50 заявки към автокъщата',
+				'Team assessment',
+				'Submit 50 dealership inquiries',
 				'Access 5 Car Specification',
-				'Контакт с консултант',
-				'Проследяване на запитване',
-				'Допълнителни уточнения при нужда',
+				'Contact an advisor',
+				'Inquiry tracking',
+				'Additional details as needed',
 				'Listings Active for 2 Months',
-				'Отговор от екипа на Day Night Auto'
+				'Response from the Texas Drive Auto team'
 			]
 		},
 		{
 			id: 'custom-service',
-			kicker: 'Полезно',
-			title: 'Индивидуална услуга',
-			price: 'По заявка',
+			kicker: 'Helpful',
+			title: 'Individual service',
+			price: 'On request',
 			features: [
-				'Индивидуално съдействие',
-				'Apply for 150 заявки към автокъщата',
+				'Personal assistance',
+				'Submit 150 dealership inquiries',
 				'Access 5 Vehicle Detail',
-				'Контакт с консултант',
-				'Проследяване на запитване',
-				'Допълнителни уточнения при нужда',
+				'Contact an advisor',
+				'Inquiry tracking',
+				'Additional details as needed',
 				'Listings Active for 2 Months',
-				'Отговор от екипа на Day Night Auto'
+				'Response from the Texas Drive Auto team'
 			]
 		}
 	];
@@ -127,24 +127,24 @@
 			href={resolve('/sell-your-car/request')}
 			class="btn btn-line-style-2 effect-line-primary btn-large font-weight-600"
 		>
-			Изпрати заявка
+			Submit request
 		</a>
 	</div>
 {/snippet}
 
 <div class="dashboard-content--inner flat-tabs" data-custom="true">
 	<div class="title-section mb-30 gap-12">
-		<p class="h3">Нова заявка за продажбаs</p>
+		<p class="h3">New sale request</p>
 		<a
 			href={resolve('/sell-your-car/request')}
 			class="btn btn-line btn-large font-weight-600 px-24"
 		>
-			Изпрати към Day Night Auto
+			Send to Texas Drive Auto
 		</a>
 	</div>
 
 	<div class="dashboard-box style-3 mb-30 bg-white">
-		<p class="h4 mb-20">Данни за автомобила</p>
+		<p class="h4 mb-20">Vehicle details</p>
 		<div class="menu-tab menu-tab-package flex flex-wrap items-center justify-between gap-30">
 			{#each tabs as tab (tab.value)}
 				<label
@@ -177,7 +177,7 @@
 					? 'dashboard-box style-2 content-inner active bg-white'
 					: 'dashboard-box style-2 content-inner bg-white'}
 			>
-				<p class="h4 mb-20 text-center">Заявка към Day Night Auto</p>
+				<p class="h4 mb-20 text-center">Request to Texas Drive Auto</p>
 
 				<div
 					class="xl-grid-cols-2 sm-grid-cols-1 listing-grid2-columns md-grid-cols-1 grid grid-cols-4 gap-30"

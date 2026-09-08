@@ -6,9 +6,9 @@
 
 	const DESCRIPTION_TAB_ID = '__description__';
 
-	// Описание leads as the default tab, followed by the feature groups.
+	// Description leads as the default tab, followed by the feature groups.
 	const navTabs = $derived([
-		{ id: DESCRIPTION_TAB_ID, label: 'Описание' },
+		{ id: DESCRIPTION_TAB_ID, label: 'Description' },
 		...tabs.map((tab) => ({ id: tab.id, label: tab.label }))
 	]);
 
@@ -72,7 +72,7 @@
 		display: inline;
 	}
 
-	/* Bigger, clearer PDP info tabs (Описание + feature groups). */
+	/* Bigger, clearer PDP info tabs (Description + feature groups). */
 	.pdp-info-tabs :global(.menu-tab-style4 li) {
 		padding-bottom: 14px;
 	}

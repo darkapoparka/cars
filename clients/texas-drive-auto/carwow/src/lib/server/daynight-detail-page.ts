@@ -20,9 +20,9 @@ function toFeatureItems(tabId: string, labels: string[]): DetailFeatureItem[] {
 		}));
 }
 
-// Native PDP "Опознайте автомобила" feature tabs, built from real Car data.
-// "Описание" is rendered by DesktopDetailFeatureTabs from vehicle.description;
-// this adds the spec tabs: Екстри (vehicle.features) + Акценти (vehicle.highlights).
+// Native PDP "Explore the vehicle" feature tabs, built from real Car data.
+// "Description" is rendered by DesktopDetailFeatureTabs from vehicle.description;
+// this adds the spec tabs: Features (vehicle.features) + Highlights (vehicle.highlights).
 // A tab is omitted when its source list is empty so no blank panel renders.
 export function buildDetailFeatureTabs(vehicle: Car): DetailFeatureTab[] {
 	const tabs: DetailFeatureTab[] = [];
@@ -31,7 +31,7 @@ export function buildDetailFeatureTabs(vehicle: Car): DetailFeatureTab[] {
 		const id = 'feature-tab-ekstri';
 		tabs.push({
 			id,
-			label: 'Екстри',
+			label: 'Features',
 			active: false,
 			features: toFeatureItems(id, vehicle.features)
 		});
@@ -41,7 +41,7 @@ export function buildDetailFeatureTabs(vehicle: Car): DetailFeatureTab[] {
 		const id = 'feature-tab-aktsenti';
 		tabs.push({
 			id,
-			label: 'Акценти',
+			label: 'Highlights',
 			active: false,
 			features: toFeatureItems(id, vehicle.highlights)
 		});

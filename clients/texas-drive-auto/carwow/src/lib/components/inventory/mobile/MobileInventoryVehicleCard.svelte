@@ -12,7 +12,7 @@
 	<a
 		class="mobile-inventory-card__link"
 		href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
-		aria-label={`Виж ${vehicle.shortTitle} ${vehicle.year}`}
+		aria-label={`View ${vehicle.shortTitle} ${vehicle.year}`}
 	>
 		<div class="mobile-inventory-card__media">
 			<img
@@ -23,14 +23,14 @@
 				data-daynight-image-fallback
 				use:daynightImageFallback
 			/>
-			<span>{vehicle.badges[0] ?? 'Наличен'}</span>
+			<span>{vehicle.badges[0] ?? 'Available'}</span>
 		</div>
 		<div class="mobile-inventory-card__body">
 			<div class="mobile-inventory-card__title">
 				<h3>{vehicle.shortTitle}</h3>
 				<div class="mobile-inventory-card__price">
 					<span class="mobile-inventory-card__price-stack">
-						<strong>{vehicle.priceEur}</strong>
+						<strong>{vehicle.priceLabel}</strong>
 						<span>{vehicle.monthly}</span>
 					</span>
 					<span class="mobile-inventory-card__arrow" aria-hidden="true">
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<p>{vehicle.conditionLine}</p>
-			<ul aria-label="Основни данни">
+			<ul aria-label="Key specs">
 				<li>
 					<DayNightSpecIcon name="mileage" size={15} />
 					{vehicle.mileage}

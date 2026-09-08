@@ -11,7 +11,7 @@
 	let inquirySubmitState = $state<LeadSubmitState>('idle');
 	let inquirySubmitMessage = $state('');
 
-	const inquiryErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const inquiryErrorMessage = `Your inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -38,11 +38,11 @@
 		const message = readFormValue(formData, 'message');
 		const wantsPriceUpdates = formData.get('price_updates') === 'yes';
 		const fullMessage = [
-			`Автомобил: ${vehicle.title}`,
-			`Референтен номер: ${vehicle.lot}`,
-			`Тема: ${subject}`,
+			`Vehicle: ${vehicle.title}`,
+			`Reference number: ${vehicle.lot}`,
+			`Subject: ${subject}`,
 			message,
-			wantsPriceUpdates ? 'Клиентът иска известия за цената.' : ''
+			wantsPriceUpdates ? 'The customer requests price alerts.' : ''
 		]
 			.filter(Boolean)
 			.join('\n\n');
@@ -62,7 +62,7 @@
 
 		if (result.ok) {
 			inquirySubmitState = 'success';
-			inquirySubmitMessage = 'Благодарим! Ще се свържем с вас за този автомобил.';
+			inquirySubmitMessage = 'Draft only — not sent';
 			form.reset();
 			return;
 		}
@@ -73,7 +73,7 @@
 </script>
 
 <div class="listing-details--sidebar-box">
-	<p class="h5 mb-16 capitalize">Запитване за автомобила</p>
+	<p class="h5 mb-16 capitalize">Vehicle inquiry</p>
 
 	<form
 		action="#"
@@ -84,63 +84,63 @@
 	>
 		<div class="mb-8 grid grid-cols-1 gap-18">
 			<div>
-				<label class="mb-8" for="SendInquiryname">Име</label>
+				<label class="mb-8" for="SendInquiryname">Name</label>
 				<input
 					class="active input-large"
 					id="SendInquiryname"
 					name="SendInquiryname"
 					type="text"
 					value=""
-					placeholder="Вашето име"
+					placeholder="Your name"
 					required
-					aria-label="Вашето име"
+					aria-label="Your name"
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryemail">Имейл</label>
+				<label class="mb-8" for="SendInquiryemail">Email</label>
 				<input
 					class="input-large"
 					name="SendInquiryemail"
 					id="SendInquiryemail"
 					type="email"
 					value=""
-					placeholder="Вашият имейл"
+					placeholder="Your email"
 					required
-					aria-label="Имейл"
+					aria-label="Email"
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryphone">Телефон</label>
+				<label class="mb-8" for="SendInquiryphone">Phone</label>
 				<input
-					placeholder="Телефон (по избор)"
+					placeholder="Phone (optional)"
 					class="input-large"
 					name="SendInquiryphone"
 					id="SendInquiryphone"
 					type="tel"
 					value=""
-					aria-label="Телефон"
+					aria-label="Phone"
 				/>
 			</div>
 
 			<div>
-				<label class="mb-8" for="SendInquirysubject">Тема</label>
+				<label class="mb-8" for="SendInquirysubject">Subject</label>
 				<select id="SendInquirysubject" name="SendInquirysubject">
-					<option>Наличност на автомобила</option>
-					<option>Цена и оглед</option>
-					<option>Финансиране</option>
+					<option>Vehicle availability</option>
+					<option>Price and viewing</option>
+					<option>Buyer-arranged funding</option>
 				</select>
 			</div>
 
 			<div class="padding-0">
-				<label class="mb-6" for="message">Съобщение</label>
+				<label class="mb-6" for="message">Message</label>
 				<textarea
-					placeholder="Вашето съобщение"
+					placeholder="Your message"
 					rows="3"
 					name="message"
 					class="message"
 					id="message"
 					required
-					aria-label="Съобщение"
+					aria-label="Message"
 				></textarea>
 			</div>
 		</div>
@@ -149,7 +149,7 @@
 			class="sa-cta sa-cta-primary mb-18 w-full"
 			disabled={inquirySubmitState === 'submitting'}
 		>
-			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}
+			{inquirySubmitState === 'submitting' ? 'Sending...' : 'Send inquiry'}
 		</button>
 		{#if inquirySubmitMessage}
 			<p
@@ -167,14 +167,14 @@
 		<label class="filter-checkbox style-2 mb-6">
 			<input type="checkbox" name="price_updates" value="yes" />
 			<span class="text-sm"
-				>Да, искам да получавам известия за цената и полезна информация за този автомобил.</span
+				>Yes, I’d like price alerts and useful information about this vehicle.</span
 			>
 		</label>
 
 		<p class="text-secondary text-xs">
-			Използвайки услугата, приемате нашето
+			By using this service, you accept our
 			<a href={resolve('/terms')} class="text-underline text-highlight text-xs">
-				Споразумение с потребителите.
+				User Agreement.
 			</a>
 		</p>
 	</form>

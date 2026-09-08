@@ -7,5 +7,5 @@
 	aria-live="polite"
 	hidden={!isEmpty}
 >
-	Няма автомобили по избраните филтри.
+	No vehicles match the selected filters.
 </p>

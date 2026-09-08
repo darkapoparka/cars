@@ -1,8 +1,8 @@
 <script lang="ts">
 	// Native self-contained rebuild of the /blog/[slug] (blog-details-2.html) desktop
 	// article: breadcrumb + centered title/meta + hero image + body (lead, pull-quote,
-	// paired images, sections, tags + share, author card, prev/next) + the "Още по
-	// темата" related grid. The look that used to come from app.css +
+	// paired images, sections, tags + share, author card, prev/next) + the "More on
+	// this topic" related grid. The look that used to come from app.css +
 	// StorefrontTemplateContent's :global stylesheet is reproduced as a SELF-CONTAINED
 	// scoped style block below (design-system rules inlined from
 	// StorefrontTemplateContent, de-scoped to this component's markup). Brand colours
@@ -44,7 +44,7 @@
 		href: `mailto:?subject=${encodedShareTitle}&body=${encodedShareUrl}`
 	});
 	function formatArticleDate(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat('en-US', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
@@ -69,14 +69,14 @@
 
 {#snippet socialLinks()}
 	<ul class="blog-detail-social flex gap-12">
-		<li><p>Сподели:</p></li>
+		<li><p>Share:</p></li>
 		<li>
-			<a {...facebookShareLinkProps} aria-label="Сподели публикацията">
+			<a {...facebookShareLinkProps} aria-label="Share this post">
 				<Share2 size={18} />
 			</a>
 		</li>
 		<li>
-			<a {...mailShareLinkProps} aria-label="Изпрати публикацията по имейл">
+			<a {...mailShareLinkProps} aria-label="Email this post">
 				<Mail size={18} />
 			</a>
 		</li>
@@ -95,7 +95,7 @@
 		<div class="content">
 			<p class="h5 title mb-8 text-white">{related.title}</p>
 			<div class="blog-related-meta flex justify-start gap-8">
-				{#if related.author}<span class="text-xs text-white">от {related.author}</span>{/if}
+				{#if related.author}<span class="text-xs text-white">of {related.author}</span>{/if}
 				<span class="text-xs text-white">{formatArticleDate(related.date)}</span>
 				<span class="text-highlight text-underline text-xs uppercase">{related.category}</span>
 			</div>
@@ -107,9 +107,9 @@
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={resolve('/')}>Home</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/blog')}>Блог</a></li>
+				<li><a href={resolve('/blog')}>Blog</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><span>{article.category}</span></li>
 			</ul>
@@ -138,7 +138,7 @@
 
 			<div class="md-flex-col mb-40 flex justify-between gap-16">
 				<ul class="blog-detail-tags flex gap-12">
-					<li><p>Тема:</p></li>
+					<li><p>Topic:</p></li>
 					{#each article.tags.slice(0, 3) as tag (tag)}
 						<li><a href={resolve(filterHref('tag', tag))}>{tag}</a></li>
 					{/each}
@@ -152,9 +152,9 @@
 					<img src="/brand/daynight-logo-generated.png" alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
-							Day Night Auto
+							Texas Drive Auto
 						</a>
-						<p class="text-secondary mb-18">Автокъща в София</p>
+						<p class="text-secondary mb-18">Used-car dealership</p>
 						{#if daynightSite.email}
 							<a href={`mailto:${daynightSite.email}`} class="text-highlight text-sm">
 								{daynightSite.email}
@@ -163,14 +163,14 @@
 					</div>
 				</div>
 				<p class="h7 line-height-28">
-					Имате въпрос за конкретен автомобил? <a href={resolve('/contact')}>Свържете се с екипа</a> и посочете обявата, която ви интересува.
+					Have a question about a specific vehicle? <a href={resolve('/contact')}>Contact the team</a> and mention the listing you’re interested in.
 				</p>
 			</div>
 
 			<div class="divider mb-26"></div>
 			<div class="blog-detail-recentpost mb-24 flex justify-between">
 				<div class="previous">
-					<p class="font-weight-600 text-highlight mb-4 uppercase">ПРЕДИШНА</p>
+					<p class="font-weight-600 text-highlight mb-4 uppercase">PREVIOUS</p>
 					<a
 						href={resolve('/blog/[slug]', { slug: adjacentArticles.previous.slug })}
 						class="h5 font-weight-500 capitalize"
@@ -179,7 +179,7 @@
 					</a>
 				</div>
 				<div class="next">
-					<p class="font-weight-600 text-highlight mb-4 text-right uppercase">СЛЕДВАЩА</p>
+					<p class="font-weight-600 text-highlight mb-4 text-right uppercase">NEXT</p>
 					<a
 						href={resolve('/blog/[slug]', { slug: adjacentArticles.next.slug })}
 						class="h5 font-weight-500 text-right capitalize"
@@ -194,9 +194,9 @@
 	{#if relatedArticles.length}
 		<section class="py-100">
 			<div class="container">
-				<h2 class="mb-12 text-center">Още по темата</h2>
+				<h2 class="mb-12 text-center">More on this topic</h2>
 				<p class="h7 text-secondary mb-40 text-center">
-					Последни новини и практични съвети за покупка, документи, финансиране и наличност.
+					News and practical tips on buying, paperwork, buyer-arranged funding, and availability.
 				</p>
 				<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 					{#each relatedArticles as related (related.slug)}

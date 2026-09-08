@@ -8,7 +8,7 @@
 {#if vehicles.length}
 	<section class="background-light pdp-related py-100" aria-labelledby="pdp-related-title">
 		<div class="container">
-			<p id="pdp-related-title" class="h3 mb-40 capitalize">Подобни автомобили</p>
+			<p id="pdp-related-title" class="h3 mb-40 capitalize">Similar vehicles</p>
 			<div class="pdp-related__grid">
 				{#each vehicles as vehicle, index (vehicle.slug)}
 					<VehicleCard {vehicle} {index} />

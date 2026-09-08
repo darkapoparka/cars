@@ -49,7 +49,7 @@
 	<div class="image">
 		<a
 			href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
-			aria-label={`Виж ${vehicle.shortTitle} ${vehicle.year}`}
+			aria-label={`View ${vehicle.shortTitle} ${vehicle.year}`}
 		>
 			<img
 				class="card--img"

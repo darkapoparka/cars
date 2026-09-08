@@ -17,7 +17,7 @@ describe('GarageState', () => {
 		expect(garage.toggleCompare(slugs[2])).toBe(true);
 		expect(garage.toggleCompare(slugs[3])).toBe(false);
 		expect(garage.compare).toEqual(slugs.slice(0, 3));
-		expect(garage.formMessage).toContain('до 3 автомобила');
+		expect(garage.formMessage).toContain('up to 3 vehicles');
 
 		garage.toggleCompare(slugs[1]);
 		expect(garage.compare).toEqual([slugs[0], slugs[2]]);

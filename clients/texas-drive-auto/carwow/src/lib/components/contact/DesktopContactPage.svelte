@@ -43,7 +43,7 @@
 	const contactContext = readContactIntent(initialSearchParams);
 	const initialImportFields = readImportIntent(initialSearchParams);
 	const initialEmail = initialSearchParams.get('email')?.trim() ?? '';
-	const initialSubject = initialImportFields.isImport ? 'Внос на автомобил' : contactContext.subject;
+	const initialSubject = initialImportFields.isImport ? 'Vehicle import questions' : contactContext.subject;
 	const importFields = $derived(
 		readImportIntent(appPage.url.searchParams)
 	);
@@ -58,8 +58,8 @@
 	let leadSubmitState = $state<LeadSubmitState>('idle');
 	let leadSubmitMessage = $state('');
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Your inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Your import inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -80,7 +80,7 @@
 
 		const formData = new FormData(form);
 		const customerName =
-			readFormValue(formData, 'name') || (isImportMode ? 'Заявка за внос от сайта' : '');
+			readFormValue(formData, 'name') || (isImportMode ? 'Website import inquiry' : '');
 		const subjectValue = readFormValue(formData, 'subject');
 		const emailValue = readFormValue(formData, 'email');
 		const phoneValue = readFormValue(formData, 'phone');
@@ -124,8 +124,8 @@
 		if (result.ok) {
 			leadSubmitState = 'success';
 			leadSubmitMessage = isImportMode
-				? 'Благодарим! Заявката за внос е изпратена и ще Ви изпратим конкретни варианти.'
-				: 'Благодарим! Ще се свържем с Вас възможно най-скоро.';
+				? 'Draft only — not sent'
+				: 'Draft only — not sent';
 			name = '';
 			subject = initialSubject;
 			email = '';
@@ -205,13 +205,13 @@
 			artwork={isImportMode ? 'cars' : 'contact'}
 			panel="light"
 			headingId="daynight-contact-title"
-			title={isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се с нас'}
+			title={isImportMode ? 'Vehicle import inquiry' : 'Contact us'}
 			copy={isImportMode
-				? 'Изпратете линк, модел или бюджет и ще Ви върнем конкретна следваща стъпка.'
-				: 'Оглед, документи, финансиране, бартер или въпрос за наличен автомобил.'}
-			primaryLabel="Изпрати запитване"
+				? 'Add a link, model, or budget to your draft inquiry.'
+				: 'Questions about viewings, paperwork, or available vehicles. No dealer financing or payment plans; buyer-arranged funding is separate.'}
+			primaryLabel="Send inquiry"
 			primaryHref="/contact#contact-form"
-			secondaryLabel="Виж автомобили"
+			secondaryLabel="View vehicles"
 			secondaryHref="/inventory"
 		/>
 		<section id="contact-form" class="daynight-contact-primary bg-white pb-84">
@@ -227,19 +227,19 @@
 						loading="eager"
 						decoding="async"
 					/>
-					<span>Шоурум в София</span>
+					<span>Showroom location</span>
 				</div>
 
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
 					<div class="contact-page-info">
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
-								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Day Night Auto'}
+								{isImportMode ? 'Vehicle import inquiry' : 'Contact Texas Drive Auto'}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
 								{isImportMode
-									? 'Изпратете линк, модел или бюджет и ще Ви изпратим конкретни варианти за внос.'
-									: 'Свържете се за оглед, документи, регистрация, финансиране, бартер или въпрос за наличен автомобил.'}
+									? 'Add a link, model, or budget. Import services are unconfirmed in this preview.'
+									: 'Ask about viewings, paperwork, registration, trade-in availability, or available vehicles. No dealer financing or payment plans; buyer-arranged funding is separate.'}
 							</p>
 
 							<div class="daynight-contact-actions">
@@ -248,34 +248,34 @@
 									class="daynight-contact-action sa-cta sa-cta-primary"
 								>
 									{@render phoneIcon()}
-									<span>Обади се / Viber</span>
+									<span>Call / Viber</span>
 								</a>
 								<a
 									{...mapLinkAttributes}
 									class="daynight-contact-action daynight-contact-action--map sa-cta sa-cta-ghost"
 								>
 									{@render mapIcon()}
-									<span>Виж карта</span>
+									<span>View map</span>
 								</a>
 							</div>
 
-							<div class="daynight-contact-details" aria-label="Данни за контакт">
+							<div class="daynight-contact-details" aria-label="Contact details">
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Адрес</p>
+									<p class="daynight-contact-detail-label">Address</p>
 									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Телефон / Viber</p>
+									<p class="daynight-contact-detail-label">Phone / Viber</p>
 									<a href={`tel:${daynightSite.phone}`} class="daynight-contact-detail-value">
 										{daynightSite.phoneLabel}
 									</a>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Писмен контакт</p>
-									<p class="daynight-contact-detail-value">Използвайте формата за запитване</p>
+									<p class="daynight-contact-detail-label">Written inquiries</p>
+									<p class="daynight-contact-detail-value">Use the inquiry form</p>
 								</div>
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Работно време</p>
+									<p class="daynight-contact-detail-label">Business hours</p>
 									<p class="daynight-contact-detail-value">
 										{daynightSite.hoursLabel}
 									</p>
@@ -285,15 +285,15 @@
 					</div>
 
 					<div class="radius-20 contact-page-form bg-white">
-						<p class="h3 mb-12">{isImportMode ? 'Данни за внос' : 'Пишете ни за автомобил'}</p>
+						<p class="h3 mb-12">{isImportMode ? 'Import inquiry details' : 'Ask about a vehicle'}</p>
 						<p class="text-body-style-2 mb-32">
 							{isImportMode
-								? 'Попълнете контакт и линк към обява, ако вече сте избрали автомобил.'
-								: 'Пишете ни за автомобил, оглед, документи или следващи стъпки.'}
+								? 'Enter your contact details and a listing link if you have already chosen a vehicle.'
+								: 'Draft a question about a vehicle, viewing, paperwork, or next steps.'}
 						</p>
 
 						{#if !isImportMode && contactContext.vehicle}
-							<p class="mb-20">Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
+							<p class="mb-20">Vehicle: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
 						{/if}
 
 						<form
@@ -307,7 +307,7 @@
 								aria-hidden="true"
 								style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"
 							>
-								<label for="contact-company-website">Не попълвайте това поле</label>
+								<label for="contact-company-website">Leave this field blank</label>
 								<input
 									id="contact-company-website"
 									name="companyWebsite"
@@ -320,59 +320,59 @@
 							</div>
 							<div class="md-grid-cols-1 mb-22 grid grid-cols-2 gap-x-20 gap-y-24">
 								<div class="padding-0">
-									<p class="mb-8">Име</p>
+									<p class="mb-8">Name</p>
 									<input
 										class="active input-large"
 										id="contact-name"
 										name="name"
 										type="text"
 										bind:value={name}
-										placeholder="Вашето име"
+										placeholder="Your name"
 										required={!isImportMode}
-										aria-label="Вашето име"
+										aria-label="Your name"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Тема</p>
+									<p class="mb-8">Subject</p>
 									<input
 										class="input-large"
-										placeholder={isImportMode ? 'Внос на автомобил' : 'Автомобил, бартер...'}
+										placeholder={isImportMode ? 'Vehicle import questions' : 'Vehicle, viewing...'}
 										id="contact-subject"
 										name="subject"
 										type="text"
 										bind:value={subject}
 										required
-										aria-label="Тема на запитването"
+										aria-label="Inquiry subject"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Имейл</p>
+									<p class="mb-8">Email</p>
 									<input
 										class="input-large"
 										name="email"
 										id="contact-email"
 										type="email"
 										bind:value={email}
-										placeholder="Имейл по желание"
-										aria-label="Имейл"
+										placeholder="Email (optional)"
+										aria-label="Email"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Телефон</p>
+									<p class="mb-8">Phone</p>
 									<input
-										placeholder="Въведете телефон"
+										placeholder="Enter phone number"
 										class="input-large"
 										name="phone"
 										id="contact-phone"
 										type="tel"
 										bind:value={phone}
 										required
-										aria-label="Телефон"
+										aria-label="Phone"
 									/>
 								</div>
 								{#if isImportMode}
 									<div class="padding-0 col-span-2">
-										<p class="mb-8">Линк към обява</p>
+										<p class="mb-8">Listing link</p>
 										<input
 											class="input-large"
 											name="sourceUrl"
@@ -381,23 +381,23 @@
 											inputmode="url"
 											bind:value={sourceUrl}
 											placeholder="mobile.de, autoscout24..."
-											aria-label="Линк към обява"
+											aria-label="Listing link"
 										/>
 									</div>
 								{/if}
 								<div class="padding-0 col-span-2">
-									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Съобщение'}</p>
+									<p class="mb-8">{isImportMode ? 'What you’re looking for' : 'Message'}</p>
 									<textarea
 										placeholder={isImportMode
-											? 'Марка, модел, бюджет, условия или допълнителни изисквания...'
-											: 'Вашето съобщение*'}
+											? 'Make, model, budget, preferences, or additional requirements...'
+											: 'Your message*'}
 										rows="3"
 										name="message"
 										class="message"
 										id="message"
 										bind:value={message}
 										required={!isImportMode}
-										aria-label="Съобщение"
+										aria-label="Message"
 									></textarea>
 								</div>
 							</div>
@@ -407,10 +407,10 @@
 								disabled={leadSubmitState === 'submitting'}
 							>
 								{leadSubmitState === 'submitting'
-									? 'Изпращаме...'
+									? 'Sending...'
 									: isImportMode
-										? 'Изпрати заявка'
-										: 'Изпрати запитване'}
+										? 'Submit request'
+										: 'Send inquiry'}
 							</button>
 							{#if leadSubmitMessage}
 								<p
@@ -436,7 +436,7 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title="Карта до Day Night Auto София"
+						title="Map to Texas Drive Auto"
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -444,10 +444,10 @@
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
-					<div class="daynight-contact-map__overlay" aria-label="Локация Day Night Auto">
-						<p class="daynight-contact-map__eyebrow">Day Night Auto</p>
+					<div class="daynight-contact-map__overlay" aria-label="Texas Drive Auto location">
+						<p class="daynight-contact-map__eyebrow">Texas Drive Auto</p>
 						<p class="daynight-contact-map__address">{daynightSite.location}</p>
-						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
+						<a {...mapLinkAttributes}>Open in Google Maps</a>
 					</div>
 				</div>
 			</div>

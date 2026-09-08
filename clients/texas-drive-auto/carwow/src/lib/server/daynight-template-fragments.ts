@@ -10,7 +10,7 @@ const legacyTrailingChromeIds = [
 	'VideoModal',
 	'QuickViewModal',
 	'ShoppingCartModal',
-	'СравниModal'
+	'CompareModal'
 ] as const;
 
 function escapeRegExp(value: string) {

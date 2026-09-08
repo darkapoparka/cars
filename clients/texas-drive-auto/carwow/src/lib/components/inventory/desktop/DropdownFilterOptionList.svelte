@@ -31,7 +31,7 @@
 		onDone: () => void;
 	} = $props();
 
-	const searchPlaceholder = $derived(`Търси ${label.toLocaleLowerCase('bg-BG')}...`);
+	const searchPlaceholder = $derived(`Search ${label.toLocaleLowerCase('en-US')}...`);
 
 	function handleQueryInput(event: Event) {
 		if (event.target instanceof HTMLInputElement) {
@@ -58,7 +58,7 @@
 			type="search"
 			data-daynight-quick-option-search
 			placeholder={searchPlaceholder}
-			aria-label={`Търси ${label}`}
+			aria-label={`Search ${label}`}
 			autocomplete="off"
 			value={optionQuery}
 			oninput={handleQueryInput}
@@ -94,7 +94,7 @@
 		</label>
 	{/each}
 	{#if visibleOptions.length === 0}
-		<p class="filter-select-dropdown__empty">Няма резултат по това търсене.</p>
+		<p class="filter-select-dropdown__empty">No results match your search.</p>
 	{/if}
 </div>
 
@@ -106,7 +106,7 @@
 			data-daynight-quick-menu-clear
 			onclick={onClear}
 		>
-			Изчисти
+			Clear
 		</button>
 		<button
 			type="button"
@@ -114,7 +114,7 @@
 			data-daynight-quick-done
 			onclick={onDone}
 		>
-			Готово
+			Done
 		</button>
 	</div>
 {/if}

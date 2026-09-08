@@ -11,8 +11,8 @@
 	const garage = getOptionalGarageContext();
 	const isCompared = $derived(garage.isCompared(vehicle.slug));
 	const isFavorite = $derived(garage.isFavorite(vehicle.slug));
-	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
-	const fallbackBadge = $derived(index % 5 === 1 ? 'Добра цена' : '');
+	const displayPrice = $derived(vehicle.priceLabel.replace(/\s*EUR\b/, ' $'));
+	const fallbackBadge = $derived(index % 5 === 1 ? 'Good price' : '');
 	const badge = $derived(
 		vehicle.badges.find((value) => normalizeBadgeLabel(value) !== 'vip') ??
 			vehicle.badges[0] ??
@@ -23,7 +23,7 @@
 	);
 
 	function normalizeBadgeLabel(value: string) {
-		return value.trim().toLocaleLowerCase('bg-BG');
+		return value.trim().toLocaleLowerCase('en-US');
 	}
 </script>
 
@@ -55,9 +55,9 @@
 				class={['daynight-card-compare', { 'is-active': isCompared }]}
 				aria-pressed={isCompared}
 				aria-label={isCompared
-					? `Премахни ${vehicle.shortTitle} от сравнение`
-					: `Добави ${vehicle.shortTitle} за сравнение`}
-				title={isCompared ? 'Премахни от сравнение' : 'Добави за сравнение'}
+					? `Remove ${vehicle.shortTitle} from comparison`
+					: `Add ${vehicle.shortTitle} to comparison`}
+				title={isCompared ? 'Remove from comparison' : 'Add to comparison'}
 				onclick={() => garage.toggleCompare(vehicle.slug)}
 			>
 				<svg
@@ -88,9 +88,9 @@
 				class={['heart', { 'is-active': isFavorite }]}
 				aria-pressed={isFavorite}
 				aria-label={isFavorite
-					? `Премахни ${vehicle.shortTitle} от любими`
-					: `Добави ${vehicle.shortTitle} в любими`}
-				title={isFavorite ? 'Премахни от любими' : 'Добави в любими'}
+					? `Remove ${vehicle.shortTitle} from favorites`
+					: `Add ${vehicle.shortTitle} to favorites`}
+				title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
 				onclick={() => garage.toggleFavorite(vehicle.slug)}
 			>
 				<svg

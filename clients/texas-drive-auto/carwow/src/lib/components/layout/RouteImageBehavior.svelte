@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Branded inline placeholder — never 404s, so a failed external photo
-	// degrades to the same "Очаквайте снимки" card the rest of the site uses.
+	// degrades to the same "Photos unavailable in preview" card the rest of the site uses.
 	import { DAY_IMAGE_FALLBACK as IMAGE_FALLBACK } from '$lib/utils/daynight-image-fallback';
 
 	function describeRouteImage(img: HTMLImageElement): string {
@@ -19,7 +19,7 @@
 			return headingText;
 		}
 
-		return img.closest('a')?.getAttribute('title')?.trim() || 'Day Night Auto';
+		return img.closest('a')?.getAttribute('title')?.trim() || 'Texas Drive Auto';
 	}
 
 	// One pass over route images: lazy-load below-the-fold media, async-decode,

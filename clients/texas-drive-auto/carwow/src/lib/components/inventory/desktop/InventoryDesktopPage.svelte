@@ -60,7 +60,7 @@
 		<div class="inventory-hero" data-daynight-inventory-layout="grid">
 			<DesktopYellowRouteHero
 				headingId="daynight-inventory-title"
-				title="Налични автомобили"
+				title="Vehicle inventory"
 				panel="light"
 				rail={inventoryFilters}
 			>

@@ -18,7 +18,7 @@
 	let localSort = $state<DesktopSortKey>('best-match');
 	const selectedValue = $derived(inventory ? inventory.sort : localSort);
 	const selectedLabel = $derived(
-		desktopSortOptions.find((option) => option.value === selectedValue)?.label ?? 'Най-подходящи'
+		desktopSortOptions.find((option) => option.value === selectedValue)?.label ?? 'Best match'
 	);
 	const triggerLabel = $derived(buttonLabel ?? selectedLabel);
 

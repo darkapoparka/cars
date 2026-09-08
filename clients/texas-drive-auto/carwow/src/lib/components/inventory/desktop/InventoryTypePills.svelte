@@ -64,7 +64,7 @@
 	</svg>
 {/snippet}
 
-<div class="daynight-inventory-type-pills" data-daynight-shortcut-pills aria-label="Бърз избор">
+<div class="daynight-inventory-type-pills" data-daynight-shortcut-pills aria-label="Quick selection">
 	{#each inventoryShortcuts as pill (pill.label)}
 		{@const active = pillActive(pill)}
 		<a
@@ -78,8 +78,8 @@
 			data-daynight-shortcut-field={pill.field}
 			data-daynight-shortcut-value={pill.value}
 			aria-current={active ? 'true' : 'false'}
-			aria-label={pill.clearsAll ? 'Покажи всички автомобили' : `Избери ${pill.label}`}
-			title={pill.clearsAll ? 'Покажи всички автомобили' : `Избери ${pill.label}`}
+			aria-label={pill.clearsAll ? 'Show all vehicles' : `Select ${pill.label}`}
+			title={pill.clearsAll ? 'Show all vehicles' : `Select ${pill.label}`}
 			onclick={(event) => handlePillClick(event, pill)}
 		>
 			{@render pillIcon()}

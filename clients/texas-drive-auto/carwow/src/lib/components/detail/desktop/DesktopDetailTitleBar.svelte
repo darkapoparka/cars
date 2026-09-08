@@ -11,14 +11,14 @@
 
 	async function shareVehicle() {
 		const url = globalThis.location?.href ?? resolve(`/inventory/${vehicle.slug}`);
-		const title = `${vehicle.shortTitle} - ${vehicle.priceEur}`;
+		const title = `${vehicle.shortTitle} - ${vehicle.priceLabel}`;
 
 		try {
 			if (navigator.share) {
 				await navigator.share({ title, text: vehicle.conditionLine, url });
 			} else if (navigator.clipboard) {
 				await navigator.clipboard.writeText(url);
-				shareState = 'Копирано';
+				shareState = 'Copied';
 				window.setTimeout(() => (shareState = ''), 1600);
 			}
 		} catch {
@@ -87,7 +87,7 @@
 <div class="title-section pdp-title-card__main">
 	<a href={resolve('/inventory')} class="pdp-nav-button pdp-nav-button--back">
 		{@render leftArrow()}
-		<span>Назад</span>
+		<span>Back</span>
 	</a>
 	<h1 class="daynight-pdp-title">{vehicle.shortTitle} {vehicle.year}</h1>
 	<div class="pdp-title-actions flex items-center justify-end gap-12">
@@ -95,8 +95,8 @@
 			href={resolve('/compare')}
 			class="btn-icon-circle hover-stroke-white"
 			class:is-active={isCompared}
-			title={isCompared ? 'Виж сравнение' : 'Добави и виж сравнение'}
-			aria-label={isCompared ? 'Виж сравнение' : 'Добави и виж сравнение'}
+			title={isCompared ? 'View comparison' : 'Add and compare'}
+			aria-label={isCompared ? 'View comparison' : 'Add and compare'}
 			onclick={() => {
 				if (!isCompared) garage.toggleCompare(vehicle.slug);
 			}}
@@ -108,8 +108,8 @@
 			type="button"
 			class="btn-icon-circle hover-stroke-white"
 			class:is-active={isSaved}
-			title={isSaved ? 'Премахни от запазени' : 'Запази автомобила'}
-			aria-label={isSaved ? 'Премахни от запазени' : 'Запази автомобила'}
+			title={isSaved ? 'Remove from saved' : 'Save vehicle'}
+			aria-label={isSaved ? 'Remove from saved' : 'Save vehicle'}
 			aria-pressed={isSaved}
 			onclick={() => garage.toggleFavorite(vehicle.slug)}
 		>
@@ -119,8 +119,8 @@
 		<button
 			type="button"
 			class="btn-icon-circle hover-fill-white"
-			title="Сподели автомобила"
-			aria-label="Сподели автомобила"
+			title="Share vehicle"
+			aria-label="Share vehicle"
 			onclick={shareVehicle}
 		>
 			{@render shareIcon()}

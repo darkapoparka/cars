@@ -5,7 +5,7 @@
 </script>
 
 <div class="mobile-hero-bar">
-	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
+	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Texas Drive Auto home">
 		<img
 			src={resolve('/brand/daynight-logo-generated.png')}
 			alt={daynightSite.shortName}
@@ -16,8 +16,8 @@
 	<a
 		class="mobile-hero-bar__call"
 		href={`tel:+359${daynightSite.phone.slice(1)}`}
-		aria-label="Обади се"
-		title="Обади се"
+		aria-label="Call"
+		title="Call"
 	>
 		<Phone size={22} strokeWidth={2} aria-hidden="true" />
 	</a>

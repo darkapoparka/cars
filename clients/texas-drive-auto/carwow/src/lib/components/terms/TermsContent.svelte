@@ -13,29 +13,29 @@
 	};
 
 	const intro =
-		'Информацията в този сайт има информативен характер. Актуалните цени, наличност и условия за финансиране се потвърждават директно със Day Night Auto преди сделка.';
+		'This site is an informational preview. Confirm current prices and availability directly with Texas Drive Auto before purchasing. No dealer financing or payment plans are offered; buyer-arranged funding is separate.';
 	const usageNotice =
-		'Използвайки сайта, потребителят приема, че обявите и описанията подлежат на проверка на място и не представляват публична оферта.';
+		'Listings and descriptions require verification in person and do not constitute a binding offer.';
 	const photosNotice =
-		'Снимките и описанията илюстрират конкретния автомобил, а състоянието и оборудването се потвърждават при оглед.';
+		'Verify listing photos and descriptions against the vehicle, and confirm its condition and equipment during an inspection.';
 	const accuracyNotice =
-		'Day Night Auto полага усилия съдържанието да е точно и актуално, но не носи отговорност за непълноти или технически грешки в обявите.';
+		'Texas Drive Auto preview listings may contain incomplete information or technical errors. Confirm details before purchasing.';
 	const stockNotice =
-		'Възможно е автомобил да бъде продаден или резервиран, преди обявата да бъде обновена, затова препоръчваме предварително потвърждение на наличността.';
+		'A vehicle may be sold or reserved before its listing is updated. Confirm availability before visiting.';
 	const updatesNotice =
-		'Day Night Auto може да актуализира услугите и условията по всяко време, като валидна е версията, публикувана към момента на ползване на сайта. ';
+		'Preview service information and terms may change. Confirm applicable terms directly with Texas Drive Auto before purchasing. ';
 
 	const sharedListItems = [
-		'Финансиране, разсрочено плащане и бартер се предлагат при условия, договорени индивидуално за всеки клиент.',
-		'Огледът и тестът се организират предварително по уговорка в София.',
-		'Техническите характеристики са по данни на производителя и предходния собственик и подлежат на проверка при оглед.'
+		'No dealer financing or payment plans are offered. Buyer-arranged funding is separate. Ask whether trade-ins are accepted.',
+		'Contact the dealership to confirm the location and arrange a viewing or test drive.',
+		'Verify listed specifications and their sources during an inspection.'
 	];
 
 	const sections: readonly TermsSection[] = [
 		{
 			id: 'section1',
-			navLabel: '1. Условия',
-			title: '1. Условия',
+			navLabel: '1. Terms',
+			title: '1. Terms',
 			paragraphs: [
 				{ text: intro, spaced: true },
 				{ text: usageNotice, spaced: true },
@@ -44,26 +44,26 @@
 		},
 		{
 			id: 'section2',
-			navLabel: '2. Ограничения',
-			title: '2. Ограничения',
+			navLabel: '2. Limitations',
+			title: '2. Limitations',
 			paragraphs: [{ text: accuracyNotice }]
 		},
 		{
 			id: 'section3',
-			navLabel: '3. Наличност',
-			title: '3. Наличност',
+			navLabel: '3. Availability',
+			title: '3. Availability',
 			paragraphs: [{ text: stockNotice }]
 		},
 		{
 			id: 'section4',
-			navLabel: '4. Промени в условията',
-			title: '4. Промени в условията',
+			navLabel: '4. Changes to terms',
+			title: '4. Changes to terms',
 			paragraphs: [{ text: updatesNotice }]
 		},
 		{
 			id: 'section5',
-			navLabel: '5. Уточнения',
-			title: '5. Уточнения',
+			navLabel: '5. Additional details',
+			title: '5. Additional details',
 			paragraphs: [],
 			listItems: sharedListItems
 		}
@@ -71,23 +71,23 @@
 </script>
 
 <div class="terms-page">
-	<section class="breadcrumb-band" aria-label="Навигационна пътека">
+	<section class="breadcrumb-band" aria-label="Breadcrumb navigation">
 		<div class="terms-container">
 			<ol class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<img src="/assets/icons/right.svg" alt="" />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>More</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<img src="/assets/icons/right.svg" alt="" />
 				</li>
 				<li>
-					<span>Условия за ползване</span>
+					<span>Terms of use</span>
 				</li>
 			</ol>
 		</div>
@@ -95,11 +95,11 @@
 
 	<section class="terms-main">
 		<div class="terms-container">
-			<h1>Условия за ползване</h1>
+			<h1>Terms of use</h1>
 			<div class="heading-spacer"></div>
 
 			<div class="terms-layout" id="scrollContainer">
-				<nav class="terms-nav-container" aria-label="Съдържание">
+				<nav class="terms-nav-container" aria-label="Contents">
 					<ol class="terms-nav" id="sidebarSticky">
 						{#each sections as section (section.id)}
 							<li>

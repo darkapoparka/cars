@@ -10,8 +10,8 @@
 	// The accordion is a NATIVE Svelte accordion: open/close is driven by local
 	// $state (no template JS). Single-open behaviour mirrors the template — opening
 	// an item closes the others, clicking the open item collapses it. The initial
-	// state matches the baseline screenshot: the first item ("Какви са стъпките за
-	// покупка?") is open, every other item is collapsed. Content visibility is
+	// state matches the baseline screenshot: the first item ("What are the steps to
+	// buy?") is open, every other item is collapsed. Content visibility is
 	// class-driven (`.flat-toggle.active .toggle-content`) so no inline styles are
 	// needed and the markup stays static/server-renderable.
 
@@ -33,19 +33,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>More</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Често задавани въпроси</span>
+					<span>Frequently asked questions</span>
 				</li>
 			</ul>
 		</div>
@@ -56,7 +56,7 @@
 		{#each daynightFaqGroups as group, groupIndex (group.id)}
 			<div class={group.containerClass}>
 				{#if groupIndex === 0}
-					<h1>Често задавани въпроси</h1>
+					<h1>Frequently asked questions</h1>
 					<div class="tf-spacing-style3"></div>
 				{/if}
 				<h2 class={group.headingClass}>{group.heading}</h2>

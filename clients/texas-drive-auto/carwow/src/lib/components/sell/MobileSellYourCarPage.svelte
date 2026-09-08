@@ -46,13 +46,13 @@
 
 	const submittedFields = $derived.by(() => {
 		const labels: [string, string][] = [
-			[plate, 'Рег. номер'],
+			[plate, 'Plate number'],
 			[vin, 'VIN'],
-			[make, 'Марка'],
-			[model, 'Модел'],
-			[year, 'Година'],
-			[mileage, 'Километри'],
-			[phone, 'Телефон']
+			[make, 'Make'],
+			[model, 'Model'],
+			[year, 'Year'],
+			[mileage, 'Mileage'],
+			[phone, 'Phone']
 		];
 		return labels
 			.map(([value, label]) => ({ label, value: value.trim() }))
@@ -60,9 +60,9 @@
 	});
 
 	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = `Your request was not sent. Please try again or call ${daynightSite.phoneLabel}.`;
 	const quickContext = $derived(
-		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
+		plate.trim() ? `Plate number ${plate.trim().toUpperCase()}` : 'No plate number'
 	);
 
 	$effect(() => {
@@ -128,12 +128,12 @@
 
 	function buildNotes() {
 		return [
-			['Рег. номер', plate.trim().toUpperCase()],
+			['Plate number', plate.trim().toUpperCase()],
 			['VIN', vin.trim().toUpperCase()],
-			['Марка', make.trim()],
-			['Модел', model.trim()],
-			['Година', year.trim()],
-			['Километри', mileage.trim()]
+			['Make', make.trim()],
+			['Model', model.trim()],
+			['Year', year.trim()],
+			['Mileage', mileage.trim()]
 		]
 			.filter(([, value]) => value)
 			.map(([label, value]) => `${label}: ${value}`)
@@ -156,7 +156,7 @@
 
 		if (!contactValue) {
 			sellSubmitState = 'error';
-			sellSubmitMessage = 'Моля, въведете телефон, за да Ви изпратим оценка и следваща стъпка.';
+			sellSubmitMessage = 'Please enter a phone number for your valuation inquiry draft.';
 			return;
 		}
 
@@ -164,7 +164,7 @@
 		sellSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: 'Мобилна заявка за оценка',
+			customerName: 'Mobile valuation inquiry',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
@@ -189,16 +189,16 @@
 
 	const steps = [
 		{
-			title: 'Въвеждате данните',
-			copy: 'Рег. номер или марка, модел, година и километри.'
+			title: 'Enter vehicle details',
+			copy: 'Plate number or make, model, year, and mileage.'
 		},
 		{
-			title: 'Изпращате снимки',
-			copy: 'Проверяваме състояние, история и реални пазарни цени.'
+			title: 'Add photos',
+			copy: 'Include known condition and history details for a valuation inquiry.'
 		},
 		{
-			title: 'Получавате вариант',
-			copy: 'Изкупуване, бартер към налична кола или оглед.'
+			title: 'Ask about options',
+			copy: 'Ask whether a purchase, trade-in, or inspection is available.'
 		}
 	];
 </script>
@@ -214,23 +214,23 @@
 		<MobileHeroBar />
 
 		<div class="ms-hero__copy">
-			<h1>Продай или замени автомобила си</h1>
-			<p>Започнете с номера — под минута.</p>
+			<h1>Explore selling or trading in your car</h1>
+			<p>Start with your plate number.</p>
 		</div>
 
 		{#if !isRequestStep}
-			<form class="ms-quick-start" onsubmit={handleQuickStart} aria-label="Начало на заявката">
+			<form class="ms-quick-start" onsubmit={handleQuickStart} aria-label="Start your inquiry">
 				<label>
-					<span>Регистрационен номер</span>
-					<input type="text" bind:value={plate} placeholder="СА 1234 АВ" autocomplete="off" />
+					<span>License plate number</span>
+					<input type="text" bind:value={plate} placeholder="CA 1234 AB" autocomplete="off" />
 				</label>
-				<button type="submit" aria-label="Продължи">
+				<button type="submit" aria-label="Continue">
 					<ChevronRight size={22} strokeWidth={2.7} aria-hidden="true" />
 				</button>
 			</form>
 			<div class="ms-quick-meta">
-				<p>Номерът се добавя само към заявката.</p>
-				<button type="button" onclick={() => revealDetails()}>Нямам номер</button>
+				<p>The plate number is included only in your inquiry draft.</p>
+				<button type="button" onclick={() => revealDetails()}>I don’t have a plate number</button>
 			</div>
 		{/if}
 	</header>
@@ -240,19 +240,19 @@
 			<section class="ms-panel ms-panel--form" aria-labelledby="ms-confirm-title">
 				<div class="ms-section-head">
 					<div>
-						<span>Готово</span>
-						<h2 id="ms-confirm-title" tabindex="-1">Получихме данните</h2>
+						<span>Done</span>
+						<h2 id="ms-confirm-title" tabindex="-1">Draft only — not sent</h2>
 					</div>
 					<CircleCheck size={26} strokeWidth={2.2} aria-hidden="true" />
 				</div>
 
 				<div class="ms-confirm-card">
 					<p>
-						Ще се свържем с Вас до един работен ден с оценка и следващи стъпки. Ако бързате, обадете
-						се направо.
+						This preview does not send inquiries or provide an estimate. For next steps, call
+						directly.
 					</p>
 					{#if submittedFields.length}
-						<dl class="ms-confirm-summary" aria-label="Изпратени данни">
+						<dl class="ms-confirm-summary" aria-label="Draft details">
 							{#each submittedFields as field (field.label)}
 								<div>
 									<dt>{field.label}</dt>
@@ -265,7 +265,7 @@
 
 				<a class="ms-primary-action" href={phoneHref}>
 					<Phone size={17} strokeWidth={2.45} aria-hidden="true" />
-					<span>Обади се сега</span>
+					<span>Call now</span>
 				</a>
 				<button
 					class="ms-secondary-action"
@@ -275,24 +275,24 @@
 						void revealDetails();
 					}}
 				>
-					<span>Нова заявка</span>
+					<span>New inquiry</span>
 				</button>
 			</section>
 		{/if}
 
 		{#if !isRequestStep}
-			<nav class="ms-disclosures" aria-label="Повече за услугата">
+			<nav class="ms-disclosures" aria-label="More about this service">
 				<MobilePromoCard
-					title="Как работи"
-					description="Три ясни стъпки до конкретна оценка."
-					label="Виж стъпките"
+					title="How it works"
+					description="Three steps to prepare a valuation inquiry."
+					label="View the steps"
 					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Защо Day Night"
-					description="Кристиян и екипът Ви дават ясен следващ вариант."
-					label="Виж предимствата"
+					title="Why Texas Drive Auto"
+					description="Contact the dealership to ask about your next steps."
+					label="Explore the details"
 					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
 					tone="yellow"
 					portrait
@@ -316,17 +316,17 @@
 			<form class="ms-sheet__surface" onsubmit={handleSubmit}>
 				<header class="ms-sheet__head">
 					<div>
-						<h2 id="ms-form-title">Оценка на автомобила</h2>
-						<p>Стъпка {formStep} от 2 · {formStep === 1 ? 'Автомобил' : 'Контакт'}</p>
+						<h2 id="ms-form-title">Vehicle valuation</h2>
+						<p>Step {formStep} of 2 · {formStep === 1 ? 'Vehicle' : 'Contact'}</p>
 					</div>
-					<button type="button" class="ms-sheet__close" onclick={closeDetails} aria-label="Затвори">
+					<button type="button" class="ms-sheet__close" onclick={closeDetails} aria-label="Close">
 						<X size={20} strokeWidth={2.45} />
 					</button>
 				</header>
 				<div
 					class="ms-wizard-progress"
 					role="progressbar"
-					aria-label="Напредък на заявката"
+					aria-label="Inquiry progress"
 					aria-valuemin="1"
 					aria-valuemax="2"
 					aria-valuenow={formStep}
@@ -339,13 +339,13 @@
 					{#if formStep === 1}
 						<section class="ms-wizard-step" aria-labelledby="ms-vehicle-step-title">
 							<div class="ms-wizard-step__intro">
-								<span>Автомобил</span>
-								<h3 id="ms-vehicle-step-title">Кой автомобил продавате?</h3>
-								<p>{quickContext}. Добавете само данните, които знаете.</p>
+								<span>Vehicle</span>
+								<h3 id="ms-vehicle-step-title">Which car are you selling?</h3>
+								<p>{quickContext}. Add only the details you know.</p>
 							</div>
 							<div class="ms-form-grid">
 								<label class="ms-field">
-									<span>Марка</span>
+									<span>Make</span>
 									<input
 										data-autofocus
 										type="text"
@@ -355,15 +355,15 @@
 									/>
 								</label>
 								<label class="ms-field">
-									<span>Модел</span>
+									<span>Model</span>
 									<input type="text" bind:value={model} placeholder="320d" autocomplete="off" />
 								</label>
 								<label class="ms-field">
-									<span>Година</span>
+									<span>Year</span>
 									<input type="text" inputmode="numeric" bind:value={year} placeholder="2019" />
 								</label>
 								<label class="ms-field">
-									<span>Километри</span>
+									<span>Mileage</span>
 									<input
 										type="text"
 										inputmode="numeric"
@@ -372,13 +372,13 @@
 									/>
 								</label>
 								<label class="ms-field ms-field--wide ms-field--vin">
-									<span>VIN (по желание)</span>
+									<span>VIN (optional)</span>
 									<input
 										type="text"
 										bind:value={vin}
 										placeholder="WBA..."
 										autocomplete="off"
-										aria-label="VIN номер, по желание"
+										aria-label="VIN, optional"
 									/>
 								</label>
 							</div>
@@ -386,27 +386,27 @@
 					{:else}
 						<section class="ms-wizard-step" aria-labelledby="ms-contact-step-title">
 							<div class="ms-wizard-step__intro">
-								<span>Контакт</span>
-								<h3 id="ms-contact-step-title">Къде да изпратим оценката?</h3>
-								<p>Ще се свържем до един работен ден. Без нежелани съобщения.</p>
+								<span>Contact</span>
+								<h3 id="ms-contact-step-title">What contact details should the draft include?</h3>
+								<p>Draft only — not sent. No callback is scheduled through this preview.</p>
 							</div>
 							<div
 								class="ms-vehicle-summary"
 								role="group"
-								aria-label="Въведени данни за автомобила"
+								aria-label="Vehicle details entered"
 							>
 								<div>
-									<span>Автомобил</span>
+									<span>Vehicle</span>
 									<strong>{[make, model].filter(Boolean).join(' ') || quickContext}</strong>
 									<small
-										>{[year, mileage && `${mileage} км`].filter(Boolean).join(' · ') ||
-											'Данните могат да се допълнят по телефона'}</small
+										>{[year, mileage && `${mileage} mi`].filter(Boolean).join(' · ') ||
+											'You can discuss missing details by phone'}</small
 									>
 								</div>
-								<button type="button" onclick={goToVehicleStep}>Редактирай</button>
+								<button type="button" onclick={goToVehicleStep}>Edit</button>
 							</div>
 							<label class="ms-field ms-field--phone">
-								<span>Телефон</span>
+								<span>Phone</span>
 								<input
 									data-contact-autofocus
 									type="tel"
@@ -420,7 +420,7 @@
 					{/if}
 
 					<label class="ms-honeypot" aria-hidden="true">
-						<span>Компания</span>
+						<span>Company</span>
 						<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 					</label>
 
@@ -433,7 +433,7 @@
 					{#if formStep === 2}
 						<button type="button" class="ms-wizard-back" onclick={goToVehicleStep}>
 							<ChevronLeft size={17} strokeWidth={2.5} />
-							<span>Назад към автомобила</span>
+							<span>Back to vehicle</span>
 						</button>
 					{/if}
 					<button
@@ -443,15 +443,15 @@
 					>
 						<span>
 							{formStep === 1
-								? 'Към контакт'
+								? 'Continue to contact'
 								: sellSubmitState === 'submitting'
-									? 'Изпращаме...'
-									: 'Изпрати за оценка'}
+									? 'Sending...'
+									: 'Create valuation draft'}
 						</span>
 						<ChevronRight size={20} strokeWidth={2.6} />
 					</button>
 					{#if formStep === 2}
-						<a href={phoneHref}>Или се обадете на {daynightSite.phoneLabel}</a>
+						<a href={phoneHref}>Or call {daynightSite.phoneLabel}</a>
 					{/if}
 				</footer>
 			</form>
@@ -478,15 +478,15 @@
 					<div class="ms-info-hero__handle" aria-hidden="true"></div>
 					<div class="ms-info-hero__title">
 						<h2 id="ms-info-title">
-							{activeInfo === 'process' ? 'Как работи' : 'Защо Day Night'}
+							{activeInfo === 'process' ? 'How it works' : 'Why Texas Drive Auto'}
 						</h2>
 						<p>
 							{activeInfo === 'process'
-								? 'От заявката до конкретен вариант'
-								: 'Ясни следващи стъпки за Вашия автомобил'}
+								? 'From inquiry to available options'
+								: 'Explore next steps for your vehicle'}
 						</p>
 					</div>
-					<button type="button" class="ms-sheet__close" onclick={closeInfo} aria-label="Затвори">
+					<button type="button" class="ms-sheet__close" onclick={closeInfo} aria-label="Close">
 						<X size={20} strokeWidth={2.45} aria-hidden="true" />
 					</button>
 				</header>
@@ -511,7 +511,7 @@
 									><CircleCheck size={20} strokeWidth={2.35} /></span
 								>
 								<span
-									><strong>Ясна оценка</strong><small>Цена според данните и състоянието.</small
+									><strong>Valuation inquiry</strong><small>Ask how vehicle details and condition affect an estimate.</small
 									></span
 								>
 							</article>
@@ -520,8 +520,8 @@
 									><CircleCheck size={20} strokeWidth={2.35} /></span
 								>
 								<span
-									><strong>Изкупуване или бартер</strong><small
-										>Избирате подходящия за Вас вариант.</small
+									><strong>Purchase or trade-in inquiry</strong><small
+										>Ask which options are available for your vehicle.</small
 									></span
 								>
 							</article>
@@ -530,7 +530,7 @@
 									><CircleCheck size={20} strokeWidth={2.35} /></span
 								>
 								<span
-									><strong>Оглед при нужда</strong><small>Уговаряме удобна следваща стъпка.</small
+									><strong>Inspection questions</strong><small>Ask about inspection availability and scheduling.</small
 									></span
 								>
 							</article>
@@ -538,7 +538,7 @@
 					{/if}
 					<a class="ms-info-call" href={phoneHref}>
 						<Phone size={18} strokeWidth={2.45} aria-hidden="true" />
-						<span>Обади се на {daynightSite.phoneLabel}</span>
+						<span>Call {daynightSite.phoneLabel}</span>
 					</a>
 				</div>
 			</div>

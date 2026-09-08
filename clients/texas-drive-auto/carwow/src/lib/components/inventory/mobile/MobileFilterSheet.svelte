@@ -170,10 +170,10 @@
 <div class="mobile-filter-sheet" data-mode={filterSheetMode}>
 	<header>
 		<div>
-			<span>{filterSheetEyebrow} · избор до „Покажи“</span>
+			<span>{filterSheetEyebrow} · selection next to “Show”</span>
 			<strong id="mobile-filter-title">{resultCountLabel}</strong>
 		</div>
-		<button type="button" aria-label="Затвори" data-mobile-drawer-initial-focus onclick={onClose}>
+		<button type="button" aria-label="Close" data-mobile-drawer-initial-focus onclick={onClose}>
 			<X size={19} strokeWidth={2.5} />
 		</button>
 	</header>
@@ -190,10 +190,10 @@
 				onclick={() => openFilterSheet('brand')}
 			>
 				{#if brandSummary}
-					<span>Марка</span>
+					<span>Make</span>
 					<strong>{brandSummary}</strong>
 				{:else}
-					<strong>Марка</strong>
+					<strong>Make</strong>
 				{/if}
 			</button>
 			<button
@@ -202,10 +202,10 @@
 				onclick={() => openFilterSheet('model')}
 			>
 				{#if modelSummary}
-					<span>Модел</span>
+					<span>Model</span>
 					<strong>{modelSummary}</strong>
 				{:else}
-					<strong>Модел</strong>
+					<strong>Model</strong>
 				{/if}
 			</button>
 			<button
@@ -214,10 +214,10 @@
 				onclick={() => openFilterSheet('fuel')}
 			>
 				{#if fuelSummary}
-					<span>Гориво</span>
+					<span>Fuel</span>
 					<strong>{fuelSummary}</strong>
 				{:else}
-					<strong>Гориво</strong>
+					<strong>Fuel</strong>
 				{/if}
 			</button>
 			<button
@@ -226,10 +226,10 @@
 				onclick={() => openFilterSheet('mileage')}
 			>
 				{#if mileageLabel}
-					<span>Пробег</span>
+					<span>Mileage</span>
 					<strong>{mileageLabel}</strong>
 				{:else}
-					<strong>Пробег</strong>
+					<strong>Mileage</strong>
 				{/if}
 			</button>
 			<button
@@ -238,10 +238,10 @@
 				onclick={() => openFilterSheet('body')}
 			>
 				{#if bodySummary}
-					<span>Каросерия</span>
+					<span>Body style</span>
 					<strong>{bodySummary}</strong>
 				{:else}
-					<strong>Каросерия</strong>
+					<strong>Body style</strong>
 				{/if}
 			</button>
 			<button
@@ -250,10 +250,10 @@
 				onclick={() => openFilterSheet('sort')}
 			>
 				{#if sortOverviewLabel}
-					<span>Подредба</span>
+					<span>Layout</span>
 					<strong>{sortOverviewLabel}</strong>
 				{:else}
-					<strong>Подредба</strong>
+					<strong>Layout</strong>
 				{/if}
 			</button>
 			<button
@@ -262,10 +262,10 @@
 				onclick={() => openFilterSheet('price')}
 			>
 				{#if priceLabel}
-					<span>Цена</span>
+					<span>Price</span>
 					<strong>{priceLabel}</strong>
 				{:else}
-					<strong>Цена</strong>
+					<strong>Price</strong>
 				{/if}
 			</button>
 			<button
@@ -274,10 +274,10 @@
 				onclick={() => openFilterSheet('transmission')}
 			>
 				{#if transmission}
-					<span>Скорости</span>
+					<span>Transmission</span>
 					<strong>{transmission}</strong>
 				{:else}
-					<strong>Скорости</strong>
+					<strong>Transmission</strong>
 				{/if}
 			</button>
 		{:else if filterSheetMode === 'search'}
@@ -287,21 +287,21 @@
 					id="mobile-inventory-query"
 					type="search"
 					value={query}
-					aria-label="Търсене"
+					aria-label="Search"
 					autocomplete="off"
-					placeholder="Марка, модел, цена..."
+					placeholder="Make, model, price..."
 					oninput={(event) => onQueryChange(inputValue(event))}
 				/>
 				{#if query}
-					<button type="button" aria-label="Изчисти търсенето" onclick={() => onQueryChange('')}>
+					<button type="button" aria-label="Clear search" onclick={() => onQueryChange('')}>
 						<X size={17} strokeWidth={2.4} />
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-search-options" aria-label="Бързо търсене">
+			<div class="mobile-search-options" aria-label="Quick search">
 				<section class="mobile-search-options__group" aria-labelledby="mobile-search-brands">
 					<div class="mobile-search-options__heading">
-						<span id="mobile-search-brands">Популярни марки</span>
+						<span id="mobile-search-brands">Popular makes</span>
 						{#if selectedBrands.length}
 							<small>{brandSummary}</small>
 						{/if}
@@ -325,7 +325,7 @@
 
 				<section class="mobile-search-options__group" aria-labelledby="mobile-search-price">
 					<div class="mobile-search-options__heading">
-						<span id="mobile-search-price">Бюджет</span>
+						<span id="mobile-search-price">Budget</span>
 						{#if priceLabel}
 							<small>{priceLabel}</small>
 						{/if}
@@ -348,7 +348,7 @@
 
 				<section class="mobile-search-options__group" aria-labelledby="mobile-search-fuel">
 					<div class="mobile-search-options__heading">
-						<span id="mobile-search-fuel">Гориво</span>
+						<span id="mobile-search-fuel">Fuel</span>
 						{#if fuel}
 							<small>{fuel}</small>
 						{/if}
@@ -376,28 +376,28 @@
 				<input
 					type="search"
 					value={selectorQuery}
-					placeholder="Търси марка"
+					placeholder="Search makes"
 					autocomplete="off"
-					aria-label="Търси марка"
+					aria-label="Search makes"
 					oninput={(event) => onSelectorQueryChange(inputValue(event))}
 				/>
 				{#if selectorQuery}
 					<button
 						type="button"
-						aria-label="Изчисти търсенето"
+						aria-label="Clear search"
 						onclick={() => onSelectorQueryChange('')}
 					>
 						<X size={16} strokeWidth={2.5} />
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-filter-options" aria-label="Марки">
+			<div class="mobile-filter-options" aria-label="Makes">
 				<button
 					type="button"
 					class={!selectedBrands.length ? 'is-active' : ''}
 					onclick={clearBrandsAndReturn}
 				>
-					<span>Всички марки</span>
+					<span>All makes</span>
 					<small>{showAllBrandsCount()}</small>
 				</button>
 				{#each filteredBrandOptions as option (option.value)}
@@ -427,7 +427,7 @@
 					</button>
 				{/each}
 				{#if !filteredBrandOptions.length}
-					<p class="mobile-filter-options__empty">Няма марки по това търсене.</p>
+					<p class="mobile-filter-options__empty">No makes match your search.</p>
 				{/if}
 			</div>
 		{:else if filterSheetMode === 'model'}
@@ -436,28 +436,28 @@
 				<input
 					type="search"
 					value={selectorQuery}
-					placeholder="Търси модел"
+					placeholder="Search models"
 					autocomplete="off"
-					aria-label="Търси модел"
+					aria-label="Search models"
 					oninput={(event) => onSelectorQueryChange(inputValue(event))}
 				/>
 				{#if selectorQuery}
 					<button
 						type="button"
-						aria-label="Изчисти търсенето"
+						aria-label="Clear search"
 						onclick={() => onSelectorQueryChange('')}
 					>
 						<X size={16} strokeWidth={2.5} />
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-filter-options" aria-label="Модели">
+			<div class="mobile-filter-options" aria-label="Models">
 				<button
 					type="button"
 					class={!selectedModels.length ? 'is-active' : ''}
 					onclick={clearModelsAndReturn}
 				>
-					<span>Всички модели</span>
+					<span>All models</span>
 					<small>{showAllModelsCount()}</small>
 				</button>
 				{#each filteredModelOptions as option (option.value)}
@@ -477,13 +477,13 @@
 					</button>
 				{/each}
 				{#if !filteredModelOptions.length}
-					<p class="mobile-filter-options__empty">Няма модели по това търсене.</p>
+					<p class="mobile-filter-options__empty">No models match your search.</p>
 				{/if}
 			</div>
 		{:else if filterSheetMode === 'fuel'}
 			<MobileFilterOptions
-				ariaLabel="Гориво"
-				allLabel="Всички горива"
+				ariaLabel="Fuel"
+				allLabel="All fuel types"
 				allCount={vehiclesCount}
 				allActive={!fuel}
 				options={fuelOptions}
@@ -493,8 +493,8 @@
 			/>
 		{:else if filterSheetMode === 'mileage'}
 			<MobileFilterOptions
-				ariaLabel="Пробег"
-				allLabel="Всички пробези"
+				ariaLabel="Mileage"
+				allLabel="All mileage"
 				allCount={vehiclesCount}
 				allActive={!mileage}
 				options={mileageOptions}
@@ -505,8 +505,8 @@
 			/>
 		{:else if filterSheetMode === 'body'}
 			<MobileFilterOptions
-				ariaLabel="Каросерия"
-				allLabel="Всички каросерии"
+				ariaLabel="Body style"
+				allLabel="All body styles"
 				allCount={vehiclesCount}
 				allActive={!selectedBodies.length}
 				options={bodyOptions}
@@ -517,8 +517,8 @@
 			/>
 		{:else if filterSheetMode === 'price'}
 			<MobileFilterOptions
-				ariaLabel="Цена"
-				allLabel="Всички цени"
+				ariaLabel="Price"
+				allLabel="All prices"
 				allCount={vehiclesCount}
 				allActive={!price}
 				options={priceOptions}
@@ -529,8 +529,8 @@
 			/>
 		{:else if filterSheetMode === 'transmission'}
 			<MobileFilterOptions
-				ariaLabel="Скорости"
-				allLabel="Всички скорости"
+				ariaLabel="Transmission"
+				allLabel="All transmissions"
 				allCount={vehiclesCount}
 				allActive={!transmission}
 				options={transmissions.map((item) => ({ value: item }))}
@@ -540,7 +540,7 @@
 				onSelect={selectTransmissionAndReturn}
 			/>
 		{:else if filterSheetMode === 'sort'}
-			<div class="mobile-filter-options" aria-label="Подредба">
+			<div class="mobile-filter-options" aria-label="Layout">
 				{#each sortOptions as option (option.value)}
 					<button
 						type="button"

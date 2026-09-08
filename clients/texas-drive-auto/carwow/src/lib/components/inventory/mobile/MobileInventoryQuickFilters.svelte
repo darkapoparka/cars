@@ -50,10 +50,10 @@
 	} = $props();
 </script>
 
-<div class="mobile-inventory-quick" aria-label="Бързи филтри">
+<div class="mobile-inventory-quick" aria-label="Quick filters">
 	<p class="mobile-inventory-count" role="status">
 		{resultCount}
-		{resultCount === 1 ? 'резултат' : 'резултата'}
+		{resultCount === 1 ? 'result' : 'results'}
 	</p>
 	<div class="mobile-inventory-pills">
 		<button
@@ -64,7 +64,7 @@
 			onclick={() => openFilterSheet('all')}
 		>
 			<SlidersHorizontal size={16} strokeWidth={2.25} />
-			<span class="mobile-inventory-pill-label">Филтри</span>
+			<span class="mobile-inventory-pill-label">Filters</span>
 		</button>
 		<button
 			type="button"
@@ -101,7 +101,7 @@
 				<Car size={17} strokeWidth={2.2} />
 			{/if}
 			<span class="mobile-inventory-pill-label">
-				{selectedBrands.length ? brandSummary : 'Марка'}
+				{selectedBrands.length ? brandSummary : 'Make'}
 			</span>
 		</button>
 		<button
@@ -113,7 +113,7 @@
 		>
 			<Car size={17} strokeWidth={2.2} />
 			<span class="mobile-inventory-pill-label">
-				{selectedModels.length ? modelSummary : 'Модел'}
+				{selectedModels.length ? modelSummary : 'Model'}
 			</span>
 		</button>
 		<button
@@ -122,7 +122,7 @@
 			onclick={() => openFilterSheet('fuel')}
 		>
 			<Fuel size={16} strokeWidth={2.25} />
-			<span class="mobile-inventory-pill-label">{fuel || 'Гориво'}</span>
+			<span class="mobile-inventory-pill-label">{fuel || 'Fuel'}</span>
 		</button>
 		<button
 			type="button"
@@ -130,7 +130,7 @@
 			onclick={() => openFilterSheet('mileage')}
 		>
 			<Gauge size={16} strokeWidth={2.25} />
-			<span class="mobile-inventory-pill-label">{mileageLabel || 'Пробег'}</span>
+			<span class="mobile-inventory-pill-label">{mileageLabel || 'Mileage'}</span>
 		</button>
 		<button
 			type="button"
@@ -141,13 +141,13 @@
 		>
 			<Car size={17} strokeWidth={2.2} />
 			<span class="mobile-inventory-pill-label">
-				{selectedBodies.length ? bodySummary : 'Каросерия'}
+				{selectedBodies.length ? bodySummary : 'Body style'}
 			</span>
 		</button>
 		<button type="button" class={!hasActiveFilters ? 'is-active' : ''} onclick={clearFilters}>
 			<Car size={17} strokeWidth={2.2} />
 			<span class="mobile-inventory-pill-label"
-				>{hasActiveFilters ? `Изчисти (${vehiclesCount})` : `Всички ${vehiclesCount}`}</span
+				>{hasActiveFilters ? `Clear (${vehiclesCount})` : `All ${vehiclesCount}`}</span
 			>
 		</button>
 		{#if priceLabel}

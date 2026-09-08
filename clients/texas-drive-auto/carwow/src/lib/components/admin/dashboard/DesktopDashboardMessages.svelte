@@ -25,8 +25,8 @@
 			id: 'marvin',
 			contact: 'marvin',
 			avatar: '/assets/images/avatar/avatar-5.png',
-			alt: 'Клиент от сайта',
-			name: 'Клиент от сайта',
+			alt: 'Website customer',
+			name: 'Website customer',
 			preview: "Hey! there I'm available",
 			time: '16:24 PM',
 			badge: '2'
@@ -36,8 +36,8 @@
 			contact: 'john',
 			classes: 'active user-online',
 			avatar: '/assets/images/avatar/avatar-6.png',
-			alt: 'Клиент от сайта',
-			name: 'Клиент от сайта',
+			alt: 'Website customer',
+			name: 'Website customer',
 			preview: "Hey! there I'm available",
 			time: '15:56 PM'
 		},
@@ -46,8 +46,8 @@
 			contact: 'brooklyn',
 			classes: 'user-offline',
 			avatar: '/assets/images/avatar/avatar-7.png',
-			alt: 'Клиент от София',
-			name: 'Клиент от София',
+			alt: 'Customer from Dallas',
+			name: 'Customer from Dallas',
 			preview: "Hey! there I'm available",
 			time: '14:10 PM',
 			badge: '2'
@@ -55,40 +55,40 @@
 		{
 			id: 'plovdiv-1123',
 			avatar: '/assets/images/avatar/avatar-8.png',
-			alt: 'Клиент от София',
-			name: 'Клиент от София',
+			alt: 'Customer from Dallas',
+			name: 'Customer from Dallas',
 			preview: "Hey! there I'm available",
 			time: '11:23 AM'
 		},
 		{
 			id: 'daynight-auto',
 			avatar: '/assets/images/avatar/avatar-9.png',
-			alt: 'Day Night Auto',
-			name: 'Day Night Auto',
+			alt: 'Texas Drive Auto',
+			name: 'Texas Drive Auto',
 			preview: "Hey! there I'm available",
 			time: 'Yesterday'
 		},
 		{
 			id: 'plovdiv-tuesday',
 			avatar: '/assets/images/avatar/avatar-5.png',
-			alt: 'Клиент от сайта',
-			name: 'Клиент от София',
+			alt: 'Website customer',
+			name: 'Customer from Dallas',
 			preview: "Hey! there I'm available",
 			time: 'Tuesday'
 		},
 		{
 			id: 'plovdiv-june-1',
 			avatar: '/assets/images/avatar/avatar-6.png',
-			alt: 'Клиент от сайта',
-			name: 'Клиент от София',
+			alt: 'Website customer',
+			name: 'Customer from Dallas',
 			preview: "Hey! there I'm available",
 			time: '01/06/2024'
 		},
 		{
 			id: 'site-june-6',
 			avatar: '/assets/images/avatar/avatar-7.png',
-			alt: 'Клиент от сайта',
-			name: 'Клиент от сайта',
+			alt: 'Website customer',
+			name: 'Website customer',
 			preview: "Hey! there I'm available",
 			time: '06/06/2024'
 		}
@@ -229,12 +229,12 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Toggle Моят профил"
+			aria-label="Toggle My account"
 			type="button"
 		>
-			Show Моят профил
+			Show My account
 		</button>
-		<p class="h3 mb-40">Запитвания</p>
+		<p class="h3 mb-40">Inquiries</p>
 
 		<div class="message-container">
 			<div class="message-sidebar">
@@ -268,14 +268,14 @@
 						<div class="message-chat__avatar user-online">
 							<img
 								src={resolve('/assets/images/avatar/avatar-6.png')}
-								alt="Клиент от сайта"
+								alt="Website customer"
 								data-daynight-img="1"
 								decoding="async"
 								loading="eager"
 							/>
 						</div>
 						<div class="message-chat__user-info">
-							<div class="message-chat__name">Клиент от сайта</div>
+							<div class="message-chat__name">Website customer</div>
 							<div class="message-chat__email">grew-sra@gmail.com</div>
 						</div>
 					</div>

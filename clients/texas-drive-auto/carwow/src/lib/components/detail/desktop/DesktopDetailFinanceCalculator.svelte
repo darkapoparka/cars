@@ -14,12 +14,12 @@
 	const estimate = $derived(calculateFinance(inputs));
 </script>
 
-<h2 class="h4 mb-16">Калкулатор за финансиране</h2>
+<h2 class="h4 mb-16">Buyer-arranged funding calculator</h2>
 <form action={resolve('/calculator')} method="get" class="financing-calculator mb-40">
 	<div class="financing-calculator-form mb-24">
 		<div class="xl2-grid-cols-2 md-grid-cols-1 grid grid-cols-4 gap-12">
 			<div>
-				<label class="mb-10" for="FinancingCalculatorCarPrice">Цена на автомобила (€)</label>
+				<label class="mb-10" for="FinancingCalculatorCarPrice">Vehicle price (USD)</label>
 				<input
 					class="active"
 					id="FinancingCalculatorCarPrice"
@@ -32,7 +32,7 @@
 			</div>
 
 			<div>
-				<label class="mb-10" for="FinancingCalculatorInterestRate">Годишна лихва (%)</label>
+				<label class="mb-10" for="FinancingCalculatorInterestRate">Annual interest rate (%)</label>
 				<input
 					id="FinancingCalculatorInterestRate"
 					name="annualRate"
@@ -46,20 +46,20 @@
 			</div>
 
 			<div>
-				<label class="mb-8" for="FinancingCalculatorLoanTerm">Срок (месеци)</label>
+				<label class="mb-8" for="FinancingCalculatorLoanTerm">Term (months)</label>
 				<select
 					id="FinancingCalculatorLoanTerm"
 					name="months"
 					bind:value={() => inputs.months, (value) => (inputs = { ...inputs, months: value })}
 				>
-					<option value="60">60 месеца</option>
-					<option value="30">30 месеца</option>
-					<option value="10">10 месеца</option>
+					<option value="60">60 months</option>
+					<option value="30">30 months</option>
+					<option value="10">10 months</option>
 				</select>
 			</div>
 
 			<div>
-				<label class="mb-8" for="FinancingCalculatorDownPayment">Първоначална вноска (€)</label>
+				<label class="mb-8" for="FinancingCalculatorDownPayment">Down payment (USD)</label>
 				<input
 					id="FinancingCalculatorDownPayment"
 					name="deposit"
@@ -73,31 +73,31 @@
 
 		<input type="hidden" name="tradeIn" value={inputs.tradeIn} />
 		<input type="hidden" name="feePercent" value={inputs.feePercent} />
-		<button type="submit" class="sa-cta-compact mb-2 sa-cta sa-cta-primary">Изчисли</button>
+		<button type="submit" class="sa-cta-compact mb-2 sa-cta sa-cta-primary">Calculate</button>
 	</div>
 
 	<div class="md-grid-cols-1 grid grid-cols-3 gap-8">
 		<div>
-			<p class="mb-4">Месечна вноска:</p>
+			<p class="mb-4">Estimated monthly payment:</p>
 			<p class="font-weight-600">{estimate.valid ? formatFinanceEur(estimate.monthly) : '—'}</p>
 		</div>
 
 		<div>
-			<p class="mb-4">Лихва и такси:</p>
+			<p class="mb-4">Interest and fees:</p>
 			<p class="font-weight-600">
 				{estimate.valid ? formatFinanceEur(estimate.interest + estimate.fees) : '—'}
 			</p>
 		</div>
 
 		<div>
-			<p class="mb-4">Ориентировъчна цена:</p>
+			<p class="mb-4">Estimated price:</p>
 			<p class="font-weight-600">{estimate.valid ? formatFinanceEur(estimate.price) : '—'}</p>
 		</div>
 	</div>
 	<p class="h7 text-secondary">
-		Примерна сметка в евро, не оферта: равни вноски, фиксирана годишна лихва, {inputs.feePercent}%
-		финансирани такси от цената; без други разходи и застраховки. Всички стойности могат да се
-		променят в калкулатора.
+		Illustrative USD estimate for buyer-arranged funding, not an offer: equal payments, fixed annual interest, {inputs.feePercent}%
+		fees financed as a share of the price; excludes other costs and insurance. Texas Drive Auto offers no dealer financing or payment plans. You can
+		adjust all values in the calculator.
 	</p>
 	{#if !estimate.valid}<p role="alert">{estimate.error}</p>{/if}
 </form>

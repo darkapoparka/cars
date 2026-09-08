@@ -13,14 +13,14 @@ function toMobileVehicle(car: Car): HomeMobileVehicle {
 		fuel: car.fuel,
 		transmission: car.transmission,
 		image: car.image,
-		priceEur: car.priceEur,
+		priceLabel: car.priceLabel,
 		badges: car.badges,
 		conditionLine: car.conditionLine
 	};
 }
 
 // Body-type browse tiles: group by body, count stock, drop thin bodies
-// (< 3 cars) so the grid never surfaces a lone Лимузина/Купе, sort by count desc.
+// (< 3 cars) so the grid never surfaces a lone Sedan/Coupe, sort by count desc.
 function buildBodyTiles(vehicles: Car[]) {
 	const order: string[] = [];
 	const count = new Map<string, number>();
@@ -103,40 +103,40 @@ function buildFeaturedCars(vehicles: Car[]) {
 function buildBudgetTiles(vehicles: Car[]) {
 	const budgets = [
 		{
-			label: 'До 10 000 EUR',
+			label: 'Up to 10 000 USD',
 			value: 'under-10000',
 			limit: 10000,
 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 		},
 		{
-			label: 'До 20 000 EUR',
+			label: 'Up to 20 000 USD',
 			value: 'under-20000',
 			limit: 20000,
 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp'
 		},
 		{
-			label: 'До 30 000 EUR',
+			label: 'Up to 30 000 USD',
 			value: 'under-30000',
 			limit: 30000,
 			image: '/assets/images/body-type/normalized/body-wagon-transparent.webp'
 		},
 		{
-			label: 'До 50 000 EUR',
+			label: 'Up to 50 000 USD',
 			value: 'under-50000',
 			limit: 50000,
 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 		},
 		{
-			label: 'Над 50 000 EUR',
+			label: 'Over 50 000 USD',
 			value: 'over-50000',
 			min: 50000,
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 		},
 		{
-			label: 'Без бюджет',
+			label: 'No budget set',
 			value: 'all',
 			image: '/assets/images/budget/open-budget-supercar-v2.webp',
-			caption: `Всички ${vehicles.length} коли`,
+			caption: `All ${vehicles.length} cars`,
 			variant: 'open' as const
 		}
 	];
@@ -159,7 +159,7 @@ function buildBudgetTiles(vehicles: Car[]) {
 }
 
 export function loadHomePageData(
-	home: HomePageHeadData = { title: 'Day Night Auto' },
+	home: HomePageHeadData = { title: 'Texas Drive Auto' },
 	initialViewport: HomeInitialViewport = 'desktop',
 	vehicles?: Car[]
 ) {

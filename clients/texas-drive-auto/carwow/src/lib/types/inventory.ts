@@ -15,7 +15,7 @@ export type InventoryListVehicle = Pick<
 	| 'body'
 	| 'color'
 	| 'price'
-	| 'priceEur'
+	| 'priceLabel'
 	| 'monthly'
 	| 'image'
 	| 'gallery'
@@ -39,7 +39,7 @@ export type InventoryQuickFilterOption = {
 	value: string;
 	label: string;
 	/* Brands that actually stock this option — lets the runtime scope the
-	   Модел menu to the selected Марка. */
+	   Model menu to the selected Make. */
 	brands?: string[];
 };
 

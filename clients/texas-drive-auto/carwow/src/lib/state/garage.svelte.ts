@@ -63,7 +63,7 @@ export class GarageState {
 		} else {
 			if (this.compare.length >= 3) {
 				this.setMessage(
-					'Можете да сравните до 3 автомобила. Премахнете един, за да добавите друг.'
+					'You can compare up to 3 vehicles. Remove one to add another.'
 				);
 				return false;
 			}

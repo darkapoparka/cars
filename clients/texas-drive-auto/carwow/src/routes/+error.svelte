@@ -5,25 +5,25 @@
 
 	const isVehicleMissing = $derived(page.error?.message === 'Vehicle not found');
 	const heading = $derived.by(() => {
-		if (isVehicleMissing) return 'Този автомобил вече не е наличен';
-		if (page.status === 404) return 'Страницата не е намерена';
-		return 'Нещо се обърка';
+		if (isVehicleMissing) return 'This vehicle is no longer available';
+		if (page.status === 404) return 'Page not found';
+		return 'Something went wrong';
 	});
 	const detail = $derived.by(() => {
-		if (isVehicleMissing) return 'Обявата е свалена или продадена. Разгледай наличните автомобили.';
-		if (page.status === 404) return 'Адресът е грешен или страницата е преместена.';
-		return 'Опитай отново или се върни към началната страница.';
+		if (isVehicleMissing) return 'This listing has been removed or the vehicle has sold. Browse available vehicles.';
+		if (page.status === 404) return 'The address is incorrect or the page has moved.';
+		return 'Try again or return to the home page.';
 	});
 </script>
 
 <svelte:head>
-	<title>{page.status} · Day Night Auto</title>
+	<title>{page.status} · Texas Drive Auto</title>
 </svelte:head>
 
 <main id="main-content" class="daynight-error" aria-labelledby="daynight-error-title">
 	<div class="daynight-error__card">
 		<a class="daynight-error__brand" href={resolve('/')}>
-			<img src={resolve('/brand/daynight-logo-generated.png')} alt="Day Night Auto" />
+			<img src={resolve('/brand/daynight-logo-generated.png')} alt="Texas Drive Auto" />
 		</a>
 		<span class="daynight-error__code">{page.status}</span>
 		<h1 id="daynight-error-title">{heading}</h1>
@@ -31,11 +31,11 @@
 		<div class="daynight-error__actions">
 			<a class="daynight-error__action daynight-error__action--primary" href={resolve('/inventory')}>
 				<CarFront size={18} strokeWidth={2.3} aria-hidden="true" />
-				<span>Виж автомобилите</span>
+				<span>View vehicles</span>
 			</a>
 			<a class="daynight-error__action" href={resolve('/')}>
 				<House size={18} strokeWidth={2.3} aria-hidden="true" />
-				<span>Начало</span>
+				<span>Home</span>
 			</a>
 		</div>
 	</div>

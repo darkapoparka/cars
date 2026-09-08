@@ -13,9 +13,9 @@
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
 	const highlights = [
-		'Проверени автомобили с реална наличност',
-		'Съдействие за документи, регистрация и финансиране',
-		'Бартер, оценка и оглед в доверен сервиз'
+		'Ask about vehicle condition and availability',
+		'Ask about paperwork and registration; no dealer financing',
+		'Ask about trade-ins, appraisals, and independent inspections'
 	] as const;
 	const vehicles = featuredDayNightVehicles.slice(0, 3);
 	const reviews = daynightReviews.slice(0, 3);
@@ -35,11 +35,11 @@
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={resolve('/')}>Home</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/about')}>За нас</a></li>
+				<li><a href={resolve('/about')}>About us</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>Профил на Day Night Auto</span></li>
+				<li><span>Texas Drive Auto profile</span></li>
 			</ul>
 		</div>
 	</section>
@@ -48,11 +48,11 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Проверена автокъща</p>
-					<h1>Day Night Auto София</h1>
+					<p class="eyebrow">Dealership preview</p>
+					<h1>Texas Drive Auto</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Автокъща в София с подбрани употребявани автомобили, ясна информация за състояние,
-						съдействие при документи и практични следващи стъпки след оглед.
+						A used-car dealership preview where you can explore vehicles and ask about condition,
+						paperwork, and practical next steps after a viewing.
 					</p>
 					<ul class="dealer-profile-hero__highlights">
 						{#each highlights as highlight (highlight)}
@@ -63,7 +63,7 @@
 						{/each}
 					</ul>
 					<div class="dealer-profile-hero__actions">
-						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> Виж наличните </a>
+						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> View inventory </a>
 						<a {...phoneLinkProps} class="sa-cta sa-cta-ghost">
 							{daynightSite.phoneLabel}
 						</a>
@@ -71,9 +71,9 @@
 				</div>
 				<div class="dealer-profile-card">
 					<img class="dealer-profile-card__logo" src="/brand/daynight-logo-generated.png" alt="" />
-					<p class="dealer-profile-card__title mb-6">Day Night Auto</p>
+					<p class="dealer-profile-card__title mb-6">Texas Drive Auto</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
-					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
+					<a {...mapLinkProps} class="text-highlight">View location</a>
 				</div>
 			</div>
 		</div>
@@ -82,8 +82,8 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Налични автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<h2>Vehicle inventory</h2>
+				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each vehicles as vehicle (vehicle.slug)}
@@ -98,7 +98,7 @@
 								{vehicle.year}
 							</p>
 							<p class="text-secondary mb-10">{vehicle.mileage} · {vehicle.fuel}</p>
-							<p class="dealer-vehicle-card__price text-highlight">{vehicle.priceEur}</p>
+							<p class="dealer-vehicle-card__price text-highlight">{vehicle.priceLabel}</p>
 						</div>
 					</a>
 				{/each}
@@ -110,16 +110,16 @@
 		<div class="container">
 			<div class="dealer-about-grid">
 				<div>
-					<p class="eyebrow">За автокъщата</p>
-					<h2>Подреден процес от избора до документите</h2>
+					<p class="eyebrow">About the dealership</p>
+					<h2>From choosing a vehicle to paperwork</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Екипът помага с сравнение на автомобили, запазване на оглед, проверка на документи,
-						регистрация, финансиране и бартер. Фокусът е клиентът да има реална информация преди
-						решение, без излишни обещания.
+						Ask about comparing vehicles, requesting a viewing, checking paperwork,
+						registration, and trade-in availability. No dealer financing is offered. Confirm the details before
+						making a decision.
 					</p>
-					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
+					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Get in touch </a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="330" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Map to Texas Drive Auto" height="330" />
 			</div>
 		</div>
 	</section>
@@ -127,8 +127,8 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Екип</h2>
-				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж екипа</a>
+				<h2>Contact options</h2>
+				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">View contact options</a>
 			</div>
 			<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
@@ -149,10 +149,10 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<div>
-					<h2>Отзиви от клиенти</h2>
+					<h2>Customer reviews unavailable in this preview</h2>
 					<p class="text-secondary">{daynightReviewDisclosure}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}

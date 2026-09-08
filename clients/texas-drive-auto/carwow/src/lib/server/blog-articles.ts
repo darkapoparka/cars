@@ -18,6 +18,6 @@ export async function loadPublishedBlogArticles(
 		return articles;
 	} catch (cmsError) {
 		console.error('Published blog content could not be loaded:', cmsError);
-		error(503, 'Публикациите временно не са достъпни. Опитайте отново по-късно.');
+		error(503, 'Posts are temporarily unavailable. Please try again later.');
 	}
 }

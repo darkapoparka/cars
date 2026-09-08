@@ -25,9 +25,9 @@
   <div class="container">
     <div class="dn-videos__panel">
       <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Watch on</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Selected car videos featuring Dealer videos.</p>
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+        <h2 id="videos-title" class="dn-home-section-title">{#if featuredVideos.length}<span class="dn-videos__intro">Watch on</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube{:else}Vehicle video information{/if}</h2>
+        <p>{featuredVideos.length ? "Published dealer videos." : "No verified dealer video channel is included. Ask the dealer whether additional media is available for your selected vehicle."}</p>
+        {#if brand.youtubeUrl}<a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
           <span>All videos</span>
           <Icon name="arrow-right" size={16} />
           <span class="dn-sr-only"> on YouTube (new tab)</span>

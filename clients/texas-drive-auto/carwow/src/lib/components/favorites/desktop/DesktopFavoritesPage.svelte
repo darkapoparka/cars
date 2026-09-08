@@ -23,7 +23,7 @@
 		cars.filter((vehicle) => !garage.favorites.includes(vehicle.slug)).slice(0, 4)
 	);
 	const countLabel = $derived(
-		vehicles.length === 1 ? '1 запазен автомобил' : `${vehicles.length} запазени автомобила`
+		vehicles.length === 1 ? '1 saved vehicle' : `${vehicles.length} saved vehicles`
 	);
 </script>
 
@@ -31,33 +31,33 @@
 	<section class="desktop-favorites__hero" aria-labelledby="favorites-title">
 		<div class="desktop-favorites__hero-inner">
 			<div class="desktop-favorites__hero-copy">
-				<p class="desktop-favorites__eyebrow">Любими</p>
-				<h1 id="favorites-title">Запазени автомобили</h1>
+				<p class="desktop-favorites__eyebrow">Favorites</p>
+				<h1 id="favorites-title">Saved vehicles</h1>
 				<p>
 					{vehicles.length
-						? `${countLabel} са готови за сравнение, оглед или запитване.`
-						: 'Запазвайте автомобили от наличността и ги преглеждайте тук.'}
+						? `${countLabel} are ready to compare or review before a viewing or inquiry.`
+						: 'Save vehicles from inventory and view them here.'}
 				</p>
 			</div>
-			<div class="desktop-favorites__hero-actions" aria-label="Действия">
+			<div class="desktop-favorites__hero-actions" aria-label="Actions">
 				<a class="desktop-favorites__cta sa-cta sa-cta-primary" href={resolve('/inventory')}>
-					Виж наличните автомобили
+					Browse available vehicles
 				</a>
 				<a class="desktop-favorites__cta sa-cta sa-cta-on-dark" href={resolve('/compare')}>
-					Сравни автомобили
+					Compare vehicles
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="desktop-favorites__content" aria-label="Списък със запазени автомобили">
+	<section class="desktop-favorites__content" aria-label="Saved vehicles">
 		{#if vehicles.length}
 			<div class="desktop-favorites__section-heading">
 				<div>
-					<p class="desktop-favorites__section-kicker">Вашият избор</p>
+					<p class="desktop-favorites__section-kicker">Your picks</p>
 					<h2>{countLabel}</h2>
 				</div>
-				<p>Натиснете сърцето върху карта, за да премахнете автомобил от запазените.</p>
+				<p>Select the heart on a card to remove a saved vehicle.</p>
 			</div>
 			<div class="desktop-favorites__grid">
 				{#each vehicles as vehicle, index (vehicle.slug)}
@@ -69,10 +69,10 @@
 				<div class="desktop-favorites__empty-icon" aria-hidden="true">
 					<Heart size={34} strokeWidth={2.2} />
 				</div>
-				<h2>Нямате запазени автомобили</h2>
-				<p>Изберете сърцето върху обява, за да съберете кратък списък за оглед и сравнение.</p>
+				<h2>No saved vehicles yet</h2>
+				<p>Select the heart on a listing to build a shortlist for viewing and comparison.</p>
 				<a class="desktop-favorites__cta sa-cta sa-cta-primary" href={resolve('/inventory')}>
-					Разгледай автомобилите
+					Browse vehicles
 				</a>
 			</div>
 		{/if}
@@ -80,11 +80,11 @@
 		{#if suggestedVehicles.length}
 			<div class="desktop-favorites__section-heading desktop-favorites__section-heading--suggested">
 				<div>
-					<p class="desktop-favorites__section-kicker">Още налични</p>
-					<h2>Автомобили, които може да разгледате</h2>
+					<p class="desktop-favorites__section-kicker">More available vehicles</p>
+					<h2>Vehicles to explore</h2>
 				</div>
 				<a class="desktop-favorites__section-link" href={resolve('/inventory')}>
-					Всички автомобили
+					All vehicles
 				</a>
 			</div>
 			<div class="desktop-favorites__grid">

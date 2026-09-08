@@ -28,7 +28,7 @@ export const footerSocialLinks: FooterSocialLink[] = [
 	{
 		label: 'Mobile.bg',
 		href: daynightSite.sourceInventory,
-		title: 'Виж наличните автомобили в mobile.bg',
+		title: 'View available vehicles on mobile.bg',
 		icon: 'mobilebg',
 		external: true
 	}
@@ -88,25 +88,25 @@ export const brandMark = (brand: string) =>
 		.toUpperCase();
 
 export const bodyPhoto = (body: string) => {
-	const normalized = body.toLocaleLowerCase('bg-BG');
+	const normalized = body.toLocaleLowerCase('en-US');
 	if (body === 'SUV') return bodyTypeArt.suv;
-	if (normalized.includes('хеч')) return bodyTypeArt.hatch;
-	if (normalized.includes('комби')) return bodyTypeArt.wagon;
-	if (normalized.includes('седан') || normalized.includes('лимуз')) return bodyTypeArt.sedan;
-	if (normalized.includes('куп')) return bodyTypeArt.coupe;
-	if (normalized.includes('ван') || normalized.includes('бус')) return bodyTypeArt.mpv;
+	if (normalized.includes('hatchback')) return bodyTypeArt.hatch;
+	if (normalized.includes('wagon')) return bodyTypeArt.wagon;
+	if (normalized.includes('sedan') || normalized.includes('limousine')) return bodyTypeArt.sedan;
+	if (normalized.includes('coupe')) return bodyTypeArt.coupe;
+	if (normalized.includes('minivan') || normalized.includes('van')) return bodyTypeArt.mpv;
 	return bodyTypeArt.suv;
 };
 
 export const bodyChipIconFor = (body: string): BodyChipIcon => {
-	const normalized = body.toLocaleLowerCase('bg-BG');
+	const normalized = body.toLocaleLowerCase('en-US');
 	if (body === 'SUV') return 'wagon';
-	if (normalized.includes('хеч')) return 'hatchback';
-	if (normalized.includes('комби')) return 'suv';
-	if (normalized.includes('куп')) return 'coupe';
-	if (normalized.includes('ван') || normalized.includes('бус')) return 'mpv';
-	if (normalized.includes('седан') || normalized.includes('лимуз')) return 'sedan';
+	if (normalized.includes('hatchback')) return 'hatchback';
+	if (normalized.includes('wagon')) return 'suv';
+	if (normalized.includes('coupe')) return 'coupe';
+	if (normalized.includes('minivan') || normalized.includes('van')) return 'mpv';
+	if (normalized.includes('sedan') || normalized.includes('limousine')) return 'sedan';
 	return 'suv';
 };
 
-export const bodyLabel = (body: string) => (body === 'SUV' ? 'Джип' : body);
+export const bodyLabel = (body: string) => (body === 'SUV' ? 'SUV' : body);

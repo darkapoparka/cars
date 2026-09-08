@@ -15,21 +15,21 @@
 	} = $props();
 
 	const layoutOptions = [
-		{ value: 'grid' as const, label: 'Лента', hint: 'Филтри над автомобилите' },
-		{ value: 'sidebar' as const, label: 'Странично', hint: 'Филтри в лява колона' }
+		{ value: 'grid' as const, label: 'Bar', hint: 'Filters above vehicles' },
+		{ value: 'sidebar' as const, label: 'Sidebar', hint: 'Filters in left column' }
 	];
 
 	const filterOptions = [
-		{ value: 'popover' as const, label: 'Меню', hint: 'Падащи менюта в страницата' },
-		{ value: 'modal' as const, label: 'Прозорец', hint: 'Филтри в отделен прозорец' }
+		{ value: 'popover' as const, label: 'Menu', hint: 'In-page dropdowns' },
+		{ value: 'modal' as const, label: 'Window', hint: 'Filters in a separate window' }
 	];
 </script>
 
-<section class="daynight-preview-bar" aria-label="Режим за преглед на филтрите">
+<section class="daynight-preview-bar" aria-label="Filter display mode">
 	<div class="daynight-preview-bar__inner">
 		<div class="daynight-preview-bar__groups">
-			<div class="daynight-preview-seg" role="group" aria-label="Оформление на филтрите">
-				<span class="daynight-preview-seg__caption">Оформление</span>
+			<div class="daynight-preview-seg" role="group" aria-label="Filter layout">
+				<span class="daynight-preview-seg__caption">Layout</span>
 				<div class="daynight-preview-seg__track">
 					{#each layoutOptions as option (option.value)}
 						<button
@@ -45,8 +45,8 @@
 				</div>
 			</div>
 
-			<div class="daynight-preview-seg" role="group" aria-label="Начин на отваряне на филтрите">
-				<span class="daynight-preview-seg__caption">Филтри</span>
+			<div class="daynight-preview-seg" role="group" aria-label="How filters open">
+				<span class="daynight-preview-seg__caption">Filters</span>
 				<div class="daynight-preview-seg__track">
 					{#each filterOptions as option (option.value)}
 						<button

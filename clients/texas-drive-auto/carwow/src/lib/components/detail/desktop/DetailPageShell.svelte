@@ -51,7 +51,7 @@
 						? 'https://schema.org/PreOrder'
 						: 'https://schema.org/InStock',
 				url: appState.url ? appState.url.origin + appState.url.pathname : '',
-				seller: { '@type': 'AutoDealer', name: 'Day Night Auto София' }
+				seller: { '@type': 'AutoDealer', name: 'Texas Drive Auto' }
 			}
 		}).replaceAll('<', '\\u003c')
 	);

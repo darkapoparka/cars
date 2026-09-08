@@ -9,22 +9,22 @@
 	};
 
 	const sortOptions: SortOption[] = [
-		{ id: 'best-match', label: 'Най-подходящи' },
-		{ id: 'lowest-price', label: 'Най-ниска цена', active: true },
-		{ id: 'highest-price', label: 'Най-висока цена' },
-		{ id: 'lowest-mileage', label: 'Най-малък пробег' },
-		{ id: 'highest-mileage', label: 'Най-голям пробег' },
-		{ id: 'newest-year', label: 'Най-нова година' },
-		{ id: 'oldest-year', label: 'Най-стара година' }
+		{ id: 'best-match', label: 'Best match' },
+		{ id: 'lowest-price', label: 'Lowest price', active: true },
+		{ id: 'highest-price', label: 'Highest price' },
+		{ id: 'lowest-mileage', label: 'Lowest mileage' },
+		{ id: 'highest-mileage', label: 'Highest mileage' },
+		{ id: 'newest-year', label: 'Newest year' },
+		{ id: 'oldest-year', label: 'Oldest year' }
 	];
 
 	const listingHeaders = [
-		'Автомобил',
-		'Марка',
-		'Година',
-		'Скорости',
-		'Гориво',
-		'Действия'
+		'Vehicle',
+		'Make',
+		'Year',
+		'Transmission',
+		'Fuel',
+		'Actions'
 	] as const;
 	const paginationPages = [1, 2, 3] as const;
 	// Real inventory rows — the demo panel must show the dealer's own cars.
@@ -34,7 +34,7 @@
 		image: vehicle.image,
 		title: vehicle.title,
 		subtitle: vehicle.conditionLine,
-		price: vehicle.priceEur,
+		price: vehicle.priceLabel,
 		brand: vehicle.brand,
 		year: String(vehicle.year),
 		transmission: vehicle.transmission,
@@ -83,12 +83,12 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Покажи меню профил"
+			aria-label="Show profile menu"
 			type="button"
 		>
-			Меню профил
+			Profile menu
 		</button>
-		<p class="h3 mb-40">Моите автомобили</p>
+		<p class="h3 mb-40">My vehicles</p>
 
 		<div class="dashboard-box style-2 bg-white">
 			<div class="mb-20 flex flex-wrap items-center justify-between gap-20">
@@ -98,8 +98,8 @@
 						name="searchListing"
 						id="searchListing"
 						class="form-control"
-						placeholder="Търси по ключова дума"
-						aria-label="Търси по ключова дума"
+						placeholder="Search by keyword"
+						aria-label="Search by keyword"
 					/>
 					<button type="submit">
 						{@render searchIcon()}
@@ -107,14 +107,14 @@
 				</form>
 
 				<div class="flex items-center gap-8">
-					<p class="text-secondary">Подреди по:</p>
+					<p class="text-secondary">Sort by:</p>
 					<div class="core-dropdown style-2 listing">
 						<button
 							class="core-dropdown__button dropdown__normal"
 							type="button"
 							id="coreDropdownBtn"
 						>
-							<span class="core-dropdown__selected">Най-нови</span>
+							<span class="core-dropdown__selected">Newest</span>
 							<img
 								src={resolve('/assets/icons/chevron-down-primary.svg')}
 								alt="chevron"
@@ -188,12 +188,12 @@
 								>
 									{@render editIcon()}
 
-									<p class="tooltip">Редактирай</p>
+									<p class="tooltip">Edit</p>
 								</a>
 								<div class="hover-fill-white cart-item__remove action">
 									{@render deleteIcon()}
 
-									<p class="tooltip">Изтрий</p>
+									<p class="tooltip">Delete</p>
 								</div>
 							</div>
 						</div>
@@ -223,7 +223,7 @@
 							</a>
 						</li>
 					</ul>
-					<p class="text-secondary">Показани {listings.length} от {daynightVehicles.length} обяви</p>
+					<p class="text-secondary">Showing {listings.length} of {daynightVehicles.length} listings</p>
 				</div>
 			</div>
 		</div>

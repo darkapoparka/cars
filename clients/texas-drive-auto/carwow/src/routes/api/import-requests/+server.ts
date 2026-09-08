@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({ locals, request, getClientAddress }
 
 	if (!limit.allowed) {
 		return json(
-			{ message: 'Получихме твърде много заявки. Опитайте отново след малко.' },
+			{ message: 'Too many requests. Try again shortly.' },
 			{ status: 429, headers: { 'retry-after': String(limit.retryAfterSec) } }
 		);
 	}

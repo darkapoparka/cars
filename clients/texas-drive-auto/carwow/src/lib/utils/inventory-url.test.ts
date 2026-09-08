@@ -10,13 +10,13 @@ describe('shared inventory URL contract', () => {
 	it('hydrates repeated, comma-separated and old plural links', () => {
 		expect(
 			parseInventoryFilters(
-				new URLSearchParams('brand=BMW,Audi&brand=BMW&brands=VW&models=A8&body=Седан')
+				new URLSearchParams('brand=BMW,Audi&brand=BMW&brands=VW&models=A8&body=Sedan')
 			).brand
 		).toEqual(['BMW', 'Audi', 'VW']);
 	});
 	it('round-trips criteria, sort, and unrelated context without stale aliases', () => {
 		const source = new URLSearchParams(
-			'brands=BMW&feature=Кожа&type=used&availability=incoming&ref=home'
+			'brands=BMW&feature=Leather&type=used&availability=incoming&ref=home'
 		);
 		const criteria = parseInventoryFilters(source);
 		const params = serializeInventoryFilters(criteria, 'price-desc', source);

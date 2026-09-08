@@ -7,10 +7,10 @@ import ts from 'typescript';
 // Compile the real pure domain modules, with the same TypeScript compiler as the app.
 const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
-for (const name of ['inventory', 'listing', 'journeys']) {
+for (const name of ['dealer-stock', 'inventory', 'listing', 'journeys']) {
   const source = await readFile(`src/lib/data/${name}.ts`, 'utf8');
   const code = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 } }).outputText
-    .replace(/from '\.\/(inventory|listing)'/g, "from './$1.mjs'");
+    .replace(/from '\.\/(dealer-stock|inventory|listing)'/g, "from './$1.mjs'");
   await writeFile(`${out}/${name}.mjs`, code);
 }
 const inventory = await import(pathToFileURL(`${out}/inventory.mjs`));
@@ -21,8 +21,11 @@ assert.equal(new Set(records.map(record => record.id)).size, records.length);
 for (const record of records) {
   assert(Number.isSafeInteger(record.id) && record.id > 0);
   assert(record.yearNumber >= 1900 && Number.isSafeInteger(record.yearNumber));
-  assert(record.priceEur > 0 && Number.isFinite(record.priceEur));
-  assert(record.mileageKm >= 0 && Number.isSafeInteger(record.mileageKm));
+  assert(record.priceUsd > 0 && Number.isFinite(record.priceUsd));
+  assert.equal(record.currency, "USD");
+  assert.equal(record.mileageUnit, "mi");
+  assert.match(inventory.formatVehiclePrice(record.priceUsd), /^\$/);
+  assert(record.mileageMiles >= 0 && Number.isSafeInteger(record.mileageMiles));
   assert.equal(record.href, `/listing-detail-v1/${record.id}`);
   assert(['sample', 'verified'].includes(record.verification));
   assert(record.verification !== 'verified' || record.evidenceUrl);

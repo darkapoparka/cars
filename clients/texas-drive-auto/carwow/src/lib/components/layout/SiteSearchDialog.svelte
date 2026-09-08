@@ -107,7 +107,7 @@
 		<button
 			type="button"
 			class="absolute inset-0 cursor-pointer border-0 bg-sa-ink/50 p-0 backdrop-blur-[2px]"
-			aria-label="Затвори търсенето"
+			aria-label="Close search"
 			onclick={close}
 		></button>
 		<div
@@ -118,7 +118,7 @@
 				class="absolute top-3.5 right-3.5 inline-grid size-10 cursor-pointer place-items-center rounded-sa-pill border-0 bg-sa-bg text-sa-ink transition duration-150 ease-sa hover:bg-sa-fill focus-visible:bg-sa-fill focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-6 [&_svg_path]:stroke-current"
 				id="searchModalClose"
 				type="button"
-				aria-label="Затвори търсенето"
+				aria-label="Close search"
 				onclick={close}
 			>
 				{@render closeIcon()}
@@ -127,7 +127,7 @@
 				class="m-0 mr-12 mb-6 text-sa-2xl leading-[1.16] font-bold text-sa-ink max-[575px]:text-sa-xl"
 				id="headerSearchTitle"
 			>
-				Какво търсите?
+				What are you looking for?
 			</h2>
 			<form
 				class="block"
@@ -140,7 +140,7 @@
 					<input
 						type="text"
 						class="w-full rounded-none border-0 border-b-2 border-sa-line bg-transparent py-2.5 pr-[60px] pl-0 font-sa text-sa-lg leading-7 font-semibold text-sa-ink shadow-none outline-0 placeholder:text-sa-faint placeholder:opacity-100 focus:border-sa-blue"
-						placeholder="Търси по марка, модел, година, гориво..."
+						placeholder="Search by make, model, year, fuel..."
 						autocomplete="off"
 						id="searchModalInput"
 						name="q"
@@ -150,7 +150,7 @@
 					<button
 						type="submit"
 						class="absolute right-0 bottom-1 inline-grid size-11 cursor-pointer place-items-center rounded-sa-pill border-0 bg-sa-blue text-sa-surface transition duration-150 ease-sa hover:bg-sa-blue-strong focus-visible:bg-sa-blue-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-6 [&_svg_path]:stroke-current"
-						aria-label="Търси"
+						aria-label="Search"
 					>
 						{@render searchIcon()}
 					</button>

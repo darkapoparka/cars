@@ -3,64 +3,64 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 
 	const inferredFieldLabels: Record<string, string> = {
-		brand: 'Марка',
-		model: 'Модел',
-		price: 'Цена',
-		mileage: 'Пробег',
-		fuel: 'Гориво',
-		transmission: 'Скорости',
-		body: 'Каросерия',
-		feature: 'Екстри',
-		condition: 'Състояние',
-		Firstname: 'Вашето име',
-		Lastname: 'Тема на запитването',
-		SendInquiryname: 'Вашето име',
-		SendInquiryemail: 'Имейл',
-		SendInquiryphone: 'Телефон',
-		message: 'Съобщение',
-		FinancingCalculatorCarPrice: 'Цена на автомобила',
-		FinancingCalculatorInterestRate: 'Лихвен процент',
-		FinancingCalculatorLoanTerm: 'Срок на лизинга',
-		FinancingCalculatorDownPayment: 'Първоначална вноска'
+		brand: 'Make',
+		model: 'Model',
+		price: 'Price',
+		mileage: 'Mileage',
+		fuel: 'Fuel',
+		transmission: 'Transmission',
+		body: 'Body style',
+		feature: 'Features',
+		condition: 'Condition',
+		Firstname: 'Your name',
+		Lastname: 'Inquiry subject',
+		SendInquiryname: 'Your name',
+		SendInquiryemail: 'Email',
+		SendInquiryphone: 'Phone',
+		message: 'Message',
+		FinancingCalculatorCarPrice: 'Vehicle price',
+		FinancingCalculatorInterestRate: 'Buyer-arranged interest rate',
+		FinancingCalculatorLoanTerm: 'Buyer-arranged loan term',
+		FinancingCalculatorDownPayment: 'Down payment'
 	};
 
 	function translateTemplateLabels() {
 		const labelMap = new Map([
-			['Home', 'Начало'],
-			['Listing', 'Автомобили'],
-			['Pages', 'Още'],
-			['All Brand', 'Всички марки'],
-			['All Model', 'Всички модели'],
-			['All Miles', 'Всички пробези'],
-			['All Price', 'Всички цени'],
-			['All Fuel Type', 'Всички горива'],
-			['All Transmission', 'Всички скорости'],
-			['All Body Style', 'Всички каросерии'],
-			['All Categories', 'Всички категории'],
-			['All Branding', 'Всички марки'],
-			['Filters', 'Филтри'],
-			['Lowest Price', 'Най-ниска цена'],
-			['No accidents', 'Без удари'],
-			['Great Price', 'Добра цена'],
-			['REMOVE ALL', 'Изчисти'],
-			['Remove All', 'Изчисти'],
-			['Special', 'Специално'],
-			['Compare', 'Сравни'],
-			['PREV', 'ПРЕДИШНА'],
-			['NEXT', 'СЛЕДВАЩА'],
-			['Play Video', 'Видео преглед'],
-			['View All Photo', 'Виж всички снимки'],
-			['View All Photos', 'Виж всички снимки'],
-			['Write A Review', 'Добавете отзив'],
-			['Write a review', 'Добавете отзив'],
-			['Login To Add A Review', 'Вход за добавяне на отзив'],
-			['Login to add a Review', 'Вход за добавяне на отзив'],
+			['Home', 'Home'],
+			['Listing', 'Vehicles'],
+			['Pages', 'More'],
+			['All Brand', 'All makes'],
+			['All Model', 'All models'],
+			['All Miles', 'All mileage'],
+			['All Price', 'All prices'],
+			['All Fuel Type', 'All fuel types'],
+			['All Transmission', 'All transmissions'],
+			['All Body Style', 'All body styles'],
+			['All Categories', 'All categories'],
+			['All Branding', 'All makes'],
+			['Filters', 'Filters'],
+			['Lowest Price', 'Lowest price'],
+			['No accidents', 'Accident history unverified'],
+			['Great Price', 'Good price'],
+			['REMOVE ALL', 'Clear'],
+			['Remove All', 'Clear'],
+			['Special', 'Featured'],
+			['Compare', 'Compare'],
+			['PREV', 'PREVIOUS'],
+			['NEXT', 'NEXT'],
+			['Play Video', 'Video overview'],
+			['View All Photo', 'View all photos'],
+			['View All Photos', 'View all photos'],
+			['Write A Review', 'Add feedback'],
+			['Write a review', 'Add feedback'],
+			['Login To Add A Review', 'Sign in to add a review'],
+			['Login to add a Review', 'Sign in to add a review'],
 			['View More Reviews (98)', daynightSite.reviewLinkLabel],
 			['View more reviews', daynightSite.reviewLinkLabel],
 			['Chat via WhatsApp', 'Viber / WhatsApp'],
-			['View details', 'Виж детайли'],
-			['See Finance', 'Финансиране'],
-			['You might also like', 'Подобни автомобили']
+			['View details', 'View details'],
+			['See Finance', 'Buyer-arranged funding'],
+			['You might also like', 'Similar vehicles']
 		]);
 
 		document.querySelectorAll('a, span, button, option, p, div, .current').forEach((element) => {
@@ -76,7 +76,7 @@
 				}
 
 				if (/\bVehicles\b/.test(node.textContent)) {
-					node.textContent = node.textContent.replaceAll('Vehicles', 'автомобила');
+					node.textContent = node.textContent.replaceAll('Vehicles', 'vehicles');
 				}
 			});
 		});
@@ -95,7 +95,7 @@
 			field.getAttribute('placeholder') ||
 			(field instanceof HTMLSelectElement ? field.options[0]?.textContent : '') ||
 			field.closest<HTMLElement>('[data-name]')?.dataset.name ||
-			'Поле';
+			'Field';
 		return (inferredFieldLabels[name] || fallback).replace(/\*/g, '').trim();
 	}
 

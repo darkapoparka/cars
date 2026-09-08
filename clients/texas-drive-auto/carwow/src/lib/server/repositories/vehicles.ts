@@ -38,8 +38,8 @@ const formKeys = [
 	'status',
 	'condition',
 	'price',
-	'priceEur',
-	'priceBgn',
+	'priceLabel',
+	'secondaryPrice',
 	'monthly',
 	'mileageValue',
 	'mileageText',
@@ -147,9 +147,9 @@ async function buildVehicleWrite(
 	const shortTitle = input.shortTitle?.trim() || `${input.brand} ${input.model}`.trim();
 	const title =
 		input.title?.trim() ||
-		`${shortTitle} ${input.year} г., ${input.fuel || 'автомобил'}, ${formatAmount(
+		`${shortTitle} ${input.year} yr., ${input.fuel || 'vehicle'}, ${formatAmount(
 			input.mileageValue
-		)} км`;
+		)} mi`;
 	const slug = await createUniqueSlug(
 		db,
 		dealerId,
@@ -169,7 +169,7 @@ async function buildVehicleWrite(
 		model: input.model,
 		year: input.year,
 		mileage_value: input.mileageValue,
-		mileage_text: input.mileageText || `${formatAmount(input.mileageValue)} км`,
+		mileage_text: input.mileageText || `${formatAmount(input.mileageValue)} mi`,
 		fuel: input.fuel || '',
 		transmission: input.transmission || '',
 		body: input.body || '',
@@ -179,10 +179,10 @@ async function buildVehicleWrite(
 		drive: input.drive || '',
 		color: input.color || '',
 		price: input.price,
-		price_eur: input.priceEur || (input.price ? `${formatAmount(input.price)} EUR` : ''),
+		price_eur: input.priceLabel || (input.price ? `${formatAmount(input.price)} EUR` : ''),
 		price_bgn:
-			input.priceBgn ||
-			(input.price ? `${formatAmount(Math.round(input.price * 1.95583))} лв.` : ''),
+			input.secondaryPrice ||
+			(input.price ? `${formatAmount(Math.round(input.price * 1.95583))} USD` : ''),
 		monthly: input.monthly || '',
 		condition: input.condition,
 		description: input.description || '',

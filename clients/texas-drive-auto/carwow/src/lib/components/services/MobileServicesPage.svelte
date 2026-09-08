@@ -21,47 +21,47 @@
 	const services = [
 		{
 			id: 'inspection',
-			label: 'Оглед',
-			title: 'Проверка преди покупка',
-			kicker: 'Оглед и история',
-			cta: 'Заяви оглед',
+			label: 'Viewing',
+			title: 'Pre-purchase inspection',
+			kicker: 'Inspection and history questions',
+			cta: 'Request a viewing',
 			href: '/contact',
 			icon: ShieldCheck,
-			points: ['Проверка на историята', 'Оглед на място', 'Следващи стъпки преди капаро']
+			points: ['Ask about vehicle history', 'In-person inspection', 'Next steps before a deposit']
 		},
 		{
 			id: 'documents',
-			label: 'Документи',
-			title: 'Регистрация и документи',
-			kicker: 'Договор и прехвърляне',
-			cta: 'Попитай за документи',
+			label: 'Paperwork',
+			title: 'Registration and paperwork',
+			kicker: 'Purchase agreement and title transfer',
+			cta: 'Ask about paperwork',
 			href: '/contact',
 			icon: ClipboardCheck,
-			points: ['Договор и фактура', 'Прехвърляне и номера', 'Финални стъпки при предаване']
+			points: ['Purchase agreement and invoice', 'Title transfer and plates', 'Final steps at vehicle handover']
 		},
 		{
 			id: 'trade',
-			label: 'Бартер',
-			title: 'Бартер или изкупуване',
-			kicker: 'Оценка на автомобил',
-			cta: 'Заяви оценка',
+			label: 'Trade-in questions',
+			title: 'Ask about trade-ins or selling your car',
+			kicker: 'Vehicle appraisal questions',
+			cta: 'Draft a valuation inquiry',
 			href: '/sell-your-car',
 			icon: Repeat,
 			points: [
-				'Оценка на Вашия автомобил',
-				'Приспадане към следваща покупка',
-				'Опция за директно изкупуване'
+				'Ask about your vehicle’s value',
+				'Can a trade-in count toward a purchase?',
+				'Do you buy vehicles outright?'
 			]
 		},
 		{
 			id: 'finance',
-			label: 'Финансиране',
-			title: 'Финансиране',
-			kicker: 'Лизинг и бюджет',
-			cta: 'Виж варианти',
+			label: 'Buyer-arranged funding',
+			title: 'Buyer-arranged funding',
+			kicker: 'Buyer-arranged funding and budget',
+			cta: 'View details',
 			href: '/financing',
 			icon: Banknote,
-			points: ['Ориентировъчна месечна вноска', 'Съдействие с лизинг', 'Сравнение спрямо бюджет']
+			points: ['No dealer payment plans', 'Arrange funding independently', 'Compare against your budget']
 		}
 	] as const;
 
@@ -98,7 +98,7 @@
 		const contactValue = servicePhone.trim();
 		if (!contactValue) {
 			serviceSubmitState = 'error';
-			serviceSubmitMessage = 'Моля, въведете телефон, за да уточним следващата стъпка.';
+			serviceSubmitMessage = 'Please enter a phone number for your inquiry draft.';
 			return;
 		}
 
@@ -106,14 +106,14 @@
 		serviceSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: 'Мобилна заявка за услуга',
+			customerName: 'Mobile service request',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
 			source: 'services-mobile',
 			message: [
-				`Услуга: ${activeService.title}`,
-				serviceVehicle.trim() ? `Автомобил: ${serviceVehicle.trim()}` : ''
+				`Service: ${activeService.title}`,
+				serviceVehicle.trim() ? `Vehicle: ${serviceVehicle.trim()}` : ''
 			]
 				.filter(Boolean)
 				.join('\n'),
@@ -130,11 +130,11 @@
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
 			result.error ||
-			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
+			`Your inquiry was not sent. Please call ${daynightSite.phoneLabel}.`;
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Услуги Day Night Auto">
+<div class="mobile-services-app" aria-label="Texas Drive Auto services">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -143,21 +143,21 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="Texas Drive Auto home">
 				<img
 					src={resolve('/brand/daynight-logo-generated.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
-			<a class="mobile-services-hero__phone" href={phoneHref} aria-label="Обади се">
+			<a class="mobile-services-hero__phone" href={phoneHref} aria-label="Call">
 				<Phone size={19} strokeWidth={2.45} />
 			</a>
 		</div>
 
 		<div class="mobile-services-hero__copy">
-			<span>Услуги</span>
-			<h1>Подкрепа преди и след покупка</h1>
-			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в София.</p>
+			<span>Services</span>
+			<h1>Questions before and after purchase</h1>
+			<p>Ask about inspections, paperwork, registration, and trade-in availability. No dealer financing or payment plans.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">
@@ -166,18 +166,18 @@
 				type="button"
 				onclick={() => openServiceDrawer('inspection')}
 			>
-				<span>Заяви услуга</span>
+				<span>Request service</span>
 				<ChevronRight size={18} strokeWidth={2.55} />
 			</button>
 			<a class="mobile-services-secondary" href={resolve('/inventory')}>
 				<CarFront size={18} strokeWidth={2.45} />
-				<span>Виж автомобили</span>
+				<span>View vehicles</span>
 			</a>
 		</div>
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mobile-services-chips" aria-label="Бързи услуги">
+		<nav class="mobile-services-chips" aria-label="Quick service links">
 			{#each quickActions as action (action.label)}
 				<button
 					type="button"
@@ -192,7 +192,7 @@
 
 		<section class="mobile-services-section" aria-labelledby="mobile-services-title">
 			<div class="mobile-services-heading">
-				<h2 id="mobile-services-title">Как помагаме</h2>
+				<h2 id="mobile-services-title">How we can help</h2>
 			</div>
 
 			<div class="mobile-services-list">
@@ -230,7 +230,7 @@
 						<span>{activeService.kicker}</span>
 						<h2 id="mobile-service-drawer-title">{activeService.title}</h2>
 					</div>
-					<button type="button" aria-label="Затвори" onclick={() => (serviceDrawerOpen = false)}>
+					<button type="button" aria-label="Close" onclick={() => (serviceDrawerOpen = false)}>
 						<X size={19} strokeWidth={2.5} />
 					</button>
 				</header>
@@ -246,8 +246,8 @@
 					<div class="mobile-service-sheet__success" role="status" aria-live="polite">
 						<BadgeCheck size={22} strokeWidth={2.45} />
 						<span>
-							<strong>Заявката е подготвена</strong>
-							<small>Екипът ще се свърже с Вас за следващата стъпка.</small>
+							<strong>Draft only — not sent</strong>
+							<small>This preview does not send requests or schedule follow-up.</small>
 						</span>
 					</div>
 				{:else}
@@ -256,12 +256,12 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-vehicle-${activeService.id}`}
 						>
-							<span>Автомобил</span>
+							<span>Vehicle</span>
 							<input
 								id={`mobile-service-vehicle-${activeService.id}`}
 								type="text"
 								bind:value={serviceVehicle}
-								placeholder="Марка, модел или линк към обява"
+								placeholder="Make, model, or listing link"
 								autocomplete="off"
 							/>
 						</label>
@@ -269,7 +269,7 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-phone-${activeService.id}`}
 						>
-							<span>Телефон</span>
+							<span>Phone</span>
 							<input
 								id={`mobile-service-phone-${activeService.id}`}
 								type="tel"
@@ -289,7 +289,7 @@
 							type="submit"
 							disabled={serviceSubmitState === 'submitting'}
 						>
-							<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : activeService.cta}</span
+							<span>{serviceSubmitState === 'submitting' ? 'Sending...' : activeService.cta}</span
 							>
 							<ChevronRight size={19} strokeWidth={2.6} />
 						</button>

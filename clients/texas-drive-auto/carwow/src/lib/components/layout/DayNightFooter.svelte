@@ -52,7 +52,7 @@
 							<a
 								href={resolve('/')}
 								class="inline-block no-underline"
-								aria-label="Day Night Auto начална страница"
+								aria-label="Texas Drive Auto home page"
 							>
 								<img
 									class="mb-[22px] block h-[54px] w-[190px] object-contain"
@@ -61,23 +61,23 @@
 								/>
 							</a>
 							<p class="m-0 mb-2 text-sa-sm leading-5 font-medium text-sa-surface/60 uppercase">
-								Огледи и консултация
+								Viewings and questions
 							</p>
 							<p class="m-0 mb-7 text-sa-surface/75">
-								Огледи с предварителна уговорка.<br />Наличност, финансиране, бартер и съдействие по
-								документи.
+								Ask about scheduling a viewing.<br />Ask about availability and
+								paperwork.
 							</p>
 						</div>
 						<form
 							class="relative mt-6 w-[min(100%,380px)] max-[1199px]:mt-5 max-[1199px]:ml-auto max-[1199px]:w-full max-[1199px]:max-w-full max-[767px]:mt-0 max-[767px]:ml-0"
 							action={resolve('/contact')}
 							method="get"
-							title="Запиши се за нови оферти"
+							title="Interest in new listings"
 						>
-							<label class="sr-only" for="footer-email">Имейл за нови оферти</label>
+							<label class="sr-only" for="footer-email">Email for new listings</label>
 							<input
 								type="email"
-								placeholder="Имейл за нови оферти"
+								placeholder="Email for new listings"
 								name="email"
 								id="footer-email"
 								autocomplete="email"
@@ -87,7 +87,7 @@
 							<button
 								type="submit"
 								class="absolute top-1 right-1 flex size-12 cursor-pointer items-center justify-center rounded-sa-pill border-0 bg-sa-surface text-sa-ink transition duration-150 ease-sa hover:bg-sa-blue hover:text-sa-surface focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-6 [&_svg_path]:stroke-current"
-								aria-label="Изпрати интерес към нови оферти"
+								aria-label="Draft interest in new listings"
 							>
 								<DayNightFooterIcon name="search" />
 							</button>
@@ -136,8 +136,8 @@
 								{daynightSite.location}
 							</a>
 							<p class="m-0 mb-4 text-sa-sm leading-[22px] text-sa-surface/60">
-								Day Night Auto предлага актуална дигитална витрина с наличност, запитвания и ясни
-								следващи стъпки.
+								Texas Drive Auto offers an inventory preview with draft inquiries and clear
+								next steps are unconfirmed in this preview.
 							</p>
 							<ul class="m-0 mb-3 flex list-none flex-wrap gap-2 p-0">
 								<li>
@@ -163,8 +163,8 @@
 								<li>
 									<a
 										href={phoneHref}
-										title={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
-										aria-label={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
+										title={`Contact ${daynightSite.shortName} by phone or Viber.`}
+										aria-label={`Contact ${daynightSite.shortName} by phone or Viber.`}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="phone" />
@@ -173,8 +173,8 @@
 								<li>
 									<a
 										{...sourceInventoryLinkProps}
-										title="Виж наличните автомобили в mobile.bg"
-										aria-label="Виж наличните автомобили в mobile.bg"
+										title="View available vehicles on mobile.bg"
+										aria-label="View available vehicles on mobile.bg"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="car-lot" />
@@ -183,8 +183,8 @@
 								<li>
 									<a
 										{...mapLinkProps}
-										title="Отвори локацията на Day Night Auto в Google Maps"
-										aria-label="Отвори локацията на Day Night Auto в Google Maps"
+										title="Open the Texas Drive Auto location in Google Maps"
+										aria-label="Open the Texas Drive Auto location in Google Maps"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="location" />
@@ -196,15 +196,15 @@
 							class="max-[1199px]:w-1/2 max-[767px]:mt-[18px] max-[767px]:w-full xl:translate-y-1"
 						>
 							<p class="m-0 mb-2 text-sa-sm leading-[22px] font-semibold text-sa-surface">
-								Имате въпрос?
+								Have a question?
 							</p>
 							<div class="flex items-center gap-3">
 								<a
 									href={resolve(contactHref)}
 									class="inline-flex min-h-11 items-center justify-center rounded-sa-xs border border-sa-surface/20 px-3.5 text-sa-base leading-none font-semibold text-sa-surface/75 no-underline transition duration-150 ease-sa hover:border-sa-blue hover:bg-sa-blue hover:text-sa-surface focus-visible:border-sa-blue focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue"
-									title="Свържете се със Day Night Auto."
+									title="Contact Texas Drive Auto."
 								>
-									Свържете се
+									Get in touch
 								</a>
 							</div>
 						</div>
@@ -222,8 +222,8 @@
 				<p class="m-0 text-sa-sm leading-[22px] text-sa-surface/60">
 					©2026 <a
 						class="text-sa-sm leading-[22px] text-sa-surface no-underline"
-						href={resolve('/')}>Day Night Auto</a
-					>. Всички права запазени.
+						href={resolve('/')}>Texas Drive Auto</a
+					>. All rights reserved.
 				</p>
 				<ul
 					class="m-0 flex list-none flex-wrap items-center p-0 max-[767px]:w-full max-[767px]:justify-start"

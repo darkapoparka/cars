@@ -39,7 +39,7 @@ export function getAuth() {
 
 	if (!authInstance) {
 		authInstance = betterAuth({
-			appName: 'Day Night Auto Admin',
+			appName: 'Texas Drive Auto Admin',
 			baseURL: env.BETTER_AUTH_URL?.trim() || undefined,
 			secret: getBetterAuthSecret(),
 			database: drizzleAdapter(createDb(), {

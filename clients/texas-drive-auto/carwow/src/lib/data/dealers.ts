@@ -17,38 +17,38 @@ export const dealers: Dealer[] = [
 	{
 		slug: "day-night-auto-group",
 		name: daynightSite.name,
-		location: "София",
+		location: "Dallas",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
 		logo: daynightSite.logoDark,
 		cover: '/brand/daynight-hero-search-composed.webp',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.8,
-		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Финансиране']
+		specialties: ['Ask about vehicle inspections', 'Viewing by appointment', 'Buyer-arranged funding']
 	},
 	{
 		slug: "day-night-auto-group-documents",
-		name: "Day Night Auto Документи и съдействие",
-		location: "София",
+		name: "Texas Drive Auto Paperwork and assistance",
+		location: "Dallas",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
 		logo: daynightSite.logoDark,
 		cover: '/brand/daynight-hero-mobile-search-composed.webp',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.7,
-		specialties: ['Документи', 'Регистрация', 'Съдействие']
+		specialties: ['Paperwork', 'Registration', 'Assistance']
 	},
 	{
 		slug: "day-night-auto-group-sourcing",
-		name: "Day Night Auto Подбор на автомобил",
-		location: "София",
+		name: "Texas Drive Auto Vehicle selection",
+		location: "Dallas",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
 		logo: '/brand/daynight-logo-generated.png',
 		cover: '/brand/daynight-logo-generated.png',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.7,
-		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
+		specialties: ['Vehicle search inquiry', 'Viewing', 'Consultation']
 	}
 ];
 

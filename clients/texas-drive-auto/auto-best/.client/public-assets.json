@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 1,
+  "scope": "Expected local assets of this independent copy, not source master counts or media-license approval",
+  "assets": [
+    {
+      "path": "/apple-touch-icon.png",
+      "bytes": 16650,
+      "sha256": "19848dbb5baf5aa59975b3bd690f9cdc97ae95b46070de2a02b0f6ecd72ee7b7"
+    },
+    {
+      "path": "/assets/images/blog/blog-1.jpg",
+      "bytes": 93721,
+      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+    },
+    {
+      "path": "/assets/images/blog/blog-2.jpg",
+      "bytes": 34864,
+      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+    },
+    {
+      "path": "/assets/images/blog/blog-3.jpg",
+      "bytes": 94447,
+      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+    },
+    {
+      "path": "/assets/images/blog/blog-4.jpg",
+      "bytes": 165710,
+      "sha256": "d3c61f0a21b785e81cbc2ee4113c659a2ad456d1a2e7347248ae64b364eb5d8b"
+    },
+    {
+      "path": "/assets/images/blog/blog-5.jpg",
+      "bytes": 52086,
+      "sha256": "e60f20403837bd1c48a9efd90c9fb8ca118e3fece2bd1f33b7607c85a09792dc"
+    },
+    {
+      "path": "/assets/images/blog/blog-6.jpg",
+      "bytes": 86362,
+      "sha256": "ad6b82d92f73b87ffd9e8d047e901152d84e43655d950260189cf9e104b414d0"
+    },
+    {
+      "path": "/assets/images/blog/blog-7.jpg",
+      "bytes": 48660,
+      "sha256": "48609ff46522e8f355d37e18d291ff20d989208f8ffb4e6812d4cc396a4f6b32"
+    },
+    {
+      "path": "/assets/images/blog/blog-8.jpg",
+      "bytes": 38400,
+      "sha256": "47d04954266de4ba3c9113fd07580847adf05789393f0d1ef7038eed22e87f8b"
+    },
+    {
+      "path": "/assets/images/blog/blog-9.jpg",
+      "bytes": 92539,
+      "sha256": "5d999d7e8820fdbe68f01ddf262951579cb931e5ddfcc8af4cd99ff8a0e29a8b"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list1.png",
+      "bytes": 17569,
+      "sha256": "77bf4c2219a12b07d7c1620a35c547f3b97c90c8be4fb838cad54bdf257f4028"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list2.png",
+      "bytes": 17766,
+      "sha256": "65456e3ed0de84598f77ed8a58b3e10edffc4a898ee2f101e56ae5723840ce95"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list3.png",
+      "bytes": 17222,
+      "sha256": "1a9d0ad2d3bbba6640f531135648418ca9cd2358e3b5687972896fb9ea17c9fe"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list4.png",
+      "bytes": 18028,
+      "sha256": "f03f8f094494932d0a73c44741e9e8ee03d638ee78b04e166df0deef05d9a59b"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list5.png",
+      "bytes": 18159,
+      "sha256": "91a9aa878a6ec639045ad5dc09525a2444078c7aa349f00805683d22ee9ab03b"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list6.png",
+      "bytes": 15335,
+      "sha256": "e1a0894c839e8411c5f454d2696ed7b76371cf8446eecccc359afab5fa8847e1"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list7.png",
+      "bytes": 14609,
+      "sha256": "3fbd0debd40517f85a89fdd7b422c3142257a170d4a7dbddb4f23aa754061a71"
+    },
+    {
+      "path": "/assets/images/icon-box/car-list8.png",
+      "bytes": 13861,
+      "sha256": "ab207b7348f9e9107f35f37007ff44555c540709bbdecd6359690a6638dc13d2"
+    },
+    {
+      "path": "/assets/images/img-box/team1.jpg",
+      "bytes": 13209,
+      "sha256": "ffd77bec7d645e5a94b5d8f30f32c4a8801d037f469552f93f48d5d5f21f85f3"
+    },
+    {
+      "path": "/assets/images/img-box/team2.jpg",
+      "bytes": 20556,
+      "sha256": "665ac311d11cc8c478329ac5b88c22270699eb20db2d6bd9e27db1488479799a"
+    },
+    {
+      "path": "/assets/images/img-box/team3.jpg",
+      "bytes": 18029,
+      "sha256": "2c34bbe7550b57044c1a988dd6e56e2361f6e3917b8afd9fc973723352b17ea2"
+    },
+    {
+      "path": "/assets/images/img-box/team4.jpg",
+      "bytes": 21356,
+      "sha256": "4230ac3857c403d9938e38ffaf2f98102cfdd46e4227c3e314908fc649ce7610"
+    },
+    {
+      "path": "/assets/images/lead/day-night-about-kristian-v1-light.webp",
+      "bytes": 64114,
+      "sha256": "b3d58392c4f5285409be5cbf484c59b8c89fbd40932efbd96e0fb943ca617bb3"
+    },
+    {
+      "path": "/assets/images/lead/day-night-about-showroom-v1-light.webp",
+      "bytes": 68726,
+      "sha256": "6b26a7733ccd2a5a9f292c3781a6269861b7d16cc363a0666ae279888ff606a8"
+    },
+    {
+      "path": "/assets/images/lead/day-night-blog-hero-v2.webp",
+      "bytes": 325078,
+      "sha256": "bb948611c607935f49a7e87a5af33e75e48725438ed56b55da52a8056cfb7530"
+    },
+    {
+      "path": "/assets/images/lead/day-night-collection-banner-v2.webp",
+      "bytes": 113046,
+      "sha256": "d9f896f744abf519acbd28897c7eabd6e9082bddfa0174ff52506d01fdb09e75"
+    },
+    {
+      "path": "/assets/images/lead/day-night-contact-email-red-v1.webp",
+      "bytes": 35466,
+      "sha256": "fc14424f78e1a2961fef0cae0af6fa15184b44d21ec751565167a0b2119eca80"
+    },
+    {
+      "path": "/assets/images/lead/day-night-contact-email-v1-light.webp",
+      "bytes": 25264,
+      "sha256": "f08fef2a380c39a1ea8d9f99488187e1fbb795b7776d8e42dfa64666ef263a85"
+    },
+    {
+      "path": "/assets/images/lead/day-night-contact-hero-v2.webp",
+      "bytes": 254674,
+      "sha256": "fe0e053b5c63bc3facd544378f5482f98005944803ba733c8f8b5cadd35ff80b"
+    },
+    {
+      "path": "/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp",
+      "bytes": 72532,
+      "sha256": "017f9ded454ab0ab948737e003354b25af9f5d3d4546d114496f0015d849218b"
+    },
+    {
+      "path": "/assets/images/lead/day-night-contact-phone-red-v1.webp",
+      "bytes": 105392,
+      "sha256": "1b4934a5d0c1807c69f40e49144873215e7f2ae33f023904dbc43a86b4804b69"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-a45-v1.webp",
+      "bytes": 83132,
+      "sha256": "dac81d872cf50c8142cd0ade045d80962ed2aa9acaefcb62cb2e2d835ff1f277"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-amggt-v1.webp",
+      "bytes": 76252,
+      "sha256": "42c3099748c113bbc36dc10c969f0a63b2074d43efac35e586422ae85158b329"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-e63-v1.webp",
+      "bytes": 69448,
+      "sha256": "18a7c8a7448e0abb5a361a8f83c5ac13c584182ba2396b98885aee2c0b53d111"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-gclass-v1.webp",
+      "bytes": 84112,
+      "sha256": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-golf-v1.webp",
+      "bytes": 80380,
+      "sha256": "ae2508c29902b35c5ae02a738e60b3d6805ce9e6d7688e7c13fd0ae24b885888"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-graphite-v1.webp",
+      "bytes": 71336,
+      "sha256": "2e2a1144f12db5fcea849fb76434df8a00adc2b9589e7956d203e9abc8da05b5"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-m4-v1.webp",
+      "bytes": 79178,
+      "sha256": "eee707e7a3a891a934e7346b5a33c9e77f3dd2128768458f09fe2d5a5150f627"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-m5-v1.webp",
+      "bytes": 75030,
+      "sha256": "891d287bb21fe52e43ddb4e8b204c2eb8645f7401974f671f1559a9b2599d19c"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-porsche-v1.webp",
+      "bytes": 74932,
+      "sha256": "740d09a56a3524ef81d76298cf0b3f1953c2f921395c0d05ac4d69c309f77d44"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-rs5-v1.webp",
+      "bytes": 76144,
+      "sha256": "eaa9c59c37090f1571972836b8ead35c1a118089c7eae0e7c5c1af147b104e13"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-silver-v1.webp",
+      "bytes": 79120,
+      "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff"
+    },
+    {
+      "path": "/assets/images/lead/day-night-cutout-urus-v1.webp",
+      "bytes": 65210,
+      "sha256": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027"
+    },
+    {
+      "path": "/assets/images/lead/day-night-editorial-banner-v2.webp",
+      "bytes": 112542,
+      "sha256": "54a9ab5cd4bbbfccbcde9f33e253524ef22b92942878b7f3074f2b80751a5c2a"
+    },
+    {
+      "path": "/assets/images/lead/day-night-graphite-color-v1.webp",
+      "bytes": 106190,
+      "sha256": "f83edea40a244b762716873ac4baeb6ac7aeea8ca3e27b143cf43761681c44ef"
+    },
+    {
+      "path": "/assets/images/lead/day-night-guide-import.webp",
+      "bytes": 64648,
+      "sha256": "e0f7e8bc80f0ad8e2ffe947183db974b8481673771d31888a4d5d017fcf0a9f0"
+    },
+    {
+      "path": "/assets/images/lead/day-night-guide-inspection.webp",
+      "bytes": 66926,
+      "sha256": "93ba31dffd89b4e014fad2465645908c5624e4a512a8b87f6a0fb2d37e7aae02"
+    },
+    {
+      "path": "/assets/images/lead/day-night-guide-leasing.webp",
+      "bytes": 53020,
+      "sha256": "8ed8b3cc3fef615277afdb02c7f8bd2c8ce43a5f4825fa29b45689c06d9c7a2f"
+    },
+    {
+      "path": "/assets/images/lead/day-night-guide-yellow-v1.webp",
+      "bytes": 100924,
+      "sha256": "c3c0376130deb45dd3a829dffcc5dc6376383c64610917973eddc5c5135b19ac"
+    },
+    {
+      "path": "/assets/images/lead/day-night-hero-graphite-v1.webp",
+      "bytes": 91314,
+      "sha256": "282ca58808b79a13d74aeffa072a0e42b7585dd4a5fda530f2aca310a3dc3d7c"
+    },
+    {
+      "path": "/assets/images/lead/day-night-hero-silver-v1.webp",
+      "bytes": 101826,
+      "sha256": "cd3c12b31c74c4b10c888c3a81019f40adf228134cb15ef9870b7043dc32c59f"
+    },
+    {
+      "path": "/assets/images/lead/day-night-home-black-v1.webp",
+      "bytes": 41178,
+      "sha256": "42b8af4cbf13328e558cc151a91517dc0c365551c7da48c8bc574f1c7337ccaf"
+    },
+    {
+      "path": "/assets/images/lead/day-night-home-hero-v3.webp",
+      "bytes": 114870,
+      "sha256": "6496510def178620c33aa4403c7945b0dc9fa05e337aa489110b87d90686c135"
+    },
+    {
+      "path": "/assets/images/lead/day-night-import-banner-v1.webp",
+      "bytes": 78680,
+      "sha256": "745199db8d7ea1332d34b340dfedcdf64a09bb6cc5283ef7eff58e099d1af4f0"
+    },
+    {
+      "path": "/assets/images/lead/day-night-keys-yellow-v1.webp",
+      "bytes": 76000,
+      "sha256": "19bb9764b5194c5cde1e01b46302e525240bd074fb48a2bcb78be6c77c5a3b2c"
+    },
+    {
+      "path": "/assets/images/lead/day-night-portrait-color-v1.webp",
+      "bytes": 98582,
+      "sha256": "a01b8fd3df9084e1b5f70d7b26396acec6136c527e263c3eeb3c9beed32d5a97"
+    },
+    {
+      "path": "/assets/images/lead/day-night-sell-banner-v1.webp",
+      "bytes": 94492,
+      "sha256": "fcd8f4f35ca6e9814b8e6a038a90381e2df22457fe9b6375ba76b77b65bf9e62"
+    },
+    {
+      "path": "/assets/images/lead/day-night-sell-banner-v2.webp",
+      "bytes": 149664,
+      "sha256": "393fe03e5694f948ff56bf2b124734119a371fcaa4125a62b560322136d23f7f"
+    },
+    {
+      "path": "/assets/images/lead/day-night-showroom-color-v1.webp",
+      "bytes": 164760,
+      "sha256": "d1b6d0d6d3215e125a15b64f9c6d12bf459c8ab8c9d965beb94b01de99c5eb26"
+    },
+    {
+      "path": "/assets/images/lead/day-night-silver-color-v1.webp",
+      "bytes": 118976,
+      "sha256": "c74fced7b50da9dc45b4d37c66250343cfdf91eaadc06139636d3bcb6c81582d"
+    },
+    {
+      "path": "/assets/images/lead/day-night-stock-01.webp",
+      "bytes": 278312,
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "/assets/images/lead/day-night-stock-03.webp",
+      "bytes": 181070,
+      "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930"
+    },
+    {
+      "path": "/assets/images/lead/day-night-stock-06.webp",
+      "bytes": 207938,
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "/assets/images/lead/day-night-studio-cars-v1.webp",
+      "bytes": 49310,
+      "sha256": "23dd9e6f0cc391878bbc10a28479b5579a4905e333e3de587db8d503a1e3a2c3"
+    },
+    {
+      "path": "/assets/images/lead/day-night-studio-guide-v1.webp",
+      "bytes": 57486,
+      "sha256": "c01c841fab26485ffac3c5d8f23e046c07fb47afea7abf0e5893c0e4b0d3b9df"
+    },
+    {
+      "path": "/assets/images/lead/day-night-studio-keys-v1.webp",
+      "bytes": 38104,
+      "sha256": "993523b38286449b2e84cab96598203945fdbc84411aeed2afa40807c1267f1a"
+    },
+    {
+      "path": "/assets/images/lead/day-night-urus-front-v1.webp",
+      "bytes": 61626,
+      "sha256": "067acd750a9cc40c21c513b395661be16d66b9d1a1f971e1752ed1adda171f9b"
+    },
+    {
+      "path": "/assets/images/partner/parner10.png",
+      "bytes": 981,
+      "sha256": "c766fb50b11985cadfcd040a3f8b09861eac7bcd736818ad521c6a2ad54beb27"
+    },
+    {
+      "path": "/assets/images/partner/parner11.png",
+      "bytes": 1241,
+      "sha256": "8441496b7499d543d5e2dfebc9b4ec0b1a354cb51f3e2895cc1139ce81fdf0ce"
+    },
+    {
+      "path": "/assets/images/partner/parner12.png",
+      "bytes": 1261,
+      "sha256": "8cec077472ed19dec9e3a7f136f4de8ede5fe526383972364e71722dfb9bd6e7"
+    },
+    {
+      "path": "/assets/images/partner/parner7.png",
+      "bytes": 785,
+      "sha256": "8f773623b38d2ed8f40655eece46ed49969957354e34df7dfb8e5806b44ab8fe"
+    },
+    {
+      "path": "/assets/images/partner/parner8.png",
+      "bytes": 908,
+      "sha256": "5e0295c9b6b30f606f60ed3f3b8ec9c078d431fd2ac5064ef579d92a2487c107"
+    },
+    {
+      "path": "/assets/images/partner/parner9.png",
+      "bytes": 1409,
+      "sha256": "2423d254763c975bd21259f9f350e817f601318cfea1fdaa5f3649376eac1bcb"
+    },
+    {
+      "path": "/assets/images/partner/partner1.png",
+      "bytes": 7939,
+      "sha256": "fd0644a6659ed7b041a5a527b8cbe706e85a3d313f3c0cc2586ff4d91aa5b4e2"
+    },
+    {
+      "path": "/assets/images/partner/partner2.png",
+      "bytes": 855,
+      "sha256": "72f825dd15c98d1c37d1960520587d7b2dcdb4308f569a3e674fffe1ae4dc36e"
+    },
+    {
+      "path": "/assets/images/partner/partner3.png",
+      "bytes": 4398,
+      "sha256": "894f4d69cf82bf7aac80b2315bd5c570c1171b3f3e7f881b40643fa572c2f950"
+    },
+    {
+      "path": "/assets/images/partner/partner4.png",
+      "bytes": 1162,
+      "sha256": "95e13967fff39b7ca18813314f66a18c61540fb2b780d93f2df8cacd539d9fce"
+    },
+    {
+      "path": "/assets/images/partner/partner5.png",
+      "bytes": 1980,
+      "sha256": "65fb90df18b8d8ac9c4cc1a683a73c5d34d436a268d257ae43945d286f37a8c2"
+    },
+    {
+      "path": "/assets/images/partner/partner6.png",
+      "bytes": 2475,
+      "sha256": "d496020efe2c13f27e3167ea3804f0f07fd316b8ec3672be7fde878c56559432"
+    },
+    {
+      "path": "/assets/images/section/bg-12.jpg",
+      "bytes": 181376,
+      "sha256": "6e83f0f876739eeed9397afc21d1adb2b80361cc4fd4bbfa40e9f8a011fcb620"
+    },
+    {
+      "path": "/assets/images/section/bg-4.jpg",
+      "bytes": 447246,
+      "sha256": "442c996e79c246489c92f48a1483f31dcf63a02fcee27237a86ce845540369da"
+    },
+    {
+      "path": "/assets/images/section/bg-6.jpg",
+      "bytes": 199583,
+      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
+    },
+    {
+      "path": "/assets/images/section/car-slide1.png",
+      "bytes": 41257,
+      "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72"
+    },
+    {
+      "path": "/assets/images/section/car-slide2.png",
+      "bytes": 32424,
+      "sha256": "deb4dd110aad16100226bb9584fa8bd8658d1526b644579ade21d1853178e279"
+    },
+    {
+      "path": "/assets/images/section/car-slide3.png",
+      "bytes": 27720,
+      "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a"
+    },
+    {
+      "path": "/brand/favicon.ico",
+      "bytes": 752,
+      "sha256": "2fa58625274f71581d5b4fe7431df73e954c7854cc5d078d54e42cd4ce763e7d"
+    },
+    {
+      "path": "/brand/icon-180.png",
+      "bytes": 16650,
+      "sha256": "19848dbb5baf5aa59975b3bd690f9cdc97ae95b46070de2a02b0f6ecd72ee7b7"
+    },
+    {
+      "path": "/brand/icon-192.png",
+      "bytes": 18659,
+      "sha256": "0d783aba23dc76b6e5ea783357ee8f95cd40529df31a8e642679f1fef92ccb44"
+    },
+    {
+      "path": "/brand/icon-32.png",
+      "bytes": 730,
+      "sha256": "92101723d63b4957b5dbe9473679d68da8e96bfb42dc19f3c87d9a7c0ee97d50"
+    },
+    {
+      "path": "/brand/icon-512.png",
+      "bytes": 106522,
+      "sha256": "0948c166a12373fbd6b89ff8f317afd752103e52286696b141925b5f3f6fe52f"
+    },
+    {
+      "path": "/brand/logo-on-dark.png",
+      "bytes": 8874,
+      "sha256": "40d7a9b9343a1cc8741fefc8252f00955777ae87ee95486f46c82ed37dc70afd"
+    },
+    {
+      "path": "/brand/logo-on-light.png",
+      "bytes": 5639,
+      "sha256": "a21ef5c84043f4d9c34b9b62da5a5ea43e8469c63ebe7440ce87db7d4b1ad7bd"
+    },
+    {
+      "path": "/brand/published-logo.jpg",
+      "bytes": 2630,
+      "sha256": "48ed78df8b0c7909905598130444a1d2e8a2e2353cb78a09cfc2758a7fa4ebad"
+    },
+    {
+      "path": "/favicon.ico",
+      "bytes": 752,
+      "sha256": "2fa58625274f71581d5b4fe7431df73e954c7854cc5d078d54e42cd4ce763e7d"
+    },
+    {
+      "path": "/media/photo-unavailable.svg",
+      "bytes": 939,
+      "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38"
+    },
+    {
+      "path": "/office.webp",
+      "bytes": 150068,
+      "sha256": "cbd265ccec53c885ebceb5a0dee1163309d3c9bfe5c8d7cbadeb2a5f07189384"
+    },
+    {
+      "path": "/site.webmanifest",
+      "bytes": 349,
+      "sha256": "f706bb187f429dc980b95511b36be22e35b1dded6355868e90aee1ec90f060b3"
+    },
+    {
+      "path": "/stock/127361904-1.webp",
+      "bytes": 113034,
+      "sha256": "2fd83adf01279e6745b4f33373cab57b1ed2be7517298dabd6e13dece38929ea"
+    },
+    {
+      "path": "/stock/127361913-1.webp",
+      "bytes": 91226,
+      "sha256": "f05bafa591d1c7addbbc0839fc308c0f717e01d214da9d09567ef591cb16e158"
+    },
+    {
+      "path": "/stock/127361925-1.webp",
+      "bytes": 101396,
+      "sha256": "9630e81b8a4369995908baaa021da911f5e5f96bbd4ba3b8fde5d1cfc1206ae3"
+    }
+  ],
+  "removedInheritedUnreferencedIdentityMedia": [
+    "/assets/images/lead/day-night-logo.png",
+    "/assets/images/lead/day-night-stock-02.webp",
+    "/assets/images/lead/day-night-stock-04.webp",
+    "/assets/images/lead/day-night-stock-05.webp",
+    "/assets/images/lead/day-night-video-g-class.jpg",
+    "/assets/images/lead/day-night-video-panamera.jpg",
+    "/assets/images/lead/day-night-video-urus.jpg",
+    "/assets/images/partner/par1.png",
+    "/assets/images/partner/par2.png",
+    "/assets/images/partner/par3.png",
+    "/assets/images/partner/par4.png",
+    "/assets/images/partner/par5.png",
+    "/assets/images/partner/par6.png"
+  ]
+}

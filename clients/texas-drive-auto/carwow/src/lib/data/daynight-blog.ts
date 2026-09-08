@@ -1,4 +1,4 @@
-export type DayNightArticleCategory = 'Новини' | 'Съвети' | 'Финансиране' | 'Документи' | 'Марки' | 'Покупка' | 'Продажба';
+export type DayNightArticleCategory = 'News' | 'Tips' | 'Buyer-arranged funding' | 'Paperwork' | 'Makes' | 'Buying' | 'Selling';
 export type DayNightArticleKind = 'news' | 'guide';
 
 export type DayNightArticleSection = {
@@ -38,209 +38,209 @@ function article(input: DayNightArticleInput): DayNightArticle {
 export const daynightArticles: DayNightArticle[] = [
 	article({
 		slug: 'dnevni-novini-daynight-auto-obnovena-nalichnost',
-		title: 'Как да следите наличността на Day Night Auto',
+		title: 'How to check Texas Drive Auto inventory',
 		description:
-			'Как да проверите актуалната наличност и да подготвите запитване за автомобил или оглед.',
-		category: 'Съвети',
+			'How to confirm current availability and prepare a vehicle or viewing inquiry.',
+		category: 'Tips',
 		kind: 'guide',
 		date: '2026-05-28',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-44.jpg',
 		readMinutes: 3,
 		summary: [
-			'Наличността се обновява регулярно според пазара и заявките от клиенти.',
-			'Най-бързият начин за актуална информация е директно запитване за конкретен бюджет или марка.',
-			'Екипът подготвя огледи, документи и следващи стъпки според избрания автомобил.'
+			'Preview inventory may not reflect current availability. Confirm directly with the dealership.',
+			'For current information, contact the dealership with your budget or preferred make.',
+			'Ask about viewing arrangements, paperwork, and next steps for your chosen vehicle.'
 		],
 		sections: [
 			{
-				heading: 'Ориентир за проверка на наличността',
+				heading: 'A guide to checking availability',
 				paragraphs: [
-					'Това е въведение към проверката на наличността, а не новина за конкретни новопристигнали автомобили.',
-					'Този формат е създаден за клиенти, които следят наличността често и искат ясна информация без излишен шум.'
+					'This is an introduction to checking inventory, not an announcement of specific vehicle arrivals.',
+					'This guide offers clear information for shoppers who check inventory often.'
 				]
 			},
 			{
-				heading: 'Как да проверите актуална наличност',
+				heading: 'How to confirm current availability',
 				paragraphs: [
-					'Ако търсите конкретна марка, двигател, бюджет или тип купе, изпратете запитване или се обадете преди посещение.',
-					'Така екипът може да потвърди наличност, да подготви автомобил за оглед и да даде реална информация за документи, регистрация и финансиране.'
+					'If you have a specific make, engine, budget, or body style in mind, contact the dealership before visiting.',
+					'Ask the dealership to confirm availability, viewing arrangements, paperwork, and registration details. No dealer financing or payment plans are offered; buyer-arranged funding is separate.'
 				]
 			}
 		],
-		tags: ['новини', 'наличност', 'София']
+		tags: ['news', 'inventory', 'Dallas']
 	}),
 	article({
 		slug: 'novi-avtomobili-v-nalichnost-daynight-auto',
-		title: 'Как да проверите автомобил преди оглед',
-		description: 'Насоки за проверка на обява, потвърждение на наличност и подготовка за оглед.',
-		category: 'Съвети',
+		title: 'How to check a vehicle before a viewing',
+		description: 'Tips for reviewing a listing, confirming availability, and preparing for a viewing.',
+		category: 'Tips',
 		kind: 'guide',
 		date: '2026-05-27',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-20.jpg',
 		readMinutes: 3,
 		summary: [
-			'Започнете от снимките, цената, пробега и характеристиките в обявата.',
-			'Свържете се с екипа за конкретния автомобил, който разглеждате.',
-			'При интерес към автомобил е важно да се потвърди наличност преди посещение.'
+			'Start with the listing photos, price, mileage, and features.',
+			'Contact the team about the specific vehicle you’re viewing.',
+			'If you’re interested in a vehicle, confirm availability before visiting.'
 		],
 		sections: [
 			{
-				heading: 'Потвърдете информацията в обявата',
+				heading: 'Confirm the listing details',
 				paragraphs: [
-					'Наличността може да се промени, затова потвърдете избрания автомобил преди посещение.',
-					'Посочете марка, модел и обява, за да получите информация за автомобила, който Ви интересува.'
+					'Availability can change, so confirm your selected vehicle before visiting.',
+					'Include the make, model, and listing to request information about the vehicle you’re interested in.'
 				]
 			},
 			{
-				heading: 'Какво да направите при интерес',
+				heading: 'Interested in a vehicle?',
 				paragraphs: [
-					'Проверете снимките, цената, пробега и основните характеристики в страницата с автомобили.',
-					'След това насрочете оглед, за да получите конкретна информация за документи, финансиране, регистрация и предаване.'
+					'Review the photos, price, mileage, and key features on the inventory page.',
+					'Then request a viewing and ask about paperwork, registration, and pickup. Any funding must be arranged independently; no dealer financing or payment plans are offered.'
 				]
 			}
 		],
-		tags: ['нови автомобили', 'наличност', 'оглед']
+		tags: ['new arrivals', 'inventory', 'viewing']
 	}),
 	article({
 		slug: 'kak-da-kupim-upotrebyavan-avtomobil',
-		title: 'Как да купим употребяван автомобил без излишен риск',
+		title: 'How to reduce risk when buying a used car',
 		description:
-			'Практически списък за проверка на произход, документи, техническо състояние и финансиране преди покупка.',
-		category: 'Съвети',
+			'A practical checklist for reviewing vehicle history, paperwork, condition, and independently arranged funding before buying.',
+		category: 'Tips',
 		kind: 'guide',
 		date: '2026-05-26',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-18.jpg',
 		readMinutes: 5,
 		summary: [
-			'Определете бюджет, тип автомобил, гориво и реални разходи след покупката.',
-			'Проверете историята, документите, видимото състояние и съответствието между описание и автомобил.',
-			'Не финализирайте покупка без ясен план за регистрация, обслужване и предаване.'
+			'Set your budget, vehicle type, fuel preference, and expected ownership costs.',
+			'Check the history, paperwork, visible condition, and whether the vehicle matches its description.',
+			'Before finalizing a purchase, have a clear plan for registration, maintenance, and pickup.'
 		],
 		sections: [
 			{
-				heading: '1. Започнете с ясна рамка',
+				heading: '1. Define your needs',
 				paragraphs: [
-					'Преди оглед определете бюджет, тип купе, гориво, пробег и очаквани разходи след покупката.',
-					'Това помага да сравнявате реално автомобили, вместо да избирате само по снимка или най-ниска цена.'
+					'Before a viewing, decide on your budget, body style, fuel type, mileage range, and expected ownership costs.',
+					'This helps you compare vehicles realistically instead of choosing based only on photos or the lowest price.'
 				]
 			},
 			{
-				heading: '2. Проверете история и документи',
+				heading: '2. Check history and paperwork',
 				paragraphs: [
-					'Проверете сервизни документи, произход, видимо състояние и дали описанието съвпада с автомобила на място.',
-					'При автомобил нов внос обърнете внимание на нужните стъпки за превод, регистрация и застраховки.'
+					'Review service records, vehicle background, and visible condition, and check that the vehicle matches its listing in person.',
+					'For a recently imported vehicle, confirm any required document translations, registration steps, and insurance.'
 				]
 			},
 			{
-				heading: '3. Направете оглед спокойно',
+				heading: '3. Take your time at the viewing',
 				paragraphs: [
-					'При оглед поискайте тестово шофиране и възможност за проверка в доверен сервиз.',
-					'Day Night Auto съдейства с документи, регистрация, финансиране и оглед на място в София.'
+					'Ask for a test drive and an inspection by a mechanic you trust.',
+					'Ask Texas Drive Auto what paperwork and registration assistance is available and where to view the vehicle. No dealer financing or payment plans are offered.'
 				]
 			}
 		],
-		tags: ['покупка', 'оглед', 'употребяван автомобил']
+		tags: ['buying', 'viewing', 'used car']
 	}),
 	article({
 		slug: 'lizing-upotrebyavan-avtomobil-plovdiv',
-		title: 'Лизинг за употребяван автомобил в София',
+		title: 'Independently arranged funding for a used car',
 		description:
-			'Какво да подготвите, как се гледа месечната вноска и защо общата цена е по-важна от най-ниската вноска.',
-		category: 'Финансиране',
+			'What to prepare when arranging your own funding, how to assess monthly payments, and why total cost matters more than the lowest payment.',
+		category: 'Buyer-arranged funding',
 		kind: 'guide',
 		date: '2026-05-25',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-21.jpg',
 		readMinutes: 4,
 		summary: [
-			'Гледайте първоначална вноска, срок, месечна вноска, такси и застраховки заедно.',
-			'Оставете бюджет за обслужване, гуми, регистрация и гражданска отговорност.',
-			'Проверете общата цена, а не само най-ниската месечна вноска.'
+			'Consider the down payment, term, monthly payment, fees, and insurance together when comparing independent lenders.',
+			'Budget for maintenance, tires, registration, and liability insurance.',
+			'Check the total cost, not just the lowest monthly payment.'
 		],
 		sections: [
 			{
-				heading: 'Как да сравнявате оферти',
+				heading: 'How to compare independent lender offers',
 				paragraphs: [
-					'При лизинг месечната вноска е само част от решението. Важно е да знаете първоначалната вноска, срока, таксите и общата сума.',
-					'Добрата оферта е тази, която пасва на реалния бюджет и не оставя клиента без средства за обслужване.'
+					'When arranging funding independently, the monthly payment is only part of the decision. Understand the down payment, term, fees, and total amount payable.',
+					'A suitable offer fits your actual budget and leaves room for maintenance.'
 				]
 			},
 			{
-				heading: 'Как помага екипът',
+				heading: 'What to know about funding',
 				paragraphs: [
-					'Екипът на Day Night Auto може да насочи клиента към подходящи варианти за финансиране според автомобила, бюджета и желания срок.',
-					'При конкретен автомобил е най-добре параметрите да се обсъдят преди финално решение.'
+					'Texas Drive Auto offers no dealer financing or payment plans. Buyers must arrange any funding independently.',
+					'For a specific vehicle, confirm the purchase details and any independently arranged funding terms before making a final decision.'
 				]
 			}
 		],
-		tags: ['лизинг', 'финансиране', 'София']
+		tags: ['independent funding', 'buyer-arranged funding', 'Dallas']
 	}),
 	article({
 		slug: 'dokumenti-registratsia-nov-vnos',
-		title: 'Документи и регистрация при автомобил нов внос',
+		title: 'Paperwork and registration for a recently imported vehicle',
 		description:
-			'Какви стъпки обикновено следват след избор на автомобил нов внос и какво може да бъде подготвено предварително.',
-		category: 'Документи',
+			'Steps to check after choosing a recently imported vehicle and what you can prepare in advance.',
+		category: 'Paperwork',
 		kind: 'guide',
 		date: '2026-05-24',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-24.jpg',
 		readMinutes: 4,
 		summary: [
-			'Проверете произхода, наличните документи и техническото състояние преди плащане.',
-			'Планирайте превод, регистрация, застраховки и първоначално обслужване.',
-			'Подреденият процес спестява време между огледа и реалното ползване.'
+			'Check the vehicle background, available paperwork, and mechanical condition before paying.',
+			'Plan for any required document translations, registration, insurance, and initial maintenance.',
+			'An organized process helps avoid delays between viewing and driving.'
 		],
 		sections: [
 			{
-				heading: 'Какво се проверява предварително',
+				heading: 'What to check in advance',
 				paragraphs: [
-					'При автомобил нов внос проверете наличните документи, произхода и техническото състояние преди плащане.',
-					'Важно е клиентът да знае кои стъпки са завършени и кои предстоят след покупката.'
+					'For a recently imported vehicle, check the available paperwork, vehicle background, and mechanical condition before paying.',
+					'Make sure you know which steps are complete and which remain after purchase.'
 				]
 			},
 			{
-				heading: 'Какво следва след избор',
+				heading: 'What comes after choosing a vehicle',
 				paragraphs: [
-					'След покупка обикновено следват превод, регистрация, застраховки и обслужване според конкретния автомобил.',
-					'Day Night Auto предлага съдействие с документи и регистрация, за да не се губи време между огледа и предаването.'
+					'After purchase, confirm any required document translations, registration, insurance, and maintenance for the specific vehicle.',
+					'Ask Texas Drive Auto whether paperwork or registration assistance is available and what you need to complete before pickup.'
 				]
 			}
 		],
-		tags: ['документи', 'регистрация', 'нов внос']
+		tags: ['paperwork', 'registration', 'recently imported']
 	}),
 	article({
 		slug: 'bmw-mercedes-audi-upotrebyavani',
-		title: 'BMW, Mercedes и Audi употребявани: какво да гледаме',
+		title: 'Used BMW, Mercedes, and Audi: what to check',
 		description:
-			'Практически ориентир при избор на премиум употребяван автомобил от най-търсените марки.',
-		category: 'Марки',
+			'A practical guide to choosing a used luxury vehicle from popular brands.',
+		category: 'Makes',
 		kind: 'guide',
 		date: '2026-05-23',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-30.jpg',
 		readMinutes: 5,
 		summary: [
-			'При премиум автомобил техническото състояние е по-важно от най-ниската цена.',
-			'Проверете скоростна кутия, окачване, електроника, салон и сервизна история.',
-			'Сравнете разходите за обслужване преди финално решение.'
+			'With a luxury vehicle, mechanical condition matters more than the lowest price.',
+			'Check the transmission, suspension, electronics, interior, and service history.',
+			'Compare maintenance costs before making a final decision.'
 		],
 		sections: [
 			{
-				heading: 'Защо премиум автомобилите искат повече внимание',
+				heading: 'Why luxury vehicles need closer attention',
 				paragraphs: [
-					'BMW, Mercedes-Benz и Audi могат да бъдат много добър избор, но поддръжката и историята са решаващи.',
-					'При тези автомобили евтината покупка често излиза скъпо, ако има пропуснато обслужване или скрити технически проблеми.'
+					'BMW, Mercedes-Benz, and Audi can be good choices, but maintenance and history are crucial.',
+					'A low purchase price can lead to expensive repairs if maintenance has been skipped or mechanical problems are hidden.'
 				]
 			},
 			{
-				heading: 'Какво да гледате при оглед',
+				heading: 'What to check during a viewing',
 				paragraphs: [
-					'Проверете скоростна кутия, окачване, електроника, обслужване и реално състояние на салона.',
-					'В наличността на Day Night Auto често има BMW, Mercedes-Benz и Audi, подходящи за оглед и сравнение на място.'
+					'Check the transmission, suspension, electronics, maintenance records, and actual interior condition.',
+					'Ask Texas Drive Auto whether any BMW, Mercedes-Benz, or Audi vehicles are currently available to view and compare in person.'
 				]
 			}
 		],
@@ -248,104 +248,104 @@ export const daynightArticles: DayNightArticle[] = [
 	}),
 	article({
 		slug: 'dizel-benzin-hibrid-elektricheski',
-		title: 'Дизел, бензин, хибрид или електрически автомобил',
-		description: 'Как да изберете гориво според пробег, градско каране, бюджет и очаквани разходи.',
-		category: 'Съвети',
+		title: 'Diesel, gas, hybrid, or electric',
+		description: 'How to choose a fuel type based on mileage, city driving, budget, and expected costs.',
+		category: 'Tips',
 		kind: 'guide',
 		date: '2026-05-22',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-32.jpg',
 		readMinutes: 5,
 		summary: [
-			'Дизелът често е логичен за дълъг пробег, но трябва да се гледат екологичните системи.',
-			'Бензинът е удобен за по-кратки маршрути и по-проста поддръжка.',
-			'Хибридните и електрическите автомобили изискват отделна проверка на батерия и зарядна логика.'
+			'Diesel can make sense for high mileage, but check the emissions systems.',
+			'Gas vehicles can suit shorter trips and offer simpler maintenance.',
+			'Hybrid and electric vehicles need additional checks of battery condition and charging operation.'
 		],
 		sections: [
 			{
-				heading: 'Избор според реалното каране',
+				heading: 'Choose for your actual driving',
 				paragraphs: [
-					'Най-добрият избор зависи от маршрута, годишния пробег, бюджета за поддръжка и конкретния автомобил.',
-					'За градско каране бензин или хибрид често са по-удобни, докато дизелът остава силен избор при дълги извънградски маршрути.'
+					'The best choice depends on your routes, annual mileage, maintenance budget, and the specific vehicle.',
+					'Gas or hybrid vehicles often suit city driving, while diesel can work well for longer highway trips.'
 				]
 			},
 			{
-				heading: 'Какво да проверите',
+				heading: 'What to check',
 				paragraphs: [
-					'При дизел проверете обслужване, турбо, филтри и екологични системи.',
-					'При хибрид или електрически автомобил обърнете внимание на батерия, зарядна логика, история и реален пробег.'
+					'For diesel vehicles, check maintenance records, the turbo, filters, and emissions systems.',
+					'For hybrid or electric vehicles, check the battery, charging operation, history, and real-world range.'
 				]
 			}
 		],
-		tags: ['дизел', 'бензин', 'хибрид']
+		tags: ['diesel', 'gas', 'hybrid']
 	}),
 	article({
 		slug: 'kak-da-podgotvim-avtomobil-za-prodazhba',
-		title: 'Как да подготвите автомобил за продажба или бартер',
+		title: 'How to prepare a car for sale or a possible trade-in',
 		description:
-			'Какво да подготвите, ако искате оценка, продажба или замяна на автомобил чрез Day Night Auto.',
-		category: 'Съвети',
+			'What to prepare before asking Texas Drive Auto whether appraisals, vehicle purchases, or trade-ins are available.',
+		category: 'Tips',
 		kind: 'guide',
 		date: '2026-05-21',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-31.jpg',
 		readMinutes: 4,
 		summary: [
-			'Подгответе снимки, основни данни, документи и информация за обслужване.',
-			'Опишете реално състоянието, за да получите по-точна оценка.',
-			'Бартерът е най-лесен, когато има ясен бюджет за следващ автомобил.'
+			'Gather photos, basic vehicle details, paperwork, and maintenance information.',
+			'Describe the condition accurately to support a more informed appraisal.',
+			'If a trade-in is available, set a clear budget for your next vehicle.'
 		],
 		sections: [
 			{
-				heading: 'Какво да изпратите за оценка',
+				heading: 'What to prepare for an appraisal inquiry',
 				paragraphs: [
-					'За предварителна оценка са полезни снимки, година, пробег, двигател, скоростна кутия, ниво на оборудване и информация за обслужване.',
-					'Колкото по-точна е информацията, толкова по-бързо може да се даде реалистична насока.'
+					'For a preliminary appraisal inquiry, useful details include photos, year, mileage, engine, transmission, trim level, and maintenance information.',
+					'Accurate information helps an appraiser give a more realistic initial assessment.'
 				]
 			},
 			{
-				heading: 'Продажба или бартер',
+				heading: 'Selling or trading in a vehicle?',
 				paragraphs: [
-					'Ако целта е бартер, подгответе и ориентир за желания следващ автомобил: марка, бюджет, тип купе и гориво.',
-					'Екипът може да предложи вариант според наличността и реалното състояние на автомобила за замяна.'
+					'If you’re considering a trade-in, outline your next vehicle preferences: make, budget, body style, and fuel type.',
+					'Ask whether trade-ins are accepted and how current inventory and your vehicle’s condition would affect the options.'
 				]
 			}
 		],
-		tags: ['продажба', 'бартер', 'оценка']
+		tags: ['selling', 'trade-in', 'appraisal']
 	}),
 	article({
 		slug: 'kakvo-oznachava-proveren-avtomobil',
-		title: 'Какво означава проверен автомобил при покупка',
+		title: 'What does an inspected vehicle mean when buying?',
 		description:
-			'Кратко обяснение какво да разбирате под проверка на автомобил и защо тя не трябва да се пропуска.',
-		category: 'Съвети',
+			'A brief explanation of what a vehicle inspection should cover and why it matters.',
+		category: 'Tips',
 		kind: 'guide',
 		date: '2026-05-20',
-		author: 'Day Night Auto',
+		author: 'Texas Drive Auto',
 		image: '/assets/images/blog/post-23.jpg',
 		readMinutes: 4,
 		summary: [
-			'Проверката включва документи, визуално състояние, тестово шофиране и технически преглед.',
-			'Историята и сервизните записи дават контекст, но не заменят огледа.',
-			'Решението трябва да съчетава цена, състояние и разходи след покупката.'
+			'A thorough check should include paperwork, visible condition, a test drive, and a mechanical inspection.',
+			'History and service records provide context but don’t replace an inspection.',
+			'Weigh the price, condition, and expected ownership costs together.'
 		],
 		sections: [
 			{
-				heading: 'Проверка не е само бърз оглед',
+				heading: 'An inspection is more than a quick look',
 				paragraphs: [
-					'Един автомобил може да изглежда добре на снимки, но реалната проверка включва документи, видимо състояние, тестово шофиране и сервизна оценка.',
-					'Особено при по-скъпи модели е важно да се видят обслужване, електроника, окачване и консумативи.'
+					'A vehicle may look good in photos, but a thorough check includes paperwork, visible condition, a test drive, and a mechanic’s assessment.',
+					'Especially with more expensive models, check maintenance records, electronics, suspension, and wear items.'
 				]
 			},
 			{
-				heading: 'Как се взема решение',
+				heading: 'How to decide',
 				paragraphs: [
-					'Добрата покупка не е само най-ниската цена, а баланс между състояние, история, бъдещи разходи и удобен процес.',
-					'Day Night Auto помага на клиента да сравни тези фактори преди финализиране.'
+					'A good purchase balances price, condition, history, future costs, and a convenient process.',
+					'What information is available from Texas Drive Auto to help compare these factors before buying?'
 				]
 			}
 		],
-		tags: ['проверка', 'оглед', 'състояние']
+		tags: ['inspection', 'viewing', 'condition']
 	})
 ];
 

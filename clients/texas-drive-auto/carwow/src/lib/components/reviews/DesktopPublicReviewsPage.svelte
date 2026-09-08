@@ -41,19 +41,19 @@
 	<div class="container">
 		<ul class="breadcrumb">
 			<li>
-				<a href={resolve('/')}>Начало</a>
+				<a href={resolve('/')}>Home</a>
 			</li>
 			<li>
 				<img src={asset('/assets/icons/right.svg')} alt="chevron-right" />
 			</li>
 			<li>
-				<span>Още</span>
+				<span>More</span>
 			</li>
 			<li>
 				<img src={asset('/assets/icons/right.svg')} alt="chevron-right" />
 			</li>
 			<li>
-				<span>Отзиви от клиенти</span>
+				<span>Customer reviews unavailable in this preview</span>
 			</li>
 		</ul>
 	</div>
@@ -61,7 +61,7 @@
 
 <section class="pb-100">
 	<div class="container">
-		<h2>Отзиви от клиенти</h2>
+		<h2>Customer reviews unavailable in this preview</h2>
 		<div class="tf-spacing-style3"></div>
 
 		<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">

@@ -1,44 +1,44 @@
 export const desktopSellProcessSteps = [
 	{
-		title: 'Опиши автомобила',
-		copy: 'Въведи номер или VIN и данните за автомобила.'
+		title: 'Describe your vehicle',
+		copy: 'Enter a license plate number or VIN and vehicle details.'
 	},
 	{
-		title: 'Уточни състоянието',
-		copy: 'Изпрати снимки и посочи забележките.'
+		title: 'Describe its condition',
+		copy: 'Add photos and note any issues.'
 	},
 	{
-		title: 'Обсъди оценката',
-		copy: 'Избери продажба или бартер с нашия екип.'
+		title: 'Ask about an appraisal',
+		copy: 'Ask whether vehicle purchases or trade-ins are available.'
 	},
-	{ title: 'Оглед и документи', copy: 'Уговори оглед и уточни финалните условия.' }
+	{ title: 'Viewing and paperwork', copy: 'Ask about a viewing and confirm the final terms.' }
 ] as const;
 
 export const desktopSellBenefits = [
-	'Оценка според реалното състояние, историята и пазара.',
-	'Бартер към автомобил от нашата наличност.',
-	'Съдействие с документите, регистрацията и предаването.'
+	'Ask how condition, history and market prices would affect an appraisal.',
+	'Ask whether trade-ins toward an in-stock vehicle are available.',
+	'Ask about paperwork, registration, and vehicle handoff.'
 ] as const;
 
 export const desktopSellFaqItems = [
 	{
-		question: 'Какви документи са нужни?',
+		question: 'What documents are needed?',
 		answer:
-			'Обикновено са нужни талон, документ за собственост и лична карта. Ако има особен случай, екипът уточнява какво да подготвите преди оглед.'
+			'Ask which title, registration, and identification documents are needed for your situation before a vehicle inspection.'
 	},
 	{
-		question: 'Може ли бартер към наличен автомобил?',
+		question: 'Can I trade in toward an in-stock vehicle?',
 		answer:
-			'Да. Оценката може да се приспадне към избран автомобил от наличността, като уточняваме разликата и следващите стъпки.'
+			'Trade-in availability and terms are not confirmed in this preview. Ask about eligibility, any price difference, and next steps.'
 	},
 	{
-		question: 'Кога получавам обратна връзка?',
+		question: 'When will I hear back?',
 		answer:
-			'След изпратени основни данни и снимки се свързваме с Вас, за да уточним оглед, ориентир за цена и възможен вариант.'
+			'This preview does not send your vehicle details or photos. Contact the dealership to ask about an inspection, an estimate, and available options.'
 	},
 	{
-		question: 'Какво ако автомобилът е на лизинг?',
+		question: 'What if my vehicle is leased?',
 		answer:
-			'Можем да обсъдим случая и нужните документи. Финалният вариант зависи от остатъка, условията и състоянието на автомобила.'
+			'Ask your leasing company about required documents, the remaining balance, and any restrictions before discussing a sale.'
 	}
 ] as const;

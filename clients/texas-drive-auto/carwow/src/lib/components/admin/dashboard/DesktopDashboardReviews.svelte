@@ -28,8 +28,8 @@
 	];
 
 	const dateOptions: DropdownOption[] = [
-		{ value: 'desc', label: 'Най-нови' },
-		{ value: 'asc', label: 'Най-стари' }
+		{ value: 'desc', label: 'Newest' },
+		{ value: 'asc', label: 'Oldest' }
 	];
 
 	const reviews: Review[] = [
@@ -38,30 +38,30 @@
 			menuId: 'MoreDropdown-1',
 			menuDropdownId: 'coreDropdownMessage',
 			avatar: '/assets/images/avatar/avatar-4.png',
-			name: 'Иван Д.',
-			date: 'Август 2025',
-			title: 'Отлично преживяване',
-			body: 'Получих ясна информация за автомобила, документите и следващите стъпки. Огледът беше организиран спокойно, без натиск и без излишни обещания.'
+			name: 'Ivan D.',
+			date: 'August 2025',
+			title: 'Reviews unavailable in preview',
+			body: 'Customer reviews are unavailable in this preview. Ask about vehicle details, paperwork, next steps, and scheduling a viewing.'
 		},
 		{
 			id: 'review-maria',
 			menuId: 'MoreDropdown-2',
 			menuDropdownId: 'coreDropdownMessage2',
 			avatar: '/assets/images/avatar/coment-avatar-1.png',
-			name: 'Мария Г.',
-			date: 'Август 2025',
-			title: 'Лесно и удобно',
-			body: 'Сайтът е удобен и сравних няколко автомобила за минути. Вариантите за финансиране бяха обяснени ясно и намерих подходящ за бюджета ми.'
+			name: 'Maria G.',
+			date: 'August 2025',
+			title: 'Funding information',
+			body: 'Texas Drive Auto offers no dealer financing or payment plans. Any buyer-arranged funding is separate. Customer reviews are unavailable in this preview.'
 		},
 		{
 			id: 'review-nikolay',
 			menuId: 'MoreDropdown-3',
 			menuDropdownId: 'coreDropdownMessage3',
 			avatar: '/assets/images/avatar/coment-avatar-2.png',
-			name: 'Николай П.',
-			date: 'Август 2025',
-			title: 'Коректно и надеждно',
-			body: 'Автомобилът беше представен коректно, със снимки, цена и обяснение за състоянието. Сделката мина бързо и подредено.'
+			name: 'Nikolay P.',
+			date: 'August 2025',
+			title: 'Vehicle information',
+			body: 'Customer reviews are unavailable in this preview. Ask about vehicle photos, price, condition, and the purchase process.'
 		}
 	];
 
@@ -122,7 +122,7 @@
 		<div class="core-dropdown__menu" id={review.menuDropdownId}>
 			<ul class="core-dropdown__list more-links">
 				<li>
-					<a href={resolve('/dashboard/messages')} class="active">Изпрати съобщение</a>
+					<a href={resolve('/dashboard/messages')} class="active">Save draft</a>
 				</li>
 				<li>
 					<a href={resolve('/dashboard/profile')}>View Profile</a>
@@ -231,12 +231,12 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Toggle Моят профил"
+			aria-label="Toggle My account"
 			type="button"
 		>
-			Show Моят профил
+			Show My account
 		</button>
-		<p class="h3 mb-40">Моите отзиви</p>
+		<p class="h3 mb-40">My reviews</p>
 		<div class="dashboard-box style-2 mb-30 bg-white">
 			<p class="h4 mb-14">Customer Feedback</p>
 

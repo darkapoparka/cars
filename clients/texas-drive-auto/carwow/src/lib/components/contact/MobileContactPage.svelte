@@ -47,25 +47,25 @@
 	const contactCards = [
 		{
 			id: 'phone',
-			title: 'Телефон',
+			title: 'Phone',
 			value: daynightSite.phoneLabel,
 			icon: PhoneCall
 		},
 		{
 			id: 'email',
-			title: 'Писмен контакт',
-			value: 'Използвайте формата за запитване',
+			title: 'Written inquiries',
+			value: 'Use the inquiry form',
 			icon: MessageCircle
 		},
 		{
 			id: 'address',
-			title: 'Адрес',
+			title: 'Address',
 			value: daynightSite.location,
 			icon: MapPin
 		},
 		{
 			id: 'hours',
-			title: 'Работно време',
+			title: 'Business hours',
 			value: daynightSite.hoursLabel,
 			href: null,
 			icon: Clock
@@ -74,31 +74,31 @@
 
 	const importSteps = [
 		{
-			title: 'Изпращате обявата',
-			copy: 'Проверяваме автомобила, продавача и условията в обявата.'
+			title: 'Add a listing link',
+			copy: 'Ask how the vehicle, seller, and listing terms can be verified.'
 		},
 		{
-			title: 'Получавате конкретен разчет',
-			copy: 'Уточняваме цена, транспорт, срок и необходимите документи.'
+			title: 'What would the total cost be?',
+			copy: 'Ask about price, transportation, timing, and required documents.'
 		},
 		{
-			title: 'Организираме вноса',
-			copy: 'Координираме покупката, доставката и предаването в България.'
+			title: 'Are import services available?',
+			copy: 'Import, delivery, and handoff services are unconfirmed in this preview.'
 		}
 	] as const;
 
 	const importCoverage = [
 		{
-			title: 'Проверка преди решение',
-			copy: 'Преглеждаме обявата и изясняваме важните детайли предварително.'
+			title: 'Check before deciding',
+			copy: 'Review the listing and ask about key details before deciding.'
 		},
 		{
-			title: 'Транспорт и документи',
-			copy: 'Подреждаме практическите стъпки по доставката и документацията.'
+			title: 'Transportation and paperwork',
+			copy: 'Ask who would handle transportation and paperwork.'
 		},
 		{
-			title: 'Ясен контакт до предаването',
-			copy: 'Знаете какво следва и получавате конкретен отговор на всеки етап.'
+			title: 'Who would be your contact?',
+			copy: 'Ask who would provide updates and explain each next step.'
 		}
 	] as const;
 
@@ -132,8 +132,8 @@
 	let importInfoDialog: HTMLDialogElement | undefined = $state();
 	let activeImportInfo = $state<ImportInfo | null>(null);
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Your inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Your import inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
 
 	async function revealImportForm() {
 		importExpanded = true;
@@ -172,7 +172,7 @@
 		const contactValue = contact.trim();
 		const email = contactValue.includes('@') ? contactValue : null;
 		const phone = email ? null : contactValue;
-		const customerName = name.trim() || (isImportMode ? 'Заявка за внос от сайта' : '');
+		const customerName = name.trim() || (isImportMode ? 'Website import inquiry' : '');
 
 		leadSubmitState = 'submitting';
 		leadSubmitMessage = '';
@@ -220,8 +220,8 @@
 		if (result.ok) {
 			leadSubmitState = 'success';
 			leadSubmitMessage = isImportMode
-				? 'Заявката за внос е изпратена. Екипът ще Ви изпрати варианти и следващи стъпки.'
-				: 'Екипът ще се свърже с Вас за следваща стъпка.';
+				? 'Draft only — not sent'
+				: 'Draft only — not sent';
 			name = '';
 			contact = '';
 			sourceUrl = '';
@@ -252,23 +252,23 @@
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
+				<a href={resolve('/')} aria-label="Texas Drive Auto home">
 					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 				</a>
-				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
+				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Call">
 					<Phone size={19} strokeWidth={2.35} />
 				</a>
 			</div>{/if}
 
 		<div class="mobile-contact-hero__copy">
-			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
+			{#if !isImportMode}<span class="mobile-contact-hero__label">Contact</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Found a vehicle? Ask about your options.' : 'Contact Texas Drive Auto'}
 			</h1>
 			<p>
 				{isImportMode
-					? 'Поставете линк — ние поемаме оттам.'
-					: 'Огледи, въпроси за налични автомобили, бартер, документи и посещение на място.'}
+					? 'Paste a link to draft an inquiry.'
+					: 'Questions about viewings, available vehicles, trade-in availability, paperwork, and visiting in person.'}
 			</p>
 		</div>
 
@@ -276,7 +276,7 @@
 			<form
 				class="mobile-import-quick"
 				onsubmit={handleImportQuickStart}
-				aria-label="Начало на заявката за внос"
+				aria-label="Start an import inquiry"
 			>
 				<label>
 					<Link size={18} strokeWidth={2.35} aria-hidden="true" />
@@ -284,24 +284,24 @@
 						bind:value={sourceUrl}
 						type="url"
 						inputmode="url"
-						placeholder="Поставете линк към обява"
+						placeholder="Paste a listing link"
 						autocomplete="url"
-						aria-label="Линк към обява за внос"
+						aria-label="Import listing link"
 					/>
 				</label>
-				<button type="submit" aria-label="Продължи">
+				<button type="submit" aria-label="Continue">
 					<ChevronRight size={22} strokeWidth={2.7} aria-hidden="true" />
 				</button>
 			</form>
 			<div class="mobile-import-quick__meta">
-				<p>mobile.de, AutoScout24 или друга обява</p>
-				<button type="button" onclick={() => revealImportForm()}>Нямам линк</button>
+				<p>mobile.de, AutoScout24 or another listing</p>
+				<button type="button" onclick={() => revealImportForm()}>I don’t have a link</button>
 			</div>
 		{:else}
 			<div class="mobile-contact-actions">
 				<a class="mobile-contact-action mobile-contact-action--call" href={phoneHref}>
 					<PhoneCall size={20} strokeWidth={2.5} />
-					<span>Обади се</span>
+					<span>Call</span>
 				</a>
 				<button
 					class="mobile-contact-action mobile-contact-action--map"
@@ -309,7 +309,7 @@
 					onclick={openMap}
 				>
 					<MapPin size={20} strokeWidth={2.5} />
-					<span>Карта</span>
+					<span>Map</span>
 				</button>
 			</div>
 		{/if}
@@ -319,8 +319,8 @@
 		{#if !isImportMode}
 			<section class="mobile-contact-section" aria-labelledby="mobile-contact-info-title">
 				<div class="mobile-contact-heading">
-					<span>Инфо</span>
-					<h2 id="mobile-contact-info-title">Данни за контакт</h2>
+					<span>Info</span>
+					<h2 id="mobile-contact-info-title">Contact details</h2>
 				</div>
 
 				<div class="mobile-contact-cards">
@@ -347,21 +347,21 @@
 				tabindex="-1"
 			>
 				<div class="mobile-contact-heading">
-					<span>{isImportMode ? 'Стъпка 2' : 'Запитване'}</span>
+					<span>{isImportMode ? 'Step 2' : 'Inquiry'}</span>
 					<h2 id="mobile-contact-form-title">
-						{isImportMode ? 'Уточнете търсенето' : contactContext.subject || 'Пишете ни за автомобил'}
+						{isImportMode ? 'Refine your search' : contactContext.subject || 'Ask about a vehicle'}
 					</h2>
 				</div>
 
 				{#if !isImportMode && contactContext.vehicle}
-					<p>Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
+					<p>Vehicle: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
 				{/if}
 
 				{#if leadSubmitState === 'success'}
 					<div class="mobile-contact-success" role="status" aria-live="polite">
 						<MessageCircle size={23} strokeWidth={2.45} />
 						<span>
-							<strong>{isImportMode ? 'Заявката е изпратена' : 'Запитването е изпратено'}</strong>
+							<strong>{isImportMode ? 'Draft only — not sent' : 'Draft only — not sent'}</strong>
 							<small>{leadSubmitMessage}</small>
 						</span>
 					</div>
@@ -378,7 +378,7 @@
 							aria-hidden="true"
 							style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"
 						>
-							<label for="mobile-contact-company-website">Не попълвайте това поле</label>
+							<label for="mobile-contact-company-website">Leave this field blank</label>
 							<input
 								id="mobile-contact-company-website"
 								name="companyWebsite"
@@ -389,30 +389,30 @@
 							/>
 						</div>
 						{#if !isImportMode}<label>
-								<span>Име</span>
+								<span>Name</span>
 								<input
 									bind:value={name}
 									name="name"
 									type="text"
-									placeholder="Вашето име"
+									placeholder="Your name"
 									autocomplete="name"
 									required={!isImportMode}
 								/>
 							</label>{/if}
 						{#if isImportMode}
 							<label>
-								<span>Какъв автомобил търсите</span>
+								<span>What vehicle are you looking for</span>
 								<input
 									bind:value={importQuery}
 									name="query"
 									type="text"
-									placeholder="BMW X5, дизел, след 2019..."
+									placeholder="BMW X5, diesel, after 2019..."
 									autocomplete="off"
 								/>
 							</label>
 							<div class="mobile-contact-form__grid">
 								<label>
-									<span>Година от</span>
+									<span>Min. year</span>
 									<input
 										bind:value={importYear}
 										name="year"
@@ -422,7 +422,7 @@
 									/>
 								</label>
 								<label>
-									<span>Бюджет</span>
+									<span>Budget</span>
 									<input
 										bind:value={importBudget}
 										name="budget"
@@ -434,7 +434,7 @@
 							</div>
 						{/if}
 						<label>
-							<span>Телефон или имейл</span>
+							<span>Phone or email</span>
 							<input
 								bind:value={contact}
 								name="contact"
@@ -446,14 +446,14 @@
 							/>
 						</label>
 						<label>
-							<span>{isImportMode ? 'Допълнителни условия' : 'Съобщение'}</span>
+							<span>{isImportMode ? 'Additional requirements' : 'Message'}</span>
 							<textarea
 								bind:value={message}
 								name="message"
 								rows="3"
 								placeholder={isImportMode
-									? 'Оборудване, гориво или други предпочитания...'
-									: 'Автомобил, оглед, бартер, документи...'}
+									? 'Features, fuel type or other preferences...'
+									: 'Vehicle, viewing, trade-in questions, documents...'}
 								required={!isImportMode}
 							></textarea>
 						</label>
@@ -461,10 +461,10 @@
 							<Send size={18} strokeWidth={2.55} />
 							<span>
 								{leadSubmitState === 'submitting'
-									? 'Изпращаме...'
+									? 'Sending...'
 									: isImportMode
-										? 'Изпрати заявка'
-										: 'Изпрати запитване'}
+										? 'Submit request'
+										: 'Send inquiry'}
 							</span>
 						</button>
 						{#if leadSubmitMessage}
@@ -478,51 +478,51 @@
 		{/if}
 
 		{#if isImportMode}
-			<nav class="mobile-import-disclosures" aria-label="Повече за вноса">
+			<nav class="mobile-import-disclosures" aria-label="Import questions">
 				<MobilePromoCard
-					title="Как работи вносът"
-					description="От обявата до конкретна оферта и срок."
-					label="Виж стъпките"
+					title="How would an import work"
+					description="Ask about listing eligibility, costs and timing."
+					label="View the steps"
 					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
 					tone="red"
 					onclick={() => openImportInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Какво поемаме ние"
-					description="Проверка, транспорт, документи и предаване."
-					label="Виж услугата"
+					title="What assistance is available"
+					description="Ask about inspections, transport, paperwork and pickup."
+					label="View details"
 					image="/assets/images/home-promos/gclass-urus-pair-v4.webp"
 					cars
 					onclick={() => openImportInfo('coverage')}
 				/>
 			</nav>
 
-			<section class="mobile-import-contact" aria-label="Бърз контакт за внос">
+			<section class="mobile-import-contact" aria-label="Import contact questions">
 				<span>
-					<strong>Имате въпрос?</strong>
-					<small>Ще Ви ориентираме преди да изпратите заявка.</small>
+					<strong>Have a question?</strong>
+					<small>Import assistance is unconfirmed in this preview.</small>
 				</span>
 				<a href={phoneHref}>
 					<Phone size={18} strokeWidth={2.45} aria-hidden="true" />
-					<span>Обади се</span>
+					<span>Call</span>
 				</a>
 			</section>
 		{/if}
 
-		<section class="mobile-contact-map" aria-label="Карта">
+		<section class="mobile-contact-map" aria-label="Map">
 			<div class="mobile-contact-map__head">
 				<div>
-					<span>Локация</span>
-					<h2>Шоурум в София</h2>
+					<span>Location</span>
+					<h2>Showroom location</h2>
 				</div>
 				<a href={resolve('/inventory')}>
 					<CarFront size={18} strokeWidth={2.45} />
-					<span>Коли</span>
+					<span>Cars</span>
 				</a>
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Map to Texas Drive Auto"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -565,15 +565,15 @@
 					<div class="mobile-import-sheet__handle" aria-hidden="true"></div>
 					<div class="mobile-import-sheet__title">
 						<h2 id="mobile-import-sheet-title">
-							{activeImportInfo === 'process' ? 'Как работи вносът' : 'Какво поемаме ние'}
+							{activeImportInfo === 'process' ? 'How would an import work' : 'What assistance is available'}
 						</h2>
 						<p>
 							{activeImportInfo === 'process'
-								? 'Три ясни стъпки от обявата до доставката'
-								: 'Практическа помощ до предаването на автомобила'}
+								? 'Three steps to explore listing, import and delivery questions'
+								: 'What help is available before vehicle pickup'}
 						</p>
 					</div>
-					<button type="button" onclick={closeImportInfo} aria-label="Затвори">
+					<button type="button" onclick={closeImportInfo} aria-label="Close">
 						<X size={20} strokeWidth={2.45} aria-hidden="true" />
 					</button>
 				</header>
@@ -598,7 +598,7 @@
 					</div>
 					<a class="mobile-import-sheet__call" href={phoneHref}>
 						<Phone size={18} strokeWidth={2.45} aria-hidden="true" />
-						<span>Обади се на {daynightSite.phoneLabel}</span>
+						<span>Call {daynightSite.phoneLabel}</span>
 					</a>
 				</div>
 			</div>

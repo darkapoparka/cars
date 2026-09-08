@@ -16,7 +16,7 @@
 
 	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
 	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
-	const searchLabel = $derived(query.trim() ? `Търсене: ${query.trim()}` : 'Отвори търсене');
+	const searchLabel = $derived(query.trim() ? `Search: ${query.trim()}` : 'Open search');
 </script>
 
 <section class="mobile-inventory-top">
@@ -32,11 +32,11 @@
 			<div class="mobile-map-card__actions">
 				<a class="is-primary" href={resolve('/contact')}>
 					<MapPin size={17} strokeWidth={2.4} />
-					Карта
+					Map
 				</a>
 				<a href={phoneHref}>
 					<PhoneCall size={17} strokeWidth={2.4} />
-					Обади се
+					Call
 				</a>
 				<a href={viberHref}>
 					<MessageCircle size={17} strokeWidth={2.4} />
@@ -60,7 +60,7 @@
 					? 'mobile-inventory-search__label is-filled'
 					: 'mobile-inventory-search__label'}
 			>
-				{query || 'Търси автомобили'}
+				{query || 'Search vehicles'}
 			</span>
 			<span class="mobile-inventory-search__icon" aria-hidden="true">
 				<Search size={19} strokeWidth={2.55} />

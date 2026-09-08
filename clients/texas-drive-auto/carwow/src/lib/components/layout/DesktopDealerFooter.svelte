@@ -8,21 +8,21 @@
 	const youtubeLink = { href: youtubeChannelUrl, target: '_blank', rel: 'noopener noreferrer' } as const;
 
 	const groups = [
-		{ title: 'Бързи връзки', links: [
-			{ href: '/about', label: 'За нас' },
-			{ href: '/team', label: 'Нашият екип' },
-			{ href: '/services', label: 'Услуги' },
-			{ href: '/faq', label: 'Често задавани въпроси' },
-			{ href: '/blog', label: 'Блог' },
-			{ href: '/contact', label: 'Контакти' }
+		{ title: 'Quick links', links: [
+			{ href: '/about', label: 'About us' },
+			{ href: '/team', label: 'Team information' },
+			{ href: '/services', label: 'Services' },
+			{ href: '/faq', label: 'Frequently asked questions' },
+			{ href: '/blog', label: 'Blog' },
+			{ href: '/contact', label: 'Contact' }
 		] },
-		{ title: 'Покупка и продажба', links: [
-			{ href: '/inventory', label: 'Намери автомобил' },
-			{ href: '/sell-your-car', label: 'Продай или замени' },
-			{ href: '/financing', label: 'Лизинг и финансиране' },
-			{ href: '/inventory/map', label: 'Карта на автомобилите' },
-			{ href: '/calculator', label: 'Калкулатор за финансиране' },
-			{ href: '/reviews', label: 'Отзиви от клиенти' }
+		{ title: 'Buying and selling', links: [
+			{ href: '/inventory', label: 'Find a vehicle' },
+			{ href: '/sell-your-car', label: 'Ask about selling or trading' },
+			{ href: '/financing', label: 'No dealer financing or payment plans' },
+			{ href: '/inventory/map', label: 'Vehicle map' },
+			{ href: '/calculator', label: 'Buyer-arranged funding calculator' },
+			{ href: '/reviews', label: 'Customer reviews unavailable in this preview' }
 		] }
 	] as const;
 </script>
@@ -31,11 +31,11 @@
 	<div class="dealer-footer__container">
 		<div class="dealer-footer__grid">
 			<div class="dealer-footer__brand">
-				<a href={resolve('/')} aria-label="Day Night Auto — начална страница">
-					<img src={daynightSite.logoLight} width="220" height="68" alt="Day Night Auto Group" loading="lazy" />
+				<a href={resolve('/')} aria-label="Texas Drive Auto — home page">
+					<img src={daynightSite.logoLight} width="220" height="68" alt="Texas Drive Auto" loading="lazy" />
 				</a>
 				<div class="dealer-footer__hours">
-					<p>Работно време:</p>
+					<p>Business hours:</p>
 					<span>{daynightSite.hoursLabel}</span>
 				</div>
 			</div>
@@ -54,12 +54,12 @@
 					<Phone size={19} /><strong>{daynightSite.phoneLabel}</strong><ArrowUpRight size={15} />
 				</a>
 				<a class="dealer-footer__contact-row" href={resolve('/contact')}>
-					<Mail size={19} /><span>Онлайн запитване</span><ArrowUpRight size={15} />
+					<Mail size={19} /><span>Online inquiry</span><ArrowUpRight size={15} />
 				</a>
 				<a class="dealer-footer__contact-row" {...mapLink}>
 					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
 				</a>
-				<div class="dealer-footer__socials" aria-label="Социални мрежи">
+				<div class="dealer-footer__socials" aria-label="Social media">
 					<a href="https://www.facebook.com/61566304063141/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a>
 					<a {...youtubeLink} aria-label="YouTube"><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a>
 					<a href="https://www.instagram.com/daynight.auto.plovdiv/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a>
@@ -67,8 +67,8 @@
 			</div>
 		</div>
 		<div class="dealer-footer__bottom">
-			<p>©2026 Day Night Auto Group. Всички права запазени.</p>
-			<nav aria-label="Правна информация">
+			<p>©2026 Texas Drive Auto. All rights reserved.</p>
+			<nav aria-label="Legal information">
 				{#each daynightFooterBottomLinks as link (link.label)}
 					<a href={resolve(link.href)}>{link.label}</a>
 				{/each}

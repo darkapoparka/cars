@@ -35,19 +35,19 @@ export type MileageOption = {
 
 /** Price bands — EXACT 5, ported verbatim from MobileInventoryPage. */
 export const priceOptions: PriceOption[] = [
-	{ value: 'under-10000', label: 'До 10 000 EUR', limit: 10000 },
-	{ value: 'under-20000', label: 'До 20 000 EUR', limit: 20000 },
-	{ value: 'under-30000', label: 'До 30 000 EUR', limit: 30000 },
-	{ value: 'under-50000', label: 'До 50 000 EUR', limit: 50000 },
-	{ value: 'over-50000', label: 'Над 50 000 EUR', min: 50000 }
+	{ value: 'under-10000', label: 'Up to 10 000 USD', limit: 10000 },
+	{ value: 'under-20000', label: 'Up to 20 000 USD', limit: 20000 },
+	{ value: 'under-30000', label: 'Up to 30 000 USD', limit: 30000 },
+	{ value: 'under-50000', label: 'Up to 50 000 USD', limit: 50000 },
+	{ value: 'over-50000', label: 'Over 50 000 USD', min: 50000 }
 ];
 
 /** Mileage bands — EXACT 4, all `limit`, ported verbatim. */
 export const mileageOptions: MileageOption[] = [
-	{ value: 'under-50000', label: 'До 50 000 км', limit: 50000 },
-	{ value: 'under-100000', label: 'До 100 000 км', limit: 100000 },
-	{ value: 'under-150000', label: 'До 150 000 км', limit: 150000 },
-	{ value: 'under-200000', label: 'До 200 000 км', limit: 200000 }
+	{ value: 'under-50000', label: 'Up to 50 000 miles', limit: 50000 },
+	{ value: 'under-100000', label: 'Up to 100 000 miles', limit: 100000 },
+	{ value: 'under-150000', label: 'Up to 150 000 miles', limit: 150000 },
+	{ value: 'under-200000', label: 'Up to 200 000 miles', limit: 200000 }
 ];
 
 /**
@@ -83,7 +83,7 @@ export type InventoryCriteria = {
 	price: string;
 	mileage: string;
 	/**
-	 * Desktop-only multi-select екстри (AND across selected). Optional so the
+	 * Desktop-only multi-select features (AND across selected). Optional so the
 	 * mobile page and the existing unit-test criteria (which never set it) keep
 	 * type-checking — `undefined`/`[]` is a no-op.
 	 */
@@ -130,7 +130,7 @@ export function vehicleMatches(v: InventoryListVehicle, criteria: InventoryCrite
 	if (!priceMatches(v.price, criteria.price)) return false;
 	if (!mileageMatches(v.mileageValue, criteria.mileage)) return false;
 
-	// Екстри = AND across every selected feature (exact membership, normalized),
+	// Features = AND across every selected feature (exact membership, normalized),
 	// mirroring the legacy DOM-runtime's `features.every(...)`.
 	if (criteria.feature?.length) {
 		const owned = v.features.map(normalize);

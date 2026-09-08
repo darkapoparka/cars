@@ -29,14 +29,14 @@
 	const basicFields = $derived(filters.filter((item) => item.name !== 'feature'));
 	const commonFeatures = [
 		'4x4',
-		'360 camera \\ Задна камера',
+		'360 camera \\ Rear camera',
 		'Apple CarPlay \\ Android Auto',
-		'LED фарове',
-		'7 места',
-		'Безключово палене',
-		'Адаптивни предни светлини',
-		'Адаптивно въздушно окачване',
-		'Bluetooth \\ handsfree система'
+		'LED headlights',
+		'7 seats',
+		'Keyless start',
+		'Adaptive headlights',
+		'Adaptive air suspension',
+		'Bluetooth \\ hands-free system'
 	];
 	const displayedFeatures = $derived(
 		featureField
@@ -198,11 +198,11 @@
 	onkeydown={keepFocus}
 >
 	<div class="filter-dialog-header">
-		<h2 id="inventory-filter-title">{field ? field.label : 'Търсене на автомобили'}</h2>
+		<h2 id="inventory-filter-title">{field ? field.label : 'Search vehicles'}</h2>
 		<button
 			type="button"
 			class="filter-dialog-close"
-			aria-label="Затвори филтрите"
+			aria-label="Close filters"
 			onclick={() => dialog.close()}><X size={22} /></button
 		>
 	</div>
@@ -212,8 +212,8 @@
 				<label class="filter-dialog-search"
 					><Search size={20} /><input
 						type="search"
-						aria-label={`Търси ${field.label.toLocaleLowerCase('bg')}`}
-						placeholder="Търси…"
+						aria-label={`Search ${field.label.toLocaleLowerCase('bg')}`}
+						placeholder="Search…"
 						bind:value={optionQuery}
 					/></label
 				>
@@ -231,14 +231,14 @@
 							onchange={() => toggle(field.name, option.value)}
 						/>{option.label}
 					</label>
-				{:else}<p class="filter-dialog-empty">Няма съвпадения.</p>{/each}
+				{:else}<p class="filter-dialog-empty">No matches.</p>{/each}
 			</div>
 		{:else}
 			<label class="filter-dialog-search"
 				><Search size={20} /><input
 					type="search"
-					aria-label="Марка, модел или ключова дума"
-					placeholder="Марка, модел или ключова дума"
+					aria-label="Make, model, or keyword"
+					placeholder="Make, model, or keyword"
 					bind:value={query}
 				/></label
 			>
@@ -250,7 +250,7 @@
 							>
 							<details class="filter-dialog-multiselect">
 								<summary aria-labelledby={`modal-label-${group.name}`}
-									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'Всички'}</span
+									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'All'}</span
 									><ChevronDown size={16} /></summary
 								>
 								<div class="filter-dialog-multi-options">
@@ -262,7 +262,7 @@
 												onchange={() => toggle(group.name, option.value)}
 											/>{option.label}</label
 										>
-									{:else}<p>Няма налични модели.</p>{/each}
+									{:else}<p>No models available.</p>{/each}
 								</div>
 							</details>
 						{:else}
@@ -272,7 +272,7 @@
 								value={draft[group.name]?.[0] ?? ''}
 								onchange={(event) => setValues(group.name, [event.currentTarget.value])}
 							>
-								<option value="">Всички</option>
+								<option value="">All</option>
 								{#each options(group) as option (option.value)}<option value={option.value}
 										>{option.label}</option
 									>{/each}
@@ -281,21 +281,21 @@
 					</div>
 				{/each}
 				<div class="filter-dialog-field">
-					<label class="filter-dialog-label" for="modal-availability">Наличност</label>
+					<label class="filter-dialog-label" for="modal-availability">Availability</label>
 					<select
 						id="modal-availability"
 						value={draft.availability?.[0] ?? ''}
 						onchange={(event) => setValues('availability', [event.currentTarget.value])}
 					>
-						<option value="">Всички</option><option value="available">Налични</option><option
-							value="incoming">Очакван внос</option
+						<option value="">All</option><option value="available">Available</option><option
+							value="incoming">Import status unconfirmed</option
 						>
 					</select>
 				</div>
 			</div>
 			{#if featureField}
 				<section class="filter-dialog-features" aria-labelledby="filter-extras-title">
-					<h3 id="filter-extras-title">Екстри</h3>
+					<h3 id="filter-extras-title">Features</h3>
 					<div class="filter-dialog-feature-grid">
 						{#each displayedFeatures as option (option.value)}
 							<label
@@ -316,7 +316,7 @@
 						onclick={() => {
 							allFeatures = !allFeatures;
 						}}
-						>{allFeatures ? 'По-малко екстри' : `Всички екстри (${options(featureField).length})`}
+						>{allFeatures ? 'Fewer features' : `All features (${options(featureField).length})`}
 						<ChevronDown size={16} /></button
 					>
 				</section>
@@ -325,10 +325,10 @@
 	</div>
 	<div class="filter-dialog-footer">
 		<button type="button" class="filter-dialog-clear" onclick={clear}
-			>Изчисти{field ? '' : ' всички'}</button
+			>Clear{field ? '' : ' all'}</button
 		>
 		<button type="button" class="filter-dialog-apply" onclick={apply}
-			>Покажи {count} автомобила <Search size={18} /></button
+			>Show {count} vehicles <Search size={18} /></button
 		>
 	</div>
 </dialog>

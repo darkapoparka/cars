@@ -104,7 +104,7 @@
 			status.className = 'daynight-form-status text-highlight font-weight-600 mt-12';
 			form.append(status);
 		}
-		status.textContent = 'Запитването е изпратено локално';
+		status.textContent = 'Draft only — not sent';
 	}
 
 	function isInquiryForm(form: HTMLFormElement) {
@@ -186,7 +186,7 @@
 			return;
 		}
 
-		if (modalId.includes('CompareModal') || modalId.includes('СравниModal')) {
+		if (modalId.includes('CompareModal') || modalId.includes('CompareModal')) {
 			event.preventDefault();
 			go('/compare');
 			return;

@@ -4,7 +4,7 @@
 
 	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
 
-	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
+	const displayPrice = $derived(vehicle.priceLabel.replace(/\s*EUR\b/, ' $'));
 </script>
 
 <div class="h6 card-box__price mb-15">
@@ -15,8 +15,8 @@
 	<a
 		href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
 		class="daynight-card-price__link"
-		aria-label={`Виж ${vehicle.shortTitle}`}
-		title="Виж автомобила"
+		aria-label={`View ${vehicle.shortTitle}`}
+		title="View vehicle"
 	>
 		<svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
 			<path d="M4.25 10H15.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />

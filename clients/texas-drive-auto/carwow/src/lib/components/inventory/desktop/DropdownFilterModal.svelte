@@ -26,7 +26,7 @@
 		onClose: () => void;
 	} = $props();
 
-	const searchPlaceholder = $derived(`Търси ${label.toLocaleLowerCase('bg-BG')}...`);
+	const searchPlaceholder = $derived(`Search ${label.toLocaleLowerCase('en-US')}...`);
 
 	function handleQueryInput(event: Event) {
 		if (event.target instanceof HTMLInputElement) {
@@ -61,7 +61,7 @@
 	<button
 		type="button"
 		class="daynight-hero-search-modal__backdrop"
-		aria-label="Затвори"
+		aria-label="Close"
 		onclick={onClose}
 	></button>
 	<div class="daynight-hero-search-modal__sheet" role="dialog" aria-modal="true" aria-label={label}>
@@ -70,7 +70,7 @@
 			<button
 				type="button"
 				class="daynight-hero-search-modal__close"
-				aria-label="Затвори"
+				aria-label="Close"
 				onclick={onClose}>✕</button
 			>
 		</div>
@@ -84,7 +84,7 @@
 					type="text"
 					class="daynight-hero-search-modal__search"
 					placeholder={searchPlaceholder}
-					aria-label={`Търси ${label}`}
+					aria-label={`Search ${label}`}
 					autocomplete="off"
 					value={optionQuery}
 					oninput={handleQueryInput}
@@ -118,16 +118,16 @@
 				</button>
 			{/each}
 			{#if visibleOptions.length === 0}
-				<p class="daynight-hero-search-modal__empty">Няма резултат по това търсене.</p>
+				<p class="daynight-hero-search-modal__empty">No results match your search.</p>
 			{/if}
 		</div>
 		{#if isMultiSelect}
 			<div class="daynight-hero-search-modal__actions">
 				<button type="button" class="daynight-hero-search-modal__clear" onclick={onClear}>
-					Изчисти
+					Clear
 				</button>
 				<button type="button" class="daynight-hero-search-modal__done" onclick={onClose}>
-					Готово
+					Done
 				</button>
 			</div>
 		{/if}

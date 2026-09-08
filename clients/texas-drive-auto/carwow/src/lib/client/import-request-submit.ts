@@ -67,7 +67,7 @@ export async function submitImportRequest(
 				status: response.status,
 				error: readResponseMessage(
 					body,
-					'Заявката не беше изпратена. Моля, обадете се или пишете във Viber.'
+					'Request not sent. Please call or message us on Viber.'
 				),
 				details: isJsonObject(body) ? body.details : undefined
 			};
@@ -82,7 +82,7 @@ export async function submitImportRequest(
 			return {
 				ok: false,
 				status: response.status,
-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
+				error: 'Unexpected response. Please call or message us on Viber.'
 			};
 		}
 
@@ -100,7 +100,7 @@ export async function submitImportRequest(
 			error:
 				error instanceof Error
 					? error.message
-					: 'Заявката не може да бъде изпратена. Моля, обадете се или пишете във Viber.'
+					: 'Request could not be sent. Please call or message us on Viber.'
 		};
 	}
 }

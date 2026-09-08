@@ -5,136 +5,136 @@ export type PublicStaticRoute = {
 	sitemap: boolean;
 };
 
-export const DAY_SITE_TITLE = "Day Night Auto София";
+export const DAY_SITE_TITLE = "Texas Drive Auto";
 
 export const DEFAULT_DESCRIPTION =
-	"Day Night Auto предлага налични автомобили, огледи и съдействие при покупка в София.";
+	"Browse Texas Drive Auto’s vehicle listings and ask about availability, viewings, and purchasing in Dallas.";
 
 export const PUBLIC_STATIC_ROUTES: PublicStaticRoute[] = [
 	{
 		path: '',
-		title: `${DAY_SITE_TITLE} - проверени автомобили и бърз контакт`,
+		title: `${DAY_SITE_TITLE} - vehicle listings and contact information`,
 		description: DEFAULT_DESCRIPTION,
 		sitemap: true
 	},
 	{
 		path: 'inventory',
-		title: `Автомобили в наличност | ${DAY_SITE_TITLE}`,
-		description: "Разгледайте наличните автомобили на Day Night Auto с филтри по марка, цена, гориво и пробег.",
+		title: `Available Vehicles | ${DAY_SITE_TITLE}`,
+		description: "Browse Texas Drive Auto’s vehicle listings with filters for make, price, fuel, and mileage.",
 		sitemap: true
 	},
 	{
 		path: 'inventory/map',
-		title: `Карта на автомобилите | ${DAY_SITE_TITLE}`,
-		description: "Вижте карта и списък с наличните автомобили на Day Night Auto.",
+		title: `Vehicle Map | ${DAY_SITE_TITLE}`,
+		description: "View a map and list of Texas Drive Auto’s vehicle listings.",
 		sitemap: true
 	},
 	{
 		path: 'services',
-		title: `Услуги | ${DAY_SITE_TITLE}`,
-		description: "Услуги на Day Night Auto: финансиране, изкупуване, оценка и съдействие при покупка на автомобил.",
+		title: `Services | ${DAY_SITE_TITLE}`,
+		description: "Ask Texas Drive Auto about vehicle purchases, appraisals, and buying assistance. Service availability is unconfirmed. No dealer financing or payment plans are offered.",
 		sitemap: true
 	},
 	{
 		path: 'sell-your-car',
-		title: `Продай автомобила си | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за продажба, бартер или оценка към Day Night Auto.",
+		title: `Sell Your Vehicle | ${DAY_SITE_TITLE}`,
+		description: "Prepare an inquiry for Texas Drive Auto about whether vehicle purchases, trade-ins, or appraisals are available.",
 		sitemap: true
 	},
 	{
 		path: 'sell-your-car/request',
-		title: `Заявка за изкупуване | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за оценка и изкупуване към Day Night Auto.",
+		title: `Vehicle Purchase Inquiry | ${DAY_SITE_TITLE}`,
+		description: "Prepare an inquiry for Texas Drive Auto about appraisal and vehicle purchase availability.",
 		sitemap: true
 	},
 	{
 		path: 'sell-car',
-		title: `Продай автомобила си | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за продажба, бартер или оценка към Day Night Auto.",
+		title: `Sell Your Vehicle | ${DAY_SITE_TITLE}`,
+		description: "Prepare an inquiry for Texas Drive Auto about whether vehicle purchases, trade-ins, or appraisals are available.",
 		sitemap: false
 	},
 	{
 		path: 'sell-car/request',
-		title: `Заявка за изкупуване | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за оценка и изкупуване към Day Night Auto.",
+		title: `Vehicle Purchase Inquiry | ${DAY_SITE_TITLE}`,
+		description: "Prepare an inquiry for Texas Drive Auto about appraisal and vehicle purchase availability.",
 		sitemap: false
 	},
 	{
 		path: 'about',
-		title: `За нас | ${DAY_SITE_TITLE}`,
-		description: "Day Night Auto - автокъща с подреден каталог, прозрачни сделки и съдействие при финансиране.",
+		title: `About Us | ${DAY_SITE_TITLE}`,
+		description: "Texas Drive Auto - browse vehicle listings and ask about purchase details. No dealer financing or payment plans are offered.",
 		sitemap: true
 	},
 	{
 		path: 'about/daynight-auto-plovdiv',
-		title: `Профил на автокъщата | ${DAY_SITE_TITLE}`,
-		description: "Научете повече за подхода на Day Night Auto при покупка, продажба и финансиране на автомобили.",
+		title: `Dealership Profile | ${DAY_SITE_TITLE}`,
+		description: "Learn about Texas Drive Auto and ask about buying or selling a vehicle. Any funding must be arranged independently by the buyer.",
 		sitemap: true
 	},
 	{
 		path: 'contact',
-		title: `Контакти | ${DAY_SITE_TITLE}`,
-		description: "Свържете се с Day Night Auto - телефон, адрес и локация на автокъщата.",
+		title: `Contact | ${DAY_SITE_TITLE}`,
+		description: "Contact Texas Drive Auto - dealership phone, address, and location.",
 		sitemap: true
 	},
 	{
 		path: 'financing',
-		title: `Финансиране | ${DAY_SITE_TITLE}`,
-		description: "Възможности за автомобилно финансиране и съдействие при покупка чрез Day Night Auto.",
+		title: `Buyer-Arranged Funding | ${DAY_SITE_TITLE}`,
+		description: "Texas Drive Auto offers no dealer financing or payment plans. Buyers must arrange any funding independently.",
 		sitemap: true
 	},
 	{
 		path: 'reviews',
-		title: `Клиентски отзиви | ${DAY_SITE_TITLE}`,
-		description: "Отзиви от клиенти за покупка, продажба и съдействие при автомобили от Day Night Auto.",
+		title: `Customer Reviews | ${DAY_SITE_TITLE}`,
+		description: "Customer reviews for Texas Drive Auto are unavailable in this preview.",
 		sitemap: true
 	},
 	{
 		path: 'calculator',
-		title: `Калкулатор за финансиране | ${DAY_SITE_TITLE}`,
-		description: "Ориентировъчен калкулатор за автомобилно финансиране и месечна вноска от Day Night Auto.",
+		title: `Buyer-Arranged Funding Calculator | ${DAY_SITE_TITLE}`,
+		description: "Estimate payments for separate, buyer-arranged funding. Texas Drive Auto offers no dealer financing or payment plans.",
 		sitemap: false
 	},
 	{
 		path: 'compare',
-		title: `Сравнение на автомобили | ${DAY_SITE_TITLE}`,
-		description: "Сравнете избрани автомобили от Day Night Auto по цена, характеристики и оборудване.",
+		title: `Compare Vehicles | ${DAY_SITE_TITLE}`,
+		description: "Compare selected Texas Drive Auto vehicles by price, specifications, and features.",
 		sitemap: false
 	},
 	{
 		path: 'team',
-		title: `Екип | ${DAY_SITE_TITLE}`,
-		description: "Запознайте се с екипа зад продажбите и клиентското обслужване на Day Night Auto.",
+		title: `Team | ${DAY_SITE_TITLE}`,
+		description: "Staff information is unavailable in this Texas Drive Auto preview.",
 		sitemap: true
 	},
 	{
 		path: 'team/prodazhbi-daynight-auto',
-		title: `Продажби | ${DAY_SITE_TITLE}`,
-		description: "Контакт с търговския екип на Day Night Auto за налични автомобили и оферти.",
+		title: `Sales | ${DAY_SITE_TITLE}`,
+		description: "Contact Texas Drive Auto with questions about vehicle availability and pricing.",
 		sitemap: true
 	},
 	{
 		path: 'blog',
-		title: `Блог | ${DAY_SITE_TITLE}`,
-		description: "Практични съвети от Day Night Auto за покупка, продажба, финансиране и поддръжка на автомобили.",
+		title: `Blog | ${DAY_SITE_TITLE}`,
+		description: "Texas Drive Auto tips on buying, selling, buyer-arranged funding, and vehicle maintenance.",
 		sitemap: true
 	},
 	{
 		path: 'blog/kak-da-kupim-upotrebyavan-avtomobil',
-		title: `Как да купим употребяван автомобил | ${DAY_SITE_TITLE}`,
-		description: "Кратък наръчник от Day Night Auto за проверка, избор и покупка на употребяван автомобил.",
+		title: `How to Buy a Used Car | ${DAY_SITE_TITLE}`,
+		description: "A short Texas Drive Auto guide to inspecting, choosing, and buying a used car.",
 		sitemap: false
 	},
 	{
 		path: 'faq',
-		title: `Често задавани въпроси | ${DAY_SITE_TITLE}`,
-		description: "Отговори на чести въпроси за покупка, продажба, финансиране и контакт с Day Night Auto.",
+		title: `Frequently Asked Questions | ${DAY_SITE_TITLE}`,
+		description: "Answers to common questions about buying, selling, buyer-arranged funding, and contacting Texas Drive Auto.",
 		sitemap: true
 	},
 	{
 		path: 'terms',
-		title: `Условия | ${DAY_SITE_TITLE}`,
-		description: "Условия за ползване и информация за публичния сайт на Day Night Auto.",
+		title: `Terms | ${DAY_SITE_TITLE}`,
+		description: "Terms of use and information about the Texas Drive Auto public website.",
 		sitemap: true
 	}
 ];

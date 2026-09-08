@@ -39,97 +39,97 @@ const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
 		label: 'Chrysler 300C',
 		href: '/inventory/chrysler-300c-2018-gaz',
 		image: '/assets/images/megamenu/chrysler-300c.webp',
-		meta: '17 000 EUR · Газ/Бензин'
+		meta: '17 000 USD · LPG/Gasoline'
 	},
 	{
 		label: 'BMW i7',
 		href: '/inventory/bmw-i7-2023-full-maxx',
 		image: '/assets/images/megamenu/bmw-i7.webp',
-		meta: '81 000 EUR · Електрически'
+		meta: '81 000 USD · Electric'
 	},
 	{
 		label: 'BMW 520i',
 		href: '/inventory/bmw-520i-2006-avtomatik',
 		image: '/assets/images/megamenu/bmw-520i.webp',
-		meta: '4 500 EUR · Бензин'
+		meta: '4 500 USD · Gasoline'
 	},
 	{
 		label: 'Mercedes E 350 D',
 		href: '/inventory/mercedes-benz-e-350-d-2015-64594',
 		image: '/assets/images/megamenu/mercedes-e220d.webp',
-		meta: '11 500 EUR · Дизел'
+		meta: '11 500 USD · Diesel'
 	}
 ] as const;
 
 const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 	{
-		title: 'Наличност',
+		title: 'Availability',
 		links: [
-			{ label: 'Всички автомобили', href: '/inventory' },
-			{ label: 'Автомобили на карта', href: '/inventory/map' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'Калкулатор', href: '/calculator' }
+			{ label: 'All vehicles', href: '/inventory' },
+			{ label: 'Vehicles on a map', href: '/inventory/map' },
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'Calculator', href: '/calculator' }
 		]
 	},
 	{
-		title: 'По тип',
+		title: 'By type',
 		links: [
-			{ label: 'Седан', href: '/inventory?body=Седан' },
-			{ label: 'Джип', href: '/inventory?body=SUV' },
-			{ label: 'Купе', href: '/inventory?body=Купе' },
-			{ label: 'Комби', href: '/inventory?body=Комби' }
+			{ label: 'Sedan', href: '/inventory?body=Sedan' },
+			{ label: 'SUV', href: '/inventory?body=SUV' },
+			{ label: 'Coupe', href: '/inventory?body=Coupe' },
+			{ label: 'Wagon', href: '/inventory?body=Wagon' }
 		]
 	},
 	{
-		title: 'По гориво',
+		title: 'By fuel type',
 		links: [
-			{ label: 'Дизел', href: '/inventory?fuel=Дизел' },
-			{ label: 'Бензин', href: '/inventory?fuel=Бензин' },
-			{ label: 'Газ/Бензин', href: '/inventory?fuel=Газ/Бензин' },
-			{ label: 'Електрически', href: '/inventory?fuel=Електрически' }
+			{ label: 'Diesel', href: '/inventory?fuel=Diesel' },
+			{ label: 'Gasoline', href: '/inventory?fuel=Gasoline' },
+			{ label: 'LPG/Gasoline', href: '/inventory?fuel=LPG/Gasoline' },
+			{ label: 'Electric', href: '/inventory?fuel=Electric' }
 		]
 	},
 	{
-		title: 'Помощ при избор',
+		title: 'Help choosing a vehicle',
 		links: [
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'Услуги', href: '/services' },
-			{ label: 'Често задавани въпроси', href: '/faq' },
-			{ label: 'Полезно за купувачи', href: '/blog' }
+			{ label: 'Buyer-arranged funding', href: '/financing' },
+			{ label: 'Services', href: '/services' },
+			{ label: 'Frequently asked questions', href: '/faq' },
+			{ label: 'Buyer resources', href: '/blog' }
 		]
 	}
 ] as const;
 
 const footerLinkGroups: readonly FooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'TEXAS DRIVE AUTO',
 		links: [
-			{ label: 'За Day Night Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
-			{ label: 'Екип', href: '/team' },
-			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{ label: 'Контакти', href: '/contact' }
+			{ label: 'About Texas Drive Auto', href: '/about' },
+			{ label: 'Dealership profile', href: '/about/daynight-auto-plovdiv' },
+			{ label: 'Contact options', href: '/team' },
+			{ label: 'Reviews', href: '/reviews' },
+			{ label: 'Helpful', href: '/blog' },
+			{ label: 'Contact', href: '/contact' }
 		]
 	},
 	{
-		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
+		title: 'SERVICES AND TOOLS',
 		links: [
-			{ label: 'Налични автомобили', href: '/inventory' },
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'Калкулатор', href: '/calculator' },
-			{ label: 'Продай или замени', href: '/sell-your-car' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'ЧЗВ', href: '/faq' }
+			{ label: 'Vehicle inventory', href: '/inventory' },
+			{ label: 'Buyer-arranged funding', href: '/financing' },
+			{ label: 'Calculator', href: '/calculator' },
+			{ label: 'Ask about selling or trading', href: '/sell-your-car' },
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'FAQ', href: '/faq' }
 		]
 	},
 	{
-		title: 'ЗАПИТВАНИЯ',
+		title: 'INQUIRIES',
 		links: [
-			{ label: 'Контакт за оглед', href: '/contact' },
-			{ label: 'Заявка за оценка', href: '/sell-your-car/request' },
-			{ label: 'Продай или замени', href: '/sell-your-car' },
-			{ label: 'ЧЗВ', href: '/faq' }
+			{ label: 'Contact for a viewing', href: '/contact' },
+			{ label: 'Request an appraisal', href: '/sell-your-car/request' },
+			{ label: 'Ask about selling or trading', href: '/sell-your-car' },
+			{ label: 'FAQ', href: '/faq' }
 		]
 	}
 ] as const;
@@ -251,15 +251,15 @@ function renderIconLink(link: PresentationIconLink, className = 'effect-svg-hove
 
 function renderHeaderLanguageDropdown() {
 	return `<div class="core-dropdown language-select" id="language-select">
-<button class="core-dropdown__button" type="button" aria-label="Език: Български" aria-haspopup="listbox" aria-controls="headerLanguageMenu" aria-expanded="false">
+<button class="core-dropdown__button" type="button" aria-label="Language: English" aria-haspopup="listbox" aria-controls="headerLanguageMenu" aria-expanded="false">
 <span class="core-dropdown__label">BG</span>
 ${chevronDownIcon('#1C1C1C', 'icon-chevron')}
 </button>
 <div class="core-dropdown__menu" id="headerLanguageMenu">
-<ul class="core-dropdown__list" role="listbox" aria-label="Избор на език">
-<li class="text-sm cursor-pointer">Български</li>
+<ul class="core-dropdown__list" role="listbox" aria-label="Choose a language">
+<li class="text-sm cursor-pointer">Bulgarian</li>
 <li class="text-sm cursor-pointer">English</li>
-<li class="text-sm cursor-pointer">Още езици скоро</li>
+<li class="text-sm cursor-pointer">More languages coming soon</li>
 </ul>
 </div>
 </div>`;
@@ -346,23 +346,23 @@ function renderFooterSocialLinks() {
 			kind: 'external'
 		},
 		{
-			label: 'Viber / Телефон',
+			label: 'Viber / Phone',
 			href: `tel:${daynightSite.phone}`,
-			title: `Свържете се с ${daynightSite.shortName} по телефон или Viber.`,
+			title: `Contact ${daynightSite.shortName} by phone or Viber.`,
 			kind: 'direct',
 			icon: whitePhoneIcon
 		},
 		{
 			label: 'Mobile.bg',
 			href: daynightSite.sourceInventory,
-			title: 'Виж наличните автомобили в mobile.bg',
+			title: 'View available vehicles on mobile.bg',
 			kind: 'external',
 			icon: carLotIcon('#FFFFFF')
 		},
 		{
 			label: 'Google Maps',
 			href: daynightSite.mapUrl,
-			title: 'Отвори локацията на Day Night Auto в Google Maps',
+			title: 'Open the Texas Drive Auto location in Google Maps',
 			kind: 'external',
 			icon: whiteLocationIcon
 		}
@@ -386,13 +386,13 @@ export function renderPresentationFooter() {
 <a href="/">
 <img class="logo" ${desktopOnlyImageAttrs(daynightSite.logoLight, 570, '190px')} alt="${daynightSite.shortName}">
 </a>
-<p class="text-xs uppercase font-weight-500 mb-8 text-muted">Огледи и консултация</p>
-<p class="text-white mb-28">Огледи с предварителна уговорка.<br>Наличност, финансиране, бартер и съдействие по документи.</p>
+<p class="text-xs uppercase font-weight-500 mb-8 text-muted">Viewings and questions</p>
+<p class="text-white mb-28">Ask about scheduling a viewing.<br>Ask about availability and paperwork. Trade-in details are unavailable in this preview. No dealer financing or payment plans.</p>
 </div>
 <form class="form-footer relative" action="/contact" method="get">
-<label class="sr-only" for="footer-email">Имейл за нови оферти</label>
-<input type="email" placeholder="Имейл за нови оферти" name="email" id="footer-email" autocomplete="email" required>
-<button type="submit" class="btn-submit" aria-label="Изпрати интерес към нови оферти">
+<label class="sr-only" for="footer-email">Email for new listings</label>
+<input type="email" placeholder="Email for new listings" name="email" id="footer-email" autocomplete="email" required>
+<button type="submit" class="btn-submit" aria-label="Draft interest in new listings">
 ${searchIcon()}
 </button>
 </form>
@@ -410,13 +410,13 @@ ${footerColumns}
 <a href="tel:${daynightSite.phone}" class="flex items-start h7">${daynightSite.phoneLabel}</a>
 </p>
 <a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="block font-weight-500 text-white mb-20 h7">${daynightSite.location}</a>
-<p class="text-sm text-muted mb-16">Day Night Auto предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
+<p class="text-sm text-muted mb-16">Texas Drive Auto dealership preview with vehicle listings, inquiry drafts, and next-step information.</p>
 ${renderFooterSocialLinks()}
 </div>
 <div>
-<p class="text-sm text-white font-weight-600 mb-8">Имате въпрос?</p>
+<p class="text-sm text-white font-weight-600 mb-8">Have a question?</p>
 <div class="flex items-center gap-12">
-<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Day Night Auto">Свържете се</a>
+<a href="/contact" class="btn btn-line-1 btn-small" title="Contact Texas Drive Auto">Get in touch</a>
 </div>
 </div>
 </div>
@@ -428,11 +428,11 @@ ${renderFooterSocialLinks()}
 <div class="footer-bottom">
 <div class="container">
 <div class="flex justify-between md-flex-col">
-<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Day Night Auto</a>. Всички права запазени.</p>
+<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Texas Drive Auto</a>. All rights reserved.</p>
 <ul class="footer-bottom-links">
-<li><a href="/terms">Условия за ползване</a></li>
-<li><a href="/terms">Поверителност</a></li>
-<li><a href="/terms">Бисквитки</a></li>
+<li><a href="/terms">Terms of use</a></li>
+<li><a href="/terms">Privacy</a></li>
+<li><a href="/terms">Cookies</a></li>
 </ul>
 </div>
 </div>
@@ -451,34 +451,34 @@ export function renderHeaderContact() {
 
 	return `<ul class="header-contact">
 <li class="daynight-header-contact daynight-header-contact--phone">
-<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на Day Night Auto">${phoneIcon()}</a>
+<a href="tel:${daynightSite.phone}" class="icon" aria-label="Call Texas Drive Auto">${phoneIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="tel:${daynightSite.phone}">${daynightSite.phoneLabel}</a>
-<a class="text-xs font-weight-500" href="${viberHref}">Обаждане / Viber</a>
+<a class="text-xs font-weight-500" href="${viberHref}">Call / Viber</a>
 </div>
-<div class="daynight-contact-popover" role="group" aria-label="Контакт по телефон">
-<strong>Свържете се веднага</strong>
-<span>Изберете обаждане или Viber чат.</span>
+<div class="daynight-contact-popover" role="group" aria-label="Contact by phone">
+<strong>Get in touch</strong>
+<span>Choose a phone call or Viber chat.</span>
 <div class="daynight-contact-popover__actions">
-<a href="tel:${daynightSite.phone}">Обади се</a>
+<a href="tel:${daynightSite.phone}">Call</a>
 <a href="${viberHref}">Viber</a>
 </div>
 </div>
 </li>
 <li class="daynight-header-contact daynight-header-contact--location">
-<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до Day Night Auto">${locationIcon()}</a>
+<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Open map to Texas Drive Auto">${locationIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.mapLabel}</a>
-<a class="text-xs font-weight-500 uppercase" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">ВИЖ КАРТА</a>
+<a class="text-xs font-weight-500 uppercase" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">VIEW MAP</a>
 </div>
-<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до Day Night Auto">
+<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Open Google Maps to Texas Drive Auto">
 <span class="daynight-map-preview__thumb">
 <span class="daynight-map-preview__pin"></span>
 </span>
 <span class="daynight-map-preview__body">
-<strong>Day Night Auto София</strong>
+<strong>Texas Drive Auto</strong>
 <span>${daynightSite.mapLabel}</span>
-<em>Отвори в Google Maps</em>
+<em>Open in Google Maps</em>
 </span>
 </a>
 </li>
@@ -493,14 +493,14 @@ export function renderHeaderSearchForm() {
 	return `<div class="search-modal daynight-header-search" id="searchForm" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="headerSearchTitle">
 <div class="search-modal__overlay"></div>
 <div class="search-modal__content">
-<button class="search-modal__close" id="searchModalClose" type="button" aria-label="Затвори търсенето">
+<button class="search-modal__close" id="searchModalClose" type="button" aria-label="Close search">
 ${closeIcon()}
 </button>
-<h2 class="search-modal__title" id="headerSearchTitle">Какво търсите?</h2>
+<h2 class="search-modal__title" id="headerSearchTitle">What are you looking for?</h2>
 <form class="search-modal__form daynight-header-search-form" action="/inventory" method="get" role="search">
 <div class="search-modal__input-wrapper">
-<input type="text" class="search-modal__input daynight-header-search__input" placeholder="Търси по марка, модел, година, гориво..." autocomplete="off" id="searchModalInput" name="q">
-<button type="submit" class="search-modal__submit" aria-label="Търси">
+<input type="text" class="search-modal__input daynight-header-search__input" placeholder="Search by make, model, year, fuel..." autocomplete="off" id="searchModalInput" name="q">
+<button type="submit" class="search-modal__submit" aria-label="Search">
 ${searchIcon()}
 </button>
 </div>
@@ -513,7 +513,7 @@ export function replaceHeaderSearch(html: string) {
 	const next = html
 		.replace(
 			/<span class="relative header-action-btn" id="searchToggle">/,
-			'<span class="relative header-action-btn" id="searchToggle" role="button" tabindex="0" aria-label="Отвори търсене" title="Отвори търсене" aria-expanded="false" aria-controls="searchForm">'
+			'<span class="relative header-action-btn" id="searchToggle" role="button" tabindex="0" aria-label="Open search" title="Open search" aria-expanded="false" aria-controls="searchForm">'
 		)
 		.replace(
 			/<div class="search-form" id="searchForm">[\s\S]*?<\/div>\s*<!-- Search Form -->/,
@@ -560,7 +560,7 @@ function renderVehicleTile(vehicle: MegaMenuVehicleTile) {
 </span>
 <span class="daynight-mega-car__title">${vehicle.label}</span>
 <span class="daynight-mega-car__meta">${vehicle.meta}</span>
-<span class="daynight-mega-car__actions"><span>Виж</span><span>Детайли</span></span>
+<span class="daynight-mega-car__actions"><span>View</span><span>Details</span></span>
 </a>`;
 }
 
@@ -576,16 +576,16 @@ function renderInventoryMegaMenu(chevronStroke: string) {
 	const sideColumns = inventoryMegaMenuLinkColumns.map(renderMegaColumn).join('');
 
 	return `<li class="menu-item menu-item-has-children menu-item--static">
-${renderDropdownToggle('Автомобили', chevronStroke, '/inventory')}
+${renderDropdownToggle('Vehicles', chevronStroke, '/inventory')}
 <div class="sub-menu sub-menu--full sub-menu--listing daynight-mega daynight-mega--vehicles">
 <div class="daynight-mega__content">
 <div class="daynight-mega__vehicle-panel">
 <div class="sub-menu--listing-nav daynight-mega__vehicles">${vehicleTiles}</div>
 <div class="daynight-mega__footer">
-<a class="daynight-mega__footer-button" href="/inventory">Виж всички автомобили</a>
+<a class="daynight-mega__footer-button" href="/inventory">View all vehicles</a>
 <div class="daynight-mega__footer-copy">
-<strong>${daynightVehicles.length} проверени автомобила в наличност</strong>
-<span>С филтри по марка, цена, гориво, пробег и екстри.</span>
+<strong>${daynightVehicles.length} vehicles listed in this preview</strong>
+<span>Filter by make, price, fuel, mileage and features.</span>
 </div>
 </div>
 </div>
@@ -596,7 +596,7 @@ ${renderDropdownToggle('Автомобили', chevronStroke, '/inventory')}
 }
 
 function renderPublicNavItem(item: PublicNavLink, chevronStroke: string, includeMegaMenu: boolean) {
-	if (includeMegaMenu && item.label === 'Автомобили') {
+	if (includeMegaMenu && item.label === 'Vehicles') {
 		return renderInventoryMegaMenu(chevronStroke);
 	}
 
@@ -660,7 +660,7 @@ function renderHeaderButtons(mobile = false) {
 	return `<div class="header-button ${mobile ? 'header-button-mobile' : 'mobile-hidden-header-button'} flex items-center gap-20">
 <a href="/admin/login" class="${accountClass}">
 ${accountIcon()}
-Екип вход
+Staff sign-in
 </a>
 <a href="/sell-your-car/request" class="btn btn-primary btn-large font-weight-600">
 ${plusCircleIcon()}
@@ -673,15 +673,15 @@ function renderHeaderActions() {
 	return `<div class="header-actions ml-20">
 <img class="logo-mobile-header" ${desktopOnlyImageAttrs(daynightSite.logoLight, 570, '190px')} alt="logo">
 <div class="header-search-wrapper">
-<span class="relative header-action-btn" id="searchToggle" role="button" tabindex="0" aria-label="Отвори търсене" title="Отвори търсене" aria-expanded="false" aria-controls="searchForm">
+<span class="relative header-action-btn" id="searchToggle" role="button" tabindex="0" aria-label="Open search" title="Open search" aria-expanded="false" aria-controls="searchForm">
 ${searchActionIcon()}
 </span>
 <!-- Search Form -->
 </div>
-<a href="/compare" class="header-action-btn header-action-icon" aria-label="Сравни">
+<a href="/compare" class="header-action-btn header-action-icon" aria-label="Compare">
 ${compareIcon()}
 </a>
-<a href="/favorites" class="header-action-btn header-action-icon" aria-label="Запазени автомобили" data-badge="2">
+<a href="/favorites" class="header-action-btn header-action-icon" aria-label="Saved vehicles" data-badge="2">
 ${heartIcon()}
 </a>
 <div class="mobile-button"><span></span></div>
