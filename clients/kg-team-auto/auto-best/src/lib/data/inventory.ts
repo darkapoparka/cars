@@ -1,19 +1,12 @@
 export type VehicleCondition = 'new' | 'used';
-export type VehicleEquipment =
-  | '4x4'
-  | '360° камера'
-  | 'Панорамен покрив'
-  | 'Подгряване на седалки'
-  | 'Навигация'
-  | 'Парктроник'
-  | 'Безключов достъп'
-  | 'Адаптивен круиз контрол';
+export type VehicleEquipment = string;
 
 export type Vehicle = {
   id: number;
   verification: 'sample' | 'verified';
   evidenceUrl?: string;
   image: string;
+  gallery: string[];
   category: string;
   body: string;
   make: string;
@@ -30,27 +23,310 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
-  { id: 1, image: '/assets/images/lead/day-night-stock-04.webp', category: 'Комби', body: 'Wagon', make: 'Audi', title: 'Audi RS 6 Avant', yearNumber: 2024, mileageKm: 99701, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 68804 },
-  { id: 2, image: '/assets/images/lead/day-night-stock-01.webp', category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
-  { id: 3, image: '/assets/images/lead/day-night-stock-06.webp', category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
-  { id: 4, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
-  { id: 5, image: '/assets/images/lead/day-night-stock-05.webp', category: 'SUV', body: 'SUV', make: 'Land Rover', title: 'Range Rover Sport', yearNumber: 2019, mileageKm: 84426, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 68313 },
-  { id: 6, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
-  { id: 7, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
-  { id: 8, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
+
+// Dated seller-advertised sample. Source IDs, prices and media: ../inventory-source.json in client root.
+export const featuredVehicles: Vehicle[] = [
+  {
+    "id": 1,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11783754278742708-toyota-yaris-1-33i-116000km-6-speed-swiss-edition",
+    "image": "/dealer/11783754278742708-1.webp",
+    "gallery": [
+      "/dealer/11783754278742708-1.webp",
+      "/dealer/11783754278742708-2.webp",
+      "/dealer/11783754278742708-3.webp"
+    ],
+    "category": "Хечбек",
+    "body": "Hatchback",
+    "make": "Toyota",
+    "title": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+    "year": "2014",
+    "yearNumber": 2014,
+    "mileage": "116 000 км",
+    "mileageKm": 116000,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Навигация",
+      "Парктроник",
+      "Система ISOFIX",
+      "Сервизна книжка",
+      "Климатик"
+    ],
+    "condition": "used",
+    "priceEur": 7500.0,
+    "href": "/listing-detail-v1/1"
+  },
+  {
+    "id": 2,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-21785829117309786-nissan-qashqai-2-0i-131000km-automatic",
+    "image": "/dealer/21785829117309786-1.webp",
+    "gallery": [
+      "/dealer/21785829117309786-1.webp",
+      "/dealer/21785829117309786-2.webp",
+      "/dealer/21785829117309786-3.webp"
+    ],
+    "category": "Джип",
+    "body": "SUV",
+    "make": "Nissan",
+    "title": "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+    "year": "2014",
+    "yearNumber": 2014,
+    "mileage": "131 000 км",
+    "mileageKm": 131000,
+    "fuel": "Бензин",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Система ISOFIX",
+      "4x4",
+      "Сервизна книжка",
+      "Климатроник"
+    ],
+    "condition": "used",
+    "priceEur": 7700.0,
+    "href": "/listing-detail-v1/2"
+  },
+  {
+    "id": 3,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11678716951277480-mitsubishi-colt-1-5-i-swiss",
+    "image": "/dealer/11678716951277480-1.webp",
+    "gallery": [
+      "/dealer/11678716951277480-1.webp",
+      "/dealer/11678716951277480-2.webp",
+      "/dealer/11678716951277480-3.webp"
+    ],
+    "category": "Хечбек",
+    "body": "Hatchback",
+    "make": "Mitsubishi",
+    "title": "Mitsubishi Colt 1.5 I SWISS",
+    "year": "2007",
+    "yearNumber": 2007,
+    "mileage": "189 000 км",
+    "mileageKm": 189000,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Система ISOFIX",
+      "Климатик"
+    ],
+    "condition": "used",
+    "priceEur": 2700.0,
+    "href": "/listing-detail-v1/3"
+  },
+  {
+    "id": 4,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11773570472954394-mini-cooper-1-6i-153000km-euro-5-75ps",
+    "image": "/dealer/11773570472954394-1.webp",
+    "gallery": [
+      "/dealer/11773570472954394-1.webp",
+      "/dealer/11773570472954394-2.webp",
+      "/dealer/11773570472954394-3.webp"
+    ],
+    "category": "Купе",
+    "body": "Coupe",
+    "make": "Mini",
+    "title": "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+    "year": "2013",
+    "yearNumber": 2013,
+    "mileage": "153 000 км",
+    "mileageKm": 153000,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Парктроник",
+      "Система ISOFIX",
+      "Сервизна книжка",
+      "Климатроник"
+    ],
+    "condition": "used",
+    "priceEur": 4950.0,
+    "href": "/listing-detail-v1/4"
+  },
+  {
+    "id": 5,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11780222156478967-honda-jazz-1-4-si-automatic-sport-edition",
+    "image": "/dealer/11780222156478967-1.webp",
+    "gallery": [
+      "/dealer/11780222156478967-1.webp",
+      "/dealer/11780222156478967-2.webp",
+      "/dealer/11780222156478967-3.webp"
+    ],
+    "category": "Хечбек",
+    "body": "Hatchback",
+    "make": "Honda",
+    "title": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
+    "year": "2013",
+    "yearNumber": 2013,
+    "mileage": "145 000 км",
+    "mileageKm": 145000,
+    "fuel": "Бензин",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Система ISOFIX",
+      "Сервизна книжка",
+      "Климатроник"
+    ],
+    "condition": "used",
+    "priceEur": 7950.0,
+    "href": "/listing-detail-v1/5"
+  },
+  {
+    "id": 6,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-21788253346975689-honda-cr-v-2-2-i-ctdi-177000km-executiv",
+    "image": "/dealer/21788253346975689-1.webp",
+    "gallery": [
+      "/dealer/21788253346975689-1.webp",
+      "/dealer/21788253346975689-2.webp",
+      "/dealer/21788253346975689-3.webp"
+    ],
+    "category": "Джип",
+    "body": "SUV",
+    "make": "Honda",
+    "title": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
+    "year": "2009",
+    "yearNumber": 2009,
+    "mileage": "177 000 км",
+    "mileageKm": 177000,
+    "fuel": "Дизел",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Навигация",
+      "Парктроник",
+      "Система ISOFIX",
+      "4x4",
+      "Сервизна книжка",
+      "Климатроник",
+      "Подгряване на седалките"
+    ],
+    "condition": "used",
+    "priceEur": 7500.0,
+    "href": "/listing-detail-v1/6"
+  },
+  {
+    "id": 7,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11782979504874945-vw-golf-vi-tdi-swiss-edition-6-speed-4x4",
+    "image": "/dealer/11782979504874945-1.webp",
+    "gallery": [
+      "/dealer/11782979504874945-1.webp",
+      "/dealer/11782979504874945-2.webp",
+      "/dealer/11782979504874945-3.webp"
+    ],
+    "category": "Комби",
+    "body": "Wagon",
+    "make": "VW",
+    "title": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
+    "year": "2013",
+    "yearNumber": 2013,
+    "mileage": "197 000 км",
+    "mileageKm": 197000,
+    "fuel": "Дизел",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Парктроник",
+      "Система ISOFIX",
+      "4x4",
+      "Сервизна книжка",
+      "Климатик"
+    ],
+    "condition": "used",
+    "priceEur": 5999.0,
+    "href": "/listing-detail-v1/7"
+  },
+  {
+    "id": 8,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11778753257201470-toyota-auris-1-8-hsd-181000km-euro5",
+    "image": "/dealer/11778753257201470-1.webp",
+    "gallery": [
+      "/dealer/11778753257201470-1.webp",
+      "/dealer/11778753257201470-2.webp",
+      "/dealer/11778753257201470-3.webp"
+    ],
+    "category": "Хечбек",
+    "body": "Hatchback",
+    "make": "Toyota",
+    "title": "Toyota Auris 1.8 HSD 181000KM EURO5",
+    "year": "2011",
+    "yearNumber": 2011,
+    "mileage": "181 000 км",
+    "mileageKm": 181000,
+    "fuel": "Хибрид",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Навигация",
+      "Парктроник",
+      "Система ISOFIX",
+      "Сервизна книжка",
+      "Климатроник",
+      "Подгряване на седалките"
+    ],
+    "condition": "used",
+    "priceEur": 7500.0,
+    "href": "/listing-detail-v1/8"
+  },
+  {
+    "id": 9,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11777536762184091-suzuki-swift-1-3i-151000km-swiss-edition",
+    "image": "/dealer/11777536762184091-1.webp",
+    "gallery": [
+      "/dealer/11777536762184091-1.webp",
+      "/dealer/11777536762184091-2.webp",
+      "/dealer/11777536762184091-3.webp"
+    ],
+    "category": "Хечбек",
+    "body": "Hatchback",
+    "make": "Suzuki",
+    "title": "Suzuki Swift 1.3i 151000km. SWISS EDITION",
+    "year": "2010",
+    "yearNumber": 2010,
+    "mileage": "151 000 км",
+    "mileageKm": 151000,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Система ISOFIX",
+      "Климатик"
+    ],
+    "condition": "used",
+    "priceEur": 4500.0,
+    "href": "/listing-detail-v1/9"
+  },
+  {
+    "id": 10,
+    "verification": "sample",
+    "evidenceUrl": "https://team-auto.mobile.bg/obiava-11701247770704576-subaru-impreza-2-0i-swiss-edition",
+    "image": "/dealer/11701247770704576-1.webp",
+    "gallery": [
+      "/dealer/11701247770704576-1.webp",
+      "/dealer/11701247770704576-2.webp",
+      "/dealer/11701247770704576-3.webp"
+    ],
+    "category": "Хечбек",
+    "body": "Hatchback",
+    "make": "Subaru",
+    "title": "Subaru Impreza 2.0i SWISS EDITION",
+    "year": "2007",
+    "yearNumber": 2007,
+    "mileage": "207 000 км",
+    "mileageKm": 207000,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "equipment": [
+      "Система ISOFIX",
+      "4x4",
+      "Климатроник",
+      "Подгряване на седалките"
+    ],
+    "condition": "used",
+    "priceEur": 3300.0,
+    "href": "/listing-detail-v1/10"
+  }
 ];
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
-export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
-  ...record,
-  verification: 'sample',
-  year: String(record.yearNumber),
-  mileage: `${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,
-  href: `/listing-detail-v1/${record.id}`
-}));
-
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+export const formatVehiclePrice = (value:number) => `${new Intl.NumberFormat('bg-BG').format(value)} €`;

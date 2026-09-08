@@ -88,7 +88,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const transmission = normalizeTransmission(listing.transmission);
 	const body = normalizeBody(listing.body);
 	const isIncoming = /очакван/i.test(listing.title);
-	const availability = isIncoming ? 'Очакван внос' : 'Наличен';
+	const availability = isIncoming ? 'Очакван внос' : 'Датирана обява';
 	const drive = listing.features.some((feature) => /4x4|xdrive|quattro|4matic/i.test(feature))
 		? '4x4'
 		: '—';
@@ -99,7 +99,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
 	const conditionLine = isIncoming
 		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Наличен автомобил в София — свържете се за оглед.';
+		: "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача.";
 
 	return {
 		slug: `${slugBase}-${listing.id.slice(-6)}`,
@@ -113,7 +113,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		fuel,
 		transmission,
 		body,
-		doors: body === 'Купе' ? 3 : 5,
+		doors: 0,
 		engine: '—',
 		power: listing.power,
 		drive,
@@ -121,9 +121,9 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		price,
 		priceEur: listing.priceEur,
 		priceBgn: listing.priceBgn,
-		monthly: 'Финансиране по запитване',
+		monthly: 'Без потвърдена финансова оферта',
 		image: listing.image,
-		gallery: [listing.image],
+		gallery: listing.gallery,
 		badges: [
 			availability,
 			...(listing.status && listing.status !== availability ? [listing.status] : []),
@@ -133,7 +133,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
 		features,
 		highlights: [availability, listing.power, drive],
-		lot: `DN-${listing.id.slice(-6)}`,
+		lot: `KG-${listing.id.slice(-6)}`,
 		sourceUrl: listing.sourceUrl
 	};
 };
