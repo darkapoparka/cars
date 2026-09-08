@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "key": "auto-best",
+  "source": "templates/auto-best",
+  "destination": "clients/navara-car/auto-best",
+  "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "copiedAt": "2026-09-08",
+  "method": "Git tree/blob copy; unchanged files preserve source Git blob identity",
+  "helper": "scripts/new-client.mjs and scripts/copy-source.mjs were read; local repository download was unavailable",
+  "exclusions": ["inherited .template", "inherited AGENTS.md", "source QA claims in TEMPLATE.md"],
+  "qaInherited": false,
+  "deploymentInherited": false,
+  "crmInherited": false
+}

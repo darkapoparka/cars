@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-08",
+  "inspectedHeads": {
+    "main": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "astra": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4"
+  },
+  "scope": "Client-directory presence, historical public brief/shortlist identity and fixed assignment cross-check only. Not full repository content/QA or private CRM audit. Refresh immediately before new work.",
+  "buildStatusRule": "No completion status is set by this research. Existing paths mean protected/reuse-review; fixed assignments mean reserved, not launched or completed.",
+  "existingAccounts": [
+    {
+      "profile": "excellent",
+      "accountId": "bg-varna-excellent-cars",
+      "paths": [
+        "clients/excellent-cars"
+      ],
+      "inspectionSession": "01",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "avangard-auto",
+      "accountId": "bg-varna-avangard-auto",
+      "paths": [
+        "clients/avangard-auto"
+      ],
+      "inspectionSession": "02",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "championautopro",
+      "accountId": "bg-varna-champion-auto-pro",
+      "paths": [
+        "clients/champion-auto-pro"
+      ],
+      "inspectionSession": "03",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "astracar",
+      "accountId": "bg-varna-astracar",
+      "paths": [
+        "clients/astracar"
+      ],
+      "inspectionSession": "04",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "autolife",
+      "accountId": "bg-varna-autolife",
+      "paths": [
+        "clients/autolife"
+      ],
+      "inspectionSession": "05",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "priselci",
+      "accountId": "bg-varna-priselci",
+      "paths": [
+        "clients/priselci"
+      ],
+      "inspectionSession": "06",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "ivoauto-varna",
+      "accountId": "bg-varna-ivo-auto",
+      "paths": [
+        "clients/ivo-auto"
+      ],
+      "inspectionSession": "07",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "automarket",
+      "accountId": "bg-varna-automarket",
+      "paths": [
+        "clients/automarket-varna"
+      ],
+      "inspectionSession": "08",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "elitautoimport",
+      "accountId": "bg-varna-elit-auto-import",
+      "paths": [
+        "clients/elit-auto-import"
+      ],
+      "inspectionSession": "09",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "legendauto1",
+      "accountId": "bg-varna-legend-auto",
+      "paths": [
+        "clients/legend-auto"
+      ],
+      "inspectionSession": "10",
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "navara",
+      "accountId": "bg-varna-navara-car",
+      "paths": [
+        "clients/navara-car"
+      ],
+      "inspectionSession": null,
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "astra"
+      ]
+    },
+    {
+      "profile": "eliqauto",
+      "accountId": "protected-eliqauto",
+      "paths": [
+        "clients/eliqauto"
+      ],
+      "inspectionSession": null,
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "daynight",
+      "accountId": "protected-dayandnight",
+      "paths": [
+        "clients/dayandnight"
+      ],
+      "inspectionSession": null,
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    },
+    {
+      "profile": "asko96-2",
+      "accountId": "protected-asko96",
+      "paths": [
+        "clients/asko-96",
+        "clients/asko96"
+      ],
+      "inspectionSession": null,
+      "status": "protected-existing-paths-qa-not-audited",
+      "branches": [
+        "main",
+        "astra"
+      ]
+    }
+  ],
+  "assignedBulgarianAccounts": [
+    {
+      "profile": "valentinoauto",
+      "leadId": "bg-sofia-valentino-auto-house",
+      "session": "01",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/valentino-auto-house",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    },
+    {
+      "profile": "success",
+      "leadId": "bg-plovdiv-success-automobile",
+      "session": "01",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/success-automobile",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    },
+    {
+      "profile": "voivodovauto",
+      "leadId": "bg-plovdiv-voivodov-auto-antonio",
+      "session": "01",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/voivodov-auto-antonio",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    },
+    {
+      "profile": "team-auto",
+      "leadId": "bg-plovdiv-kg-team-auto",
+      "session": "02",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/kg-team-auto",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    },
+    {
+      "profile": "icars",
+      "leadId": "bg-plovdiv-icars",
+      "session": "02",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/icars-plovdiv",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    },
+    {
+      "profile": "fiveauto",
+      "leadId": "bg-burgas-five-auto",
+      "session": "02",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/five-auto",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    },
+    {
+      "profile": "mg7group",
+      "leadId": "bg-burgas-mg7-group",
+      "session": "03",
+      "batch": "lead-build-2026-09-08",
+      "proposedClientPath": "clients/mg7-group",
+      "status": "reserved-by-existing-assignment-no-completion-inferred"
+    }
+  ],
+  "identityGroups": [
+    {
+      "id": "contact-pito",
+      "profiles": [
+        "pitocar",
+        "pitocar2"
+      ],
+      "basis": "Same published primary phone 0888603085 and business name.",
+      "action": "Treat as one contact family pending ownership verification. Do not sum stock; both screened catalogues include parts.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+        "https://www.mobile.bg/dealers/location-grad-varna"
+      ]
+    },
+    {
+      "id": "contact-kalchev",
+      "profiles": [
+        "kalchev",
+        "kalchev-correct"
+      ],
+      "basis": "Same published primary phone 0879699644 and business name.",
+      "action": "One contact family pending ownership review; choose a canonical profile before any assignment.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+        "https://www.mobile.bg/dealers/location-grad-varna/p-4"
+      ]
+    },
+    {
+      "id": "contact-partmag",
+      "profiles": [
+        "partmag",
+        "partmagcars"
+      ],
+      "basis": "Same published primary phone 0899960605.",
+      "action": "Review parts-versus-whole-car split; do not generate two dealer accounts automatically.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-varna",
+        "https://www.mobile.bg/dealers/location-grad-varna/p-7"
+      ]
+    },
+    {
+      "id": "contact-royal-sofia",
+      "profiles": [
+        "royalcars2024",
+        "royalcarspre9899"
+      ],
+      "basis": "Same published phone 0888160001 and related name.",
+      "action": "Group for identity verification; no double assignment or summed catalogue.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-sofiya"
+      ]
+    },
+    {
+      "id": "contact-five-star-blagoevgrad",
+      "profiles": [
+        "fsautogroup",
+        "fivestarauto"
+      ],
+      "basis": "Same published phone 0876855205 and related name.",
+      "action": "Group before creating any account. Not automatically FIVE AUTO Burgas.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-blagoevgrad"
+      ]
+    },
+    {
+      "id": "company-autotrade-varna",
+      "profiles": [
+        "vwvarna",
+        "weltauto"
+      ],
+      "basis": "Both directory names identify Avtotrade OOD; review sales channels as one company.",
+      "action": "Franchise/used-car channel review, not two no-website prospects.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+        "https://www.mobile.bg/dealers/location-grad-varna/p-3"
+      ]
+    },
+    {
+      "id": "branches-isauto",
+      "profiles": [
+        "isautovarna",
+        "isauto"
+      ],
+      "basis": "Retrieved isauto.net presents Sofia and Varna locations.",
+      "action": "One multi-location account review; do not count as two independent no-site companies.",
+      "sources": [
+        "https://isauto.net/",
+        "https://www.mobile.bg/dealers/location-grad-varna",
+        "https://www.mobile.bg/dealers/location-grad-sofiya/p-2"
+      ]
+    },
+    {
+      "id": "relationship-asko",
+      "profiles": [
+        "asko96",
+        "asko96-2"
+      ],
+      "basis": "Similar brand. Existing Cars brief explicitly references ASKO96-2; relationship to Sofia profile still needs confirmation.",
+      "action": "Protect both from new assignment until the existing account is reconciled.",
+      "sources": [
+        "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/clients/asko96/CLIENT.md",
+        "https://www.mobile.bg/dealers/location-grad-sofiya/p-3",
+        "https://www.mobile.bg/dealers/location-grad-plovdiv"
+      ]
+    },
+    {
+      "id": "relationship-wincars",
+      "profiles": [
+        "wincars",
+        "wincars-suhodol",
+        "wincars-central",
+        "wincarsplovdiv"
+      ],
+      "basis": "Related published branding across profiles; not a verified legal-ownership conclusion.",
+      "action": "Resolve branch/account relationships before assignments; do not sum profiles or claim separate owners.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-sofiya",
+        "https://www.mobile.bg/dealers/location-grad-sofiya/p-2",
+        "https://www.mobile.bg/dealers/location-grad-plovdiv"
+      ]
+    },
+    {
+      "id": "relationship-promosale",
+      "profiles": [
+        "promosale_varna",
+        "promosaleplovdiv",
+        "promosale"
+      ],
+      "basis": "Related published branding across profiles; not a verified legal-ownership conclusion.",
+      "action": "Resolve branch/account relationships before assignments; do not sum profiles or claim separate owners.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-varna",
+        "https://www.mobile.bg/dealers/location-grad-plovdiv",
+        "https://www.mobile.bg/dealers/location-grad-stara-zagora"
+      ]
+    },
+    {
+      "id": "relationship-nunki",
+      "profiles": [
+        "nunki-1",
+        "nunki"
+      ],
+      "basis": "Related published branding across profiles; not a verified legal-ownership conclusion.",
+      "action": "Resolve branch/account relationships before assignments; do not sum profiles or claim separate owners.",
+      "sources": [
+        "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+        "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+        "https://www.mobile.bg/dealers/location-grad-ruse"
+      ]
+    }
+  ],
+  "sectorScreenHints": {
+    "centralautomorga": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "balkankar-varna": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "feniks": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "kristeraagro": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "orlincar": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "motocenter-varna": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "bgagro": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "varnaparts": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "am-varna": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "promotors82": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "stefansti75": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "varnaboats": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "alphamotors": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "automoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "topautoparts": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "lobbi": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "motopfohe": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "motoscooter": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "cars4u1": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "avto-chasti": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "motomar": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "lmmoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "jar": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "overdrivemoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "topavto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "gbpartseood": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "motocarsdp": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "new-motors": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "daroeood": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "aleksiev93": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "euromac": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "ikarcar": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "agrabg-ood": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "astagroup": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "nikmoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "visoilgroup": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "autofranz": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "bazovets": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "schtraklevo": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "fresh-motors": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "avtomorga-vt": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "stiliqnstoev": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "eksit-97": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "valdesmoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "motomoda": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "kiromoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "mmotomania": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "hddmotors": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "abagro": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "mototom": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "ppdobrich": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "marsatrucks": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "m_parts": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "credirent": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "jeronimo72": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "classmotors": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "autoparts13": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "antocar": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "kr-moto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "carlet": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "viktoriads": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "mitrev-bg": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "jdselectauto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "avtoden": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "avtomorga-dika": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "kisyovautomoto": "Name suggests parts, motorcycles, agricultural/commercial stock or rental; check actual catalogue before car-sales qualification.",
+    "odesos": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "classic": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "dsvarnaauto": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "partmag": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "tampers": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "candexgroup": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "atvvarna": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "ribbg": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "solaray": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "trackland": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "avtostaklauran": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "boavto": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock.",
+    "dermendzhievauto": "Sector/whole-vehicle screen required; do not use total advertisements as available passenger-car stock."
+  },
+  "locationNotes": {
+    "euromotarsauto": [
+      "Directory city Dupnitsa; address names Golemo Selo."
+    ],
+    "tmnugi": [
+      "Directory city Dupnitsa; address names Blatino."
+    ],
+    "autodaskalov": [
+      "Directory city Dupnitsa; address names Kraynitsi."
+    ],
+    "amigoleasing": [
+      "Directory city Dupnitsa; address names Blatino."
+    ],
+    "megabor-auto": [
+      "Directory city Pleven; address names Brestovets."
+    ],
+    "abagro": [
+      "Dobrich directory result gives a Varna address; sector and location require verification."
+    ],
+    "smartcarss": [
+      "Dobrich directory result gives Donchevo village."
+    ],
+    "autoaktiv": [
+      "Vratsa directory result gives a site toward Zgorigrad."
+    ],
+    "nikonipon": [
+      "Haskovo directory result gives Podkrepa village."
+    ],
+    "5dstil": [
+      "Pernik directory result gives Dragichevo village."
+    ],
+    "deninosht": [
+      "Name similarity alone does not link this Blagoevgrad transport profile to the protected Day & Night account."
+    ],
+    "balans": [
+      "Blagoevgrad directory result gives Izgrev village."
+    ],
+    "dechev74": [
+      "Pazardzhik directory result gives Bratanitsa village."
+    ],
+    "elitauto": [
+      "Pazardzhik directory result gives Saraya. Distinct from Varna ELIT AUTO IMPORT EXPORT."
+    ],
+    "success": [
+      "Carried from docs/lead-build/source/bulgaria.json; no fresh profile/contact screening in this expansion."
+    ],
+    "voivodovauto": [
+      "Carried from docs/lead-build/source/bulgaria.json; no fresh profile/contact screening in this expansion."
+    ],
+    "team-auto": [
+      "Carried from docs/lead-build/source/bulgaria.json; no fresh profile/contact screening in this expansion."
+    ],
+    "icars": [
+      "Carried from docs/lead-build/source/bulgaria.json; no fresh profile/contact screening in this expansion."
+    ]
+  },
+  "similarNameWarnings": [
+    "Champion Auto Varna is not automatically existing Champion Auto Pro; use profile and phone.",
+    "Varna Perfect Auto is not automatically perfektauto.com, Vratsa Perfect Auto 73 or Auto Perfect1.",
+    "Varna KRIS AUTO, Plovdiv Kris Car and Vratsa KRIS are not interchangeable.",
+    "Sofia KJ Cars is not Plovdiv K-G Team Auto.",
+    "Blagoevgrad Den i Nosht Trans is not matched to existing Day & Night Auto Group.",
+    "Pazardzhik Royal Cars is not matched to the two same-phone Sofia Royal Cars profiles.",
+    "Banovo NEXTCAR and Pernik NEXT AUTO are different source profiles; do not merge on name.",
+    "Do not merge Varna Express Auto, Varna Car Express, Mazda Express or similarly named regional accounts.",
+    "Tsar Osvoboditel 289: Avangard, Legend and Dynamic require ownership review; shared address is not proof of one account.",
+    "Tsar Osvoboditel 282: Astracar and D&M need account/location review; 285: Priselci and other occupants likewise.",
+    "Central Autosalon and Central Automorga share Yan Hunyadi 23 but have different phones; resolve relationship.",
+    "ASKO96 existing brief refers to asko96-2, not proof that the Sofia asko96 profile is the same legal account."
+  ],
+  "sources": [
+    "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/docs/lead-build/assignments.json",
+    "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/audits/2026-09-07/varna-leads/SHORTLIST.md",
+    "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/clients/asko96/CLIENT.md",
+    "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/clients/dayandnight/CLIENT.md",
+    "https://api.github.com/repos/darkapoparka/cars/git/trees/fc19c91c064c418fb4f0b2a5fe1f9a82f2ffffec",
+    "https://api.github.com/repos/darkapoparka/cars/git/trees/b7a453e6658d8e6778bad90075491efae6427fd3"
+  ]
+}

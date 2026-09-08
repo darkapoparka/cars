@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "04",
+  "leadId": "ae-sharjah-al-basma-motors",
+  "observedAt": "2026-09-08",
+  "status": "blocked",
+  "consumedByApplications": false,
+  "identity": {
+    "tradingName": "Al Basma Motors",
+    "publishedLegalLabel": "Al Basma Motors LLC",
+    "country": "AE",
+    "city": "Sharjah",
+    "website": "https://albasmamotors.com/",
+    "phone": "+971543422222",
+    "email": "admin@albasmamotors.com",
+    "address": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
+    "hours": null,
+    "coordinates": null,
+    "sources": ["https://albasmamotors.com/terms", "https://albasmamotors.com/privacy", "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322"],
+    "excludedIdentity": "Al Basma Auto Maintenance (LEXUS), warehouse 17 / Industrial Area 17, +971558245626 is not merged into this showroom record. A same-name New Cairo business is also excluded.",
+    "addressConflict": "Published signage imagery includes showroom 142, whereas the current official terms identify showroom 61. That sign is not current-location proof."
+  },
+  "businessContent": {
+    "supported": ["Vehicle sales: official terms describe a buying platform.", "DubiCars seller section advertises test drive and trade-in; specific availability and terms remain subject to confirmation."],
+    "notAdopted": ["Own leasing, finance rates, insurance, inspection certification, warranty duration, delivery guarantees, review scores, team biographies, satisfaction metrics and marketplace verification badges."]
+  },
+  "branding": {
+    "publishedBranding": true,
+    "visualObservation": "Silver/metallic sweeping emblem and geometric italic AL BASMA lettering visible in the published official logo and showroom imagery.",
+    "sourceLogoUrl": "https://albasmamotors.com/logo.webp",
+    "imageReferences": ["https://albasmamotors.com/logo.webp", "https://scdn.tabby.ai/images/cbjxg0yl/production_v2/a37641011abc588e614a71ffb73d87363fcd5f99-1024x682.png", "https://www.citysearch.ae/uf/albums/51772/albasmamotors-sharjah_55334222.jpg"],
+    "alternatePublishedLogoUrl": "https://d2souf30ck18jq.cloudfront.net/al-basma-used-cars/logo-431d92c6-9206-466c-aff0-70e22dd7ebea.jpeg",
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not evidenced",
+    "localAssetPackComplete": false,
+    "reusePermission": "not established; official terms retain intellectual-property ownership. This is not a conclusion that every possible use is prohibited.",
+    "downloadAttempts": "Official logo, published marketplace logo and signage image download attempts failed in this execution environment. No source image bytes were obtained or committed.",
+    "generatedArtwork": false
+  },
+  "siteAudit": {
+    "officialSiteRequested": true,
+    "result": "Live text extraction exposed only a tag-manager iframe; search extraction supplied terms/contact text. A rendered desktop/mobile site audit was not achieved.",
+    "observedDefect": null,
+    "opportunity": "Consistent record-level specifications and dated advertised-stock disclosure are useful content controls; no customer-facing defect in the owned site is claimed.",
+    "renderedJourneysChecked": []
+  },
+  "localization": {"proposedLocale": "en-AE", "currency": "AED", "odometerUnit": "km", "conversions": [], "arabicImplemented": false},
+  "inventory": {
+    "catalogueUrl": "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322",
+    "retrievedResultCount": 49,
+    "countMeaning": "Changing retrieved marketplace advertisement count; not independently verified available unique stock. Historical frozen research said 50.",
+    "items": [
+      {"sourceId":"1015231","sourceUrl":"https://www.dubicars.com/2021-lexus-rc350-35-1015231.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2021,"make":"Lexus","model":"RC350","trim":"F SPORT PLATINUM","advertisedPrice":{"amount":80000,"currency":"AED"},"advertisedOdometer":{"value":120000,"unit":"km"},"regionalSpecs":"American","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Advertiser table labels this car a sedan; body type, seating, wheels and drivetrain are withheld."},
+      {"sourceId":"1014115","sourceUrl":"https://www.dubicars.com/2023-lexus-es350-35-1014115.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2023,"make":"Lexus","model":"ES350","trim":"F SPORT","advertisedPrice":{"amount":145000,"currency":"AED"},"advertisedOdometer":{"value":77000,"unit":"km"},"regionalSpecs":"GCC","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Warranty/service narrative conflicts with table fields; those promises and disputed cylinder count are withheld."},
+      {"sourceId":"1015230","sourceUrl":"https://www.dubicars.com/2024-lexus-lx600-35-1015230.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2024,"make":"Lexus","model":"LX600","trim":"SIGNATURE","advertisedPrice":{"amount":430000,"currency":"AED"},"advertisedOdometer":{"value":93000,"unit":"km"},"regionalSpecs":"GCC","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Generic sedan/front-wheel-drive/seating/wheel fields are not treated as verified specifications."},
+      {"sourceId":"1016006","sourceUrl":"https://www.dubicars.com/2024-lexus-is350-35-1016006.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2024,"make":"Lexus","model":"IS350","trim":"F SPORT PLATINUM","advertisedPrice":{"amount":140000,"currency":"AED"},"advertisedOdometer":{"value":151000,"unit":"km"},"regionalSpecs":"GCC","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Advertised mileage is 151000 km, not silently corrected. Disputed drivetrain/wheel fields are withheld."},
+      {"sourceId":"1013411","sourceUrl":"https://www.dubicars.com/2016-lexus-lx570-57-1013411.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2016,"make":"Lexus","model":"LX570","trim":"PLATINUM","advertisedPrice":{"amount":175000,"currency":"AED"},"advertisedOdometer":{"value":228000,"unit":"km"},"regionalSpecs":"GCC","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"No availability guarantee or warranty is inferred from the catalogue badge."},
+      {"sourceId":"1017882","sourceUrl":"https://www.dubicars.com/2023-lexus-is300-20-1017882.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2023,"make":"Lexus","model":"IS300","trim":"PLATINUM","advertisedPrice":{"amount":105000,"currency":"AED"},"advertisedOdometer":{"value":40000,"unit":"km"},"regionalSpecs":"American","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Native catalogue amount and kilometres retained without currency or distance conversion."},
+      {"sourceId":"1013413","sourceUrl":"https://www.dubicars.com/2024-lexus-tx350-24-1013413.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2024,"make":"Lexus","model":"TX350","trim":"STANDARD","advertisedPrice":{"amount":185000,"currency":"AED"},"advertisedOdometer":{"value":53000,"unit":"km"},"regionalSpecs":"American","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"read","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Detail also contains generic sedan/seating/wheel fields; those are withheld."},
+      {"sourceId":"1019538","sourceUrl":"https://www.dubicars.com/2026-lexus-nx-350h-25-1019538.html","observedAt":"2026-09-08","seller":"Al Basma Motors","year":2026,"make":"Lexus","model":"NX 350h","trim":"PLATINUM","advertisedPrice":{"amount":250000,"currency":"AED"},"advertisedOdometer":{"value":0,"unit":"km"},"regionalSpecs":"GCC","availability":"advertised in retrieved catalogue; reconfirm with dealer","detailAccess":"cache-miss","bodyType":null,"warranty":null,"localImages":[],"mediaPermission":"not established","note":"Facts read from current dealer catalogue; detail URL was exposed by the failed follow. Zero kilometres is an advertised value, not independently verified."}
+    ],
+    "completePermittedGallerySet": false,
+    "exampleUnbundledImageUrl": "https://www.dubicars.com/images/bc4bb0/w_1300x760/al-basma-motors/11b1e679-2d62-4f2e-9d37-14cf7f589577.jpeg",
+    "excludedListing": "2015 Lexus LS460 977752 redirected to a general Lexus search; not retained as a current detail-verified sample."
+  },
+  "duplicateInspection": {
+    "mainCommit": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "astraCommit": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "topLevelClientTreesRead": true,
+    "matchingAssignedSlugFound": false,
+    "fullAliasDomainPhoneAuditComplete": false,
+    "limitation": "Top-level tree inspection is not exhaustive alias/domain/phone identity proof. No application copy was created while this and media access remain incomplete."
+  },
+  "blockers": ["No usable local original-brand and stock-photo bytes were obtained by the available download path.", "Reuse permission for essential dealer/listing media has not been established.", "A real rendered audit of the owned site was not completed."],
+  "applicationOutcomes": {
+    "auto-best": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","framework checks","build","390px and 1440px browser journeys","full content sweep"],"knownLimitations":["Application not created; this source record is not an imported application configuration."]},
+    "modern": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","Prisma generation","framework checks","build","390px and 1440px browser journeys","full content sweep"],"knownLimitations":["Application not created; no workspace has been copied."]},
+    "carwow": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","framework checks","build","390px and 1440px browser journeys","full content sweep"],"knownLimitations":["Application not created; this source record is not an imported application configuration."]}
+  }
+}

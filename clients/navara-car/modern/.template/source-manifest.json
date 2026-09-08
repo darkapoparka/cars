@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "key": "modern",
+  "source": "templates/modern",
+  "destination": "clients/navara-car/modern",
+  "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "copiedAt": "2026-09-08",
+  "method": "Git tree/blob copy; unchanged files preserve source Git blob identity; complete apps/packages workspace retained",
+  "helper": "scripts/new-client.mjs and scripts/copy-source.mjs were read; local repository download was unavailable",
+  "exclusions": ["inherited .template", "inherited AGENTS.md", ".cursorrules.example", "historical production/cutover/finalization runbooks", "SOURCE_SNAPSHOT.json", "source QA claims in TEMPLATE.md"],
+  "qaInherited": false,
+  "crmInherited": false
+}

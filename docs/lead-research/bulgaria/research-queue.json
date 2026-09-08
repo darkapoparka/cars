@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "researchBatch": "bg-expansion-2026-09-08",
+  "mode": "research-and-qualification-only",
+  "cityOrder": [
+    "Varna",
+    "Sofia",
+    "other Bulgaria"
+  ],
+  "templatesForFutureApprovedBuild": [
+    "auto-best",
+    "modern",
+    "carwow"
+  ],
+  "doNotAssignExistingOrReserved": true,
+  "scopeNote": "This is an ordered research queue, not a schedule, automated job or approval. City completion is not claimed. Inspect account-links and current main/astra before allocating.",
+  "cityQueues": {
+    "Varna": [
+      "perfektauto",
+      "tesicar",
+      "centralauto",
+      "kapitol",
+      "autofest",
+      "express_auto",
+      "chernomore",
+      "mania",
+      "prestige",
+      "extracar-sm",
+      "sunny",
+      "rqsautoteam",
+      "evrocarvarna09",
+      "sprint",
+      "evropavarna",
+      "exclusiveauto",
+      "next_car",
+      "ecodrive",
+      "kolarovcars",
+      "dynamicautovarna",
+      "dmautovarna",
+      "kalchev-correct",
+      "autostar21"
+    ],
+    "Sofia": [
+      "troya-auto",
+      "fadicars",
+      "vvc-auto",
+      "maverik",
+      "dangerauto",
+      "autohof",
+      "lubocar",
+      "optimum",
+      "carmax",
+      "novacars",
+      "stenlicar",
+      "new-motors",
+      "kj-cars"
+    ],
+    "other Bulgaria": [
+      "kris_car",
+      "swissauto43",
+      "todorovauto",
+      "plusauto",
+      "freshauto",
+      "luxauto",
+      "fresh-motors",
+      "slavicars",
+      "f1auto",
+      "martin-auto",
+      "kunchev-auto",
+      "nextautobg",
+      "haskovocarsbg"
+    ]
+  },
+  "count": 49
+}

@@ -1,0 +1,36 @@
+{
+  "patches": 111,
+  "files": 42,
+  "failures": [
+    {
+      "index": 54,
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "count": 1
+    },
+    {
+      "index": 55,
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "count": 1
+    },
+    {
+      "index": 56,
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "count": 1
+    },
+    {
+      "index": 57,
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "count": 1
+    },
+    {
+      "index": 58,
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "count": 1
+    },
+    {
+      "index": 59,
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "count": 1
+    }
+  ]
+}

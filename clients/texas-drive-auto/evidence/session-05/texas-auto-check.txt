@@ -1,0 +1,9 @@
+
+> day-and-night-autodeal@0.1.0 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --threshold error
+
+Loading svelte-check in workspace: j:\cars-session-05-20260909\clients\texas-drive-auto\auto-best
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "client": "eliqauto",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-08",
+  "state": "personalized-qa-pending",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "source": {"method":"git-tree-copy","repository":"darkapoparka/cars","commit":"6998a7ce8092b99422cdb9cccc0b18449ff2f541","path":"templates/carwow","tree":"d4a08817e87cf84d08c4db1c08a515937245f2dd"},
+  "stockCapture": "2026-06-21T13:54:02.933Z",
+  "handoff": "../ASTRA-HANDOFF.md",
+  "knownLimits": ["Initial code personalization only; install, check, build and rendered QA not run.","Whole-route source identity scan remains, especially auxiliary static copy, dealer-profile routes, map, team and chat.","Unknown door counts are represented internally by 0; verify all rendered specs show unknown rather than a factual zero.","No inherited testimonials are assigned to ELIQ. No backend or real enquiry delivery verified."]
+}

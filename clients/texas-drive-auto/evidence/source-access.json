@@ -1,0 +1,16 @@
+{
+  "observedAt": "2026-09-08",
+  "purpose": "public-source access diagnostic, not application QA",
+  "url": "https://www.texasdriveauto.com/",
+  "runtime": "Python 3.13.5 / Playwright / system Chromium",
+  "executable": "/usr/bin/chromium",
+  "viewportWidth": 1440,
+  "operation": "page.goto(url, wait_until='domcontentloaded', timeout=15000)",
+  "result": "failed",
+  "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://www.texasdriveauto.com/",
+  "screenshotSaved": false,
+  "browserClosed": true,
+  "additionalAttempts": ["git ls-remote: Could not resolve host github.com", "curl official dealer and npm registry: DNS resolution failed", "direct dealer avatar download: download failed", "web image references: Cache miss"],
+  "githubConnector": "Reads and create_blob writes succeeded independently of shell DNS failures.",
+  "applicationTestsRun": 0
+}

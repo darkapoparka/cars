@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "10",
+  "updatedAt": "2026-09-08T21:52:51.086Z",
+  "summary": {
+    "assignedCandidates": 3,
+    "blockedCandidates": 2,
+    "implementedApplications": 0,
+    "committedApplications": 0,
+    "verifiedLocalApplications": 0,
+    "reuseAccountsInspected": 1,
+    "delivery": "Implementation resumed: actual Al Hamoor master copies created; personalization in progress.",
+    "committedSourceCopies": 3
+  },
+  "documentationCommitShas": [
+    "e73863648838016dc3f31764688d701899971328"
+  ],
+  "resume": {
+    "priorReport": "Not found on initial astra or prepublication recheck.",
+    "priorAssignedApplications": "No matching proposed candidate folders found in the inspected initial main/astra client trees. No own app work was resumed.",
+    "doNotRegenerate": "Existing HANDOFF.md files are research records, not applications or proof of completed assets.",
+    "previousDocumentationOnlyReportCommit": "6691226443e7ba462c63dcc6966ae28ae7e901ef",
+    "currentWorktree": "J:/cars-session-10-20260909",
+    "ownerMainCheckoutPreserved": true,
+    "resumedAt": "2026-09-08T21:52:51.086Z"
+  },
+  "repositoryInspection": {
+    "mainCommit": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "mainRefRechecked": true,
+    "initialAstraCommit": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "prepublicationAstraCommit": "0323b2235f4d4cc28efb1c25742607bcb7303781",
+    "mainClientTree": "b7a453e6658d8e6778bad90075491efae6427fd3",
+    "initialAstraClientTree": "fc19c91c064c418fb4f0b2a5fe1f9a82f2ffffec",
+    "duplicateReview": "Bounded review of both client trees, assignment/source identities and historical Varna names/profiles/phones found no assigned candidate match. Subsequent compared changes belonged only to sessions 03 and 09.",
+    "exhaustiveAliasPhoneMetadataScanCompleted": false,
+    "duplicateReviewLimit": "No claim of an exhaustive content search across every client file or unknown aliases. Exact Al Hamoor physical identity remains unresolved.",
+    "protectedWorkChanged": false
+  },
+  "masterInspection": {
+    "sourceCommit": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "copied": false,
+    "runtimeEvidence": "TEMPLATE.md run instructions were read; no new app manifests, installs or runnable copies exist.",
+    "versions": {
+      "auto-best": "2026.09.08-polish-1",
+      "modern": "2026.09.06-refresh-1",
+      "carwow": "2026.09.08-repair-1"
+    }
+  },
+  "candidates": [
+    {
+      "leadId": "ae-sharjah-al-hamoor-al-thahabi",
+      "name": "Al Hamoor Al Thahabi Used Cars",
+      "clientPath": "clients/al-hamoor-al-thahabi",
+      "state": "in-progress",
+      "commitShas": [],
+      "documentationCommitShas": [
+        "e73863648838016dc3f31764688d701899971328"
+      ],
+      "publicEvidencePaths": [
+        "clients/al-hamoor-al-thahabi/HANDOFF.md"
+      ],
+      "variants": {
+        "auto-best": {
+          "implemented": false,
+          "committed": true,
+          "checksPassed": [
+            "Master helper dry-run; independent file copy with SHA256 verification"
+          ],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "Source-copy checkpoint only; personalization and runtime QA still in progress."
+          ],
+          "proposedPort": 7491,
+          "portAvailabilityChecked": false
+        },
+        "modern": {
+          "implemented": false,
+          "committed": true,
+          "checksPassed": [
+            "Master helper dry-run; independent file copy with SHA256 verification"
+          ],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "Source-copy checkpoint only; personalization and runtime QA still in progress."
+          ],
+          "proposedPort": 7492,
+          "portAvailabilityChecked": false
+        },
+        "carwow": {
+          "implemented": false,
+          "committed": true,
+          "checksPassed": [
+            "Master helper dry-run; independent file copy with SHA256 verification"
+          ],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "Source-copy checkpoint only; personalization and runtime QA still in progress."
+          ],
+          "proposedPort": 7493,
+          "portAvailabilityChecked": false
+        }
+      },
+      "blockers": [
+        {
+          "code": "essential-media-permission-unresolved",
+          "detail": "No applicable permission for a local dealer inventory photo pack was established. The inspected terms do not grant this proposed republication; no owner-supplied permitted pack was found in inspected inputs."
+        },
+        {
+          "code": "vehicle-location-unresolved",
+          "detail": "Do not substitute a guessed precise address/map pin for the conflicting source labels."
+        },
+        {
+          "code": "finished-branding-unavailable",
+          "detail": "No suitable permitted standalone logo or finished refresh was produced; no image generation occurred."
+        }
+      ],
+      "sourceCopy": {
+        "sourceCommit": "57a0c9694e325747d776cfd78255b60241080a8a",
+        "method": "scripts/new-client.mjs dry-run then copy, including exclusions and per-file SHA256 verification",
+        "independent": true,
+        "fullModernWorkspace": true
+      }
+    },
+    {
+      "leadId": "us-fl-pompano-beach-keen-auto-mall",
+      "name": "Keen Auto Mall",
+      "clientPath": "clients/keen-auto-mall",
+      "state": "blocked",
+      "commitShas": [],
+      "documentationCommitShas": [
+        "e73863648838016dc3f31764688d701899971328"
+      ],
+      "publicEvidencePaths": [
+        "clients/keen-auto-mall/HANDOFF.md"
+      ],
+      "variants": {
+        "auto-best": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "No application exists; essential permitted media and finished branding are missing."
+          ],
+          "proposedPort": 7494,
+          "portAvailabilityChecked": false
+        },
+        "modern": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "No application exists; essential permitted media and finished branding are missing."
+          ],
+          "proposedPort": 7495,
+          "portAvailabilityChecked": false
+        },
+        "carwow": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "No application exists; essential permitted media and finished branding are missing."
+          ],
+          "proposedPort": 7496,
+          "portAvailabilityChecked": false
+        }
+      },
+      "blockers": [
+        {
+          "code": "essential-media-permission-unresolved",
+          "detail": "No applicable local photo/branding reuse permission or owner-supplied permitted media pack was established in inspected inputs; site terms grant no implied IP licence."
+        },
+        {
+          "code": "finished-branding-unavailable",
+          "detail": "No usable finished source-based identity was produced. A generic mechanic image or plain text mark would not satisfy the branding requirement."
+        }
+      ]
+    },
+    {
+      "leadId": "gb-birmingham-midlands-trade-centre",
+      "name": "Midlands Trade Centre Limited",
+      "clientPath": "clients/midlands-trade-centre",
+      "state": "blocked",
+      "commitShas": [],
+      "documentationCommitShas": [
+        "e73863648838016dc3f31764688d701899971328"
+      ],
+      "publicEvidencePaths": [
+        "clients/midlands-trade-centre/HANDOFF.md"
+      ],
+      "variants": {
+        "auto-best": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "No application exists; essential permitted media and finished branding are missing."
+          ],
+          "proposedPort": 7497,
+          "portAvailabilityChecked": false
+        },
+        "modern": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "No application exists; essential permitted media and finished branding are missing."
+          ],
+          "proposedPort": 7498,
+          "portAvailabilityChecked": false
+        },
+        "carwow": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "Installation, framework checks/build and 390/1440 browser acceptance"
+          ],
+          "knownLimitations": [
+            "No application exists; essential permitted media and finished branding are missing."
+          ],
+          "proposedPort": 7499,
+          "portAvailabilityChecked": false
+        }
+      },
+      "blockers": [
+        {
+          "code": "essential-media-permission-unresolved",
+          "detail": "No applicable dealer-photo reuse permission was established. The privacy policy is not a media licence. Failed retrieval of Autotrader terms is not evidence of a particular restriction."
+        },
+        {
+          "code": "finished-branding-unavailable",
+          "detail": "The source composite is not a finished isolated logo. No suitable permitted export or professional refresh was produced; no image-generation tool was available."
+        }
+      ]
+    }
+  ],
+  "reuseInspection": {
+    "leadId": "bg-varna-legend-auto",
+    "clientPath": "clients/legend-auto",
+    "mode": "read-only",
+    "state": "existing-reuse",
+    "followUp": "needs-owner-scoped-repair",
+    "inspectedCommit": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "tree": "05ecc6b9ef974e2e7b8658ad8b8ddfd231adf27c",
+    "variantsFound": [
+      "auto-best",
+      "modern",
+      "carwow"
+    ],
+    "inspectedPaths": [
+      "clients/legend-auto/BUILD-STATUS.md",
+      "clients/legend-auto/CLIENT.md",
+      "clients/legend-auto/business-facts.json",
+      "clients/legend-auto/{auto-best,modern,carwow}/.client/project.json",
+      "clients/legend-auto/qa-final/FINAL.md",
+      "clients/legend-auto/qa-final/results.json",
+      "clients/legend-auto/qa-final/legend-auto/{auto-best,modern,carwow}/result.json",
+      "clients/legend-auto/auto-best/src/lib/data/company.ts"
+    ],
+    "checksPassed": [
+      "Verified all three variant trees exist on inspected branches.",
+      "Read all three project metadata files and final QA narrative; confirmed individual saved result files exist and inspected excerpts.",
+      "Compared stale BUILD-STATUS.md with later CLIENT.md and qa-final/FINAL.md; read actual service/contact consumer source."
+    ],
+    "priorRecordedEvidence": {
+      "templateVersion": "2026.09.06-refresh-1",
+      "metadataState": "local-qa-passed",
+      "finalReport": "clients/legend-auto/qa-final/FINAL.md",
+      "finalReportBlob": "824d2830d9be0e5aae034dde93ad875c63c2128a",
+      "frameworkAnd3901440BrowserPasses": "Reported for all three variants by prior work, not rerun here.",
+      "routeStates": {
+        "auto-best": 10,
+        "modern": 8,
+        "carwow": 12
+      },
+      "autoBestFrameworkCaveat": "Final narrative reuses the 2026-09-06 validation log rather than claiming a fresh framework run.",
+      "datedSampleCount": 14,
+      "publicPreview": null
+    },
+    "checksNotRun": [
+      "New dependency installation, typecheck or build",
+      "New browser or source-image review of the applications",
+      "Revalidation of all fourteen listings or media permissions",
+      "Every route in saved result files was not individually re-audited"
+    ],
+    "outstandingTechnicalGaps": [
+      "BUILD-STATUS.md still reports earlier pending work and obsolete ports; later final evidence differs.",
+      "Original low-resolution logo remains a known limit.",
+      "Actual source and saved links retain import/leasing/trade-in topics; some text disclaims unverified services. Owner-scoped review should reconcile remaining service CTA wording rather than assume all assertions are verified.",
+      "Dated sample, demo integrations and decorative template cutouts remain; no public release or current QA approval follows from this inspection.",
+      "Shared street-number legal ownership with Avangard is not independently resolved by distinct profiles/phones."
+    ],
+    "modified": false,
+    "pathNotation": "Brace expressions above abbreviate the three separately inspected files, not literal paths."
+  },
+  "checks": {
+    "passed": [
+      "Required prompt, guardrails, workflow, assignments, source defaults, catalog and selected TEMPLATE.md documents read through GitHub.",
+      "Both initial branch client trees inspected; main ref rechecked unchanged.",
+      "Public dealer catalogue/detail and selected branding images inspected; findings and unresolved conflicts retained.",
+      "Three handoff file blob SHAs read back at reachable astra commit e73863648838016dc3f31764688d701899971328.",
+      "Handoff commit comparison contains only the three assigned HANDOFF.md additions.",
+      "JSON syntax and candidate/variant coverage assertions passed locally; not full repository schema or app QA."
+    ],
+    "notRun": [
+      "Full normalized duplicate scan across every client file",
+      "Rendered 390px/1440px dealer-site opportunity audit",
+      "Any new application installation, framework or browser test",
+      "Complete source-backed 8-12-listing/photo asset pack",
+      "Final brand creation/integration/consumer verification"
+    ],
+    "environment": "GitHub connector read/write confirmed. Isolated worktree on connected computer supports local Git and application execution. No owner checkout edits."
+  },
+  "publication": {
+    "handoffCommit": "e73863648838016dc3f31764688d701899971328",
+    "parent": "0323b2235f4d4cc28efb1c25742607bcb7303781",
+    "nonForce": true,
+    "readBackRefConfirmed": true,
+    "changedPaths": [
+      "clients/al-hamoor-al-thahabi/HANDOFF.md",
+      "clients/keen-auto-mall/HANDOFF.md",
+      "clients/midlands-trade-centre/HANDOFF.md"
+    ],
+    "conflictHandling": "First update was rejected as non-fast-forward. Read new head/commit, inspected intervening delta and rebuilt only the three owned file entries on its current root tree.",
+    "reportCommit": "Discover from repository history; this report does not invent its own commit SHA."
+  },
+  "localAgentHandoff": {
+    "mode": "fetch-and-inspect-evidence-only",
+    "prompt": "In J:/cars verify the repository remote, branch and dirty work. Fetch origin astra. Preserve local edits; use a clean worktree when needed, and only fast-forward an appropriate clean astra checkout. Read docs/lead-build/reports/session-10.json and the three assigned HANDOFF.md files. These folders contain no applications; do not run install/start commands, create or personalize apps, substitute assets, deploy or contact dealers. Legend inspection is read-only and its recorded QA is not a fresh pass.",
+    "startCommands": null,
+    "reason": "No session-10 application exists to install or start; the preview agent is not being assigned unfinished implementation."
+  },
+  "safety": {
+    "deployed": false,
+    "dealerContacted": false,
+    "externalFormsSubmitted": false,
+    "crmOrPrivateSalesRecordsChanged": false,
+    "mastersModified": false,
+    "mainModified": false,
+    "unrelatedClientsModified": false
+  }
+}

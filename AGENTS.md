@@ -26,6 +26,13 @@ Work only in `J:\cars` and its main Cars repository. Keep every dealer under `cl
 2. State whether this is template work, a client Fast Skin, an audit, or a deployment. Do not turn a Fast Skin into redesign work.
 3. Confirm the physical folder, Git identity when present, dirty changes and listener ownership. A port number alone is not source proof. Never stop an unrelated server or silently use another port.
 4. Read existing client/project metadata before creating a duplicate. Preserve owner work and use a new explicitly named variant if the requested destination exists; never overwrite it.
+5. For lead implementation, read `docs/LEAD-BUILD-GUARDRAILS.md`. For an assigned multi-session batch, also read `docs/lead-build/README.md`, `docs/lead-build/assignments.json` and your session prompt/report before editing.
+
+## Mandatory lead-build standard
+
+The owner-requested guardrails apply to branding, actual template copies, source-backed inventory, local assets, complete content sweeps and honest verification. Visually inspect published branding before declaring a logo missing; use a suitable original or a professional, clearly identified image-generation-assisted refresh, not a final generic text placeholder. Generating an image is not implementation until the asset is integrated and committed in each app.
+
+For the fixed ten-session campaign, each session owns three candidate dealer sets (all three requested variants) and one read-only existing-account inspection. Do not recreate occupied accounts, invent alternate slugs to evade duplicate checks or take another session's allocation. Publish only allowlisted changes to the latest `astra` head using the execution contract's non-force/fresh-head protocol. Preserve all other work. Do not carry forward template QA, treat Navara's isolated logo checks as full app verification, or infer 'never contacted' from unknown history. These documents authorize no deployment, outreach or private sales-record writes.
 
 ## Default client build: Fast Skin
 

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "03",
+  "leadId": "ae-sharjah-al-aayan-used-cars",
+  "observedAt": "2026-09-08",
+  "purpose": "Source evidence only; no application or local asset pack implemented.",
+  "business": {
+    "publishedName": "Al Aayan Used Cars",
+    "country": "AE",
+    "city": "Sharjah",
+    "address": "Showroom 276, Souq Al Haraj, Sharjah",
+    "phoneE164": "+971567730044",
+    "email": null,
+    "openingHours": null,
+    "legalEntity": null,
+    "aliases": ["Al Aayan Used Cars", "Al-Ayan used car trade", "Al Aayan Used Cars Tr Sole", "alaayancars"],
+    "sources": ["https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515", "https://auto.ae/alaayancars/", "https://auto.ae/alaayancars/sale/", "https://www.arabwheels.ae/used-cars/dealers/al-aayan-used-cars-tr-sole-showroom-in-uae", "https://uae.yallamotor.com/used-cars/bmw/7-series/2015/used-bmw-7-series-2015-sharjah-1442778"],
+    "identityEvidence": ["DubiCars seller descriptions give showroom 276 in Sharjah despite Dubai location labels.", "AUTO.AE and DubiCars show the same red-and-blue bilingual storefront sign; AUTO.AE facade image has unit 801/276.", "ArabWheels joins Souq Al Haraj 276 and 0567730044; YallaMotor seller text also gives that phone and unit."],
+    "locationCaveats": ["AUTO.AE overview says no address entered; its sales page gives 8FRH+7H3, Al Ruqa Al Hamra, Sharjah.", "OneClickDrive describes Saif Zone, Sharjah. Exact map pin not independently validated."],
+    "openingHoursNote": "AUTO.AE sales page shows 09:00-21:00 without a verified weekly schedule; other directory schedules conflict. No weekly hours adopted.",
+    "independentWebsite": {"url": null, "status": "not-confidently-matched-in-bounded-search", "absenceProven": false, "unmatchedDomain": "aayanauto.com", "reason": "Search surfaces a Kuwait-based Aayan Auto with different phone numbers; no identity match to Sharjah showroom 276 established.", "sources": ["https://www.linkedin.com/company/aayanauto", "https://www.aayanauto.com/en/ContactUs"]},
+    "serviceClaimsApprovedForUse": [],
+    "excludedClaims": ["Marketplace badges and AI-generated vehicle praise", "Unverified warranty or condition promises", "Finance terms or approval", "Founding date, staff and testimonials"]
+  },
+  "localization": {"language": "en", "locale": "en-AE", "currency": "AED", "distanceUnit": "km", "conversionPerformed": false, "taxTreatment": "not-disclosed", "unknownPriceText": "Price on request", "unknownHoursText": "Please confirm opening hours by phone"},
+  "listingSampleDefaults": {"observedAt": "2026-09-08", "availability": "advertised-unconfirmed", "independentlyVerified": false, "fuel": "petrol", "transmission": "automatic", "powerUnit": "HP-as-published", "mileageUnit": "km", "priceCurrency": "AED", "taxTreatment": "not-disclosed", "trim": null, "localPhotoPaths": [], "photoPermission": "unverified"},
+  "listingSamples": [
+    {"sourceId":"953220","sourceUrl":"https://www.dubicars.com/2015-toyota-land-cruiser-60th-953220.html","title":"Toyota Land Cruiser","modelYear":2015,"mileageKm":190000,"priceAED":90000,"engineLitres":4,"power":275,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":"2026-09-08","notes":["Title says 60TH; seller says GXR. Trim withheld."]},
+    {"sourceId":"956065","sourceUrl":"https://www.dubicars.com/2014-land-rover-range-rover-50l-956065.html","title":"Land Rover Range Rover","modelYear":2014,"mileageKm":170000,"priceAED":48000,"engineLitres":5,"power":510,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":null,"notes":["Structured trim says VOGUE SE; seller says VOUGE HSE. Trim withheld."]},
+    {"sourceId":"957210","sourceUrl":"https://www.dubicars.com/2014-mercedes-benz-gl500-47l-957210.html","title":"Mercedes-Benz GL500","modelYear":2014,"mileageKm":160000,"priceAED":42000,"engineLitres":4.7,"power":429,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":"2026-09-08","notes":["Structured trim says STANDARD; seller says AMG. Trim withheld."]},
+    {"sourceId":"954904","sourceUrl":"https://www.dubicars.com/2016-audi-q5-45-tfsi-s-line-30l-954904.html","title":"Audi Q5","modelYear":2016,"mileageKm":150000,"priceAED":32000,"engineLitres":3,"power":272,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":null,"notes":["Source title includes 45 TFSI S-Line 3.0L; engine/power recorded as published, not factory-verified. Conflicting interior colour omitted."]},
+    {"sourceId":"862343","sourceUrl":"https://www.dubicars.com/2020-dodge-challenger-sxt-plus-36l-862343.html","title":"Dodge Challenger","modelYear":2020,"mileageKm":80000,"priceAED":45000,"engineLitres":3.6,"power":305,"regionalSpecification":"Other","body":"Coupe","sourceUpdatedAt":"2026-09-07","notes":["Other specifications not relabeled as GCC or American. SXT/SXT Plus trim and interior-colour differences not resolved."]},
+    {"sourceId":"862309","sourceUrl":"https://www.dubicars.com/2018-volkswagen-tiguan-sport-20l-model-2018-gcc-car-perfect-condition-inside-and-outside-862309.html","title":"Volkswagen Tiguan","modelYear":2018,"mileageKm":140000,"priceAED":30000,"engineLitres":2,"power":220,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":"2026-09-08"},
+    {"sourceId":"914019","sourceUrl":"https://www.dubicars.com/2013-nissan-juke-sv-16l-model-2013-car-in-perfect-condition-inside-and-outside-full-option-sun-roof-914019.html","title":"Nissan Juke","modelYear":2013,"mileageKm":130000,"priceAED":18500,"engineLitres":1.6,"power":115,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":"2026-09-08","notes":["Title includes SV, structured trim says SL TURBO. Trim and conflicting interior colour omitted."]},
+    {"sourceId":"1013543","sourceUrl":"https://www.dubicars.com/2020-infiniti-qx80-1013543.html","title":"Infiniti QX80","modelYear":2020,"mileageKm":120000,"priceAED":110000,"engineLitres":5.6,"power":428,"regionalSpecification":"GCC","body":"SUV/Crossover","sourceUpdatedAt":"2026-08-24","notes":["Source update is 24 August, not the research date. Conflicting interior colour omitted."]}
+  ],
+  "availabilityAudit": {
+    "platformCounts": [{"sourceUrl":"https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515","advertisedEntries":34},{"sourceUrl":"https://auto.ae/alaayancars/sale/","advertisedEntries":48}],
+    "verifiedAvailableCount": null,
+    "interpretation": "Separate platform snapshots, not unique available stock; never add these counts together.",
+    "excluded": [
+      {"sourceId":"932276","sourceUrl":"https://www.dubicars.com/2014-kia-cadenza-model-2014-gcc-car-perfect-condition-inside-and-outside-full-option-panoramic-roof-leather-seats-932276.html","title":"Kia Cadenza 2014","reason":"Highlights show 170000 km; seller text says 160000 km.","state":"conflicting-source-fields","useInAvailableSample":false},
+      {"sourceId":"983285","sourceUrl":"https://www.dubicars.com/2014-mercedes-benz-cls350-983285.html","title":"Mercedes-Benz CLS350 2014","reason":"Highlights show GCC; seller text says JAPANESE Specs.","state":"conflicting-source-fields","useInAvailableSample":false}
+    ]
+  },
+  "branding": {
+    "publishedBranding": true,
+    "sourceLogoUrl": "https://d2souf30ck18jq.cloudfront.net/al-aayan-used-cars/logo-1fbb63c4-d74e-4d13-8526-5425781e85be.png",
+    "sourceLogoKind": "Photograph of storefront sign, not a transparent logo master",
+    "visualReferences": ["https://d2souf30ck18jq.cloudfront.net/al-aayan-used-cars/logo-1fbb63c4-d74e-4d13-8526-5425781e85be.png", "https://auto-ae-prod-storage.storage.googleapis.com/13d3b76f0da54ccab6d7208b01082d73"],
+    "observation": "Red/orange AL AAYAN and Arabic lettering above blue USED CARS.TR and Arabic descriptor; same sign in both profiles.",
+    "workingLogoPath": null,
+    "creationMethod": "none",
+    "approvalStatus": "not-evidenced",
+    "permission": "unverified",
+    "localAssetPackComplete": false
+  },
+  "assetAccess": {
+    "localFilesAcquired": 0,
+    "downloadAttemptsFailed": ["https://d2souf30ck18jq.cloudfront.net/al-aayan-used-cars/logo-1fbb63c4-d74e-4d13-8526-5425781e85be.png", "https://www.dubicars.com/images/01a961/w_1300x760/al-aayan-used-cars/6b5b70e8-a9d2-42d4-8fe9-305a3cff0531.jpeg"],
+    "visualInspection": "Logo, facade and Land Cruiser image rendered through web; no local image bytes acquired."
+  },
+  "blockers": [
+    {"id":"essential-media-access","detail":"Direct image downloads failed; no permitted local logo/stock-photo pack was acquired."},
+    {"id":"media-permission","detail":"No demo reuse grant established. DubiCars terms restrict its viewing licence; public visibility is not a commercial demo licence.","sourceUrl":"https://www.dubicars.com/copyright.html","sections":["Terms & Conditions for Users 2","Buyer and Seller Terms 8 and 14"]},
+    {"id":"creative-tool-unavailable","detail":"No callable image-generation tool was available; no artwork was generated or generic wordmark substituted."}
+  ],
+  "repositoryCheck": {"mainCommit":"6998a7ce8092b99422cdb9cccc0b18449ff2f541","astraCommit":"e73863648838016dc3f31764688d701899971328","astraClientsTree":"6f7d3db0447dc12c24515e1fbbe3bf4f57fac55b","assignedPathPresent":false,"indexedMainSearches":{"567730044":"no-results"},"fullAliasAndMetadataSweepComplete":false,"limitation":"Both client trees inspected; astra refreshed after concurrent session-10 work. Full all-content normalized-identity scan incomplete."},
+  "implementation": {"state":"blocked","applicationsCreated":0,"actualConsumersChanged":[],"notices":["No template copy, local media pack, deployment, outreach, integration or enquiry delivery.","These eight source samples are not a functioning catalogue."]}
+}

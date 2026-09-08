@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-08",
+  "business": {
+    "slug": "navara-car",
+    "name": "Навара кар",
+    "latinName": "Navara Car",
+    "city": "Варна",
+    "country": "България",
+    "countryCode": "BG",
+    "addressLine": "бул. „Цар Освободител“, Кайсиева градина",
+    "address": "бул. „Цар Освободител“, Кайсиева градина, Варна",
+    "directions": "Преди Италмодалуче, вдясно в посока летището — ориентирът е публикуван от продавача. Потвърдете точния вход по телефона.",
+    "phoneDisplay": "0899 192 300",
+    "phoneE164": "+359899192300",
+    "email": null,
+    "hours": null,
+    "coordinates": null,
+    "independentWebsite": null,
+    "officialLogo": null,
+    "socialLinks": {},
+    "marketplaceUrl": "https://navara.mobile.bg/",
+    "contactsUrl": "https://navara.mobile.bg/contacts",
+    "publishedListingCount": 26,
+    "services": [
+      { "id": "vehicles", "title": "Продажба на автомобили", "description": "Автомобили с бензинов, дизелов и електрически двигател в публикувания каталог на Навара кар.", "sourceUrl": "https://navara.mobile.bg/" },
+      { "id": "registration", "title": "Съдействие за регистрация", "description": "В обявите е посочено съдействие за регистрация в КАТ Варна или за транзитни номера. Обхватът и разходите се уточняват с продавача.", "sourceUrl": "https://navara.mobile.bg/obiava-11782409246983224-vw-polo-1-6-tdi" },
+      { "id": "leasing", "title": "Лизинг по запитване", "description": "Част от обявите са означени с „Лизинг“. Няма потвърдени публични лихви, срокове, доставчик или условия за одобрение в този преглед.", "sourceUrl": "https://navara.mobile.bg/obiava-11786363468065195-nissan-micra-1-0-n-sport" }
+    ]
+  },
+  "previewNotice": "Демонстрационен сайт за преглед — не е официален канал на автокъщата.",
+  "inventoryNotice": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+  "availabilityLabel": "Обява към 08.09.2026",
+  "sources": [
+    { "url": "https://navara.mobile.bg/", "observedAt": "2026-09-08", "supports": "Published Bulgarian name, Varna location, 26 advertisements and sample vehicle specifications/prices." },
+    { "url": "https://navara.mobile.bg/contacts", "observedAt": "2026-09-08", "supports": "Telephone, Kaysieva gradina district, street and directional landmark. Hours are explicitly not provided." },
+    { "url": "https://www.cars.bg/company/navaracar", "observedAt": "2026-09-08", "supports": "Latin marketplace alias Navara car and matching Varna business." },
+    { "url": "https://www.car24.bg/avtokashta/navara", "observedAt": "2026-09-08", "supports": "Marketplace alias; not an independently operated dealer website." }
+  ],
+  "branding": {
+    "treatment": "Plain typographic business-name label, not a reproduced or newly claimed official logo. No staff portrait or invented review is used.",
+    "wordmarkPath": "/navara/wordmark.svg",
+    "faviconPath": "/navara/favicon.svg",
+    "paletteNote": "Red, white and dark lettering observed on the dealer's own number-plate signage in its listing photographs. Template composition and typography are retained.",
+    "evidenceImage": "https://mobistatic3.focus.bg/mobile/photosorg/914/1/big1/11787212062225914_2.webp"
+  },
+  "media": {
+    "status": "source-urls-collected",
+    "origin": "Photographs linked directly by the selected dealer's individual Mobile.bg advertisements. Each pair below was visually inspected through the web tool.",
+    "rights": "Public availability is not a redistribution licence. No dealer approval or asset licence has been obtained. This repository entry does not claim one.",
+    "localBinaryCopies": false
+  },
+  "vehicles": [
+    {
+      "id": 1, "sourceId": "11786363468065195", "slug": "nissan-micra-n-sport-065195", "make": "Nissan", "model": "Micra", "title": "Nissan Micra 1.0 N-Sport", "year": 2021, "month": 5, "dateLabel": "май 2021 г.", "mileageKm": 63800, "color": "Черен", "fuel": "Бензин", "fuelType": "petrol", "transmission": "Ръчна", "transmissionType": "manual", "body": "Хечбек", "bodyType": "Hatchback", "engineCc": 999, "batteryKwh": null, "powerHp": 92, "doorsLabel": "4(5)", "drive": null, "priceEur": 10500, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["Навигация", "Парктроник", "Подгряване на седалки", "Apple CarPlay / Android Auto"],
+      "images": ["https://mobistatic4.focus.bg/mobile/photosorg/195/1/big1/11786363468065195_cG.webp", "https://mobistatic4.focus.bg/mobile/photosorg/195/1/big1/11786363468065195_v9.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11786363468065195-nissan-micra-1-0-n-sport", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 2, "sourceId": "11782409246983224", "slug": "vw-polo-tdi-983224", "make": "Volkswagen", "model": "Polo", "title": "VW Polo 1.6 TDI", "year": 2018, "month": 1, "dateLabel": "януари 2018 г.", "mileageKm": 125902, "color": "Сив", "fuel": "Дизел", "fuelType": "diesel", "transmission": "Ръчна", "transmissionType": "manual", "body": "Хечбек", "bodyType": "Hatchback", "engineCc": 1600, "batteryKwh": null, "powerHp": 80, "doorsLabel": "4(5)", "drive": null, "priceEur": 10000, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["Bluetooth", "Климатик", "ISOFIX", "Сензор за дъжд"],
+      "images": ["https://mobistatic4.focus.bg/mobile/photosorg/224/1/big1/11782409246983224_lu.webp", "https://mobistatic4.focus.bg/mobile/photosorg/224/1/big1/11782409246983224_sS.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11782409246983224-vw-polo-1-6-tdi", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 3, "sourceId": "11787311216769974", "slug": "tesla-model-3-performance-769974", "make": "Tesla", "model": "Model 3", "title": "Tesla Model 3 Performance Dual Motor", "sourceTitle": "Tesla Model 3 Peformance dual motor", "year": 2022, "month": 9, "dateLabel": "септември 2022 г.", "mileageKm": 63900, "color": "Перла", "fuel": "Електрически", "fuelType": "electric", "transmission": "Автоматик", "transmissionType": "automatic", "body": "Седан", "bodyType": "Sedan", "engineCc": null, "batteryKwh": 75, "powerHp": 534, "doorsLabel": "4(5)", "drive": "4x4", "priceEur": 32999, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["4x4", "Навигация", "Парктроник", "Подгряване на седалки", "Термопомпа"],
+      "images": ["https://mobistatic4.focus.bg/mobile/photosorg/974/1/big1/11787311216769974_cv.webp", "https://mobistatic4.focus.bg/mobile/photosorg/974/1/big1/11787311216769974_dD.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11787311216769974-tesla-model-3-peformance-dual-motor", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 4, "sourceId": "21780735125049477", "slug": "nissan-qashqai-sv-awd-049477", "make": "Nissan", "model": "Qashqai", "title": "Nissan Qashqai 2.0i SV AWD", "year": 2023, "month": 6, "dateLabel": "юни 2023 г.", "mileageKm": 57000, "color": "Бордо", "fuel": "Бензин", "fuelType": "petrol", "transmission": "Автоматик", "transmissionType": "automatic", "body": "SUV", "bodyType": "SUV", "engineCc": 2000, "batteryKwh": null, "powerHp": 141, "doorsLabel": "4(5)", "drive": "4x4", "priceEur": 18499, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["4x4", "Парктроник", "Подгряване на седалки", "Камера за заден ход", "Шибедах"],
+      "images": ["https://mobistatic1.focus.bg/mobile/photosorg/477/2/big1/21780735125049477_AP.webp", "https://mobistatic1.focus.bg/mobile/photosorg/477/2/big1/21780735125049477_X2.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-21780735125049477-nissan-qashqai-2-0i-4x4-automatic-sv-awd", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 5, "sourceId": "11787212062225914", "slug": "peugeot-e2008-allure-225914", "make": "Peugeot", "model": "2008", "title": "Peugeot e-2008 Allure", "year": 2022, "month": 12, "dateLabel": "декември 2022 г.", "mileageKm": 59079, "color": "Керемиден", "fuel": "Електрически", "fuelType": "electric", "transmission": "Автоматик", "transmissionType": "automatic", "body": "SUV", "bodyType": "SUV", "engineCc": null, "batteryKwh": 50, "powerHp": 136, "doorsLabel": "4(5)", "drive": null, "priceEur": 19999, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["Парктроник", "Подгряване на седалки", "Apple CarPlay / Android Auto", "Климатроник"],
+      "images": ["https://mobistatic3.focus.bg/mobile/photosorg/914/1/big1/11787212062225914_YM.webp", "https://mobistatic3.focus.bg/mobile/photosorg/914/1/big1/11787212062225914_2.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11787212062225914-peugeot-2008-e-2008-allure", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 6, "sourceId": "21774534756506554", "slug": "opel-mokka-lpg-506554", "make": "Opel", "model": "Mokka", "title": "Opel Mokka 1.4i Газ/Бензин", "year": 2015, "month": 7, "dateLabel": "юли 2015 г.", "mileageKm": 182000, "color": "Бял", "fuel": "Бензин / LPG", "fuelType": "petrol", "transmission": "Ръчна", "transmissionType": "manual", "body": "SUV", "bodyType": "SUV", "engineCc": 1400, "batteryKwh": null, "powerHp": 140, "doorsLabel": "4(5)", "drive": null, "priceEur": 6999, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["Газова уредба", "Парктроник", "Климатроник", "ISOFIX"],
+      "images": ["https://mobistatic1.focus.bg/mobile/photosorg/554/2/big1/21774534756506554_xB.webp", "https://mobistatic1.focus.bg/mobile/photosorg/554/2/big1/21774534756506554_Lo.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-21774534756506554-opel-mokka-1-4-i-gaz-benzin", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 7, "sourceId": "11784982235652112", "slug": "audi-a4-quattro-652112", "make": "Audi", "model": "A4", "title": "Audi A4 1.8i quattro", "year": 2009, "month": 4, "dateLabel": "април 2009 г.", "mileageKm": 212000, "color": "Бял", "fuel": "Бензин", "fuelType": "petrol", "transmission": "Ръчна", "transmissionType": "manual", "body": "Комби", "bodyType": "Wagon", "engineCc": 1798, "batteryKwh": null, "powerHp": 160, "doorsLabel": "4(5)", "drive": "4x4", "priceEur": 6999, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["4x4", "Парктроник", "Подгряване на седалки", "Панорамен люк"],
+      "images": ["https://cdn2.focus.bg/mobile/photosorg/112/1/big1/11784982235652112_z0.webp", "https://cdn2.focus.bg/mobile/photosorg/112/1/big1/11784982235652112_p2.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11784982235652112-audi-a4-1-8-i-quattro", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 8, "sourceId": "11772183782578045", "slug": "mercedes-b250-electric-578045", "make": "Mercedes-Benz", "model": "B 250", "title": "Mercedes-Benz B 250 e", "year": 2016, "month": 8, "dateLabel": "август 2016 г.", "mileageKm": 106000, "color": "Червен", "fuel": "Електрически", "fuelType": "electric", "transmission": "Автоматик", "transmissionType": "automatic", "body": "Хечбек", "bodyType": "Hatchback", "engineCc": null, "batteryKwh": 31, "powerHp": 180, "doorsLabel": "4(5)", "drive": null, "priceEur": 9999, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["Навигация", "Парктроник", "Климатроник", "ISOFIX"],
+      "images": ["https://mobistatic2.focus.bg/mobile/photosorg/045/1/big1/11772183782578045_AD.webp", "https://mobistatic2.focus.bg/mobile/photosorg/045/1/big1/11772183782578045_Tx.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11772183782578045-mercedes-benz-b-250-b250-e", "observedAt": "2026-09-08"
+    },
+    {
+      "id": 9, "sourceId": "11780755712824361", "slug": "smart-fortwo-824361", "make": "Smart", "model": "Fortwo", "title": "Smart Fortwo 1.0i", "year": 2011, "month": 2, "dateLabel": "февруари 2011 г.", "mileageKm": 66121, "color": "Черен", "fuel": "Бензин", "fuelType": "petrol", "transmission": "Автоматик", "transmissionType": "automatic", "body": "Хечбек", "bodyType": "Hatchback", "engineCc": 1000, "batteryKwh": null, "powerHp": 72, "doorsLabel": "2(3)", "drive": null, "priceEur": 4500, "currency": "EUR", "vatLabel": "Не се начислява ДДС", "condition": "used", "availability": "listing-sample", "features": ["Климатик", "Панорамен люк", "Ел. стъкла", "Бордкомпютър"],
+      "images": ["https://cdn2.focus.bg/mobile/photosorg/361/1/big1/11780755712824361_Hg.webp", "https://cdn2.focus.bg/mobile/photosorg/361/1/big1/11780755712824361_d0.webp"],
+      "sourceUrl": "https://navara.mobile.bg/obiava-11780755712824361-smart-fortwo-1-0i", "observedAt": "2026-09-08"
+    }
+  ]
+}

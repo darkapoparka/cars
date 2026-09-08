@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "09",
+  "updatedAt": "2026-09-08",
+  "outcome": "blocked-before-application-copy",
+  "delivery": {
+    "artifactType": "technical-evidence-report-only",
+    "newApplicationsImplemented": 0,
+    "newApplicationsCommitted": 0,
+    "newApplicationsRuntimeVerified": 0,
+    "newClientFoldersCreated": false,
+    "applicationCommitShas": [],
+    "note": "This is not delivery of the nine requested applications. No template copies, branding assets, inventory packs or application consumer changes were completed."
+  },
+  "repositoryEvidence": {
+    "repository": "darkapoparka/cars",
+    "targetBranch": "astra",
+    "inspectedAstraHead": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "inspectedAstraRootTree": "aedc750e3deaa002589d3aabcbe7b4ebd3a9cafb",
+    "inspectedMainHead": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "researchBranchHead": "25b5dc4acefc29dc7df968edfde371ff9240835b",
+    "priorSessionReport": "404 at start and again at the inspected astra commit",
+    "duplicateCheck": {
+      "state": "incomplete",
+      "completed": "Read both branch heads and client directory listings. None of the three proposed client slugs was present. Read the fixed assignment and matching frozen source records/defaults.",
+      "notCompleted": "An exhaustive comparison of every existing application's aliases, domains, marketplace profiles and normalized phones was not completed. Directory absence is not full identity clearance.",
+      "decision": "No application directory was created or overwritten."
+    },
+    "documentsRead": [
+      "AGENTS.md",
+      "docs/WORKFLOW.md",
+      "docs/LEAD-BUILD-GUARDRAILS.md",
+      "docs/lead-build/README.md",
+      "docs/lead-build/prompts/session-09.md",
+      "docs/lead-build/assignments.json",
+      "catalog.json",
+      "templates/auto-best/TEMPLATE.md",
+      "templates/modern/TEMPLATE.md",
+      "templates/carwow/TEMPLATE.md",
+      "docs/lead-build/source/README.md",
+      "docs/lead-build/source/europe.json",
+      "docs/lead-build/source/uae.json",
+      "docs/lead-build/source/bulgaria.json: defaults and assigned reuse record"
+    ],
+    "templateVersionsRead": {
+      "auto-best": "2026.09.08-polish-1",
+      "modern": "2026.09.06-refresh-1",
+      "carwow": "2026.09.08-repair-1"
+    },
+    "lineageNote": "These are inspected template versions, not lineage of new copies. No new copies exist.",
+    "allowedWritePaths": ["docs/lead-build/reports/session-09.json"]
+  },
+  "observationPolicy": {
+    "observedAt": "2026-09-08",
+    "method": "First-party and marketplace text retrieved with the web tool; GitHub repository reads; bounded local environment probes.",
+    "freshness": "Some returned pages were cached days or months earlier. Observation date is not a guarantee of live stock, current price or physical vehicle location.",
+    "branding": "No successful rendered dealer-brand inspection. Missing extracted logos must not be interpreted as absence of published branding.",
+    "mediaRights": "No sufficient reuse authorization was established for an essential local dealer-media pack. This is unresolved, not a legal determination or a dealer refusal.",
+    "authorization": "The current user request authorizes technical implementation. Historical buildApproved:false defaults were not used as a blocker. No private contact history was inspected."
+  },
+  "environmentEvidence": [
+    {
+      "id": "ENV-GIT-DNS",
+      "action": "git ls-remote https://github.com/darkapoparka/cars.git refs/heads/astra refs/heads/main",
+      "cwd": "/",
+      "result": "exit 128: Could not resolve host: github.com",
+      "scope": "Local shell transport only. Connected GitHub reads and write actions are separate capabilities; this does not establish read-only GitHub access."
+    },
+    {
+      "id": "ENV-SITE-DNS",
+      "action": "curl -I https://www.autobedrijfspinder.nl/",
+      "cwd": "/",
+      "result": "curl (6): Could not resolve host: www.autobedrijfspinder.nl"
+    },
+    {
+      "id": "ENV-NPM-DNS",
+      "action": "curl -I https://registry.npmjs.org/",
+      "cwd": "/",
+      "result": "curl (6): Could not resolve host: registry.npmjs.org",
+      "scope": "Network probe, not npm ci or an application installation test."
+    },
+    {
+      "id": "ENV-BROWSER",
+      "action": "timeout 20s chromium --headless --no-sandbox --disable-gpu --dump-dom https://www.autobedrijfspinder.nl/",
+      "cwd": "/",
+      "result": "exit 124; zero-byte HTML output. No dealer page screenshot or visual acceptance was obtained.",
+      "additionalAttempt": "agent-browser executable was absent; connected Browserbase plugin search returned no matching plugin."
+    },
+    {
+      "id": "ENV-IMAGE-SEARCH",
+      "action": "Image search for Autobedrijf Spinder logo",
+      "result": "503 Service Unavailable. No usable image result was obtained."
+    },
+    {
+      "id": "ENV-GENERATION",
+      "result": "No image-generation tool was available in this session. No generated artwork, generation ID or vector recreation is claimed."
+    }
+  ],
+  "localRuntimeObserved": {"node": "v22.16.0", "npm": "10.9.2", "git": "2.47.3"},
+  "unexecutedCheckDefinitions": {
+    "install": "No application dependencies installed from retained lockfiles.",
+    "framework": "No application typecheck, Svelte check, production build or Prisma generation executed.",
+    "browser": "No new application home, inventory, detail, contact, filter, gallery, menu or enquiry tested at 390/1440 px.",
+    "content-assets": "No application identity sweep, local asset-path check, consumer integration or inventory consistency check executed.",
+    "ports": "Assigned preview ports were not checked for local listener ownership or availability."
+  },
+  "candidates": [
+    {
+      "leadId": "nl-elst-autobedrijf-spinder",
+      "name": "Autobedrijf Spinder",
+      "clientPath": null,
+      "proposedClientPath": "clients/autobedrijf-spinder",
+      "state": "blocked",
+      "commitShas": [],
+      "publicEvidencePaths": ["docs/lead-build/reports/session-09.json"],
+      "requiredLocalization": {"language": "nl-NL", "currency": "EUR", "distanceUnit": "km", "implemented": false},
+      "publicFacts": {
+        "sourceUrl": "https://www.autobedrijfspinder.nl/",
+        "contactUrl": "https://www.autobedrijfspinder.nl/contact",
+        "name": "Autobedrijf Spinder",
+        "city": "Elst, municipality of Rhenen, Utrecht, Netherlands",
+        "publishedAddress": "Rijksstraatweg 47, 3921 AB Elst (Utrecht)",
+        "additionalPublishedSite": "Remmerden 9B, between Rhenen and Elst",
+        "phonesE164": ["+31630726206", "+31655117236"],
+        "email": "info@autobedrijfspinder.nl",
+        "vehicleSpecificLocationVerified": false,
+        "locationCaveat": "The dealer asks visitors to call to establish where a particular vehicle stands. A seller's general address on an advertisement is not evidence of that car's showroom location.",
+        "safeLocationCopyForUnconfirmedCars": "Locatie vooraf telefonisch bevestigen",
+        "stockCaveat": "Homepage claims of more than 100 cars and an additional site with 60 were not added together or treated as independently counted available inventory.",
+        "opportunity": "Vehicle-specific viewing/location clarity is supported by the dealer's own instruction; a rendered website-quality judgment was not completed."
+      },
+      "stockResearch": {
+        "sourceUrls": [
+          "https://www.autobedrijfspinder.nl/occasions",
+          "https://www.autowereld.nl/aanbieder/autobedrijf-spinder-321350/details.html",
+          "https://www.autoscout24.nl/aanbod/ford-mondeo-1-6-tdci-econetic-lease-trend-116pk-diesel-zwart-cat_ma29mo1763-d38a5de7-f947-43fa-a8bd-d82894c41697",
+          "https://www.autoscout24.nl/aanbod/bmw-520-5-serie-touring-520i-last-minute-edition-leer-xeno-benzine-zwart-cat_ma13mo1648-e7398bdf-e759-4d9b-a6c5-40d3d15882da"
+        ],
+        "notes": "The official inventory iframe request failed. Seller-linked marketplace records were located, but a complete 8-12-record fact/photo set was not finished. Preserve price/tax and condition discrepancies rather than selecting an undocumented value.",
+        "completedListingSampleCount": 0,
+        "localVehiclePhotoCount": 0
+      },
+      "branding": {"publishedBranding": "unverified; visual inspection failed", "sourceLogoUrl": null, "workingLogoPath": null, "creationMethod": null, "approvalStatus": "not-established", "localAssetPackComplete": false},
+      "blockers": [
+        {"id": "SPINDER-BRAND", "evidence": "ENV-BROWSER; ENV-IMAGE-SEARCH; ENV-SITE-DNS", "description": "Published branding could not be visually inspected. The extracted RDW/NAP badge was not misidentified as the dealership logo."},
+        {"id": "SPINDER-MEDIA", "description": "A suitable, permitted local logo/gallery pack was not obtained; direct homepage download failed, and inventory iframe access failed."}
+      ],
+      "variants": {
+        "auto-best": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Application not created."], "proposedPort": 7481},
+        "modern": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Full-workspace application not created."], "proposedPort": 7482},
+        "carwow": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Application not created."], "proposedPort": 7483}
+      }
+    },
+    {
+      "leadId": "nl-autobedrijf-wester",
+      "name": "Autobedrijf Wester",
+      "clientPath": null,
+      "proposedClientPath": "clients/autobedrijf-wester",
+      "state": "blocked",
+      "commitShas": [],
+      "publicEvidencePaths": ["docs/lead-build/reports/session-09.json"],
+      "requiredLocalization": {"language": "nl-NL", "currency": "EUR", "distanceUnit": "km", "implemented": false},
+      "publicFacts": {
+        "sourceUrl": "https://autobedrijfwester.nl/contact",
+        "homepageUrl": "https://autobedrijfwester.nl/",
+        "city": "Grootebroek, Netherlands",
+        "publishedAddress": "Zesstedenweg 23, 1613 JA Grootebroek",
+        "phonesE164": ["+31653772816"],
+        "email": "info@autobedrijfwester.nl",
+        "hoursCaveat": "The returned contact page contains relative Today/Tomorrow labels. Those cached labels were not assigned to current weekdays.",
+        "stockCaveat": "Homepage, sales copy and inventory results showed different count snapshots. None was used as a verified current available-stock count.",
+        "opportunity": "Stock and dated-copy consistency merit rendered review; no mobile UX defect or broken customer journey was established."
+      },
+      "stockResearch": {
+        "sourceUrls": ["https://autobedrijfwester.nl/aanbod", "https://autobedrijfwester.nl/aanbod/dacia/duster/7368599", "https://autobedrijfwester.nl/aanbod/opel/astra/7290679"],
+        "confirmedPublishedExample": {"sourceId": "7368599", "vehicle": "Dacia Duster 1.6 Ambiance 2WD", "year": 2010, "mileage": 221974, "distanceUnit": "km", "advertisedPrice": 4250, "currency": "EUR", "taxLabel": "marge", "publishedParkingLocation": "GROOTEBROEK", "availability": "not independently confirmed"},
+        "priceConflict": "Opel Astra 7290679 had different prices in homepage and older detail/index snapshots; no fresh single price was certified.",
+        "completedListingSampleCount": 0,
+        "localVehiclePhotoCount": 0
+      },
+      "branding": {"publishedBranding": "unverified; no successful rendered inspection", "sourceLogoUrl": null, "workingLogoPath": null, "creationMethod": null, "approvalStatus": "not-established", "localAssetPackComplete": false},
+      "blockers": [
+        {"id": "WESTER-BRAND", "description": "No usable dealer-logo reference was visually verified. The site's Dealertemplates vendor mark was not treated as the dealer logo."},
+        {"id": "WESTER-MEDIA", "sourceUrl": "https://cdn.autosociaal.nl/dtweb/7368599/dacia-duster-0-aHR0cHM6Ly9oZXhvbi1pbnRlcm5hbC5hdXRvc29jaWFhbC5ubC9zdG9yYWdlL2ltYWdlc19ieV9pZC83MzY4NTk5L2Q1LzE3ODYwNjAyODgvaW1hZ2UxLmpwZw%3D%3D_b740x555-1x.jpg", "description": "The first-party detail photo returned a web cache-miss. Download attempts were rejected by the downloader's viewed-URL eligibility check even after explicit web-open attempts. No photo bytes or permitted local pack were obtained."}
+      ],
+      "variants": {
+        "auto-best": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Application not created."], "proposedPort": 7484},
+        "modern": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Full-workspace application not created."], "proposedPort": 7485},
+        "carwow": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Application not created."], "proposedPort": 7486}
+      }
+    },
+    {
+      "leadId": "ae-dubai-car-finder-360",
+      "name": "Car Finder 360",
+      "clientPath": null,
+      "proposedClientPath": "clients/car-finder-360",
+      "state": "blocked",
+      "commitShas": [],
+      "publicEvidencePaths": ["docs/lead-build/reports/session-09.json"],
+      "requiredLocalization": {"language": "en-AE", "currency": "AED", "distanceUnit": "km", "implemented": false, "arabicOrRtlImplemented": false},
+      "publicFacts": {
+        "sourceUrl": "https://www.carfinder360.com/en/contacts",
+        "homepageUrl": "https://www.carfinder360.com/en",
+        "phonesE164": ["+971522555506"],
+        "publishedContactAddress": "Meydan Grandstand, 6th floor, Al Meydan Rd, Nad Al Sheba, Dubai, United Arab Emirates",
+        "addressCaveat": "Published contact address, not a verified vehicle showroom or parking location.",
+        "email": null,
+        "emailCaveat": "The retrieved page exposed an email-protection link, not a verified address. No email was invented.",
+        "aliasEvidence": "The linked carfinder360.digital-dealer.pro buy-car destination redirected to carfinder360.com/buy-car with the same business identity; it was not treated as a separate dealer."
+      },
+      "reserveReview": {
+        "sourceUrls": ["https://www.dubicars.com/dealers/dubai-car-finder-360-3252", "https://www.carfinder360.com/en", "https://www.carfinder360.com/en/buy-car"],
+        "retrievedMarketplaceResultCount": 24,
+        "countMeaning": "Retrieved advertisements, not independently verified unique available vehicles.",
+        "historicalScreen": 30,
+        "existingJourneys": ["vehicle search", "selling", "finance enquiry", "contact", "vehicle sourcing request"],
+        "exportCaveat": "Some marketplace advertisements are explicitly Export Only, including Ferrari Purosangue and Lexus NX350/LC500h examples; local UAE registration eligibility was not assumed.",
+        "renderCaveat": "A zero-results value in retrieved own-site filter markup was not treated as proof of no cars or a live site failure.",
+        "outcome": "Unresolved. No rendered/task audit or unique-stock review established an evidenced exception to the reserve caveats. The count alone was not an automatic rejection."
+      },
+      "stockResearch": {"completedListingSampleCount": 0, "localVehiclePhotoCount": 0, "note": "Advertised AED prices and kilometre values were located, but a complete record-level 8-12-listing local-gallery pack was not prepared. Monthly finance figures were not substituted for vehicle prices."},
+      "branding": {
+        "publishedBranding": "An own-site image was labeled Logo, but its artwork was not visually verified.",
+        "sourceLogoUrl": "https://content.deal-drive.com/thumbs/e250022592db7474e0143736d033697ee82a62d508c4e4136cb488c904f0d9ea/orig.webp?v=2",
+        "workingLogoPath": null,
+        "creationMethod": null,
+        "approvalStatus": "not-established",
+        "localAssetPackComplete": false
+      },
+      "blockers": [
+        {"id": "CF360-BRAND-MEDIA", "description": "The own-site logo asset request returned a cache-miss; no visually inspected original or permitted local essential media pack was obtained."},
+        {"id": "CF360-RESERVE", "description": "The historical scale/opportunity caveats remain unresolved. Existing finance and enquiry journeys must not be pitched as missing features."}
+      ],
+      "variants": {
+        "auto-best": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Application not created."], "proposedPort": 7487},
+        "modern": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Full-workspace application not created."], "proposedPort": 7488},
+        "carwow": {"implemented": false, "committed": false, "checksPassed": [], "checksNotRun": ["install", "framework", "browser", "content-assets", "ports"], "knownLimitations": ["Application not created."], "proposedPort": 7489}
+      }
+    }
+  ],
+  "reuseInspection": {
+    "leadId": "bg-varna-elit-auto-import",
+    "name": "ELIT AUTO IMPORT EXPORT",
+    "clientPath": "clients/elit-auto-import",
+    "mode": "read-only",
+    "state": "existing-reuse",
+    "inspectedCommit": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "clientTreeSha": "bef22e7c0e8178b41c1c09847f5a14b3c7988332",
+    "sameClientTreeOnInspectedMainAndAstra": true,
+    "variantsFound": ["auto-best", "modern", "carwow"],
+    "filesRead": [
+      "BUILD-STATUS.md",
+      "CLIENT.md",
+      "auto-best/.client/project.json",
+      "modern/.client/project.json",
+      "carwow/.client/project.json",
+      "qa-final/FINAL.md",
+      "qa-final/carwow-final-contact-copy.json",
+      "qa-final/results.json (partial response; not a complete independent audit)"
+    ],
+    "recordedEvidence": {
+      "metadataStateAllThree": "local-qa-passed",
+      "templateVersionAllThree": "2026.09.06-refresh-1",
+      "recordedRouteWidthStates": {"auto-best": 10, "modern": 8, "carwow": 12},
+      "sourceOfRouteCounts": "qa-final/FINAL.md, existing evidence only",
+      "carwowTargetedEvidence": "carwow-final-contact-copy.json records empty errors, passing numeric/budget checks and a changed mobile gallery image.",
+      "recordedStock": "15 dated sampled complete vehicles; five local photographs per vehicle, according to CLIENT.md and project metadata. Not freshly recounted or requalified.",
+      "publicUrl": null,
+      "recordedPreviewState": "stopped-after-verification"
+    },
+    "checksThisSession": ["Read directory tree, three project metadata files and the listed existing QA records."],
+    "checksNotRun": ["No install, build, browser test, screenshot inspection or current stock/media-rights audit was executed for ELIT."],
+    "knownLimitations": [
+      "Existing pass flags and logs were not promoted to new session-09 verification.",
+      "Recorded limitations include small original raster branding, dated stock, no verified provider/form delivery, generic decorative cutouts and no public preview.",
+      "No confirmed hours, email or social profiles are recorded in the existing metadata.",
+      "No need for a specific new repair was established by this metadata-only review; any repair or upgrade requires separate owner scope."
+    ],
+    "modified": false
+  },
+  "handoff": {
+    "status": "blocked; no new app install/start handoff exists",
+    "localAgentPrompt": "In the existing cars checkout, inspect git status and remote identity first. Preserve dirty work. Fetch origin astra without reset, clean, force or automatic merge. Read docs/lead-build/reports/session-09.json from origin/astra. Fast-forward a clean, matching local astra only when safe. This report does not contain the nine applications: do not run install/start commands for nonexistent client folders and do not generate or personalize applications as a preview task. Keep clients/elit-auto-import read-only. Do not stop unrelated listeners, deploy, contact dealers or change private sales records.",
+    "remainingImplementation": "Duplicate identity clearance; successful visual brand inspection; sufficient permitted local assets; a complete sourced listing set; actual master copies and all consumer/localization/safe-demo changes; per-dealer application handoffs; supported framework and browser checks.",
+    "prohibitedActionsPerformed": false,
+    "noDeploymentOrDealerContact": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "client": "navara-car",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-08",
+  "state": "needs-personalization",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "branding": {"updatedAt":"2026-09-08","kind":"owner-requested-image-generated-refresh","asset":"/navara/wordmark.svg","generationId":"6f04e7f5-5407-4e05-96b9-3b41140c0f20","dealerApproved":false,"verification":"../../BRANDING.md"}
+}

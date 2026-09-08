@@ -1,0 +1,3 @@
+# ELIQ AUTO / Carwow
+
+This is an independent client copy, not a master. Read ../../../AGENTS.md and ../ASTRA-HANDOFF.md first. Preserve the existing yellow desktop and compact mobile layouts; branding work is not a redesign. Use Node 24 and the root Cars launcher on an explicitly free port, not the inherited fixed-port dev wrapper. Do not connect providers or run migrations. The legacy daynight-prefixed module/export names are compatibility contracts, not this dealer's identity. Unknown vehicle door counts use 0 and must render as unknown rather than a factual zero. Check inherited auxiliary copy, map, chat, team and SEO paths before calling the skin complete. No browser or framework acceptance is recorded yet. Never deploy or send messages during this local review.

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "client": "eliqauto",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-08",
+  "state": "personalized-qa-pending",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/cars"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "source": {"method":"git-tree-copy","repository":"darkapoparka/cars","commit":"6998a7ce8092b99422cdb9cccc0b18449ff2f541","path":"templates/modern","tree":"66bfb8196bbce18832ada6b34b02dda97baba25b"},
+  "stockCapture": "2026-06-21T13:54:02.933Z",
+  "handoff": "../ASTRA-HANDOFF.md",
+  "knownLimits": ["Initial code personalization only; frozen install, Prisma generation, typecheck, build and rendered QA not run.","Whole-route identity scan remains. Non-public template fixture contracts are retained separately and are not real ELIQ operations.","Public demo environment only; no backend, live inventory or message delivery configured."]
+}

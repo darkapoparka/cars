@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "client": "texas-drive-auto",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-08T21:53:19.316Z",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "updatedAt": "2026-09-08T23:02:53.032Z",
+  "knownGaps": [
+    "This is an in-progress implementation checkpoint, not completed or sendable.",
+    "Five Texas listing photos and media redistribution permission remain unresolved.",
+    "Complete supporting-page sweep and actual browser acceptance remain in progress."
+  ],
+  "checksPassed": [],
+  "checksNotRun": [
+    "production build",
+    "390/1440 browser review"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "05",
+  "leadId": "us-in-evansville-neuhoff-auto-sales",
+  "observedAt": "2026-09-08",
+  "state": "blocked-before-copy",
+  "applicationDataConsumers": [],
+  "identity": {
+    "name": "Neuhoff Auto Sales",
+    "aliases": ["Neuhoff Auto-sales"],
+    "website": "https://neuhoffauto.com/",
+    "websiteAliases": ["https://www.neuhoffauto.com/"],
+    "address": "1800 N Burkhardt Rd, Evansville, IN 47715",
+    "phone": "+18124776433",
+    "locale": "en-US",
+    "currency": "USD",
+    "mileageUnit": "mi"
+  },
+  "businessFacts": {
+    "hours": {"Monday":"09:00–19:00","Tuesday":"09:00–19:00","Wednesday":"09:00–19:00","Thursday":"09:00–19:00","Friday":"09:00–19:00","Saturday":"09:00–19:00","Sunday":null},
+    "hoursNote": "Store, directions and homepage extractions leave Sunday as - pm. Sunday closed is NOT verified. No call was made.",
+    "financeAdvertised": true,
+    "financeNote": "Homepage application link says subject to credit approval. No specific approval, APR or term verified.",
+    "priceNote": "Use Internet prices, not Retail or Savings. Get ePrice is an unknown price, never zero. The 2018 Malibu detail warns custom or aftermarket rims and tires may cost extra."
+  },
+  "sources": {
+    "home": "https://neuhoffauto.com/",
+    "homeAlias": "https://www.neuhoffauto.com/",
+    "inventory": "https://neuhoffauto.com/newandusedcars",
+    "inventoryQuery": "https://www.neuhoffauto.com/newandusedcars?clearall=1",
+    "store": "https://neuhoffauto.com/store",
+    "directions": "https://neuhoffauto.com/directions",
+    "about": "https://neuhoffauto.com/aboutus",
+    "contact": "https://neuhoffauto.com/sendcomments"
+  },
+  "inventoryEvidence": {
+    "liveAvailableCount": null,
+    "countObservations": [
+      {"count":74,"kind":"older homepage make sum","source":"https://www.neuhoffauto.com/","freshnessLabel":"last week"},
+      {"count":79,"kind":"newer homepage make sum","source":"https://neuhoffauto.com/","freshnessLabel":"today","sum":[15,1,20,4,1,8,4,1,1,17,1,6]},
+      {"count":72,"kind":"retrieved catalogue count","source":"https://neuhoffauto.com/newandusedcars","freshnessLabel":"last week"}
+    ],
+    "note": "Conflicting cached snapshots are not a live available-only count. The www query-bearing inventory returned a last-year snapshot and is not the sample source. Eight rows below come from the last-week catalogue; a detail page corroborates the 2018 Malibu. Values are original USD and miles, without conversion. Unknown specifications remain null. All are dated listing samples, not independently confirmed current stock.",
+    "samples": [
+      {"sourceId":"140278","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # 140278","observedAt":"2026-09-08","year":2018,"make":"Chevrolet","model":"Camaro","trim":"2dr Cpe 1LT","price":15988,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":101485,"mileageUnit":"mi","drivetrain":null,"transmission":null,"detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"111698","sourceUrl":"https://neuhoffauto.com/vdp/23369866/Used-2018-Chevrolet-Malibu-4dr-Sdn-LT-w1LT-for-sale-in-Evansville-IN-47715","detailUrl":"https://neuhoffauto.com/vdp/23369866/Used-2018-Chevrolet-Malibu-4dr-Sdn-LT-w1LT-for-sale-in-Evansville-IN-47715","sourceLocator":"Stock # 111698","observedAt":"2026-09-08","year":2018,"make":"Chevrolet","model":"Malibu","trim":"4dr Sdn LT w/1LT","price":11988,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":94024,"mileageUnit":"mi","drivetrain":"FWD","transmission":"Automatic","detailRetrieved":true,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"052128","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # 052128","observedAt":"2026-09-08","year":2020,"make":"Chevrolet","model":"Malibu","trim":"4dr Sdn LT","price":null,"priceKind":"request-price: Get ePrice","currency":"USD","mileage":101968,"mileageUnit":"mi","drivetrain":"FWD","transmission":"Automatic","detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"269305","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # 269305","observedAt":"2026-09-08","year":2016,"make":"Chevrolet","model":"Silverado 1500","trim":"4WD Crew Cab 143.5 LT w/2LT","price":19888,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":142876,"mileageUnit":"mi","drivetrain":"4WD","transmission":"Automatic","detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"198041","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # 198041","observedAt":"2026-09-08","year":2015,"make":"Chevrolet","model":"Tahoe","trim":"4WD 4dr LTZ","price":19988,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":150998,"mileageUnit":"mi","drivetrain":"4WD","transmission":"Automatic","detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"704800","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # 704800","observedAt":"2026-09-08","year":2019,"make":"Chrysler","model":"Pacifica","trim":"Touring L FWD","price":13500,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":102551,"mileageUnit":"mi","drivetrain":"FWD","transmission":"Automatic","detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"a17314","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # a17314","observedAt":"2026-09-08","year":2020,"make":"Ford","model":"Expedition","trim":"Limited 4x2","price":24900,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":100678,"mileageUnit":"mi","drivetrain":null,"transmission":"Automatic","detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]},
+      {"sourceId":"e49028","sourceUrl":"https://neuhoffauto.com/newandusedcars","detailUrl":null,"sourceLocator":"Stock # e49028","observedAt":"2026-09-08","year":2018,"make":"Ford","model":"F-150","trim":"LARIAT 4WD SuperCrew 5.5 Box","price":29988,"priceKind":"internet advertised vehicle price","currency":"USD","mileage":85526,"mileageUnit":"mi","drivetrain":"4WD","transmission":"Automatic","detailRetrieved":false,"availability":"retrieved listing; live available/sold status not independently confirmed","localImages":[]}
+    ]
+  },
+  "branding": {
+    "publishedBranding": "Official footer logo reference located; not visually inspected",
+    "sourceLogoUrl": "https://imagescdn.dealercarsearch.com/DealerImages/19481/28919/logo2.png",
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not established",
+    "visualInspectionPassed": false
+  },
+  "assets": {
+    "localPermittedPack": false,
+    "rightsStatus": "No media reuse permission established. Public listing presence alone does not establish permission.",
+    "attemptedImageUrls": ["https://imagescdn.dealercarsearch.com/DealerImages/19481/28919/logo2.png","https://imagescdn.dealercarsearch.com/Media/19481/23369866/639033087565713384.jpg"],
+    "retrievalResults": "Official logo and Malibu photograph returned web Cache miss. Chromium homepage navigation returned net::ERR_BLOCKED_BY_ADMINISTRATOR. No saved essential image bytes, generated artwork or visual approval."
+  },
+  "duplicateCheck": {
+    "mainHead": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "astraHead": "4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "proposedPathAbsentFromBothClientTrees": true,
+    "completeAliasDomainProfileNormalizedPhoneScan": false
+  },
+  "opportunity": {"observed":"Sunday field is incomplete in retrieved official text. Existing filters, comparison, financing and vehicle-specific enquiry paths are present. Stock counts differ across cached snapshots; that is not established as a live website defect.","visualAudit":"blocked; no rendered usability defect asserted"},
+  "blockers": ["Required visual branding and local essential photos unavailable.","Media reuse permission not established.","Sunday hours and live available stock remain unresolved."],
+  "implementation": {"applicationsCopied":0,"applicationsPersonalized":0,"applicationTestsRun":0,"outreach":false,"deployment":false},
+  "remainingWork": ["Full both-branch alias, domain, marketplace-profile and normalized-phone content sweep.","All three independent application copies, complete content/data consumer integration and application QA."]
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "key": "carwow",
+  "source": "templates/carwow",
+  "destination": "clients/navara-car/carwow",
+  "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "copiedAt": "2026-09-08",
+  "method": "Git tree/blob copy; unchanged files preserve source Git blob identity",
+  "helper": "scripts/new-client.mjs and scripts/copy-source.mjs were read; local repository download was unavailable",
+  "exclusions": ["inherited .template", "inherited AGENTS.md", "historical .template-ref", "MIGRATION.md", "design-qa.md", "source QA claims in TEMPLATE.md"],
+  "qaInherited": false,
+  "crmInherited": false
+}

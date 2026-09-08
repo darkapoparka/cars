@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "03",
+  "leadId": "bg-burgas-mg7-group",
+  "observedAt": "2026-09-08",
+  "purpose": "Source evidence only; not application data and not a completed build.",
+  "business": {
+    "publishedName": "MG7 Group",
+    "country": "BG",
+    "city": "Бургас",
+    "address": "Северна промишлена зона, ул. Атанас Буров 7",
+    "phonePublished": "0876277777",
+    "phoneE164": "+359876277777",
+    "email": null,
+    "openingHours": null,
+    "openingHoursNote": "The contact profile states that opening hours have not been entered.",
+    "legalEntity": null,
+    "independentWebsite": {"url": null, "status": "not-confidently-matched-in-bounded-search", "absenceProven": false},
+    "sources": ["https://mg7group.mobile.bg/", "https://mg7group.mobile.bg/contacts", "https://www.auto.bg/dealer/mg7group"],
+    "aliases": ["MG7 Group", "MG7 GROUP", "mg7group.mobile.bg", "mg7group.bazar.bg"],
+    "serviceClaimsApprovedForUse": [],
+    "excludedClaims": ["Unverified warranty promises", "Unverified finance offers", "Unverified establishment date", "Inherited staff and reviews"]
+  },
+  "localization": {
+    "language": "bg", "locale": "bg-BG", "currency": "EUR", "distanceUnit": "km", "conversionPerformed": false,
+    "taxPolicy": "Retain each advertisement tax treatment; do not present VAT-exclusive prices as VAT-inclusive.",
+    "unknownPriceText": "Цена при запитване", "unknownHoursText": "Работно време: потвърдете по телефона"
+  },
+  "availabilityAudit": {
+    "sourceUrl": "https://mg7group.mobile.bg/",
+    "advertisedEntries": 32, "reservedOrSoldLabelsObserved": 6, "remainingWithoutThatLabel": 26, "verifiedAvailableCount": null,
+    "interpretation": "26 is subtraction of labeled entries, not independently verified unique available stock. Combined labels do not distinguish sold from reserved.",
+    "excluded": [
+      {"sourceId":"11783765861930826","sourceUrl":"https://mg7group.mobile.bg/obiava-11783765861930826-bmw-740-d-xdrive-m-sport-pro-individual-nov-ot-balgariya","title":"BMW 740d xDrive M Sport Pro","observedAt":"2026-09-08","rawAvailabilityLabel":"Капариран\\Продаден","state":"reserved-or-sold","useInAvailableSample":false},
+      {"sourceId":"21773661860374633","sourceUrl":"https://mg7group.mobile.bg/obiava-21773661860374633-mercedes-benz-gle-53-4matic-amg-1-vi-sobstvenik-nov-ot-silvar-star","title":"Mercedes-Benz GLE 53 AMG","observedAt":"2026-09-08","rawAvailabilityLabel":"Капариран\\Продаден","state":"reserved-or-sold","useInAvailableSample":false},
+      {"sourceId":null,"sourceUrl":"https://mg7group.mobile.bg/","title":"Mercedes-Benz AMG GT 43 4matic+ V8 Package","observedAt":"2026-09-08","rawAvailabilityLabel":"Капариран\\Продаден","state":"reserved-or-sold","useInAvailableSample":false,"secondarySourceUrl":"https://www.car24.bg/obiava/93924451/mercedes-benz-amg-gt-43-4matic-v8-package","limitation":"Profile label observed; direct Mobile.bg detail retrieval failed. No source ID inferred."},
+      {"sourceId":"21757667206320325","sourceUrl":"https://mg7group.mobile.bg/obiava-21757667206320325-mercedes-benz-gle-53-4matic-amg-coupe-manufaktur","title":"Mercedes-Benz GLE 53 AMG Coupe Manufaktur","observedAt":"2026-09-08","rawAvailabilityLabel":"Капариран\\Продаден","state":"reserved-or-sold","useInAvailableSample":false},
+      {"sourceId":"11746533701934051","sourceUrl":"https://mg7group.mobile.bg/obiava-11746533701934051-mercedes-benz-amg-gt-brabus-b700","title":"Mercedes-Benz AMG GT BRABUS B700","observedAt":"2026-09-08","rawAvailabilityLabel":"Капариран\\Продаден","state":"reserved-or-sold","useInAvailableSample":false},
+      {"sourceId":"21747300324752811","sourceUrl":"https://mg7group.mobile.bg/obiava-21747300324752811-mercedes-benz-g-63-amg-42-262km-exclusive","title":"Mercedes-Benz G 63 AMG Exclusive","observedAt":"2026-09-08","rawAvailabilityLabel":"Капариран\\Продаден","state":"reserved-or-sold","useInAvailableSample":false}
+    ]
+  },
+  "listingSamples": [
+    {"sourceId":"21785564544332885","sourceUrl":"https://mg7group.mobile.bg/obiava-21785564544332885-bmw-x7-40d-xdrive-m-sport-facelift-carbon-1-vi-sobstvenik","observedAt":"2026-09-08","title":"BMW X7 40d xDrive M Sport","productionYear":2023,"productionMonth":9,"mileage":{"value":45000,"unit":"km"},"fuel":"diesel","transmission":"automatic","power":{"value":352,"unit":"hp-as-published"},"bodyType":"SUV","price":{"value":61900,"currency":"EUR","taxTreatment":"excluding-VAT"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false,"visuallyInspectedSourceUrl":"https://mobistatic3.focus.bg/mobile/photosorg/885/2/big1/21785564544332885_sZ.webp"}},
+    {"sourceId":"21745605265440995","sourceUrl":"https://mg7group.mobile.bg/obiava-21745605265440995-mercedes-benz-g-63-amg-2025g-nov-ot-silvar-star","observedAt":"2026-09-08","title":"Mercedes-Benz G 63 AMG","productionYear":2025,"productionMonth":2,"mileage":{"value":22000,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":605,"unit":"hp-as-published"},"bodyType":"SUV","price":{"value":181000,"currency":"EUR","taxTreatment":"excluding-VAT"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false,"visuallyInspectedSourceUrl":"https://mobistatic3.focus.bg/mobile/photosorg/995/2/big1/21745605265440995_II.webp"}},
+    {"sourceId":"21771832254641120","sourceUrl":"https://mg7group.mobile.bg/obiava-21771832254641120-mercedes-benz-g-63-amg-nov-ot-silvar-star-01-2026g","observedAt":"2026-09-08","title":"Mercedes-Benz G 63 AMG","productionYear":2026,"productionMonth":1,"mileage":{"value":13000,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":605,"unit":"hp-as-published"},"bodyType":"SUV","price":{"value":187000,"currency":"EUR","taxTreatment":"excluding-VAT"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}},
+    {"sourceId":"21781209381559630","sourceUrl":"https://mg7group.mobile.bg/obiava-21781209381559630-mercedes-benz-g-63-amg-nov-ot-silvar-star-04-2026g","observedAt":"2026-09-08","title":"Mercedes-Benz G 63 AMG","productionYear":2026,"productionMonth":4,"mileage":{"value":9700,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":605,"unit":"hp-as-published"},"bodyType":"SUV","price":{"value":189000,"currency":"EUR","taxTreatment":"excluding-VAT"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}},
+    {"sourceId":"11786258864975456","sourceUrl":"https://mg7group.mobile.bg/obiava-11786258864975456-bmw-850-v8-gran-coupe-1-vi-sobstvenik-v-garantsiya","observedAt":"2026-09-08","title":"BMW 850 V8 Gran Coupe","productionYear":2022,"productionMonth":8,"mileage":{"value":107000,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":531,"unit":"hp-as-published"},"bodyType":"sedan","price":{"value":54555,"currency":"EUR","taxTreatment":"VAT-not-charged"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}},
+    {"sourceId":"21782394387362812","sourceUrl":"https://mg7group.mobile.bg/obiava-21782394387362812-bmw-x6-m-sport-v-garantsiya-do-09-2027g","observedAt":"2026-09-08","title":"BMW X6 M Sport","productionYear":2020,"productionMonth":9,"mileage":{"value":141000,"unit":"km"},"fuel":"diesel","transmission":"automatic","power":{"value":286,"unit":"hp-as-published"},"bodyType":"SUV","price":{"value":45000,"currency":"EUR","taxTreatment":"VAT-not-charged"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}},
+    {"sourceId":"11745507897477878","sourceUrl":"https://mg7group.mobile.bg/obiava-11745507897477878-bmw-840-d-xdrive-m-sport-individual-nov-ot-balgariya","observedAt":"2026-09-08","title":"BMW 840d xDrive M Sport Individual","productionYear":2019,"productionMonth":1,"mileage":{"value":105000,"unit":"km"},"fuel":"diesel","transmission":"automatic","power":{"value":320,"unit":"hp-as-published"},"bodyType":"coupe","price":{"value":41000,"currency":"EUR","taxTreatment":"VAT-not-charged"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false},"conflicts":["Production field says January 2019; seller description mentions first registration 7 December 2018. Neither was silently corrected."]},
+    {"sourceId":"11774522821457814","sourceUrl":"https://mg7group.mobile.bg/obiava-11774522821457814-mercedes-benz-e-53-amg-coupe-amg","observedAt":"2026-09-08","title":"Mercedes-Benz E 53 AMG Coupe","productionYear":2019,"productionMonth":6,"mileage":{"value":144000,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":435,"unit":"hp-as-published"},"bodyType":"coupe","price":{"value":31000,"currency":"EUR","taxTreatment":"VAT-not-charged"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}},
+    {"sourceId":"11784017637362453","sourceUrl":"https://mg7group.mobile.bg/obiava-11784017637362453-chevrolet-camaro-palna-servizna-istoriya-90-700km","observedAt":"2026-09-08","title":"Chevrolet Camaro","productionYear":2000,"productionMonth":3,"mileage":{"value":90700,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":193,"unit":"hp-as-published"},"bodyType":"convertible","price":{"value":5300,"currency":"EUR","taxTreatment":"VAT-not-charged"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}},
+    {"sourceId":"11787220789122620","sourceUrl":"https://mg7group.mobile.bg/obiava-11787220789122620-bmw-840-ci-m-sport","observedAt":"2026-09-08","title":"BMW 840Ci M Sport","productionYear":1995,"productionMonth":1,"mileage":{"value":173000,"unit":"km"},"fuel":"petrol","transmission":"automatic","power":{"value":286,"unit":"hp-as-published"},"bodyType":"coupe","price":{"value":24900,"currency":"EUR","taxTreatment":"VAT-not-charged"},"availability":{"state":"advertised-unconfirmed","reservedOrSoldLabelSeen":false,"independentlyVerified":false},"photos":{"localPaths":[],"permission":"unverified","downloaded":false}}
+  ],
+  "branding": {
+    "publishedBranding": true,
+    "visualReferences": [
+      {"url":"https://mobistatic3.focus.bg/mobile/photosorg/885/2/big1/21785564544332885_sZ.webp","observation":"Showroom wall carries a black circular MG7 GROUP sign with thin white geometric lettering."},
+      {"url":"https://mobistatic3.focus.bg/mobile/photosorg/995/2/big1/21745605265440995_II.webp","observation":"The same circular showroom identity appears with the G63; an MG7 GROUP plate card is visible."},
+      {"url":"https://www.auto.bg/dealers/burgas","observation":"Published storefront image shows MG7 GROUP identity and the matching 08762 77777 phone."}
+    ],
+    "sourceLogoUrl":"https://cdn2.focus.bg/mobile/images/housespicts/h16993744142105534.pic",
+    "sourceLogoKind":"marketplace-banner-reference; not an acquired transparent logo",
+    "workingLogoPath":null,"creationMethod":"none; no asset generated or copied","approvalStatus":"not-evidenced","permission":"unverified","localAssetPackComplete":false
+  },
+  "blockers": [
+    {"id":"essential-media-access","detail":"Direct container downloads of the published banner and BMW X7 photo failed. Web rendering was enough for visual inspection, not for a committed local asset pack.","attemptedUrls":["https://cdn2.focus.bg/mobile/images/housespicts/h16993744142105534.pic","https://mobistatic3.focus.bg/mobile/photosorg/885/2/big1/21785564544332885_sZ.webp"]},
+    {"id":"media-permission","detail":"No reuse grant for dealer branding/stock photos was established. Public visibility is not recorded as permission. No dealer was contacted."},
+    {"id":"creative-tool-unavailable","detail":"No callable image-generation tool was available in this session. No generation occurred; a generic text logo was not substituted."}
+  ],
+  "repositoryCheck": {
+    "mainCommit":"6998a7ce8092b99422cdb9cccc0b18449ff2f541","astraCommit":"4ef7edfe4c1566dcc0688bc78b87f812de1223c4",
+    "mainClientsTree":"b7a453e6658d8e6778bad90075491efae6427fd3","astraClientsTree":"fc19c91c064c418fb4f0b2a5fe1f9a82f2ffffec",
+    "assignedPathPresent":false,"indexedMainSearches":{"mg7group":"no-results","0876277777":"no-results"},"existingVarnaSourceRecordPhonesCompared":true,"matchingIdentityFound":false,"fullAliasAndMetadataSweepComplete":false,
+    "limitation":"Top-level client trees on both branches and indexed main markers were inspected. This is not a complete full-content astra alias scan."
+  },
+  "implementation":{"state":"blocked","applicationsCreated":0,"actualConsumersChanged":[],"notices":["No inherited dealer application or inventory was published as MG7.","This evidence pack is not a runnable showroom.","No deployment, outreach, CRM write, or enquiry delivery occurred."]}
+}

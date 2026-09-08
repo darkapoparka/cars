@@ -1,0 +1,3 @@
+# ELIQ AUTO / Auto Best
+
+This is an independent client copy, not a master. Read ../../../AGENTS.md and ../ASTRA-HANDOFF.md first. The owner authorized one ELIQ trial with Auto Best, Modern and Carwow. Preserve this template's existing UI; do not redesign, migrate frameworks or edit another client's project. Source TEMPLATE.md and .template notes describe the inherited baseline, not QA performed on this copy. Read .client/project.json for actual state. Run local checks and render primary routes before marking verified; scan for remaining source identity, including support routes and metadata. Never deploy, submit enquiries or send outreach from this review task.
