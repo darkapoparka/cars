@@ -1,0 +1,194 @@
+{
+    "url":  "https://www.dubicars.com/2019-ford-figo-1017078.html",
+    "title":  "Ford Figo AMBIENTE",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2019-ford-figo-1017078.html#webpage",
+                                              "url":  "https://www.dubicars.com/2019-ford-figo-1017078.html",
+                                              "name":  "Ford Figo AMBIENTE",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2019-ford-figo-1017078.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2019-ford-figo-1017078.html#car",
+                                              "url":  "https://www.dubicars.com/2019-ford-figo-1017078.html",
+                                              "name":  "Ford Figo AMBIENTE",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/ford#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/ford/figo#model"
+                                                        },
+                                              "vehicleModelDate":  "2019",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/fb18a1/960x540/al-hamoor-al-thahabi-used-cars/088491fe-02d6-49be-a5fb-dc4ac0d3221a.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2019-ford-figo-1017078.html#offer",
+                                                             "price":  "3700",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "185000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "Sedan",
+                                              "color":  "White",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "4",
+                                              "seatingCapacity":  "5",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/FrontWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Black",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "Ford Figo 2019 gcc full automatic very clean car original paint please call 0545555204"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/e9b929/w_1300x760/al-hamoor-al-thahabi-used-cars/088491fe-02d6-49be-a5fb-dc4ac0d3221a.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/475018/w_1300x760/al-hamoor-al-thahabi-used-cars/8be9ff35-07ae-4b16-b04e-a3301e996508.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4fc229/w_1300x760/al-hamoor-al-thahabi-used-cars/3ed295e7-b067-437a-a64c-b772d8682bf6.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/cf6908/w_1300x760/al-hamoor-al-thahabi-used-cars/ce5809a4-aaac-4eba-ab46-174fb040b7cf.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a3d594/w_1300x760/al-hamoor-al-thahabi-used-cars/ffccd3a6-ae6c-48e0-878b-6aaa7f6bdf20.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ec7594/w_1300x760/al-hamoor-al-thahabi-used-cars/6148bec1-2bc0-4a87-921e-fbcc5de80509.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4701be/w_1300x760/al-hamoor-al-thahabi-used-cars/63bf7e5a-3015-45ca-9cf3-bc94e9002a24.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c0e65a/w_1300x760/al-hamoor-al-thahabi-used-cars/cefc8bad-0fc9-4017-8409-3ce41acb5803.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1aed95/w_1300x760/al-hamoor-al-thahabi-used-cars/ac057713-944b-495d-ab9b-7ccf693e9624.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/50cee1/w_1300x760/al-hamoor-al-thahabi-used-cars/68df87a4-8b1c-4d39-9a33-c8287a4aea51.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/805746/w_1300x760/al-hamoor-al-thahabi-used-cars/49242be4-ce0a-4500-bc1b-7b8bbf123efd.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a0afc0/w_1300x760/al-hamoor-al-thahabi-used-cars/f4c543a5-8b76-4222-b1f2-5d6f69caf1bc.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/464bbf/w_1300x760/al-hamoor-al-thahabi-used-cars/1d84d4b9-cd9b-46dc-9298-37e4c4624b1b.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/38b6c6/w_1300x760/al-hamoor-al-thahabi-used-cars/9593f7b3-7c7c-48ba-890f-c8ae41d6a2eb.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6935c8/w_1300x760/al-hamoor-al-thahabi-used-cars/dce5ccc2-114d-4c53-994e-0f77cb8dd6b7.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1b1075/w_1300x760/al-hamoor-al-thahabi-used-cars/954f2119-1e34-4042-8c56-914dfc0ddae5.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/26f150/130x76/al-hamoor-al-thahabi-used-cars/088491fe-02d6-49be-a5fb-dc4ac0d3221a.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/78ee8c/130x76/al-hamoor-al-thahabi-used-cars/8be9ff35-07ae-4b16-b04e-a3301e996508.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b4a51e/130x76/al-hamoor-al-thahabi-used-cars/3ed295e7-b067-437a-a64c-b772d8682bf6.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/e810f0/130x76/al-hamoor-al-thahabi-used-cars/ce5809a4-aaac-4eba-ab46-174fb040b7cf.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ba7ea4/130x76/al-hamoor-al-thahabi-used-cars/ffccd3a6-ae6c-48e0-878b-6aaa7f6bdf20.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a5fa89/130x76/al-hamoor-al-thahabi-used-cars/6148bec1-2bc0-4a87-921e-fbcc5de80509.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5e323c/130x76/al-hamoor-al-thahabi-used-cars/63bf7e5a-3015-45ca-9cf3-bc94e9002a24.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0edb09/130x76/al-hamoor-al-thahabi-used-cars/cefc8bad-0fc9-4017-8409-3ce41acb5803.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/10d36a/130x76/al-hamoor-al-thahabi-used-cars/ac057713-944b-495d-ab9b-7ccf693e9624.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/2a7af8/130x76/al-hamoor-al-thahabi-used-cars/68df87a4-8b1c-4d39-9a33-c8287a4aea51.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0a51f3/130x76/al-hamoor-al-thahabi-used-cars/49242be4-ce0a-4500-bc1b-7b8bbf123efd.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6a3ece/130x76/al-hamoor-al-thahabi-used-cars/f4c543a5-8b76-4222-b1f2-5d6f69caf1bc.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7b903d/130x76/al-hamoor-al-thahabi-used-cars/1d84d4b9-cd9b-46dc-9298-37e4c4624b1b.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8519c2/130x76/al-hamoor-al-thahabi-used-cars/9593f7b3-7c7c-48ba-890f-c8ae41d6a2eb.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c70c72/130x76/al-hamoor-al-thahabi-used-cars/dce5ccc2-114d-4c53-994e-0f77cb8dd6b7.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c9ce9f/130x76/al-hamoor-al-thahabi-used-cars/954f2119-1e34-4042-8c56-914dfc0ddae5.jpeg",
+                       "alt":  "Ford Figo AMBIENTE"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiFord DubaiFigo DubaiFigo 2019 DubaiFord Figo AMBIENTE\nFord Figo AMBIENTE\nSave\n1 / 16\nHighlights\nLocation\nDubai\nModel year\n2019\nKilometers\n185,000 Km\nEngine capacity\n1.5 L\nSpecs\nGCC\nDescription\nSeller Comments\n\nFord Figo 2019 gcc full automatic very clean car original paint please call\n\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\nLowest running cost in class\nΓÇó\nLowest depreciation in class\nΓÇó\n5-Star NCAP safety rating\n\nThis 2019 Ford Figo AMBIENTE represents a smart, strategic purchase for any GCC driver prioritizing long-term value and operational efficiency. As a GCC-spec sedan, it is purpose-built to withstand the regional climate, featuring a cooling system and internal components designed for high-temperature durability that far outlast international imports. The white exterior is a significant advantage in the local market, as it reflects heat more effectively and maintains a higher resale value than almost any other color. In a segment often dominated by high-mileage delivery vehicles, this specific sedan stands out as a reliable daily commuter that offers a perfect balance between size and utility. Its 1.5L engine is renowned for being one of the most fuel-efficient in its class, making it an ideal choice for those looking to minimize their monthly petrol spend while navigating the busy highways of the UAE and beyond. The AMBIENTE trim provides all the essential modern conveniences without the unnecessary electronic complexity, ensuring that maintenance remains affordable and straightforward for years to come. For any buyer looking for a dependable, cost-effective vehicle that holds its value exceptionally well in the GCC used market, this listing is a standout opportunity.\n\nRead more\nSpecs \u0026 features\nMake\nFord\nModel\nFigo\nTrim\nAMBIENTE\nColor\nWhite\nInterior color\nBlack\nEngine capacity\n1.5 L\nCylinders\n4 Cylinders\nHorsepower\n112 HP\nTransmission\nAutomatic\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nSeating capacity\n5 seater\nWheel size\n16\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n07 Sep, 2026\nSafety\nTraction Control\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nComfort \u0026 Convenience\nKeyless entry\nSteering wheel adjustment\nAir conditioning\nSmart key\nSteering wheel height adjustment\nInfotainment\nSpeakers\n$ 3,700\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nPremium\nFord Fusion SE\n$ 3,300\nDubai\nGCC\n2012\n178.5K Km\nFeatured\nJaguar XF PREMIUM LUXURY\n$ 3,814\nDubai\nGCC\n2013\n380K Km\nRenault Symbol LE\n$ 3,800\nDubai\nGCC\n2020\n199K Km\nNissan Sentra SL\n$ 3,700\nWarranty\nSharjah\nGCC\n2014\n110K Km\nPremium\nLexus ES350 BASE\n$ 3,800\nSharjah\nAmerican\n2007\n225.8K Km\nMazda 6 V\n$ 3,600\nDubai\nJapanese\n2015\n145K Km\nChevrolet Cruze LS\n$ 3,800\nSharjah\nGCC\n2016\n235K Km\nFeatured\nChevrolet Cruze LS\n$ 3,600\nDubai\nGCC\n2016\n104K Km\nRelated links\nFord Figo Information Section\nFord\nFord Figo\nFord Figo 1.5L Trend H/B\nUsed Ford Figo by Location\nUsed Ford Figo UAE (5)\nUsed Ford Figo Dubai (4)\nUsed Ford Figo Sharjah (1)\nUsed Ford Figo by Year\nUsed Ford Figo 2019 (2)\nUsed Ford Figo 2020 (2)\nUsed Ford Figo 2016 (1)\nSome other models of Ford\nUsed Ford Taunus in Dubai (1)\nUsed Ford Mondeo in Dubai (2)\nUsed Ford Fusion in Dubai (10)\nUsed Ford A Saloon in Dubai (3)\nUsed Ford Crown Victoria in Dubai (1)\nUsed Ford Taurus in Dubai (21)\nUsed Ford Focus in Dubai (14)\nUsed Ford EcoSport in Dubai (20)\nOther links\nAmerican Cars in Dubai\nSmall cars for sale in Dubai\nFamily cars for sale in Dubai\nGCC cars for sale in Dubai\nCheap cars for sale in Dubai\nCars under 15000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 1017078\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nFord Figo 2019 gcc full automatic very clean car original paint please call\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\nLowest running cost in class\nLowest depreciation in class\n5-Star NCAP safety rating\nSummary\n\nThis 2019 Ford Figo AMBIENTE represents a smart, strategic purchase for any GCC driver prioritizing long-term value and operational efficiency. As a GCC-spec sedan, it is purpose-built to withstand the regional climate, featuring a cooling system and internal components designed for high-temperature durability that far outlast international imports. The white exterior is a significant advantage in the local market, as it reflects heat more effectively and maintains a higher resale value than almost any other color. In a segment often dominated by high-mileage delivery vehicles, this specific sedan stands out as a reliable daily commuter that offers a perfect balance between size and utility. Its 1.5L engine is renowned for being one of the most fuel-efficient in its class, making it an ideal choice for those looking to minimize their monthly petrol spend while navigating the busy highways of the UAE and beyond. The AMBIENTE trim provides all the essential modern conveniences without the unnecessary electronic complexity, ensuring that maintenance remains affordable and straightforward for years to come. For any buyer looking for a dependable, cost-effective vehicle that holds its value exceptionally well in the GCC used market, this listing is a standout opportunity.\n\nThis Car vs Other 2019 Ford Figos\n\nWhen looking at the 2019 used market in the GCC, this Figo is positioned exactly where a reliable daily driver should be. While the mileage reflects a car that has been consistently utilized for regional commuting, it is important to remember that Ford engines in this category are designed for exactly this type of long-distance highway use. Unlike cars that sit idle, a regularly driven vehicle like this often has better-lubricated seals and more consistent service history. The white exterior provides a distinct advantage over darker 2019 models, as it helps keep the cabin significantly cooler during the peak summer months and is the most sought-after color for resale in Dubai and Riyadh. This specific car represents a transparent ownership history, which is often more valuable than a low-mileage example that hasn\u0027t been properly maintained. Choosing a GCC-spec 2019 model ensures that you are getting a car that is fully compatible with local fuel grades and has access to a massive inventory of affordable spare parts across the region. It is a practical choice that prioritizes mechanical integrity and regional suitability over vanity.\n\nAMBIENTE vs Lower Trims\n\nThe AMBIENTE trim serves as the bedrock of the Figo lineup, offering a level of build quality and essential features that are often missing in budget-tier competitors. While it is designed as a focused and efficient sedan, it provides several key upgrades over entry-level base models that GCC buyers will appreciate, including standard power windows and a more integrated audio system. The interior materials in the AMBIENTE are selected for their durability and ease of cleaning, which is a major factor for those living in dusty or sandy environments. You also benefit from a more refined dashboard layout compared to the absolute base variants, giving the cabin a more cohesive and professional feel for both driver and passengers. Ford has focused the AMBIENTE trim on what matters most: reliability, safety, and air conditioning performance. This means you aren\u0027t paying a premium for complex sensors that might fail in the extreme heat, but you still get a car that feels modern and capable on the road. It is the intelligent middle ground for a buyer who wants a modern driving experience without the premium price tag of the Titanium trim.\n\nFigo vs Segment Rivals\n\nIn the highly competitive sub-compact sedan segment, the Figo competes directly with the Toyota Yaris, Nissan Sunny, and Kia Rio. Where the Ford takes the lead is in its solid driving feel and European-influenced chassis tuning, which provides a more planted and stable experience on fast-moving UAE highways compared to some of its lighter rivals. The 1.5L engine offers a punchier 112 hp, which is often higher than the entry-level engines found in the base Yaris, making merging into high-speed traffic much safer and more effortless. Furthermore, the Figo is known for having a remarkably robust air conditioning system, a critical factor for any GCC resident who has experienced a 45-degree July afternoon. While rivals often feel thin and lightweight, the Ford feels substantial and well-insulated from road noise. Its fuel tank is sized perfectly for the region, allowing for long distances between fills during cross-emirate trips. This makes it a preferred choice for those who value mechanical substance and highway composure over the flashy but often less-durable interiors of other budget sedans.\n\nRunning Costs \u0026 Resale\n\nThe cost of ownership is where this Figo truly shines, boasting some of the lowest running costs in the entire GCC sedan market. Real-world fuel consumption for the 1.5L engine is excellent, typically averaging between 5.5L and 6.2L per 100km on the highway, ensuring that your fuel budget remains manageable even with frequent travel. Being a GCC-spec vehicle, it uses standard 95-octane fuel and is easy to service at any of the numerous authorized centers or specialized independent garages located from Muscat to Kuwait City. Maintenance is predictably affordable, with service intervals that are standard for the brand and parts that are widely available at very competitive price points. In terms of resale, the Figo is a hero of the used market; it typically sees a much lower annual depreciation rate than many European sub-compacts, often losing only about 10-12% of its value per year. This means that when it comes time for you to upgrade, you can expect a quick sale at a price that reflects its reputation for longevity. It is essentially a high-liquidity asset on wheels.\n\nPerformance \u0026 Capability\n\nUnder the hood, the 112 hp 1.5L 4-cylinder engine provides a surprisingly spirited performance for a car of its size. The automatic transmission is tuned for smoothness and efficiency, providing seamless shifts that make stop-start city traffic in Dubai or Riyadh much less taxing. With 112 hp at your disposal, the car feels agile and responsive, which is particularly useful when navigating tight urban environments or finding gaps in busy multi-lane traffic. Its 0-100 km/h performance is respectable for its class, ensuring you aren\u0027t left behind at the lights. On the highway, the Figo maintains its composure at cruising speeds, offering a stable ride that belies its compact dimensions. The front-wheel-drive setup is ideal for the flat, paved terrain of the GCC, offering predictable handling and excellent traction in both dry and occasional wet conditions. The ground clearance is also perfectly suited for the regional infrastructure, easily handling speed bumps and minor inconsistencies in the road without concern. It is a car that feels confident and capable across a wide variety of daily driving scenarios.\n\nComfort \u0026 Cabin\n\nInside, the Figo offers a surprisingly spacious cabin that comfortably seats five adults, making it a viable option for small families or carpooling. The seating is designed with ergonomic support in mind, which is a blessing during long commutes between emirates. One of the standout features is the high-output air conditioning system, which has been specifically calibrated to cool the cabin rapidly even after the car has been parked in direct sunlight. Rear passengers aren\u0027t forgotten, with the cabin layout ensuring adequate airflow reaches the back of the car quickly. The sedan body style provides a separate and secure boot space, which is ample for grocery runs, airport luggage, or work equipment, keeping your items out of sight and protected from the heat. Noise, vibration, and harshness levels are well-managed, providing a quiet sanctuary from the bustle of city streets. The simplicity of the dashboard allows the driver to focus on the road, with all controls within easy reach and intuitively placed for ease of use during the drive.\n\nSafety\n\nSafety is a paramount consideration for Ford, and the 2019 Figo is no exception, having earned a 5-Star NCAP safety rating. This trim comes equipped with dual front airbags and a high-strength steel safety cage that provides peace of mind on the road. Anti-lock Braking System (ABS) and Electronic Brakeforce Distribution (EBD) are standard, providing controlled stopping power even in emergency situations on sandy or slick surfaces. The stability control system is particularly valuable for maintaining traction during sudden maneuvers on high-speed highways. For families, the inclusion of ISOFIX child seat anchors ensures that the youngest passengers are securely protected. The car\u0027s visibility is excellent, with large mirrors and a greenhouse design that minimizes blind spots, which is a crucial advantage when navigating the fast-paced, multi-lane traffic common in the GCC. It is a vehicle that doesn\u0027t compromise on the safety of its occupants, providing a secure environment for every journey.\n\nThe bottom line\n\nThis Ford Figo is the ideal choice for the budget-conscious professional or a small family looking for a reliable, GCC-spec vehicle with a proven track record. Its combination of low running costs, strong resale value, and robust mechanical health makes it one of the smartest values currently available in the regional used market.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n5 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nBlack\nHorsepower\n112 HP\nModel year\n2019\nMake\nFord\nModel\nFigo\nColor\nWhite\nCylinders\n4 Cylinders\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nWheel size\n16\"\nService history\nNo\nSpecs\nGCC\nKilometers\n185,000 Km\nFuel Type\nPetrol\nEngine capacity\n1.5 L\nSafety\nTraction Control\nTyre pressure monitoring (TPMS)\nAnti-theft protection\nComfort \u0026 Convenience\nKeyless entry\nSteering wheel adjustment\nAir conditioning\nSmart key\nSteering wheel height adjustment\nInfotainment\nSpeakers\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}

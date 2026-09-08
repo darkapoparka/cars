@@ -1,0 +1,202 @@
+{
+    "url":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html",
+    "title":  "Chevrolet Malibu LT",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html#webpage",
+                                              "url":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html",
+                                              "name":  "Chevrolet Malibu LT",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html#car",
+                                              "url":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html",
+                                              "name":  "Chevrolet Malibu LT",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/chevrolet#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/chevrolet/malibu#model"
+                                                        },
+                                              "vehicleModelDate":  "2022",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/80d4a1/960x540/al-hamoor-al-thahabi-used-cars/144141e0-c631-4571-8169-4d00f2669e36.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2022-chevrolet-malibu-1018774.html#offer",
+                                                             "price":  "8800",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "95000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "Sedan",
+                                              "color":  "Silver",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "4",
+                                              "seatingCapacity":  "5",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/FrontWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Grey",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "Chevrolet malubu 2022 full automatic very clean good condition please call 0545555204"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/8ddbc8/w_1300x760/al-hamoor-al-thahabi-used-cars/144141e0-c631-4571-8169-4d00f2669e36.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3a119b/w_1300x760/al-hamoor-al-thahabi-used-cars/bde37cf9-7740-4429-8797-18f307827209.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3d83a4/w_1300x760/al-hamoor-al-thahabi-used-cars/78013313-c672-4687-8a96-572967381814.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/069c42/w_1300x760/al-hamoor-al-thahabi-used-cars/823d0aa2-edd7-46f7-8f1f-7177710101c2.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/22fb58/w_1300x760/al-hamoor-al-thahabi-used-cars/a8def120-d97a-4197-98c8-d329ef516019.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/e81cfb/w_1300x760/al-hamoor-al-thahabi-used-cars/be3c4a8b-af6d-4fd9-ba2c-832faacc87b4.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/75d2a4/w_1300x760/al-hamoor-al-thahabi-used-cars/77c670e0-966a-45ee-ada7-d5836df5d8d3.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ad1b56/w_1300x760/al-hamoor-al-thahabi-used-cars/cd2904b7-cd5c-47d8-9bfe-966e259b444e.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/cdf507/w_1300x760/al-hamoor-al-thahabi-used-cars/3b370d53-f914-4722-ab5a-ac4dea59a0f7.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ff188d/w_1300x760/al-hamoor-al-thahabi-used-cars/04507b03-1418-493c-9864-29452a688028.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/54ce2d/w_1300x760/al-hamoor-al-thahabi-used-cars/c5684a2e-c272-4754-85fe-5f0d51708891.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d8852c/w_1300x760/al-hamoor-al-thahabi-used-cars/deca6501-87cc-4c65-afe3-4c20e46f25ba.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/dda525/w_1300x760/al-hamoor-al-thahabi-used-cars/181691d5-04ab-4edc-87e9-92c12377239d.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/4ffc16/w_1300x760/al-hamoor-al-thahabi-used-cars/71bc5365-1029-4001-90f1-1ea44ceaa19c.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6a031e/w_1300x760/al-hamoor-al-thahabi-used-cars/6c5f24d0-f0f7-491b-b587-62adc5af24a4.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/190de9/w_1300x760/al-hamoor-al-thahabi-used-cars/f7981d27-2d3f-4e33-b68c-2438d1932661.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f76e16/w_1300x760/al-hamoor-al-thahabi-used-cars/be500188-3fc2-4924-93db-10a8a13d0fee.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/a12906/130x76/al-hamoor-al-thahabi-used-cars/144141e0-c631-4571-8169-4d00f2669e36.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ef88d3/130x76/al-hamoor-al-thahabi-used-cars/bde37cf9-7740-4429-8797-18f307827209.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/63cfe6/130x76/al-hamoor-al-thahabi-used-cars/78013313-c672-4687-8a96-572967381814.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/319a89/130x76/al-hamoor-al-thahabi-used-cars/823d0aa2-edd7-46f7-8f1f-7177710101c2.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/71e5de/130x76/al-hamoor-al-thahabi-used-cars/a8def120-d97a-4197-98c8-d329ef516019.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8e82a3/130x76/al-hamoor-al-thahabi-used-cars/be3c4a8b-af6d-4fd9-ba2c-832faacc87b4.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1c3ebc/130x76/al-hamoor-al-thahabi-used-cars/77c670e0-966a-45ee-ada7-d5836df5d8d3.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c5e58a/130x76/al-hamoor-al-thahabi-used-cars/cd2904b7-cd5c-47d8-9bfe-966e259b444e.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0699a1/130x76/al-hamoor-al-thahabi-used-cars/3b370d53-f914-4722-ab5a-ac4dea59a0f7.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/fd0c66/130x76/al-hamoor-al-thahabi-used-cars/04507b03-1418-493c-9864-29452a688028.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8292b6/130x76/al-hamoor-al-thahabi-used-cars/c5684a2e-c272-4754-85fe-5f0d51708891.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/aa6826/130x76/al-hamoor-al-thahabi-used-cars/deca6501-87cc-4c65-afe3-4c20e46f25ba.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c1e08f/130x76/al-hamoor-al-thahabi-used-cars/181691d5-04ab-4edc-87e9-92c12377239d.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/31611c/130x76/al-hamoor-al-thahabi-used-cars/71bc5365-1029-4001-90f1-1ea44ceaa19c.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5f72dc/130x76/al-hamoor-al-thahabi-used-cars/6c5f24d0-f0f7-491b-b587-62adc5af24a4.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/9050af/130x76/al-hamoor-al-thahabi-used-cars/f7981d27-2d3f-4e33-b68c-2438d1932661.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/21fa56/130x76/al-hamoor-al-thahabi-used-cars/be500188-3fc2-4924-93db-10a8a13d0fee.jpeg",
+                       "alt":  "Chevrolet Malibu LT"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiChevrolet DubaiMalibu DubaiMalibu 2022 DubaiChevrolet Malibu LT\nChevrolet Malibu LT\nSave\n1 / 17\nHighlights\nLocation\nDubai\nModel year\n2022\nKilometers\n95,000 Km\nEngine capacity\n1.5 L\nSpecs\nGCC\nDescription\nSeller Comments\n\nChevrolet malubu 2022 full automatic very clean good condition please call\n\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\nLowest running cost in class\nΓÇó\nLargest fuel tank in class\nΓÇó\n5-Star NCAP safety rating\n\nThis GCC-spec sedan offers an exceptional balance of modern efficiency and mid-sized comfort, making it a highly practical choice for the regional market. With its silver exterior providing excellent heat reflection and maintaining strong resale value in the GCC, this particular unit is well-suited for the local climate. The LT trim is a significant step up from the base model, providing the essential tech and comfort upgrades that regional buyers expect for daily commuting. Compared to its rivals, it stands out for its quiet cabin insulation and a smooth ride quality that handles the region\u0027s high-speed highways with ease. For a buyer looking for a reliable, fuel-efficient daily driver that doesn\u0027t compromise on interior space, this listing represents a very sensible and low-risk investment. The primary ownership advantage here is the widespread availability of parts and the proven durability of the powertrain in high-temperature environments.\n\nRead more\nSpecs \u0026 features\nMake\nChevrolet\nModel\nMalibu\nTrim\nLT\nColor\nSilver\nInterior color\nGrey\nEngine capacity\n1.5 L\nCylinders\n4 Cylinders\nHorsepower\n163 HP\nTransmission\nAutomatic\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nSeating capacity\n5 seater\nWheel size\n17\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n07 Sep, 2026\n$ 8,800\nFinancing from\n460\n/ month\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nChevrolet Malibu LT\n$ 7,400\nDubai\nAmerican\n2020\n105K Km\nChevrolet Malibu LT\n$ 7,700\nDubai\nAmerican\n2021\n147K Km\nPremium\nChevrolet Malibu LS\n$ 8,500\nDubai\nAmerican\n2024\n141.4K Km\nFeatured\nChevrolet Malibu LS\n$ 8,800\nDubai\nAmerican\n2023\n32.7K Km\nChevrolet Malibu LS\n$ 8,200\nSharjah\nGCC\n2020\n80K Km\nChevrolet Malibu LS\n$ 8,200\nWarranty\nSharjah\nAmerican\n2022\n33K Km\nChevrolet Malibu LT\n$ 8,200\nWarranty\nSharjah\nAmerican\n2021\n28K Km\nChevrolet Groove LT\n$ 8,037\nWarranty\nDubai\nGCC\n2022\n51.7K Km\nRelated links\nChevrolet Malibu Information Section\nChevrolet\nChevrolet Malibu\nChevrolet Malibu 1.5L Turbo LS\nUsed Chevrolet Malibu by Location\nUsed Chevrolet Malibu UAE (17)\nUsed Chevrolet Malibu Dubai (13)\nUsed Chevrolet Malibu Sharjah (4)\nUsed Chevrolet Malibu by Year\nUsed Chevrolet Malibu 2020 (4)\nUsed Chevrolet Malibu 2021 (3)\nUsed Chevrolet Malibu 2016 (2)\nUsed Chevrolet Malibu 2022 (2)\nUsed Chevrolet Malibu 2024 (2)\nUsed Chevrolet Malibu 2017 (1)\nUsed Chevrolet Malibu 2018 (1)\nUsed Chevrolet Malibu 2019 (1)\nUsed Chevrolet Malibu 2023 (1)\nSome other models of Chevrolet\nUsed Chevrolet Cruze in Dubai (20)\nUsed Chevrolet Aveo in Dubai (4)\nUsed Chevrolet Impala in Dubai (20)\nUsed Chevrolet Sonic in Dubai (1)\nUsed Chevrolet Caprice in Dubai (4)\nUsed Chevrolet Lumina in Dubai (1)\nUsed Chevrolet Optra in Dubai (1)\nUsed Chevrolet Trax in Dubai (17)\nOther links\nAmerican Cars in Dubai\nMid Size cars for sale in Dubai\nFamily cars for sale in Dubai\nInstallment cars for sale in Dubai\nGCC cars for sale in Dubai\nCheap cars for sale in Dubai\nCars under 40000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 1018774\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nChevrolet malubu 2022 full automatic very clean good condition please call\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\nLowest running cost in class\nLargest fuel tank in class\n5-Star NCAP safety rating\nSummary\n\nThis GCC-spec sedan offers an exceptional balance of modern efficiency and mid-sized comfort, making it a highly practical choice for the regional market. With its silver exterior providing excellent heat reflection and maintaining strong resale value in the GCC, this particular unit is well-suited for the local climate. The LT trim is a significant step up from the base model, providing the essential tech and comfort upgrades that regional buyers expect for daily commuting. Compared to its rivals, it stands out for its quiet cabin insulation and a smooth ride quality that handles the region\u0027s high-speed highways with ease. For a buyer looking for a reliable, fuel-efficient daily driver that doesn\u0027t compromise on interior space, this listing represents a very sensible and low-risk investment. The primary ownership advantage here is the widespread availability of parts and the proven durability of the powertrain in high-temperature environments.\n\nThis Car vs Other 2022 Malibus\n\nWith 95,000 km on the odometer, this vehicle has been driven approximately 47,500 km per year, which is above the typical GCC average for a sedan but very common for professional commuters traveling between emirates like Dubai and Abu Dhabi. While the mileage is higher than some counterparts, it indicates a car that has spent the majority of its life at steady highway speeds, which is often easier on the engine and transmission than stop-start city driving. The silver exterior is a major advantage for this specific year, as it is one of the most sought-after colors in the UAE and Saudi markets for its ability to hide dust and maintain a cooler cabin temperature. Buyers will find that this car is priced competitively to reflect its usage, offering a newer model year and modern features at a more accessible entry point. The vehicle\u0027s GCC specification ensures that all cooling systems and filtration are optimized for the intense local heat, unlike imported North American versions. Choosing this 2022 model gives you the updated infotainment and styling refinements that earlier versions lack, while still benefiting from a well-documented service history common to GCC-spec cars.\n\nLT vs Lower Trims\n\nMoving up to the LT trim from the base LS variant introduces several critical upgrades that transform the daily driving experience in the Middle East. One of the most noticeable differences is the inclusion of dual-zone automatic climate control, allowing the driver and passenger to manage the intense summer heat independently. The LT also adds premium cloth seating surfaces that are more durable and remain cooler to the touch than leather when the car is parked in direct sunlight. You will also find an upgraded 8-inch infotainment touchscreen that supports seamless smartphone integration, a feature often missed in the more basic configurations. Exterior enhancements such as LED daytime running lights and larger alloy wheels give the LT a more sophisticated presence on the road compared to the steel-wheeled base models. Additionally, the LT trim often includes remote engine start, a vital feature in the GCC that allows you to cool down the cabin before even stepping inside.\n\nMalibu vs Segment Rivals\n\nIn the highly competitive mid-size sedan segment, this model competes directly with the Toyota Camry, Honda Accord, and Nissan Altima. While the Japanese rivals are known for their ubiquity, this Chevrolet leads the segment in terms of fuel tank capacity, allowing for longer stretches between fill-ups on cross-country trips across the Emirates or Oman. Its 1.5L turbocharged engine provides a more torque-heavy feel at lower RPMs compared to the naturally aspirated engines found in some base-trim competitors, making it feel more responsive in city traffic. The cabin is frequently cited by owners as being quieter than the Accord or Altima, thanks to active noise cancellation technology that is often standard on this trim. Furthermore, the infotainment interface is widely considered one of the most user-friendly in its class, offering a shorter learning curve than the systems found in many Asian counterparts. For a family-oriented buyer, the trunk space is notably deep and wide, providing more usable cargo volume for grocery runs or airport trips than several of its closest rivals.\n\nRunning Costs \u0026 Resale\n\nThe 1.5L turbocharged engine is designed with efficiency as a priority, delivering impressive real-world fuel economy that helps mitigate the costs of high-mileage commuting. In typical GCC conditions, you can expect excellent highway efficiency, while the stop-start traffic of Riyadh or Dubai is handled by a fuel-sipping idle calibration. Being a GCC-spec vehicle, it retains a significantly higher resale value than American or European imports, as local buyers trust the cooling systems and radiator capacity of the regional version. Maintenance is straightforward, with authorized service centers located in every major city across the UAE, Saudi Arabia, and Kuwait, ensuring that parts like filters, brake pads, and sensors are always in stock. The annual depreciation for this model in the GCC typically hovers around 12-15%, which is standard for American sedans in this class, but the silver color and LT trim help it stay on the higher end of that range. Long-term reliability for this powertrain has been well-proven in the region, with many units easily surpassing the 200,000 km mark with regular oil changes.\n\nPerformance \u0026 Capability\n\nPerformance is driven by a 1.5L 4-cylinder turbocharged engine producing 163 hp, which provides plenty of pep for overtaking on fast-moving highways like the E11. The 0-100 km/h sprint is achieved in approximately 8.5 seconds, which is more than adequate for the needs of a daily sedan buyer. The automatic transmission is tuned for smoothness, prioritizing passenger comfort and fuel savings over aggressive shifts, which aligns perfectly with the car\u0027s role as a comfortable cruiser. Front Wheel Drive ensures predictable handling in the rare instances of rain or on the sandy surfaces occasionally found on secondary roads. The steering is light and easy to manage in tight parking garages in Dubai Marina, yet it weights up nicely at highway speeds to provide a sense of stability and confidence. Even when fully loaded with five passengers and luggage, the suspension remains composed, absorbing road imperfections and speed bumps with a sophisticated, damped feel. This car is not about raw speed but about effortless, efficient progress through the varying landscapes of the GCC.\n\nComfort \u0026 Cabin\n\nInside, the cabin is designed to be a sanctuary from the harsh outdoor environment, with seating for five adults and plenty of legroom in both the front and rear. The air conditioning system is specifically engineered for the Middle East, capable of dropping the interior temperature rapidly even after the car has been sitting in 45┬░C heat. Rear seat passengers are not forgotten, as the LT trim includes dedicated rear air vents to ensure the entire cabin remains comfortable. The materials used throughout the interior are chosen for durability, designed to resist the fading and cracking that can sometimes occur with prolonged sun exposure. Sound deadening is a particular highlight, with acoustic-laminated glass that keeps wind noise to a minimum during high-speed travel. Storage is plentiful, with various bins and pockets for phones, water bottles, and charging cables, making it an ideal environment for long-distance road trips. The layout is ergonomic and intuitive, ensuring that the driver can focus on the road while easily adjusting the climate or audio settings.\n\nSafety\n\nSafety is a paramount feature of this 2022 model, which holds a 5-Star NCAP safety rating, providing peace of mind for family buyers. The LT trim comes equipped with a comprehensive suite of airbags, including front, side, and curtain protection for all occupants. Electronic Stability Control and Traction Control are standard, which are vital for maintaining grip on the dusty or oily surfaces that can occur on regional roads after a long dry spell. A high-definition rearview camera is standard, making reversing in crowded mall parking lots significantly safer and easier. The car also features Rear Park Assist, which uses sensors to alert the driver to obstacles that might be out of the camera\u0027s line of sight. For those frequently driving on the high-speed multi-lane highways of the GCC, the strong braking performance and standard Anti-lock Braking System provide the necessary stopping power to handle unexpected traffic slowdowns. The chassis itself is constructed with high-strength steel in key areas, designed to direct impact energy away from the passenger cell in the event of a collision.\n\nThe bottom line\n\nThis Malibu is a perfect match for a value-conscious professional or a small family who needs a modern, reliable sedan that is already optimized for the GCC climate. While the mileage is higher, the GCC specification and desirable silver color make this a low-risk, high-reward purchase for anyone looking for a 2022 model at a significant discount.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n5 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nGrey\nHorsepower\n163 HP\nModel year\n2022\nMake\nChevrolet\nModel\nMalibu\nColor\nSilver\nCylinders\n4 Cylinders\nDrive type\nFront Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSedan\nNumber of doors\n4 Doors\nWheel size\n17\"\nService history\nNo\nSpecs\nGCC\nKilometers\n95,000 Km\nFuel Type\nPetrol\nEngine capacity\n1.5 L\nFinance this car\nLoan Calculator\n460\nEstimated monthly payment\nDown payment\n20%\n6,400\nLoan period\n60\nmonths\nPlease note\n\nWe have assumed a 2.99% interest rate. 20% is usually a minimum downpayment. This is for illustrative purposes only. Please ask your financial adviser or service for advice. Terms and condition apply.\n\nContact seller\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}

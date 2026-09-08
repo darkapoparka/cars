@@ -1,0 +1,226 @@
+{
+    "url":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html",
+    "title":  "Nissan Rogue PLATINUM",
+    "structured":  [
+                       {
+                           "@context":  "https://schema.org",
+                           "@graph":  [
+                                          {
+                                              "@type":  "ItemPage",
+                                              "@id":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html#webpage",
+                                              "url":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html",
+                                              "name":  "Nissan Rogue PLATINUM",
+                                              "mainEntity":  {
+                                                                 "@id":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html#car"
+                                                             }
+                                          },
+                                          {
+                                              "@type":  [
+                                                            "Product",
+                                                            "Car"
+                                                        ],
+                                              "@id":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html#car",
+                                              "url":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html",
+                                              "name":  "Nissan Rogue PLATINUM",
+                                              "brand":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/nissan#brand"
+                                                        },
+                                              "model":  {
+                                                            "@id":  "https://www.dubicars.com/new-cars/nissan/rogue#model"
+                                                        },
+                                              "vehicleModelDate":  "2023",
+                                              "itemCondition":  "https://schema.org/UsedCondition",
+                                              "image":  "https://www.dubicars.com/images/82396b/960x540/al-hamoor-al-thahabi-used-cars/52fec8d8-088e-4437-b05b-090ac765b2c8.jpeg",
+                                              "offers":  {
+                                                             "@type":  "Offer",
+                                                             "@id":  "https://www.dubicars.com/2023-nissan-rogue-1005647.html#offer",
+                                                             "price":  "12300",
+                                                             "priceCurrency":  "USD",
+                                                             "availability":  "https://schema.org/InStock",
+                                                             "seller":  {
+                                                                            "@id":  "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414#organization"
+                                                                        }
+                                                         },
+                                              "mileageFromOdometer":  {
+                                                                          "@type":  "QuantitativeValue",
+                                                                          "value":  "56000",
+                                                                          "unitCode":  "KMT"
+                                                                      },
+                                              "bodyType":  "SUV/Crossover",
+                                              "color":  "Grey",
+                                              "fuelType":  "Petrol",
+                                              "numberOfDoors":  "5",
+                                              "seatingCapacity":  "5",
+                                              "vehicleTransmission":  "Automatic",
+                                              "driveWheelConfiguration":  "https://schema.org/AllWheelDriveConfiguration",
+                                              "vehicleInteriorColor":  "Black",
+                                              "steeringPosition":  "https://schema.org/LeftHandDriving",
+                                              "description":  "Nissan rouge 2023 very clean car full automatic good condition please call 0545555204"
+                                          }
+                                      ]
+                       }
+                   ],
+    "images":  [
+                   {
+                       "src":  "https://www.dubicars.com/images/905a65/w_1300x760/al-hamoor-al-thahabi-used-cars/52fec8d8-088e-4437-b05b-090ac765b2c8.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8c86af/w_1300x760/al-hamoor-al-thahabi-used-cars/601d9c73-85c6-457a-82d0-35dce1695bdd.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3b7f7a/w_1300x760/al-hamoor-al-thahabi-used-cars/9d4e6376-0650-4414-9279-a95c131b3e65.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/8d426a/w_1300x760/al-hamoor-al-thahabi-used-cars/12fb1516-8f48-4c88-83e6-3866d434c653.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c2d5b7/w_1300x760/al-hamoor-al-thahabi-used-cars/3ce1f0d1-63ec-40ea-9843-fe8c921ad285.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0809a6/w_1300x760/al-hamoor-al-thahabi-used-cars/53a15012-d19b-4a67-806c-1842ee2d6969.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/f12174/w_1300x760/al-hamoor-al-thahabi-used-cars/ee1f81f0-aefb-49ed-8248-8ded51f8960d.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/76b4d5/w_1300x760/al-hamoor-al-thahabi-used-cars/159a15f9-34f1-46d0-9686-c2087123142d.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5ed0d0/w_1300x760/al-hamoor-al-thahabi-used-cars/d1cc279d-069a-4f97-a26c-d7f28047574d.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/edcc08/w_1300x760/al-hamoor-al-thahabi-used-cars/a39318b7-ef82-46cd-b068-754d5af701ab.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/b9d82e/w_1300x760/al-hamoor-al-thahabi-used-cars/618768db-0f7a-4312-aef0-1e10d4ad91d6.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/25663a/w_1300x760/al-hamoor-al-thahabi-used-cars/380d56fc-6c32-4568-9f24-1fe8d5595aea.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/780d4d/w_1300x760/al-hamoor-al-thahabi-used-cars/44e5b5e4-d6e7-4d08-ab74-b6fd99b73ae2.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/246c2b/w_1300x760/al-hamoor-al-thahabi-used-cars/a1a35c51-75a7-41ce-924f-fbffa923684e.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5fa675/w_1300x760/al-hamoor-al-thahabi-used-cars/f5772542-8b76-4a34-b701-ec0c54d33282.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/9506ec/w_1300x760/al-hamoor-al-thahabi-used-cars/98f6aa61-5fc6-420c-a016-b712e8163de8.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/e8cc7b/w_1300x760/al-hamoor-al-thahabi-used-cars/70542ec1-56bc-47b3-8a3e-a47ac6cd002e.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/99eb31/w_1300x760/al-hamoor-al-thahabi-used-cars/80d350bd-7495-461a-8d4c-c1c2dc1a2d5a.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c9df3c/w_1300x760/al-hamoor-al-thahabi-used-cars/f4a1ebcd-5fa6-4bf7-a6a4-56f18b6560b9.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/575d18/w_1300x760/al-hamoor-al-thahabi-used-cars/3e3966f0-198c-40b1-821a-3e0e32d01624.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/683b1f/130x76/al-hamoor-al-thahabi-used-cars/52fec8d8-088e-4437-b05b-090ac765b2c8.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/ad7794/130x76/al-hamoor-al-thahabi-used-cars/601d9c73-85c6-457a-82d0-35dce1695bdd.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/3e6f76/130x76/al-hamoor-al-thahabi-used-cars/9d4e6376-0650-4414-9279-a95c131b3e65.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/93a0a9/130x76/al-hamoor-al-thahabi-used-cars/12fb1516-8f48-4c88-83e6-3866d434c653.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/1a53c3/130x76/al-hamoor-al-thahabi-used-cars/3ce1f0d1-63ec-40ea-9843-fe8c921ad285.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/adac8d/130x76/al-hamoor-al-thahabi-used-cars/53a15012-d19b-4a67-806c-1842ee2d6969.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/298e1b/130x76/al-hamoor-al-thahabi-used-cars/ee1f81f0-aefb-49ed-8248-8ded51f8960d.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/dd2533/130x76/al-hamoor-al-thahabi-used-cars/159a15f9-34f1-46d0-9686-c2087123142d.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/c61e44/130x76/al-hamoor-al-thahabi-used-cars/d1cc279d-069a-4f97-a26c-d7f28047574d.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/163962/130x76/al-hamoor-al-thahabi-used-cars/a39318b7-ef82-46cd-b068-754d5af701ab.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/d36e5e/130x76/al-hamoor-al-thahabi-used-cars/618768db-0f7a-4312-aef0-1e10d4ad91d6.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/9c3aa9/130x76/al-hamoor-al-thahabi-used-cars/380d56fc-6c32-4568-9f24-1fe8d5595aea.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/5c69aa/130x76/al-hamoor-al-thahabi-used-cars/44e5b5e4-d6e7-4d08-ab74-b6fd99b73ae2.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/0136c5/130x76/al-hamoor-al-thahabi-used-cars/a1a35c51-75a7-41ce-924f-fbffa923684e.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/7f6844/130x76/al-hamoor-al-thahabi-used-cars/f5772542-8b76-4a34-b701-ec0c54d33282.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/745271/130x76/al-hamoor-al-thahabi-used-cars/98f6aa61-5fc6-420c-a016-b712e8163de8.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/840395/130x76/al-hamoor-al-thahabi-used-cars/70542ec1-56bc-47b3-8a3e-a47ac6cd002e.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/2bdd94/130x76/al-hamoor-al-thahabi-used-cars/80d350bd-7495-461a-8d4c-c1c2dc1a2d5a.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/6fcc76/130x76/al-hamoor-al-thahabi-used-cars/f4a1ebcd-5fa6-4bf7-a6a4-56f18b6560b9.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   },
+                   {
+                       "src":  "https://www.dubicars.com/images/36e483/130x76/al-hamoor-al-thahabi-used-cars/3e3966f0-198c-40b1-821a-3e0e32d01624.jpeg",
+                       "alt":  "Nissan Rogue PLATINUM"
+                   }
+               ],
+    "text":  "Used cars\nNew cars\nValue my car\nCar inspection\nCar news\n\nEnglish\n\nSell my car\nLogin\nHome Cars UAE Cars DubaiNissan DubaiRogue DubaiRogue 2023 DubaiNissan Rogue PLATINUM\nNissan Rogue PLATINUM\nSave\n1 / 20\nHighlights\nLocation\nDubai\nModel year\n2023\nKilometers\n56,000 Km\nEngine capacity\n1.5 L\nSpecs\nAmerican\nDescription\nSeller Comments\n\nNissan rouge 2023 very clean car full automatic good condition please call\n\nDubiCars intelligence\nHighlights\nAI generated\nΓÇó\nMost advanced ADAS standard\nΓÇó\nTop-tier audio system standard\nΓÇó\n5-Star NCAP safety rating\n\nThis 2023 Nissan Rogue PLATINUM offers a sophisticated blend of efficiency and high-end features that makes it a standout choice in the competitive mid-sized SUV segment. With its modern 1.5L turbocharged engine, you get a driving experience that balances power with exceptional fuel economy, a critical factor for daily commuting across the UAE. The Grey exterior is one of the most practical and sought-after colors in the GCC, providing excellent heat reflection and maintaining a clean appearance despite the dust. Being the top-tier trim, this vehicle is loaded with technology that rivals many luxury European counterparts, ensuring you don\u0027t feel like you\u0027ve compromised on comfort. For a buyer looking for a late-model SUV with relatively low mileage for its age in a region where long-distance travel is the norm, this specific listing represents a significant value proposition. The most important consideration for a GCC buyer here is the sheer level of convenience features included, making every cross-emirate journey feel shorter and more comfortable.\n\nRead more\nSpecs \u0026 features\nMake\nNissan\nModel\nRogue\nTrim\nPLATINUM\nColor\nGrey\nInterior color\nBlack\nEngine capacity\n1.5 L\nCylinders\n3 Cylinders\nHorsepower\n201 HP\nTransmission\nAutomatic\nDrive type\nAll Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSUV/Crossover\nNumber of doors\n5 Doors\nSeating capacity\n5 seater\nWheel size\n17\"\nFuel Type\nPetrol\nExport status\nCan be exported\nService history\nNo\nUpdated on:\n07 Sep, 2026\n$ 12,300\nFinancing from\n647\n/ month\n\nAl Hamoor Al Thahabi Used Cars\n\nSee more ads\nVerified Seller\nWhatsApp\nCall\nEmail\nIs there a problem with this ad?\nDealer information\nLocation and directions\nThis dealer offers test drive and trade-in\nFree, instant car valuation\nPowered by AI, Backed by Real Data\nReal-Time. Accurate Value.\nSell smarter. Buy confidently\nGet valuation\nSimilar cars\nFeatured\nNissan Rogue SV\n$ 11,800\nSharjah\nOther\n2021\n83.3K Km\nFeatured\nNissan Rogue PLATINUM\n$ 11,800\nSharjah\nAmerican\n2023\n74.7K Km\nPremium\nNissan Rogue PLATINUM\n$ 14,500\nSharjah\nAmerican\n2024\n45K Km\nFeatured\nNissan Rogue SV\n$ 10,400\nSharjah\nAmerican\n2021\n104.6K Km\nFeatured\nNissan Rogue Other\n$ 11,800\nDubai\nAmerican\n2023\n29.8K Km\nNissan Rogue\n$ 11,800\nSharjah\nAmerican\n2021\n98K Km\nNissan Rogue Other\n$ 13,200\nDubai\nAmerican\n2023\n15K Km\nFeatured\nNissan Patrol SE T2\n$ 12,300\nSharjah\nGCC\n2016\n271K Km\nPeople also viewed\nPremium\nMitsubishi Outlander GLS FABRIC\n$ 11,852\nDubai\nGCC\n2019\n88.7K Km\nHyundai Tucson ULTIMATE\n$ 11,500\nSharjah\nAmerican\n2022\n74K Km\nFord Bronco Sport BIG BEND\n$ 12,300\nDubai\nAmerican\n2021\n70K Km\nRelated links\nNissan Rogue Information Section\nNissan\nNissan Rogue\nUsed Nissan Rogue by Location\nUsed Nissan Rogue UAE (18)\nUsed Nissan Rogue Dubai (9)\nUsed Nissan Rogue Sharjah (7)\nUsed Nissan Rogue Abu Dhabi (1)\nUsed Nissan Rogue Ajman (1)\nUsed Nissan Rogue by Year\nUsed Nissan Rogue 2023 (6)\nUsed Nissan Rogue 2015 (2)\nUsed Nissan Rogue 2021 (2)\nUsed Nissan Rogue 2010 (1)\nUsed Nissan Rogue 2014 (1)\nUsed Nissan Rogue 2016 (1)\nUsed Nissan Rogue 2019 (1)\nUsed Nissan Rogue 2020 (1)\nUsed Nissan Rogue 2024 (1)\nUsed Nissan Rogue 2025 (1)\nSome other models of Nissan\nUsed Nissan Juke in Dubai (22)\nUsed Nissan Murano in Dubai (20)\nUsed Nissan Qashqai in Dubai (6)\nUsed Nissan Magnite in Dubai (2)\nUsed Nissan Kicks in Dubai (100)\nUsed Nissan Rogue Sport in Dubai (1)\nUsed Nissan X Trail in Dubai (141)\nUsed Nissan Pathfinder in Dubai (97)\nUsed Nissan Armada in Dubai (48)\nOther links\nJapanese Cars in Dubai\nBig cars for sale in Dubai\nFamily cars for sale in Dubai\nInstallment cars for sale in Dubai\nImported cars for sale in Dubai\nCars under 50000  for sale in Dubai\nGet the DubiCars app\n\nExplore more than 30,000 new \u0026 used cars for sale in uae from over 350 trusted dealerships.\n\nScan the QR code to get the app\nWhere did the buyer find this car?\nDubicars\n\n\nDubizzle\n\n\nCarmudi\n\n\nAnother dealer\n\n\nSave as sold\nReport this car\nEmail: \nReport reason: \n-- Select --\nCar is sold\nCalls are not answered\nCar specifications are wrong\nCar images are incorrect\nPrice is not accurate\nOther\nComments:\nSubmit\nCall Al Hamoor Al Thahabi Used Cars\n+97154 555 5204\nClick a number to call but first be safe!\nMake sure the car is as advertised\nGet an inspection\nAlways ensure paperwork is in place before a transaction\nCar ID: 1005647\nBy proceeding you agree to our Privacy policy\nContact Al Hamoor Al Thahabi Used Cars\nName: \nEmail: \nPhone: \nMessage:\nSubmit\nSuccess!\n\nYour message has been sent to Al Hamoor Al Thahabi Used Cars.\n\nRegards,\nThe Dubicars Team\n\nClose\nDescription\n\nNissan rouge 2023 very clean car full automatic good condition please call\n\nDubiCars intelligence\nDubiCars intelligence\nHighlights\nMost advanced ADAS standard\nTop-tier audio system standard\n5-Star NCAP safety rating\nSummary\n\nThis 2023 Nissan Rogue PLATINUM offers a sophisticated blend of efficiency and high-end features that makes it a standout choice in the competitive mid-sized SUV segment. With its modern 1.5L turbocharged engine, you get a driving experience that balances power with exceptional fuel economy, a critical factor for daily commuting across the UAE. The Grey exterior is one of the most practical and sought-after colors in the GCC, providing excellent heat reflection and maintaining a clean appearance despite the dust. Being the top-tier trim, this vehicle is loaded with technology that rivals many luxury European counterparts, ensuring you don\u0027t feel like you\u0027ve compromised on comfort. For a buyer looking for a late-model SUV with relatively low mileage for its age in a region where long-distance travel is the norm, this specific listing represents a significant value proposition. The most important consideration for a GCC buyer here is the sheer level of convenience features included, making every cross-emirate journey feel shorter and more comfortable.\n\nThis Car vs Other 2023 Rogues\n\nWhen looking at the 2023 model year in the GCC used market, this Rogue sits in a very favorable position regarding its usage. With 53,000 km on the odometer, it has been driven just slightly above the typical annual average for the region, which often sees SUVs covering 20,000 to 25,000 km per year. This level of mileage suggests the vehicle was used primarily for highway commuting between cities like Dubai and Abu Dhabi, which is generally easier on the mechanical components than heavy stop-start city traffic. The Grey exterior color is a massive advantage for resale in this market, as it is highly favored by local buyers for its ability to handle the intense sun and maintain its luster over time. Compared to basic or mid-level trims of the same year, this PLATINUM variant offers a vastly superior interior environment that makes it feel like a much newer vehicle. Choosing this specific unit allows you to benefit from the steepest part of the depreciation curve while still owning a contemporary, tech-heavy SUV that looks and feels fresh.\n\nPLATINUM vs Lower Trims\n\nThe PLATINUM trim transforms the Rogue from a practical family hauler into a genuine luxury crossover, adding features that are essential for the GCC lifestyle. Unlike the S or SV trims, the PLATINUM includes premium quilted semi-aniline leather seats that offer a level of tactile quality usually reserved for Infiniti or Lexus models. You also benefit from a fully digital 12.3-inch instrument cluster and a large head-up display, which are invaluable when navigating the complex multi-lane highways of Riyadh or Dubai. The inclusion of a 360-degree Intelligent Around View Monitor makes parking in tight mall spaces effortless, a feature often missing or simplified on lower trims. Furthermore, the tri-zone automatic climate control ensures that rear-seat passengers remain just as cool as the driver during the peak of summer, a vital upgrade over the standard dual-zone systems. The panoramic sunroof and ambient lighting also contribute to a much more airy and premium cabin feel that lower trims simply cannot match.\n\nRogue vs Segment Rivals\n\nIn the crowded SUV/Crossover segment, the Nissan Rogue competes directly with the Toyota RAV4 and the Honda CR-V, but it leads in several key technological areas. While the RAV4 is known for its ruggedness, the Rogue PLATINUM offers a significantly more advanced interior tech suite and a smoother ride quality thanks to its sophisticated All-Wheel Drive system. The RogueΓÇÖs 1.5L VC-Turbo engine is a marvel of engineering that provides a punchy 201 hp, giving it a more responsive feel during highway overtaking than many naturally aspirated rivals. For GCC families, the RogueΓÇÖs rear doors open nearly 90 degrees, making it much easier to load child seats or groceries compared to the tighter openings found on the CR-V. Additionally, the Nissan ProPILOT Assist system is widely considered one of the most intuitive and smooth driver-assistance packages in this price bracket, providing a more relaxed driving experience on long desert stretches. The blend of Nissan\u0027s massive regional service footprint and the Rogue\u0027s premium features makes it a more well-rounded choice for the modern urban professional.\n\nRunning Costs \u0026 Resale\n\nOperating a Nissan Rogue in the GCC is remarkably cost-effective due to the widespread availability of parts and expertise. The 1.5L variable compression turbo engine is designed to maximize efficiency, delivering fuel consumption figures that are highly competitive for a non-hybrid SUV, especially during steady-speed highway cruising. While this is an American spec vehicle, NissanΓÇÖs global platform means that most mechanical parts are readily available at independent shops and major retailers across the UAE and Saudi Arabia. You should note that while the official dealership might not offer the same warranty terms as a GCC-spec car, the savings on the initial purchase price often more than offset the cost of an independent extended warranty. In terms of resale, the Rogue is a staple of the Nissan lineup, and Japanese SUVs historically retain their value better than American or European rivals in this market, typically losing only 8-10% annually. The Grey color and PLATINUM trim status will ensure that this car remains highly liquid and easy to sell when you eventually decide to upgrade.\n\nPerformance \u0026 Capability\n\nThe heart of this Rogue is its innovative 1.5-liter 3-cylinder variable compression turbocharged engine, which produces a surprising 201 hp and 305 Nm of torque. This powertrain is specifically designed to provide the torque of a larger engine when you need to merge onto fast-moving highways like the E11, while sipping fuel like a compact car during city crawls. The All-Wheel Drive system provides added confidence during the occasional heavy rainstorm or when traversing gravel tracks on weekend trips to the mountains in Ras Al Khaimah. With a 0-100 km/h time of approximately 8 seconds, it feels light on its feet and perfectly suited for the pace of modern GCC traffic. The transmission is tuned for smoothness, ensuring that long-distance drives across borders are quiet and free from the hunting gear shifts common in less advanced SUVs. Ground clearance is ample for navigating speed bumps and uneven sand-swept roads, making it a versatile companion for both city life and light outdoor adventures.\n\nComfort \u0026 Cabin\n\nStepping inside the Rogue PLATINUM, you are greeted by a cabin that emphasizes quietness and thermal comfort, two necessities for the GCC climate. The air conditioning system is exceptionally robust, featuring rear air vents that ensure the entire cabin reaches a comfortable temperature quickly after being parked in the sun. The Bose Premium Audio System provides studio-quality sound, which is a massive upgrade for those who spend significant time behind the wheel commuting between emirates. NissanΓÇÖs Zero Gravity seats are a standout feature, designed to reduce fatigue on long journeys by providing continuous support from the hips to the shoulders. The cabin is well-insulated from exterior wind and road noise, allowing for clear conversations even at highway speeds. For storage, the Divide-N-Hide cargo system in the boot offers clever ways to secure your belongings, while the 5-seat layout provides generous legroom for all passengers, making it a true family-friendly environment.\n\nSafety\n\nSafety is a primary focus for the Rogue PLATINUM, which comes standard with NissanΓÇÖs Safety Shield 360 suite. This includes Automatic Emergency Braking with Pedestrian Detection, which is crucial in busy urban areas where distractions are common. The Blind Spot Warning and Rear Cross Traffic Alert systems are particularly helpful on the wide, multi-lane roads of the GCC, where fast-moving vehicles can appear suddenly in your periphery. For long-distance driving, the ProPILOT Assist with Navi-link uses radar and cameras to help maintain your lane and distance from the car ahead, significantly reducing driver stress on the long road to Al Ain or Fujairah. The vehicle also features ten airbags and a zone body construction that has earned it a 5-Star NCAP safety rating, providing peace of mind for you and your family. Unlike many competitors that charge extra for these features, the PLATINUM trim ensures you have the most advanced protective technology available as standard.\n\nThe bottom line\n\nThis Nissan Rogue PLATINUM is the perfect choice for a tech-savvy driver or a small family who wants a premium, fuel-efficient SUV without paying the high premium of a brand-new GCC-spec model. Given its high trim level and desirable color, this listing offers a luxurious daily driving experience that will hold its value well in the local market.\n\nAI insights generated from market expert data. Always inspect the vehicle before purchase.\n\nSpecs \u0026 features\nGeneral\nSeating capacity\n5 seater\nTransmission\nAutomatic\nExport status\nCan be exported\nInterior color\nBlack\nHorsepower\n201 HP\nModel year\n2023\nMake\nNissan\nModel\nRogue\nColor\nGrey\nCylinders\n3 Cylinders\nDrive type\nAll Wheel Drive\nSteering side\nLeft hand\nVehicle type\nSUV/Crossover\nNumber of doors\n5 Doors\nWheel size\n17\"\nService history\nNo\nSpecs\nAmerican\nKilometers\n56,000 Km\nFuel Type\nPetrol\nEngine capacity\n1.5 L\nFinance this car\nLoan Calculator\n647\nEstimated monthly payment\nDown payment\n20%\n9,000\nLoan period\n60\nmonths\nPlease note\n\nWe have assumed a 2.99% interest rate. 20% is usually a minimum downpayment. This is for illustrative purposes only. Please ask your financial adviser or service for advice. Terms and condition apply.\n\nContact seller\nBack to top\nSubscribe to our newsletters\nJoin\nCompany\nContact us\nAbout us\nTerms \u0026 Conditions\nPrivacy policy\nAccount sign in\nAdvertise with us\nDealer directory\nUsed cars by location\nUAE\nAbu Dhabi\nAl Ain\nAjman\nDubai\nFujairah\nRas al-Khaimah\nSharjah\nUmm al-Quwain\nPopular used makes\nToyota\nMercedes-Benz\nNissan\nLexus\nBMW\nFord\nLand Rover\nHyundai\nChevrolet\nMitsubishi\nHonda\nPorsche\nPopular used models\nToyota Land Cruiser\nNissan Patrol\nToyota Prado\nToyota Camry\nNissan Altima\nToyota RAV 4\nFord Mustang\nToyota Corolla\nToyota Hilux\nJeep Wrangler\nMitsubishi Pajero\nLexus 430\nPopular new models\nJetour T2\nNissan Patrol\nPorsche 911\nNissan Kicks\nJetour G700\nJeep Wrangler\nKia Seltos\nDodge Challenger\nNissan X Trail\nToyota RAV4\nMini Cooper\nFord Territory\nSitemap\nUsed cars\nNew cars\nNew cars for sale\nCar news\nSell your car in the UAE\n╪│┘è╪º╪▒╪º╪¬ ┘ä┘ä╪¿┘è╪╣ ┘ü┘è ╪º┘ä╪º┘à╪º╪▒╪º╪¬\nFollow us\nDownload our mobile app\n\nDubicars.com @ 2026. All rights reserved.\n\n2114, Shatha Tower, Media City, Dubai, UAE\n\nThis website uses cookies to offer you a better browsing experience. Please accept cookies for optimal performance. Read our privacy policy\nAccept only essential cookies\nAccept all cookies"
+}
