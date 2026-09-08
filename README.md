@@ -6,6 +6,12 @@ Read [the full browser audit](./audits/2026-09-06/REPORT.md), [the build workflo
 
 For an external code review, start with [the repository audit guide](./docs/REPOSITORY-AUDIT.md). The 8 September snapshot contains ten template baselines and 34 client demo applications across 12 client folders; older setup notes below describe earlier milestones.
 
+## Dealer research and three-design offers
+
+The [lead research index](./leads/README.md) contains an initial **40 company records** across Bulgaria, the UAE, the USA, the UK, Germany and the Netherlands: ten existing Varna accounts plus thirty additional research candidates, including reserves. Source dates, inventory-count caveats, website findings and existing project paths are retained. This is not exhaustive market coverage or a declaration that every candidate has a poor website.
+
+The [three-design workflow](./docs/THREE-DESIGN-WORKFLOW.md) describes the owner's offer: qualify a dealer, reuse or prepare **Auto Best, Modern and Carwow**, then seek approval for the exact preview and outreach. Research, build completion and actual sales state remain separate. Public research is not a private contact ledger; no new demos, deployment, outreach or CRM migration was performed by adding the list. See [coverage and next research steps](./leads/COVERAGE.md).
+
 ## Current catalog
 
 Scores are comparative visual/UX judgement out of 10, not a production certification.
