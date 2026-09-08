@@ -58,7 +58,7 @@ export const filterLabels = {
     newest: "Newest",
     price_asc: "Price low",
     price_desc: "Price high",
-    mileage_asc: "Lowest km",
+    mileage_asc: "Lowest miles",
     year_desc: "Newest year",
   },
 } as const;

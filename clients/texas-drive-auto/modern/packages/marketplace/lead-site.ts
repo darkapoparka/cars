@@ -29,6 +29,10 @@ export interface LeadSiteConfig {
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
   "accent": "#bf111d",
+  "dealerFinance": false,
+  "mileageUnit": "mi",
+  "stockAsOf": "2026-09-08",
+  "hours": "Monday–Saturday 10 AM–6 PM; Sunday closed",
   "address": "10511 Olympic Drive, Dallas, TX 75220",
   "city": "Dallas",
   "contactUrl": "tel:+12149723233",

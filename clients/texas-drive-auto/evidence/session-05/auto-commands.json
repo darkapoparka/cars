@@ -1,0 +1,54 @@
+[
+  {
+    "name": "auto-install",
+    "workingDirectory": "C:/Users/radev/AppData/Local/Temp/cars-session-05-active-20260909/clients/texas-drive-auto/auto-best",
+    "nodeVersion": "22.22.0",
+    "command": [
+      "J:/cars-session-05-tools/node22/node.exe",
+      "J:/cars-session-05-tools/managers/node_modules/npm/bin/npm-cli.js",
+      "ci",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "startedAt": "2026-09-08T23:19:01.027Z",
+    "endedAt": "2026-09-08T23:19:22.321Z",
+    "exitCode": 0,
+    "error": null,
+    "log": "auto-install.txt",
+    "scope": "Local source application only; no real provider credentials, migrations or delivery"
+  },
+  {
+    "name": "auto-validate",
+    "workingDirectory": "C:/Users/radev/AppData/Local/Temp/cars-session-05-active-20260909/clients/texas-drive-auto/auto-best",
+    "nodeVersion": "22.22.0",
+    "command": [
+      "J:/cars-session-05-tools/node22/node.exe",
+      "J:/cars-session-05-tools/managers/node_modules/npm/bin/npm-cli.js",
+      "run",
+      "validate"
+    ],
+    "startedAt": "2026-09-08T23:19:22.324Z",
+    "endedAt": "2026-09-08T23:19:25.333Z",
+    "exitCode": 1,
+    "error": null,
+    "log": "auto-validate.txt",
+    "scope": "Local source application only; no real provider credentials, migrations or delivery"
+  },
+  {
+    "name": "auto-build",
+    "workingDirectory": "C:/Users/radev/AppData/Local/Temp/cars-session-05-active-20260909/clients/texas-drive-auto/auto-best",
+    "nodeVersion": "22.22.0",
+    "command": [
+      "J:/cars-session-05-tools/node22/node.exe",
+      "J:/cars-session-05-tools/managers/node_modules/npm/bin/npm-cli.js",
+      "run",
+      "build"
+    ],
+    "startedAt": "2026-09-08T23:19:25.336Z",
+    "endedAt": "2026-09-08T23:21:05.492Z",
+    "exitCode": 0,
+    "error": null,
+    "log": "auto-build.txt",
+    "scope": "Local source application only; no real provider credentials, migrations or delivery"
+  }
+]
