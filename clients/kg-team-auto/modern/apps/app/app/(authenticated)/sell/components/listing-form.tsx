@@ -514,7 +514,7 @@ export const SellerListingForm = ({
               <Input
                 aria-describedby="location-city-requirements"
                 className={inputClassName}
-                defaultValue={listing?.locationCity ?? "Sofia"}
+                defaultValue={listing?.locationCity ?? "Plovdiv"}
                 id="locationCity"
                 maxLength={120}
                 minLength={2}

@@ -22,7 +22,7 @@
 			copy: 'Разгледайте селекцията и попитайте за наличност.',
 			cta: 'Вижте автомобилите',
 			href: '/inventory',
-			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
+			image: '/dealer/hero-car-2.webp'
 		},
 		{
 			id: 'viewing',
@@ -30,7 +30,7 @@
 			copy: 'Изберете автомобил и уговорете удобно посещение.',
 			cta: 'Запазете оглед',
 			href: '/contact',
-			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
+			image: '/dealer/11701247770704576-1.webp'
 		},
 		{
 			id: 'financing',
@@ -38,7 +38,7 @@
 			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
 			cta: 'Поискайте условия',
 			href: '/financing',
-			image: '/assets/images/home-promos/leasing-calculator-cutout-v7.webp'
+			image: '/dealer/hero-car-1.webp'
 		}
 	] as const;
 
@@ -67,7 +67,7 @@
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в София',
+			label: 'локация в Пловдив',
 			hasDivider: true
 		},
 		{
@@ -117,7 +117,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
+							'/dealer/21785829117309786-1.webp',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}

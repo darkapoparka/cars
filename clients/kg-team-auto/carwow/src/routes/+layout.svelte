@@ -57,16 +57,16 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/brand/daynight-logo-generated.png`,
-			logo: `${origin}/brand/daynight-logo-generated.png`,
+			image: `${origin}/dealer/logo.png`,
+			logo: `${origin}/dealer/logo.png`,
 			url: `${origin}/`,
 			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',
 				streetAddress: daynightSite.location,
-				addressLocality: 'София',
-				addressRegion: 'София',
+				addressLocality: 'Пловдив',
+				addressRegion: 'Пловдив',
 				addressCountry: 'BG'
 			},
 			areaServed: 'BG',
@@ -80,6 +80,7 @@
 </script>
 
 <svelte:head>
+<meta name="robots" content="noindex,nofollow,noarchive" />
 	<link
 		rel="preload"
 		href={geistCyrillicFont}
@@ -100,6 +101,7 @@
 {/if}
 
 {@render children()}
+<aside role="note" style="padding:12px 20px;background:#f5f5f5;color:#424242;font:500 12px/1.5 sans-serif;text-align:center">Демонстрация с обяви към 09.09.2026 г. Цената и наличността се потвърждават с продавача. Непубликувана концепция, а не официален сайт. Формите не изпращат запитвания.</aside>
 
 {#if !hidesGlobalChrome}
 	<SiteFooter />

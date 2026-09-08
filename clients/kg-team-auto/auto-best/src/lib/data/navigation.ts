@@ -93,9 +93,9 @@ export const navigation: NavigationItem[] = [
       title: brand.name,
       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
       features: [
-        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
-        { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
+        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/dealer/11782979504874945-1.webp', href: '/about-us' },
+        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/dealer/11678716951277480-1.webp', href: '/contact?topic=import' },
+        { id: 'about-leasing', title: 'Примерен бюджет', detail: 'Обсъдете условията директно с екипа.', image: '/dealer/11783754278742708-1.webp', href: '/contact?topic=leasing' }
       ],
       groups: [
         {
@@ -117,7 +117,7 @@ export const navigation: NavigationItem[] = [
           ]
         }
       ],
-      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
+      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и примерен бюджет.' }
     }
   },
   {
@@ -128,9 +128,9 @@ export const navigation: NavigationItem[] = [
       title: 'Полезно',
       description: 'Практична информация за избора, проверката и финансирането на автомобил.',
       features: [
-        { id: 'guides-inspection', title: 'Проверка преди покупка', detail: 'История, документи и състояние.', image: '/assets/images/lead/day-night-guide-inspection.webp', href: '/blog-detail/1' },
-        { id: 'guides-import', title: 'Внос и документи', detail: 'Основните стъпки преди регистрация.', image: '/assets/images/lead/day-night-guide-import.webp', href: '/blog-detail/2' },
-        { id: 'guides-leasing', title: 'Лизинг и условия', detail: 'Какво да уточните преди финансиране.', image: '/assets/images/lead/day-night-guide-leasing.webp', href: '/blog-detail/3' }
+        { id: 'guides-inspection', title: 'Проверка преди покупка', detail: 'История, документи и състояние.', image: '/dealer/11678716951277480-1.webp', href: '/blog-detail/1' },
+        { id: 'guides-import', title: 'Внос и документи', detail: 'Основните стъпки преди регистрация.', image: '/dealer/11780222156478967-1.webp', href: '/blog-detail/2' },
+        { id: 'guides-leasing', title: 'Лизинг и условия', detail: 'Какво да уточните преди финансиране.', image: '/dealer/11778753257201470-1.webp', href: '/blog-detail/3' }
       ],
       groups: [
         {

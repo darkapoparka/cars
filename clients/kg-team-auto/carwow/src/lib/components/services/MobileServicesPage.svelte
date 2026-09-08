@@ -134,7 +134,7 @@
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Услуги Day Night Auto">
+<div class="mobile-services-app" aria-label="Услуги K-G Team Auto">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -143,9 +143,9 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="K-G Team Auto начало">
 				<img
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/dealer/logo.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -157,7 +157,7 @@
 		<div class="mobile-services-hero__copy">
 			<span>Услуги</span>
 			<h1>Подкрепа преди и след покупка</h1>
-			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в София.</p>
+			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в Пловдив.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">

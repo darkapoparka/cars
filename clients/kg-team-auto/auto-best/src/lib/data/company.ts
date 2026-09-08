@@ -66,7 +66,7 @@ export const companyServices: CompanyService[] = [
   {
     index: '02',
     icon: 'import',
-    title: 'Внос по заявка',
+    title: 'Внос и документи',
     description: 'Обсъдете автомобил, бюджет и внос с екипа.',
     href: '/contact?topic=import',
     cta: 'Попитайте за внос'
@@ -74,7 +74,7 @@ export const companyServices: CompanyService[] = [
   {
     index: '03',
     icon: 'leasing',
-    title: 'Собствен лизинг',
+    title: 'Примерен бюджет',
     description: 'Условия според избрания автомобил.',
     href: '/contact?topic=leasing',
     cta: 'Обсъдете лизинг'
@@ -82,7 +82,7 @@ export const companyServices: CompanyService[] = [
   {
     index: '04',
     icon: 'trade-in',
-    title: 'Оценка за бартер',
+    title: 'Въпрос за продажба',
     description: 'Предложете своя автомобил за индивидуална оценка.',
     href: '/contact?topic=trade-in',
     cta: 'Поискайте оценка'
@@ -105,14 +105,14 @@ export const contactTopics: ContactTopic[] = [
   {
     id: 'import',
     label: 'Внос',
-    title: 'Внос по заявка',
+    title: 'Внос и документи',
     description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
     mobileDescription: 'Добавете обява или опишете какво търсите.'
   },
   {
     id: 'leasing',
     label: 'Лизинг',
-    title: 'Собствен лизинг',
+    title: 'Примерен бюджет',
     description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
   },
   {
@@ -127,7 +127,4 @@ export const contactTopics: ContactTopic[] = [
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
 
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+export const showroomCoordinates = { latitude: null, longitude: null };

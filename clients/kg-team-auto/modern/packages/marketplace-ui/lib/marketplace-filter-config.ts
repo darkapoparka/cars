@@ -39,7 +39,7 @@ export const marketplaceBodyTypesByCategory = {
 } as const satisfies Record<VehicleCategory, readonly BodyType[]>;
 
 export const marketplaceCityOptions = [
-  "Sofia",
+  "Plovdiv",
   "Plovdiv",
   "Varna",
   "Burgas",

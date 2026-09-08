@@ -185,7 +185,7 @@ export const LeaseMobileSelection = ({
       <MobileDealerServiceHero
         helpAction={<LeaseInformationDrawer faqs={faqs} locale={locale} />}
         imageClassName="object-center"
-        imageSrc="/images/lease/day-night-mobile-studio-v2.webp"
+        imageSrc="/dealer/hero-car-2.webp"
         locale={locale}
         tone="leasing"
       >

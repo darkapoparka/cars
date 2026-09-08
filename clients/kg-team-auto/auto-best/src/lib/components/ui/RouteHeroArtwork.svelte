@@ -1,15 +1,15 @@
 <script lang="ts">
   let { variant = 'cars', theme = 'light' }: { variant?: 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell'; theme?: 'light' | 'red' | 'charcoal' | 'yellow' } = $props();
   const images = {
-    cars: '/assets/images/lead/day-night-studio-cars-v1.webp',
-    keys: '/assets/images/lead/day-night-studio-keys-v1.webp',
-    guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
-    silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
-    graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
-    portrait: '/assets/images/lead/day-night-about-kristian-v1-light.webp',
-    phone: '/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp',
-    showroom: '/assets/images/lead/day-night-about-showroom-v1-light.webp',
-    email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
+    cars: '/dealer/hero-car-1.webp',
+    keys: '/dealer/hero-car-1.webp',
+    guide: '/dealer/hero-car-2.webp',
+    silver: '/dealer/11782979504874945-1.webp',
+    graphite: '/dealer/11782979504874945-1.webp',
+    portrait: '/dealer/11778753257201470-1.webp',
+    phone: '/dealer/11782979504874945-1.webp',
+    showroom: '/dealer/11778753257201470-1.webp',
+    email: '/dealer/11777536762184091-1.webp'
   };
   const pairs = {
     cars: ['silver', 'graphite'],
@@ -20,14 +20,14 @@
     sell: ['portrait', 'keys']
   } as const;
   const coloredImages: Partial<Record<keyof typeof images, string>> = {
-    silver: '/assets/images/lead/day-night-silver-color-v1.webp',
-    graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
-    showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
-    portrait: '/assets/images/lead/day-night-portrait-color-v1.webp',
-    guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
-    keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
-    phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
-    email: '/assets/images/lead/day-night-contact-email-red-v1.webp'
+    silver: '/dealer/11678716951277480-1.webp',
+    graphite: '/dealer/11777536762184091-1.webp',
+    showroom: '/dealer/11778753257201470-1.webp',
+    portrait: '/dealer/11678716951277480-1.webp',
+    guide: '/dealer/11701247770704576-1.webp',
+    keys: '/dealer/11701247770704576-1.webp',
+    phone: '/dealer/21788253346975689-1.webp',
+    email: '/dealer/11773570472954394-1.webp'
   };
 </script>
 

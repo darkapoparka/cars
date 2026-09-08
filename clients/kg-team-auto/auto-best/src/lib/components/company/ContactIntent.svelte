@@ -61,11 +61,11 @@
       <span class="dn-contact-call-label">Обадете се · </span>{brand.phone}
     </a>
 
-    {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+    {#if topic.id !== 'trade-in' && topic.id !== 'import' && socialPlatforms.some(platform => Boolean(platform.href))}
     <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
       <span>Социални мрежи</span>
       <div>
-        {#each socialPlatforms as platform (platform.name)}
+        {#each socialPlatforms.filter(platform => Boolean(platform.href)) as platform (platform.name)}
           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
             <SocialBrandIcon name={platform.name} />
           </a>

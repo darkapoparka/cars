@@ -5,10 +5,10 @@ import Image from "next/image";
 type ArtworkCategory = Exclude<VehicleCategory, "lease">;
 
 const categoryArtworkPaths: Record<ArtworkCategory, string> = {
-  car: "/images/categories/day-night-category-car-v2.png",
-  motorbike: "/images/categories/day-night-category-motorbike-v1.png",
-  truck: "/images/categories/day-night-category-truck-v1.png",
-  van: "/images/categories/day-night-category-van-v1.png",
+  car: "/dealer/11777536762184091-1.webp",
+  motorbike: "/dealer/11783754278742708-1.webp",
+  truck: "/dealer/11701247770704576-1.webp",
+  van: "/dealer/11778753257201470-1.webp",
 };
 
 export const VehicleCategoryArtwork = ({

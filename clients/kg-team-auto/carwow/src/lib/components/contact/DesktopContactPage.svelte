@@ -32,7 +32,7 @@
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const contactBannerSrc: AssetHref =
-		'/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp';
+		'/dealer/hero-car-1.webp';
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const mapLinkAttributes = {
 		href: daynightSite.mapUrl,
@@ -227,14 +227,14 @@
 						loading="eager"
 						decoding="async"
 					/>
-					<span>Шоурум в София</span>
+					<span>Шоурум в Пловдив</span>
 				</div>
 
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
 					<div class="contact-page-info">
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
-								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Day Night Auto'}
+								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със K-G Team Auto'}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
 								{isImportMode
@@ -436,7 +436,7 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title="Карта до Day Night Auto София"
+						title="Карта до K-G Team Auto Пловдив"
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -444,8 +444,8 @@
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
-					<div class="daynight-contact-map__overlay" aria-label="Локация Day Night Auto">
-						<p class="daynight-contact-map__eyebrow">Day Night Auto</p>
+					<div class="daynight-contact-map__overlay" aria-label="Локация K-G Team Auto">
+						<p class="daynight-contact-map__eyebrow">K-G Team Auto</p>
 						<p class="daynight-contact-map__address">{daynightSite.location}</p>
 						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
 					</div>
@@ -1041,7 +1041,7 @@
 		background-color: #eef3f9;
 		background-image:
 			linear-gradient(90deg, rgba(8, 20, 42, 0.7), rgba(8, 20, 42, 0.18)),
-			url('/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp');
+			url('/dealer/hero-car-1.webp');
 		background-position: center;
 		background-size: cover;
 	}

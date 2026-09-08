@@ -12,6 +12,8 @@
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
+  let galleryIndices = $state<Record<number, number>>({});
+  const activeImage = $derived(data.vehicle.gallery[galleryIndices[data.vehicle.id] ?? 0] ?? data.vehicle.image);
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const detailTabs = [
@@ -61,7 +63,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Датирана примерна обява от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -84,7 +86,7 @@
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
                 <img
-                  src={data.vehicle.image}
+                  src={activeImage}
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
@@ -92,6 +94,11 @@
                   decoding="async"
                 />
               </figure>
+              <div class="dn-detail-thumbnails" aria-label="Снимки от обявата">
+                {#each data.vehicle.gallery as image, index (image)}
+                  <button type="button" aria-label={`Снимка ${index + 1}`} aria-pressed={(galleryIndices[data.vehicle.id] ?? 0) === index} onclick={() => galleryIndices[data.vehicle.id] = index}><img src={image} alt={`${data.vehicle.title} — снимка ${index + 1}`} width="160" height="100" loading="lazy" /></button>
+                {/each}
+              </div>
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label="Информация за автомобила">
@@ -130,7 +137,7 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
+                    {data.vehicle.title} е пример от обявите, записани на 09.09.2026 г., на {brand.name}. Свържете се с
                     екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
                   </p>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>

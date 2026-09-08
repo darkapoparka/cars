@@ -11,7 +11,7 @@
 		onLanguageToggle: () => void;
 	} = $props();
 
-	const locationShort = 'Студентски град, София';
+	const locationShort = 'Индустриална зона – Юг, Пловдив';
 
 	const socialLinkBase =
 		'site-chrome-topbar__social-link inline-grid size-9 place-items-center text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-sa-surface/70 [&_img]:size-[22px] [&_svg]:size-[22px]';
