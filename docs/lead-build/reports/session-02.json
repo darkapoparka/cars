@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "02",
+  "updatedAt": "2026-09-09",
+  "candidates": [
+    {"leadId":"bg-plovdiv-kg-team-auto","clientPath":"clients/kg-team-auto","state":"in-progress","commitShas":[],"publicEvidencePaths":[],"variants":{"auto-best":{"implemented":false,"committed":false,"checksPassed":["Recovered independent local source copy"],"checksNotRun":["Personalization acceptance","Framework checks/build","Application browser QA"],"knownLimitations":["Local unfinished master copy, not yet published"]},"modern":{"implemented":false,"committed":false,"checksPassed":["Recovered full-workspace local source copy"],"checksNotRun":["Personalization acceptance","Framework checks/build","Application browser QA"],"knownLimitations":["Local unfinished master copy, not yet published"]},"carwow":{"implemented":false,"committed":false,"checksPassed":["Recovered independent local source copy"],"checksNotRun":["Personalization acceptance","Framework checks/build","Application browser QA"],"knownLimitations":["Local unfinished master copy, not yet published"]}},"blockers":[]},
+    {"leadId":"bg-plovdiv-icars","clientPath":"clients/icars-plovdiv","state":"pending","commitShas":[],"publicEvidencePaths":[],"variants":{},"blockers":[]},
+    {"leadId":"bg-burgas-five-auto","clientPath":"clients/five-auto","state":"pending","commitShas":[],"publicEvidencePaths":[],"variants":{},"blockers":[]}
+  ],
+  "recovery":{"localPath":"J:/cars-session-02-20260909","sourceCommit":"57a0c9694e325747d776cfd78255b60241080a8a","remoteDesktop":"responding again; untracked K-G copies preserved","priorTreeObjectsWereNotPublished":true},
+  "reuseInspection":{"leadId":"bg-varna-avangard-auto","clientPath":"clients/avangard-auto","mode":"read-only","variantsFound":["auto-best","modern","carwow"],"actualChecks":["Prior saved directory/metadata inspection only"],"applicationQaRerun":false,"changed":false},
+  "deployed":false,
+  "outreachPerformed":false,
+  "privateSalesRecordsChanged":false
+}
