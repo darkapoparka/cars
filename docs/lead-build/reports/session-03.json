@@ -3,6 +3,7 @@
   "batchId": "lead-build-2026-09-08",
   "sessionId": "03",
   "updatedAt": "2026-09-08",
+  "outcome": "incomplete-no-applications-implemented",
   "candidates": [
     {
       "leadId":"bg-burgas-mg7-group","clientPath":"clients/mg7-group","state":"blocked","commitShas":[],"evidenceCommitShas":["cb7b6de89d0eaf31816a9322904a3efea6733f8d"],
@@ -34,7 +35,7 @@
       ]
     },
     {
-      "leadId":"ae-sharjah-al-fareed-used-cars","clientPath":"clients/al-fareed-used-cars","state":"blocked","commitShas":[],"evidenceCommitShas":[],
+      "leadId":"ae-sharjah-al-fareed-used-cars","clientPath":"clients/al-fareed-used-cars","state":"blocked","commitShas":[],"evidenceCommitShas":["79624636e413a314a90f4954654cefb441b860b4"],
       "publicEvidencePaths":["clients/al-fareed-used-cars/SOURCE-PACK.json","clients/al-fareed-used-cars/HANDOFF.md"],
       "sourceChecks":{"scope":"source-data-only","runtime":"Python 3.13.5","workingDirectory":"/mnt/data/session-03","checkedBlobSha":"bbcf6914a182f599b42e97eb341e6f9242399d6d","passed":["JSON parse","8 unique source IDs","Exclusion disjoint","Source IDs in detail URLs","Positive native AED prices and nonnegative-or-null km","Two conflicting fields withheld with raw alternatives retained","Honest zero apps, zero local assets and unverified availability"]},
       "variants":{
@@ -50,7 +51,93 @@
       ]
     }
   ],
-  "reuseInspection":{"leadId":"bg-varna-champion-auto-pro","clientPath":"clients/champion-auto-pro","state":"pending","mode":"read-only","variants":[],"checksPassed":[],"checksNotRun":["Current metadata and source inspection pending after assigned candidate outcomes"]},
-  "counts":{"applicationsImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0},
-  "publishing":{"protocol":"fresh-head-current-tree-owned-delta-non-force","applicationCommitShas":[],"evidenceCommitShas":["cb7b6de89d0eaf31816a9322904a3efea6733f8d","d8572db68a22a53b8818ee3bdbd9bbc016f3758d"]}
+  "reuseInspection": {
+    "leadId":"bg-varna-champion-auto-pro",
+    "clientPath":"clients/champion-auto-pro",
+    "state":"existing-work-read-only-reviewed",
+    "mode":"read-only",
+    "inspectedAt":"2026-09-08",
+    "inspectedCommit":"79624636e413a314a90f4954654cefb441b860b4",
+    "clientTreeSha":"9f4a5d6d5272a2e4813b963b833c352d9f4c739f",
+    "changedPaths":[],
+    "variants":[
+      {
+        "templateKey":"auto-best",
+        "path":"clients/champion-auto-pro/auto-best",
+        "treeSha":"7dd2536d54264d74dc860fdc52f02f01b1f78ced",
+        "recordedTemplateVersion":"2026.09.06-refresh-1",
+        "entryRoute":"/",
+        "publicUrl":null,
+        "metadataPath":"clients/champion-auto-pro/auto-best/.client/project.json",
+        "metadataBlobSha":"bd75b626493e0034414ac16084ba2cc4ae345ef0",
+        "identitySourcePath":"clients/champion-auto-pro/auto-best/src/lib/config/brand.ts",
+        "identitySourceBlobSha":"c78039b59a5090d7ff5ca2eddf601dbc9000d3ca",
+        "sourceObservation":"Champion Auto Pro name, Varna address, +359885072555 phone link and /assets/champion/logo.png are configured; unverified social URLs are empty.",
+        "historicalQaClaim":{"verifiedAt":"2026-09-08T03:48:52.634Z","widths":[390,1440],"routeChecks":10,"interactionChecks":2,"executedInThisSession":false},
+        "recordedLocalPreview":"http://127.0.0.1:6631/",
+        "currentListenerVerified":false,
+        "limitations":["Top-level previewState says stopped while nested preview.state says running-owner-review; neither establishes a currently running server."]
+      },
+      {
+        "templateKey":"modern",
+        "path":"clients/champion-auto-pro/modern",
+        "treeSha":"b86e7d820a57727c3192cb863e323a7ca0b2f1b9",
+        "recordedTemplateVersion":"2026.09.06-refresh-1",
+        "entryRoute":"/cars",
+        "publicUrl":null,
+        "metadataPath":"clients/champion-auto-pro/modern/.client/project.json",
+        "metadataBlobSha":"caa4dcf1bc9b034bd1f857f2b4b5c363691eec9c",
+        "identitySourcePath":"clients/champion-auto-pro/modern/packages/marketplace/lead-site.ts",
+        "identitySourceBlobSha":"4d2ef4d9486c1fb95cb83c9e47db131448d92b78",
+        "sourceObservation":"Champion Auto Pro name, Varna address, +359885072555, bg-BG/EUR, local logo and cover paths, empty email/socials and staticDemoMode true are configured. Entire workspace completeness was not re-audited.",
+        "historicalQaClaim":{"verifiedAt":"2026-09-08T03:48:52.635Z","widths":[390,1440],"routeChecks":8,"interactionChecks":2,"executedInThisSession":false},
+        "recordedLocalPreview":"http://127.0.0.1:6632/cars",
+        "currentListenerVerified":false,
+        "limitations":["Existing QA report does not certify exact gallery-trigger focus restoration."]
+      },
+      {
+        "templateKey":"carwow",
+        "path":"clients/champion-auto-pro/carwow",
+        "treeSha":"fdb5ec7411a7d436dc50be834f6f8b830ad7d091",
+        "recordedTemplateVersion":"2026.09.06-refresh-1",
+        "entryRoute":"/",
+        "publicUrl":null,
+        "metadataPath":"clients/champion-auto-pro/carwow/.client/project.json",
+        "metadataBlobSha":"96b9487b39945590450bc8be29818d0c48114761",
+        "identitySourcePath":"clients/champion-auto-pro/carwow/src/lib/data/daynight-site.ts",
+        "identitySourceBlobSha":"c97045cd760393529b3aa4960b5bc6adfd65ff57",
+        "identitySourceReadLines":[1,90],
+        "sourceObservation":"Champion name, Varna address, phone, Mobile.bg source and local logo are configured. The inspected navigation still includes compatibility route /about/daynight-auto-plovdiv; its rendered destination was not inspected.",
+        "historicalQaClaim":{"verifiedAt":"2026-09-08T03:48:52.635Z","widths":[390,1440],"routeChecks":16,"interactionChecks":2,"executedInThisSession":false},
+        "recordedLocalPreview":"http://127.0.0.1:6633/",
+        "currentListenerVerified":false,
+        "limitations":["Retained legacy route naming is not proof of rendered wrong-dealer content, nor of complete identity clearance."]
+      }
+    ],
+    "documentationRead":[
+      {"path":"clients/champion-auto-pro/CLIENT.md","blobSha":"e0b152db3fca8a3f03b0f58d1f483a1ae1dd2294"},
+      {"path":"clients/champion-auto-pro/BUILD-STATUS.md","blobSha":"b051418cd5fc639f8694af9b61f65ef6aef99ff1"},
+      {"path":"clients/champion-auto-pro/qa-final/FINAL.md","blobSha":"ee0d671f73f54bdc1d1bd34e84fbd7726ee8d7f0"}
+    ],
+    "checksPassed":["Read-only repository tree inspection found all three variant directories","Read each variant's project metadata and a wired identity configuration source","Read existing build/status/final-QA documentation; preserved it without changing pass flags"],
+    "checksNotRun":["Dependency installation","Framework typecheck/build","Desktop/mobile browser or interaction QA","Screenshot viewing","Raw framework-log and final-results.json review","Current stock or asset-rights revalidation","Current listener/port verification","Full workspace and complete identity/content sweep"],
+    "knownLimitations":["Existing QA pass flags are historical records, not checks executed by Session 03.","Evidence and facts references contain absolute J:/cars paths; their existence here or on a new checkout is not established.","Public URLs remain null; local preview URLs are not public or confirmed reachable.","The existing notes retain decorative source artwork, sample administration, unconfigured provider/form delivery and no new asset-rights determination.","All three metadata files record source version 2026.09.06-refresh-1; they are not asserted to incorporate newer auto-best/carwow master changes.","No Champion files were copied, modified or recreated."]
+  },
+  "counts":{"applicationsExpected":9,"applicationsImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0},
+  "sessionLimitations":["All three assigned dealer outcomes are blocked; their committed folders contain only source evidence and handoffs, not applications.","Full both-branch normalized identity/domain/profile/phone content clearance remains incomplete; tree inspection and indexed main searches are not a substitute.","No local asset pack was completed; no placeholder, inherited media or generated-artwork claim was substituted.","Proposed ports 7421-7429 were neither checked nor started.","No deployment, dealer contact, external enquiry submission, private CRM/email read or write, service provisioning or successful demo delivery occurred."],
+  "localAgentHandoff": {
+    "mode":"inspection-only; no runnable new applications",
+    "instructions":["Verify the origin remote is darkapoparka/cars and preserve all dirty work.","Fetch origin astra. Fast-forward only a clean astra checkout, or inspect in a separate non-colliding worktree without resetting an existing checkout.","Read this report and the three assigned SOURCE-PACK.json/HANDOFF.md pairs. Do not run install/start commands for absent variant directories.","Do not generate or personalize replacement apps, collect substitute media, or treat these evidence packs as completed implementations.","Champion Auto Pro remains read-only. Consult its existing documentation without claiming its historical QA or local preview state has just been verified.","Do not deploy, contact dealers, submit forms, provision services or stop unrelated processes."]
+  },
+  "publishing": {
+    "protocol":"fresh-head-current-tree-owned-delta-non-force",
+    "applicationCommitShas":[],
+    "evidenceCommitShas":["cb7b6de89d0eaf31816a9322904a3efea6733f8d","d8572db68a22a53b8818ee3bdbd9bbc016f3758d","79624636e413a314a90f4954654cefb441b860b4"],
+    "evidenceCommitsVerifiedByRefAndFileReadback":true,
+    "ownedDeltaAllowlistCheckedForEvidenceCommits":true,
+    "reportPreparedAgainstCommit":"79624636e413a314a90f4954654cefb441b860b4",
+    "reportPreparedAgainstTree":"50f84428868e3357739053c475076b127772257e",
+    "concurrencyNote":"The report was initially prepared against the recorded commit. Publication reapplies only this owned file to the fresh current root; the actual publication parent is visible in Git history.",
+    "finalReportCommitReference":"Provided in the session response after publication; not self-referenced before it exists."
+  }
 }
