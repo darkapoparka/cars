@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-09-08",
+  "source": "Mobile.bg city dealer directories, partial primary catalogue review and bounded exact-name/phone website searches",
+  "profiles": 547,
+  "directoryUniqueProfiles": 540,
+  "directoryAppearances": 553,
+  "screenedProfiles": 62,
+  "rankedFollowUpProfiles": 49,
+  "cityCoverage": [
+    {
+      "city": "Varna",
+      "slug": "varna",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pagesShown": 8,
+      "crawlLabels": [
+        "yesterday",
+        "yesterday",
+        "2 weeks ago",
+        "yesterday",
+        "2 weeks ago",
+        "2 weeks ago",
+        "2 weeks ago",
+        "last week"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-varna",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 143,
+      "directoryRowsCaptured": 153,
+      "coverage": "all displayed pages in retrieved snapshots; not census"
+    },
+    {
+      "city": "Sofia",
+      "slug": "sofiya",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "pagesShown": 52,
+      "crawlLabels": [
+        "today",
+        "yesterday",
+        "last week",
+        "last week",
+        "last week",
+        "yesterday"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-sofiya",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 117,
+      "directoryRowsCaptured": 120,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Plovdiv",
+      "slug": "plovdiv",
+      "pages": [
+        1
+      ],
+      "pagesShown": 17,
+      "crawlLabels": [
+        "yesterday"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-plovdiv",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Burgas",
+      "slug": "burgas",
+      "pages": [
+        1
+      ],
+      "pagesShown": 5,
+      "crawlLabels": [
+        "yesterday"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-burgas",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Ruse",
+      "slug": "ruse",
+      "pages": [
+        1
+      ],
+      "pagesShown": 7,
+      "crawlLabels": [
+        "yesterday"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-ruse",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Stara Zagora",
+      "slug": "stara-zagora",
+      "pages": [
+        1
+      ],
+      "pagesShown": 5,
+      "crawlLabels": [
+        "yesterday"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-stara-zagora",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Veliko Tarnovo",
+      "slug": "veliko-tarnovo",
+      "pages": [
+        1
+      ],
+      "pagesShown": 3,
+      "crawlLabels": [
+        "last week"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-veliko-tarnovo",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Shumen",
+      "slug": "shumen",
+      "pages": [
+        1
+      ],
+      "pagesShown": 5,
+      "crawlLabels": [
+        "2 weeks ago"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-shumen",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Dupnitsa",
+      "slug": "dupnitsa",
+      "pages": [
+        1
+      ],
+      "pagesShown": 7,
+      "crawlLabels": [
+        "yesterday"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-dupnitsa",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Pleven",
+      "slug": "pleven",
+      "pages": [
+        1
+      ],
+      "pagesShown": 4,
+      "crawlLabels": [
+        "3 days ago"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-pleven",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Dobrich",
+      "slug": "dobrich",
+      "pages": [
+        1
+      ],
+      "pagesShown": 2,
+      "crawlLabels": [
+        "3 weeks ago"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-dobrich",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Vratsa",
+      "slug": "vratsa",
+      "pages": [
+        1
+      ],
+      "pagesShown": 5,
+      "crawlLabels": [
+        "3 days ago"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-vratsa",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Haskovo",
+      "slug": "haskovo",
+      "pages": [
+        1
+      ],
+      "pagesShown": 5,
+      "crawlLabels": [
+        "2 weeks ago"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-haskovo",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Pernik",
+      "slug": "pernik",
+      "pages": [
+        1
+      ],
+      "pagesShown": 3,
+      "crawlLabels": [
+        "last week"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-pernik",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Blagoevgrad",
+      "slug": "blagoevgrad",
+      "pages": [
+        1
+      ],
+      "pagesShown": 3,
+      "crawlLabels": [
+        "2 weeks ago"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-blagoevgrad",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    },
+    {
+      "city": "Pazardzhik",
+      "slug": "pazardzhik",
+      "pages": [
+        1
+      ],
+      "pagesShown": 4,
+      "crawlLabels": [
+        "last week"
+      ],
+      "directoryBase": "https://www.mobile.bg/dealers/location-grad-pazardzhik",
+      "retrievedAt": "2026-09-08",
+      "capturedUniqueProfiles": 20,
+      "directoryRowsCaptured": 20,
+      "coverage": "partial directory"
+    }
+  ],
+  "extraProfiles": {
+    "ecodrive": {
+      "city": "Varna",
+      "source": "https://ecodrive.mobile.bg/",
+      "tier": "profile-screened"
+    },
+    "next_car": {
+      "city": "Varna Province / Banovo",
+      "source": "https://next_car.mobile.bg/",
+      "tier": "profile-screened"
+    },
+    "optimum": {
+      "city": "Sofia",
+      "source": "https://optimum.mobile.bg/",
+      "tier": "profile-screened"
+    },
+    "success": {
+      "city": "Plovdiv",
+      "source": "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/docs/lead-build/source/bulgaria.json",
+      "tier": "source-snapshot"
+    },
+    "voivodovauto": {
+      "city": "Plovdiv",
+      "source": "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/docs/lead-build/source/bulgaria.json",
+      "tier": "source-snapshot"
+    },
+    "team-auto": {
+      "city": "Plovdiv",
+      "source": "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/docs/lead-build/source/bulgaria.json",
+      "tier": "source-snapshot"
+    },
+    "icars": {
+      "city": "Plovdiv",
+      "source": "https://github.com/darkapoparka/cars/blob/4ef7edfe4c1566dcc0688bc78b87f812de1223c4/docs/lead-build/source/bulgaria.json",
+      "tier": "source-snapshot"
+    }
+  },
+  "scopeLimits": [
+    "Not an exhaustive Bulgarian business census; businesses outside Mobile.bg can be absent.",
+    "Varna: all eight displayed pages in returned snapshots; deduplicated by profile, not legal entity.",
+    "Sofia: only first six of 52 displayed pages; earlier snapshot showed 53. Do not mark Sofia complete.",
+    "Other cities: first directory page only. Unlisted cities and nearby settlements remain discovery gaps.",
+    "Directory category is not verified physical location.",
+    "No private contact/suppression history checked. No outreach, deployment, application build or QA audit.",
+    "Website source text was reviewed for selected candidates; no rendered full mobile usability audit.",
+    "No branding assets downloaded/visually reviewed and no photo rights clearance in this research.",
+    "Public phones are research contacts, not permission to message; only one primary phone retained per profile.",
+    "Existing and assigned accounts remain protected; a live branch may advance after this snapshot."
+  ]
+}
