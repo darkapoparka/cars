@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "batchId": "lead-build-2026-09-08",
+  "sessionId": "04",
+  "updatedAt": "2026-09-08",
+  "status": "in-progress",
+  "deliveryNote": "Source evidence only so far. Zero applications implemented or committed. GitHub writes are available; no deployment or outreach is authorized.",
+  "candidates": [
+    {
+      "leadId": "ae-sharjah-al-basma-motors",
+      "clientPath": "clients/al-basma-motors",
+      "state": "blocked",
+      "commitShas": [],
+      "publicEvidencePaths": ["clients/al-basma-motors/evidence/source-record.json", "clients/al-basma-motors/HANDOFF.md"],
+      "variants": {
+        "auto-best": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["install","framework checks","build","browser QA","content sweep"],"knownLimitations":["Not created: essential local media and reuse permission unresolved."]},
+        "modern": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["workspace install","Prisma generation","typecheck","build","browser QA","content sweep"],"knownLimitations":["Not created: essential local media and reuse permission unresolved."]},
+        "carwow": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["install","framework checks","build","browser QA","content sweep"],"knownLimitations":["Not created: essential local media and reuse permission unresolved."]}
+      },
+      "blockers": ["No local source-logo/stock-photo bytes obtained by attempted downloads.", "Essential media reuse permission not established.", "Rendered owned-site audit incomplete; full alias/domain/phone audit incomplete."]
+    },
+    {
+      "leadId": "ae-dubai-the-dealers-point",
+      "clientPath": "clients/the-dealers-point",
+      "state": "pending",
+      "commitShas": [],
+      "publicEvidencePaths": [],
+      "variants": {
+        "auto-best": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started."]},
+        "modern": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started."]},
+        "carwow": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started."]}
+      },
+      "blockers": []
+    },
+    {
+      "leadId": "ae-dubai-f1rst-motors",
+      "clientPath": "clients/f1rst-motors",
+      "state": "pending",
+      "commitShas": [],
+      "publicEvidencePaths": [],
+      "variants": {
+        "auto-best": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started."]},
+        "modern": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started."]},
+        "carwow": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started."]}
+      },
+      "blockers": []
+    }
+  ],
+  "reuseInspection": {"leadId":"bg-varna-astracar","clientPath":"clients/astracar","mode":"read-only","state":"pending","variantsFound":[],"checksPassed":[],"checksNotRun":["metadata inspection","runtime QA"]},
+  "executionEnvironment": {"node":"22.16.0","npm":"10.9.2","gitReadAttempt":"git ls-remote https://github.com/darkapoparka/cars.git refs/heads/astra refs/heads/main","gitReadResult":"failed: Could not resolve host: github.com","gitHubConnectorAvailable":true,"imageGenerationExecuted":false,"privateRecordsAccessed":false,"dealerContacted":false,"deployed":false},
+  "duplicateInspection": {"mainHead":"6998a7ce8092b99422cdb9cccc0b18449ff2f541","astraHead":"4ef7edfe4c1566dcc0688bc78b87f812de1223c4","clientTreesRead":true,"assignedSlugsPresentAtInitialInspection":false,"fullIdentityAuditComplete":false},
+  "accounting": {"candidateOutcomesRecorded":1,"applicationsImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0,"reuseOutcomesRecorded":0}
+}
