@@ -2,89 +2,432 @@
   "schemaVersion": 1,
   "batchId": "lead-build-2026-09-08",
   "sessionId": "05",
-  "updatedAt": "2026-09-08",
-  "summary": "Incomplete: evidence-only outcomes for all three candidates. Zero of nine requested applications copied, personalized or tested. This report does not satisfy the application completion gate.",
-  "resume": {"priorReportFound":false,"priorReportCheckedAtCommit":"e73863648838016dc3f31764688d701899971328","priorApplicationsFound":false,"note":"No existing session-05 report or assigned application directories found. Created source blobs were retained for this publication rather than treated as published apps."},
-  "counts": {"assignedCandidates":3,"candidateOutcomesRecorded":3,"listingSamplesRecorded":24,"applicationsCopied":0,"applicationsImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0,"reuseInspections":1},
-  "publication": {"branch":"astra","baseCommitInspected":"e73863648838016dc3f31764688d701899971328","baseRootTree":"e4d0758ccd0884c416e57504209b8652e6bddf57","method":"current-root owned delta, parent comparison, non-force ref update","evidenceCommitShas":[],"applicationCommitShas":[],"note":"No self-referential SHA is invented. Evidence publication must be verified by the subsequent remote-ref read and Git history; created blobs alone are not publication."},
-  "duplicateReview": {"initialMainHead":"6998a7ce8092b99422cdb9cccc0b18449ff2f541","initialAstraHead":"4ef7edfe4c1566dcc0688bc78b87f812de1223c4","prewriteAstraHead":"e73863648838016dc3f31764688d701899971328","proposedPathsAbsentFromInitialBothClientTrees":true,"proposedPathsAbsentFromPrewriteAstraClientListing":true,"completeAliasDomainMarketplacePhoneContentScan":false,"limitation":"Directory inspection and a default-branch Texas domain search do not constitute the required complete two-branch identity sweep. That remains unfinished work; no duplicate-clearance pass is claimed."},
-  "environment": {"node":"22.16.0","npm":"10.9.2","python":"3.13.5","shellNetwork":"Dealer, GitHub and npm-registry DNS resolution failed.","browser":"System Chromium/Playwright public-origin navigation returned net::ERR_BLOCKED_BY_ADMINISTRATOR for all three dealers.","githubConnector":"Repository reads and blob creation succeeded; not read-only.","generatedImages":0,"downloadedEssentialMediaFiles":0,"proposedPorts":{"range":"7441–7449","bindTest":"available in this container only","ownerMachineChecked":false,"listenersStarted":0}},
-  "candidateProcessingOrder": ["us-tx-dallas-texas-drive-auto","us-fl-orlando-cfo-auto-group","us-in-evansville-neuhoff-auto-sales"],
+  "updatedAt": "2026-09-08T23:02:53.040Z",
+  "summary": "Resumed real implementation: Texas Drive Auto now has three independent master copies with integrated local brand assets. Auto Best has eight sourced USD/mile records and passes Svelte check. Modern actual listing/directory/brand data and full-workspace installation are complete. Carwow content personalization remains in progress. This checkpoint is not completion of nine applications.",
+  "resume": {
+    "priorReportFound": true,
+    "priorReportCommit": "3b33d0be22168a4af1027c7a8e384f621ae4b6e8",
+    "worktree": "J:/cars-session-05-20260909",
+    "sourceCommit": "57a0c9694e325747d776cfd78255b60241080a8a",
+    "note": "Own prior research preserved; actual helper copies completed after dry run. Dirty owner checkout J:/cars was not modified."
+  },
+  "counts": {
+    "assignedCandidates": 3,
+    "candidateOutcomesRecorded": 3,
+    "listingSamplesRecorded": 24,
+    "applicationsCopied": 3,
+    "applicationsImplemented": 0,
+    "applicationsCommitted": 3,
+    "applicationsRuntimeVerified": 0,
+    "reuseInspections": 1,
+    "applicationsPartiallyPersonalized": 2
+  },
+  "publication": {
+    "branch": "astra",
+    "baseCommitInspected": "e73863648838016dc3f31764688d701899971328",
+    "baseRootTree": "e4d0758ccd0884c416e57504209b8652e6bddf57",
+    "method": "current-root owned delta, parent comparison, non-force ref update",
+    "evidenceCommitShas": [],
+    "applicationCommitShas": [],
+    "note": "This in-progress checkpoint contains actual application files. Reachability is verified after push; no self-referential commit SHA is fabricated."
+  },
+  "duplicateReview": {
+    "observedAt": "2026-09-08T21:51:59.823Z",
+    "heads": {
+      "origin/main": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+      "origin/astra": "57a0c9694e325747d776cfd78255b60241080a8a"
+    },
+    "records": [
+      {
+        "slug": "texas-drive-auto",
+        "aliases": [
+          "Texas Drive Auto",
+          "Texas Drive Auto Dealer",
+          "texasdriveauto.com",
+          "https://www.cargurus.com/es/m-Texas-Drive-Auto-Dealer-sp341513"
+        ],
+        "normalizedPhones": [
+          "2149723233",
+          "2142723098",
+          "4693964165"
+        ],
+        "matches": {
+          "origin/main": [],
+          "origin/astra": [
+            "origin/astra:clients/texas-drive-auto/HANDOFF.md",
+            "origin/astra:clients/texas-drive-auto/SOURCE.json",
+            "origin/astra:clients/texas-drive-auto/evidence/source-access.json"
+          ]
+        },
+        "unrelatedMatches": []
+      },
+      {
+        "slug": "cfo-auto-group",
+        "aliases": [
+          "CFO Auto Group",
+          "CFO Auto Group - Compra e venda de carros",
+          "cfoautogroup.com",
+          ""
+        ],
+        "normalizedPhones": [
+          "4072016145"
+        ],
+        "matches": {
+          "origin/main": [],
+          "origin/astra": [
+            "origin/astra:clients/cfo-auto-group/HANDOFF.md",
+            "origin/astra:clients/cfo-auto-group/SOURCE.json",
+            "origin/astra:clients/cfo-auto-group/evidence/source-access.json"
+          ]
+        },
+        "unrelatedMatches": []
+      },
+      {
+        "slug": "neuhoff-auto-sales",
+        "aliases": [
+          "Neuhoff Auto Sales",
+          "Neuhoff Auto-sales",
+          "neuhoffauto.com",
+          ""
+        ],
+        "normalizedPhones": [
+          "8124776433"
+        ],
+        "matches": {
+          "origin/main": [],
+          "origin/astra": [
+            "origin/astra:clients/neuhoff-auto-sales/HANDOFF.md",
+            "origin/astra:clients/neuhoff-auto-sales/SOURCE.json",
+            "origin/astra:clients/neuhoff-auto-sales/evidence/source-access.json"
+          ]
+        },
+        "unrelatedMatches": []
+      }
+    ]
+  },
+  "environment": {
+    "nodeAutoBest": "22.22.0",
+    "nodeModern": "22.22.0",
+    "nodeCarwowAvailable": "24.18.0",
+    "npm": "10.9.8",
+    "pnpm": "11.4.0",
+    "execution": "Authorized remote computer, isolated worktree; connection dropped and recovered. Prior sandbox-only access failures do not describe this environment."
+  },
+  "candidateProcessingOrder": [
+    "us-tx-dallas-texas-drive-auto",
+    "us-fl-orlando-cfo-auto-group",
+    "us-in-evansville-neuhoff-auto-sales"
+  ],
   "candidates": [
     {
-      "leadId":"us-tx-dallas-texas-drive-auto",
-      "clientPath":"clients/texas-drive-auto",
-      "state":"blocked",
-      "commitShas":[],
-      "evidencePaths":["clients/texas-drive-auto/SOURCE.json","clients/texas-drive-auto/HANDOFF.md","clients/texas-drive-auto/evidence/source-access.json"],
-      "sourceObservedAt":"2026-09-08",
-      "listingSamples":8,
-      "implementedChanges":[],
-      "factsResolved":["No dealer financing/payment plans; buyer-arranged finance distinguished from dealer finance.","Original USD vehicle prices and miles retained.","Conflicting header/contact versus About/staff phones recorded."],
-      "blockers":["Usable local branding and vehicle-photo bytes unavailable after documented access attempts.","Mandatory visual brand inspection not completed; media reuse permission not established."],
-      "unfinishedWork":["Full two-branch identity duplicate sweep.","All independent master copies and entire personalization/content/asset integration.","All application checks and preview verification."],
-      "dataChecksPassed":["Earlier source-draft JSON parsing and eight unique listing IDs.","Original USD/mile numeric invariants; not application QA."],
-      "variants":{
-        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","validate/build","390/1440 app browser and interaction review","asset and identity consumers"],"knownLimitations":["Application not created; essential branding/photos unresolved."],"proposedPort":7441},
-        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["full-workspace installation","local Prisma generation","web typecheck/build","390/1440 app browser review"],"knownLimitations":["Application not created; essential branding/photos unresolved."],"proposedPort":7442},
-        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","check/build","390/1440 app browser and interaction review","asset and identity consumers"],"knownLimitations":["Application not created; essential branding/photos unresolved."],"proposedPort":7443}
+      "leadId": "us-tx-dallas-texas-drive-auto",
+      "clientPath": "clients/texas-drive-auto",
+      "state": "in-progress",
+      "commitShas": [],
+      "evidencePaths": [
+        "clients/texas-drive-auto/SOURCE.json",
+        "clients/texas-drive-auto/HANDOFF.md",
+        "clients/texas-drive-auto/evidence/source-access.json",
+        "clients/texas-drive-auto/evidence/session-05",
+        "clients/texas-drive-auto/assets/provenance.json",
+        "clients/texas-drive-auto/stock.json"
+      ],
+      "sourceObservedAt": "2026-09-08",
+      "listingSamples": 8,
+      "implementedChanges": [
+        "Actual three master copies including full Modern workspace",
+        "One real published logo family optimized and integrated as local light/dark/favicon/touch assets in all three apps",
+        "Auto Best complete source-string English pass plus 111 reviewed content corrections, explicit USD/miles data and payment policy",
+        "Modern actual mock-listing, directory and lead-site consumers populated with the same eight samples; fabricated operational fixtures emptied"
+      ],
+      "factsResolved": [
+        "No dealer financing/payment plans; buyer-arranged finance distinguished from dealer finance.",
+        "Original USD vehicle prices and miles retained.",
+        "Conflicting header/contact versus About/staff phones recorded."
+      ],
+      "blockers": [
+        "Five stock photographs are still unavailable.",
+        "Dealer media redistribution permission remains unestablished; no public release authorized."
+      ],
+      "unfinishedWork": [
+        "Full two-branch identity duplicate sweep.",
+        "All independent master copies and entire personalization/content/asset integration.",
+        "All application checks and preview verification."
+      ],
+      "dataChecksPassed": [
+        "Earlier source-draft JSON parsing and eight unique listing IDs.",
+        "Original USD/mile numeric invariants; not application QA."
+      ],
+      "variants": {
+        "auto-best": {
+          "implemented": false,
+          "committed": true,
+          "checksPassed": [
+            "npm ci with retained lockfile",
+            "npm run check: 0 errors, 0 warnings"
+          ],
+          "checksNotRun": [
+            "installation",
+            "validate/build",
+            "390/1440 app browser and interaction review",
+            "asset and identity consumers"
+          ],
+          "knownLimitations": [
+            "In-progress source application, not finished.",
+            "Missing five listing photos; permission and browser review unresolved."
+          ],
+          "proposedPort": 7441
+        },
+        "modern": {
+          "implemented": false,
+          "committed": true,
+          "checksPassed": [
+            "pnpm install --frozen-lockfile: full workspace"
+          ],
+          "checksNotRun": [
+            "full-workspace installation",
+            "local Prisma generation",
+            "web typecheck/build",
+            "390/1440 app browser review"
+          ],
+          "knownLimitations": [
+            "In-progress source application, not finished.",
+            "Missing five listing photos; permission and browser review unresolved."
+          ],
+          "proposedPort": 7442
+        },
+        "carwow": {
+          "implemented": false,
+          "committed": true,
+          "checksPassed": [],
+          "checksNotRun": [
+            "installation",
+            "check/build",
+            "390/1440 app browser and interaction review",
+            "asset and identity consumers"
+          ],
+          "knownLimitations": [
+            "In-progress source application, not finished.",
+            "Missing five listing photos; permission and browser review unresolved."
+          ],
+          "proposedPort": 7443
+        }
       }
     },
     {
-      "leadId":"us-fl-orlando-cfo-auto-group",
-      "clientPath":"clients/cfo-auto-group",
-      "state":"blocked",
-      "commitShas":[],
-      "evidencePaths":["clients/cfo-auto-group/SOURCE.json","clients/cfo-auto-group/HANDOFF.md","clients/cfo-auto-group/evidence/source-access.json"],
-      "sourceObservedAt":"2026-09-08",
-      "listingSamples":8,
-      "implementedChanges":[],
-      "factsResolved":["English extracted body with Portuguese title descriptor; no claimed Spanish or staffed-language support.","Catalogue snapshot 61 versus historical 57, not live availability.","Original USD/miles and stock IDs retained."],
-      "blockers":["Rendered language/repetition and visual branding checks blocked by browser access.","Local essential logo/photos and reuse permission not established."],
-      "unfinishedWork":["Full two-branch identity duplicate sweep.","All independent master copies and full localization/content/asset integration.","All application checks and preview verification."],
-      "dataChecksPassed":["Earlier source-draft JSON roundtrip and eight unique stock IDs.","Original USD/mile numeric invariants; not application QA."],
-      "variants":{
-        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","validate/build","390/1440 app browser and interaction review","asset and identity consumers"],"knownLimitations":["Application not created; essential media and visual checks unresolved."],"proposedPort":7444},
-        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["full-workspace installation","local Prisma generation","web typecheck/build","390/1440 app browser review"],"knownLimitations":["Application not created; essential media and visual checks unresolved."],"proposedPort":7445},
-        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","check/build","390/1440 app browser and interaction review","asset and identity consumers"],"knownLimitations":["Application not created; essential media and visual checks unresolved."],"proposedPort":7446}
+      "leadId": "us-fl-orlando-cfo-auto-group",
+      "clientPath": "clients/cfo-auto-group",
+      "state": "blocked",
+      "commitShas": [],
+      "evidencePaths": [
+        "clients/cfo-auto-group/SOURCE.json",
+        "clients/cfo-auto-group/HANDOFF.md",
+        "clients/cfo-auto-group/evidence/source-access.json"
+      ],
+      "sourceObservedAt": "2026-09-08",
+      "listingSamples": 8,
+      "implementedChanges": [],
+      "factsResolved": [
+        "English extracted body with Portuguese title descriptor; no claimed Spanish or staffed-language support.",
+        "Catalogue snapshot 61 versus historical 57, not live availability.",
+        "Original USD/miles and stock IDs retained."
+      ],
+      "blockers": [
+        "Rendered language/repetition and visual branding checks blocked by browser access.",
+        "Local essential logo/photos and reuse permission not established."
+      ],
+      "unfinishedWork": [
+        "Full two-branch identity duplicate sweep.",
+        "All independent master copies and full localization/content/asset integration.",
+        "All application checks and preview verification."
+      ],
+      "dataChecksPassed": [
+        "Earlier source-draft JSON roundtrip and eight unique stock IDs.",
+        "Original USD/mile numeric invariants; not application QA."
+      ],
+      "variants": {
+        "auto-best": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "installation",
+            "validate/build",
+            "390/1440 app browser and interaction review",
+            "asset and identity consumers"
+          ],
+          "knownLimitations": [
+            "Application not created; essential media and visual checks unresolved."
+          ],
+          "proposedPort": 7444
+        },
+        "modern": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "full-workspace installation",
+            "local Prisma generation",
+            "web typecheck/build",
+            "390/1440 app browser review"
+          ],
+          "knownLimitations": [
+            "Application not created; essential media and visual checks unresolved."
+          ],
+          "proposedPort": 7445
+        },
+        "carwow": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "installation",
+            "check/build",
+            "390/1440 app browser and interaction review",
+            "asset and identity consumers"
+          ],
+          "knownLimitations": [
+            "Application not created; essential media and visual checks unresolved."
+          ],
+          "proposedPort": 7446
+        }
       }
     },
     {
-      "leadId":"us-in-evansville-neuhoff-auto-sales",
-      "clientPath":"clients/neuhoff-auto-sales",
-      "state":"blocked",
-      "commitShas":[],
-      "evidencePaths":["clients/neuhoff-auto-sales/SOURCE.json","clients/neuhoff-auto-sales/HANDOFF.md","clients/neuhoff-auto-sales/evidence/source-access.json"],
-      "sourceObservedAt":"2026-09-08",
-      "listingSamples":8,
-      "implementedChanges":[],
-      "factsResolved":["Official Sunday field remains incomplete; stored as unknown, not closed.","74/79 homepage sums and 72 catalogue snapshot distinguished rather than called current availability.","Internet vehicle prices retained; Get ePrice remains null; original miles preserved."],
-      "blockers":["Essential local logo/photos and visual branding unavailable.","Media reuse permission not established.","Sunday hours and live available stock remain unresolved."],
-      "unfinishedWork":["Full two-branch identity duplicate sweep.","All independent master copies and full content/asset integration.","All application checks and preview verification."],
-      "dataChecksPassed":["Earlier source-draft JSON parsing and eight distinct stock IDs.","Original USD/mile and null request-price/Sunday invariants; make-sum arithmetic 79. Not application QA."],
-      "variants":{
-        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","validate/build","390/1440 app browser and interaction review","asset and identity consumers"],"knownLimitations":["Application not created; essential media, hours and current stock unresolved."],"proposedPort":7447},
-        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["full-workspace installation","local Prisma generation","web typecheck/build","390/1440 app browser review"],"knownLimitations":["Application not created; essential media, hours and current stock unresolved."],"proposedPort":7448},
-        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["installation","check/build","390/1440 app browser and interaction review","asset and identity consumers"],"knownLimitations":["Application not created; essential media, hours and current stock unresolved."],"proposedPort":7449}
+      "leadId": "us-in-evansville-neuhoff-auto-sales",
+      "clientPath": "clients/neuhoff-auto-sales",
+      "state": "blocked",
+      "commitShas": [],
+      "evidencePaths": [
+        "clients/neuhoff-auto-sales/SOURCE.json",
+        "clients/neuhoff-auto-sales/HANDOFF.md",
+        "clients/neuhoff-auto-sales/evidence/source-access.json"
+      ],
+      "sourceObservedAt": "2026-09-08",
+      "listingSamples": 8,
+      "implementedChanges": [],
+      "factsResolved": [
+        "Official Sunday field remains incomplete; stored as unknown, not closed.",
+        "74/79 homepage sums and 72 catalogue snapshot distinguished rather than called current availability.",
+        "Internet vehicle prices retained; Get ePrice remains null; original miles preserved."
+      ],
+      "blockers": [
+        "Essential local logo/photos and visual branding unavailable.",
+        "Media reuse permission not established.",
+        "Sunday hours and live available stock remain unresolved."
+      ],
+      "unfinishedWork": [
+        "Full two-branch identity duplicate sweep.",
+        "All independent master copies and full content/asset integration.",
+        "All application checks and preview verification."
+      ],
+      "dataChecksPassed": [
+        "Earlier source-draft JSON parsing and eight distinct stock IDs.",
+        "Original USD/mile and null request-price/Sunday invariants; make-sum arithmetic 79. Not application QA."
+      ],
+      "variants": {
+        "auto-best": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "installation",
+            "validate/build",
+            "390/1440 app browser and interaction review",
+            "asset and identity consumers"
+          ],
+          "knownLimitations": [
+            "Application not created; essential media, hours and current stock unresolved."
+          ],
+          "proposedPort": 7447
+        },
+        "modern": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "full-workspace installation",
+            "local Prisma generation",
+            "web typecheck/build",
+            "390/1440 app browser review"
+          ],
+          "knownLimitations": [
+            "Application not created; essential media, hours and current stock unresolved."
+          ],
+          "proposedPort": 7448
+        },
+        "carwow": {
+          "implemented": false,
+          "committed": false,
+          "checksPassed": [],
+          "checksNotRun": [
+            "installation",
+            "check/build",
+            "390/1440 app browser and interaction review",
+            "asset and identity consumers"
+          ],
+          "knownLimitations": [
+            "Application not created; essential media, hours and current stock unresolved."
+          ],
+          "proposedPort": 7449
+        }
       }
     }
   ],
-  "reuseInspection":{
-    "leadId":"bg-varna-autolife",
-    "clientPath":"clients/autolife",
-    "mode":"read-only",
-    "state":"needs-owner-scoped-repair",
-    "variantsFound":["auto-best","modern","carwow"],
-    "inspectedCommit":"cb7b6de89d0eaf31816a9322904a3efea6733f8d",
-    "clientTree":"f721ccc473e2d58bc59fce76714de44ed0e5c3b1",
-    "evidenceInspected":["clients/autolife/CLIENT.md","clients/autolife/BUILD-STATUS.md","clients/autolife/auto-best/.client/project.json","clients/autolife/modern/.client/project.json","clients/autolife/carwow/.client/project.json","clients/autolife/qa-final/results.json lines 1–160 only"],
-    "metadataBlobShas":{"auto-best":"0a10c81099f2d7410273831b30deea10840539c4","modern":"a00b6af98191050287a2ec1aabb6a84b1a97cf80","carwow":"38eeddb39c9ba1b01178b2f98160ff5867ea8bb9"},
-    "existingEvidence":"Prior metadata records all three as local-review-ready at master version 2026.09.06-refresh-1, with framework exits zero and desktop/mobile review. BUILD-STATUS records 10/8/16 routes plus two interaction sets per variant. The inspected initial raw result has empty errors/consoleErrors/broken images and zero overflow for auto-best home at 390px. These are pre-existing records, not new runs or full evidence revalidation by session 05.",
-    "checksPerformedThisSession":["Read-only directory and metadata inspection; limited raw-result inspection."],
-    "checksNotRun":["Dependency install","framework checks/builds","new browser tests","visual screenshot review","complete raw-results review"],
-    "knownLimitations":["Temporary plain text wordmark does not meet the current professional-branding gate.","Dated 16-vehicle/64-photo sample from 2026-09-07; live availability not verified.","Hours, email, socials and several services remain unverified.","Generic decorative source imagery and retained service/account/legal/demo surfaces need separately scoped review.","Modern gallery keyboard focus restoration not separately verified.","No verified real form delivery or public preview; recorded local previews stopped."],
-    "modifiedPaths":[]
+  "reuseInspection": {
+    "leadId": "bg-varna-autolife",
+    "clientPath": "clients/autolife",
+    "mode": "read-only",
+    "state": "needs-owner-scoped-repair",
+    "variantsFound": [
+      "auto-best",
+      "modern",
+      "carwow"
+    ],
+    "inspectedCommit": "cb7b6de89d0eaf31816a9322904a3efea6733f8d",
+    "clientTree": "f721ccc473e2d58bc59fce76714de44ed0e5c3b1",
+    "evidenceInspected": [
+      "clients/autolife/CLIENT.md",
+      "clients/autolife/BUILD-STATUS.md",
+      "clients/autolife/auto-best/.client/project.json",
+      "clients/autolife/modern/.client/project.json",
+      "clients/autolife/carwow/.client/project.json",
+      "clients/autolife/qa-final/results.json lines 1–160 only"
+    ],
+    "metadataBlobShas": {
+      "auto-best": "0a10c81099f2d7410273831b30deea10840539c4",
+      "modern": "a00b6af98191050287a2ec1aabb6a84b1a97cf80",
+      "carwow": "38eeddb39c9ba1b01178b2f98160ff5867ea8bb9"
+    },
+    "existingEvidence": "Prior metadata records all three as local-review-ready at master version 2026.09.06-refresh-1, with framework exits zero and desktop/mobile review. BUILD-STATUS records 10/8/16 routes plus two interaction sets per variant. The inspected initial raw result has empty errors/consoleErrors/broken images and zero overflow for auto-best home at 390px. These are pre-existing records, not new runs or full evidence revalidation by session 05.",
+    "checksPerformedThisSession": [
+      "Read-only directory and metadata inspection; limited raw-result inspection."
+    ],
+    "checksNotRun": [
+      "Dependency install",
+      "framework checks/builds",
+      "new browser tests",
+      "visual screenshot review",
+      "complete raw-results review"
+    ],
+    "knownLimitations": [
+      "Temporary plain text wordmark does not meet the current professional-branding gate.",
+      "Dated 16-vehicle/64-photo sample from 2026-09-07; live availability not verified.",
+      "Hours, email, socials and several services remain unverified.",
+      "Generic decorative source imagery and retained service/account/legal/demo surfaces need separately scoped review.",
+      "Modern gallery keyboard focus restoration not separately verified.",
+      "No verified real form delivery or public preview; recorded local previews stopped."
+    ],
+    "modifiedPaths": []
   },
-  "safety":{"deployment":false,"dealerContact":false,"externalFormSubmission":false,"crmWrites":false,"databaseProvisioningOrMigration":false,"masterChanges":false,"unrelatedClientChanges":false},
-  "localAgentPrompt":"Fetch origin safely from an owned clean checkout or use an isolated worktree; preserve dirty changes and unrelated listeners. Read docs/lead-build/reports/session-05.json and the three HANDOFF.md files on origin/astra. There are no new dealer application folders to install or start. Do not run a copying/personalization generator, submit enquiries, deploy, or treat evidence-only directories as built apps. Stop at evidence inspection; unfinished implementation is not delegated to the preview agent."
+  "safety": {
+    "deployment": false,
+    "dealerContact": false,
+    "externalFormSubmission": false,
+    "crmWrites": false,
+    "databaseProvisioningOrMigration": false,
+    "masterChanges": false,
+    "unrelatedClientChanges": false
+  },
+  "localAgentPrompt": "Read the current session report and HANDOFF. Application copies now exist; do not regenerate them. This checkpoint is in progress, not a finished review delivery. Preserve other work and do not deploy or submit dealer enquiries."
 }

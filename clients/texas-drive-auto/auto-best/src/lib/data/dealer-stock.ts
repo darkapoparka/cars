@@ -1,0 +1,23 @@
+/** Dated public listing samples, not a live feed or a verified-availability assertion.
+ * Original records: ../SOURCE.json at client root; official catalogue re-read 2026-09-09.
+ * All amounts are advertised vehicle prices in USD, all odometer readings are miles.
+ * No currency or distance conversion has been performed.
+ * Two published photo references were accessible; remaining photos and local transfers are outstanding.
+ */
+export type DealerStockRecord = {
+  sourceId: string; sourceUrl: string; observedAt: string; year: number; make: string;
+  model: string; trim: string; priceUsd: number; mileageMiles: number;
+  engine: string; transmission: string; drivetrain: string; body: string;
+  fuel: string | null; exteriorColor: string | null; image: string;
+};
+const missingPhoto = '/media/photo-unavailable.svg';
+export const dealerStock: readonly DealerStockRecord[] = [
+  { sourceId: '127361913', sourceUrl: 'https://www.texasdriveauto.com/details/used-2008-acura-tl/127361913', observedAt: '2026-09-08', year: 2008, make: 'Acura', model: 'TL', trim: '', priceUsd: 4500, mileageMiles: 176729, engine: '3.2L V6', transmission: 'Automatic 5-Speed', drivetrain: 'FWD', body: 'Sedan', fuel: 'Gasoline', exteriorColor: 'Gray', image: '/stock/127361913-1.webp' },
+  { sourceId: '128538336', sourceUrl: 'https://www.texasdriveauto.com/details/used-2012-audi-q5/128538336', observedAt: '2026-09-08', year: 2012, make: 'Audi', model: 'Q5', trim: '2.0T quattro Premium Plus', priceUsd: 6500, mileageMiles: 104710, engine: '2.0L Turbo I4', transmission: 'Automatic 8-Speed', drivetrain: 'AWD', body: 'SUV', fuel: null, exteriorColor: null, image: missingPhoto },
+  { sourceId: '127361925', sourceUrl: 'https://www.texasdriveauto.com/details/used-2013-audi-q5/127361925', observedAt: '2026-09-08', year: 2013, make: 'Audi', model: 'Q5', trim: '2.0T quattro Premium Plus', priceUsd: 6990, mileageMiles: 114512, engine: '2.0L Flex Fuel Turbo I4', transmission: 'Automatic 8-Speed', drivetrain: 'AWD', body: 'SUV', fuel: 'Flex Fuel', exteriorColor: 'White', image: '/stock/127361925-1.webp' },
+  { sourceId: '127361924', sourceUrl: 'https://www.texasdriveauto.com/details/used-2018-audi-a4/127361924', observedAt: '2026-09-08', year: 2018, make: 'Audi', model: 'A4', trim: 'Premium', priceUsd: 8990, mileageMiles: 128956, engine: '2.0L', transmission: 'Automatic 7-Speed', drivetrain: 'FWD', body: 'Sedan', fuel: null, exteriorColor: null, image: missingPhoto },
+  { sourceId: '127361904', sourceUrl: 'https://www.texasdriveauto.com/details/used-2014-bmw-x5/127361904', observedAt: '2026-09-08', year: 2014, make: 'BMW', model: 'X5', trim: 'xDrive35i', priceUsd: 7990, mileageMiles: 177873, engine: '3.0L Twin Turbo I6', transmission: 'Automatic 8-Speed', drivetrain: 'AWD', body: 'SUV', fuel: null, exteriorColor: null, image: '/stock/127361904-1.webp' },
+  { sourceId: '127361891', sourceUrl: 'https://www.texasdriveauto.com/details/used-2014-buick-enclave/127361891', observedAt: '2026-09-08', year: 2014, make: 'Buick', model: 'Enclave', trim: 'Leather', priceUsd: 6990, mileageMiles: 162632, engine: '3.6L V6', transmission: 'Automatic 6-Speed', drivetrain: 'AWD', body: 'Crossover', fuel: null, exteriorColor: null, image: missingPhoto },
+  { sourceId: '127361933', sourceUrl: 'https://www.texasdriveauto.com/details/used-2007-cadillac-cts/127361933', observedAt: '2026-09-08', year: 2007, make: 'Cadillac', model: 'CTS', trim: 'HI FEATURE V6', priceUsd: 4990, mileageMiles: 119529, engine: '3.6L V6', transmission: 'Automatic 5-Speed', drivetrain: 'RWD', body: 'Sedan', fuel: null, exteriorColor: null, image: missingPhoto },
+  { sourceId: '127361883', sourceUrl: 'https://www.texasdriveauto.com/details/used-2018-cadillac-escalade/127361883', observedAt: '2026-09-08', year: 2018, make: 'Cadillac', model: 'Escalade', trim: 'Standard', priceUsd: 15990, mileageMiles: 99315, engine: '6.2L V8', transmission: 'Automatic 10-Speed', drivetrain: '4X4', body: 'SUV', fuel: null, exteriorColor: null, image: missingPhoto }
+];

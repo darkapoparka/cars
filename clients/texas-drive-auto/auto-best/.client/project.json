@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "client": "texas-drive-auto",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-08T21:52:26.106Z",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "updatedAt": "2026-09-08T23:02:53.029Z",
+  "knownGaps": [
+    "This is an in-progress implementation checkpoint, not completed or sendable.",
+    "Five Texas listing photos and media redistribution permission remain unresolved.",
+    "Complete supporting-page sweep and actual browser acceptance remain in progress."
+  ],
+  "checksPassed": [
+    "Node 22.22.0 / npm 10.9.8: npm ci",
+    "npm run check: zero errors and zero warnings"
+  ],
+  "checksNotRun": [
+    "production build",
+    "390/1440 browser review"
+  ]
+}

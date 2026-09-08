@@ -1,0 +1,55 @@
+Scope: all 31 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1516
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1516, reused 78, downloaded 0, added 0
+Progress: resolved 1516, reused 342, downloaded 0, added 0
+Progress: resolved 1516, reused 647, downloaded 0, added 0
+Progress: resolved 1516, reused 1075, downloaded 0, added 0
+Progress: resolved 1516, reused 1412, downloaded 0, added 0
+Progress: resolved 1516, reused 1512, downloaded 0, added 84
+Progress: resolved 1516, reused 1514, downloaded 0, added 165
+Progress: resolved 1516, reused 1514, downloaded 0, added 239
+Progress: resolved 1516, reused 1514, downloaded 0, added 303
+Progress: resolved 1516, reused 1514, downloaded 0, added 356
+Progress: resolved 1516, reused 1514, downloaded 0, added 377
+Progress: resolved 1516, reused 1514, downloaded 0, added 449
+Progress: resolved 1516, reused 1514, downloaded 0, added 507
+Progress: resolved 1516, reused 1514, downloaded 0, added 573
+Progress: resolved 1516, reused 1514, downloaded 0, added 671
+Progress: resolved 1516, reused 1514, downloaded 0, added 820
+Progress: resolved 1516, reused 1514, downloaded 0, added 874
+Progress: resolved 1516, reused 1514, downloaded 0, added 875
+Progress: resolved 1516, reused 1514, downloaded 0, added 921
+Progress: resolved 1516, reused 1514, downloaded 0, added 992
+Progress: resolved 1516, reused 1514, downloaded 0, added 1047
+Progress: resolved 1516, reused 1514, downloaded 0, added 1062
+Progress: resolved 1516, reused 1514, downloaded 0, added 1073
+Progress: resolved 1516, reused 1514, downloaded 0, added 1078
+Progress: resolved 1516, reused 1514, downloaded 0, added 1086
+Progress: resolved 1516, reused 1514, downloaded 0, added 1097
+Progress: resolved 1516, reused 1514, downloaded 0, added 1135
+Progress: resolved 1516, reused 1514, downloaded 0, added 1159
+Progress: resolved 1516, reused 1514, downloaded 0, added 1201
+Progress: resolved 1516, reused 1514, downloaded 0, added 1244
+Progress: resolved 1516, reused 1514, downloaded 0, added 1321
+Progress: resolved 1516, reused 1514, downloaded 0, added 1417
+Progress: resolved 1516, reused 1514, downloaded 0, added 1440
+Progress: resolved 1516, reused 1514, downloaded 0, added 1484
+Progress: resolved 1516, reused 1514, downloaded 0, added 1511
+Progress: resolved 1516, reused 1514, downloaded 0, added 1514
+Progress: resolved 1516, reused 1514, downloaded 0, added 1515
+Progress: resolved 1516, reused 1514, downloaded 0, added 1516, done
+
+devDependencies:
++ @biomejs/biome 2.4.6
++ @repo/typescript-config 0.0.0 <- packages\typescript-config
++ @turbo/gen 2.9.16
++ @types/node 25.3.5
++ turbo 2.9.16
++ typescript 5.9.3
++ ultracite 7.2.5
++ vitest 4.1.8
+
+Done in 45.3s using pnpm v11.4.0
