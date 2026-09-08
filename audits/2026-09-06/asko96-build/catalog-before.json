@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-09-06",
+  "root": "J:/cars",
+  "purpose": "Local automotive template library and prospect demos. This is not the Agency OS CRM registry.",
+  "defaultTemplate": "auto-best",
+  "templates": [
+    {
+      "key": "auto-best",
+      "name": "Auto Best",
+      "aliases": [
+        "autodeal-best",
+        "autodeal-polished",
+        "5173",
+        "6511"
+      ],
+      "path": "templates/auto-best",
+      "version": "2026.09.06-baseline",
+      "family": "autodeal",
+      "stack": "sveltekit",
+      "sourcePort": 5173,
+      "libraryPort": 6461,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/"
+        }
+      ],
+      "desktop": 8.5,
+      "mobile": 8.5,
+      "priority": "use-first",
+      "readiness": "source-branded-candidate",
+      "reskinEffort": "lowest",
+      "brandFiles": [
+        "src/lib/config/brand.ts",
+        "src/lib/data/company.ts",
+        "src/lib/data/inventory.ts",
+        "src/app.css",
+        "static"
+      ],
+      "note": "Polished native SvelteKit derivative. One retained composition; retired variants redirect. Current working files include local polish beyond HEAD."
+    },
+    {
+      "key": "modern",
+      "name": "Modern",
+      "aliases": [
+        "6212"
+      ],
+      "path": "templates/modern",
+      "version": "2026.09.06-baseline",
+      "family": "modern",
+      "stack": "next-monorepo",
+      "sourcePort": 6212,
+      "libraryPort": 6462,
+      "entry": "/cars",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/cars"
+        }
+      ],
+      "desktop": 7,
+      "mobile": 8.5,
+      "priority": "shortlist",
+      "readiness": "source-branded-candidate",
+      "reskinEffort": "medium",
+      "brandFiles": [
+        "packages/marketplace/lead-site.ts",
+        "packages/marketplace",
+        "apps/web/public",
+        "apps/web/app"
+      ],
+      "note": "Compact stock-first storefront. Full workspace retained, independently installed and verified on 6462 in existing static demo mode. Prisma generation and web typecheck passed; provider services remain unconfigured."
+    },
+    {
+      "key": "carwow",
+      "name": "Carwow",
+      "aliases": [
+        "6517",
+        "spartak",
+        "spartak-style"
+      ],
+      "path": "templates/carwow",
+      "version": "2026.09.06-baseline",
+      "family": "showroom-carwow",
+      "stack": "sveltekit",
+      "sourcePort": 6517,
+      "libraryPort": 6463,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/"
+        }
+      ],
+      "desktop": 8,
+      "mobile": 8,
+      "priority": "shortlist",
+      "readiness": "source-branded-candidate",
+      "reskinEffort": "medium",
+      "brandFiles": [
+        "src/lib/data/daynight-site.ts",
+        "src/lib/data/daynight-current-inventory.ts",
+        "src/lib/data/daynight-vehicles.ts",
+        "src/lib/styles",
+        "static"
+      ],
+      "note": "Internal inspiration nickname, not Carwow affiliation. Yellow desktop and compact mobile compositions are intentional. Use the Cars launcher to avoid the inherited dev script's fixed port 6517."
+    },
+    {
+      "key": "import",
+      "name": "Import",
+      "aliases": [
+        "6518",
+        "bohemcars-style",
+        "auxero"
+      ],
+      "path": "templates/import",
+      "version": "2026.09.06-baseline",
+      "family": "auxero",
+      "stack": "sveltekit",
+      "sourcePort": 6518,
+      "libraryPort": 6464,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/"
+        }
+      ],
+      "desktop": 7.5,
+      "mobile": 8,
+      "priority": "reserve",
+      "readiness": "source-branded-candidate",
+      "reskinEffort": "medium",
+      "brandFiles": [
+        "src/lib/data/daynight.ts",
+        "src/lib/data/daynight-listings.json",
+        "src/lib/data/vehicles.ts",
+        "src/lib/styles",
+        "static"
+      ],
+      "note": "Dark Day & Night source baseline with buy/import/sell journeys. Related to showroom; not an entirely independent template family."
+    },
+    {
+      "key": "showroom",
+      "name": "Showroom",
+      "aliases": [
+        "6404",
+        "eliq-bohemcars",
+        "import-eliq"
+      ],
+      "path": "templates/showroom",
+      "version": "2026.09.06-baseline",
+      "family": "auxero",
+      "stack": "sveltekit",
+      "sourcePort": 6404,
+      "libraryPort": 6465,
+      "entry": "/inventory",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/"
+        }
+      ],
+      "desktop": 7.5,
+      "mobile": 8,
+      "priority": "reserve",
+      "readiness": "source-branded-candidate",
+      "reskinEffort": "medium",
+      "brandFiles": [
+        "src/lib/data/eliqauto.ts",
+        "src/lib/data/eliqauto-media.ts",
+        "src/lib/data/eliqauto-listings.json",
+        "src/lib/data/eliqauto-about.ts",
+        "src/lib/styles",
+        "static"
+      ],
+      "note": "ELIQ source retained as a distinct red/white showroom baseline. This local key does not replace Agency OS's different historical showroom template."
+    },
+    {
+      "key": "autodeal",
+      "name": "AutoDeal Full",
+      "aliases": [
+        "autodeal-full"
+      ],
+      "path": "templates/autodeal",
+      "version": "2026.09.06-baseline",
+      "family": "autodeal",
+      "stack": "node-static",
+      "sourcePort": null,
+      "libraryPort": 6460,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "home01",
+          "route": "/"
+        },
+        {
+          "id": "home02",
+          "route": "/home02"
+        },
+        {
+          "id": "home03",
+          "route": "/home03"
+        },
+        {
+          "id": "home04",
+          "route": "/home04"
+        },
+        {
+          "id": "home05",
+          "route": "/home05"
+        },
+        {
+          "id": "home06",
+          "route": "/home06"
+        },
+        {
+          "id": "home07",
+          "route": "/home07"
+        },
+        {
+          "id": "home08",
+          "route": "/home08"
+        },
+        {
+          "id": "home09",
+          "route": "/home09"
+        },
+        {
+          "id": "home10",
+          "route": "/home10"
+        }
+      ],
+      "desktop": 8,
+      "mobile": 7,
+      "priority": "variant-library",
+      "readiness": "reference-content-candidate",
+      "reskinEffort": "medium-high",
+      "brandFiles": [
+        "mirror/pages",
+        "mirror/public/assets",
+        "i18n/site-config.mjs",
+        "i18n/catalogs",
+        "server.mjs"
+      ],
+      "note": "Complete existing Agency OS library, 150 stored page routes and ten real homepage compositions. Different runtime from auto-best. Scores are family-level visual judgement, not an endorsement of every home."
+    },
+    {
+      "key": "boxcar",
+      "name": "Boxcar",
+      "aliases": [
+        "boxcars",
+        "6450"
+      ],
+      "path": "templates/boxcar",
+      "version": "2026.09.06-baseline",
+      "family": "boxcar",
+      "stack": "vite-svelte",
+      "sourcePort": 6450,
+      "libraryPort": 6450,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "home01",
+          "route": "/"
+        }
+      ],
+      "desktop": 8,
+      "mobile": 6.5,
+      "priority": "polish-next",
+      "readiness": "reference-content-candidate",
+      "reskinEffort": "medium-high",
+      "brandFiles": [
+        "public/pages",
+        "public/assets",
+        "src/local.css",
+        "src/interactions.ts"
+      ],
+      "note": "Only Home 1 is currently implemented locally; other home menu entries alias it. Strong inventory and detail patterns; mobile needs compaction. Captured content and local behavior adapters."
+    },
+    {
+      "key": "rencar",
+      "name": "Rencar",
+      "aliases": [
+        "6430"
+      ],
+      "path": "templates/rencar",
+      "version": "2026.09.06-baseline",
+      "family": "rencar",
+      "stack": "vite-svelte",
+      "sourcePort": 6430,
+      "libraryPort": 6430,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "home01",
+          "route": "/"
+        },
+        {
+          "id": "home02",
+          "route": "/index-2.html"
+        },
+        {
+          "id": "home03",
+          "route": "/index-3.html"
+        },
+        {
+          "id": "home04",
+          "route": "/index-4.html"
+        },
+        {
+          "id": "home05",
+          "route": "/index-5.html"
+        }
+      ],
+      "desktop": 7.5,
+      "mobile": 5.5,
+      "priority": "polish-next",
+      "readiness": "dealer-adaptation-needed",
+      "reskinEffort": "high-until-dealer-pass",
+      "brandFiles": [
+        "src/pages",
+        "src/template.js",
+        "public/assets/css",
+        "public/assets"
+      ],
+      "note": "Five real homepages and 45 compiled pages. Prefer Home 2 or 5 for a future dealer adaptation; long mobile heroes and stacked booking filters need a single shared template pass. Rental semantics require more than wording."
+    },
+    {
+      "key": "motoria",
+      "name": "Motoria (Motors source)",
+      "aliases": [
+        "motors",
+        "6440"
+      ],
+      "path": "templates/motoria",
+      "version": "2026.09.06-baseline",
+      "family": "motors",
+      "stack": "sveltekit",
+      "sourcePort": 6440,
+      "libraryPort": 6440,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "classified-one",
+          "route": "/"
+        }
+      ],
+      "desktop": 6.5,
+      "mobile": 5,
+      "priority": "hold",
+      "readiness": "route-completion-needed",
+      "reskinEffort": "high",
+      "brandFiles": [
+        "src/lib/snapshots",
+        "static",
+        "static/local-runtime.js"
+      ],
+      "note": "The folder name is motoria, but source is Motors by Stylemix. Different from Agency OS's historical Motoria/inventory family. One home, nine pricing styles, one captured vehicle detail. Many cards still leave for the vendor site."
+    },
+    {
+      "key": "nusavo",
+      "name": "Nusavo",
+      "aliases": [
+        "6420"
+      ],
+      "path": "templates/nusavo",
+      "version": "2026.09.06-baseline",
+      "family": "nusavo",
+      "stack": "vite-svelte",
+      "sourcePort": 6420,
+      "libraryPort": 6420,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/"
+        }
+      ],
+      "desktop": 6.5,
+      "mobile": 6,
+      "priority": "hold",
+      "readiness": "dealer-adaptation-needed",
+      "reskinEffort": "high-until-dealer-pass",
+      "brandFiles": [
+        "src/pages",
+        "src/pages.json",
+        "src/interactions.css",
+        "public/styles",
+        "public/assets"
+      ],
+      "note": "Rental storefront with local cart/checkout flows. Remote CSS mask fails CORS in the live audit. Useful for rental leads; lower priority for stock-selling showrooms."
+    }
+  ]
+}

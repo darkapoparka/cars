@@ -1,0 +1,5 @@
+import {chromium} from 'playwright';import fs from 'node:fs/promises';
+const browser=await chromium.launch({headless:true,channel:'chrome'});const page=await browser.newPage({viewport:{width:390,height:1000}});
+for(const [name,url] of [['ref','https://shop.creativemox.com/nusavo/'],['local','http://127.0.0.1:6420/']]){await page.goto(url,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(1200);await page.screenshot({path:`reference/qa/${name}-home-top.png`});console.log(name,await page.evaluate(()=>({title:document.title,carousels:[...document.querySelectorAll('.swiper')].map(el=>({class:el.className,box:el.getBoundingClientRect().toJSON(),slides:[...el.querySelectorAll('.swiper-slide')].slice(0,2).map(s=>({class:s.className,box:s.getBoundingClientRect().toJSON(),style:getComputedStyle(s).display}))})),logos:[...document.querySelectorAll('.elementor-widget-image-carousel img')].map(el=>({box:el.getBoundingClientRect().toJSON(),opacity:getComputedStyle(el).opacity}))})))}
+await browser.close();
+

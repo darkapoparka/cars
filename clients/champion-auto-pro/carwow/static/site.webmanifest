@@ -1,0 +1,17 @@
+{
+  "name": "Champion Auto Pro",
+  "short_name": "Champion Auto Pro",
+  "description": "Champion Auto Pro: автомобили, огледи и контакт във Варна.",
+  "lang": "bg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#282522",
+  "icons": [
+    {
+      "src": "/assets/champion/logo.png",
+      "type": "image/png"
+    }
+  ]
+}

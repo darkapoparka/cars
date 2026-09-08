@@ -1,0 +1,1 @@
+import fs from 'node:fs/promises';const p='J:/cars/audits/2026-09-08/verify/run-astra-last.mjs';let s=await fs.readFile(p,'utf8');s=s.replace("for(const [i,key]of [...new Set(routeList)].entries()){", "if(t==='carwow')routeList.push('/financing'); for(const [i,key]of [...new Set(routeList)].entries()){");await fs.writeFile(p,s);

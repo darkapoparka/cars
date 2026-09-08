@@ -1,0 +1,206 @@
+[
+  {
+    "name": "finance-keyboard-focus",
+    "width": 390,
+    "style": {
+      "active": true,
+      "focusVisible": true,
+      "outline": "rgb(36, 39, 44) none 3px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(196, 1, 1)",
+      "focusToken": ""
+    }
+  },
+  {
+    "name": "verified-finance-handoff",
+    "width": 390,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Audi%20RS%206%20Avant",
+    "selectedVehicleVisible": false
+  },
+  {
+    "name": "verified-detail-back",
+    "width": 390,
+    "detail": "http://127.0.0.1:6461/listing-detail-v1/4",
+    "url": "http://127.0.0.1:6461/listing-grid",
+    "count": 8
+  },
+  {
+    "name": "first-tab",
+    "width": 390,
+    "text": "<a class=\"dn-logo svelte-hv3zzy\" href=\"/\" aria-label=\"Day &amp; Night Auto Group — начало\"><img src=\"/assets/images/lead/day-night-logo.png\" alt=\"Day &amp; Night Auto Group\" width=\"220\" height=\"58\" fetchpriority=\"high\" class=\"svelte-hv3zzy\"></a>",
+    "skipLinks": 0
+  },
+  {
+    "name": "settled-map",
+    "width": 390,
+    "route": "/about-us",
+    "frames": [
+      {
+        "url": "http://127.0.0.1:6461/about-us"
+      },
+      {
+        "url": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg"
+      },
+      {
+        "url": "about:blank"
+      },
+      {
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "name": "settled-map",
+    "width": 390,
+    "route": "/listing-detail-v1/1",
+    "frames": [
+      {
+        "url": "http://127.0.0.1:6461/listing-detail-v1/1"
+      },
+      {
+        "url": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg"
+      },
+      {
+        "url": "about:blank"
+      },
+      {
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "name": "settled-map",
+    "width": 390,
+    "route": "/contact",
+    "frames": [
+      {
+        "url": "http://127.0.0.1:6461/contact"
+      },
+      {
+        "url": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg"
+      },
+      {
+        "url": "about:blank"
+      },
+      {
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "name": "video-player-state",
+    "width": 390,
+    "state": {
+      "text": "НАЙ-ЖЕЛАНАТА КОЛА В БЪЛГАРИЯ | LAMBORGHINI URUS\nKristian Kirilov\nKristian Kirilov\n81.6K subscribers\n0:02\nTime elapsed 2 seconds\n/23:19\nTime duration 23 minutes, 19 seconds\n24:41\nНАЙ-ГЪЗАРСКОТО BMW\n7 months ago\n29:04\nЕДИН ДЕН С НОНЧЕВ\n1 year ago\n23:03\nКАКВА Е РАЗЛИКАТА в G-КЛАСИТЕ\n1 year ago\n27:56\nЕДИН ДЕН С МАМА\n2 years ago\n31:23\nНАЙ-ЛУКСОЗНИТЕ ЧАСОВНИЦИ\n9 months ago\n29:37\nКУПИХ СИ ЛУКСОЗЕН ЧАСОВН",
+      "videos": [
+        {
+          "paused": false,
+          "time": 2.447549,
+          "ready": 4
+        }
+      ]
+    }
+  },
+  {
+    "name": "finance-keyboard-focus",
+    "width": 1440,
+    "style": {
+      "active": true,
+      "focusVisible": true,
+      "outline": "rgb(36, 39, 44) none 3px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(196, 1, 1)",
+      "focusToken": ""
+    }
+  },
+  {
+    "name": "verified-finance-handoff",
+    "width": 1440,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Audi%20RS%206%20Avant",
+    "selectedVehicleVisible": false
+  },
+  {
+    "name": "verified-detail-back",
+    "width": 1440,
+    "detail": "http://127.0.0.1:6461/listing-detail-v1/4",
+    "url": "http://127.0.0.1:6461/listing-grid",
+    "count": 8
+  },
+  {
+    "name": "first-tab",
+    "width": 1440,
+    "text": "<a href=\"tel:+359879824625\" class=\"svelte-hv3zzy\">087 982 4625</a>",
+    "skipLinks": 0
+  },
+  {
+    "name": "settled-map",
+    "width": 1440,
+    "route": "/about-us",
+    "frames": [
+      {
+        "url": "http://127.0.0.1:6461/about-us"
+      },
+      {
+        "url": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg"
+      },
+      {
+        "url": "about:blank"
+      },
+      {
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "name": "settled-map",
+    "width": 1440,
+    "route": "/listing-detail-v1/1",
+    "frames": [
+      {
+        "url": "http://127.0.0.1:6461/listing-detail-v1/1"
+      },
+      {
+        "url": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg"
+      },
+      {
+        "url": "about:blank"
+      },
+      {
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "name": "settled-map",
+    "width": 1440,
+    "route": "/contact",
+    "frames": [
+      {
+        "url": "http://127.0.0.1:6461/contact"
+      },
+      {
+        "url": "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg"
+      },
+      {
+        "url": "about:blank"
+      },
+      {
+        "url": "about:blank"
+      }
+    ]
+  },
+  {
+    "name": "video-player-state",
+    "width": 1440,
+    "state": {
+      "text": "НАЙ-ЖЕЛАНАТА КОЛА В БЪЛГАРИЯ | LAMBORGHINI URUS\nKristian Kirilov\nKristian Kirilov\n81.6K subscribers\n0:02\nTime elapsed 2 seconds\n/23:19\nTime duration 23 minutes, 19 seconds\n24:41\nНАЙ-ГЪЗАРСКОТО BMW\n7 months ago\n42:53\nКАКВО Е ДА СИ В ЗАТВОРА\n1 year ago\n30:28\nКУПИХ КОЛАТА НА СЛАВИ ТРИФОНОВ\n10 months ago\n23:03\nКАКВА Е РАЗЛИКАТА в G-КЛАСИТЕ\n1 year ago\n32:18\nПИКАНТНИ ИСТОРИИ С АННА СТЕФАНОВА\n5 months ag",
+      "videos": [
+        {
+          "paused": false,
+          "time": 3.077313,
+          "ready": 4
+        }
+      ]
+    }
+  }
+]

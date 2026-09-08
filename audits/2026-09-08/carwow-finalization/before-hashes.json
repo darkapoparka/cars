@@ -1,0 +1,2038 @@
+[
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\app.d.ts",
+    "Hash": "B1021D514D4DEEC5FD8CC1276FF0D72675755B328970FC27FB221DDD7F4EF75B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\app.html",
+    "Hash": "5A9F5E378F0B0A6BC44AD42F508E89336F0F5670DB63E60B4900C05AF713D5AA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\hooks.server.ts",
+    "Hash": "79C77A05BA7DAB41CA20DE7FE3855D4194AFEB705702D15FA9944873B11BC703"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils.ts",
+    "Hash": "69068FC786EBB12AA6290D29EDC3D826D1A2F9B1AEB7697E2464DC753DBE7451"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\assets\\favicon.svg",
+    "Hash": "D7D9227F0FE5BFB4189FB6BA4DD9E2D524F6A1DFD02BD901C65330987675C0B3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\client\\import-request-submit.ts",
+    "Hash": "C2435AC733B88234A2294042E93D86C6CE52BEDE8E988AD978F9FEB127B6ACEE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\client\\lead-submit.ts",
+    "Hash": "2FE6DBADDFDA572AD78A23267F82C3B97276267D7D081A5E26F7597E1D109D06"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\about\\DesktopAboutPage.svelte",
+    "Hash": "851FE4C78B1B46779B006A20512EBBD610937425EF46D393A73122974F9E2856"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\about\\DesktopDealerProfilePage.svelte",
+    "Hash": "DBF92097E175BE070B8552FCC68B0AE1DB304DE6C913DED53FA83C0D97DD1463"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\about\\MobileAboutPage.svelte",
+    "Hash": "725D13E5F009B04DBC62D475BB9B1D3F470854CA271843D19A25986E66B69665"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\AdminEmptyState.svelte",
+    "Hash": "E2C634F671544DEBA34F3D416525CF38ED346350B5E33BC5041BC12277D8D518"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\AdminMessage.svelte",
+    "Hash": "B8A13F0826256E82B0165674D0462A05E88512F92F5481FEBC841C01EBE7E9DD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\AdminRowCheckbox.svelte",
+    "Hash": "EAF2BDBA067AF1BB92606DF02ECBBA2999F058430DF2A820D46F800030320DF8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\AdminSelect.svelte",
+    "Hash": "A13BDC2337AEBA5CE4EC931218CBE6FC30517BC6B834CF900554F7C4654EBD0F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\AdminShell.svelte",
+    "Hash": "C2E4580F2BC812407E859E67F3C27E94678AF6E9ED291B23B7E32693DB657ECB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\format.ts",
+    "Hash": "DCBCA142CEFC1E180F27D554A827D599E0CAEC0D536D0C8475F6C00FD2C92BC5"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\PostForm.svelte",
+    "Hash": "A1BEA9812E031E17D1864E4FD0EADB9479EC1ACE97A16B30AC249682794C2004"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\VehicleForm.svelte",
+    "Hash": "A2FF56F0F51738B6A51AD043D1A1A3A91D6489B79F91C9D1442CBF8ABE12C292"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardChangePassword.svelte",
+    "Hash": "9E476D99628F78D556F133E377494B8B5C56E64031AB5FD105ED1B9F97B26B41"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardFavorites.svelte",
+    "Hash": "79F9AFA2D3F36E0A30A58D39CDF74286F067D7A924A0B376F0A0F44189B049A1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardHomeOverview.svelte",
+    "Hash": "DDF6126F73A24221717DD53AF4937305C1414967E8BDA1ADED7E31CB6FF95FB0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardListings.svelte",
+    "Hash": "1377FD3EF81DFC1CF407CC608B9B404668D2C61BC73DF6058EBFC31282CFB92E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardMessages.svelte",
+    "Hash": "E3A5A2F57F475BC45EF3D2094E73DB62DCBEA9D600BAA4A68363A7A15C20A358"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardNewListing.svelte",
+    "Hash": "607809035C54E9D53A5F2D558E2A2EB7A761AC52D3597607C2DAFCEE77936CCA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardPage.svelte",
+    "Hash": "20601680FF9C3E8B038AB6E9D27DC371677E928CA7E21607B43263CF9EE60375"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardProfile.svelte",
+    "Hash": "A6491B444DA7AC9781E0CFCA0F206CD9BECC3BA63231CC0763C01B04692FB6F7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardReviews.svelte",
+    "Hash": "6B1CF46FAD0345335FC5B4E1160FA196FCD9CE8521FD760660CF0DC4010FA3A8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\admin\\dashboard\\template-dashboard-export.ts",
+    "Hash": "F9BCE061236985D50A5022CF3A0D46E193F186F69F0A360D5EDDFC14C21659BA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\blog\\BlogArticlePage.svelte",
+    "Hash": "5FB53DE3E567D27C8FF1BF167E741F97A5601BFB8126F49152C89210CB9A7331"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\blog\\BlogIndexPage.svelte",
+    "Hash": "8232E0A2BDC7C92752CD603F21170067FAE00C7ADC1DA48BA3BF2054E83E6FE5"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\calculator\\CalculatorContent.svelte",
+    "Hash": "53B7474992F85F93DB9E552F4956720301B9C03627168F8149642AF354C49024"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\chat\\ChatLauncher.svelte",
+    "Hash": "E5AB26792675A68A78B554369B63CF831E0CD51D18C28D9EBED7063DA925A31D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\chat\\ChatThread.svelte",
+    "Hash": "3EF319602818878739AADE11D8530CB58EF6C6BE49E03D05D0D273D8C8E45EAF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\chat\\ChatWidget.svelte",
+    "Hash": "5A4B036612D8C431A92A784F3390B41D3181A31CE885F3C5648449119C449AB0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\compare\\CompareContent.svelte",
+    "Hash": "23586EE29D17640D0EBF89D402EEF75D9822D32B5BB83CA7F39B4E2797839FAD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\contact\\deferred-map-frame.ts",
+    "Hash": "F1C2E4FFBB9AC4896058D982E29DDB448EA1066535F2286A087212DCA63FEB29"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\contact\\DesktopContactPage.svelte",
+    "Hash": "5B15CF03A0735C60E3C9E2066D8EE0B24743D27092F0D8F2C44F91B569FAEA50"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\contact\\MobileContactPage.svelte",
+    "Hash": "CF1651C9E183232A07C8432E7A663E81D0C276E2DDA70C627E1BE79931EDFB8B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\desktop-detail-reviews-data.ts",
+    "Hash": "CBB613B645F9355A86EC83005D4557C4BF12101232F9F6878694EBDD6047D0C2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailDealerPanel.svelte",
+    "Hash": "353F1CC6DF1307C609EBBC807D23867BAC649393C3687221C24E0AC97B26DE24"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailFeatureTabs.svelte",
+    "Hash": "0FA07699A874C6659E2600DC5A4CAC026244987E4D1BA3F909A4F97D1D082203"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailFinanceCalculator.svelte",
+    "Hash": "DC126A8CACAB0551A91DE47AA03FCC12F2A810B9C9A7B6627D8D54F9D6A01691"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailGallery.svelte",
+    "Hash": "A186084BA29A4192B9339799036061C458FF88A21CDC2D0B0F2579B53BDADAD8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailInquiryPanel.svelte",
+    "Hash": "C575989F46D2A10F85779F85B0FA3768C08F57C2D9B5667ED623BE543E01ED7C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailLocationMap.svelte",
+    "Hash": "6BAE48525C16703E5BCB0ADB40C7A3DB6A840667DAC27227C3983D8C5541744C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailOverviewPanel.svelte",
+    "Hash": "390CE5E5315BDEBB0712086376B7DF14A86D8304645ED3D9F5C5C58A6C13FE15"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailPaymentPanel.svelte",
+    "Hash": "8CFF37AFB42A000B339237334BB03E9BC5B017EE678A64899A6DA11D054711D6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailPrimarySection.svelte",
+    "Hash": "4C4BD844FC07BA6106F4A13E056D749199AF0E5685E2CBF8894A7F82F462E6C7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailRelatedVehicles.svelte",
+    "Hash": "152BAF754B20FEF9147B1AD05FF0B191BAB19B27D5D38204AC61C4ACE87DCC75"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailReviews.svelte",
+    "Hash": "B3A143E44806F7F0B1E07864E9B7A5E482C0CD2C479332E293E92E7E1F9B5F82"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailSidebar.svelte",
+    "Hash": "F18C52F1FAC0DA05FBB73229DC31D6157C69028A71F490B5B06D1A3BA30AE5F2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DesktopDetailTitleBar.svelte",
+    "Hash": "2298D31447B9E46FFC0BF13CA1F89DAE8EAE912A4493A350405365A4769F40E7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\desktop\\DetailPageShell.svelte",
+    "Hash": "1F46B94086E5080E2D27D630E931BA7C246832D6462B2E6520A1C9F69B369C8A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\detail\\mobile\\MobileDetailPage.svelte",
+    "Hash": "4CF681C5E4B72B6D692AE3C4A6A8BBAA86E856766B3C04CE09A98C9C75221717"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\faq\\FaqContent.svelte",
+    "Hash": "218C81B936FB1A4974F1A9CD31B327CD3AE94CC581C370B12962DF8D4D6A2598"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\favorites\\desktop\\DesktopFavoritesPage.svelte",
+    "Hash": "A88263DA2A0757EFB14E410489637FBD08DBC7A22AAE8B1FA161DC0171D8B1C2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\favorites\\mobile\\MobileFavoritesPage.svelte",
+    "Hash": "B14C3FAD85AC842D881A628E5913FD0C2D12BEAC9DFB9340AD8B556F3DF8B428"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\financing\\DesktopFinancingPage.svelte",
+    "Hash": "A39F2035251CB1A5F4A3ADCE9ABE0103956B34389AD7298DA637295B0CE80740"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\financing\\MobileFinancingPage.svelte",
+    "Hash": "E25CD81E8B6BE970D1F0EED6DE4E9348DF7BE1836FB96992098A22BDAFA4A2C3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\HomePage.svelte",
+    "Hash": "E2BC509B50918477E841F154296C9DA4C899BD948F3D06755CA8E1931E345FC6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\HomePageHead.svelte",
+    "Hash": "CFFDEDE2A98A8AB24CB4BB26F4A3C7488E29D6695B4C07D37F6FFE659F4EB4B7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\HomeQuickFilterModalStyles.svelte",
+    "Hash": "07914B7D788EF3FD3093482AA7EE9944AD91BB987547323F291165072A89CE80"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\desktop-home-inventory-data.ts",
+    "Hash": "5AB53D2A0373DEC2AB775696F6137FDE1B813952654F0717D0271F3059CC3D40"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHome.svelte",
+    "Hash": "FB5FD5488EA4F729D51FB2725D46341113316FAD7F032066BD0542B278D38920"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeBrandStrip.svelte",
+    "Hash": "76583724145F8B25782A7F7A03368C453DD4D42D10FFF0F7EC39E92297F7BAFC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeFooter.svelte",
+    "Hash": "F5B59C9FD9031D433BC34AF56CBFA82A45E9AA8D8B02CD829CD65D01E62E08A0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeHero.svelte",
+    "Hash": "894B67D32779CD3EA803CA27292F66C5B155E7BFC72CEBBB324879EE26EDA06F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeHome1.svelte",
+    "Hash": "C344811B5DE10E50D4B8EF38BBF6510B82253E82184E320FEF047E9C1F849B29"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeInventoryCard.svelte",
+    "Hash": "8571E4D02BEFAFB974A1A0040138C3A1DA7B54A2ABF9DE124774EEB2F66B189D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeInventoryPillIcon.svelte",
+    "Hash": "14DC4932FBA5E20643D5CA1C7E1190F9235D0BF13F4520B61A1A24B702FCF23A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeInventoryPreview.svelte",
+    "Hash": "E7EDABA584A59EDE629127DA300E0EC7AC6A0A1FDE18DA1E3327C5229312DD05"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeInventoryTabs.svelte",
+    "Hash": "FEE9150C0E3D21870062384231BD76F538CDBB9C5C10961973EDC7ABB77AECBB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeReviews.svelte",
+    "Hash": "E2E7C3D9A26DB4411DEF12CA42E09DAA1CF28E416EECA1BF97BFF9EE1925854B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeSearchPanel.svelte",
+    "Hash": "C7D8F052A3BA9DB86622FFF40907E43B6C838835308545C1ABF9AC3B79CD0CA6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeTrailingChrome.svelte",
+    "Hash": "0424A9CF96C403784A6402D570D9DC8E5BBFC0E8547312A976ACF616F3C7F56C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeVehicleCategories.svelte",
+    "Hash": "8B2A2E161AD4EBBCF6A9501ED8859CA9692CCF8DD143AA51B7ACD423A4CFF155"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeVideos.svelte",
+    "Hash": "CE6B6AD2435E507682F7A0896895243B790107EEF9BAD307D92867D47DB9E6EC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\desktop\\DesktopHomeWhyDayNight.svelte",
+    "Hash": "40542520047CB4677AE8B6836D4F96D07EB5E77670B12F6A1D05F6FE093DE637"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\mobile\\mobile-home-data.ts",
+    "Hash": "4E319EB153E7D7C86505BC426885E31CD38D58056197EC2EF07C3F6A104D4DFE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+    "Hash": "94B710004D260644531ED8502122CDFCE5E4D2235D54D6980DE6720707809E20"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\mobile\\MobileHeader.svelte",
+    "Hash": "D13A724960E270D9CCBB0CBB1A80D4B1A7BDA329E0AEF5C0ACA9EB19DE0857A8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\home\\mobile\\MobileHome.svelte",
+    "Hash": "D49EF42555C5B5DC0D6A1518A5D980D22119C1C8F9EADA6E1DAFC40F64681C4E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\desktop-inventory-context.svelte.ts",
+    "Hash": "A43935D0F10D76DF8BCADBCAEC25C01F0DBEF5127B645ED81FEC213475612231"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\desktop-inventory-sort.ts",
+    "Hash": "54B16E6457A6C4591229AE9B54EBCC300280F8509CFBAE526D095198A541D081"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\DetailLink.svelte",
+    "Hash": "8CDAAFEB25E43A2A0D120FF32791D4EFD672A0DABA915419754239C0798E3FAB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\DropdownFilterControl.svelte",
+    "Hash": "739480EE7E229DD3B13F99BEEEC36CCD286D76F2F78E16488ECC6520C351CF25"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\DropdownFilterControls.svelte",
+    "Hash": "BE8C77BBB12932EEA1EFA8A8E996C62F2CEE29E6B1E29934915258D29A928D2A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\DropdownFilterModal.svelte",
+    "Hash": "07EA1D9A3E872EF078B0BB69021C71E9DE92D1AC8F76C6571167933F9DEAAB68"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\DropdownFilterOptionList.svelte",
+    "Hash": "F14255862EC538A29030679DA4A652B896D2971F5FA2D0013327176E93B41153"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\GridToggles.svelte",
+    "Hash": "D88D21A7449831F7DA8E30BE8FBB5F72AB28B8EC9B47196F1968676C83DE5003"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-base.css",
+    "Hash": "EB3FC453CDBF05A68B1A6855EC5AACBCE1EE83D89EA4ADF1450B4F062A0B7A7A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-layout.css",
+    "Hash": "49706648C13140A0DC511430CDBB1CEEE47C46DA61DA9104693438C03BB59D12"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-template-head.css",
+    "Hash": "CDE02A22A3526F374E158276080C525F46E67ECB41E840B179C97CCFC59CEE2F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryDesktopPage.svelte",
+    "Hash": "4EE64B36F442C1CF6EDCC3667F8328414B6DC8BD6A4B4B90DAC515240F5C89E6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryEmptyState.svelte",
+    "Hash": "D6B7AB6B18D0FB0802890C6C1EA970742143C26B367E5956CC4342751BBE3F7B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryFilterDialog.svelte",
+    "Hash": "0856743D1EFF395B803D1A5307CA21313D71382E0CD867FF9CB1B54BACCF8330"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryFiltersPanel.svelte",
+    "Hash": "4AC7A56CE50988BC31AA2C43B0CF11C218F61C2BBEEE56C91E48EE7D2512DA3B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryFilterTriggers.svelte",
+    "Hash": "08A36CEB81DBBF3154DF9A47E41970DF6F1AA098B2D9BA43E55C69277E4329CE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryListingsPanel.svelte",
+    "Hash": "F0EC94965546F97A715D3CA9AC9B4E1C6EE44913388B8E1DB42D63826E8CCEEF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryMapPageShell.svelte",
+    "Hash": "14DB7DDFCEC66FAC0253422821A249FF063E766FE407B03A955DA41875F22A04"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryPageShell.svelte",
+    "Hash": "17EC617CF23511C43EEE3BCD3F1C9039A80183CEDCDF00E571D94D0CF98673D1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryPreviewModeBar.svelte",
+    "Hash": "109C19179E09A03174549ECC8396675D92A02915B4539F877353D231442E2348"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryPreviewSettings.svelte",
+    "Hash": "6A0A16508957FE24808D2F9DA0048D263FFC960C2B7B284896B059E185741C8B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryQuickFilterModalStyles.svelte",
+    "Hash": "0B4A47E07E4F25B65D1A29DE5D66411421156364AD15B7AAFA8C523D1CA95B56"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryResultsQuickFilters.svelte",
+    "Hash": "9620F5323936B3AC47E057F2E4DA6D8974C052BFE59168098A80AEB72311519E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryShortcutShelf.svelte",
+    "Hash": "F3022147D845896906D4FCFE851332F3C7A0FAC65BAB693B8F26704572CE5850"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventorySidebarHero.svelte",
+    "Hash": "6661F5F2B74B3291B921776FF62F21D06DB4F230AA8428D7247C07DA9FD61CC4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\InventoryTypePills.svelte",
+    "Hash": "75FF99BA57907CB620183DB4B1B8BDBE328C98537984DCCD21FB48FBB911FDB8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\MapVehicleCard.svelte",
+    "Hash": "2710BB25443C3F5F25146BA621EA2ADD987B32F3459C0E9A5139C1E4D48CE5B1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\QuickFilters.svelte",
+    "Hash": "F26C46D2138A7FE27809C62CCC94CA340CDB00C15B375B94215A1266639324EF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\SearchBar.svelte",
+    "Hash": "2DF4216A816692A0296D0164D8C5F7AD6DC6D1CA4A184E42D9054AB6CCAF9675"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\SortDropdown.svelte",
+    "Hash": "03B4800BAD2249C299E29B7BDDBC30A6FE6CA3F7D6C07D3EF680437BDD84E919"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\SortingToolbar.svelte",
+    "Hash": "4A361260CEB7C3F3BC5E7C34017DA5E3CB494DDBB59F0368D2CC21DDB8DD4FEB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\VehicleBadge.svelte",
+    "Hash": "189ADABFA83E3DCCB59D53EA5F85006720A737BDC1D5FA2F1D4659716535A061"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\VehicleCard.svelte",
+    "Hash": "86DFB25B2FE29CBD47A494EE0FBB15640DEC5C71AEDECDC87B72E8A548906540"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\VehicleGrid.svelte",
+    "Hash": "93AEF7FF63FBBB62183D05BED75A9E4706D25C2F8C1204ABCED7D2AE4617E481"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\VehicleMetaRow.svelte",
+    "Hash": "95C9C3005F75A24C9FE53A2453A6CF3ACE1D58B572A77D087D74329EB9371580"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\desktop\\VehiclePriceRow.svelte",
+    "Hash": "86830BCF45A4FEC2227C0F660807C90BE4929CE534AAEBD3478E4A0300D57574"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\mobile-inventory-filter-data.ts",
+    "Hash": "DA2101234B24C7A7051266053EDDE763DEE6E1BD6868C18D0D8E042A7C82D2EA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileFilterOptions.svelte",
+    "Hash": "8DA0AF9E6FFEA6EDADF6B96D9605428FD016B61C057E854D50D8311373627154"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileFilterSheet.svelte",
+    "Hash": "5E3CC7D7786279E51B5C7B44E919CC237782A1133984C269E7DC92A9126730E3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\mobileInventory.css",
+    "Hash": "4C97F184CF754959686815164DC886A538541BCE2483258A27C02F847A61CA4F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileInventoryPage.svelte",
+    "Hash": "3BB60E0B80FE0780D5396C35854C7D5A34D65A8AC19E3E705B755F466FE97AF6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileInventoryQuickFilters.svelte",
+    "Hash": "D1DD54EECF547139781AC079E94492E6AE8E5DC612878987D91C5D6F3C8124A2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileInventoryResults.svelte",
+    "Hash": "39C984D97805FA53153467BB7242D2DE473299F95D9195CB9CF08D2E8C8C5931"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileInventoryTop.svelte",
+    "Hash": "9AA6A9088C8A4F3365227FEEE187659A30720B320E9C164E9453252E1C060BD9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\inventory\\mobile\\MobileInventoryVehicleCard.svelte",
+    "Hash": "3866F0C4E1CCBC658555B9A691508588EA970B8318218A3A157FBEF1BEE3952B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\Breadcrumbs.svelte",
+    "Hash": "3E44CFC510B9C54C33EBE4E50490F607853EB5A9B13DB421EAC6D0F2CF3E5E56"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\daynight-footer-data.ts",
+    "Hash": "090B56191E94EA06249CFCE12895E9DD70C05758C89F5BFE6005BC485EC4F04E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\DayNightFooter.svelte",
+    "Hash": "79E1BA5321FB6F13A40CF00D8FB560C960B16743884F3FF954EBF168A831C732"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\DayNightFooterIcon.svelte",
+    "Hash": "BB53CFC97F2281EF0FC5E10094CB81DDB29A7257D9E60D85E8380114EC5285F6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\DesktopDealerFooter.svelte",
+    "Hash": "EB90E95F45727C209A622ADA3435933FE5098E92689B1DC9394953B503E2CE11"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\DesktopYellowRouteHero.svelte",
+    "Hash": "102D3E5E1A7BEDB61A2D18F3577B168F4D587A9B7BCD5F9C987730C6F5187D10"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteAccordionBehavior.svelte",
+    "Hash": "C12628B0390F70FB0F2B13AC2480707313F498FB49728506D730E590D657F6B0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteBodyClassRuntime.svelte",
+    "Hash": "6BA90AA09F79A6AC8A646779EC0D7CEA259A0F929ACBF1BCD44E76D0FBB2FDA1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteDashboardExportBehavior.svelte",
+    "Hash": "9A5A236B714F145AC007C351228F2CEF9D21D47C7DAAC2F92FE3255DE88F67F0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteImageBehavior.svelte",
+    "Hash": "1C27486E70E00071549458A1B865159D068D9EE4C2070AC350C7E23DCC3846FE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteTemplateHeaderBehavior.svelte",
+    "Hash": "FB81FD70C779AD832244A002816AEFE4CE6AD723E31445D4A9A6E1C08ACD67FB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteTemplateInteractionBehavior.svelte",
+    "Hash": "8CF68FC87461C3BF9183457AF30A858913200ABA076BF332FD0647AF1BB558A2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteTemplateMapBehavior.svelte",
+    "Hash": "2FAEA017493F160FF4ACA0E68CD81E8D5EDFE3E9CDF86A0C3C3A41431CFE2861"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteTemplateStaticHeroBehavior.svelte",
+    "Hash": "0E209B50EAB2341FC35F46CF4D53DFD0DE7E1529DE3646E9A8B79040E11F7D76"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\RouteTemplateTextBehavior.svelte",
+    "Hash": "165DCC65F5C57E454B3D1E6DDBB2AE6B6AF9B27351BCB5D3238C390B4C14E666"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\ScrollTop.svelte",
+    "Hash": "6A1449EA28C15E4F7B6C88E71E603E4791DA8FBE352D87CFE36C0F42CCBA3924"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\site-navigation-data.ts",
+    "Hash": "EC60C719AA6FC1407C48389717BAEFA5B28D8A21E7CBC2F11BB0886C6152DD76"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChrome.svelte",
+    "Hash": "03113777F1475558626CE9E88A6B944852EFFC367C663D463886CF5D8DF58B62"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromeContactList.svelte",
+    "Hash": "49B3A735DDB686D6E800B0A2642574A23305452C345D9A445F6FE945FE092F3A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromeCtaButtons.svelte",
+    "Hash": "F8CE22F4FB6A9E3552934FF26A34E0CAE0036640B13DA32F259117D22BE24622"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromeIcon.svelte",
+    "Hash": "26A508D025F4F45648922DBE34A4FDECD11454661BB7170559EDD53737DD1D45"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromeLogo.svelte",
+    "Hash": "5BD03B171346EF5963169E0422AB5FD2E1D295B715C5F4BB8F4D75F3593B852C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromeNavRow.svelte",
+    "Hash": "BC1D06D2DB516836031BA3D3D050A4AF2FD50A09E157102F01083884B97E4708"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromePrimaryRow.svelte",
+    "Hash": "546928F10E3805F9B2452A85F4958FF40371EB8ED4126A40B1ED6683C1043E4A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteChromeTopBar.svelte",
+    "Hash": "491AA42E486493EACD242E7E0A677C53D83385D6B58A4613735EE1A3DB9DB33B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteFooter.svelte",
+    "Hash": "3F73E4FB13E1E387C083198FE5B3101CB4366BA12C877D811168AF8D3E2783C0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteHeader.svelte",
+    "Hash": "FF3D54EB85684DDD0569CD7C269F6F96CF9EB3D12E88C4206C75C119025081E4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteInventoryMegaMenu.svelte",
+    "Hash": "1C7D8C978C088865E5E9B902A7280FC76853CB27E0A92267064A77CF6BBB3971"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteNavigation.svelte",
+    "Hash": "C47BF9A080477205E6FEB3532A137C21660C561509C25D3D1CC71B6849E7C42B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\SiteSearchDialog.svelte",
+    "Hash": "3B8DC2D1D142050BF75DA13A3C2061EE1CB3C0FE0038156836EB7CF2CBF9BB4C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\storefront-inventory-summary-context.ts",
+    "Hash": "3E9204B2185A985E6E9821100622AA8CD473E71ABACC5C84A08C6255DE815A3D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\layout\\StorefrontShell.svelte",
+    "Hash": "302C713476ABB374D470FC677B10B55CB663E68BC561A5CA00D65EC5BD416B8A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\reviews\\DesktopPublicReviewsPage.svelte",
+    "Hash": "1D1A18EDE3E5D1BB0004F215B4DC06811812367D307E2C14E6E7C173BED8A5EA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\reviews\\ReviewsContent.svelte",
+    "Hash": "7495607CCC78420D683343156DCE4C15975EB584DEF4042887BF18B132CC22F0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\sell\\desktop-sell-page-data.ts",
+    "Hash": "52D2A2FC33D0EEEBFA98E9F60CC91EE82B9F56EF628315C5F123E70239907D0A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\sell\\DesktopSellYourCarPage.svelte",
+    "Hash": "EFCEB1642A270CD94242376872BFFFECDC91F2C284B235FC44054880296515FD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+    "Hash": "BFC8DA7144BF5797AFD2F44038A4DEFEE463205FE18BB878DA9457188A262A8D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\seo\\JsonLdScript.svelte",
+    "Hash": "0884AF23A66538C7A260CB1E3D41F0B175827D4D6228E4D90F9BCD9C354D0C2F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\seo\\RouteSeo.svelte",
+    "Hash": "F378D2605C2522DDD2EBB0059F34B018788AB20D3BDAAB0CFE1214E24FCDCE65"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\seo\\StorefrontPageHead.svelte",
+    "Hash": "FF1BA69DBF9BADE622FED4FB679799262534D2D9033BCC8AF7E79F5DFD679AEF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\services\\DesktopServicesPage.svelte",
+    "Hash": "EFF966CAB57F5986CC02BD31A41AF4E9FD017AA0723031CEF38A3B1E45364B76"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\services\\MobileServicesPage.svelte",
+    "Hash": "18CA1C08193E0E38544A4DD6D9A1C955B634A0051FB4BF8E171F73AB44A8DC50"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\CompareTray.svelte",
+    "Hash": "306A43C03E6FC68EF5ECE4397587B7B9D5764D451B4115C8C7B3FD1DE9E2E691"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\DesktopBrowseLink.svelte",
+    "Hash": "99A7FC6B89185020F79FCAAA90902E689F1772D9802CFB6634954C3CF7EFB377"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\DesktopSectionHeading.svelte",
+    "Hash": "98378CDC52AACD39E4F37CE14357FDFF3DF53D893A7066CB8EA7B48FF1032622"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\DesktopVehicleActions.svelte",
+    "Hash": "5DDFA0617E587F68C4BB3533A84E7402D859203F9CB02483C1966CC5CE35AC85"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\MobileHeroBar.svelte",
+    "Hash": "D78CA71CEFC36AEB5D5ABDFA9027075FD0CD2231CE756E9571E379F9F84ECF80"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\MobilePromoCard.svelte",
+    "Hash": "1CD69235D5AC4F7E600F8D26560A5776EFF92145DD9D20D435F717ECF97AA995"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\icons\\DayNightSpecIcon.svelte",
+    "Hash": "7E55417563E324B382402D16FBA06AD008E4C1DD16F980B23B10E640A50B5B51"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\map\\LazyMapEmbed.svelte",
+    "Hash": "C79C99CB313A90F864212F91D4A6266746173214AE1F7F6916FFFAFEB5C8FEF6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\mobile\\MobileDrawer.svelte",
+    "Hash": "84EB87CC6BE3C06C88E8FB62CCA8D5E37E4038297EDB8E7A30D5A569D84267BA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\shared\\mobile\\MobileFullSheet.svelte",
+    "Hash": "C169A86EC19150E6FB64085EBCFBA80F715534E2A81405FB4A1E64EA77660106"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+    "Hash": "4677EB0801FBA898CE583623893EA521C68CB902AB0ABACA013D2619FEE083B8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\team\\DesktopTeamPage.svelte",
+    "Hash": "82B57EB073661F6704DC0794EEE161A945F3462CBDD3D7E6C0D1E1EC6B82138D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\template\\RawTemplatePage.svelte",
+    "Hash": "AA8105074D93D0AB6AD8CDE22D3CD6155AEA13DCB47D2EDD90E8FBB7D87475BB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\template\\TemplateAssets.svelte",
+    "Hash": "4A99F0E8897EE22A023B782D4F7861D6E2DB2BD81EDA1763D2563F21B17B2441"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\template\\TemplateLocalBehaviors.svelte",
+    "Hash": "44A1594BF5A9B47D8A57CB2DC43B04563D9CBB2D47E21EDA3F9ABE7A23201680"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\terms\\TermsContent.svelte",
+    "Hash": "683586326C694652787912C924BA9034E25E845E85BE07AECE074B7C38149281"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\trusted-html\\TrustedMutableTemplateHtml.svelte",
+    "Hash": "65B5398F5771F2C2F917F237929B2C58DDBCCF57A569A3BBD4977F074285622F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\trusted-html\\TrustedTemplateHtml.svelte",
+    "Hash": "B993541D15090FE02A9D72E8522F8E35465E76AAFBAC095DF522BDDA11807314"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\avatar-badge.svelte",
+    "Hash": "946DDE55A37645BF8EED7BD09DF3467DEF40EDF4BC9C21537E3EBD6E7CD03AA2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\avatar-fallback.svelte",
+    "Hash": "B08A3BB90CB89ECFABD4368E4D5CBB481E1D3CD663447901B634A5192CD1178E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\avatar-group-count.svelte",
+    "Hash": "3E5CB5D32B0F2189853E0A40DB816D2A24A6F043A7620E31A2E8DC02D355DA74"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\avatar-group.svelte",
+    "Hash": "27FD975339C781C2E27FDD820802FF3AB77C1B3AD78328F8F378C8566063D943"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\avatar-image.svelte",
+    "Hash": "4A89492DA8FCBD2936531B03C40CC99503CB3E99FDE918D81196C071324D49F0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\avatar.svelte",
+    "Hash": "6C2C732C21D038F6EB3AEDC64F3ED1DCA2B33FCBBA3E037DC19CD217AD8E2C92"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\avatar\\index.ts",
+    "Hash": "BE45598A35162B1356B5462CD388EE51DF3A119FA819962D943753C91FAF54F8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\badge\\badge.svelte",
+    "Hash": "A5705C811079EBAB34132933DC1F987D21E6D21590234EF211DEAFBCBD9608FA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\badge\\index.ts",
+    "Hash": "D9F1EFDCE93E0C700E153E714B1F2671BA140A29F87EBD7B2A6DA6DD0E6BCBF6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\button\\button.svelte",
+    "Hash": "05B54F4BD4E3E58A84168CBC4C7A5B6147DC417BB2915EFB4E483262751A660C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\button\\index.ts",
+    "Hash": "4C5ACCDC4169B7AD4043B691FAABA97CC8CBA790BA70D30877D00689749C38F6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card-action.svelte",
+    "Hash": "859F3D791E7BE3D732E9157675BF8AC25E312BC036989F6CB2EDC3759C83EBA3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card-content.svelte",
+    "Hash": "213E2E4234CF9E7C469E24D13FCF6C0E5103074F4FA8A90E216EE5B434BDA85D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card-description.svelte",
+    "Hash": "28E1F83C3C47549714C6CB444BACE3E2E97E9846BE78D865744D920CE0A0A1A1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card-footer.svelte",
+    "Hash": "CC97BE3C90A458B9FDAE9478BDA289D3C70D1B1DA6CD39A90790416A7E436427"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card-header.svelte",
+    "Hash": "32049CA0496C5DFB2B530B72B2A85E906A752DFCDBDD7BC695F93A9140DEDE06"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card-title.svelte",
+    "Hash": "3718B41827D937CD676B14C230C083E2A22E9277EEDB451DCA0E5FE0BFF35564"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\card.svelte",
+    "Hash": "1E9A3926823AF31AB4823EC4232348FA23BAD27BBE9AC5AD06F5C1FBEC9919C9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\card\\index.ts",
+    "Hash": "33DA3CE26C0225E344FC500F1980CEBF71315FA4A2596CD9A9CB6312FA4C650B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\checkbox\\checkbox.svelte",
+    "Hash": "E91F2558FC7467BBB302238AB3AEB7DC580AE21933487586845F182CEF98CBB7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\checkbox\\index.ts",
+    "Hash": "8848759C280517076A5B726F7EB02E6FF23BD356BFDB9267285CA74FB3FB4511"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-close.svelte",
+    "Hash": "10B577CD84D267F7927B023DE89AC0DD66CEA82A88498239E0BAD2C3E8E97691"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-content.svelte",
+    "Hash": "BF3CEF680DFD781C76D4C33AE3C46A20EA4AA5F9CAB68A14297DD6E65FE0920D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-description.svelte",
+    "Hash": "DB350021EE6393C98C007E0172178C348B9ED6B643AA9F0D618C2C998859C079"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-footer.svelte",
+    "Hash": "636B25715821A0B76B71E4EF27847207228C5B1F409AC3BD9B7C421E45E01D42"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-header.svelte",
+    "Hash": "9104C44D64A1C9ED70E386C6C4AF8C6BE7FEFB12C72C3A225B06A8EE8E46DB7E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-nested.svelte",
+    "Hash": "003DDADA8B3B21ED91CD5906C544ADB92B7F014CAD7E097EA4C73D8F967164BE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-overlay.svelte",
+    "Hash": "E2A996134C7EB7FD9351369FE50DBD466235E6D2EA682DA57DAD102B8BEDB567"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-portal.svelte",
+    "Hash": "0F9E85D348E5CBDCA3245A91362A69AF153E157A9E1BA17932E29A6A819B26BC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-title.svelte",
+    "Hash": "D7073A9B60B25E067B762CD464A6D743C75F35FE9E0575B9446D5412651C3006"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer-trigger.svelte",
+    "Hash": "E1B186A081307FC7A6803966B16D331FC21856A322D09C6CA10B36295AAE24A6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\drawer.svelte",
+    "Hash": "BEE1C841B2B8D7FEF24AF4C3BDBC3EC07F4A2C517D84D7181BE21AA5E7BF3515"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\drawer\\index.ts",
+    "Hash": "48E0C8DFF55F65095DFBFD653947696BB91C2D898B6F20E413F600D7D3B54315"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-checkbox-group.svelte",
+    "Hash": "1D41B30B0F66649678638C6459CDEA80CCE08ED6255FC00903014CCF12FE3345"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-checkbox-item.svelte",
+    "Hash": "7A882337A80E4D258B52BB7D0D08A07668A2D6C91A397B5D88C2CF9BFBA87263"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-content.svelte",
+    "Hash": "741CAF835B1EAF8A7813BFB3D827D557487E1CE99C2A7B59B9C0F662D96FADBA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-group-heading.svelte",
+    "Hash": "DC2AC832EA565FA29AC1C1561275DACF83FC7B2733E3A522BD2BF9BB49995290"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-group.svelte",
+    "Hash": "6FD9F96B0C6848936A4056C0B6258DA8A682141A9C53B0ED625F77A8DE4E4D6F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-item.svelte",
+    "Hash": "4D7323E7FBC9E139DC3D9260DEB293229CA85A26CE61EAD713E8AD9A7AA1E8AC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-label.svelte",
+    "Hash": "EB332794CBBD447A664D76DAAA087A162095FB986C460A815D16DDCFD2F68776"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-portal.svelte",
+    "Hash": "4825AF89F5D55013BA6A385D16FACEF76F34A394130CFC6CBB6AB1041FD2F1E1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-radio-group.svelte",
+    "Hash": "ADC64F72782AA0D9C35A6404464A05ECA1E5D2478183CECDE3CD134CD6EE0432"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-radio-item.svelte",
+    "Hash": "73320C9711F3AD26A7CB46BAACD2265173D93012A4A70246B2278E0A68DAB3A2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-separator.svelte",
+    "Hash": "E0D33EE1DFAA76E4A9EF1350AEE184A462B96018AC2785F293924A000C75CEBD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-shortcut.svelte",
+    "Hash": "8CE50D0332750F94E1B373AE183C22424C0F389BE72BB2F3BFAC41DCB742DE43"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-sub-content.svelte",
+    "Hash": "E5B9F043AAE3577FBF6D826C24020314BF6A2CC5F42668E2D23721E42155AFBC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-sub-trigger.svelte",
+    "Hash": "55B5ECFFF8F51B7DEDA83C47C252F80173CEE182DF65AC5CC08D49FB47A26C47"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-sub.svelte",
+    "Hash": "2DDD62D2ED4B791BD78C50A1D2B40707183C5B0312F7D39AC02DFF1C19BB67E2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu-trigger.svelte",
+    "Hash": "E2B9A5B152FDF0128103E81A2B33C57BC6B496B1F69FC5754B6155E215DEDA0D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\dropdown-menu.svelte",
+    "Hash": "8102DEE4D9F593747870E484512589C1310238D7CAB3464BADFC0E13F137BCEB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\dropdown-menu\\index.ts",
+    "Hash": "8D08AD41184F28C36BD1D19B560C8174D8CFBBE3F0E47095C5CA5AF09076B05B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\input\\index.ts",
+    "Hash": "474E4283354EF58136D868F572FCA43AB7AD32985EE49902F5E881749C039B85"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\input\\input.svelte",
+    "Hash": "467CCD5D09E4FFC131F59729AFA00247E8D1629173FF18E26AD5D034FBCE88AB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\label\\index.ts",
+    "Hash": "7ABE02F02FD566F6393FAF9C30DC9FFD4EF51C55DE04A0D20A2FE0761F64ABB4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\label\\label.svelte",
+    "Hash": "9B9D207F6FDD140B2BFA505F6EABA83A9CEB0A9C922EAAE54EE98EA1538BD742"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\index.ts",
+    "Hash": "E591CDBF84BBC90214D2F879B1D450F1AF0107C322EC17B1F78170292A964AE4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-content.svelte",
+    "Hash": "EACA69FED5817B77E04993C06681B0303A6FA8EC2D46FF35FAFE3A4DE318124E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-group-heading.svelte",
+    "Hash": "DC684C697816C641E0C69A9D95AF96B5BE8CFDB52F0AF9CD2D53DD0B36333627"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-group.svelte",
+    "Hash": "C4FD87A434AB4AC3929D12C818AE63CA831423CAFD6C0BF0C7EC0DE13A02F5C1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-item.svelte",
+    "Hash": "28D5DDC12D240140BA9AE52237E4FC5667DA2F44824D57A2BD7111FB94099A08"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-label.svelte",
+    "Hash": "0E406D865A51C943197ED4DA2E4386E1E1384B71BD9631F844E68DD4E531B4BD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-portal.svelte",
+    "Hash": "B41A19887731BB12FB5A603B71A39869EB3C25E280E7859B8721F1C4D68E62CE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-scroll-down-button.svelte",
+    "Hash": "AA033B4B14310ABB5C956AA376727F2E9F729AFD9FDCE0168E56476137C5DCBB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-scroll-up-button.svelte",
+    "Hash": "F285693B497D44F0332298388B13903893A47A87E74C97820F26C4682BE293EE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-separator.svelte",
+    "Hash": "6C6FB7A8BF3AE27AB827F793BA87015C1DB3E20D68B97F8ED7E3B98B683BECF4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select-trigger.svelte",
+    "Hash": "A17193A00E046D241BA209B59D3FF1E4B8981EB2441BAD013F3F5E9A6E226B35"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\select\\select.svelte",
+    "Hash": "2383D77DF2084A1FBBE2AB4DAEE0D37F418358F57DBFCE665EE48DB6942F9075"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\separator\\index.ts",
+    "Hash": "0C0661CBF1496A7D5C59FFFA46165383D0C2D23C3E244A16BE1DF9D6C1AE2A1C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\separator\\separator.svelte",
+    "Hash": "0FDDC67C44EDC5FAD97D03344BFDD58DDFFD30971D3371C7C6DBA5353E2FA666"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\index.ts",
+    "Hash": "F6AB594169584160260CFC3EE8C67FC3C97F5878B47F1FD336E64B8D07F88CBB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-close.svelte",
+    "Hash": "DC389325EF7175C8B19636C397D9305CB5882A8F16838DD585191BBFBFD77993"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-content.svelte",
+    "Hash": "DF04652FD747685A7ED38159E724F89F7FAA4F95E74E0833F466BFC4076D35A7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-description.svelte",
+    "Hash": "761E157F618E5E5E86372137364563C04FFC9786C6E44A6708D5E69453DB0154"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-footer.svelte",
+    "Hash": "19EB91BE08C65582D0A44A114DD9F2D1030626EFF08D5DA39675497262109D6A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-header.svelte",
+    "Hash": "7ADBD4DC1361C0AAF16649E9A2BFF2CB23F3C6F2026B40D237A9A30362B97987"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-overlay.svelte",
+    "Hash": "3945BCED4B5D3DE30E9D8E5CF8BCA9B16561E52F797F88C2DE287F5FB30D8A30"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-portal.svelte",
+    "Hash": "6AF9759F57C000008664919097EB433137D70792D994F7A86957619700DE8E68"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-title.svelte",
+    "Hash": "9F1568EE72CA1CEF4A8C7BADBAB661E3221E7CD5E96DC9016D000719C320BC7C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet-trigger.svelte",
+    "Hash": "6B3B9777747F703465B3E03A9EF4BFEB2A1A7D31F2D5F3FF60574EFF491E3030"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sheet\\sheet.svelte",
+    "Hash": "E51A37099EBC34F06AE6A26A78B2EE66C33592C79F57B2DFA584E08F1D6D348C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\constants.ts",
+    "Hash": "BA15FF77A2BCFF921E0EF5A245597713274886FBBF24F96423C586C69B2E3EDC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\context.svelte.ts",
+    "Hash": "715DC6AEC9655755641F5A5038970221DA1AADB730FCF8B5DE4DA90ECEAE158B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\index.ts",
+    "Hash": "6CAD37734D363F63747D7A86DCC0E7459DF192D4216D5A4FA53E79B439395069"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-content.svelte",
+    "Hash": "3BDC9CA4936B45E925C65CDA258518ABF8995A4E4653C7A786EFF905C463D787"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-footer.svelte",
+    "Hash": "1D9C8B7B05FBCDC6D5F60D0398F3BE0999AA21C0947D9651538D41518774E30F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-group-action.svelte",
+    "Hash": "03B0A7B8F0428F7241BAB0C904971DD853D96865BA4750E04E106C394A5BB8B9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-group-content.svelte",
+    "Hash": "8C09DCAEC4F59EDE27B846664E3EABB06A645EF98DC431BD5BA7AAF91DFEA0CB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-group-label.svelte",
+    "Hash": "274FF49E53985B18417E9E71327BC7C23E4FF34F788CFC34F2CBFBCF6B5A19F3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-group.svelte",
+    "Hash": "591199ACD15D694D75DEBB948513E40F72BADAEC48E0545E5E28502B1C9DF79F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-header.svelte",
+    "Hash": "3EF3C1E7089528AE50DD3B05BA3DD483B605ACD35B7C4AE13F5415BCDA7CBA5C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-input.svelte",
+    "Hash": "62A9A606A4AD759C642DA401237BB3CAF8D88683635BE75E078B2FB6DFDB046E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-inset.svelte",
+    "Hash": "E575E0EC0FC320443622FB11D099E6A5D6371B641E0005829178B3EA831436A8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-action.svelte",
+    "Hash": "EE74DD6BD3682B12C03C786AD467DC6818B81B6E9C48AECEF01CDB1C3F8B60E2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-badge.svelte",
+    "Hash": "F323E230173EAC6B6F1E35FAB2307C97F61A61CFC4667FFA0FA7D9787027A026"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-button.svelte",
+    "Hash": "C54C8D3B5B1ABA4342FA8230DDE5DFBFA996C339F72A03B3F2A039624D3B15D3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-item.svelte",
+    "Hash": "2F51AF5FDB232A9B277C707161B1CDD2D28BD9319D901B20F9642A8AC0B49DE0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-skeleton.svelte",
+    "Hash": "F78C60F0877D39748588FF6555D2E5057E0FAA2E49CAB45B7085CBE05D4859EE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-sub-button.svelte",
+    "Hash": "1488644D26C1B2A0B92102E79520C121075876B63CAB21F54D750EBDCE5BBCB6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-sub-item.svelte",
+    "Hash": "A5C425C415DD43A1EBDDF8FD7DEE878B467C61FA458F7F1CBC8A265BD94715AD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-sub.svelte",
+    "Hash": "BCB08AC3CA39ED7A67D3F21771B66658946C21D5971E993168451E0A05C2A105"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-menu.svelte",
+    "Hash": "C024F6579AB79455440C6B717DB5CCCE6D80BF2A34AD8D48273671E47798BCC0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-provider.svelte",
+    "Hash": "4E9FB642551FF00F2FD4246F8D5F1B46DD044FBEB51C45E7E0427861806D2365"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-rail.svelte",
+    "Hash": "AC866572C25E7AD96B1752A6204CE23F14F7EDA9143ECF6EB9BA5AD53A14CB7F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-separator.svelte",
+    "Hash": "100C4BF6016BEFAE501DAF5DD647F4984F79D425ED31FE5D394A2FFDF1706C4B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar-trigger.svelte",
+    "Hash": "AFED61BD14020F2C49DBFF5C3526003DBC591183F70FA111BD072ADD1247C3D7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\sidebar\\sidebar.svelte",
+    "Hash": "B7F44B27A36B9737E12517C73590824C708D10EFBC3FE022739FB587DE9FBD46"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\skeleton\\index.ts",
+    "Hash": "BF66EF337904CECBF40B0E87BABE831B0A243427D80906FC15527603BFD1FF0E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\skeleton\\skeleton.svelte",
+    "Hash": "D8C198D8D25840CBB146A0EE5DBA870F180D3DBF15406DB9A725D0465AAAAB78"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\index.ts",
+    "Hash": "5DEA90E5BCE0ADBB1DA1E782CA9A1AD0B67D4287DE553986B011E3E32E2DF3A1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-body.svelte",
+    "Hash": "D752E72021A3515421C281CCE6CCF2E3EFE66A3B3A3E74B8E76D46DB0F43E70F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-caption.svelte",
+    "Hash": "2D54C3B2E495A3C540CD5A4783A06116C902F3F6956371675D8472CBF306A1F7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-cell.svelte",
+    "Hash": "C35352266C5B2265175EBF7DEFF82ECE044F51210CBA464FDF2D05D3119D92B0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-footer.svelte",
+    "Hash": "6E8E75685598D40D0BB4992D8617B9541E2B12A7FCFACDB17530F307C6F73AED"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-head.svelte",
+    "Hash": "07A21F23414C0042DD1A6C91FCAB8186FEAC77D2946F937B0000D5BBBF4C9291"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-header.svelte",
+    "Hash": "7BF280C960802A9A2D397A2EB75C5C9B199E0167693BF90BDE7517CB72D07723"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table-row.svelte",
+    "Hash": "1AEC6AA33549C54F77063F8917FE9CF52E701BADF88FEE0AF2EC07E7A4680A81"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\table\\table.svelte",
+    "Hash": "F19C1A4FC4478BA728EC6A46F91DF7E37600064F213F6ED7D2A9DD1759B642C0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tabs\\index.ts",
+    "Hash": "3A71249320C9FEDDEE70A087D9CF7E1D475E25FE11991623E63CF9F65C625CB1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tabs\\tabs-content.svelte",
+    "Hash": "8203EDC36349D94AA89CBCD2EA2352C31CEC6BE9AB6E9F2CF05EA3D50D6F7201"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tabs\\tabs-list.svelte",
+    "Hash": "0A6CDB647232BA2BD8BE518CB30CD6CF00C0408CD05D7636CCE441E822A6D8E3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tabs\\tabs-trigger.svelte",
+    "Hash": "48168A2F6A385467586CCB468D14B82251D46EED2A6A7C0634592135151D19CF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tabs\\tabs.svelte",
+    "Hash": "15741AB0AB335B7D4593076D63D05B391451185C13D0DB73AAE3EDA10433F2E1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\textarea\\index.ts",
+    "Hash": "239B723EBDA3648DAD7052741E83645E1A23037999CFB9BE5920F71160C0493A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\textarea\\textarea.svelte",
+    "Hash": "D70F7B4F68A515747F1AA6296DAD544E854940A224252DDD2CBA394694DF938B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\toggle\\index.ts",
+    "Hash": "76D6D9EA1736915DADAABAD6A5C37948519633E532793ACC9DAD6DBA0F1D443E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\toggle\\toggle.svelte",
+    "Hash": "9DD6B304821888D578AFC2BA919A5C0A2A1ECA7FE7B891A227C524C4C5A31AC0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\toggle-group\\index.ts",
+    "Hash": "F5F8703BF9258663912D15AE98BFBE0619D9066E4A582846F6D7295077AE5735"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\toggle-group\\toggle-group-item.svelte",
+    "Hash": "5536B57083576F0B2620548B41438F99317F6DD3AB900499DCD1C9CEA7355FDF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\toggle-group\\toggle-group.svelte",
+    "Hash": "720EE58A5CB6A46F022FD8E0FFAE6550606FB3394EDEE2A24A1FE675AA778905"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tooltip\\index.ts",
+    "Hash": "292E94077C68C33B0DE39128CAC08BB6A1AA794ED1D6529CD591276604B88A09"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tooltip\\tooltip-content.svelte",
+    "Hash": "AE547DB1F0A1A8F4C6B1B8F8F5A2659D3514B48ECE2D39F48B5882C405D76AC6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tooltip\\tooltip-portal.svelte",
+    "Hash": "61F7414E20A01C1699639CD715A219F8C332C607CE95FCEB44DF73FE5DFA8919"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tooltip\\tooltip-provider.svelte",
+    "Hash": "D48C71D88EC88B91ACD020F2F6C6E6BD08C09EAB032FB33195457A5D6B7086CF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tooltip\\tooltip-trigger.svelte",
+    "Hash": "77570269809FCD061DB5E837936DA8AF4129F70C87C1C143A193DC26950A6C21"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\components\\ui\\tooltip\\tooltip.svelte",
+    "Hash": "41A73EDEF0091E605407870135C43ED577695D70DCBEDC4F74E8D7D1A7C594FE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\agents.ts",
+    "Hash": "F39E7DED471A88AA1D88044D45F5B66E0F144A287CFAD434106DA0970C0013B4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\blog.ts",
+    "Hash": "CBBD2539B2194263F367B7CFF2EF7E10D5E31753321B6DF302F880906730A05D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-account.ts",
+    "Hash": "BC802520773C9042166BA66140D713665AD8E77A4660691B410B24770E3C04D7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-blog.ts",
+    "Hash": "EC91A6078A1C9BD79DDE641C33C14FEBC9C3D72C0B4A32977C06824A6DB46905"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-current-inventory.ts",
+    "Hash": "7C5A1384DF41844766191751E5330A55054474767C7A3CC45B3DE25C7915C4F7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-faq.ts",
+    "Hash": "F57A2E07C7C21876FD7AC7A99B44859328FD3CE122F3D204D35EC94DD9D6446A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-reviews.ts",
+    "Hash": "5A526C4D7612F99116437A3A051E53B7CB8E71180A09E9A296113127DF3DA484"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-site.ts",
+    "Hash": "731F5FD84966FC8CA02850485A77491D457D45A62AD828FA6EF44C1600E861E5"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-team.ts",
+    "Hash": "239837DA42319B38C4B7BA358CB2305DA60ECB67E2F050476BAC1348F9B67A6E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-vehicles.ts",
+    "Hash": "E39DD7241F9C95EAC3B4818658D7CCE05F588300821D172FF68481BDA5577661"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\daynight-videos.ts",
+    "Hash": "E746B9400A88415AA26E909EB7ACE25C9E417C65B0463EA2FAA8609134FFA612"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\dealers.ts",
+    "Hash": "87EA7364B0F8E344127DDD14CAF4B0B2BFA9BE0B23C92B27EB34F5A3B50A4DCF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\home-brand-strip.ts",
+    "Hash": "CAD118B4690D2382B25AE8F0C2861C3E5C7381AFE8D5A234B088DBC323772143"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\template-routes.ts",
+    "Hash": "C7E46F12970650285686944384D6707EDA0CE4D15BC2024927DD5E3687840E03"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\data\\vehicles.ts",
+    "Hash": "B952F5A384E4D91EEE2E0DC74B66658D735D424093EC03A6ADF8E8A732BE65FC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\hooks\\is-mobile.svelte.ts",
+    "Hash": "4E8201868DE99420077057B9412D100FAFD1CD9444CEA2E4CE717A2FFAEF2568"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\app-config.ts",
+    "Hash": "ABEFF84674E1D235E9107117C8771CDBF7AA83D2A66E799CC03594E9D5157584"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\blog-articles.ts",
+    "Hash": "E4AAC0670AF9F2465DD4E6486CADBC3CE751C6B1EB4E76EA6D025097AA44ED1A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-detail-page.ts",
+    "Hash": "6C23731805A872E317A30918754782D48DCCC41A1AEF5F22066573714F5C7B0D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-inventory-page.ts",
+    "Hash": "83251D116D8067DC7443B67F8A9D10B11D43ED82ABE5C97C7BF652342416F34E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-inventory-template.ts",
+    "Hash": "E5CE069E028EB7EA541D6A3DC84CC1A2D4731CBF31C936309EE367CFA274D014"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-seo.ts",
+    "Hash": "0B6F0623C508E1A6B1326484074B74D4C540E94A42CEBE0FD35E4C24771D9F04"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-template-chrome.ts",
+    "Hash": "7D2741D9BC1F42C3204E2C6A3877D1FAA9FDA76F90193C1201391A6729E8674D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-template-content.ts",
+    "Hash": "920819FA71A0498F1420D8E2B3ED9263AC31F97B140702FDD880DB089BB8CA7A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-template-fragments.ts",
+    "Hash": "2124C47998F1BB079BCF493A2C558DB40E02A265CA382CDE61DDC21649D05BC7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-template-renderer.ts",
+    "Hash": "E09AAF065B4F516B42C0C6014A0CBD803677D2FC1771DE88830AA6AEE45CD091"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\daynight-template-styles.ts",
+    "Hash": "3A46AE44128E81FFD8F2B3B8B803D6F592756436CDC6AC0E64A68FD00FF90D64"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\device.ts",
+    "Hash": "AEBCF080E3C9CE8B77EF7EA38458117C2CF8FA9CF72DC71743D39F80B3C5BCAC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\home-page-data.ts",
+    "Hash": "65CD0CA7151FFFB44EC386101327696F9B2D33CD543380D34853ED24EB1ED1B1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\legacy-template-route-policy.ts",
+    "Hash": "B84C9319901703018622085BA4C97763BFBB63B11DBBBA4299B5150FE19A9992"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\public-inventory-summary.ts",
+    "Hash": "57872D1ECE90C0027C800B625EFB4C4CD536A665156F85FC78D9515D26968447"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\public-routes.ts",
+    "Hash": "A582FC33B69E9CFFFEB06EF94626BB419603829D0CA821A77F1FEB063F7F7D92"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\rate-limit.ts",
+    "Hash": "AC3EAC74CFE5DEEDC0BEE07FEAC59DC922219E9619FE0E464EE940C785C4E6B0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\rendered-template-page.ts",
+    "Hash": "28F04E0569C45530E1B33897AC327A51EF1F4D7C25E248483C521065BADDF89A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\sitemap.ts",
+    "Hash": "5D3AB143E8ACA010C7D696220F9C76074996BAE5B243DDE320DDF80E5C1AE21E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\staff-notifications.ts",
+    "Hash": "E699068C4EB9D84FA26CF6A8389D3B12A3D4FDF1C1DABE649F6D79F9BF1E1E62"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\template-asset-policy.ts",
+    "Hash": "D032A4225EBCCF5CB4F8244C8B19438EE746423C1BDC7F3218A960B093F2B09E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\template-route-page.ts",
+    "Hash": "C20076B3D944C9F9EA5EEE02962F475CCAFA0605B9145DD1233F0B21B2BA907B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\visitor-chat-token.ts",
+    "Hash": "02EAB6CD0ABDB90F7F69000E2F6138D79C9AED284F93A6A118FF9E23725EC5CF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\auth\\auth.ts",
+    "Hash": "A786A35D12F054297CE66CBB76519F84DD5A1E38F0AD955E49C7F17C116F1C8C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\auth\\guards.ts",
+    "Hash": "D9A6398114B4A591792DBC8E187179C8457E57ACED038A5973E0F4E1745B3BDB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\auth\\roles.ts",
+    "Hash": "B76BB1967C5C20DF4142D02CE1D84BFFE8DA242F0C2BE23E41F63C4DBB375B41"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\auth\\session.ts",
+    "Hash": "F317F57DC693FD22B215B2D0995A0290130E1AEC960877313BE5600DCCF269D7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\cms\\schemas.ts",
+    "Hash": "CF2CF971764E6A518C46C0B5BDFE088CB380E7B684A4BBE8BFAB21BEB9AEB12A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\db\\client.ts",
+    "Hash": "B56F5C900FCAF903671C747DDF3A85099EA195924B416D7D7D836B4DD06B20F4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\db\\errors.ts",
+    "Hash": "59C2E0FC99C0AC9121287FAD485A1149D44651550EC6F4CA929ACCAB9AB03D0E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\db\\schema.ts",
+    "Hash": "4D68B8C9F96BB92C48410BDB7D80F899749E137268E1EE2FEB504436062A2C14"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\db\\types.ts",
+    "Hash": "B69173581E63705820B96441BEEB04AF26AB68374C5A5617226A3D179183E5A9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\admin-assistant.ts",
+    "Hash": "5A54AD6E177F26005546840EACAB0EA0ABEC08AE7BB09C1703E9E0D46759FCF4"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\admin.ts",
+    "Hash": "0602940D15948BAA3F9F088EEA66B1F17804CC664D7D2C332F4555522E7051E6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\conversations.ts",
+    "Hash": "343F9FD16A94C52D557C134767C3A027194ADF4F0CCFEEC051938961FA87833D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\dashboard.ts",
+    "Hash": "401CCD357A8A3A4B4096E79FB4511EFD442E2812BA9474CA5FA67E6EDFA51080"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\dealers.ts",
+    "Hash": "FDF522CEA9E6891FA5BF00DBE6922F892B3D8956F833B5F49E4C3D4B3DB4B41B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\feeds.ts",
+    "Hash": "84D14F6AFF93B20E9FE6350B09EBB87280FE81CD1E4228EAD8C1E517B29B9598"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\intake.ts",
+    "Hash": "28899B47CE50E2307E84EC1A90778CD7452C39E1449E77AF93F4352A9397F857"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\posts.ts",
+    "Hash": "7E2AE6CC388E911FBA45B0C3D7FB3722369035A1F57906152F6F49B4C99302B1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\public-inventory.ts",
+    "Hash": "BF35C701FA2F4D1E3651CBA0FE1DF7C7AC051B180026C03B6132E2F2EB5539BE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\repositories\\vehicles.ts",
+    "Hash": "B87661CDCF2595145537186A6BB58991AACFFC7F2FEE29A51FFB754CA44E428A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\server\\seed\\daynight-catalog-seed.ts",
+    "Hash": "7023D317C1CA8CB45BB97DC0B7B37B29AE9EAD28155C6CD32F5CAF200FFB0EC9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\state\\garage.svelte.ts",
+    "Hash": "CE13CE2CA4E584A141AE382CCFBE3D808385959C07DB772423614357B921AFE1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\state\\garage.test.ts",
+    "Hash": "DBB9CDA884EDE22FF7A7E4AEDDBFDADE444EEC80125D890698F07E164459E76C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\state\\inventory-filters.svelte.ts",
+    "Hash": "8685E94C1FA8EE2DB3280313415C9ACD91982E80BEADBEC31D49FB04E024ACF8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\base.css",
+    "Hash": "7C93DBDC4120D4FBA3F1002EB11543D115CE5E963D99A3F1A9E762389B63569B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\daynight-detail-desktop.css",
+    "Hash": "750AA2B2B450BE2D4255E7FD626FFC5277514348BFD00FAE7199E762833B194C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\daynight-home-base.css",
+    "Hash": "109E6E35769D6449892846863E1590BF5CBB3CECCC7EB4403427F30D7E88B181"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\daynight-home-desktop.css",
+    "Hash": "878E3EB604C10462BB6C393A94A93D0F400ED80545EE8B3A0CF2DEB8B08B7230"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\daynight-mobile.css",
+    "Hash": "235C30163A97ECA010C9EC0F9B1E8128BDA3DC22DD6EA3BB172A72788B3A3947"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\desktop-controls.css",
+    "Hash": "812C43BA839283455094B551883CC4FA108439C5568E3E296EDFD3D654702D36"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\desktop-discovery.css",
+    "Hash": "DC40772BE9AE3B738D1BAED22C77E406B4B893074C21559FE6F1D3C2E4E5FFEB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\storefront-chrome.css",
+    "Hash": "37286D461E734EC50C91B4BA8772B898B548DD5F73822F75957D377605B9A55D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\storefront.css",
+    "Hash": "0ABA65A29823DF66DB6B9C4C8AD5DE45998AB498582EFEA9413C0825D5EC6E1E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\styles\\tokens.css",
+    "Hash": "FF17CEB7DB61FC443364A1FF31AEC5D1AEA823C0D389802C80FEBFC8F9CE66C7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\admin-forms.ts",
+    "Hash": "801DF1E831068973C6B4D8635E98B10AB860B6455741C8DD7239D08899B54F80"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\database.ts",
+    "Hash": "8EC449B8F3C95A46D762E49D00FAF54514F8358CF5F3901F914A58BFAD9BE78C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\home.ts",
+    "Hash": "B37E25A081FB12C600CF2EBA5F8948B9FD92C9A81D43A108297EA7F92ACEDFAE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\inventory.ts",
+    "Hash": "8E5A685070B8D550379F474E5BAF6AE29B58345A894B0ED55DBD00EEB78F58DE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\mobile-inventory.ts",
+    "Hash": "FFBBEE07208339D96F8D4895BCF00F17F48144B7419BA5DB3F5DF91CE44C1668"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\post-form.ts",
+    "Hash": "DE1E40C820BA5BBDE1CCB791BFF1627BB618FF9587C7D7A9A108E54D8B784401"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\types\\template-page.ts",
+    "Hash": "E47C5632E7199020046CB493FD47A5A74F0287F4FABA41F63331BC613CA35A70"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\body-scroll-lock.ts",
+    "Hash": "4024D9EC99D056B9D240B1D895CA0EEF068740FA1B5353BE4D7280D89E072887"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\daynight-image-fallback.ts",
+    "Hash": "8456CB8BA4ECA337A849539A21EA1D5B1A03F20ABDD3A67E7CB3703DFCC7BF46"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\daynight-quick-filter-dom.ts",
+    "Hash": "F7A2159AAC06FF8A9EA46BB98E543C20C667D1805FE3B1EEA03464CE7B1ACC48"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\desktop-only-assets.ts",
+    "Hash": "D0BE1096F184E9B51F78B02F9139F06A0A9219323B99B2298C404C167F8A4C93"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\format.ts",
+    "Hash": "0E10C5F0521137BD6C7707E3F8F4F8F3E70D918F753E11FB6522F4F8729EEC2B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\import-intent.ts",
+    "Hash": "26DD77324F8667AB97FADB072E84FDC36F96AF4A4581E182C21990FA6BA2EA1D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\lib\\utils\\inventory-filter-utils.ts",
+    "Hash": "A3882F4EE87B3207C4EF4B529A30B8615AAB752B171776C627CF45F295F421CD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\+error.svelte",
+    "Hash": "C89A4D757F4BCAEEDEFBC5F9457CE5B0AE3B3550F35408C4DB06255B61135CAD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\+layout.server.ts",
+    "Hash": "F73EEFBD8AFB7F9D77CA1AA563555F6E31A20CA1807D0D5F813643CF05BA1D95"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\+layout.svelte",
+    "Hash": "BBB8723AE79F18A2A94CA58ACBE4A0C4C4277CC5C5DE1E4F42064E5C0FD0DA17"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\+page.server.ts",
+    "Hash": "6F53D6FA64D3C7216479E7C11C203F582DF93AFE4B7B3A2A199D5E14A77FEAC2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\+page.svelte",
+    "Hash": "4F26AE479C9F1173E3B9665F0C5F433EA7B156952BDA691FDDDA365EF69A1BD6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\(legacy-template)\\[...templatePath]\\+page.server.ts",
+    "Hash": "EA349449D5E43225181FEC297F43769898C1EBAA8C652C6D1B9FF1C15772ECBA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\(legacy-template)\\[...templatePath]\\+page.svelte",
+    "Hash": "2063939AE87AFC7837985064461AB740C9ADC575CB89109C420BE24AC67E991C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\about\\+page.server.ts",
+    "Hash": "2CE75A7FE1AABB7581E16E24C10C01066BE645FB769683189854647399A3072F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\about\\+page.svelte",
+    "Hash": "D1EE2AF9B8C581FCF58702E17BD6BC3D45059799018FF19BBFC99D386363D0B9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\about\\daynight-auto-plovdiv\\+page.server.ts",
+    "Hash": "92BE5E6A4594591196D65EBB7463D4641FBD0F6BAE3AB641766D256F93B67D63"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\about\\daynight-auto-plovdiv\\+page.svelte",
+    "Hash": "DDE6ABFC218F099A7CFBCF3EB97119CD4E050E3A4AD7522404B753F0B6885101"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\+layout.server.ts",
+    "Hash": "D5F5CA6A09CDAC5C1B41A5DFBCAA9FA3F32959E831E0D5B42A97BAC160DC9DA7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\+layout.svelte",
+    "Hash": "1C31B5AE0131AAAA5B08BC5A2584A0EF16FA22BDEA79ED3384103458F062D24B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\+page.server.ts",
+    "Hash": "F928DB1F6B5E6453C8C2CF08FCEAB46CC641E5E45E0BEC90D90067E5E800E69A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\+page.svelte",
+    "Hash": "6EE1D6676B2B098FE73294DF51121794D0C8DF098164ADC4E9036A248E266FD1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\admin.css",
+    "Hash": "498B365BB5C81652F79DB8952AD3EC9F733471509DB102965932378931B3986E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\shadcn.css",
+    "Hash": "F4971CE473697FC80EE032036282D62FD48AD51AA7AA21CB8E7C2CCAFDA5D2EC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\analytics\\+page.server.ts",
+    "Hash": "F928DB1F6B5E6453C8C2CF08FCEAB46CC641E5E45E0BEC90D90067E5E800E69A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\analytics\\+page.svelte",
+    "Hash": "31C5BAE43802A00F14E341C921960A1A173021F3A613DC7857E2F4C5145B7F4F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\assistant\\+page.server.ts",
+    "Hash": "B830188AA5EBCD71BF01A5EB49EBAD812B0C600C3732565128BCD8AED4E5DC01"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\assistant\\+page.svelte",
+    "Hash": "15DCA996A89993B4D8FE11A100039922110E218E8853AE181C06E14C3A7B750C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\assistant\\chat\\+server.ts",
+    "Hash": "2EE947C66F65A3DF25D0CE77A90DAC8FE2E4A23AF03DD05F5A8FC0647280B6B8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\conversations\\+page.server.ts",
+    "Hash": "EF5B0A69AB49AD92EAE8ED82202D0ABB88225324684F66A800D17375D915B44E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\conversations\\+page.svelte",
+    "Hash": "8382B7DD2A95FBCA2D4D0E01157E03AC8E63826A9CC9F3B5E670A9053BA1F38D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\conversations\\[id]\\+page.server.ts",
+    "Hash": "89B3B41E5BD59DE1A961F5039149916EF897BADAF3705906E2F15EDE05CEDCBB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\conversations\\[id]\\+page.svelte",
+    "Hash": "03CA280B40185F96703F72E73CBA420C43402864FED935697DA470E1D8DBD261"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\imports\\+page.server.ts",
+    "Hash": "BBB00EFDA7A6A95CFB51B3E254F5D42203D3AF2C67EF69B5C555765E82EB3C29"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\imports\\+page.svelte",
+    "Hash": "9D10CE31F58C2AAC6E5094D869223BB5F4B8B59A2C0E4F013714B3DD1E8BF311"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\leads\\+page.server.ts",
+    "Hash": "5C3E18DCA8112E16DB3CE600EB985888883AFED0F46ED1AA3D66AA21E9FF9141"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\leads\\+page.svelte",
+    "Hash": "C87466B13CE7D9FCF2170799DAEF04A89E09EEF1604FC72D947D18071394FC0C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\listings\\+page.server.ts",
+    "Hash": "418F7B5B64FFBFE16E9D9954C66FC9C25AEFF6752BDB334ABB095C50691C3151"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\listings\\+page.svelte",
+    "Hash": "A44F8F539FFFAB80C0DC8E8250F47BA8651B6037304E609B82AF1FD9AF56CB60"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\listings\\new\\+page.server.ts",
+    "Hash": "F2C2020BD1BB92FAD908AEAAD6FF07D1B1DED7DC5C02167AD787529E012F5C37"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\listings\\new\\+page.svelte",
+    "Hash": "AFBE65DC93A67E64FFE23D4ECD6B669821FE4D5EA4BA1A5352DA43FF1CD5F79E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\listings\\[id]\\+page.server.ts",
+    "Hash": "968723DC1B5D93EDA56F11B588F9B998380DCF2AF92B50364310E2C952C8C275"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\listings\\[id]\\+page.svelte",
+    "Hash": "5048F3F9D7CCF5725875D5086CAB3F409BCBA780643F92798E37926ACC853D75"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\login\\+page.server.ts",
+    "Hash": "54D2E08555EF341B1B7F813158F8F3BE705C4B59572F8FE668A0583BC7CF022C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\login\\+page.svelte",
+    "Hash": "68DF5B8248EF3DEF16B9B734AC3A90E7C62BD08E0D118BF3E9CF1FF72B139EA2"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\logout\\+server.ts",
+    "Hash": "B477E3D53CCA6F9CE8A432C790584E69C9049BA51981A3D8335AE3688E81C20E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\posts\\+page.server.ts",
+    "Hash": "968E32553AC5ACF222E0FA08832BE0C11AF9D4298B8209AE584F0ABB5F1DA1CD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\posts\\+page.svelte",
+    "Hash": "7FB9BDE989486C4AA1512D67D442F74A48CDFA4BF0021C69E8BC55274C29BE29"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\posts\\new\\+page.server.ts",
+    "Hash": "483AF7473DB8F0B872B7E2BAB4BE87E3523603EDEFC8C4AAD329AB3E169946E6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\posts\\new\\+page.svelte",
+    "Hash": "AF54D7B957EFD76F1EE7DADF4D347050EA24F6603CE522996F1DC4F694570E40"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\posts\\[id]\\+page.server.ts",
+    "Hash": "B9C36A3056341DAA6FB192DB24055296587350B9C3FAAB83DBAB7A44AFBC962F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\posts\\[id]\\+page.svelte",
+    "Hash": "448FB6D1EAD64A34424E786E758564C7A9E36C9C92D0CC878139B5CC5A917270"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\settings\\+page.server.ts",
+    "Hash": "0027A0B6AFD287DDCDD7F1E82D5E4D8A2BEFEBFC27667DB8D6B3F41C5D5AB74F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\admin\\settings\\+page.svelte",
+    "Hash": "C7987BEFE218148BB28D598DC08841207EDC35508CB13099BB0CFB938E0E4208"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\auth\\[...all]\\+server.ts",
+    "Hash": "F16CF36245F714BABC8479AF4D1254C11F77E512A9E46BF32A66C00B55F01246"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\chat\\conversations\\+server.ts",
+    "Hash": "BC53D1A955F5B5E8773FC3F6C6305CC1B0F6904855565B57D432E4514235B79F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\chat\\conversations\\[id]\\messages\\+server.ts",
+    "Hash": "7927CC534CCDDFCB61A7293E74E47A2A0DC4AB30B6D52CBAFEE41228570E2CFA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\feeds\\[dealerSlug]\\cars-bg.csv\\+server.ts",
+    "Hash": "49A4E2057A724EDE514EEA31191779D8925FA6C763BFA4C31D82D0F8F7C8BE12"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\feeds\\[dealerSlug]\\mobile-bg.xml\\+server.ts",
+    "Hash": "770EA963724E5E8113E0606038E4658E1FAF22072C47B3E8E119F324FB5FFDF9"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\import-requests\\+server.ts",
+    "Hash": "BE5706251543E08181698A90DA903DA3C8AE5905D5A1FD8AA71A08D9AD4136E7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\api\\leads\\+server.ts",
+    "Hash": "F0F532CA23A9F28B1250D6A70AD3227CA427EF4B7F46D970B8278249BA1A7165"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\blog\\+page.server.ts",
+    "Hash": "7ADA934D4D8909FA2A84D094B231A49424E5C1BAF2067B5C4B1CFB77BB87E135"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\blog\\+page.svelte",
+    "Hash": "9126788B572320250E50E562797984D4974207925FEFAA1840101D7E71A35345"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\blog\\[slug]\\+page.server.ts",
+    "Hash": "6498571E7FCE25B9CBEE64FCDD1D96FEF6626244B90EF3BBC5AF0E9D783C32C6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\blog\\[slug]\\+page.svelte",
+    "Hash": "99FB4DB0E4FF774BA2007FDEE1BE40C9F2FE778AC4DEF3803A0157E55A74F7E7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\calculator\\+page.server.ts",
+    "Hash": "8BBD572CD1B2AE90F221F093D5E0DBC4928AF99DFF3F8B7AF78E1FF7D7894051"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\calculator\\+page.svelte",
+    "Hash": "A326E03D7FB411A0C71C62F442C97E94FF9D22AAD422C9E08B6DDE08C13ECF8F"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\compare\\+page.server.ts",
+    "Hash": "5C4859FC6F92BF01028A3906CC8E1C1B4EDA6CF9659ED179637276240E288FF8"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\compare\\+page.svelte",
+    "Hash": "78CCC1396F22EEA8118E3B20B028545DF0390E7C7EE6323F855F354E9E3B28B1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\contact\\+page.server.ts",
+    "Hash": "C76465039BC3DF779E27367BBD9635DF040F330C80D263A6FB372FE3AA7040A7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\contact\\+page.svelte",
+    "Hash": "430475AEBF7DDCBD6F7D904530CFC20E2CE17806968BB0A4C03F9851976CEBBD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\faq\\+page.server.ts",
+    "Hash": "1D677C4AA1AD2470D013C48A7B4479DD5AD8218E5E15AC1B10BD48BCF571E05D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\faq\\+page.svelte",
+    "Hash": "DAB0BEE9337A954E062C14F2FA14C7F3EE197CFD9B9E4B2CA8F6BDF3FFE91A54"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\favorites\\+page.svelte",
+    "Hash": "2F8074DA7CBB9F470AF5A91247507BF4327CB53341012A49B338D64D980B1DDF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\financing\\+page.server.ts",
+    "Hash": "C4362A7D0E6C9EBD6D3DA80BB1E8E5B6703AAE3F2B244BF81A425BD27094465B"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\financing\\+page.svelte",
+    "Hash": "D52C528D3D1E24A2E5237E95709F183A964C913066B1E7C78B9FE7E1437A2907"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\home1\\+page.server.ts",
+    "Hash": "BF91708E25C515EBFA6B4AFB9E10EF9A3AC734CAB671D9B48C645381EDDF81B3"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\home1\\+page.svelte",
+    "Hash": "0CC1BC1E15735050F0F090F916A79F096AB180645DA3CC7176FBEC790B1B4DCC"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\home1-box\\+page.server.ts",
+    "Hash": "3AD47B20797EB5E530CF22C72F77AE94855D40B5D4EEFFFE3E34C5E4C8495C5D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\home1-box\\+page.svelte",
+    "Hash": "1E6F5FDC054FC3595D41587000606D293684C37BA95B57145D23F87D3E344C15"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\home2\\+server.ts",
+    "Hash": "85EB738A68E47E276713976A4214E5E7BAF078A25930F84BD7FABE2CF2FDA6A7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\home3\\+server.ts",
+    "Hash": "E90FF8D0B31AC0075D9DAAAB77D468749EDE0C573A9C1ED2959CF457DED65F81"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\inventory\\+page.server.ts",
+    "Hash": "E78D1ED94B5F9712C30D7EC199328666C5D112A8C7A4285801E1CCF16D0BD644"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\inventory\\+page.svelte",
+    "Hash": "107E0A8EE90F98A7E71B28D7CEFFEC4EDFDE81C41D10767D0591DBA8019997A7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\inventory\\map\\+page.server.ts",
+    "Hash": "B4E5C59638FDCF1469E53609EB771B91E621FD0543560CA84F0A5B72C4D0625E"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\inventory\\map\\+page.svelte",
+    "Hash": "A2637BF31C03646C480048BD9223161B9140B2889AA803E9C7B03FB0BDE00957"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\inventory\\[slug]\\+page.server.ts",
+    "Hash": "CD83E07733D97D439EAD021CBA2E5CD1EED9944AC42F75A2769718C4EAD8EA29"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\inventory\\[slug]\\+page.svelte",
+    "Hash": "A636869F21343902A19CD178894932897CB84630FB3D6B2C9762EC32017BF2F0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\presentation\\home2\\+page.server.ts",
+    "Hash": "BD7C508F1F34A9664E44BBA62B7492186E952093BD4E92DF985CA64B838F8247"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\presentation\\home2\\+page.svelte",
+    "Hash": "1A01B4ABEB5BA6C8D88E2B459469CD7749959D9772ABB2EE042974B18702E56D"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\presentation\\home3\\+page.server.ts",
+    "Hash": "97D0E5D41E4559F349C4E090B7A8F06FDF6E3F3D71646AC2D8910BE46FC89EC6"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\presentation\\home3\\+page.svelte",
+    "Hash": "FFE20D715DB63A714DD26EFD7425DF1BA643B7F4DEFEFFC2684CB1575FC982DF"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\reviews\\+page.server.ts",
+    "Hash": "DB2683C5E67361F92105B15F0BB049E63DE66340A35C02801B951A4BACF0CADA"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\reviews\\+page.svelte",
+    "Hash": "D08DF801090B8B44A358E22150CDA058948DD7E872B5318D607B7D2B975E5F60"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\robots.txt\\+server.ts",
+    "Hash": "6273170301E7145585859DCFF3A16CBB8AF3F31ECE19D4BE6F93D1DA1740545C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\sell-your-car\\+page.server.ts",
+    "Hash": "10FB37C4DFD3DB73C8C4BF1510B37FDDFD176EF3089D8D104662F99358E1EDCE"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\sell-your-car\\+page.svelte",
+    "Hash": "A94DD0E35E5D049423015740B39AF622FF5168C998D2ADA2CB852D889AF7B7E7"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\sell-your-car\\request\\+page.server.ts",
+    "Hash": "6BB28FEA95A38093162FF9640D1959AD1A2007E41A86589512FD132290113040"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\sell-your-car\\request\\+page.svelte",
+    "Hash": "D63702011597020A59632E87B7187ED2426EE54D2835230EECEB4BD6EA7FC9F0"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\services\\+page.server.ts",
+    "Hash": "B08780E5A2A27F78FE6418EA6C022F9F52B03BD0A0EB9ABD713DEB9CD28E9C6A"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\services\\+page.svelte",
+    "Hash": "D8B0EE4D4626341F3765BC2C1E04B653025D0B7B9A4DEA6643090F72893C1FE1"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\sitemap.xml\\+server.ts",
+    "Hash": "8817512D9644DBCC58913F1084DBE0B2CD434770091A0E7E1D314FDB0D1A9B20"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\team\\+page.server.ts",
+    "Hash": "C9532BFCC924E04CA4EEA9661BCA52B16FAB587800B449A4E1397AF941C89FFB"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\team\\+page.svelte",
+    "Hash": "4E2EAB742DBFD3008DC0237C99667F23E349CDDEBC81B7434F96D808A91CD3DD"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\team\\[slug]\\+page.server.ts",
+    "Hash": "38E203EF26AD61C7F2F183AC13BB5D6593CD2455E34CD8F6B1E0EF21FD733022"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\team\\[slug]\\+page.svelte",
+    "Hash": "082E3955DC22BA69C48EFEA99F2396CA1F7F3EFD9E351E21BA16A6CB364D9F6C"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\terms\\+page.server.ts",
+    "Hash": "C99B495855192139DD5DDFF36EB75208F12556F180A0BBF1ECB2302868839500"
+  },
+  {
+    "Path": "J:\\cars\\audits\\2026-09-08\\carwow-finalization\\before-source\\src\\routes\\terms\\+page.svelte",
+    "Hash": "C95FD6F3F232648AEC58A6CD7ECD0F36314B54C23DAA2F7B3CC13E6F6D73EC0F"
+  }
+]

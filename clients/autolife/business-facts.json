@@ -1,0 +1,56 @@
+{
+  "name": "Аутолайф",
+  "latinName": "AUTOLIFE",
+  "shortName": "Аутолайф",
+  "accent": "#a46d24",
+  "accentLight": "#d5af51",
+  "phoneDisplay": "0895 766 736",
+  "phoneHref": "tel:+359895766736",
+  "phone": "0895766736",
+  "email": "",
+  "address": "ГП4, разклон за с. Тополи",
+  "directions": "На 3 км от голямото кръгово под Метро, по път ГП4 на разклона за с. Тополи",
+  "city": "Варна",
+  "country": "България",
+  "hours": null,
+  "hoursNote": "За работно време се обадете предварително.",
+  "coordinates": {
+    "latitude": 43.22861,
+    "longitude": 27.8253778
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed",
+  "stockUrl": "https://autolife.mobile.bg/",
+  "contactUrl": "https://autolife.mobile.bg/contacts",
+  "socialLinks": {},
+  "services": [
+    "Продажба на автомобили",
+    "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"
+  ],
+  "logo": "/assets/autolife/wordmark.svg",
+  "logoNote": "Temporary plain text wordmark. Source logo slot contains forecourt photograph, not isolated artwork. Original sign/forecourt photo retained.",
+  "showroom": "/assets/autolife/cover.jpg",
+  "stockSnapshotDate": "2026-09-07",
+  "stockCount": 16,
+  "stockNote": "Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона.",
+  "sources": [
+    "https://autolife.mobile.bg/",
+    "https://autolife.mobile.bg/contacts",
+    "https://autolife.mobile.bg/about",
+    "https://www.cars.bg/?company_id=712"
+  ],
+  "notVerified": [
+    "opening hours",
+    "email",
+    "official social profiles",
+    "independent website",
+    "trade-in",
+    "custom import",
+    "reviews",
+    "team identities"
+  ],
+  "crm": {
+    "registered": false
+  },
+  "publicUrl": null
+}

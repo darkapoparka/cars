@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';import path from 'node:path';const root=import.meta.dirname;const read=p=>fs.readFile(p,'utf8'),edit=async(p,fn)=>fs.writeFile(p,fn(await read(p)));
+for(const file of ['MobileBudget','SearchBox'])await edit(`${root}/auto-best/src/lib/components/home/${file}.svelte`,s=>s.replaceAll('60000','20000').replaceAll('70000','40000').replaceAll('60 000','20 000').replaceAll('60–70','20–40').replaceAll('70 000','40 000'));
+await edit(`${root}/auto-best/src/lib/components/home/MobileBudget.svelte`,s=>s.replace('image: featuredVehicles[1].image','image: featuredVehicles[2].image').replace('image: featuredVehicles[0].image','image: featuredVehicles[1].image').replace('image: featuredVehicles[6].image','image: featuredVehicles[0].image'));
+async function walk(d){for(const e of await fs.readdir(d,{withFileTypes:true})){const p=path.join(d,e.name);if(e.isDirectory())await walk(p);else if(/\.(svelte|css|ts)$/.test(p)){let s=await read(p),t=s.replaceAll('#b80024','var(--dn-red)').replaceAll('/assets/images/home-promos/phone-portrait-generated-v7.webp','/assets/champion/cover.jpg');if(t!==s)await fs.writeFile(p,t);}}}
+await walk(`${root}/auto-best/src`);await walk(`${root}/carwow/src`);
+await edit(`${root}/carwow/src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte`,s=>s.replace("value: '4',\n\t\t\tlabel: 'директни канала за контакт'","value: '1',\n\t\t\tlabel: 'телефон за контакт'").replace('Налични автомобила','Публикувани автомобила'));
+await edit(`${root}/carwow/src/routes/presentation/home2/+page.svelte`,s=>s.replaceAll('Plovdiv','Varna'));
+console.log('Budget bands, image boundaries and remaining content claims corrected.');

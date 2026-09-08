@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+import { writeFile } from 'node:fs/promises';
+const browser=await chromium.connectOverCDP(process.argv[2]);
+const page=await browser.contexts()[0].newPage();
+const failures=[],errors=[];
+page.on('response',r=>{if(r.status()>=400)failures.push({url:r.url(),status:r.status()});});
+page.on('requestfailed',r=>failures.push({url:r.url(),error:r.failure()?.errorText}));
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto(process.argv[3]||'http://127.0.0.1:6440/',{waitUntil:'domcontentloaded'});
+await page.waitForTimeout(4000);
+console.log(JSON.stringify({failures,errors,fonts:await page.evaluate(()=>[...document.fonts].map(f=>({family:f.family,status:f.status})) )},null,2));
+await writeFile('references/last-inspection.json',JSON.stringify({failures,errors},null,2));
+await page.close();await browser.close();

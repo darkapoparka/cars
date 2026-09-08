@@ -1,0 +1,106 @@
+[
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/",
+    "label": "home1",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home02",
+    "label": "home2",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home03",
+    "label": "home3",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home04",
+    "label": "home4",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home05",
+    "label": "home5",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home06",
+    "label": "home6",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home07",
+    "label": "home7",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home08",
+    "label": "home8",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home09",
+    "label": "home9",
+    "settle": 1100
+  },
+  {
+    "key": "autodeal",
+    "port": 6460,
+    "route": "/home10",
+    "label": "home10",
+    "settle": 1100
+  },
+  {
+    "key": "auto-best",
+    "port": 6461,
+    "route": "/",
+    "label": "copied-home"
+  },
+  {
+    "key": "boxcar",
+    "port": 6450,
+    "route": "/",
+    "label": "relocated",
+    "settle": 0
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/",
+    "label": "relocated",
+    "settle": 1800
+  },
+  {
+    "key": "nusavo",
+    "port": 6420,
+    "route": "/",
+    "label": "relocated",
+    "settle": 0
+  },
+  {
+    "key": "motoria",
+    "port": 6440,
+    "route": "/",
+    "label": "relocated",
+    "settle": 0
+  }
+]

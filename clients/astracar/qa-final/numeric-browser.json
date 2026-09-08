@@ -1,0 +1,70 @@
+[
+  {
+    "width": 390,
+    "query": "price=under-20000",
+    "expected": 14,
+    "matches": [
+      "/inventory/fiat-punto-1-4i-091690",
+      "/inventory/mini-cooper-1-6d-415236",
+      "/inventory/audi-a3-159317",
+      "/inventory/mini-cooper-1-6d-423161",
+      "/inventory/citroen-c3-1-2i-088103",
+      "/inventory/audi-a5-157214",
+      "/inventory/hyundai-ix35-1-6gdi-609383",
+      "/inventory/citroen-jumpy-1-6hdi-736534",
+      "/inventory/audi-a3-275644",
+      "/inventory/audi-a6-333448",
+      "/inventory/renault-captur-0-9t-167565",
+      "/inventory/mercedes-benz-ml-541606",
+      "/inventory/peugeot-2008-1-2-662538",
+      "/inventory/bmw-535-289964"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 390,
+    "query": "mileage=under-100000",
+    "expected": 2,
+    "matches": [
+      "/inventory/hyundai-ix35-1-6gdi-609383",
+      "/inventory/peugeot-2008-1-2-662538"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "query": "price=under-20000",
+    "expected": 14,
+    "matches": [
+      "/inventory/mini-cooper-1-6d-415236",
+      "/inventory/renault-captur-0-9t-167565",
+      "/inventory/bmw-535-289964",
+      "/inventory/audi-a3-159317",
+      "/inventory/audi-a5-157214",
+      "/inventory/fiat-punto-1-4i-091690",
+      "/inventory/audi-a3-275644",
+      "/inventory/mini-cooper-1-6d-423161",
+      "/inventory/audi-a6-333448",
+      "/inventory/citroen-c3-1-2i-088103",
+      "/inventory/hyundai-ix35-1-6gdi-609383",
+      "/inventory/mercedes-benz-ml-541606",
+      "/inventory/peugeot-2008-1-2-662538",
+      "/inventory/citroen-jumpy-1-6hdi-736534"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "query": "mileage=under-100000",
+    "expected": 2,
+    "matches": [
+      "/inventory/hyundai-ix35-1-6gdi-609383",
+      "/inventory/peugeot-2008-1-2-662538"
+    ],
+    "errors": [],
+    "pass": true
+  }
+]

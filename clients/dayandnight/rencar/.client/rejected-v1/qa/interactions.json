@@ -1,0 +1,97 @@
+[
+  {
+    "width": 390,
+    "check": "Mobile menu opens; Escape and close restore focus and scrolling",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Global search submits to two matching Audi models; dialog Escape restores focus",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Sort changes both rendered order and URL",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Vehicle photo opens; Escape and close restore focus and scrolling",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Detail and related model preserve catalog query and sorting on return",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Vehicle enquiry retains model and topic; verified direct contact links replace booking",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Make filter, empty state, clear/reset and mobile dialog work",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Home dealer search submits combined criteria",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "Invalid model and old rental/account URLs show appropriate client content",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "check": "No browser console errors or page errors during interactions",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Global search submits to two matching Audi models; dialog Escape restores focus",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Sort changes both rendered order and URL",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Vehicle photo opens; Escape and close restore focus and scrolling",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Detail and related model preserve catalog query and sorting on return",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Vehicle enquiry retains model and topic; verified direct contact links replace booking",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Make filter, empty state, clear/reset and mobile dialog work",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Home dealer search submits combined criteria",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "Invalid model and old rental/account URLs show appropriate client content",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "check": "No browser console errors or page errors during interactions",
+    "pass": true
+  }
+]

@@ -1,0 +1,977 @@
+{
+  "client": "elit-auto-import",
+  "name": "ELIT AUTO IMPORT EXPORT",
+  "template": "modern",
+  "port": 6662,
+  "startedAt": "2026-09-07T22:26:03.308Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили от ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-21717056982373192"
+        },
+        {
+          "text": "Mercedes-Benz GL 450\n\n13 500 €\n\n2010\n184 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-21717056982373192"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11700571967441521"
+        },
+        {
+          "text": "Volvo S60\n\n10 891 €\n\n2013\n129 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11700571967441521"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11529502627430878"
+        },
+        {
+          "text": "Toyota Prius Hybrid\n\n16 106 €\n\n2016\n60 950 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/elit-11529502627430878"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11694454110383951"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4\n\n27 800 €\n\n2021\n200 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11694454110383951"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11694504370077664"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4\n\n19 000 €\n\n2017\n55 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11694504370077664"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11752520414621839"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4\n\n17 500 €\n\n2017\n78 400 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11752520414621839"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11671399519745199"
+        },
+        {
+          "text": "Subaru XV 2.0 бензин 4х4\n\n17 100 €\n\n2017\n36 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/elit-11671399519745199"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11752522269460399"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited STI\n\n13 038 €\n\n2015\n110 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11752522269460399"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11690723101506266"
+        },
+        {
+          "text": "Subaru Outback 3.6R Limited 4х4\n\n25 500 €\n\n2017\n19 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11690723101506266"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11708792902908882"
+        },
+        {
+          "text": "Subaru Outback 3.6 Touring 4x4\n\n21 500 €\n\n2017\n82 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11708792902908882"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11706466498517805"
+        },
+        {
+          "text": "Subaru Outback 3.6 Limited 4x4\n\n21 500 €\n\n2017\n48 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11706466498517805"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11693118990022696"
+        },
+        {
+          "text": "Subaru Legacy 2.5 Limited 4x4\n\n13 000 €\n\n2015\n94 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11693118990022696"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11655794958039551"
+        },
+        {
+          "text": "Subaru Legacy 2.5 бензин 4х4\n\n11 900 €\n\n2014\n137 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11655794958039551"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11722966256335346"
+        },
+        {
+          "text": "Mazda 6 2.5 Skyactiv\n\n11 913 €\n\n2015\n100 789 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11722966256335346"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-21691652621240351"
+        },
+        {
+          "text": "Hyundai Santa fe\n\n14 316 €\n\n2013\n58 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/elit-21691652621240351"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/listing/elit-21717056982373192",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за лизинг",
+          "href": "/bg/lease?vehicle=elit-21717056982373192"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "10 891 €\n\nVolvo S60\n\n129 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/elit-11700571967441521"
+        },
+        {
+          "text": "16 106 €\n\nToyota Prius Hybrid\n\n60 950 км · Хибрид\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/elit-11529502627430878"
+        },
+        {
+          "text": "27 800 €\n\nSubaru XV 2.5 Sport 4x4\n\n200 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/elit-11694454110383951"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас и контакти | ELIT AUTO | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Обадете ни се\n0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Посетете шоурума\nул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Условия за покупка",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Внос на автомобил по заявка | ELIT AUTO | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили от ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-21717056982373192"
+        },
+        {
+          "text": "Mercedes-Benz GL 450\n\n13 500 €\n\n2010\n184 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-21717056982373192"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11700571967441521"
+        },
+        {
+          "text": "Volvo S60\n\n10 891 €\n\n2013\n129 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11700571967441521"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11529502627430878"
+        },
+        {
+          "text": "Toyota Prius Hybrid\n\n16 106 €\n\n2016\n60 950 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/elit-11529502627430878"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11694454110383951"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4\n\n27 800 €\n\n2021\n200 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11694454110383951"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11694504370077664"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4\n\n19 000 €\n\n2017\n55 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11694504370077664"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11752520414621839"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4\n\n17 500 €\n\n2017\n78 400 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11752520414621839"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11671399519745199"
+        },
+        {
+          "text": "Subaru XV 2.0 бензин 4х4\n\n17 100 €\n\n2017\n36 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/elit-11671399519745199"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11752522269460399"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited STI\n\n13 038 €\n\n2015\n110 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11752522269460399"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11690723101506266"
+        },
+        {
+          "text": "Subaru Outback 3.6R Limited 4х4\n\n25 500 €\n\n2017\n19 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11690723101506266"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11708792902908882"
+        },
+        {
+          "text": "Subaru Outback 3.6 Touring 4x4\n\n21 500 €\n\n2017\n82 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11708792902908882"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11706466498517805"
+        },
+        {
+          "text": "Subaru Outback 3.6 Limited 4x4\n\n21 500 €\n\n2017\n48 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11706466498517805"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11693118990022696"
+        },
+        {
+          "text": "Subaru Legacy 2.5 Limited 4x4\n\n13 000 €\n\n2015\n94 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11693118990022696"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11655794958039551"
+        },
+        {
+          "text": "Subaru Legacy 2.5 бензин 4х4\n\n11 900 €\n\n2014\n137 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11655794958039551"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-11722966256335346"
+        },
+        {
+          "text": "Mazda 6 2.5 Skyactiv\n\n11 913 €\n\n2015\n100 789 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/elit-11722966256335346"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/elit-21691652621240351"
+        },
+        {
+          "text": "Hyundai Santa fe\n\n14 316 €\n\n2013\n58 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/elit-21691652621240351"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/listing/elit-21717056982373192",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Назад към търсенето",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "10 891 €\n\nVolvo S60\n\n129 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/elit-11700571967441521"
+        },
+        {
+          "text": "16 106 €\n\nToyota Prius Hybrid\n\n60 950 км · Хибрид\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/elit-11529502627430878"
+        },
+        {
+          "text": "27 800 €\n\nSubaru XV 2.5 Sport 4x4\n\n200 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/elit-11694454110383951"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Виж финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Варна\nул. „Прилеп“ 74А, м-т Пчелина, България",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас и контакти | ELIT AUTO | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Телефон\n0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Шоурум · м-т Пчелина\nул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Условия за покупка\nОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Внос на автомобил по заявка | ELIT AUTO | ELIT AUTO IMPORT EXPORT",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Опишете автомобил",
+          "href": "/bg/imports?start=1#import-request"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 15,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6662/cars?q=BMW",
+      "afterCount": 0,
+      "search": false,
+      "error": "locator.getAttribute: Timeout 6500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href*=\"/listing/\"]').visible().first()\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 15,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6662/cars?q=BMW",
+      "afterCount": 0,
+      "search": false,
+      "error": "locator.getAttribute: Timeout 6500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href*=\"/listing/\"]').visible().first()\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\elit-auto-import\\modern",
+    "PID": 75608,
+    "Port": 6662,
+    "Url": "http://127.0.0.1:6662",
+    "Stdout": "J:\\cars\\runtime\\modern-6662-20260908-012604.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6662-20260908-012604.err.log",
+    "Status": "started-not-yet-browser-verified",
+    "status": "stopped-after-verification"
+  },
+  "pass": false
+}

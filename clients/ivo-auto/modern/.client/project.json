@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "client": "ivo-auto",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:49:00.079Z",
+  "state": "local-review-ready",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "checkedAt": "2026-09-08T03:39:29.888Z",
+    "evidence": "../qa-final/ivo-auto/modern/result.json",
+    "screenshots": "../qa-final/ivo-auto/modern",
+    "framework": {
+      "build": 0,
+      "typecheck": 0
+    },
+    "sourceScan": "../qa-final/source-scan.json",
+    "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6652/cars",
+    "status": "stopped-after-verification"
+  },
+  "businessFacts": "../business-facts.json",
+  "stock": "../stock.json",
+  "stockCount": 16,
+  "galleryPhotos": 64,
+  "branding": {
+    "logo": "temporary transparent text wordmark; not verified official logo",
+    "phone": "0878 720 035",
+    "address": "бул. Цар Освободител 256, Варна"
+  },
+  "limitations": [
+    "Captured stock sample, not live inventory.",
+    "Forms and provider services unconfigured; no real message delivery verified.",
+    "No verified official logo, hours or social links.",
+    "Generic template decorative cars retained; not advertised stock."
+  ],
+  "assetsProvenance": "../assets/provenance.json",
+  "knownGaps": [
+    "Captured stock sample, not live inventory.",
+    "Forms and provider services unconfigured; no real message delivery verified.",
+    "No verified official logo, hours or social links.",
+    "Generic template decorative cars retained; not advertised stock.",
+    "Local demo only; form/provider delivery unverified; no public URL.",
+    "Dated 2026-09-07 stock snapshot; availability and prices need seller confirmation.",
+    "Temporary wordmark, unverified official logo/hours/social profiles.",
+    "Retained service/account/legal/demo surfaces need owner review before public publication; generic decorative template car artwork is not stock.",
+    "Gallery keyboard focus restoration was not separately verified in this client."
+  ],
+  "finalizationChanges": [
+    "Configured social destinations only; no coming-soon promises",
+    "Legible wordmarks on dark mobile/desktop headers"
+  ]
+}

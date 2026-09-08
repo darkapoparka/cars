@@ -1,0 +1,24 @@
+[
+  {
+    "width": 390,
+    "errors": [],
+    "filterOpened": true,
+    "filterDismissed": true,
+    "menuText": "Към основното съдържание\nТърси 16 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\nАвтомобили за продажба\nToyota Rav4 HYBRID\n\n36 500 €\n\n2024\n14 000 км\nХибрид\nАвтоматик\n4\n4 снимки\nAudi A7 S-LINE\n\n14 000 €\n\n2011\n211 000 км\nБензин\nАвтоматик\n4\n4 снимки\nMercedes-Benz GLC Coupe 350AMG\n\n26 000 €\n\n2018\n179 200 км\nДизел\nАвтоматик\n4\n4 снимки\nMercedes-Benz GLS 400 AMG\n\n47 000 €\n\n2020\n135 141 км\nДизел\nАвтоматик\n4\n4 снимки\nMini Countryman ALL4\n\n7 777 €\n\n2014\n205 000 км\nБензин\nАвтоматик\n4\n4 снимки\nAudi SQ7 FUL LED\n\n32 000 €\n\n2018\n170 000 км\nДизел\nАвтоматик\n4\n4 снимки\nCitroen C5X PLUG IN\n\n17 900 €\n\n2022\n162 000 км\nЕлектрически\nАвтоматик\n4\n4 снимки\nAudi A5 S-LINE PLUS\n\n14 000 €\n\n2012\n230 000 км\nДизел\nАвтоматик\nMercedes-Benz E 220 AMG\n\n19 500 €\n\n2016\n195 530 км\nДизел\nАвтоматик\nMercedes-Benz S 680 L\n\n120 000 €\n\n2024\n140 000 км\nБензин\nАвтоматик\n4\n4 снимки\nMercedes-Benz S 500 L\n\n29 500 €\n\n2015\n173 291 км\nБензин\nАвтоматик\n4\n4 снимки\nMini Countryman SD\n\n18 500 €\n\n2018\n190 582 км\nДизел\nАвтоматик\n4\n4 снимки\nPorsche Cayenne S\n\n39 000 €\n\n2018\n165 009 км\nБензин\nАвтоматик\n4\n4 снимки\nJeep Compass 4x4\n\n14 000 €\n\n2019\n181 889 км\nДизел\nАвтоматик\nBMW X3 М40D\n\n43 900 €\n\n2022\n90 800 км\nДизел\nАвтоматик\n4\n4 снимки\nBMW 550 M\n\n17 500 €\n\n2013\n184 120 км\nДизел\nАвтоматик\nКоли\nВнос\nПродай\nЛизинг\nМеню\nМеню\n\nАСКО 96\n\n0899 76 96 96\nСофия\nВсички автомобили\nСъвети за покупка\nЗа нас и контакти\nYouTube\nFacebook\n\nбул. „Ботевградско шосе“ 300",
+    "searchInputs": 1,
+    "searchUrl": "http://127.0.0.1:6612/cars?q=Toyota",
+    "text": "Към основното съдържание\nТърси 1 автомобил\nToyota\nЦена\nГодина\nПробег\nГориво\nСкорости\nАвтомобили за продажба\nToyota Rav4 HYBRID\n\n36 500 €\n\n2024\n14 000 км\nХибрид\nАвтоматик\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "detailHref": "/bg/listing/asko-21788444587626928",
+    "detailUrl": "http://127.0.0.1:6612/listing/asko-21788444587626928",
+    "phones": [
+      "tel:+359899769696"
+    ],
+    "returnUrl": "http://127.0.0.1:6612/cars?q=Toyota"
+  },
+  {
+    "width": 1440,
+    "errors": [],
+    "searchInputs": 0,
+    "failure": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('searchbox').visible().first()\u001b[22m\n"
+  }
+]

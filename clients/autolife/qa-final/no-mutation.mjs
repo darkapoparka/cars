@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='J:/cars/clients/autolife/qa-final/run.mjs';let s=fs.readFileSync(p,'utf8');s=s.replace(" await p.evaluate(()=>{for(const i of document.images)if(i.getBoundingClientRect().width>0)i.loading='eager'});",'');s=s.replace('(!i.complete||!i.naturalWidth)','(i.complete&&!i.naturalWidth)');fs.writeFileSync(p,s);

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/c5acdfc28c7759cbe3.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fd09da0e254d731a97.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/36c4b80dab169c6441.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/764c1a626bec563bcc.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/03ecb0741a40075cbd.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/4a700106133ae2bd58.ttf") format('truetype');
+}

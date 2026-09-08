@@ -1,0 +1,52 @@
+{
+  "name": "Excellent Cars",
+  "shortName": "Excellent Cars",
+  "city": "Варна",
+  "country": "България",
+  "address": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+  "phoneDisplay": "0895 996 559",
+  "phoneHref": "tel:+359895996559",
+  "additionalPhones": [
+    "0894 883 833",
+    "0878 377 562"
+  ],
+  "email": "",
+  "hours": [
+    "Понеделник – петък: 08:30–19:00",
+    "Събота: 09:00–18:00",
+    "Неделя: почивен ден"
+  ],
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
+  "website": "https://excellent.cars.bg/",
+  "stockUrl": "https://excellent.mobile.bg/",
+  "services": [
+    "Продажба на автомобили",
+    "Оглед и тест драйв",
+    "Проверка в сервиз по избор на клиента",
+    "Съдействие при регистрация и транзитни номера",
+    "Лизинг с индивидуални условия",
+    "Изкупуване и бартер",
+    "Транспорт и доставка от чужбина",
+    "Автокозметични услуги",
+    "Пътна помощ"
+  ],
+  "stockCount": 16,
+  "stockSnapshotDate": "2026-09-07",
+  "stockNote": "Подбрани публикувани обяви към 07.09.2026. Наличностите и условията се потвърждават по телефона.",
+  "sources": [
+    "https://excellent.mobile.bg/",
+    "https://excellent.mobile.bg/contacts",
+    "https://excellent.cars.bg/",
+    "https://excellent.mobile.bg/about"
+  ],
+  "limitations": [
+    "Не е потвърден служебен имейл или официален социален профил.",
+    "Местоположението е по описанието на дилъра; Google 178 е запазено само като изследователска бележка.",
+    "Пропуснати карти с противоречие между заглавие и описание: Hyundai Tucson/Santa Fe, Honda CR-V."
+  ],
+  "accent": "#527b21",
+  "accentLight": "#98c93c",
+  "logo": "/assets/excellent/logo-header.png",
+  "logoLight": "/assets/excellent/logo-cars.jpg"
+}

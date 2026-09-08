@@ -1,0 +1,22 @@
+[
+    {
+        "exitCode":  0,
+        "check":  "auto-validate"
+    },
+    {
+        "exitCode":  0,
+        "check":  "modern-typecheck"
+    },
+    {
+        "exitCode":  0,
+        "check":  "modern-build"
+    },
+    {
+        "exitCode":  0,
+        "check":  "carwow-check"
+    },
+    {
+        "exitCode":  0,
+        "check":  "carwow-build"
+    }
+]

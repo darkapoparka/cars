@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';
+for(const slug of ['automarket-varna','elit-auto-import','legend-auto']){
+const p=`J:/cars/clients/${slug}/carwow/src/lib/components/chat/ChatLauncher.svelte`;let s=await fs.readFile(p,'utf8');s=s.replace("import X from '@lucide/svelte/icons/x';","import X from '@lucide/svelte/icons/x';\n\timport { daynightSite } from '$lib/data/daynight-site';");s=s.replace('src="/assets/images/chat/daynight-helper-helmet-v1.png"','src={daynightSite.logoDark}');s=s.replace(/(\.chat-launcher__mascot\s*\{)[\s\S]*?\n\t\}/,'$1\n\t\tdisplay: block;\n\t\twidth: 44px;\n\t\theight: 44px;\n\t\tobject-fit: contain;\n\t\tpointer-events: none;\n\t}');await fs.writeFile(p,s);}

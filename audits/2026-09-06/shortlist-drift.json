@@ -1,0 +1,1543 @@
+[
+  {
+    "key": "auto-best",
+    "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
+    "destination": "J:\\cars\\templates\\auto-best",
+    "copiedAt": "2026-09-06T14:14:49.865Z",
+    "branch": "main",
+    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
+    "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
+    "dirty": [
+      "M ASSET_PROVENANCE.md",
+      " M SVELTE_TASKS.md",
+      " M scripts/check-assets.mjs",
+      " M scripts/sveltekit-smoke.mjs",
+      " M src/app.css",
+      " M src/lib/components/company/AboutHero.svelte",
+      " M src/lib/components/company/AboutProcess.svelte",
+      " M src/lib/components/company/ContactHero.svelte",
+      " M src/lib/components/company/ContactIntent.svelte",
+      " M src/lib/components/company/VehicleEnquiry.svelte",
+      " M src/lib/components/editorial/BlogHero.svelte",
+      " M src/lib/components/home/BodyTypes.svelte",
+      " M src/lib/components/home/BrandSection.svelte",
+      " M src/lib/components/home/Editorial.svelte",
+      " M src/lib/components/home/Hero.svelte",
+      " M src/lib/components/home/InventorySection.svelte",
+      " M src/lib/components/home/MobileBudget.svelte",
+      " M src/lib/components/home/SearchBox.svelte",
+      " M src/lib/components/home/TrustActions.svelte",
+      " M src/lib/components/home/VideoSection.svelte",
+      " M src/lib/components/layout/Header.svelte",
+      " M src/lib/components/listing/ListingFilters.svelte",
+      " M src/lib/components/listing/ListingHero.svelte",
+      " M src/lib/components/listing/QuickFilterSheet.svelte",
+      " M src/lib/data/company.ts",
+      " M src/routes/+page.svelte",
+      " M src/routes/about-us/about.css",
+      " M src/routes/blog/blog.css",
+      " M src/routes/contact/contact.css",
+      " M src/routes/listing-grid/listing.css",
+      "?? provenance/collection-lineup-2026-09-06.md",
+      "?? provenance/hero-vehicle-pairs-2026-09-06.md",
+      "?? provenance/superseded-hero-art/",
+      "?? provenance/three-quarter-cutouts-2026-09-06/",
+      "?? provenance/vehicle-cutouts-2026-09-06.md",
+      "?? provenance/vehicle-side-profile-prompts-2026-09-06.json",
+      "?? provenance/vehicle-side-profiles-2026-09-06.md",
+      "?? src/lib/components/home/BrowseAllCard.svelte",
+      "?? src/lib/components/ui/HeroVehicles.svelte",
+      "?? src/lib/components/ui/VehicleCutout.svelte",
+      "?? src/lib/data/vehicle-artwork.ts",
+      "?? static/assets/images/lead/day-night-collection-lineup-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-a45-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-amggt-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-e63-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-gclass-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-golf-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-graphite-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-m4-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-m5-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-porsche-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-rs5-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-silver-v1.webp",
+      "?? static/assets/images/lead/day-night-cutout-urus-v1.webp",
+      "?? static/assets/images/lead/day-night-home-black-v1.webp",
+      "?? static/assets/images/lead/day-night-urus-front-v1.webp"
+    ],
+    "changes": [
+      {
+        "path": "ASSET_PROVENANCE.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "README.md",
+        "sourceChanged": false,
+        "libraryChanged": true,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "scripts/check-assets.mjs",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "scripts/sveltekit-smoke.mjs",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/app.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/company/AboutHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/company/AboutProcess.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/company/ContactHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/company/ContactIntent.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/company/VehicleEnquiry.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/editorial/BlogHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/BodyTypes.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/BrandSection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/Editorial.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/Hero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/InventorySection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/MobileBudget.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/SearchBox.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/TrustActions.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/layout/Header.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/listing/ListingHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/data/company.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/routes/+page.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/routes/about-us/about.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/routes/blog/blog.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/routes/contact/contact.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "static/assets/images/lead/day-night-about-detail-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": false,
+        "libraryExists": true
+      },
+      {
+        "path": "static/assets/images/lead/day-night-contact-detail-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": false,
+        "libraryExists": true
+      },
+      {
+        "path": "provenance/collection-lineup-2026-09-06.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/superseded-hero-art/day-night-about-detail-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-graphite-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-silver-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-urus-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/vehicle-cutouts-2026-09-06.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/vehicle-side-profile-prompts-2026-09-06.json",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "provenance/vehicle-side-profiles-2026-09-06.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/components/home/BrowseAllCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/components/ui/HeroVehicles.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/components/ui/VehicleCutout.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/data/vehicle-artwork.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-collection-lineup-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-a45-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-amggt-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-e63-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-gclass-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-golf-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-graphite-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-m4-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-m5-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-porsche-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-rs5-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-silver-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-cutout-urus-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/images/lead/day-night-urus-front-v1.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      }
+    ]
+  },
+  {
+    "key": "modern",
+    "source": "M:\\leads-cars\\projects\\bulgaria\\day-night-auto-group",
+    "destination": "J:\\cars\\templates\\modern",
+    "copiedAt": "2026-09-06T14:15:20.055Z",
+    "branch": "codex/mobile-header-contact-refinement",
+    "head": "7c635fee1c8fadca317a8a65d5887c0c455b021d",
+    "remote": "https://github.com/darkapoparka/day-and-night-modern.git",
+    "dirty": [
+      "M DESIGN.md",
+      " M apps/web/app/[locale]/components/mobile-about-contact.tsx",
+      " M apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx",
+      " M apps/web/app/[locale]/components/mobile-financing-interceptor.tsx",
+      " M apps/web/app/[locale]/components/mobile-financing-policy.ts",
+      " M apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx",
+      " M apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx",
+      " M apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx",
+      " M apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts",
+      " M apps/web/app/[locale]/components/mobile-service-help.tsx",
+      " M apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx",
+      " M apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx",
+      " M apps/web/app/[locale]/components/public-route-loading.tsx",
+      " M apps/web/app/[locale]/imports/components/blank-import-request-link.tsx",
+      " M apps/web/app/[locale]/imports/components/import-origin-field.tsx",
+      " M apps/web/app/[locale]/imports/components/import-request-fields.tsx",
+      " M apps/web/app/[locale]/imports/components/import-request-policy.ts",
+      " M apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx",
+      " M apps/web/app/[locale]/imports/page.tsx",
+      " M apps/web/app/[locale]/layout.tsx",
+      " M apps/web/app/[locale]/lease/lease-car-selector.tsx",
+      " M apps/web/app/[locale]/lease/lease-finance-policy.ts",
+      " M apps/web/app/[locale]/lease/lease-mobile-selection.tsx",
+      " M apps/web/app/[locale]/lease/lease-selected-vehicle.tsx",
+      " M apps/web/app/[locale]/lease/lease-vehicle-selector.tsx",
+      " M apps/web/app/[locale]/lease/page.tsx",
+      " M apps/web/app/[locale]/styles.css",
+      " M packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+      " M packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+      " M packages/marketplace-ui/components/dealer-social-links.tsx",
+      " M packages/marketplace-ui/components/desktop-discovery-bar.tsx",
+      " M packages/marketplace-ui/components/desktop-discovery-search.tsx",
+      " M packages/marketplace-ui/components/desktop-quick-filters.tsx",
+      " M packages/marketplace-ui/components/marketplace-masthead.tsx",
+      " M packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
+      " M packages/marketplace-ui/components/mobile-marketplace-overlay.tsx",
+      " M packages/marketplace-ui/components/vehicle-card-content.tsx",
+      " M packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+      " M packages/marketplace-ui/package.json",
+      "?? .tmp/",
+      "?? apps/web/app/[locale]/components/mobile-sell-category-field.tsx",
+      "?? apps/web/app/[locale]/desktop-header.css",
+      "?? apps/web/app/[locale]/lease/lease-mobile-preferences.tsx",
+      "?? packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx",
+      "?? packages/marketplace-ui/components/dealer-desktop-header.tsx",
+      "?? packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+      "?? packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
+      "?? packages/marketplace-ui/components/dealer-ui-icon.tsx",
+      "?? packages/marketplace-ui/components/dealer-vehicle-facts.tsx",
+      "?? packages/marketplace-ui/components/mobile-pill-rail.tsx",
+      "?? packages/marketplace-ui/lib/icons/",
+      "?? packages/marketplace-ui/lib/mobile-form-control.ts",
+      "?? packages/marketplace-ui/lib/mobile-header-icon-action.ts"
+    ],
+    "changes": [
+      {
+        "path": "apps/web/app/[locale]/components/mobile-about-contact.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-financing-interceptor.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-financing-policy.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-service-help.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/imports/components/blank-import-request-link.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/imports/components/import-origin-field.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/imports/components/import-request-fields.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/imports/components/import-request-policy.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/lease-car-selector.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/lease-finance-policy.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/lease-mobile-selection.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/lease-selected-vehicle.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/lease-vehicle-selector.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/page.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/next-env.d.ts",
+        "sourceChanged": false,
+        "libraryChanged": true,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "DESIGN.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-social-links.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/components/mobile-marketplace-overlay.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/components/vehicle-card-content.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/lib/mobile-header-icon-action.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "packages/marketplace-ui/package.json",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "README.md",
+        "sourceChanged": false,
+        "libraryChanged": true,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "apps/web/app/[locale]/components/mobile-sell-category-field.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "apps/web/app/[locale]/lease/lease-mobile-preferences.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-ui-icon.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/components/dealer-vehicle-facts.tsx",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/lib/icons/hugeicons-controls.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/lib/icons/hugeicons-header.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/lib/icons/hugeicons-LICENSE.txt",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/lib/icons/hugeicons-navigation.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "packages/marketplace-ui/lib/mobile-form-control.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      }
+    ]
+  },
+  {
+    "key": "carwow",
+    "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\spartak-style",
+    "destination": "J:\\cars\\templates\\carwow",
+    "copiedAt": "2026-09-06T14:14:53.566Z",
+    "branch": "codex/6517-canonical",
+    "head": "9f05da01000d9177226b19f6d5dd8e5531964948",
+    "remote": "https://github.com/darkapoparka/day-and-night-spartak.git",
+    "dirty": [
+      "M .gitignore",
+      " M AGENTS.md",
+      " M package.json",
+      " M src/lib/components/about/DesktopAboutPage.svelte",
+      " M src/lib/components/blog/BlogArticlePage.svelte",
+      " M src/lib/components/blog/BlogIndexPage.svelte",
+      " M src/lib/components/calculator/CalculatorContent.svelte",
+      " M src/lib/components/compare/CompareContent.svelte",
+      " M src/lib/components/contact/DesktopContactPage.svelte",
+      " M src/lib/components/contact/MobileContactPage.svelte",
+      " M src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte",
+      " M src/lib/components/detail/desktop/DesktopDetailFinanceCalculator.svelte",
+      " M src/lib/components/detail/desktop/DesktopDetailGallery.svelte",
+      " M src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte",
+      " M src/lib/components/detail/desktop/DesktopDetailReviews.svelte",
+      " M src/lib/components/faq/FaqContent.svelte",
+      " M src/lib/components/favorites/desktop/DesktopFavoritesPage.svelte",
+      " M src/lib/components/financing/DesktopFinancingPage.svelte",
+      " M src/lib/components/home/HomePage.svelte",
+      " M src/lib/components/home/HomeQuickFilterModalStyles.svelte",
+      " M src/lib/components/home/desktop/DesktopHome.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeBrandStrip.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeFooter.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeHero.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeInventoryTabs.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeVehicleCategories.svelte",
+      " M src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
+      " M src/lib/components/home/desktop/desktop-home-inventory-data.ts",
+      " M src/lib/components/home/mobile/MobileHome.svelte",
+      " M src/lib/components/inventory/desktop/InventoryDesktopPage.svelte",
+      " M src/lib/components/inventory/desktop/InventoryListingsPanel.svelte",
+      " M src/lib/components/inventory/desktop/InventoryPageShell.svelte",
+      " M src/lib/components/inventory/desktop/InventoryResultsQuickFilters.svelte",
+      " M src/lib/components/inventory/desktop/InventoryTypePills.svelte",
+      " M src/lib/components/inventory/desktop/QuickFilters.svelte",
+      " M src/lib/components/inventory/desktop/SearchBar.svelte",
+      " M src/lib/components/inventory/desktop/SortingToolbar.svelte",
+      " M src/lib/components/inventory/desktop/VehicleCard.svelte",
+      " M src/lib/components/inventory/desktop/desktop-inventory-context.svelte.ts",
+      " M src/lib/components/inventory/desktop/inventory-desktop-layout.css",
+      " M src/lib/components/inventory/mobile/MobileInventoryPage.svelte",
+      " M src/lib/components/inventory/mobile/MobileInventoryResults.svelte",
+      " M src/lib/components/inventory/mobile/MobileInventoryVehicleCard.svelte",
+      " M src/lib/components/inventory/mobile/mobileInventory.css",
+      " M src/lib/components/layout/DayNightFooter.svelte",
+      " M src/lib/components/layout/RouteImageBehavior.svelte",
+      " M src/lib/components/layout/SiteChrome.svelte",
+      " M src/lib/components/layout/SiteChromeCtaButtons.svelte",
+      " M src/lib/components/layout/SiteChromeIcon.svelte",
+      " M src/lib/components/layout/SiteChromeNavRow.svelte",
+      " M src/lib/components/layout/SiteChromePrimaryRow.svelte",
+      " M src/lib/components/layout/SiteChromeTopBar.svelte",
+      " M src/lib/components/layout/SiteFooter.svelte",
+      " M src/lib/components/layout/SiteNavigation.svelte",
+      " M src/lib/components/sell/DesktopSellYourCarPage.svelte",
+      " M src/lib/components/sell/MobileSellYourCarPage.svelte",
+      " M src/lib/components/sell/desktop-sell-page-data.ts",
+      " M src/lib/components/services/DesktopServicesPage.svelte",
+      " M src/lib/components/team/DesktopTeamMemberPage.svelte",
+      " M src/lib/components/team/DesktopTeamPage.svelte",
+      " M src/lib/data/daynight-site.ts",
+      " M src/lib/data/daynight-team.ts",
+      " M src/lib/state/inventory-filters.svelte.ts",
+      " M src/lib/styles/daynight-detail-desktop.css",
+      " M src/lib/styles/daynight-home-base.css",
+      " M src/lib/styles/daynight-home-desktop.css",
+      " M src/lib/styles/daynight-mobile.css",
+      " M src/lib/styles/storefront.css",
+      " M src/lib/styles/tokens.css",
+      " M src/routes/+layout.svelte",
+      " M tasks.md",
+      " M vite.config.ts",
+      "?? .impeccable/",
+      "?? DESKTOP_STYLE_GUIDE.md",
+      "?? artifacts/",
+      "?? scripts/dev-local.mjs",
+      "?? src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+      "?? src/lib/components/inventory/desktop/InventoryFilterDialog.svelte",
+      "?? src/lib/components/inventory/desktop/InventoryFilterTriggers.svelte",
+      "?? src/lib/components/inventory/desktop/InventoryShortcutShelf.svelte",
+      "?? src/lib/components/layout/DesktopDealerFooter.svelte",
+      "?? src/lib/components/layout/DesktopYellowRouteHero.svelte",
+      "?? src/lib/components/shared/DesktopBrowseLink.svelte",
+      "?? src/lib/components/shared/DesktopSectionHeading.svelte",
+      "?? src/lib/components/shared/DesktopVehicleActions.svelte",
+      "?? src/lib/components/shared/MobileHeroBar.svelte",
+      "?? src/lib/components/shared/MobilePromoCard.svelte",
+      "?? src/lib/data/daynight-videos.ts",
+      "?? src/lib/styles/desktop-controls.css",
+      "?? src/lib/styles/desktop-discovery.css",
+      "?? static/assets/brands/",
+      "?? static/assets/daynight-contact/",
+      "?? static/assets/icons/youtube-footer.svg",
+      "?? static/assets/images/home-promos/campaign-collection-v3.webp",
+      "?? static/assets/images/home-promos/campaign-financing-v3.webp",
+      "?? static/assets/images/home-promos/campaign-financing-v4.webp",
+      "?? static/assets/images/home-promos/campaign-viewing-v3.webp",
+      "?? static/assets/images/home-promos/campaign-viewing-v4.webp",
+      "?? static/assets/images/home-promos/finance-documents-cutout-v5.webp",
+      "?? static/assets/images/home-promos/gclass-urus-pair-v4.webp",
+      "?? static/assets/images/home-promos/kristian-original-instagram-DNyKbke2D83.jpg",
+      "?? static/assets/images/home-promos/kristian-phone-cutout-v5.webp",
+      "?? static/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.png",
+      "?? static/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.webp",
+      "?? static/assets/images/home-promos/leasing-calculator-cutout-v7.webp",
+      "?? static/assets/images/home-promos/phone-portrait-generated-v7.png",
+      "?? static/assets/images/home-promos/phone-portrait-generated-v7.webp",
+      "?? static/assets/images/home-promos/urus-rear-v4.webp",
+      "?? static/assets/images/services/service-card-delivery-daynight-v2.webp",
+      "?? static/assets/images/services/service-card-documents-daynight-v2.webp",
+      "?? static/assets/images/services/service-card-financing-daynight-v2.webp",
+      "?? static/assets/images/services/service-card-inspection-daynight-v2.webp",
+      "?? static/assets/images/services/service-card-sourcing-daynight-v2.webp",
+      "?? static/assets/images/services/service-card-trade-in-daynight-v2.webp",
+      "?? tests/desktop-discovery.e2e.ts",
+      "?? tests/home-hero.e2e.ts",
+      "?? tests/mobile-inventory-cards.e2e.ts"
+    ],
+    "changes": [
+      {
+        "path": "README.md",
+        "sourceChanged": false,
+        "libraryChanged": true,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/contact/DesktopContactPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/contact/MobileContactPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHome.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHomeInventoryTabs.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/HomeQuickFilterModalStyles.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/mobile/MobileHome.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/desktop/InventoryDesktopPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/desktop/InventoryFilterDialog.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/desktop/InventoryFilterTriggers.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/desktop/InventoryShortcutShelf.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/desktop/InventoryTypePills.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/desktop/SearchBar.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/layout/DesktopYellowRouteHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/layout/SiteChrome.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/layout/SiteChromeCtaButtons.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/sell/DesktopSellYourCarPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/sell/MobileSellYourCarPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/services/DesktopServicesPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/shared/DesktopBrowseLink.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/shared/DesktopVehicleActions.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/styles/desktop-discovery.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/routes/+layout.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "tests/desktop-discovery.e2e.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "DESKTOP_STYLE_GUIDE.md",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/components/shared/MobileHeroBar.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/components/shared/MobilePromoCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "src/lib/styles/desktop-controls.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      }
+    ]
+  },
+  {
+    "key": "import",
+    "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\bohemcars-style",
+    "destination": "J:\\cars\\templates\\import",
+    "copiedAt": "2026-09-06T14:15:48.398Z",
+    "branch": "codex/about-contact-hero-refinement",
+    "head": "48facd336a99647988bc55419eef2f4bbdfa362e",
+    "remote": "https://github.com/darkapoparka/day-and-night-import.git",
+    "dirty": [
+      "M src/lib/auxero/about.ts",
+      " M src/lib/auxero/faqs.ts",
+      " M src/lib/auxero/home-five.ts",
+      " M src/lib/auxero/inventory-desktop.ts",
+      " M src/lib/auxero/inventory-mobile.ts",
+      " M src/lib/auxero/services.ts",
+      " M src/lib/components/about/AboutBrandsSection.svelte",
+      " M src/lib/components/about/AboutConsultantsSection.svelte",
+      " M src/lib/components/about/AboutContent.svelte",
+      " M src/lib/components/about/AboutLocationSection.svelte",
+      " M src/lib/components/about/AboutSectionHeader.svelte",
+      " M src/lib/components/blog/BlogDetailRelatedCard.svelte",
+      " M src/lib/components/blog/BlogListCard.svelte",
+      " M src/lib/components/blog/BlogTemplatePage.svelte",
+      " M src/lib/components/contact/ContactFormCard.svelte",
+      " M src/lib/components/contact/ContactMobilePage.svelte",
+      " M src/lib/components/contact/ContactTemplatePage.svelte",
+      " M src/lib/components/faqs/FaqsCleanPage.svelte",
+      " M src/lib/components/forms/InquiryForm.svelte",
+      " M src/lib/components/home/HomeFiveActionBand.svelte",
+      " M src/lib/components/home/HomeFiveFeaturedVehicles.svelte",
+      " M src/lib/components/home/HomeFiveFooter.svelte",
+      " M src/lib/components/home/HomeFiveHeader.svelte",
+      " M src/lib/components/home/HomeFiveHero.svelte",
+      " M src/lib/components/home/HomeFiveNewsSection.svelte",
+      " M src/lib/components/home/HomeFiveReviewsSection.svelte",
+      " M src/lib/components/home/HomeFiveTemplatePage.svelte",
+      " M src/lib/components/home/HomeFiveVehicleCard.svelte",
+      " M src/lib/components/home/HomeSectionCta.svelte",
+      " M src/lib/components/inventory/AuxeroInventoryActiveFilters.svelte",
+      " M src/lib/components/inventory/AuxeroInventoryDesktopSurface.svelte",
+      " M src/lib/components/inventory/AuxeroInventoryFilterPopover.svelte",
+      " M src/lib/components/inventory/AuxeroInventoryVehicleCard.svelte",
+      " M src/lib/components/inventory/InventoryMobilePage.svelte",
+      " M src/lib/components/layout/CleanSiteHeader.svelte",
+      " M src/lib/components/layout/MobileAppbar.svelte",
+      " M src/lib/components/layout/MobileBottomNav.svelte",
+      " M src/lib/components/layout/SiteSearchModal.svelte",
+      " M src/lib/components/sell-your-car/SellCarWizard.svelte",
+      " M src/lib/components/sell-your-car/SellYourCarMobilePage.svelte",
+      " M src/lib/components/sell-your-car/SellYourCarTemplatePage.svelte",
+      " M src/lib/components/services/ImportRequestMobilePage.svelte",
+      " M src/lib/components/services/ImportRequestTemplatePage.svelte",
+      " M src/lib/components/services/ImportRequestWizard.svelte",
+      " M src/lib/components/services/ServiceFormCard.svelte",
+      " M src/lib/components/services/ServicesContent.svelte",
+      " M src/lib/data/blog.ts",
+      " M src/lib/data/daynight.ts",
+      " M src/lib/data/vehicles.ts",
+      " M src/lib/server/auxero-listing-data.ts",
+      " M src/lib/server/home-five-page-data.ts",
+      " M src/lib/server/inventory-state.ts",
+      " M src/lib/styles/daynight.css",
+      " M src/lib/styles/daynight.tailwind.css",
+      " M src/lib/types/vehicle.ts",
+      " M src/routes/faqs/+page.server.ts",
+      " M src/routes/faqs/+page.svelte",
+      " M src/routes/import/+page.server.ts",
+      " M src/routes/import/+page.svelte",
+      " M src/routes/sell-your-car/+page.server.ts",
+      " M src/routes/services/+page.ts",
+      "?? .impeccable/",
+      "?? artifacts/",
+      "?? scripts/extract-banner-alpha.mjs",
+      "?? src/lib/components/about/AboutVideosSection.svelte",
+      "?? src/lib/components/blog/BlogEditorialCard.svelte",
+      "?? src/lib/components/common/CenteredRouteHero.svelte",
+      "?? src/lib/components/common/RouteHeroCopy.svelte",
+      "?? src/lib/components/common/RouteHeroMedia.svelte",
+      "?? src/lib/components/common/RouteQuickNav.svelte",
+      "?? src/lib/components/common/YouTubeSection.svelte",
+      "?? src/lib/components/inventory/InventoryAdvancedFilters.svelte",
+      "?? src/lib/components/services/ImportBrowseControls.svelte",
+      "?? src/lib/components/services/MobileServiceEntry.svelte",
+      "?? src/lib/components/services/ServiceVehicleCard.svelte",
+      "?? src/lib/data/about-videos.ts",
+      "?? src/lib/data/import-criteria.spec.ts",
+      "?? src/lib/data/import-criteria.ts",
+      "?? src/lib/data/vehicle-keyword.spec.ts",
+      "?? src/routes/api/inventory/count/",
+      "?? static/assets/daynight/banners/about-kristian-v1.png",
+      "?? static/assets/daynight/banners/about-showroom-v1.png",
+      "?? static/assets/daynight/banners/contact-email-v1.png",
+      "?? static/assets/daynight/banners/contact-kristian-phone-v1.png",
+      "?? static/assets/daynight/banners/home-gclass-v1.png",
+      "?? static/assets/daynight/banners/home-kristian-consultation-v1.png",
+      "?? static/assets/daynight/banners/home-kristian-selection-v1.png",
+      "?? static/assets/daynight/banners/home-urus-v1.png",
+      "?? static/assets/daynight/banners/route-about-edges-v4.png",
+      "?? static/assets/daynight/banners/route-about-framed-v2.png",
+      "?? static/assets/daynight/banners/route-about-studio-v6.png",
+      "?? static/assets/daynight/banners/route-contact-edges-v4.png",
+      "?? static/assets/daynight/banners/route-contact-framed-v2.png",
+      "?? static/assets/daynight/banners/route-contact-studio-v6.png",
+      "?? static/assets/daynight/banners/route-inventory-edges-v4.png",
+      "?? static/assets/daynight/banners/route-inventory-framed-v4.png",
+      "?? static/assets/daynight/banners/route-services-edges-v4.png",
+      "?? static/assets/daynight/banners/route-services-framed-v2.png",
+      "?? static/assets/daynight/banners/route-services-studio-v6.png",
+      "?? static/assets/daynight/banners/route-vehicles-studio-v5.png",
+      "?? static/assets/daynight/blog/import-cutout-v3.webp",
+      "?? static/assets/daynight/blog/import-studio-v2.png",
+      "?? static/assets/daynight/blog/inspection-cutout-v3.webp",
+      "?? static/assets/daynight/blog/inspection-studio-v2.png",
+      "?? static/assets/daynight/blog/registration-cutout-v3.webp",
+      "?? static/assets/daynight/blog/registration-studio-v2.png",
+      "?? static/assets/daynight/team/demo-aleksandar.png",
+      "?? static/assets/daynight/team/demo-mariya.png",
+      "?? static/assets/daynight/team/kristian-kirilov-public.jpg",
+      "?? static/assets/icons/brands/instagram.svg",
+      "?? static/assets/icons/brands/tiktok.svg"
+    ],
+    "changes": [
+      {
+        "path": "README.md",
+        "sourceChanged": false,
+        "libraryChanged": true,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/auxero/about.ts",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/about/AboutBrandsSection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/about/AboutConsultantsSection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/about/AboutContent.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/about/AboutLocationSection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/blog/BlogDetailRelatedCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/blog/BlogListCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/blog/BlogTemplatePage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/common/CenteredRouteHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/common/RouteHeroMedia.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/common/RouteQuickNav.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/contact/ContactTemplatePage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/faqs/FaqsCleanPage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/HomeFiveHero.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/home/HomeFiveNewsSection.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/inventory/AuxeroInventoryDesktopSurface.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/sell-your-car/SellYourCarTemplatePage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/services/ImportBrowseControls.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/services/ImportRequestTemplatePage.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/services/MobileServiceEntry.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/services/ServiceFormCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/services/ServicesContent.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/styles/daynight.css",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": true
+      },
+      {
+        "path": "src/lib/components/blog/BlogEditorialCard.svelte",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/daynight/blog/import-cutout-v3.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/daynight/blog/inspection-cutout-v3.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      },
+      {
+        "path": "static/assets/daynight/blog/registration-cutout-v3.webp",
+        "sourceChanged": true,
+        "libraryChanged": false,
+        "sourceExists": true,
+        "libraryExists": false
+      }
+    ]
+  }
+]

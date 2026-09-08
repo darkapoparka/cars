@@ -1,0 +1,30 @@
+[
+  {
+    "selector": ".mobile-inventory-search",
+    "pass": true
+  },
+  {
+    "selector": ".mobile-inventory-filter-chip",
+    "pass": true
+  },
+  {
+    "selector": ".mobile-inventory-sort-chip",
+    "pass": true
+  },
+  {
+    "selector": ".mobile-inventory-make-chip",
+    "pass": true
+  },
+  {
+    "selector": ".mobile-inventory-model-chip",
+    "pass": true
+  },
+  {
+    "selector": "Price submode Escape focus",
+    "pass": true
+  },
+  {
+    "selector": "Menu Escape focus",
+    "pass": true
+  }
+]

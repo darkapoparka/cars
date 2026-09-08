@@ -1,0 +1,895 @@
+[
+  {
+    "client": "excellent-cars",
+    "name": "Excellent Cars",
+    "template": "auto-best",
+    "port": 6621,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/excellent-cars/qa-final/results.json",
+    "report": "J:/cars/clients/excellent-cars/qa-final/FINAL.md",
+    "state": "local-demo-verified",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:44:08.553Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "routeChecks": 10,
+      "interactionPasses": 2,
+      "evidence": "J:/cars/clients/excellent-cars/qa-final/excellent-cars/auto-best/result.json",
+      "build": "qa-final/auto-validate.log: current architecture, assets, Svelte check and build passed",
+      "visualReview": "Viewport screenshots manually inspected; current logo contrast and contact destinations corrected."
+    }
+  },
+  {
+    "client": "excellent-cars",
+    "name": "Excellent Cars",
+    "template": "modern",
+    "port": 6622,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/excellent-cars/qa-final/results.json",
+    "report": "J:/cars/clients/excellent-cars/qa-final/FINAL.md",
+    "state": "local-demo-verified",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:44:08.556Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "routeChecks": 8,
+      "interactionPasses": 2,
+      "evidence": "J:/cars/clients/excellent-cars/qa-final/excellent-cars/modern/result.json",
+      "build": "qa-final/build-results.json: current framework check and production build passed",
+      "visualReview": "Viewport screenshots manually inspected; current logo contrast and contact destinations corrected."
+    }
+  },
+  {
+    "client": "excellent-cars",
+    "name": "Excellent Cars",
+    "template": "carwow",
+    "port": 6623,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/excellent-cars/qa-final/results.json",
+    "report": "J:/cars/clients/excellent-cars/qa-final/FINAL.md",
+    "state": "local-demo-verified",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:44:08.557Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "routeChecks": 10,
+      "interactionPasses": 2,
+      "evidence": "J:/cars/clients/excellent-cars/qa-final/excellent-cars/carwow/result.json",
+      "build": "qa-final/build-results.json: current framework check and production build passed",
+      "visualReview": "Viewport screenshots manually inspected; current logo contrast and contact destinations corrected."
+    }
+  },
+  {
+    "client": "avangard-auto",
+    "name": "AVANGARD AUTO",
+    "template": "auto-best",
+    "port": 6626,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/avangard-auto/qa-final/results.json",
+    "report": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.627Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
+      "routeChecks": 10,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "avangard-auto",
+    "name": "AVANGARD AUTO",
+    "template": "modern",
+    "port": 6627,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/avangard-auto/qa-final/results.json",
+    "report": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.628Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
+      "routeChecks": 8,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "avangard-auto",
+    "name": "AVANGARD AUTO",
+    "template": "carwow",
+    "port": 6628,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/avangard-auto/qa-final/results.json",
+    "report": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.628Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
+      "routeChecks": 10,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "champion-auto-pro",
+    "name": "Champion Auto Pro",
+    "template": "auto-best",
+    "port": 6631,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/champion-auto-pro/qa-final/results.json",
+    "report": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.634Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+      "routeChecks": 10,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "champion-auto-pro",
+    "name": "Champion Auto Pro",
+    "template": "modern",
+    "port": 6632,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/champion-auto-pro/qa-final/results.json",
+    "report": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.635Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+      "routeChecks": 8,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "champion-auto-pro",
+    "name": "Champion Auto Pro",
+    "template": "carwow",
+    "port": 6633,
+    "routeChecks": 16,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/champion-auto-pro/qa-final/results.json",
+    "report": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.635Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+      "routeChecks": 16,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "astracar",
+    "name": "Астракар",
+    "template": "auto-best",
+    "port": 6636,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/astracar/qa-final/results.json",
+    "report": "J:/cars/clients/astracar/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.642Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/astracar/qa-final/FINAL.md",
+      "routeChecks": 10,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "astracar",
+    "name": "Астракар",
+    "template": "modern",
+    "port": 6637,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/astracar/qa-final/results.json",
+    "report": "J:/cars/clients/astracar/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.642Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/astracar/qa-final/FINAL.md",
+      "routeChecks": 8,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "astracar",
+    "name": "Астракар",
+    "template": "carwow",
+    "port": 6638,
+    "routeChecks": 16,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/astracar/qa-final/results.json",
+    "report": "J:/cars/clients/astracar/qa-final/FINAL.md",
+    "state": "personalized-local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "verifiedAt": "2026-09-08T03:48:52.642Z",
+      "widths": [
+        390,
+        1440
+      ],
+      "browserEvidence": "J:/cars/clients/astracar/qa-final/FINAL.md",
+      "routeChecks": 16,
+      "interactionChecks": 2
+    }
+  },
+  {
+    "client": "autolife",
+    "name": "Аутолайф",
+    "template": "auto-best",
+    "port": 6641,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/autolife/qa-final/results.json",
+    "report": "J:/cars/clients/autolife/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:29.872Z",
+      "evidence": "../qa-final/autolife/auto-best/result.json",
+      "screenshots": "../qa-final/autolife/auto-best",
+      "framework": {
+        "validate": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    }
+  },
+  {
+    "client": "autolife",
+    "name": "Аутолайф",
+    "template": "modern",
+    "port": 6642,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/autolife/qa-final/results.json",
+    "report": "J:/cars/clients/autolife/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:29.874Z",
+      "evidence": "../qa-final/autolife/modern/result.json",
+      "screenshots": "../qa-final/autolife/modern",
+      "framework": {
+        "build": 0,
+        "typecheck": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    }
+  },
+  {
+    "client": "autolife",
+    "name": "Аутолайф",
+    "template": "carwow",
+    "port": 6643,
+    "routeChecks": 16,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/autolife/qa-final/results.json",
+    "report": "J:/cars/clients/autolife/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:50.683Z",
+      "evidence": "../qa-final/autolife/carwow/result.json",
+      "screenshots": "../qa-final/autolife/carwow",
+      "framework": {
+        "build": 0,
+        "check": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission",
+      "focusedEvidence": "../qa-final/focused.json",
+      "numericEvidence": "../qa-final/numeric-stock-check.json"
+    }
+  },
+  {
+    "client": "priselci",
+    "name": "Автокъща Приселци",
+    "template": "auto-best",
+    "port": 6646,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/priselci/qa-final/results.json",
+    "report": "J:/cars/clients/priselci/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:29.879Z",
+      "evidence": "../qa-final/priselci/auto-best/result.json",
+      "screenshots": "../qa-final/priselci/auto-best",
+      "framework": {
+        "validate": 0,
+        "reused": true,
+        "evidence": "J:/cars/clients/priselci/evidence/auto-validate.log"
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    }
+  },
+  {
+    "client": "priselci",
+    "name": "Автокъща Приселци",
+    "template": "modern",
+    "port": 6647,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/priselci/qa-final/results.json",
+    "report": "J:/cars/clients/priselci/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:29.880Z",
+      "evidence": "../qa-final/priselci/modern/result.json",
+      "screenshots": "../qa-final/priselci/modern",
+      "framework": {
+        "build": 0,
+        "typecheck": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    }
+  },
+  {
+    "client": "priselci",
+    "name": "Автокъща Приселци",
+    "template": "carwow",
+    "port": 6648,
+    "routeChecks": 16,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/priselci/qa-final/results.json",
+    "report": "J:/cars/clients/priselci/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:50.685Z",
+      "evidence": "../qa-final/priselci/carwow/result.json",
+      "screenshots": "../qa-final/priselci/carwow",
+      "framework": {
+        "build": 0,
+        "check": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission",
+      "focusedEvidence": "../qa-final/focused.json",
+      "numericEvidence": "../qa-final/numeric-stock-check.json"
+    }
+  },
+  {
+    "client": "ivo-auto",
+    "name": "Иво Ауто",
+    "template": "auto-best",
+    "port": 6651,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/ivo-auto/qa-final/results.json",
+    "report": "J:/cars/clients/ivo-auto/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:29.887Z",
+      "evidence": "../qa-final/ivo-auto/auto-best/result.json",
+      "screenshots": "../qa-final/ivo-auto/auto-best",
+      "framework": {
+        "validate": 0,
+        "reused": true,
+        "evidence": "J:/cars/clients/ivo-auto/evidence/auto-validate.log"
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    }
+  },
+  {
+    "client": "ivo-auto",
+    "name": "Иво Ауто",
+    "template": "modern",
+    "port": 6652,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/ivo-auto/qa-final/results.json",
+    "report": "J:/cars/clients/ivo-auto/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:29.888Z",
+      "evidence": "../qa-final/ivo-auto/modern/result.json",
+      "screenshots": "../qa-final/ivo-auto/modern",
+      "framework": {
+        "build": 0,
+        "typecheck": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    }
+  },
+  {
+    "client": "ivo-auto",
+    "name": "Иво Ауто",
+    "template": "carwow",
+    "port": 6653,
+    "routeChecks": 16,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/ivo-auto/qa-final/results.json",
+    "report": "J:/cars/clients/ivo-auto/qa-final/FINAL.md",
+    "state": "local-review-ready",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "checkedAt": "2026-09-08T03:39:50.686Z",
+      "evidence": "../qa-final/ivo-auto/carwow/result.json",
+      "screenshots": "../qa-final/ivo-auto/carwow",
+      "framework": {
+        "build": 0,
+        "check": 0
+      },
+      "sourceScan": "../qa-final/source-scan.json",
+      "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission",
+      "focusedEvidence": "../qa-final/focused.json",
+      "numericEvidence": "../qa-final/numeric-stock-check.json"
+    }
+  },
+  {
+    "client": "automarket-varna",
+    "name": "Аутомаркет Варна",
+    "template": "auto-best",
+    "port": 6656,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/automarket-varna/qa-final/results.json",
+    "report": "J:/cars/clients/automarket-varna/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "J:/cars/audits/2026-09-08/verify/automarket-varna/auto-best/result.json",
+      "frameworkChecks": true,
+      "checkedAt": "2026-09-08T03:40:50.029Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/automarket-varna/evidence/auto-best-validate.log",
+          "modifiedAt": "2026-09-06T22:05:25.540Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/automarket-varna/qa-final/results.json"
+    }
+  },
+  {
+    "client": "automarket-varna",
+    "name": "Аутомаркет Варна",
+    "template": "modern",
+    "port": 6657,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/automarket-varna/qa-final/results.json",
+    "report": "J:/cars/clients/automarket-varna/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/automarket-varna/modern/result.json",
+      "frameworkChecks": true,
+      "checkedAt": "2026-09-08T03:40:50.032Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/automarket-varna/qa-final/modern-typecheck.log",
+          "modifiedAt": "2026-09-08T01:47:51.856Z"
+        },
+        {
+          "path": "J:/cars/clients/automarket-varna/qa-final/modern-build.log",
+          "modifiedAt": "2026-09-08T01:48:38.293Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/automarket-varna/qa-final/results.json"
+    }
+  },
+  {
+    "client": "automarket-varna",
+    "name": "Аутомаркет Варна",
+    "template": "carwow",
+    "port": 6658,
+    "routeChecks": 12,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/automarket-varna/qa-final/results.json",
+    "report": "J:/cars/clients/automarket-varna/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/automarket-varna/carwow/result.json",
+      "frameworkChecks": true,
+      "buildScope": "Original build passed before final static/contact-label correction; final Svelte check and targeted browser supplement pass. Unicode-aware numeric parser unchanged.",
+      "checkedAt": "2026-09-08T03:40:50.031Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "finalTargetedEvidence": "J:/cars/clients/automarket-varna/qa-final/carwow-final-contact-copy.json",
+      "numericStockEvidence": "J:/cars/clients/automarket-varna/qa-final/numeric-stock-proof.json",
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/automarket-varna/qa-final/carwow-check.log",
+          "modifiedAt": "2026-09-08T01:49:02.686Z"
+        },
+        {
+          "path": "J:/cars/clients/automarket-varna/qa-final/carwow-build.log",
+          "modifiedAt": "2026-09-08T01:49:34.346Z"
+        },
+        {
+          "path": "J:/cars/clients/automarket-varna/qa-final/carwow-contact-copy-check.log",
+          "modifiedAt": "2026-09-08T02:12:31.825Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/automarket-varna/qa-final/results.json"
+    }
+  },
+  {
+    "client": "elit-auto-import",
+    "name": "ELIT AUTO IMPORT EXPORT",
+    "template": "auto-best",
+    "port": 6661,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/elit-auto-import/qa-final/results.json",
+    "report": "J:/cars/clients/elit-auto-import/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "J:/cars/audits/2026-09-08/verify/elit-auto-import/auto-best/result.json",
+      "frameworkChecks": true,
+      "checkedAt": "2026-09-08T03:40:50.037Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/elit-auto-import/validate-auto-final.log",
+          "modifiedAt": "2026-09-06T22:07:24.864Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+    }
+  },
+  {
+    "client": "elit-auto-import",
+    "name": "ELIT AUTO IMPORT EXPORT",
+    "template": "modern",
+    "port": 6662,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/elit-auto-import/qa-final/results.json",
+    "report": "J:/cars/clients/elit-auto-import/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/elit-auto-import/modern/result.json",
+      "frameworkChecks": true,
+      "checkedAt": "2026-09-08T03:40:50.038Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/elit-auto-import/qa-final/modern-typecheck.log",
+          "modifiedAt": "2026-09-08T01:46:24.893Z"
+        },
+        {
+          "path": "J:/cars/clients/elit-auto-import/qa-final/modern-build.log",
+          "modifiedAt": "2026-09-08T01:47:06.726Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+    }
+  },
+  {
+    "client": "elit-auto-import",
+    "name": "ELIT AUTO IMPORT EXPORT",
+    "template": "carwow",
+    "port": 6663,
+    "routeChecks": 12,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/elit-auto-import/qa-final/results.json",
+    "report": "J:/cars/clients/elit-auto-import/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/elit-auto-import/carwow/result.json",
+      "frameworkChecks": true,
+      "buildScope": "Final numeric framework check and production build passed after numeric, static and contact-copy corrections; targeted browser supplement passes.",
+      "checkedAt": "2026-09-08T03:40:50.039Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "finalTargetedEvidence": "J:/cars/clients/elit-auto-import/qa-final/carwow-final-contact-copy.json",
+      "numericStockEvidence": "J:/cars/clients/elit-auto-import/qa-final/numeric-stock-proof.json",
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/elit-auto-import/qa-final/carwow-numeric-check.log",
+          "modifiedAt": "2026-09-08T03:14:25.089Z"
+        },
+        {
+          "path": "J:/cars/clients/elit-auto-import/qa-final/carwow-numeric-build.log",
+          "modifiedAt": "2026-09-08T03:14:50.727Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+    }
+  },
+  {
+    "client": "legend-auto",
+    "name": "LEGEND AUTO",
+    "template": "auto-best",
+    "port": 6671,
+    "routeChecks": 10,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/legend-auto/qa-final/results.json",
+    "report": "J:/cars/clients/legend-auto/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/legend-auto/auto-best/result.json",
+      "frameworkChecks": true,
+      "checkedAt": "2026-09-08T03:40:50.042Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/legend-auto/validate-auto.log",
+          "modifiedAt": "2026-09-06T22:05:46.770Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/legend-auto/qa-final/results.json"
+    }
+  },
+  {
+    "client": "legend-auto",
+    "name": "LEGEND AUTO",
+    "template": "modern",
+    "port": 6672,
+    "routeChecks": 8,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/legend-auto/qa-final/results.json",
+    "report": "J:/cars/clients/legend-auto/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/legend-auto/modern/result.json",
+      "frameworkChecks": true,
+      "checkedAt": "2026-09-08T03:40:50.043Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/legend-auto/qa-final/modern-typecheck-retry.log",
+          "modifiedAt": "2026-09-08T01:49:37.084Z"
+        },
+        {
+          "path": "J:/cars/clients/legend-auto/qa-final/modern-build-retry.log",
+          "modifiedAt": "2026-09-08T01:50:24.097Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/legend-auto/qa-final/results.json"
+    }
+  },
+  {
+    "client": "legend-auto",
+    "name": "LEGEND AUTO",
+    "template": "carwow",
+    "port": 6673,
+    "routeChecks": 12,
+    "interactionChecks": 2,
+    "pass": true,
+    "evidence": "J:/cars/clients/legend-auto/qa-final/results.json",
+    "report": "J:/cars/clients/legend-auto/qa-final/FINAL.md",
+    "state": "local-qa-passed",
+    "qa": {
+      "desktop": true,
+      "mobile": true,
+      "identity": true,
+      "contactPath": true,
+      "evidence": "../qa-final/legend-auto/carwow/result.json",
+      "frameworkChecks": true,
+      "buildScope": "Final numeric framework check and production build passed after numeric, static and contact-copy corrections; targeted browser supplement passes.",
+      "checkedAt": "2026-09-08T03:40:50.043Z",
+      "limits": [
+        "Local demo only; no provider or form delivery verified.",
+        "Stock is a dated source-backed sample."
+      ],
+      "finalTargetedEvidence": "J:/cars/clients/legend-auto/qa-final/carwow-final-contact-copy.json",
+      "numericStockEvidence": "J:/cars/clients/legend-auto/qa-final/numeric-stock-proof.json",
+      "latestFrameworkEvidence": [
+        {
+          "path": "J:/cars/clients/legend-auto/qa-final/carwow-numeric-check.log",
+          "modifiedAt": "2026-09-08T03:15:09.014Z"
+        },
+        {
+          "path": "J:/cars/clients/legend-auto/qa-final/carwow-numeric-build.log",
+          "modifiedAt": "2026-09-08T03:15:34.412Z"
+        }
+      ],
+      "finalMatrixEvidence": "J:/cars/clients/legend-auto/qa-final/results.json"
+    }
+  }
+]

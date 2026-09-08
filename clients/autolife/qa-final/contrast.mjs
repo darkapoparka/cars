@@ -1,0 +1,2 @@
+import fs from 'node:fs';
+for(const c of ['autolife','priselci','ivo-auto']){const p=`J:/cars/clients/${c}/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx`;let s=fs.readFileSync(p,'utf8');s=s.replace('className="h-full w-full object-contain"','className={cn("h-full w-full object-contain", clean && wordmarkTone === "original" && "brightness-0 invert")}');fs.writeFileSync(p,s);}

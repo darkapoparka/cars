@@ -1,0 +1,22 @@
+{
+  "filesScanned": 8,
+  "findingCount": 2,
+  "findings": [
+    {
+      "file": "J:\\cars\\templates\\carwow\\src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+      "line": 1094,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(2px);"
+    },
+    {
+      "file": "J:\\cars\\templates\\carwow\\src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+      "line": 1191,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(6px);"
+    }
+  ]
+}

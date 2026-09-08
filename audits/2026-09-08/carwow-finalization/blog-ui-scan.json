@@ -1,0 +1,14 @@
+{
+  "filesScanned": 2,
+  "findingCount": 1,
+  "findings": [
+    {
+      "file": "J:\\cars\\templates\\carwow\\src\\lib\\components\\blog\\BlogIndexPage.svelte",
+      "line": 735,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.14);"
+    }
+  ]
+}

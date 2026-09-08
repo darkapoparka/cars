@@ -1,0 +1,8 @@
+/* Keep discovery actions consistent across the separate desktop route themes. */
+.hero-intent,
+.inventory-hero,
+.inventory-filter-triggers,
+.desktop-vehicle-actions {
+	--sa-red: #d50028;
+	--sa-red-strong: #b70022;
+}

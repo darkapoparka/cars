@@ -1,0 +1,16 @@
+src/lib/components/sell/MobileSellYourCarPage.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [     "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",     "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",     "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",     'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',     'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.'   ],   require_another_tool_call_after_fixing: true }
+src/lib/components/compare/CompareContent.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [],   require_another_tool_call_after_fixing: false }
+src/lib/components/chat/ChatWidget.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [     'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.'   ],   require_another_tool_call_after_fixing: true }
+src/lib/components/chat/ChatLauncher.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [],   require_another_tool_call_after_fixing: false }
+src/lib/components/chat/ChatThread.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [],   require_another_tool_call_after_fixing: false }
+src/lib/components/home/mobile/MobileHome.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [],   require_another_tool_call_after_fixing: false }
+src/lib/components/about/MobileAboutPage.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [],   require_another_tool_call_after_fixing: false }
+src/lib/components/detail/desktop/DetailPageShell.svelte
+Detected file path, reading file... {   issues: [],   suggestions: [],   require_another_tool_call_after_fixing: false }

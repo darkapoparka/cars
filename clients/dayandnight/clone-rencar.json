@@ -1,0 +1,38 @@
+{
+  "mode": "copy",
+  "client": "dayandnight",
+  "plans": [
+    {
+      "template": "rencar",
+      "version": "2026.09.06-baseline",
+      "source": "J:\\cars\\templates\\rencar",
+      "destination": "J:\\cars\\clients\\dayandnight\\rencar",
+      "readiness": "dealer-adaptation-needed",
+      "homes": [
+        {
+          "id": "home01",
+          "route": "/"
+        },
+        {
+          "id": "home02",
+          "route": "/index-2.html"
+        },
+        {
+          "id": "home03",
+          "route": "/index-3.html"
+        },
+        {
+          "id": "home04",
+          "route": "/index-4.html"
+        },
+        {
+          "id": "home05",
+          "route": "/index-5.html"
+        }
+      ],
+      "personalization": "required",
+      "crmRegistration": "not-performed"
+    }
+  ]
+}
+Created J:\cars\clients\dayandnight\rencar

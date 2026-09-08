@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+import {load} from 'cheerio';
+const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const before=await fs.readFile('.client/section-qa/before-index.svelte','utf8');
+const after=await fs.readFile('src/pages/index.svelte','utf8');
+const a=load(before),b=load(after);
+const whyUnchanged=a('.choose-area').toString()===b('.choose-area').toString();
+const surrounds=x=>{const s=x.indexOf('      <div class="about-area py-120">')>=0?x.indexOf('      <div class="about-area py-120">'):x.indexOf('      <section class="about-area about-centered py-120"');const e=x.indexOf('      <div class="car-type-area bg py-90">',s);return x.slice(0,s).trim()+x.slice(e).trim();};
+const otherHome1SectionsUnchanged=surrounds(before)===surrounds(after);
+const manifest=JSON.parse(await fs.readFile('.client/skin-changes.json','utf8'));
+const changed=[];for(const f of manifest.files)if(hash(await fs.readFile(f.file))!==f.resultHash)changed.push(f.file);
+const result={beforeHome1Hash:hash(before),afterHome1Hash:hash(after),whyUnchanged,otherHome1SectionsUnchanged,changedSinceInitialReskin:changed,sourceCopy:'Existing owner demo at http://127.0.0.1:5173/; service heading, collection, sale/trade-in, import by request; inspected 2026-09-06'};
+await fs.writeFile('.client/section-qa/changes.json',JSON.stringify(result,null,2));console.log(result);
+if(!whyUnchanged||!otherHome1SectionsUnchanged||changed.length!==1)process.exitCode=1;

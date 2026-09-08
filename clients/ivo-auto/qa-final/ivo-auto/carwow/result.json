@@ -1,0 +1,3344 @@
+{
+  "client": "ivo-auto",
+  "name": "Иво Ауто",
+  "template": "carwow",
+  "port": 6653,
+  "startedAt": "2026-09-08T03:11:59.924Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Иво Ауто Варна - публикувани автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Всички 16 коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory?transmission=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "До 10 000 EUR\n7 коли",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR\n13 коли",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "До 30 000 EUR\n15 коли",
+          "href": "/inventory?price=under-30000"
+        },
+        {
+          "text": "До 50 000 EUR\n15 коли",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "Над 50 000 EUR\n1 коли",
+          "href": "/inventory?price=over-50000"
+        },
+        {
+          "text": "Без бюджет\nВсички 16 коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n6 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n2 автомобила",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n2 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Porsche\n1 автомобил",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Mazda\nЗапитване за автомобил",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Honda\nЗапитване за автомобил",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\nЗапитване за автомобил",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\nЗапитване за автомобил",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\nЗапитване за автомобил",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\nЗапитване за автомобил",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Tesla\nЗапитване за автомобил",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Седан\n7 коли",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Джип\n5 коли",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Купе\n3 коли",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "0878 720 035\nОбаждане / Viber",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nAudi A4\n2800 €\nУсловия по запитване\n195 000 км\n2008\nБензин\nАвтоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Публикувана обява\nVW Touran 1.6TDI\n3999 €\nУсловия по запитване\n210 000 км\n2012\nДизел\nАвтоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Публикувана обява\nSubaru B9 tribeca\n3999 €\nУсловия по запитване\n170 000 км\n2006\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Публикувана обява\nBMW X5\n4600 €\nУсловия по запитване\n195 000 км\n2005\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "Публикувана обява\nVW CC 2.0i\n9000 €\nУсловия по запитване\n214 000 км\n2013\nБензин\nАвтоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Публикувана обява\nBMW X5\n9500 €\nУсловия по запитване\n196 000 км\n2011\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Публикувана обява\nMercedes-Benz S 500\n10 000 €\nУсловия по запитване\n290 000 км\n2007\nБензин\nАвтоматик",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Публикувана обява\nBMW 730\n11 000 €\nУсловия по запитване\n214 000 км\n2010\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "Публикувана обява\nDodge Durango 3.6\n13 900 €\nУсловия по запитване\n202 000 км\n2015\nБензин\nАвтоматик",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Публикувана обява\nMercedes-Benz ML\n14 500 €\nУсловия по запитване\n130 000 км\n2014\nДизел\nАвтоматик",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "Публикувана обява\nAudi A8\n15 500 €\nУсловия по запитване\n215 000 км\n2013\nДизел\nАвтоматик",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Публикувана обява\nBMW 418\n16 200 €\nУсловия по запитване\n149 000 км\n2017\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "Публикувана обява\nBMW 520\n19 000 €\nУсловия по запитване\n165 000 км\n2018\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Публикувана обява\nPorsche Panamera Turbo\n21 000 €\nУсловия по запитване\n145 000 км\n2010\nБензин\nАвтоматик",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "Публикувана обява\nBMW M5\n30 000 €\nУсловия по запитване\n218 000 км\n2008\nБензин\nАвтоматик",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "Публикувана обява\nRolls-Royce Ghost\n105 000 €\nУсловия по запитване\n66 000 км\n2011\nБензин\nАвтоматик",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory/audi-a4-964926",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Audi A4 2008 г., Бензин, 195 000 км, Наличен | Иво Ауто",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359878720035"
+        },
+        {
+          "text": "Иво Ауто\nИво Ауто, Варна, България",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "КОЛИ",
+          "href": "/inventory"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "ВСИЧКИ",
+          "href": "/team"
+        },
+        {
+          "text": "Контакт с Иво Ауто\nКонсултант продажби",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "Контакт с Иво Ауто\nОценка, покупка и бартер",
+          "href": "/team/barter-i-ocenka"
+        },
+        {
+          "text": "Контакт с Иво Ауто\nДокументи и финансиране",
+          "href": "/team/dokumenti-finansirane"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/financing",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Финансиране | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359878720035",
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory?price=under-10000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nAudi A4\n2800 €\nУсловия по запитване\n195 000 км\n2008\nБензин\nАвтоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Публикувана обява\nVW Touran 1.6TDI\n3999 €\nУсловия по запитване\n210 000 км\n2012\nДизел\nАвтоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Публикувана обява\nSubaru B9 tribeca\n3999 €\nУсловия по запитване\n170 000 км\n2006\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Публикувана обява\nBMW X5\n4600 €\nУсловия по запитване\n195 000 км\n2005\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "Публикувана обява\nVW CC 2.0i\n9000 €\nУсловия по запитване\n214 000 км\n2013\nБензин\nАвтоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Публикувана обява\nBMW X5\n9500 €\nУсловия по запитване\n196 000 км\n2011\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Публикувана обява\nMercedes-Benz S 500\n10 000 €\nУсловия по запитване\n290 000 км\n2007\nБензин\nАвтоматик",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 7,
+      "expectedBudgetCount": 7,
+      "originalHarnessCount": 7,
+      "focusedEvidence": "../focused.json"
+    },
+    {
+      "width": 390,
+      "route": "/inventory?price=under-20000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nAudi A4\n2800 €\nУсловия по запитване\n195 000 км\n2008\nБензин\nАвтоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Публикувана обява\nVW Touran 1.6TDI\n3999 €\nУсловия по запитване\n210 000 км\n2012\nДизел\nАвтоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Публикувана обява\nSubaru B9 tribeca\n3999 €\nУсловия по запитване\n170 000 км\n2006\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Публикувана обява\nBMW X5\n4600 €\nУсловия по запитване\n195 000 км\n2005\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "Публикувана обява\nVW CC 2.0i\n9000 €\nУсловия по запитване\n214 000 км\n2013\nБензин\nАвтоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Публикувана обява\nBMW X5\n9500 €\nУсловия по запитване\n196 000 км\n2011\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Публикувана обява\nMercedes-Benz S 500\n10 000 €\nУсловия по запитване\n290 000 км\n2007\nБензин\nАвтоматик",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Публикувана обява\nBMW 730\n11 000 €\nУсловия по запитване\n214 000 км\n2010\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "Публикувана обява\nDodge Durango 3.6\n13 900 €\nУсловия по запитване\n202 000 км\n2015\nБензин\nАвтоматик",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Публикувана обява\nMercedes-Benz ML\n14 500 €\nУсловия по запитване\n130 000 км\n2014\nДизел\nАвтоматик",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "Публикувана обява\nAudi A8\n15 500 €\nУсловия по запитване\n215 000 км\n2013\nДизел\nАвтоматик",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Публикувана обява\nBMW 418\n16 200 €\nУсловия по запитване\n149 000 км\n2017\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "Публикувана обява\nBMW 520\n19 000 €\nУсловия по запитване\n165 000 км\n2018\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 13,
+      "expectedBudgetCount": 13,
+      "originalHarnessCount": 13,
+      "focusedEvidence": "../focused.json"
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Иво Ауто Варна - публикувани автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=SUV"
+        },
+        {
+          "text": "Комби",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "До 10 000 EUR",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "Rolls-Royce Ghost",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Audi A4",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "Porsche Panamera Turbo",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Dodge Durango 3.6",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "BMW 520",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "VW Touran 1.6TDI",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "VW CC 2.0i",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж всички 16 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Купи автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Разгледай автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Продай автомобил",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Всички типове",
+          "href": "/inventory"
+        },
+        {
+          "text": "Седан\n\n7 автомобила",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе\n\n3 автомобила",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван\n\n1 автомобил",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n\n6 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n\n2 автомобила",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n\n2 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Honda\n\nВиж марката",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\n\nВиж марката",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\n\nВиж марката",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\n\nВиж марката",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\n\nВиж марката",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Kia\n\nВиж марката",
+          "href": "/inventory?brand=Kia"
+        },
+        {
+          "text": "Mazda\n\nВиж марката",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Ferrari\n\nВиж марката",
+          "href": "/inventory?brand=Ferrari"
+        },
+        {
+          "text": "Tesla\n\nВиж марката",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/financing"
+        },
+        {
+          "text": "Всички обяви",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/obiava-11786049135297264-rolls-royce-ghost"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/obiava-11784822971964926-audi-a4-s-line-4x4-2-0t"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/obiava-11775231551222536-porsche-panamera-turbo-4-8i"
+        },
+        {
+          "text": "Виж всички отзиви",
+          "href": "/reviews"
+        },
+        {
+          "text": "Подбрани публикувани обяви; наличностите и условията се потвърждават с Иво Ауто.\n\nПубликувани автомобили\n\nMobile.bg",
+          "href": "/reviews"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна\n\nПосещение\n\nСвържете се за работно време и оглед.",
+          "href": "/reviews"
+        },
+        {
+          "text": "Бартер и лизинг са посочени в обявите. Конкретните условия се уточняват по телефона.\n\nУсловия\n\n0878 720 035",
+          "href": "/reviews"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "Rolls-Royce Ghost",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "",
+          "href": "/inventory/rolls-royce-ghost-297264"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Audi A4",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "Porsche Panamera Turbo",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "",
+          "href": "/inventory/porsche-panamera-turbo-222536"
+        },
+        {
+          "text": "",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Dodge Durango 3.6",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "BMW 520",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "VW Touran 1.6TDI",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "VW CC 2.0i",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "BMW 418",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Subaru B9 tribeca",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "Mercedes-Benz ML",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Mercedes-Benz S 500",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "BMW 730",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "BMW M5",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Audi A8",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory/rolls-royce-ghost-297264",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Rolls-Royce Ghost 2011 г., Бензин, 66 000 км, Наличен | Иво Ауто",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Назад",
+          "href": "/inventory"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "Заяви видео преглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Заяви още снимки",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "#reviewForm"
+        },
+        {
+          "text": "Контакт и условия",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратете отзив",
+          "href": "/contact?intent=review"
+        },
+        {
+          "text": "",
+          "href": "/terms"
+        },
+        {
+          "text": "Иво Ауто",
+          "href": "/about/daynight-auto-plovdiv"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Обади се за оглед",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Viber чат",
+          "href": "viber://chat?number=%2B359878720035"
+        },
+        {
+          "text": "Споразумение с потребителите.",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "BMW M5",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-m5-120541"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "BMW 520",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Audi A8",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "BMW 730",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact#contact-form"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се / Viber",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Виж карта",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Отвори в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035",
+        "tel:+359878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Виж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:+359878720035"
+        },
+        {
+          "text": "Виж екипа",
+          "href": "/team"
+        },
+        {
+          "text": "",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "Контакт за автомобили",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/team/barter-i-ocenka"
+        },
+        {
+          "text": "Въпроси за бартер",
+          "href": "/team/barter-i-ocenka"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/team/dokumenti-finansirane"
+        },
+        {
+          "text": "Въпроси за условия",
+          "href": "/team/dokumenti-finansirane"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/team/klientski-zapitvania"
+        },
+        {
+          "text": "Уговорете оглед",
+          "href": "/team/klientski-zapitvania"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "Свържи се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Chevrolet",
+          "href": "/inventory?brand=Chevrolet"
+        },
+        {
+          "text": "Chrysler",
+          "href": "/inventory?brand=Chrysler"
+        },
+        {
+          "text": "Citroen",
+          "href": "/inventory?brand=Citroen"
+        },
+        {
+          "text": "Ford",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Honda",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Jaguar",
+          "href": "/inventory?brand=Jaguar"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/inventory?brand=Land%20Rover"
+        },
+        {
+          "text": "Mazda",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Opel",
+          "href": "/inventory?brand=Opel"
+        },
+        {
+          "text": "Peugeot",
+          "href": "/inventory?brand=Peugeot"
+        },
+        {
+          "text": "Porsche",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Skoda",
+          "href": "/inventory?brand=Skoda"
+        },
+        {
+          "text": "VW",
+          "href": "/inventory?brand=VW"
+        },
+        {
+          "text": "Volvo",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продажба и бартер\n\nИзпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.\n\nПродай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Документи и финансиране\n\nПопитайте за документите и условията за избрания автомобил.\n\nРазгледай услугите",
+          "href": "/services"
+        },
+        {
+          "text": "Уговори оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Отвори маршрута",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/financing",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Финансиране | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?intent=financing"
+        },
+        {
+          "text": "Търсете според месечния бюджет",
+          "href": "/calculator"
+        },
+        {
+          "text": "Изберете подходяща оферта",
+          "href": "/inventory"
+        },
+        {
+          "text": "Иво Ауто\nАвгуст 2025\nСЪВЕТИ\n\nКак да купим употребяван автомобил без риск\n\nПреглед, история и документи — стъпките, които спестяват скъпи грешки при покупка...",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "Иво Ауто\nАвгуст 2025\nФИНАНСИРАНЕ\n\nЛизинг или разсрочено плащане — кое е за вас?\n\nСравнение на вариантите за финансиране според бюджет, месечна вноска и срок...",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "Иво Ауто\nАвгуст 2025\nПОЛЕЗНО\n\nБартер при покупка: как се оценява автомобилът ви\n\nКакво гледа екипът при оценката и как бартерът намалява крайната сума за плащане...",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory?price=under-10000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Audi A4",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "VW Touran 1.6TDI",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "VW CC 2.0i",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Subaru B9 tribeca",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Mercedes-Benz S 500",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 7,
+      "expectedBudgetCount": 7,
+      "originalHarnessCount": 8,
+      "focusedEvidence": "../focused.json"
+    },
+    {
+      "width": 1440,
+      "route": "/inventory?price=under-20000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Иво Ауто Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0878720035"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "Audi A4",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-964926"
+        },
+        {
+          "text": "",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "Dodge Durango 3.6",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "",
+          "href": "/inventory/dodge-durango-3-6-950248"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "BMW 520",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-520-679925"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "VW Touran 1.6TDI",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-1-6tdi-736048"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "VW CC 2.0i",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-cc-2-0i-693531"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-117197"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "BMW X5",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x5-151936"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "BMW 418",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-418-731573"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "Subaru B9 tribeca",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-b9-tribeca-573646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "Mercedes-Benz ML",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-ml-847465"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "Mercedes-Benz S 500",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-s-500-485843"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "BMW 730",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-730-395904"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "Audi A8",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a8-854071"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0878 720 035",
+          "href": "tel:0878720035"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 256, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "https://ivoauto-varna.mobile.bg/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 13,
+      "expectedBudgetCount": 13,
+      "originalHarnessCount": 14,
+      "focusedEvidence": "../focused.json"
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Audi",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6653/inventory",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/inventory/audi-a4-964926",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 17,
+      "menu": "No visible menu button at this width",
+      "searchUrl": "http://127.0.0.1:6653/inventory?q=BMW",
+      "afterCount": 25,
+      "search": true,
+      "detailHref": "/inventory/bmw-520-679925",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "carwow",
+    "Project": "J:\\cars\\clients\\ivo-auto\\carwow",
+    "PID": 76984,
+    "Port": 6653,
+    "Url": "http://127.0.0.1:6653",
+    "Stdout": "J:\\cars\\runtime\\carwow-6653-20260908-061201.out.log",
+    "Stderr": "J:\\cars\\runtime\\carwow-6653-20260908-061201.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true,
+  "focusedProof": "focused.json"
+}

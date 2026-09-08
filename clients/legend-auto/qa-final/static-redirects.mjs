@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';
+for(const slug of ['automarket-varna','elit-auto-import','legend-auto']){
+const root=`J:/cars/clients/${slug}`,facts=JSON.parse(await fs.readFile(root+'/business-facts.json'));await fs.mkdir(root+'/qa-final/provenance',{recursive:true});for(const name of ['oferta.html','sa-concept.html']){const p=root+'/carwow/static/'+name;await fs.copyFile(p,root+'/qa-final/provenance/'+name,1).catch(e=>{if(e.code!=='EEXIST')throw e;});await fs.writeFile(p,`<!doctype html><html lang="bg"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/"><title>${facts.name}</title></head><body><p>Страницата е преместена. <a href="/">${facts.name}</a> · <a href="/contact">Контакти</a></p></body></html>\n`);}}

@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';
+import {chromium} from '../../templates/boxcar/node_modules/playwright/index.mjs';
+const root='J:/cars/clients/elit-auto-import'; await fs.mkdir(root+'/research',{recursive:true}); await fs.mkdir(root+'/assets',{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true});const p=await browser.newPage();
+for(const key of ['home','contacts','about']) {await p.goto('https://elitautoimport.mobile.bg/'+(key==='home'?'':key),{waitUntil:'domcontentloaded'});const data=await p.evaluate(()=>({url:location.href,text:document.body.innerText,images:[...document.images].map(i=>({src:i.src,alt:i.alt})),links:[...document.querySelectorAll('a')].map(a=>({text:a.textContent.trim(),url:a.href})),cards:[...document.querySelectorAll('.ads2023 > .item')].map(e=>({title:e.querySelector('a.title')?.textContent.trim(),url:e.querySelector('a.title')?.href,parts:[...(e.querySelector('.text')?.children??[])].map(x=>({cls:x.className,text:x.textContent.trim()})),images:[...e.querySelectorAll('img')].map(i=>i.src).filter(s=>s.includes('photosorg'))}))}));await fs.writeFile(root+'/research/'+key+'.json',JSON.stringify(data,null,2)); console.log(key, data.cards.length, data.text.slice(0,key==='home'?100:2000));}
+await browser.close();

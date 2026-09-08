@@ -1,0 +1,57 @@
+
+> rencar-svelte@1.0.0 build
+> vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 156 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                   0.86 kB │ gzip:  0.38 kB
+dist/assets/coming-soon-UkRWBR_Q.js               1.44 kB │ gzip:  0.62 kB
+dist/assets/404-D8SSdm-h.js                      14.82 kB │ gzip:  3.07 kB
+dist/assets/forgot-password-CDe92TLV.js          15.02 kB │ gzip:  3.06 kB
+dist/assets/mail-success-QY-3q5Ou.js             15.02 kB │ gzip:  3.07 kB
+dist/assets/login-C5YTcuf8.js                    15.95 kB │ gzip:  3.25 kB
+dist/assets/register-Dh6ASXkd.js                 16.13 kB │ gzip:  3.28 kB
+dist/assets/car-booking-confirm-Cs1Nr4ta.js      16.67 kB │ gzip:  3.45 kB
+dist/assets/profile-cancel-booking-Cr4qoBGb.js   17.31 kB │ gzip:  3.63 kB
+dist/assets/driver-single-_rX_9eyO.js            17.44 kB │ gzip:  3.56 kB
+dist/assets/contact-Cxy2UCFy.js                  17.44 kB │ gzip:  3.72 kB
+dist/assets/gallery-y0TZm9FI.js                  17.46 kB │ gzip:  3.23 kB
+dist/assets/car-rate-Di94qz3h.js                 17.62 kB │ gzip:  3.36 kB
+dist/assets/faq-5Jy8c9-i.js                      17.86 kB │ gzip:  3.50 kB
+dist/assets/car-brand-C1N8Nx0M.js                17.86 kB │ gzip:  3.20 kB
+dist/assets/service-FHTcQImO.js                  17.98 kB │ gzip:  3.40 kB
+dist/assets/car-type-pQ6RK17W.js                 17.99 kB │ gzip:  3.27 kB
+dist/assets/profile-setting-CyDSi2KH.js          18.46 kB │ gzip:  3.81 kB
+dist/assets/testimonial-DsG5nJgf.js              18.47 kB │ gzip:  3.34 kB
+dist/assets/service-2-VkS2tCn_.js                18.52 kB │ gzip:  3.39 kB
+dist/assets/privacy-Ttv6q8NB.js                  18.61 kB │ gzip:  4.43 kB
+dist/assets/profile-C1eGs9-0.js                  18.96 kB │ gzip:  3.77 kB
+dist/assets/car-checkout-DevUweTj.js             19.28 kB │ gzip:  3.77 kB
+dist/assets/help-BTgL5Bzs.js                     19.51 kB │ gzip:  3.49 kB
+dist/assets/profile-payment-TkNUG8y-.js          19.61 kB │ gzip:  3.63 kB
+dist/assets/terms-UzrN_6Rj.js                    19.85 kB │ gzip:  4.54 kB
+dist/assets/blog-7AH8W5rU.js                     19.86 kB │ gzip:  3.51 kB
+dist/assets/booking-cancel-policy-CmBAWdP2.js    19.89 kB │ gzip:  4.55 kB
+dist/assets/dashboard-BT74JME2.js                19.91 kB │ gzip:  3.66 kB
+dist/assets/service-single-ZwvAJRkK.js           19.96 kB │ gzip:  4.86 kB
+dist/assets/team-5MTAqmsQ.js                     21.02 kB │ gzip:  3.36 kB
+dist/assets/driver-c7ZtELY5.js                   21.12 kB │ gzip:  3.33 kB
+dist/assets/profile-booking-DiX1ZP2f.js          21.28 kB │ gzip:  3.99 kB
+dist/assets/car-booking-DRmBoKY8.js              22.47 kB │ gzip:  4.91 kB
+dist/assets/book-ride-DS35zyB9.js                22.60 kB │ gzip:  4.89 kB
+dist/assets/profile-wishlist-IZCjokn_.js         23.05 kB │ gzip:  3.75 kB
+dist/assets/car-2-XAkI-rF3.js                    23.96 kB │ gzip:  3.76 kB
+dist/assets/blog-single-CxM-IPJL.js              24.08 kB │ gzip:  4.99 kB
+dist/assets/car-B3uS9GSn.js                      29.51 kB │ gzip:  4.28 kB
+dist/assets/about-06vHygLX.js                    32.34 kB │ gzip:  5.20 kB
+dist/assets/car-single-BcLEqC7r.js               34.37 kB │ gzip:  6.82 kB
+dist/assets/index-2-Bse6Zsi8.js                  61.68 kB │ gzip:  8.77 kB
+dist/assets/index-5-rocGdaQJ.js                  62.12 kB │ gzip:  8.87 kB
+dist/assets/index-3-700wtdcd.js                  63.27 kB │ gzip:  8.44 kB
+dist/assets/index-4-uAnFkx4g.js                  69.34 kB │ gzip:  9.34 kB
+dist/assets/index-CmmcikGS.js                    75.14 kB │ gzip:  9.84 kB
+dist/assets/index-DGocqyiu.js                   100.80 kB │ gzip: 15.41 kB
+✓ built in 3.17s

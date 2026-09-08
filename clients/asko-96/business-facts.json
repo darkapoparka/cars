@@ -1,0 +1,41 @@
+{
+  "name": "АСКО 96",
+  "latinName": "ASKO96",
+  "shortName": "АСКО 96",
+  "accent": "#d7ae35",
+  "accentDark": "#8b6811",
+  "phoneDisplay": "0899 76 96 96",
+  "phoneHref": "tel:+359899769696",
+  "email": "askogroup@abv.bg",
+  "address": "бул. „Ботевградско шосе“ 300",
+  "city": "София",
+  "country": "България",
+  "hours": [
+    "Понеделник – петък: 09:00–18:30",
+    "Събота: 10:00–16:00",
+    "Неделя: почивен ден"
+  ],
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
+  "website": "https://asko96.bg/",
+  "stockUrl": "https://asko96.mobile.bg/",
+  "facebook": "https://www.facebook.com/p/Asko96-100050328800477/",
+  "youtube": "https://www.youtube.com/@asko96bulgaria",
+  "services": [
+    "Продажба на автомобили",
+    "Замяна и изкупуване",
+    "Внос по поръчка",
+    "Собствен лизинг",
+    "Сервизно обслужване"
+  ],
+  "logo": "/assets/asko96/asko96-logo.png",
+  "showroom": "/assets/asko96/asko96-showroom.jpg",
+  "stockSnapshotDate": "2026-09-06",
+  "stockCount": 16,
+  "stockNote": "Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.",
+  "sources": [
+    "https://asko96.bg/en/home-2/",
+    "https://asko96.mobile.bg/",
+    "https://asko96.mobile.bg/contacts"
+  ]
+}

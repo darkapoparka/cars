@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Auto Best — before / after</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f5f7;color:#202329;font:15px system-ui,sans-serif}header{padding:22px 28px;background:white;border-bottom:1px solid #dce0e5}h1{font-size:24px;margin:0 0 6px}p{margin:6px 0;color:#626873;line-height:1.5}nav{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin-top:18px}label{display:grid;gap:5px;font-size:13px}select,button{font:inherit;border:1px solid #cbd0d7;background:#fff;border-radius:8px;padding:10px 12px;min-height:44px}a{color:#124db0}button:focus-visible,select:focus-visible{outline:3px solid #0b57d0;outline-offset:2px}.note{max-width:1050px;margin-top:16px}.panes{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1640px;padding:22px;margin:auto}.pane{min-width:0}h2{font-size:16px;margin:0 0 10px}.frame{overflow:auto;height:calc(100vh - 310px);min-height:360px;background:#e8ebef;border:1px solid #dce0e5;border-radius:8px;text-align:center}img{display:block;width:auto;max-width:100%;height:auto;margin:0 auto}.original img{max-width:none}footer{padding:0 28px 20px;font-size:13px;color:#626873}.check{display:flex;align-items:center;gap:8px;min-height:44px}input{width:18px;height:18px}@media(max-width:760px){header{padding:16px}.panes{gap:8px;padding:12px}.frame{min-height:450px}h1{font-size:21px}}
+</style>
+<header>
+<h1>Auto Best — before / after</h1>
+<p>Shared template · 8 September 2026 · Original mobile and desktop screenshots</p>
+<nav>
+<label>Page<select id="page"><option value="leasing">Vehicle enquiry</option><option value="home">Home</option><option value="inventory">Filtered inventory</option><option value="vehicle">Vehicle detail</option><option value="about">About</option><option value="article">Article</option></select></label>
+<label>Viewport<select id="width"><option value="390">Mobile · 390 × 844</option><option value="1440">Desktop · 1440 × 900</option></select></label>
+<label>Capture<select id="capture"><option value="-top">First viewport</option><option value="">Full page</option></select></label>
+<label class="check"><input type="checkbox" id="sync" checked>Scroll together</label>
+<label class="check"><input type="checkbox" id="size">Actual size</label>
+<a href="REPORT.md">Implementation report</a>
+</nav>
+<p class="note" id="note"></p>
+</header>
+<main class="panes"><section class="pane"><h2>Before</h2><div class="frame" id="left"><img id="before" alt="Template before improvements"></div></section><section class="pane"><h2>After · 2026.09.08-polish-1</h2><div class="frame" id="right"><img id="after" alt="Template after improvements"></div></section></main>
+<footer>Same route, width and capture type on both sides. Full-page lengths can change as redundant content is removed. Source dealer identity and unverified stock remain template fixtures. <a href="http://127.0.0.1:6461">Open the local template</a>.</footer>
+<script>
+const notes={leasing:'The selected car now appears directly under the leasing title, replacing the redundant contact shortcut. The duplicate vehicle row below is removed; opening leasing without a car offers a vehicle selection link. The phone action remains explicit; no enquiry is silently sent.',home:'Stock-backed body types and brands replace empty-result shortcuts. All four available brands are visible on mobile. Existing artwork, typography and section patterns are preserved.',inventory:'The list keeps its compact rows and cards. Opening a car and using Back now restores make, sort and the selected card anchor.',vehicle:'The decorative gallery counter is removed. Body labels are localized, enquiry links carry the car ID, and the finance control has a visible keyboard focus ring.',about:'Sample people and unsupported partner logos are optional and hidden by default. The existing process and showroom sections remain.',article:'Related reading and contact remain. Repeated search, categories and popular-topic widgets are removed, reducing the sidebar and mobile page length.'};
+const $=id=>document.getElementById(id);
+function update(){const name=$('page').value,width=$('width').value,suffix=$('capture').value;for(const phase of ['before','after'])$(phase).src=`${phase}/${width}-${name}${suffix}.png`;$('note').textContent=notes[name];$('left').scrollTop=$('right').scrollTop=0;}
+for(const id of ['page','width','capture'])$(id).addEventListener('change',update);
+$('size').addEventListener('change',()=>document.body.classList.toggle('original',$('size').checked));
+for(const [from,to] of [['left','right'],['right','left']])$(from).addEventListener('scroll',()=>{if($('sync').checked&&Math.abs($(to).scrollTop-$(from).scrollTop)>1)$(to).scrollTop=$(from).scrollTop;});
+update();
+</script>
+</html>

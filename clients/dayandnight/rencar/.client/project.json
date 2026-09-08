@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "client": "dayandnight",
+  "templateKey": "rencar",
+  "templateVersion": "2026.09.06-baseline",
+  "createdAt": "2026-09-06T17:39:56.807Z",
+  "state": "visual-reskin-draft",
+  "selectedHome": "home01",
+  "availableHomes": [
+    {
+      "id": "home01",
+      "route": "/"
+    },
+    {
+      "id": "home02",
+      "route": "/index-2.html"
+    },
+    {
+      "id": "home03",
+      "route": "/index-3.html"
+    },
+    {
+      "id": "home04",
+      "route": "/index-4.html"
+    },
+    {
+      "id": "home05",
+      "route": "/index-5.html"
+    }
+  ],
+  "offeredHomes": [
+    "home01",
+    "home02",
+    "home03",
+    "home04",
+    "home05"
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "layoutFidelity": true,
+    "sourceStructurePreserved": false,
+    "svelteCheck": true,
+    "build": true,
+    "contentReady": false,
+    "contactDeliveryVerified": false,
+    "report": ".client/QA.md",
+    "evidence": ".client/reskin-qa/",
+    "polishEvidence": ".client/polish-qa/",
+    "sourceStructureExceptions": [
+      "Owner-requested Home 1 About composition",
+      "Owner-requested Home 1 information strip and hero cleanup"
+    ],
+    "sectionEvidence": ".client/section-qa/",
+    "heroEvidence": ".client/hero-qa/"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false,
+    "note": "This client copy was not registered and existing M: CRM identities were not modified. No live CRM refresh was performed for this trial."
+  },
+  "projectKey": "day-and-night-rencar",
+  "clientVersion": "2026.09.06-reskin-v2-centered-hero",
+  "updatedAt": "2026-09-06T20:09:12.918Z",
+  "buildType": "original Rencar reskin with owner-requested motion and surface polish",
+  "entryRoute": "/",
+  "localUrl": "http://127.0.0.1:6601/",
+  "comparisonUrl": null,
+  "changes": [
+    "Original Rencar App/runtime/styles/widgets/pages restored",
+    "Day & Night logo, brand colours, selected hero/showroom asset URLs",
+    "Business-name/headline/phone/address text substitutions inside original markup",
+    "Original five home variants, navigation, sections, cards, forms, fonts and breakpoints retained",
+    "Owner-requested quieter hovers, disabled section and hero entrances, manual carousels",
+    "Home 1 header inset and rounded at both ends; booking panel centered and rounded",
+    "Header tracks top-bar content plus 24px per side, subject to viewport gutters",
+    "Owner-requested Home 1 About centered intro and service row; Why choose us and all other page sections preserved",
+    "Rencar style guide and future promotion workflow linked from AGENTS",
+    "Home 1 bounded factual information strip; centered compact headline/car hero; removed repeated name, filler, shapes and vague buttons; booking box raised"
+  ],
+  "knownGaps": [
+    "Visual draft only; no public deployment or outreach",
+    "Original rental forms and remaining English copy are retained",
+    "Original sample stock/prices/reviews and example email/hours are placeholders, not verified Day & Night facts",
+    "No dealer workflow conversion or real backend delivery is claimed"
+  ],
+  "provenance": {
+    "templateManifest": ".template/source-manifest.json",
+    "donorAssets": ".client/provenance/assets.json",
+    "skinSubstitutions": ".client/skin-changes.json",
+    "rejectedVersion": ".client/rejected-v1"
+  },
+  "runtime": {
+    "port": 6601,
+    "verifiedPid": 22044,
+    "source": "J:/cars/clients/dayandnight/rencar",
+    "evidence": ".client/reskin-qa/listeners.json"
+  },
+  "rejection": {
+    "reason": "The owner asked for branding/assets only. V1 rebuilt the project and was rejected.",
+    "backup": ".client/rejected-v1",
+    "correctiveScope": "Original Rencar markup, styles, widgets, routes and all five homes. Branding, image paths and business copy only.",
+    "correctedAt": "2026-09-06T18:52:20.374Z"
+  },
+  "referenceBaseUrl": "http://127.0.0.1:6430/",
+  "styleGuide": "../../../docs/RENCAR-STYLEGUIDE.md",
+  "promotionGuide": "../../../docs/TEMPLATE-PROMOTION.md",
+  "proposedMaster": {
+    "key": "rencar-polished",
+    "state": "documented-future-promotion",
+    "created": false
+  }
+}

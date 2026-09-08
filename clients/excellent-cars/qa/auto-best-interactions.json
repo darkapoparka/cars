@@ -1,0 +1,16 @@
+[
+  {
+    "width": 390,
+    "menuDismiss": true,
+    "filterUrl": "http://127.0.0.1:6621/listing-grid?q=Cupra",
+    "filter": true,
+    "error": "Expected \"actual\" to be strictly unequal to:\n\n'/assets/excellent/vehicle-01-1.webp'"
+  },
+  {
+    "width": 1440,
+    "menuDismiss": true,
+    "filterUrl": "http://127.0.0.1:6621/listing-grid?make=Cupra",
+    "filter": true,
+    "error": "Expected \"actual\" to be strictly unequal to:\n\n'/assets/excellent/vehicle-01-1.webp'"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "ИВО АУТО",
+  "short_name": "ИВО АУТО",
+  "description": "ИВО АУТО: автомобили и контакт във Варна.",
+  "lang": "bg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#222222",
+  "icons": [
+    {
+      "src": "/assets/ivo-auto/wordmark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

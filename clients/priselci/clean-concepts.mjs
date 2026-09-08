@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+const r='J:/cars/clients/priselci/carwow/src/routes/presentation';
+const p=`${r}/home2/+page.svelte`;let s=await fs.readFile(p,'utf8');s=s.replace(/const reviews = \[[\s\S]*?\n\t\];/,'const reviews: {title:string;body:string;author:string}[] = [];').replace('Rated {data.stats.rating} based on {data.stats.reviews} local reviews.','No verified dealer reviews are published in this demo.');await fs.writeFile(p,s);
+for(const key of ['home2','home3']){const p=`${r}/${key}/+page.server.ts`;let s=await fs.readFile(p,'utf8');s=s.replaceAll('DayNight inspected','Published listing').replaceAll("rating: '4.9/5'","rating: '—'").replaceAll("reviews: '240+'","reviews: '0'").replace(/Math\.max\(\d+, (countBetween\([^)]*\))\)/g,'$1').replace("['5,500+ dealers competing for your car', 'Free home collection', 'Fast payment']","['Ask about trade-in availability', 'Contact the dealership', 'Confirm individual conditions']");await fs.writeFile(p,s);}

@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+for(const c of ['autolife','priselci','ivo-auto']){const roots=['auto-best','modern','carwow'].map(t=>({path:`J:/cars/clients/${c}/${t}`,physicalPath:fs.realpathSync(`J:/cars/clients/${c}/${t}`),git:fs.existsSync(`J:/cars/clients/${c}/${t}/.git`)}));fs.writeFileSync(`J:/cars/clients/${c}/qa-final/workspace-identity.json`,JSON.stringify({at:new Date().toISOString(),roots,scope:'existing client Fast Skin finalization; preserved all other client/master work'},null,2));}

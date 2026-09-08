@@ -1,0 +1,166 @@
+[
+  {
+    "width": 390,
+    "steps": [
+      {
+        "name": "navigation and Escape",
+        "ok": true,
+        "expanded": 1,
+        "afterEscape": 0,
+        "url": "http://127.0.0.1:6626/"
+      },
+      {
+        "name": "filter opens and dismisses",
+        "ok": true,
+        "dialogs": 0,
+        "afterEscape": 0
+      },
+      {
+        "name": "search BMW",
+        "ok": true,
+        "url": "http://127.0.0.1:6626/listing-grid?q=BMW",
+        "text": "Начало\nКоли\nПродай\nВнос\nМеню\nBMW\nBMW\nМарка\nМодел\nЦена\nГодина\nКупе\nГориво\nСкорости\nПробег\nВерсия\nСъстояние\nЕкстри\n3 коли\nBMW X1 2.0D\n2016\n138 000 км\nДизел\nАвтоматик\n14 500 €\nBMW X1 2.0D\n2010\n187 000 км\nДизел\nРъчна\n5999 €\nBMW 320 i\n2013\n187 000 км\nБензин\nРъчна\n6300 €\nНалични автомобили — AVANGARD AUTO"
+      },
+      {
+        "name": "inventory to detail and enquiry",
+        "ok": true,
+        "detailUrl": "http://127.0.0.1:6626/listing-grid",
+        "phoneLinks": [
+          "tel:+359877800921",
+          "tel:+359877800921",
+          "tel:+359877800921",
+          "tel:+359877800921",
+          "tel:+359877800921",
+          "tel:+359877800921"
+        ],
+        "enquiryUrl": "http://127.0.0.1:6626/listing-detail-v1/1",
+        "text": "Заявете оглед\nОбадете се\nVW Passat Alltrack\n1 / 4\nДанни\nОписание\nЕкстри\nМарка\nVW\nКатегория\nWagon\nСъстояние\nУпотребяван\nГодина\n2018\nПробег\n220 000 км\nГориво\nДизел\nСкоростна кутия\nАвтоматик\nЛокация\nВарна\nЛокация\n\nбул. Цар Освободител 289, Варна\n\nОтворете в Google Maps\n\n13 500 €\n\nНаличността и условията се потвърждават от екипа.\n\nОбадете се\nЗаявете оглед\nКалкулатор за финансиране\n\nПроменете първоначалната вноска и срока, за да видите оставащата главница.\n\nПървоначална вноска\n€\nСрок\n12 месеца\n24 месеца\n36 месеца\n48 месеца\n60 месеца\nОставаща главница\n13 500 €\nГлавница / месец\n225 €\n\nОриентир без лихва, такси и застраховки. Не представлява кредитна оферта.\n\nПолучете реална оферта\nAVANGARD AUTO\n\nбул. Цар Освободител 289, Варна\n\n0877 800 921\nИзпратете запитване\nПодбрани автомобили\n\nОще предложения от актуалната селекция\n\nВижте всички автомобили\nBMW 320 i\n6300 €\nAudi A4 2.0TDI\n6300 €\nVolvo XC40 2.0D\n17 999 €\nVW Passat Alltrack — AVANGARD AUTO"
+      },
+      {
+        "name": "contact destinations and local validation",
+        "ok": true,
+        "links": [
+          {
+            "text": "Обадете се ·0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": " Адрес бул. Цар Освободител 289, Варна  Отвори карта",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": " Посещения Обадете се преди посещение  Уговори посещение",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": " Телефон 0877 800 921  Позвъни сега",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": " Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": " Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": " 0877 800 921 ",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "forms": 0,
+        "required": 0,
+        "note": "No external submission or phone navigation performed"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "steps": [
+      {
+        "name": "navigation and Escape",
+        "ok": true,
+        "expanded": 3,
+        "afterEscape": 0,
+        "url": "http://127.0.0.1:6626/"
+      },
+      {
+        "name": "filter opens and dismisses",
+        "ok": true,
+        "presentation": "Inline desktop filters",
+        "selectCount": 7
+      },
+      {
+        "name": "search BMW",
+        "ok": false,
+        "error": "locator.click: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.dn-listing-filter__toggle')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Филтри\" aria-label=\"Филтри\" aria-expanded=\"false\" aria-haspopup=\"dialog\" class=\"dn-listing-filter__toggle\" aria-controls=\"dn-listing-filter-dialog\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    18 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+      },
+      {
+        "name": "inventory to detail and enquiry",
+        "ok": true,
+        "detailUrl": "http://127.0.0.1:6626/listing-grid",
+        "phoneLinks": [
+          "tel:+359877800921",
+          "tel:+359877800921",
+          "tel:+359877800921"
+        ],
+        "enquiryUrl": "http://127.0.0.1:6626/contact",
+        "text": "бул. Цар Освободител 289, Варна\n0877 800 921\nОбадете се преди посещение\nНачало\nАвтомобили\nЗа нас\nПолезно\nКонтакти\nЗапитване\nЗапазете оглед\nНазад\nVW Passat Alltrack\n1 / 4\nДанни\nОписание\nЕкстри\nМарка\nVW\nКатегория\nWagon\nСъстояние\nУпотребяван\nГодина\n2018\nПробег\n220 000 км\nГориво\nДизел\nСкоростна кутия\nАвтоматик\nЛокация\nВарна\nЛокация\n\nбул. Цар Освободител 289, Варна\n\nОтворете в Google Maps\n\nЦена\n\n13 500 €\n\nНаличността и условията се потвърждават от екипа.\n\nОбадете се\nЗаявете оглед\nКалкулатор за финансиране\n\nПроменете първоначалната вноска и срока, за да видите оставащата главница.\n\nПървоначална вноска\n€\nСрок\n12 месеца\n24 месеца\n36 месеца\n48 месеца\n60 месеца\nОставаща главница\n13 500 €\nГлавница / месец\n225 €\n\nОриентир без лихва, такси и застраховки. Не представлява кредитна оферта.\n\nПолучете реална оферта\nAVANGARD AUTO\n\nбул. Цар Освободител 289, Варна\n\n0877 800 921\nИзпратете запитване\nПодбрани автомобили\n\nОще предложения от актуалната селекция\n\nВижте всички автомобили\nBMW 320 i\n6300 €\nAudi A4 2.0TDI\n6300 €\nVolvo XC40 2.0D\n17 999 €\nПодбрани автомобили\nРазгледайте актуалната селекция\nОглед в Варна\nС предварителна уговорка\nЛизинг\nПопитайте за актуалните условия\nТранспорт в България\nУточнете критериите с екипа\n\nПодбрани премиум автомобили, внос и лизинг с директен контакт с екипа.\n\nАвтомобили\nВсички автомобили\nУпотребявани\nНови автомобили\nКомпания\nЗа нас\nПолезно\nКонтакти\n0877 800 921\nбул. Цар Освободител 289, Варна\n\nОбадете се преди посещение\n\n© 2026 AVANGARD AUTO\nАвтомобили · Внос · Лизинг\nVW Passat Alltrack — AVANGARD AUTO"
+      },
+      {
+        "name": "contact destinations and local validation",
+        "ok": true,
+        "links": [
+          {
+            "text": "Обадете се ·0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": " Адрес бул. Цар Освободител 289, Варна  Отвори карта",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": " Посещения Обадете се преди посещение  Уговори посещение",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": " Телефон 0877 800 921  Позвъни сега",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": " Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": " Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": " 0877 800 921 ",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "forms": 0,
+        "required": 0,
+        "note": "No external submission or phone navigation performed"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+import fs from'node:fs/promises';const p='J:/cars/audits/2026-09-08/verify/run-astra-last.mjs';let s=await fs.readFile(p,'utf8');s += "\nif(process.argv[2]==='elit-auto-import'&&process.env.QA_SKIP_PREFLIGHT)await exec(process.execPath,['J:/cars/audits/2026-09-08/verify/console-astra-last.mjs'],{timeout:180000});\n";await fs.writeFile(p,s);

@@ -1,0 +1,122 @@
+{
+  "evidence": [
+    {
+      "id": "21781257688134220",
+      "price": 32900,
+      "mileage": 179000,
+      "pass": true
+    },
+    {
+      "id": "11785932596351376",
+      "price": 10500,
+      "mileage": 212000,
+      "pass": true
+    },
+    {
+      "id": "11788181514006324",
+      "price": 17900,
+      "mileage": 180000,
+      "pass": true
+    },
+    {
+      "id": "11786795820524833",
+      "price": 22900,
+      "mileage": 67000,
+      "pass": true
+    },
+    {
+      "id": "21786794971218528",
+      "price": 17900,
+      "mileage": 40000,
+      "pass": true
+    },
+    {
+      "id": "21786455005208728",
+      "price": 10900,
+      "mileage": 180000,
+      "pass": true
+    },
+    {
+      "id": "21786453972789852",
+      "price": 16990,
+      "mileage": 199000,
+      "pass": true
+    },
+    {
+      "id": "21786451392501339",
+      "price": 25000,
+      "mileage": 125000,
+      "pass": true
+    },
+    {
+      "id": "21773151499854810",
+      "price": 16900,
+      "mileage": 133000,
+      "pass": true
+    },
+    {
+      "id": "11768639133016485",
+      "price": 21500,
+      "mileage": 65000,
+      "pass": true
+    },
+    {
+      "id": "21775914499512125",
+      "price": 21990,
+      "mileage": 48000,
+      "pass": true
+    },
+    {
+      "id": "21785575816054903",
+      "price": 16990,
+      "mileage": 118000,
+      "pass": true
+    },
+    {
+      "id": "21773150110056507",
+      "price": 12000,
+      "mileage": 188000,
+      "pass": true
+    },
+    {
+      "id": "21785323501482685",
+      "price": 9500,
+      "mileage": 186000,
+      "pass": true
+    },
+    {
+      "id": "11778320754806394",
+      "price": 9200,
+      "mileage": 130000,
+      "pass": true
+    },
+    {
+      "id": "21781781688732220",
+      "price": 14990,
+      "mileage": 192000,
+      "pass": true
+    }
+  ],
+  "budgets": [
+    {
+      "limit": 10000,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "limit": 20000,
+      "count": 11,
+      "expected": 11
+    },
+    {
+      "limit": 30000,
+      "count": 15,
+      "expected": 15
+    },
+    {
+      "limit": 50000,
+      "count": 16,
+      "expected": 16
+    }
+  ]
+}

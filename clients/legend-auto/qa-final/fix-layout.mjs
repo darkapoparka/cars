@@ -1,0 +1,1 @@
+import fs from 'node:fs/promises';const p='J:/cars/clients/legend-auto/carwow/src/routes/+layout.svelte';let s=await fs.readFile(p,'utf8');const rule='.client-service-note { margin: 0; padding: 12px 24px; background: #fff4e5; color: #573700; font-size: 14px; }';s=s.replace('<style>'+rule+'</style>','');s=s.replace('<style>','<style>\n\t'+rule);await fs.writeFile(p,s);

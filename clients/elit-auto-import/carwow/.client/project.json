@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "client": "elit-auto-import",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:49:19.131Z",
+  "state": "local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "evidence": "../qa-final/elit-auto-import/carwow/result.json",
+    "frameworkChecks": true,
+    "buildScope": "Final numeric framework check and production build passed after numeric, static and contact-copy corrections; targeted browser supplement passes.",
+    "checkedAt": "2026-09-08T03:40:50.039Z",
+    "limits": [
+      "Local demo only; no provider or form delivery verified.",
+      "Stock is a dated source-backed sample."
+    ],
+    "finalTargetedEvidence": "J:/cars/clients/elit-auto-import/qa-final/carwow-final-contact-copy.json",
+    "numericStockEvidence": "J:/cars/clients/elit-auto-import/qa-final/numeric-stock-proof.json",
+    "latestFrameworkEvidence": [
+      {
+        "path": "J:/cars/clients/elit-auto-import/qa-final/carwow-numeric-check.log",
+        "modifiedAt": "2026-09-08T03:14:25.089Z"
+      },
+      {
+        "path": "J:/cars/clients/elit-auto-import/qa-final/carwow-numeric-build.log",
+        "modifiedAt": "2026-09-08T03:14:50.727Z"
+      }
+    ],
+    "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6663/",
+    "state": "stopped-after-verification"
+  },
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 15,
+    "photosPerVehicle": 5,
+    "assetsProvenance": "../assets/provenance.json",
+    "officialLogo": true,
+    "sourceTemplateVersion": "2026.09.06-refresh-1",
+    "captureDate": "2026-09-07",
+    "notes": [
+      "Full source composition preserved; generic decorative vehicle cutouts retained.",
+      "No confirmed social profiles, email or opening hours.",
+      "No dealer financing, buyback or trade-in service confirmed. Existing inquiry routes remain demo templates with copy limitations.",
+      "Mileage field and seller description conflicts explicitly disclosed."
+    ]
+  }
+}

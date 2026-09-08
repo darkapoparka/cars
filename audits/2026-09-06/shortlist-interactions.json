@@ -1,0 +1,954 @@
+[
+  {
+    "key": "auto-best",
+    "port": 5173,
+    "route": "/listing-grid",
+    "name": "Филтри",
+    "errors": [],
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Начало",
+        "class": "svelte-hv3zzy"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Коли",
+        "class": "svelte-hv3zzy active"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Продай",
+        "class": "svelte-hv3zzy"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Внос",
+        "class": "svelte-hv3zzy"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Меню",
+        "class": "svelte-hv3zzy"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Отворете търсенето на автомобили",
+        "class": "dn-listing-filter__keyword dn-listing-filter__mobile-keyword"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Филтри",
+        "class": "dn-listing-filter__toggle"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Сортиране: Препоръчани",
+        "class": "dn-listing-filter__mobile-sort"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Марка",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Модел",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Цена",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Година",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Купе",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Гориво",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Скорости",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Пробег",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Версия",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Състояние",
+        "class": ""
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Екстри",
+        "class": ""
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте Audi RS 6 Avant",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте Mercedes-Benz GLE Coupé",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте Audi RS Q8",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте BMW X6 M Sport",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте Range Rover Sport",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте Mercedes-AMG GT 4-Door",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте BMW X6 xDrive",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Вижте Mercedes-AMG GT Coupé",
+        "class": "dn-vehicle-card__link svelte-1y8iuzo"
+      }
+    ],
+    "after": {
+      "url": "http://127.0.0.1:5173/listing-grid",
+      "text": "Марка или модел\nМарка\nМодел\nЦена\nГодина\nКупе\nГориво\nСкорости\nПробег\nВерсия\nСъстояние\nЕкстри\n8 коли\nAudi RS 6 Avant\n2024\n99 701 км\nБензин\nАвтоматик\n68 804 €\nMercedes-Benz GLE Coupé\n2021\n96 865 км\nДизел\nАвтоматик\n55 403 €\nAudi RS Q8\n2021\n94 709 км\nБензин\nАвтоматик\n57 480 €\nBMW X6 M Sport\n2021\n62 485 км\nДизел\nАвтоматик\n54 223 €\nRange Rover Sport\n2019\n84 426 км\nДизел\nАвтоматик\n68 313 €\nMercedes-AMG GT 4-Door\n2020\n72 812 км\nБензин\nАвтоматик\n61 069 €\nBMW X6 xDrive\n2020\n76 346 км\nДизел\nАвтоматик\n85 635 €\nMercedes-AMG GT Coupé\n2023\n49 584 км\nБензин\nАвтоматик\n51 365 €\nТърсене на автомобили\nТърсене на автомобил\nМарка\nВсички марки\nМодел\nВсички модели\nКупе\nВсички купета\nБюджет\nБез ограничение\nГодина\nБез ограничение\nГориво\nВсяко гориво\nПробег\nБез ограничение\nСкорости\nВсички\nВерсия\nВсички\nСъстояние\nВсички\nЕкстри\nБез предпочитания\nПокажи 8 автомобила",
+      "dialogs": 1
+    },
+    "afterEscape": {
+      "dialogs": 0,
+      "active": "Филтри"
+    },
+    "result": "action-inspected"
+  },
+  {
+    "key": "carwow",
+    "port": 6517,
+    "route": "/inventory",
+    "name": "Филтри",
+    "errors": [],
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Към основното съдържание",
+        "class": "skip-to-content svelte-12qhfyh"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Отвори търсене",
+        "class": "mobile-inventory-search"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Филтри",
+        "class": "mobile-inventory-filter-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Сортирай",
+        "class": "mobile-inventory-sort-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Марка",
+        "class": "mobile-inventory-make-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Модел",
+        "class": "mobile-inventory-model-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Гориво",
+        "class": "mobile-inventory-fuel-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Пробег",
+        "class": "mobile-inventory-mileage-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Каросерия",
+        "class": "mobile-inventory-body-chip"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Всички 40",
+        "class": "is-active"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz GLA 45 AMG 2016",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Audi A8 2016",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz S 500 2016",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW X6 2015",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz E 350 2018",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW X6 2017",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Audi A8 2020",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Audi Q7 2017",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz E 400 2019",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz GL 63 AMG 2016",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz E 350 2018",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz V 300 2016",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz CLS 400 2020",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW 430 2023",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Audi Q7 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz E 400 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW X5 2020",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz S 400 2019",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Audi Q8 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW X7 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz G 350 2017",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz CLS 53 AMG 2020",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Land Rover Range Rover Sport 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz V 300 2018",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW X6 2020",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz GLS 400 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz G 63 AMG 2017",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz GLE 400 2021",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж Mercedes-Benz AMG GT 2019",
+        "class": "mobile-inventory-card__link"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж BMW M5 2021",
+        "class": "mobile-inventory-card__link"
+      }
+    ],
+    "after": {
+      "url": "http://127.0.0.1:6517/inventory",
+      "text": "Към основното съдържание\nАвтомобили на склад — Ден и Нощ Ауто Груп\nТърси автомобили\nФилтри\nСортирай\nМарка\nМодел\nГориво\nПробег\nКаросерия\nВсички 40\nНОВА ОБЯВА\nMercedes-Benz GLA 45 AMG\n26 699 €\nот 842 лв./месец\n170 000 км\n2016\nБензин\nАвтоматик\nНаличен\nAudi A8\n27 500 €\nот 868 лв./месец\n204 000 км\n2016\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz S 500\n27 699 €\nот 874 лв./месец\n175 000 км\n2016\nБензин\nАвтоматик\nНаличен\nBMW X6\n28 478.45 €\nот 898 лв./месец\n185 000 км\n2015\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz E 350\n28 699 €\nот 905 лв./месец\n140 000 км\n2018\nДизел\nАвтоматик\nНаличен\nBMW X6\n28 699 €\nот 905 лв./месец\n183 000 км\n2017\nДизел\nАвтоматик\nНаличен\nAudi A8\n28 699 €\nот 905 лв./месец\n186 000 км\n2020\nДизел\nАвтоматик\nОчакван внос\nAudi Q7\n29 699 €\nот 937 лв./месец\n188 000 км\n2017\nДизел\nАвтоматик\nНаличен\nMercedes-Benz E 400\n29 699 €\nот 937 лв./месец\n172 000 км\n2019\nДизел\nАвтоматик\nНаличен\nMercedes-Benz GL 63 AMG\n32 699 €\nот 1032 лв./месец\n139 000 км\n2016\nБензин\nАвтоматик\nНаличен\nMercedes-Benz E 350\n33 699 €\nот 1063 лв./месец\n177 000 км\n2018\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz V 300\n33 699 €\nот 1063 лв./месец\n187 000 км\n2016\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz CLS 400\n37 699 €\nот 1189 лв./месец\n171 000 км\n2020\nДизел\nАвтоматик\nНаличен\nBMW 430\n41 699 €\nот 1315 лв./месец\n35 000 км\n2023\nБензин\nАвтоматик\nНаличен\nAudi Q7\n41 699 €\nот 1315 лв./месец\n160 000 км\n2021\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz E 400\n42 699 €\nот 1347 лв./месец\n162 000 км\n2021\nДизел\nАвтоматик\nОчакван внос\nBMW X5\n45 699 €\nот 1442 лв./месец\n167 000 км\n2020\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz S 400\n48 699 €\nот 1536 лв./месец\n179 000 км\n2019\nДизел\nАвтоматик\nОчакван внос\nAudi Q8\n50 699 €\nот 1599 лв./месец\n163 000 км\n2021\nДизел\nАвтоматик\nОчакван внос\nBMW X7\n53 699 €\nот 1694 лв./месец\n150 000 км\n2021\nДизел\nАвтоматик\nНаличен\nMercedes-Benz G 350\n54 699 €\nот 1726 лв./месец\n130 000 км\n2017\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz CLS 53 AMG\n54 699 €\nот 1726 лв./месец\n166 000 км\n2020\nБензин\nАвтоматик\nНаличен\nLand Rover Range Rover Sport\n54 699 €\nот 1726 лв./месец\n155 000 км\n2021\nБензин\nАвтоматик\nНаличен\nMercedes-Benz V 300\n54 699 €\nот 1726 лв./месец\n44 500 км\n2018\nДизел\nАвтоматик\nНаличен\nBMW X6\n55 699 €\nот 1757 лв./месец\n160 000 км\n2020\nБензин\nАвтоматик\nОчакван внос\nMercedes-Benz GLS 400\n59 699 €\nот 1883 лв./месец\n172 000 км\n2021\nДизел\nАвтоматик\nОчакван внос\nMercedes-Benz G 63 AMG\n61 699 €\nот 1946 лв./месец\n164 000 км\n2017\nБензин\nАвтоматик\nНаличен\nMercedes-Benz GLE 400\n63 699 €\nот 2009 лв./месец\n166 000 км\n2021\nДизел\nАвтоматик\nНаличен\nMercedes-Benz AMG GT\n65 699 €\nот 2073 лв./месец\n165 000 км\n2019\nБензин\nАвтоматик\nОчакван внос\nBMW M5\n68 699 €\nот 2167 лв./месец\n133 000 км\n2021\nБензин\nАвтоматик\nНаличен\nAudi Rs6\n69 699 €\nот 2199 лв./месец\n169 000 км\n2020\nБензин\nАвтоматик\nОчакван внос\nBMW X6\n71 669 €\nот 2261 лв./месец\n160 000 км\n2023\nБензин\nАвтоматик\nОчакван внос\nMercedes-Benz GLE 53 4MATIC\n71 699 €\nот 2262 лв./месец\n105 000 км\n2022\nБензин\nАвтоматик\nОчакван внос\nMercedes-Benz GLS 400\n72 699 €\nот 2293 лв./месец\n149 000 км\n2021\nДизел\nАвтоматик\nНаличен\nAudi Rs7\n72 699 €\nот 2293 лв./месец\n144 000 км\n2021\nБензин\nАвтоматик\nНаличен\nMercedes-Benz E 63 AMG\n84 699 €\nот 2672 лв./месец\n96 000 км\n2021\nБензин\nАвтоматик\nОчакван внос\nMercedes-Benz S 580\n86 699 €\nот 2735 лв./месец\n72 000 км\n2022\nБензин\nАвтоматик\nНаличен\nMercedes-Benz AMG GT S\n88 699 €\nот 2798 лв./месец\n70 000 км\n2017\nБензин\nАвтоматик\nНаличен\nMercedes-Benz S 63 AMG\n143 699 €\nот 4533 лв./месец\n30 000 км\n2024\nБензин\nАвтоматик\nНаличен\nLamborghini Urus\n172 669 €\nот 5447 лв./месец\n86 000 км\n2021\nБензин\nАвтоматик\nНачало\nКоли\nПродай\nВнос\nМеню\nФИЛТРИ\n40 автомобила\nМарка\nМодел\nГориво\nПробег\nКаросерия\nПодредба\nЦена\nСкорости\nИзчисти\nПокажи 40",
+      "dialogs": 1
+    },
+    "afterEscape": {
+      "dialogs": 0,
+      "active": "Към основното съдържание    Автомобили на склад — Ден и Нощ Ауто Груп  Търси автомобили   Филтри  Со"
+    },
+    "result": "action-inspected"
+  },
+  {
+    "key": "modern",
+    "port": 6212,
+    "route": "/cars",
+    "name": "Отвори филтрите",
+    "errors": [],
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Към основното съдържание",
+        "class": "fixed top-3 left-3 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-semibold text-background shadow-lg focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Избери категория превозно средство",
+        "class": "relative grid size-11 shrink-0 place-items-center rounded-full bg-[color-mix(in_srgb,currentColor_var(--mobile-header-action-fill,10%),transparent)] text-current shadow-[inset_0_1px_0_rgb(255_255_255/0.14),inset_0_0_0_1px_rgb(255_255_255/0.05)] transition-colors hover:bg-current/15 active:bg-current/20 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Начало",
+        "class": "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Отвори филтрите",
+        "class": "relative grid size-11 shrink-0 place-items-center rounded-full bg-[color-mix(in_srgb,currentColor_var(--mobile-header-action-fill,10%),transparent)] text-current shadow-[inset_0_1px_0_rgb(255_255_255/0.14),inset_0_0_0_1px_rgb(255_255_255/0.05)] transition-colors hover:bg-current/15 active:bg-current/20 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Търси 12 автомобила",
+        "class": "flex min-w-0 items-center gap-2.5 text-left ring-1 ring-inset transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 bg-white ring-white/15 hover:bg-zinc-100 focus-visible:outline-[var(--lead-site-accent-bright)] h-[52px] w-full rounded-full px-4"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Цена",
+        "class": "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-transparent px-3.5 font-medium text-[15px] text-zinc-950 transition-colors focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-2 bg-zinc-200 hover:bg-zinc-300"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Година",
+        "class": "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-transparent px-3.5 font-medium text-[15px] text-zinc-950 transition-colors focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-2 bg-zinc-200 hover:bg-zinc-300"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Пробег",
+        "class": "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-transparent px-3.5 font-medium text-[15px] text-zinc-950 transition-colors focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-2 bg-zinc-200 hover:bg-zinc-300"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Гориво",
+        "class": "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-transparent px-3.5 font-medium text-[15px] text-zinc-950 transition-colors focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-2 bg-zinc-200 hover:bg-zinc-300"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Скорости",
+        "class": "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-transparent px-3.5 font-medium text-[15px] text-zinc-950 transition-colors focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-2 bg-zinc-200 hover:bg-zinc-300"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2020 BMW X5 M50d",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW X5 M50d\n\n89 379 лв.\n\nот 1 360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2021 Mercedes-Benz GLS 400d 4MATIC AMG",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz GLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1 870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2021 BMW M4 Competition",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW M4 Competition\n\n128 496 лв.\n\nот 1 960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2024 BMW 750e xDrive M Sport",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW 750e xDrive M Sport\n\n175 436 лв.\n\nот 2 680 лв./мес.\n\n2024\n40 000 км\nПлъгин хибрид\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2021 Mercedes-Benz E 63 S AMG",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz E 63 S AMG\n\n165 657 лв.\n\nот 2 530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2020 Mercedes-Benz CLS 400d 4MATIC",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz CLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2021 Audi Q8 50 TDI quattro S line",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Audi Q8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1 515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2021 Mercedes-Benz GLE 400d Coupe",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz GLE 400d Coupe\n\n124 584 лв.\n\nот 1 900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2019 Mercedes-Benz S 350d Long AMG",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz S 350d Long AMG\n\n83 512 лв.\n\nот 1 275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2021 Range Rover Sport SVR",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Range Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2023 BMW 430i xDrive Gran Coupe",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW 430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1 245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Виж 2022 BMW X5 xDrive40d",
+        "class": "absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW X5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтоматик",
+        "class": "flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Коли",
+        "class": "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] font-semibold text-[var(--lead-site-accent)]"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Внос",
+        "class": "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Продай",
+        "class": "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Лизинг",
+        "class": "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Меню",
+        "class": "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+      }
+    ],
+    "after": {
+      "url": "http://127.0.0.1:6212/cars",
+      "text": "Към основното съдържание\nТърси 12 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\nАвтомобили за продажба\nПрепоръчана\nBMW X5 M50d\n\n89 379 лв.\n\nот 1 360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтоматик\nПрепоръчана\nMercedes-Benz GLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1 870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтоматик\nПрепоръчана\nBMW M4 Competition\n\n128 496 лв.\n\nот 1 960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтоматик\nBMW 750e xDrive M Sport\n\n175 436 лв.\n\nот 2 680 лв./мес.\n\n2024\n40 000 км\nПлъгин хибрид\nАвтоматик\nMercedes-Benz E 63 S AMG\n\n165 657 лв.\n\nот 2 530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтоматик\nMercedes-Benz CLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтоматик\nAudi Q8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1 515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтоматик\nMercedes-Benz GLE 400d Coupe\n\n124 584 лв.\n\nот 1 900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтоматик\nMercedes-Benz S 350d Long AMG\n\n83 512 лв.\n\nот 1 275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтоматик\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтоматик\nBMW 430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1 245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтоматик\nВнос\nBMW X5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтоматик\nФилтри\n\nРазширени филтри за автомобил, цена, пробег и продавач.\n\nТърси автомобили\nАвтомобил\nАвтомобили\nМарка и модел\nВсички марки\nБюджет\nВсеки бюджет\nГориво\nВсяко гориво\nПробег\nВсеки пробег\nСкорости\nВсички скорости\nОще филтри\nПокажи обявите",
+      "dialogs": 1
+    },
+    "afterEscape": {
+      "dialogs": 0,
+      "active": "Отвори филтрите"
+    },
+    "result": "action-inspected"
+  },
+  {
+    "key": "import",
+    "port": 6518,
+    "route": "/inventory",
+    "name": "Филтри",
+    "errors": [],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Търси автомобили",
+        "class": "daynight-inventory-mobile__search-label svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Търси",
+        "class": "daynight-inventory-mobile__search-action svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Филтри",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Сортирай: Най-подходящи",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Марка: Всички",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Модел: Всички",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Гориво: Всички",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Пробег: Всички",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Тип купе: Всички 42",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Цена: Всички",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Екстри: Всички",
+        "class": "daynight-inventory-mobile__tool-choice svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НОВА ОБЯВА",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW X5 40i M Sport Shadow Line",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НОВА ОБЯВА",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW X4 M Competition",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НОВА ОБЯВА",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Audi SQ5 30T Black Optic",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НОВА ОБЯВА",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Audi A7 55TFSI Technik Black Optic",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НОВА ОБЯВА",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Audi Q8 55TFSI Technik Black Optic",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НОВА ОБЯВА",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НАЛИЧЕН",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW X5 40i Black Vermilion",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НАЛИЧЕН",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz GLC 300 4M AMG Package",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НАЛИЧЕН",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НАЛИЧЕН",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW X3 30e xDrive",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НАЛИЧЕН",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "BMW 850 GC xDrive Shadow Line",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "НАЛИЧЕН",
+        "class": "daynight-inventory-mobile-card__image svelte-1dz2glm"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Mercedes-Benz GLC 300 4M AMG Package",
+        "class": "svelte-1dz2glm"
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Покажи още автомобили\n12 / 42",
+        "class": "svelte-1say69q"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Начало",
+        "class": "mobile-bottom-nav__item svelte-km60v1"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Коли",
+        "class": "mobile-bottom-nav__item mobile-bottom-nav__item--commerce active svelte-km60v1"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Продай",
+        "class": "mobile-bottom-nav__item mobile-bottom-nav__item--commerce svelte-km60v1"
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "name": "Внос",
+        "class": "mobile-bottom-nav__item mobile-bottom-nav__item--commerce svelte-km60v1"
+      }
+    ],
+    "after": {
+      "url": "http://127.0.0.1:6518/inventory",
+      "text": "Автомобили\nТърси автомобили\nФилтри\nСортирай\nМарка\nМодел\nГориво\nПробег\nТип\nЦена\nЕкстри\nНОВА ОБЯВА\n\nBMW\n\nBMW X5 40i M Sport Shadow Line\n36 500 EUR\n507 EUR/мес.\n140 000 km\n2019\nБензин\nАвтомат\nНОВА ОБЯВА\n\nBMW\n\nBMW X4 M Competition\n43 500 EUR\n604 EUR/мес.\n123 000 km\n2020\nБензин\nАвтомат\nНОВА ОБЯВА\n\nAUDI\n\nAudi SQ5 30T Black Optic\n33 000 EUR\n458 EUR/мес.\n106 000 km\n2021\nБензин\nАвтомат\nНОВА ОБЯВА\n\nAUDI\n\nAudi A7 55TFSI Technik Black Optic\n35 000 EUR\n486 EUR/мес.\n127 000 km\n2019\nБензин\nАвтомат\nНОВА ОБЯВА\n\nAUDI\n\nAudi Q8 55TFSI Technik Black Optic\n37 000 EUR\n514 EUR/мес.\n107 000 km\n2019\nБензин\nАвтомат\nНОВА ОБЯВА\n\nMERCEDES-BENZ\n\nMercedes-Benz GLA 45 AMG 4M AMG Night Package\n19 500 EUR\n271 EUR/мес.\n79 000 km\n2015\nБензин\nАвтомат\nНАЛИЧЕН\n\nBMW\n\nBMW X5 40i Black Vermilion\n48 500 EUR\n674 EUR/мес.\n79 000 km\n2022\nБензин\nАвтомат\nНАЛИЧЕН\n\nMERCEDES-BENZ\n\nMercedes-Benz GLC 300 4M AMG Package\n41 500 EUR\n576 EUR/мес.\n100 000 km\n2023\nБензин\nАвтомат\nНАЛИЧЕН\n\nMERCEDES-BENZ\n\nMercedes-Benz CLS 53 AMG 4M Night Package\n46 500 EUR\n646 EUR/мес.\n80 000 km\n2019\nБензин\nАвтомат\nНАЛИЧЕН\n\nBMW\n\nBMW X3 30e xDrive\n31 000 EUR\n431 EUR/мес.\n100 000 km\n2022\nPlug-in хибрид\nАвтомат\nНАЛИЧЕН\n\nBMW\n\nBMW 850 GC xDrive Shadow Line\n48 000 EUR\n667 EUR/мес.\n124 000 km\n2020\nБензин\nАвтомат\nНАЛИЧЕН\n\nMERCEDES-BENZ\n\nMercedes-Benz GLC 300 4M AMG Package\n30 000 EUR\n417 EUR/мес.\n81 000 km\n2020\nБензин\nАвтомат\nЗатвори\n\nФИЛТРИ\n\nФилтри\nВсички 42\n\nТИП КУПЕ\n\nВсички типове\n42\nSUV\n26\nСедан\n11\nКабрио\n4\n\nГОРИВО\n\nЕлектрически\n1\nБензин\n39\nPlug-in хибрид\n2\n\nПРОБЕГ\n\nВсеки пробег\n42\nДо 80 000 km\n9\nДо 120 000 km\n30\nДо 160 000 km\n40\nНад 160 000 km\n2\n\nЦЕНА\n\nВсички цени\n42\nДо 30 000 EUR\n7\n30 000 EUR - 50 000 EUR\n27\n50 000 EUR - 80 000 EUR\n9\nНад 80 000 EUR\n1\n\nГОДИНА\n\nВсички години\n42\nОт 2023\n3\nОт 2021\n10\nОт 2019\n32\n\nСКОРОСТИ\n\nВсички скорости\n42\nАвтомат\n41\nПо запитване\n1\n\nЕКСТРИ\n\nВсички екстри\n42\n4x4\n37\nLED фарове\n38\nHead-up\n7\nБезключово\n29\nИзчисти\nВиж 42 автомобила\nПокажи още автомобили\n12 / 42\nНачало\nКоли\nПродай\nВнос\nМеню",
+      "dialogs": 1
+    },
+    "afterEscape": {
+      "dialogs": 0,
+      "active": "Филтри"
+    },
+    "result": "action-inspected"
+  }
+]

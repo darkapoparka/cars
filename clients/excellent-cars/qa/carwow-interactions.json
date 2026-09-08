@@ -1,0 +1,37 @@
+[
+  {
+    "width": 390,
+    "errors": [],
+    "menuOpened": true,
+    "menuDismissed": false,
+    "filterOpened": true,
+    "filterDismissed": false,
+    "inputs": [
+      {
+        "placeholder": "Марка, модел, цена...",
+        "name": "",
+        "type": "search"
+      }
+    ],
+    "searchUrl": "http://127.0.0.1:6623/inventory",
+    "search": true,
+    "detailHref": "/inventory/cupra-born-restyling-58kw-524833",
+    "detailUrl": "http://127.0.0.1:6623/inventory/cupra-born-restyling-58kw-524833",
+    "phones": [
+      "tel:+359895996559"
+    ],
+    "phoneEnquiry": true,
+    "returnUrl": "http://127.0.0.1:6623/inventory",
+    "returnPreservesSearch": true,
+    "contact": true,
+    "formStatus": [
+      "Изпрати запитване"
+    ]
+  },
+  {
+    "width": 1440,
+    "errors": [],
+    "inputs": [],
+    "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"search\"],input[name=\"q\"],input[placeholder*=\"марка\"],input[placeholder*=\"Марка\"]').visible().first()\u001b[22m\n"
+  }
+]

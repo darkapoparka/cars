@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';import crypto from 'node:crypto';
+const root=import.meta.dirname,provenance=JSON.parse(await fs.readFile(`${root}/assets/provenance.json`));const urls=[];
+for(let i=1;i<=16;i++){const d=JSON.parse(await fs.readFile(`${root}/research/detail-${i}.json`));urls.push(...[...d.html.matchAll(/https?:[^"'\s<>]+photosorg[^"'\s<>]+/g)].map(m=>m[0]).filter(u=>u.includes('/big1/')&&/\.webp$/.test(u)));}
+const large=new Map(urls.map(u=>[u.split('/').at(-1),u]));let count=0;
+for(const m of provenance.vehicles){const url=large.get(m.sourceUrl.split('/').at(-1));if(!url)continue;const res=await fetch(url);if(!res.ok)continue;const bytes=Buffer.from(await res.arrayBuffer());await fs.writeFile(`${root}/assets/${m.file}`,bytes);for(const variant of ['auto-best','modern','carwow'])await fs.writeFile(`${root}/${variant}/${variant==='modern'?'apps/web/public':'static'}/assets/legend-auto/${m.file}`,bytes);m.sourceUrl=url;m.sha256=crypto.createHash('sha256').update(bytes).digest('hex');count++;}
+await fs.writeFile(`${root}/assets/provenance.json`,JSON.stringify(provenance,null,2));console.log(`${count} photos now use the larger original gallery URLs actually present in captured dealer HTML.`);

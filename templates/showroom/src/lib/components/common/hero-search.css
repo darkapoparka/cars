@@ -1,0 +1,77 @@
+/* Shared desktop search chrome for inventory and services; mobile stays independent. */
+.eliqauto-search-shortcuts {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.eliqauto-search-hero {
+		--hero-search-width: min(720px, 56%);
+		--hero-search-padding: 10px;
+		--hero-search-control-height: 48px;
+		--hero-search-height: 392px;
+		--hero-search-copy-top: 80px;
+		--hero-search-cutout-width: 22%;
+	}
+
+	.eliqauto-search-shortcuts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 8px;
+		width: 100%;
+		margin: 12px auto 0;
+	}
+
+	.eliqauto-search-shortcuts :is(a, button) {
+		display: inline-flex;
+		min-height: 44px;
+		align-items: center;
+		justify-content: center;
+		padding: 0 16px;
+		border: 1px solid rgb(255 255 255 / 0.5);
+		border-radius: 999px;
+		background: transparent;
+		color: #fff;
+		font: inherit;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+		text-decoration: none;
+		cursor: pointer;
+		transition:
+			background-color 160ms ease,
+			border-color 160ms ease,
+			color 160ms ease;
+	}
+
+	.eliqauto-search-shortcuts :is(a[aria-current='true'], button[aria-pressed='true']) {
+		border-color: #fff;
+		background: #fff;
+		color: var(--bc-ink);
+	}
+
+	.eliqauto-search-shortcuts :is(a, button):focus-visible {
+		outline: 2px solid #fff;
+		outline-offset: 3px;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+	.eliqauto-search-hero {
+		--hero-search-cutout-width: 22%;
+	}
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+	.eliqauto-search-shortcuts :is(a, button):hover {
+		border-color: var(--bc-ink);
+		background: var(--bc-ink);
+		color: #fff;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.eliqauto-search-shortcuts :is(a, button) {
+		transition: none;
+	}
+}

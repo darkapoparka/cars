@@ -1,0 +1,178 @@
+[
+  {
+    "name": "home",
+    "route": "",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 7946,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "listings",
+    "route": "listings/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 2920,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "detail",
+    "route": "listing/ranger-white-2022/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 7233,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "blog",
+    "route": "blog/?style=full",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 2479,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "article",
+    "route": "bmw-x6-m50i-is-designed-to-exceed-your-sportiest/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 5631,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "contact",
+    "route": "contact-us/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 2848,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "about",
+    "route": "about-us/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 6132,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "compare",
+    "route": "compare/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 1196,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "calculator",
+    "route": "calculator/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 1654,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "services",
+    "route": "services/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 3910,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  },
+  {
+    "name": "terms",
+    "route": "terms-and-conditions/",
+    "desktop": {
+      "width": 1440,
+      "scroll": 1440,
+      "height": 2205,
+      "broken": []
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "failures": []
+  }
+]

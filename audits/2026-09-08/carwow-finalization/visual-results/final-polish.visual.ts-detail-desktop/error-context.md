@@ -1,0 +1,685 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: final-polish.visual.ts >> detail-desktop
+- Location: tests\visual\final-polish.visual.ts:23:2
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  Expected an image 1440px by 4693px, received 1440px by 4636px. 1180024 pixels (ratio 0.18 of all image pixels) are different.
+
+  Snapshot: detail-desktop.png
+
+Call log:
+  - Expect "toHaveScreenshot(detail-desktop.png)" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - Expected an image 1440px by 4693px, received 1440px by 4636px. 1180024 pixels (ratio 0.18 of all image pixels) are different.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - Expected an image 1440px by 4693px, received 1440px by 4636px. 1180024 pixels (ratio 0.18 of all image pixels) are different.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - link "Към основното съдържание" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "Виж наличните автомобили" [ref=e10] [cursor=pointer]:
+            - /url: /inventory
+          - 'link "Отвори в Google Maps: гр. София, Студентски град, ул. Атанас Манчев 18" [ref=e11] [cursor=pointer]':
+            - /url: https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018
+            - img [ref=e12]
+            - generic [ref=e15]: Студентски град, София
+          - generic [ref=e16]: ·
+          - link "Обади се на 0877 733 110" [ref=e17] [cursor=pointer]:
+            - /url: tel:0877733110
+            - img [ref=e18]
+            - generic [ref=e20]: 0877 733 110
+        - generic [ref=e21]:
+          - list "Социални канали" [ref=e22]:
+            - listitem [ref=e23]:
+              - link "Facebook" [ref=e24] [cursor=pointer]:
+                - /url: https://www.facebook.com/61566304063141/
+                - img [ref=e25]
+            - listitem [ref=e26]:
+              - link "Instagram" [ref=e27] [cursor=pointer]:
+                - /url: https://www.instagram.com/daynight.auto.plovdiv/
+                - img [ref=e28]
+          - 'button "Език: Български" [ref=e30] [cursor=pointer]':
+            - generic [ref=e31]: БГ
+            - img [ref=e32]
+      - generic:
+        - generic:
+          - generic:
+            - link "Day Night Auto" [ref=e34] [cursor=pointer]:
+              - /url: /
+              - img "Day Night Auto" [ref=e35]
+            - generic:
+              - generic:
+                - generic:
+                  - link "Обади се на 0877 733 110" [ref=e36] [cursor=pointer]:
+                    - /url: tel:0877733110
+                    - img [ref=e37]
+                  - link "Свържи се с екипа" [ref=e39] [cursor=pointer]:
+                    - /url: /contact
+                    - img [ref=e40]
+                  - button "Отвори търсене" [ref=e43] [cursor=pointer]:
+                    - img [ref=e44]
+                  - link "Сравни" [ref=e47] [cursor=pointer]:
+                    - /url: /compare
+                    - img [ref=e48]
+                  - link "Запазени автомобили" [ref=e51] [cursor=pointer]:
+                    - /url: /favorites
+                    - img [ref=e52]
+                - link "Продай автомобил" [ref=e54] [cursor=pointer]:
+                  - /url: /sell-your-car/request
+                  - img [ref=e55]
+      - navigation "Основна навигация" [ref=e62]:
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - link "Начало" [ref=e65] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e66]:
+            - link "Автомобили" [ref=e67] [cursor=pointer]:
+              - /url: /inventory
+          - listitem [ref=e68]:
+            - link "Продай" [ref=e69] [cursor=pointer]:
+              - /url: /sell-your-car
+          - listitem [ref=e70]:
+            - link "Услуги" [ref=e71] [cursor=pointer]:
+              - /url: /services
+          - listitem [ref=e72]:
+            - link "За нас" [ref=e73] [cursor=pointer]:
+              - /url: /about
+    - generic [ref=e74]:
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e81]:
+            - link "Назад" [ref=e82] [cursor=pointer]:
+              - /url: /inventory
+              - img [ref=e83]
+              - generic [ref=e85]: Назад
+            - heading "Mercedes-Benz GLA 45 AMG 2016" [level=1] [ref=e86]
+            - generic [ref=e87]:
+              - link "Добави и виж сравнение" [ref=e88] [cursor=pointer]:
+                - /url: /compare
+                - img [ref=e89]
+              - button "Запази автомобила" [ref=e91] [cursor=pointer]:
+                - img [ref=e92]
+              - button "Сподели автомобила" [ref=e94] [cursor=pointer]:
+                - img [ref=e95]
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e101]:
+                - img "Mercedes-Benz GLA 45 AMG" [ref=e102]
+                - generic [ref=e103]:
+                  - link "Заяви видео преглед" [ref=e104] [cursor=pointer]:
+                    - /url: /contact?intent=video&vehicle=mercedes-benz-gla-45-amg-405323
+                    - img [ref=e105]
+                    - text: Заяви видео преглед
+                  - link "Заяви още снимки" [ref=e106] [cursor=pointer]:
+                    - /url: /contact?intent=photos&vehicle=mercedes-benz-gla-45-amg-405323
+                    - img [ref=e107]
+                    - text: Заяви още снимки
+              - button "Предишна снимка" [disabled] [ref=e108]:
+                - img [ref=e109]
+              - button "Следваща снимка" [disabled] [ref=e111]:
+                - img [ref=e112]
+            - button "Покажи снимка 1" [ref=e117] [cursor=pointer]:
+              - img "Mercedes-Benz GLA 45 AMG снимка 1" [ref=e118]
+          - generic [ref=e120]:
+            - list [ref=e122]:
+              - listitem [ref=e123] [cursor=pointer]:
+                - button "Описание" [pressed] [ref=e124]
+              - listitem [ref=e125] [cursor=pointer]:
+                - button "Екстри" [ref=e126]
+              - listitem [ref=e127] [cursor=pointer]:
+                - button "Акценти" [ref=e128]
+            - paragraph [ref=e131]: Mercedes-Benz GLA 45 AMG, 2016 г., бензин, 170 000 км, 370 к.с., автоматик. Очакван внос — свържете се за актуален срок и условия.
+          - generic [ref=e132]:
+            - heading "Калкулатор за финансиране" [level=2] [ref=e133]
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - generic [ref=e137]:
+                    - text: Цена на автомобила (€)
+                    - textbox "Цена на автомобила (€)" [ref=e138]: "26699"
+                  - generic [ref=e139]:
+                    - text: Годишна лихва (%)
+                    - textbox "Годишна лихва (%)" [ref=e140]: "1.2"
+                  - generic [ref=e141]:
+                    - text: Срок (месеци)
+                    - combobox "Срок (месеци)" [ref=e142] [cursor=pointer]:
+                      - option "60 месеца" [selected]
+                      - option "30 месеца"
+                      - option "10 месеца"
+                  - generic [ref=e143]:
+                    - text: Първоначална вноска (€)
+                    - textbox "Първоначална вноска (€)" [ref=e144]: "0"
+                - button "Изчисли" [ref=e145] [cursor=pointer]
+              - generic [ref=e146]:
+                - generic [ref=e147]:
+                  - paragraph [ref=e148]: "Месечна вноска:"
+                  - paragraph [ref=e149]: 472,45 €
+                - generic [ref=e150]:
+                  - paragraph [ref=e151]: "Лихва и такси:"
+                  - paragraph [ref=e152]: 1647,96 €
+                - generic [ref=e153]:
+                  - paragraph [ref=e154]: "Ориентировъчна цена:"
+                  - paragraph [ref=e155]: 26 699,00 €
+              - paragraph [ref=e156]: "Примерна сметка в евро, не оферта: равни вноски, фиксирана годишна лихва, 3% финансирани такси от цената; без други разходи и застраховки. Всички стойности могат да се променят в калкулатора."
+          - generic [ref=e158]:
+            - generic [ref=e159]:
+              - paragraph [ref=e160]: Локация
+              - paragraph [ref=e161]:
+                - img [ref=e162]
+                - text: гр. София, Студентски град, ул. Атанас Манчев 18
+            - link "Виж локация" [ref=e163] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%9E%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D1%8A%D1%81%D1%82%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%2086%2C%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F
+          - generic [ref=e165]:
+            - heading "Отзиви от клиенти" [level=2] [ref=e167]
+            - paragraph [ref=e168]: Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.
+            - generic [ref=e170]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: "5.0"
+                - generic [ref=e174]:
+                  - img [ref=e175]
+                  - img [ref=e176]
+                  - img [ref=e177]
+                  - img [ref=e178]
+                  - img [ref=e179]
+                - paragraph [ref=e180]: (9 примерни отзива)
+              - generic [ref=e181]:
+                - generic [ref=e182]:
+                  - paragraph [ref=e183]:
+                    - generic [ref=e184]: "5"
+                  - generic [ref=e187]: 100%
+                - generic [ref=e188]:
+                  - paragraph [ref=e189]:
+                    - generic [ref=e190]: "4"
+                  - generic [ref=e192]: 0%
+                - generic [ref=e193]:
+                  - paragraph [ref=e194]:
+                    - generic [ref=e195]: "3"
+                  - generic [ref=e197]: 0%
+                - generic [ref=e198]:
+                  - paragraph [ref=e199]:
+                    - generic [ref=e200]: "2"
+                  - generic [ref=e202]: 0%
+                - generic [ref=e203]:
+                  - paragraph [ref=e204]:
+                    - generic [ref=e205]: "1"
+                  - generic [ref=e207]: 0%
+              - link "Добавете отзив" [ref=e209] [cursor=pointer]:
+                - /url: "#reviewForm"
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - generic [ref=e213]:
+                    - img "Клиент на Day Night Auto"
+                  - generic [ref=e215]:
+                    - paragraph [ref=e216]: Клиент на Day Night Auto
+                    - generic [ref=e217]: "-"
+                    - generic [ref=e218]: Оглед и документи
+                - paragraph [ref=e219]: Получих ясна информация за автомобила, документите и следващите стъпки. Огледът беше организиран спокойно, без натиск и без излишни обещания.
+              - generic [ref=e220]:
+                - generic [ref=e221]:
+                  - generic [ref=e222]:
+                    - img "Клиент от София"
+                  - generic [ref=e224]:
+                    - paragraph [ref=e225]: Клиент от София
+                    - generic [ref=e226]: "-"
+                    - generic [ref=e227]: Сравнение и разсрочване
+                - paragraph [ref=e228]: Екипът ми помогна да сравня няколко автомобила и да преценя бюджета с вариант за разсрочено плащане.
+              - generic [ref=e229]:
+                - generic [ref=e230]:
+                  - generic [ref=e231]:
+                    - img "Клиент на Day Night Auto"
+                  - generic [ref=e233]:
+                    - paragraph [ref=e234]: Клиент на Day Night Auto
+                    - generic [ref=e235]: "-"
+                    - generic [ref=e236]: Коректна сделка
+                - paragraph [ref=e237]: Автомобилът беше представен коректно, със снимки, цена и обяснение за състоянието. Сделката мина бързо и подредено.
+              - paragraph [ref=e238]:
+                - link "Виж всички 9 примерни отзива" [ref=e239] [cursor=pointer]:
+                  - /url: /reviews
+            - generic [ref=e240]:
+              - heading "Добавете отзив" [level=2] [ref=e241]
+              - paragraph [ref=e242]: Изпратете мнение през формата за контакт. Публикуването се уточнява с екипа.
+              - link "Изпратете отзив" [ref=e243] [cursor=pointer]:
+                - /url: /contact?intent=review
+        - generic [ref=e244]:
+          - generic [ref=e246]:
+            - list [ref=e248]:
+              - listitem [ref=e249] [cursor=pointer]:
+                - button "В брой" [ref=e250]
+              - listitem [ref=e251] [cursor=pointer]:
+                - button "Финансиране" [ref=e252]
+            - generic [ref=e254]:
+              - paragraph [ref=e255]: "Цена:"
+              - paragraph [ref=e256]:
+                - generic [ref=e257]: 26 699 €
+                - generic [ref=e258]: Финансиране по запитване
+              - paragraph [ref=e259]: Вноска без данъци и такси
+              - paragraph [ref=e260]: Първоначална вноска · 72 мес. · 7.89% ГПР
+              - generic [ref=e261]:
+                - img [ref=e262]
+                - button "Автомобил по ДДС" [ref=e263] [cursor=pointer]
+          - generic [ref=e264]:
+            - paragraph [ref=e265]: Преглед на автомобила
+            - list [ref=e266]:
+              - listitem [ref=e267]:
+                - paragraph [ref=e268]:
+                  - img [ref=e269]
+                  - generic [ref=e270]: "Пробег:"
+                - generic [ref=e271]: 170 000 км
+              - listitem [ref=e272]:
+                - paragraph [ref=e273]:
+                  - img [ref=e274]
+                  - generic [ref=e275]: "Година:"
+                - generic [ref=e276]: "2016"
+              - listitem [ref=e277]:
+                - paragraph [ref=e278]:
+                  - img [ref=e279]
+                  - generic [ref=e280]: "Гориво:"
+                - generic [ref=e281]: Бензин
+              - listitem [ref=e282]:
+                - paragraph [ref=e283]:
+                  - img [ref=e284]
+                  - generic [ref=e285]: "Цвят:"
+                - generic [ref=e286]: Графит
+              - listitem [ref=e287]:
+                - paragraph [ref=e288]:
+                  - img [ref=e289]
+                  - generic [ref=e290]: "Локация:"
+                - generic [ref=e291]: София
+              - listitem [ref=e292]:
+                - paragraph [ref=e293]:
+                  - img [ref=e294]
+                  - generic [ref=e295]: "Интериор:"
+                - generic [ref=e296]: Тъмен салон
+              - listitem [ref=e297]:
+                - paragraph [ref=e298]:
+                  - img [ref=e299]
+                  - generic [ref=e300]: "Двигател:"
+                - generic [ref=e301]: —
+              - listitem [ref=e302]:
+                - paragraph [ref=e303]:
+                  - img [ref=e304]
+                  - generic [ref=e305]: "Скоростна кутия:"
+                - generic [ref=e306]: Автоматик
+              - listitem [ref=e307]:
+                - paragraph [ref=e308]:
+                  - img [ref=e309]
+                  - generic [ref=e310]: "VIN:"
+                - generic [ref=e311]: предоставя се при оглед
+              - listitem [ref=e312]:
+                - paragraph [ref=e313]:
+                  - img [ref=e314]
+                  - generic [ref=e315]: "Референтен №:"
+                - generic [ref=e316]: DN-405323
+          - generic [ref=e318]:
+            - generic [ref=e319]:
+              - img "Day Night Auto" [ref=e320]
+              - generic [ref=e321]:
+                - link "Day Night Auto" [ref=e322] [cursor=pointer]:
+                  - /url: /about/daynight-auto-plovdiv
+                - generic [ref=e323]:
+                  - img "verified" [ref=e324]
+                  - paragraph [ref=e325]: Проверена автокъща
+            - list [ref=e326]:
+              - listitem [ref=e327]:
+                - paragraph [ref=e328]:
+                  - img [ref=e329]
+                - generic [ref=e330]:
+                  - link "гр. София, Студентски град, ул. Атанас Манчев 18" [ref=e331] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018
+                  - link "Виж локация" [ref=e332] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018
+            - list [ref=e333]:
+              - listitem [ref=e334]:
+                - paragraph [ref=e335]:
+                  - img [ref=e336]
+                - link "0877 733 110" [ref=e338] [cursor=pointer]:
+                  - /url: tel:0877733110
+            - link "Обади се за оглед" [ref=e339] [cursor=pointer]:
+              - /url: tel:0877733110
+              - img [ref=e340]
+              - text: Обади се за оглед
+            - link "Viber чат" [ref=e341] [cursor=pointer]:
+              - /url: viber://chat?number=%2B359877733110
+              - img [ref=e342]
+              - text: Viber чат
+          - generic [ref=e343]:
+            - paragraph [ref=e344]: Запитване за автомобила
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - generic [ref=e347]:
+                  - text: Име
+                  - textbox "Вашето име" [ref=e348]
+                - generic [ref=e349]:
+                  - text: Имейл
+                  - textbox "Имейл" [ref=e350]:
+                    - /placeholder: Вашият имейл
+                - generic [ref=e351]:
+                  - text: Телефон
+                  - textbox "Телефон" [ref=e352]:
+                    - /placeholder: Телефон (по избор)
+                - generic [ref=e353]:
+                  - text: Тема
+                  - combobox "Тема" [ref=e354] [cursor=pointer]:
+                    - option "Наличност на автомобила" [selected]
+                    - option "Цена и оглед"
+                    - option "Финансиране"
+                - generic [ref=e355]:
+                  - text: Съобщение
+                  - textbox "Съобщение" [ref=e356]:
+                    - /placeholder: Вашето съобщение
+              - button "Изпрати запитване" [ref=e357] [cursor=pointer]
+              - generic [ref=e358] [cursor=pointer]:
+                - checkbox "Да, искам да получавам известия за цената и полезна информация за този автомобил."
+                - generic [ref=e359]: Да, искам да получавам известия за цената и полезна информация за този автомобил.
+              - paragraph [ref=e360]:
+                - text: Използвайки услугата, приемате нашето
+                - link "Споразумение с потребителите." [ref=e361] [cursor=pointer]:
+                  - /url: /terms
+      - region "Подобни автомобили" [ref=e362]:
+        - generic [ref=e363]:
+          - paragraph [ref=e364]: Подобни автомобили
+          - generic [ref=e365]:
+            - generic [ref=e366]:
+              - generic [ref=e367]:
+                - paragraph [ref=e368]: Наличен
+                - group "Действия за Mercedes-Benz AMG GT S" [ref=e369]:
+                  - button "Добави Mercedes-Benz AMG GT S за сравнение" [ref=e370] [cursor=pointer]:
+                    - img [ref=e371]
+                  - button "Добави Mercedes-Benz AMG GT S в любими" [ref=e374] [cursor=pointer]:
+                    - img [ref=e375]
+              - link "Виж Mercedes-Benz AMG GT S 2017" [ref=e378] [cursor=pointer]:
+                - /url: /inventory/mercedes-benz-amg-gt-s-698048
+                - img "Mercedes-Benz AMG GT S" [ref=e379]
+              - generic [ref=e380]:
+                - generic [ref=e381]:
+                  - paragraph [ref=e382]:
+                    - link "Автоматик - Mercedes-Benz AMG GT S 2017" [ref=e383] [cursor=pointer]:
+                      - /url: /inventory/mercedes-benz-amg-gt-s-698048
+                      - text: Автоматик
+                  - paragraph [ref=e385]: "1"
+                - paragraph [ref=e386]:
+                  - link "Mercedes-Benz AMG GT S" [ref=e387] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-amg-gt-s-698048
+                - list [ref=e388]:
+                  - listitem [ref=e389]:
+                    - img [ref=e390]
+                    - generic [ref=e391]: 70 000 км
+                  - listitem [ref=e392]:
+                    - img [ref=e393]
+                    - generic [ref=e394]: "2017"
+                  - listitem [ref=e395]:
+                    - img [ref=e396]
+                    - generic [ref=e397]: Бензин
+                - generic [ref=e398]:
+                  - generic [ref=e399]:
+                    - generic [ref=e400]: 88 699 €
+                    - generic [ref=e401]: Финансиране по запитване
+                  - link "Виж Mercedes-Benz AMG GT S" [ref=e402] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-amg-gt-s-698048
+                    - img [ref=e403]
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - paragraph [ref=e407]: Очакван внос
+                - group "Действия за Mercedes-Benz S 500" [ref=e408]:
+                  - button "Добави Mercedes-Benz S 500 за сравнение" [ref=e409] [cursor=pointer]:
+                    - img [ref=e410]
+                  - button "Добави Mercedes-Benz S 500 в любими" [ref=e413] [cursor=pointer]:
+                    - img [ref=e414]
+              - link "Виж Mercedes-Benz S 500 2016" [ref=e417] [cursor=pointer]:
+                - /url: /inventory/mercedes-benz-s-500-711568
+                - img "Mercedes-Benz S 500" [ref=e418]
+              - generic [ref=e419]:
+                - generic [ref=e420]:
+                  - paragraph [ref=e421]:
+                    - link "Автоматик - Mercedes-Benz S 500 2016" [ref=e422] [cursor=pointer]:
+                      - /url: /inventory/mercedes-benz-s-500-711568
+                      - text: Автоматик
+                  - paragraph [ref=e424]: "1"
+                - paragraph [ref=e425]:
+                  - link "Mercedes-Benz S 500" [ref=e426] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-s-500-711568
+                - list [ref=e427]:
+                  - listitem [ref=e428]:
+                    - img [ref=e429]
+                    - generic [ref=e430]: 175 000 км
+                  - listitem [ref=e431]:
+                    - img [ref=e432]
+                    - generic [ref=e433]: "2016"
+                  - listitem [ref=e434]:
+                    - img [ref=e435]
+                    - generic [ref=e436]: Бензин
+                - generic [ref=e437]:
+                  - generic [ref=e438]:
+                    - generic [ref=e439]: 27 699 €
+                    - generic [ref=e440]: Финансиране по запитване
+                  - link "Виж Mercedes-Benz S 500" [ref=e441] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-s-500-711568
+                    - img [ref=e442]
+            - generic [ref=e444]:
+              - generic [ref=e445]:
+                - paragraph [ref=e446]: Очакван внос
+                - group "Действия за Mercedes-Benz E 350" [ref=e447]:
+                  - button "Добави Mercedes-Benz E 350 за сравнение" [ref=e448] [cursor=pointer]:
+                    - img [ref=e449]
+                  - button "Добави Mercedes-Benz E 350 в любими" [ref=e452] [cursor=pointer]:
+                    - img [ref=e453]
+              - link "Виж Mercedes-Benz E 350 2018" [ref=e456] [cursor=pointer]:
+                - /url: /inventory/mercedes-benz-e-350-764829
+                - img "Mercedes-Benz E 350" [ref=e457]
+              - generic [ref=e458]:
+                - generic [ref=e459]:
+                  - paragraph [ref=e460]:
+                    - link "Автоматик - Mercedes-Benz E 350 2018" [ref=e461] [cursor=pointer]:
+                      - /url: /inventory/mercedes-benz-e-350-764829
+                      - text: Автоматик
+                  - paragraph [ref=e463]: "1"
+                - paragraph [ref=e464]:
+                  - link "Mercedes-Benz E 350" [ref=e465] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-e-350-764829
+                - list [ref=e466]:
+                  - listitem [ref=e467]:
+                    - img [ref=e468]
+                    - generic [ref=e469]: 140 000 км
+                  - listitem [ref=e470]:
+                    - img [ref=e471]
+                    - generic [ref=e472]: "2018"
+                  - listitem [ref=e473]:
+                    - img [ref=e474]
+                    - generic [ref=e475]: Дизел
+                - generic [ref=e476]:
+                  - generic [ref=e477]:
+                    - generic [ref=e478]: 28 699 €
+                    - generic [ref=e479]: Финансиране по запитване
+                  - link "Виж Mercedes-Benz E 350" [ref=e480] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-e-350-764829
+                    - img [ref=e481]
+            - generic [ref=e483]:
+              - generic [ref=e484]:
+                - paragraph [ref=e485]: Наличен
+                - group "Действия за Mercedes-Benz E 400" [ref=e486]:
+                  - button "Добави Mercedes-Benz E 400 за сравнение" [ref=e487] [cursor=pointer]:
+                    - img [ref=e488]
+                  - button "Добави Mercedes-Benz E 400 в любими" [ref=e491] [cursor=pointer]:
+                    - img [ref=e492]
+              - link "Виж Mercedes-Benz E 400 2019" [ref=e495] [cursor=pointer]:
+                - /url: /inventory/mercedes-benz-e-400-169037
+                - img "Mercedes-Benz E 400" [ref=e496]
+              - generic [ref=e497]:
+                - generic [ref=e498]:
+                  - paragraph [ref=e499]:
+                    - link "Автоматик - Mercedes-Benz E 400 2019" [ref=e500] [cursor=pointer]:
+                      - /url: /inventory/mercedes-benz-e-400-169037
+                      - text: Автоматик
+                  - paragraph [ref=e502]: "1"
+                - paragraph [ref=e503]:
+                  - link "Mercedes-Benz E 400" [ref=e504] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-e-400-169037
+                - list [ref=e505]:
+                  - listitem [ref=e506]:
+                    - img [ref=e507]
+                    - generic [ref=e508]: 172 000 км
+                  - listitem [ref=e509]:
+                    - img [ref=e510]
+                    - generic [ref=e511]: "2019"
+                  - listitem [ref=e512]:
+                    - img [ref=e513]
+                    - generic [ref=e514]: Дизел
+                - generic [ref=e515]:
+                  - generic [ref=e516]:
+                    - generic [ref=e517]: 29 699 €
+                    - generic [ref=e518]: Финансиране по запитване
+                  - link "Виж Mercedes-Benz E 400" [ref=e519] [cursor=pointer]:
+                    - /url: /inventory/mercedes-benz-e-400-169037
+                    - img [ref=e520]
+    - contentinfo [ref=e522]:
+      - generic [ref=e523]:
+        - generic [ref=e524]:
+          - generic [ref=e525]:
+            - link "Day Night Auto — начална страница" [ref=e526] [cursor=pointer]:
+              - /url: /
+              - img "Day Night Auto Group" [ref=e527]
+            - generic [ref=e528]:
+              - paragraph [ref=e529]: "Работно време:"
+              - generic [ref=e530]: Огледи с предварителна уговорка
+          - navigation "Бързи връзки" [ref=e531]:
+            - heading "Бързи връзки" [level=2] [ref=e532]
+            - list [ref=e533]:
+              - listitem [ref=e534]:
+                - link "За нас" [ref=e535] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e536]:
+                - link "Нашият екип" [ref=e537] [cursor=pointer]:
+                  - /url: /team
+              - listitem [ref=e538]:
+                - link "Услуги" [ref=e539] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e540]:
+                - link "Често задавани въпроси" [ref=e541] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e542]:
+                - link "Новини и съвети" [ref=e543] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e544]:
+                - link "Контакти" [ref=e545] [cursor=pointer]:
+                  - /url: /contact
+          - navigation "Покупка и продажба" [ref=e546]:
+            - heading "Покупка и продажба" [level=2] [ref=e547]
+            - list [ref=e548]:
+              - listitem [ref=e549]:
+                - link "Намери автомобил" [ref=e550] [cursor=pointer]:
+                  - /url: /inventory
+              - listitem [ref=e551]:
+                - link "Продай или замени" [ref=e552] [cursor=pointer]:
+                  - /url: /sell-your-car
+              - listitem [ref=e553]:
+                - link "Лизинг и финансиране" [ref=e554] [cursor=pointer]:
+                  - /url: /financing
+              - listitem [ref=e555]:
+                - link "Карта на автомобилите" [ref=e556] [cursor=pointer]:
+                  - /url: /inventory/map
+              - listitem [ref=e557]:
+                - link "Калкулатор за финансиране" [ref=e558] [cursor=pointer]:
+                  - /url: /calculator
+              - listitem [ref=e559]:
+                - link "Отзиви от клиенти" [ref=e560] [cursor=pointer]:
+                  - /url: /reviews
+          - generic [ref=e561]:
+            - link "0877 733 110" [ref=e562] [cursor=pointer]:
+              - /url: tel:0877733110
+              - img [ref=e563]
+              - strong [ref=e565]: 0877 733 110
+              - img [ref=e566]
+            - link "Онлайн запитване" [ref=e569] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e570]
+              - generic [ref=e573]: Онлайн запитване
+              - img [ref=e574]
+            - link "гр. София, Студентски град, ул. Атанас Манчев 18" [ref=e577] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018
+              - img [ref=e578]
+              - generic [ref=e581]: гр. София, Студентски град, ул. Атанас Манчев 18
+              - img [ref=e582]
+            - generic "Социални мрежи" [ref=e585]:
+              - link "Facebook" [ref=e586] [cursor=pointer]:
+                - /url: https://www.facebook.com/61566304063141/
+              - link "YouTube" [ref=e587] [cursor=pointer]:
+                - /url: https://www.youtube.com/@kristiankirilov1355/videos
+              - link "Instagram" [ref=e588] [cursor=pointer]:
+                - /url: https://www.instagram.com/daynight.auto.plovdiv/
+        - generic [ref=e589]:
+          - paragraph [ref=e590]: ©2026 Day Night Auto Group. Всички права запазени.
+          - navigation "Правна информация" [ref=e591]:
+            - link "Условия за ползване" [ref=e592] [cursor=pointer]:
+              - /url: /terms
+    - text: + + +
+  - button "Към началото" [ref=e593] [cursor=pointer]:
+    - img [ref=e594]
+    - img "top" [ref=e596]
+  - button "Отвори чат с екипа" [ref=e597] [cursor=pointer]:
+    - img [ref=e598]
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test } from '@playwright/test';
+  2  | 
+  3  | const visualCases = [
+  4  | 	{ name: 'home-mobile', path: '/', width: 390, height: 900 },
+  5  | 	{ name: 'inventory-mobile', path: '/inventory', width: 390, height: 900 },
+  6  | 	{
+  7  | 		name: 'detail-mobile',
+  8  | 		path: '/inventory/mercedes-benz-gla-45-amg-405323',
+  9  | 		width: 390,
+  10 | 		height: 900
+  11 | 	},
+  12 | 	{ name: 'home-desktop', path: '/', width: 1440, height: 900 },
+  13 | 	{ name: 'inventory-desktop', path: '/inventory', width: 1440, height: 900 },
+  14 | 	{
+  15 | 		name: 'detail-desktop',
+  16 | 		path: '/inventory/mercedes-benz-gla-45-amg-405323',
+  17 | 		width: 1440,
+  18 | 		height: 900
+  19 | 	}
+  20 | ] as const;
+  21 | 
+  22 | for (const visualCase of visualCases) {
+  23 | 	test(visualCase.name, async ({ page }) => {
+  24 | 		await page.setViewportSize({ width: visualCase.width, height: visualCase.height });
+  25 | 		await page.goto(visualCase.path, { waitUntil: 'networkidle' });
+> 26 | 		await expect(page).toHaveScreenshot(`${visualCase.name}.png`, { fullPage: true });
+     |                      ^ Error: expect(page).toHaveScreenshot(expected) failed
+  27 | 	});
+  28 | }
+  29 | 
+```

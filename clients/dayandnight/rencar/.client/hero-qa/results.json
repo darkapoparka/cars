@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "overflow": 4,
+      "stripWidth": 296,
+      "navWidth": 296,
+      "headingCentered": true,
+      "headingOverflow": 0,
+      "bookingTop": 414.25,
+      "extraHeroContent": 0,
+      "broken": [],
+      "manualSlider": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "stripWidth": 366,
+      "navWidth": 366,
+      "headingCentered": true,
+      "headingOverflow": 0,
+      "bookingTop": 414.25,
+      "extraHeroContent": 0,
+      "broken": [],
+      "manualSlider": true,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "stripWidth": 744,
+      "navWidth": 744,
+      "headingCentered": true,
+      "headingOverflow": 0,
+      "bookingTop": 368.25,
+      "extraHeroContent": 0,
+      "broken": [],
+      "manualSlider": true,
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "stripWidth": 1000,
+      "navWidth": 1000,
+      "headingCentered": true,
+      "headingOverflow": 0,
+      "bookingTop": 460.5625,
+      "extraHeroContent": 0,
+      "broken": [],
+      "manualSlider": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "stripWidth": 1248,
+      "navWidth": 1248,
+      "headingCentered": true,
+      "headingOverflow": 0,
+      "bookingTop": 481.171875,
+      "extraHeroContent": 0,
+      "broken": [],
+      "manualSlider": true,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "stripWidth": 1248,
+      "navWidth": 1248,
+      "headingCentered": true,
+      "headingOverflow": 0,
+      "bookingTop": 481.171875,
+      "extraHeroContent": 0,
+      "broken": [],
+      "manualSlider": true,
+      "errors": []
+    }
+  ],
+  "belowHeroUnchanged": true,
+  "mainNavigationUnchanged": true,
+  "originalSlides": 3
+}

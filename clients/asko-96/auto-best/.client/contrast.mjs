@@ -1,0 +1,4 @@
+import fs from 'node:fs';const e=(p,f)=>fs.writeFileSync(p,f(fs.readFileSync(p,'utf8')));
+e('src/lib/components/home/TrustActions.svelte',s=>s.replace('.dn-trust-card--red p { color:', '.dn-trust-card.dn-trust-card--red p { color:'));
+e('src/lib/components/layout/Header.svelte',s=>s.replace('<picture><source media="(max-width: 991px)" srcset={brand.darkLogo} /><img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" /></picture>','<picture class="asko-logo"><img src={brand.darkLogo} alt={brand.name} width="220" height="58" fetchpriority="high" /></picture>'));
+e('src/app.css',s=>s.replace('.dn-logo { display: inline-flex; align-items: center; }','.dn-logo { display: inline-flex; align-items: center; }\n@media (min-width: 992px) { .dn-logo .asko-logo { padding: 6px 12px; border-radius: 6px; background: #101114; } }'));

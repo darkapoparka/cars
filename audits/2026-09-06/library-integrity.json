@@ -1,0 +1,304 @@
+{
+  "checkedAt": "2026-09-06T14:59:17.097Z",
+  "templates": 10,
+  "snapshotFilesVerified": 6256,
+  "pass": true,
+  "rows": [
+    {
+      "key": "auto-best",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 186,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "modern",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 1368,
+      "runtimeGeneratedDifferences": [
+        {
+          "file": "apps/web/next-env.d.ts",
+          "change": "Next dev route-type import",
+          "original": ".template/source-next-env.d.ts"
+        }
+      ],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "carwow",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 1335,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "import",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 1447,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "showroom",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 1387,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "autodeal",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 533,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "boxcar",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 0,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "rencar",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 0,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "motoria",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 0,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    },
+    {
+      "key": "nusavo",
+      "requiredFiles": [
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "TEMPLATE.md",
+          "exists": true
+        },
+        {
+          "file": "AGENTS.md",
+          "exists": true
+        },
+        {
+          "file": ".template/template.json",
+          "exists": true
+        }
+      ],
+      "snapshotFilesVerified": 0,
+      "runtimeGeneratedDifferences": [],
+      "mismatches": [],
+      "missing": []
+    }
+  ]
+}

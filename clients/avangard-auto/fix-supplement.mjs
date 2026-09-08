@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='J:/cars/clients/avangard-auto/supplement-final.mjs';let s=fs.readFileSync(p,'utf8');s=s.replace(/await p\.screenshot\(\{path:.*?gallery\.png.*?\}\);/,"await p.screenshot({path:dir+'/'+t+'-'+width+'-gallery.png'});");fs.writeFileSync(p,s);

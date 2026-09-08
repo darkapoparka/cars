@@ -1,0 +1,2 @@
+import fs from 'node:fs';
+for(const name of ['remainder-final.mjs','numeric-browser-final.mjs']){const path='J:/cars/clients/avangard-auto/'+name;let s=fs.readFileSync(path,'utf8');s=s.replace('resolve({stdout:output});', "(async()=>{const result=JSON.parse(output);for(let n=0;n<45;n++){try{if((await fetch(result.Url,{signal:AbortSignal.timeout(2000)})).ok){resolve({stdout:output});return;}}catch{}await new Promise(r=>setTimeout(r,500));}reject(Error('Runtime did not become ready: '+result.Url));})();");fs.writeFileSync(path,s);}

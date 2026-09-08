@@ -1,0 +1,37 @@
+{
+  "processes": [
+    {
+      "PID": 22044,
+      "Cwd": "J:\\cars\\clients\\dayandnight\\rencar\\",
+      "CommandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6601 --strictPort"
+    },
+    {
+      "PID": 76436,
+      "Cwd": "J:\\cars\\templates\\rencar\\",
+      "CommandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6430 --strictPort"
+    },
+    {
+      "PID": 51708,
+      "Cwd": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night\\",
+      "CommandLine": "\"C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe\" artifacts/about-flow-fix/dev-runtime.mjs"
+    }
+  ],
+  "checkedAt": "2026-09-06T18:20:09.6797900Z",
+  "listeners": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 6601,
+      "OwningProcess": 22044
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 6430,
+      "OwningProcess": 76436
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 5173,
+      "OwningProcess": 51708
+    }
+  ]
+}

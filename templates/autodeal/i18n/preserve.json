@@ -1,0 +1,1486 @@
+{
+	"version": 1,
+	"sourceLocale": "en",
+	"entries": {
+		"1": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"3": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"4": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"5": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"6": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"7": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"8": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"9": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"10": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"12": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"16": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"20": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"24": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"25": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"26": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"29": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"32": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"34": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"40": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"49": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"50": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"69": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"99": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2016": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2017": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2018": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2019": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2020": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2021": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2022": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2023": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2024": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2025": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2975": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"50000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"60000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"90000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"100000": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"\"": {
+			"category": "punctuation",
+			"reason": "Punctuation-only artifact retained without localization."
+		},
+		"$": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$0": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$4,000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$50.000 - $70.000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$50.000 - $80.000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$60.00": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$600.00": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$70,000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$70.000 - $90.000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$73,000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$73,000 - $120,000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$80,000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$80.000 - $100.000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$90,000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"$90.000 - $100.000": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"(": {
+			"category": "punctuation",
+			"reason": "Punctuation-only artifact retained without localization."
+		},
+		"(217) 555-0***": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"(808) 555-0111": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		")": {
+			"category": "punctuation",
+			"reason": "Punctuation-only artifact retained without localization."
+		},
+		"+7-445-556-8337": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"-": {
+			"category": "punctuation",
+			"reason": "Punctuation-only artifact retained without localization."
+		},
+		"- $": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"...": {
+			"category": "punctuation",
+			"reason": "Punctuation-only artifact retained without localization."
+		},
+		"/": {
+			"category": "punctuation",
+			"reason": "Punctuation-only artifact retained without localization."
+		},
+		"/5": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"0%": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"02": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"06": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"06:-00 Am - 09:00 Pm": {
+			"category": "date-or-time-fact",
+			"reason": "Reference opening-hour value retained as supplied; the runtime may localize its presentation without changing the fact."
+		},
+		"07:-00 Am - 07:00 Pm": {
+			"category": "date-or-time-fact",
+			"reason": "Reference opening-hour value retained as supplied; the runtime may localize its presentation without changing the fact."
+		},
+		"1-333-345-6868": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"1.2L": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"1.483": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"10000$": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"100000$": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"101 E 129th St, East Chicago, IN 46312": {
+			"category": "address",
+			"reason": "Reference address retained as supplied factual contact/location data."
+		},
+		"110 Nm": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"15 May 2020 9:30 am": {
+			"category": "date-or-time-fact",
+			"reason": "Reference opening-hour value retained as supplied; the runtime may localize its presentation without changing the fact."
+		},
+		"17,730 Kms": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"1st Owner": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"1st owned, automatic transmission, Apple Carplay...": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"1st owner": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"2 Cylinder": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"2 Door": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"2 Seat": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"2.9": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"2.975 Reviews": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"2012 Nissan Leaf SV": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"2017 BMV X1 xDrive 20d xline": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"2018 Audi Q3 Premium": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"2018 BMV X1 xDrive 20d xline": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"2021 BMV X1 xDrive 20d xline": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"2024 BMW Skytop Concept": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"22,737 Kms": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"2464 Royal Ln. Mesa, New Jersey 45463": {
+			"category": "address",
+			"reason": "Reference address retained as supplied factual contact/location data."
+		},
+		"2715 Ash Dr. San Jose, South Dakota 83475": {
+			"category": "address",
+			"reason": "Reference address retained as supplied factual contact/location data."
+		},
+		"28,937 Kms": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"289mi": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"2972 Westheimer Rd. Santa Ana, Illinois 85486": {
+			"category": "address",
+			"reason": "Reference address retained as supplied factual contact/location data."
+		},
+		"2:55 PM - Aug 17, 2024": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"3 Cylinder": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"3 Door": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"30 advertised listings": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"30000$": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"39847059856": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"4 Cylinder": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"4 Door": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"4 Seat": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"4.8": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"4.9s": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"4140 Parker Rd. Allentown, New Mexico 31134": {
+			"category": "address",
+			"reason": "Reference address retained as supplied factual contact/location data."
+		},
+		"4517 Washington Ave. Manchester, Kentucky 39495": {
+			"category": "address",
+			"reason": "Reference address retained as supplied factual contact/location data."
+		},
+		"4WD – Four-wheel drive": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"5 Seats": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"5.0star": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"5/5": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"50,727": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"50,796": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"50000$": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"51,214": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"51,365": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"51,897": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"51,933": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"52,015": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"520Nm": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"53,250": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"54,223": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"54,560": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"54,611": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"55,403": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"55,717": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"56,186": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"57,480": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"58,281": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"59,443": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"6 Door": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"6 Seat": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"60:40 Split": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"61,069": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"61,135": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"62,112": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"62,485": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"63,437": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"63,803": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"64,363": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"64,733": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"64,737": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"65,504": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"66,588": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"66.332 mi": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"67,175": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"67,623": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"68,213": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"68,313": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"68,804": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"69,533": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"7,800 car sellers": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"70,064": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"70,262": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"70,872": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"70,907": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"71,645": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"72,387": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"72,491 kms": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"73,751": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"74,896": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"75,433": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"76,742": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"78,262": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"78,779": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"8 Door": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"8 Seat": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"8 characters minimum": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"80,101": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"82,323": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"82,758": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"83,854": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"83,901": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"84,179": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"84,426": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"85,635": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"85,713": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"85,908": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"87,501": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"89,298": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"89HP": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"90,454": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"91,691": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"92,035": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"92,880": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"93,404": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"93,941": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"94,530": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"94,709": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"94,996": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"95,854": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"96,576": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"96,865": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"97,973": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"98,830": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"98,838": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"99,701": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"999 cc": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"A/C: Front": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"A4": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"AB9084329457": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"AT (CTV) MT": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"AWD – All-wheel drive": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"Aa": {
+			"category": "placeholder-copy",
+			"reason": "Typography sample placeholder retained as supplied."
+		},
+		"Albert Flores": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Almera": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Annette Black": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"April 6, 2024": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"Arlene McCoy": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Audi": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"August 13, 2023": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"AutoDecar": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"BMW": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Bellett": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Bessie Cooper": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"C-Class": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"CEO Themesflat": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"CVT": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Cameron Williamson": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Camry": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Car Empire": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Carnival": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Chevrolet": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Chevrolet Blazer EV 2024 new car": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Chevrolet Colorado": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Chevrolet Cruze": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Chevrolet Orlando": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Chevrolet Spark": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Chevrolet Trailblazer": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Cody Fisher": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Convertible": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Cooper, Kristin": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Coupe": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Creta": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Crossover": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"DCT": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Dealer image": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Devon Lane": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Dianne Russell": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Donec bibendum nibh quis nisl luctus, at aliquet ipsum bibendum. Fusce at dui tincidunt nulla semper venenatis at et magna. Mauris turpis lorem, ultricies vel justo sed.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Dongfeng": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Enterprise": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"FWD – Front-wheel drive": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"February 16, 2024": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"Flores, Juanita": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Ford": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Foton": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"From 0-100mph": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"Fusce sit amet purus eget quam eleifend hendrerit nec a erat. Sed turpis neque, iaculis blandit viverra ut, dapibus eget nisi.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Fusce tempor urna dictum ante porta pretium...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"GLC-Class X235": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Hatchback": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Henry, Arthur": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Honda": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Honda cars Pasig": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Hyundai": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Hyundai Creta 2022": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Hyundai Elantra 2022": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Hyundai Ioniq 5": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Hyundai Stargazer": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Hyundai Tucson 2022": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Infinity": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Isuzu": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Jacob Jones": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Jane Cooper": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"January 28, 2024": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"January 30": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"Jeep": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Jerome Bell": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"John Doe": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"John Smith": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Jul 2024": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"KIA": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Kathryn Murphy": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Kia": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Kristin Watson": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Land Rover": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Land rover": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Leslie Alexander": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"London": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia sit amet elit sed molestie. Sed neque enim, iaculis id viverra in, scelerisque vitae nulla.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non egestas justo. Vestibulum ac commodo enim, eget fringilla lectus.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non egestas justo. Vestibulum ac commodo enim, eget fringilla lectus.simply rent a car": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere est eget lorem viverra eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam eu nibh condimentum pharetra. Ut ut interdum felis, sit amet accumsan nulla.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra semper convallis. Integer vestibulum tempus tincidunt.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Lorem ipsum dolor sit amet, consectetur...L": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"MUV": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"MVP": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Maecenas eu lorem et urna accumsan vestibulum vel vitae magna.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"March 22, 2023": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"Marvin McKinney": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Mauris facilisis ipsum elementum nulla iaculis...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Mercedes Benz": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Mercedes Benz GLC-Class X235": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Mercedes benz": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Minivan": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Monay - Friday: 08:00 - 20:00": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"Mondeo Sport": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"New York": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Nguyen, Shane": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Nissan": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Nulla egestas augue vitae mollis semper. Phasellus congue neque et pulvinar gravida. Nam placerat, massa a consequat scelerisque, lacus enim mattis felis, pellentesque volutpat risus nisl et sapien. Proin ac elit vitae velit iaculis varius non quis massa. Nunc fringilla nulla sit amet mattis viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut hendrerit non nisl auctor sollicitudin. Nunc id viverra erat, quis viverra elit.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Nullam rhoncus dolor arcu, et commodo tellus semper vitae. Aenean finibus tristique lectus, ac lobortis mauris venenatis ac.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Paris": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Partner 1": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Partner 2": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Partner 3": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Partner 4": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Partner 5": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Partner 6": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"Pickup Truck": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Proin a augue ut leo elementum tincidunt et...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Proin at massa suscipit sem iaculis dignissim...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Proin sed tellus porttitor, varius mauris vitae, tincidunt augue. Sed consectetur magna elit, sit amet faucibus tortor sodales vitae. Maecenas quis arcu est. Nam sit amet neque vestibulum, fringilla elit sit amet, volutpat nunc.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"RWD – Rear-wheel drive": {
+			"category": "numeric-or-specification",
+			"reason": "Numeric value, price, rating, measurement, identifier, or vehicle specification retained as supplied."
+		},
+		"Ralph Edwards": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Robert Fox": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Ronald Richards": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"SUV": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Sample Data 1": {
+			"category": "placeholder-copy",
+			"reason": "Generic sample-data label from the licensed reference content, retained as supplied."
+		},
+		"Sample Data 2": {
+			"category": "placeholder-copy",
+			"reason": "Generic sample-data label from the licensed reference content, retained as supplied."
+		},
+		"Saturday - Sunday: 10:00 - 18:00": {
+			"category": "date-or-time-fact",
+			"reason": "Reference date or opening-hour value; the runtime may localize its presentation without changing the fact."
+		},
+		"Savannah Nguyen": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Sed imperdiet tortor sed magna tempus, in...": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Sed molestie nibh vitae nisl pulvinar elementum. Phasellus sit amet sapien vestibulum, gravida augue ac, interdum nisl.": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"Sedan": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Sedanx50": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"Station Wagon": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Station wagon": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Tesla": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Themesflat": {
+			"category": "person-or-business-name",
+			"reason": "Proper name or business identity from the licensed reference data."
+		},
+		"Toyota": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"United States": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Ut posuere sem eu venenatis auctor. Nam in ipsum lectus. Mauris turpis quam, fermentum at mi varius, dapibus rhoncus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		},
+		"VS": {
+			"category": "identifier-or-model",
+			"reason": "Short model, trim, drivetrain, or technical identifier retained as supplied."
+		},
+		"Volkswagen": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"Volkswagen Scirocco, Honda Civic, Audi A3, Toyota Vios, Nissan GTR, Subaru Impreza": {
+			"category": "vehicle-inventory-fact",
+			"reason": "Vehicle listing, model, trim, VIN, or inventory fact retained as supplied."
+		},
+		"XUV700": {
+			"category": "vehicle-brand-or-model",
+			"reason": "Automotive brand, model, body type, or named location retained as factual reference data."
+		},
+		"admin": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"autodecar": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"avatar": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"avt": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"blog image": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"car brand image": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"darlenerobertson@gmail.com": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"dvg.ap.ngantt1@gmail.com.": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"file": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"hidden": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"icon": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"imag-blog": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"image": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"image 1": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"image 2": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"image 3": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"images": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"img": {
+			"category": "asset-label",
+			"reason": "Generic or technical image label; it is not user-facing editorial copy."
+		},
+		"km": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"km -": {
+			"category": "vehicle-specification",
+			"reason": "Vehicle specification or performance value retained as supplied."
+		},
+		"n/a": {
+			"category": "identifier-or-model",
+			"reason": "Unavailable-value marker retained as supplied."
+		},
+		"themesflat@gmail...": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"themesflat@gmail.com": {
+			"category": "contact-data",
+			"reason": "Telephone number, email address, URL, or other contact identifier retained as supplied."
+		},
+		"“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dui dui, laoreet eget libero quis, maximus cursus metus. Integer id nibh sit amet purus congue mollis. ”": {
+			"category": "placeholder-copy",
+			"reason": "Licensed reference placeholder or lorem-style filler content, retained as supplied."
+		}
+	}
+}

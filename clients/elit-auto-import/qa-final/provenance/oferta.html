@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ELIT AUTO — Предложение за партньорство</title>
+<meta name="description" content="Професионален уебсайт, каталог с автомобили, административен панел и експорт към mobile.bg и cars.bg за ELIT AUTO." />
+<link rel="icon" type="image/png" href="brand/daynight-emblem-transparent.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0a1626;
+    --ink-2:#0e2038;
+    --ink-3:#13294a;
+    --blue:#111827;
+    --blue-bright:#d71920;
+    --silver:#c3cedc;
+    --paper:#f4f7fb;
+    --white:#ffffff;
+    --red:#e4151f;
+    --text:#0b1626;
+    --muted:#5a6b82;
+    --muted-light:#9fb0c6;
+    --line:#e4e9f1;
+    --gold:#d8b15a;
+    --radius:18px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    color:var(--text);
+    background:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  .en{display:none}
+  body.lang-en .bg{display:none}
+  body.lang-en .en{display:inline}
+  body.lang-en .en.block{display:block}
+
+  h1,h2,h3,.display{font-family:'Unbounded',sans-serif;letter-spacing:-.02em;line-height:1.05}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--blue-bright)}
+  a{color:inherit}
+
+  /* ===== Lang toggle ===== */
+  .langtoggle{
+    position:fixed;top:18px;right:18px;z-index:50;
+    display:flex;gap:2px;padding:4px;border-radius:999px;
+    background:rgba(10,22,38,.72);backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 30px rgba(0,0,0,.35)
+  }
+  .langtoggle button{
+    font-family:'Manrope';font-weight:700;font-size:12.5px;letter-spacing:.08em;
+    color:#aebed4;background:transparent;border:0;cursor:pointer;
+    padding:7px 14px;border-radius:999px;transition:.2s
+  }
+  .langtoggle button.active{background:var(--blue);color:#fff}
+
+  /* ===== Cover ===== */
+  .cover{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;
+    justify-content:space-between;color:#fff;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(10,22,38,.62) 0%,rgba(10,22,38,.78) 55%,rgba(10,22,38,.96) 100%),
+      url('brand/daynight-hero-banner-dealership-v1.webp') center/cover no-repeat;
+  }
+  .cover::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 80% 0%,rgba(17, 24, 39, .22),transparent 60%);pointer-events:none}
+  .cover-top{display:flex;align-items:center;justify-content:space-between;padding:34px 28px 0;position:relative;z-index:2}
+  .cover-top img{height:46px;width:auto;filter:drop-shadow(0 4px 14px rgba(0,0,0,.4))}
+  .cover-date{font-size:12.5px;color:#bcccE2;letter-spacing:.04em;font-weight:600;margin-right:120px}
+  .cover-main{position:relative;z-index:2;padding:0 28px;max-width:var(--maxw);margin:0 auto;width:100%;padding-bottom:64px}
+  .cover-main .eyebrow{opacity:0;animation:rise .8s .15s forwards}
+  .cover h1{
+    font-size:clamp(38px,6.4vw,78px);font-weight:800;margin:18px 0 22px;max-width:16ch;
+    opacity:0;animation:rise .9s .28s forwards
+  }
+  .cover h1 .acc{color:var(--blue-bright)}
+  .cover-sub{font-size:clamp(16px,1.7vw,20px);max-width:54ch;color:#d4dEED;font-weight:500;opacity:0;animation:rise .9s .42s forwards}
+  .cover-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;opacity:0;animation:rise .9s .56s forwards}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;font-family:'Manrope';font-weight:700;font-size:15px;
+    padding:15px 26px;border-radius:999px;text-decoration:none;transition:.22s;cursor:pointer;border:0
+  }
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 30px rgba(17, 24, 39, .45)}
+  .btn-primary:hover{background:#1a4fc0;transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+  .btn-ghost:hover{background:rgba(255,255,255,.16)}
+  .btn .arr{transition:.22s}
+  .btn:hover .arr{transform:translateX(4px)}
+  .scrollhint{position:relative;z-index:2;text-align:center;padding-bottom:26px;color:#90a4bf;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:0;animation:rise 1s .8s forwards}
+
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ===== Sections ===== */
+  section{position:relative}
+  .pad{padding:96px 0}
+  .sec-paper{background:var(--paper);color:var(--text)}
+  .sec-white{background:var(--white);color:var(--text)}
+  .sec-dark{background:var(--ink);color:#fff}
+  .sec-head{max-width:60ch}
+  .sec-head h2{font-size:clamp(28px,4vw,46px);font-weight:800;margin:14px 0 0}
+  .sec-head .eyebrow{color:var(--blue)}
+  .sec-dark .sec-head .eyebrow{color:var(--blue-bright)}
+  .lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);margin-top:18px;max-width:58ch}
+  .sec-dark .lead{color:#aebed4}
+
+  /* problem cards */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+  .pcard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:.25s}
+  .sec-paper .pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,32,60,.08)}
+  .pcard .nho{font-family:'Unbounded';font-weight:700;font-size:15px;color:var(--blue);background:rgba(17, 24, 39, .1);width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .pcard h3{font-size:19px;font-weight:700;margin-bottom:8px}
+  .pcard p{font-size:14.5px;color:var(--muted)}
+
+  /* built / features */
+  .feat{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:52px}
+  .feat-item{display:flex;gap:18px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--radius);padding:26px}
+  .feat-item .ic{flex:none;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-bright));display:flex;align-items:center;justify-content:center;font-size:22px}
+  .feat-item .ic{font-family:'Unbounded';font-size:14px;font-weight:800;letter-spacing:.02em}
+  .feat-item h3{font-size:18px;font-weight:700;margin-bottom:6px}
+  .feat-item p{font-size:14.5px;color:#aebed4}
+  .feat-item .tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(216,177,90,.4);border-radius:999px;padding:3px 9px;margin-bottom:8px}
+  .built-band{margin-top:54px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative}
+  .built-band img{width:100%;display:block;height:300px;object-fit:cover}
+  .built-band .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,38,.86),rgba(10,22,38,.15));display:flex;align-items:center;padding:0 44px}
+  .built-band .ov div{max-width:42ch}
+  .built-band .ov h3{font-size:clamp(20px,2.4vw,30px);font-weight:800;color:#fff;margin-bottom:10px}
+  .built-band .ov p{color:#cfdcec;font-size:15px}
+
+  /* device showcase */
+  .sc-head{text-align:center;margin-top:64px;max-width:none}
+  .sc-head .eyebrow{color:var(--blue-bright)}
+  .sc-head h3{font-family:'Unbounded';font-weight:800;font-size:clamp(22px,3vw,34px);color:#fff;margin-top:12px}
+  .sc-head p{color:#aebed4;font-size:15px;margin:10px auto 0;max-width:48ch}
+  .showcase{margin-top:42px;position:relative}
+  .showcase .glow{position:absolute;top:80px;left:50%;transform:translateX(-50%);width:80%;height:60%;background:radial-gradient(50% 50% at 50% 40%,rgba(17, 24, 39, .32),transparent 70%);filter:blur(24px);pointer-events:none}
+  .demo{position:relative;z-index:1;border:1px solid rgba(255,255,255,.1);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));padding:18px;box-shadow:0 34px 90px rgba(0,0,0,.34)}
+  .demo-tabs{display:flex;flex-wrap:wrap;gap:8px;overflow-x:auto;padding:0 0 14px;scrollbar-width:none}
+  .demo-tabs::-webkit-scrollbar{display:none}
+  .demo-tab{flex:0 0 auto;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.055);color:#c8d8ef;font:700 13px/1 'Manrope';padding:11px 15px;cursor:pointer;transition:.18s}
+  .demo-tab:hover,.demo-tab.active{background:var(--blue);border-color:var(--blue);color:#fff}
+  .demo-stage{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:18px;align-items:stretch}
+  .demo-device{min-width:0;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#0b172b;box-shadow:0 30px 70px rgba(0,0,0,.38)}
+  .demo-device--desktop{border-radius:16px}
+  .demo-device--mobile{width:min(320px,100%);justify-self:center;border:9px solid #050b15;border-radius:34px;background:#050b15}
+  .demo-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;background:#10233f;border-bottom:1px solid rgba(255,255,255,.08)}
+  .demo-device--mobile .demo-bar{justify-content:center;height:24px;padding:0;border:0;background:#050b15}
+  .demo-device--mobile .demo-bar .dot,.demo-device--mobile .demo-bar .url{display:none}
+  .demo-device--mobile .demo-bar::before{content:"";width:74px;height:6px;border-radius:99px;background:#1a2740}
+  .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+  .url{margin-left:12px;font-size:12px;color:#9fb3cc;background:#0a1830;border:1px solid rgba(255,255,255,.08);padding:5px 16px;border-radius:8px;font-weight:600}
+  .demo-viewport{overflow:auto;background:#eef2f7;max-height:620px}
+  .demo-device--mobile .demo-viewport{max-height:690px;border-radius:24px;background:#fff}
+  .demo-viewport img{display:block;width:100%;height:auto}
+  .demo-copy{display:flex;flex-direction:column;justify-content:space-between;gap:20px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(5,11,21,.42);padding:22px}
+  .demo-kicker{color:var(--blue-bright);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+  .demo-copy h4{font-family:'Unbounded';font-size:22px;line-height:1.15;color:#fff;margin:9px 0 10px}
+  .demo-copy p{color:#b9c9df;font-size:14px;line-height:1.65}
+  .demo-meta{display:grid;gap:10px}
+  .demo-meta span{display:flex;align-items:center;gap:8px;color:#dce8f8;font-size:13px;font-weight:700}
+  .demo-meta span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-bright);box-shadow:0 0 0 4px rgba(215, 25, 32, .16)}
+  .sc-cap{text-align:center;margin-top:32px;font-size:14px;color:#8ea4c2}
+  .sc-cap b{color:#cfe0f5}
+  @media(max-width:880px){
+    .demo{padding:12px;border-radius:20px}
+    .demo-tabs{flex-wrap:nowrap}
+    .demo-stage{grid-template-columns:1fr}
+    .demo-copy{order:-1;padding:18px}
+    .demo-copy h4{font-size:19px}
+    .demo-device--mobile{max-width:290px}
+    .demo-viewport{max-height:560px}
+    .demo-device--mobile .demo-viewport{max-height:610px}
+  }
+
+  /* pricing */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;align-items:stretch}
+  .tier{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:34px 28px;display:flex;flex-direction:column;position:relative;transition:.25s}
+  .tier:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(13,32,60,.1)}
+  .tier.featured{background:linear-gradient(180deg,var(--ink-2),var(--ink));color:#fff;border:1px solid var(--blue);box-shadow:0 26px 60px rgba(13,32,60,.28);transform:translateY(-10px)}
+  .tier.featured:hover{transform:translateY(-14px)}
+  .tier .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap}
+  .tier .tname{font-family:'Unbounded';font-weight:700;font-size:20px;margin-bottom:4px}
+  .tier .tdesc{font-size:13.5px;color:var(--muted);min-height:40px}
+  .tier.featured .tdesc{color:#aebed4}
+  .price{margin:22px 0 4px;display:flex;align-items:baseline;gap:8px}
+  .price .cur{font-family:'Unbounded';font-weight:800;font-size:40px;line-height:1}
+  .price .per{font-size:14px;color:var(--muted);font-weight:600}
+  .tier.featured .price .per{color:#aebed4}
+  .price-lv{font-size:12.5px;color:var(--muted-light);font-weight:600}
+  .tier.featured .price-lv{color:#7e93b0}
+  .setup{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+  .tier.featured .setup{border-top:1px solid rgba(255,255,255,.14);color:#cfdcec}
+  .setup b{color:var(--text);font-weight:800}
+  .tier.featured .setup b{color:#fff}
+  .tlist{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px}
+  .tlist li{font-size:14px;display:flex;gap:10px;align-items:flex-start;color:var(--text)}
+  .tier.featured .tlist li{color:#dce7f4}
+  .tlist li::before{content:"✓";color:var(--blue);font-weight:800;flex:none}
+  .tier.featured .tlist li::before{color:var(--blue-bright)}
+  .tier .pick{margin-top:auto;text-align:center;font-weight:700;font-size:14px;padding:13px;border-radius:12px;border:1px solid var(--line);color:var(--text);transition:.2s}
+  .tier.featured .pick{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .addon-note{margin-top:30px;background:rgba(216,177,90,.1);border:1px solid rgba(216,177,90,.35);border-radius:14px;padding:18px 22px;font-size:14.5px;color:#7a6320;display:flex;gap:12px;align-items:flex-start}
+  .sec-paper .addon-note b{color:#5c4a14}
+  .founder{margin-top:16px;background:#0e2038;border-radius:14px;padding:18px 22px;font-size:14.5px;color:#cfdcec;display:flex;gap:12px;align-items:flex-start}
+  .founder b{color:#fff}
+
+  /* ROI */
+  .roi{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+  .stat{text-align:center;padding:30px 18px;border-radius:var(--radius);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09)}
+  .stat .big{font-family:'Unbounded';font-weight:800;font-size:clamp(30px,4.5vw,46px);background:linear-gradient(135deg,#fff,var(--blue-bright));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat p{margin-top:8px;color:#aebed4;font-size:14px}
+  .roi-line{margin-top:46px;text-align:center;font-family:'Unbounded';font-weight:600;font-size:clamp(19px,2.6vw,30px);color:#fff;line-height:1.3;max-width:24ch;margin-left:auto;margin-right:auto}
+  .roi-line .acc{color:var(--blue-bright)}
+
+  /* CTA */
+  .cta-final{background:linear-gradient(135deg,var(--blue),#111827);color:#fff;border-radius:26px;padding:64px 44px;text-align:center;position:relative;overflow:hidden}
+  .cta-final::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 50% -10%,rgba(255,255,255,.18),transparent 60%)}
+  .cta-final > *{position:relative;z-index:2}
+  .cta-final h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;margin-bottom:14px}
+  .cta-final p{color:#e3ecfb;font-size:17px;max-width:48ch;margin:0 auto 30px}
+  .cta-final .btn-primary{background:#fff;color:var(--blue)}
+  .cta-final .btn-primary:hover{background:#eef3ff}
+  .contact{display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:center;margin-top:30px;font-size:15px;font-weight:600;color:#dbe6fb}
+  .contact span{opacity:.65;font-weight:500}
+
+  /* footer */
+  footer{background:var(--ink);color:#8ea1bb;padding:46px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+  .foot img{height:40px}
+  .foot .fr{font-size:13px;text-align:right;line-height:1.7}
+  .foot .fr b{color:#cfdcec}
+
+  /* responsive */
+  @media(max-width:880px){
+    .grid3,.feat,.tiers,.roi{grid-template-columns:1fr}
+    .tier.featured{transform:none}
+    .tier.featured:hover{transform:translateY(-4px)}
+    .pad{padding:68px 0}
+    .built-band .ov{background:linear-gradient(180deg,rgba(10,22,38,.4),rgba(10,22,38,.92));align-items:flex-end;padding:28px}
+    .cover-top img{height:38px}
+    .cover-date{margin-right:0;font-size:11px}
+    .langtoggle{top:auto;bottom:16px;right:16px}
+  }
+
+  /* print → clean PDF */
+  @media print{
+    @page{margin:14mm}
+    body{background:#fff}
+    .langtoggle,.scrollhint{display:none!important}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .cover{min-height:auto;page-break-after:always}
+    .pad{padding:30px 0}
+    section{page-break-inside:avoid}
+    .tier.featured{transform:none}
+  }
+</style>
+</head>
+<body class="lang-bg">
+
+<div class="langtoggle" role="group" aria-label="Език / Language">
+  <button id="b-bg" class="active" onclick="setLang('bg')">БГ</button>
+  <button id="b-en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ============ COVER ============ -->
+<header class="cover">
+  <div class="cover-top">
+    <img src="brand/daynight-mobile-logo-white-v1.webp" alt="ELIT AUTO" />
+    <div class="cover-date">
+      <span class="bg">Изготвено за ELIT AUTO · Юни 2026</span>
+      <span class="en">Prepared for ELIT AUTO · June 2026</span>
+    </div>
+  </div>
+
+  <div class="cover-main">
+    <div class="eyebrow">
+      <span class="bg">Предложение за партньорство</span>
+      <span class="en">Partnership proposal</span>
+    </div>
+    <h1>
+      <span class="bg">Повече от обяви. <span class="acc">Вашият собствен дигитален автосалон.</span></span>
+      <span class="en">More than listings. <span class="acc">Your own digital showroom.</span></span>
+    </h1>
+    <p class="cover-sub">
+      <span class="bg">Готов уебсайт за ELIT AUTO със собствен каталог, административен панел и експорт към mobile.bg и cars.bg. Изграден е, работи и може да се прегледа веднага.</span>
+      <span class="en">A finished website for ELIT AUTO with its own catalogue, admin panel, and export to mobile.bg and cars.bg. It is built, working, and ready to review.</span>
+    </p>
+    <div class="cover-cta">
+      <a class="btn btn-primary" href="https://day-night-auto-group.demo" target="_blank" rel="noopener">
+        <span class="bg">Вижте сайта на живо</span><span class="en">See the live site</span>
+        <span class="arr">→</span>
+      </a>
+      <a class="btn btn-ghost" href="#pricing">
+        <span class="bg">Вижте пакетите</span><span class="en">View packages</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="scrollhint">
+    <span class="bg">Разгледайте ↓</span><span class="en">Scroll ↓</span>
+  </div>
+</header>
+
+<!-- ============ PROBLEM ============ -->
+<section class="pad sec-paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="bg">Защо сега</span><span class="en">Why now</span></div>
+      <h2><span class="bg">Днес сте невидими извън обявите.</span><span class="en">Today you're invisible outside the listings.</span></h2>
+      <p class="lead">
+        <span class="bg">Клиентите Ви намират само в морето от обяви на mobile.bg и cars.bg — където се конкурирате единствено по цена, а марката Ви я няма.</span>
+        <span class="en">Buyers only find you in the sea of ads on mobile.bg and cars.bg — where you compete on price alone and your brand simply isn't there.</span>
+      </p>
+    </div>
+    <div class="grid3">
+      <div class="pcard">
+        <div class="nho">01</div>
+        <h3><span class="bg">Без собствена марка</span><span class="en">No brand of your own</span></h3>
+        <p><span class="bg">Купувачите помнят обявата, не Вас. Няма доверие, няма повторни клиенти, няма препоръки.</span><span class="en">Buyers remember the ad, not you. No trust, no repeat customers, no referrals.</span></p>
+      </div>
+      <div class="pcard">
+        <div class="nho">02</div>
+        <h3><span class="bg">Битка само по цена</span><span class="en">A race to the bottom</span></h3>
+        <p><span class="bg">До Вашата обява стоят 20 почти еднакви. Печели най-ниската цена — не най-добрият дилър.</span><span class="en">Next to your ad sit 20 near-identical ones. The lowest price wins — not the best dealer.</span></p>
+      </div>
+      <div class="pcard">
+        <div class="nho">03</div>
+        <h3><span class="bg">Ръчна работа, всеки ден</span><span class="en">Manual work, every day</span></h3>
+        <p><span class="bg">Качване на всяка кола поотделно, на всяка платформа. Часове губещо време всяка седмица.</span><span class="en">Posting each car one by one, on every platform. Hours lost every single week.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE BUILT ============ -->
+<section class="pad sec-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="bg">Какво вече е готово</span><span class="en">What's already built</span></div>
+      <h2><span class="bg">Не е концепция. Изградено е и работи.</span><span class="en">Not a concept. Built and working.</span></h2>
+      <p class="lead"><span class="bg">Изградихме пълна платформа за ELIT AUTO, преди да Ви я покажем. Отворете я на телефона си сега:</span><span class="en">We built the full platform for ELIT AUTO before showing it to you. Open it on your phone right now:</span></p>
+      <a class="btn btn-primary" style="margin-top:22px" href="https://day-night-auto-group.demo" target="_blank" rel="noopener">
+        day-night-auto-group.demo <span class="arr">→</span>
+      </a>
+    </div>
+
+    <div class="feat">
+      <div class="feat-item">
+        <div class="ic">01</div>
+        <div>
+          <h3><span class="bg">Премиум уебсайт (mobile-first)</span><span class="en">Premium website (mobile-first)</span></h3>
+          <p><span class="bg">Бърз и модерен, на нивото на най-добрите европейски дилъри. Вашата витрина, отворена 24/7.</span><span class="en">Fast and modern, on par with Europe's best dealers. Your showroom, open 24/7.</span></p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="ic">02</div>
+        <div>
+          <h3><span class="bg">Система за управление (CMS)</span><span class="en">Management system (CMS)</span></h3>
+          <p><span class="bg">Качвате и редактирате обяви сами, за секунди — без програмист, без чакане.</span><span class="en">Add and edit listings yourself in seconds — no developer, no waiting.</span></p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="ic">03</div>
+        <div>
+          <h3><span class="bg">Експорт към mobile.bg и cars.bg</span><span class="en">Export to mobile.bg & cars.bg</span></h3>
+          <p><span class="bg">Качете цялата си наличност наведнъж, с един клик. XML/CSV — край на ръчното копиране.</span><span class="en">Push your whole inventory at once, in one click. XML/CSV — no more manual copying.</span></p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div>
+          <span class="tag"><span class="bg">По пътната карта</span><span class="en">On the roadmap</span></span>
+          <h3><span class="bg">Асистент и автоматизация</span><span class="en">Assistant and automation</span></h3>
+          <p><span class="bg">По избор: търсене по зададени критерии, подготовка на отговори и по-бърза обработка на запитванията.</span><span class="en">Optional: searches by your criteria, draft replies, and faster lead handling.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-head">
+      <div class="eyebrow"><span class="bg">Вижте го с очите си</span><span class="en">See it with your own eyes</span></div>
+      <h3><span class="bg">Вашите коли. Вашата марка. Вашият сайт.</span><span class="en">Your cars. Your brand. Your site.</span></h3>
+      <p><span class="bg">Реални екрани от сайта и каталога — начална страница, обяви, филтри, детайли и мобилен изглед.</span><span class="en">Real screens from the website and catalogue: home, inventory, filters, vehicle details, and mobile views.</span></p>
+    </div>
+    <div class="showcase">
+      <div class="glow"></div>
+      <div class="demo" data-demo>
+        <div class="demo-tabs" role="tablist" aria-label="Екрани от продукта">
+          <button class="demo-tab active" type="button" data-device="desktop" data-src="offer-shots/app-desktop-home.png" data-title-bg="Начална страница" data-title-en="Desktop home" data-copy-bg="Първото впечатление: марка, търсене и директен път към каталога." data-copy-en="The first impression: brand, search, and a direct path into the catalogue." data-meta-bg="Desktop изглед|Търсене над сгъвката|Собствена марка" data-meta-en="Desktop view|Search above the fold|Own brand">
+            <span class="bg">Начало</span><span class="en">Home</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="desktop" data-src="offer-shots/app-desktop-inventory-grid.png" data-title-bg="Каталог - grid" data-title-en="Inventory grid" data-copy-bg="Пълен каталог с търсене, сортиране и ясни карти за всяка кола." data-copy-en="A full catalogue with search, sorting, and clear cards for every vehicle." data-meta-bg="54 автомобила|Grid изглед|Бързо сравнение" data-meta-en="54 vehicles|Grid view|Fast comparison">
+            <span class="bg">Каталог</span><span class="en">Inventory</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="desktop" data-src="offer-shots/app-desktop-inventory-filter-modal.png" data-title-bg="Филтри - modal" data-title-en="Filter modal" data-copy-bg="Марка, модел, гориво, цена, пробег и скоростна кутия в един ясен филтър." data-copy-en="Brand, model, fuel, price, mileage, and transmission in one clear filter flow." data-meta-bg="Modal филтри|Desktop UX|Без шум" data-meta-en="Modal filters|Desktop UX|Low friction">
+            <span class="bg">Модал</span><span class="en">Modal</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="desktop" data-src="offer-shots/app-desktop-inventory-brand-popover.png" data-title-bg="Филтри - popover" data-title-en="Filter popover" data-copy-bg="Бърз popover за избор на марка, без да напускаш списъка." data-copy-en="A quick brand popover without leaving the list." data-meta-bg="Popover режим|Марки|Моментален избор" data-meta-en="Popover mode|Brands|Instant choice">
+            <span class="bg">Popover</span><span class="en">Popover</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="desktop" data-src="offer-shots/app-desktop-inventory-sidebar.png" data-title-bg="Sidebar изглед" data-title-en="Sidebar layout" data-copy-bg="Алтернативен плътен desktop изглед за хора, които сравняват повече коли наведнъж." data-copy-en="A denser desktop layout for people comparing more vehicles at once." data-meta-bg="Sidebar|Плътен каталог|Филтри винаги видими" data-meta-en="Sidebar|Dense catalogue|Filters stay visible">
+            <span class="bg">Sidebar</span><span class="en">Sidebar</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="desktop" data-src="offer-shots/app-desktop-pdp.png" data-title-bg="Страница на автомобил" data-title-en="Vehicle detail page" data-copy-bg="Снимки, цена, лизинг, характеристики и контакти на една силна продуктова страница." data-copy-en="Photos, price, financing, specifications, and contact actions on a focused detail page." data-meta-bg="PDP|Галерия|Контакт и лизинг" data-meta-en="PDP|Gallery|Contact and finance">
+            <span class="bg">Детайл</span><span class="en">PDP</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="mobile" data-src="offer-shots/app-mobile-home-tight.png" data-title-bg="Мобилно начало" data-title-en="Mobile home" data-copy-bg="Първият мобилен екран води към цена, избрани коли, марки и типове без излишен въздух." data-copy-en="The first mobile screen leads into price, featured cars, brands, and body types without wasted space." data-meta-bg="Mobile-first|По цена първо|Стегната навигация" data-meta-en="Mobile-first|Price first|Tight navigation">
+            <span class="bg">Mobile начало</span><span class="en">Mobile home</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="mobile" data-src="offer-shots/app-mobile-inventory-tight.png" data-title-bg="Мобилен каталог" data-title-en="Mobile inventory" data-copy-bg="Търсене, бързи филтри и компактни карти, направени за скрол с палец." data-copy-en="Search, quick filters, and compact cards made for thumb scrolling." data-meta-bg="Mobile каталог|Компактни карти|Бързо търсене" data-meta-en="Mobile inventory|Compact cards|Fast search">
+            <span class="bg">Mobile каталог</span><span class="en">Mobile list</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="mobile" data-src="offer-shots/app-mobile-inventory-filter.png" data-title-bg="Мобилни филтри" data-title-en="Mobile filters" data-copy-bg="Марка, модел, гориво, цена и скорости като ясни бутони, не като дребни, криви селекти." data-copy-en="Brand, model, fuel, price, and transmission as clear buttons, not tiny cramped selects." data-meta-bg="Филтър sheet|Чисти етикети|Без „Всички“ навсякъде" data-meta-en="Filter sheet|Clean labels|No noisy defaults">
+            <span class="bg">Mobile филтри</span><span class="en">Mobile filters</span>
+          </button>
+          <button class="demo-tab" type="button" data-device="mobile" data-src="offer-shots/app-mobile-pdp.png" data-title-bg="Мобилен детайл" data-title-en="Mobile PDP" data-copy-bg="Снимки, цена, параметри и действия в поток, който не кара клиента да търси." data-copy-en="Photos, price, specs, and actions in a flow that does not make the buyer hunt." data-meta-bg="Mobile PDP|Бързи действия|Ясен детайл" data-meta-en="Mobile PDP|Quick actions|Clear detail">
+            <span class="bg">Mobile детайл</span><span class="en">Mobile PDP</span>
+          </button>
+        </div>
+        <div class="demo-stage">
+          <figure class="demo-device demo-device--desktop" id="demo-device">
+            <div class="demo-bar">
+              <span class="dot" style="background:#ff5f57"></span>
+              <span class="dot" style="background:#febc2e"></span>
+              <span class="dot" style="background:#28c840"></span>
+              <span class="url">day-night-auto-group.demo</span>
+            </div>
+            <div class="demo-viewport">
+              <img id="demo-shot" src="offer-shots/app-desktop-home.png" alt="Начална страница на ELIT AUTO" loading="lazy" />
+            </div>
+          </figure>
+          <aside class="demo-copy" aria-live="polite">
+            <div>
+              <div class="demo-kicker" id="demo-kicker">Desktop</div>
+              <h4 id="demo-title">Начална страница</h4>
+              <p id="demo-text">Първото впечатление: марка, търсене и директен път към каталога.</p>
+            </div>
+            <div class="demo-meta" id="demo-meta">
+              <span>Desktop изглед</span>
+              <span>Търсене над сгъвката</span>
+              <span>Собствена марка</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <p class="sc-cap"><span class="bg">Това са реални екрани от продукта, не презентационен макет.</span><span class="en">These are real product screens, not a presentation mockup.</span></p>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pad sec-paper" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="bg">Пакети</span><span class="en">Packages</span></div>
+      <h2><span class="bg">Прозрачна цена. Без изненади.</span><span class="en">Transparent pricing. No surprises.</span></h2>
+      <p class="lead"><span class="bg">Еднократна изработка + месечна такса за хостинг, поддръжка и обновления. Изберете пакета, който Ви върши работа.</span><span class="en">A one-time build fee + a monthly fee for hosting, support and updates. Pick the package that fits you.</span></p>
+    </div>
+
+    <div class="tiers">
+      <!-- Start -->
+      <div class="tier">
+        <div class="tname"><span class="bg">Старт</span><span class="en">Start</span></div>
+        <div class="tdesc"><span class="bg">Всичко необходимо, за да сте онлайн с Ваш сайт.</span><span class="en">Everything you need to be online with your own site.</span></div>
+        <div class="price"><span class="cur">€49</span><span class="per">/<span class="bg">мес</span><span class="en">mo</span></span></div>
+        <div class="price-lv">≈ 96 лв / <span class="bg">мес</span><span class="en">mo</span></div>
+        <div class="setup"><span class="bg">Еднократна изработка:</span><span class="en">One-time build:</span> <b>€1 500</b> <span style="opacity:.7">(≈ 2 934 лв)</span></div>
+        <ul class="tlist">
+          <li><span class="bg">Премиум уебсайт (mobile-first)</span><span class="en">Premium website (mobile-first)</span></li>
+          <li><span class="bg">Система за управление на обяви</span><span class="en">Listings management system</span></li>
+          <li><span class="bg">Експорт към mobile.bg и cars.bg</span><span class="en">Export to mobile.bg & cars.bg</span></li>
+          <li><span class="bg">Хостинг и поддръжка</span><span class="en">Hosting & support</span></li>
+        </ul>
+        <div class="pick"><span class="bg">Изберете Старт</span><span class="en">Choose Start</span></div>
+      </div>
+
+      <!-- Pro (featured) -->
+      <div class="tier featured">
+        <div class="badge"><span class="bg">Препоръчан</span><span class="en">Recommended</span></div>
+        <div class="tname"><span class="bg">Про</span><span class="en">Pro</span></div>
+        <div class="tdesc"><span class="bg">За дилъри, които искат и клиенти, не само сайт.</span><span class="en">For dealers who want customers, not just a site.</span></div>
+        <div class="price"><span class="cur">€99</span><span class="per">/<span class="bg">мес</span><span class="en">mo</span></span></div>
+        <div class="price-lv">≈ 194 лв / <span class="bg">мес</span><span class="en">mo</span></div>
+        <div class="setup"><span class="bg">Еднократна изработка:</span><span class="en">One-time build:</span> <b>€2 500</b> <span style="opacity:.7">(≈ 4 890 лв)</span></div>
+        <ul class="tlist">
+          <li><span class="bg">Всичко от „Старт"</span><span class="en">Everything in Start</span></li>
+          <li><span class="bg">Събиране на запитвания (leads) от сайта</span><span class="en">Lead capture from the site</span></li>
+          <li><span class="bg">Повече обяви и галерии</span><span class="en">More listings & galleries</span></li>
+          <li><span class="bg">Приоритетна поддръжка</span><span class="en">Priority support</span></li>
+        </ul>
+        <div class="pick"><span class="bg">Изберете Про</span><span class="en">Choose Pro</span></div>
+      </div>
+
+      <!-- Automation -->
+      <div class="tier">
+        <div class="tname"><span class="bg">Премиум + асистент</span><span class="en">Premium + assistant</span></div>
+        <div class="tdesc"><span class="bg">Сайтът, плюс автоматизация за търсене, отговори и запитвания.</span><span class="en">The site plus automation for sourcing, replies, and leads.</span></div>
+        <div class="price"><span class="cur">€149</span><span class="per">/<span class="bg">мес</span><span class="en">mo</span></span></div>
+        <div class="price-lv">≈ 291 лв / <span class="bg">мес</span><span class="en">mo</span></div>
+        <div class="setup"><span class="bg">Еднократна изработка:</span><span class="en">One-time build:</span> <b>€3 500</b> <span style="opacity:.7">(≈ 6 845 лв)</span></div>
+        <ul class="tlist">
+          <li><span class="bg">Всичко от „Про"</span><span class="en">Everything in Pro</span></li>
+          <li><span class="bg">Търсене на автомобили по зададени критерии</span><span class="en">Vehicle sourcing by saved criteria</span></li>
+          <li><span class="bg">Подготовка на отговори и оферти</span><span class="en">Draft replies and offers</span></li>
+          <li><span class="bg">Асистент за екипа по заявка</span><span class="en">Team assistant on request</span></li>
+        </ul>
+        <div class="pick"><span class="bg">Изберете Премиум + асистент</span><span class="en">Choose Premium + assistant</span></div>
+      </div>
+    </div>
+
+    <div class="addon-note">
+      <span style="font-size:20px">✦</span>
+      <div><span class="bg"><b>Асистент като добавка:</b> Може да се добави към „Старт" или „Про" за <b>+€79–99/мес</b>, когато има реална нужда от него.</span><span class="en"><b>Assistant as an add-on:</b> It can be added to Start or Pro for <b>+€79–99/mo</b> when there is a real need for it.</span></div>
+    </div>
+    <div class="founder">
+      <span style="font-size:20px">★</span>
+      <div><span class="bg"><b>Като наш първи партньор:</b> 2 месеца безплатна месечна такса при годишен план, а еднократната изработка — на 2 вноски.</span><span class="en"><b>As our first partner:</b> 2 months of monthly fee free on an annual plan, and the one-time build split into 2 payments.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROI ============ -->
+<section class="pad sec-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="bg">Възвръщаемост</span><span class="en">Return on investment</span></div>
+      <h2><span class="bg">Плаща се само от себе си.</span><span class="en">It pays for itself.</span></h2>
+    </div>
+    <div class="roi">
+      <div class="stat">
+        <div class="big">1</div>
+        <p><span class="bg">продадена кола повече покрива цяла година месечна такса</span><span class="en">extra car sold covers an entire year of the monthly fee</span></p>
+      </div>
+      <div class="stat">
+        <div class="big">~5ч</div>
+        <p><span class="bg">спестено време седмично от ръчно качване на обяви</span><span class="en">saved every week from manual listing work</span></p>
+      </div>
+      <div class="stat">
+        <div class="big">24/7</div>
+        <p><span class="bg">Вашата витрина работи и продава, докато Вие спите</span><span class="en">your showroom keeps selling while you sleep</span></p>
+      </div>
+    </div>
+    <p class="roi-line"><span class="bg">Не разход. <span class="acc">Инструмент, който носи продажби.</span></span><span class="en">Not a cost. <span class="acc">A tool that drives sales.</span></span></p>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="pad sec-paper">
+  <div class="wrap">
+    <div class="cta-final">
+      <h2><span class="bg">Готови сме да Ви пуснем онлайн до 2 седмици.</span><span class="en">We can have you online within 2 weeks.</span></h2>
+      <p><span class="bg">Сайтът вече е изграден за ELIT AUTO. Остава само Вашето „да" — и сме на линия.</span><span class="en">The site is already built for ELIT AUTO. All that's left is your "yes" — and we're ready.</span></p>
+      <a class="btn btn-primary" href="https://day-night-auto-group.demo" target="_blank" rel="noopener">
+        <span class="bg">Вижте го на живо отново</span><span class="en">See it live again</span> <span class="arr">→</span>
+      </a>
+      <div class="contact">
+        <div><span class="bg">Имейл</span><span class="en">Email</span> · <b>[вашият имейл]</b></div>
+        <div><span class="bg">Телефон</span><span class="en">Phone</span> · <b>[вашият телефон]</b></div>
+        <div><span class="bg">Уебсайт</span><span class="en">Web</span> · <b>[вашият сайт]</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <img src="brand/daynight-logo-generated.png" alt="ELIT AUTO" />
+    <div class="fr">
+      <b><span class="bg">Изготвено от [Вашето студио]</span><span class="en">Prepared by [Your studio]</span></b><br/>
+      <span class="bg">Предложение за партньорство · Юни 2026 · Цени в евро (EUR)</span><span class="en">Partnership proposal · June 2026 · Prices in euro (EUR)</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let activeDemoTab = null;
+
+  function updateDemo(tab){
+    if(!tab) return;
+    activeDemoTab = tab;
+    document.querySelectorAll('.demo-tab').forEach((btn) => btn.classList.toggle('active', btn === tab));
+
+    const isEn = document.body.classList.contains('lang-en');
+    const device = tab.dataset.device || 'desktop';
+    const title = tab.dataset[isEn ? 'titleEn' : 'titleBg'] || '';
+    const copy = tab.dataset[isEn ? 'copyEn' : 'copyBg'] || '';
+    const meta = (tab.dataset[isEn ? 'metaEn' : 'metaBg'] || '').split('|').filter(Boolean);
+    const src = tab.dataset.src || '';
+
+    const frame = document.getElementById('demo-device');
+    const shot = document.getElementById('demo-shot');
+    const kicker = document.getElementById('demo-kicker');
+    const titleEl = document.getElementById('demo-title');
+    const textEl = document.getElementById('demo-text');
+    const metaEl = document.getElementById('demo-meta');
+
+    frame.classList.toggle('demo-device--mobile', device === 'mobile');
+    frame.classList.toggle('demo-device--desktop', device !== 'mobile');
+    shot.src = src;
+    shot.alt = title;
+    kicker.textContent = device === 'mobile' ? 'Mobile' : 'Desktop';
+    titleEl.textContent = title;
+    textEl.textContent = copy;
+    metaEl.innerHTML = meta.map((item) => `<span>${item}</span>`).join('');
+  }
+
+  function setLang(l){
+    document.body.classList.toggle('lang-en', l==='en');
+    document.body.classList.toggle('lang-bg', l==='bg');
+    document.documentElement.lang = l;
+    document.getElementById('b-bg').classList.toggle('active', l==='bg');
+    document.getElementById('b-en').classList.toggle('active', l==='en');
+    updateDemo(activeDemoTab || document.querySelector('.demo-tab.active'));
+  }
+
+  document.querySelectorAll('.demo-tab').forEach((tab) => {
+    tab.addEventListener('click', () => updateDemo(tab));
+  });
+  updateDemo(document.querySelector('.demo-tab.active'));
+</script>
+</body>
+</html>

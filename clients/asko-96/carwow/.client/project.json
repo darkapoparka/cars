@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "client": "asko-96",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T20:49:20.390Z",
+  "state": "local-review-ready",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    "/"
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "frameworkCheck": "npm run check: 0 errors, 0 warnings",
+    "build": "npm run build: passed final 2026-09-07",
+    "routeMatrix": ".client/qa-routes.json",
+    "finalRecheck": ".client/qa-final.json",
+    "interactions": ".client/qa-interactions.json",
+    "viewports": [
+      390,
+      1440
+    ],
+    "identityScope": "Offered home and primary public routes, metadata, phone/map/social destinations. Internal source identifiers preserved.",
+    "autofixer": "44 changed Svelte files reviewed; final six components also checked. External href false positives and inherited bind:this suggestions retained."
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localUrl": "http://127.0.0.1:6613/",
+  "updatedAt": "2026-09-06T21:16:01.435198+00:00",
+  "businessName": "АСКО 96",
+  "stockSnapshot": "2026-09-06",
+  "stockCount": 16,
+  "changes": [
+    "Official ASKO96 wordmark and full-logo favicon; gold accent and readable surface variants",
+    "16 real source-backed vehicle listings, 52 photos and galleries; unknown features explicitly referred to dealer",
+    "Real ASKO showroom, contacts, hours, maps, Facebook and three verified ASKO YouTube videos",
+    "Source fabricated testimonials replaced with factual service cards; fictitious team names/photos replaced by contact/service topics",
+    "Forms and chat identified as local demos; no credentials copied or backend configured",
+    "Source stock mega menu and hidden financing phone replaced with current ASKO content"
+  ],
+  "knownGaps": [
+    "Local visual demo only; no public deployment or message delivery configured. No external form submissions or messages sent.",
+    "Inventory is a selected published snapshot; ASKO must confirm availability, equipment and financial terms. Citroen fuel follows the source listing verbatim.",
+    "Generic decorative Audi/BMW hero cutouts and body/budget illustrations remain from template; they are not presented as ASKO inventory. Real listing photos are ASKO.",
+    "Main and offered public routes verified. Historical legacy/presentation/admin sample routes and unreferenced source assets remain in retained template codebase; they are not offered as lead homepage variants.",
+    "Viber links derive from the verified phone; account availability and actual phone/message delivery not tested.",
+    "Browser emulation at390/1440 is local QA, not physical-device or hosted acceptance."
+  ],
+  "runtime": {
+    "pid": 28564,
+    "port": 6613,
+    "node": "24.18.0",
+    "launcher": "J:/cars/scripts/start-preview.ps1",
+    "folder": "J:/cars/clients/asko-96/carwow"
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "records": [
+    {
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/inventory",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/sell-your-car",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/contact?intent=import",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/services",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/about",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/financing",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/calculator",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/blog",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/team",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/compare",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/inventory",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/sell-your-car",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/contact?intent=import",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/services",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/about",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/financing",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/calculator",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/blog",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/team",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/compare",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 430,
+      "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/inventory",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/sell-your-car",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/contact?intent=import",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/services",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/about",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/financing",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/calculator",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/blog",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/team",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/compare",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1280,
+      "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/inventory",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/sell-your-car",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/contact?intent=import",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/services",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/about",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/financing",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/calculator",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/blog",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/team",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/compare",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1920,
+      "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "broken": []
+    }
+  ],
+  "checks": [
+    {
+      "name": "text resize inventory 320",
+      "value": {
+        "overflow": false
+      }
+    },
+    {
+      "name": "financing phone 320",
+      "value": {
+        "width": 142.484375,
+        "height": 44,
+        "color": "rgb(5, 5, 5)",
+        "background": "rgb(255, 255, 255)",
+        "href": "tel:+359877733110"
+      }
+    },
+    {
+      "name": "footer gutters 320",
+      "value": {
+        "left": 16,
+        "right": 304,
+        "viewport": 320
+      }
+    },
+    {
+      "name": "text resize inventory 430",
+      "value": {
+        "overflow": false
+      }
+    },
+    {
+      "name": "financing phone 430",
+      "value": {
+        "width": 142.484375,
+        "height": 44,
+        "color": "rgb(5, 5, 5)",
+        "background": "rgb(255, 255, 255)",
+        "href": "tel:+359877733110"
+      }
+    },
+    {
+      "name": "footer gutters 430",
+      "value": {
+        "left": 16,
+        "right": 414,
+        "viewport": 430
+      }
+    }
+  ]
+}

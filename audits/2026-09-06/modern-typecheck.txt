@@ -1,0 +1,7 @@
+$ node ../../scripts/next-typegen.mjs && tsc --noEmit --emitDeclarationOnly false
+Generating route types...
+✓ Types generated successfully
+../../packages/security/index.ts(10,15): error TS2307: Cannot find module './inventory-credentials' or its corresponding type declarations.
+J:\cars\templates\modern\apps\web:
+[ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] web@ typecheck: `node ../../scripts/next-typegen.mjs && tsc --noEmit --emitDeclarationOnly false`
+Exit status 2

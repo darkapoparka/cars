@@ -1,0 +1,9 @@
+/* Keep the inherited Auxero stylesheet below project-authored Svelte styles in
+   the cascade. This removes the need for specificity escalation in components:
+   vendor defaults live in the first layer, route compatibility rules in the
+   second, and unlayered component styles remain the final visual authority. */
+@layer properties, theme, base, components, utilities, auxero-template, auxero-adapter;
+
+@import url('/assets/scss/swiper/swiper-bundle.min.css') layer(auxero-template);
+@import url('/assets/app.css') layer(auxero-template);
+@import url('./auxero-guards.css') layer(auxero-adapter);

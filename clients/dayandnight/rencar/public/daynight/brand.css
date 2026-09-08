@@ -1,0 +1,20 @@
+/* Branding only. Rencar's original stylesheet, geometry and widgets are retained. */
+:root {
+  --theme-color: #c40101;
+  --theme-color2: #c40101;
+  --color-dark: #17191c;
+  --body-text-color: #62666d;
+  --footer-bg: #111214;
+  --footer-text-color: #f5f5f5;
+}
+
+/* Keep the original image boxes when substituting a differently shaped asset. */
+img[src="/daynight/day-night-logo.png"] { aspect-ratio: 462 / 103; object-fit: contain; }
+img[src="/daynight/day-night-cutout-graphite-v1.webp"] { aspect-ratio: 1; object-fit: contain; }
+img[src="/daynight/day-night-cutout-gclass-v1.webp"] { aspect-ratio: 1596 / 845; object-fit: contain; }
+
+/* Recolour the existing decorative artwork without replacing its shapes. */
+.hs-1 .hero-single { background-color: #111214; background-blend-mode: luminosity; }
+.hs-1-1 .hero-single::before { background: rgba(17, 18, 20, 0.85); }
+.hs-2 .hero-single, .hs-3 .hero-single { background-color: #f6f6f6; background-blend-mode: luminosity; }
+.hero-shape img, .hero-single > .shape img { filter: grayscale(1); }

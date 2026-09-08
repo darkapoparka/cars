@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "client": "legend-auto",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:49:03.692Z",
+  "state": "local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "evidence": "../qa-final/legend-auto/modern/result.json",
+    "frameworkChecks": true,
+    "checkedAt": "2026-09-08T03:40:50.043Z",
+    "limits": [
+      "Local demo only; no provider or form delivery verified.",
+      "Stock is a dated source-backed sample."
+    ],
+    "latestFrameworkEvidence": [
+      {
+        "path": "J:/cars/clients/legend-auto/qa-final/modern-typecheck-retry.log",
+        "modifiedAt": "2026-09-08T01:49:37.084Z"
+      },
+      {
+        "path": "J:/cars/clients/legend-auto/qa-final/modern-build-retry.log",
+        "modifiedAt": "2026-09-08T01:50:24.097Z"
+      }
+    ],
+    "finalMatrixEvidence": "J:/cars/clients/legend-auto/qa-final/results.json"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6672/cars",
+    "state": "stopped-after-verification",
+    "origins": {
+      "api": "http://127.0.0.1:6674",
+      "app": "http://127.0.0.1:6675"
+    }
+  },
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 14,
+    "sourceTemplateVersion": "2026.09.06-refresh-1"
+  }
+}

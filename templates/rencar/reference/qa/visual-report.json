@@ -1,0 +1,82 @@
+[
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "reference": {
+      "title": "Rencar - Car Rental And Booking HTML5 Template",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 15135,
+      "images": [],
+      "headings": [],
+      "fonts": [
+        "Roboto, sans-serif",
+        "Roboto, sans-serif"
+      ],
+      "errors": [],
+      "failed": [
+        {
+          "url": "https://live.themewild.com/rencar/",
+          "status": 403
+        }
+      ]
+    },
+    "local": {
+      "title": "Rencar - Car Rental And Booking HTML5 Template",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 15135,
+      "images": [],
+      "headings": [],
+      "fonts": [
+        "Roboto, sans-serif",
+        "Roboto, sans-serif"
+      ],
+      "errors": [],
+      "failed": []
+    },
+    "pixelMismatchPercent": 0.0006944444444444445,
+    "fullPagePixelMismatchPercent": 0.0011746136622251587
+  },
+  {
+    "viewport": "mobile",
+    "width": 390,
+    "height": 844,
+    "reference": {
+      "title": "Rencar - Car Rental And Booking HTML5 Template",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 32363,
+      "images": [],
+      "headings": [],
+      "fonts": [
+        "Roboto, sans-serif",
+        "Roboto, sans-serif"
+      ],
+      "errors": [],
+      "failed": [
+        {
+          "url": "https://live.themewild.com/rencar/",
+          "status": 403
+        }
+      ]
+    },
+    "local": {
+      "title": "Rencar - Car Rental And Booking HTML5 Template",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 32363,
+      "images": [],
+      "headings": [],
+      "fonts": [
+        "Roboto, sans-serif",
+        "Roboto, sans-serif"
+      ],
+      "errors": [],
+      "failed": []
+    },
+    "pixelMismatchPercent": 0,
+    "fullPagePixelMismatchPercent": 0.00003169177843960775
+  }
+]

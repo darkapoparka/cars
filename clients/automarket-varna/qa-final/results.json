@@ -1,0 +1,6033 @@
+[
+  {
+    "client": "automarket-varna",
+    "name": "Аутомаркет Варна",
+    "template": "auto-best",
+    "port": 6656,
+    "startedAt": "2026-09-07T22:20:49.502Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Аутомаркет Варна — Употребявани автомобили в Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "До 5 000 €",
+            "href": "/listing-grid?price_max=5000"
+          },
+          {
+            "text": "5–10 000 €",
+            "href": "/listing-grid?price_min=5000&price_max=10000"
+          },
+          {
+            "text": "Audi",
+            "href": "/listing-grid?make=Audi"
+          },
+          {
+            "text": "Mercedes",
+            "href": "/listing-grid?make=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/listing-grid?make=BMW"
+          },
+          {
+            "text": "Разгледай",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Заяви оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "До 5 000 €\n6 автомобила",
+            "href": "/listing-grid?price_max=5000"
+          },
+          {
+            "text": "5–10 000 €\n4 автомобила",
+            "href": "/listing-grid?price_min=5000&price_max=10000"
+          },
+          {
+            "text": "Над 10 000 €\n6 автомобила",
+            "href": "/listing-grid?price_min=10000"
+          },
+          {
+            "text": "Виж всички\n16 автомобила",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Седан",
+            "href": "/listing-grid?body=Sedan"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/listing-grid?body=Hatchback"
+          },
+          {
+            "text": "SUV",
+            "href": "/listing-grid?body=SUV"
+          },
+          {
+            "text": "Кросоувър",
+            "href": "/listing-grid?body=Crossover"
+          },
+          {
+            "text": "Комби",
+            "href": "/listing-grid?body=Wagon"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "249 000 км\n2014\n\nКомби\n\nFord Focus 1.6D 115HP\nДизел\nРъчна\n5112 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "208 000 км\n2006\n\nХечбек\n\nOpel Astra 1.4i 90HP\nБензин\nРъчна\n2555,95 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "165 000 км\n2009\n\nХечбек\n\nOpel Corsa 1.2i 80HP GPL\nБензин\nРъчна\n2999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "227 000 км\n2012\n\nХечбек\n\nFord Fiesta 1.25i 82HP FACE LIFT\nБензин\nРъчна\n3799 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Ford",
+            "href": "/listing-grid?make=Ford"
+          },
+          {
+            "text": "Opel",
+            "href": "/listing-grid?make=Opel"
+          },
+          {
+            "text": "Honda",
+            "href": "/listing-grid?make=Honda"
+          },
+          {
+            "text": "VW",
+            "href": "/listing-grid?make=VW"
+          },
+          {
+            "text": "Mazda",
+            "href": "/listing-grid?make=Mazda"
+          },
+          {
+            "text": "Всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.",
+            "href": "/blog"
+          },
+          {
+            "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+            "href": "/blog"
+          },
+          {
+            "text": "Заяви внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Виж условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "Снимки и детайли",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "Снимки и детайли",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Снимки и детайли",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Разгледай",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай/Бартер",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Заяви оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос по заявка",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заяви внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Виж условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/listing-grid",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Налични автомобили — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Ford Focus 1.6D 115HP\n2014\n249 000 км\nДизел\nРъчна\n5112 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "Opel Astra 1.4i 90HP\n2006\n208 000 км\nБензин\nРъчна\n2555,95 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "Opel Corsa 1.2i 80HP GPL\n2009\n165 000 км\nБензин\nРъчна\n2999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n2012\n227 000 км\nБензин\nРъчна\n3799 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT\n2009\n197 000 км\nБензин\nРъчна\n3885,31 €",
+            "href": "/listing-detail-v1/5"
+          },
+          {
+            "text": "Opel Meriva 1.4 TURBO 120HP GPL\n2012\n156 000 км\nБензин\nРъчна\n4499 €",
+            "href": "/listing-detail-v1/6"
+          },
+          {
+            "text": "VW Golf 1.6TDI 105HP DSG\n2010\n213 000 км\nДизел\nАвтоматик\n4999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "Nissan Qashqai 1.6i 117HP FACE LIFT\n2011\n223 000 км\nБензин\nРъчна\n5799 €",
+            "href": "/listing-detail-v1/8"
+          },
+          {
+            "text": "Dacia Duster 1.5DCI 110HP AWD E5A\n2011\n232 000 км\nДизел\nРъчна\n5799 €",
+            "href": "/listing-detail-v1/9"
+          },
+          {
+            "text": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\n2016\n155 000 км\nДизел\nАвтоматик\n9999 €",
+            "href": "/listing-detail-v1/10"
+          },
+          {
+            "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n2016\n207 000 км\nДизел\nАвтоматик\n12 399 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC\n2021\n39 000 км\nБензин\nАвтоматик\n12 781 €",
+            "href": "/listing-detail-v1/12"
+          },
+          {
+            "text": "BMW X3 2.0 X-Drive 184HP\n2014\n249 000 км\nДизел\nАвтоматик\n12 526 €",
+            "href": "/listing-detail-v1/13"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\n2023\n147 000 км\nДизел\nАвтоматик\n24 999 €",
+            "href": "/listing-detail-v1/14"
+          },
+          {
+            "text": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\n2016\n165 000 км\nДизел\nАвтоматик\n21 999 €",
+            "href": "/listing-detail-v1/15"
+          },
+          {
+            "text": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\n2016\n218 000 км\nДизел\nАвтоматик\n15 999 €",
+            "href": "/listing-detail-v1/16"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/listing-detail-v1/1",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Ford Focus 1.6D 115HP — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Получете реална оферта",
+            "href": "/contact?topic=leasing&vehicle=Ford%20Focus%201.6D%20115HP"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n3799 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "VW Golf 1.6TDI 105HP DSG\n4999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n12 399 €",
+            "href": "/listing-detail-v1/11"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Контакти — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Контакти и адрес",
+            "href": "#contact-intent"
+          },
+          {
+            "text": "Обадете се ·\n0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Адрес\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Посещения\nЗа работно време и оглед се обадете предварително.",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Телефон\n0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/about-us",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Попитайте за внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Обсъдете лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Аутомаркет Варна — Употребявани автомобили в Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте колекцията",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Към автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продажба или бартер",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Седан",
+            "href": "/listing-grid?body=Sedan"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/listing-grid?body=Hatchback"
+          },
+          {
+            "text": "Пикап",
+            "href": "/listing-grid?body=Pickup%20Truck"
+          },
+          {
+            "text": "SUV",
+            "href": "/listing-grid?body=SUV"
+          },
+          {
+            "text": "Кросоувър",
+            "href": "/listing-grid?body=Crossover"
+          },
+          {
+            "text": "Миниван",
+            "href": "/listing-grid?body=Minivan"
+          },
+          {
+            "text": "Комби",
+            "href": "/listing-grid?body=Wagon"
+          },
+          {
+            "text": "Кабриолет",
+            "href": "/listing-grid?body=Convertible"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "249 000 км\n2014\n\nКомби\n\nFord Focus 1.6D 115HP\nДизел\nРъчна\n5112 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "208 000 км\n2006\n\nХечбек\n\nOpel Astra 1.4i 90HP\nБензин\nРъчна\n2555,95 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "165 000 км\n2009\n\nХечбек\n\nOpel Corsa 1.2i 80HP GPL\nБензин\nРъчна\n2999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "227 000 км\n2012\n\nХечбек\n\nFord Fiesta 1.25i 82HP FACE LIFT\nБензин\nРъчна\n3799 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Ford",
+            "href": "/listing-grid?make=Ford"
+          },
+          {
+            "text": "Opel",
+            "href": "/listing-grid?make=Opel"
+          },
+          {
+            "text": "Honda",
+            "href": "/listing-grid?make=Honda"
+          },
+          {
+            "text": "VW",
+            "href": "/listing-grid?make=VW"
+          },
+          {
+            "text": "Mazda",
+            "href": "/listing-grid?make=Mazda"
+          },
+          {
+            "text": "BMW",
+            "href": "/listing-grid?make=BMW"
+          },
+          {
+            "text": "Audi",
+            "href": "/listing-grid?make=Audi"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/listing-grid?make=Mercedes-Benz"
+          },
+          {
+            "text": "Вижте всички статии",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.",
+            "href": "/blog"
+          },
+          {
+            "text": "Внос по заявка",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заявете внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "Снимки и детайли",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "Снимки и детайли",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Снимки и детайли",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Вижте колекцията",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Към автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продажба или бартер",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос по заявка",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заявете внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/listing-grid",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Налични автомобили — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "249 000 км\n2014\n\nКомби\n\nFord Focus 1.6D 115HP\nДизел\nРъчна\n5112 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "208 000 км\n2006\n\nХечбек\n\nOpel Astra 1.4i 90HP\nБензин\nРъчна\n2555,95 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "165 000 км\n2009\n\nХечбек\n\nOpel Corsa 1.2i 80HP GPL\nБензин\nРъчна\n2999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "227 000 км\n2012\n\nХечбек\n\nFord Fiesta 1.25i 82HP FACE LIFT\nБензин\nРъчна\n3799 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "197 000 км\n2009\n\nХечбек\n\nHonda Jazz 1.4 I-VTEC 99HP FACE LIFT\nБензин\nРъчна\n3885,31 €",
+            "href": "/listing-detail-v1/5"
+          },
+          {
+            "text": "156 000 км\n2012\n\nМиниван\n\nOpel Meriva 1.4 TURBO 120HP GPL\nБензин\nРъчна\n4499 €",
+            "href": "/listing-detail-v1/6"
+          },
+          {
+            "text": "213 000 км\n2010\n\nКомби\n\nVW Golf 1.6TDI 105HP DSG\nДизел\nАвтоматик\n4999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "223 000 км\n2011\n\nSUV\n\nNissan Qashqai 1.6i 117HP FACE LIFT\nБензин\nРъчна\n5799 €",
+            "href": "/listing-detail-v1/8"
+          },
+          {
+            "text": "232 000 км\n2011\n\nSUV\n\nDacia Duster 1.5DCI 110HP AWD E5A\nДизел\nРъчна\n5799 €",
+            "href": "/listing-detail-v1/9"
+          },
+          {
+            "text": "155 000 км\n2016\n\nSUV\n\nMazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\nДизел\nАвтоматик\n9999 €",
+            "href": "/listing-detail-v1/10"
+          },
+          {
+            "text": "207 000 км\n2016\n\nКомби\n\nVW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\nДизел\nАвтоматик\n12 399 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "39 000 км\n2021\n\nХечбек\n\nSuzuki Swift 1.2 HYBRID 83HP AUTOMATIC\nБензин\nАвтоматик\n12 781 €",
+            "href": "/listing-detail-v1/12"
+          },
+          {
+            "text": "249 000 км\n2014\n\nSUV\n\nBMW X3 2.0 X-Drive 184HP\nДизел\nАвтоматик\n12 526 €",
+            "href": "/listing-detail-v1/13"
+          },
+          {
+            "text": "147 000 км\n2023\n\nSUV\n\nVW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\nДизел\nАвтоматик\n24 999 €",
+            "href": "/listing-detail-v1/14"
+          },
+          {
+            "text": "165 000 км\n2016\n\nSUV\n\nMercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\nДизел\nАвтоматик\n21 999 €",
+            "href": "/listing-detail-v1/15"
+          },
+          {
+            "text": "218 000 км\n2016\n\nКомби\n\nAudi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\nДизел\nАвтоматик\n15 999 €",
+            "href": "/listing-detail-v1/16"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Внос по заявка\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/listing-detail-v1/1",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Ford Focus 1.6D 115HP — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Назад",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Получете реална оферта",
+            "href": "/contact?topic=leasing&vehicle=Ford%20Focus%201.6D%20115HP"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n3799 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "VW Golf 1.6TDI 105HP DSG\n4999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n12 399 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Внос по заявка\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Контакти — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Внос по заявка\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/about-us",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас — Аутомаркет Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Попитайте за внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Обсъдете лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Внос по заявка\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "Ford",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6656/listing-grid?q=Ford",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/listing-detail-v1/1",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiryHref": "/contact?topic=inspection",
+        "enquiry": true,
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "Ford",
+        "beforeCount": 16,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6656/listing-grid?make=Ford",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/listing-detail-v1/1",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiryHref": "/contact",
+        "enquiry": true,
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "auto-best",
+      "Project": "J:\\cars\\clients\\automarket-varna\\auto-best",
+      "PID": 77508,
+      "Port": 6656,
+      "Url": "http://127.0.0.1:6656",
+      "Stdout": "J:\\cars\\runtime\\auto-best-6656-20260908-012050.out.log",
+      "Stderr": "J:\\cars\\runtime\\auto-best-6656-20260908-012050.err.log",
+      "Status": "started-not-yet-browser-verified",
+      "status": "stopped-after-verification"
+    },
+    "pass": true,
+    "frameworkEvidence": [
+      {
+        "path": "J:/cars/clients/automarket-varna/evidence/auto-best-validate.log",
+        "modifiedAt": "2026-09-06T22:05:25.540Z"
+      }
+    ]
+  },
+  {
+    "client": "automarket-varna",
+    "name": "Аутомаркет Варна",
+    "template": "carwow",
+    "port": 6658,
+    "startedAt": "2026-09-08T02:01:51.316Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "counter-scroll daynight-home-page daynight-page-home-header is_light",
+        "landmarks": [
+          {
+            "tag": "DIV",
+            "class": "mobile-home svelte-lqo9i2",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 2670.125
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "mh-hero svelte-lqo9i2",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 244
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-lqo9i2",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 230,
+              "width": 385,
+              "height": 1964.359375
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Аутомаркет Варна Варна - проверени автомобили и бърз контакт",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Всички 16 коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory?transmission=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "До 10 000 EUR\n10 коли",
+            "href": "/inventory?price=under-10000"
+          },
+          {
+            "text": "До 20 000 EUR\n14 коли",
+            "href": "/inventory?price=under-20000"
+          },
+          {
+            "text": "До 30 000 EUR\n16 коли",
+            "href": "/inventory?price=under-30000"
+          },
+          {
+            "text": "До 50 000 EUR\n16 коли",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "Над 50 000 EUR\n0 коли",
+            "href": "/inventory?price=over-50000"
+          },
+          {
+            "text": "Без бюджет\nВсички 16 коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "BMW\n1 автомобил",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Mercedes\nВнос по заявка",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "Audi\n1 автомобил",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Porsche\nВнос по заявка",
+            "href": "/inventory?brand=Porsche"
+          },
+          {
+            "text": "Mazda\n1 автомобил",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Honda\n1 автомобил",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Toyota\nВнос по заявка",
+            "href": "/inventory?brand=Toyota"
+          },
+          {
+            "text": "Volvo\nВнос по заявка",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Ford\n2 автомобила",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Hyundai\nВнос по заявка",
+            "href": "/inventory?brand=Hyundai"
+          },
+          {
+            "text": "Tesla\nВнос по заявка",
+            "href": "/inventory?brand=Tesla"
+          },
+          {
+            "text": "Всички марки",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Джип\n6 коли",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Хечбек\n5 коли",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Комби\n4 коли",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/61566304063141/"
+          },
+          {
+            "text": "",
+            "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+          },
+          {
+            "text": "",
+            "href": "https://automarket.mobile.bg/"
+          },
+          {
+            "text": "0886 424 400\nОбаждане",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 2687
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Автомобили в наличност | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Публикувана обява\nOpel Astra 1.4i\n2555,95 €\nУсловия по запитване\n208 000 км\n2006\nБензин\nРъчна",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "Публикувана обява\nOpel Corsa 1.2i\n2999 €\nУсловия по запитване\n165 000 км\n2009\nБензин\nРъчна",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "Публикувана обява\nFord Fiesta 1.25i\n3799 €\nУсловия по запитване\n227 000 км\n2012\nБензин\nРъчна",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Публикувана обява\nHonda Jazz 1.4\n3885,31 €\nУсловия по запитване\n197 000 км\n2009\nБензин\nРъчна",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "Публикувана обява\nOpel Meriva 1.4\n4499 €\nУсловия по запитване\n156 000 км\n2012\nБензин\nРъчна",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "Публикувана обява\nVW Golf 1.6TDI\n4999 €\nУсловия по запитване\n213 000 км\n2010\nДизел\nАвтоматик",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "Публикувана обява\nFord Focus 1.6D\n5112 €\nУсловия по запитване\n249 000 км\n2014\nДизел\nРъчна",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "Публикувана обява\nNissan Qashqai 1.6i\n5799 €\nУсловия по запитване\n223 000 км\n2011\nБензин\nРъчна",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "Публикувана обява\nDacia Duster 1.5DCI\n5799 €\nУсловия по запитване\n232 000 км\n2011\nДизел\nРъчна",
+            "href": "/inventory/dacia-duster-1-5dci-477562"
+          },
+          {
+            "text": "Публикувана обява\nMazda CX-3 1.5D\n9999 €\nУсловия по запитване\n155 000 км\n2016\nДизел\nАвтоматик",
+            "href": "/inventory/mazda-cx-3-1-5d-688076"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 2.0TDI\n12 399 €\nУсловия по запитване\n207 000 км\n2016\nДизел\nАвтоматик",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "Публикувана обява\nBMW X3\n12 526 €\nУсловия по запитване\n249 000 км\n2014\nДизел\nАвтоматик",
+            "href": "/inventory/bmw-x3-233954"
+          },
+          {
+            "text": "Публикувана обява\nSuzuki Swift 1.2\n12 781 €\nУсловия по запитване\n39 000 км\n2021\nБензин\nАвтоматик",
+            "href": "/inventory/suzuki-swift-1-2-900410"
+          },
+          {
+            "text": "Публикувана обява\nAudi A4\n15 999 €\nУсловия по запитване\n218 000 км\n2016\nДизел\nАвтоматик",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "Публикувана обява\nMercedes-Benz GLC\n21 999 €\nУсловия по запитване\n165 000 км\n2016\nДизел\nАвтоматик",
+            "href": "/inventory/mercedes-benz-glc-144582"
+          },
+          {
+            "text": "Публикувана обява\nVW Tiguan 2.0TDI\n24 999 €\nУсловия по запитване\n147 000 км\n2023\nДизел\nАвтоматик",
+            "href": "/inventory/vw-tiguan-2-0tdi-828599"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory/opel-astra-1-4i-555032",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "mobile-detail svelte-pltl0v",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 900
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "mobile-detail-sheet__head svelte-pltl0v",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 14,
+              "y": 439.6648864746094,
+              "width": 357,
+              "height": 62
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Opel Astra 1.4i 2006 г., Бензин, 208 000 км, Публикувана обява | Аутомаркет Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Viber",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Аутомаркет Варна\nАутомаркет Варна, Варна, България",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "mobile-contact-hero svelte-1hmsaaa",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 250.71875
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-1hmsaaa",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 250.71875,
+              "width": 385,
+              "height": 1036.328125
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Контакти | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "КОЛИ",
+            "href": "/inventory"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/about",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "mobile-about-hero svelte-ddok02",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 250.71875
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-ddok02",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 250.71875,
+              "width": 385,
+              "height": 1380.984375
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "За нас | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "ВСИЧКИ",
+            "href": "/team"
+          },
+          {
+            "text": "Автомобили\nКонтакт с Аутомаркет Варна",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "Бартер\nКонтакт с Аутомаркет Варна",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "Регистрация и лизинг\nКонтакт с Аутомаркет Варна",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/financing",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "mobile-financing-hero svelte-p4z26y",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 250.71875
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-p4z26y",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 250.71875,
+              "width": 385,
+              "height": 1267.5625
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-u36ghs",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Финансиране | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400",
+          "tel:0886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "counter-scroll daynight-home-page daynight-page-home-header is_light",
+        "landmarks": [
+          {
+            "tag": "DIV",
+            "class": "daynight-home-shell daynight-home-shell--original svelte-ixawm0",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 4643.625
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-ixawm0",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 4110.625
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Аутомаркет Варна Варна - проверени автомобили и бърз контакт",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=SUV"
+          },
+          {
+            "text": "Комби",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "До 10 000 EUR",
+            "href": "/inventory?price=under-10000"
+          },
+          {
+            "text": "До 20 000 EUR",
+            "href": "/inventory?price=under-20000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "Ford Focus 1.6D",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "Opel Astra 1.4i",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "Opel Corsa 1.2i",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Ford Fiesta 1.25i",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "Honda Jazz 1.4",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "Opel Meriva 1.4",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "VW Golf 1.6TDI",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "Nissan Qashqai 1.6i",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Виж всички 16 автомобила",
+            "href": "/inventory"
+          },
+          {
+            "text": "Купи автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Разгледай автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Продай автомобил",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Всички типове",
+            "href": "/inventory"
+          },
+          {
+            "text": "Комби\n\n4 автомобила",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Хечбек\n\n5 автомобила",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Всички марки",
+            "href": "/inventory"
+          },
+          {
+            "text": "BMW\n\n1 автомобил",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Mercedes\n\n1 автомобил",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "Audi\n\n1 автомобил",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Honda\n\n1 автомобил",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Toyota\n\nВиж марката",
+            "href": "/inventory?brand=Toyota"
+          },
+          {
+            "text": "Volvo\n\nВиж марката",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Ford\n\n2 автомобила",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Hyundai\n\nВиж марката",
+            "href": "/inventory?brand=Hyundai"
+          },
+          {
+            "text": "Kia\n\nВиж марката",
+            "href": "/inventory?brand=Kia"
+          },
+          {
+            "text": "Mazda\n\n1 автомобил",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Ferrari\n\nВиж марката",
+            "href": "/inventory?brand=Ferrari"
+          },
+          {
+            "text": "Tesla\n\nВиж марката",
+            "href": "/inventory?brand=Tesla"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/financing"
+          },
+          {
+            "text": "Всички обяви",
+            "href": "https://automarket.mobile.bg/"
+          },
+          {
+            "text": "",
+            "href": "https://automarket.mobile.bg/obiava-11785576029711434-ford-focus-1-6d-115hp"
+          },
+          {
+            "text": "",
+            "href": "https://automarket.mobile.bg/obiava-11714813323555032-opel-astra-1-4i-90hp"
+          },
+          {
+            "text": "",
+            "href": "https://automarket.mobile.bg/obiava-11776340911802527-opel-corsa-1-2i-80hp-gpl"
+          },
+          {
+            "text": "Виж всички отзиви",
+            "href": "/reviews"
+          },
+          {
+            "text": "Внос на употребявани автомобили от ЕС и доставка по поръчка.\n\nПродажба на употребявани автомобили\n\nИнформация от публикуваните обяви",
+            "href": "/reviews"
+          },
+          {
+            "text": "Обсъдете замяна на автомобила си срещу доплащане.\n\nВнос от ЕС и доставка по поръчка\n\nИнформация от публикуваните обяви",
+            "href": "/reviews"
+          },
+          {
+            "text": "Съдействие при регистрация в КАТ и транзитни номера.\n\nБартер с доплащане\n\nИнформация от публикуваните обяви",
+            "href": "/reviews"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "inventory-refined pb-[100px] svelte-2pubfh",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 1869.390625
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Автомобили в наличност | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "Ван",
+            "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+          },
+          {
+            "text": "Налични",
+            "href": "/inventory?availability=available"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "До 50 000 EUR",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "До 100 000 км",
+            "href": "/inventory?mileage=under-100000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "Ford Focus 1.6D",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-focus-1-6d-711434"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "Opel Astra 1.4i",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-astra-1-4i-555032"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "Opel Corsa 1.2i",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-corsa-1-2i-802527"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Ford Fiesta 1.25i",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "Honda Jazz 1.4",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "",
+            "href": "/inventory/honda-jazz-1-4-417474"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "Opel Meriva 1.4",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-meriva-1-4-658789"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "VW Golf 1.6TDI",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "Nissan Qashqai 1.6i",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-6i-932817"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-duster-1-5dci-477562"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/dacia-duster-1-5dci-477562"
+          },
+          {
+            "text": "Dacia Duster 1.5DCI",
+            "href": "/inventory/dacia-duster-1-5dci-477562"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-duster-1-5dci-477562"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mazda-cx-3-1-5d-688076"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/mazda-cx-3-1-5d-688076"
+          },
+          {
+            "text": "Mazda CX-3 1.5D",
+            "href": "/inventory/mazda-cx-3-1-5d-688076"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mazda-cx-3-1-5d-688076"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "VW Passat 2.0TDI",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "",
+            "href": "/inventory/suzuki-swift-1-2-900410"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/suzuki-swift-1-2-900410"
+          },
+          {
+            "text": "Suzuki Swift 1.2",
+            "href": "/inventory/suzuki-swift-1-2-900410"
+          },
+          {
+            "text": "",
+            "href": "/inventory/suzuki-swift-1-2-900410"
+          },
+          {
+            "text": "",
+            "href": "/inventory/bmw-x3-233954"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/bmw-x3-233954"
+          },
+          {
+            "text": "BMW X3",
+            "href": "/inventory/bmw-x3-233954"
+          },
+          {
+            "text": "",
+            "href": "/inventory/bmw-x3-233954"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-828599"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-tiguan-2-0tdi-828599"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI",
+            "href": "/inventory/vw-tiguan-2-0tdi-828599"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-828599"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-glc-144582"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/mercedes-benz-glc-144582"
+          },
+          {
+            "text": "Mercedes-Benz GLC",
+            "href": "/inventory/mercedes-benz-glc-144582"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-glc-144582"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "Audi A4",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory/ford-focus-1-6d-711434",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Ford Focus 1.6D 2014 г., Дизел, 249 000 км, Публикувана обява | Аутомаркет Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886424400",
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Назад",
+            "href": "/inventory"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "Заяви видео преглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Заяви още снимки",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж локация",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Виж информацията",
+            "href": "/reviews"
+          },
+          {
+            "text": "Изпратете отзив",
+            "href": "/contact?intent=review"
+          },
+          {
+            "text": "",
+            "href": "/terms"
+          },
+          {
+            "text": "Аутомаркет Варна",
+            "href": "/about/daynight-auto-plovdiv"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Виж локация",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Обади се за оглед",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Viber чат",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Споразумение с потребителите.",
+            "href": "/terms"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "VW Golf 1.6TDI",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-6tdi-646848"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "VW Passat 2.0TDI",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-990623"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "Audi A4",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a4-495216"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "Ford Fiesta 1.25i",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-fiesta-1-25i-735625"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-1y5r016",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 1574.546875
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Контакти | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact#contact-form"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Виж карта",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Отвори в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/about",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "about-page svelte-4cyxiw",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 2557.921875
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "За нас | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886424400",
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Виж автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Виж екипа",
+            "href": "/team"
+          },
+          {
+            "text": "",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "Бартер",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "Документи",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/team/klientski-zapitvania"
+          },
+          {
+            "text": "Огледи",
+            "href": "/team/klientski-zapitvania"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "Свържи се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Chevrolet",
+            "href": "/inventory?brand=Chevrolet"
+          },
+          {
+            "text": "Chrysler",
+            "href": "/inventory?brand=Chrysler"
+          },
+          {
+            "text": "Citroen",
+            "href": "/inventory?brand=Citroen"
+          },
+          {
+            "text": "Ford",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Honda",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Jaguar",
+            "href": "/inventory?brand=Jaguar"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/inventory?brand=Land%20Rover"
+          },
+          {
+            "text": "Mazda",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Opel",
+            "href": "/inventory?brand=Opel"
+          },
+          {
+            "text": "Peugeot",
+            "href": "/inventory?brand=Peugeot"
+          },
+          {
+            "text": "Porsche",
+            "href": "/inventory?brand=Porsche"
+          },
+          {
+            "text": "Skoda",
+            "href": "/inventory?brand=Skoda"
+          },
+          {
+            "text": "VW",
+            "href": "/inventory?brand=VW"
+          },
+          {
+            "text": "Volvo",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продажба и бартер\n\nИзпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.\n\nПродай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Документи и финансиране\n\nСъдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.\n\nРазгледай услугите",
+            "href": "/services"
+          },
+          {
+            "text": "Уговори оглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Отвори маршрута",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/financing",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-u36ghs",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 3630.703125
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Финансиране | Аутомаркет Варна Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Владислав Варненчик, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?intent=financing"
+          },
+          {
+            "text": "Търсете според месечния бюджет",
+            "href": "/calculator"
+          },
+          {
+            "text": "Изберете подходяща оферта",
+            "href": "/inventory"
+          },
+          {
+            "text": "Аутомаркет Варна\nАвгуст 2025\nСЪВЕТИ\n\nКак да купим употребяван автомобил без риск\n\nПреглед, история и документи — стъпките, които спестяват скъпи грешки при покупка...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "Аутомаркет Варна\nАвгуст 2025\nФИНАНСИРАНЕ\n\nЛизинг или разсрочено плащане — кое е за вас?\n\nСравнение на вариантите за финансиране според бюджет, месечна вноска и срок...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "Аутомаркет Варна\nАвгуст 2025\nПОЛЕЗНО\n\nБартер при покупка: как се оценява автомобилът ви\n\nКакво гледа екипът при оценката и как бартерът намалява крайната сума за плащане...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Услуги и информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:0886424400"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "Opel",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6658/inventory",
+        "afterCount": 3,
+        "search": true,
+        "detailHref": "/inventory/opel-astra-1-4i-555032",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "Ford",
+        "beforeCount": 17,
+        "menu": "No visible menu button at this width",
+        "searchUrl": "http://127.0.0.1:6658/inventory?q=Ford",
+        "afterCount": 9,
+        "search": true,
+        "detailHref": "/inventory/ford-focus-1-6d-711434",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiryHref": "/contact",
+        "enquiry": true,
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "carwow",
+      "Project": "J:\\cars\\clients\\automarket-varna\\carwow",
+      "PID": 62136,
+      "Port": 6658,
+      "Url": "http://127.0.0.1:6658",
+      "Stdout": "J:\\cars\\runtime\\carwow-6658-20260908-050156.out.log",
+      "Stderr": "J:\\cars\\runtime\\carwow-6658-20260908-050156.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true,
+    "frameworkEvidence": [
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/carwow-check.log",
+        "modifiedAt": "2026-09-08T01:49:02.686Z"
+      },
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/carwow-build.log",
+        "modifiedAt": "2026-09-08T01:49:34.346Z"
+      },
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/carwow-contact-copy-check.log",
+        "modifiedAt": "2026-09-08T02:12:31.825Z"
+      }
+    ],
+    "finalContactCopy": {
+      "path": "J:/cars/clients/automarket-varna/qa-final/carwow-final-contact-copy.json",
+      "detail": "/inventory/opel-astra-1-4i-555032",
+      "errors": [],
+      "homeBudgets": [
+        {
+          "value": "under-10000",
+          "count": 10
+        },
+        {
+          "value": "under-20000",
+          "count": 14
+        },
+        {
+          "value": "under-30000",
+          "count": 16
+        },
+        {
+          "value": "under-50000",
+          "count": 16
+        },
+        {
+          "value": "over-50000",
+          "count": 0
+        }
+      ],
+      "homeBudgetPass": true,
+      "priceFilterCount": 14,
+      "priceFilterExpected": 14,
+      "mileageFilterCount": 1,
+      "mileageFilterExpected": 1,
+      "numericPass": true,
+      "phoneLabels": 2,
+      "viberLabels": 0,
+      "unsupportedServices": 0,
+      "mobileGalleryChanged": true,
+      "pass": true
+    },
+    "numericStockProof": {
+      "path": "J:/cars/clients/automarket-varna/qa-final/numeric-stock-proof.json",
+      "checkedAt": "2026-09-08T03:15:35.073Z",
+      "module": "carwow/src/lib/data/daynight-vehicles.ts",
+      "stockCount": 16,
+      "vehicleCount": 16,
+      "records": [
+        {
+          "slug": "ford-focus-1-6d-711434",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11785576029711434-ford-focus-1-6d-115hp",
+          "price": 5112,
+          "mileage": 249000,
+          "stockPrice": 5112,
+          "stockMileage": 249000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "opel-astra-1-4i-555032",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11714813323555032-opel-astra-1-4i-90hp",
+          "price": 2555.95,
+          "mileage": 208000,
+          "stockPrice": 2555.95,
+          "stockMileage": 208000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "opel-corsa-1-2i-802527",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11776340911802527-opel-corsa-1-2i-80hp-gpl",
+          "price": 2999,
+          "mileage": 165000,
+          "stockPrice": 2999,
+          "stockMileage": 165000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "ford-fiesta-1-25i-735625",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11749035353735625-ford-fiesta-1-25i-82hp-face-lift",
+          "price": 3799,
+          "mileage": 227000,
+          "stockPrice": 3799,
+          "stockMileage": 227000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "honda-jazz-1-4-417474",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11646385836417474-honda-jazz-1-4-i-vtec-99hp-face-lift",
+          "price": 3885.31,
+          "mileage": 197000,
+          "stockPrice": 3885.31,
+          "stockMileage": 197000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "opel-meriva-1-4-658789",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11730904111658789-opel-meriva-1-4-turbo-120hp-gpl",
+          "price": 4499,
+          "mileage": 156000,
+          "stockPrice": 4499,
+          "stockMileage": 156000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "vw-golf-1-6tdi-646848",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11664339654646848-vw-golf-1-6tdi-105hp-dsg",
+          "price": 4999,
+          "mileage": 213000,
+          "stockPrice": 4999,
+          "stockMileage": 213000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "nissan-qashqai-1-6i-932817",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-21702843989932817-nissan-qashqai-1-6i-117hp-face-lift",
+          "price": 5799,
+          "mileage": 223000,
+          "stockPrice": 5799,
+          "stockMileage": 223000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "dacia-duster-1-5dci-477562",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-21777122320477562-dacia-duster-1-5dci-110hp-awd-e5a",
+          "price": 5799,
+          "mileage": 232000,
+          "stockPrice": 5799,
+          "stockMileage": 232000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "mazda-cx-3-1-5d-688076",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-21777123440688076-mazda-cx-3-1-5d-skyactiv-105hp-awd-auto",
+          "price": 9999,
+          "mileage": 155000,
+          "stockPrice": 9999,
+          "stockMileage": 155000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "vw-passat-2-0tdi-990623",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11764611602990623-vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic",
+          "price": 12399,
+          "mileage": 207000,
+          "stockPrice": 12399,
+          "stockMileage": 207000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "suzuki-swift-1-2-900410",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11770373711900410-suzuki-swift-1-2-hybrid-83hp-automatic",
+          "price": 12781,
+          "mileage": 39000,
+          "stockPrice": 12781,
+          "stockMileage": 39000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "bmw-x3-233954",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-21732197261233954-bmw-x3-2-0-x-drive-184hp",
+          "price": 12526,
+          "mileage": 249000,
+          "stockPrice": 12526,
+          "stockMileage": 249000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "vw-tiguan-2-0tdi-828599",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-21781689983828599-vw-tiguan-2-0tdi-200hp-allspace-4-motion",
+          "price": 24999,
+          "mileage": 147000,
+          "stockPrice": 24999,
+          "stockMileage": 147000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "mercedes-benz-glc-144582",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-21784142258144582-mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi",
+          "price": 21999,
+          "mileage": 165000,
+          "stockPrice": 21999,
+          "stockMileage": 165000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "audi-a4-495216",
+          "sourceUrl": "https://automarket.mobile.bg/obiava-11750340593495216-audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital",
+          "price": 15999,
+          "mileage": 218000,
+          "stockPrice": 15999,
+          "stockMileage": 218000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        }
+      ],
+      "budgetCounts": [
+        {
+          "value": "under-10000",
+          "actual": 10,
+          "expected": 10
+        },
+        {
+          "value": "under-20000",
+          "actual": 14,
+          "expected": 14
+        },
+        {
+          "value": "under-30000",
+          "actual": 16,
+          "expected": 16
+        },
+        {
+          "value": "under-50000",
+          "actual": 16,
+          "expected": 16
+        },
+        {
+          "value": "over-50000",
+          "actual": 0,
+          "expected": 0
+        }
+      ],
+      "mileageCounts": [
+        {
+          "value": "under-50000",
+          "actual": 1,
+          "expected": 1
+        },
+        {
+          "value": "under-100000",
+          "actual": 1,
+          "expected": 1
+        },
+        {
+          "value": "under-150000",
+          "actual": 2,
+          "expected": 2
+        },
+        {
+          "value": "under-200000",
+          "actual": 7,
+          "expected": 7
+        }
+      ],
+      "priceComparison": "Runtime EUR values compared to source snapshot within 0.51 EUR to allow retained whole-EUR snapshot rounding; exact values recorded.",
+      "pass": true
+    }
+  },
+  {
+    "client": "automarket-varna",
+    "name": "Аутомаркет Варна",
+    "template": "modern",
+    "port": 6657,
+    "startedAt": "2026-09-08T02:10:11.001Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "min-h-[100dvh] bg-background pb-[calc(5rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 375,
+              "height": 2520
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Автомобили от Аутомаркет Варна | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11785576029711434"
+          },
+          {
+            "text": "Ford Focus 1.6D 115HP\n\n5 112 €\n\n2014\n249 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/automarket-11785576029711434"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11714813323555032"
+          },
+          {
+            "text": "Opel Astra 1.4i 90HP\n\n2 556 €\n\n2006\n208 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11714813323555032"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11776340911802527"
+          },
+          {
+            "text": "Opel Corsa 1.2i 80HP GPL\n\n2 999 €\n\n2009\n165 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11776340911802527"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11749035353735625"
+          },
+          {
+            "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n\n3 799 €\n\n2012\n227 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11749035353735625"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11646385836417474"
+          },
+          {
+            "text": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT\n\n3 885 €\n\n2009\n197 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11646385836417474"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11730904111658789"
+          },
+          {
+            "text": "Opel Meriva 1.4 TURBO 120HP GPL\n\n4 499 €\n\n2012\n156 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11730904111658789"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11664339654646848"
+          },
+          {
+            "text": "VW Golf 1.6TDI 105HP DSG\n\n4 999 €\n\n2010\n213 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-11664339654646848"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21702843989932817"
+          },
+          {
+            "text": "Nissan Qashqai 1.6i 117HP FACE LIFT\n\n5 799 €\n\n2011\n223 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-21702843989932817"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21777122320477562"
+          },
+          {
+            "text": "Dacia Duster 1.5DCI 110HP AWD E5A\n\n5 799 €\n\n2011\n232 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/automarket-21777122320477562"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21777123440688076"
+          },
+          {
+            "text": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\n\n9 999 €\n\n2016\n155 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21777123440688076"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11764611602990623"
+          },
+          {
+            "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n\n12 399 €\n\n2016\n207 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-11764611602990623"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11770373711900410"
+          },
+          {
+            "text": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC\n\n12 781 €\n\n2021\n39 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/automarket-11770373711900410"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21732197261233954"
+          },
+          {
+            "text": "BMW X3 2.0 X-Drive 184HP\n\n12 526 €\n\n2014\n249 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21732197261233954"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21781689983828599"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\n\n24 999 €\n\n2023\n147 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21781689983828599"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21784142258144582"
+          },
+          {
+            "text": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\n\n21 999 €\n\n2016\n165 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21784142258144582"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11750340593495216"
+          },
+          {
+            "text": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\n\n15 999 €\n\n2016\n218 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-11750340593495216"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true,
+        "unrequestedOffscreenLazyImages": [
+          "http://127.0.0.1:6657/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-16-1.webp&w=3840&q=75"
+        ],
+        "lazyAssetVerification": "../../lazy-asset-http-check.json",
+        "assertionCorrection": "Pending offscreen lazy assets are not broken; exact asset URLs returned HTTP 200. Original diagnostic preserved."
+      },
+      {
+        "width": 390,
+        "route": "/bg/listing/automarket-11785576029711434",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "min-h-[100dvh] bg-background text-foreground lg:pb-10 pb-[calc(6rem+env(safe-area-inset-bottom))]",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 375,
+              "height": 1678.9375
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "mb-4 hidden min-h-20 flex-wrap items-center gap-4 rounded-xl border border-border bg-card px-4 py-3 lg:flex",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Ford Focus 1.6D 115HP | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/bg/lease?vehicle=automarket-11785576029711434"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "3799 €\n\nFord Fiesta 1.25i 82HP FACE LIFT\n\n227 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/automarket-11749035353735625"
+          },
+          {
+            "text": "2556 €\n\nOpel Astra 1.4i 90HP\n\n208 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/automarket-11714813323555032"
+          },
+          {
+            "text": "2999 €\n\nOpel Corsa 1.2i 80HP GPL\n\n165 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/automarket-11776340911802527"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "hidden",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "bg-background text-zinc-950 lg:bg-[#0b0c0e] lg:text-white",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 375,
+              "height": 836
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "За нас и контакти | Аутомаркет | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Обадете ни се\n0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Посетете шоурума\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Автомобили в наличност",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос по заявка",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "hidden",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "pb-10 lg:min-h-[38rem] lg:pb-14",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 375,
+              "height": 460
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Внос на автомобил по заявка | Аутомаркет | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true,
+        "unrequestedOffscreenLazyImages": [
+          "http://127.0.0.1:6657/images/flags/us.svg",
+          "http://127.0.0.1:6657/images/flags/jp.svg",
+          "http://127.0.0.1:6657/images/flags/kr.svg"
+        ],
+        "lazyAssetVerification": "../../lazy-asset-http-check.json",
+        "assertionCorrection": "Pending offscreen lazy assets are not broken; exact asset URLs returned HTTP 200. Original diagnostic preserved."
+      },
+      {
+        "width": 1440,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "min-h-[100dvh] bg-background pb-[calc(5rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 16,
+              "width": 1425,
+              "height": 1677.625
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 24,
+              "y": 16,
+              "width": 1377,
+              "height": 76
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Автомобили от Аутомаркет Варна | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11785576029711434"
+          },
+          {
+            "text": "Ford Focus 1.6D 115HP\n\n5 112 €\n\n2014\n249 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/automarket-11785576029711434"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11714813323555032"
+          },
+          {
+            "text": "Opel Astra 1.4i 90HP\n\n2 556 €\n\n2006\n208 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11714813323555032"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11776340911802527"
+          },
+          {
+            "text": "Opel Corsa 1.2i 80HP GPL\n\n2 999 €\n\n2009\n165 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11776340911802527"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11749035353735625"
+          },
+          {
+            "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n\n3 799 €\n\n2012\n227 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11749035353735625"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11646385836417474"
+          },
+          {
+            "text": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT\n\n3 885 €\n\n2009\n197 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11646385836417474"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11730904111658789"
+          },
+          {
+            "text": "Opel Meriva 1.4 TURBO 120HP GPL\n\n4 499 €\n\n2012\n156 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-11730904111658789"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11664339654646848"
+          },
+          {
+            "text": "VW Golf 1.6TDI 105HP DSG\n\n4 999 €\n\n2010\n213 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-11664339654646848"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21702843989932817"
+          },
+          {
+            "text": "Nissan Qashqai 1.6i 117HP FACE LIFT\n\n5 799 €\n\n2011\n223 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/automarket-21702843989932817"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21777122320477562"
+          },
+          {
+            "text": "Dacia Duster 1.5DCI 110HP AWD E5A\n\n5 799 €\n\n2011\n232 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/automarket-21777122320477562"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21777123440688076"
+          },
+          {
+            "text": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\n\n9 999 €\n\n2016\n155 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21777123440688076"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11764611602990623"
+          },
+          {
+            "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n\n12 399 €\n\n2016\n207 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-11764611602990623"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11770373711900410"
+          },
+          {
+            "text": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC\n\n12 781 €\n\n2021\n39 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/automarket-11770373711900410"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21732197261233954"
+          },
+          {
+            "text": "BMW X3 2.0 X-Drive 184HP\n\n12 526 €\n\n2014\n249 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21732197261233954"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21781689983828599"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\n\n24 999 €\n\n2023\n147 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21781689983828599"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-21784142258144582"
+          },
+          {
+            "text": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\n\n21 999 €\n\n2016\n165 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-21784142258144582"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/automarket-11750340593495216"
+          },
+          {
+            "text": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\n\n15 999 €\n\n2016\n218 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/automarket-11750340593495216"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/listing/automarket-11785576029711434",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "min-h-[100dvh] bg-background text-foreground lg:pb-10 pb-[calc(6rem+env(safe-area-inset-bottom))]",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 16,
+              "width": 1425,
+              "height": 1624.75
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 24,
+              "y": 16,
+              "width": 1377,
+              "height": 76
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "mb-4 hidden min-h-20 flex-wrap items-center gap-4 rounded-xl border border-border bg-card px-4 py-3 lg:flex",
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 40,
+              "y": 128,
+              "width": 961,
+              "height": 88
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Ford Focus 1.6D 115HP | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Назад към търсенето",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "3799 €\n\nFord Fiesta 1.25i 82HP FACE LIFT\n\n227 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/automarket-11749035353735625"
+          },
+          {
+            "text": "2556 €\n\nOpel Astra 1.4i 90HP\n\n208 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/automarket-11714813323555032"
+          },
+          {
+            "text": "2999 €\n\nOpel Corsa 1.2i 80HP GPL\n\n165 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/automarket-11776340911802527"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Виж финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Варна\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, България",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 24,
+              "y": 16,
+              "width": 1377,
+              "height": 76
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "hidden",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "bg-background text-zinc-950 lg:bg-[#0b0c0e] lg:text-white",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 112,
+              "width": 1425,
+              "height": 964
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "За нас и контакти | Аутомаркет | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Вижте наличностите",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Телефон\n0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Шоурум · Владислав Варненчик\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Запитване за лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "dealer-desktop-header hidden lg:block",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 24,
+              "y": 16,
+              "width": 1377,
+              "height": 76
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "hidden",
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "pb-10 lg:min-h-[38rem] lg:pb-14",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 112,
+              "width": 1425,
+              "height": 1008
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Внос на автомобил по заявка | Аутомаркет | Аутомаркет Варна",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886424400"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Опишете автомобил",
+            "href": "/bg/imports?start=1#import-request"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          },
+          {
+            "text": "0886 424 400",
+            "href": "tel:+359886424400"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "Ford",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6657/cars?q=Ford",
+        "afterCount": 4,
+        "search": true,
+        "detailHref": "/bg/listing/automarket-11785576029711434",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "Ford",
+        "beforeCount": 16,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6657/cars?q=Ford",
+        "afterCount": 4,
+        "search": true,
+        "detailHref": "/bg/listing/automarket-11785576029711434",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "modern",
+      "Project": "J:\\cars\\clients\\automarket-varna\\modern",
+      "PID": 50192,
+      "Port": 6657,
+      "Url": "http://127.0.0.1:6657",
+      "Stdout": "J:\\cars\\runtime\\modern-6657-20260908-051014.out.log",
+      "Stderr": "J:\\cars\\runtime\\modern-6657-20260908-051014.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true,
+    "frameworkEvidence": [
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/modern-typecheck.log",
+        "modifiedAt": "2026-09-08T01:47:51.856Z"
+      },
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/modern-build.log",
+        "modifiedAt": "2026-09-08T01:48:38.293Z"
+      }
+    ]
+  }
+]

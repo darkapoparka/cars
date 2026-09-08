@@ -1,0 +1,18 @@
+{
+  "name": "ПРИСЕЛЦИ",
+  "short_name": "ПРИСЕЛЦИ",
+  "description": "ПРИСЕЛЦИ: автомобили и контакт във Варна.",
+  "lang": "bg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#176b48",
+  "icons": [
+    {
+      "src": "/assets/priselci/wordmark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

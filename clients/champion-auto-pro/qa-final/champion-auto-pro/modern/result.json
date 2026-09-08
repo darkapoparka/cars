@@ -1,0 +1,1000 @@
+{
+  "client": "champion-auto-pro",
+  "name": "Champion Auto Pro",
+  "template": "modern",
+  "port": 6632,
+  "startedAt": "2026-09-08T02:26:43.661Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили от Champion Auto Pro | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11787294758482309"
+        },
+        {
+          "text": "BMW iX 40Xdrive\n\n43 800 €\n\n2022\n28 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11787294758482309"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11787311251312869"
+        },
+        {
+          "text": "Audi A6 50TDI Quattro\n\n23 000 €\n\n2019\n176 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11787311251312869"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11784794853353090"
+        },
+        {
+          "text": "Smart Forfour 22kw.-26000км.\n\n12 900 €\n\n2021\n26 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11784794853353090"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11784640487309304"
+        },
+        {
+          "text": "Mercedes-Benz S 500 AMG Packet 63 Long\n\n27 999 €\n\n2014\n265 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/champion-11784640487309304"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11771862221224289"
+        },
+        {
+          "text": "Mercedes-Benz S 400 LONG-FULL\n\n89 999 €\n\n2023\n73 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11771862221224289"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21784732491989700"
+        },
+        {
+          "text": "Mercedes-Benz ML 350 AMG Packet\n\n15 999 €\n\n2012\n185 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-21784732491989700"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11784720940119234"
+        },
+        {
+          "text": "Audi A7 S-Line FULL\n\n35 999 €\n\n2020\n108 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11784720940119234"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11783584641538327"
+        },
+        {
+          "text": "Mercedes-Benz B 200 AMG Line\n\n17 999 €\n\n2020\n95 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11783584641538327"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21778484741555035"
+        },
+        {
+          "text": "Audi SQ7 S-Line\n\n33 000 €\n\n2017\n230 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-21778484741555035"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11758265694582686"
+        },
+        {
+          "text": "Audi Rs5 2.9TFSI V6 Quattro\n\n39 999 €\n\n2020\n182 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/champion-11758265694582686"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11773307576284789"
+        },
+        {
+          "text": "Audi E-Tron 2 X S-Line\n\n31 000 €\n\n2021\n72 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11773307576284789"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11787215050268120"
+        },
+        {
+          "text": "VW ID.5 PRO 82kw\n\n29 999 €\n\n2023\n104 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11787215050268120"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21787142969943440"
+        },
+        {
+          "text": "Toyota Highlander 60000km Газ Prins\n\n26 800 €\n\n2019\n60 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/champion-21787142969943440"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21787197677876419"
+        },
+        {
+          "text": "Mercedes-Benz EQE 300\n\n44 999 €\n\n2023\n47 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-21787197677876419"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21787200936302723"
+        },
+        {
+          "text": "Mercedes-Benz EQC 400\n\n38 800 €\n\n2021\n68 900 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-21787200936302723"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11786100747512292"
+        },
+        {
+          "text": "Renault Captur\n\n9 200 €\n\n2015\n55 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11786100747512292"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/listing/champion-11787294758482309",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW iX 40Xdrive | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за лизинг",
+          "href": "/bg/lease?vehicle=champion-11787294758482309"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "23 000 €\n\nAudi A6 50TDI Quattro\n\n176 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/champion-11787311251312869"
+        },
+        {
+          "text": "12 900 €\n\nSmart Forfour 22kw.-26000км.\n\n26 000 км · Електрически\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/champion-11784794853353090"
+        },
+        {
+          "text": "27 999 €\n\nMercedes-Benz S 500 AMG Packet 63 Long\n\n265 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/champion-11784640487309304"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас и контакти | Champion Auto Pro | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Обадете ни се\n0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Посетете шоурума\nбул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Собствен лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Внос на автомобил по заявка | Champion Auto Pro | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили от Champion Auto Pro | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11787294758482309"
+        },
+        {
+          "text": "BMW iX 40Xdrive\n\n43 800 €\n\n2022\n28 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11787294758482309"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11787311251312869"
+        },
+        {
+          "text": "Audi A6 50TDI Quattro\n\n23 000 €\n\n2019\n176 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11787311251312869"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11784794853353090"
+        },
+        {
+          "text": "Smart Forfour 22kw.-26000км.\n\n12 900 €\n\n2021\n26 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11784794853353090"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11784640487309304"
+        },
+        {
+          "text": "Mercedes-Benz S 500 AMG Packet 63 Long\n\n27 999 €\n\n2014\n265 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/champion-11784640487309304"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11771862221224289"
+        },
+        {
+          "text": "Mercedes-Benz S 400 LONG-FULL\n\n89 999 €\n\n2023\n73 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11771862221224289"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21784732491989700"
+        },
+        {
+          "text": "Mercedes-Benz ML 350 AMG Packet\n\n15 999 €\n\n2012\n185 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-21784732491989700"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11784720940119234"
+        },
+        {
+          "text": "Audi A7 S-Line FULL\n\n35 999 €\n\n2020\n108 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11784720940119234"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11783584641538327"
+        },
+        {
+          "text": "Mercedes-Benz B 200 AMG Line\n\n17 999 €\n\n2020\n95 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11783584641538327"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21778484741555035"
+        },
+        {
+          "text": "Audi SQ7 S-Line\n\n33 000 €\n\n2017\n230 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-21778484741555035"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11758265694582686"
+        },
+        {
+          "text": "Audi Rs5 2.9TFSI V6 Quattro\n\n39 999 €\n\n2020\n182 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/champion-11758265694582686"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11773307576284789"
+        },
+        {
+          "text": "Audi E-Tron 2 X S-Line\n\n31 000 €\n\n2021\n72 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11773307576284789"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11787215050268120"
+        },
+        {
+          "text": "VW ID.5 PRO 82kw\n\n29 999 €\n\n2023\n104 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-11787215050268120"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21787142969943440"
+        },
+        {
+          "text": "Toyota Highlander 60000km Газ Prins\n\n26 800 €\n\n2019\n60 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/champion-21787142969943440"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21787197677876419"
+        },
+        {
+          "text": "Mercedes-Benz EQE 300\n\n44 999 €\n\n2023\n47 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-21787197677876419"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-21787200936302723"
+        },
+        {
+          "text": "Mercedes-Benz EQC 400\n\n38 800 €\n\n2021\n68 900 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/champion-21787200936302723"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/champion-11786100747512292"
+        },
+        {
+          "text": "Renault Captur\n\n9 200 €\n\n2015\n55 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/champion-11786100747512292"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/listing/champion-11787294758482309",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW iX 40Xdrive | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Назад към търсенето",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "23 000 €\n\nAudi A6 50TDI Quattro\n\n176 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/champion-11787311251312869"
+        },
+        {
+          "text": "12 900 €\n\nSmart Forfour 22kw.-26000км.\n\n26 000 км · Електрически\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/champion-11784794853353090"
+        },
+        {
+          "text": "27 999 €\n\nMercedes-Benz S 500 AMG Packet 63 Long\n\n265 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/champion-11784640487309304"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Виж финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Варна\nбул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, България",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас и контакти | Champion Auto Pro | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Телефон\n0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Шоурум · Цар Освободител 302\nбул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Собствен лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Внос на автомобил по заявка | Champion Auto Pro | Champion Auto Pro",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Опишете автомобил",
+          "href": "/bg/imports?start=1#import-request"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6632/cars?q=BMW",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/bg/listing/champion-11787294758482309",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6632/cars?q=BMW",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/bg/listing/champion-11787294758482309",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\champion-auto-pro\\modern",
+    "PID": 23008,
+    "Port": 6632,
+    "Url": "http://127.0.0.1:6632",
+    "Stdout": "J:\\cars\\runtime\\modern-6632-20260908-052645.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6632-20260908-052645.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true
+}

@@ -1,0 +1,275 @@
+[
+  {
+    "name": "hidden-images",
+    "width": 390,
+    "images": [
+      {
+        "src": "/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+        "fetchpriority": null,
+        "loaded": true,
+        "resource": [
+          {
+            "encoded": 84112,
+            "transfer": 84412
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+        "fetchpriority": null,
+        "loaded": true,
+        "resource": [
+          {
+            "encoded": 65210,
+            "transfer": 65510
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-home-hero-v3.webp",
+        "fetchpriority": "high",
+        "loaded": true,
+        "resource": [
+          {
+            "encoded": 41178,
+            "transfer": 41478
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-collection-banner-v2.webp",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/lead/day-night-sell-banner-v2.webp",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/icon-box/car-list3.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/icon-box/car-list6.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/icon-box/car-list8.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 13861,
+            "transfer": 14161
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 65210,
+            "transfer": 65510
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/partner/partner6.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/partner/parner7.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/partner/parner8.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/partner/parner9.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/partner/parner10.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/partner/parner11.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/partner/parner12.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": []
+      },
+      {
+        "src": "/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 65210,
+            "transfer": 65510
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 84112,
+            "transfer": 84412
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 65210,
+            "transfer": 65510
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "stretched-card-hit-area",
+    "iconWidth": 32,
+    "linkHeight": 20,
+    "pseudo": {
+      "position": "absolute",
+      "inset": "0px",
+      "w": "178px",
+      "h": "144px"
+    },
+    "cardWidth": 178,
+    "cardHeight": 144
+  },
+  {
+    "name": "demo-social-affordance",
+    "width": 390,
+    "cursor": "pointer",
+    "links": 0
+  },
+  {
+    "name": "isolated-brand-change",
+    "url": "http://127.0.0.1:6461/listing-grid?make=BMW&sort=price-asc",
+    "count": 2
+  },
+  {
+    "name": "hidden-images",
+    "width": 1440,
+    "images": [
+      {
+        "src": "/assets/images/lead/day-night-urus-front-v1.webp",
+        "fetchpriority": null,
+        "loaded": true,
+        "resource": [
+          {
+            "encoded": 61626,
+            "transfer": 61926
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-home-hero-v3.webp",
+        "fetchpriority": "high",
+        "loaded": true,
+        "resource": [
+          {
+            "encoded": 41178,
+            "transfer": 41478
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-stock-01.webp",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 278312,
+            "transfer": 278612
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-stock-04.webp",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 182452,
+            "transfer": 182752
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-stock-02.webp",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 248390,
+            "transfer": 248690
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/lead/day-night-stock-06.webp",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 207938,
+            "transfer": 208238
+          }
+        ]
+      },
+      {
+        "src": "/assets/images/icon-box/car-list8.png",
+        "fetchpriority": null,
+        "loaded": false,
+        "resource": [
+          {
+            "encoded": 13861,
+            "transfer": 14161
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "demo-social-affordance",
+    "width": 1440,
+    "cursor": "pointer",
+    "links": 0
+  }
+]

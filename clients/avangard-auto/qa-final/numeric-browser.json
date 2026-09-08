@@ -1,0 +1,62 @@
+[
+  {
+    "width": 390,
+    "query": "price=under-20000",
+    "expected": 13,
+    "matches": [
+      "/inventory/peugeot-208-1-6hdi-679744",
+      "/inventory/bmw-x1-349714",
+      "/inventory/bmw-320-689299",
+      "/inventory/audi-a4-096424",
+      "/inventory/peugeot-2008-1-6hdi-415648",
+      "/inventory/kia-sportage-1-7crdi-842805",
+      "/inventory/mitsubishi-outlander-2-2di-d-228539",
+      "/inventory/nissan-qashqai-1-5dci-452600",
+      "/inventory/vw-passat-alltrack-119627",
+      "/inventory/bmw-x1-488667",
+      "/inventory/volvo-xc40-t5-220471",
+      "/inventory/volvo-xc40-2-0d-976935",
+      "/inventory/audi-q5-293800"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 390,
+    "query": "mileage=under-100000",
+    "expected": 0,
+    "matches": [],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "query": "price=under-20000",
+    "expected": 13,
+    "matches": [
+      "/inventory/vw-passat-alltrack-119627",
+      "/inventory/volvo-xc40-2-0d-976935",
+      "/inventory/volvo-xc40-t5-220471",
+      "/inventory/peugeot-208-1-6hdi-679744",
+      "/inventory/peugeot-2008-1-6hdi-415648",
+      "/inventory/nissan-qashqai-1-5dci-452600",
+      "/inventory/mitsubishi-outlander-2-2di-d-228539",
+      "/inventory/kia-sportage-1-7crdi-842805",
+      "/inventory/bmw-x1-488667",
+      "/inventory/bmw-x1-349714",
+      "/inventory/bmw-320-689299",
+      "/inventory/audi-q5-293800",
+      "/inventory/audi-a4-096424"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "query": "mileage=under-100000",
+    "expected": 0,
+    "matches": [],
+    "errors": [],
+    "pass": true
+  }
+]

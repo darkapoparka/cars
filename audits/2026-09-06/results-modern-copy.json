@@ -1,0 +1,86 @@
+[
+  {
+    "key": "modern-copy",
+    "port": 6462,
+    "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "label": "detail",
+    "timeout": 90000,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6462/bg/listing/bmw-x5-m50d-sofia-2020\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6462/bg/listing/bmw-x5-m50d-sofia-2020\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "key": "modern-copy",
+    "port": 6462,
+    "route": "/cars",
+    "label": "entry",
+    "timeout": 90000,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6462/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6462/cars\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "key": "modern-copy",
+    "port": 6462,
+    "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "label": "detail",
+    "timeout": 90000,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6462/bg/listing/bmw-x5-m50d-sofia-2020\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6462/bg/listing/bmw-x5-m50d-sofia-2020\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "key": "modern-copy",
+    "port": 6462,
+    "route": "/cars",
+    "label": "entry",
+    "timeout": 90000,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6462/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6462/cars\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "key": "modern-copy",
+    "port": 6462,
+    "route": "/bg/contact",
+    "label": "contact",
+    "timeout": 90000,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6462/bg/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6462/bg/contact\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "key": "modern-copy",
+    "port": 6462,
+    "route": "/bg/contact",
+    "label": "contact",
+    "timeout": 90000,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "failure": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6462/bg/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6462/bg/contact\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+]

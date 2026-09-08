@@ -1,0 +1,1320 @@
+{
+  "client": "automarket-varna",
+  "name": "Аутомаркет Варна",
+  "template": "modern",
+  "port": 6657,
+  "startedAt": "2026-09-08T02:00:01.350Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "MAIN",
+          "class": "min-h-[100dvh] bg-background pb-[calc(5rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2520
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "Автомобили от Аутомаркет Варна | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11785576029711434"
+        },
+        {
+          "text": "Ford Focus 1.6D 115HP\n\n5 112 €\n\n2014\n249 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/automarket-11785576029711434"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11714813323555032"
+        },
+        {
+          "text": "Opel Astra 1.4i 90HP\n\n2 556 €\n\n2006\n208 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11714813323555032"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11776340911802527"
+        },
+        {
+          "text": "Opel Corsa 1.2i 80HP GPL\n\n2 999 €\n\n2009\n165 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11776340911802527"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11749035353735625"
+        },
+        {
+          "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n\n3 799 €\n\n2012\n227 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11749035353735625"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11646385836417474"
+        },
+        {
+          "text": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT\n\n3 885 €\n\n2009\n197 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11646385836417474"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11730904111658789"
+        },
+        {
+          "text": "Opel Meriva 1.4 TURBO 120HP GPL\n\n4 499 €\n\n2012\n156 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11730904111658789"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11664339654646848"
+        },
+        {
+          "text": "VW Golf 1.6TDI 105HP DSG\n\n4 999 €\n\n2010\n213 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-11664339654646848"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21702843989932817"
+        },
+        {
+          "text": "Nissan Qashqai 1.6i 117HP FACE LIFT\n\n5 799 €\n\n2011\n223 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-21702843989932817"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21777122320477562"
+        },
+        {
+          "text": "Dacia Duster 1.5DCI 110HP AWD E5A\n\n5 799 €\n\n2011\n232 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/automarket-21777122320477562"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21777123440688076"
+        },
+        {
+          "text": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\n\n9 999 €\n\n2016\n155 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21777123440688076"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11764611602990623"
+        },
+        {
+          "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n\n12 399 €\n\n2016\n207 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-11764611602990623"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11770373711900410"
+        },
+        {
+          "text": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC\n\n12 781 €\n\n2021\n39 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/automarket-11770373711900410"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21732197261233954"
+        },
+        {
+          "text": "BMW X3 2.0 X-Drive 184HP\n\n12 526 €\n\n2014\n249 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21732197261233954"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21781689983828599"
+        },
+        {
+          "text": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\n\n24 999 €\n\n2023\n147 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21781689983828599"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21784142258144582"
+        },
+        {
+          "text": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\n\n21 999 €\n\n2016\n165 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21784142258144582"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11750340593495216"
+        },
+        {
+          "text": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\n\n15 999 €\n\n2016\n218 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-11750340593495216"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/listing/automarket-11785576029711434",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "MAIN",
+          "class": "min-h-[100dvh] bg-background text-foreground lg:pb-10 pb-[calc(6rem+env(safe-area-inset-bottom))]",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 1678.9375
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "mb-4 hidden min-h-20 flex-wrap items-center gap-4 rounded-xl border border-border bg-card px-4 py-3 lg:flex",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "Ford Focus 1.6D 115HP | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за лизинг",
+          "href": "/bg/lease?vehicle=automarket-11785576029711434"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "3799 €\n\nFord Fiesta 1.25i 82HP FACE LIFT\n\n227 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/automarket-11749035353735625"
+        },
+        {
+          "text": "2556 €\n\nOpel Astra 1.4i 90HP\n\n208 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/automarket-11714813323555032"
+        },
+        {
+          "text": "2999 €\n\nOpel Corsa 1.2i 80HP GPL\n\n165 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/automarket-11776340911802527"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "hidden",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "MAIN",
+          "class": "bg-background text-zinc-950 lg:bg-[#0b0c0e] lg:text-white",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 836
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "За нас и контакти | Аутомаркет | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Обадете ни се\n0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Посетете шоурума\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Запитване за лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "hidden",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "MAIN",
+          "class": "pb-10 lg:min-h-[38rem] lg:pb-14",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 460
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "Внос на автомобил по заявка | Аутомаркет | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <SegmentViewNode type=\"page\" pagePath=\"[locale]/c...\">\n      <SegmentTrieNode>\n      <CarsPage>\n        <CategoryMarketplacePage>\n          ...\n            <div className=\"min-w-0\">\n              <ResultToolbar>\n              <div className=\"grid items...\" data-slot=\"marketplac...\">\n                <VehicleCard>\n                <VehicleCard>\n                <VehicleCard>\n                <VehicleCard>\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Honda ...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Honda ...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Honda Jazz 1.4 I-VTEC 99HP FACE LIFT\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-05-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-05-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Opel M...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Opel M...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Opel Meriva 1.4 TURBO 120HP GPL\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-06-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-06-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж VW Gol...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж VW Gol...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"VW Golf 1.6TDI 105HP DSG\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-07-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-07-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Nissan...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Nissan...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Nissan Qashqai 1.6i 117HP FACE LIFT\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-08-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-08-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Dacia ...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Dacia ...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Dacia Duster 1.5DCI 110HP AWD E5A\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-09-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-09-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Mazda ...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Mazda ...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-10-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-10-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж VW Pas...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж VW Pas...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-11-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-11-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Suzuki...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Suzuki...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-12-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-12-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж BMW X3...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж BMW X3...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"BMW X3 2.0 X-Drive 184HP\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-13-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-13-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж VW Tig...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж VW Tig...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-14-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-14-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Merced...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Merced...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-15-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-15-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n                <VehicleCard density=\"compact\" desktopLayout=\"grid\" href=\"/bg/listin...\" listing={{id:\"automa...\", ...}} ...>\n                  <article className=\"group flex...\" data-presentation=\"discovery\">\n                    <div className=\"relative m...\" data-slot=\"vehicle-ca...\">\n                      <div>\n                      <LinkComponent aria-label=\"Виж Audi A...\" className=\"absolute i...\" href=\"/bg/listin...\">\n                        <a aria-label=\"Виж Audi A...\" className=\"absolute i...\" ref={function} onClick={function onClick} ...>\n                          <img\n                            alt=\"Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\"\n                            referrerPolicy=\"no-referrer\"\n                            fetchPriority={undefined}\n+                           loading=\"lazy\"\n-                           loading=\"eager\"\n                            width={undefined}\n                            height={undefined}\n                            decoding=\"async\"\n                            data-nimg=\"fill\"\n                            className=\"object-cover\"\n                            style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                            sizes=\"(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw\"\n                            srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-16-1.webp&w=256&q=75 256w, /_n...\"}\n                            src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-16-1.webp&w=3840&q=75\"}\n                            ref={function}\n                            onLoad={function onLoad}\n                            onError={function onError}\n                          >\n                      ...\n                    ...\n              ...\n          <Footer>\n            <footer className=\"border-for...\" data-slot=\"public-mar...\">\n              <div className=\"mx-auto w-...\">\n                <div className=\"grid gap-8...\">\n                  <div className=\"max-w-sm\">\n                    <LinkComponent>\n                      <LinkComponent aria-label=\"Аутомаркет...\" className=\"inline-fle...\" href=\"/bg\" prefetch={false}>\n                        ...\n                          <LeadSiteMark>\n                            <span className=\"relative b...\">\n                              <img\n                                alt=\"\"\n                                aria-hidden=\"true\"\n                                fetchPriority={undefined}\n+                               loading={undefined}\n-                               loading=\"eager\"\n                                width={undefined}\n                                height={undefined}\n                                decoding=\"async\"\n                                data-nimg=\"fill\"\n                                className=\"object-contain object-left\"\n                                style={{position:\"absolute\",height:\"100%\",width:\"100%\",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}\n                                sizes=\"236px\"\n                                srcSet={\"/_next/image?url=%2Fassets%2Fautomarket%2Fcover.png&w=32&q=75 32w, /_next/im...\"}\n                                src={\"/_next/image?url=%2Fassets%2Fautomarket%2Fcover.png&w=3840&q=75\"}\n                                ref={function}\n                                onLoad={function onLoad}\n                                onError={function onError}\n                              >\n                              ...\n                    ...\n                  ...\n                ...\n    ...\n"
+      ],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "MAIN",
+          "class": "min-h-[100dvh] bg-background pb-[calc(5rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 16,
+            "width": 1425,
+            "height": 1677.625
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 24,
+            "y": 16,
+            "width": 1377,
+            "height": 76
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "Автомобили от Аутомаркет Варна | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11785576029711434"
+        },
+        {
+          "text": "Ford Focus 1.6D 115HP\n\n5 112 €\n\n2014\n249 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/automarket-11785576029711434"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11714813323555032"
+        },
+        {
+          "text": "Opel Astra 1.4i 90HP\n\n2 556 €\n\n2006\n208 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11714813323555032"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11776340911802527"
+        },
+        {
+          "text": "Opel Corsa 1.2i 80HP GPL\n\n2 999 €\n\n2009\n165 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11776340911802527"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11749035353735625"
+        },
+        {
+          "text": "Ford Fiesta 1.25i 82HP FACE LIFT\n\n3 799 €\n\n2012\n227 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11749035353735625"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11646385836417474"
+        },
+        {
+          "text": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT\n\n3 885 €\n\n2009\n197 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11646385836417474"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11730904111658789"
+        },
+        {
+          "text": "Opel Meriva 1.4 TURBO 120HP GPL\n\n4 499 €\n\n2012\n156 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-11730904111658789"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11664339654646848"
+        },
+        {
+          "text": "VW Golf 1.6TDI 105HP DSG\n\n4 999 €\n\n2010\n213 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-11664339654646848"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21702843989932817"
+        },
+        {
+          "text": "Nissan Qashqai 1.6i 117HP FACE LIFT\n\n5 799 €\n\n2011\n223 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/automarket-21702843989932817"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21777122320477562"
+        },
+        {
+          "text": "Dacia Duster 1.5DCI 110HP AWD E5A\n\n5 799 €\n\n2011\n232 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/automarket-21777122320477562"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21777123440688076"
+        },
+        {
+          "text": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO\n\n9 999 €\n\n2016\n155 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21777123440688076"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11764611602990623"
+        },
+        {
+          "text": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic\n\n12 399 €\n\n2016\n207 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-11764611602990623"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11770373711900410"
+        },
+        {
+          "text": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC\n\n12 781 €\n\n2021\n39 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/automarket-11770373711900410"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21732197261233954"
+        },
+        {
+          "text": "BMW X3 2.0 X-Drive 184HP\n\n12 526 €\n\n2014\n249 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21732197261233954"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21781689983828599"
+        },
+        {
+          "text": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion\n\n24 999 €\n\n2023\n147 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21781689983828599"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-21784142258144582"
+        },
+        {
+          "text": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi\n\n21 999 €\n\n2016\n165 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-21784142258144582"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/automarket-11750340593495216"
+        },
+        {
+          "text": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL\n\n15 999 €\n\n2016\n218 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/automarket-11750340593495216"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/listing/automarket-11785576029711434",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "MAIN",
+          "class": "min-h-[100dvh] bg-background text-foreground lg:pb-10 pb-[calc(6rem+env(safe-area-inset-bottom))]",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 16,
+            "width": 1425,
+            "height": 1624.75
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 24,
+            "y": 16,
+            "width": 1377,
+            "height": 76
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "mb-4 hidden min-h-20 flex-wrap items-center gap-4 rounded-xl border border-border bg-card px-4 py-3 lg:flex",
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 40,
+            "y": 128,
+            "width": 961,
+            "height": 88
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "Ford Focus 1.6D 115HP | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "Назад към търсенето",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "3799 €\n\nFord Fiesta 1.25i 82HP FACE LIFT\n\n227 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/automarket-11749035353735625"
+        },
+        {
+          "text": "2556 €\n\nOpel Astra 1.4i 90HP\n\n208 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/automarket-11714813323555032"
+        },
+        {
+          "text": "2999 €\n\nOpel Corsa 1.2i 80HP GPL\n\n165 000 км · Бензин\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/automarket-11776340911802527"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Виж финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Варна\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, България",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 24,
+            "y": 16,
+            "width": 1377,
+            "height": 76
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "hidden",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "MAIN",
+          "class": "bg-background text-zinc-950 lg:bg-[#0b0c0e] lg:text-white",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 112,
+            "width": 1425,
+            "height": 964
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "За нас и контакти | Аутомаркет | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Телефон\n0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Шоурум · Владислав Варненчик\nбул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Запитване за лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "bodyClass": "",
+      "landmarks": [
+        {
+          "tag": "HEADER",
+          "class": "dealer-desktop-header hidden lg:block",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 24,
+            "y": 16,
+            "width": 1377,
+            "height": 76
+          }
+        },
+        {
+          "tag": "HEADER",
+          "class": "hidden",
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "tag": "MAIN",
+          "class": "pb-10 lg:min-h-[38rem] lg:pb-14",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "rect": {
+            "x": 0,
+            "y": 112,
+            "width": 1425,
+            "height": 1008
+          }
+        }
+      ],
+      "visibleContent": true,
+      "title": "Внос на автомобил по заявка | Аутомаркет | Аутомаркет Варна",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359886424400"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Опишете автомобил",
+          "href": "/bg/imports?start=1#import-request"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        },
+        {
+          "text": "0886 424 400",
+          "href": "tel:+359886424400"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Ford",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6657/cars?q=Ford",
+      "afterCount": 4,
+      "search": true,
+      "detailHref": "/bg/listing/automarket-11785576029711434",
+      "navigation": false,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "Ford",
+      "beforeCount": 16,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6657/cars",
+      "afterCount": 32,
+      "search": false,
+      "detailHref": "/bg/listing/automarket-11785576029711434",
+      "navigation": false,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": false
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\automarket-varna\\modern",
+    "PID": 67784,
+    "Port": 6657,
+    "Url": "http://127.0.0.1:6657",
+    "Stdout": "J:\\cars\\runtime\\modern-6657-20260908-050003.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6657-20260908-050003.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": false
+}

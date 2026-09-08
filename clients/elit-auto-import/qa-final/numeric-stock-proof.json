@@ -1,0 +1,224 @@
+{
+  "checkedAt": "2026-09-08T03:15:35.161Z",
+  "module": "carwow/src/lib/data/daynight-vehicles.ts",
+  "stockCount": 15,
+  "vehicleCount": 15,
+  "records": [
+    {
+      "slug": "mercedes-benz-gl-450-373192",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-21717056982373192-mercedes-benz-gl-450",
+      "price": 13500,
+      "mileage": 184000,
+      "stockPrice": 13500,
+      "stockMileage": 184000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "volvo-s60-441521",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11700571967441521-volvo-s60",
+      "price": 10890.52,
+      "mileage": 129000,
+      "stockPrice": 10890.52,
+      "stockMileage": 129000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "toyota-prius-hybrid-430878",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11529502627430878-toyota-prius-hybrid",
+      "price": 16105.69,
+      "mileage": 60950,
+      "stockPrice": 16105.69,
+      "stockMileage": 60950,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-xv-2-5-sport-4x4-383951",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11694454110383951-subaru-xv-2-5-sport-4x4",
+      "price": 27800,
+      "mileage": 200,
+      "stockPrice": 27800,
+      "stockMileage": 200,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-xv-2-0-limited-4x4-077664",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11694504370077664-subaru-xv-2-0-limited-4x4",
+      "price": 19000,
+      "mileage": 55000,
+      "stockPrice": 19000,
+      "stockMileage": 55000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-xv-2-0-premium-4x4-621839",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11752520414621839-subaru-xv-2-0-premium-4x4",
+      "price": 17500,
+      "mileage": 78400,
+      "stockPrice": 17500,
+      "stockMileage": 78400,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-xv-2-0-4-4-745199",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11671399519745199-subaru-xv-2-0-benzin-4h4",
+      "price": 17100,
+      "mileage": 36000,
+      "stockPrice": 17100,
+      "stockMileage": 36000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-xv-2-0-limited-sti-460399",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11752522269460399-subaru-xv-2-0-limited-sti",
+      "price": 13037.94,
+      "mileage": 110000,
+      "stockPrice": 13037.94,
+      "stockMileage": 110000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-outback-3-6r-limited-4-4-506266",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11690723101506266-subaru-outback-3-6r-limited-4h4",
+      "price": 25500,
+      "mileage": 19000,
+      "stockPrice": 25500,
+      "stockMileage": 19000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-outback-3-6-touring-4x4-908882",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11708792902908882-subaru-outback-3-6-touring-4x4",
+      "price": 21500,
+      "mileage": 82000,
+      "stockPrice": 21500,
+      "stockMileage": 82000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-outback-3-6-limited-4x4-517805",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11706466498517805-subaru-outback-3-6-limited-4x4",
+      "price": 21500,
+      "mileage": 48000,
+      "stockPrice": 21500,
+      "stockMileage": 48000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-legacy-2-5-limited-4x4-022696",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11693118990022696-subaru-legacy-2-5-limited-4x4",
+      "price": 13000,
+      "mileage": 94000,
+      "stockPrice": 13000,
+      "stockMileage": 94000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "subaru-legacy-2-5-4-4-039551",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11655794958039551-subaru-legacy-2-5-benzin-4h4",
+      "price": 11900,
+      "mileage": 137000,
+      "stockPrice": 11900,
+      "stockMileage": 137000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "mazda-6-2-5-skyactiv-335346",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11722966256335346-mazda-6-2-5-skyactiv",
+      "price": 11913.1,
+      "mileage": 100789,
+      "stockPrice": 11913.1,
+      "stockMileage": 100789,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "hyundai-santa-fe-240351",
+      "sourceUrl": "https://elitautoimport.mobile.bg/obiava-21691652621240351-hyundai-santa-fe",
+      "price": 14316.17,
+      "mileage": 58000,
+      "stockPrice": 14316.17,
+      "stockMileage": 58000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    }
+  ],
+  "budgetCounts": [
+    {
+      "value": "under-10000",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "value": "under-20000",
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "value": "under-30000",
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "value": "under-50000",
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "value": "over-50000",
+      "actual": 0,
+      "expected": 0
+    }
+  ],
+  "mileageCounts": [
+    {
+      "value": "under-50000",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "value": "under-100000",
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "value": "under-150000",
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "value": "under-200000",
+      "actual": 15,
+      "expected": 15
+    }
+  ],
+  "priceComparison": "Runtime EUR values compared to source snapshot within 0.51 EUR to allow retained whole-EUR snapshot rounding; exact values recorded.",
+  "pass": true
+}

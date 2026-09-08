@@ -1,0 +1,103 @@
+{
+  "mode": "dry-run",
+  "client": "asko96",
+  "plans": [
+    {
+      "template": "rencar",
+      "version": "2026.09.06-baseline",
+      "source": "J:\\cars\\templates\\rencar",
+      "destination": "J:\\cars\\clients\\asko96\\rencar",
+      "readiness": "dealer-adaptation-needed",
+      "homes": [
+        {
+          "id": "home01",
+          "route": "/"
+        },
+        {
+          "id": "home02",
+          "route": "/index-2.html"
+        },
+        {
+          "id": "home03",
+          "route": "/index-3.html"
+        },
+        {
+          "id": "home04",
+          "route": "/index-4.html"
+        },
+        {
+          "id": "home05",
+          "route": "/index-5.html"
+        }
+      ],
+      "personalization": "required",
+      "crmRegistration": "not-performed"
+    },
+    {
+      "template": "autodeal",
+      "version": "2026.09.06-baseline",
+      "source": "J:\\cars\\templates\\autodeal",
+      "destination": "J:\\cars\\clients\\asko96\\autodeal",
+      "readiness": "reference-content-candidate",
+      "homes": [
+        {
+          "id": "home01",
+          "route": "/"
+        },
+        {
+          "id": "home02",
+          "route": "/home02"
+        },
+        {
+          "id": "home03",
+          "route": "/home03"
+        },
+        {
+          "id": "home04",
+          "route": "/home04"
+        },
+        {
+          "id": "home05",
+          "route": "/home05"
+        },
+        {
+          "id": "home06",
+          "route": "/home06"
+        },
+        {
+          "id": "home07",
+          "route": "/home07"
+        },
+        {
+          "id": "home08",
+          "route": "/home08"
+        },
+        {
+          "id": "home09",
+          "route": "/home09"
+        },
+        {
+          "id": "home10",
+          "route": "/home10"
+        }
+      ],
+      "personalization": "required",
+      "crmRegistration": "not-performed"
+    },
+    {
+      "template": "modern",
+      "version": "2026.09.06-baseline",
+      "source": "J:\\cars\\templates\\modern",
+      "destination": "J:\\cars\\clients\\asko96\\modern",
+      "readiness": "source-branded-candidate",
+      "homes": [
+        {
+          "id": "main",
+          "route": "/cars"
+        }
+      ],
+      "personalization": "required",
+      "crmRegistration": "not-performed"
+    }
+  ]
+}

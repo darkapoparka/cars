@@ -1,0 +1,5 @@
+const name = 'АСКО 96';
+const shortName = 'АСКО 96';
+const city = 'София';
+const addressLine = 'бул. „Ботевградско шосе“ 300';
+export const brand = { name, shortName, city, addressLine, address: `${addressLine}, ${city}`, youtubeUrl: 'https://www.youtube.com/@asko96bulgaria', facebookUrl: 'https://www.facebook.com/p/Asko96-100050328800477/', phone: '0899 76 96 96', phoneHref: 'tel:+359899769696', email: 'askogroup@abv.bg', appointment: 'Понеделник – петък: 09:00–18:30 · Събота: 10:00–16:00 · Неделя: почивен ден', logo: '/assets/asko96/asko96-logo.png', darkLogo: '/assets/asko96/asko96-wordmark.png', mapsUrl: 'https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F', mapsEmbedUrl: 'https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed' } as const;

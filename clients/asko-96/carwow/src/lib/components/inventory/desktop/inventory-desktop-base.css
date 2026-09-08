@@ -1,0 +1,519 @@
+/* App.css (Auxero) + generic template-head base styles the native inventory
+   cards and controls used to sit on, reproduced and scoped to the native shells
+   (`.inventory-template-shell` = grid, `.inventory-map-template-shell` = half-map)
+   so the look survives `app.css` + the template head CSS being dropped from the
+   route. Values mirror the legacy cascade 1:1. The grid card overlays + sizing live
+   in inventory-desktop-template-head.css; this file is the shared listing-card shell
+   and the controls (sort dropdown, tabs, applied-filter chips). */
+
+/* ============================ Card shell ============================ */
+/* shared by the grid card (.card-box-style-1) and map card (.card-box-style-9) */
+.inventory-template-shell .card-box,
+.inventory-map-template-shell .card-box {
+	border-radius: 16px;
+	height: fit-content;
+	position: relative;
+}
+
+.inventory-template-shell .card-box .image,
+.inventory-map-template-shell .card-box .image {
+	border-radius: 16px 16px 0 0;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.inventory-template-shell .card-box .image > a,
+.inventory-map-template-shell .card-box .image > a {
+	height: 100%;
+	width: 100%;
+}
+
+.inventory-template-shell .card-box .image .card--img,
+.inventory-map-template-shell .card-box .image .card--img {
+	border-radius: 16px 16px 0 0;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.inventory-template-shell .card-box .top,
+.inventory-map-template-shell .card-box .top {
+	display: flex;
+	justify-content: space-between;
+	left: 8px;
+	overflow: hidden;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	z-index: 1;
+}
+
+/* Badge pill (`.highlight`). Colour comes from `.bg-primary-2` (red) / `.bg-green`. */
+.inventory-template-shell .card-box .top .highlight,
+.inventory-map-template-shell .card-box .top .highlight {
+	align-items: center;
+	border-radius: 8px;
+	display: flex;
+	font-size: 14px;
+	font-weight: 600;
+	min-height: 30px;
+	justify-content: center;
+	line-height: 20px;
+	padding: 4px 12px;
+}
+
+.inventory-template-shell .card-box .top .heart,
+.inventory-map-template-shell .card-box .top .heart {
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	display: flex;
+	height: 28px;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	width: 28px;
+}
+
+.inventory-template-shell .card-box .bottom,
+.inventory-map-template-shell .card-box .bottom {
+	display: flex;
+	justify-content: space-between;
+	left: 6px;
+	position: absolute;
+	top: -36px;
+	width: calc(100% - 12px);
+}
+
+.inventory-template-shell .card-box .bottom .category,
+.inventory-map-template-shell .card-box .bottom .category {
+	align-items: center;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	display: flex;
+	font-size: 14px;
+	gap: 4px;
+	min-height: 30px;
+	justify-content: center;
+	padding: 5px 9px;
+}
+
+.inventory-template-shell .card-box .bottom .category > a,
+.inventory-map-template-shell .card-box .bottom .category > a {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/* Placeholder/SVG fallback photos are light — flip the overlay chips to dark ink
+   so they stay readable (legacy template-head `:has()` rule). */
+.inventory-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
+.inventory-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category a,
+.inventory-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category,
+.inventory-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category a,
+.inventory-map-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
+.inventory-map-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category a,
+.inventory-map-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category,
+.inventory-map-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category a {
+	color: #233044 !important;
+}
+
+.inventory-template-shell .card-box .content,
+.inventory-map-template-shell .card-box .content {
+	border-radius: 0 0 16px 16px;
+	padding: 16px;
+	position: relative;
+}
+
+.inventory-template-shell .card-box .content .card-box__title,
+.inventory-template-shell .card-box .content .card-box__title > a,
+.inventory-map-template-shell .card-box .content .card-box__title,
+.inventory-map-template-shell .card-box .content .card-box__title > a {
+	font-size: var(--sa-text-desktop-lead, 20px);
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.inventory-template-shell .card-box .content .tag,
+.inventory-map-template-shell .card-box .content .tag {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.inventory-template-shell .card-box .content .tag.style3,
+.inventory-map-template-shell .card-box .content .tag.style3 {
+	gap: 28px;
+	justify-content: start;
+}
+
+.inventory-template-shell .card-box .content .tag li,
+.inventory-map-template-shell .card-box .content .tag li {
+	align-items: center;
+	display: flex;
+}
+
+.inventory-template-shell .card-box .content .tag li img,
+.inventory-map-template-shell .card-box .content .tag li img {
+	margin-right: 4px;
+}
+
+.inventory-template-shell .card-box .content .tag li span,
+.inventory-map-template-shell .card-box .content .tag li span {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.inventory-template-shell .card-box__price,
+.inventory-map-template-shell .card-box__price {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.inventory-template-shell .card-box__price .daynight-card-price__value,
+.inventory-map-template-shell .card-box__price .daynight-card-price__value {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+/* ---- Map card horizontal layout (.card-box-style-9) ---- */
+.inventory-map-template-shell .card-box-style-9.card-box {
+	display: flex;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .image {
+	border-radius: 16px 0 0 16px;
+	max-width: 299px;
+	min-height: 225px;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .image .card--img {
+	border-radius: 16px 0 0 16px;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .bottom {
+	bottom: 8px;
+	top: auto;
+	width: 283px;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .content {
+	border: 1px solid #e7e7e7;
+	border-radius: 0 16px 16px 0;
+	padding: 24px 24px 0;
+	width: calc(100% - 299px);
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .content .bottom {
+	bottom: 8px;
+	top: auto;
+}
+
+.inventory-map-template-shell .card-box-style-9 .content .tag li span {
+	color: #4b4b4b;
+}
+
+/* ============================ Badge colours ============================ */
+.inventory-template-shell .text-white,
+.inventory-map-template-shell .text-white {
+	color: #fff;
+}
+
+.inventory-template-shell .bg-green,
+.inventory-map-template-shell .bg-green {
+	background-color: #4518cc;
+}
+
+/* Real-listing badge — DayNight red (legacy template-head override of `.bg-primary-2`). */
+.inventory-template-shell .card-box .top .bg-primary-2.highlight,
+.inventory-template-shell .card-box .top .bg-primary-2.text-white,
+.inventory-map-template-shell .card-box .top .bg-primary-2.highlight,
+.inventory-map-template-shell .card-box .top .bg-primary-2.text-white {
+	background: #e11c2a;
+	color: #fff;
+}
+
+/* ======================= Card text utilities ======================= */
+.inventory-template-shell .card-box .text-secondary,
+.inventory-map-template-shell .card-box .text-secondary {
+	color: #4b4b4b;
+}
+
+.inventory-template-shell .card-box .text-muted,
+.inventory-map-template-shell .card-box .text-muted {
+	color: #9fa1a4;
+}
+
+.inventory-template-shell .card-box .text-underline,
+.inventory-map-template-shell .card-box .text-underline {
+	text-decoration: underline;
+}
+
+.inventory-template-shell .card-box .text-xs,
+.inventory-map-template-shell .card-box .text-xs {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.inventory-template-shell .card-box .text-sm,
+.inventory-map-template-shell .card-box .text-sm {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.inventory-template-shell .card-box .clamp,
+.inventory-map-template-shell .card-box .clamp {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.inventory-template-shell .card-box .clamp-1,
+.inventory-map-template-shell .card-box .clamp-1 {
+	-webkit-line-clamp: 1;
+}
+
+/* The grid card (VehicleCard) + price row are shared with the un-converted PDP, so
+   their markup keeps the Auxero spacing classes (read from app.css on the PDP).
+   app.css is gone on the native inventory, so reproduce the intended px here,
+   scoped to the shell — otherwise Tailwind would reinterpret e.g. `mb-10` as 2.5rem. */
+.inventory-template-shell .card-box .mb-8 {
+	margin-bottom: 8px;
+}
+
+.inventory-template-shell .card-box .mb-10 {
+	margin-bottom: 10px;
+}
+
+.inventory-template-shell .card-box .mb-15 {
+	margin-bottom: 15px;
+}
+
+.inventory-template-shell .card-box .gap-8 {
+	gap: 8px;
+}
+
+/* ============== Card price (generic template-head layout) ============== */
+.inventory-template-shell .card-box.card-box-style-1 .card-box__price {
+	align-items: start;
+	column-gap: 18px;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	min-height: 40px;
+}
+
+.inventory-template-shell .daynight-card-price__value,
+.inventory-map-template-shell .daynight-card-price__value {
+	align-items: flex-start;
+	align-self: start;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-size: 24px;
+	font-weight: 700;
+	justify-self: start;
+	letter-spacing: 0;
+	line-height: 1.05;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-card-price__meta {
+	align-items: flex-end;
+	display: inline-flex;
+	flex-direction: column;
+	gap: 0;
+	justify-content: flex-start;
+	justify-self: end;
+	line-height: 1;
+	min-width: 0;
+	text-align: right;
+}
+
+.inventory-template-shell .daynight-card-price__monthly {
+	font-size: 16px;
+	line-height: 20px;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-card-price__link {
+	align-items: center;
+	color: #475569 !important;
+	display: inline-flex;
+	font-size: 16px;
+	line-height: 20px;
+	min-height: 20px;
+	text-decoration-color: currentColor !important;
+	white-space: nowrap;
+}
+
+/* ===================== Sort dropdown (.core-dropdown) ===================== */
+.inventory-template-shell .core-dropdown,
+.inventory-map-template-shell .core-dropdown {
+	min-width: 180px;
+	position: relative;
+}
+
+.inventory-template-shell .core-dropdown__button,
+.inventory-map-template-shell .core-dropdown__button {
+	align-items: center;
+	background: #fff;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 0 0 1px #e7e7e7;
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	justify-content: space-between;
+	padding: 8px 16px;
+	transition: box-shadow 0.12s ease-out;
+	width: 100%;
+}
+
+.inventory-template-shell .core-dropdown__button:hover,
+.inventory-template-shell .core-dropdown__button:focus,
+.inventory-map-template-shell .core-dropdown__button:hover,
+.inventory-map-template-shell .core-dropdown__button:focus {
+	box-shadow: 0 0 0 2px var(--sa-red);
+	outline: none;
+}
+
+.inventory-template-shell .core-dropdown__selected,
+.inventory-map-template-shell .core-dropdown__selected {
+	color: #1c1c1c;
+	flex: 1;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: left;
+}
+
+.inventory-template-shell .core-dropdown__icon,
+.inventory-map-template-shell .core-dropdown__icon {
+	height: 20px;
+	width: 20px;
+}
+
+.inventory-template-shell .core-dropdown__list,
+.inventory-map-template-shell .core-dropdown__list {
+	list-style: none;
+	margin: 0;
+	padding: 8px 16px;
+}
+
+.inventory-template-shell .core-dropdown__item:not(:last-child) .core-dropdown__option,
+.inventory-map-template-shell .core-dropdown__item:not(:last-child) .core-dropdown__option {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.inventory-template-shell .core-dropdown__option,
+.inventory-map-template-shell .core-dropdown__option {
+	color: #1c1c1c;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px 0;
+	text-decoration: none;
+	transition: background-color 0.12s ease-out;
+}
+
+.inventory-template-shell .core-dropdown__option:hover,
+.inventory-template-shell .core-dropdown__option.active,
+.inventory-map-template-shell .core-dropdown__option:hover,
+.inventory-map-template-shell .core-dropdown__option.active {
+	background-color: #f7f7f7;
+}
+
+/* ===================== Tab panels (map list/grid) ===================== */
+.inventory-map-template-shell .content-inner {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transform: scale(0.9);
+	visibility: hidden;
+	width: 100%;
+	z-index: -1;
+}
+
+.inventory-map-template-shell .content-inner.active {
+	opacity: 1;
+	position: relative;
+	transform: scale(1);
+	visibility: visible;
+	z-index: 1;
+}
+
+/* ===================== Applied-filter chips ===================== */
+.inventory-template-shell .select-item,
+.inventory-map-template-shell .select-item {
+	border: 1px solid #e7e7e7;
+	border-radius: 40px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: var(--sa-text-base);
+	font-weight: 500;
+	height: 30px;
+	line-height: 28px;
+	margin: 4px 6px 4px 0;
+	padding: 0 12px;
+	transition: border-color 0.12s ease-out;
+	vertical-align: middle;
+}
+
+.inventory-template-shell .select-item.active,
+.inventory-template-shell .select-item:hover,
+.inventory-map-template-shell .select-item.active,
+.inventory-map-template-shell .select-item:hover {
+	border-color: #1c1c1c;
+}
+
+.inventory-template-shell .select-item img,
+.inventory-map-template-shell .select-item img {
+	height: 16px;
+	margin-left: 4px;
+	margin-top: -2px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.inventory-template-shell .btn-clear-items,
+.inventory-map-template-shell .btn-clear-items {
+	background-color: #1c1c1c;
+	border-radius: 40px;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	height: 34px;
+	line-height: 34px;
+	margin: 4px 0;
+	padding: 0 14px;
+	text-transform: none;
+	transition: background-color 0.12s ease-out;
+}
+
+.inventory-template-shell .btn-clear-items:hover,
+.inventory-map-template-shell .btn-clear-items:hover {
+	background-color: var(--sa-red);
+}
+
+.inventory-template-shell .btn-clear-items img,
+.inventory-map-template-shell .btn-clear-items img {
+	margin-top: -2px;
+	vertical-align: middle;
+}
+
+.inventory-map-template-shell .divider-vertical-style2 {
+	background: #d9d9d9;
+	width: 1px;
+}

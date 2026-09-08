@@ -1,0 +1,1000 @@
+{
+  "client": "autolife",
+  "name": "Аутолайф",
+  "template": "modern",
+  "port": 6642,
+  "startedAt": "2026-09-08T03:02:51.847Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили от Аутолайф | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21769682585171886"
+        },
+        {
+          "text": "BMW X4 2.0D-190\n\n20 500 €\n\n2017\n190 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21769682585171886"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11770980926901387"
+        },
+        {
+          "text": "Seat Alhambra 2.0TDI-150\n\n11 999 €\n\n2015\n244 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11770980926901387"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11741772051965725"
+        },
+        {
+          "text": "Ford Ka +\n\n6 999 €\n\n2018\n119 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11741772051965725"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11751025134623319"
+        },
+        {
+          "text": "VW Golf 1.6TDI\n\n4 500 €\n\n2010\n250 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11751025134623319"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11768209424885033"
+        },
+        {
+          "text": "Seat Altea FACELIFT\n\n3 999 €\n\n2010\n242 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/autolife-11768209424885033"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11762785459915323"
+        },
+        {
+          "text": "Audi A4 Sline\n\n20 500 €\n\n2021\n186 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11762785459915323"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11752841612433166"
+        },
+        {
+          "text": "Citroen C5 2.2\n\n3 700 €\n\n2008\n217 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11752841612433166"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21756807262024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170\n\n7 999 €\n\n2009\n224 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21756807262024883"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11768636298551646"
+        },
+        {
+          "text": "VW Touran 2.0TDI-150\n\n13 999 €\n\n2021\n145 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11768636298551646"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21774977517199416"
+        },
+        {
+          "text": "Mercedes-Benz GLE Coupe\n\n34 500 €\n\n2017\n189 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21774977517199416"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21776689748685033"
+        },
+        {
+          "text": "BMW X1 2.0D-150\n\n11 500 €\n\n2016\n250 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-21776689748685033"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11776774936356749"
+        },
+        {
+          "text": "Peugeot 508 ACTIVE\n\n12 300 €\n\n2019\n175 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11776774936356749"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21778149802063175"
+        },
+        {
+          "text": "VW Tiguan FACELIFT\n\n14 999 €\n\n2019\n214 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21778149802063175"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11778155314388381"
+        },
+        {
+          "text": "Volvo S60 НАПЪЛНО\n\n2 500 €\n\n2007\n470 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11778155314388381"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11787391986129616"
+        },
+        {
+          "text": "VW Passat 2.0TDI-140\n\n6 300 €\n\n2012\n237 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11787391986129616"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11779369221509132"
+        },
+        {
+          "text": "VW Polo 1.6\n\n9 999 €\n\n2020\n140 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11779369221509132"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/listing/autolife-21769682585171886",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW X4 2.0D-190 | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за лизинг",
+          "href": "/bg/lease?vehicle=autolife-21769682585171886"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "11 500 €\n\nBMW X1 2.0D-150\n\n250 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/autolife-21776689748685033"
+        },
+        {
+          "text": "11 999 €\n\nSeat Alhambra 2.0TDI-150\n\n244 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/autolife-11770980926901387"
+        },
+        {
+          "text": "6999 €\n\nFord Ka +\n\n119 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/autolife-11741772051965725"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас и контакти | Аутолайф | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Обадете ни се\n0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Посетете шоурума\nГП4, разклон за с. Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Търсене на автомобил",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Условия за лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Внос на автомобил по заявка | Аутолайф | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили от Аутолайф | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21769682585171886"
+        },
+        {
+          "text": "BMW X4 2.0D-190\n\n20 500 €\n\n2017\n190 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21769682585171886"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11770980926901387"
+        },
+        {
+          "text": "Seat Alhambra 2.0TDI-150\n\n11 999 €\n\n2015\n244 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11770980926901387"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11741772051965725"
+        },
+        {
+          "text": "Ford Ka +\n\n6 999 €\n\n2018\n119 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11741772051965725"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11751025134623319"
+        },
+        {
+          "text": "VW Golf 1.6TDI\n\n4 500 €\n\n2010\n250 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11751025134623319"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11768209424885033"
+        },
+        {
+          "text": "Seat Altea FACELIFT\n\n3 999 €\n\n2010\n242 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/autolife-11768209424885033"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11762785459915323"
+        },
+        {
+          "text": "Audi A4 Sline\n\n20 500 €\n\n2021\n186 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11762785459915323"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11752841612433166"
+        },
+        {
+          "text": "Citroen C5 2.2\n\n3 700 €\n\n2008\n217 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11752841612433166"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21756807262024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170\n\n7 999 €\n\n2009\n224 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21756807262024883"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11768636298551646"
+        },
+        {
+          "text": "VW Touran 2.0TDI-150\n\n13 999 €\n\n2021\n145 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11768636298551646"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21774977517199416"
+        },
+        {
+          "text": "Mercedes-Benz GLE Coupe\n\n34 500 €\n\n2017\n189 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21774977517199416"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21776689748685033"
+        },
+        {
+          "text": "BMW X1 2.0D-150\n\n11 500 €\n\n2016\n250 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-21776689748685033"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11776774936356749"
+        },
+        {
+          "text": "Peugeot 508 ACTIVE\n\n12 300 €\n\n2019\n175 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11776774936356749"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-21778149802063175"
+        },
+        {
+          "text": "VW Tiguan FACELIFT\n\n14 999 €\n\n2019\n214 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-21778149802063175"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11778155314388381"
+        },
+        {
+          "text": "Volvo S60 НАПЪЛНО\n\n2 500 €\n\n2007\n470 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11778155314388381"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11787391986129616"
+        },
+        {
+          "text": "VW Passat 2.0TDI-140\n\n6 300 €\n\n2012\n237 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/autolife-11787391986129616"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/autolife-11779369221509132"
+        },
+        {
+          "text": "VW Polo 1.6\n\n9 999 €\n\n2020\n140 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/autolife-11779369221509132"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/listing/autolife-21769682585171886",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW X4 2.0D-190 | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Назад към търсенето",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "11 500 €\n\nBMW X1 2.0D-150\n\n250 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/autolife-21776689748685033"
+        },
+        {
+          "text": "11 999 €\n\nSeat Alhambra 2.0TDI-150\n\n244 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/autolife-11770980926901387"
+        },
+        {
+          "text": "6999 €\n\nFord Ka +\n\n119 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/autolife-11741772051965725"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Виж финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Варна\nГП4, разклон за с. Тополи, България",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас и контакти | Аутолайф | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Телефон\n0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Шоурум · Тополи\nГП4, разклон за с. Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Търсене на автомобил\nКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Условия за лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Внос на автомобил по заявка | Аутолайф | Аутолайф",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Опишете автомобил",
+          "href": "/bg/imports?start=1#import-request"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6642/cars?q=BMW",
+      "afterCount": 4,
+      "search": true,
+      "detailHref": "/bg/listing/autolife-21769682585171886",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6642/cars?q=BMW",
+      "afterCount": 4,
+      "search": true,
+      "detailHref": "/bg/listing/autolife-21769682585171886",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\autolife\\modern",
+    "PID": 12120,
+    "Port": 6642,
+    "Url": "http://127.0.0.1:6642",
+    "Stdout": "J:\\cars\\runtime\\modern-6642-20260908-060253.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6642-20260908-060253.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true
+}

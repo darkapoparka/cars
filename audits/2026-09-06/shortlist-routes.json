@@ -1,0 +1,142 @@
+[
+  {
+    "label": "home",
+    "port": 5173,
+    "settle": 400,
+    "key": "shortlist-auto-best",
+    "route": "/"
+  },
+  {
+    "label": "inventory",
+    "port": 5173,
+    "settle": 400,
+    "key": "shortlist-auto-best",
+    "route": "/listing-grid"
+  },
+  {
+    "label": "detail",
+    "port": 5173,
+    "settle": 400,
+    "key": "shortlist-auto-best",
+    "route": "/listing-detail-v1/1"
+  },
+  {
+    "label": "contact",
+    "port": 5173,
+    "settle": 400,
+    "key": "shortlist-auto-best",
+    "route": "/contact"
+  },
+  {
+    "label": "home",
+    "port": 6212,
+    "settle": 400,
+    "key": "shortlist-modern",
+    "route": "/"
+  },
+  {
+    "label": "inventory",
+    "port": 6212,
+    "settle": 400,
+    "key": "shortlist-modern",
+    "route": "/cars"
+  },
+  {
+    "label": "detail",
+    "port": 6212,
+    "settle": 400,
+    "key": "shortlist-modern",
+    "route": "/bg/listing/bmw-x5-m50d-sofia-2020"
+  },
+  {
+    "label": "contact",
+    "port": 6212,
+    "settle": 400,
+    "key": "shortlist-modern",
+    "route": "/bg/contact"
+  },
+  {
+    "label": "home",
+    "port": 6517,
+    "settle": 400,
+    "key": "shortlist-carwow",
+    "route": "/"
+  },
+  {
+    "label": "inventory",
+    "port": 6517,
+    "settle": 400,
+    "key": "shortlist-carwow",
+    "route": "/inventory"
+  },
+  {
+    "label": "detail",
+    "port": 6517,
+    "settle": 400,
+    "key": "shortlist-carwow",
+    "route": "/inventory/mercedes-benz-gla-45-amg-405323"
+  },
+  {
+    "label": "contact",
+    "port": 6517,
+    "settle": 400,
+    "key": "shortlist-carwow",
+    "route": "/contact"
+  },
+  {
+    "label": "sell",
+    "port": 6517,
+    "settle": 400,
+    "key": "shortlist-carwow",
+    "route": "/sell-your-car"
+  },
+  {
+    "label": "import",
+    "port": 6517,
+    "settle": 400,
+    "key": "shortlist-carwow",
+    "route": "/import"
+  },
+  {
+    "label": "home",
+    "port": 6518,
+    "settle": 400,
+    "key": "shortlist-import",
+    "route": "/"
+  },
+  {
+    "label": "inventory",
+    "port": 6518,
+    "settle": 400,
+    "key": "shortlist-import",
+    "route": "/inventory"
+  },
+  {
+    "label": "detail",
+    "port": 6518,
+    "settle": 400,
+    "key": "shortlist-import",
+    "route": "/inventory/21764342419542174"
+  },
+  {
+    "label": "contact",
+    "port": 6518,
+    "settle": 400,
+    "key": "shortlist-import",
+    "route": "/contact"
+  },
+  {
+    "label": "sell",
+    "port": 6518,
+    "settle": 400,
+    "key": "shortlist-import",
+    "route": "/sell-your-car"
+  },
+  {
+    "label": "import",
+    "port": 6518,
+    "settle": 400,
+    "key": "shortlist-import",
+    "route": "/import"
+  }
+]

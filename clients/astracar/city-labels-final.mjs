@@ -1,0 +1,1 @@
+import fs from 'node:fs';for(const f of ['listing-truth.ts','marketplace-control-copy.ts','vehicle-card-view-policy.ts']){const p=`J:/cars/clients/astracar/modern/packages/marketplace-ui/lib/${f}`;let s=fs.readFileSync(p,'utf8');s=s.replace('  Varna: "Варна",','  Sofia: "София",').replace('"Varna City": "Варна-град"','"Sofia City": "София-град"');fs.writeFileSync(p,s);}

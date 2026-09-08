@@ -1,0 +1,540 @@
+[
+  {
+    "file": "src\\lib\\components\\about\\DesktopAboutPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\about\\DesktopDealerProfilePage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\about\\MobileAboutPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\AdminShell.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\dashboard\\DesktopDashboardHomeOverview.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\dashboard\\DesktopDashboardMessages.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\dashboard\\DesktopDashboardNewListing.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\dashboard\\DesktopDashboardPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\dashboard\\DesktopDashboardProfile.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\dashboard\\DesktopDashboardReviews.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\admin\\PostForm.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\blog\\BlogArticlePage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\blog\\BlogIndexPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\calculator\\CalculatorContent.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\chat\\ChatLauncher.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\chat\\ChatThread.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\contact\\DesktopContactPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\contact\\MobileContactPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [
+        "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.",
+        "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible."
+      ],
+      "require_another_tool_call_after_fixing": true
+    }
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailDealerPanel.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailLocationMap.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailOverviewPanel.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailReviews.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DetailPageShell.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\detail\\mobile\\MobileDetailPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\financing\\DesktopFinancingPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\financing\\MobileFinancingPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeHero.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeInventoryPreview.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeReviews.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeVideos.svelte",
+    "result": {
+      "issues": [
+        "Unused CSS selector \".home-videos__title img\"\nhttps://svelte.dev/e/css_unused_selector at line 28, column 1",
+        "Unused CSS selector \".home-video__image iframe\"\nhttps://svelte.dev/e/css_unused_selector at line 32, column 1"
+      ],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": true
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeWhyDayNight.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\HomePageHead.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\mobile\\MobileHeader.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\home\\mobile\\MobileHome.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\inventory\\desktop\\InventoryMapPageShell.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\inventory\\mobile\\MobileInventoryPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\layout\\DayNightFooter.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\layout\\DesktopDealerFooter.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\layout\\RouteImageBehavior.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [
+        "You are calling the function `enhanceRouteImages` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling the function `ensureMainLandmark` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling the function `enhanceRouteImages` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling the function `ensureMainLandmark` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does."
+      ],
+      "require_another_tool_call_after_fixing": true
+    }
+  },
+  {
+    "file": "src\\lib\\components\\layout\\SiteChromeTopBar.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\layout\\SiteFooter.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\layout\\SiteHeader.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\reviews\\DesktopPublicReviewsPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\reviews\\ReviewsContent.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\sell\\DesktopSellYourCarPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [
+        "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible."
+      ],
+      "require_another_tool_call_after_fixing": true
+    }
+  },
+  {
+    "file": "src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+        "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.",
+        "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible."
+      ],
+      "require_another_tool_call_after_fixing": true
+    }
+  },
+  {
+    "file": "src\\lib\\components\\seo\\RouteSeo.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\services\\DesktopServicesPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\services\\MobileServicesPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\shared\\MobileHeroBar.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\team\\DesktopTeamPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\lib\\components\\terms\\TermsContent.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\+error.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\+layout.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\admin\\assistant\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\admin\\listings\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\admin\\posts\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\admin\\settings\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\contact\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\favorites\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\presentation\\home2\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "file": "src\\routes\\presentation\\home3\\+page.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  }
+]

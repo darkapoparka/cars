@@ -1,0 +1,64 @@
+[
+  {
+    "width": 390,
+    "query": "price=under-20000",
+    "expected": 4,
+    "matches": [
+      "/inventory/renault-captur-512292",
+      "/inventory/smart-forfour-22kw-26000-353090",
+      "/inventory/mercedes-benz-ml-350-amg-packet-989700",
+      "/inventory/mercedes-benz-b-200-amg-line-538327"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 390,
+    "query": "mileage=under-100000",
+    "expected": 9,
+    "matches": [
+      "/inventory/renault-captur-512292",
+      "/inventory/smart-forfour-22kw-26000-353090",
+      "/inventory/mercedes-benz-b-200-amg-line-538327",
+      "/inventory/toyota-highlander-60000km-prins-943440",
+      "/inventory/audi-e-tron-2-x-s-line-284789",
+      "/inventory/mercedes-benz-eqc-400-302723",
+      "/inventory/bmw-ix-40xdrive-482309",
+      "/inventory/mercedes-benz-eqe-300-876419",
+      "/inventory/mercedes-benz-s-400-long-full-224289"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "query": "price=under-20000",
+    "expected": 4,
+    "matches": [
+      "/inventory/smart-forfour-22kw-26000-353090",
+      "/inventory/mercedes-benz-ml-350-amg-packet-989700",
+      "/inventory/mercedes-benz-b-200-amg-line-538327",
+      "/inventory/renault-captur-512292"
+    ],
+    "errors": [],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "query": "mileage=under-100000",
+    "expected": 9,
+    "matches": [
+      "/inventory/bmw-ix-40xdrive-482309",
+      "/inventory/smart-forfour-22kw-26000-353090",
+      "/inventory/mercedes-benz-s-400-long-full-224289",
+      "/inventory/mercedes-benz-b-200-amg-line-538327",
+      "/inventory/audi-e-tron-2-x-s-line-284789",
+      "/inventory/toyota-highlander-60000km-prins-943440",
+      "/inventory/mercedes-benz-eqe-300-876419",
+      "/inventory/mercedes-benz-eqc-400-302723",
+      "/inventory/renault-captur-512292"
+    ],
+    "errors": [],
+    "pass": true
+  }
+]

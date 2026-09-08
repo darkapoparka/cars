@@ -1,0 +1,38 @@
+{
+  "detail": "/inventory/opel-agila-1-3i-563390",
+  "errors": [],
+  "homeBudgets": [
+    {
+      "value": "under-10000",
+      "count": 9
+    },
+    {
+      "value": "under-20000",
+      "count": 12
+    },
+    {
+      "value": "under-30000",
+      "count": 13
+    },
+    {
+      "value": "under-50000",
+      "count": 14
+    },
+    {
+      "value": "over-50000",
+      "count": 0
+    }
+  ],
+  "homeBudgetPass": true,
+  "priceFilterCount": 12,
+  "priceFilterExpected": 12,
+  "mileageFilterCount": 2,
+  "mileageFilterExpected": 2,
+  "numericPass": true,
+  "phoneLabels": 1,
+  "viberLabels": 1,
+  "viberHref": "viber://chat?number=%2B359899877305",
+  "unsupportedServices": 0,
+  "mobileGalleryChanged": true,
+  "pass": true
+}

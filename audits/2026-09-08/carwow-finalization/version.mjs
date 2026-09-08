@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+const catalog='J:/cars/catalog.json';
+const text=fs.readFileSync(catalog,'utf8');
+const start=text.indexOf('"key": "carwow"');
+const end=text.indexOf('"key":',start+10);
+if(start<0||end<0)throw new Error('Carwow catalog entry not found');
+const before=text.slice(start,end);
+if(!before.includes('2026.09.06-refresh-1'))throw new Error('Unexpected carwow version');
+fs.writeFileSync(catalog,text.slice(0,start)+before.replace('2026.09.06-refresh-1','2026.09.08-repair-1')+text.slice(end));
+const metadata='J:/cars/templates/carwow/.template/template.json';
+const data=JSON.parse(fs.readFileSync(metadata,'utf8'));
+data.version='2026.09.08-repair-1';
+data.repairEvidence='J:/cars/audits/2026-09-08/carwow-finalization/REPORT.md';
+data.publicDeliveryVerified=false;
+fs.writeFileSync(metadata,JSON.stringify(data,null,2)+'\n');
+console.log('Carwow metadata version updated');

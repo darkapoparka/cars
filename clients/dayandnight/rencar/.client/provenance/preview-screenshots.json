@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-09-06T18:21:47.591Z",
+  "note": "Unmodified local browser screenshots of this client; no donor or third-party image processing.",
+  "files": [
+    {
+      "source": ".client/qa/screenshots/home1-1440.png",
+      "destination": "public/daynight/variants/home-1.png",
+      "bytes": 375594,
+      "sha256": "73c3337ed0e91cb5a403dd59a9f207e025fbe5e41f361130859b7f94cc9dffa5"
+    },
+    {
+      "source": ".client/qa/screenshots/home2-1440.png",
+      "destination": "public/daynight/variants/home-2.png",
+      "bytes": 308350,
+      "sha256": "fc497d54da5515a2e41de473756f5e51a3fe971833cb9b9d7ef1a604880dd705"
+    },
+    {
+      "source": ".client/qa/screenshots/home3-1440.png",
+      "destination": "public/daynight/variants/home-3.png",
+      "bytes": 216510,
+      "sha256": "d80d83b1582002a049394bb2e9c1d40432de24e6310f8d87b5ad507c9b4d9940"
+    },
+    {
+      "source": ".client/qa/screenshots/home4-1440.png",
+      "destination": "public/daynight/variants/home-4.png",
+      "bytes": 198119,
+      "sha256": "4fd72f030ae28e18f85dcbad1a54f800f75fba0a8fb41b508b555680d501af7f"
+    },
+    {
+      "source": ".client/qa/screenshots/home5-1440.png",
+      "destination": "public/daynight/variants/home-5.png",
+      "bytes": 214721,
+      "sha256": "c9212bfc31025205972a15318b28f9f74f31475f6d6e9915fc3b8eb628ffcf68"
+    }
+  ]
+}

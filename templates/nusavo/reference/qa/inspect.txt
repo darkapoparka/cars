@@ -1,0 +1,62 @@
+ref {
+  title: 'Nusavo',
+  carousels: [
+    {
+      class: 'swiper elementor-loop-container elementor-grid swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden',
+      box: [Object],
+      slides: [Array]
+    },
+    {
+      class: 'elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events',
+      box: [Object],
+      slides: [Array]
+    },
+    {
+      class: 'e-n-carousel swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden',
+      box: [Object],
+      slides: [Array]
+    }
+  ],
+  logos: [
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' }
+  ]
+}
+local {
+  title: 'Nusavo',
+  carousels: [
+    {
+      class: 'swiper elementor-loop-container elementor-grid swiper-initialized swiper-horizontal swiper-backface-hidden',
+      box: [Object],
+      slides: [Array]
+    },
+    {
+      class: 'elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-backface-hidden',
+      box: [Object],
+      slides: [Array]
+    },
+    {
+      class: 'e-n-carousel swiper swiper-initialized swiper-horizontal swiper-backface-hidden',
+      box: [Object],
+      slides: [Array]
+    }
+  ],
+  logos: [
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' },
+    { box: [Object], opacity: '1' }
+  ]
+}

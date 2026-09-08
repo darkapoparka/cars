@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./SubTotalWrapper-CQh4P4aj.css"])))=>i.map(i=>d[i]);
+import{a as i,b as _,e as o,_ as s,y as l,f as u,g as m,W as c,H as d,r as f,w as v,J as w,X as C,Y as P}from"./convert-case-to-camel-case.utils-DRsbC-qG.js";const A=i({__name:"Wrapper",props:{wrapper:{}},setup(a){const e=a,n=_(()=>e.wrapper==="subtotal"?o(()=>s(()=>import("./SubTotalWrapper-LglZnYlz.js"),__vite__mapDeps([0]),import.meta.url)):e.wrapper==="fields"?o(()=>s(()=>import("./FieldsWrapper-BIITE4yx.js"),[],import.meta.url)):l("div"));return(r,E)=>(m(),u(f(n.value),null,c({_:2},[d(r.$slots,(h,t)=>({name:t,fn:v(p=>[w(r.$slots,t,C(P(p)))])}))]),1024))}});export{A as _};
+//# sourceMappingURL=Wrapper.vue_vue_type_script_setup_true_lang-D_Su8LOM.js.map

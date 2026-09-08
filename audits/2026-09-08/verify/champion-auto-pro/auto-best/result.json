@@ -1,0 +1,1615 @@
+{
+  "client": "champion-auto-pro",
+  "name": "Champion Auto Pro",
+  "template": "auto-best",
+  "port": 6631,
+  "startedAt": "2026-09-07T22:00:18.279Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Champion Auto Pro — Премиум автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "До 20 000 €",
+          "href": "/listing-grid?price_max=20000"
+        },
+        {
+          "text": "20–40 000 €",
+          "href": "/listing-grid?price_min=20000&price_max=40000"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "Mercedes",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Заяви оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "До 20 000 €\n4 автомобила",
+          "href": "/listing-grid?price_max=20000"
+        },
+        {
+          "text": "20–40 000 €\n9 автомобила",
+          "href": "/listing-grid?price_min=20000&price_max=40000"
+        },
+        {
+          "text": "Над 40 000 €\n3 автомобила",
+          "href": "/listing-grid?price_min=40000"
+        },
+        {
+          "text": "Виж всички\n16 автомобила",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "28 000 км\n2022\n\nSUV\n\nBMW iX 40Xdrive\nЕлектрически\nАвтоматик\n43 800 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "176 000 км\n2019\n\nКомби\n\nAudi A6 50TDI Quattro\nДизел\nАвтоматик\n23 000 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "26 000 км\n2021\n\nХечбек\n\nSmart Forfour 22kw.-26000км.\nЕлектрически\nАвтоматик\n12 900 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "265 000 км\n2014\n\nСедан\n\nMercedes-Benz S 500 AMG Packet 63 Long\nБензин\nАвтоматик\n27 999 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.",
+          "href": "/blog"
+        },
+        {
+          "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+          "href": "/blog"
+        },
+        {
+          "text": "Заяви внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Вижте обявата",
+          "href": "https://championautopro.mobile.bg/obiava-11787294758482309-bmw-ix-40xdrive-m-sport-h-k-360"
+        },
+        {
+          "text": "Вижте обявата",
+          "href": "https://championautopro.mobile.bg/obiava-11787311251312869-audi-a6-50tdi-quattro"
+        },
+        {
+          "text": "Вижте обявата",
+          "href": "https://championautopro.mobile.bg/obiava-11784794853353090-smart-forfour-22kw-26000km"
+        },
+        {
+          "text": "Всички обяви\nВижте обявата\nКъм канала\nОтваря се в нов раздел",
+          "href": ""
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай/Бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Заяви оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заяви внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Собствен лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "BMW iX 40Xdrive\n2022\n28 000 км\nЕлектрически\nАвтоматик\n43 800 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "Audi A6 50TDI Quattro\n2019\n176 000 км\nДизел\nАвтоматик\n23 000 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "Smart Forfour 22kw.-26000км.\n2021\n26 000 км\nЕлектрически\nАвтоматик\n12 900 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "Mercedes-Benz S 500 AMG Packet 63 Long\n2014\n265 000 км\nБензин\nАвтоматик\n27 999 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Mercedes-Benz S 400 LONG-FULL\n2023\n73 000 км\nДизел\nАвтоматик\n89 999 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "Mercedes-Benz ML 350 AMG Packet\n2012\n185 000 км\nДизел\nАвтоматик\n15 999 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Audi A7 S-Line FULL\n2020\n108 000 км\nДизел\nАвтоматик\n35 999 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "Mercedes-Benz B 200 AMG Line\n2020\n95 000 км\nДизел\nАвтоматик\n17 999 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "Audi SQ7 S-Line\n2017\n230 000 км\nДизел\nАвтоматик\n33 000 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "Audi Rs5 2.9TFSI V6 Quattro\n2020\n182 000 км\nБензин\nАвтоматик\n39 999 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "Audi E-Tron 2 X S-Line\n2021\n72 000 км\nЕлектрически\nАвтоматик\n31 000 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "VW ID.5 PRO 82kw\n2023\n104 000 км\nЕлектрически\nАвтоматик\n29 999 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "Toyota Highlander 60000km Газ Prins\n2019\n60 000 км\nБензин\nАвтоматик\n26 800 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "Mercedes-Benz EQE 300\n2023\n47 000 км\nЕлектрически\nАвтоматик\n44 999 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "Mercedes-Benz EQC 400\n2021\n68 900 км\nЕлектрически\nАвтоматик\n38 800 €",
+          "href": "/listing-detail-v1/15"
+        },
+        {
+          "text": "Renault Captur\n2015\n55 000 км\nДизел\nАвтоматик\n9200 €",
+          "href": "/listing-detail-v1/16"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW iX 40Xdrive — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=BMW%20iX%2040Xdrive"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Mercedes-Benz ML 350 AMG Packet\n15 999 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Audi SQ7 S-Line\n33 000 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "Audi E-Tron 2 X S-Line\n31 000 €",
+          "href": "/listing-detail-v1/11"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Контакти и адрес",
+          "href": "#contact-intent"
+        },
+        {
+          "text": "Обадете се ·\n0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Адрес\nбул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Посещения\nПонеделник – петък: 09:30–18:00 · Събота: 10:00–15:00 · Неделя: почивен ден",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Телефон\n0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Champion Auto Pro — Премиум автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продажба или бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "Пикап",
+          "href": "/listing-grid?body=Pickup%20Truck"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Миниван",
+          "href": "/listing-grid?body=Minivan"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Кабриолет",
+          "href": "/listing-grid?body=Convertible"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "28 000 км\n2022\n\nSUV\n\nBMW iX 40Xdrive\nЕлектрически\nАвтоматик\n43 800 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "176 000 км\n2019\n\nКомби\n\nAudi A6 50TDI Quattro\nДизел\nАвтоматик\n23 000 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "26 000 км\n2021\n\nХечбек\n\nSmart Forfour 22kw.-26000км.\nЕлектрически\nАвтоматик\n12 900 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "265 000 км\n2014\n\nСедан\n\nMercedes-Benz S 500 AMG Packet 63 Long\nБензин\nАвтоматик\n27 999 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Ford",
+          "href": "/listing-grid?make=Ford"
+        },
+        {
+          "text": "Foton",
+          "href": "/listing-grid?make=Foton"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "Dongfeng",
+          "href": "/listing-grid?make=Dongfeng"
+        },
+        {
+          "text": "Isuzu",
+          "href": "/listing-grid?make=Isuzu"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Вижте всички статии",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.",
+          "href": "/blog"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заявете внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Собствен лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Всички обяви\nв Mobile.bg (нов раздел)",
+          "href": "https://championautopro.mobile.bg/"
+        },
+        {
+          "text": "Вижте обявата",
+          "href": "https://championautopro.mobile.bg/obiava-11787294758482309-bmw-ix-40xdrive-m-sport-h-k-360"
+        },
+        {
+          "text": "Вижте обявата",
+          "href": "https://championautopro.mobile.bg/obiava-11787311251312869-audi-a6-50tdi-quattro"
+        },
+        {
+          "text": "Вижте обявата",
+          "href": "https://championautopro.mobile.bg/obiava-11784794853353090-smart-forfour-22kw-26000km"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продажба или бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заявете внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Собствен лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "28 000 км\n2022\n\nSUV\n\nBMW iX 40Xdrive\nЕлектрически\nАвтоматик\n43 800 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "176 000 км\n2019\n\nКомби\n\nAudi A6 50TDI Quattro\nДизел\nАвтоматик\n23 000 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "26 000 км\n2021\n\nХечбек\n\nSmart Forfour 22kw.-26000км.\nЕлектрически\nАвтоматик\n12 900 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "265 000 км\n2014\n\nСедан\n\nMercedes-Benz S 500 AMG Packet 63 Long\nБензин\nАвтоматик\n27 999 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "73 000 км\n2023\n\nСедан\n\nMercedes-Benz S 400 LONG-FULL\nДизел\nАвтоматик\n89 999 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "185 000 км\n2012\n\nSUV\n\nMercedes-Benz ML 350 AMG Packet\nДизел\nАвтоматик\n15 999 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "108 000 км\n2020\n\nХечбек\n\nAudi A7 S-Line FULL\nДизел\nАвтоматик\n35 999 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "95 000 км\n2020\n\nХечбек\n\nMercedes-Benz B 200 AMG Line\nДизел\nАвтоматик\n17 999 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "230 000 км\n2017\n\nSUV\n\nAudi SQ7 S-Line\nДизел\nАвтоматик\n33 000 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "182 000 км\n2020\n\nСедан\n\nAudi Rs5 2.9TFSI V6 Quattro\nБензин\nАвтоматик\n39 999 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "72 000 км\n2021\n\nSUV\n\nAudi E-Tron 2 X S-Line\nЕлектрически\nАвтоматик\n31 000 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "104 000 км\n2023\n\nХечбек\n\nVW ID.5 PRO 82kw\nЕлектрически\nАвтоматик\n29 999 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "60 000 км\n2019\n\nSUV\n\nToyota Highlander 60000km Газ Prins\nБензин\nАвтоматик\n26 800 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "47 000 км\n2023\n\nСедан\n\nMercedes-Benz EQE 300\nЕлектрически\nАвтоматик\n44 999 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "68 900 км\n2021\n\nSUV\n\nMercedes-Benz EQC 400\nЕлектрически\nАвтоматик\n38 800 €",
+          "href": "/listing-detail-v1/15"
+        },
+        {
+          "text": "55 000 км\n2015\n\nХечбек\n\nRenault Captur\nДизел\nАвтоматик\n9200 €",
+          "href": "/listing-detail-v1/16"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Собствен лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW iX 40Xdrive — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Назад",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=BMW%20iX%2040Xdrive"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Mercedes-Benz ML 350 AMG Packet\n15 999 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Audi SQ7 S-Line\n33 000 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "Audi E-Tron 2 X S-Line\n31 000 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Собствен лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "Маршрут",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Собствен лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — Champion Auto Pro",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359885072555"
+      ],
+      "links": [
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20302%20%2F%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0%20Izgi%20Europe%20Motor%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Собствен лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0885 072 555",
+          "href": "tel:+359885072555"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6631/listing-grid?q=BMW",
+      "afterCount": 1,
+      "search": true,
+      "detailHref": "/listing-detail-v1/1",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact?topic=inspection",
+      "enquiry": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6631/listing-grid?make=BMW",
+      "afterCount": 1,
+      "search": true,
+      "detailHref": "/listing-detail-v1/1",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "status": "existing owner-review server preserved"
+  },
+  "pass": true
+}

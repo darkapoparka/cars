@@ -1,0 +1,219 @@
+[
+  {
+    "key": "auto-best",
+    "port": 5173,
+    "route": "/listing-grid",
+    "label": "inventory",
+    "settle": 0
+  },
+  {
+    "key": "auto-best",
+    "port": 5173,
+    "route": "/listing-detail-v1/1",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "auto-best",
+    "port": 5173,
+    "route": "/contact",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "carwow",
+    "port": 6517,
+    "route": "/inventory",
+    "label": "inventory",
+    "settle": 0
+  },
+  {
+    "key": "carwow",
+    "port": 6517,
+    "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "carwow",
+    "port": 6517,
+    "route": "/contact",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "modern",
+    "port": 6212,
+    "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "modern",
+    "port": 6212,
+    "route": "/bg/contact",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "import",
+    "port": 6518,
+    "route": "/inventory",
+    "label": "inventory",
+    "settle": 0
+  },
+  {
+    "key": "import",
+    "port": 6518,
+    "route": "/inventory/21764342419542174",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "import",
+    "port": 6518,
+    "route": "/contact",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "import-eliq",
+    "port": 6404,
+    "route": "/",
+    "label": "home",
+    "settle": 0
+  },
+  {
+    "key": "import-eliq",
+    "port": 6404,
+    "route": "/inventory/11779989521200947",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "import-eliq",
+    "port": 6404,
+    "route": "/contact",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "boxcar",
+    "port": 6450,
+    "route": "/listings/",
+    "label": "inventory",
+    "settle": 0
+  },
+  {
+    "key": "boxcar",
+    "port": 6450,
+    "route": "/listing/ranger-white-2022/",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "boxcar",
+    "port": 6450,
+    "route": "/contact-us/",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "nusavo",
+    "port": 6420,
+    "route": "/car-listing/",
+    "label": "inventory",
+    "settle": 0
+  },
+  {
+    "key": "nusavo",
+    "port": 6420,
+    "route": "/car-listing/urbango-hatchback/",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "nusavo",
+    "port": 6420,
+    "route": "/contact-us/",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "motoria",
+    "port": 6440,
+    "route": "/inventory/",
+    "label": "inventory",
+    "settle": 0
+  },
+  {
+    "key": "motoria",
+    "port": 6440,
+    "route": "/listings/bmw-m5/",
+    "label": "detail",
+    "settle": 0
+  },
+  {
+    "key": "motoria",
+    "port": 6440,
+    "route": "/contact-us/",
+    "label": "contact",
+    "settle": 0
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/car.html",
+    "label": "inventory",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/car-single.html",
+    "label": "detail",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/contact.html",
+    "label": "contact",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/",
+    "label": "home1",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/index-2.html",
+    "label": "home2",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/index-3.html",
+    "label": "home3",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/index-4.html",
+    "label": "home4",
+    "settle": 1800
+  },
+  {
+    "key": "rencar",
+    "port": 6430,
+    "route": "/index-5.html",
+    "label": "home5",
+    "settle": 1800
+  }
+]

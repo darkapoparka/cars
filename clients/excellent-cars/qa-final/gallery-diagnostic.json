@@ -1,0 +1,20 @@
+[
+  {
+    "check": "modern-gallery",
+    "width": 390,
+    "first": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-1.webp&w=3840&q=75",
+    "second": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-2.webp&w=3840&q=75",
+    "focusReturned": false,
+    "activeElement": "<body style=\"\"><div hidden=\"\"><!--$--><!--/$--></div><script>((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"dark\"\n    ];\n    function p(n) {\n        (Array.isArray(e) ? e : [\n            e\n        ]).forEach((y)=>{\n            let k = y === \"class\", S = k && a ? m.map((f)=>a[f] || f) : m;\n            k ? (d.classList.remove(...S), d.classList.add(a && a[n] ? a[n] : n)) : d.setAttribute(y, n);\n        }), R(n);\n    }\n    function R(n) {\n        ",
+    "pass": false
+  },
+  {
+    "check": "modern-gallery",
+    "width": 1440,
+    "first": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-1.webp&w=3840&q=75",
+    "second": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-2.webp&w=3840&q=75",
+    "focusReturned": false,
+    "activeElement": "<button aria-label=\"Отвори снимка 1 от 4 на цял екран\" class=\"group relative min-h-0 overflow-hidden rounded-lg bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"dialog-trigger\"><img alt=\"BMW X3 2.0D  xDrive\" referrerpolicy=\"no-referrer\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover transition-transform duration-200 group-hov",
+    "pass": false
+  }
+]

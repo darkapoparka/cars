@@ -1,0 +1,803 @@
+[
+  {
+    "path": "src/app.css",
+    "bytes": 28611,
+    "lines": 588,
+    "sha256": "b2a86ca5f010df5e0aa385c02ab7d4fc79c9db9712bfd67b714734afe88e872d",
+    "hexColors": 115,
+    "important": 9,
+    "effects": 0
+  },
+  {
+    "path": "src/app.html",
+    "bytes": 404,
+    "lines": 14,
+    "sha256": "3bac60bfee8d1682bb7ec04e4255a070e8a327bcecc3350b6b705b9a651dc07c",
+    "hexColors": 1,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/hooks.server.ts",
+    "bytes": 2243,
+    "lines": 74,
+    "sha256": "0317247034a0396c8a8540f6188725f7f8e4a6ffb09460e0d3f9e64fc3bb1edd",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/AboutHero.svelte",
+    "bytes": 2917,
+    "lines": 63,
+    "sha256": "0f1334953b01b7245fcebff055341f7eb5836b2c91805cee5701c986f565cc73",
+    "hexColors": 7,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/AboutPartners.svelte",
+    "bytes": 3050,
+    "lines": 128,
+    "sha256": "d364d18635bdd04a26cd66015fb68ac3e90a874c4be7565a60f657d9b5fca57c",
+    "hexColors": 4,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/AboutProcess.svelte",
+    "bytes": 1583,
+    "lines": 39,
+    "sha256": "14ece1003bd74e971f50399fef19bee0ff8f8471c35e908c170e25f2120fc4c1",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/AboutServiceIcon.svelte",
+    "bytes": 16297,
+    "lines": 56,
+    "sha256": "d81137b45db0b31759ea99832c5c29c4ef3aec54207453adbaea13533a0209b4",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/AboutTeam.svelte",
+    "bytes": 6639,
+    "lines": 265,
+    "sha256": "ad243036f9079c5e1ae2c5da36a1b7457d1b1d6874707e6f9ce91f2535365a37",
+    "hexColors": 12,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/ContactHero.svelte",
+    "bytes": 2961,
+    "lines": 47,
+    "sha256": "4e32c31b9b023438bd15c9a078a04b573117c69957c00d12f0f39365d6bb7765",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/ContactIntent.svelte",
+    "bytes": 10452,
+    "lines": 249,
+    "sha256": "476b552987e88b74cd4e2a4311064da42ef9adac96382462b7abd1ddf5c8870b",
+    "hexColors": 8,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/ShowroomMap.svelte",
+    "bytes": 2072,
+    "lines": 83,
+    "sha256": "707692a5f7a1d33d5971aec6d35bff7ee8d6fbdaa302d739221c5d45366b1622",
+    "hexColors": 2,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/SocialBrandIcon.svelte",
+    "bytes": 3443,
+    "lines": 40,
+    "sha256": "90dd7eafa720e4b875a8802e84e8ec8039f029d76d173d2e2831a422cd6fd3fc",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/TeamSocialIcon.svelte",
+    "bytes": 3142,
+    "lines": 52,
+    "sha256": "da897ba1ec38b32a2435f6763a5ab2a70b8eaff8f09ba949459f56d4b815c74a",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/company/VehicleEnquiry.svelte",
+    "bytes": 23816,
+    "lines": 315,
+    "sha256": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a",
+    "hexColors": 47,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/editorial/BlogCard.svelte",
+    "bytes": 3934,
+    "lines": 163,
+    "sha256": "488d7e18e0536a528b2544b54c878a0bea548c212787d79faaf26309ec77fa71",
+    "hexColors": 7,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/editorial/BlogHero.svelte",
+    "bytes": 2317,
+    "lines": 51,
+    "sha256": "322b1450672c95ce3a75ca4aa82c697c4949f699753bd904e98b1d6afd4d4c62",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/BodyTypes.svelte",
+    "bytes": 7096,
+    "lines": 304,
+    "sha256": "b8602d394120d5f3a6dc4fd19380cf9ec3c31f6c485f301f8c4f31c15da2b248",
+    "hexColors": 6,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/BrandSection.svelte",
+    "bytes": 10070,
+    "lines": 431,
+    "sha256": "f4593770ed49690ffdda7d506ac866f78ae9d9a65f9bbd1141ad899e499e7d6b",
+    "hexColors": 19,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/BrowseAllCard.svelte",
+    "bytes": 2263,
+    "lines": 34,
+    "sha256": "9f647078b0034ffcc059a4187138835bccd5fe6ce44c1ce3cc228d7750f28a74",
+    "hexColors": 8,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/Editorial.svelte",
+    "bytes": 12103,
+    "lines": 504,
+    "sha256": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b",
+    "hexColors": 22,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/Hero.svelte",
+    "bytes": 3084,
+    "lines": 116,
+    "sha256": "b0a6316fc17828b6fa5a535ca137aa10168f8e4f364f4704b0360ba802246649",
+    "hexColors": 4,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/InventorySection.svelte",
+    "bytes": 6346,
+    "lines": 269,
+    "sha256": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18",
+    "hexColors": 12,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/MobileBudget.svelte",
+    "bytes": 3955,
+    "lines": 149,
+    "sha256": "46cffaeec6e414b5d14e89ac93c115a5ac47323f71f48aa209facb9435f0fc27",
+    "hexColors": 4,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/SearchBox.svelte",
+    "bytes": 10497,
+    "lines": 340,
+    "sha256": "7f0bfd4b6595b2e96dac50dc8ae569caa3847979b6c5aa1271f67460351e198a",
+    "hexColors": 14,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/TrustActions.svelte",
+    "bytes": 13637,
+    "lines": 209,
+    "sha256": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc",
+    "hexColors": 17,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/VehicleQuickSearch.svelte",
+    "bytes": 24152,
+    "lines": 779,
+    "sha256": "e2d552436161dbe509f3062aa9e587cc174242edfa50feb0ac165b1cb5d40fda",
+    "hexColors": 40,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/home/VideoSection.svelte",
+    "bytes": 9591,
+    "lines": 146,
+    "sha256": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972",
+    "hexColors": 26,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/layout/Footer.svelte",
+    "bytes": 3638,
+    "lines": 90,
+    "sha256": "4661ed2a2d7c2a8875e8e2adb95df6631fbdf79ce33c16c5a0a29c6f06e6a567",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/layout/Header.svelte",
+    "bytes": 29984,
+    "lines": 802,
+    "sha256": "bc3b46d1c24f5af9eeda806bf10624e8ead7823649efa6f359a14ecc8bed7d3d",
+    "hexColors": 29,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/layout/MobileNavIcon.svelte",
+    "bytes": 9542,
+    "lines": 57,
+    "sha256": "fc4711462bbbee641954eaaf01abec68d3b33664c1ab665a1c4f80cd6b763cf9",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/layout/SiteShell.svelte",
+    "bytes": 463,
+    "lines": 14,
+    "sha256": "c3be99729f6e921a1e795c046776bae1c8b7faa45583a5e7dc9466ac488ecd0a",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/listing/ListingFilters.svelte",
+    "bytes": 10730,
+    "lines": 217,
+    "sha256": "79b6b4fb028ae29dc5772f6b2dac37b94b1b5aafa7c530d09d49d8774d75db45",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/listing/ListingHero.svelte",
+    "bytes": 772,
+    "lines": 17,
+    "sha256": "83386703733e226330886645028fb479a63e4b7f80c24fffa6b36927824f9dfc",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/listing/ListingResults.svelte",
+    "bytes": 10190,
+    "lines": 322,
+    "sha256": "dd7940a029219e5c6cbb62ffeaa6932d0d9295df193a5308dc9776bbfa89a6ec",
+    "hexColors": 21,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/listing/QuickFilterSheet.svelte",
+    "bytes": 14005,
+    "lines": 213,
+    "sha256": "4c4ded372d764ae1d5132af28f72bc537e5b499feaa8867f95db5f9b8ae2f253",
+    "hexColors": 23,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+    "bytes": 12175,
+    "lines": 142,
+    "sha256": "e402c55fda3dc0242b484c1dcb6935f9495e6db2dfeddd0fcea37df24cfa5aed",
+    "hexColors": 20,
+    "important": 0,
+    "effects": 1
+  },
+  {
+    "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+    "bytes": 28082,
+    "lines": 794,
+    "sha256": "abc9d4bcdf15aacee47659a9efa92f859058b8f8f433d4017411d48481a93e37",
+    "hexColors": 40,
+    "important": 2,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/ui/HeroVehicles.svelte",
+    "bytes": 3133,
+    "lines": 71,
+    "sha256": "49ace952ea6c3e1b42f78eb8aed3c131575712080259a82a634d3170d7758842",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/ui/Icon.svelte",
+    "bytes": 3839,
+    "lines": 110,
+    "sha256": "b831854b6452271e8ab6138de7f40ae9814744704fe06d40c45b9eeb3308f0c8",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/ui/icons/OriginalActionIcon.svelte",
+    "bytes": 17068,
+    "lines": 48,
+    "sha256": "029bd306547c967824db32dd05f13daf128ea3fc0d7388c3bbe7979da2ac0e6f",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
+    "bytes": 4264,
+    "lines": 86,
+    "sha256": "6e739089e1b12b6ba0fa2ac76878eb71a6e83a6982510d86bf612cc87b3baaf5",
+    "hexColors": 5,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/ui/VehicleCutout.svelte",
+    "bytes": 1128,
+    "lines": 30,
+    "sha256": "17f681988e8df2945c3723554688c7f6fd658b56eac94193058996fc08c29369",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/vehicles/VehicleCard.svelte",
+    "bytes": 9425,
+    "lines": 376,
+    "sha256": "9efabd72156d2d2539936a7c31cbc27900e5a31c44b6bd51b1f99f8e246ed2d5",
+    "hexColors": 22,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+    "bytes": 5103,
+    "lines": 202,
+    "sha256": "5a04ca9e0b8dae1ffaf505af48bc9a498767bfd892fc1127edd8e20cb973d9cb",
+    "hexColors": 13,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/config/brand.ts",
+    "bytes": 704,
+    "lines": 20,
+    "sha256": "2d8aaf30e7a898a7022271f4d9ecc846c33719fe7cb32d84cb6d51780385db59",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/company.ts",
+    "bytes": 5138,
+    "lines": 134,
+    "sha256": "4a4b3b10ad6deaf7af61bd5de17c556759057aee79e8cd7d792dac95749376a3",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/demo-content.ts",
+    "bytes": 1856,
+    "lines": 57,
+    "sha256": "19ac138545f9704bf02ffe69701146730a86be51d760af43846558dcd02f3a8d",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/editorial.ts",
+    "bytes": 13543,
+    "lines": 252,
+    "sha256": "bdb313d9d89f0945fb2c5069edddefb38ae806b85edc0d3b1202533b0ad18ae1",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/home.ts",
+    "bytes": 3268,
+    "lines": 55,
+    "sha256": "e1677636876aee70b586f139014718976e2b357cd197402da00d4bdf5f098476",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/inventory.ts",
+    "bytes": 5600,
+    "lines": 45,
+    "sha256": "6f014cbec675c463debb411c68b46efc5a7f60ecc6f2c3139da02daa8417f466",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/listing.ts",
+    "bytes": 6038,
+    "lines": 138,
+    "sha256": "f1a2832e64576c14d56d98dd36f1ce3ee6aae605f3e3322dc041157d27e192d1",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/navigation.ts",
+    "bytes": 7161,
+    "lines": 159,
+    "sha256": "6afa51239090b8a7bb7127881ae8ee57117980701bc8c9c75fd638628ea6b63f",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/vehicle-artwork.ts",
+    "bytes": 2170,
+    "lines": 28,
+    "sha256": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/lib/data/videos.ts",
+    "bytes": 908,
+    "lines": 30,
+    "sha256": "57217c36b4b0e67a318f44b3f64eade67ea19b1d63541b88aa96605cd1615d1e",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/+error.svelte",
+    "bytes": 2945,
+    "lines": 114,
+    "sha256": "66be7df827725c56e1e1ca5a4eabe79ee7c98fb86aee359c45f1230ec78e1bfc",
+    "hexColors": 4,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/+layout.svelte",
+    "bytes": 693,
+    "lines": 21,
+    "sha256": "771aa7e400dc3d954fa8ca7902262b1dc1828cc8249fed4c23258e311d8b96fd",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/+page.svelte",
+    "bytes": 3793,
+    "lines": 122,
+    "sha256": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660",
+    "hexColors": 8,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/about-us/+page.svelte",
+    "bytes": 1161,
+    "lines": 30,
+    "sha256": "39916dbda7377aee664025c4c299707a2c9a76bd6eed3f2ca8ce5216017adb6f",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/about-us/about.css",
+    "bytes": 7544,
+    "lines": 277,
+    "sha256": "c75224b45705f1442f8ddb413ee811d7f643e5ecd60973fd4ce1c7808a192bfb",
+    "hexColors": 11,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/blog/+page.svelte",
+    "bytes": 1456,
+    "lines": 38,
+    "sha256": "6600e8406ae4e9139aa959ef8e94c70108daf9a23ab6ae0da4fc5a8bb405753f",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/blog/+page.ts",
+    "bytes": 311,
+    "lines": 11,
+    "sha256": "040ab75b8cfaf31b2e9f2679ea6dc86fefb9100ad4f801ffe28007e5d85fc744",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/blog/blog.css",
+    "bytes": 4349,
+    "lines": 207,
+    "sha256": "c28b6a338e0fb4193ad2816924b96f3018f7e4cd4619a5167ea125c69b7c1f2e",
+    "hexColors": 17,
+    "important": 1,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/blog-detail/[id]/+page.svelte",
+    "bytes": 5014,
+    "lines": 125,
+    "sha256": "5a745497bb54bcce5fe6bf4e3766f9ff67284ea1e432ffcc0e08eb32eb5121df",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/blog-detail/[id]/+page.ts",
+    "bytes": 1016,
+    "lines": 32,
+    "sha256": "e6d4315fcd1ead985c50d148939747a404beb4146af681e65463f333f1be747a",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/blog-detail/[id]/detail.css",
+    "bytes": 9353,
+    "lines": 470,
+    "sha256": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305",
+    "hexColors": 37,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/contact/+page.svelte",
+    "bytes": 1430,
+    "lines": 35,
+    "sha256": "2ba55cf3c788ed71bdc5aabd6d66e36efb4c3d29a62d326c196add4112eeb8b5",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/contact/+page.ts",
+    "bytes": 348,
+    "lines": 8,
+    "sha256": "38f9f4d3d8b9ec495b35880712aec6af3c017e1e6774aec8f47abfd0d46fa6be",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/contact/contact.css",
+    "bytes": 19232,
+    "lines": 726,
+    "sha256": "4aca418e7c39f6cb4d50ee3ecf5326bd73b02486825abfec0a399cbb93ce8088",
+    "hexColors": 52,
+    "important": 1,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
+    "bytes": 10436,
+    "lines": 221,
+    "sha256": "5254c56c4feac37563bacb3de2ba4661804816dd1f90ae91d541445e2829a6f7",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/listing-detail-v1/[id]/+page.ts",
+    "bytes": 1064,
+    "lines": 32,
+    "sha256": "7a418df9ce58a5bd1b7bc9631aa3d033af90a81992d5f468867be55aa86e90fc",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/listing-detail-v1/[id]/detail.css",
+    "bytes": 15492,
+    "lines": 586,
+    "sha256": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b",
+    "hexColors": 46,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/listing-grid/+page.svelte",
+    "bytes": 1259,
+    "lines": 28,
+    "sha256": "81d1308316251af7088e2681345cf7139cab5f519c0784df5f2e93db83992e7a",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/listing-grid/+page.ts",
+    "bytes": 344,
+    "lines": 12,
+    "sha256": "62e80b84d0360c5442b89e9486011515153ba7dce9fe7f7c897aab03002d26a3",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/listing-grid/listing.css",
+    "bytes": 13059,
+    "lines": 540,
+    "sha256": "c76c77afd19c0e71499e6a4b3d474a1c7a953281968cbc922c160a74ee7423d3",
+    "hexColors": 54,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/robots.txt/+server.ts",
+    "bytes": 356,
+    "lines": 13,
+    "sha256": "fc9004659301978e40f393420ea59e6883a4639850a87a11b36f4c5f573b5ea7",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "src/routes/sitemap.xml/+server.ts",
+    "bytes": 1085,
+    "lines": 39,
+    "sha256": "588d606eb64a6eb49c82a32c1dd230590a6d9fe4d7766109e4a2e8fdde606574",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/check-architecture.mjs",
+    "bytes": 5438,
+    "lines": 90,
+    "sha256": "1fbba0a95299d0e257d15f5550120193ddd771dd76f2b5011963a99f2b1a0eb1",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/check-assets.mjs",
+    "bytes": 3818,
+    "lines": 95,
+    "sha256": "5684df078304b3b0fd9002b1b2d544fdc371fb2384749a5d30408aa44c6ca987",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/desktop-discovery-smoke.mjs",
+    "bytes": 6471,
+    "lines": 96,
+    "sha256": "542418452d5144404f4a8d4b98e1722092522795e421c1769484d808e86faf75",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/enquiry-smoke.mjs",
+    "bytes": 8537,
+    "lines": 114,
+    "sha256": "8c721e4ba503826e52899ce3398c1e1258537fd9dfcf6a70d8e6f7e0815cc06a",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/mobile-filter-smoke.mjs",
+    "bytes": 6403,
+    "lines": 101,
+    "sha256": "6ef2cc5ddbc378f8f049c30207790948a59862878831550d7347ad59a6814b7b",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
+    "bytes": 5474,
+    "lines": 153,
+    "sha256": "0d59888bfd2feda3dee279de297545b745cad2e2bbeb76c00ac296b8cb60e8ab",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/provenance/legacy-mirror-snapshot-check.mjs",
+    "bytes": 1935,
+    "lines": 51,
+    "sha256": "a0c8d53864bbd4fb9108be6dee3abb21be361f951f1b305c062792a93216c090",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "scripts/sveltekit-smoke.mjs",
+    "bytes": 153314,
+    "lines": 2019,
+    "sha256": "f006e2f2312223f6962bde636b0c7c2eba9e386d2ce4766fe5d507dba5c5abc8",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "package.json",
+    "bytes": 1204,
+    "lines": 36,
+    "sha256": "23e0195643d89f623756eb984ae3e726609b131550865442cda0cbacb30eeefd",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "package-lock.json",
+    "bytes": 78666,
+    "lines": 2334,
+    "sha256": "9e9d03327224086f01ec6de7d0d5b85816aabe92fd354f504825ad306db1f90d",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "svelte.config.js",
+    "bytes": 404,
+    "lines": 18,
+    "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": "TEMPLATE.md",
+    "bytes": 2694,
+    "lines": 63,
+    "sha256": "96276b3ce575e4a6dc713f0b1fa759a1bead3fa06e66c02bcea1399407b46428",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  },
+  {
+    "path": ".template/template.json",
+    "bytes": 1320,
+    "lines": 49,
+    "sha256": "38a011b955e047f3886dd6838bde222018d3c8520ed4e549b527ecd68b93e119",
+    "hexColors": 0,
+    "important": 0,
+    "effects": 0
+  }
+]

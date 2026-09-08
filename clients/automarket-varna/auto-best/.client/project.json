@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "client": "automarket-varna",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:48:32.918Z",
+  "state": "local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "evidence": "J:/cars/audits/2026-09-08/verify/automarket-varna/auto-best/result.json",
+    "frameworkChecks": true,
+    "checkedAt": "2026-09-08T03:40:50.029Z",
+    "limits": [
+      "Local demo only; no provider or form delivery verified.",
+      "Stock is a dated source-backed sample."
+    ],
+    "latestFrameworkEvidence": [
+      {
+        "path": "J:/cars/clients/automarket-varna/evidence/auto-best-validate.log",
+        "modifiedAt": "2026-09-06T22:05:25.540Z"
+      }
+    ],
+    "finalMatrixEvidence": "J:/cars/clients/automarket-varna/qa-final/results.json"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localUrl": "http://127.0.0.1:6656/",
+  "businessFacts": "../business-facts.json",
+  "stock": "../stock.json",
+  "stockCount": 16,
+  "mediaProvenance": "../assets/provenance.json",
+  "changedBoundaries": [
+    "wired dealer identity",
+    "stock and real photo galleries",
+    "source contact/map/SEO/PWA",
+    "unsupported source testimonials/socials/media replaced",
+    "brand accent tokens"
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:6656/",
+    "state": "stopped-after-verification"
+  },
+  "knownGaps": [
+    "Local demos only; no verified public preview or provider delivery.",
+    "Representative 2026-09-07 stock snapshot; reconfirm availability.",
+    "Low resolution official logo; hours/email/social accounts not established.",
+    "Map searches by dealer name and landmarks; exact entrance pin not verified.",
+    "Generic decorative template car graphics retained; not advertised stock."
+  ],
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 16,
+    "sourceTemplateVersion": "2026.09.06-refresh-1"
+  }
+}

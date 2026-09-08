@@ -1,0 +1,848 @@
+{
+  "completedAt": "2026-09-06T20:48:34.551Z",
+  "plan": [
+    {
+      "key": "auto-best",
+      "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
+      "destination": "J:\\cars\\templates\\auto-best",
+      "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
+      "branch": "main",
+      "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
+      "dirty": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp",
+      "changes": [
+        {
+          "path": "ASSET_PROVENANCE.md",
+          "before": "0284de9c7904689b0df6435da9cdb1d024ea22e99d90b77b13b8b245836fa291",
+          "after": "27f8a80bbde149c9374e1657a8a2c67d998ca948d2d364280cb6bfe8cbfa7b06",
+          "sourceExists": true
+        },
+        {
+          "path": "scripts/check-assets.mjs",
+          "before": "d543af978a76f3f653689a68b6f3e672fe3b8c23b8a9b95c5af39d682ec84544",
+          "after": "5684df078304b3b0fd9002b1b2d544fdc371fb2384749a5d30408aa44c6ca987",
+          "sourceExists": true
+        },
+        {
+          "path": "scripts/sveltekit-smoke.mjs",
+          "before": "1189449286c318bdf5a1e183390712634a0b5af9e4d71b8cd0fdbb714a114b7f",
+          "after": "f006e2f2312223f6962bde636b0c7c2eba9e386d2ce4766fe5d507dba5c5abc8",
+          "sourceExists": true
+        },
+        {
+          "path": "src/app.css",
+          "before": "2a723a894f92068c5d21b4deea66f544a0c8c5ccd8d0a4b2deea2b0c571babd5",
+          "after": "b2a86ca5f010df5e0aa385c02ab7d4fc79c9db9712bfd67b714734afe88e872d",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/company/AboutHero.svelte",
+          "before": "19de9362b84916c971090057dd5d6cbff7b60e33fa6993d9128b858e972c539e",
+          "after": "0f1334953b01b7245fcebff055341f7eb5836b2c91805cee5701c986f565cc73",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/company/AboutProcess.svelte",
+          "before": "2e3bb0133049624d2ffab8da4d71c4ef57212f0e92308306b83fd316b7f58c72",
+          "after": "14ece1003bd74e971f50399fef19bee0ff8f8471c35e908c170e25f2120fc4c1",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/company/ContactHero.svelte",
+          "before": "95f996f12cdddf9cca916cdbf049edc3ec1e01978438454fd5cc83a5e74fbe41",
+          "after": "4e32c31b9b023438bd15c9a078a04b573117c69957c00d12f0f39365d6bb7765",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/company/ContactIntent.svelte",
+          "before": "8de2140770fa8cd527ec9b7315c1949d996d93493c6549e796efcedbd72d75ff",
+          "after": "476b552987e88b74cd4e2a4311064da42ef9adac96382462b7abd1ddf5c8870b",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/company/VehicleEnquiry.svelte",
+          "before": "f013bd8b063c8545c4284806bf2dc81478f98846a57e1002fcef356b7a09258f",
+          "after": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/editorial/BlogHero.svelte",
+          "before": "58d5ddb916f4bcee91c53a626fe0e70219daccccf69f1cd970dd024d89028ce7",
+          "after": "322b1450672c95ce3a75ca4aa82c697c4949f699753bd904e98b1d6afd4d4c62",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/BodyTypes.svelte",
+          "before": "1e1cb5477c62c77b74c99845bc24b42f35863f463054560e20aed5c2433e73e2",
+          "after": "b8602d394120d5f3a6dc4fd19380cf9ec3c31f6c485f301f8c4f31c15da2b248",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/BrandSection.svelte",
+          "before": "b6727689ac7c0a8dbb9775085915b21646c8716af02b368aa538bb283d562910",
+          "after": "f4593770ed49690ffdda7d506ac866f78ae9d9a65f9bbd1141ad899e499e7d6b",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/Editorial.svelte",
+          "before": "f71eeefe69cb35d4e757d4ce820b177467d30685458a87a7e42f7508129dd9b9",
+          "after": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/Hero.svelte",
+          "before": "1c3ed567c44a1516095e99356f3101f75c37b8c856da83240ece842d4b3b6238",
+          "after": "b0a6316fc17828b6fa5a535ca137aa10168f8e4f364f4704b0360ba802246649",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/InventorySection.svelte",
+          "before": "ace0e0a0cb2ca9440aebde61376095274b04b5a829964b59110264e830f7e204",
+          "after": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/MobileBudget.svelte",
+          "before": "af8a412bfc5de1eeafdd3dadf3a2781188aecd6dd8d17800bb96ff3c7a6bf5ff",
+          "after": "46cffaeec6e414b5d14e89ac93c115a5ac47323f71f48aa209facb9435f0fc27",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/SearchBox.svelte",
+          "before": "65b88eb4f3c790a6c7d694474af8204b180b8760fdb4f9e4e6817e5567c750dd",
+          "after": "7f0bfd4b6595b2e96dac50dc8ae569caa3847979b6c5aa1271f67460351e198a",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/TrustActions.svelte",
+          "before": "c75afaf1888fb616197f9b8ae994ccb06aca9ac886c0916cf041f3d3280e01d5",
+          "after": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/VideoSection.svelte",
+          "before": "fdcc2f8285cca37dd1dbd121509959603e4c89e024cae26991b0dcea42c5bbcb",
+          "after": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/layout/Header.svelte",
+          "before": "95cbf12a6a6ef9d11c2eb4e264b964ac1f2bf8702d3eefc51ffd2306c87fb911",
+          "after": "bc3b46d1c24f5af9eeda806bf10624e8ead7823649efa6f359a14ecc8bed7d3d",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/listing/ListingHero.svelte",
+          "before": "320bc6e5a89ab7b4f8030747a59096e513d3342ac558ca64dd584f3a0d5c2242",
+          "after": "83386703733e226330886645028fb479a63e4b7f80c24fffa6b36927824f9dfc",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/data/company.ts",
+          "before": "c41d7454453d3b1251d7a8f2b60286ff7cf81de5be1c986630acff8494d3d23d",
+          "after": "4a4b3b10ad6deaf7af61bd5de17c556759057aee79e8cd7d792dac95749376a3",
+          "sourceExists": true
+        },
+        {
+          "path": "src/routes/+page.svelte",
+          "before": "1726ba8242c7e256e680b80b895d010ee204d2019b08d8ffd050eed72e97d76d",
+          "after": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660",
+          "sourceExists": true
+        },
+        {
+          "path": "src/routes/about-us/about.css",
+          "before": "38b497b2b2434121def3bb37faa47dbdec4487328eeaca102c8a418854c644dc",
+          "after": "c75224b45705f1442f8ddb413ee811d7f643e5ecd60973fd4ce1c7808a192bfb",
+          "sourceExists": true
+        },
+        {
+          "path": "src/routes/blog/blog.css",
+          "before": "dea9aca4f1eba028bab6df46f748617c328ac1d62bb536967860f84f470787ec",
+          "after": "c28b6a338e0fb4193ad2816924b96f3018f7e4cd4619a5167ea125c69b7c1f2e",
+          "sourceExists": true
+        },
+        {
+          "path": "src/routes/contact/contact.css",
+          "before": "3bb33ca0ee0bd10052a63247bc660545b63be7e28e7498904fb3152f4fa191f1",
+          "after": "4aca418e7c39f6cb4d50ee3ecf5326bd73b02486825abfec0a399cbb93ce8088",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-about-detail-v1.webp",
+          "before": "8ac8a13af6ab3a6d2791b181e40d8387f69dbff58b8d53f6ecd2cfada06790b2",
+          "after": null,
+          "sourceExists": false
+        },
+        {
+          "path": "static/assets/images/lead/day-night-contact-detail-v1.webp",
+          "before": "fb1b9a24c1935e8458bee71a330cedc0766fe9d686fbfc21c1c4ac74cafae2d3",
+          "after": null,
+          "sourceExists": false
+        },
+        {
+          "path": "provenance/browse-campaign-pair-2026-09-06.md",
+          "before": null,
+          "after": "6392fcab3d9f7067d4de05ce0137316d54631bfb0a9b8287ee30c25217308b8c",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/collection-lineup-2026-09-06.md",
+          "before": null,
+          "after": "d8c633efec6273b5be3bb1fc8d13046eb536cab5502d66a51eb4aa2fae6160ad",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
+          "before": null,
+          "after": "3b6f123f61b9a941671ed29550151eb442307431b98652c98cf6ea1f8df2e1f9",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/superseded-collection-lineup/day-night-collection-lineup-v1.webp",
+          "before": null,
+          "after": "2f46252053944d55d8adaa6f235b792efabe004d6c19bb7afe13bca0bd1729e0",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/superseded-hero-art/day-night-about-detail-v1.webp",
+          "before": null,
+          "after": "8ac8a13af6ab3a6d2791b181e40d8387f69dbff58b8d53f6ecd2cfada06790b2",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
+          "before": null,
+          "after": "fb1b9a24c1935e8458bee71a330cedc0766fe9d686fbfc21c1c4ac74cafae2d3",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
+          "before": null,
+          "after": "3c86dc46335a9adbbd61d601a90b8332ac0f4663f6ca1eb777a9b11af9d64059",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-graphite-v1.webp",
+          "before": null,
+          "after": "0dbe76f50ec8f198b63b57c8a0891fabb1fd875a745b18fc222d3be028d0f0b9",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-silver-v1.webp",
+          "before": null,
+          "after": "56af63d9ca92410e85c262a852c732640296956e1139efea44b80e2a161132f6",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-urus-v1.webp",
+          "before": null,
+          "after": "3d7d4882c635941a0430e67fb83b52a391b6d64a5cf3ef30726afa4eae981428",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/vehicle-cutouts-2026-09-06.md",
+          "before": null,
+          "after": "98852c6449dbbfe5548492a1f90c681585c77f90bc0c2948c9642b7a6c0b886f",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/vehicle-side-profile-prompts-2026-09-06.json",
+          "before": null,
+          "after": "74f1cd3f6c01031b696a624f9e762b85c2a181fcdd1a89f64597ef0e7a75c3fa",
+          "sourceExists": true
+        },
+        {
+          "path": "provenance/vehicle-side-profiles-2026-09-06.md",
+          "before": null,
+          "after": "cb405da2c931a2772c0f21e149fe285b1804c78cf7eb858cfa50ffb2968264aa",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/BrowseAllCard.svelte",
+          "before": null,
+          "after": "9f647078b0034ffcc059a4187138835bccd5fe6ce44c1ce3cc228d7750f28a74",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/ui/HeroVehicles.svelte",
+          "before": null,
+          "after": "49ace952ea6c3e1b42f78eb8aed3c131575712080259a82a634d3170d7758842",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/ui/VehicleCutout.svelte",
+          "before": null,
+          "after": "17f681988e8df2945c3723554688c7f6fd658b56eac94193058996fc08c29369",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/data/vehicle-artwork.ts",
+          "before": null,
+          "after": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-collection-banner-v2.webp",
+          "before": null,
+          "after": "d9f896f744abf519acbd28897c7eabd6e9082bddfa0174ff52506d01fdb09e75",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-a45-v1.webp",
+          "before": null,
+          "after": "dac81d872cf50c8142cd0ade045d80962ed2aa9acaefcb62cb2e2d835ff1f277",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-amggt-v1.webp",
+          "before": null,
+          "after": "42c3099748c113bbc36dc10c969f0a63b2074d43efac35e586422ae85158b329",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-e63-v1.webp",
+          "before": null,
+          "after": "18a7c8a7448e0abb5a361a8f83c5ac13c584182ba2396b98885aee2c0b53d111",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-gclass-v1.webp",
+          "before": null,
+          "after": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-golf-v1.webp",
+          "before": null,
+          "after": "ae2508c29902b35c5ae02a738e60b3d6805ce9e6d7688e7c13fd0ae24b885888",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-graphite-v1.webp",
+          "before": null,
+          "after": "2e2a1144f12db5fcea849fb76434df8a00adc2b9589e7956d203e9abc8da05b5",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-m4-v1.webp",
+          "before": null,
+          "after": "eee707e7a3a891a934e7346b5a33c9e77f3dd2128768458f09fe2d5a5150f627",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-m5-v1.webp",
+          "before": null,
+          "after": "891d287bb21fe52e43ddb4e8b204c2eb8645f7401974f671f1559a9b2599d19c",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-porsche-v1.webp",
+          "before": null,
+          "after": "740d09a56a3524ef81d76298cf0b3f1953c2f921395c0d05ac4d69c309f77d44",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-rs5-v1.webp",
+          "before": null,
+          "after": "eaa9c59c37090f1571972836b8ead35c1a118089c7eae0e7c5c1af147b104e13",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-silver-v1.webp",
+          "before": null,
+          "after": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-cutout-urus-v1.webp",
+          "before": null,
+          "after": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-sell-banner-v2.webp",
+          "before": null,
+          "after": "393fe03e5694f948ff56bf2b124734119a371fcaa4125a62b560322136d23f7f",
+          "sourceExists": true
+        },
+        {
+          "path": "static/assets/images/lead/day-night-urus-front-v1.webp",
+          "before": null,
+          "after": "067acd750a9cc40c21c513b395661be16d66b9d1a1f971e1752ed1adda171f9b",
+          "sourceExists": true
+        }
+      ]
+    },
+    {
+      "key": "modern",
+      "source": "M:\\leads-cars\\projects\\bulgaria\\day-night-auto-group",
+      "destination": "J:\\cars\\templates\\modern",
+      "head": "7c635fee1c8fadca317a8a65d5887c0c455b021d",
+      "branch": "codex/mobile-header-contact-refinement",
+      "remote": "https://github.com/darkapoparka/day-and-night-modern.git",
+      "dirty": "M DESIGN.md\n M apps/web/app/[locale]/components/mobile-about-contact.tsx\n M apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx\n M apps/web/app/[locale]/components/mobile-financing-interceptor.tsx\n M apps/web/app/[locale]/components/mobile-financing-policy.ts\n M apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx\n M apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx\n M apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx\n M apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts\n M apps/web/app/[locale]/components/mobile-service-help.tsx\n M apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx\n M apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx\n M apps/web/app/[locale]/components/public-route-loading.tsx\n M apps/web/app/[locale]/imports/components/blank-import-request-link.tsx\n M apps/web/app/[locale]/imports/components/import-origin-field.tsx\n M apps/web/app/[locale]/imports/components/import-request-fields.tsx\n M apps/web/app/[locale]/imports/components/import-request-policy.ts\n M apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx\n M apps/web/app/[locale]/imports/page.tsx\n M apps/web/app/[locale]/layout.tsx\n M apps/web/app/[locale]/lease/lease-car-selector.tsx\n M apps/web/app/[locale]/lease/lease-finance-policy.ts\n M apps/web/app/[locale]/lease/lease-mobile-selection.tsx\n M apps/web/app/[locale]/lease/lease-selected-vehicle.tsx\n M apps/web/app/[locale]/lease/lease-vehicle-selector.tsx\n M apps/web/app/[locale]/lease/page.tsx\n M apps/web/app/[locale]/styles.css\n M packages/marketplace-ui/components/dealer-bottom-nav.tsx\n M packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx\n M packages/marketplace-ui/components/dealer-social-links.tsx\n M packages/marketplace-ui/components/desktop-discovery-bar.tsx\n M packages/marketplace-ui/components/desktop-discovery-search.tsx\n M packages/marketplace-ui/components/desktop-quick-filters.tsx\n M packages/marketplace-ui/components/marketplace-masthead.tsx\n M packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx\n M packages/marketplace-ui/components/mobile-marketplace-overlay.tsx\n M packages/marketplace-ui/components/vehicle-card-content.tsx\n M packages/marketplace-ui/lib/vehicle-card-view-policy.ts\n M packages/marketplace-ui/package.json\n?? .tmp/\n?? apps/web/app/[locale]/components/mobile-sell-category-field.tsx\n?? apps/web/app/[locale]/desktop-header.css\n?? apps/web/app/[locale]/lease/lease-mobile-preferences.tsx\n?? packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx\n?? packages/marketplace-ui/components/dealer-desktop-header.tsx\n?? packages/marketplace-ui/components/dealer-desktop-toolbar.tsx\n?? packages/marketplace-ui/components/dealer-mobile-header-icon.tsx\n?? packages/marketplace-ui/components/dealer-ui-icon.tsx\n?? packages/marketplace-ui/components/dealer-vehicle-facts.tsx\n?? packages/marketplace-ui/components/mobile-pill-rail.tsx\n?? packages/marketplace-ui/lib/icons/\n?? packages/marketplace-ui/lib/mobile-form-control.ts\n?? packages/marketplace-ui/lib/mobile-header-icon-action.ts",
+      "changes": [
+        {
+          "path": "apps/web/app/[locale]/components/mobile-about-contact.tsx",
+          "before": "b59207b3ef75d0a22a5e0c21ee0672ce7f93dd9b2a215cb072545aebc107b176",
+          "after": "f69f3a04cdfce97a7070afa5f869f2b5298ccdcedcd8062c3daabb3b4de6df76",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx",
+          "before": "242f5572e8fbaa7934de9fc1d58a82d1dfe826b5f175c63e333baddd85428a73",
+          "after": "2201d62b19ec41b1e04d93593bca4e75ba6f8dce9620f2e22dd7a840ed2f38c5",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-financing-interceptor.tsx",
+          "before": "1676374fe94cd6c45598929dacf793c66e5a0c25e9ee96dc9c463d54b9e8f0a2",
+          "after": "5a06303897eecd7077b9bbd595836a51f3bc6b527b2431cccca682b6180642b9",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-financing-policy.ts",
+          "before": "eac010b778b7166948b4f4d0175ed3ae8c2f1ab68d2427434230a21f97761d0a",
+          "after": "2072dee01c9bbc6677e069a5c4b38bdf8f4aae2f9ffbb6dabf8b8f30311f191b",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx",
+          "before": "ca320a6423101ac653c5ededfbd244d261da72b4ba889b3bcd1d0cb7d1ff00d7",
+          "after": "75f9018ea43b4b6a8019971ac41a8318c7ee7df9f2f3f2c7952e901c5bcc2e1c",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx",
+          "before": "e6e23bfab3ecc1f228fdbedb9b0a0900a94b6bba59306c0a30870940e87ccfda",
+          "after": "cf6e3972321898b8969e09809a3e17d8e6d7a270df8d4d0cc2f300ebf7cdc2e6",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx",
+          "before": "eb53d493307e7bbbd92054a3b94eb56e89ca9b777117219e0543f715d4092ee4",
+          "after": "b6d33b8c9217572ad772f77f1db9a5c700e8def7bb58d43ca3def8b2c1d81c28",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts",
+          "before": "afaa8891567ff16cb7d56380045ac29ac9c4b12665d64e7b132e09563cb74e9f",
+          "after": "10fba53231884d6a0e3779fa4832f9a28a9f706a9fb39d14cca5905016f8e092",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-service-help.tsx",
+          "before": "46d67a25de2f3559d9a891301a018ec5b331b58fc62037a86021693825d320ce",
+          "after": "7b0c5c7b6f5d5c72806395d8882d4e29adf38beb816b1b8ec4872cd0c1482a94",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx",
+          "before": "e6ff3d90a15d612aeb690631f275e99c7268d271a8672e70c5cb69779c4d0865",
+          "after": "8e2a6bedbd11497bc9903cc2969e8b20d08e2cf77329f58642a5bdc1f87a3d74",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx",
+          "before": "687f5ff98f0088d9d07eca59f219b9729fe72ff0635a80f19d9b590f903cc92f",
+          "after": "e09654bdcc52db0cd68c972a95c880f04eccd900c66b743179e3bf025323809a",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/imports/components/blank-import-request-link.tsx",
+          "before": "3a8f51790c0b2979f1862906efcf08a3f2a5a7073ac4e011ae7123128ce8418f",
+          "after": "4f27629e1822c5f28714c1470a2831802ec83add7bcf411e3cee1422593bf5ba",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/imports/components/import-origin-field.tsx",
+          "before": "97f63fdc208c2a4387be8f5f6836f9579c0ce21b994cec574ca27daf55a6de0f",
+          "after": "0a4b4b87c52db321a218d5deeebad6dfc1823655985a9fc7f0ae181d21efc242",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/imports/components/import-request-fields.tsx",
+          "before": "f0588db16d77717449c0cac923d7b28a78465025f9e938625df0fe724b5c5452",
+          "after": "b28dc717750b899580b61ad4800d429660c5c4742593338c5815cbd9f1886d38",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/imports/components/import-request-policy.ts",
+          "before": "b995ad1deb51711f74acf78df1480ad266733fd822625d65fdcbc0b4067f2068",
+          "after": "3fc747f76c85d8e14291af8f74ac1004c89fa5f50673446328fe0434297dd0e0",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx",
+          "before": "0446bddd43ba2bff0abc92203094b7df735ee7a784671b10f8d97c824654cfb9",
+          "after": "cf3d75aac9bc8b84540c11d7d9952f17ab5ee5a1a42713b3924d852dbe8b6977",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/lease-car-selector.tsx",
+          "before": "6da1ee9a34a3e2c54fa6ee1ead100dcde2bacbfbbfaff3a0771805e923e318a0",
+          "after": "4016585250ab40cb5983c72c97e5ad6cfa5c3ea13b2c55100e7bf3ecb35ed8c6",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/lease-finance-policy.ts",
+          "before": "39ce2e28e9f5b031b28c653824f80023faa9f4ef8b92ab65973bbaf1468ece6e",
+          "after": "2c26214d6ad6fce1dc3d8c53cfb1750a8d95c8877efd35da13703dafa0eda929",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/lease-mobile-selection.tsx",
+          "before": "0fa5340599831d4ed197b6529b55ae2a079f9d5110aa57c94f1c447735d2db65",
+          "after": "aca318d736e6ae25e29f8487bfac6aa0652c27917bea7a0ea291ab22c3f2f6b3",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/lease-selected-vehicle.tsx",
+          "before": "df90c2fc52a40953b8add25a70d10d5a4909c076344ed506a1a88fec999ee269",
+          "after": "5efd274470967354e70a1a1121bae19447a7916cc722511eeecaf83e202ea313",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/lease-vehicle-selector.tsx",
+          "before": "7b406ba81c46e69d6d9517596ba7052b7569b7982ef7e1159a6ee8059ae146e5",
+          "after": "20f7389afca619d1fedf63afc5c1043262e68ff041399e2d494a45c7d637fdc5",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/page.tsx",
+          "before": "f005be54dad9f0b39560c0302e24899f7af00ce8c68f927e915d407744650da4",
+          "after": "66edc95fec3cc0f21675e008c95f53d9e7e2de5180cec730482adc0f6747fdba",
+          "sourceExists": true
+        },
+        {
+          "path": "DESIGN.md",
+          "before": "152a1f6d92ef3da5915205459cee49bc25365b438b38460cc6cabf5c4096882a",
+          "after": "dc6963ed180467a1449ed0842dfee64ee3ec8d477d8eeed854df927ac3a74edd",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+          "before": "bb5b012b4f9edf66e5fefdfc22c429135b8a093414fc88501be8af90b5104709",
+          "after": "d4c742e2e4e9f90c04afc01434bc45cf00fb57efbd3cf2fefb61478f70b1aea1",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+          "before": "da1a38ce9800aea1b89e0ab6c8d7bf7d32bd2db47e070bfc3839fb2ba256b4e9",
+          "after": "d7af6a473e1e02e2028ce841c9df1c8ac6e6d45bd205ab21a62235345ec2aa78",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-social-links.tsx",
+          "before": "bcc16be81db0c8e34e879dc323aa54202685a9fe0bbc7fa45c862a30199ca571",
+          "after": "2082be71ac3fe6184b4a9e14128b7539c9d79dfe5272491630cf9ad972e6696b",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
+          "before": "8ecb74add52fe2c85b33d05815a4335acee8759e45ee97907c3fc9f277131534",
+          "after": "165f21e33e9f4ff2923b745b1e9b0c1136d4fa905203e8c7eb036789449ae86c",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/mobile-marketplace-overlay.tsx",
+          "before": "e7347aa0bda86d64cdd795ca9f94f197777356b1f984c1b988b06ec6243d9413",
+          "after": "79d2cb719a438074ba3ff92ba75151c6616c71efdab670704b8812ad63aa9ace",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/vehicle-card-content.tsx",
+          "before": "f72e780eea1471884dddcc615a540d4772ad06d62adff83fca84a248105c1482",
+          "after": "6dc15eef623a0f024a688393ec5396f462d6ecd5cd84804c10bd964fd49d2c05",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/mobile-header-icon-action.ts",
+          "before": "c433f9f68c391533a277a0f2cfdcfa47dd667ea571c90fd86c90562d15e64ee8",
+          "after": "73f3606db3092d38b23eaa1c44f983dbb807ad853bcef388b031bd2bfb2194cd",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+          "before": "43df88cfda5a409578e6a9fbdd77fe9ba3a49233adf6ca53bcae8edc416cd3d2",
+          "after": "6fd4434422d33c3a455815c94753131d24ebfc321dc54885746067775127f839",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/package.json",
+          "before": "72caa8407e7a04a4b9fd7457ed82b1bcb318b18107f0c375b7c6dd7f21a6a6e5",
+          "after": "ae49a06059413b8ccf592b41cde786ee3fc7630cf141540c2d34c2998ee4dd49",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/components/mobile-sell-category-field.tsx",
+          "before": null,
+          "after": "ab1fb2e0cd396539a59abbd743b7eb81f906112c8247b49083ccb85e1b37584e",
+          "sourceExists": true
+        },
+        {
+          "path": "apps/web/app/[locale]/lease/lease-mobile-preferences.tsx",
+          "before": null,
+          "after": "f43df6793df98178f50ba418bb130e1d60b864deb1aa9e175829eda165964f19",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx",
+          "before": null,
+          "after": "3edbc362ec62f71fa2082a1af8599f9429b1fcc98682bc5804b4e22ba02249be",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
+          "before": null,
+          "after": "07e49275e81afb44fd73bf0c11d99a4f124f5d3127779cbf89008749c1b7a5bf",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-ui-icon.tsx",
+          "before": null,
+          "after": "ad86c354d9e2d4f6fec5df18ef4aeec62a201a68af62efa570c888a37e58f1a9",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/components/dealer-vehicle-facts.tsx",
+          "before": null,
+          "after": "5ff23f769b850d1667ad9161a5e0cdaa545049d250671d24247738a7f21de5da",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/icons/hugeicons-controls.ts",
+          "before": null,
+          "after": "fe166e6b788cfc486b58d7f85b347d23d27782c595a17caf59c3cc7d924a06f6",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/icons/hugeicons-header.ts",
+          "before": null,
+          "after": "754f263af6da61b50880455490750cb56a4a28c8fa55bca5f72120b15e758bd4",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/icons/hugeicons-LICENSE.txt",
+          "before": null,
+          "after": "50714aa0930b7ec52a08c79f608bf360841e9ef2ade5917ccc6551695570057f",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/icons/hugeicons-navigation.ts",
+          "before": null,
+          "after": "1abdf28510a9c7f9d9ee62b20fce11ab85f6c8f26d1ce039e3ca65e11d40a9cd",
+          "sourceExists": true
+        },
+        {
+          "path": "packages/marketplace-ui/lib/mobile-form-control.ts",
+          "before": null,
+          "after": "feb380e33812c25d56ec2884e59dcad4d51ce646d70935b62f01c4ebaef20c18",
+          "sourceExists": true
+        }
+      ]
+    },
+    {
+      "key": "carwow",
+      "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\spartak-style",
+      "destination": "J:\\cars\\templates\\carwow",
+      "head": "9f05da01000d9177226b19f6d5dd8e5531964948",
+      "branch": "codex/6517-canonical",
+      "remote": "https://github.com/darkapoparka/day-and-night-spartak.git",
+      "dirty": "M .gitignore\n M AGENTS.md\n M package.json\n M src/lib/components/about/DesktopAboutPage.svelte\n M src/lib/components/blog/BlogArticlePage.svelte\n M src/lib/components/blog/BlogIndexPage.svelte\n M src/lib/components/calculator/CalculatorContent.svelte\n M src/lib/components/compare/CompareContent.svelte\n M src/lib/components/contact/DesktopContactPage.svelte\n M src/lib/components/contact/MobileContactPage.svelte\n M src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte\n M src/lib/components/detail/desktop/DesktopDetailFinanceCalculator.svelte\n M src/lib/components/detail/desktop/DesktopDetailGallery.svelte\n M src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte\n M src/lib/components/detail/desktop/DesktopDetailReviews.svelte\n M src/lib/components/faq/FaqContent.svelte\n M src/lib/components/favorites/desktop/DesktopFavoritesPage.svelte\n M src/lib/components/financing/DesktopFinancingPage.svelte\n M src/lib/components/home/HomePage.svelte\n M src/lib/components/home/HomeQuickFilterModalStyles.svelte\n M src/lib/components/home/desktop/DesktopHome.svelte\n M src/lib/components/home/desktop/DesktopHomeBrandStrip.svelte\n M src/lib/components/home/desktop/DesktopHomeFooter.svelte\n M src/lib/components/home/desktop/DesktopHomeHero.svelte\n M src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte\n M src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte\n M src/lib/components/home/desktop/DesktopHomeInventoryTabs.svelte\n M src/lib/components/home/desktop/DesktopHomeReviews.svelte\n M src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte\n M src/lib/components/home/desktop/DesktopHomeVehicleCategories.svelte\n M src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte\n M src/lib/components/home/desktop/desktop-home-inventory-data.ts\n M src/lib/components/home/mobile/MobileHome.svelte\n M src/lib/components/inventory/desktop/InventoryDesktopPage.svelte\n M src/lib/components/inventory/desktop/InventoryListingsPanel.svelte\n M src/lib/components/inventory/desktop/InventoryPageShell.svelte\n M src/lib/components/inventory/desktop/InventoryResultsQuickFilters.svelte\n M src/lib/components/inventory/desktop/InventoryTypePills.svelte\n M src/lib/components/inventory/desktop/QuickFilters.svelte\n M src/lib/components/inventory/desktop/SearchBar.svelte\n M src/lib/components/inventory/desktop/SortingToolbar.svelte\n M src/lib/components/inventory/desktop/VehicleCard.svelte\n M src/lib/components/inventory/desktop/desktop-inventory-context.svelte.ts\n M src/lib/components/inventory/desktop/inventory-desktop-layout.css\n M src/lib/components/inventory/mobile/MobileInventoryPage.svelte\n M src/lib/components/inventory/mobile/MobileInventoryResults.svelte\n M src/lib/components/inventory/mobile/MobileInventoryVehicleCard.svelte\n M src/lib/components/inventory/mobile/mobileInventory.css\n M src/lib/components/layout/DayNightFooter.svelte\n M src/lib/components/layout/RouteImageBehavior.svelte\n M src/lib/components/layout/SiteChrome.svelte\n M src/lib/components/layout/SiteChromeCtaButtons.svelte\n M src/lib/components/layout/SiteChromeIcon.svelte\n M src/lib/components/layout/SiteChromeNavRow.svelte\n M src/lib/components/layout/SiteChromePrimaryRow.svelte\n M src/lib/components/layout/SiteChromeTopBar.svelte\n M src/lib/components/layout/SiteFooter.svelte\n M src/lib/components/layout/SiteNavigation.svelte\n M src/lib/components/sell/DesktopSellYourCarPage.svelte\n M src/lib/components/sell/MobileSellYourCarPage.svelte\n M src/lib/components/sell/desktop-sell-page-data.ts\n M src/lib/components/services/DesktopServicesPage.svelte\n M src/lib/components/team/DesktopTeamMemberPage.svelte\n M src/lib/components/team/DesktopTeamPage.svelte\n M src/lib/data/daynight-site.ts\n M src/lib/data/daynight-team.ts\n M src/lib/state/inventory-filters.svelte.ts\n M src/lib/styles/daynight-detail-desktop.css\n M src/lib/styles/daynight-home-base.css\n M src/lib/styles/daynight-home-desktop.css\n M src/lib/styles/daynight-mobile.css\n M src/lib/styles/storefront.css\n M src/lib/styles/tokens.css\n M src/routes/+layout.svelte\n M tasks.md\n M vite.config.ts\n?? .impeccable/\n?? DESKTOP_STYLE_GUIDE.md\n?? artifacts/\n?? scripts/dev-local.mjs\n?? src/lib/components/home/desktop/DesktopHomeVideos.svelte\n?? src/lib/components/inventory/desktop/InventoryFilterDialog.svelte\n?? src/lib/components/inventory/desktop/InventoryFilterTriggers.svelte\n?? src/lib/components/inventory/desktop/InventoryShortcutShelf.svelte\n?? src/lib/components/layout/DesktopDealerFooter.svelte\n?? src/lib/components/layout/DesktopYellowRouteHero.svelte\n?? src/lib/components/shared/DesktopBrowseLink.svelte\n?? src/lib/components/shared/DesktopSectionHeading.svelte\n?? src/lib/components/shared/DesktopVehicleActions.svelte\n?? src/lib/components/shared/MobileHeroBar.svelte\n?? src/lib/components/shared/MobilePromoCard.svelte\n?? src/lib/data/daynight-videos.ts\n?? src/lib/styles/desktop-controls.css\n?? src/lib/styles/desktop-discovery.css\n?? static/assets/brands/\n?? static/assets/daynight-contact/\n?? static/assets/icons/youtube-footer.svg\n?? static/assets/images/home-promos/campaign-collection-v3.webp\n?? static/assets/images/home-promos/campaign-financing-v3.webp\n?? static/assets/images/home-promos/campaign-financing-v4.webp\n?? static/assets/images/home-promos/campaign-viewing-v3.webp\n?? static/assets/images/home-promos/campaign-viewing-v4.webp\n?? static/assets/images/home-promos/finance-documents-cutout-v5.webp\n?? static/assets/images/home-promos/gclass-urus-pair-v4.webp\n?? static/assets/images/home-promos/kristian-original-instagram-DNyKbke2D83.jpg\n?? static/assets/images/home-promos/kristian-phone-cutout-v5.webp\n?? static/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.png\n?? static/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.webp\n?? static/assets/images/home-promos/leasing-calculator-cutout-v7.webp\n?? static/assets/images/home-promos/phone-portrait-generated-v7.png\n?? static/assets/images/home-promos/phone-portrait-generated-v7.webp\n?? static/assets/images/home-promos/urus-rear-v4.webp\n?? static/assets/images/services/service-card-delivery-daynight-v2.webp\n?? static/assets/images/services/service-card-documents-daynight-v2.webp\n?? static/assets/images/services/service-card-financing-daynight-v2.webp\n?? static/assets/images/services/service-card-inspection-daynight-v2.webp\n?? static/assets/images/services/service-card-sourcing-daynight-v2.webp\n?? static/assets/images/services/service-card-trade-in-daynight-v2.webp\n?? tests/desktop-discovery.e2e.ts\n?? tests/home-hero.e2e.ts\n?? tests/mobile-inventory-cards.e2e.ts",
+      "changes": [
+        {
+          "path": "src/lib/components/contact/DesktopContactPage.svelte",
+          "before": "b482e12cab812f4789412af88d1ed5046e47043c7d7d848cb1c4891afd55c627",
+          "after": "5b15cf03a0735c60e3c9e2066d8ee0b24743d27092f0d8f2c44f91b569faea50",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/contact/MobileContactPage.svelte",
+          "before": "23a083b2125219fbe7c4fb627c4d3357af365ec71651defbbdf943ad6dbc05b9",
+          "after": "cf1651c9e183232a07c8432e7a663e81d0c276e2dda70c627e1be79931edfb8b",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHome.svelte",
+          "before": "4156ded98e8df1393546421fb4f4826951fd22d23e97a28bb24b0449223039a0",
+          "after": "fb5fd5488ea4f729d51fb2725d46341113316fad7f032066bd0542b278d38920",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte",
+          "before": "49edacdd0756ffbeba908c9ec4a12199d46cf7390b22b18330854b9970182050",
+          "after": "8571e4d02befafb974a1a0040138c3a1da7b54a2abf9de124774eeb2f66b189d",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte",
+          "before": "1633be1321cfaad246344a064d24461985d444e4309ef6659cb392130b75dceb",
+          "after": "e7edaba584a59ede629127da300e0ec7ac6a0a1fde18da1e3327c5229312dd05",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeInventoryTabs.svelte",
+          "before": "46e56f3c521a00196ad73c0d3d7879d984f6258991aa9fd5b6568fcc80e8aaba",
+          "after": "fee9150c0e3d21870062384231bd76f538cdbb9c5c10961973edc7abb77aecbb",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+          "before": "6329e3f0d3f523fcb22e89836a6ca723d43136601cef5c1bd55b0be2ad9f1dd8",
+          "after": "e2e7c3d9a26db4411def12ca42e09daa1cf28e416eeca1bf97bff9ee1925854b",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte",
+          "before": "85a5540603bf71bd6b83ba99e7adb40780251204a4062fed0925dce2cca5f128",
+          "after": "c7d8f052a3ba9db86622fff40907e43b6c838835308545c1abf9ac3b79cd0ca6",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
+          "before": "a482898bff59ecadbfbaff6b8121237db3c409712bd11ce428dd8686f527a4b2",
+          "after": "40542520047cb4677ae8b6836d4f96d07eb5e77670b12f6a1d05f6fe093de637",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/HomeQuickFilterModalStyles.svelte",
+          "before": "0e33f7240eeddc57fa1bf91129730f907bb1c0eae1f17cccf695c7f59fc83aa1",
+          "after": "07914b7d788ef3fd3093482aa7ee9944ad91bb987547323f291165072a89ce80",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/home/mobile/MobileHome.svelte",
+          "before": "cdf92fe76f070535d7b66c5dd5c3a9e7d3822cd7dfd3ccc6f5a965b676ce5366",
+          "after": "d49ef42555c5b5dc0d6a1518a5d980d22119c1c8f9eada6e1dafc40f64681c4e",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/inventory/desktop/InventoryDesktopPage.svelte",
+          "before": "c74196860f906c46a107f081d8a40ce44b7ab8752aa825ec2ef7b9050631f2e9",
+          "after": "4ee64b36f442c1cf6edcc3667f8328414b6dc8bd6a4b4b90dac515240f5c89e6",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/inventory/desktop/InventoryFilterDialog.svelte",
+          "before": "ef0736750aad16c98cf180de77823fd5f92d1cb40b279853a20855321f26b528",
+          "after": "0856743d1eff395b803d1a5307ca21313d71382e0cd867ff9cb1b54baccf8330",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/inventory/desktop/InventoryFilterTriggers.svelte",
+          "before": "852589a4e6188eb4be3ebe8329dbc059cf2a666e6ddc98882050b500c3cb8b8c",
+          "after": "08a36ceb81dbbf3154df9a47e41970df6f1aa098b2d9ba43e55c69277e4329ce",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/inventory/desktop/InventoryShortcutShelf.svelte",
+          "before": "569898d647c5c9593d07beb900f7bcc8d3075fc56014528c11b822618b2eb92f",
+          "after": "f3022147d845896906d4fcfe851332f3c7a0fac65bab693b8f26704572ce5850",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/inventory/desktop/InventoryTypePills.svelte",
+          "before": "d02665388a48ef870361d93efdf95189a274f0c76e9c5fd0c61716457dc1a490",
+          "after": "75ff99ba57907cb620183db4b1b8bdbe328c98537984dccd21fb48fbb911fdb8",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/inventory/desktop/SearchBar.svelte",
+          "before": "56b52fd3379bbe342c62000329bbc5c9dda21db25e0546b732e4b9a8ec5e8361",
+          "after": "2df4216a816692a0296d0164d8c5f7ad6dc6d1ca4a184e42d9054ab6ccaf9675",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/layout/DesktopYellowRouteHero.svelte",
+          "before": "ecaa11a1f07a23685c24b2b2dca418dd6437b63ae4216ea24e9b2f42757793b1",
+          "after": "102d3e5e1a7bedb61a2d18f3577b168f4d587a9b7bcd5f9c987730c6f5187d10",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/layout/SiteChrome.svelte",
+          "before": "2e7e4a9bc6ee19546d000276721f8a1fe452b43cb17da6191acba4eaa0a95d57",
+          "after": "03113777f1475558626ce9e88a6b944852effc367c663d463886cf5d8df58b62",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/layout/SiteChromeCtaButtons.svelte",
+          "before": "f1ea4ff5ef395406e9752b27a71e14d9f40e22d434fb274694bf1c3209a3a380",
+          "after": "f8ce22f4fb6a9e3552934ff26a34e0cae0036640b13da32f259117d22be24622",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/sell/DesktopSellYourCarPage.svelte",
+          "before": "f59cd3c20290d53d5f7fafd119753f0d06a29aa97a4e38e6f999cffc9aa94ff5",
+          "after": "efceb1642a270cd94242376872bfffecdc91f2c284b235fc44054880296515fd",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/sell/MobileSellYourCarPage.svelte",
+          "before": "44b1e9219e37627cbe7755979a3f3a9e2e10b0dbbcd5c04c06f4bad5b4a252ad",
+          "after": "bfc8da7144bf5797afd2f44038a4defee463205fe18bb878da9457188a262a8d",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/services/DesktopServicesPage.svelte",
+          "before": "ec103cff59a3dd0e2e6f05d076f9ef1572a804f626a14d02a7fe8d74d074c5fa",
+          "after": "eff966cab57f5986cc02bd31a41af4e9fd017aa0723031cef38a3b1e45364b76",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/shared/DesktopBrowseLink.svelte",
+          "before": "22668ac0534b1ead57b4b2344e597d2f4847b3884e543309d2be5994d9e9545e",
+          "after": "99a7fc6b89185020f79fcaaa90902e689f1772d9802cfb6634954c3cf7efb377",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/shared/DesktopVehicleActions.svelte",
+          "before": "17e767df0d656d7ee79b040d827b2ec2a5f6b5d82d43f303c53b4d2bfc2630a9",
+          "after": "5ddfa0617e587f68c4bb3533a84e7402d859203f9cb02483c1966cc5ce35ac85",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/styles/desktop-discovery.css",
+          "before": "1e6ade57abe8d09afbcbfcd64dcf3a16d60b5f28d1f158b241cf2429b688a71a",
+          "after": "dc40772be9ae3b738d1baed22c77e406b4b893074c21559fe6f1d3c2e4e5ffeb",
+          "sourceExists": true
+        },
+        {
+          "path": "src/routes/+layout.svelte",
+          "before": "009bcb4dfb1731d980595d9d1ed5fab1be0874937a7d3e52551033a6d05fdc36",
+          "after": "bbb8723ae79f18a2a94ca58acbe4a0c4c4277cc5c5de1e4f42064e5c0fd0da17",
+          "sourceExists": true
+        },
+        {
+          "path": "tests/desktop-discovery.e2e.ts",
+          "before": "92c432c0d2a091e668da79d1d17b593e57674cb0fe2079ecc68c105160499b0b",
+          "after": "158f01316870935814c13498405ee0c660e58c60ecc89b5d7010e47247e9a676",
+          "sourceExists": true
+        },
+        {
+          "path": "DESKTOP_STYLE_GUIDE.md",
+          "before": null,
+          "after": "c0f21dc4d0051e7d1ea8d7fa1f31ef1cd2b9d5d01d7501f8bc416d11e7a4eeef",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/shared/MobileHeroBar.svelte",
+          "before": null,
+          "after": "d78ca71cefc36aeb5d5abdfa9027075fd0cd2231ce756e9571e379f9f84ecf80",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/components/shared/MobilePromoCard.svelte",
+          "before": null,
+          "after": "1cd69235d5ac4f7e600f8d26560a5776eff92145dd9d20d435f717ecf97aa995",
+          "sourceExists": true
+        },
+        {
+          "path": "src/lib/styles/desktop-controls.css",
+          "before": null,
+          "after": "812c43ba839283455094b551883cc4fa108439c5568e3e296edfd3d654702d36",
+          "sourceExists": true
+        }
+      ]
+    }
+  ]
+}

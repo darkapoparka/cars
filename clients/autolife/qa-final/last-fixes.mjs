@@ -1,0 +1,2 @@
+import fs from 'node:fs';
+for(const c of ['autolife','priselci','ivo-auto']){const p=`J:/cars/clients/${c}/carwow/src/lib/components/home/mobile/MobileHome.svelte`;let s=fs.readFileSync(p,'utf8');s=s.replace(`src={resolve('/assets/${c}/wordmark.svg')}`,`src={resolve('/assets/${c}/wordmark-light.svg')}`);s=s.replace(/Автокъща в(?:ъв)? Варна с подбрани употребявани автомобили\. Съдействие за документи, регистрация,\s*финансиране и доставка\./,'Автомобили във Варна. Свържете се с нас за наличност, информация и оглед.');fs.writeFileSync(p,s);}

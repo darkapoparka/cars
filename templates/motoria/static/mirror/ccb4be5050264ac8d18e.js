@@ -1,0 +1,2 @@
+import{_ as s}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{m as c,g as o,p as r,J as t}from"./convert-case-to-camel-case.utils-DRsbC-qG.js";const a={},d={class:"ccb-block"},n={class:"ccb-fields-wrapper"};function _(e,l){return o(),c("div",d,[r("div",n,[t(e.$slots,"default",{},void 0,!0)])])}const p=s(a,[["render",_],["__scopeId","data-v-e3eebbf0"]]);export{p as default};
+//# sourceMappingURL=FieldsWrapper-BIITE4yx.js.map

@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';import path from 'node:path';const root='J:/cars/clients/autolife';
+async function edit(v,p,fn){const f=root+'/'+v+'/'+p;const s=await fs.readFile(f,'utf8');await fs.writeFile(f,fn(s));}
+await edit('auto-best','src/lib/components/home/TrustActions.svelte',s=>s.replaceAll('Получете оценка за продажба или бартер.','Възможностите за замяна се уточняват по телефона.').replace("['Получете оценка', 'за продажба или бартер.']","['Попитайте за възможност', 'за продажба или бартер.']").replaceAll('Заявете внос','Попитайте за модел').replaceAll('Заяви внос','Попитай').replaceAll('за внос по заявка','за търсен автомобил').replaceAll('и модел за внос.','и търсен модел.').replaceAll('#b80024','#a46d24'));
+await edit('auto-best','src/lib/components/home/VideoSection.svelte',s=>s.replaceAll(' в YouTube (нов раздел)',' в Mobile.bg (нов раздел)').replace('<SocialBrandIcon name="youtube" size={32} />','<Icon name="car" size={32} />'));
+for(const p of ['src/lib/components/company/AboutHero.svelte','src/lib/components/company/ContactIntent.svelte'])await edit('auto-best',p,s=>s.replace(/const socialLinks = \[[\s\S]*?\] as const;/,'const socialLinks = [] as const;'));
+await edit('auto-best','src/lib/components/layout/Header.svelte',s=>s.replace(/<a \{\.\.\.\{ href: brand\.(instagramUrl|youtubeUrl|facebookUrl) \}\}[^\n]+<\/a>/g,''));
+await edit('carwow','src/lib/components/home/mobile/mobile-home-data.ts',s=>s.replace(/\{\s*label: '(Facebook|Instagram)',[\s\S]*?\},/g,''));
+await edit('carwow','src/lib/server/app-config.ts',s=>s.replace("'daynight-auto'","'autolife'"));
+for(const p of ['src/lib/components/contact/MobileContactPage.svelte','src/lib/components/contact/DesktopContactPage.svelte'])await edit('carwow',p,s=>s.replace(/const mapEmbedSrc = `[^`]+`;/,"const mapEmbedSrc = 'https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed';"));
+// Forms and non-confirmed service sections keep the source interactions with clear local-demo status.
+for(const p of ['src/lib/components/contact/MobileContactPage.svelte','src/lib/components/contact/DesktopContactPage.svelte'])await edit('carwow',p,s=>s.replace(/(<form\b[\s\S]*?>)/g,'$1\n<p>Демонстрационна форма. За реално запитване се обадете на 0895 766 736. Внос и изкупуване не са потвърдени услуги.</p>'));
+for(const file of await fs.readdir(root)){if(file.endsWith('.ps1')&&(file.startsWith('install-')||file.startsWith('validate-'))){let s=await fs.readFile(root+'/'+file,'utf8');s=s.replace("$ErrorActionPreference='Stop'","$ErrorActionPreference='Continue'");await fs.writeFile(root+'/'+file,s);}}
+console.log('Enquiry copy, social identity, map and job wrapper corrections applied');

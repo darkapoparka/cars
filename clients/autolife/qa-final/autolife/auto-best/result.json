@@ -1,0 +1,1534 @@
+{
+  "client": "autolife",
+  "name": "Аутолайф",
+  "template": "auto-best",
+  "port": 6641,
+  "startedAt": "2026-09-08T03:01:25.606Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Аутолайф — Автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "До 10 000 €",
+          "href": "/listing-grid?price_max=10000"
+        },
+        {
+          "text": "10–20 000 €",
+          "href": "/listing-grid?price_min=10000&price_max=20000"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "Mercedes",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Заяви оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "До 10 000 €\n8 автомобила",
+          "href": "/listing-grid?price_max=10000"
+        },
+        {
+          "text": "10–20 000 €\n5 автомобила",
+          "href": "/listing-grid?price_min=10000&price_max=20000"
+        },
+        {
+          "text": "Над 20 000 €\n3 автомобила",
+          "href": "/listing-grid?price_min=20000"
+        },
+        {
+          "text": "Виж всички\n16 автомобила",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "190 000 км\n2017\n\nДжип\n\nBMW X4 2.0D-190\nДизел\nАвтоматик\n20 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "244 000 км\n2015\n\nВан\n\nSeat Alhambra 2.0TDI-150\nДизел\nАвтоматик\n11 999 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "119 000 км\n2018\n\nДжип\n\nFord Ka +\nДизел\nРъчна\n6999 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "250 000 км\n2010\n\nХечбек\n\nVW Golf 1.6TDI\nДизел\nРъчна\n4500 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nПреди покупка поискайте документи, история и независима техническа проверка.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nОбадете се, за да обсъдите търсения модел. Внос по поръчка не е потвърдена услуга.",
+          "href": "/blog"
+        },
+        {
+          "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+          "href": "/blog"
+        },
+        {
+          "text": "Попитай",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Всички обяви\nВижте в Mobile.bg\nКъм обявите\nОтваря се в нов раздел",
+          "href": "https://autolife.mobile.bg/"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай/Бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Заяви оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Търсене на автомобил",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Попитай",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Условия за лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "BMW X4 2.0D-190\n2017\n190 000 км\nДизел\nАвтоматик\n20 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "Seat Alhambra 2.0TDI-150\n2015\n244 000 км\nДизел\nАвтоматик\n11 999 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "Ford Ka +\n2018\n119 000 км\nДизел\nРъчна\n6999 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "VW Golf 1.6TDI\n2010\n250 000 км\nДизел\nРъчна\n4500 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Seat Altea FACELIFT\n2010\n242 000 км\nБензин\nРъчна\n3999 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "Audi A4 Sline\n2021\n186 000 км\nДизел\nАвтоматик\n20 500 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Citroen C5 2.2\n2008\n217 000 км\nДизел\nРъчна\n3700 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170\n2009\n224 000 км\nДизел\nАвтоматик\n7999 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "VW Touran 2.0TDI-150\n2021\n145 000 км\nДизел\nАвтоматик\n13 999 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "Mercedes-Benz GLE Coupe\n2017\n189 000 км\nДизел\nАвтоматик\n34 500 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "BMW X1 2.0D-150\n2016\n250 000 км\nДизел\nРъчна\n11 500 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "Peugeot 508 ACTIVE\n2019\n175 000 км\nДизел\nАвтоматик\n12 300 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "VW Tiguan FACELIFT\n2019\n214 000 км\nДизел\nАвтоматик\n14 999 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "Volvo S60 НАПЪЛНО\n2007\n470 000 км\nДизел\nАвтоматик\n2500 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "VW Passat 2.0TDI-140\n2012\n237 000 км\nДизел\nРъчна\n6300 €",
+          "href": "/listing-detail-v1/15"
+        },
+        {
+          "text": "VW Polo 1.6\n2020\n140 000 км\nДизел\nАвтоматик\n9999 €",
+          "href": "/listing-detail-v1/16"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW X4 2.0D-190 — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=BMW%20X4%202.0D-190"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "BMW X1 2.0D-150\n11 500 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "Ford Ka +\n6999 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170\n7999 €",
+          "href": "/listing-detail-v1/8"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Контакти и адрес",
+          "href": "#contact-intent"
+        },
+        {
+          "text": "Обадете се ·\n0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Адрес\nГП4, разклон за с. Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Посещения\nЗа работно време се обадете предварително.",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Телефон\n0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Аутолайф — Автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продажба или бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "Пикап",
+          "href": "/listing-grid?body=Pickup%20Truck"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Миниван",
+          "href": "/listing-grid?body=Minivan"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Кабриолет",
+          "href": "/listing-grid?body=Convertible"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "190 000 км\n2017\n\nДжип\n\nBMW X4 2.0D-190\nДизел\nАвтоматик\n20 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "244 000 км\n2015\n\nВан\n\nSeat Alhambra 2.0TDI-150\nДизел\nАвтоматик\n11 999 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "119 000 км\n2018\n\nДжип\n\nFord Ka +\nДизел\nРъчна\n6999 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "250 000 км\n2010\n\nХечбек\n\nVW Golf 1.6TDI\nДизел\nРъчна\n4500 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Ford",
+          "href": "/listing-grid?make=Ford"
+        },
+        {
+          "text": "Foton",
+          "href": "/listing-grid?make=Foton"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "Dongfeng",
+          "href": "/listing-grid?make=Dongfeng"
+        },
+        {
+          "text": "Isuzu",
+          "href": "/listing-grid?make=Isuzu"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Вижте всички статии",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nПреди покупка поискайте документи, история и независима техническа проверка.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nОбадете се, за да обсъдите търсения модел. Внос по поръчка не е потвърдена услуга.",
+          "href": "/blog"
+        },
+        {
+          "text": "Търсене на автомобил",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Попитайте за модел",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Условия за лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Всички обяви\nв Mobile.bg (нов раздел)",
+          "href": "https://autolife.mobile.bg/"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продажба или бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Търсене на автомобил",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Попитайте за модел",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Условия за лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "190 000 км\n2017\n\nДжип\n\nBMW X4 2.0D-190\nДизел\nАвтоматик\n20 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "244 000 км\n2015\n\nВан\n\nSeat Alhambra 2.0TDI-150\nДизел\nАвтоматик\n11 999 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "119 000 км\n2018\n\nДжип\n\nFord Ka +\nДизел\nРъчна\n6999 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "250 000 км\n2010\n\nХечбек\n\nVW Golf 1.6TDI\nДизел\nРъчна\n4500 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "242 000 км\n2010\n\nХечбек\n\nSeat Altea FACELIFT\nБензин\nРъчна\n3999 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "186 000 км\n2021\n\nКомби\n\nAudi A4 Sline\nДизел\nАвтоматик\n20 500 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "217 000 км\n2008\n\nСедан\n\nCitroen C5 2.2\nДизел\nРъчна\n3700 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "224 000 км\n2009\n\nДжип\n\nAudi Q5 2.0TDI-170\nДизел\nАвтоматик\n7999 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "145 000 км\n2021\n\nВан\n\nVW Touran 2.0TDI-150\nДизел\nАвтоматик\n13 999 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "189 000 км\n2017\n\nДжип\n\nMercedes-Benz GLE Coupe\nДизел\nАвтоматик\n34 500 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "250 000 км\n2016\n\nДжип\n\nBMW X1 2.0D-150\nДизел\nРъчна\n11 500 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "175 000 км\n2019\n\nХечбек\n\nPeugeot 508 ACTIVE\nДизел\nАвтоматик\n12 300 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "214 000 км\n2019\n\nДжип\n\nVW Tiguan FACELIFT\nДизел\nАвтоматик\n14 999 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "470 000 км\n2007\n\nСедан\n\nVolvo S60 НАПЪЛНО\nДизел\nАвтоматик\n2500 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "237 000 км\n2012\n\nКомби\n\nVW Passat 2.0TDI-140\nДизел\nРъчна\n6300 €",
+          "href": "/listing-detail-v1/15"
+        },
+        {
+          "text": "140 000 км\n2020\n\nХечбек\n\nVW Polo 1.6\nДизел\nАвтоматик\n9999 €",
+          "href": "/listing-detail-v1/16"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Търсене на автомобил\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW X4 2.0D-190 — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Назад",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=BMW%20X4%202.0D-190"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "BMW X1 2.0D-150\n11 500 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "Ford Ka +\n6999 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170\n7999 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Търсене на автомобил\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Маршрут",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Търсене на автомобил\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — Аутолайф",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%93%D0%9F4%2C%20%D1%80%D0%B0%D0%B7%D0%BA%D0%BB%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%81.%20%D0%A2%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за лизинг\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Търсене на автомобил\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "ГП4, разклон за с. Тополи, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6641/listing-grid?q=BMW",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/listing-detail-v1/1",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact?topic=inspection",
+      "enquiry": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 16,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6641/listing-grid?make=BMW",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/listing-detail-v1/1",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "auto-best",
+    "Project": "J:\\cars\\clients\\autolife\\auto-best",
+    "PID": 31964,
+    "Port": 6641,
+    "Url": "http://127.0.0.1:6641",
+    "Stdout": "J:\\cars\\runtime\\auto-best-6641-20260908-060127.out.log",
+    "Stderr": "J:\\cars\\runtime\\auto-best-6641-20260908-060127.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true
+}

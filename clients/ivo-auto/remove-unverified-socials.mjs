@@ -1,0 +1,2 @@
+import fs from 'node:fs/promises';const root='J:/cars/clients/ivo-auto';let p=root+'/auto-best/src/lib/components/company/ContactIntent.svelte',s=await fs.readFile(p,'utf8');s=s.replace(/const socialPlatforms = \[[\s\S]*?\] as const;/,"const socialPlatforms: {name: 'instagram' | 'facebook' | 'youtube'; label: string; href: string}[] = [];");await fs.writeFile(p,s);
+p=root+'/carwow/src/lib/components/layout/DayNightFooter.svelte';s=await fs.readFile(p,'utf8');s=s.replace(/<a\b[^>]*\{\.\.\.(?:facebook|instagram)LinkProps\}[^>]*>[\s\S]*?<\/a>/g,'');await fs.writeFile(p,s);

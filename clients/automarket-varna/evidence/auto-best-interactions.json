@@ -1,0 +1,24 @@
+[
+  {
+    "width": 390,
+    "menuOpened": true,
+    "menuDismissed": true
+  },
+  {
+    "width": 390,
+    "searchUrl": "http://127.0.0.1:6656/listing-grid?q=Ford",
+    "ford": true
+  },
+  {
+    "width": 390,
+    "galleryChanged": true,
+    "phone": 6
+  },
+  {
+    "width": 390,
+    "enquiryUrl": "http://127.0.0.1:6656/contact?topic=inspection"
+  },
+  {
+    "error": "Error: browser.newPage: Target crashed "
+  }
+]

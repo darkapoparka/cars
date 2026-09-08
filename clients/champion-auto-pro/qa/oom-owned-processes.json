@@ -1,0 +1,14 @@
+[
+  {
+    "ProcessId": 29112,
+    "ParentProcessId": 36140,
+    "Name": "node.exe",
+    "CommandLine": "\"C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6631 --strictPort "
+  },
+  {
+    "ProcessId": 54580,
+    "ParentProcessId": 29112,
+    "Name": "conhost.exe",
+    "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+  }
+]

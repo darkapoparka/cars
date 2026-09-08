@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "client": "astracar",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:48:54.398Z",
+  "state": "personalized-local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "verifiedAt": "2026-09-08T03:48:52.642Z",
+    "widths": [
+      390,
+      1440
+    ],
+    "browserEvidence": "J:/cars/clients/astracar/qa-final/FINAL.md",
+    "routeChecks": 8,
+    "interactionChecks": 2
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6637/cars",
+    "state": "stopped-after-verification"
+  },
+  "businessFacts": "J:/cars/clients/astracar/business-facts.json",
+  "stock": "J:/cars/clients/astracar/stock.json",
+  "assetProvenance": "J:/cars/clients/astracar/assets/provenance.json",
+  "limitations": [
+    "Local unpublished prospect demo; no agreement or CRM registration implied.",
+    "Dated representative stock, not a live feed; confirm availability and prices.",
+    "Forms/calculators/provider flows remain demos; no message delivery verified or external enquiry sent.",
+    "Generic decorative source artwork and explicitly labelled sample administration remain.",
+    "Original asset/license provenance retained; no new rights determination.",
+    "Modern exact gallery-trigger focus restoration was not certified; inherited accessibility behavior remains."
+  ]
+}

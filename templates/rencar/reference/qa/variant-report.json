@@ -1,0 +1,122 @@
+[
+  {
+    "width": 1440,
+    "variant": 2,
+    "reference": {
+      "bodyClass": "home-2",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "local": {
+      "bodyClass": "home-2",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "pixelMismatchPercent": 0.0043055555555555555
+  },
+  {
+    "width": 1440,
+    "variant": 3,
+    "reference": {
+      "bodyClass": "home-3",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "local": {
+      "bodyClass": "home-3",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "pixelMismatchPercent": 0
+  },
+  {
+    "width": 1440,
+    "variant": 4,
+    "reference": {
+      "bodyClass": "home-4",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "local": {
+      "bodyClass": "home-4",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "pixelMismatchPercent": 0
+  },
+  {
+    "width": 1440,
+    "variant": 5,
+    "reference": {
+      "bodyClass": "home-2",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "local": {
+      "bodyClass": "home-2",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "pixelMismatchPercent": 0
+  },
+  {
+    "width": 390,
+    "variant": 2,
+    "reference": {
+      "bodyClass": "home-2",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "local": {
+      "bodyClass": "home-2",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "pixelMismatchPercent": 0
+  },
+  {
+    "width": 390,
+    "variant": 3,
+    "reference": {
+      "bodyClass": "home-3",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "local": {
+      "bodyClass": "home-3",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "pixelMismatchPercent": 0
+  },
+  {
+    "width": 390,
+    "variant": 4,
+    "reference": {
+      "bodyClass": "home-4",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "local": {
+      "bodyClass": "home-4",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "pixelMismatchPercent": 0
+  },
+  {
+    "width": 390,
+    "variant": 5,
+    "reference": {
+      "bodyClass": "home-2",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "local": {
+      "bodyClass": "home-2",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "pixelMismatchPercent": 0
+  }
+]

@@ -1,0 +1,1 @@
+import {chromium} from '@playwright/test';const b=await chromium.launch({headless:true});const p=await b.newPage({viewport:{width:390,height:844}});await p.goto('http://127.0.0.1:6613/inventory',{waitUntil:'domcontentloaded'});await p.waitForTimeout(2000);console.log(await p.locator('body').ariaSnapshot());await b.close();

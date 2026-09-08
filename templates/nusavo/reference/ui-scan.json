@@ -1,0 +1,246 @@
+{
+  "filesScanned": 31,
+  "findingCount": 30,
+  "findings": [
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\airport-car-rental-guide-for-international-travelers.svelte",
+      "line": 195,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p class=\"wp-block-paragraph\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, "
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\best-car-rental-options-for-family-vacations.svelte",
+      "line": 195,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p class=\"wp-block-paragraph\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, "
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\best-cars-to-rent-for-a-bali-road-trip.svelte",
+      "line": 195,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p class=\"wp-block-paragraph\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, "
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\blog.svelte",
+      "line": 178,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\blog.svelte",
+      "line": 197,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\blog.svelte",
+      "line": 216,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\blog.svelte",
+      "line": 235,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\blog.svelte",
+      "line": 254,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\blog.svelte",
+      "line": 273,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\car-rental-requirements-for-foreign-tourists-in-indonesia.svelte",
+      "line": 195,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p class=\"wp-block-paragraph\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, "
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\evolve-electric-suv.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\evolve-electric-suv.svelte",
+      "line": 381,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\grandis-mpv.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\grandis-mpv.svelte",
+      "line": 368,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\home.svelte",
+      "line": 1193,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-255268f3 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"255268f3\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\how-to-rent-a-car-in-indonesia-easily.svelte",
+      "line": 195,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p class=\"wp-block-paragraph\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, "
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\prestige-executive.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\prestige-executive.svelte",
+      "line": 381,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\services.svelte",
+      "line": 557,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-78dcc38c elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"78dcc38c\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\single-post.svelte",
+      "line": 195,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p class=\"wp-block-paragraph\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, "
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\terrax-suv.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\terrax-suv.svelte",
+      "line": 381,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\trailmark-4x4.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\trailmark-4x4.svelte",
+      "line": 381,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\urbango-hatchback.svelte",
+      "line": 232,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\urbango-hatchback.svelte",
+      "line": 389,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\veloce-sedan.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\veloce-sedan.svelte",
+      "line": 368,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\voyager-minivan.svelte",
+      "line": 226,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque"
+    },
+    {
+      "file": "J:\\cars\\nusavo\\src\\pages\\voyager-minivan.svelte",
+      "line": 381,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<div class=\"elementor-element elementor-element-7c1ae099 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel\" data-id=\"7c1ae099\" data-element_"
+    }
+  ]
+}

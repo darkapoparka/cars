@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "client": "automarket-varna",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:49:19.074Z",
+  "state": "local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "evidence": "../qa-final/automarket-varna/carwow/result.json",
+    "frameworkChecks": true,
+    "buildScope": "Original build passed before final static/contact-label correction; final Svelte check and targeted browser supplement pass. Unicode-aware numeric parser unchanged.",
+    "checkedAt": "2026-09-08T03:40:50.031Z",
+    "limits": [
+      "Local demo only; no provider or form delivery verified.",
+      "Stock is a dated source-backed sample."
+    ],
+    "finalTargetedEvidence": "J:/cars/clients/automarket-varna/qa-final/carwow-final-contact-copy.json",
+    "numericStockEvidence": "J:/cars/clients/automarket-varna/qa-final/numeric-stock-proof.json",
+    "latestFrameworkEvidence": [
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/carwow-check.log",
+        "modifiedAt": "2026-09-08T01:49:02.686Z"
+      },
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/carwow-build.log",
+        "modifiedAt": "2026-09-08T01:49:34.346Z"
+      },
+      {
+        "path": "J:/cars/clients/automarket-varna/qa-final/carwow-contact-copy-check.log",
+        "modifiedAt": "2026-09-08T02:12:31.825Z"
+      }
+    ],
+    "finalMatrixEvidence": "J:/cars/clients/automarket-varna/qa-final/results.json"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localUrl": "http://127.0.0.1:6658/",
+  "businessFacts": "../business-facts.json",
+  "stock": "../stock.json",
+  "stockCount": 16,
+  "mediaProvenance": "../assets/provenance.json",
+  "changedBoundaries": [
+    "wired dealer identity",
+    "stock and real photo galleries",
+    "source contact/map/SEO/PWA",
+    "unsupported source testimonials/socials/media replaced",
+    "brand accent tokens"
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:6658/",
+    "state": "stopped-after-verification"
+  },
+  "knownGaps": [
+    "Local demos only; no verified public preview or provider delivery.",
+    "Representative 2026-09-07 stock snapshot; reconfirm availability.",
+    "Low resolution official logo; hours/email/social accounts not established.",
+    "Map searches by dealer name and landmarks; exact entrance pin not verified.",
+    "Generic decorative template car graphics retained; not advertised stock."
+  ],
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 16,
+    "sourceTemplateVersion": "2026.09.06-refresh-1"
+  }
+}

@@ -1,0 +1,133 @@
+
+				#ccb-preview-overlay,
+				#ccb_app_93646,
+			    .ccb-sticky-floating-93646 {
+				    --ccb-container-converted:       #FFFFFFFF;
+					--ccb-container-invert:          ;
+			        --ccb-container-color:           #FFFFFF;
+			        --ccb-container-opacity:         100;
+			        --ccb-container-dark-color:      #0101011D;
+			        --ccb-container-border-color:    #0101011A;
+
+					--ccb-payment-bg-color:          #FFFFFF0D;
+
+			        --ccb-text-color:                #010101;
+			        --ccb-accent-color:              #1bc744;
+			        --ccb-fields-color:			     #FFFFFF;
+			        --ccb-fields-bg-color:           #FFFFFF;
+			        --ccb-fields-border-color:       #0101011A;
+			        --ccb-fields-description-color:  #01010180;
+			        --ccb-fields-hover-color:        #0101011a;
+			        --ccb-error-color:			     #D94141;
+			        --ccb-summary-description-color: #010101B3;
+			        --ccb-toggle-label-bg:           #01010133;
+			        --ccb-fields-bg-color-alpha:     #1bc7441A;
+			        --ccb-orders-notice-color:       #1bc74433;
+
+			        --ccb-header-size:			     16px;
+			        --ccb-header-weight:			 600;
+			        --ccb-header-display:			 block;
+
+			        --ccb-field-size:			     16px;
+			        --ccb-field-weight:			     500;
+					--ccb-field-label-weight:		 600;
+			        --ccb-description-size:          8px;
+			        --ccb-description-weight:        500;
+			        --ccb-payment-label-size:        17px;
+			        --ccb-field-size-2:			     14px;
+
+			        --ccb-summary-header-size:       14px;
+			        --ccb-summary-header-weight:     600;
+
+			        --ccb-summary-text-size:         14px;
+			        --ccb-summary-text-weight:       400;
+			        --ccb-summary-text-transform:    capitalize;
+
+			        --ccb-grand-total-size:          18px;
+			        --ccb-grand-total-weight:        600;
+
+			        --ccb-fields-button-size:        14px;
+			        --ccb-fields-button-weight:      500;
+
+					--ccb-mobile-header-size:         16px;
+					--ccb-mobile-header-weight:       600;
+
+					--ccb-mobile-field-size:          12px;
+					--ccb-mobile-field-weight:        500;
+					--ccb-mobile-field-label-weight:  600;
+
+					--ccb-mobile-description-size:    12px;
+					--ccb-mobile-description-weight:  500;
+
+					--ccb-mobile-summary-header-size:   12px;
+					--ccb-mobile-summary-header-weight: 600;
+
+					--ccb-mobile-summary-text-size:   12px;
+					--ccb-mobile-summary-text-weight: 400;
+
+					--ccb-mobile-summary-text-transform: capitalize;
+
+					--ccb-mobile-grand-total-size:     16px;
+					--ccb-mobile-grand-total-weight:   600;
+
+					--ccb-mobile-fields-button-size: 12px;
+					--ccb-mobile-fields-button-weight: 500;
+
+			        --ccb-container-border:          1px;
+			        --ccb-container-border-radius:   2px;
+			        --ccb-container-border-style:    solid;
+
+			        --ccb-fields-border:             1px;
+			        --ccb-fields-border-radius:      2px;
+			        --ccb-fields-border-style:       solid;
+
+			        --ccb-button-border:             1px;
+			        --ccb-button-border-radius:      2px;
+			        --ccb-button-border-style:       solid;
+
+			        --ccb-container-shadow-blur:     0px;
+			        --ccb-container-shadow-x-offset: 0px;
+			        --ccb-container-shadow-y-offset: 0px;
+			        --ccb-container-shadow-color:    #cccccc;
+
+			        --ccb-field-button-height:        42px;
+			        --ccb-vertical-max-width:         970px;
+			        --ccb-horizontal-max-width:       970px;
+			        --ccb-two-columns-max-width:      1200px;
+			        --ccb-mobile-field-button-height: 40px;
+
+			        --ccb-field-side-indent:         12px;
+			        --ccb-field-spacing:             20px;
+					--ccb-summary-spacing:           10px;
+					--ccb-summary-group-spacing:     5px;
+			        --ccb-grand-total-spacing:       10px;
+			        --ccb-container-margin-top:      0px;
+			        --ccb-container-margin-bottom:   0px;
+			        --ccb-container-margin-left:     0px;
+			        --ccb-container-margin-right:    0px;
+			        --ccb-container-padding-top:     20px;
+			        --ccb-container-padding-bottom:  20px;
+			        --ccb-container-padding-left:    20px;
+			        --ccb-container-padding-right:   20px;
+
+			        --ccb-mobile-field-side-indent:        12px;
+			        --ccb-mobile-field-spacing:            20px;
+					--ccb-mobile-summary-spacing:          10px;
+					--ccb-mobile-summary-group-spacing:    5px;
+			        --ccb-mobile-container-margin-top:     0px;
+			        --ccb-mobile-container-margin-bottom:  0px;
+			        --ccb-mobile-container-margin-left:    0px;
+			        --ccb-mobile-container-margin-right:   0px;
+			        --ccb-mobile-container-padding-top:    10px;
+			        --ccb-mobile-container-padding-bottom: 10px;
+			        --ccb-mobile-container-padding-left:   10px;
+			        --ccb-mobile-container-padding-right:  10px;
+
+			        --ccb-date-picker-day:           #0101010D;
+					--ccb-date-picker-picket-day:    #1bc7441D;
+			        --ccb-button-light-bg:           #0101010D;
+			        --ccb-button-light-bg-alpha:     #01010126;
+					--ccb-page-done-bg-color:        #1bc74430;
+					--ccb-repeater-title-font-size:  12px;
+			    }
+			

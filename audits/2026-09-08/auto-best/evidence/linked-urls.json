@@ -1,0 +1,506 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/",
+    "redirected": false
+  },
+  {
+    "route": "/contact",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=trade-in",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=trade-in",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=import",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=import",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?price_max=60000",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?price_max=60000",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?price_min=60000&price_max=70000",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?price_min=60000&price_max=70000",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Audi",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Audi",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Mercedes-Benz",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Mercedes-Benz",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=BMW",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=BMW",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?price_min=70000",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?price_min=70000",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Sedan",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Sedan",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Hatchback",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Hatchback",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=SUV",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=SUV",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Crossover",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Crossover",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Wagon",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Wagon",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/1",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/1",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/2",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/2",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/3",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/3",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/4",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/4",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Land%20Rover",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Land%20Rover",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Kia",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Kia",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Toyota",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Toyota",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Jeep",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Jeep",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Nissan",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Nissan",
+    "redirected": false
+  },
+  {
+    "route": "/blog",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?condition=used",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?condition=used",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?condition=new",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?condition=new",
+    "redirected": false
+  },
+  {
+    "route": "/about-us",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/about-us",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/5",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/5",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/6",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/6",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/7",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/7",
+    "redirected": false
+  },
+  {
+    "route": "/listing-detail-v1/8",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/8",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=inspection",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=inspection",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=Audi%20RS%206%20Avant",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Audi%20RS%206%20Avant",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=Mercedes-Benz%20GLE%20Coup%C3%A9",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Mercedes-Benz%20GLE%20Coup%C3%A9",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=Audi%20RS%20Q8",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Audi%20RS%20Q8",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=BMW%20X6%20M%20Sport",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=BMW%20X6%20M%20Sport",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=Range%20Rover%20Sport",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Range%20Rover%20Sport",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=Mercedes-AMG%20GT%204-Door",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Mercedes-AMG%20GT%204-Door",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=BMW%20X6%20xDrive",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=BMW%20X6%20xDrive",
+    "redirected": false
+  },
+  {
+    "route": "/contact?topic=leasing&vehicle=Mercedes-AMG%20GT%20Coup%C3%A9",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Mercedes-AMG%20GT%20Coup%C3%A9",
+    "redirected": false
+  },
+  {
+    "route": "/blog?category=%D0%9E%D0%B3%D0%BB%D0%B5%D0%B4",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?category=%D0%9E%D0%B3%D0%BB%D0%B5%D0%B4",
+    "redirected": false
+  },
+  {
+    "route": "/blog?category=%D0%92%D0%BD%D0%BE%D1%81",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?category=%D0%92%D0%BD%D0%BE%D1%81",
+    "redirected": false
+  },
+  {
+    "route": "/blog?category=%D0%9B%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?category=%D0%9B%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3",
+    "redirected": false
+  },
+  {
+    "route": "/blog?category=%D0%9D%D0%B0%D1%81%D0%BE%D0%BA%D0%B8",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?category=%D0%9D%D0%B0%D1%81%D0%BE%D0%BA%D0%B8",
+    "redirected": false
+  },
+  {
+    "route": "/blog?category=%D0%91%D0%B0%D1%80%D1%82%D0%B5%D1%80",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?category=%D0%91%D0%B0%D1%80%D1%82%D0%B5%D1%80",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/1",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/1",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/2",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/2",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/3",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/3",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/4",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/4",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/5",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/5",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/6",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/6",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/7",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/7",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/8",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/8",
+    "redirected": false
+  },
+  {
+    "route": "/blog-detail/9",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog-detail/9",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%9E%D0%B3%D0%BB%D0%B5%D0%B4",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%9E%D0%B3%D0%BB%D0%B5%D0%B4",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%9B%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%9B%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%98%D0%B7%D0%B1%D0%BE%D1%80",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%98%D0%B7%D0%B1%D0%BE%D1%80",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%91%D0%B0%D1%80%D1%82%D0%B5%D1%80",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%91%D0%B0%D1%80%D1%82%D0%B5%D1%80",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D0%B7",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D0%B7",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=zzzz-no-match",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=zzzz-no-match",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=zzzz-no-match&category=%D0%9E%D0%B3%D0%BB%D0%B5%D0%B4",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=zzzz-no-match&category=%D0%9E%D0%B3%D0%BB%D0%B5%D0%B4",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=zzzz-no-match&category=%D0%92%D0%BD%D0%BE%D1%81",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=zzzz-no-match&category=%D0%92%D0%BD%D0%BE%D1%81",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=zzzz-no-match&category=%D0%9B%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=zzzz-no-match&category=%D0%9B%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=zzzz-no-match&category=%D0%9D%D0%B0%D1%81%D0%BE%D0%BA%D0%B8",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=zzzz-no-match&category=%D0%9D%D0%B0%D1%81%D0%BE%D0%BA%D0%B8",
+    "redirected": false
+  },
+  {
+    "route": "/blog?q=zzzz-no-match&category=%D0%91%D0%B0%D1%80%D1%82%D0%B5%D1%80",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/blog?q=zzzz-no-match&category=%D0%91%D0%B0%D1%80%D1%82%D0%B5%D1%80",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Pickup%20Truck",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Pickup%20Truck",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Minivan",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Minivan",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?body=Convertible",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?body=Convertible",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Ford",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Ford",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Foton",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Foton",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Dongfeng",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Dongfeng",
+    "redirected": false
+  },
+  {
+    "route": "/listing-grid?make=Isuzu",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid?make=Isuzu",
+    "redirected": false
+  },
+  {
+    "route": "/home02",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/",
+    "redirected": true
+  },
+  {
+    "route": "/home10",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/",
+    "redirected": true
+  },
+  {
+    "route": "/listing-list",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-grid",
+    "redirected": true
+  },
+  {
+    "route": "/listing-detail-v2/1",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/listing-detail-v1/1",
+    "redirected": true
+  },
+  {
+    "route": "/faq",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/contact",
+    "redirected": true
+  },
+  {
+    "route": "/sitemap.xml",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/sitemap.xml",
+    "redirected": false
+  },
+  {
+    "route": "/robots.txt",
+    "status": 200,
+    "url": "http://127.0.0.1:6461/robots.txt",
+    "redirected": false
+  }
+]

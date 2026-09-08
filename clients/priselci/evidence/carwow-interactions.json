@@ -1,0 +1,74 @@
+[
+  {
+    "variant": "carwow",
+    "width": 390,
+    "errors": [],
+    "steps": [
+      {
+        "name": "Navigation and Escape dismissal",
+        "passed": true,
+        "opened": true,
+        "expanded": "false",
+        "focusReturned": true
+      },
+      {
+        "name": "Filter overlay Escape",
+        "passed": true,
+        "opened": 1,
+        "remaining": 0
+      },
+      {
+        "name": "Search Golf through visible control",
+        "passed": true,
+        "url": "http://127.0.0.1:6648/inventory",
+        "golfShown": true,
+        "visibleDetailLinks": 1
+      },
+      {
+        "name": "Result to actual detail and enquiry",
+        "passed": true,
+        "detailUrl": "http://127.0.0.1:6648/inventory/vw-golf-1-4-061757",
+        "phoneLinks": [
+          "tel:+359886251705"
+        ],
+        "enquiryUrl": "http://127.0.0.1:6648/contact",
+        "externalSubmission": false
+      }
+    ]
+  },
+  {
+    "variant": "carwow",
+    "width": 1440,
+    "errors": [],
+    "steps": [
+      {
+        "name": "Navigation and Escape dismissal",
+        "passed": true,
+        "url": "http://127.0.0.1:6648/contact",
+        "target": "/contact"
+      },
+      {
+        "name": "Filter overlay Escape",
+        "passed": true,
+        "notApplicable": "No general filter overlay in selected source layout; search tested separately."
+      },
+      {
+        "name": "Search Golf through visible control",
+        "passed": true,
+        "url": "http://127.0.0.1:6648/inventory?q=Golf",
+        "golfShown": true,
+        "visibleDetailLinks": 4
+      },
+      {
+        "name": "Result to actual detail and enquiry",
+        "passed": true,
+        "detailUrl": "http://127.0.0.1:6648/inventory/vw-golf-1-4-061757",
+        "phoneLinks": [
+          "tel:0886251705"
+        ],
+        "enquiryUrl": "http://127.0.0.1:6648/contact",
+        "externalSubmission": false
+      }
+    ]
+  }
+]

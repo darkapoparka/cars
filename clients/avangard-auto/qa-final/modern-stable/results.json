@@ -1,0 +1,1010 @@
+[
+  {
+    "client": "avangard-auto",
+    "name": "AVANGARD AUTO",
+    "template": "modern",
+    "port": 6627,
+    "startedAt": "2026-09-08T02:38:54.782Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили от AVANGARD AUTO | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11785010475119627"
+          },
+          {
+            "text": "VW Passat Alltrack\n\n13 500 €\n\n2018\n220 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-11785010475119627"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21783748809976935"
+          },
+          {
+            "text": "Volvo XC40 2.0D\n\n17 999 €\n\n2019\n166 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-21783748809976935"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21766322242220471"
+          },
+          {
+            "text": "Volvo XC40 T5 inscription\n\n16 900 €\n\n2019\n278 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21766322242220471"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11782450720679744"
+          },
+          {
+            "text": "Peugeot 208 1.6HDI\n\n5 800 €\n\n2016\n214 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-11782450720679744"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11782462832415648"
+          },
+          {
+            "text": "Peugeot 2008 1.6HDI\n\n6 999 €\n\n2013\n216 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-11782462832415648"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21776284342452600"
+          },
+          {
+            "text": "Nissan Qashqai 1.5dCi\n\n11 500 €\n\n2018\n175 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21776284342452600"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21773782041228539"
+          },
+          {
+            "text": "Mitsubishi Outlander 2.2DI-D\n\n9 350 €\n\n2014\n167 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21773782041228539"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21760385289842805"
+          },
+          {
+            "text": "Kia Sportage 1.7CRDI\n\n8 500 €\n\n2014\n179 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21760385289842805"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21785012088488667"
+          },
+          {
+            "text": "BMW X1 2.0D\n\n14 500 €\n\n2016\n138 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-21785012088488667"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21746821020349714"
+          },
+          {
+            "text": "BMW X1 2.0D\n\n5 999 €\n\n2010\n187 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21746821020349714"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11754080933689299"
+          },
+          {
+            "text": "BMW 320 i\n\n6 300 €\n\n2013\n187 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/avangard-11754080933689299"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21779794798955793"
+          },
+          {
+            "text": "Audi SQ5 3.0V6T ZF\n\n21 999 €\n\n2018\n197 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21779794798955793"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21786111867697018"
+          },
+          {
+            "text": "Audi Q7 Premium Plus\n\n20 500 €\n\n2017\n255 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21786111867697018"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21779802183945718"
+          },
+          {
+            "text": "Audi Q5 SQ5 3.0V6T\n\n21 999 €\n\n2018\n197 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21779802183945718"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21762503862293800"
+          },
+          {
+            "text": "Audi Q5 Premium Plus\n\n17 999 €\n\n2018\n206 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21762503862293800"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11787435697096424"
+          },
+          {
+            "text": "Audi A4 2.0TDI\n\n6 300 €\n\n2011\n202 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-11787435697096424"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/listing/avangard-11785010475119627",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Passat Alltrack | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/bg/lease?vehicle=avangard-11785010475119627"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "17 999 €\n\nVolvo XC40 2.0D\n\n166 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/avangard-21783748809976935"
+          },
+          {
+            "text": "16 900 €\n\nVolvo XC40 T5 inscription\n\n278 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/avangard-21766322242220471"
+          },
+          {
+            "text": "5800 €\n\nPeugeot 208 1.6HDI\n\n214 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/avangard-11782450720679744"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас и контакти | AVANGARD AUTO | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Обадете ни се\n0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Посетете шоурума\nбул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Автомобили в наличност",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Транспорт в България",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/avangard_auto_varna/"
+          },
+          {
+            "text": "Facebook",
+            "href": "https://www.facebook.com/avangardautovarna/"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Внос на автомобил по заявка | AVANGARD AUTO | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили от AVANGARD AUTO | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11785010475119627"
+          },
+          {
+            "text": "VW Passat Alltrack\n\n13 500 €\n\n2018\n220 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-11785010475119627"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21783748809976935"
+          },
+          {
+            "text": "Volvo XC40 2.0D\n\n17 999 €\n\n2019\n166 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-21783748809976935"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21766322242220471"
+          },
+          {
+            "text": "Volvo XC40 T5 inscription\n\n16 900 €\n\n2019\n278 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21766322242220471"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11782450720679744"
+          },
+          {
+            "text": "Peugeot 208 1.6HDI\n\n5 800 €\n\n2016\n214 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-11782450720679744"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11782462832415648"
+          },
+          {
+            "text": "Peugeot 2008 1.6HDI\n\n6 999 €\n\n2013\n216 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-11782462832415648"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21776284342452600"
+          },
+          {
+            "text": "Nissan Qashqai 1.5dCi\n\n11 500 €\n\n2018\n175 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21776284342452600"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21773782041228539"
+          },
+          {
+            "text": "Mitsubishi Outlander 2.2DI-D\n\n9 350 €\n\n2014\n167 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21773782041228539"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21760385289842805"
+          },
+          {
+            "text": "Kia Sportage 1.7CRDI\n\n8 500 €\n\n2014\n179 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21760385289842805"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21785012088488667"
+          },
+          {
+            "text": "BMW X1 2.0D\n\n14 500 €\n\n2016\n138 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-21785012088488667"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21746821020349714"
+          },
+          {
+            "text": "BMW X1 2.0D\n\n5 999 €\n\n2010\n187 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/avangard-21746821020349714"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11754080933689299"
+          },
+          {
+            "text": "BMW 320 i\n\n6 300 €\n\n2013\n187 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/avangard-11754080933689299"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21779794798955793"
+          },
+          {
+            "text": "Audi SQ5 3.0V6T ZF\n\n21 999 €\n\n2018\n197 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21779794798955793"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21786111867697018"
+          },
+          {
+            "text": "Audi Q7 Premium Plus\n\n20 500 €\n\n2017\n255 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21786111867697018"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21779802183945718"
+          },
+          {
+            "text": "Audi Q5 SQ5 3.0V6T\n\n21 999 €\n\n2018\n197 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21779802183945718"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-21762503862293800"
+          },
+          {
+            "text": "Audi Q5 Premium Plus\n\n17 999 €\n\n2018\n206 000 км\nБензин\nАвтоматик",
+            "href": "/bg/listing/avangard-21762503862293800"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/avangard-11787435697096424"
+          },
+          {
+            "text": "Audi A4 2.0TDI\n\n6 300 €\n\n2011\n202 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/avangard-11787435697096424"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/listing/avangard-11785010475119627",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Passat Alltrack | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Назад към търсенето",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "17 999 €\n\nVolvo XC40 2.0D\n\n166 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/avangard-21783748809976935"
+          },
+          {
+            "text": "16 900 €\n\nVolvo XC40 T5 inscription\n\n278 000 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/avangard-21766322242220471"
+          },
+          {
+            "text": "5800 €\n\nPeugeot 208 1.6HDI\n\n214 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/avangard-11782450720679744"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Виж финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Варна\nбул. Цар Освободител 289, България",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас и контакти | AVANGARD AUTO | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Вижте наличностите",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Телефон\n0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Шоурум · Владислав Варненчик\nбул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Транспорт в България\nКажете какво търсите и започнете разговор.",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Внос на автомобил по заявка | AVANGARD AUTO | AVANGARD AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359877800921"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Опишете автомобил",
+            "href": "/bg/imports?start=1#import-request"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          },
+          {
+            "text": "0877 800 921",
+            "href": "tel:+359877800921"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "BMW",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6627/cars?q=BMW",
+        "afterCount": 6,
+        "search": true,
+        "detailHref": "/bg/listing/avangard-21785012088488667",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "BMW",
+        "beforeCount": 16,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6627/cars?q=BMW",
+        "afterCount": 6,
+        "search": true,
+        "detailHref": "/bg/listing/avangard-21785012088488667",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "modern",
+      "Project": "J:\\cars\\clients\\avangard-auto\\modern",
+      "PID": 35104,
+      "Port": 6627,
+      "Url": "http://127.0.0.1:6627",
+      "Stdout": "J:\\cars\\runtime\\modern-6627-20260908-053904.out.log",
+      "Stderr": "J:\\cars\\runtime\\modern-6627-20260908-053904.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true
+  }
+]

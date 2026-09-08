@@ -1,0 +1,1 @@
+import fs from'node:fs/promises';const p='J:/cars/audits/2026-09-08/verify/contact-astra-last.mjs';let s=await fs.readFile(p,'utf8');s=s.replace(/let lazyOwned;[\s\S]*?\ntry\{for/,'try{for');await fs.writeFile(p,s);

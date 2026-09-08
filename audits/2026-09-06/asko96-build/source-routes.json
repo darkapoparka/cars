@@ -1,0 +1,23 @@
+[
+  {
+    "settle": 400,
+    "label": "home",
+    "route": "/",
+    "key": "asko-source-auto-best",
+    "port": 5173
+  },
+  {
+    "settle": 400,
+    "label": "home",
+    "route": "/cars",
+    "key": "asko-source-modern",
+    "port": 6212
+  },
+  {
+    "settle": 400,
+    "label": "home",
+    "route": "/",
+    "key": "asko-source-carwow",
+    "port": 6517
+  }
+]

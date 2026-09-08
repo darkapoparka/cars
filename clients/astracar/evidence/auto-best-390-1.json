@@ -1,0 +1,603 @@
+{
+  "url": "http://127.0.0.1:6636/listing-grid",
+  "title": "Налични автомобили — Астракар",
+  "text": "Начало\nКоли\nПродай\nВнос\nМеню\nМарка или модел\nМарка\nМодел\nЦена\nГодина\nКупе\nГориво\nСкорости\nПробег\nВерсия\nСъстояние\nЕкстри\n15 коли\nMini Cooper 1.6D EURO4\n2009\n143 100 км\nДизел\nРъчна\n4000 €\nRenault Captur 0.9T EURO6B\n2017\n127 663 км\nБензин\nРъчна\n9500 €\nBMW 535 xDrive FULL EU5B\n2012\n177 390 км\nДизел\nАвтоматик\n14 600 €\nAudi A3 2.0TDI S-LINE QUATTRO\n2006\n181 000 км\nДизел\nРъчна\n4000 €\nAudi A5 2.0TFSI EURO5B\n2010\n165 170 км\nБензин\nАвтоматик\n7900 €\nFiat Punto 1.4i EVO EURO4\n2010\n139 800 км\nБензин\nРъчна\n3900 €\nAudi A3 1.6TDI EU5B SPORTBAG\n2015\n162 148 км\nДизел\nРъчна\n8900 €\nMini Cooper 1.6D EURO5\n2010\n150 052 км\nДизел\nРъчна\n4200 €\nAudi A6 2.0TDI EURO5B\n2014\n159 400 км\nДизел\nРъчна\n8999 €\nBMW X7 3.0d xDrive EU6D\n2020\n190 000 км\nДизел\nАвтоматик\n49 000 €\nCitroen C3 1.2i EURO5B\n2013\n136 574 км\nБензин\nРъчна\n4600 €\nHyundai IX35 1.6GDI EURO5\n2012\n56 178 км\nБензин\nРъчна\n7999 €\nMercedes-Benz ML 350 3.0CDI PREMIUM EU6\n2010\n182 887 км\nДизел\nАвтоматик\n9500 €\nPeugeot 2008 1.2 PureTech EU6D\n2022\n36 216 км\nБензин\nРъчна\n14 000 €\nCitroen Jumpy 1.6HDI L2H1EU6B\n2017\n186 586 км\nДизел\nРъчна\n8500 €",
+  "overflow": false,
+  "scrollWidth": 390,
+  "brokenImages": [],
+  "links": [
+    {
+      "text": "Начало",
+      "href": "/"
+    },
+    {
+      "text": "Коли",
+      "href": "/listing-grid"
+    },
+    {
+      "text": "Продай",
+      "href": "/contact?topic=trade-in"
+    },
+    {
+      "text": "Внос",
+      "href": "/contact?topic=import"
+    },
+    {
+      "text": "Mini Cooper 1.6D EURO4\n2009\n143 100 км\nДизел\nРъчна\n4000 €",
+      "href": "/listing-detail-v1/1"
+    },
+    {
+      "text": "Renault Captur 0.9T EURO6B\n2017\n127 663 км\nБензин\nРъчна\n9500 €",
+      "href": "/listing-detail-v1/2"
+    },
+    {
+      "text": "BMW 535 xDrive FULL EU5B\n2012\n177 390 км\nДизел\nАвтоматик\n14 600 €",
+      "href": "/listing-detail-v1/3"
+    },
+    {
+      "text": "Audi A3 2.0TDI S-LINE QUATTRO\n2006\n181 000 км\nДизел\nРъчна\n4000 €",
+      "href": "/listing-detail-v1/4"
+    },
+    {
+      "text": "Audi A5 2.0TFSI EURO5B\n2010\n165 170 км\nБензин\nАвтоматик\n7900 €",
+      "href": "/listing-detail-v1/5"
+    },
+    {
+      "text": "Fiat Punto 1.4i EVO EURO4\n2010\n139 800 км\nБензин\nРъчна\n3900 €",
+      "href": "/listing-detail-v1/6"
+    },
+    {
+      "text": "Audi A3 1.6TDI EU5B SPORTBAG\n2015\n162 148 км\nДизел\nРъчна\n8900 €",
+      "href": "/listing-detail-v1/7"
+    },
+    {
+      "text": "Mini Cooper 1.6D EURO5\n2010\n150 052 км\nДизел\nРъчна\n4200 €",
+      "href": "/listing-detail-v1/8"
+    },
+    {
+      "text": "Audi A6 2.0TDI EURO5B\n2014\n159 400 км\nДизел\nРъчна\n8999 €",
+      "href": "/listing-detail-v1/9"
+    },
+    {
+      "text": "BMW X7 3.0d xDrive EU6D\n2020\n190 000 км\nДизел\nАвтоматик\n49 000 €",
+      "href": "/listing-detail-v1/10"
+    },
+    {
+      "text": "Citroen C3 1.2i EURO5B\n2013\n136 574 км\nБензин\nРъчна\n4600 €",
+      "href": "/listing-detail-v1/11"
+    },
+    {
+      "text": "Hyundai IX35 1.6GDI EURO5\n2012\n56 178 км\nБензин\nРъчна\n7999 €",
+      "href": "/listing-detail-v1/12"
+    },
+    {
+      "text": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6\n2010\n182 887 км\nДизел\nАвтоматик\n9500 €",
+      "href": "/listing-detail-v1/13"
+    },
+    {
+      "text": "Peugeot 2008 1.2 PureTech EU6D\n2022\n36 216 км\nБензин\nРъчна\n14 000 €",
+      "href": "/listing-detail-v1/14"
+    },
+    {
+      "text": "Citroen Jumpy 1.6HDI L2H1EU6B\n2017\n186 586 км\nДизел\nРъчна\n8500 €",
+      "href": "/listing-detail-v1/15"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Меню",
+      "label": null
+    },
+    {
+      "text": "Марка или модел",
+      "label": "Отворете търсенето на автомобили"
+    },
+    {
+      "text": "",
+      "label": "Филтри"
+    },
+    {
+      "text": "",
+      "label": "Сортиране: Препоръчани"
+    },
+    {
+      "text": "Марка",
+      "label": null
+    },
+    {
+      "text": "Модел",
+      "label": null
+    },
+    {
+      "text": "Цена",
+      "label": null
+    },
+    {
+      "text": "Година",
+      "label": null
+    },
+    {
+      "text": "Купе",
+      "label": null
+    },
+    {
+      "text": "Гориво",
+      "label": null
+    },
+    {
+      "text": "Скорости",
+      "label": null
+    },
+    {
+      "text": "Пробег",
+      "label": null
+    },
+    {
+      "text": "Версия",
+      "label": null
+    },
+    {
+      "text": "Състояние",
+      "label": null
+    },
+    {
+      "text": "Екстри",
+      "label": null
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "make",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "model",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "body",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "price_max",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "year_min",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "mileage_max",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "name": "q",
+      "placeholder": "Марка, модел или ключова дума",
+      "label": "Търсене на автомобили"
+    },
+    {
+      "tag": "INPUT",
+      "type": "hidden",
+      "name": "sort",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "make",
+      "label": "Марка"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "model",
+      "label": "Модел"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "body",
+      "label": "Купе"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "fuel",
+      "label": "Гориво"
+    },
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "name": "",
+      "placeholder": "Търси марка…",
+      "label": "Търси марка"
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "name": "",
+      "placeholder": "Търси марка…",
+      "label": "Търси марка"
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "sort",
+      "label": "Сортиране на автомобилите"
+    },
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "name": "q",
+      "placeholder": "Марка или модел",
+      "label": null
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "make",
+      "label": "Марка"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "model",
+      "label": "Модел"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "body",
+      "label": "Купе"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "condition",
+      "label": "Състояние"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "price_min",
+      "label": "Цена от"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "price_max",
+      "label": "Цена до"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "year_min",
+      "label": "Година от"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "year_max",
+      "label": "Година до"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "mileage_max",
+      "label": "Пробег до"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "fuel",
+      "label": "Гориво"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "transmission",
+      "label": "Скоростна кутия"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "name": "version",
+      "label": "Пакет или версия"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "equipment",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "hidden",
+      "name": "sort",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "search",
+      "name": "",
+      "placeholder": "Търси марка…",
+      "label": "Търси марка"
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "name": "make",
+      "placeholder": "",
+      "label": null
+    }
+  ]
+}

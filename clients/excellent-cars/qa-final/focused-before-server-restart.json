@@ -1,0 +1,107 @@
+[
+  {
+    "check": "financing-phone",
+    "phones": [
+      "tel:0895996559",
+      "tel:0895996559",
+      "tel:0895996559",
+      "tel:0895996559",
+      "tel:0895996559",
+      "tel:0895996559",
+      "tel:0895996559"
+    ],
+    "pass": true
+  },
+  {
+    "check": "detail-map",
+    "maps": [
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна",
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна",
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна",
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна",
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна",
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна",
+      "https://www.google.com/maps/search/?api=1&query=Excellent Cars, бул. Ян Хунияди и Цар Освободител, Варна"
+    ],
+    "pass": true
+  },
+  {
+    "check": "manifest-identity",
+    "name": "Excellent Cars",
+    "pass": true
+  },
+  {
+    "check": "inherited-static-redirect",
+    "route": "/oferta.html",
+    "target": "/contact",
+    "pass": true
+  },
+  {
+    "check": "inherited-static-redirect",
+    "route": "/sa-concept.html",
+    "target": "/",
+    "pass": true
+  },
+  {
+    "check": "budget-home-counts",
+    "width": 390,
+    "counts": [
+      "До 10 000 EUR 2 коли",
+      "До 20 000 EUR 2 коли",
+      "До 30 000 EUR 2 коли",
+      "До 50 000 EUR 2 коли",
+      "Над 50 000 EUR 0 коли",
+      "Без бюджет Всички 16 коли"
+    ],
+    "pass": false
+  },
+  {
+    "check": "budget-filter",
+    "width": 390,
+    "limit": 20000,
+    "matches": [
+      "/inventory/peugeot-308-1-6gt-205h-p-806394",
+      "/inventory/nissan-juke-1-6-nismo-482685"
+    ],
+    "pass": false
+  },
+  {
+    "check": "mileage-filter",
+    "width": 390,
+    "expected": 4,
+    "matches": [],
+    "pass": false
+  },
+  {
+    "check": "budget-filter",
+    "width": 1440,
+    "limit": 20000,
+    "matches": [
+      "/inventory/nissan-juke-1-6-nismo-482685",
+      "/inventory/peugeot-308-1-6gt-205h-p-806394",
+      "/inventory/map"
+    ],
+    "pass": false
+  },
+  {
+    "check": "mileage-filter",
+    "width": 1440,
+    "expected": 4,
+    "matches": [
+      "/inventory/map"
+    ],
+    "pass": false
+  },
+  {
+    "check": "modern-gallery",
+    "width": 390,
+    "first": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-1.webp&w=3840&q=75",
+    "second": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-2.webp&w=3840&q=75",
+    "pass": false
+  },
+  {
+    "check": "focused-exception",
+    "pass": false,
+    "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-slot=\"listing-gallery-lightbox\"]') to be visible\u001b[22m\n\n    at J:\\cars\\clients\\excellent-cars\\qa-final\\focus.mjs:47:103"
+  }
+]

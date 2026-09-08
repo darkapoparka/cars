@@ -1,0 +1,198 @@
+{
+  "filesScanned": 46,
+  "findingCount": 24,
+  "findings": [
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\about.svelte",
+      "line": 731,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\car-single.svelte",
+      "line": 471,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\car-single.svelte",
+      "line": 472,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary making this the first"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\car-single.svelte",
+      "line": 477,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\driver-single.svelte",
+      "line": 350,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\driver-single.svelte",
+      "line": 352,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\driver-single.svelte",
+      "line": 355,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\driver-single.svelte",
+      "line": 357,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\faq.svelte",
+      "line": 302,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 325,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 340,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 355,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 370,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 385,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 400,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 415,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 430,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\help.svelte",
+      "line": 445,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available but the majority have alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\index-2.svelte",
+      "line": 1358,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\index-5.svelte",
+      "line": 1359,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\index.svelte",
+      "line": 1697,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\mail-success.svelte",
+      "line": 301,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\privacy.svelte",
+      "line": 315,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "efficitur quam quis congue. Ut vel ornare lorem. Vivamus mi mi, vestibulum nec eleifend eu, lobortis ac neque. Lorem ipsum"
+    },
+    {
+      "file": "J:\\cars\\clients\\dayandnight\\rencar\\src\\pages\\profile.svelte",
+      "line": 380,
+      "rule": "placeholder-copy",
+      "severity": "error",
+      "message": "Obvious placeholder or demo identity appears in UI source.",
+      "excerpt": "<textarea class=\"form-control\" rows=\"4\" placeholder=\"Write Here...\" aria-label=\"Write Here...\" id=\"field-5\">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poi"
+    }
+  ]
+}

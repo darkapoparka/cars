@@ -1,0 +1,12 @@
+{
+  "client": "avangard-auto",
+  "name": "AVANGARD AUTO",
+  "template": "modern",
+  "port": 6627,
+  "startedAt": "2026-09-07T21:58:14.188Z",
+  "routes": [],
+  "interactions": [],
+  "runtime": null,
+  "error": "Command failed: powershell.exe -NoProfile -ExecutionPolicy Bypass -File J:\\cars\\audits\\2026-09-08\\verify\\runtime.ps1 -Client avangard-auto -Template modern -Port 6627\nPort 6627 is already used by PID 19900. No process was stopped.\r\nAt J:\\cars\\scripts\\start-preview.ps1:16 char:24\r\n+ ... ting.Count){throw \"Port $Port is already used by PID $($carExisting[0 ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (Port 6627 is al...ss was stopped.:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : Port 6627 is already used by PID 19900. No process was stopped.\r\n \r\n",
+  "pass": false
+}

@@ -1,0 +1,5 @@
+[
+  {"key":"modern-copy","port":6462,"route":"/cars","label":"entry","timeout":90000},
+  {"key":"modern-copy","port":6462,"route":"/bg/listing/bmw-x5-m50d-sofia-2020","label":"detail","timeout":90000},
+  {"key":"modern-copy","port":6462,"route":"/bg/contact","label":"contact","timeout":90000}
+]

@@ -1,0 +1,79 @@
+{
+  "key": "autodeal",
+  "name": "AutoDeal Full",
+  "aliases": [
+    "autodeal-full"
+  ],
+  "path": "templates/autodeal",
+  "version": "2026.09.06-baseline",
+  "family": "autodeal",
+  "stack": "node-static",
+  "sourcePort": null,
+  "libraryPort": 6460,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "home01",
+      "route": "/"
+    },
+    {
+      "id": "home02",
+      "route": "/home02"
+    },
+    {
+      "id": "home03",
+      "route": "/home03"
+    },
+    {
+      "id": "home04",
+      "route": "/home04"
+    },
+    {
+      "id": "home05",
+      "route": "/home05"
+    },
+    {
+      "id": "home06",
+      "route": "/home06"
+    },
+    {
+      "id": "home07",
+      "route": "/home07"
+    },
+    {
+      "id": "home08",
+      "route": "/home08"
+    },
+    {
+      "id": "home09",
+      "route": "/home09"
+    },
+    {
+      "id": "home10",
+      "route": "/home10"
+    }
+  ],
+  "desktop": 8,
+  "mobile": 7,
+  "priority": "variant-library",
+  "readiness": "reference-content-candidate",
+  "reskinEffort": "medium-high",
+  "brandFiles": [
+    "mirror/pages",
+    "mirror/public/assets",
+    "i18n/site-config.mjs",
+    "i18n/catalogs",
+    "server.mjs"
+  ],
+  "note": "Complete existing Agency OS library, 150 stored page routes and ten real homepage compositions. Different runtime from auto-best. Scores are family-level visual judgement, not an endorsement of every home.",
+  "sourceSnapshot": {
+    "source": "M:\\codex\\agency-os-templates\\verticals\\automotive\\templates\\autodeal",
+    "head": "392bb1b5f26596582ea6fa7e547913eb3f8b86b7",
+    "branch": "agent/autodeal-i18n-layout-fix",
+    "includesDirtyFiles": false,
+    "files": 533,
+    "bytes": 169303886
+  },
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed"
+}

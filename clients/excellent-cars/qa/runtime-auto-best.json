@@ -1,0 +1,10 @@
+{
+    "Template":  "auto-best",
+    "Project":  "J:\\cars\\clients\\excellent-cars\\auto-best",
+    "PID":  70432,
+    "Port":  6621,
+    "Url":  "http://127.0.0.1:6621",
+    "Stdout":  "J:\\cars\\runtime\\auto-best-6621-20260908-001530.out.log",
+    "Stderr":  "J:\\cars\\runtime\\auto-best-6621-20260908-001530.err.log",
+    "Status":  "stopped-after-final-qa"
+}

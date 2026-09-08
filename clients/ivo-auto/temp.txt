@@ -1,0 +1,2 @@
+import fs from 'node:fs/promises';
+import {chromium} from '../../templates/boxcar/node_modules/playwright/index.mjs';

@@ -1,0 +1,445 @@
+/* Keep Tailwind's generic utility layers below the imported dealer template,
+   then let the narrow route adapter sit above both. Unlayered component styles
+   remain the final owner of component visuals. */
+@layer properties, theme, base, components, utilities, auxero-template, auxero-adapter;
+
+/*
+ * Icon-color footgun fix: static/assets/app.css declares a global `* { color:#1c1c1c }`
+ * that paints SVG icons (and their <path>s drawing with currentColor) dark — invisible on
+ * dark surfaces. SVG selectors outspecify `*`, so this lets icons inherit their parent's
+ * text colour instead. It is a no-op on light surfaces (parent is already #1c1c1c) and only
+ * rescues icons on dark/red surfaces. Component/guard `` overrides still win.
+ */
+svg,
+svg * {
+	color: inherit;
+}
+
+/* Auxero's global `*` reset also paints descendants of filled controls dark.
+   Let text and icons inherit the intentional control colour. */
+a *,
+button * {
+	color: inherit;
+}
+
+:root {
+	color-scheme: light;
+
+	--bc-font-ui:
+		'Geist Variable', 'Noto Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Arial, sans-serif;
+	--bc-font-body: var(--bc-font-ui);
+	--bc-font-heading: var(--bc-font-ui);
+	--bc-font-dashboard: var(--bc-font-ui);
+	--bc-weight-regular: 400;
+	--bc-weight-medium: 500;
+	--bc-weight-semibold: 600;
+	--bc-weight-bold: 700;
+
+	--bc-text-h1: 68px;
+	--bc-leading-h1: 76px;
+	--bc-text-h2: 40px;
+	--bc-leading-h2: 48px;
+	--bc-text-h3: 32px;
+	--bc-leading-h3: 1.25;
+	--bc-text-h4: 24px;
+	--bc-leading-h4: 1.333;
+	--bc-text-h5: 20px;
+	--bc-leading-h5: 1.4;
+	--bc-text-h6: 20px;
+	--bc-leading-h6: 1.6;
+	--bc-text-h7: 18px;
+	--bc-leading-h7: 1.44;
+	--bc-text-body: 16px;
+	--bc-leading-body: 26px;
+	--bc-text-body-lg: 18px;
+	--bc-leading-body-lg: 28px;
+	--bc-text-control: 16px;
+	--bc-leading-control: 1.25;
+	--bc-text-caption: 14px;
+	--bc-leading-caption: 1.4;
+	--bc-text-micro: 13px;
+	--bc-leading-micro: 1.35;
+	--bc-text-display: var(--bc-text-h1);
+	--bc-leading-display: var(--bc-leading-h1);
+	--bc-text-section: var(--bc-text-h2);
+	--bc-leading-section: var(--bc-leading-h2);
+	--bc-text-subsection: var(--bc-text-h3);
+	--bc-leading-subsection: var(--bc-leading-h3);
+	--bc-text-panel-title: var(--bc-text-h4);
+	--bc-leading-panel-title: var(--bc-leading-h4);
+	--bc-text-card-price: var(--bc-text-h5);
+	--bc-leading-card-price: var(--bc-leading-h5);
+	--bc-text-card-title: 18px;
+	--bc-leading-card-title: 1.28;
+	--bc-text-meta: var(--bc-text-caption);
+	--bc-leading-meta: var(--bc-leading-caption);
+	--bc-text-label: var(--bc-text-micro);
+	--bc-leading-label: var(--bc-leading-micro);
+	--bc-text-header-meta: var(--bc-text-control);
+	--bc-leading-header-meta: var(--bc-leading-control);
+	--bc-text-header-nav: var(--bc-text-h7);
+	--bc-leading-header-nav: var(--bc-leading-h7);
+	--bc-text-header-cta: 17px;
+	--bc-leading-header-cta: 1.15;
+	--bc-text-mega-title: var(--bc-text-card-title);
+	--bc-leading-mega-title: var(--bc-leading-card-title);
+	--bc-text-mega-option: var(--bc-text-caption);
+	--bc-leading-mega-option: var(--bc-leading-caption);
+	--bc-text-mega-car-title: 17px;
+	--bc-leading-mega-car-title: 1.18;
+
+	--bc-bg: #f4f5f7;
+	--bc-bg-strong: #e5e7eb;
+	--bc-ink: #18181b;
+	--bc-ink-soft: #27272a;
+	--bc-copy: #52525b;
+	--bc-muted: #71717a;
+	--bc-muted-light: #a1a1aa;
+	--bc-subtle: #6b7280;
+	--bc-white: #ffffff;
+
+	--bc-surface: #f3f4f6;
+	--bc-surface-soft: #f8fafc;
+	--bc-surface-hover: #e5e7eb;
+	--bc-surface-raised: #ffffff;
+	--bc-border: #e4e4e7;
+	--bc-border-strong: #cbd5e1;
+	--bc-hero-control-border: rgba(40, 12, 12, 0.42);
+	--bc-hero-action-surface: rgba(255, 255, 255, 0.85);
+	--bc-hero-action-border: rgba(255, 255, 255, 0.62);
+
+	--bc-control: #f3f4f6;
+	--bc-control-hover: #e5e7eb;
+	--bc-control-active: #fff1f2;
+	--bc-hover-surface: #eef0f3;
+	--bc-hover-surface-strong: #fff1f2;
+	--bc-hover-border: #dc2626;
+	--bc-hover-accent: #b5121b;
+	--bc-hover-accent-strong: #941018;
+	--bc-hover-accent-soft: #fff1f2;
+	--bc-hover-accent-ink: #ffffff;
+	--bc-hover-quiet-ink: #18181b;
+
+	--bc-accent: #b5121b;
+	--bc-accent-hover: #941018;
+	--bc-accent-soft: #fff1f2;
+	--bc-accent-contrast: #ffffff;
+	--bc-accent-alt: #941018;
+	--bc-accent-bright: #dc2626;
+	--bc-accent-bright-soft: #fff1f2;
+	--bc-accent-on-dark: #ff6674;
+	/* Compatibility aliases for older component names. Their visual meaning is Eliq red. */
+	--bc-action-gold: var(--bc-accent);
+	--bc-action-gold-hover: var(--bc-accent-hover);
+	--bc-action-gold-ink: #ffffff;
+	--bc-accent-olive: var(--bc-accent);
+
+	--bc-success: #0f9f7a;
+	--bc-warning: #f4bd0e;
+	--bc-danger: #e85347;
+
+	--bc-card-bg: #151518;
+	--bc-card-hover: #1f1f23;
+	--bc-card-ink: #ffffff;
+	--bc-card-muted: #d4d4d8;
+	--bc-card-media: #121214;
+	--bc-card-chip: #ffffff;
+	--bc-card-chip-border: #e4e4e7;
+	--bc-card-pill: rgb(28 28 28 / 0.78);
+	--bc-card-pill-hover: rgb(28 28 28 / 0.88);
+	--bc-vehicle-card-surface: #f4f4f5;
+	--bc-vehicle-card-surface-hover: #ffffff;
+	--bc-vehicle-card-title-size: 18px;
+	--bc-vehicle-card-title-leading: 1.4;
+	--bc-vehicle-card-title-weight: 500;
+	--bc-vehicle-card-action-size: 16px;
+
+	--bc-popover-bg: #ffffff;
+	--bc-popover-border: #e4e4e7;
+	--bc-popover-border-hover: #dc2626;
+	--bc-popover-accent: var(--bc-accent);
+	--bc-popover-accent-soft: #fff1f2;
+	--bc-popover-accent-ring: rgb(200 30 30 / 0.18);
+	--bc-popover-focus: var(--bc-accent);
+	--bc-popover-muted: #52525b;
+	--bc-popover-muted-strong: #71717a;
+	--bc-popover-icon: #71717a;
+	--bc-popover-icon-active: var(--bc-accent);
+	--bc-popover-surface: #f4f4f5;
+	--bc-popover-chip-bg: #f4f4f5;
+	--bc-popover-chip-hover: #e4e4e7;
+	--bc-popover-chip-border-hover: var(--bc-accent);
+	--bc-popover-chip-ink: #27272a;
+	--bc-popover-subtle: #6b7280;
+	--bc-popover-hint: #52525b;
+	--bc-popover-footer-line: #e4e4e7;
+	--bc-popover-clear-bg: #f4f4f5;
+	--bc-popover-clear-ink: #3f3f46;
+	--bc-popover-mono-bg: #26262c;
+	--bc-popover-shadow: 0 20px 42px rgb(9 9 11 / 0.22);
+
+	--bc-filter-field-border: #e4e4e7;
+	--bc-filter-field-hover-border: #dca1a1;
+	--bc-filter-field-hover-bg: #fff1f2;
+	--bc-filter-ring: rgb(200 30 30 / 0.16);
+	--bc-filter-label: #52525b;
+	--bc-filter-backdrop: rgb(13 19 26 / 0.58);
+	--bc-filter-panel-border: #e4e4e7;
+	--bc-filter-panel-shadow: 0 18px 38px rgb(32 8 8 / 0.16);
+	--bc-filter-modal-border: #e4e4e7;
+	--bc-filter-modal-shadow: 0 28px 70px rgb(10 15 20 / 0.35);
+	--bc-filter-heading: #111111;
+	--bc-filter-close-border: #e4e4e7;
+	--bc-filter-close-bg: #f4f4f5;
+	--bc-filter-close-ink: #3f3f46;
+	--bc-filter-close-hover-bg: #e4e4e7;
+	--bc-filter-modal-row-ink: #151515;
+	--bc-filter-modal-row-hover: #fff1f2;
+	--bc-filter-modal-row-selected: #fff1f2;
+	--bc-filter-control-border: #d4d4d8;
+	--bc-filter-chip-count-active: #7a1212;
+	--bc-filter-done-hover: #2e2e2e;
+	--bc-filter-clear-hover: #e4e4e7;
+
+	--bc-dashboard-bg: #f4f5f7;
+	--bc-dashboard-surface: #ffffff;
+	--bc-dashboard-sidebar: #ffffff;
+	--bc-dashboard-border: #e4e4e7;
+	--bc-dashboard-border-strong: #d4d4d8;
+	--bc-dashboard-text: #3f3f46;
+	--bc-dashboard-heading: #18181b;
+	--bc-dashboard-muted: #71717a;
+	--bc-dashboard-card-hover: #f4f4f5;
+	--bc-dashboard-card-radius: 14px;
+	--bc-dashboard-action-bg: #f4f4f5;
+	--bc-dashboard-action-hover: #e4e4e7;
+	--bc-dashboard-icon-bg: #f4f4f5;
+	--bc-dashboard-status-bg: #fff1f2;
+	--bc-dashboard-status-text: var(--bc-accent);
+
+	--bc-showcase-bg: #f4f5f7;
+	--bc-showcase-dark: #18181b;
+	--bc-showcase-dark-soft: #27272a;
+	--bc-showcase-dark-panel: #202023;
+	--bc-showcase-ink: #18181b;
+	--bc-showcase-muted: #71717a;
+	--bc-showcase-line: #e4e4e7;
+	--bc-showcase-icon-bg: #f4f4f5;
+	--bc-showcase-card-hover: #f4f4f5;
+
+	--bc-container-narrow: 760px;
+	--bc-container-page: 1440px;
+	--bc-container-wide: 1920px;
+	--bc-page-x: 15px;
+	--bc-page-y: 32px;
+	--bc-section-sm: clamp(32px, 4vw, 54px);
+	--bc-section-md: clamp(48px, 6vw, 76px);
+	--bc-section-lg: clamp(64px, 8vw, 104px);
+	--bc-card-padding: 20px;
+	--bc-control-x: 16px;
+	--bc-control-y: 12px;
+	--bc-touch: 44px;
+	--bc-touch-compact: 40px;
+	--bc-space-1: 4px;
+	--bc-space-2: 8px;
+	--bc-space-3: 12px;
+	--bc-space-4: 16px;
+	--bc-space-5: 24px;
+	--bc-space-6: 32px;
+
+	--bc-radius-xs: 4px;
+	--bc-radius-sm: 6px;
+	--bc-radius-md: 8px;
+	--bc-radius-lg: 12px;
+	--bc-radius-card: 16px;
+	--bc-radius-panel: 24px;
+	--bc-radius-section: 28px;
+	--bc-radius-modal: 40px;
+	--bc-radius-pill: 999px;
+
+	--bc-shadow-subtle: 0 1px 3px rgb(28 28 28 / 0.08);
+	--bc-shadow-card: 0 4px 12px rgb(28 28 28 / 0.08);
+	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
+	--bc-shadow-modal: 0 24px 80px rgb(28 28 28 / 0.16);
+
+	--bc-motion-fast: 150ms ease;
+	--bc-motion-hover: 140ms ease;
+	--bc-motion-standard: 220ms ease;
+	--bc-motion-drawer: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html,
+body {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+	font-optical-sizing: auto;
+	font-synthesis: none;
+	font-variant-ligatures: common-ligatures;
+	font-feature-settings:
+		'kern' 1,
+		'liga' 1,
+		'clig' 1;
+	text-rendering: geometricPrecision;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: var(--bc-font-body);
+	letter-spacing: 0;
+}
+
+/* The imported dealer template ships its own broad body/container rules. Keep the
+   lead demo's type and page grid authoritative without escalating specificity in
+   individual components. */
+body[class*='auxero-template-'],
+body[class*='auxero-template-'] button,
+body[class*='auxero-template-'] input,
+body[class*='auxero-template-'] select,
+body[class*='auxero-template-'] textarea {
+	font-family: var(--bc-font-body);
+}
+
+/* Auxero sets Manrope directly on several component roots, so body inheritance
+   alone leaves a visibly mixed type system. Keep the personalized demo on one
+   face without changing the template's composition. */
+body[class*='auxero-template-']
+	:where(
+		.header,
+		.page-title,
+		.search-cars,
+		.card-box,
+		.eliqauto-action-card,
+		.eliqauto-newest-banner,
+		.menu-tab-style1,
+		.menu-tab-style2
+	) {
+	font-family: var(--bc-font-body);
+	font-synthesis: none;
+}
+
+body[class*='auxero-template-'] .container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+	body[class*='auxero-template-'] .container {
+		max-width: 1140px;
+	}
+}
+
+@media (min-width: 1400px) {
+	body[class*='auxero-template-'] .container {
+		max-width: 1410px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--bc-text-body: 18px;
+		--bc-leading-body: 28px;
+		--bc-text-body-lg: 20px;
+		--bc-leading-body-lg: 30px;
+		--bc-text-control: 16px;
+		--bc-leading-control: 1.32;
+		--bc-text-caption: 15px;
+		--bc-text-micro: 14px;
+		--bc-text-card-title: 22px;
+		--bc-leading-card-title: 1.28;
+		--bc-text-card-price: 24px;
+		--bc-leading-card-price: 1.2;
+		--bc-text-header-nav: 18px;
+		--bc-leading-header-nav: 1.38;
+		--bc-text-header-cta: 18px;
+		--bc-text-mega-title: 19px;
+		--bc-leading-mega-title: 1.22;
+		--bc-text-mega-option: 15px;
+		--bc-leading-mega-option: 1.35;
+		--bc-text-mega-car-title: 18px;
+		--bc-leading-mega-car-title: 1.2;
+	}
+}
+
+/* Restore the Eliqauto display font only on non-Auxero surfaces.
+   Auxero template pages keep the template typography contract. */
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) h1,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) h2,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) h3,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) h4,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) h5,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) h6,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) .h1,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) .h2,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) .h3,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) .h4,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) .h5,
+body:not([class*='auxero-template-']):not(.eliqauto-inventory-template) .h6 {
+	font-family: var(--bc-font-heading);
+}
+
+.bc-container {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-page));
+	margin-inline: auto;
+}
+
+.bc-container--narrow {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-narrow));
+}
+
+.bc-container--wide {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-wide));
+}
+
+.bc-card {
+	border: 1px solid var(--bc-border);
+	border-radius: var(--bc-radius-md);
+	background: var(--bc-surface-raised);
+	box-shadow: none;
+	color: var(--bc-ink);
+}
+
+.bc-card--soft {
+	background: var(--bc-surface);
+}
+
+.bc-calm-hover {
+	transition:
+		background-color var(--bc-motion-hover),
+		border-color var(--bc-motion-hover),
+		color var(--bc-motion-hover),
+		filter var(--bc-motion-hover),
+		opacity var(--bc-motion-hover);
+}
+
+.bc-calm-hover:hover,
+.bc-calm-hover:focus-visible {
+	border-color: var(--bc-hover-border);
+	background: var(--bc-hover-surface);
+	color: var(--bc-hover-quiet-ink);
+}
+
+/* Instant tactile press for push-to-navigate surfaces (cards, CTAs, links).
+   Pointer devices only — on touch the nudge reads as unwanted "everything moves
+   when I tap it", so it's gated to mice/trackpads via the hover/pointer query. */
+@media (hover: hover) and (pointer: fine) {
+	.bc-press:active {
+		transform: translateY(1px);
+	}
+}
+
+.bc-focus-ring {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.bc-focus-ring:focus-visible {
+	outline-color: rgb(200 30 30 / 0.5);
+	box-shadow: 0 0 0 4px rgb(200 30 30 / 0.16);
+}

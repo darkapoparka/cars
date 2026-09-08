@@ -1,0 +1,900 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: final-polish.visual.ts >> inventory-mobile
+- Location: tests\visual\final-polish.visual.ts:23:2
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  Expected an image 390px by 6748px, received 390px by 6667px. 621239 pixels (ratio 0.24 of all image pixels) are different.
+
+  Snapshot: inventory-mobile.png
+
+Call log:
+  - Expect "toHaveScreenshot(inventory-mobile.png)" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - Expected an image 390px by 6748px, received 390px by 6667px. 621239 pixels (ratio 0.24 of all image pixels) are different.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - Expected an image 390px by 6748px, received 390px by 6667px. 621239 pixels (ratio 0.24 of all image pixels) are different.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - link "Към основното съдържание" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic "Мобилна страница автомобили" [ref=e4]:
+    - main [ref=e5]:
+      - heading "Автомобили на склад — Ден и Нощ Ауто Груп" [level=1] [ref=e6]
+      - button "Отвори търсене" [ref=e8] [cursor=pointer]:
+        - generic [ref=e9]:
+          - generic [ref=e10]: Търси автомобили
+          - img [ref=e12]
+      - generic [ref=e13]:
+        - generic "Бързи филтри" [ref=e14]:
+          - status [ref=e15]: 40 резултата
+          - generic [ref=e16]:
+            - button "Филтри" [ref=e17] [cursor=pointer]:
+              - img [ref=e18]
+              - generic [ref=e19]: Филтри
+            - button "Сортирай" [ref=e20] [cursor=pointer]:
+              - img [ref=e21]
+              - generic [ref=e22]: Сортирай
+            - button "Марка" [ref=e23] [cursor=pointer]:
+              - img [ref=e24]
+              - generic [ref=e25]: Марка
+            - button "Модел" [ref=e26] [cursor=pointer]:
+              - img [ref=e27]
+              - generic [ref=e28]: Модел
+            - button "Гориво" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+              - generic [ref=e31]: Гориво
+            - button "Пробег" [ref=e32] [cursor=pointer]:
+              - img [ref=e33]
+              - generic [ref=e34]: Пробег
+            - button "Каросерия" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+              - generic [ref=e37]: Каросерия
+            - button "Всички 40" [ref=e38] [cursor=pointer]:
+              - img [ref=e39]
+              - generic [ref=e40]: Всички 40
+        - status [ref=e41]: 40 автомобила
+        - generic [ref=e42]:
+          - article [ref=e43]:
+            - link "Виж Mercedes-Benz GLA 45 AMG 2016" [ref=e44] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-gla-45-amg-405323
+              - generic [ref=e45]:
+                - img "Mercedes-Benz GLA 45 AMG" [ref=e46]
+                - generic [ref=e47]: Очакван внос
+              - generic [ref=e48]:
+                - generic [ref=e49]:
+                  - heading "Mercedes-Benz GLA 45 AMG" [level=3] [ref=e50]
+                  - generic [ref=e51]:
+                    - generic [ref=e52]:
+                      - strong [ref=e53]: 26 699 €
+                      - generic [ref=e54]: Финансиране по запитване
+                    - img [ref=e56]
+                - list "Основни данни" [ref=e58]:
+                  - listitem [ref=e59]: 170 000 км
+                  - listitem [ref=e61]: "2016"
+                  - listitem [ref=e63]: Бензин
+                  - listitem [ref=e65]: Автоматик
+          - article [ref=e67]:
+            - link "Виж Audi A8 2016" [ref=e68] [cursor=pointer]:
+              - /url: /inventory/audi-a8-574112
+              - generic [ref=e69]:
+                - img "Audi A8" [ref=e70]
+                - generic [ref=e71]: Наличен
+              - generic [ref=e72]:
+                - generic [ref=e73]:
+                  - heading "Audi A8" [level=3] [ref=e74]
+                  - generic [ref=e75]:
+                    - generic [ref=e76]:
+                      - strong [ref=e77]: 27 500 €
+                      - generic [ref=e78]: Финансиране по запитване
+                    - img [ref=e80]
+                - list "Основни данни" [ref=e82]:
+                  - listitem [ref=e83]: 204 000 км
+                  - listitem [ref=e85]: "2016"
+                  - listitem [ref=e87]: Дизел
+                  - listitem [ref=e89]: Автоматик
+          - article [ref=e91]:
+            - link "Виж Mercedes-Benz S 500 2016" [ref=e92] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-s-500-711568
+              - generic [ref=e93]:
+                - img "Mercedes-Benz S 500" [ref=e94]
+                - generic [ref=e95]: Очакван внос
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - heading "Mercedes-Benz S 500" [level=3] [ref=e98]
+                  - generic [ref=e99]:
+                    - generic [ref=e100]:
+                      - strong [ref=e101]: 27 699 €
+                      - generic [ref=e102]: Финансиране по запитване
+                    - img [ref=e104]
+                - list "Основни данни" [ref=e106]:
+                  - listitem [ref=e107]: 175 000 км
+                  - listitem [ref=e109]: "2016"
+                  - listitem [ref=e111]: Бензин
+                  - listitem [ref=e113]: Автоматик
+          - article [ref=e115]:
+            - link "Виж BMW X6 2015" [ref=e116] [cursor=pointer]:
+              - /url: /inventory/bmw-x6-685588
+              - generic [ref=e117]:
+                - img "BMW X6" [ref=e118]
+                - generic [ref=e119]: Наличен
+              - generic [ref=e120]:
+                - generic [ref=e121]:
+                  - heading "BMW X6" [level=3] [ref=e122]
+                  - generic [ref=e123]:
+                    - generic [ref=e124]:
+                      - strong [ref=e125]: 28 478.45 €
+                      - generic [ref=e126]: Финансиране по запитване
+                    - img [ref=e128]
+                - list "Основни данни" [ref=e130]:
+                  - listitem [ref=e131]: 185 000 км
+                  - listitem [ref=e133]: "2015"
+                  - listitem [ref=e135]: Дизел
+                  - listitem [ref=e137]: Автоматик
+          - article [ref=e139]:
+            - link "Виж Mercedes-Benz E 350 2018" [ref=e140] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-e-350-764829
+              - generic [ref=e141]:
+                - img "Mercedes-Benz E 350" [ref=e142]
+                - generic [ref=e143]: Очакван внос
+              - generic [ref=e144]:
+                - generic [ref=e145]:
+                  - heading "Mercedes-Benz E 350" [level=3] [ref=e146]
+                  - generic [ref=e147]:
+                    - generic [ref=e148]:
+                      - strong [ref=e149]: 28 699 €
+                      - generic [ref=e150]: Финансиране по запитване
+                    - img [ref=e152]
+                - list "Основни данни" [ref=e154]:
+                  - listitem [ref=e155]: 140 000 км
+                  - listitem [ref=e157]: "2018"
+                  - listitem [ref=e159]: Дизел
+                  - listitem [ref=e161]: Автоматик
+          - article [ref=e163]:
+            - link "Виж BMW X6 2017" [ref=e164] [cursor=pointer]:
+              - /url: /inventory/bmw-x6-876978
+              - generic [ref=e165]:
+                - img "BMW X6" [ref=e166]
+                - generic [ref=e167]: Наличен
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - heading "BMW X6" [level=3] [ref=e170]
+                  - generic [ref=e171]:
+                    - generic [ref=e172]:
+                      - strong [ref=e173]: 28 699 €
+                      - generic [ref=e174]: Финансиране по запитване
+                    - img [ref=e176]
+                - list "Основни данни" [ref=e178]:
+                  - listitem [ref=e179]: 183 000 км
+                  - listitem [ref=e181]: "2017"
+                  - listitem [ref=e183]: Дизел
+                  - listitem [ref=e185]: Автоматик
+          - article [ref=e187]:
+            - link "Виж Audi A8 2020" [ref=e188] [cursor=pointer]:
+              - /url: /inventory/audi-a8-697521
+              - generic [ref=e189]:
+                - img "Audi A8" [ref=e190]
+                - generic [ref=e191]: Наличен
+              - generic [ref=e192]:
+                - generic [ref=e193]:
+                  - heading "Audi A8" [level=3] [ref=e194]
+                  - generic [ref=e195]:
+                    - generic [ref=e196]:
+                      - strong [ref=e197]: 28 699 €
+                      - generic [ref=e198]: Финансиране по запитване
+                    - img [ref=e200]
+                - list "Основни данни" [ref=e202]:
+                  - listitem [ref=e203]: 186 000 км
+                  - listitem [ref=e205]: "2020"
+                  - listitem [ref=e207]: Дизел
+                  - listitem [ref=e209]: Автоматик
+          - article [ref=e211]:
+            - link "Виж Audi Q7 2017" [ref=e212] [cursor=pointer]:
+              - /url: /inventory/audi-q7-983332
+              - generic [ref=e213]:
+                - img "Audi Q7" [ref=e214]
+                - generic [ref=e215]: Очакван внос
+              - generic [ref=e216]:
+                - generic [ref=e217]:
+                  - heading "Audi Q7" [level=3] [ref=e218]
+                  - generic [ref=e219]:
+                    - generic [ref=e220]:
+                      - strong [ref=e221]: 29 699 €
+                      - generic [ref=e222]: Финансиране по запитване
+                    - img [ref=e224]
+                - list "Основни данни" [ref=e226]:
+                  - listitem [ref=e227]: 188 000 км
+                  - listitem [ref=e229]: "2017"
+                  - listitem [ref=e231]: Дизел
+                  - listitem [ref=e233]: Автоматик
+          - article [ref=e235]:
+            - link "Виж Mercedes-Benz E 400 2019" [ref=e236] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-e-400-169037
+              - generic [ref=e237]:
+                - img "Mercedes-Benz E 400" [ref=e238]
+                - generic [ref=e239]: Наличен
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - heading "Mercedes-Benz E 400" [level=3] [ref=e242]
+                  - generic [ref=e243]:
+                    - generic [ref=e244]:
+                      - strong [ref=e245]: 29 699 €
+                      - generic [ref=e246]: Финансиране по запитване
+                    - img [ref=e248]
+                - list "Основни данни" [ref=e250]:
+                  - listitem [ref=e251]: 172 000 км
+                  - listitem [ref=e253]: "2019"
+                  - listitem [ref=e255]: Дизел
+                  - listitem [ref=e257]: Автоматик
+          - article [ref=e259]:
+            - link "Виж Mercedes-Benz GL 63 AMG 2016" [ref=e260] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-gl-63-amg-636300
+              - generic [ref=e261]:
+                - img "Mercedes-Benz GL 63 AMG" [ref=e262]
+                - generic [ref=e263]: Наличен
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - heading "Mercedes-Benz GL 63 AMG" [level=3] [ref=e266]
+                  - generic [ref=e267]:
+                    - generic [ref=e268]:
+                      - strong [ref=e269]: 32 699 €
+                      - generic [ref=e270]: Финансиране по запитване
+                    - img [ref=e272]
+                - list "Основни данни" [ref=e274]:
+                  - listitem [ref=e275]: 139 000 км
+                  - listitem [ref=e277]: "2016"
+                  - listitem [ref=e279]: Бензин
+                  - listitem [ref=e281]: Автоматик
+          - article [ref=e283]:
+            - link "Виж Mercedes-Benz E 350 2018" [ref=e284] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-e-350-336917
+              - generic [ref=e285]:
+                - img "Mercedes-Benz E 350" [ref=e286]
+                - generic [ref=e287]: Наличен
+              - generic [ref=e288]:
+                - generic [ref=e289]:
+                  - heading "Mercedes-Benz E 350" [level=3] [ref=e290]
+                  - generic [ref=e291]:
+                    - generic [ref=e292]:
+                      - strong [ref=e293]: 33 699 €
+                      - generic [ref=e294]: Финансиране по запитване
+                    - img [ref=e296]
+                - list "Основни данни" [ref=e298]:
+                  - listitem [ref=e299]: 177 000 км
+                  - listitem [ref=e301]: "2018"
+                  - listitem [ref=e303]: Дизел
+                  - listitem [ref=e305]: Автоматик
+          - article [ref=e307]:
+            - link "Виж Mercedes-Benz V 300 2016" [ref=e308] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-v-300-140338
+              - generic [ref=e309]:
+                - img "Mercedes-Benz V 300" [ref=e310]
+                - generic [ref=e311]: Очакван внос
+              - generic [ref=e312]:
+                - generic [ref=e313]:
+                  - heading "Mercedes-Benz V 300" [level=3] [ref=e314]
+                  - generic [ref=e315]:
+                    - generic [ref=e316]:
+                      - strong [ref=e317]: 33 699 €
+                      - generic [ref=e318]: Финансиране по запитване
+                    - img [ref=e320]
+                - list "Основни данни" [ref=e322]:
+                  - listitem [ref=e323]: 187 000 км
+                  - listitem [ref=e325]: "2016"
+                  - listitem [ref=e327]: Дизел
+                  - listitem [ref=e329]: Автоматик
+          - article [ref=e331]:
+            - link "Виж Mercedes-Benz CLS 400 2020" [ref=e332] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-cls-400-635636
+              - generic [ref=e333]:
+                - img "Mercedes-Benz CLS 400" [ref=e334]
+                - generic [ref=e335]: Очакван внос
+              - generic [ref=e336]:
+                - generic [ref=e337]:
+                  - heading "Mercedes-Benz CLS 400" [level=3] [ref=e338]
+                  - generic [ref=e339]:
+                    - generic [ref=e340]:
+                      - strong [ref=e341]: 37 699 €
+                      - generic [ref=e342]: Финансиране по запитване
+                    - img [ref=e344]
+                - list "Основни данни" [ref=e346]:
+                  - listitem [ref=e347]: 171 000 км
+                  - listitem [ref=e349]: "2020"
+                  - listitem [ref=e351]: Дизел
+                  - listitem [ref=e353]: Автоматик
+          - article [ref=e355]:
+            - link "Виж BMW 430 2023" [ref=e356] [cursor=pointer]:
+              - /url: /inventory/bmw-430-171119
+              - generic [ref=e357]:
+                - img "BMW 430" [ref=e358]
+                - generic [ref=e359]: Наличен
+              - generic [ref=e360]:
+                - generic [ref=e361]:
+                  - heading "BMW 430" [level=3] [ref=e362]
+                  - generic [ref=e363]:
+                    - generic [ref=e364]:
+                      - strong [ref=e365]: 41 699 €
+                      - generic [ref=e366]: Финансиране по запитване
+                    - img [ref=e368]
+                - list "Основни данни" [ref=e370]:
+                  - listitem [ref=e371]: 35 000 км
+                  - listitem [ref=e373]: "2023"
+                  - listitem [ref=e375]: Бензин
+                  - listitem [ref=e377]: Автоматик
+          - article [ref=e379]:
+            - link "Виж Audi Q7 2021" [ref=e380] [cursor=pointer]:
+              - /url: /inventory/audi-q7-196509
+              - generic [ref=e381]:
+                - img "Audi Q7" [ref=e382]
+                - generic [ref=e383]: Наличен
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - heading "Audi Q7" [level=3] [ref=e386]
+                  - generic [ref=e387]:
+                    - generic [ref=e388]:
+                      - strong [ref=e389]: 41 699 €
+                      - generic [ref=e390]: Финансиране по запитване
+                    - img [ref=e392]
+                - list "Основни данни" [ref=e394]:
+                  - listitem [ref=e395]: 160 000 км
+                  - listitem [ref=e397]: "2021"
+                  - listitem [ref=e399]: Дизел
+                  - listitem [ref=e401]: Автоматик
+          - article [ref=e403]:
+            - link "Виж Mercedes-Benz E 400 2021" [ref=e404] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-e-400-668074
+              - generic [ref=e405]:
+                - img "Mercedes-Benz E 400" [ref=e406]
+                - generic [ref=e407]: Очакван внос
+              - generic [ref=e408]:
+                - generic [ref=e409]:
+                  - heading "Mercedes-Benz E 400" [level=3] [ref=e410]
+                  - generic [ref=e411]:
+                    - generic [ref=e412]:
+                      - strong [ref=e413]: 42 699 €
+                      - generic [ref=e414]: Финансиране по запитване
+                    - img [ref=e416]
+                - list "Основни данни" [ref=e418]:
+                  - listitem [ref=e419]: 162 000 км
+                  - listitem [ref=e421]: "2021"
+                  - listitem [ref=e423]: Дизел
+                  - listitem [ref=e425]: Автоматик
+          - article [ref=e427]:
+            - link "Виж BMW X5 2020" [ref=e428] [cursor=pointer]:
+              - /url: /inventory/bmw-x5-022942
+              - generic [ref=e429]:
+                - img "BMW X5" [ref=e430]
+                - generic [ref=e431]: Очакван внос
+              - generic [ref=e432]:
+                - generic [ref=e433]:
+                  - heading "BMW X5" [level=3] [ref=e434]
+                  - generic [ref=e435]:
+                    - generic [ref=e436]:
+                      - strong [ref=e437]: 45 699 €
+                      - generic [ref=e438]: Финансиране по запитване
+                    - img [ref=e440]
+                - list "Основни данни" [ref=e442]:
+                  - listitem [ref=e443]: 167 000 км
+                  - listitem [ref=e445]: "2020"
+                  - listitem [ref=e447]: Дизел
+                  - listitem [ref=e449]: Автоматик
+          - article [ref=e451]:
+            - link "Виж Mercedes-Benz S 400 2019" [ref=e452] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-s-400-563618
+              - generic [ref=e453]:
+                - img "Mercedes-Benz S 400" [ref=e454]
+                - generic [ref=e455]: Очакван внос
+              - generic [ref=e456]:
+                - generic [ref=e457]:
+                  - heading "Mercedes-Benz S 400" [level=3] [ref=e458]
+                  - generic [ref=e459]:
+                    - generic [ref=e460]:
+                      - strong [ref=e461]: 48 699 €
+                      - generic [ref=e462]: Финансиране по запитване
+                    - img [ref=e464]
+                - list "Основни данни" [ref=e466]:
+                  - listitem [ref=e467]: 179 000 км
+                  - listitem [ref=e469]: "2019"
+                  - listitem [ref=e471]: Дизел
+                  - listitem [ref=e473]: Автоматик
+          - article [ref=e475]:
+            - link "Виж Audi Q8 2021" [ref=e476] [cursor=pointer]:
+              - /url: /inventory/audi-q8-707096
+              - generic [ref=e477]:
+                - img "Audi Q8" [ref=e478]
+                - generic [ref=e479]: Очакван внос
+              - generic [ref=e480]:
+                - generic [ref=e481]:
+                  - heading "Audi Q8" [level=3] [ref=e482]
+                  - generic [ref=e483]:
+                    - generic [ref=e484]:
+                      - strong [ref=e485]: 50 699 €
+                      - generic [ref=e486]: Финансиране по запитване
+                    - img [ref=e488]
+                - list "Основни данни" [ref=e490]:
+                  - listitem [ref=e491]: 163 000 км
+                  - listitem [ref=e493]: "2021"
+                  - listitem [ref=e495]: Дизел
+                  - listitem [ref=e497]: Автоматик
+          - article [ref=e499]:
+            - link "Виж BMW X7 2021" [ref=e500] [cursor=pointer]:
+              - /url: /inventory/bmw-x7-166128
+              - generic [ref=e501]:
+                - img "BMW X7" [ref=e502]
+                - generic [ref=e503]: Очакван внос
+              - generic [ref=e504]:
+                - generic [ref=e505]:
+                  - heading "BMW X7" [level=3] [ref=e506]
+                  - generic [ref=e507]:
+                    - generic [ref=e508]:
+                      - strong [ref=e509]: 53 699 €
+                      - generic [ref=e510]: Финансиране по запитване
+                    - img [ref=e512]
+                - list "Основни данни" [ref=e514]:
+                  - listitem [ref=e515]: 150 000 км
+                  - listitem [ref=e517]: "2021"
+                  - listitem [ref=e519]: Дизел
+                  - listitem [ref=e521]: Автоматик
+          - article [ref=e523]:
+            - link "Виж Mercedes-Benz G 350 2017" [ref=e524] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-g-350-344162
+              - generic [ref=e525]:
+                - img "Mercedes-Benz G 350" [ref=e526]
+                - generic [ref=e527]: Наличен
+              - generic [ref=e528]:
+                - generic [ref=e529]:
+                  - heading "Mercedes-Benz G 350" [level=3] [ref=e530]
+                  - generic [ref=e531]:
+                    - generic [ref=e532]:
+                      - strong [ref=e533]: 54 699 €
+                      - generic [ref=e534]: Финансиране по запитване
+                    - img [ref=e536]
+                - list "Основни данни" [ref=e538]:
+                  - listitem [ref=e539]: 130 000 км
+                  - listitem [ref=e541]: "2017"
+                  - listitem [ref=e543]: Дизел
+                  - listitem [ref=e545]: Автоматик
+          - article [ref=e547]:
+            - link "Виж Mercedes-Benz CLS 53 AMG 2020" [ref=e548] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-cls-53-amg-807146
+              - generic [ref=e549]:
+                - img "Mercedes-Benz CLS 53 AMG" [ref=e550]
+                - generic [ref=e551]: Очакван внос
+              - generic [ref=e552]:
+                - generic [ref=e553]:
+                  - heading "Mercedes-Benz CLS 53 AMG" [level=3] [ref=e554]
+                  - generic [ref=e555]:
+                    - generic [ref=e556]:
+                      - strong [ref=e557]: 54 699 €
+                      - generic [ref=e558]: Финансиране по запитване
+                    - img [ref=e560]
+                - list "Основни данни" [ref=e562]:
+                  - listitem [ref=e563]: 166 000 км
+                  - listitem [ref=e565]: "2020"
+                  - listitem [ref=e567]: Бензин
+                  - listitem [ref=e569]: Автоматик
+          - article [ref=e571]:
+            - link "Виж Land Rover Range Rover Sport 2021" [ref=e572] [cursor=pointer]:
+              - /url: /inventory/land-rover-range-rover-sport-012835
+              - generic [ref=e573]:
+                - img "Land Rover Range Rover Sport" [ref=e574]
+                - generic [ref=e575]: Наличен
+              - generic [ref=e576]:
+                - generic [ref=e577]:
+                  - heading "Land Rover Range Rover Sport" [level=3] [ref=e578]
+                  - generic [ref=e579]:
+                    - generic [ref=e580]:
+                      - strong [ref=e581]: 54 699 €
+                      - generic [ref=e582]: Финансиране по запитване
+                    - img [ref=e584]
+                - list "Основни данни" [ref=e586]:
+                  - listitem [ref=e587]: 155 000 км
+                  - listitem [ref=e589]: "2021"
+                  - listitem [ref=e591]: Бензин
+                  - listitem [ref=e593]: Автоматик
+          - article [ref=e595]:
+            - link "Виж Mercedes-Benz V 300 2018" [ref=e596] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-v-300-610297
+              - generic [ref=e597]:
+                - img "Mercedes-Benz V 300" [ref=e598]
+                - generic [ref=e599]: Наличен
+              - generic [ref=e600]:
+                - generic [ref=e601]:
+                  - heading "Mercedes-Benz V 300" [level=3] [ref=e602]
+                  - generic [ref=e603]:
+                    - generic [ref=e604]:
+                      - strong [ref=e605]: 54 699 €
+                      - generic [ref=e606]: Финансиране по запитване
+                    - img [ref=e608]
+                - list "Основни данни" [ref=e610]:
+                  - listitem [ref=e611]: 44 500 км
+                  - listitem [ref=e613]: "2018"
+                  - listitem [ref=e615]: Дизел
+                  - listitem [ref=e617]: Автоматик
+          - article [ref=e619]:
+            - link "Виж BMW X6 2020" [ref=e620] [cursor=pointer]:
+              - /url: /inventory/bmw-x6-781136
+              - generic [ref=e621]:
+                - img "BMW X6" [ref=e622]
+                - generic [ref=e623]: Наличен
+              - generic [ref=e624]:
+                - generic [ref=e625]:
+                  - heading "BMW X6" [level=3] [ref=e626]
+                  - generic [ref=e627]:
+                    - generic [ref=e628]:
+                      - strong [ref=e629]: 55 699 €
+                      - generic [ref=e630]: Финансиране по запитване
+                    - img [ref=e632]
+                - list "Основни данни" [ref=e634]:
+                  - listitem [ref=e635]: 160 000 км
+                  - listitem [ref=e637]: "2020"
+                  - listitem [ref=e639]: Бензин
+                  - listitem [ref=e641]: Автоматик
+          - article [ref=e643]:
+            - link "Виж Mercedes-Benz GLS 400 2021" [ref=e644] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-gls-400-273938
+              - generic [ref=e645]:
+                - img "Mercedes-Benz GLS 400" [ref=e646]
+                - generic [ref=e647]: Очакван внос
+              - generic [ref=e648]:
+                - generic [ref=e649]:
+                  - heading "Mercedes-Benz GLS 400" [level=3] [ref=e650]
+                  - generic [ref=e651]:
+                    - generic [ref=e652]:
+                      - strong [ref=e653]: 59 699 €
+                      - generic [ref=e654]: Финансиране по запитване
+                    - img [ref=e656]
+                - list "Основни данни" [ref=e658]:
+                  - listitem [ref=e659]: 172 000 км
+                  - listitem [ref=e661]: "2021"
+                  - listitem [ref=e663]: Дизел
+                  - listitem [ref=e665]: Автоматик
+          - article [ref=e667]:
+            - link "Виж Mercedes-Benz G 63 AMG 2017" [ref=e668] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-g-63-amg-906066
+              - generic [ref=e669]:
+                - img "Mercedes-Benz G 63 AMG" [ref=e670]
+                - generic [ref=e671]: Очакван внос
+              - generic [ref=e672]:
+                - generic [ref=e673]:
+                  - heading "Mercedes-Benz G 63 AMG" [level=3] [ref=e674]
+                  - generic [ref=e675]:
+                    - generic [ref=e676]:
+                      - strong [ref=e677]: 61 699 €
+                      - generic [ref=e678]: Финансиране по запитване
+                    - img [ref=e680]
+                - list "Основни данни" [ref=e682]:
+                  - listitem [ref=e683]: 164 000 км
+                  - listitem [ref=e685]: "2017"
+                  - listitem [ref=e687]: Бензин
+                  - listitem [ref=e689]: Автоматик
+          - article [ref=e691]:
+            - link "Виж Mercedes-Benz GLE 400 2021" [ref=e692] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-gle-400-237038
+              - generic [ref=e693]:
+                - img "Mercedes-Benz GLE 400" [ref=e694]
+                - generic [ref=e695]: Наличен
+              - generic [ref=e696]:
+                - generic [ref=e697]:
+                  - heading "Mercedes-Benz GLE 400" [level=3] [ref=e698]
+                  - generic [ref=e699]:
+                    - generic [ref=e700]:
+                      - strong [ref=e701]: 63 699 €
+                      - generic [ref=e702]: Финансиране по запитване
+                    - img [ref=e704]
+                - list "Основни данни" [ref=e706]:
+                  - listitem [ref=e707]: 166 000 км
+                  - listitem [ref=e709]: "2021"
+                  - listitem [ref=e711]: Дизел
+                  - listitem [ref=e713]: Автоматик
+          - article [ref=e715]:
+            - link "Виж Mercedes-Benz AMG GT 2019" [ref=e716] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-amg-gt-562014
+              - generic [ref=e717]:
+                - img "Mercedes-Benz AMG GT" [ref=e718]
+                - generic [ref=e719]: Наличен
+              - generic [ref=e720]:
+                - generic [ref=e721]:
+                  - heading "Mercedes-Benz AMG GT" [level=3] [ref=e722]
+                  - generic [ref=e723]:
+                    - generic [ref=e724]:
+                      - strong [ref=e725]: 65 699 €
+                      - generic [ref=e726]: Финансиране по запитване
+                    - img [ref=e728]
+                - list "Основни данни" [ref=e730]:
+                  - listitem [ref=e731]: 165 000 км
+                  - listitem [ref=e733]: "2019"
+                  - listitem [ref=e735]: Бензин
+                  - listitem [ref=e737]: Автоматик
+          - article [ref=e739]:
+            - link "Виж BMW M5 2021" [ref=e740] [cursor=pointer]:
+              - /url: /inventory/bmw-m5-167628
+              - generic [ref=e741]:
+                - img "BMW M5" [ref=e742]
+                - generic [ref=e743]: Очакван внос
+              - generic [ref=e744]:
+                - generic [ref=e745]:
+                  - heading "BMW M5" [level=3] [ref=e746]
+                  - generic [ref=e747]:
+                    - generic [ref=e748]:
+                      - strong [ref=e749]: 68 699 €
+                      - generic [ref=e750]: Финансиране по запитване
+                    - img [ref=e752]
+                - list "Основни данни" [ref=e754]:
+                  - listitem [ref=e755]: 133 000 км
+                  - listitem [ref=e757]: "2021"
+                  - listitem [ref=e759]: Бензин
+                  - listitem [ref=e761]: Автоматик
+          - article [ref=e763]:
+            - link "Виж Audi Rs6 2020" [ref=e764] [cursor=pointer]:
+              - /url: /inventory/audi-rs6-224394
+              - generic [ref=e765]:
+                - img "Audi Rs6" [ref=e766]
+                - generic [ref=e767]: Наличен
+              - generic [ref=e768]:
+                - generic [ref=e769]:
+                  - heading "Audi Rs6" [level=3] [ref=e770]
+                  - generic [ref=e771]:
+                    - generic [ref=e772]:
+                      - strong [ref=e773]: 69 699 €
+                      - generic [ref=e774]: Финансиране по запитване
+                    - img [ref=e776]
+                - list "Основни данни" [ref=e778]:
+                  - listitem [ref=e779]: 169 000 км
+                  - listitem [ref=e781]: "2020"
+                  - listitem [ref=e783]: Бензин
+                  - listitem [ref=e785]: Автоматик
+          - article [ref=e787]:
+            - link "Виж BMW X6 2023" [ref=e788] [cursor=pointer]:
+              - /url: /inventory/bmw-x6-263153
+              - generic [ref=e789]:
+                - img "BMW X6" [ref=e790]
+                - generic [ref=e791]: Очакван внос
+              - generic [ref=e792]:
+                - generic [ref=e793]:
+                  - heading "BMW X6" [level=3] [ref=e794]
+                  - generic [ref=e795]:
+                    - generic [ref=e796]:
+                      - strong [ref=e797]: 71 669 €
+                      - generic [ref=e798]: Финансиране по запитване
+                    - img [ref=e800]
+                - list "Основни данни" [ref=e802]:
+                  - listitem [ref=e803]: 160 000 км
+                  - listitem [ref=e805]: "2023"
+                  - listitem [ref=e807]: Бензин
+                  - listitem [ref=e809]: Автоматик
+          - article [ref=e811]:
+            - link "Виж Mercedes-Benz GLE 53 4MATIC 2022" [ref=e812] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-gle-53-4matic-383846
+              - generic [ref=e813]:
+                - img "Mercedes-Benz GLE 53 4MATIC" [ref=e814]
+                - generic [ref=e815]: Очакван внос
+              - generic [ref=e816]:
+                - generic [ref=e817]:
+                  - heading "Mercedes-Benz GLE 53 4MATIC" [level=3] [ref=e818]
+                  - generic [ref=e819]:
+                    - generic [ref=e820]:
+                      - strong [ref=e821]: 71 699 €
+                      - generic [ref=e822]: Финансиране по запитване
+                    - img [ref=e824]
+                - list "Основни данни" [ref=e826]:
+                  - listitem [ref=e827]: 105 000 км
+                  - listitem [ref=e829]: "2022"
+                  - listitem [ref=e831]: Бензин
+                  - listitem [ref=e833]: Автоматик
+          - article [ref=e835]:
+            - link "Виж Mercedes-Benz GLS 400 2021" [ref=e836] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-gls-400-650416
+              - generic [ref=e837]:
+                - img "Mercedes-Benz GLS 400" [ref=e838]
+                - generic [ref=e839]: Очакван внос
+              - generic [ref=e840]:
+                - generic [ref=e841]:
+                  - heading "Mercedes-Benz GLS 400" [level=3] [ref=e842]
+                  - generic [ref=e843]:
+                    - generic [ref=e844]:
+                      - strong [ref=e845]: 72 699 €
+                      - generic [ref=e846]: Финансиране по запитване
+                    - img [ref=e848]
+                - list "Основни данни" [ref=e850]:
+                  - listitem [ref=e851]: 149 000 км
+                  - listitem [ref=e853]: "2021"
+                  - listitem [ref=e855]: Дизел
+                  - listitem [ref=e857]: Автоматик
+          - article [ref=e859]:
+            - link "Виж Audi Rs7 2021" [ref=e860] [cursor=pointer]:
+              - /url: /inventory/audi-rs7-702102
+              - generic [ref=e861]:
+                - img "Audi Rs7" [ref=e862]
+                - generic [ref=e863]: Наличен
+              - generic [ref=e864]:
+                - generic [ref=e865]:
+                  - heading "Audi Rs7" [level=3] [ref=e866]
+                  - generic [ref=e867]:
+                    - generic [ref=e868]:
+                      - strong [ref=e869]: 72 699 €
+                      - generic [ref=e870]: Финансиране по запитване
+                    - img [ref=e872]
+                - list "Основни данни" [ref=e874]:
+                  - listitem [ref=e875]: 144 000 км
+                  - listitem [ref=e877]: "2021"
+                  - listitem [ref=e879]: Бензин
+                  - listitem [ref=e881]: Автоматик
+          - article [ref=e883]:
+            - link "Виж Mercedes-Benz E 63 AMG 2021" [ref=e884] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-e-63-amg-515038
+              - generic [ref=e885]:
+                - img "Mercedes-Benz E 63 AMG" [ref=e886]
+                - generic [ref=e887]: Наличен
+              - generic [ref=e888]:
+                - generic [ref=e889]:
+                  - heading "Mercedes-Benz E 63 AMG" [level=3] [ref=e890]
+                  - generic [ref=e891]:
+                    - generic [ref=e892]:
+                      - strong [ref=e893]: 84 699 €
+                      - generic [ref=e894]: Финансиране по запитване
+                    - img [ref=e896]
+                - list "Основни данни" [ref=e898]:
+                  - listitem [ref=e899]: 96 000 км
+                  - listitem [ref=e901]: "2021"
+                  - listitem [ref=e903]: Бензин
+                  - listitem [ref=e905]: Автоматик
+          - article [ref=e907]:
+            - link "Виж Mercedes-Benz S 580 2022" [ref=e908] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-s-580-689775
+              - generic [ref=e909]:
+                - img "Mercedes-Benz S 580" [ref=e910]
+                - generic [ref=e911]: Очакван внос
+              - generic [ref=e912]:
+                - generic [ref=e913]:
+                  - heading "Mercedes-Benz S 580" [level=3] [ref=e914]
+                  - generic [ref=e915]:
+                    - generic [ref=e916]:
+                      - strong [ref=e917]: 86 699 €
+                      - generic [ref=e918]: Финансиране по запитване
+                    - img [ref=e920]
+                - list "Основни данни" [ref=e922]:
+                  - listitem [ref=e923]: 72 000 км
+                  - listitem [ref=e925]: "2022"
+                  - listitem [ref=e927]: Бензин
+                  - listitem [ref=e929]: Автоматик
+          - article [ref=e931]:
+            - link "Виж Mercedes-Benz AMG GT S 2017" [ref=e932] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-amg-gt-s-698048
+              - generic [ref=e933]:
+                - img "Mercedes-Benz AMG GT S" [ref=e934]
+                - generic [ref=e935]: Наличен
+              - generic [ref=e936]:
+                - generic [ref=e937]:
+                  - heading "Mercedes-Benz AMG GT S" [level=3] [ref=e938]
+                  - generic [ref=e939]:
+                    - generic [ref=e940]:
+                      - strong [ref=e941]: 88 699 €
+                      - generic [ref=e942]: Финансиране по запитване
+                    - img [ref=e944]
+                - list "Основни данни" [ref=e946]:
+                  - listitem [ref=e947]: 70 000 км
+                  - listitem [ref=e949]: "2017"
+                  - listitem [ref=e951]: Бензин
+                  - listitem [ref=e953]: Автоматик
+          - article [ref=e955]:
+            - link "Виж Mercedes-Benz S 63 AMG 2024" [ref=e956] [cursor=pointer]:
+              - /url: /inventory/mercedes-benz-s-63-amg-841845
+              - generic [ref=e957]:
+                - img "Mercedes-Benz S 63 AMG" [ref=e958]
+                - generic [ref=e959]: Наличен
+              - generic [ref=e960]:
+                - generic [ref=e961]:
+                  - heading "Mercedes-Benz S 63 AMG" [level=3] [ref=e962]
+                  - generic [ref=e963]:
+                    - generic [ref=e964]:
+                      - strong [ref=e965]: 143 699 €
+                      - generic [ref=e966]: Финансиране по запитване
+                    - img [ref=e968]
+                - list "Основни данни" [ref=e970]:
+                  - listitem [ref=e971]: 30 000 км
+                  - listitem [ref=e973]: "2024"
+                  - listitem [ref=e975]: Бензин
+                  - listitem [ref=e977]: Автоматик
+          - article [ref=e979]:
+            - link "Виж Lamborghini Urus 2021" [ref=e980] [cursor=pointer]:
+              - /url: /inventory/lamborghini-urus-775312
+              - generic [ref=e981]:
+                - img "Lamborghini Urus" [ref=e982]
+                - generic [ref=e983]: Наличен
+              - generic [ref=e984]:
+                - generic [ref=e985]:
+                  - heading "Lamborghini Urus" [level=3] [ref=e986]
+                  - generic [ref=e987]:
+                    - generic [ref=e988]:
+                      - strong [ref=e989]: 172 669 €
+                      - generic [ref=e990]: Финансиране по запитване
+                    - img [ref=e992]
+                - list "Основни данни" [ref=e994]:
+                  - listitem [ref=e995]: 86 000 км
+                  - listitem [ref=e997]: "2021"
+                  - listitem [ref=e999]: Бензин
+                  - listitem [ref=e1001]: Автоматик
+    - navigation "Основни действия" [ref=e1003]:
+      - link "Начало" [ref=e1004] [cursor=pointer]:
+        - /url: /
+        - img [ref=e1006]
+        - generic [ref=e1007]: Начало
+      - link "Коли" [ref=e1008] [cursor=pointer]:
+        - /url: /inventory
+        - img [ref=e1010]
+        - generic [ref=e1011]: Коли
+      - link "Продай" [ref=e1012] [cursor=pointer]:
+        - /url: /sell-your-car
+        - img [ref=e1014]
+        - generic [ref=e1015]: Продай
+      - link "Внос" [ref=e1016] [cursor=pointer]:
+        - /url: /contact?intent=import
+        - img [ref=e1018]
+        - generic [ref=e1019]: Внос
+      - button "Меню" [ref=e1020] [cursor=pointer]:
+        - img [ref=e1022]
+        - generic [ref=e1023]: Меню
+  - button "Отвори чат с екипа" [ref=e1024] [cursor=pointer]:
+    - img [ref=e1025]
+    - generic [ref=e1027]: Чат с екипа
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test } from '@playwright/test';
+  2  | 
+  3  | const visualCases = [
+  4  | 	{ name: 'home-mobile', path: '/', width: 390, height: 900 },
+  5  | 	{ name: 'inventory-mobile', path: '/inventory', width: 390, height: 900 },
+  6  | 	{
+  7  | 		name: 'detail-mobile',
+  8  | 		path: '/inventory/mercedes-benz-gla-45-amg-405323',
+  9  | 		width: 390,
+  10 | 		height: 900
+  11 | 	},
+  12 | 	{ name: 'home-desktop', path: '/', width: 1440, height: 900 },
+  13 | 	{ name: 'inventory-desktop', path: '/inventory', width: 1440, height: 900 },
+  14 | 	{
+  15 | 		name: 'detail-desktop',
+  16 | 		path: '/inventory/mercedes-benz-gla-45-amg-405323',
+  17 | 		width: 1440,
+  18 | 		height: 900
+  19 | 	}
+  20 | ] as const;
+  21 | 
+  22 | for (const visualCase of visualCases) {
+  23 | 	test(visualCase.name, async ({ page }) => {
+  24 | 		await page.setViewportSize({ width: visualCase.width, height: visualCase.height });
+  25 | 		await page.goto(visualCase.path, { waitUntil: 'networkidle' });
+> 26 | 		await expect(page).toHaveScreenshot(`${visualCase.name}.png`, { fullPage: true });
+     |                      ^ Error: expect(page).toHaveScreenshot(expected) failed
+  27 | 	});
+  28 | }
+  29 | 
+```

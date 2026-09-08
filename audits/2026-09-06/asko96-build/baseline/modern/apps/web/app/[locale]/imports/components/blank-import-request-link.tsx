@@ -1,0 +1,90 @@
+"use client";
+
+import {
+  MobileMarketplaceOverlay,
+  MobileMarketplaceOverlayCloseAction,
+} from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
+import { getLocalizedPath } from "@repo/seo/metadata";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useRef, useState } from "react";
+import {
+  type MobileFormDraft,
+  readMobileFormDraft,
+} from "../../components/mobile-form-draft";
+import { ImportRequestForm } from "./import-request-form";
+import { importRequestCopy } from "./import-request-policy";
+
+const actionClassName =
+  "mt-4 h-11 items-center justify-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-4 font-semibold text-[14px] text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)]";
+
+export function BlankImportRequestLink({
+  defaultOrigin,
+  href,
+  isBg,
+}: {
+  defaultOrigin: string;
+  href: string;
+  isBg: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const [draft, setDraft] = useState<MobileFormDraft>({});
+  const formRef = useRef<HTMLFormElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const locale = isBg ? "bg" : "en";
+  const label = isBg ? "Опишете автомобил" : "Describe a vehicle";
+
+  return (
+    <>
+      <button
+        aria-haspopup="dialog"
+        className={`${actionClassName} inline-flex lg:hidden`}
+        onClick={() => setOpen(true)}
+        ref={triggerRef}
+        type="button"
+      >
+        {label}
+        <ArrowRight aria-hidden="true" className="size-4" />
+      </button>
+      <Link className={`${actionClassName} hidden lg:inline-flex`} href={href}>
+        {label}
+        <ArrowRight aria-hidden="true" className="size-4" />
+      </Link>
+      <MobileMarketplaceOverlay
+        bodyClassName="no-scrollbar pb-[calc(1rem+env(safe-area-inset-bottom))] text-left"
+        contentClassName="z-50"
+        contentDataSlot="mobile-import-request"
+        description={importRequestCopy[locale].formDescription}
+        onCloseAutoFocus={(event) => {
+          event.preventDefault();
+          triggerRef.current?.focus({ preventScroll: true });
+        }}
+        onOpenChange={(nextOpen) => {
+          if (!nextOpen) {
+            setDraft(
+              formRef.current ? readMobileFormDraft(formRef.current) : {}
+            );
+          }
+          setOpen(nextOpen);
+        }}
+        open={open}
+        rightAction={
+          <MobileMarketplaceOverlayCloseAction
+            ariaLabel={isBg ? "Затвори заявката" : "Close request"}
+          />
+        }
+        title={label}
+      >
+        <ImportRequestForm
+          defaultOrigin={defaultOrigin === "ALL" ? "" : defaultOrigin}
+          defaultSourceUrl=""
+          draft={draft}
+          embedded
+          formRef={formRef}
+          locale={locale}
+          privacyHref={getLocalizedPath(locale, "/legal/privacy")}
+        />
+      </MobileMarketplaceOverlay>
+    </>
+  );
+}

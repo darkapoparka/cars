@@ -1,0 +1,554 @@
+[
+  {
+    "width": 390,
+    "route": "/",
+    "status": 200,
+    "filename": "390-00.png",
+    "errors": [],
+    "title": "Day Night Auto София - проверени автомобили и бърз контакт",
+    "h1": [
+      "Day Night Auto"
+    ],
+    "height": 2682,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/inventory",
+    "status": 200,
+    "filename": "390-01.png",
+    "errors": [],
+    "title": "Автомобили в наличност | Day Night Auto София",
+    "h1": [
+      "Автомобили на склад — Ден и Нощ Ауто Груп"
+    ],
+    "height": 6475,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/sell-your-car",
+    "status": 200,
+    "filename": "390-02.png",
+    "errors": [],
+    "title": "Продай автомобила си | Day Night Auto София",
+    "h1": [
+      "Продай или замени автомобила си"
+    ],
+    "height": 844,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/sell-your-car/request",
+    "status": 200,
+    "filename": "390-03.png",
+    "errors": [],
+    "title": "Заявка за изкупуване | Day Night Auto София",
+    "h1": [
+      "Продай или замени автомобила си"
+    ],
+    "height": 844,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "status": 200,
+    "filename": "390-04.png",
+    "errors": [],
+    "title": "Контакти | Day Night Auto София",
+    "h1": [
+      "Свържете се със Day Night Auto"
+    ],
+    "height": 1261,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/contact?intent=import",
+    "status": 200,
+    "filename": "390-05.png",
+    "errors": [],
+    "title": "Внос на автомобил | Day Night Auto София",
+    "h1": [
+      "Намерете автомобила. Ние ще го внесем."
+    ],
+    "height": 1251,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/financing",
+    "status": 200,
+    "filename": "390-06.png",
+    "errors": [],
+    "title": "Финансиране | Day Night Auto София",
+    "h1": [
+      "Финансиране и разсрочено плащане"
+    ],
+    "height": 1504,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/calculator",
+    "status": 200,
+    "filename": "390-07.png",
+    "errors": [],
+    "title": "Калкулатор за финансиране | Day Night Auto София",
+    "h1": [
+      "Калкулатор за месечна вноска"
+    ],
+    "height": 6429,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/reviews",
+    "status": 200,
+    "filename": "390-08.png",
+    "errors": [],
+    "title": "Клиентски отзиви | Day Night Auto София",
+    "h1": [],
+    "height": 5092,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/faq",
+    "status": 200,
+    "filename": "390-09.png",
+    "errors": [],
+    "title": "Често задавани въпроси | Day Night Auto София",
+    "h1": [
+      "Често задавани въпроси"
+    ],
+    "height": 4421,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/team",
+    "status": 200,
+    "filename": "390-10.png",
+    "errors": [],
+    "title": "Екип | Day Night Auto София",
+    "h1": [
+      "Екипът на Day Night Auto"
+    ],
+    "height": 4040,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/blog",
+    "status": 200,
+    "filename": "390-11.png",
+    "errors": [],
+    "title": "Блог | Day Night Auto София",
+    "h1": [
+      "Съвети за покупка, документи и финансиране"
+    ],
+    "height": 8377,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/terms",
+    "status": 200,
+    "filename": "390-12.png",
+    "errors": [],
+    "title": "Условия | Day Night Auto София",
+    "h1": [
+      "Условия за ползване"
+    ],
+    "height": 5192,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/favorites",
+    "status": 200,
+    "filename": "390-13.png",
+    "errors": [],
+    "title": "Запазени автомобили · Day Night Auto",
+    "h1": [
+      "Запазени"
+    ],
+    "height": 844,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/compare",
+    "status": 200,
+    "filename": "390-14.png",
+    "errors": [],
+    "title": "Сравнение на автомобили | Day Night Auto София",
+    "h1": [],
+    "height": 2499,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/about",
+    "status": 200,
+    "filename": "390-15.png",
+    "errors": [],
+    "title": "За нас | Day Night Auto София",
+    "h1": [
+      "Проверени автомобили и ясен процес"
+    ],
+    "height": 1620,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/about/daynight-auto-plovdiv",
+    "status": 200,
+    "filename": "390-16.png",
+    "errors": [],
+    "title": "Профил на автокъщата | Day Night Auto София",
+    "h1": [
+      "Day Night Auto София"
+    ],
+    "height": 7761,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/team/prodazhbi-showroom",
+    "status": 200,
+    "filename": "390-17.png",
+    "errors": [],
+    "title": "Екип продажби Day Night Auto | Day Night Auto",
+    "h1": [
+      "Екип продажби Day Night Auto"
+    ],
+    "height": 7683,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/blog/kak-da-kupim-upotrebyavan-avtomobil",
+    "status": 200,
+    "filename": "390-18.png",
+    "errors": [],
+    "title": "Как да купим употребяван автомобил без излишен риск | Day Night Auto",
+    "h1": [
+      "Как да купим употребяван автомобил без излишен риск"
+    ],
+    "height": 6253,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+    "status": 200,
+    "filename": "390-19.png",
+    "errors": [],
+    "title": "Mercedes-Benz GLA 45 AMG 2016 г., Бензин, 170 000 км, Очакван внос | Day Night Auto",
+    "h1": [
+      "Mercedes-Benz GLA 45 AMG"
+    ],
+    "height": 844,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "filename": "1440-00.png",
+    "errors": [],
+    "title": "Day Night Auto София - проверени автомобили и бърз контакт",
+    "h1": [
+      "Разгледай. Купи. Продай. На едно място."
+    ],
+    "height": 4672,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/inventory",
+    "status": 200,
+    "filename": "1440-01.png",
+    "errors": [],
+    "title": "Автомобили в наличност | Day Night Auto София",
+    "h1": [
+      "Налични автомобили"
+    ],
+    "height": 3795,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/sell-your-car",
+    "status": 200,
+    "filename": "1440-02.png",
+    "errors": [],
+    "title": "Продай автомобила си | Day Night Auto София",
+    "h1": [
+      "Продай автомобила си"
+    ],
+    "height": 2365,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/sell-your-car/request",
+    "status": 200,
+    "filename": "1440-03.png",
+    "errors": [],
+    "title": "Заявка за изкупуване | Day Night Auto София",
+    "h1": [
+      "Продай автомобила си"
+    ],
+    "height": 2365,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "status": 200,
+    "filename": "1440-04.png",
+    "errors": [],
+    "title": "Контакти | Day Night Auto София",
+    "h1": [
+      "Свържете се с нас"
+    ],
+    "height": 2358,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/contact?intent=import",
+    "status": 200,
+    "filename": "1440-05.png",
+    "errors": [],
+    "title": "Внос на автомобил | Day Night Auto София",
+    "h1": [
+      "Заявка за внос на автомобил"
+    ],
+    "height": 2472,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/financing",
+    "status": 200,
+    "filename": "1440-06.png",
+    "errors": [],
+    "title": "Финансиране | Day Night Auto София",
+    "h1": [
+      "Финансиране"
+    ],
+    "height": 4141,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/calculator",
+    "status": 200,
+    "filename": "1440-07.png",
+    "errors": [],
+    "title": "Калкулатор за финансиране | Day Night Auto София",
+    "h1": [
+      "Калкулатор за месечна вноска"
+    ],
+    "height": 3437,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/reviews",
+    "status": 200,
+    "filename": "1440-08.png",
+    "errors": [],
+    "title": "Клиентски отзиви | Day Night Auto София",
+    "h1": [],
+    "height": 1789,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/faq",
+    "status": 200,
+    "filename": "1440-09.png",
+    "errors": [],
+    "title": "Често задавани въпроси | Day Night Auto София",
+    "h1": [
+      "Често задавани въпроси"
+    ],
+    "height": 2725,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/team",
+    "status": 200,
+    "filename": "1440-10.png",
+    "errors": [],
+    "title": "Екип | Day Night Auto София",
+    "h1": [
+      "Екипът на Day Night Auto"
+    ],
+    "height": 1315,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog",
+    "status": 200,
+    "filename": "1440-11.png",
+    "errors": [],
+    "title": "Блог | Day Night Auto София",
+    "h1": [
+      "Съвети за покупка, документи и финансиране"
+    ],
+    "height": 3436,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/terms",
+    "status": 200,
+    "filename": "1440-12.png",
+    "errors": [],
+    "title": "Условия | Day Night Auto София",
+    "h1": [
+      "Условия за ползване"
+    ],
+    "height": 2451,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/favorites",
+    "status": 200,
+    "filename": "1440-13.png",
+    "errors": [],
+    "title": "Запазени автомобили · Day Night Auto",
+    "h1": [
+      "Запазени автомобили"
+    ],
+    "height": 1928,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/compare",
+    "status": 200,
+    "filename": "1440-14.png",
+    "errors": [],
+    "title": "Сравнение на автомобили | Day Night Auto София",
+    "h1": [],
+    "height": 1138,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/about",
+    "status": 200,
+    "filename": "1440-15.png",
+    "errors": [],
+    "title": "За нас | Day Night Auto София",
+    "h1": [
+      "За Day Night Auto"
+    ],
+    "height": 3090,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/about/daynight-auto-plovdiv",
+    "status": 200,
+    "filename": "1440-16.png",
+    "errors": [],
+    "title": "Профил на автокъщата | Day Night Auto София",
+    "h1": [
+      "Day Night Auto София"
+    ],
+    "height": 3379,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/team/prodazhbi-showroom",
+    "status": 200,
+    "filename": "1440-17.png",
+    "errors": [],
+    "title": "Екип продажби Day Night Auto | Day Night Auto",
+    "h1": [
+      "Екип продажби Day Night Auto"
+    ],
+    "height": 3480,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog/kak-da-kupim-upotrebyavan-avtomobil",
+    "status": 200,
+    "filename": "1440-18.png",
+    "errors": [],
+    "title": "Как да купим употребяван автомобил без излишен риск | Day Night Auto",
+    "h1": [
+      "Как да купим употребяван автомобил без излишен риск"
+    ],
+    "height": 3724,
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "route": "/inventory/mercedes-benz-gla-45-amg-405323",
+    "status": 200,
+    "filename": "1440-19.png",
+    "errors": [],
+    "title": "Mercedes-Benz GLA 45 AMG 2016 г., Бензин, 170 000 км, Очакван внос | Day Night Auto",
+    "h1": [
+      "Mercedes-Benz GLA 45 AMG 2016"
+    ],
+    "height": 4512,
+    "overflow": false,
+    "broken": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "url": "http://127.0.0.1:6657/_next/image?url=%2Fassets%2Fautomarket%2Fvehicle-16-1.webp&w=3840&q=75",
+    "status": 200,
+    "bytes": 237180,
+    "pass": true
+  },
+  {
+    "url": "http://127.0.0.1:6657/images/flags/us.svg",
+    "status": 200,
+    "bytes": 745,
+    "pass": true
+  },
+  {
+    "url": "http://127.0.0.1:6657/images/flags/jp.svg",
+    "status": 200,
+    "bytes": 192,
+    "pass": true
+  },
+  {
+    "url": "http://127.0.0.1:6657/images/flags/kr.svg",
+    "status": 200,
+    "bytes": 530,
+    "pass": true
+  }
+]

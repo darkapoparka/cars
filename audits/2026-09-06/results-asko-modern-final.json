@@ -1,0 +1,2096 @@
+[
+  {
+    "key": "asko-modern-final",
+    "port": 6612,
+    "route": "/cars",
+    "settle": 300,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "Автомобили от АСКО 96 | АСКО 96",
+      "url": "http://127.0.0.1:6612/cars",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "height": 2084,
+      "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0899 76 96 96\nШоурум\nКатегория\nАвтомобили\nEnter ↵\nФилтри за автомобили\nМарка\nМодел\nЦена\nГодина\nПробег\nГориво\nСкорости\nТип купе\nПрепоръчани\nФилтри\nАвтомобили за продажба\nToyota Rav4 HYBRID\n\n36 500 €\n\n2024\n14 000 км\nХибрид\nАвтоматик\n4\n4 снимки\nAudi A7 S-LINE\n\n14 000 €\n\n2011\n211 000 км\nБензин\nАвтоматик\n4\n4 снимки\nMercedes-Benz GLC Coupe 350AMG\n\n26 000 €\n\n2018\n179 200 км\nДизел\nАвтоматик\n4\n4 снимки\nMercedes-Benz GLS 400 AMG\n\n47 000 €\n\n2020\n135 141 км\nДизел\nАвтоматик\n4\n4 снимки\nMini Countryman ALL4\n\n7 777 €\n\n2014\n205 000 км\nБензин\nАвтоматик\n4\n4 снимки\nAudi SQ7 FUL LED\n\n32 000 €\n\n2018\n170 000 км\nДизел\nАвтоматик\n4\n4 снимки\nCitroen C5X PLUG IN\n\n17 900 €\n\n2022\n162 000 км\nЕлектрически\nАвтоматик\n4\n4 снимки\nAudi A5 S-LINE PLUS\n\n14 000 €\n\n2012\n230 000 км\nДизел\nАвтоматик\nMercedes-Benz E 220 AMG\n\n19 500 €\n\n2016\n195 530 км\nДизел\nАвтоматик\nMercedes-Benz S 680 L\n\n120 000 €\n\n2024\n140 000 км\nБензин\nАвтоматик\n4\n4 снимки\nMercedes-Benz S 500 L\n\n29 500 €\n\n2015\n173 291 км\nБензин\nАвтоматик\n4\n4 снимки\nMini Countryman SD\n\n18 500 €\n\n2018\n190 582 км\nДизел\nАвтоматик\n4\n4 снимки\nPorsche Cayenne S\n\n39 000 €\n\n2018\n165 009 км\nБензин\nАвтоматик\n4\n4 снимки\nJeep Compass 4x4\n\n14 000 €\n\n2019\n181 889 км\nДизел\nАвтоматик\nBMW X3 М40D\n\n43 900 €\n\n2022\n90 800 км\nДизел\nАвтоматик\n4\n4 снимки\nBMW 550 M\n\n17 500 €\n\n2013\n184 120 км\nДизел\nАвтоматик\n\nАвтомобили, внос по поръчка и собствен лизинг в София.\n\nбул. „Ботевградско шосе“ 300, София, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0899 76 96 96\naskogroup@abv.bg\n\n© 2026 АСКО 96\n\n0899 76 96 96\naskogroup@abv.bg",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "tag": "H2",
+          "text": "Toyota Rav4 HYBRID"
+        },
+        {
+          "tag": "H2",
+          "text": "Toyota Rav4 HYBRID"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A7 S-LINE"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A7 S-LINE"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLC Coupe 350AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLC Coupe 350AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLS 400 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLS 400 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman ALL4"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman ALL4"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi SQ7 FUL LED"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi SQ7 FUL LED"
+        },
+        {
+          "tag": "H2",
+          "text": "Citroen C5X PLUG IN"
+        },
+        {
+          "tag": "H2",
+          "text": "Citroen C5X PLUG IN"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A5 S-LINE PLUS"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A5 S-LINE PLUS"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz E 220 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz E 220 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 680 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 680 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 500 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 500 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman SD"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman SD"
+        },
+        {
+          "tag": "H2",
+          "text": "Porsche Cayenne S"
+        },
+        {
+          "tag": "H2",
+          "text": "Porsche Cayenne S"
+        },
+        {
+          "tag": "H2",
+          "text": "Jeep Compass 4x4"
+        },
+        {
+          "tag": "H2",
+          "text": "Jeep Compass 4x4"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW X3 М40D"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW X3 М40D"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW 550 M"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW 550 M"
+        },
+        {
+          "tag": "H2",
+          "text": "Наличности"
+        },
+        {
+          "tag": "H2",
+          "text": "Помощ"
+        },
+        {
+          "tag": "H2",
+          "text": "Свържете се"
+        }
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "EN",
+          "href": "/en/cars"
+        },
+        {
+          "text": "Виж Toyota Rav4 HYBRID",
+          "href": "/bg/listing/asko-21788444587626928"
+        },
+        {
+          "text": "Toyota Rav4 HYBRID36 500 €202414 000 кмХибридАвтоматик",
+          "href": "/bg/listing/asko-21788444587626928"
+        },
+        {
+          "text": "Toyota Rav4 HYBRID\n\n36 500 €\n\n2024\n14 000 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/asko-21788444587626928"
+        },
+        {
+          "text": "Виж Audi A7 S-LINE",
+          "href": "/bg/listing/asko-11788418194310981"
+        },
+        {
+          "text": "Audi A7 S-LINE14 000 €2011211 000 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11788418194310981"
+        },
+        {
+          "text": "Audi A7 S-LINE\n\n14 000 €\n\n2011\n211 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11788418194310981"
+        },
+        {
+          "text": "Виж Mercedes-Benz GLC Coupe 350AMG",
+          "href": "/bg/listing/asko-21788361724092359"
+        },
+        {
+          "text": "Mercedes-Benz GLC Coupe 350AMG26 000 €2018179 200 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21788361724092359"
+        },
+        {
+          "text": "Mercedes-Benz GLC Coupe 350AMG\n\n26 000 €\n\n2018\n179 200 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21788361724092359"
+        },
+        {
+          "text": "Виж Mercedes-Benz GLS 400 AMG",
+          "href": "/bg/listing/asko-21788340495159936"
+        },
+        {
+          "text": "Mercedes-Benz GLS 400 AMG47 000 €2020135 141 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21788340495159936"
+        },
+        {
+          "text": "Mercedes-Benz GLS 400 AMG\n\n47 000 €\n\n2020\n135 141 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21788340495159936"
+        },
+        {
+          "text": "Виж Mini Countryman ALL4",
+          "href": "/bg/listing/asko-11788268077076934"
+        },
+        {
+          "text": "Mini Countryman ALL47 777 €2014205 000 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11788268077076934"
+        },
+        {
+          "text": "Mini Countryman ALL4\n\n7 777 €\n\n2014\n205 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11788268077076934"
+        },
+        {
+          "text": "Виж Audi SQ7 FUL LED",
+          "href": "/bg/listing/asko-21787916905998235"
+        },
+        {
+          "text": "Audi SQ7 FUL LED32 000 €2018170 000 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21787916905998235"
+        },
+        {
+          "text": "Audi SQ7 FUL LED\n\n32 000 €\n\n2018\n170 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21787916905998235"
+        },
+        {
+          "text": "Виж Citroen C5X PLUG IN",
+          "href": "/bg/listing/asko-11787665314733489"
+        },
+        {
+          "text": "Citroen C5X PLUG IN17 900 €2022162 000 кмЕлектрическиАвтоматик",
+          "href": "/bg/listing/asko-11787665314733489"
+        },
+        {
+          "text": "Citroen C5X PLUG IN\n\n17 900 €\n\n2022\n162 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/asko-11787665314733489"
+        },
+        {
+          "text": "Виж Audi A5 S-LINE PLUS",
+          "href": "/bg/listing/asko-11787664720233597"
+        },
+        {
+          "text": "Audi A5 S-LINE PLUS14 000 €2012230 000 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-11787664720233597"
+        },
+        {
+          "text": "Audi A5 S-LINE PLUS\n\n14 000 €\n\n2012\n230 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-11787664720233597"
+        },
+        {
+          "text": "Виж Mercedes-Benz E 220 AMG",
+          "href": "/bg/listing/asko-11787318670316786"
+        },
+        {
+          "text": "Mercedes-Benz E 220 AMG19 500 €2016195 530 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-11787318670316786"
+        },
+        {
+          "text": "Mercedes-Benz E 220 AMG\n\n19 500 €\n\n2016\n195 530 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-11787318670316786"
+        },
+        {
+          "text": "Виж Mercedes-Benz S 680 L",
+          "href": "/bg/listing/asko-11787292903991160"
+        },
+        {
+          "text": "Mercedes-Benz S 680 L120 000 €2024140 000 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11787292903991160"
+        },
+        {
+          "text": "Mercedes-Benz S 680 L\n\n120 000 €\n\n2024\n140 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11787292903991160"
+        },
+        {
+          "text": "Виж Mercedes-Benz S 500 L",
+          "href": "/bg/listing/asko-11787147161945133"
+        },
+        {
+          "text": "Mercedes-Benz S 500 L29 500 €2015173 291 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11787147161945133"
+        },
+        {
+          "text": "Mercedes-Benz S 500 L\n\n29 500 €\n\n2015\n173 291 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11787147161945133"
+        },
+        {
+          "text": "Виж Mini Countryman SD",
+          "href": "/bg/listing/asko-21787145927135700"
+        },
+        {
+          "text": "Mini Countryman SD18 500 €2018190 582 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21787145927135700"
+        },
+        {
+          "text": "Mini Countryman SD\n\n18 500 €\n\n2018\n190 582 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21787145927135700"
+        },
+        {
+          "text": "Виж Porsche Cayenne S",
+          "href": "/bg/listing/asko-21786786821064251"
+        },
+        {
+          "text": "Porsche Cayenne S39 000 €2018165 009 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-21786786821064251"
+        },
+        {
+          "text": "Porsche Cayenne S\n\n39 000 €\n\n2018\n165 009 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-21786786821064251"
+        },
+        {
+          "text": "Виж Jeep Compass 4x4",
+          "href": "/bg/listing/asko-21786778589147860"
+        },
+        {
+          "text": "Jeep Compass 4x414 000 €2019181 889 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21786778589147860"
+        },
+        {
+          "text": "Jeep Compass 4x4\n\n14 000 €\n\n2019\n181 889 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21786778589147860"
+        },
+        {
+          "text": "Виж BMW X3 М40D",
+          "href": "/bg/listing/asko-21786540153108868"
+        },
+        {
+          "text": "BMW X3 М40D43 900 €202290 800 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21786540153108868"
+        },
+        {
+          "text": "BMW X3 М40D\n\n43 900 €\n\n2022\n90 800 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21786540153108868"
+        },
+        {
+          "text": "Виж BMW 550 M",
+          "href": "/bg/listing/asko-11786173977658651"
+        },
+        {
+          "text": "BMW 550 M17 500 €2013184 120 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-11786173977658651"
+        },
+        {
+          "text": "BMW 550 M\n\n17 500 €\n\n2013\n184 120 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-11786173977658651"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "АСКО 96 начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "Избери категория превозно средство",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Отвори филтрите",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси 16 автомобила",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Цена",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Година",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Пробег",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Гориво",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Скорости",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Категория\nАвтомобили",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Търсене на автомобили",
+          "type": "search",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Марка",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Модел",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Цена",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Година",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Пробег",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Гориво",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Скорости",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Тип купе",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Препоръчани",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Филтри",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Филтри",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Списъчен изглед",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Изглед в решетка",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "type": "button",
+          "id": ""
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-dom_1stz_ta._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_next-devtools_index_16i_5dr.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-server-dom-turbopack_1lr-6n2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_1anqs-0._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_shared_lib_0ixdmtz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_client_0ok74pm._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_1z5vtyi._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_router_0p191de.js",
+        "http://127.0.0.1:6612/_next/static/chunks/17tk_%40sentry_core_build_esm_0ff6m-w._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0z_o_%40sentry_browser_build_npm_esm_dev_0p9eavt._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0kjp_%40sentry-internal_browser-utils_build_esm_00b3p4l._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1c-x_zod_v4_0yuvwk6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_14bpwtv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0dbst88._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_1anvha4._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/turbopack-apps_web_0393k2d._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-domain_13t0pu1._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_lib_06-70go._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_components_135k389._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_0xp_isg._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0nhib2z._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_1wu66bf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_0mx9-d6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1fdn_posthog-js_dist_module_203zj0-.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1u9fasz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1hn7_tailwind-merge_dist_bundle-mjs_mjs_04a_myf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0c-xbx2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_layout_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0p_cpq8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_error_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_105abrh._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_197os22._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_13t54fa._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_10krxyp._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_05bif9x._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_not-found_tsx_0rirkcf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_181ct6u._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_not-found_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0_xu9yi._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_cars_page_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0vfklo6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_19vt7og._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_016so0_._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1-qx6z8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0ec3utv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_global-error_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_components_176w6r2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_cars_loading_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_build_polyfills_polyfill-nomodule.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_03gwso5._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0av-m5k._.js"
+      ],
+      "sourceModules": []
+    }
+  },
+  {
+    "key": "asko-modern-final",
+    "port": 6612,
+    "route": "/bg/contact",
+    "label": "contact",
+    "settle": 300,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "За нас и контакти | АСКО 96 | АСКО 96",
+      "url": "http://127.0.0.1:6612/contact",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "height": 1454,
+      "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0899 76 96 96\nШоурум\nПремиум автомобили. Внос. Лизинг.\n\nВижте автомобилите в наличност или говорете директно с АСКО 96 за следващия си автомобил.\n\nВижте наличностите\nОбадете се\nГоворете директно с нас.\n\nЕдин телефон за автомобил, внос или финансиране. Шоурум в Ботевградско шосе.\n\nТелефон\n0899 76 96 96\nШоурум · Ботевградско шосе\nбул. „Ботевградско шосе“ 300, София\nИзберете правилната посока.\n\nОт наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.\n\nАвтомобили в наличност\nРазгледайте предложенията и планирайте оглед.\nВнос по заявка\nКажете какво търсите и започнете разговор.\nСобствен лизинг\nОбсъдете вариант според автомобила и бюджета ви.\nПродайте автомобила си\nИзпратете данни за автомобила и заявете оценка.\n\nАвтомобили, внос по поръчка и собствен лизинг в София.\n\nбул. „Ботевградско шосе“ 300, София, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0899 76 96 96\naskogroup@abv.bg\n\n© 2026 АСКО 96\n\n0899 76 96 96\naskogroup@abv.bg",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "За нас и контакти"
+        },
+        {
+          "tag": "H2",
+          "text": "С какво можем да помогнем"
+        },
+        {
+          "tag": "H1",
+          "text": "Премиум автомобили. Внос. Лизинг."
+        },
+        {
+          "tag": "H2",
+          "text": "Говорете директно с нас."
+        },
+        {
+          "tag": "H2",
+          "text": "Изберете правилната посока."
+        },
+        {
+          "tag": "H2",
+          "text": "Наличности"
+        },
+        {
+          "tag": "H2",
+          "text": "Помощ"
+        },
+        {
+          "tag": "H2",
+          "text": "Свържете се"
+        }
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "АСКО 96",
+          "href": "/bg"
+        },
+        {
+          "text": "София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Наличности",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Отвори местоположението",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се на 0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Обадете ни се0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Посетете шоурумабул. „Ботевградско шосе“ 300, София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Собствен лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@asko96bulgaria"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/p/Asko96-100050328800477/"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Телефон\n0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Шоурум · Ботевградско шосе\nбул. „Ботевградско шосе“ 300, София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Собствен лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "АСКО 96 начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "type": "button",
+          "id": ""
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-dom_1stz_ta._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_next-devtools_index_16i_5dr.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-server-dom-turbopack_1lr-6n2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_1anqs-0._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_shared_lib_0ixdmtz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_client_0ok74pm._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_1z5vtyi._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_router_0p191de.js",
+        "http://127.0.0.1:6612/_next/static/chunks/17tk_%40sentry_core_build_esm_0ff6m-w._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0z_o_%40sentry_browser_build_npm_esm_dev_0p9eavt._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0kjp_%40sentry-internal_browser-utils_build_esm_00b3p4l._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1c-x_zod_v4_0yuvwk6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_14bpwtv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0dbst88._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_1anvha4._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/turbopack-apps_web_0393k2d._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-domain_13t0pu1._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_lib_06-70go._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_components_135k389._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_0xp_isg._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0nhib2z._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_1wu66bf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_0mx9-d6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1fdn_posthog-js_dist_module_203zj0-.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1u9fasz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1hn7_tailwind-merge_dist_bundle-mjs_mjs_04a_myf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0c-xbx2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_layout_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0p_cpq8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_error_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_105abrh._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_197os22._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_13t54fa._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_10krxyp._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_05bif9x._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_not-found_tsx_0rirkcf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_181ct6u._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_not-found_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0vfklo6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_19vt7og._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_016so0_._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1-qx6z8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0ec3utv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_global-error_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_14_wwz6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_contact_page_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_build_polyfills_polyfill-nomodule.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_03gwso5._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0av-m5k._.js"
+      ],
+      "sourceModules": []
+    }
+  },
+  {
+    "key": "asko-modern-final",
+    "port": 6612,
+    "route": "/cars",
+    "settle": 300,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "Автомобили от АСКО 96 | АСКО 96",
+      "url": "http://127.0.0.1:6612/cars",
+      "width": 390,
+      "scrollWidth": 375,
+      "height": 2376,
+      "text": "Към основното съдържание\nТърси 16 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\nАвтомобили за продажба\nToyota Rav4 HYBRID\n\n36 500 €\n\n2024\n14 000 км\nХибрид\nАвтоматик\n4\n4 снимки\nAudi A7 S-LINE\n\n14 000 €\n\n2011\n211 000 км\nБензин\nАвтоматик\n4\n4 снимки\nMercedes-Benz GLC Coupe 350AMG\n\n26 000 €\n\n2018\n179 200 км\nДизел\nАвтоматик\n4\n4 снимки\nMercedes-Benz GLS 400 AMG\n\n47 000 €\n\n2020\n135 141 км\nДизел\nАвтоматик\n4\n4 снимки\nMini Countryman ALL4\n\n7 777 €\n\n2014\n205 000 км\nБензин\nАвтоматик\n4\n4 снимки\nAudi SQ7 FUL LED\n\n32 000 €\n\n2018\n170 000 км\nДизел\nАвтоматик\n4\n4 снимки\nCitroen C5X PLUG IN\n\n17 900 €\n\n2022\n162 000 км\nЕлектрически\nАвтоматик\n4\n4 снимки\nAudi A5 S-LINE PLUS\n\n14 000 €\n\n2012\n230 000 км\nДизел\nАвтоматик\nMercedes-Benz E 220 AMG\n\n19 500 €\n\n2016\n195 530 км\nДизел\nАвтоматик\nMercedes-Benz S 680 L\n\n120 000 €\n\n2024\n140 000 км\nБензин\nАвтоматик\n4\n4 снимки\nMercedes-Benz S 500 L\n\n29 500 €\n\n2015\n173 291 км\nБензин\nАвтоматик\n4\n4 снимки\nMini Countryman SD\n\n18 500 €\n\n2018\n190 582 км\nДизел\nАвтоматик\n4\n4 снимки\nPorsche Cayenne S\n\n39 000 €\n\n2018\n165 009 км\nБензин\nАвтоматик\n4\n4 снимки\nJeep Compass 4x4\n\n14 000 €\n\n2019\n181 889 км\nДизел\nАвтоматик\nBMW X3 М40D\n\n43 900 €\n\n2022\n90 800 км\nДизел\nАвтоматик\n4\n4 снимки\nBMW 550 M\n\n17 500 €\n\n2013\n184 120 км\nДизел\nАвтоматик\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "tag": "H2",
+          "text": "Toyota Rav4 HYBRID"
+        },
+        {
+          "tag": "H2",
+          "text": "Toyota Rav4 HYBRID"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A7 S-LINE"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A7 S-LINE"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLC Coupe 350AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLC Coupe 350AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLS 400 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz GLS 400 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman ALL4"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman ALL4"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi SQ7 FUL LED"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi SQ7 FUL LED"
+        },
+        {
+          "tag": "H2",
+          "text": "Citroen C5X PLUG IN"
+        },
+        {
+          "tag": "H2",
+          "text": "Citroen C5X PLUG IN"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A5 S-LINE PLUS"
+        },
+        {
+          "tag": "H2",
+          "text": "Audi A5 S-LINE PLUS"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz E 220 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz E 220 AMG"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 680 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 680 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 500 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mercedes-Benz S 500 L"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman SD"
+        },
+        {
+          "tag": "H2",
+          "text": "Mini Countryman SD"
+        },
+        {
+          "tag": "H2",
+          "text": "Porsche Cayenne S"
+        },
+        {
+          "tag": "H2",
+          "text": "Porsche Cayenne S"
+        },
+        {
+          "tag": "H2",
+          "text": "Jeep Compass 4x4"
+        },
+        {
+          "tag": "H2",
+          "text": "Jeep Compass 4x4"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW X3 М40D"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW X3 М40D"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW 550 M"
+        },
+        {
+          "tag": "H2",
+          "text": "BMW 550 M"
+        },
+        {
+          "tag": "H2",
+          "text": "Наличности"
+        },
+        {
+          "tag": "H2",
+          "text": "Помощ"
+        },
+        {
+          "tag": "H2",
+          "text": "Свържете се"
+        }
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "EN",
+          "href": "/en/cars"
+        },
+        {
+          "text": "Виж Toyota Rav4 HYBRID",
+          "href": "/bg/listing/asko-21788444587626928"
+        },
+        {
+          "text": "Toyota Rav4 HYBRID\n\n36 500 €\n\n2024\n14 000 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/asko-21788444587626928"
+        },
+        {
+          "text": "Toyota Rav4 HYBRID36 500 €202414 000 кмХибридАвтоматик",
+          "href": "/bg/listing/asko-21788444587626928"
+        },
+        {
+          "text": "Виж Audi A7 S-LINE",
+          "href": "/bg/listing/asko-11788418194310981"
+        },
+        {
+          "text": "Audi A7 S-LINE\n\n14 000 €\n\n2011\n211 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11788418194310981"
+        },
+        {
+          "text": "Audi A7 S-LINE14 000 €2011211 000 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11788418194310981"
+        },
+        {
+          "text": "Виж Mercedes-Benz GLC Coupe 350AMG",
+          "href": "/bg/listing/asko-21788361724092359"
+        },
+        {
+          "text": "Mercedes-Benz GLC Coupe 350AMG\n\n26 000 €\n\n2018\n179 200 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21788361724092359"
+        },
+        {
+          "text": "Mercedes-Benz GLC Coupe 350AMG26 000 €2018179 200 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21788361724092359"
+        },
+        {
+          "text": "Виж Mercedes-Benz GLS 400 AMG",
+          "href": "/bg/listing/asko-21788340495159936"
+        },
+        {
+          "text": "Mercedes-Benz GLS 400 AMG\n\n47 000 €\n\n2020\n135 141 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21788340495159936"
+        },
+        {
+          "text": "Mercedes-Benz GLS 400 AMG47 000 €2020135 141 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21788340495159936"
+        },
+        {
+          "text": "Виж Mini Countryman ALL4",
+          "href": "/bg/listing/asko-11788268077076934"
+        },
+        {
+          "text": "Mini Countryman ALL4\n\n7 777 €\n\n2014\n205 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11788268077076934"
+        },
+        {
+          "text": "Mini Countryman ALL47 777 €2014205 000 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11788268077076934"
+        },
+        {
+          "text": "Виж Audi SQ7 FUL LED",
+          "href": "/bg/listing/asko-21787916905998235"
+        },
+        {
+          "text": "Audi SQ7 FUL LED\n\n32 000 €\n\n2018\n170 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21787916905998235"
+        },
+        {
+          "text": "Audi SQ7 FUL LED32 000 €2018170 000 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21787916905998235"
+        },
+        {
+          "text": "Виж Citroen C5X PLUG IN",
+          "href": "/bg/listing/asko-11787665314733489"
+        },
+        {
+          "text": "Citroen C5X PLUG IN\n\n17 900 €\n\n2022\n162 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/asko-11787665314733489"
+        },
+        {
+          "text": "Citroen C5X PLUG IN17 900 €2022162 000 кмЕлектрическиАвтоматик",
+          "href": "/bg/listing/asko-11787665314733489"
+        },
+        {
+          "text": "Виж Audi A5 S-LINE PLUS",
+          "href": "/bg/listing/asko-11787664720233597"
+        },
+        {
+          "text": "Audi A5 S-LINE PLUS\n\n14 000 €\n\n2012\n230 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-11787664720233597"
+        },
+        {
+          "text": "Audi A5 S-LINE PLUS14 000 €2012230 000 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-11787664720233597"
+        },
+        {
+          "text": "Виж Mercedes-Benz E 220 AMG",
+          "href": "/bg/listing/asko-11787318670316786"
+        },
+        {
+          "text": "Mercedes-Benz E 220 AMG\n\n19 500 €\n\n2016\n195 530 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-11787318670316786"
+        },
+        {
+          "text": "Mercedes-Benz E 220 AMG19 500 €2016195 530 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-11787318670316786"
+        },
+        {
+          "text": "Виж Mercedes-Benz S 680 L",
+          "href": "/bg/listing/asko-11787292903991160"
+        },
+        {
+          "text": "Mercedes-Benz S 680 L\n\n120 000 €\n\n2024\n140 000 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11787292903991160"
+        },
+        {
+          "text": "Mercedes-Benz S 680 L120 000 €2024140 000 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11787292903991160"
+        },
+        {
+          "text": "Виж Mercedes-Benz S 500 L",
+          "href": "/bg/listing/asko-11787147161945133"
+        },
+        {
+          "text": "Mercedes-Benz S 500 L\n\n29 500 €\n\n2015\n173 291 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-11787147161945133"
+        },
+        {
+          "text": "Mercedes-Benz S 500 L29 500 €2015173 291 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-11787147161945133"
+        },
+        {
+          "text": "Виж Mini Countryman SD",
+          "href": "/bg/listing/asko-21787145927135700"
+        },
+        {
+          "text": "Mini Countryman SD\n\n18 500 €\n\n2018\n190 582 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21787145927135700"
+        },
+        {
+          "text": "Mini Countryman SD18 500 €2018190 582 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21787145927135700"
+        },
+        {
+          "text": "Виж Porsche Cayenne S",
+          "href": "/bg/listing/asko-21786786821064251"
+        },
+        {
+          "text": "Porsche Cayenne S\n\n39 000 €\n\n2018\n165 009 км\nБензин\nАвтоматик",
+          "href": "/bg/listing/asko-21786786821064251"
+        },
+        {
+          "text": "Porsche Cayenne S39 000 €2018165 009 кмБензинАвтоматик",
+          "href": "/bg/listing/asko-21786786821064251"
+        },
+        {
+          "text": "Виж Jeep Compass 4x4",
+          "href": "/bg/listing/asko-21786778589147860"
+        },
+        {
+          "text": "Jeep Compass 4x4\n\n14 000 €\n\n2019\n181 889 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21786778589147860"
+        },
+        {
+          "text": "Jeep Compass 4x414 000 €2019181 889 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21786778589147860"
+        },
+        {
+          "text": "Виж BMW X3 М40D",
+          "href": "/bg/listing/asko-21786540153108868"
+        },
+        {
+          "text": "BMW X3 М40D\n\n43 900 €\n\n2022\n90 800 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-21786540153108868"
+        },
+        {
+          "text": "BMW X3 М40D43 900 €202290 800 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-21786540153108868"
+        },
+        {
+          "text": "Виж BMW 550 M",
+          "href": "/bg/listing/asko-11786173977658651"
+        },
+        {
+          "text": "BMW 550 M\n\n17 500 €\n\n2013\n184 120 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/asko-11786173977658651"
+        },
+        {
+          "text": "BMW 550 M17 500 €2013184 120 кмДизелАвтоматик",
+          "href": "/bg/listing/asko-11786173977658651"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "АСКО 96 начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "Избери категория превозно средство",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Отвори филтрите",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси 16 автомобила",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Цена",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Година",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Пробег",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Гориво",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Скорости",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "КатегорияАвтомобили",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Търсене на автомобили",
+          "type": "search",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Марка",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Модел",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Цена",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Година",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Пробег",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Гориво",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Скорости",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Тип купе",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Препоръчани",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Филтри",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Филтри",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Списъчен изглед",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Изглед в решетка",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "type": "button",
+          "id": ""
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-dom_1stz_ta._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_next-devtools_index_16i_5dr.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-server-dom-turbopack_1lr-6n2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_1anqs-0._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_shared_lib_0ixdmtz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_client_0ok74pm._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_1z5vtyi._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_router_0p191de.js",
+        "http://127.0.0.1:6612/_next/static/chunks/17tk_%40sentry_core_build_esm_0ff6m-w._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0z_o_%40sentry_browser_build_npm_esm_dev_0p9eavt._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0kjp_%40sentry-internal_browser-utils_build_esm_00b3p4l._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1c-x_zod_v4_0yuvwk6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_14bpwtv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0dbst88._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_1anvha4._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/turbopack-apps_web_0393k2d._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-domain_13t0pu1._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_lib_06-70go._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_components_135k389._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_0xp_isg._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0nhib2z._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_1wu66bf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_0mx9-d6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1fdn_posthog-js_dist_module_203zj0-.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1u9fasz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1hn7_tailwind-merge_dist_bundle-mjs_mjs_04a_myf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0c-xbx2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_layout_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0p_cpq8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_error_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_105abrh._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_197os22._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_13t54fa._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_10krxyp._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_05bif9x._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_not-found_tsx_0rirkcf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_181ct6u._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_not-found_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0_xu9yi._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_cars_page_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0vfklo6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_19vt7og._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_016so0_._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1-qx6z8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0ec3utv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_global-error_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_components_176w6r2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_cars_loading_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_build_polyfills_polyfill-nomodule.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_03gwso5._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0av-m5k._.js"
+      ],
+      "sourceModules": []
+    }
+  },
+  {
+    "key": "asko-modern-final",
+    "port": 6612,
+    "route": "/bg/contact",
+    "label": "contact",
+    "settle": 300,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "За нас и контакти | АСКО 96 | АСКО 96",
+      "url": "http://127.0.0.1:6612/contact",
+      "width": 390,
+      "scrollWidth": 375,
+      "height": 844,
+      "text": "Към основното съдържание\nЗа нас и контакти\nОбадете ни се\n0899 76 96 96\nПосетете шоурума\nбул. „Ботевградско шосе“ 300, София\nС какво можем да помогнем\nАвтомобили в наличност\nВнос по заявка\nСобствен лизинг\nПродайте автомобила си\nYouTube\nFacebook\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "За нас и контакти"
+        },
+        {
+          "tag": "H2",
+          "text": "С какво можем да помогнем"
+        },
+        {
+          "tag": "H1",
+          "text": "Премиум автомобили. Внос. Лизинг."
+        },
+        {
+          "tag": "H2",
+          "text": "Говорете директно с нас."
+        },
+        {
+          "tag": "H2",
+          "text": "Изберете правилната посока."
+        },
+        {
+          "tag": "H2",
+          "text": "Наличности"
+        },
+        {
+          "tag": "H2",
+          "text": "Помощ"
+        },
+        {
+          "tag": "H2",
+          "text": "Свържете се"
+        }
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "АСКО 96",
+          "href": "/bg"
+        },
+        {
+          "text": "София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Наличности",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Отвори местоположението",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се на 0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Обадете ни се\n0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Посетете шоурума\nбул. „Ботевградско шосе“ 300, София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Собствен лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@asko96bulgaria"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/p/Asko96-100050328800477/"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Телефон0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Шоурум · Ботевградско шосебул. „Ботевградско шосе“ 300, София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+        },
+        {
+          "text": "Автомобили в наличностРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос по заявкаКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Собствен лизингОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила сиИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "АСКО 96 начало",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "0899 76 96 96",
+          "href": "tel:+359899769696"
+        },
+        {
+          "text": "askogroup@abv.bg",
+          "href": "mailto:askogroup@abv.bg"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "type": "button",
+          "id": ""
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-dom_1stz_ta._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_next-devtools_index_16i_5dr.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_react-server-dom-turbopack_1lr-6n2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_compiled_1anqs-0._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_shared_lib_0ixdmtz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_client_0ok74pm._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_1z5vtyi._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_router_0p191de.js",
+        "http://127.0.0.1:6612/_next/static/chunks/17tk_%40sentry_core_build_esm_0ff6m-w._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0z_o_%40sentry_browser_build_npm_esm_dev_0p9eavt._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0kjp_%40sentry-internal_browser-utils_build_esm_00b3p4l._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1c-x_zod_v4_0yuvwk6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_14bpwtv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0dbst88._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_1anvha4._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/turbopack-apps_web_0393k2d._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-domain_13t0pu1._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_lib_06-70go._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_components_135k389._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_marketplace-ui_0xp_isg._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0nhib2z._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_1wu66bf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_0mx9-d6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1fdn_posthog-js_dist_module_203zj0-.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1u9fasz._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1hn7_tailwind-merge_dist_bundle-mjs_mjs_04a_myf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0c-xbx2._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_layout_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_0p_cpq8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_error_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_105abrh._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_197os22._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_13t54fa._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_10krxyp._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_05bif9x._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_not-found_tsx_0rirkcf._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_181ct6u._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_not-found_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/packages_0vfklo6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_19vt7og._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_016so0_._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/0a3b_lucide-react_dist_esm_1-qx6z8._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/node_modules__pnpm_0ec3utv._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_global-error_tsx_13vhjaw._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/_14_wwz6._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/apps_web_app_%5Blocale%5D_contact_page_tsx_17z7b7j._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/1m1b_next_dist_build_polyfills_polyfill-nomodule.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_03gwso5._.js",
+        "http://127.0.0.1:6612/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0av-m5k._.js"
+      ],
+      "sourceModules": []
+    }
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-07",
+  "mode": "Fast Skin",
+  "workspace": "J:/cars",
+  "templates": [
+    "auto-best",
+    "modern",
+    "carwow"
+  ],
+  "templateVersion": "2026.09.06-refresh-1",
+  "crm": "Current connected Neon organization search returned no agency project; no CRM reconciliation or writes performed.",
+  "tasks": [
+    {
+      "slug": "excellent-cars",
+      "name": "Excellent Cars",
+      "key": "excellent",
+      "ports": {
+        "autoBest": 6621,
+        "modern": 6622,
+        "carwow": 6623,
+        "modernApi": 6624,
+        "modernApp": 6625
+      },
+      "note": "Google Website points to excellent.cars.bg. Phone 0895996559. Address corner Yan Hunyadi/Tsar Osvoboditel; Google Tsar Osvoboditel178. Start at https://excellent.mobile.bg/ .",
+      "threadId": "01a078b0-cf91-7303-ac07-2eaede852274",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "avangard-auto",
+      "name": "AVANGARD AUTO",
+      "key": "avangard-auto",
+      "ports": {
+        "autoBest": 6626,
+        "modern": 6627,
+        "carwow": 6628,
+        "modernApi": 6629,
+        "modernApp": 6630
+      },
+      "note": "Phone0877800921, Tsar Osvoboditel289. Matched Facebook avangardautovarna and Instagram avangard_auto_varna. Do not confuse other Avangard businesses. Start https://avangard-auto.mobile.bg/ .",
+      "threadId": "01a078b0-d782-71e3-8f92-b761a9fb89eb",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "champion-auto-pro",
+      "name": "Champion Auto Pro",
+      "key": "championautopro",
+      "ports": {
+        "autoBest": 6631,
+        "modern": 6632,
+        "carwow": 6633,
+        "modernApi": 6634,
+        "modernApp": 6635
+      },
+      "note": "Phone0885072555, Tsar Osvoboditel302 / Izgi Europe Motors. Distinct from Champion Auto at another address. Google Website points Mobile.bg. Start https://championautopro.mobile.bg/ . No invented reputation claims.",
+      "threadId": "01a078b0-ddd0-7f43-a36e-64bc5688f892",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "astracar",
+      "name": "Астракар",
+      "key": "astracar",
+      "ports": {
+        "autoBest": 6636,
+        "modern": 6637,
+        "carwow": 6638,
+        "modernApi": 6639,
+        "modernApp": 6640
+      },
+      "note": "Phone0899908040, Tsar Osvoboditel282. Workshop Bardahl listing may be Dimitar Peshev34; distinguish showroom and workshop. Start https://astracar.mobile.bg/ .",
+      "threadId": "01a078b0-e4db-77c0-806f-fec815d98f45",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "autolife",
+      "name": "Аутолайф",
+      "key": "autolife",
+      "ports": {
+        "autoBest": 6641,
+        "modern": 6642,
+        "carwow": 6643,
+        "modernApi": 6644,
+        "modernApp": 6645
+      },
+      "note": "Phone0895766736; GP4 Topoli junction, about3km from Metro roundabout. Do not confuse unrelated autolife.bg accessories shop. Start https://autolife.mobile.bg/ .",
+      "threadId": "01a078b0-ee82-7780-846d-f53e4807eb1b",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "priselci",
+      "name": "Автокъща Приселци",
+      "key": "priselci",
+      "ports": {
+        "autoBest": 6646,
+        "modern": 6647,
+        "carwow": 6648,
+        "modernApi": 6649,
+        "modernApp": 6650
+      },
+      "note": "Phone0886251705. Actual Mobile contact address Tsar Osvoboditel285 Varna, not Priselci village. Start https://priselci.mobile.bg/ .",
+      "threadId": "01a078b0-f426-7761-b00e-e16157969123",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "ivo-auto",
+      "name": "Иво Ауто",
+      "key": "ivoauto-varna",
+      "ports": {
+        "autoBest": 6651,
+        "modern": 6652,
+        "carwow": 6653,
+        "modernApi": 6654,
+        "modernApp": 6655
+      },
+      "note": "Phone0878720035, Tsar Osvoboditel256. Mixed stock including premium vehicles. Start https://ivoauto-varna.mobile.bg/ .",
+      "threadId": "01a078b0-fb9d-7e10-b501-9c2d6a8b9cef",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "automarket-varna",
+      "name": "Аутомаркет Варна",
+      "key": "automarket",
+      "ports": {
+        "autoBest": 6656,
+        "modern": 6657,
+        "carwow": 6658,
+        "modernApi": 6659,
+        "modernApp": 6660
+      },
+      "note": "Phone0886424400. Tsar Osvoboditel, 300 METRES after Dom na Kamiona towards airport, not house number300. Start https://automarket.mobile.bg/ .",
+      "threadId": "01a078b1-0338-7342-a4c3-e2990241b5f1",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "elit-auto-import",
+      "name": "ELIT AUTO IMPORT EXPORT",
+      "key": "elitautoimport",
+      "ports": {
+        "autoBest": 6661,
+        "modern": 6662,
+        "carwow": 6663,
+        "modernApi": 6664,
+        "modernApp": 6665
+      },
+      "note": "Phone0887777887, Prilep74A. US/Subaru import specialization. MUST exclude parts-only cars; at least one exists in source category. Start https://elitautoimport.mobile.bg/ .",
+      "threadId": "01a078b1-0bb7-7670-8f33-9c361155cfb8",
+      "hostId": "local",
+      "status": "dispatched"
+    },
+    {
+      "slug": "legend-auto",
+      "name": "LEGEND AUTO",
+      "key": "legendauto1",
+      "ports": {
+        "autoBest": 6671,
+        "modern": 6672,
+        "carwow": 6673,
+        "modernApi": 6674,
+        "modernApp": 6675
+      },
+      "note": "Phone0899877305, Tsar Osvoboditel289 opposite Macau. Same street number as other dealers, distinct profile/phone. Do not merge assets/identity with Avangard. Start https://legendauto1.mobile.bg/ .",
+      "threadId": "01a078b1-134f-79a2-9d13-e7d4a1f8281d",
+      "hostId": "local",
+      "status": "dispatched",
+      "previousPorts": {
+        "autoBest": 6666,
+        "modern": 6667,
+        "carwow": 6668,
+        "modernApi": 6669,
+        "modernApp": 6670
+      },
+      "portNote": "Reassigned 2026-09-08 after browser verification: Chromium blocks previous 6666-6668. 6671-6675 checked free; owner informed."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Excellent Cars",
+  "short_name": "Excellent Cars",
+  "description": "Excellent Cars: автомобили, огледи и контакт във Варна.",
+  "lang": "bg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#527b21",
+  "icons": [
+    {
+      "src": "/assets/excellent/logo-header.png",
+      "type": "image/png"
+    }
+  ]
+}

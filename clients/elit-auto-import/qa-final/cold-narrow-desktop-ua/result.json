@@ -1,0 +1,2211 @@
+{
+  "client": "elit-auto-import",
+  "name": "ELIT AUTO IMPORT EXPORT",
+  "template": "carwow",
+  "port": 6663,
+  "startedAt": "2026-09-08T01:56:47.833Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": false,
+      "title": "ELIT AUTO Варна - автомобили по обяви и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Автомобили в наличност | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "По обява\nVolvo S60\n10890.52 €\nУсловия по запитване\n129 000 км (по обява)\n2013\nБензин\nАвтоматик",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "По обява\nSubaru Legacy 2.5 бензин 4х4\n11900 €\nУсловия по запитване\n137 000 км (по обява)\n2014\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-legacy-2-5-4-4-039551"
+        },
+        {
+          "text": "По обява\nMazda 6 2.5 Skyactiv\n11913.1 €\nУсловия по запитване\n100 789 км (по обява)\n2015\nБензин\nАвтоматик",
+          "href": "/inventory/mazda-6-2-5-skyactiv-335346"
+        },
+        {
+          "text": "По обява\nSubaru Legacy 2.5 Limited 4x4\n13000 €\nУсловия по запитване\n94 000 км (по обява)\n2015\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-legacy-2-5-limited-4x4-022696"
+        },
+        {
+          "text": "По обява\nSubaru XV 2.0 Limited STI\n13037.94 €\nУсловия по запитване\n110 000 км (по обява)\n2015\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "По обява\nMercedes-Benz GL 450\n13500 €\nУсловия по запитване\n184 000 км (по обява)\n2010\nБензин\nАвтоматик",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "По обява\nHyundai Santa fe\n14316.17 €\nУсловия по запитване\n58 000 км (по обява)\n2013\nДизел\nАвтоматик",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "По обява\nToyota Prius Hybrid\n16105.69 €\nУсловия по запитване\n60 950 км (по обява)\n2016\nХибрид\nАвтоматик",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "По обява\nSubaru XV 2.0 бензин 4х4\n17100 €\nУсловия по запитване\n36 000 км (по обява)\n2017\nБензин\nРъчна",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "По обява\nSubaru XV 2.0 Premium 4x4\n17500 €\nУсловия по запитване\n78 400 км (по обява)\n2017\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "По обява\nSubaru XV 2.0 Limited 4x4\n19000 €\nУсловия по запитване\n55 000 км (по обява)\n2017\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "По обява\nSubaru Outback 3.6 Touring 4x4\n21500 €\nУсловия по запитване\n82 000 км (по обява)\n2017\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-outback-3-6-touring-4x4-908882"
+        },
+        {
+          "text": "По обява\nSubaru Outback 3.6 Limited 4x4\n21500 €\nУсловия по запитване\n48 000 км (по обява)\n2017\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-outback-3-6-limited-4x4-517805"
+        },
+        {
+          "text": "По обява\nSubaru Outback 3.6R Limited 4х4\n25500 €\nУсловия по запитване\n19 000 км (по обява)\n2017\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-outback-3-6r-limited-4-4-506266"
+        },
+        {
+          "text": "По обява\nSubaru XV 2.5 Sport 4x4\n27800 €\nУсловия по запитване\n200 км (по обява)\n2021\nБензин\nАвтоматик",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory/volvo-s60-441521",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Volvo S60 2013 г., Бензин, 129 000 км (по обява), Наличен | ELIT AUTO",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359887777887"
+        },
+        {
+          "text": "ELIT AUTO\nELIT AUTO IMPORT EXPORT, Варна, България",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Контакти | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "КОЛИ",
+          "href": "/inventory"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "За нас | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "ВСИЧКИ",
+          "href": "/team"
+        },
+        {
+          "text": "ELIT AUTO IMPORT EXPORT\nКонтакт с автокъщата",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/financing",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Финансиране | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887",
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "ELIT AUTO Варна - автомобили по обяви и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=SUV"
+        },
+        {
+          "text": "Комби",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "До 10 000 EUR",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "Mercedes-Benz GL 450",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "Volvo S60",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "Toyota Prius Hybrid",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Subaru XV 2.0 бензин 4х4",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited STI",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж всички 15 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Купи автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Разгледай автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Въпрос за автомобил",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Попитай екипа",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Всички типове",
+          "href": "/inventory"
+        },
+        {
+          "text": "Седан\n\n5 автомобила",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n\nВиж марката",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n\n1 автомобил",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n\nВиж марката",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Honda\n\nВиж марката",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\n\n1 автомобил",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\n\n1 автомобил",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\n\nВиж марката",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\n\n1 автомобил",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Kia\n\nВиж марката",
+          "href": "/inventory?brand=Kia"
+        },
+        {
+          "text": "Mazda\n\n1 автомобил",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Ferrari\n\nВиж марката",
+          "href": "/inventory?brand=Ferrari"
+        },
+        {
+          "text": "Tesla\n\nВиж марката",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Автомобили в наличност | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "Mercedes-Benz GL 450",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-gl-450-373192"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "Volvo S60",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-441521"
+        },
+        {
+          "text": "",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "Toyota Prius Hybrid",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "",
+          "href": "/inventory/toyota-prius-hybrid-430878"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-5-sport-4x4-383951"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-4x4-077664"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Subaru XV 2.0 бензин 4х4",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited STI",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-outback-3-6r-limited-4-4-506266"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-outback-3-6r-limited-4-4-506266"
+        },
+        {
+          "text": "Subaru Outback 3.6R Limited 4х4",
+          "href": "/inventory/subaru-outback-3-6r-limited-4-4-506266"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-outback-3-6r-limited-4-4-506266"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-outback-3-6-touring-4x4-908882"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-outback-3-6-touring-4x4-908882"
+        },
+        {
+          "text": "Subaru Outback 3.6 Touring 4x4",
+          "href": "/inventory/subaru-outback-3-6-touring-4x4-908882"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-outback-3-6-touring-4x4-908882"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-outback-3-6-limited-4x4-517805"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-outback-3-6-limited-4x4-517805"
+        },
+        {
+          "text": "Subaru Outback 3.6 Limited 4x4",
+          "href": "/inventory/subaru-outback-3-6-limited-4x4-517805"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-outback-3-6-limited-4x4-517805"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-legacy-2-5-limited-4x4-022696"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-legacy-2-5-limited-4x4-022696"
+        },
+        {
+          "text": "Subaru Legacy 2.5 Limited 4x4",
+          "href": "/inventory/subaru-legacy-2-5-limited-4x4-022696"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-legacy-2-5-limited-4x4-022696"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-legacy-2-5-4-4-039551"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-legacy-2-5-4-4-039551"
+        },
+        {
+          "text": "Subaru Legacy 2.5 бензин 4х4",
+          "href": "/inventory/subaru-legacy-2-5-4-4-039551"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-legacy-2-5-4-4-039551"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mazda-6-2-5-skyactiv-335346"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mazda-6-2-5-skyactiv-335346"
+        },
+        {
+          "text": "Mazda 6 2.5 Skyactiv",
+          "href": "/inventory/mazda-6-2-5-skyactiv-335346"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mazda-6-2-5-skyactiv-335346"
+        },
+        {
+          "text": "",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "Hyundai Santa fe",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory/mercedes-benz-gl-450-373192",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Mercedes-Benz GL 450 2010 г., Бензин, 184 000 км (по обява), Наличен | ELIT AUTO",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Назад",
+          "href": "/inventory"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "Заяви видео преглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Заяви още снимки",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Добавете отзив",
+          "href": "#reviewForm"
+        },
+        {
+          "text": "Виж всички Няма потвърдени отзиви",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратете отзив",
+          "href": "/contact?intent=review"
+        },
+        {
+          "text": "",
+          "href": "/terms"
+        },
+        {
+          "text": "ELIT AUTO",
+          "href": "/about/daynight-auto-plovdiv"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Обади се за оглед",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Viber чат",
+          "href": "viber://chat?number=%2B359887777887"
+        },
+        {
+          "text": "Споразумение с потребителите.",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited STI",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-limited-sti-460399"
+        },
+        {
+          "text": "",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "Hyundai Santa fe",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "",
+          "href": "/inventory/hyundai-santa-fe-240351"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "Subaru XV 2.0 бензин 4х4",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-4-4-745199"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "",
+          "href": "/inventory/subaru-xv-2-0-premium-4x4-621839"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Контакти | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact#contact-form"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се / Viber",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Виж карта",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Отвори в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "За нас | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887",
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Виж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Виж екипа",
+          "href": "/team"
+        },
+        {
+          "text": "",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "Александър Петров",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "Свържи се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Chevrolet",
+          "href": "/inventory?brand=Chevrolet"
+        },
+        {
+          "text": "Chrysler",
+          "href": "/inventory?brand=Chrysler"
+        },
+        {
+          "text": "Citroen",
+          "href": "/inventory?brand=Citroen"
+        },
+        {
+          "text": "Ford",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Honda",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Jaguar",
+          "href": "/inventory?brand=Jaguar"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/inventory?brand=Land%20Rover"
+        },
+        {
+          "text": "Mazda",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Opel",
+          "href": "/inventory?brand=Opel"
+        },
+        {
+          "text": "Peugeot",
+          "href": "/inventory?brand=Peugeot"
+        },
+        {
+          "text": "Porsche",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Skoda",
+          "href": "/inventory?brand=Skoda"
+        },
+        {
+          "text": "VW",
+          "href": "/inventory?brand=VW"
+        },
+        {
+          "text": "Volvo",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продажба и бартер\n\nИзпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.\n\nПродай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Документи и финансиране\n\nСъдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.\n\nРазгледай услугите",
+          "href": "/services"
+        },
+        {
+          "text": "Уговори оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Отвори маршрута",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/financing",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Финансиране | ELIT AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0887777887"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?intent=financing"
+        },
+        {
+          "text": "Търсете според месечния бюджет",
+          "href": "/calculator"
+        },
+        {
+          "text": "Изберете подходяща оферта",
+          "href": "/inventory"
+        },
+        {
+          "text": "ELIT AUTO\nАвгуст 2025\nСЪВЕТИ\n\nКак да купим употребяван автомобил без риск\n\nПодгответе въпросите за избрания автомобил и се обадете на екипа.",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "ELIT AUTO\nАвгуст 2025\nФИНАНСИРАНЕ\n\nЛизинг или разсрочено плащане — кое е за вас?\n\nПодгответе въпросите за избрания автомобил и се обадете на екипа.",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "ELIT AUTO\nАвгуст 2025\nПОЛЕЗНО\n\nБартер при покупка: как се оценява автомобилът ви\n\nПодгответе въпросите за избрания автомобил и се обадете на екипа.",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:0887777887"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, м-т Пчелина, ул. Прилеп 74А",
+          "href": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Volvo",
+      "beforeCount": 15,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6663/inventory",
+      "afterCount": 1,
+      "search": true,
+      "detailHref": "/inventory/volvo-s60-441521",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "Mercedes",
+      "beforeCount": 16,
+      "menu": "No visible menu button at this width",
+      "searchUrl": "http://127.0.0.1:6663/inventory?q=Mercedes",
+      "afterCount": 5,
+      "search": true,
+      "detailHref": "/inventory/mercedes-benz-gl-450-373192",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "carwow",
+    "Project": "J:\\cars\\clients\\elit-auto-import\\carwow",
+    "PID": 35536,
+    "Port": 6663,
+    "Url": "http://127.0.0.1:6663",
+    "Stdout": "J:\\cars\\runtime\\carwow-6663-20260908-045648.out.log",
+    "Stderr": "J:\\cars\\runtime\\carwow-6663-20260908-045648.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": false
+}

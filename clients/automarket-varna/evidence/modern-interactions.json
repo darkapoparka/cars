@@ -1,0 +1,30 @@
+[
+  {
+    "width": 390,
+    "errors": [],
+    "menuOpened": true,
+    "menuDismissed": false,
+    "filterOpened": true,
+    "filterDismissed": true,
+    "searchUrl": "http://127.0.0.1:6657/cars?q=Ford",
+    "fordResult": true,
+    "detailUrl": "http://127.0.0.1:6657/listing/automarket-11785576029711434",
+    "phones": [
+      "tel:+359886424400"
+    ],
+    "enquiryHref": "/bg/lease?vehicle=automarket-11785576029711434",
+    "enquiryUrl": "http://127.0.0.1:6657/lease?vehicle=automarket-11785576029711434",
+    "enquiryDialog": 0
+  },
+  {
+    "width": 1440,
+    "errors": [],
+    "searchUrl": "http://127.0.0.1:6657/cars?q=Ford",
+    "fordResult": true,
+    "detailUrl": "http://127.0.0.1:6657/listing/automarket-11785576029711434",
+    "phones": [
+      "tel:+359886424400"
+    ],
+    "enquiryPhoneVerified": true
+  }
+]

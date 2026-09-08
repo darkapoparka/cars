@@ -1,0 +1,246 @@
+
+src\lib\components\company\AboutHero.svelte
+Detected file path, reading file...
+{
+  issues: [ 'Unexpected href link without resolve(). at line 41, column 19' ],
+  suggestions: [],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\company\AboutPartners.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\company\AboutTeam.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\company\ContactIntent.svelte
+Detected file path, reading file...
+{
+  issues: [
+    'Unexpected href link without resolve(). at line 49, column 17',
+    'Unexpected href link without resolve(). at line 54, column 66',
+    'Unexpected href link without resolve(). at line 63, column 19',
+    'Unexpected href link without resolve(). at line 73, column 62',
+    'Unexpected href link without resolve(). at line 114, column 14',
+    'Unexpected href link without resolve(). at line 130, column 14',
+    'Unexpected href link without resolve(). at line 146, column 45'
+  ],
+  suggestions: [],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\company\ShowroomMap.svelte
+Detected file path, reading file...
+{
+  issues: [ 'Unexpected href link without resolve(). at line 17, column 41' ],
+  suggestions: [],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\company\VehicleEnquiry.svelte
+Detected file path, reading file...
+{
+  issues: [ 'Unexpected href link without resolve(). at line 210, column 195' ],
+  suggestions: [
+    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',
+    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',
+    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.'
+  ],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\editorial\BlogCard.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\BodyTypes.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\BrandSection.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\BrowseAllCard.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\Editorial.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\Hero.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\InventorySection.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\MobileBudget.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\SearchBox.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [
+    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',
+    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',
+    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.'
+  ],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\home\TrustActions.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\VehicleQuickSearch.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\home\VideoSection.svelte
+Detected file path, reading file...
+{
+  issues: [
+    'Unexpected href link without resolve(). at line 30, column 67',
+    'Unexpected href link without resolve(). at line 78, column 45'
+  ],
+  suggestions: [],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\layout\Footer.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\layout\Header.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\listing\ListingResults.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\listing\QuickFilterSheet.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\listing\VehicleDiscoveryForm.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [
+    "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.",
+    "You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does."
+  ],
+  require_another_tool_call_after_fixing: true
+}
+
+src\lib\components\listing\VehicleSearchDialog.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\ui\RouteHeroArtwork.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\vehicles\VehicleCard.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\lib\components\vehicles\VehicleFinanceCalculator.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}
+
+src\routes\+error.svelte
+Detected file path, reading file...
+{
+  issues: [],
+  suggestions: [],
+  require_another_tool_call_after_fixing: false
+}

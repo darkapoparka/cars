@@ -1,0 +1,1583 @@
+{
+  "client": "elit-auto-import",
+  "name": "ELIT AUTO IMPORT EXPORT",
+  "template": "auto-best",
+  "port": 6661,
+  "startedAt": "2026-09-07T22:25:05.589Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "ELIT AUTO IMPORT EXPORT — Премиум автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "До 15 000 €",
+          "href": "/listing-grid?price_max=15000"
+        },
+        {
+          "text": "15–20 000 €",
+          "href": "/listing-grid?price_min=15000&price_max=20000"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "Mercedes",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Попитай екипа",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "До 15 000 €\n7 автомобила",
+          "href": "/listing-grid?price_max=15000"
+        },
+        {
+          "text": "15–20 000 €\n4 автомобила",
+          "href": "/listing-grid?price_min=15000&price_max=20000"
+        },
+        {
+          "text": "Над 20 000 €\n4 автомобила",
+          "href": "/listing-grid?price_min=20000"
+        },
+        {
+          "text": "Виж всички\n15 автомобила",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "184 000 км (по обява)\n2010\n\nДжип\n\nMercedes-Benz GL 450\nБензин\nАвтоматик\n13 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "129 000 км (по обява)\n2013\n\nСедан\n\nVolvo S60\nБензин\nАвтоматик\n10 890,52 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "60 950 км (по обява)\n2016\n\nСтреч лимузина\n\nToyota Prius Hybrid\nХибрид\nАвтоматик\n16 105,69 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "200 км (по обява)\n2021\n\nДжип\n\nSubaru XV 2.5 Sport 4x4\nБензин\nАвтоматик\n27 800 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.",
+          "href": "/blog"
+        },
+        {
+          "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+          "href": "/blog"
+        },
+        {
+          "text": "Заяви внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Проверка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Попитай екипа",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заяви внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Доставка в страната",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Mercedes-Benz GL 450\n2010\n184 000 км (по обява)\nБензин\nАвтоматик\n13 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "Volvo S60\n2013\n129 000 км (по обява)\nБензин\nАвтоматик\n10 890,52 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "Toyota Prius Hybrid\n2016\n60 950 км (по обява)\nХибрид\nАвтоматик\n16 105,69 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4\n2021\n200 км (по обява)\nБензин\nАвтоматик\n27 800 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4\n2017\n55 000 км (по обява)\nБензин\nАвтоматик\n19 000 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4\n2017\n78 400 км (по обява)\nБензин\nАвтоматик\n17 500 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Subaru XV 2.0 бензин 4х4\n2017\n36 000 км (по обява)\nБензин\nРъчна\n17 100 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited STI\n2015\n110 000 км (по обява)\nБензин\nАвтоматик\n13 037,94 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "Subaru Outback 3.6R Limited 4х4\n2017\n19 000 км (по обява)\nБензин\nАвтоматик\n25 500 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "Subaru Outback 3.6 Touring 4x4\n2017\n82 000 км (по обява)\nБензин\nАвтоматик\n21 500 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "Subaru Outback 3.6 Limited 4x4\n2017\n48 000 км (по обява)\nБензин\nАвтоматик\n21 500 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "Subaru Legacy 2.5 Limited 4x4\n2015\n94 000 км (по обява)\nБензин\nАвтоматик\n13 000 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "Subaru Legacy 2.5 бензин 4х4\n2014\n137 000 км (по обява)\nБензин\nАвтоматик\n11 900 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "Mazda 6 2.5 Skyactiv\n2015\n100 789 км (по обява)\nБензин\nАвтоматик\n11 913,1 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "Hyundai Santa fe\n2013\n58 000 км (по обява)\nДизел\nАвтоматик\n14 316,17 €",
+          "href": "/listing-detail-v1/15"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=Mercedes-Benz%20GL%20450"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4\n27 800 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4\n19 000 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4\n17 500 €",
+          "href": "/listing-detail-v1/6"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Контакти и адрес",
+          "href": "#contact-intent"
+        },
+        {
+          "text": "Обадете се ·\n0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Адрес\nул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Посещения\nПосещения с предварителна уговорка",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Телефон\n0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете доставка",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Попитайте за проверка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "ELIT AUTO IMPORT EXPORT — Премиум автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Проверка в сервиз",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Попитайте за проверка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "Пикап",
+          "href": "/listing-grid?body=Pickup%20Truck"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Миниван",
+          "href": "/listing-grid?body=Minivan"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Кабриолет",
+          "href": "/listing-grid?body=Convertible"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "184 000 км (по обява)\n2010\n\nДжип\n\nMercedes-Benz GL 450\nБензин\nАвтоматик\n13 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "129 000 км (по обява)\n2013\n\nСедан\n\nVolvo S60\nБензин\nАвтоматик\n10 890,52 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "60 950 км (по обява)\n2016\n\nСтреч лимузина\n\nToyota Prius Hybrid\nХибрид\nАвтоматик\n16 105,69 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "200 км (по обява)\n2021\n\nДжип\n\nSubaru XV 2.5 Sport 4x4\nБензин\nАвтоматик\n27 800 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Ford",
+          "href": "/listing-grid?make=Ford"
+        },
+        {
+          "text": "Foton",
+          "href": "/listing-grid?make=Foton"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "Dongfeng",
+          "href": "/listing-grid?make=Dongfeng"
+        },
+        {
+          "text": "Isuzu",
+          "href": "/listing-grid?make=Isuzu"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Вижте всички статии",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.",
+          "href": "/blog"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заявете внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Доставка в страната",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Проверка в сервиз",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Попитайте за проверка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос по заявка",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заявете внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Доставка в страната",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "184 000 км (по обява)\n2010\n\nДжип\n\nMercedes-Benz GL 450\nБензин\nАвтоматик\n13 500 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "129 000 км (по обява)\n2013\n\nСедан\n\nVolvo S60\nБензин\nАвтоматик\n10 890,52 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "60 950 км (по обява)\n2016\n\nСтреч лимузина\n\nToyota Prius Hybrid\nХибрид\nАвтоматик\n16 105,69 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "200 км (по обява)\n2021\n\nДжип\n\nSubaru XV 2.5 Sport 4x4\nБензин\nАвтоматик\n27 800 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "55 000 км (по обява)\n2017\n\nДжип\n\nSubaru XV 2.0 Limited 4x4\nБензин\nАвтоматик\n19 000 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "78 400 км (по обява)\n2017\n\nДжип\n\nSubaru XV 2.0 Premium 4x4\nБензин\nАвтоматик\n17 500 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "36 000 км (по обява)\n2017\n\nДжип\n\nSubaru XV 2.0 бензин 4х4\nБензин\nРъчна\n17 100 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "110 000 км (по обява)\n2015\n\nДжип\n\nSubaru XV 2.0 Limited STI\nБензин\nАвтоматик\n13 037,94 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "19 000 км (по обява)\n2017\n\nДжип\n\nSubaru Outback 3.6R Limited 4х4\nБензин\nАвтоматик\n25 500 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "82 000 км (по обява)\n2017\n\nДжип\n\nSubaru Outback 3.6 Touring 4x4\nБензин\nАвтоматик\n21 500 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "48 000 км (по обява)\n2017\n\nДжип\n\nSubaru Outback 3.6 Limited 4x4\nБензин\nАвтоматик\n21 500 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "94 000 км (по обява)\n2015\n\nСедан\n\nSubaru Legacy 2.5 Limited 4x4\nБензин\nАвтоматик\n13 000 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "137 000 км (по обява)\n2014\n\nСедан\n\nSubaru Legacy 2.5 бензин 4х4\nБензин\nАвтоматик\n11 900 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "100 789 км (по обява)\n2015\n\nСедан\n\nMazda 6 2.5 Skyactiv\nБензин\nАвтоматик\n11 913,1 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "58 000 км (по обява)\n2013\n\nДжип\n\nHyundai Santa fe\nДизел\nАвтоматик\n14 316,17 €",
+          "href": "/listing-detail-v1/15"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за покупка\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Назад",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=Mercedes-Benz%20GL%20450"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Subaru XV 2.5 Sport 4x4\n27 800 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Subaru XV 2.0 Limited 4x4\n19 000 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "Subaru XV 2.0 Premium 4x4\n17 500 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за покупка\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "Маршрут",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за покупка\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — ELIT AUTO IMPORT EXPORT",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359887777887"
+      ],
+      "links": [
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете доставка",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Попитайте за проверка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%E2%80%9C%2074%D0%90%2C%20%D0%BC-%D1%82%20%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Условия за покупка\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос по заявка\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0887 777 887",
+          "href": "tel:+359887777887"
+        },
+        {
+          "text": "ул. „Прилеп“ 74А, м-т Пчелина, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Mercedes",
+      "beforeCount": 15,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6661/listing-grid?q=Mercedes",
+      "afterCount": 1,
+      "search": true,
+      "detailHref": "/listing-detail-v1/1",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact?topic=inspection",
+      "enquiry": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "Mercedes-Benz",
+      "beforeCount": 15,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6661/listing-grid?make=Mercedes-Benz",
+      "afterCount": 1,
+      "search": true,
+      "detailHref": "/listing-detail-v1/1",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "auto-best",
+    "Project": "J:\\cars\\clients\\elit-auto-import\\auto-best",
+    "PID": 38536,
+    "Port": 6661,
+    "Url": "http://127.0.0.1:6661",
+    "Stdout": "J:\\cars\\runtime\\auto-best-6661-20260908-012506.out.log",
+    "Stderr": "J:\\cars\\runtime\\auto-best-6661-20260908-012506.err.log",
+    "Status": "started-not-yet-browser-verified",
+    "status": "stopped-after-verification"
+  },
+  "pass": true
+}

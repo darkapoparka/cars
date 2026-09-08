@@ -1,0 +1,112 @@
+[
+  {
+    "width": 390,
+    "route": "/",
+    "errors": [],
+    "visible": true,
+    "logo": "/assets/priselci/wordmark-light.svg",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "route": "/inventory?price=under-10000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/dacia-sandero-1-4-819998",
+      "/inventory/mercedes-benz-c-200-2-2-cdi-433302",
+      "/inventory/peugeot-307-cc-282742",
+      "/inventory/ford-mondeo-2-0-dizel-481666",
+      "/inventory/seat-ibiza-1-2-493559",
+      "/inventory/citroen-c3-picasso-1-6hdi-90-294169",
+      "/inventory/vw-golf-1-4-061757",
+      "/inventory/vw-passat-2-0tdi-commonrail-467246",
+      "/inventory/vw-passat-1-4-113337",
+      "/inventory/renault-grand-scenic-1-5dci-337634",
+      "/inventory/audi-a3-1-9-tdi-105ps-574277",
+      "/inventory/peugeot-5008-2-0hdi-150-154449",
+      "/inventory/nissan-qashqai-1-5-dci-118991"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "route": "/inventory?price=under-20000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/dacia-sandero-1-4-819998",
+      "/inventory/mercedes-benz-c-200-2-2-cdi-433302",
+      "/inventory/peugeot-307-cc-282742",
+      "/inventory/ford-mondeo-2-0-dizel-481666",
+      "/inventory/seat-ibiza-1-2-493559",
+      "/inventory/citroen-c3-picasso-1-6hdi-90-294169",
+      "/inventory/vw-golf-1-4-061757",
+      "/inventory/vw-passat-2-0tdi-commonrail-467246",
+      "/inventory/vw-passat-1-4-113337",
+      "/inventory/renault-grand-scenic-1-5dci-337634",
+      "/inventory/audi-a3-1-9-tdi-105ps-574277",
+      "/inventory/peugeot-5008-2-0hdi-150-154449",
+      "/inventory/nissan-qashqai-1-5-dci-118991"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "errors": [],
+    "visible": true,
+    "logo": "/assets/images/placeholder/transparent-1x1.svg",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/inventory?price=under-10000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/vw-golf-1-4-061757",
+      "/inventory/vw-passat-1-4-113337",
+      "/inventory/vw-passat-2-0tdi-commonrail-467246",
+      "/inventory/seat-ibiza-1-2-493559",
+      "/inventory/peugeot-307-cc-282742",
+      "/inventory/ford-mondeo-2-0-dizel-481666",
+      "/inventory/peugeot-5008-2-0hdi-150-154449",
+      "/inventory/mercedes-benz-c-200-2-2-cdi-433302",
+      "/inventory/citroen-c3-picasso-1-6hdi-90-294169",
+      "/inventory/audi-a3-1-9-tdi-105ps-574277",
+      "/inventory/dacia-sandero-1-4-819998",
+      "/inventory/renault-grand-scenic-1-5dci-337634",
+      "/inventory/nissan-qashqai-1-5-dci-118991",
+      "/inventory/map"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/inventory?price=under-20000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/vw-golf-1-4-061757",
+      "/inventory/vw-passat-1-4-113337",
+      "/inventory/vw-passat-2-0tdi-commonrail-467246",
+      "/inventory/seat-ibiza-1-2-493559",
+      "/inventory/peugeot-307-cc-282742",
+      "/inventory/ford-mondeo-2-0-dizel-481666",
+      "/inventory/peugeot-5008-2-0hdi-150-154449",
+      "/inventory/mercedes-benz-c-200-2-2-cdi-433302",
+      "/inventory/citroen-c3-picasso-1-6hdi-90-294169",
+      "/inventory/audi-a3-1-9-tdi-105ps-574277",
+      "/inventory/dacia-sandero-1-4-819998",
+      "/inventory/renault-grand-scenic-1-5dci-337634",
+      "/inventory/nissan-qashqai-1-5-dci-118991",
+      "/inventory/map"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  }
+]

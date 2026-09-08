@@ -1,0 +1,36 @@
+{
+  "key": "nusavo",
+  "name": "Nusavo",
+  "aliases": [
+    "6420"
+  ],
+  "path": "templates/nusavo",
+  "version": "2026.09.06-baseline",
+  "family": "nusavo",
+  "stack": "vite-svelte",
+  "sourcePort": 6420,
+  "libraryPort": 6420,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "desktop": 6.5,
+  "mobile": 6,
+  "priority": "hold",
+  "readiness": "dealer-adaptation-needed",
+  "reskinEffort": "high-until-dealer-pass",
+  "brandFiles": [
+    "src/pages",
+    "src/pages.json",
+    "src/interactions.css",
+    "public/styles",
+    "public/assets"
+  ],
+  "note": "Rental storefront with local cart/checkout flows. Remote CSS mask fails CORS in the live audit. Useful for rental leads; lower priority for stock-selling showrooms.",
+  "sourceSnapshot": null,
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed"
+}

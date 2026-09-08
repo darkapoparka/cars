@@ -1,0 +1,122 @@
+[
+  {
+    "width": 390,
+    "route": "/",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-390-0.png"
+  },
+  {
+    "width": 390,
+    "route": "/listing-grid",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/listing-grid",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-390-1.png"
+  },
+  {
+    "width": 390,
+    "route": "/listing-detail-v1/1",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/listing-detail-v1/1",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-390-2.png"
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/contact",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-390-3.png"
+  },
+  {
+    "width": 390,
+    "route": "/about-us",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/about-us",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-390-4.png"
+  },
+  {
+    "width": 390,
+    "route": "/blog",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/blog",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-390-5.png"
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-1440-0.png"
+  },
+  {
+    "width": 1440,
+    "route": "/listing-grid",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/listing-grid",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-1440-1.png"
+  },
+  {
+    "width": 1440,
+    "route": "/listing-detail-v1/1",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/listing-detail-v1/1",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-1440-2.png"
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/contact",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-1440-3.png"
+  },
+  {
+    "width": 1440,
+    "route": "/about-us",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/about-us",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-1440-4.png"
+  },
+  {
+    "width": 1440,
+    "route": "/blog",
+    "status": 200,
+    "url": "http://127.0.0.1:6636/blog",
+    "overflow": false,
+    "brokenImages": [],
+    "errors": [],
+    "screenshot": "auto-best-1440-5.png"
+  }
+]

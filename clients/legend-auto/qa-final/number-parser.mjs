@@ -1,0 +1,1 @@
+import fs from'node:fs/promises';for(const slug of ['automarket-varna','elit-auto-import','legend-auto']){const p=`J:/cars/clients/${slug}/carwow/src/lib/data/daynight-vehicles.ts`;let s=await fs.readFile(p,'utf8');const changed=s.includes("replaceAll(' ', '')");s=s.replace("replaceAll(' ', '')","replace(/\\s/g, '')");await fs.writeFile(p,s);console.log(slug,{changed});}

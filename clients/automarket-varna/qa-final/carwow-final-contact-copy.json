@@ -1,0 +1,37 @@
+{
+  "detail": "/inventory/opel-astra-1-4i-555032",
+  "errors": [],
+  "homeBudgets": [
+    {
+      "value": "under-10000",
+      "count": 10
+    },
+    {
+      "value": "under-20000",
+      "count": 14
+    },
+    {
+      "value": "under-30000",
+      "count": 16
+    },
+    {
+      "value": "under-50000",
+      "count": 16
+    },
+    {
+      "value": "over-50000",
+      "count": 0
+    }
+  ],
+  "homeBudgetPass": true,
+  "priceFilterCount": 14,
+  "priceFilterExpected": 14,
+  "mileageFilterCount": 1,
+  "mileageFilterExpected": 1,
+  "numericPass": true,
+  "phoneLabels": 2,
+  "viberLabels": 0,
+  "unsupportedServices": 0,
+  "mobileGalleryChanged": true,
+  "pass": true
+}

@@ -1,0 +1,1 @@
+import fs from'node:fs/promises';const p='J:/cars/clients/legend-auto/qa-final/annotate-evidence.mjs';let s=await fs.readFile(p,'utf8');s=s.replace("const notes=[];for(const r of rows)", "logs.carwow.push('qa-final/carwow-contact-copy-check.log');const notes=[];for(const r of rows)");await fs.writeFile(p,s);

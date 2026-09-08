@@ -1,0 +1,17 @@
+{
+  "name": "Астракар",
+  "short_name": "Астракар",
+  "description": "Астракар: автомобили, огледи и контакт във Варна.",
+  "lang": "bg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#30343b",
+  "icons": [
+    {
+      "src": "/assets/astracar/astracar-logo.png",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Home make/model search and URL persistence",
+    "passed": true
+  },
+  {
+    "name": "Sort and zero-result filters",
+    "passed": true
+  },
+  {
+    "name": "Pagination keeps navigation local",
+    "passed": true
+  },
+  {
+    "name": "More Filters disclosure and selection",
+    "passed": true
+  },
+  {
+    "name": "Saved cars and comparison persist between pages",
+    "passed": true
+  },
+  {
+    "name": "Calculator normal, zero interest, and invalid deposit",
+    "passed": true
+  },
+  {
+    "name": "Detail gallery and request dialog Escape/focus return",
+    "passed": true
+  },
+  {
+    "name": "Mobile menu opens, expands, closes with Escape",
+    "passed": true
+  },
+  {
+    "name": "Contact form stays local and gives honest feedback",
+    "passed": true
+  }
+]

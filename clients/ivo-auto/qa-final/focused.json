@@ -1,0 +1,100 @@
+[
+  {
+    "width": 390,
+    "route": "/",
+    "errors": [],
+    "visible": true,
+    "logo": "/assets/ivo-auto/wordmark-light.svg",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "route": "/inventory?price=under-10000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/audi-a4-964926",
+      "/inventory/vw-touran-1-6tdi-736048",
+      "/inventory/subaru-b9-tribeca-573646",
+      "/inventory/bmw-x5-151936",
+      "/inventory/vw-cc-2-0i-693531",
+      "/inventory/bmw-x5-117197",
+      "/inventory/mercedes-benz-s-500-485843"
+    ],
+    "count": 7,
+    "expected": 7,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "route": "/inventory?price=under-20000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/audi-a4-964926",
+      "/inventory/vw-touran-1-6tdi-736048",
+      "/inventory/subaru-b9-tribeca-573646",
+      "/inventory/bmw-x5-151936",
+      "/inventory/vw-cc-2-0i-693531",
+      "/inventory/bmw-x5-117197",
+      "/inventory/mercedes-benz-s-500-485843",
+      "/inventory/bmw-730-395904",
+      "/inventory/dodge-durango-3-6-950248",
+      "/inventory/mercedes-benz-ml-847465",
+      "/inventory/audi-a8-854071",
+      "/inventory/bmw-418-731573",
+      "/inventory/bmw-520-679925"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "errors": [],
+    "visible": true,
+    "logo": "/assets/images/placeholder/transparent-1x1.svg",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/inventory?price=under-10000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/audi-a4-964926",
+      "/inventory/vw-touran-1-6tdi-736048",
+      "/inventory/vw-cc-2-0i-693531",
+      "/inventory/bmw-x5-117197",
+      "/inventory/bmw-x5-151936",
+      "/inventory/subaru-b9-tribeca-573646",
+      "/inventory/mercedes-benz-s-500-485843",
+      "/inventory/map"
+    ],
+    "count": 7,
+    "expected": 7,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/inventory?price=under-20000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/audi-a4-964926",
+      "/inventory/dodge-durango-3-6-950248",
+      "/inventory/bmw-520-679925",
+      "/inventory/vw-touran-1-6tdi-736048",
+      "/inventory/vw-cc-2-0i-693531",
+      "/inventory/bmw-x5-117197",
+      "/inventory/bmw-x5-151936",
+      "/inventory/bmw-418-731573",
+      "/inventory/subaru-b9-tribeca-573646",
+      "/inventory/mercedes-benz-ml-847465",
+      "/inventory/mercedes-benz-s-500-485843",
+      "/inventory/bmw-730-395904",
+      "/inventory/audi-a8-854071",
+      "/inventory/map"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  }
+]

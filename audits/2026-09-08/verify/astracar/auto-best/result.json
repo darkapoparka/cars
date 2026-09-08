@@ -1,0 +1,1637 @@
+{
+  "client": "astracar",
+  "name": "Астракар",
+  "template": "auto-best",
+  "port": 6636,
+  "startedAt": "2026-09-07T22:03:58.164Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Астракар — Автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "До 10 000 €",
+          "href": "/listing-grid?price_max=10000"
+        },
+        {
+          "text": "10–15 000 €",
+          "href": "/listing-grid?price_min=10000&price_max=15000"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "Mercedes",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Заяви оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "До 10 000 €\n12 автомобила",
+          "href": "/listing-grid?price_max=10000"
+        },
+        {
+          "text": "10–15 000 €\n2 автомобила",
+          "href": "/listing-grid?price_min=10000&price_max=15000"
+        },
+        {
+          "text": "Над 15 000 €\n1 автомобила",
+          "href": "/listing-grid?price_min=15000"
+        },
+        {
+          "text": "Виж всички\n15 автомобила",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "143 100 км\n2009\n\nХечбек\n\nMini Cooper 1.6D EURO4\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "127 663 км\n2017\n\nДжип\n\nRenault Captur 0.9T EURO6B\nБензин\nРъчна\n9500 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "177 390 км\n2012\n\nСедан\n\nBMW 535 xDrive FULL EU5B\nДизел\nАвтоматик\n14 600 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "181 000 км\n2006\n\nХечбек\n\nAudi A3 2.0TDI S-LINE QUATTRO\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Всички",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос и регистрация според критерии за модел, бюджет и оборудване.",
+          "href": "/blog"
+        },
+        {
+          "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+          "href": "/blog"
+        },
+        {
+          "text": "Заяви внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Всички обяви\nГледайте в Mobile.bg\nКъм обявите\nОтваря се в нов раздел",
+          "href": "https://astracar.mobile.bg/"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Разгледай",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай/Бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Заяви оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос и регистрация",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заяви внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Лизинг по запитване",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Виж условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Mini Cooper 1.6D EURO4\n2009\n143 100 км\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "Renault Captur 0.9T EURO6B\n2017\n127 663 км\nБензин\nРъчна\n9500 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "BMW 535 xDrive FULL EU5B\n2012\n177 390 км\nДизел\nАвтоматик\n14 600 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "Audi A3 2.0TDI S-LINE QUATTRO\n2006\n181 000 км\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Audi A5 2.0TFSI EURO5B\n2010\n165 170 км\nБензин\nАвтоматик\n7900 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "Fiat Punto 1.4i EVO EURO4\n2010\n139 800 км\nБензин\nРъчна\n3900 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Audi A3 1.6TDI EU5B SPORTBAG\n2015\n162 148 км\nДизел\nРъчна\n8900 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "Mini Cooper 1.6D EURO5\n2010\n150 052 км\nДизел\nРъчна\n4200 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "Audi A6 2.0TDI EURO5B\n2014\n159 400 км\nДизел\nРъчна\n8999 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "BMW X7 3.0d xDrive EU6D\n2020\n190 000 км\nДизел\nАвтоматик\n49 000 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "Citroen C3 1.2i EURO5B\n2013\n136 574 км\nБензин\nРъчна\n4600 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "Hyundai IX35 1.6GDI EURO5\n2012\n56 178 км\nБензин\nРъчна\n7999 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6\n2010\n182 887 км\nДизел\nАвтоматик\n9500 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "Peugeot 2008 1.2 PureTech EU6D\n2022\n36 216 км\nБензин\nРъчна\n14 000 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "Citroen Jumpy 1.6HDI L2H1EU6B\n2017\n186 586 км\nДизел\nРъчна\n8500 €",
+          "href": "/listing-detail-v1/15"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Mini Cooper 1.6D EURO4 — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=Mini%20Cooper%201.6D%20EURO4"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Mini Cooper 1.6D EURO5\n4200 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "Audi A3 2.0TDI S-LINE QUATTRO\n4000 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Fiat Punto 1.4i EVO EURO4\n3900 €",
+          "href": "/listing-detail-v1/6"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Контакти и адрес",
+          "href": "#contact-intent"
+        },
+        {
+          "text": "Обадете се ·\n0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": "https://astracar.mobile.bg/"
+        },
+        {
+          "text": "Адрес\nбул. „Цар Освободител“ 282, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Посещения\nОбадете се за работно време и оглед.",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Телефон\n0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продай",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": "https://astracar.mobile.bg/"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Астракар — Автомобили в Варна",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продажба или бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Седан",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/listing-grid?body=Hatchback"
+        },
+        {
+          "text": "Пикап",
+          "href": "/listing-grid?body=Pickup%20Truck"
+        },
+        {
+          "text": "SUV",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/listing-grid?body=Crossover"
+        },
+        {
+          "text": "Миниван",
+          "href": "/listing-grid?body=Minivan"
+        },
+        {
+          "text": "Комби",
+          "href": "/listing-grid?body=Wagon"
+        },
+        {
+          "text": "Кабриолет",
+          "href": "/listing-grid?body=Convertible"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "143 100 км\n2009\n\nХечбек\n\nMini Cooper 1.6D EURO4\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "127 663 км\n2017\n\nДжип\n\nRenault Captur 0.9T EURO6B\nБензин\nРъчна\n9500 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "177 390 км\n2012\n\nСедан\n\nBMW 535 xDrive FULL EU5B\nДизел\nАвтоматик\n14 600 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "181 000 км\n2006\n\nХечбек\n\nAudi A3 2.0TDI S-LINE QUATTRO\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/listing-grid?make=Land%20Rover"
+        },
+        {
+          "text": "Kia",
+          "href": "/listing-grid?make=Kia"
+        },
+        {
+          "text": "Toyota",
+          "href": "/listing-grid?make=Toyota"
+        },
+        {
+          "text": "Jeep",
+          "href": "/listing-grid?make=Jeep"
+        },
+        {
+          "text": "Nissan",
+          "href": "/listing-grid?make=Nissan"
+        },
+        {
+          "text": "Ford",
+          "href": "/listing-grid?make=Ford"
+        },
+        {
+          "text": "Foton",
+          "href": "/listing-grid?make=Foton"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/listing-grid?make=Mercedes-Benz"
+        },
+        {
+          "text": "Dongfeng",
+          "href": "/listing-grid?make=Dongfeng"
+        },
+        {
+          "text": "Isuzu",
+          "href": "/listing-grid?make=Isuzu"
+        },
+        {
+          "text": "Audi",
+          "href": "/listing-grid?make=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/listing-grid?make=BMW"
+        },
+        {
+          "text": "Вижте всички статии",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+          "href": "/blog"
+        },
+        {
+          "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nДа — можем да обсъдим внос и регистрация според критерии за модел, бюджет и оборудване.",
+          "href": "/blog"
+        },
+        {
+          "text": "Внос и регистрация",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заявете внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Лизинг по запитване",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Всички обяви\nв Mobile.bg (нов раздел)",
+          "href": "https://astracar.mobile.bg/"
+        },
+        {
+          "text": "Свържете се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Вижте колекцията",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Към автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Продажба или бартер",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "Внос и регистрация",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Заявете внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Лизинг по запитване",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-grid",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Налични автомобили — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "143 100 км\n2009\n\nХечбек\n\nMini Cooper 1.6D EURO4\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/1"
+        },
+        {
+          "text": "127 663 км\n2017\n\nДжип\n\nRenault Captur 0.9T EURO6B\nБензин\nРъчна\n9500 €",
+          "href": "/listing-detail-v1/2"
+        },
+        {
+          "text": "177 390 км\n2012\n\nСедан\n\nBMW 535 xDrive FULL EU5B\nДизел\nАвтоматик\n14 600 €",
+          "href": "/listing-detail-v1/3"
+        },
+        {
+          "text": "181 000 км\n2006\n\nХечбек\n\nAudi A3 2.0TDI S-LINE QUATTRO\nДизел\nРъчна\n4000 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "165 170 км\n2010\n\nКупе\n\nAudi A5 2.0TFSI EURO5B\nБензин\nАвтоматик\n7900 €",
+          "href": "/listing-detail-v1/5"
+        },
+        {
+          "text": "139 800 км\n2010\n\nХечбек\n\nFiat Punto 1.4i EVO EURO4\nБензин\nРъчна\n3900 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "162 148 км\n2015\n\nХечбек\n\nAudi A3 1.6TDI EU5B SPORTBAG\nДизел\nРъчна\n8900 €",
+          "href": "/listing-detail-v1/7"
+        },
+        {
+          "text": "150 052 км\n2010\n\nХечбек\n\nMini Cooper 1.6D EURO5\nДизел\nРъчна\n4200 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "159 400 км\n2014\n\nКомби\n\nAudi A6 2.0TDI EURO5B\nДизел\nРъчна\n8999 €",
+          "href": "/listing-detail-v1/9"
+        },
+        {
+          "text": "190 000 км\n2020\n\nДжип\n\nBMW X7 3.0d xDrive EU6D\nДизел\nАвтоматик\n49 000 €",
+          "href": "/listing-detail-v1/10"
+        },
+        {
+          "text": "136 574 км\n2013\n\nХечбек\n\nCitroen C3 1.2i EURO5B\nБензин\nРъчна\n4600 €",
+          "href": "/listing-detail-v1/11"
+        },
+        {
+          "text": "56 178 км\n2012\n\nДжип\n\nHyundai IX35 1.6GDI EURO5\nБензин\nРъчна\n7999 €",
+          "href": "/listing-detail-v1/12"
+        },
+        {
+          "text": "182 887 км\n2010\n\nДжип\n\nMercedes-Benz ML 350 3.0CDI PREMIUM EU6\nДизел\nАвтоматик\n9500 €",
+          "href": "/listing-detail-v1/13"
+        },
+        {
+          "text": "36 216 км\n2022\n\nДжип\n\nPeugeot 2008 1.2 PureTech EU6D\nБензин\nРъчна\n14 000 €",
+          "href": "/listing-detail-v1/14"
+        },
+        {
+          "text": "186 586 км\n2017\n\nВан\n\nCitroen Jumpy 1.6HDI L2H1EU6B\nДизел\nРъчна\n8500 €",
+          "href": "/listing-detail-v1/15"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Лизинг по запитване\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос и регистрация\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/listing-detail-v1/1",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Mini Cooper 1.6D EURO4 — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Назад",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Заявете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Получете реална оферта",
+          "href": "/contact?topic=leasing&vehicle=Mini%20Cooper%201.6D%20EURO4"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Mini Cooper 1.6D EURO5\n4200 €",
+          "href": "/listing-detail-v1/8"
+        },
+        {
+          "text": "Audi A3 2.0TDI S-LINE QUATTRO\n4000 €",
+          "href": "/listing-detail-v1/4"
+        },
+        {
+          "text": "Fiat Punto 1.4i EVO EURO4\n3900 €",
+          "href": "/listing-detail-v1/6"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Лизинг по запитване\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос и регистрация\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": "https://astracar.mobile.bg/"
+        },
+        {
+          "text": "Маршрут",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Лизинг по запитване\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос и регистрация\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about-us",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас — Астракар",
+      "overflow": 0,
+      "broken": [],
+      "phones": [
+        "tel:+359899908040"
+      ],
+      "links": [
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": ""
+        },
+        {
+          "text": "",
+          "href": "https://astracar.mobile.bg/"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Попитайте за внос",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "Обсъдете лизинг",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Поискайте оценка",
+          "href": "/contact?topic=trade-in"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "Отворете в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Оглед в Варна\nС предварителна уговорка",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "text": "Лизинг по запитване\nПопитайте за актуалните условия",
+          "href": "/contact?topic=leasing"
+        },
+        {
+          "text": "Внос и регистрация\nУточнете критериите с екипа",
+          "href": "/contact?topic=import"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/listing-grid"
+        },
+        {
+          "text": "Употребявани",
+          "href": "/listing-grid?condition=used"
+        },
+        {
+          "text": "Нови автомобили",
+          "href": "/listing-grid?condition=new"
+        },
+        {
+          "text": "За нас",
+          "href": "/about-us"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0899 908 040",
+          "href": "tel:+359899908040"
+        },
+        {
+          "text": "бул. „Цар Освободител“ 282, Варна",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 15,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6636/listing-grid?q=BMW",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/listing-detail-v1/3",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiryHref": "/contact?topic=inspection",
+      "enquiry": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 15,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6636/listing-grid?make=BMW",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/listing-detail-v1/3",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "auto-best",
+    "Project": "J:\\cars\\clients\\astracar\\auto-best",
+    "PID": 51452,
+    "Port": 6636,
+    "Url": "http://127.0.0.1:6636",
+    "Stdout": "J:\\cars\\runtime\\auto-best-6636-20260908-010359.out.log",
+    "Stderr": "J:\\cars\\runtime\\auto-best-6636-20260908-010359.err.log",
+    "Status": "started-not-yet-browser-verified",
+    "status": "stopped-after-verification"
+  },
+  "pass": true
+}

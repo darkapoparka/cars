@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "auto-best",
+    "width": 390,
+    "errors": [],
+    "steps": [
+      {
+        "name": "Navigation and Escape dismissal",
+        "passed": true,
+        "opened": true,
+        "expanded": "false",
+        "focusReturned": true
+      },
+      {
+        "name": "Filter overlay Escape",
+        "passed": true,
+        "opened": 1,
+        "remaining": 0
+      },
+      {
+        "name": "Search Golf through visible control",
+        "passed": true,
+        "url": "http://127.0.0.1:6646/listing-grid?q=Golf",
+        "golfShown": true,
+        "visibleDetailLinks": 1
+      },
+      {
+        "name": "Result to actual detail and enquiry",
+        "passed": true,
+        "detailUrl": "http://127.0.0.1:6646/listing-grid?q=Golf",
+        "phoneLinks": [
+          "tel:+359886251705"
+        ],
+        "enquiryUrl": "http://127.0.0.1:6646/listing-detail-v1/1",
+        "externalSubmission": false
+      }
+    ]
+  },
+  {
+    "variant": "auto-best",
+    "width": 1440,
+    "errors": [],
+    "steps": [
+      {
+        "name": "Navigation and Escape dismissal",
+        "passed": true,
+        "url": "http://127.0.0.1:6646/"
+      },
+      {
+        "name": "Filter overlay Escape",
+        "passed": true,
+        "opened": 1,
+        "remaining": 0
+      },
+      {
+        "name": "Search Golf through visible control",
+        "passed": false,
+        "error": "locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Отворете търсенето|Отвори търсене|Марка.*модел|Търси.*автомобил|Търсене/ }).filter({ visible: true }).first()\u001b[22m\n"
+      },
+      {
+        "name": "Result to actual detail and enquiry",
+        "passed": true,
+        "detailUrl": "http://127.0.0.1:6646/listing-grid",
+        "phoneLinks": [
+          "tel:+359886251705"
+        ],
+        "enquiryUrl": "http://127.0.0.1:6646/listing-detail-v1/1",
+        "externalSubmission": false
+      }
+    ]
+  }
+]

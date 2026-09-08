@@ -1,0 +1,18 @@
+{
+	"name": "АСКО 96",
+	"short_name": "АСКО 96",
+	"description": "АСКО 96: налични автомобили, огледи и контакт в София.",
+	"lang": "bg",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#d7ae35",
+	"icons": [
+		{
+			"src": "/assets/asko96/asko96-logo.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

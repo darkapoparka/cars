@@ -1,0 +1,93 @@
+{
+  "client": "legend-auto",
+  "name": "LEGEND AUTO",
+  "template": "modern",
+  "port": 6667,
+  "startedAt": "2026-09-07T22:30:55.648Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "DETAIL",
+      "error": "No vehicle detail link found"
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/bg/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/bg/contact\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/bg/imports\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/bg/imports\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "DETAIL",
+      "error": "No vehicle detail link found"
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/bg/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/bg/contact\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/bg/imports\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/bg/imports\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6667/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6667/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\legend-auto\\modern",
+    "PID": 68056,
+    "Port": 6667,
+    "Url": "http://127.0.0.1:6667",
+    "Stdout": "J:\\cars\\runtime\\modern-6667-20260908-013056.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6667-20260908-013056.err.log",
+    "Status": "started-not-yet-browser-verified",
+    "status": "stopped-after-verification"
+  },
+  "pass": false
+}

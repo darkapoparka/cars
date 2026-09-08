@@ -1,0 +1,48 @@
+[
+  {
+    "template": "auto-best",
+    "path": "J:/cars/clients/astracar/qa-final/validate-auto-best.log",
+    "modifiedAt": "2026-09-08T02:50:39.392Z",
+    "pass": true,
+    "warnings": [
+      0
+    ]
+  },
+  {
+    "template": "modern",
+    "path": "J:/cars/clients/astracar/qa-final/prisma.log",
+    "modifiedAt": "2026-09-08T02:50:48.340Z",
+    "pass": true,
+    "warnings": []
+  },
+  {
+    "template": "modern",
+    "path": "J:/cars/clients/astracar/qa-final/typecheck-modern.log",
+    "modifiedAt": "2026-09-08T03:17:31.534Z",
+    "pass": true,
+    "warnings": []
+  },
+  {
+    "template": "modern",
+    "path": "J:/cars/clients/astracar/qa-final/build-modern.log",
+    "modifiedAt": "2026-09-08T03:18:23.789Z",
+    "pass": true,
+    "warnings": []
+  },
+  {
+    "template": "carwow",
+    "path": "J:/cars/clients/astracar/qa-final/check-carwow.log",
+    "modifiedAt": "2026-09-08T03:18:45.641Z",
+    "pass": true,
+    "warnings": [
+      1
+    ]
+  },
+  {
+    "template": "carwow",
+    "path": "J:/cars/clients/astracar/qa-final/build-carwow.log",
+    "modifiedAt": "2026-09-08T03:19:15.615Z",
+    "pass": true,
+    "warnings": []
+  }
+]

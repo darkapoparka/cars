@@ -1,0 +1,48 @@
+{
+  "key": "auto-best",
+  "name": "Auto Best",
+  "aliases": [
+    "autodeal-best",
+    "autodeal-polished",
+    "5173",
+    "6511"
+  ],
+  "path": "templates/auto-best",
+  "version": "2026.09.06-refresh-1",
+  "family": "autodeal",
+  "stack": "sveltekit",
+  "sourcePort": 5173,
+  "libraryPort": 6461,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "desktop": 8.5,
+  "mobile": 8.5,
+  "priority": "use-first",
+  "readiness": "source-branded-candidate",
+  "reskinEffort": "lowest",
+  "brandFiles": [
+    "src/lib/config/brand.ts",
+    "src/lib/data/company.ts",
+    "src/lib/data/inventory.ts",
+    "src/app.css",
+    "static"
+  ],
+  "note": "Polished native SvelteKit derivative. One retained composition; retired variants redirect. Current working files include local polish beyond HEAD.",
+  "sourceSnapshot": {
+    "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
+    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
+    "branch": "main",
+    "includesDirtyFiles": true,
+    "files": 186,
+    "bytes": 7822988
+  },
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed",
+  "refreshedAt": "2026-09-06T20:48:34.551Z",
+  "refreshEvidence": "J:/cars/audits/2026-09-06/asko96-build/refresh-complete.json"
+}

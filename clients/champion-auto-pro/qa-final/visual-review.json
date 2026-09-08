@@ -1,0 +1,37 @@
+[
+  {
+    "path": "J:/cars/audits/2026-09-08/verify/champion-auto-pro/auto-best/390-0.png",
+    "finding": "Auto Best 390: source compact composition retained; actual dealer logo and stock budget previews visible.",
+    "reviewedAt": "2026-09-08T03:34:13.335Z"
+  },
+  {
+    "path": "J:/cars/audits/2026-09-08/verify/champion-auto-pro/auto-best/1440-0.png",
+    "finding": "Auto Best 1440: dealer header, phone, address and stock-search composition visible.",
+    "reviewedAt": "2026-09-08T03:34:13.335Z"
+  },
+  {
+    "path": "J:/cars/clients/champion-auto-pro/qa-final/supplement/modern-390-home.png",
+    "finding": "Dealer logo legible, stock cards and responsive source composition intact.",
+    "reviewedAt": "2026-09-08T03:48:52.519Z"
+  },
+  {
+    "path": "J:/cars/clients/champion-auto-pro/qa-final/supplement/modern-1440-home.png",
+    "finding": "Dealer logo legible, stock cards and responsive source composition intact.",
+    "reviewedAt": "2026-09-08T03:48:52.519Z"
+  },
+  {
+    "path": "J:/cars/clients/champion-auto-pro/qa-final/supplement/carwow-390-home.png",
+    "finding": "Dealer logo legible, stock cards and responsive source composition intact.",
+    "reviewedAt": "2026-09-08T03:48:52.519Z"
+  },
+  {
+    "path": "J:/cars/clients/champion-auto-pro/qa-final/supplement/carwow-1440-home.png",
+    "finding": "Dealer logo legible, stock cards and responsive source composition intact.",
+    "reviewedAt": "2026-09-08T03:48:52.519Z"
+  },
+  {
+    "path": "J:/cars/clients/champion-auto-pro/qa-final/supplement/carwow-390-gallery.png",
+    "finding": "Real listing photo displayed; gallery control proof passed. Original responsive composition retained.",
+    "reviewedAt": "2026-09-08T03:48:52.519Z"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "template": "auto-best",
+    "path": "J:/cars/clients/avangard-auto/qa-final/validate-auto-best.log",
+    "modifiedAt": "2026-09-08T01:44:01.723Z",
+    "pass": true,
+    "warnings": [
+      7
+    ]
+  },
+  {
+    "template": "modern",
+    "path": "J:/cars/clients/avangard-auto/evidence/build-modern.log",
+    "modifiedAt": "2026-09-07T15:51:27.332Z",
+    "pass": true,
+    "warnings": []
+  },
+  {
+    "template": "modern",
+    "path": "J:/cars/clients/avangard-auto/qa-final/typecheck-modern.log",
+    "modifiedAt": "2026-09-08T03:22:25.363Z",
+    "pass": true,
+    "warnings": []
+  },
+  {
+    "template": "carwow",
+    "path": "J:/cars/clients/avangard-auto/qa-final/check-carwow.log",
+    "modifiedAt": "2026-09-08T02:47:33.275Z",
+    "pass": true,
+    "warnings": [
+      2
+    ]
+  },
+  {
+    "template": "carwow",
+    "path": "J:/cars/clients/avangard-auto/qa-final/build-carwow-final.log",
+    "modifiedAt": "2026-09-08T02:48:07.952Z",
+    "pass": true,
+    "warnings": []
+  }
+]

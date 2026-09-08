@@ -1,0 +1,2427 @@
+[
+  {
+    "route": "/cars",
+    "width": 390,
+    "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6622/cars\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "route": "/bg/listing/excellent-21781257688134220",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/listing/excellent-21781257688134220",
+    "title": "Mercedes-Benz GLE 350 AMG DESIGNO | Excellent Cars",
+    "text": "4\n\n32 900 €\n\nMercedes-Benz GLE 350 AMG DESIGNO\nЗапитване за лизинг\nОбзор\nДетайли\n\nMercedes-Benz GLE 350 AMG DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21781257688134220-mercedes-benz-gle-350-amg-designo-360cam-serv-ist-ambient-diss-har\n\nОписание, предоставено от продавача. Независимо проверените данни се показват отделно, когато са налични.\n\nПодобни автомобили\nВиж всички\n\n10 500 €\n\nVW Passat 2.0TDI HIGHLINE\n\n212 000 км · Дизел\n\nАвтомобил в Варна, България\n\n17 900 €\n\nSkoda Octavia 2.0TDI 4x4\n\n180 000 км · Дизел\n\nАвтомобил в Варна, България\n\n22 900 €\n\nCupra Born RESTYLING 58KW\n\n67 000 км · Електрически\n\nАвтомобил в Варна, България\n\nВарна\n\nВъзраждане 1\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, България\n\nОбадете се",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-02-1.webp&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-03-1.webp&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-04-1.webp&w=640&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Запитване за лизинг",
+        "href": "/bg/lease?vehicle=excellent-21781257688134220"
+      },
+      {
+        "text": "Виж всички",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "10 500 €\n\nVW Passat 2.0TDI HIGHLINE\n\n212 000 км · Дизел\n\nАвтомобил в Варна, България",
+        "href": "/bg/listing/excellent-11785932596351376"
+      },
+      {
+        "text": "17 900 €\n\nSkoda Octavia 2.0TDI 4x4\n\n180 000 км · Дизел\n\nАвтомобил в Варна, България",
+        "href": "/bg/listing/excellent-11788181514006324"
+      },
+      {
+        "text": "22 900 €\n\nCupra Born RESTYLING 58KW\n\n67 000 км · Електрически\n\nАвтомобил в Варна, България",
+        "href": "/bg/listing/excellent-11786795820524833"
+      },
+      {
+        "text": "",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "4",
+        "label": "Отвори снимка 1 от 4 на цял екран",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Сподели обявата",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Обзор",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Детайли",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/contact",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/contact",
+    "title": "За нас и контакти | Excellent Cars | Excellent Cars",
+    "text": "Към основното съдържание\nЗа нас и контакти\nОбадете ни се\n0895 996 559\nПосетете шоурума\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна\nС какво можем да помогнем\nАвтомобили в наличност\nВнос по заявка\nЛизинг по договаряне\nПродайте автомобила си\nYouTube\nFacebook\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fimages%2Fsocial%2Fyoutube.png&w=48&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fimages%2Fsocial%2Ffacebook.png&w=32&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Обадете ни се\n0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Посетете шоурума\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Автомобили в наличност",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос по заявка",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг по договаряне",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте автомобила си",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Коли",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "YouTube",
+        "label": "YouTube — очаквайте скоро",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Facebook",
+        "label": "Facebook — очаквайте скоро",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Меню",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/imports",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/imports",
+    "title": "Внос на автомобил по заявка | Excellent Cars | Excellent Cars",
+    "text": "Към основното съдържание\nВнос на автомобил\nПоставете линк към обявата\nМаршрути за внос\nВсички\nКитай\nГермания\nСАЩ\nЯпония\nЮжна Корея\nОбявите временно не се зареждат.\n\nПоставете линк горе или опишете автомобила, който търсите.\n\nОпишете автомобил\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/cn.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/de.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/us.svg",
+        "loaded": false
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/jp.svg",
+        "loaded": false
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/kr.svg",
+        "loaded": false
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички",
+        "href": "/bg/imports?origin=ALL"
+      },
+      {
+        "text": "Китай",
+        "href": "/bg/imports?origin=CN"
+      },
+      {
+        "text": "Германия",
+        "href": "/bg/imports?origin=DE"
+      },
+      {
+        "text": "САЩ",
+        "href": "/bg/imports?origin=US"
+      },
+      {
+        "text": "Япония",
+        "href": "/bg/imports?origin=JP"
+      },
+      {
+        "text": "Южна Корея",
+        "href": "/bg/imports?origin=KR"
+      },
+      {
+        "text": "Коли",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Как работи вносът",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Поставете линк към обявата",
+        "label": "Отворете полето за линк към обява",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Опишете автомобил",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Меню",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/sell",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/sell",
+    "title": "Продайте ни автомобил | Excellent Cars",
+    "text": "Към основното съдържание\nVIN номер\nПродайте автомобила си\nБез VIN? Въведете данни\nНалични автомобили\n4\n4 снимки\nMercedes-Benz GLE 350 AMG DESIGNO\n\n32 900 €\n\n2016\n179 000 км\nДизел\nАвтоматик\n4\n4 снимки\nVW Passat 2.0TDI HIGHLINE\n\n10 500 €\n\n2011\n212 000 км\nДизел\nАвтоматик\n4\n4 снимки\nSkoda Octavia 2.0TDI 4x4\n\n17 900 €\n\n2022\n180 000 км\nДизел\nАвтоматик\n4\n4 снимки\nCupra Born RESTYLING 58KW\n\n22 900 €\n\n2022\n67 000 км\nЕлектрически\nАвтоматик\n4\n4 снимки\nHyundai Kona 1.6HEV N-LINE\n\n17 900 €\n\n2020\n40 000 км\nХибрид\nАвтоматик\n4\n4 снимки\nKia Sportage 1.6D AUTOMAT\n\n10 900 €\n\n2017\n180 000 км\nДизел\nАвтоматик\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-02-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-03-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-04-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-05-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-06-1.webp&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21781257688134220"
+      },
+      {
+        "text": "Mercedes-Benz GLE 350 AMG DESIGNO\n\n32 900 €\n\n2016\n179 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-21781257688134220"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11785932596351376"
+      },
+      {
+        "text": "VW Passat 2.0TDI HIGHLINE\n\n10 500 €\n\n2011\n212 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-11785932596351376"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11788181514006324"
+      },
+      {
+        "text": "Skoda Octavia 2.0TDI 4x4\n\n17 900 €\n\n2022\n180 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-11788181514006324"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11786795820524833"
+      },
+      {
+        "text": "Cupra Born RESTYLING 58KW\n\n22 900 €\n\n2022\n67 000 км\nЕлектрически\nАвтоматик",
+        "href": "/bg/listing/excellent-11786795820524833"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21786794971218528"
+      },
+      {
+        "text": "Hyundai Kona 1.6HEV N-LINE\n\n17 900 €\n\n2020\n40 000 км\nХибрид\nАвтоматик",
+        "href": "/bg/listing/excellent-21786794971218528"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21786455005208728"
+      },
+      {
+        "text": "Kia Sportage 1.6D AUTOMAT\n\n10 900 €\n\n2017\n180 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-21786455005208728"
+      },
+      {
+        "text": "Коли",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Как протича продажбата",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "VIN номер",
+        "label": "Въведете VIN номер",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Без VIN? Въведете данни",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Меню",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/lease",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/lease",
+    "title": "Финансиране на автомобил | Excellent Cars",
+    "text": "Към основното съдържание\nФинансиране за следващия ви автомобил\nИзберете автомобил\nЛизинг на автомобил\nСрок\nВноска\nФилтри\nЦена\nГодина\nПробег\nГориво\nСкорости\nMercedes-Benz GLE 350 AMG DESIGNO\n\n32 900 €\n\n2016\n179 000 км\nДизел\nАвтоматик\nVW Passat 2.0TDI HIGHLINE\n\n10 500 €\n\n2011\n212 000 км\nДизел\nАвтоматик\nSkoda Octavia 2.0TDI 4x4\n\n17 900 €\n\n2022\n180 000 км\nДизел\nАвтоматик\nCupra Born RESTYLING 58KW\n\n22 900 €\n\n2022\n67 000 км\nЕлектрически\nАвтоматик\nHyundai Kona 1.6HEV N-LINE\n\n17 900 €\n\n2020\n40 000 км\nХибрид\nАвтоматик\nKia Sportage 1.6D AUTOMAT\n\n10 900 €\n\n2017\n180 000 км\nДизел\nАвтоматик\nVW Tiguan 2.0ТDI 4MOTION\n\n16 990 €\n\n2017\n199 000 км\nДизел\nАвтоматик\nLand Rover Range Rover Evoque HYBRID NARDO_GREY\n\n25 000 €\n\n2022\n125 000 км\nХибрид\nАвтоматик\nAudi Q2 2.0TFSI QUATTRO\n\n16 900 €\n\n2018\n133 000 км\nБензин\nАвтоматик\nDodge Challenger 5.7HEMI SRT\n\n21 500 €\n\n2014\n65 000 км\nБензин\nАвтоматик\nVW T-Cross 1.5i AUTOMAT\n\n21 990 €\n\n2023\n48 000 км\nБензин\nАвтоматик\nKia Niro PLUG-IN-HYBRID\n\n16 990 €\n\n2019\n118 000 км\nЕлектрически\nАвтоматик\nBMW X3 2.0D xDrive\n\n12 000 €\n\n2014\n188 000 км\nДизел\nАвтоматик\nNissan Juke 1.6Т NISMO\n\n9500 €\n\n2014\n186 000 км\nБензин\nАвтоматик\nPeugeot 308 1.6GT 205h.p\n\n9200 €\n\n2016\n130 000 км\nБензин\nРъчна\nMazda CX-5 2.5i 4x4\n\n14 990 €\n\n2015\n192 000 км\nБензин\nАвтоматик\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fimages%2Fcategories%2Fday-night-category-car-v2.png&w=32&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-02-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-03-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-04-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-05-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-06-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-07-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-08-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-09-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-10-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-11-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-12-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-14-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-15-1.webp&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-16-1.webp&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Коли",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Как работи лизингът",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Изберете автомобил",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Срок",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Вноска",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Филтри",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Цена",
+        "label": "Цена",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Година",
+        "label": "Година",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Пробег",
+        "label": "Пробег",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Гориво",
+        "label": "Гориво",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Скорости",
+        "label": "Скорости",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Mercedes-Benz GLE 350 AMG  DESIGNO, 32 900 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "VW Passat 2.0TDI  HIGHLINE, 10 500 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Skoda Octavia 2.0TDI  4x4, 17 900 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Cupra Born RESTYLING  58KW, 22 900 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Hyundai Kona 1.6HEV  N-LINE, 17 900 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Kia Sportage 1.6D  AUTOMAT, 10 900 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "VW Tiguan 2.0ТDI  4MOTION, 16 990 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 25 000 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Audi Q2 2.0TFSI  QUATTRO, 16 900 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Dodge Challenger 5.7HEMI  SRT, 21 500 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "VW T-Cross 1.5i  AUTOMAT, 21 990 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Kia Niro PLUG-IN-HYBRID, 16 990 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "BMW X3 2.0D  xDrive, 12 000 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Nissan Juke 1.6Т  NISMO, 9500 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Peugeot 308 1.6GT  205h.p, 9200 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Mazda CX-5 2.5i  4x4, 14 990 €",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Меню",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/guides",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/guides",
+    "title": "Съвети за автомобили | Excellent Cars",
+    "text": "Към основното съдържание\nСъвети за автомобили\n\nКратки, практични материали за по-информиран избор. Те не заменят независим технически или правен съвет.\n\nПокупка на употребяван автомобил в България\n\nПрактичен списък за обявата, документите, огледа и пробното шофиране.\n\nПрочети\nПроверки при електромобил или хибрид\n\nКакво да проверите за батерия, зареждане, гаранция, сервиз и части.\n\nПрочети\nКак да оцените дилърска обява\n\nСигнали за ясна цена, идентичност на продавача и условия след продажбата.\n\nПрочети\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Прочети",
+        "href": "/bg/guides/buying-used-car-bulgaria"
+      },
+      {
+        "text": "Прочети",
+        "href": "/bg/guides/ev-hybrid-ownership-checklist"
+      },
+      {
+        "text": "Прочети",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "Коли",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Меню",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/blog",
+    "width": 390,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/blog",
+    "title": "Новини и анализи | Excellent Cars",
+    "text": "Към основното съдържание\n\nEXCELLENT CARS\n\nНовини и анализи\n\nПрактични материали за избор на автомобил, внос, оглед и финансиране.\n\nПодготвяме първите статии\n\nМеждувременно разгледайте практичните ни ръководства за покупка и проверка на автомобил.\n\nКъм съветите\nКоли\nВнос\nПродай\nЛизинг\nМеню",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Към съветите",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Коли",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Меню",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/cars",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/cars",
+    "title": "Автомобили от Excellent Cars | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nКатегория\nАвтомобили\nEnter ↵\nФилтри за автомобили\nМарка\nМодел\nЦена\nГодина\nПробег\nГориво\nСкорости\nТип купе\nПрепоръчани\nФилтри\nАвтомобили за продажба\n4\n4 снимки\nMercedes-Benz GLE 350 AMG DESIGNO\n\n32 900 €\n\n2016\n179 000 км\nДизел\nАвтоматик\n4\n4 снимки\nVW Passat 2.0TDI HIGHLINE\n\n10 500 €\n\n2011\n212 000 км\nДизел\nАвтоматик\n4\n4 снимки\nSkoda Octavia 2.0TDI 4x4\n\n17 900 €\n\n2022\n180 000 км\nДизел\nАвтоматик\n4\n4 снимки\nCupra Born RESTYLING 58KW\n\n22 900 €\n\n2022\n67 000 км\nЕлектрически\nАвтоматик\n4\n4 снимки\nHyundai Kona 1.6HEV N-LINE\n\n17 900 €\n\n2020\n40 000 км\nХибрид\nАвтоматик\n4\n4 снимки\nKia Sportage 1.6D AUTOMAT\n\n10 900 €\n\n2017\n180 000 км\nДизел\nАвтоматик\n4\n4 снимки\nVW Tiguan 2.0ТDI 4MOTION\n\n16 990 €\n\n2017\n199 000 км\nДизел\nАвтоматик\n4\n4 снимки\nLand Rover Range Rover Evoque HYBRID NARDO_GREY\n\n25 000 €\n\n2022\n125 000 км\nХибрид\nАвтоматик\n4\n4 снимки\nAudi Q2 2.0TFSI QUATTRO\n\n16 900 €\n\n2018\n133 000 км\nБензин\nАвтоматик\n4\n4 снимки\nDodge Challenger 5.7HEMI SRT\n\n21 500 €\n\n2014\n65 000 км\nБензин\nАвтоматик\n4\n4 снимки\nVW T-Cross 1.5i AUTOMAT\n\n21 990 €\n\n2023\n48 000 км\nБензин\nАвтоматик\n4\n4 снимки\nKia Niro PLUG-IN-HYBRID\n\n16 990 €\n\n2019\n118 000 км\nЕлектрически\nАвтоматик\n4\n4 снимки\nBMW X3 2.0D xDrive\n\n12 000 €\n\n2014\n188 000 км\nДизел\nАвтоматик\n4\n4 снимки\nNissan Juke 1.6Т NISMO\n\n9 500 €\n\n2014\n186 000 км\nБензин\nАвтоматик\n4\n4 снимки\nPeugeot 308 1.6GT 205h.p\n\n9 200 €\n\n2016\n130 000 км\nБензин\nРъчна\n4\n4 снимки\nMazda CX-5 2.5i 4x4\n\n14 990 €\n\n2015\n192 000 км\nБензин\nАвтоматик\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-02-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-03-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-04-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-05-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-06-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-07-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-08-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-09-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-10-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-11-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-12-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-13-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-14-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-15-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-16-1.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21781257688134220"
+      },
+      {
+        "text": "Mercedes-Benz GLE 350 AMG DESIGNO\n\n32 900 €\n\n2016\n179 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-21781257688134220"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11785932596351376"
+      },
+      {
+        "text": "VW Passat 2.0TDI HIGHLINE\n\n10 500 €\n\n2011\n212 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-11785932596351376"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11788181514006324"
+      },
+      {
+        "text": "Skoda Octavia 2.0TDI 4x4\n\n17 900 €\n\n2022\n180 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-11788181514006324"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11786795820524833"
+      },
+      {
+        "text": "Cupra Born RESTYLING 58KW\n\n22 900 €\n\n2022\n67 000 км\nЕлектрически\nАвтоматик",
+        "href": "/bg/listing/excellent-11786795820524833"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21786794971218528"
+      },
+      {
+        "text": "Hyundai Kona 1.6HEV N-LINE\n\n17 900 €\n\n2020\n40 000 км\nХибрид\nАвтоматик",
+        "href": "/bg/listing/excellent-21786794971218528"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21786455005208728"
+      },
+      {
+        "text": "Kia Sportage 1.6D AUTOMAT\n\n10 900 €\n\n2017\n180 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-21786455005208728"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21786453972789852"
+      },
+      {
+        "text": "VW Tiguan 2.0ТDI 4MOTION\n\n16 990 €\n\n2017\n199 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-21786453972789852"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21786451392501339"
+      },
+      {
+        "text": "Land Rover Range Rover Evoque HYBRID NARDO_GREY\n\n25 000 €\n\n2022\n125 000 км\nХибрид\nАвтоматик",
+        "href": "/bg/listing/excellent-21786451392501339"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21773151499854810"
+      },
+      {
+        "text": "Audi Q2 2.0TFSI QUATTRO\n\n16 900 €\n\n2018\n133 000 км\nБензин\nАвтоматик",
+        "href": "/bg/listing/excellent-21773151499854810"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11768639133016485"
+      },
+      {
+        "text": "Dodge Challenger 5.7HEMI SRT\n\n21 500 €\n\n2014\n65 000 км\nБензин\nАвтоматик",
+        "href": "/bg/listing/excellent-11768639133016485"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21775914499512125"
+      },
+      {
+        "text": "VW T-Cross 1.5i AUTOMAT\n\n21 990 €\n\n2023\n48 000 км\nБензин\nАвтоматик",
+        "href": "/bg/listing/excellent-21775914499512125"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21785575816054903"
+      },
+      {
+        "text": "Kia Niro PLUG-IN-HYBRID\n\n16 990 €\n\n2019\n118 000 км\nЕлектрически\nАвтоматик",
+        "href": "/bg/listing/excellent-21785575816054903"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21773150110056507"
+      },
+      {
+        "text": "BMW X3 2.0D xDrive\n\n12 000 €\n\n2014\n188 000 км\nДизел\nАвтоматик",
+        "href": "/bg/listing/excellent-21773150110056507"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21785323501482685"
+      },
+      {
+        "text": "Nissan Juke 1.6Т NISMO\n\n9 500 €\n\n2014\n186 000 км\nБензин\nАвтоматик",
+        "href": "/bg/listing/excellent-21785323501482685"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-11778320754806394"
+      },
+      {
+        "text": "Peugeot 308 1.6GT 205h.p\n\n9 200 €\n\n2016\n130 000 км\nБензин\nРъчна",
+        "href": "/bg/listing/excellent-11778320754806394"
+      },
+      {
+        "text": "",
+        "href": "/bg/listing/excellent-21781781688732220"
+      },
+      {
+        "text": "Mazda CX-5 2.5i 4x4\n\n14 990 €\n\n2015\n192 000 км\nБензин\nАвтоматик",
+        "href": "/bg/listing/excellent-21781781688732220"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Категория\nАвтомобили",
+        "label": "Избери категория",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "label": "Търсене на автомобили",
+        "placeholder": "Търсете по марка, модел или ключова дума…",
+        "name": "q"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Марка",
+        "label": "Марка",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Модел",
+        "label": "Модел",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Цена",
+        "label": "Цена",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Година",
+        "label": "Година",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Пробег",
+        "label": "Пробег",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Гориво",
+        "label": "Гориво",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Скорости",
+        "label": "Скорости",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Тип купе",
+        "label": "Тип купе",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Препоръчани",
+        "label": "Препоръчани",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Филтри",
+        "label": "Филтри",
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/listing/excellent-21781257688134220",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/listing/excellent-21781257688134220",
+    "title": "Mercedes-Benz GLE 350 AMG DESIGNO | Excellent Cars",
+    "text": "Купи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nНазад към търсенето\nMercedes-Benz GLE 350 AMG DESIGNO\nВарна, България\nRef EXCELLENT-21781257688134220\nОтвори галерията\n+1 снимки\nИзберете снимка\nОбзор\nИнформация\nХарактеристики\nЕкстри\nОписание\n\nMercedes-Benz GLE 350 AMG DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21781257688134220-mercedes-benz-gle-350-amg-designo-360cam-serv-ist-ambient-diss-har\n\nОписание, предоставено от продавача. Независимо проверените данни се показват отделно, когато са налични.\n\nПодобни автомобили\nВиж всички\n\n10 500 €\n\nVW Passat 2.0TDI HIGHLINE\n\n212 000 км · Дизел\n\nАвтомобил в Варна, България\n\n17 900 €\n\nSkoda Octavia 2.0TDI 4x4\n\n180 000 км · Дизел\n\nАвтомобил в Варна, България\n\n22 900 €\n\nCupra Born RESTYLING 58KW\n\n67 000 км · Електрически\n\nАвтомобил в Варна, България\n\nПокупка\n\n32 900 €\n\nФиксирана цена\n\nОбадете се\nВиж финансиране\nВарна\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, България\nРеф. номер\nEXCELLENT-21781257688134220\nПубликуван\n7.09.2026 г.\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=1080&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-2.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-3.webp&w=384&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=1080&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-2.webp&w=96&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-3.webp&w=96&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-4.webp&w=96&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-02-1.webp&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-03-1.webp&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-04-1.webp&w=640&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Назад към търсенето",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Виж всички",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "10 500 €\n\nVW Passat 2.0TDI HIGHLINE\n\n212 000 км · Дизел\n\nАвтомобил в Варна, България",
+        "href": "/bg/listing/excellent-11785932596351376"
+      },
+      {
+        "text": "17 900 €\n\nSkoda Octavia 2.0TDI 4x4\n\n180 000 км · Дизел\n\nАвтомобил в Варна, България",
+        "href": "/bg/listing/excellent-11788181514006324"
+      },
+      {
+        "text": "22 900 €\n\nCupra Born RESTYLING 58KW\n\n67 000 км · Електрически\n\nАвтомобил в Варна, България",
+        "href": "/bg/listing/excellent-11786795820524833"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Виж финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Варна\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, България",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Печат / PDF",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Сподели обявата",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Отвори галерията",
+        "label": "Отвори снимка 1 от 4 на цял екран",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Отвори снимка 2 от 4 на цял екран",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "+1 снимки",
+        "label": "Отвори снимка 3 от 4 на цял екран",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Покажи снимка 1 от 4",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Покажи снимка 2 от 4",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Покажи снимка 3 от 4",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Покажи снимка 4 от 4",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Обзор",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Информация",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Характеристики",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Екстри",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/contact",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/contact",
+    "title": "За нас и контакти | Excellent Cars | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nПремиум автомобили. Внос. Лизинг.\n\nВижте автомобилите в наличност или говорете директно с Excellent Cars за следващия си автомобил.\n\nВижте наличностите\nОбадете се\nГоворете директно с нас.\n\nЕдин телефон за автомобил, внос или финансиране. Шоурум в Възраждане 1.\n\nТелефон\n0895 996 559\nШоурум · Възраждане 1\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна\nИзберете правилната посока.\n\nОт наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.\n\nАвтомобили в наличност\nРазгледайте предложенията и планирайте оглед.\nВнос по заявка\nКажете какво търсите и започнете разговор.\nЛизинг по договаряне\nОбсъдете вариант според автомобила и бюджета ви.\nПродайте автомобила си\nИзпратете данни за автомобила и заявете оценка.\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Fvehicle-01-1.webp&w=1920&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Вижте наличностите",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Телефон\n0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум · Възраждане 1\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг по договаряне\nОбсъдете вариант според автомобила и бюджета ви.",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/imports",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/imports",
+    "title": "Внос на автомобил по заявка | Excellent Cars | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nРеални обяви за внос\n\nРазгледайте актуални оферти от свързани източници или поставете линк към автомобил, който вече сте намерили.\n\nЛинк към обявата\nПоискай оферта\nМаршрути за внос\nВсички\nКитай\nГермания\nСАЩ\nЯпония\nЮжна Корея\nОбявите временно не се зареждат.\n\nПоставете линк горе или опишете автомобила, който търсите.\n\nОпишете автомобил\nЧесто задавани въпроси\n\nНай-важното за заявката и доставката до България.\n\nКак да започна?\nКаква информация е полезна?\nКакво означава доставка до България?\nТрябва ли да се регистрирам?\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/cn.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/de.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/us.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/jp.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/images/flags/kr.svg",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Всички",
+        "href": "/bg/imports?origin=ALL"
+      },
+      {
+        "text": "Китай",
+        "href": "/bg/imports?origin=CN"
+      },
+      {
+        "text": "Германия",
+        "href": "/bg/imports?origin=DE"
+      },
+      {
+        "text": "САЩ",
+        "href": "/bg/imports?origin=US"
+      },
+      {
+        "text": "Япония",
+        "href": "/bg/imports?origin=JP"
+      },
+      {
+        "text": "Южна Корея",
+        "href": "/bg/imports?origin=KR"
+      },
+      {
+        "text": "Опишете автомобил",
+        "href": "/bg/imports?start=1#import-request"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "label": null,
+        "placeholder": "Поставете линк към конкретна обява",
+        "name": "sourceUrl"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Поискай оферта",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Как да започна?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Каква информация е полезна?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Какво означава доставка до България?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Трябва ли да се регистрирам?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/sell",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/sell",
+    "title": "Продайте ни автомобил | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nПродайте ни автомобила си\n\nДайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.\n\nКатегория\nАвтомобил\nКамион\nМотоциклет\nБус\nМарка\nМарка\nAudi\nBMW\nMercedes-Benz\nVolkswagen\nSkoda\nToyota\nFord\nOpel\nPeugeot\nRenault\nCitroen\nDacia\nHyundai\nKia\nNissan\nVolvo\nMazda\nHonda\nSuzuki\nMitsubishi\nPorsche\nLexus\nLand Rover\nJaguar\nSEAT\nCUPRA\nAlfa Romeo\nFiat\nTesla\nMINI\nJeep\nSubaru\nChevrolet\nSmart\nMG\nBYD\nPolestar\nDS Automobiles\nМодел\nГодина\nПробег\nПродължи\nЕкстри и бележки\nпо желание\n\nТърсите автомобил за бартер? Вижте наличностите\n\nПредпочитате директен разговор? 0895 996 559\n\nКак протича оценката\nЗадължителен ли е бартерът?\nКакви данни са необходими?\nМоже ли оценка само по снимки?\nКакво да подготвя за огледа?\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fimages%2Fsell%2Fday-night-sell-centered-hero-v2.webp&w=1920&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Вижте наличностите",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SELECT",
+        "text": "Автомобил\nКамион\nМотоциклет\nБус",
+        "label": null,
+        "placeholder": null,
+        "name": "category"
+      },
+      {
+        "tag": "SELECT",
+        "text": "Марка\nAudi\nBMW\nMercedes-Benz\nVolkswagen\nSkoda\nToyota\nFord\nOpel\nPeugeot\nRenault\nCitroen\nDacia\nHyundai\nKia\nNissan\nVolvo\nMazda\nHonda\nSuzuki\nMitsubishi\nPorsche\nLexus\nLand Rover\nJaguar\nSEAT\nCUPRA\nAlfa Romeo\nFiat\nTesla\nMINI\nJeep\nSubaru\nChevrolet\nSmart\nMG\nBYD\nPolestar\nDS Automobiles",
+        "label": null,
+        "placeholder": null,
+        "name": "make"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "label": null,
+        "placeholder": "напр. Octavia",
+        "name": "model"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "label": null,
+        "placeholder": "2022",
+        "name": "year"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "label": null,
+        "placeholder": "62 000 км",
+        "name": "mileage"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Продължи",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Задължителен ли е бартерът?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Какви данни са необходими?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Може ли оценка само по снимки?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Какво да подготвя за огледа?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/lease",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/lease",
+    "title": "Финансиране на автомобил | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nФинансиране от Excellent Cars\nФинансиране за следващия ви автомобил\n\nИзберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.\n\nИзберете автомобил\nMercedes-Benz GLE 350 AMG DESIGNO · 32 900 €\nVW Passat 2.0TDI HIGHLINE · 10 500 €\nSkoda Octavia 2.0TDI 4x4 · 17 900 €\nCupra Born RESTYLING 58KW · 22 900 €\nHyundai Kona 1.6HEV N-LINE · 17 900 €\nKia Sportage 1.6D AUTOMAT · 10 900 €\nVW Tiguan 2.0ТDI 4MOTION · 16 990 €\nLand Rover Range Rover Evoque HYBRID NARDO_GREY · 25 000 €\nAudi Q2 2.0TFSI QUATTRO · 16 900 €\nDodge Challenger 5.7HEMI SRT · 21 500 €\nVW T-Cross 1.5i AUTOMAT · 21 990 €\nKia Niro PLUG-IN-HYBRID · 16 990 €\nBMW X3 2.0D xDrive · 12 000 €\nNissan Juke 1.6Т NISMO · 9500 €\nPeugeot 308 1.6GT 205h.p · 9200 €\nMazda CX-5 2.5i 4x4 · 14 990 €\nПредпочитана първоначална вноска\nЩе уточним\n10%\n20%\n30%\nПредпочитан срок\nЩе уточним\n24 месеца\n36 месеца\n48 месеца\n60 месеца\n\nВашият избор\n\nMercedes-Benz GLE 350 AMG DESIGNO\n\nЩе уточним · Ще уточним\n\nЦена\n\n32 900 €\n\nОбадете се за оферта\nВижте автомобила\n\nПосочената месечна вноска е ориентировъчна и не представлява обвързваща оферта. 0895 996 559\n\nЧесто задавани въпроси\nКак да започна?\nКаква първоначална вноска е необходима?\nКакви документи ще са ми нужни?\nВсеки автомобил ли може да бъде финансиран?\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fimages%2Flease%2Fday-night-financing-hero-v1.webp&w=1920&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Обадете се за оферта",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Вижте автомобила",
+        "href": "/bg/listing/excellent-21781257688134220"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SELECT",
+        "text": "Mercedes-Benz GLE 350 AMG DESIGNO · 32 900 €\nVW Passat 2.0TDI HIGHLINE · 10 500 €\nSkoda Octavia 2.0TDI 4x4 · 17 900 €\nCupra Born RESTYLING 58KW · 22 900 €\nHyundai Kona 1.6HEV N-LINE · 17 900 €\nKia Sportage 1.6D AUTOMAT · 10 900 €\nVW Tiguan 2.0ТDI 4MOTION · 16 990 €\nLand Rover Range Rover Evoque HYBRID NARDO_GREY · 25 000 €\nAudi Q2 2.0TFSI QUATTRO · 16 900 €\nDodge Challenger 5.7HEMI SRT · 21 500 €\nVW T-Cross 1.5i AUTOMAT · 21 990 €\nKia Niro PLUG-IN-HYBRID · 16 990 €\nBMW X3 2.0D xDrive · 12 000 €\nNissan Juke 1.6Т NISMO · 9500 €\nPeugeot 308 1.6GT 205h.p · 9200 €\nMazda CX-5 2.5i 4x4 · 14 990 €",
+        "label": "Изберете автомобил",
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "SELECT",
+        "text": "Ще уточним\n10%\n20%\n30%",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "SELECT",
+        "text": "Ще уточним\n24 месеца\n36 месеца\n48 месеца\n60 месеца",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Как да започна?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Каква първоначална вноска е необходима?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Какви документи ще са ми нужни?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Всеки автомобил ли може да бъде финансиран?",
+        "label": null,
+        "placeholder": null,
+        "name": null
+      }
+    ],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/guides",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/guides",
+    "title": "Съвети за автомобили | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\nСъвети за автомобили\n\nКратки, практични материали за по-информиран избор. Те не заменят независим технически или правен съвет.\n\nПокупка на употребяван автомобил в България\n\nПрактичен списък за обявата, документите, огледа и пробното шофиране.\n\nПрочети\nПроверки при електромобил или хибрид\n\nКакво да проверите за батерия, зареждане, гаранция, сервиз и части.\n\nПрочети\nКак да оцените дилърска обява\n\nСигнали за ясна цена, идентичност на продавача и условия след продажбата.\n\nПрочети\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Прочети",
+        "href": "/bg/guides/buying-used-car-bulgaria"
+      },
+      {
+        "text": "Прочети",
+        "href": "/bg/guides/ev-hybrid-ownership-checklist"
+      },
+      {
+        "text": "Прочети",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [],
+    "errors": [],
+    "consoleErrors": []
+  },
+  {
+    "route": "/bg/blog",
+    "width": 1440,
+    "status": 200,
+    "url": "http://127.0.0.1:6622/blog",
+    "title": "Новини и анализи | Excellent Cars",
+    "text": "Към основното съдържание\nКупи\nПродай\nВнос\nЛизинг\n0895 996 559\nШоурум\n\nEXCELLENT CARS\n\nНовини и анализи\n\nПрактични материали за избор на автомобил, внос, оглед и финансиране.\n\nПодготвяме първите статии\n\nМеждувременно разгледайте практичните ни ръководства за покупка и проверка на автомобил.\n\nКъм съветите\n\nАвтомобили, бартер и лизинг по договаряне във Варна.\n\nбул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“, Варна, България\nОбадете се\nНаличности\nВсички автомобили\nФинансиране\nПродайте ни автомобил\nПомощ\nСъвети за покупка\nПрозрачност на обявите\nЗа нас и контакти\nСвържете се\n0895 996 559\n\n© 2026 Excellent Cars\n\n0895 996 559",
+    "overflow": -15,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:6622/_next/image?url=%2Fassets%2Fexcellent%2Flogo-header.png&w=256&q=75",
+        "loaded": true
+      }
+    ],
+    "links": [
+      {
+        "text": "Към основното съдържание",
+        "href": "#main-content"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Купи",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Продай",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Внос",
+        "href": "/bg/imports"
+      },
+      {
+        "text": "Лизинг",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Шоурум",
+        "href": "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+      },
+      {
+        "text": "Към съветите",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "",
+        "href": "/bg"
+      },
+      {
+        "text": "Обадете се",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "Всички автомобили",
+        "href": "/bg/cars"
+      },
+      {
+        "text": "Финансиране",
+        "href": "/bg/lease"
+      },
+      {
+        "text": "Продайте ни автомобил",
+        "href": "/bg/sell"
+      },
+      {
+        "text": "Съвети за покупка",
+        "href": "/bg/guides"
+      },
+      {
+        "text": "Прозрачност на обявите",
+        "href": "/bg/guides/dealer-listing-transparency"
+      },
+      {
+        "text": "За нас и контакти",
+        "href": "/bg/contact"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      },
+      {
+        "text": "0895 996 559",
+        "href": "tel:+359895996559"
+      }
+    ],
+    "controls": [],
+    "errors": [],
+    "consoleErrors": []
+  }
+]

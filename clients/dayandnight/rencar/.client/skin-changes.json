@@ -1,0 +1,1787 @@
+{
+  "appliedAt": "2026-09-06T18:37:26.852Z",
+  "scope": "Branding, image references and business text only; source elements/classes/controls unchanged.",
+  "source": "J:/cars/templates/rencar",
+  "files": [
+    {
+      "file": "src/pages/404.svelte",
+      "sourceHash": "e0381b7a00fd21c58b7d61c8e97e6b460c9789db7aba1602719c369ce2e4479c",
+      "resultHash": "2347ce481f2a17300f6af1cb993889e18993268ead479f24e05117b4019a0291",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/about.svelte",
+      "sourceHash": "55ec1780957eac886f0146d411fab93c325dada42979b1873074d19257a8388a",
+      "resultHash": "61e699bbcae78f5914a2cbd7def8a480a776f22e545b03b62fe3727e69579873",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/about/01.jpg",
+          "after": "/daynight/day-night-about-showroom-v1-light.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/02.jpg",
+          "after": "/daynight/day-night-showroom-color-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/03.jpg",
+          "after": "/daynight/day-night-studio-keys-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog-single.svelte",
+      "sourceHash": "082346e0a7b7d06b323f28be7c8d8b326f2438fc3e6a070c99a408b2a3896e7b",
+      "resultHash": "f6a74e408fecbb5674e3ff39d0328bea04fea48e245b6e80e3b3c516a5cac5e6",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/blog.svelte",
+      "sourceHash": "58015623f9d7482102e5903bb45f71d455beca99d3ea9996f29003c468f4c891",
+      "resultHash": "3bca330a92c3c29181ed34165875804bbfcbd1f3fd11ff25826ac98bae2c7c2d",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/book-ride.svelte",
+      "sourceHash": "29e04ed7db7ac5576c13d74877f6d12225b41bd329d76b8a4fad42f742039c76",
+      "resultHash": "a6318d3fa3c1e100e952e16ff27453d6665e90ce1709f1dd237e2d4a50f254b2",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/booking-cancel-policy.svelte",
+      "sourceHash": "e5b87d7ca5aa63e9cd0844cecd8937defc05f368066e46f7202db55cbe8fd4ca",
+      "resultHash": "7253bc0023995cac27db319c11dc51bba911ffeed03c57eb9c9eb5f899b6abb5",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-2.svelte",
+      "sourceHash": "af14dd1d3e516e9ce53bfdc09ed1ba3044f1d05820ca4acd77c9058cd97a986d",
+      "resultHash": "f79f728a74e988d1fd39b3bb78f1e14b860092f988a4fbc5c68f0e49f403be5e",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-booking-confirm.svelte",
+      "sourceHash": "85b215c016da1799b29d4cfb0bfc1d7293b810b5473c86dcbfedd9b2de308d19",
+      "resultHash": "20c30454161e2da4d3038bf96d9dfd70902c1abb210147bf74aa22e52497f110",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-booking.svelte",
+      "sourceHash": "73d32b4d99af30ad6fbbcb0ecbba6b84a0c1e2a5274de2ff6d97e79cad84e90f",
+      "resultHash": "dc439a010debccf63576a59d3c6c0c0e7f36c77550ddc4af6c103e96fa87e2e8",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-brand.svelte",
+      "sourceHash": "9dda8452452d6630504d14a96b03bcf2bda68f40063536a50c7517bfd3b26541",
+      "resultHash": "cacd39b3f91b1091a773e3fd49595c94907090735cd4106c9bd8ec2714c385e5",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-checkout.svelte",
+      "sourceHash": "b2a9e3417b7050d2e9dd2a0cf945c86d47c3e335cf83387690c06d44b3116e08",
+      "resultHash": "66eac8ec00751ed4807842258d67ef96f3b6bc101651be6835625e16683829e1",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-rate.svelte",
+      "sourceHash": "0d445d778ae6fdd38e6e4862b1b9c59220aadd775b163d89b8c6235dbef3d5f2",
+      "resultHash": "08ce7561ad57dde042af5732ce7e77add3e877d61b5719e5bf4149240e7c7b1f",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-single.svelte",
+      "sourceHash": "aaa79d6052db338e93e78360f1d95dcdc0b4494022cae10d0f16a0aa9f261de1",
+      "resultHash": "16c89c0d39ffd9176c7848d96ed964541fc08de1b9626a5d903006b7011ee2c8",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car-type.svelte",
+      "sourceHash": "690a6f1c4e08e1f5249fd97b3463111819bf5f60dc1b944c537028fe91d8644f",
+      "resultHash": "56df58e479730fb7f17802ffe2988406526d40d3700058227cb6d5c1e57c432d",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/car.svelte",
+      "sourceHash": "8e80ab86e59db4caddb77c2520445d920c6b26dd44c2cc62ec9487cd6911a3d1",
+      "resultHash": "e0dc608e95ff9b05312074dec3a099b44be34186c2be1a7d17a18b0a3d903017",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/coming-soon.svelte",
+      "sourceHash": "da4921670071cb41fffe2c52f8eb3fc8f48b45ae5e0c29ae42111797f4b4a929",
+      "resultHash": "da4921670071cb41fffe2c52f8eb3fc8f48b45ae5e0c29ae42111797f4b4a929",
+      "changes": []
+    },
+    {
+      "file": "src/pages/contact.svelte",
+      "sourceHash": "77f126dba4e2e56cc64975f4b66f21ebd239009a62f51ce23178969906006f12",
+      "resultHash": "aaa9cfea5d9a7a7e42a264811a407fb4a297e9d9c1dcf775db7c14a9ce85f1c8",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/dashboard.svelte",
+      "sourceHash": "08707d3ee45df0fdbe738423e7fbf79eb8094d8f745e86f55ce0a75cb4bba0f0",
+      "resultHash": "db5c6b74dd44c5d1b629190a12375e11826a33f3d38ba719198c0c5f0fec0744",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "file": "src/pages/driver-single.svelte",
+      "sourceHash": "c4d48bd3f6bb1a7ac571fc6aa4c706e8d9b6dafee0dc4513b8f30392ca9aa49c",
+      "resultHash": "42fda0155e580e9c6768512f6c9e4061a8258aebc5bdcde1c077f690fd859e7a",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 4
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/driver.svelte",
+      "sourceHash": "a51f160b05980df72ab8dfa2de8c3826d527a0798a6e0cf4ed9aecf060ba0e13",
+      "resultHash": "9532a4ed40f78fa543ae041b0fc7d04edc5720fa974ec4b328a26de563b82cb0",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/faq.svelte",
+      "sourceHash": "3fd94d572f437d923b95c61aefc2038ed68a580e4ed23c0fc05f5a4452b71d84",
+      "resultHash": "1ebf74fc6113cd68126e949b81609aa77a39de9f529e6b5bf1c8dd480dd5767f",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/forgot-password.svelte",
+      "sourceHash": "131aa3ff099fb28c377596efa889956df715d16ac3b267f207ef395fce0ab293",
+      "resultHash": "c03d46fc5658f0e22787e41ceb32e6e89cbccf02f21e546dbb45e382758352be",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 4
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/gallery.svelte",
+      "sourceHash": "6acb5e37e445e254d591c3321507993d6a5ffcf3d4d71bea07e79f39c785e2a7",
+      "resultHash": "6298af761e74a28a99dc5dd5e297fdf73b0b2ff1e5787827fe3094fc3b30aaa8",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/help.svelte",
+      "sourceHash": "1e80c945d07928577bd24443a4d52df6d8ebb47d9a84c8e494c76f083cf07301",
+      "resultHash": "e8d7eadac70e855ddc1e0f49fa93325edf11516bea745e00a47375de32d39d9c",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index-2.svelte",
+      "sourceHash": "83189ae256d0110903ee5dc2c83c4ee0ad6fd40cc605b81e9a610f0ab9a58a91",
+      "resultHash": "58a77b533ec921567c299503b03763c666adf98e74685c52d5dce5facb113d6f",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/hero/01.png",
+          "after": "/daynight/day-night-cutout-graphite-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/01.jpg",
+          "after": "/daynight/day-night-about-showroom-v1-light.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/02.jpg",
+          "after": "/daynight/day-night-showroom-color-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/03.jpg",
+          "after": "/daynight/day-night-studio-keys-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "Welcome To Rencar!",
+          "after": "Day &amp; Night Auto Group",
+          "count": 1
+        },
+        {
+          "before": "Make Your Travel <span>More Easy</span> Safe And Faster",
+          "after": "Изберете своя <span>модел</span>",
+          "count": 1
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index-3.svelte",
+      "sourceHash": "cd2961fd8e431630b6131a4ca1536e916b9135b57ebb2e96ce76d34968454dea",
+      "resultHash": "4f06f8b08fd3018b52625c5fdbbd211d05fd568d32b94a668b71781df965bd34",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/about/01.jpg",
+          "after": "/daynight/day-night-about-showroom-v1-light.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/02.jpg",
+          "after": "/daynight/day-night-showroom-color-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/03.jpg",
+          "after": "/daynight/day-night-studio-keys-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "Make Your Travel <span>More Easy</span> Safe And Faster",
+          "after": "Изберете своя <span>модел</span>",
+          "count": 1
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 2
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 2
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index-4.svelte",
+      "sourceHash": "8f4dc4118e0eb4da05446b1bafae2c72eded3dcd384618526e9b8184ae185617",
+      "resultHash": "e7562fc310c4f4f99fd97cb6989d7789753ca75df57e0f57f61775dbe137e8ce",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/about/01.jpg",
+          "after": "/daynight/day-night-about-showroom-v1-light.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/02.jpg",
+          "after": "/daynight/day-night-showroom-color-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/03.jpg",
+          "after": "/daynight/day-night-studio-keys-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "Welcome To Rencar!",
+          "after": "Day &amp; Night Auto Group",
+          "count": 1
+        },
+        {
+          "before": "Find Affordable <span>Dream Cars</span> For Your Rental",
+          "after": "Изберете своя <span>модел</span>",
+          "count": 1
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 4
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 4
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index-5.svelte",
+      "sourceHash": "1bec2d365a199f6e3036fddce12ddb15aee81b23aa74e8a468df3e5b7a44fb0f",
+      "resultHash": "e0562a156b2cb4417f351c87acd3d64280390718a0f35e8fdf04be2bcb392cbb",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/about/01.jpg",
+          "after": "/daynight/day-night-about-showroom-v1-light.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/02.jpg",
+          "after": "/daynight/day-night-showroom-color-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/03.jpg",
+          "after": "/daynight/day-night-studio-keys-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "Make Your <span>Travel Safe</span> And Faster",
+          "after": "Изберете своя <span>модел</span>",
+          "count": 1
+        },
+        {
+          "before": "<span>rental cars</span>",
+          "after": "<span>Day &amp; Night</span>",
+          "count": 1
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "file": "src/pages/index.svelte",
+      "sourceHash": "e5e12beefd12546a7337e2aca9b61203dafa4249a4998013d6ce1062d1012713",
+      "resultHash": "06619903454c8c7a2d81c5baaaf5509a61bd0fcadf32993524ba917d4881cc38",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/hero/03.png",
+          "after": "/daynight/day-night-cutout-gclass-v1.webp",
+          "count": 3
+        },
+        {
+          "before": "/assets/img/about/01.jpg",
+          "after": "/daynight/day-night-about-showroom-v1-light.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/02.jpg",
+          "after": "/daynight/day-night-showroom-color-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/about/03.jpg",
+          "after": "/daynight/day-night-studio-keys-v1.webp",
+          "count": 1
+        },
+        {
+          "before": "Welcome To Rencar!",
+          "after": "Day &amp; Night Auto Group",
+          "count": 3
+        },
+        {
+          "before": "Book Your Car <span>For Safe</span> Ride",
+          "after": "Изберете своя <span>модел</span>",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 4
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 4
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "file": "src/pages/login.svelte",
+      "sourceHash": "87297744428c8d0bd645f29c42eedb58b1011288483a0b103ff86f6b592b76ec",
+      "resultHash": "2417fdb613cba5a58a0b5615a9ca83ffd3e5561238cf854bcc4c2f93da627be8",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 4
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/mail-success.svelte",
+      "sourceHash": "f4e24a13111789e8591791395ff09f5eff2fc910d49a0b35dbfe3bba16953052",
+      "resultHash": "92a29b2fd18ef72032134b3a87465fc02ed50b5153e9092fe75f35e4be2cfa04",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/privacy.svelte",
+      "sourceHash": "3458dc3082f6b1305288419d77b122c9645b1934466953f0a19ce67aecf7f5d5",
+      "resultHash": "4067c3b8a11db6e501b71147b1694daba4b477fffac9e1c56481652eeb0cd27c",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/profile-booking.svelte",
+      "sourceHash": "6fc2c0de70f9924e50ae74653ed5996126007e6f8e2d5830ed84163b035db47f",
+      "resultHash": "6b663eeff928744da73c74160d30fee8d0498b6eab0bd51fc3897044d0b5d5fa",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "file": "src/pages/profile-cancel-booking.svelte",
+      "sourceHash": "20e82f55bfdaa7948206dd6be9d0a9d90523d37d990559b0d319a89a7c4d9bab",
+      "resultHash": "dad48d1fd9516019cd234a7f40a7bdf7568b03e933fd762151d5d996ef32c4b6",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "file": "src/pages/profile-payment.svelte",
+      "sourceHash": "22ad5868d4e0c6805b153d8e7ef3bc22289efa492e5c461ab9339920605565c6",
+      "resultHash": "8192c9eb704505ffcc8a06166eb13bc92c351cc68078a76f4acd122acc020289",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "file": "src/pages/profile-setting.svelte",
+      "sourceHash": "388e75477434678821e59cbe7e9e04e51fcc587e018f9782f8ba6aae1f723403",
+      "resultHash": "dae4f19a9ac0e5d0be5a8dc07e9289708e5cd0a034ce9e6e5b41ed869ed618b5",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "file": "src/pages/profile-wishlist.svelte",
+      "sourceHash": "22b4b95c74b45f7c453cb86fed8953600aa14df11a43d923f6e37a30b72c7bdc",
+      "resultHash": "fb5e5c7c532c049ce9c085dc6664edd9d3c32845f11a64d9cfc75cc0d873b71b",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "file": "src/pages/profile.svelte",
+      "sourceHash": "f6fce16534e454005fc83dad36252bcc77132f9c21b32c25e27ccc2d2bbc26d8",
+      "resultHash": "8dcd26312febab51b74df24cd3e56409b45f75f32586514fdbc9217e0b41e5e1",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "file": "src/pages/register.svelte",
+      "sourceHash": "89ed8daa50591c1a520e1b4da1a3fe8e8241da3febf60cf2257f0178a75549c5",
+      "resultHash": "bca4c933201d926cc60173709a03795b2e01d142d4085ab5cd7f2577ff4885a3",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 4
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/service-2.svelte",
+      "sourceHash": "bc645388aa088571cece60920eea452a5c1324076fe106e326646c4c120b2203",
+      "resultHash": "aaa6220b1b73ce3fa9e368c8f526202357c26aed53ce4dabfb7377327530968f",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/service-single.svelte",
+      "sourceHash": "e94b1ab0549c077f0ac39a030bf570ef633c45776c219d6fe8ddea28ddf47752",
+      "resultHash": "1217dede2bae127d2f1a795986f95e666345630910da299a18a35898cbd33726",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/service.svelte",
+      "sourceHash": "12ff90fc9c9859a7ee0a2bea9bedb1533cd8ed6dc5448424ddd0322f2a50cd5a",
+      "resultHash": "b7ad9a41595966f1020ee689cc197030fe695eeea4028a5b14a7510df02b9a03",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/team.svelte",
+      "sourceHash": "fa745a4175fd6b9b86323e0df0ff17d1cd124651d85f3435e2fa5991b5cc15df",
+      "resultHash": "f9176e0c087c0e1d6231348d73c0ad20d1af8354895b145b0f327a6e140c6da9",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/terms.svelte",
+      "sourceHash": "1605e2710dc5ff7e6b6d628cc12bcd19d3ddc40e5aa1b5ed7f3c046b42ac25a7",
+      "resultHash": "40acbb0a86f3935cc4ebcb09a97b02656830cd7a9ac4175b883d6d4173b93020",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "file": "src/pages/testimonial.svelte",
+      "sourceHash": "c3e28dc5f4b9e032b4d2c91600ff0f624346050798e6cdb4e2b65850827a7f1c",
+      "resultHash": "df5ba51e98ef1d6144eac47d17ab63ea3557857504dac5202200e804dd894936",
+      "changes": [
+        {
+          "before": "/assets/img/logo/logo-light.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 1
+        },
+        {
+          "before": "/assets/img/logo/logo.png",
+          "after": "/daynight/day-night-logo.png",
+          "count": 3
+        },
+        {
+          "before": "+2 123 654 7898",
+          "after": "0877 733 110",
+          "count": 3
+        },
+        {
+          "before": "tel:+21236547898",
+          "after": "tel:+359877733110",
+          "count": 3
+        },
+        {
+          "before": "25/AB Milford Road, New York, USA",
+          "after": "ул. „Атанас Манчев“ 18, София",
+          "count": 1
+        },
+        {
+          "before": "Rencar",
+          "after": "Day &amp; Night",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "contentFitNote": "Shortened the substituted headline noun to avoid clipping under unchanged source typography."
+}

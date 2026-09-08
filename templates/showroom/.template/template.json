@@ -1,0 +1,46 @@
+{
+  "key": "showroom",
+  "name": "Showroom",
+  "aliases": [
+    "6404",
+    "eliq-bohemcars",
+    "import-eliq"
+  ],
+  "path": "templates/showroom",
+  "version": "2026.09.06-baseline",
+  "family": "auxero",
+  "stack": "sveltekit",
+  "sourcePort": 6404,
+  "libraryPort": 6465,
+  "entry": "/inventory",
+  "homes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "desktop": 7.5,
+  "mobile": 8,
+  "priority": "reserve",
+  "readiness": "source-branded-candidate",
+  "reskinEffort": "medium",
+  "brandFiles": [
+    "src/lib/data/eliqauto.ts",
+    "src/lib/data/eliqauto-media.ts",
+    "src/lib/data/eliqauto-listings.json",
+    "src/lib/data/eliqauto-about.ts",
+    "src/lib/styles",
+    "static"
+  ],
+  "note": "ELIQ source retained as a distinct red/white showroom baseline. This local key does not replace Agency OS's different historical showroom template.",
+  "sourceSnapshot": {
+    "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\eliq-auto\\bohemcars",
+    "head": "f5f9d924171c347345b39781f8fb034e15ed6aa9",
+    "branch": "codex/home-desktop-polish-0904",
+    "includesDirtyFiles": true,
+    "files": 1387,
+    "bytes": 82914623
+  },
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed"
+}

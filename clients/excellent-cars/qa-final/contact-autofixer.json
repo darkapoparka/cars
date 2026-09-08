@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "J:/cars/clients/excellent-cars/carwow/src/lib/components/detail/desktop/DesktopDetailLocationMap.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "filename": "J:/cars/clients/excellent-cars/carwow/src/lib/components/financing/DesktopFinancingPage.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  },
+  {
+    "filename": "J:/cars/clients/excellent-cars/carwow/src/lib/components/admin/dashboard/DesktopDashboardProfile.svelte",
+    "result": {
+      "issues": [],
+      "suggestions": [],
+      "require_another_tool_call_after_fixing": false
+    }
+  }
+]

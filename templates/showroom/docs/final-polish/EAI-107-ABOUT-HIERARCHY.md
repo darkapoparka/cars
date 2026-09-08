@@ -1,0 +1,15 @@
+# EAI-107 — About page hierarchy
+
+Company context now appears in the red banner: “За ELIQ AUTO” and “Автомобили и собствено финансиране в Пазарджик от 2017 г.” The gallery follows immediately. The separate company-introduction block and six activity cards have been removed from the opening. The six activities, including their descriptions and destinations, are grouped into three photographic cards in the existing services section: buying/selling, financing/barter, and import/support. These use existing original showroom images. All 27 detailed services remain available below them.
+
+The desktop banner remains 300px high with the approved Mercedes pair, two CTAs and section links. The About mobile banner is shorter (240px at 390px width), allowing the gallery to appear sooner. The mobile “За нас” anchor still exists at the top of the About content.
+
+Scope: four application files, 93 additions and 50 deletions against the saved immediate baseline. `PageBanner.svelte` adds an optional description display, enabled only by About. `AboutContent.svelte` updates the banner and section composition. `AboutGallerySection.svelte` adjusts the opening caption and spacing. `AboutIntroSection.svelte` consolidates the six activities. No data files, assets, shared stylesheet, dependencies or other routes edited.
+
+Evidence: `artifacts/about-hierarchy-20260906/`. Before: `before/about-{390,1440}.png` at 900px height and copies of all four source files. After: `final-about-{320,390,430,768,1024,1280,1440,1920}.png` and corresponding `final-services-*.png` at 900px height. Desktop 1440, 1024 and mobile 390 inspected visually. Gallery immediately follows banner; no old activity cards remain above it; all six activities are present below.
+
+Six existing interaction tests pass, covering gallery photos/navigation/swipe/failure recovery/focus, service accordions, company/contact/map controls and opt-in video playback. Focused ESLint and Prettier pass. All four Svelte autofixers report no issues; the gallery's existing close-button binding receives an optional attachment suggestion and remains unchanged. UI scan only flags the existing `backdrop-filter: none` reset, which explicitly disables blur.
+
+Eight viewport checks pass without overflow. All four desktop section links land below the sticky header (approximately 132px from the viewport top), and browser Back restores the fragment-free route. Twelve final preservation screenshots match exactly: Inventory, Services and Contact at 390, 1024, 1440 and 1920. Files: `preserved-{route}-{width}.png`; results: `qa.json`. No browser page errors. An initial screenshot comparison caught transient rasterization of the Contact logo; the final settled comparison matches exactly. QA script URL matching and asynchronous Back waiting were corrected without application changes.
+
+Status: **READY FOR OWNER REVIEW**. Svelte check passes with zero errors and warnings; production build passes. Logs: check.log and build.log in the evidence directory. Existing repository-wide lint/unit limitations remain documented in EAI-107-ABOUT-CONTENT.md. Existing dirty work preserved; no commit or push.

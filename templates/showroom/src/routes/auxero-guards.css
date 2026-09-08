@@ -1,0 +1,2021 @@
+body {
+	background: var(--bc-bg);
+	background-color: var(--bc-bg);
+}
+
+body[class*='auxero-template-'] {
+	background: var(--bc-bg);
+	background-color: var(--bc-bg);
+	font-family: var(--bc-font-body);
+	font-size: var(--bc-text-body);
+	line-height: var(--bc-leading-body);
+	letter-spacing: 0;
+}
+
+/* app.css assigns Manrope directly to `*`, so inheritance from body cannot win.
+   Scope the bundled Cyrillic-capable storefront face to text-bearing elements and
+   leave icon-font elements free to opt into their own family. */
+body[class*='auxero-template-']
+	:where(
+		a,
+		button,
+		input,
+		select,
+		textarea,
+		label,
+		p,
+		span,
+		strong,
+		small,
+		li,
+		td,
+		th,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6
+	),
+body.eliqauto-inventory-template
+	:where(
+		a,
+		button,
+		input,
+		select,
+		textarea,
+		label,
+		p,
+		span,
+		strong,
+		small,
+		li,
+		td,
+		th,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6
+	) {
+	font-family: var(--bc-font-body);
+	letter-spacing: 0;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.modal.active {
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+/* Vaul drawers (inventory + PDP): keep library-owned drag/focus behavior, but
+   shorten the default 0.5s open/close motion to match the faster CSS sheets. */
+[data-vaul-drawer],
+[data-vaul-overlay] {
+	animation-duration: 0.28s;
+	transition-duration: 0.28s;
+}
+
+.eliqauto-no-image-zoom.card-box.active .card--img,
+.eliqauto-no-image-zoom.card-box:hover .card--img,
+.eliqauto-no-image-zoom.card-box-style-1.active .card--img,
+.eliqauto-no-image-zoom.card-box-style-1:hover .card--img,
+.eliqauto-no-image-zoom.card-box-style-8.active .card--img,
+.eliqauto-no-image-zoom.card-box-style-8:hover .card--img,
+.eliqauto-no-image-zoom.card-box-style-9.active .card--img,
+.eliqauto-no-image-zoom.card-box-style-9:hover .card--img {
+	transform: none;
+}
+
+html .card-box.active .content .card-box__title a,
+html .card-box:hover .content .card-box__title a,
+html .card-box.active .card-box__title a,
+html .card-box:hover .card-box__title a,
+html .card-box.active .content .bottom .category a,
+html .card-box:hover .content .bottom .category a,
+html .card-box.active .bottom .category a,
+html .card-box:hover .bottom .category a,
+html .card-box .card-box__title a:hover,
+html .card-box .bottom .category a:hover {
+	text-decoration: none;
+}
+
+.eliqauto-no-image-zoom.post-style-2:hover .post--img,
+.eliqauto-no-image-zoom.post-style-3:hover .post--img img,
+.eliqauto-no-image-zoom.post-style-6:hover .post--img {
+	transform: none;
+}
+
+.eliqauto-no-image-zoom.image-effect-scale:hover img {
+	transform: none;
+}
+
+.sale-agent-box.active,
+.sale-agent-box:hover {
+	box-shadow: none;
+	transform: none;
+}
+
+.sale-agent-box.active .card-top img,
+.sale-agent-box:hover .card-top img {
+	transform: none;
+}
+
+.sale-agent-box .sale-agent-social li a:hover,
+.sale-agent-box .card-bottom .contact li a:hover {
+	border-color: var(--bc-border);
+	background-color: var(--bc-surface);
+}
+
+.eliqauto-no-image-zoom.card-box-style-1.active,
+.eliqauto-no-image-zoom.card-box-style-1:hover,
+.eliqauto-no-image-zoom.card-box-style-9.active,
+.eliqauto-no-image-zoom.card-box-style-9:hover,
+.eliqauto-calm-hover.active,
+.eliqauto-calm-hover:hover {
+	box-shadow: none;
+	transform: none;
+}
+
+.eliqauto-no-image-zoom.card-box-style-1 .image {
+	aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 992px) {
+	.card-box[data-eliqauto-slug] {
+		border: 0;
+		background: var(--bc-card-bg);
+		color: var(--bc-card-ink);
+		transition: background-color 0.22s ease;
+	}
+
+	.card-box[data-eliqauto-slug]:hover,
+	.card-box[data-eliqauto-slug]:focus-within {
+		background: var(--bc-card-hover);
+		box-shadow: none;
+	}
+
+	.card-box[data-eliqauto-slug] .image {
+		background: var(--bc-card-media);
+	}
+
+	.card-box[data-eliqauto-slug] .content {
+		background: var(--bc-card-bg);
+	}
+
+	.card-box[data-eliqauto-slug]:hover .content,
+	.card-box[data-eliqauto-slug]:focus-within .content {
+		background: var(--bc-card-hover);
+	}
+
+	.card-box[data-eliqauto-slug] .top .highlight {
+		border: 1px solid rgba(28, 28, 28, 0.1);
+		background: #ffffff;
+		box-shadow: 0 4px 12px rgba(28, 28, 28, 0.14);
+		color: var(--bc-card-ink);
+	}
+
+	.card-box[data-eliqauto-slug] .bottom .category {
+		border-color: rgba(255, 255, 255, 0.18);
+		background-color: var(--bc-card-pill);
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+	}
+
+	.card-box[data-eliqauto-slug]:hover .bottom .category,
+	.card-box[data-eliqauto-slug]:focus-within .bottom .category {
+		border-color: rgba(255, 255, 255, 0.24);
+		background-color: var(--bc-card-pill-hover);
+	}
+
+	.card-box[data-eliqauto-slug] .bottom .category a,
+	.card-box[data-eliqauto-slug]:hover .bottom .category a,
+	.card-box[data-eliqauto-slug]:focus-within .bottom .category a {
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	.card-box[data-eliqauto-slug] .content .tag li {
+		border-color: var(--bc-card-chip-border);
+		background: var(--bc-card-chip);
+	}
+
+	.card-box[data-eliqauto-slug] .content .tag li span {
+		color: #3d443a;
+	}
+
+	.card-box[data-eliqauto-slug] .card-box__price,
+	.card-box[data-eliqauto-slug] .eliqauto-card-price__amount {
+		color: var(--bc-card-ink);
+	}
+
+	.card-box[data-eliqauto-slug] .eliqauto-card-price__amount,
+	.card-box[data-eliqauto-slug]:hover .eliqauto-card-price__amount,
+	.card-box[data-eliqauto-slug]:focus-within .eliqauto-card-price__amount {
+		background: transparent;
+	}
+
+	.card-box[data-eliqauto-slug] .eliqauto-card-price__finance-link {
+		color: var(--bc-card-muted);
+	}
+}
+
+/* Keep high-level Bulgarian headings clear and deliberate in the storefront face. */
+.title-section h2,
+.eliqauto-compare-section h2,
+.eliqauto-featured-vehicles h2 {
+	font-weight: 650;
+	letter-spacing: 0;
+}
+
+/* The Auxero `capitalize` utility title-cases every word, which mis-cases
+   Bulgarian copy ("Основни данни" -> "Основни Данни", "Внос и покупка" ->
+   "Внос И Покупка"). The source strings are already correctly cased, so disable
+   capitalize for the Bulgarian locale only — English mode keeps title-casing.
+   The theme also bakes capitalize into FAQ accordion titles, blog card titles
+   and the 404 title, so those selectors need the same guard. */
+html[lang='bg'] .capitalize,
+html[lang='bg'] .flat-accordion .flat-toggle .toggle-title,
+html[lang='bg'] .post-style-6 .title,
+html[lang='bg'] .post-style-7 .title,
+html[lang='bg'] .error-page .title {
+	text-transform: none;
+}
+
+/* Desktop sell-your-car: keep the Auxero page, but rebalance the heavier
+   Eliqauto intake content so the first viewport feels intentional. */
+@media (min-width: 992px) {
+	body.auxero-template-sell-your-car-html .eliqauto-sell-hero {
+		background: #ffffff;
+		padding-bottom: 76px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-hero > .container > .tf-spacing-style3 {
+		height: 34px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-page-title {
+		margin-bottom: 0;
+		font-size: 42px;
+		font-weight: 500;
+		line-height: 48px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.95fr) minmax(480px, 1fr);
+		gap: 54px;
+		align-items: start;
+		margin: 0;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-hero-grid > [class*='col-'] {
+		width: auto;
+		max-width: none;
+		padding: 0;
+		flex: none;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-copy {
+		padding-top: 22px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-eyebrow {
+		font-size: 13px;
+		line-height: 18px;
+		letter-spacing: 0;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-copy h2 {
+		max-width: 560px;
+		font-size: 36px;
+		font-weight: 500;
+		line-height: 42px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-copy > p.text-secondary {
+		max-width: 560px;
+		font-size: 17px;
+		line-height: 26px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-checklist li {
+		align-items: flex-start;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-checklist p {
+		margin: 0;
+		font-size: 17px;
+		line-height: 24px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-actions {
+		flex-wrap: wrap;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-phone {
+		align-items: center;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-phone img {
+		width: 48px;
+		height: 48px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-phone p {
+		margin: 0;
+		line-height: 26px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-intake {
+		margin-top: 6px;
+		padding: 20px 24px 22px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-intake .overflow-x-auto {
+		margin-bottom: 18px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-intake .menu-tab-style7.large {
+		width: 100%;
+		padding: 4px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-intake .menu-tab-style7.large li {
+		min-height: 42px;
+		height: 42px;
+		padding: 0 22px;
+		font-size: 15px;
+		line-height: 20px;
+		white-space: nowrap;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-form .grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px;
+		margin-bottom: 18px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-form p.mb-8 {
+		margin-bottom: 6px;
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-form input.input-large {
+		height: 44px;
+		padding: 0 16px;
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-form button[type='submit'] {
+		height: 52px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-section-gap {
+		height: 54px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .mb-40 {
+		margin-bottom: 32px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process h2 {
+		font-weight: 500;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box-wrapper {
+		gap: 42px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box::before,
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box::after {
+		top: 33px;
+		width: calc(50% + 21px);
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box::before {
+		left: -21px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box::after {
+		right: -21px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box .number {
+		width: 68px;
+		height: 68px;
+		margin-bottom: 22px;
+		font-size: 28px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box a {
+		max-width: 240px;
+		font-size: 22px;
+		line-height: 28px;
+		text-align: center;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-process .sell-your-car-box p {
+		max-width: 265px;
+		margin: 0;
+		line-height: 26px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	body.auxero-template-sell-your-car-html .eliqauto-sell-hero-grid {
+		grid-template-columns: minmax(0, 1fr) minmax(430px, 1fr);
+		gap: 34px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-copy h2 {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	body.auxero-template-sell-your-car-html .eliqauto-sell-checklist p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+/* =====================================================================
+   MOBILE-ONLY POLISH — phones + the mobile nav drawer.
+   Desktop (>=992px) is intentionally left untouched.
+   ===================================================================== */
+
+/* Mobile drawer: the "Вход" (Login) button rendered white-on-white and was
+   invisible. Give it a legible secondary style + icon recolor. The
+   #main-nav-mobile scope only exists in the mobile drawer, so desktop is safe. */
+#main-nav-mobile .header-button-mobile {
+	flex-direction: column;
+	align-items: stretch;
+	gap: 12px;
+	width: 100%;
+	padding: 16px 20px 8px;
+}
+
+#main-nav-mobile .header-button-mobile .btn {
+	width: 100%;
+	height: 50px;
+	justify-content: center;
+}
+
+#main-nav-mobile .header-button-mobile .btn-primary-3 {
+	background-color: #ffffff;
+	color: #1c1c1c;
+}
+
+#main-nav-mobile .header-button-mobile .btn-primary-3 svg path {
+	stroke: #1c1c1c;
+}
+
+/* Mobile drawer: the drawer is dark (#1c1c1c) but reused the light-background
+   (dark-ink) header logo, so it was illegible/clipped. Swap to the dark-bg
+   logo asset that the footer already uses. */
+#main-nav-mobile .logo-mobile img {
+	display: none;
+}
+
+#main-nav-mobile .logo-mobile a {
+	display: block;
+	width: 168px;
+	height: 34px;
+	background: url('/assets/eliqauto/brand/eliqauto-logo-dark.svg') left center / contain no-repeat;
+}
+
+/* Comfortable >=44px touch targets for the compact header controls
+   (search, compare, wishlist, hamburger) on phones. */
+@media (max-width: 767.98px) {
+	.header-wrapper-style-4 .logo a,
+	body.inner-page .header-wrapper .logo a,
+	.dashboard-container .dashboard-content > .header .logo a,
+	.dashboard-container .dashboard-content > .header a.logo {
+		display: inline-flex;
+		min-height: 44px;
+		align-items: center;
+	}
+
+	body.auxero-template-home-05-html .header-wrapper-style-4 .logo-mobile,
+	body.auxero-template-home-05-html .header-wrapper-style-4 #main-nav-mobile .logo-mobile {
+		display: none;
+		visibility: hidden;
+	}
+
+	.eliqauto-inventory-desktop-route,
+	.eliqauto-sell-desktop-route,
+	.eliqauto-favorites-desktop-route {
+		display: none;
+	}
+
+	.header-wrapper-style-4 .mobile-button,
+	.header-wrapper-style-4 #searchToggle,
+	.header-wrapper-style-4 .header-action-btn.header-action-icon {
+		min-width: 44px;
+		min-height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* Hero category tabs were centered and clipped at the right edge. Left-align
+   and let them scroll horizontally (parent is already overflow-x:auto). */
+@media (max-width: 767.98px) {
+	.menu-tab.menu-tab-style1 {
+		margin-left: 0;
+		margin-right: 0;
+		justify-content: flex-start;
+		padding-left: 2px;
+		padding-right: 24px;
+	}
+}
+
+/* Scroll-to-top FAB: dark utility control so it never reads as a stray
+   duplicate of the green "Виж всички" section CTAs it floats over. */
+.progress-wrap {
+	background: #1c1c1c;
+	box-shadow: 0 10px 26px rgba(12, 21, 23, 0.22);
+}
+
+.progress-wrap .progress-circle path {
+	stroke: var(--bc-accent-on-dark);
+}
+
+/* Vehicle detail has a right-hand inquiry sidebar; the floating utility button
+   otherwise lands on top of form fields while the buyer is reading financing. */
+body.auxero-template-listing-details-3-html .progress-wrap {
+	display: none;
+}
+
+/* Scroll-to-top FAB: tuck tighter into the corner on phones. */
+@media (max-width: 767.98px) {
+	.progress-wrap {
+		right: 16px;
+		bottom: 16px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	body.inner-page .header-wrapper {
+		height: 64px;
+		min-height: 64px;
+	}
+
+	body.inner-page .header-wrapper .header.bg-white.header-style-1 {
+		height: 64px;
+		min-height: 64px;
+		border-bottom: 1px solid var(--bc-border);
+		box-shadow: none;
+	}
+
+	body.inner-page .header-wrapper .header-container-fluid,
+	body.inner-page .header-wrapper .header-inner {
+		height: 64px;
+		min-height: 64px;
+	}
+
+	body.inner-page .header-wrapper .header-container-fluid {
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+
+	body.inner-page .header-wrapper .logo {
+		display: flex;
+		width: 176px;
+		align-items: center;
+	}
+
+	body.inner-page .header-wrapper .logo img {
+		width: 142px;
+		max-width: 142px;
+		height: auto;
+		max-height: none;
+		filter: none;
+	}
+
+	body.inner-page .header-wrapper .logo-mobile,
+	body.inner-page .header-wrapper #main-nav,
+	body.inner-page .header-wrapper .header-button,
+	body.inner-page .header-wrapper .header-button-mobile,
+	body.inner-page .header-wrapper .header-actions,
+	body.inner-page .header-wrapper .mobile-button {
+		display: none;
+	}
+
+	body.inner-page .header-wrapper .main-nav-wrapper,
+	body.inner-page .header-wrapper .header-right {
+		width: auto;
+		margin-left: auto;
+		gap: 0;
+		justify-content: flex-end;
+	}
+
+	body.inner-page .header-wrapper .header-actions {
+		margin-left: auto;
+		gap: 8px;
+	}
+
+	body.inner-page .header-wrapper .mobile-button {
+		color: #a51717;
+	}
+
+	body.inner-page .header-wrapper + section.background-light,
+	body.inner-page .header-wrapper + section.mb-22.background-light {
+		display: none;
+	}
+
+	body.inner-page .header-wrapper + section.background-light + section.pb-100,
+	body.inner-page .header-wrapper + section.background-light + section.bg-white.pb-84,
+	body.inner-page .header-wrapper + section.background-light + section.py-100 {
+		padding-top: 32px;
+	}
+
+	body.inner-page .header-wrapper + section.background-light + section.pb-100 > .tf-spacing-style4 {
+		display: none;
+	}
+
+	body.inner-page .eliqauto-about-page__intro {
+		padding-top: 32px;
+	}
+
+	body.inner-page .title-section {
+		margin-bottom: 24px;
+	}
+
+	.dashboard-container .dashboard-content > .header.bg-white {
+		height: 64px;
+		min-height: 64px;
+		border-bottom: 1px solid var(--bc-border);
+		box-shadow: none;
+	}
+
+	.dashboard-container .dashboard-content > .header .header-container-fluid,
+	.dashboard-container .dashboard-content > .header .header-inner {
+		height: 64px;
+		min-height: 64px;
+	}
+
+	.dashboard-container .dashboard-content > .header .header-container-fluid {
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+
+	.dashboard-container .dashboard-content > .header .hidden.xl-show {
+		display: flex;
+		align-items: center;
+	}
+
+	.dashboard-container .dashboard-content > .header .logo {
+		display: flex;
+		align-items: center;
+	}
+
+	.dashboard-container .dashboard-content > .header .logo img {
+		width: 142px;
+		max-width: 142px;
+		height: auto;
+		max-height: none;
+	}
+
+	/* The mobile dashboard header intentionally shows the desktop (light-background,
+	   dark-text) logo above. The template's separate `.logo-mobile` (a dark-background,
+	   white-text asset) was ALSO rendering — two overlapping logos, the source of the
+	   broken "ELIQ … AUTO + arrow" jumble. Hide the duplicate. */
+	.dashboard-container .dashboard-content > .header .logo-mobile {
+		display: none;
+	}
+
+	.dashboard-container .dashboard-content > .header .header-right,
+	.dashboard-container .dashboard-content > .header .mobile-button {
+		display: none;
+	}
+
+	body.dashboard,
+	body.dashboard #wrapper,
+	body.dashboard .dashboard-container,
+	body.dashboard .dashboard-content {
+		background: var(--bc-bg);
+		background-color: var(--bc-bg);
+	}
+
+	body.dashboard .dashboard-content--inner {
+		padding: 18px 14px 92px;
+	}
+
+	body.dashboard .dashboard-content--inner > .h3 {
+		margin-bottom: 18px;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 36px;
+	}
+
+	body.dashboard .dashboard-toggle-btn {
+		min-height: 46px;
+		border: 1px solid var(--bc-border);
+		border-radius: 8px;
+		background: var(--bc-control);
+		box-shadow: none;
+		color: #1c1c1c;
+		padding: 0 18px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	body.dashboard .dashboard-toggle-btn:hover,
+	body.dashboard .dashboard-toggle-btn:focus-visible {
+		background: var(--bc-control-hover);
+	}
+
+	body.dashboard .core-dropdown__button,
+	body.dashboard .search-form-listing button,
+	body.dashboard .search-form-contact button,
+	body.dashboard .message-chat__actions .core-dropdown__button {
+		min-width: 44px;
+		min-height: 44px;
+	}
+
+	body.dashboard .search-form-listing button,
+	body.dashboard .search-form-contact button {
+		display: inline-flex;
+		width: 44px;
+		height: 44px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	body.dashboard .dashboard-box.bg-white {
+		border: 1px solid var(--bc-border);
+		background: var(--bc-surface);
+		box-shadow: none;
+	}
+
+	body.dashboard .dashboard-box input:not([type='checkbox']):not([type='radio']),
+	body.dashboard .dashboard-box select,
+	body.dashboard .dashboard-box textarea {
+		border-color: var(--bc-border);
+		background: #ffffff;
+		box-shadow: none;
+	}
+
+	body.dashboard .message-container,
+	body.dashboard .message-sidebar,
+	body.dashboard .message-chat {
+		border-color: var(--bc-border);
+		background: var(--bc-surface);
+	}
+
+	body.dashboard .message-search,
+	body.dashboard .message-chat__header,
+	body.dashboard .message-chat .message__action {
+		border-color: var(--bc-border);
+		background: var(--bc-surface);
+	}
+
+	body.dashboard .message-contact:hover,
+	body.dashboard .message-contact.active,
+	body.dashboard .message-chat__body {
+		background: var(--bc-surface-soft);
+	}
+
+	body.dashboard .message-search input,
+	body.dashboard .message-chat__input-field,
+	body.dashboard .message-item__text {
+		border-color: var(--bc-border);
+		background: #ffffff;
+		box-shadow: none;
+	}
+
+	.sale-agent-box .sale-agent-social li a,
+	.sale-agent-box .card-bottom .contact li a,
+	.sale-agent-box .btn.btn-small {
+		display: inline-flex;
+		min-width: 44px;
+		min-height: 44px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.eliqauto-favorite,
+	.card-box .heart {
+		display: inline-flex;
+		min-width: 44px;
+		min-height: 44px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.eliqauto-card-price__finance-link {
+		display: inline-flex;
+		min-height: 44px;
+		align-items: center;
+		margin-block: -14px;
+	}
+
+	.compare-item-remove-table {
+		min-width: 44px;
+		min-height: 44px;
+	}
+
+	.breadcrumb a,
+	ul.flex.items-center.flex-wrap a.text-white {
+		display: inline-flex;
+		min-width: 44px;
+		min-height: 44px;
+		align-items: center;
+	}
+
+	ul.flex.items-center.flex-wrap a.text-highlight {
+		display: inline-flex;
+		min-height: 44px;
+		align-items: center;
+		margin-block: -9px;
+		padding-block: 9px;
+	}
+
+	.card-box .card-box__title a,
+	.sale-agent-box .sale-agent-title {
+		display: inline-flex;
+		min-height: 44px;
+		align-items: center;
+		margin-block: -8px;
+		padding-block: 8px;
+	}
+
+	.card-box .category a.text-xs.text-white.uppercase {
+		display: inline-flex;
+		min-width: 44px;
+		min-height: 44px;
+		align-items: center;
+		justify-content: center;
+		margin-block: -12px;
+		padding-block: 12px;
+	}
+
+	.card-box .compare-details.btn.btn-small.open-modal,
+	.card-box .view-details {
+		display: inline-flex;
+		min-height: 44px;
+		align-items: center;
+	}
+
+	.swiper-pagination .swiper-pagination-bullet {
+		box-sizing: content-box;
+		width: 20px;
+		height: 20px;
+		margin: -12px 2px;
+		border: 12px solid transparent;
+		background-clip: padding-box;
+	}
+}
+
+@media (max-width: 767.98px) {
+	body.auxero-template-listing-grid3-columns-html,
+	body.auxero-template-listing-grid4-columns-html,
+	body.auxero-template-listing-gridstyle-halfmap-html,
+	body.auxero-template-listing-grid3-columns-html #wrapper,
+	body.auxero-template-listing-grid4-columns-html #wrapper,
+	body.auxero-template-listing-gridstyle-halfmap-html #wrapper {
+		background: #ffffff;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-banner,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-banner,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-banner,
+	body.auxero-template-listing-grid3-columns-html section.pb-100 > .container > h2,
+	body.auxero-template-listing-grid4-columns-html section.pb-100 > .container > h2,
+	body.auxero-template-listing-gridstyle-halfmap-html section.pb-100 > .container > h2,
+	body.auxero-template-listing-grid3-columns-html .eliqauto-view-toggle,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-view-toggle,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-view-toggle {
+		display: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html section.pb-100,
+	body.auxero-template-listing-grid4-columns-html section.pb-100,
+	body.auxero-template-listing-gridstyle-halfmap-html section.pb-100 {
+		background: #ffffff;
+		padding-top: 12px;
+		padding-bottom: 88px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html section.pb-100 > .container,
+	body.auxero-template-listing-grid4-columns-html section.pb-100 > .container,
+	body.auxero-template-listing-gridstyle-halfmap-html section.pb-100 > .container,
+	body.auxero-template-listing-grid3-columns-html .flat-tabs[data-custom='true'],
+	body.auxero-template-listing-grid4-columns-html .flat-tabs[data-custom='true'],
+	body.auxero-template-listing-gridstyle-halfmap-html .flat-tabs[data-custom='true'] {
+		width: 100%;
+		max-width: none;
+		padding-right: 14px;
+		padding-left: 14px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar {
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+		background: #ffffff;
+		box-shadow: none;
+		padding: 10px 0 12px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__row,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__row,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__row {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__primary,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__primary,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__primary {
+		order: 1;
+		grid-template-columns: minmax(0, 1fr) auto;
+		width: 100%;
+		height: 48px;
+		min-height: 48px;
+		border: 1px solid var(--bc-border);
+		border-radius: 8px;
+		background: var(--bc-surface);
+		padding: 4px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__search,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__search,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__search {
+		min-width: 0;
+		padding: 0 12px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__search input,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__search input,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__search input {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__submit,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__submit,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__submit {
+		width: 82px;
+		height: 40px;
+		min-height: 40px;
+		border-radius: 7px;
+		padding: 0;
+		font-size: 14px;
+		line-height: 40px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__filter,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__filter,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__filter {
+		order: 2;
+		align-self: flex-start;
+		width: max-content;
+		min-width: 106px;
+		min-height: 42px;
+		gap: 8px;
+		border: 1px solid var(--bc-border);
+		border-radius: 8px;
+		background: var(--bc-surface);
+		padding: 0 13px;
+		color: #1c1c1c;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-searchbar__filter span,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-searchbar__filter span,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-searchbar__filter span {
+		display: inline-block;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-brand-pills,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-brand-pills,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-brand-pills {
+		margin-top: 10px;
+		margin-right: -14px;
+		margin-left: -14px;
+		padding: 0 14px 2px;
+		scrollbar-width: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .tf-spacing-style3,
+	body.auxero-template-listing-grid4-columns-html .tf-spacing-style3,
+	body.auxero-template-listing-gridstyle-halfmap-html .tf-spacing-style3 {
+		height: 16px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-brand-pills .menu-tab-style2,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-brand-pills .menu-tab-style2,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-brand-pills
+		.menu-tab-style2 {
+		gap: 8px;
+		padding-right: 14px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-quick-pill,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-quick-pill,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-quick-pill,
+	body.auxero-template-listing-grid3-columns-html .eliqauto-quick-pill a,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-quick-pill a,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-quick-pill a {
+		min-height: 42px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-quick-pill,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-quick-pill,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-quick-pill {
+		border-color: var(--bc-border);
+		border-radius: 8px;
+		background: var(--bc-surface);
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-quick-pill a,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-quick-pill a,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-quick-pill a {
+		padding: 0 13px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 18px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-toolbar-row,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-toolbar-row,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-toolbar-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 9px;
+		margin: 8px 0 12px;
+		border: 0;
+		border-radius: 0;
+		background: #ffffff;
+		box-shadow: none;
+		padding: 0;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-toolbar-row > [class*='col-'],
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-toolbar-row > [class*='col-'],
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-toolbar-row
+		> [class*='col-'] {
+		width: 100%;
+		max-width: none;
+		flex: none;
+		padding: 0;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-toolbar-row
+		> [class*='col-']:nth-child(2),
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-toolbar-row
+		> [class*='col-']:nth-child(2),
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-toolbar-row
+		> [class*='col-']:nth-child(2),
+	body.auxero-template-listing-grid3-columns-html #filterDivider,
+	body.auxero-template-listing-grid4-columns-html #filterDivider,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterDivider {
+		display: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-result-count,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-result-count,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-result-count {
+		display: block;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-result-count p,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-result-count p,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-result-count p {
+		color: #1c1c1c;
+		font-size: 13px;
+		line-height: 18px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-toolbar-row .justify-end,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-toolbar-row .justify-end,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-toolbar-row .justify-end {
+		justify-content: flex-start;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-toolbar-row .core-dropdown,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-toolbar-row .core-dropdown,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-toolbar-row
+		.core-dropdown {
+		width: 100%;
+		min-width: 0;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-toolbar-row
+		.core-dropdown__button,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-toolbar-row
+		.core-dropdown__button,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-toolbar-row
+		.core-dropdown__button {
+		min-height: 46px;
+		border: 1px solid var(--bc-border);
+		background: var(--bc-surface);
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterResults,
+	body.auxero-template-listing-grid4-columns-html #filterResults,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterResults {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		align-items: center;
+		margin: 0 0 12px;
+		color: #1c1c1c;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterResults > p,
+	body.auxero-template-listing-grid4-columns-html #filterResults > p,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterResults > p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterTags,
+	body.auxero-template-listing-grid4-columns-html #filterTags,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterTags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterResults .select-item,
+	body.auxero-template-listing-grid4-columns-html #filterResults .select-item,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterResults .select-item,
+	body.auxero-template-listing-grid3-columns-html #btnClearAll,
+	body.auxero-template-listing-grid4-columns-html #btnClearAll,
+	body.auxero-template-listing-gridstyle-halfmap-html #btnClearAll {
+		min-height: var(--bc-touch);
+		border-radius: 999px;
+		font-size: var(--bc-text-control);
+		font-weight: 700;
+		line-height: 20px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-content,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-content,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-content {
+		border: 0;
+		border-radius: 0;
+		background: #ffffff;
+		box-shadow: none;
+		padding: 0;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.content-inner
+		> .grid,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.content-inner
+		> .grid,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.content-inner
+		> .grid {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-content .card-box-style-1,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-content .card-box-style-1,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1 {
+		display: grid;
+		grid-template-columns: 132px minmax(0, 1fr);
+		min-height: 168px;
+		overflow: hidden;
+		border: 1px solid var(--bc-border);
+		border-radius: 8px;
+		background: var(--bc-surface);
+		box-shadow: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image {
+		grid-column: 1;
+		grid-row: 1;
+		width: 132px;
+		height: 100%;
+		min-height: 168px;
+		aspect-ratio: auto;
+		border-radius: 8px 0 0 8px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image
+		img,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image
+		img,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image
+		img {
+		width: 100%;
+		height: 100%;
+		border-radius: 8px 0 0 8px;
+		object-fit: cover;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.content {
+		grid-column: 2;
+		grid-row: 1;
+		min-width: 0;
+		border: 0;
+		background: var(--bc-surface);
+		padding: 10px 10px 9px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1,
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.image {
+		background: #ffffff;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-desktop-route
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.content {
+		background: #fff8f8;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.bottom,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.bottom,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.bottom {
+		display: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top {
+		right: auto;
+		left: 0;
+		width: 132px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top
+		.highlight,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top
+		.highlight,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top
+		.highlight {
+		top: 8px;
+		left: 8px;
+		min-height: 32px;
+		border-radius: 7px;
+		padding: 0 8px;
+		font-size: var(--bc-text-micro);
+		font-weight: 800;
+		line-height: 32px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top
+		.heart,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top
+		.heart,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.top
+		.heart {
+		display: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.card-box__title,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.card-box__title,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.card-box-style-1
+		.card-box__title {
+		min-height: auto;
+		margin-bottom: 6px;
+		font-size: 15px;
+		font-weight: 800;
+		line-height: 20px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-content .eliqauto-card-specs,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-content .eliqauto-card-specs,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 5px;
+		margin-bottom: 6px;
+		overflow: hidden;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs
+		li,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs
+		li,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs
+		li {
+		display: flex;
+		flex: 1 1 0;
+		font-size: var(--bc-text-caption);
+		justify-content: flex-start;
+		line-height: 18px;
+		min-width: 0;
+		padding: 5px 6px;
+		white-space: nowrap;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs
+		li
+		span,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs
+		li
+		span,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-specs
+		li
+		span {
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-content .eliqauto-card-price,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-content .eliqauto-card-price,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 1px;
+		margin-bottom: 7px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__amount,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__amount,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__amount {
+		font-size: 18px;
+		font-weight: 800;
+		line-height: 22px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__finance,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__finance,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__finance {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__monthly,
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__finance-link,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__monthly,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__finance-link,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__monthly,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-price__finance-link {
+		font-size: var(--bc-text-caption);
+		line-height: 18px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .eliqauto-inventory-content .divider,
+	body.auxero-template-listing-grid4-columns-html .eliqauto-inventory-content .divider,
+	body.auxero-template-listing-gridstyle-halfmap-html .eliqauto-inventory-content .divider {
+		margin-bottom: 7px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions {
+		gap: 7px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.compare-details,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.compare-details,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.compare-details {
+		height: var(--bc-touch);
+		min-width: auto;
+		padding: 0 12px;
+		font-size: var(--bc-text-control);
+		line-height: var(--bc-touch);
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.compare-details
+		svg,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.compare-details
+		svg,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.compare-details
+		svg {
+		width: 14px;
+		height: 14px;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.view-details,
+	body.auxero-template-listing-grid4-columns-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.view-details,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.eliqauto-inventory-content
+		.eliqauto-card-actions
+		.view-details {
+		min-width: 0;
+		font-size: var(--bc-text-control);
+		font-weight: 800;
+		line-height: 20px;
+		white-space: nowrap;
+	}
+}
+
+/* ── Near-static motion ────────────────────────────────────────────────
+   Resale buyers expect a fast, calm page, so the template's scroll-reveal
+   and load-in animations are switched off. Template button fills remain
+   owned by Auxero's original classes. */
+.wow {
+	visibility: visible;
+	opacity: 1;
+	animation: none;
+}
+
+.effect-item,
+.effect-up,
+.effect-zoom-item {
+	opacity: 1;
+	transform: none;
+	animation: none;
+}
+
+.btn.btn-primary-3.eliqauto-section-cta,
+.btn.btn-primary-3.eliqauto-section-cta:hover,
+.btn.btn-primary-3.eliqauto-section-cta:focus-visible,
+.btn.btn-primary-3.eliqauto-section-cta:active,
+.eliqauto-type-gallery__cta,
+.eliqauto-type-gallery__cta:hover,
+.eliqauto-type-gallery__cta:focus-visible,
+.eliqauto-type-gallery__cta:active {
+	background-color: #a51717;
+	border-color: #a51717;
+	color: #ffffff;
+	transform: none;
+}
+
+.btn.btn-primary-3.eliqauto-section-cta:hover,
+.btn.btn-primary-3.eliqauto-section-cta:focus-visible,
+.btn.btn-primary-3.eliqauto-section-cta:active,
+.eliqauto-type-gallery__cta:hover,
+.eliqauto-type-gallery__cta:focus-visible,
+.eliqauto-type-gallery__cta:active {
+	background-color: #8a1414;
+	border-color: #8a1414;
+	color: #ffffff;
+}
+
+.btn.btn-primary-3.eliqauto-section-cta svg,
+.eliqauto-type-gallery__cta svg {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Enforced section-heading scale. Every band heading lives in `.title-section`
+   but each component hardcoded its own weight (mostly 500), so headings read
+   LIGHTER than the 600 CTAs beside them. Lock one spec: bigger + 700, so the
+   heading is the heaviest thing in the band and the hierarchy reads correctly.
+   ────────────────────────────────────────────────────────────────────────── */
+html
+	body[class*='auxero-template-']
+	.title-section
+	:is(h2, .h2, .h3, .eliqauto-title-desktop, .eliqauto-title-mobile, .eliqauto-title-swap),
+html
+	body.eliqauto-inventory-template
+	.title-section
+	:is(h2, .h2, .h3, .eliqauto-title-desktop, .eliqauto-title-mobile) {
+	font-size: clamp(40px, 3.5vw, 52px);
+	font-weight: 700;
+	line-height: 1.16;
+	letter-spacing: 0;
+}
+
+html body.auxero-template-listing-details-3-html .eliqauto-pdp-desktop .title-section h1 {
+	font-size: clamp(40px, 2.85vw, 44px);
+	font-weight: 750;
+	line-height: 1.12;
+	letter-spacing: 0;
+}
+
+/* White is correct only for the circular icon-button variant (white glyph on
+   a green circle). The plain `.view-details` text link lives on light cards
+   (home) where white = invisible; it sets its own ink per component, and the
+   inventory template re-darkens its own copy below. Scope white to the circle
+   variant only. */
+.eliqauto-card-actions .eliqauto-card-detail-circle,
+.eliqauto-card-actions .view-details.eliqauto-card-detail-circle {
+	color: #ffffff;
+}
+
+.eliqauto-card-actions .eliqauto-card-detail-circle:hover,
+.eliqauto-card-actions .eliqauto-card-detail-circle:focus-visible,
+.eliqauto-card-actions .view-details.eliqauto-card-detail-circle:hover,
+.eliqauto-card-actions .view-details.eliqauto-card-detail-circle:focus-visible {
+	background-color: #a51717;
+	border-color: #a51717;
+	color: #2a0c0c;
+}
+
+.eliqauto-card-actions .eliqauto-card-detail-circle::after,
+.eliqauto-card-actions .view-details.eliqauto-card-detail-circle::after {
+	display: none;
+}
+
+.eliqauto-card-actions .eliqauto-card-detail-circle svg,
+.eliqauto-card-actions .view-details.eliqauto-card-detail-circle svg {
+	display: none;
+}
+
+body.eliqauto-inventory-template .eliqauto-inventory-content .eliqauto-card-actions .view-details {
+	width: auto;
+	min-width: 0;
+	height: auto;
+	min-height: 0;
+	border: 0;
+	background: transparent;
+	color: #1c1c1c;
+	font-size: 15px;
+	font-weight: 800;
+	line-height: 22px;
+	padding: 0;
+	text-decoration: none;
+}
+
+body.eliqauto-inventory-template
+	.eliqauto-inventory-content
+	.eliqauto-card-actions
+	.view-details::before,
+body.eliqauto-inventory-template
+	.eliqauto-inventory-content
+	.eliqauto-card-actions
+	.view-details::after {
+	display: none;
+}
+
+body.eliqauto-inventory-template
+	.eliqauto-inventory-content
+	.eliqauto-card-actions
+	.view-details
+	img {
+	display: inline-block;
+}
+
+/* ── Desktop hover system ──────────────────────────────────────────────
+   Keep desktop controls responsive without Auxero's older sliding fills,
+   lift transforms, zooms, or glow/shadow-heavy feedback. */
+@media (min-width: 992px) {
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.eliqauto-home-two-shell
+		)
+		:where(
+			.btn,
+			button,
+			[role='button'],
+			.header-action-btn,
+			.icon-button,
+			.core-dropdown__button,
+			.eliqauto-favorite,
+			.heart,
+			.car-box,
+			.menu-tab-style2,
+			.filter-select-dropdown__button,
+			.view-details,
+			.compare-details,
+			.eliqauto-section-cta,
+			.eliqauto-type-gallery__cta,
+			.dash-icon-button,
+			.dash-user-button,
+			.dash-primary-button,
+			.dash-secondary-button
+		) {
+		transition:
+			background-color var(--bc-motion-hover),
+			border-color var(--bc-motion-hover),
+			color var(--bc-motion-hover),
+			filter var(--bc-motion-hover),
+			opacity var(--bc-motion-hover);
+	}
+
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.eliqauto-home-two-shell
+		)
+		:where(
+			.btn,
+			button,
+			[role='button'],
+			.header-action-btn,
+			.icon-button,
+			.core-dropdown__button,
+			.eliqauto-favorite,
+			.heart,
+			.car-box,
+			.menu-tab-style2,
+			.filter-select-dropdown__button,
+			.compare-details,
+			.eliqauto-section-cta,
+			.eliqauto-type-gallery__cta,
+			.dash-icon-button,
+			.dash-user-button,
+			.dash-primary-button,
+			.dash-secondary-button
+		):where(:hover, :focus-visible, :active) {
+		box-shadow: none;
+		transform: none;
+	}
+
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.eliqauto-home-two-shell
+		)
+		:where(.btn, .btn-line-hover, .hover-fill-white, .hover-stroke-white)::before,
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.eliqauto-home-two-shell
+		)
+		:where(.btn, .btn-line-hover, .hover-fill-white, .hover-stroke-white)::after {
+		display: none;
+		width: 0;
+		height: 0;
+		background: transparent;
+		content: none;
+		opacity: 0;
+		transform: none;
+		transition: none;
+	}
+
+	:where(body[class*='auxero-template-'], .search-modal)
+		:where(
+			.btn-primary,
+			.btn-primary-3,
+			.bg-sign-in,
+			button[type='submit'],
+			.eliqauto-section-cta,
+			.eliqauto-type-gallery__cta,
+			.eliqauto-sell-form button[type='submit'],
+			.search-form-listing button,
+			.search-form-contact button
+		):where(:hover, :focus-visible, :active),
+	body.dashboard :where(.dash-primary-button):where(:hover, :focus-visible, :active),
+	.site-header :where(.header-pill--solid):where(:hover, :focus-visible),
+	.search-modal :where(.search-modal__form .btn):where(:hover, :focus-visible),
+	.eliqauto-home-two-shell
+		:where(
+			button[type='submit'],
+			a[class*='cta'],
+			a[class*='action'],
+			.home2-browse-cta,
+			.home2-header__action
+		):where(:hover, :focus-visible) {
+		border-color: var(--bc-hover-accent);
+		background: var(--bc-hover-accent);
+		background-color: var(--bc-hover-accent);
+		color: var(--bc-hover-accent-ink);
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .eliqauto-home-two-shell)
+		:where(
+			.btn-line-style-2,
+			.btn-line-hover,
+			.btn-filter,
+			.core-dropdown__button,
+			.filter-select-dropdown__button,
+			.car-box,
+			.menu-tab-style2,
+			.dashboard-toggle-btn,
+			.dash-secondary-button,
+			.dash-user-button
+		):where(:hover, :focus-visible, :active),
+	.site-header :where(.header-pill--outline):where(:hover, :focus-visible),
+	.search-modal :where(.search-modal__close):where(:hover, :focus-visible),
+	.eliqauto-home-two-shell :where(summary, .home2-search__tabs a):where(:hover, :focus-visible) {
+		border-color: var(--bc-hover-border);
+		background: var(--bc-hover-surface);
+		background-color: var(--bc-hover-surface);
+		color: var(--bc-hover-quiet-ink);
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .site-header, .eliqauto-home-two-shell)
+		:where(.header-action-btn, .icon-button, .eliqauto-favorite, .heart, .dash-icon-button):where(
+			:hover,
+			:focus-visible,
+			:active
+		) {
+		border-color: var(--bc-hover-accent);
+		background: var(--bc-hover-accent);
+		background-color: var(--bc-hover-accent);
+		color: var(--bc-hover-accent-ink);
+		opacity: 1;
+	}
+
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.eliqauto-home-two-shell
+		)
+		:where(
+			.btn,
+			button,
+			[role='button'],
+			.header-action-btn,
+			.icon-button,
+			.eliqauto-favorite,
+			.heart,
+			.car-box,
+			.menu-tab-style2,
+			.filter-select-dropdown__button,
+			.compare-details,
+			.dash-icon-button,
+			.dash-primary-button,
+			.dash-secondary-button
+		):where(:hover, :focus-visible, :active)
+		:where(svg, svg *) {
+		color: currentColor;
+		stroke: currentColor;
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .site-header, .eliqauto-home-two-shell)
+		:where(.eliqauto-favorite, .heart, .btn-icon-circle):where(:hover, :focus-visible, :active)
+		:where(svg path) {
+		fill: none;
+		stroke: currentColor;
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .site-header, .eliqauto-home-two-shell)
+		:where(.eliqauto-favorite.is-active, .heart.is-active):where(:hover, :focus-visible, :active)
+		:where(svg path) {
+		fill: currentColor;
+		stroke: currentColor;
+	}
+
+	:where(body[class*='auxero-template-'], .eliqauto-home-two-shell)
+		:where(
+			.card-box__title a,
+			.view-details,
+			.eliqauto-card-price__finance-link,
+			.sale-agent-title,
+			.post-title a,
+			.breadcrumb a
+		):where(:hover, :focus-visible),
+	.site-header :where(.site-nav__link):where(:hover, :focus-visible),
+	.eliqauto-home-two-shell
+		:where(a:not([class*='cta']):not([class*='action'])):where(:hover, :focus-visible) {
+		background: transparent;
+		color: var(--bc-hover-accent);
+		text-decoration: none;
+	}
+
+	:where(body[class*='auxero-template-'])
+		:where(.view-details, .eliqauto-card-price__finance-link):where(:hover, :focus-visible)
+		img {
+		filter: brightness(0) saturate(100%) invert(45%) sepia(45%) saturate(962%) hue-rotate(38deg)
+			brightness(92%) contrast(89%);
+		opacity: 0.95;
+	}
+
+	:where(body[class*='auxero-template-'])
+		:where(.compare-details.open-modal, .compare-details.btn):where(
+			:hover,
+			:focus-visible,
+			:active
+		) {
+		border-color: var(--bc-hover-accent);
+		background: var(--bc-hover-accent);
+		background-color: var(--bc-hover-accent);
+		color: var(--bc-hover-accent-ink);
+	}
+
+	:where(body[class*='auxero-template-'])
+		:where(.compare-details.open-modal, .compare-details.btn):where(:hover, :focus-visible, :active)
+		:where(svg, svg *) {
+		color: currentColor;
+		stroke: currentColor;
+	}
+}

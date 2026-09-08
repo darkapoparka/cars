@@ -1,0 +1,266 @@
+[
+  {
+    "file": "src\\lib\\components\\about\\DesktopAboutPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [\n    'Unexpected href link without resolve(). at line 59, column 13',\n    'Unexpected href link without resolve(). at line 78, column 14',\n    'Unexpected href link without resolve(). at line 210, column 11'\n  ],\n  suggestions: [],\n  require_another_tool_call_after_fixing: true\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\about\\DesktopDealerProfilePage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\about\\MobileAboutPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\blog\\BlogArticlePage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\blog\\BlogIndexPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\calculator\\CalculatorContent.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\chat\\ChatThread.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\contact\\DesktopContactPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\contact\\MobileContactPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [\n    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',\n    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.'\n  ],\n  require_another_tool_call_after_fixing: true\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailDealerPanel.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailLocationMap.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [ 'Unexpected href link without resolve(). at line 28, column 10' ],\n  suggestions: [],\n  require_another_tool_call_after_fixing: true\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DesktopDetailReviews.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\detail\\desktop\\DetailPageShell.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\detail\\mobile\\MobileDetailPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\financing\\DesktopFinancingPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\financing\\MobileFinancingPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeHero.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeInventoryPreview.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeReviews.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\desktop\\DesktopHomeVideos.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\HomePageHead.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\mobile\\MobileHeader.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\home\\mobile\\MobileHome.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\inventory\\desktop\\InventoryMapPageShell.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\inventory\\mobile\\MobileInventoryPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\layout\\DayNightFooter.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\layout\\DesktopDealerFooter.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\layout\\RouteImageBehavior.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [\n    \"You are calling the function `enhanceRouteImages` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling the function `ensureMainLandmark` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling the function `enhanceRouteImages` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling the function `ensureMainLandmark` inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\"\n  ],\n  require_another_tool_call_after_fixing: true\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\layout\\SiteHeader.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\reviews\\DesktopPublicReviewsPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\reviews\\ReviewsContent.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\n    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.',\n    'The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.'\n  ],\n  require_another_tool_call_after_fixing: true\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\seo\\RouteSeo.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\services\\DesktopServicesPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\services\\MobileServicesPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\shared\\MobileHeroBar.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\team\\DesktopTeamPage.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\lib\\components\\terms\\TermsContent.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\routes\\+error.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\routes\\contact\\+page.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\routes\\favorites\\+page.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\routes\\presentation\\home2\\+page.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  },
+  {
+    "file": "src\\routes\\presentation\\home3\\+page.svelte",
+    "status": 0,
+    "output": "Detected file path, reading file...\n{\n  issues: [],\n  suggestions: [],\n  require_another_tool_call_after_fixing: false\n}\n",
+    "error": ""
+  }
+]

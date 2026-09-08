@@ -1,0 +1,1068 @@
+<svelte:options runes={true} />
+
+    
+    <div class="preloader">
+      <div class="loader-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    
+
+    
+    <header class="header header-2">
+      
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrap">
+            <div class="header-top-left">
+              <div class="header-top-list">
+                <ul>
+                  <li>
+                    <a href="mailto:info@example.com"><i class="far fa-envelopes"></i> info@example.com</a>
+                  </li>
+                  <li>
+                    <a href="tel:+359877733110"><i class="far fa-phone-volume"></i> 0877 733 110</a>
+                  </li>
+                  <li>
+                    <a href="#top"><i class="far fa-alarm-clock"></i> Sun - Fri (08AM - 10PM)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-top-right">
+              <div class="header-top-list">
+                <a href="/login.html"><i class="far fa-sign-in"></i>Login</a>
+              </div>
+              <div class="header-top-lang">
+                <div class="dropdown">
+                  <a href="#top" class="top-lang dropdown-toggle" data-bs-toggle="dropdown"><i class="fal fa-globe"></i> Eng</a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#top">English</a></li>
+                    <li><a class="dropdown-item" href="#top">German</a></li>
+                    <li><a class="dropdown-item" href="#top">Russian</a></li>
+                    <li><a class="dropdown-item" href="#top">Spanish</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header-top-social">
+                <span>Follow Us: </span>
+                <a href="#top" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#top" aria-label="x twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#top" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#top" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="main-navigation">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container position-relative">
+            <a class="navbar-brand" href="/index.html" aria-label="Day &amp; Night home">
+              <img src="/daynight/day-night-logo.png" alt="logo">
+            </a>
+            <div class="mobile-menu-right">
+              <div class="mobile-menu-btn">
+                <button type="button" class="nav-right-link search-box-outer" aria-label="Search"><i class="far fa-search"></i></button>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a href="/index.html" class="offcanvas-brand" id="offcanvasNavbarLabel" aria-label="Day &amp; Night home">
+                  <img src="/daynight/day-night-logo.png" alt="">
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <i class="far fa-xmark"></i>
+                </button>
+              </div>
+              <div class="offcanvas-body gap-xl-4">
+                <ul class="navbar-nav justify-content-end flex-grow-1">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#top" data-bs-toggle="dropdown">Home</a>
+                    <ul class="dropdown-menu fade-down">
+                      <li><a class="dropdown-item" href="/index.html">Home Demo 01</a></li>
+                      <li><a class="dropdown-item" href="/index-2.html">Home Demo 02</a></li>
+                      <li><a class="dropdown-item" href="/index-3.html">Home Demo 03</a></li>
+                      <li><a class="dropdown-item" href="/index-4.html">Home Demo 04</a></li>
+                      <li><a class="dropdown-item" href="/index-5.html">Home Demo 05</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#top" data-bs-toggle="dropdown">Cars</a>
+                    <ul class="dropdown-menu fade-down">
+                      <li><a class="dropdown-item" href="/car.html">Cars One</a></li>
+                      <li><a class="dropdown-item" href="/car-2.html">Cars Two</a></li>
+                      <li><a class="dropdown-item" href="/car-single.html">Car Single</a></li>
+                      <li><a class="dropdown-item" href="/car-type.html">Car Type</a></li>
+                      <li><a class="dropdown-item" href="/car-brand.html">Car Brands</a></li>
+                      <li><a class="dropdown-item" href="/car-booking.html">Car Booking</a></li>
+                      <li><a class="dropdown-item" href="/car-checkout.html">Car Checkout</a></li>
+                      <li><a class="dropdown-item" href="/car-booking-confirm.html">Booking Confirm</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#top" data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu fade-down">
+                      <li><a class="dropdown-item" href="/about.html">About Us</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#top">My Account</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/dashboard.html">Dashboard</a></li>
+                          <li><a class="dropdown-item" href="/profile.html">My Profile</a></li>
+                          <li><a class="dropdown-item" href="/profile-booking.html">My Booking</a></li>
+                          <li><a class="dropdown-item" href="/profile-cancel-booking.html">Cancel Booking</a></li>
+                          <li><a class="dropdown-item" href="/profile-wishlist.html">My Wishlist</a></li>
+                          <li><a class="dropdown-item" href="/profile-payment.html">Payment History</a></li>
+                          <li><a class="dropdown-item" href="/profile-setting.html">Settings</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#top">Authentication</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/login.html">Login</a></li>
+                          <li><a class="dropdown-item" href="/register.html">Register</a></li>
+                          <li><a class="dropdown-item" href="/forgot-password.html">Forgot Password</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="/team.html">Our Team</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#top">Drivers</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/driver.html">Drivers</a></li>
+                          <li><a class="dropdown-item" href="/driver-single.html">Driver Single</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#top">Extra Pages</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/coming-soon.html">Coming Soon</a></li>
+                          <li><a class="dropdown-item" href="/booking-cancel-policy.html">Booking Cancel Policy</a></li>
+                          <li><a class="dropdown-item" href="/terms.html">Terms Of Service</a></li>
+                          <li><a class="dropdown-item" href="/privacy.html">Privacy Policy</a></li>
+                          <li><a class="dropdown-item" href="/mail-success.html">Mail Success</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="/book-ride.html">Book A Ride</a></li>
+                      <li><a class="dropdown-item" href="/car-rate.html">Our Car Rate</a></li>
+                      <li><a class="dropdown-item" href="/gallery.html">Gallery</a></li>
+                      <li><a class="dropdown-item" href="/help.html">Help Center</a></li>
+                      <li><a class="dropdown-item" href="/faq.html">Faq's</a></li>
+                      <li><a class="dropdown-item" href="/testimonial.html">Testimonials</a></li>
+                      <li><a class="dropdown-item" href="/404.html">404 Error</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#top" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu fade-down">
+                      <li><a class="dropdown-item" href="/service.html">Services One</a></li>
+                      <li><a class="dropdown-item" href="/service-2.html">Services Two</a></li>
+                      <li><a class="dropdown-item" href="/service-single.html">Service Single</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#top" data-bs-toggle="dropdown">Blog</a>
+                    <ul class="dropdown-menu fade-down">
+                      <li><a class="dropdown-item" href="/blog.html">Blog</a></li>
+                      <li><a class="dropdown-item" href="/blog-single.html">Blog Single</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-right">
+                  <div class="search-btn">
+                    <button type="button" class="nav-right-link search-box-outer" aria-label="Search"><i class="far fa-search"></i></button>
+                  </div>
+                  <div class="nav-btn">
+                    <a href="/book-ride.html" class="theme-btn"><span class="far fa-car"></span> Book A Car</a>
+                  </div>
+                  <button type="button" class="sidebar-btn nav-right-link" data-bs-toggle="offcanvas" data-bs-target="#sidebarPopup" aria-label="sidebar btn nav right link">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+    </header>
+    
+
+    
+    <div class="search-popup">
+      <button class="close-search" type="button" aria-label="close search"><span class="far fa-times"></span></button>
+      <form action="#">
+        <div class="form-group">
+          <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required="" aria-label="Search Here...">
+          <button type="submit" aria-label="Search"><i class="far fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+    
+
+    
+    <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
+      <div class="offcanvas-header">
+        <a href="/index.html" class="sidebar-popup-logo" aria-label="Day &amp; Night home">
+          <img src="/daynight/day-night-logo.png" alt="">
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="far fa-xmark"></i>
+        </button>
+      </div>
+      <div class="sidebar-popup-wrap offcanvas-body">
+        <div class="sidebar-popup-content">
+          <div class="sidebar-popup-about">
+            <h4>About Us</h4>
+            <p>
+              There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or
+              randomised words which don't look even slightly believable.
+            </p>
+          </div>
+          <div class="sidebar-popup-contact">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="far fa-envelope"></i>
+                </div>
+                <div class="content">
+                  <h5>Email</h5>
+                  <a href="mailto:info@example.com">info@example.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="far fa-phone"></i>
+                </div>
+                <div class="content">
+                  <h5>Phone</h5>
+                  <a href="tel:+359877733110">0877 733 110</a>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="far fa-location-dot"></i>
+                </div>
+                <div class="content">
+                  <h5>Address</h5>
+                  <a href="#top">25/B Milford Road, New York</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-popup-social">
+            <h4>Follow Us</h4>
+            <a href="#top" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#top" aria-label="x twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#top" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#top" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <main class="main">
+      
+      <div class="site-breadcrumb ng-mt" style="background: url(/assets/img/breadcrumb/01.jpg)">
+        <div class="container">
+          <h3 class="breadcrumb-title">Car Single</h3>
+          <ul class="breadcrumb-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li class="active">Car Single</li>
+          </ul>
+        </div>
+      </div>
+      
+
+      
+      <div class="car-single bg py-120">
+        <div class="container">
+          <div class="car-single-wrap">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="car-single-details">
+                  <div class="car-single-widget">
+                    <div class="car-single-top">
+                      <div>
+                        <h3 class="title">Mercedes Benz Car</h3>
+                        <ul class="meta">
+                          <li>
+                            <span class="rate"><i class="far fa-star-half-stroke"></i> 4.5</span> 1.5k Reviews
+                          </li>
+                          <li><i class="fas fa-dollar-circle"></i> <span>Rate:</span> $2.30/km</li>
+                          <li><i class="fas fa-check-circle"></i> <span>Booking Fee:</span> $0.99</li>
+                        </ul>
+                      </div>
+                      <span class="type">Luxuary Car</span>
+                    </div>
+                    <div class="car-single-slider-wrap">
+                      <div class="car-single-slider owl-carousel">
+                        <div class="item">
+                          <img src="/assets/img/car/slider-1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="/assets/img/car/slider-2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="/assets/img/car/slider-3.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="/assets/img/car/slider-4.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="car-single-dots">
+                        <img src="/assets/img/car/slider-1.jpg" data-index="0" alt="">
+                        <img src="/assets/img/car/slider-2.jpg" data-index="1" alt="">
+                        <img src="/assets/img/car/slider-3.jpg" data-index="2" alt="">
+                        <img src="/assets/img/car/slider-4.jpg" data-index="3" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="car-single-widget">
+                    <h4 class="mb-4">Key Information</h4>
+                    <div class="car-key-info">
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-car-side-bolt"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Doors</span>
+                              <h4>2 Doors</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-person-seat"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Travelers</span>
+                              <h4>4 Travelers</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-suitcase-rolling"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Luggage Carry</span>
+                              <h4>3 Luggage</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-steering-wheel"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Transmission</span>
+                              <h4>Autometic</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-calendar-days"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Build Year</span>
+                              <h4>2026</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-gas-pump"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Fuel Type</span>
+                              <h4>Diesel</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-heat"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Air Condition</span>
+                              <h4>Yes</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-map-location-dot"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>GPS Navigatio</span>
+                              <h4>Yes</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-user-pilot"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Driver Choose</span>
+                              <h4>Yes</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-engine"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>Engine Size</span>
+                              <h4>2,000 (cc)</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                          <div class="car-key-item">
+                            <div class="car-key-icon">
+                              <i class="far fa-registered"></i>
+                            </div>
+                            <div class="car-key-content">
+                              <span>VIN</span>
+                              <h4>682GAFDRTD</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="car-single-widget">
+                    <div class="car-single-overview">
+                      <h4 class="mb-3">Description</h4>
+                      <div class="mb-4">
+                        <p>
+                          There are many variations of passages orem psum available but the majority have suffered alteration in some form
+                          by injected humour or randomised words which don't look even slightly believable. If you are going to use a
+                          passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All
+                          the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary making this the first
+                          true generator on the internet.
+                        </p>
+                        <p class="mt-2">
+                          It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+                          its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed
+                          to using Content here content here making it look like readable English.
+                        </p>
+                      </div>
+                      <h4 class="mb-3">Car Features</h4>
+                      <div class="row mb-3">
+                        <div class="col-lg-4">
+                          <ul class="car-single-list">
+                            <li><i class="far fa-check-circle"></i> Multi-zone A/C</li>
+                            <li><i class="far fa-check-circle"></i> Heated front seats</li>
+                            <li><i class="far fa-check-circle"></i> Navigation system</li>
+                            <li><i class="far fa-check-circle"></i> Leather seats</li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-4">
+                          <ul class="car-single-list">
+                            <li><i class="far fa-check-circle"></i> Premium sound system</li>
+                            <li><i class="far fa-check-circle"></i> Bluetooth</li>
+                            <li><i class="far fa-check-circle"></i> Andriod Auto</li>
+                            <li><i class="far fa-check-circle"></i> Intermittent wipers</li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-4">
+                          <ul class="car-single-list">
+                            <li><i class="far fa-check-circle"></i> Memory seat</li>
+                            <li><i class="far fa-check-circle"></i> Adaptive Cruise Control</li>
+                            <li><i class="far fa-check-circle"></i> Cooled Seats</li>
+                            <li><i class="far fa-check-circle"></i> Keyles Start</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4 class="mb-4">Vehicle History</h4>
+                      <div class="mb-4">
+                        <ul class="car-single-list">
+                          <li><i class="far fa-check-circle"></i> It is a long established fact that a reader will be distracted</li>
+                          <li><i class="far fa-check-circle"></i> Sed perspic unde omnis iste natus sit voluptatem accusantium</li>
+                          <li><i class="far fa-check-circle"></i> Explain to you how all this mistaken idea of denouncing pleasure</li>
+                          <li><i class="far fa-check-circle"></i> Praising pain was born will give account of the system</li>
+                        </ul>
+                      </div>
+                      <h4 class="mb-4">Location</h4>
+                      <div class="car-single-map">
+                        <div class="contact-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194156103!2d-74.03927096447748!3d40.759040329405195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a01c8df6fb3cb8!2sSolomon%20R.%20Guggenheim%20Museum!5e0!3m2!1sen!2sbd!4v1619410634508!5m2!1sen!2s" style="border: 0" allowfullscreen="" loading="lazy" title="Location map"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="car-single-widget">
+                    <div class="blog-single car-single-review">
+                      <div class="blog-comment">
+                        <h3>Reviews (20)</h3>
+                        <div class="blog-comment-wrap">
+                          <div class="blog-comment-item mt-0">
+                            <img src="/assets/img/blog/com-1.jpg" alt="thumb">
+                            <div class="blog-comment-content">
+                              <h4>Rosa Fossum</h4>
+                              <span><i class="far fa-clock"></i> Jan 23, 2026</span>
+                              <p>
+                                There are many variations of passages the majority have suffered in some injected humour or randomised words
+                                which don't look even slightly believable.
+                              </p>
+                              <a href="#top"><i class="far fa-reply"></i> Reply</a>
+                            </div>
+                          </div>
+                          <div class="blog-comment-item reply">
+                            <img src="/assets/img/blog/com-2.jpg" alt="thumb">
+                            <div class="blog-comment-content">
+                              <h4>Timothy Stone</h4>
+                              <span><i class="far fa-clock"></i> Jan 23, 2026</span>
+                              <p>
+                                There are many variations of passages the majority have suffered in some injected humour or randomised words
+                                which don't look even slightly believable.
+                              </p>
+                              <a href="#top"><i class="far fa-reply"></i> Reply</a>
+                            </div>
+                          </div>
+                          <div class="blog-comment-item">
+                            <img src="/assets/img/blog/com-3.jpg" alt="thumb">
+                            <div class="blog-comment-content">
+                              <h4>Stacey Anthony</h4>
+                              <span><i class="far fa-clock"></i> Jan 23, 2026</span>
+                              <p>
+                                There are many variations of passages the majority have suffered in some injected humour or randomised words
+                                which don't look even slightly believable.
+                              </p>
+                              <a href="#top"><i class="far fa-reply"></i> Reply</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="blog-comment-form">
+                          <h3>Leave A Review</h3>
+                          <form action="#">
+                            <div class="row">
+                              <div class="col-lg-6 col-xl-4">
+                                <div class="form-group">
+                                  <div class="form-icon">
+                                    <i class="far fa-user-tie"></i>
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name*" required="" aria-label="Your Name*">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-xl-5">
+                                <div class="form-group">
+                                  <div class="form-icon">
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email*" required="" aria-label="Your Email*">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-12 col-xl-3">
+                                <div class="form-group">
+                                  <div class="form-icon">
+                                    <i class="far fa-star"></i>
+                                    <select class="form-select" aria-label="Rating">
+                                      <option value="">Rating</option>
+                                      <option value="1">5</option>
+                                      <option value="2">4</option>
+                                      <option value="3">3</option>
+                                      <option value="2">2</option>
+                                      <option value="1">1</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <div class="form-icon">
+                                    <i class="far fa-pen"></i>
+                                    <textarea name="message" cols="30" rows="5" class="form-control" placeholder="Your Comment*" required="" aria-label="Your Comment*"></textarea>
+                                  </div>
+                                </div>
+                                <button type="submit" class="theme-btn">Leave Review <i class="far fa-paper-plane"></i></button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="car-single-widget">
+                  <h4 class="car-single-price">$10,560</h4>
+                  <div class="car-single-top mb-0">
+                    <ul class="meta">
+                      <li><i class="far fa-sack-dollar"></i> For 20 Days Rent</li>
+                      <li><i class="far fa-location-dot"></i> 25/B Milford, NY</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="car-single-widget">
+                  <div class="car-single-author">
+                    <img src="/assets/img/team/01.jpg" alt="">
+                    <div class="car-single-author-content">
+                      <h4>Marida Andsia</h4>
+                      <span>Expert Driver</span>
+                      <div class="car-single-author-social">
+                        <a href="#top" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#top" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#top" aria-label="x twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#top" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="car-single-widget">
+                  <h4 class="mb-3">Book Your Ride</h4>
+                  <div class="car-single-form">
+                    <form action="#">
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-location-dot"></i>
+                          <select class="select" name="pu-location" data-slim-search="true" aria-label="Pick Up Location">
+                            <option value="">Pick Up Location</option>
+                            <option value="1">Broadway, New York</option>
+                            <option value="2">Brooklyn, New York</option>
+                            <option value="3">Cooper Square, New York</option>
+                            <option value="4">Metrotech Center, New York</option>
+                            <option value="5">East 10th Street, New York</option>
+                            <option value="6">Washington Pl, New York</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-calendar-range"></i>
+                          <input type="text" class="form-control date-picker" data-datetime="true" name="pu-date" placeholder="Pick Up Date &amp; Time" aria-label="Pick Up Date &amp; Time">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-location-dot"></i>
+                          <select class="select" data-slim-search="true" name="do-location" aria-label="Drop Off Location">
+                            <option value="">Drop Off Location</option>
+                            <option value="1">Broadway, New York</option>
+                            <option value="2">Brooklyn, New York</option>
+                            <option value="3">Cooper Square, New York</option>
+                            <option value="4">Metrotech Center, New York</option>
+                            <option value="5">East 10th Street, New York</option>
+                            <option value="6">Washington Pl, New York</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-calendar-range"></i>
+                          <input type="text" class="form-control date-picker" data-datetime="true" name="do-date" placeholder="Drop Off Date &amp; Time" aria-label="Drop Off Date &amp; Time">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-circle-half-stroke"></i>
+                          <select class="select" data-slim-search="true" name="brands" aria-label="Car Brands">
+                            <option value="">Car Brands</option>
+                            <option value="1">BMW</option>
+                            <option value="2">Toyota</option>
+                            <option value="3">Honda</option>
+                            <option value="4">Ford</option>
+                            <option value="5">Volkswagen</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-car"></i>
+                          <select class="select" data-slim-search="true" name="car-model" aria-label="Choose Car Model">
+                            <option value="">Choose Car Model</option>
+                            <option value="1">All Model</option>
+                            <option value="2">BMW SUV M8, 2025</option>
+                            <option value="2">Toyota SUV RAV4, 2025</option>
+                            <option value="3">Honda CR-V, 2024</option>
+                            <option value="4">Ford F-150, 2025</option>
+                            <option value="5">Volkswagen VW, 2025</option>
+                            <option value="6">Hyundai SUV Creta, 2024</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-user-tie-hair"></i>
+                          <select class="select" name="passenger" aria-label="Traveler">
+                            <option value="">Traveler</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-icon">
+                          <i class="far fa-user-pilot"></i>
+                          <select class="select" name="driver-age" aria-label="Driver Age">
+                            <option value="">Driver Age</option>
+                            <option value="1">Any Age</option>
+                            <option value="2">25-30</option>
+                            <option value="3">30-35</option>
+                            <option value="4">35-40</option>
+                            <option value="5">40-45</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button class="theme-btn" type="submit">Book Your Car<i class="fas fa-arrow-right"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="car-area car-single-related mt-5">
+              <h3 class="mb-30">Related Listing</h3>
+              <div class="row g-3">
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div class="car-item wow fadeInUp" data-wow-delay=".2s">
+                    <div class="car-top">
+                      <span class="type">Sedan</span>
+                      <a href="#top" class="favorite-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="car-img">
+                      <img src="/assets/img/car/01.png" alt="">
+                    </div>
+                    <div class="car-content">
+                      <h4><a href="/car-single.html">Toyota sedan rav4</a></h4>
+                      <div class="car-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (58.5k Review)</span>
+                      </div>
+                      <ul class="info-list">
+                        <li><i class="far fa-steering-wheel"></i>Automatic</li>
+                        <li><i class="far fa-user-tie"></i>4 Traveler</li>
+                        <li><i class="far fa-car"></i>Model: 2025</li>
+                        <li><i class="far fa-gas-pump"></i>Hybrid</li>
+                        <li><i class="far fa-road"></i>10.15km / 1-litre</li>
+                      </ul>
+                    </div>
+                    <div class="car-bottom">
+                      <span class="car-price">$80 <sub>/day</sub></span>
+                      <a href="#top" class="theme-btn">Details<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div class="car-item wow fadeInUp" data-wow-delay=".4s">
+                    <div class="car-top">
+                      <span class="type">Sports</span>
+                      <a href="#top" class="favorite-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="car-img">
+                      <img src="/assets/img/car/02.png" alt="">
+                    </div>
+                    <div class="car-content">
+                      <h4><a href="/car-single.html">Toyota sub rav4</a></h4>
+                      <div class="car-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (58.5k Review)</span>
+                      </div>
+                      <ul class="info-list">
+                        <li><i class="far fa-steering-wheel"></i>Automatic</li>
+                        <li><i class="far fa-user-tie"></i>4 Traveler</li>
+                        <li><i class="far fa-car"></i>Model: 2025</li>
+                        <li><i class="far fa-gas-pump"></i>Hybrid</li>
+                        <li><i class="far fa-road"></i>10.15km / 1-litre</li>
+                      </ul>
+                    </div>
+                    <div class="car-bottom">
+                      <span class="car-price">$80 <sub>/day</sub></span>
+                      <a href="#top" class="theme-btn">Details<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div class="car-item wow fadeInUp" data-wow-delay=".6s">
+                    <div class="car-top">
+                      <span class="type">SUV</span>
+                      <a href="#top" class="favorite-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="car-img">
+                      <img src="/assets/img/car/03.png" alt="">
+                    </div>
+                    <div class="car-content">
+                      <h4><a href="/car-single.html">Toyota sub rav4</a></h4>
+                      <div class="car-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (58.5k Review)</span>
+                      </div>
+                      <ul class="info-list">
+                        <li><i class="far fa-steering-wheel"></i>Automatic</li>
+                        <li><i class="far fa-user-tie"></i>4 Traveler</li>
+                        <li><i class="far fa-car"></i>Model: 2025</li>
+                        <li><i class="far fa-gas-pump"></i>Hybrid</li>
+                        <li><i class="far fa-road"></i>10.15km / 1-litre</li>
+                      </ul>
+                    </div>
+                    <div class="car-bottom">
+                      <span class="car-price">$80 <sub>/day</sub></span>
+                      <a href="#top" class="theme-btn">Details<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div class="car-item wow fadeInUp" data-wow-delay=".8s">
+                    <div class="car-top">
+                      <span class="type">Compact</span>
+                      <a href="#top" class="favorite-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="car-img">
+                      <img src="/assets/img/car/04.png" alt="">
+                    </div>
+                    <div class="car-content">
+                      <h4><a href="/car-single.html">Toyota sub rav4</a></h4>
+                      <div class="car-rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (58.5k Review)</span>
+                      </div>
+                      <ul class="info-list">
+                        <li><i class="far fa-steering-wheel"></i>Automatic</li>
+                        <li><i class="far fa-user-tie"></i>4 Traveler</li>
+                        <li><i class="far fa-car"></i>Model: 2025</li>
+                        <li><i class="far fa-gas-pump"></i>Hybrid</li>
+                        <li><i class="far fa-road"></i>10.15km / 1-litre</li>
+                      </ul>
+                    </div>
+                    <div class="car-bottom">
+                      <span class="car-price">$80 <sub>/day</sub></span>
+                      <a href="#top" class="theme-btn">Details<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
+    
+    <footer class="footer-area footer-2 pb-40">
+      <div class="footer-shape">
+        <img src="/assets/img/shape/02.png" alt="">
+      </div>
+      <div class="footer-widget">
+        <div class="container">
+          <div class="footer-widget-wrap pt-100 pb-50">
+            <div class="row g-4">
+              <div class="col-lg-5">
+                <div class="footer-widget-box about-us">
+                  <a href="#top" class="footer-logo" aria-label="Day &amp; Night home">
+                    <img src="/daynight/day-night-logo.png" alt="">
+                  </a>
+                  <p>
+                    We are many variations of passages available but the majority have suffered alteration some form by injected humour
+                    words believable.
+                  </p>
+                  <div class="footer-payment mt-30">
+                    <h4>We Accept Payment Gateway</h4>
+                    <div class="payment-wrap">
+                      <div class="payment-img">
+                        <img class="paypal" src="/assets/img/payment/paypal.png" alt="">
+                      </div>
+                      <div class="payment-img">
+                        <img class="master" src="/assets/img/payment/master-card.png" alt="">
+                      </div>
+                      <div class="payment-img">
+                        <img class="visa" src="/assets/img/payment/visa.png" alt="">
+                      </div>
+                      <div class="payment-img">
+                        <img class="google" src="/assets/img/payment/google-pay.png" alt="">
+                      </div>
+                      <div class="payment-img">
+                        <img class="amex" src="/assets/img/payment/american-express.png" alt="">
+                      </div>
+                      <div class="payment-img">
+                        <img class="discover" src="/assets/img/payment/discover.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-2">
+                <div class="footer-widget-box list">
+                  <h4 class="footer-widget-title">Company</h4>
+                  <ul class="footer-list">
+                    <li>
+                      <a href="/about.html"><i class="far fa-angle-double-right"></i>About Us</a>
+                    </li>
+                    <li>
+                      <a href="/blog.html"><i class="far fa-angle-double-right"></i>Update News</a>
+                    </li>
+                    <li>
+                      <a href="/testimonial.html"><i class="far fa-angle-double-right"></i>Testimonials</a>
+                    </li>
+                    <li>
+                      <a href="/contact.html"><i class="far fa-angle-double-right"></i>Contact Us</a>
+                    </li>
+                    <li>
+                      <a href="/terms.html"><i class="far fa-angle-double-right"></i>Terms Of Service</a>
+                    </li>
+                    <li>
+                      <a href="/privacy.html"><i class="far fa-angle-double-right"></i>Privacy policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 col-lg-2">
+                <div class="footer-widget-box list">
+                  <h4 class="footer-widget-title">Quick Links</h4>
+                  <ul class="footer-list">
+                    <li>
+                      <a href="/book-ride.html"><i class="far fa-angle-double-right"></i>Book A Ride</a>
+                    </li>
+                    <li>
+                      <a href="/faq.html"><i class="far fa-angle-double-right"></i>FAQ's</a>
+                    </li>
+                    <li>
+                      <a href="/help.html"><i class="far fa-angle-double-right"></i>Booking Tips</a>
+                    </li>
+                    <li>
+                      <a href="/help.html"><i class="far fa-angle-double-right"></i>Help &amp; Support</a>
+                    </li>
+                    <li>
+                      <a href="/car.html"><i class="far fa-angle-double-right"></i>Our Cars</a>
+                    </li>
+                    <li>
+                      <a href="/contact.html"><i class="far fa-angle-double-right"></i>Join Our Team</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="footer-widget-box">
+                  <h4 class="footer-widget-title">Get In Touch</h4>
+                  <ul class="footer-contact">
+                    <li>
+                      <div class="icon">
+                        <i class="far fa-location-dot"></i>
+                      </div>
+                      <div class="content">
+                        <h5>Our Address</h5>
+                        <p>ул. „Атанас Манчев“ 18, София</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <i class="far fa-phone"></i>
+                      </div>
+                      <div class="content">
+                        <h5>Call Us</h5>
+                        <a href="tel:+359877733110">0877 733 110</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <i class="far fa-envelope"></i>
+                      </div>
+                      <div class="content">
+                        <h5>Mail Us</h5>
+                        <a href="mailto:info@example.com">info@example.com</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 align-self-center">
+              <p class="copyright-text">© Copyright <span id="date"></span> <a href="#top"> Day &amp; Night </a> All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 align-self-center">
+              <ul class="footer-social">
+                <li>
+                  <a href="#top" aria-label="facebook f"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#top" aria-label="x twitter"><i class="fab fa-x-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#top" aria-label="linkedin in"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="#top" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+    
+    <a href="#top" id="scroll-top" aria-label="Back to top"><i class="far fa-arrow-up"></i></a>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+

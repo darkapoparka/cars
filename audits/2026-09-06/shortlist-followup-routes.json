@@ -1,0 +1,16 @@
+[
+  {
+    "key": "shortlist-carwow",
+    "port": 6517,
+    "label": "import-actual",
+    "settle": 400,
+    "route": "/contact?intent=import"
+  },
+  {
+    "key": "shortlist-import",
+    "port": 6518,
+    "label": "home-settled",
+    "settle": 10000,
+    "route": "/"
+  }
+]

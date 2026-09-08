@@ -1,0 +1,43 @@
+export const brand = {
+  "name": "Иво Ауто",
+  "latinName": "IVO AUTO",
+  "shortName": "Иво Ауто",
+  "phoneDisplay": "0878 720 035",
+  "phoneHref": "tel:+359878720035",
+  "secondaryPhone": "0898 300 036",
+  "address": "бул. „Цар Освободител“ 256, Варна",
+  "city": "Варна",
+  "country": "България",
+  "email": "",
+  "hours": [],
+  "hoursNote": "Свържете се за работно време и оглед.",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
+  "stockUrl": "https://ivoauto-varna.mobile.bg/",
+  "website": null,
+  "socialLinks": {},
+  "logo": "/assets/ivo-auto/wordmark.svg",
+  "logoLight": "/assets/ivo-auto/wordmark-light.svg",
+  "logoStatus": "Temporary text wordmark, not an official logo",
+  "accent": "#222222",
+  "accentNote": "Neutral temporary identity; official brand colours not verified",
+  "services": [
+    "Продажба на автомобили",
+    "Бартер според обявата",
+    "Лизинг според обявата"
+  ],
+  "stockCount": 16,
+  "stockSnapshotDate": "2026-09-07",
+  "stockNote": "Подбрани публикувани обяви; наличностите и условията се потвърждават с Иво Ауто.",
+  "sources": [
+    "https://ivoauto-varna.mobile.bg/",
+    "https://ivoauto-varna.mobile.bg/contacts",
+    "https://ivoauto-varna.mobile.bg/about"
+  ],
+  "addressLine": "бул. „Цар Освободител“ 256",
+  "phone": "0878 720 035",
+  "appointment": "Свържете се за работно време и оглед.",
+  "youtubeUrl": "https://ivoauto-varna.mobile.bg/",
+  "instagramUrl": "https://ivoauto-varna.mobile.bg/",
+  "facebookUrl": "https://ivoauto-varna.mobile.bg/"
+} as const;

@@ -1,0 +1,3 @@
+$ node ../../scripts/next-typegen.mjs && tsc --noEmit --emitDeclarationOnly false
+Generating route types...
+✓ Types generated successfully

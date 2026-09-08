@@ -1,0 +1,32 @@
+[
+  {
+    "port": 6517,
+    "placeholder": "Марка, модел или ключова дума",
+    "url": "http://127.0.0.1:6517/inventory?q=BMW",
+    "headings": [
+      "Бързи връзки",
+      "Покупка и продажба"
+    ]
+  },
+  {
+    "port": 6518,
+    "placeholder": "Търси по марка, модел, година, гориво, екстри...",
+    "url": "http://127.0.0.1:6518/inventory?layout=classic&keyword=BMW",
+    "headings": [
+      "BMW X5 40i M Sport Shadow Line",
+      "BMW X4 M Competition",
+      "BMW X5 40i Black Vermilion",
+      "BMW X3 30e xDrive",
+      "BMW 850 GC xDrive Shadow Line",
+      "BMW X7 40i M Sport Shadow Line",
+      "BMW M3 V8 M DCT",
+      "BMW M3 Cabrio M DCT",
+      "BMW X6 M50i xDrive Shadow Line",
+      "BMW X5 40i M Sport Shadow Line",
+      "BMW X5 xdrive 40i M-Sport",
+      "BMW 740 Завиващ заден мост",
+      "БЪРЗИ ВРЪЗКИ",
+      "ПОКУПКА И ПРОДАЖБА"
+    ]
+  }
+]

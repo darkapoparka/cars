@@ -1,0 +1,109 @@
+{
+  "client": "legend-auto",
+  "name": "LEGEND AUTO",
+  "template": "carwow",
+  "port": 6668,
+  "startedAt": "2026-09-07T22:31:13.198Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/inventory\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/inventory\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "DETAIL",
+      "error": "No vehicle detail link found"
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/contact\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/about\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/about\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/inventory\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/inventory\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "DETAIL",
+      "error": "No vehicle detail link found"
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/contact\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/about\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/about\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/inventory\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/inventory\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "error": "page.goto: net::ERR_UNSAFE_PORT at http://127.0.0.1:6668/inventory\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6668/inventory\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "runtime": {
+    "Template": "carwow",
+    "Project": "J:\\cars\\clients\\legend-auto\\carwow",
+    "PID": 31880,
+    "Port": 6668,
+    "Url": "http://127.0.0.1:6668",
+    "Stdout": "J:\\cars\\runtime\\carwow-6668-20260908-013114.out.log",
+    "Stderr": "J:\\cars\\runtime\\carwow-6668-20260908-013114.err.log",
+    "Status": "started-not-yet-browser-verified",
+    "status": "stopped-after-verification"
+  },
+  "pass": false
+}

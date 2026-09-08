@@ -1,0 +1,972 @@
+{
+  "schemaVersion": 1,
+  "key": "auto-best",
+  "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
+  "destination": "J:\\cars\\templates\\auto-best",
+  "copiedAt": "2026-09-06T14:14:49.865Z",
+  "sourceUrl": "http://127.0.0.1:5173/",
+  "git": {
+    "root": "M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/autodeal-best-day-night",
+    "branch": "main",
+    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
+    "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
+    "status": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/about-us/about.css\n M src/routes/contact/contact.css\n M src/routes/listing-grid/listing.css\n?? static/assets/images/lead/day-night-about-detail-v1.webp\n?? static/assets/images/lead/day-night-contact-detail-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp",
+    "headAfterCopy": "ab92ce9671fb1b56afa38f693755b41aee9c28b0"
+  },
+  "files": [
+    {
+      "path": "ASSET_PROVENANCE.md",
+      "bytes": 20261,
+      "sha256": "0284de9c7904689b0df6435da9cdb1d024ea22e99d90b77b13b8b245836fa291"
+    },
+    {
+      "path": "docs/architecture/.migration-marker",
+      "bytes": 193,
+      "sha256": "1ba90a1069331d8f5283fb546b7fe73f3596eae28b440f484c4727a92d43cb86"
+    },
+    {
+      "path": "docs/architecture/README.md",
+      "bytes": 7199,
+      "sha256": "f9e23d4789779ed27286e51e874f0d7974eabd7db7a94e2213a121dfe59a2140"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 78666,
+      "sha256": "9e9d03327224086f01ec6de7d0d5b85816aabe92fd354f504825ad306db1f90d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1204,
+      "sha256": "23e0195643d89f623756eb984ae3e726609b131550865442cda0cbacb30eeefd"
+    },
+    {
+      "path": "PRODUCT.md",
+      "bytes": 2128,
+      "sha256": "4a671507afa97f22465acee1bc19dd863655e395b6430c743da955bc2b4a8f60"
+    },
+    {
+      "path": "provenance/hugeicons-LICENSE.txt",
+      "bytes": 1338,
+      "sha256": "50714aa0930b7ec52a08c79f608bf360841e9ef2ade5917ccc6551695570057f"
+    },
+    {
+      "path": "provenance/mirror-manifest.json",
+      "bytes": 67581,
+      "sha256": "4534b039345912e60ca0f634ada4882ba9e9e166f5f5b8b50bd5a0fb089f4d62"
+    },
+    {
+      "path": "provenance/phosphor-icons-LICENSE.txt",
+      "bytes": 1092,
+      "sha256": "ddbe6082ec3cf979db47e5af549d2849c5d6182b3e005ef91ce1dbb9eb122f11"
+    },
+    {
+      "path": "provenance/README.md",
+      "bytes": 1026,
+      "sha256": "6339af1ad39ee64136cd3637fab9f4bd70abc5a7ce14341e4dad6068491552c9"
+    },
+    {
+      "path": "provenance/simple-icons-LICENSE.md",
+      "bytes": 6569,
+      "sha256": "9046848b63a5c92bff14e4accca80bd987e0623b74adf9226ce5198d312b79d5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4992,
+      "sha256": "ecf340d0bf7999fac58132551327239a6fa9194b5874ae151d634a259034b790"
+    },
+    {
+      "path": "REUSE_GUIDE.md",
+      "bytes": 2294,
+      "sha256": "a12cc36c04621533c330e1065baeeea86f513a3f2574ea0266ce7c5a9ba0f4b6"
+    },
+    {
+      "path": "scripts/check-architecture.mjs",
+      "bytes": 5438,
+      "sha256": "1fbba0a95299d0e257d15f5550120193ddd771dd76f2b5011963a99f2b1a0eb1"
+    },
+    {
+      "path": "scripts/check-assets.mjs",
+      "bytes": 3725,
+      "sha256": "d543af978a76f3f653689a68b6f3e672fe3b8c23b8a9b95c5af39d682ec84544"
+    },
+    {
+      "path": "scripts/desktop-discovery-smoke.mjs",
+      "bytes": 6471,
+      "sha256": "542418452d5144404f4a8d4b98e1722092522795e421c1769484d808e86faf75"
+    },
+    {
+      "path": "scripts/enquiry-smoke.mjs",
+      "bytes": 8537,
+      "sha256": "8c721e4ba503826e52899ce3398c1e1258537fd9dfcf6a70d8e6f7e0815cc06a"
+    },
+    {
+      "path": "scripts/mobile-filter-smoke.mjs",
+      "bytes": 6403,
+      "sha256": "6ef2cc5ddbc378f8f049c30207790948a59862878831550d7347ad59a6814b7b"
+    },
+    {
+      "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
+      "bytes": 5474,
+      "sha256": "0d59888bfd2feda3dee279de297545b745cad2e2bbeb76c00ac296b8cb60e8ab"
+    },
+    {
+      "path": "scripts/provenance/legacy-mirror-snapshot-check.mjs",
+      "bytes": 1935,
+      "sha256": "a0c8d53864bbd4fb9108be6dee3abb21be361f951f1b305c062792a93216c090"
+    },
+    {
+      "path": "scripts/sveltekit-smoke.mjs",
+      "bytes": 145550,
+      "sha256": "1189449286c318bdf5a1e183390712634a0b5af9e4d71b8cd0fdbb714a114b7f"
+    },
+    {
+      "path": "SOURCE_LICENSE.md",
+      "bytes": 2263,
+      "sha256": "c77be97a4d764a3cb369bb2789458a1c89ca38e54b4238da39f2b29841f3964f"
+    },
+    {
+      "path": "src/app.css",
+      "bytes": 27875,
+      "sha256": "2a723a894f92068c5d21b4deea66f544a0c8c5ccd8d0a4b2deea2b0c571babd5"
+    },
+    {
+      "path": "src/app.html",
+      "bytes": 404,
+      "sha256": "3bac60bfee8d1682bb7ec04e4255a070e8a327bcecc3350b6b705b9a651dc07c"
+    },
+    {
+      "path": "src/hooks.server.ts",
+      "bytes": 2243,
+      "sha256": "0317247034a0396c8a8540f6188725f7f8e4a6ffb09460e0d3f9e64fc3bb1edd"
+    },
+    {
+      "path": "src/lib/components/company/AboutHero.svelte",
+      "bytes": 1223,
+      "sha256": "19de9362b84916c971090057dd5d6cbff7b60e33fa6993d9128b858e972c539e"
+    },
+    {
+      "path": "src/lib/components/company/AboutPartners.svelte",
+      "bytes": 3050,
+      "sha256": "d364d18635bdd04a26cd66015fb68ac3e90a874c4be7565a60f657d9b5fca57c"
+    },
+    {
+      "path": "src/lib/components/company/AboutProcess.svelte",
+      "bytes": 1446,
+      "sha256": "2e3bb0133049624d2ffab8da4d71c4ef57212f0e92308306b83fd316b7f58c72"
+    },
+    {
+      "path": "src/lib/components/company/AboutServiceIcon.svelte",
+      "bytes": 16297,
+      "sha256": "d81137b45db0b31759ea99832c5c29c4ef3aec54207453adbaea13533a0209b4"
+    },
+    {
+      "path": "src/lib/components/company/AboutTeam.svelte",
+      "bytes": 6639,
+      "sha256": "ad243036f9079c5e1ae2c5da36a1b7457d1b1d6874707e6f9ce91f2535365a37"
+    },
+    {
+      "path": "src/lib/components/company/ContactHero.svelte",
+      "bytes": 2892,
+      "sha256": "95f996f12cdddf9cca916cdbf049edc3ec1e01978438454fd5cc83a5e74fbe41"
+    },
+    {
+      "path": "src/lib/components/company/ContactIntent.svelte",
+      "bytes": 10330,
+      "sha256": "8de2140770fa8cd527ec9b7315c1949d996d93493c6549e796efcedbd72d75ff"
+    },
+    {
+      "path": "src/lib/components/company/ShowroomMap.svelte",
+      "bytes": 2072,
+      "sha256": "707692a5f7a1d33d5971aec6d35bff7ee8d6fbdaa302d739221c5d45366b1622"
+    },
+    {
+      "path": "src/lib/components/company/SocialBrandIcon.svelte",
+      "bytes": 3443,
+      "sha256": "90dd7eafa720e4b875a8802e84e8ec8039f029d76d173d2e2831a422cd6fd3fc"
+    },
+    {
+      "path": "src/lib/components/company/TeamSocialIcon.svelte",
+      "bytes": 3142,
+      "sha256": "da897ba1ec38b32a2435f6763a5ab2a70b8eaff8f09ba949459f56d4b815c74a"
+    },
+    {
+      "path": "src/lib/components/company/VehicleEnquiry.svelte",
+      "bytes": 23777,
+      "sha256": "f013bd8b063c8545c4284806bf2dc81478f98846a57e1002fcef356b7a09258f"
+    },
+    {
+      "path": "src/lib/components/editorial/BlogCard.svelte",
+      "bytes": 3934,
+      "sha256": "488d7e18e0536a528b2544b54c878a0bea548c212787d79faaf26309ec77fa71"
+    },
+    {
+      "path": "src/lib/components/editorial/BlogHero.svelte",
+      "bytes": 2319,
+      "sha256": "58d5ddb916f4bcee91c53a626fe0e70219daccccf69f1cd970dd024d89028ce7"
+    },
+    {
+      "path": "src/lib/components/home/BodyTypes.svelte",
+      "bytes": 6612,
+      "sha256": "1e1cb5477c62c77b74c99845bc24b42f35863f463054560e20aed5c2433e73e2"
+    },
+    {
+      "path": "src/lib/components/home/BrandSection.svelte",
+      "bytes": 8895,
+      "sha256": "b6727689ac7c0a8dbb9775085915b21646c8716af02b368aa538bb283d562910"
+    },
+    {
+      "path": "src/lib/components/home/Editorial.svelte",
+      "bytes": 10601,
+      "sha256": "f71eeefe69cb35d4e757d4ce820b177467d30685458a87a7e42f7508129dd9b9"
+    },
+    {
+      "path": "src/lib/components/home/Hero.svelte",
+      "bytes": 2940,
+      "sha256": "1c3ed567c44a1516095e99356f3101f75c37b8c856da83240ece842d4b3b6238"
+    },
+    {
+      "path": "src/lib/components/home/InventorySection.svelte",
+      "bytes": 5896,
+      "sha256": "ace0e0a0cb2ca9440aebde61376095274b04b5a829964b59110264e830f7e204"
+    },
+    {
+      "path": "src/lib/components/home/MobileBudget.svelte",
+      "bytes": 4199,
+      "sha256": "af8a412bfc5de1eeafdd3dadf3a2781188aecd6dd8d17800bb96ff3c7a6bf5ff"
+    },
+    {
+      "path": "src/lib/components/home/SearchBox.svelte",
+      "bytes": 10564,
+      "sha256": "65b88eb4f3c790a6c7d694474af8204b180b8760fdb4f9e4e6817e5567c750dd"
+    },
+    {
+      "path": "src/lib/components/home/TrustActions.svelte",
+      "bytes": 9397,
+      "sha256": "c75afaf1888fb616197f9b8ae994ccb06aca9ac886c0916cf041f3d3280e01d5"
+    },
+    {
+      "path": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "bytes": 24152,
+      "sha256": "e2d552436161dbe509f3062aa9e587cc174242edfa50feb0ac165b1cb5d40fda"
+    },
+    {
+      "path": "src/lib/components/home/VideoSection.svelte",
+      "bytes": 9360,
+      "sha256": "fdcc2f8285cca37dd1dbd121509959603e4c89e024cae26991b0dcea42c5bbcb"
+    },
+    {
+      "path": "src/lib/components/layout/Footer.svelte",
+      "bytes": 3638,
+      "sha256": "4661ed2a2d7c2a8875e8e2adb95df6631fbdf79ce33c16c5a0a29c6f06e6a567"
+    },
+    {
+      "path": "src/lib/components/layout/Header.svelte",
+      "bytes": 29731,
+      "sha256": "95cbf12a6a6ef9d11c2eb4e264b964ac1f2bf8702d3eefc51ffd2306c87fb911"
+    },
+    {
+      "path": "src/lib/components/layout/MobileNavIcon.svelte",
+      "bytes": 9542,
+      "sha256": "fc4711462bbbee641954eaaf01abec68d3b33664c1ab665a1c4f80cd6b763cf9"
+    },
+    {
+      "path": "src/lib/components/layout/SiteShell.svelte",
+      "bytes": 463,
+      "sha256": "c3be99729f6e921a1e795c046776bae1c8b7faa45583a5e7dc9466ac488ecd0a"
+    },
+    {
+      "path": "src/lib/components/listing/ListingFilters.svelte",
+      "bytes": 10730,
+      "sha256": "79b6b4fb028ae29dc5772f6b2dac37b94b1b5aafa7c530d09d49d8774d75db45"
+    },
+    {
+      "path": "src/lib/components/listing/ListingHero.svelte",
+      "bytes": 763,
+      "sha256": "320bc6e5a89ab7b4f8030747a59096e513d3342ac558ca64dd584f3a0d5c2242"
+    },
+    {
+      "path": "src/lib/components/listing/ListingResults.svelte",
+      "bytes": 10190,
+      "sha256": "dd7940a029219e5c6cbb62ffeaa6932d0d9295df193a5308dc9776bbfa89a6ec"
+    },
+    {
+      "path": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "bytes": 14005,
+      "sha256": "4c4ded372d764ae1d5132af28f72bc537e5b499feaa8867f95db5f9b8ae2f253"
+    },
+    {
+      "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "bytes": 12175,
+      "sha256": "e402c55fda3dc0242b484c1dcb6935f9495e6db2dfeddd0fcea37df24cfa5aed"
+    },
+    {
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "bytes": 28082,
+      "sha256": "abc9d4bcdf15aacee47659a9efa92f859058b8f8f433d4017411d48481a93e37"
+    },
+    {
+      "path": "src/lib/components/ui/Icon.svelte",
+      "bytes": 3839,
+      "sha256": "b831854b6452271e8ab6138de7f40ae9814744704fe06d40c45b9eeb3308f0c8"
+    },
+    {
+      "path": "src/lib/components/ui/icons/OriginalActionIcon.svelte",
+      "bytes": 17068,
+      "sha256": "029bd306547c967824db32dd05f13daf128ea3fc0d7388c3bbe7979da2ac0e6f"
+    },
+    {
+      "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
+      "bytes": 4264,
+      "sha256": "6e739089e1b12b6ba0fa2ac76878eb71a6e83a6982510d86bf612cc87b3baaf5"
+    },
+    {
+      "path": "src/lib/components/vehicles/VehicleCard.svelte",
+      "bytes": 9425,
+      "sha256": "9efabd72156d2d2539936a7c31cbc27900e5a31c44b6bd51b1f99f8e246ed2d5"
+    },
+    {
+      "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "bytes": 5103,
+      "sha256": "5a04ca9e0b8dae1ffaf505af48bc9a498767bfd892fc1127edd8e20cb973d9cb"
+    },
+    {
+      "path": "src/lib/config/brand.ts",
+      "bytes": 704,
+      "sha256": "2d8aaf30e7a898a7022271f4d9ecc846c33719fe7cb32d84cb6d51780385db59"
+    },
+    {
+      "path": "src/lib/data/company.ts",
+      "bytes": 5007,
+      "sha256": "c41d7454453d3b1251d7a8f2b60286ff7cf81de5be1c986630acff8494d3d23d"
+    },
+    {
+      "path": "src/lib/data/demo-content.ts",
+      "bytes": 1856,
+      "sha256": "19ac138545f9704bf02ffe69701146730a86be51d760af43846558dcd02f3a8d"
+    },
+    {
+      "path": "src/lib/data/editorial.ts",
+      "bytes": 13543,
+      "sha256": "bdb313d9d89f0945fb2c5069edddefb38ae806b85edc0d3b1202533b0ad18ae1"
+    },
+    {
+      "path": "src/lib/data/home.ts",
+      "bytes": 3268,
+      "sha256": "e1677636876aee70b586f139014718976e2b357cd197402da00d4bdf5f098476"
+    },
+    {
+      "path": "src/lib/data/inventory.ts",
+      "bytes": 5600,
+      "sha256": "6f014cbec675c463debb411c68b46efc5a7f60ecc6f2c3139da02daa8417f466"
+    },
+    {
+      "path": "src/lib/data/listing.ts",
+      "bytes": 6038,
+      "sha256": "f1a2832e64576c14d56d98dd36f1ce3ee6aae605f3e3322dc041157d27e192d1"
+    },
+    {
+      "path": "src/lib/data/navigation.ts",
+      "bytes": 7161,
+      "sha256": "6afa51239090b8a7bb7127881ae8ee57117980701bc8c9c75fd638628ea6b63f"
+    },
+    {
+      "path": "src/lib/data/videos.ts",
+      "bytes": 908,
+      "sha256": "57217c36b4b0e67a318f44b3f64eade67ea19b1d63541b88aa96605cd1615d1e"
+    },
+    {
+      "path": "src/routes/+error.svelte",
+      "bytes": 2945,
+      "sha256": "66be7df827725c56e1e1ca5a4eabe79ee7c98fb86aee359c45f1230ec78e1bfc"
+    },
+    {
+      "path": "src/routes/+layout.svelte",
+      "bytes": 693,
+      "sha256": "771aa7e400dc3d954fa8ca7902262b1dc1828cc8249fed4c23258e311d8b96fd"
+    },
+    {
+      "path": "src/routes/+page.svelte",
+      "bytes": 3454,
+      "sha256": "1726ba8242c7e256e680b80b895d010ee204d2019b08d8ffd050eed72e97d76d"
+    },
+    {
+      "path": "src/routes/about-us/+page.svelte",
+      "bytes": 1161,
+      "sha256": "39916dbda7377aee664025c4c299707a2c9a76bd6eed3f2ca8ce5216017adb6f"
+    },
+    {
+      "path": "src/routes/about-us/about.css",
+      "bytes": 7830,
+      "sha256": "38b497b2b2434121def3bb37faa47dbdec4487328eeaca102c8a418854c644dc"
+    },
+    {
+      "path": "src/routes/blog/+page.svelte",
+      "bytes": 1456,
+      "sha256": "6600e8406ae4e9139aa959ef8e94c70108daf9a23ab6ae0da4fc5a8bb405753f"
+    },
+    {
+      "path": "src/routes/blog/+page.ts",
+      "bytes": 311,
+      "sha256": "040ab75b8cfaf31b2e9f2679ea6dc86fefb9100ad4f801ffe28007e5d85fc744"
+    },
+    {
+      "path": "src/routes/blog/blog.css",
+      "bytes": 4211,
+      "sha256": "dea9aca4f1eba028bab6df46f748617c328ac1d62bb536967860f84f470787ec"
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/+page.svelte",
+      "bytes": 5014,
+      "sha256": "5a745497bb54bcce5fe6bf4e3766f9ff67284ea1e432ffcc0e08eb32eb5121df"
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/+page.ts",
+      "bytes": 1016,
+      "sha256": "e6d4315fcd1ead985c50d148939747a404beb4146af681e65463f333f1be747a"
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/detail.css",
+      "bytes": 9353,
+      "sha256": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305"
+    },
+    {
+      "path": "src/routes/contact/+page.svelte",
+      "bytes": 1430,
+      "sha256": "2ba55cf3c788ed71bdc5aabd6d66e36efb4c3d29a62d326c196add4112eeb8b5"
+    },
+    {
+      "path": "src/routes/contact/+page.ts",
+      "bytes": 348,
+      "sha256": "38f9f4d3d8b9ec495b35880712aec6af3c017e1e6774aec8f47abfd0d46fa6be"
+    },
+    {
+      "path": "src/routes/contact/contact.css",
+      "bytes": 19927,
+      "sha256": "3bb33ca0ee0bd10052a63247bc660545b63be7e28e7498904fb3152f4fa191f1"
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
+      "bytes": 10436,
+      "sha256": "5254c56c4feac37563bacb3de2ba4661804816dd1f90ae91d541445e2829a6f7"
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/+page.ts",
+      "bytes": 1064,
+      "sha256": "7a418df9ce58a5bd1b7bc9631aa3d033af90a81992d5f468867be55aa86e90fc"
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/detail.css",
+      "bytes": 15492,
+      "sha256": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b"
+    },
+    {
+      "path": "src/routes/listing-grid/+page.svelte",
+      "bytes": 1259,
+      "sha256": "81d1308316251af7088e2681345cf7139cab5f519c0784df5f2e93db83992e7a"
+    },
+    {
+      "path": "src/routes/listing-grid/+page.ts",
+      "bytes": 344,
+      "sha256": "62e80b84d0360c5442b89e9486011515153ba7dce9fe7f7c897aab03002d26a3"
+    },
+    {
+      "path": "src/routes/listing-grid/listing.css",
+      "bytes": 13059,
+      "sha256": "c76c77afd19c0e71499e6a4b3d474a1c7a953281968cbc922c160a74ee7423d3"
+    },
+    {
+      "path": "src/routes/robots.txt/+server.ts",
+      "bytes": 356,
+      "sha256": "fc9004659301978e40f393420ea59e6883a4639850a87a11b36f4c5f573b5ea7"
+    },
+    {
+      "path": "src/routes/sitemap.xml/+server.ts",
+      "bytes": 1085,
+      "sha256": "588d606eb64a6eb49c82a32c1dd230590a6d9fe4d7766109e4a2e8fdde606574"
+    },
+    {
+      "path": "static/assets/images/blog/blog-1.jpg",
+      "bytes": 93721,
+      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+    },
+    {
+      "path": "static/assets/images/blog/blog-2.jpg",
+      "bytes": 34864,
+      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+    },
+    {
+      "path": "static/assets/images/blog/blog-3.jpg",
+      "bytes": 94447,
+      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+    },
+    {
+      "path": "static/assets/images/blog/blog-4.jpg",
+      "bytes": 165710,
+      "sha256": "d3c61f0a21b785e81cbc2ee4113c659a2ad456d1a2e7347248ae64b364eb5d8b"
+    },
+    {
+      "path": "static/assets/images/blog/blog-5.jpg",
+      "bytes": 52086,
+      "sha256": "e60f20403837bd1c48a9efd90c9fb8ca118e3fece2bd1f33b7607c85a09792dc"
+    },
+    {
+      "path": "static/assets/images/blog/blog-6.jpg",
+      "bytes": 86362,
+      "sha256": "ad6b82d92f73b87ffd9e8d047e901152d84e43655d950260189cf9e104b414d0"
+    },
+    {
+      "path": "static/assets/images/blog/blog-7.jpg",
+      "bytes": 48660,
+      "sha256": "48609ff46522e8f355d37e18d291ff20d989208f8ffb4e6812d4cc396a4f6b32"
+    },
+    {
+      "path": "static/assets/images/blog/blog-8.jpg",
+      "bytes": 38400,
+      "sha256": "47d04954266de4ba3c9113fd07580847adf05789393f0d1ef7038eed22e87f8b"
+    },
+    {
+      "path": "static/assets/images/blog/blog-9.jpg",
+      "bytes": 92539,
+      "sha256": "5d999d7e8820fdbe68f01ddf262951579cb931e5ddfcc8af4cd99ff8a0e29a8b"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list1.png",
+      "bytes": 17569,
+      "sha256": "77bf4c2219a12b07d7c1620a35c547f3b97c90c8be4fb838cad54bdf257f4028"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list2.png",
+      "bytes": 17766,
+      "sha256": "65456e3ed0de84598f77ed8a58b3e10edffc4a898ee2f101e56ae5723840ce95"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list3.png",
+      "bytes": 17222,
+      "sha256": "1a9d0ad2d3bbba6640f531135648418ca9cd2358e3b5687972896fb9ea17c9fe"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list4.png",
+      "bytes": 18028,
+      "sha256": "f03f8f094494932d0a73c44741e9e8ee03d638ee78b04e166df0deef05d9a59b"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list5.png",
+      "bytes": 18159,
+      "sha256": "91a9aa878a6ec639045ad5dc09525a2444078c7aa349f00805683d22ee9ab03b"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list6.png",
+      "bytes": 15335,
+      "sha256": "e1a0894c839e8411c5f454d2696ed7b76371cf8446eecccc359afab5fa8847e1"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list7.png",
+      "bytes": 14609,
+      "sha256": "3fbd0debd40517f85a89fdd7b422c3142257a170d4a7dbddb4f23aa754061a71"
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list8.png",
+      "bytes": 13861,
+      "sha256": "ab207b7348f9e9107f35f37007ff44555c540709bbdecd6359690a6638dc13d2"
+    },
+    {
+      "path": "static/assets/images/img-box/team1.jpg",
+      "bytes": 13209,
+      "sha256": "ffd77bec7d645e5a94b5d8f30f32c4a8801d037f469552f93f48d5d5f21f85f3"
+    },
+    {
+      "path": "static/assets/images/img-box/team2.jpg",
+      "bytes": 20556,
+      "sha256": "665ac311d11cc8c478329ac5b88c22270699eb20db2d6bd9e27db1488479799a"
+    },
+    {
+      "path": "static/assets/images/img-box/team3.jpg",
+      "bytes": 18029,
+      "sha256": "2c34bbe7550b57044c1a988dd6e56e2361f6e3917b8afd9fc973723352b17ea2"
+    },
+    {
+      "path": "static/assets/images/img-box/team4.jpg",
+      "bytes": 21356,
+      "sha256": "4230ac3857c403d9938e38ffaf2f98102cfdd46e4227c3e314908fc649ce7610"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-about-detail-v1.webp",
+      "bytes": 90850,
+      "sha256": "8ac8a13af6ab3a6d2791b181e40d8387f69dbff58b8d53f6ecd2cfada06790b2"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-about-kristian-v1-light.webp",
+      "bytes": 64114,
+      "sha256": "b3d58392c4f5285409be5cbf484c59b8c89fbd40932efbd96e0fb943ca617bb3"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-about-showroom-v1-light.webp",
+      "bytes": 68726,
+      "sha256": "6b26a7733ccd2a5a9f292c3781a6269861b7d16cc363a0666ae279888ff606a8"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-blog-hero-v2.webp",
+      "bytes": 325078,
+      "sha256": "bb948611c607935f49a7e87a5af33e75e48725438ed56b55da52a8056cfb7530"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-detail-v1.webp",
+      "bytes": 57966,
+      "sha256": "fb1b9a24c1935e8458bee71a330cedc0766fe9d686fbfc21c1c4ac74cafae2d3"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-email-red-v1.webp",
+      "bytes": 35466,
+      "sha256": "fc14424f78e1a2961fef0cae0af6fa15184b44d21ec751565167a0b2119eca80"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-email-v1-light.webp",
+      "bytes": 25264,
+      "sha256": "f08fef2a380c39a1ea8d9f99488187e1fbb795b7776d8e42dfa64666ef263a85"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-hero-v2.webp",
+      "bytes": 254674,
+      "sha256": "fe0e053b5c63bc3facd544378f5482f98005944803ba733c8f8b5cadd35ff80b"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp",
+      "bytes": 72532,
+      "sha256": "017f9ded454ab0ab948737e003354b25af9f5d3d4546d114496f0015d849218b"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-phone-red-v1.webp",
+      "bytes": 105392,
+      "sha256": "1b4934a5d0c1807c69f40e49144873215e7f2ae33f023904dbc43a86b4804b69"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-editorial-banner-v2.webp",
+      "bytes": 112542,
+      "sha256": "54a9ab5cd4bbbfccbcde9f33e253524ef22b92942878b7f3074f2b80751a5c2a"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-graphite-color-v1.webp",
+      "bytes": 106190,
+      "sha256": "f83edea40a244b762716873ac4baeb6ac7aeea8ca3e27b143cf43761681c44ef"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-import.webp",
+      "bytes": 64648,
+      "sha256": "e0f7e8bc80f0ad8e2ffe947183db974b8481673771d31888a4d5d017fcf0a9f0"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-inspection.webp",
+      "bytes": 66926,
+      "sha256": "93ba31dffd89b4e014fad2465645908c5624e4a512a8b87f6a0fb2d37e7aae02"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-leasing.webp",
+      "bytes": 53020,
+      "sha256": "8ed8b3cc3fef615277afdb02c7f8bd2c8ce43a5f4825fa29b45689c06d9c7a2f"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-yellow-v1.webp",
+      "bytes": 100924,
+      "sha256": "c3c0376130deb45dd3a829dffcc5dc6376383c64610917973eddc5c5135b19ac"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-hero-graphite-v1.webp",
+      "bytes": 91314,
+      "sha256": "282ca58808b79a13d74aeffa072a0e42b7585dd4a5fda530f2aca310a3dc3d7c"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-hero-silver-v1.webp",
+      "bytes": 101826,
+      "sha256": "cd3c12b31c74c4b10c888c3a81019f40adf228134cb15ef9870b7043dc32c59f"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-home-black-v1.webp",
+      "bytes": 41178,
+      "sha256": "42b8af4cbf13328e558cc151a91517dc0c365551c7da48c8bc574f1c7337ccaf"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-home-hero-v3.webp",
+      "bytes": 114870,
+      "sha256": "6496510def178620c33aa4403c7945b0dc9fa05e337aa489110b87d90686c135"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-import-banner-v1.webp",
+      "bytes": 78680,
+      "sha256": "745199db8d7ea1332d34b340dfedcdf64a09bb6cc5283ef7eff58e099d1af4f0"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-keys-yellow-v1.webp",
+      "bytes": 76000,
+      "sha256": "19bb9764b5194c5cde1e01b46302e525240bd074fb48a2bcb78be6c77c5a3b2c"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-logo.png",
+      "bytes": 736865,
+      "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-portrait-color-v1.webp",
+      "bytes": 98582,
+      "sha256": "a01b8fd3df9084e1b5f70d7b26396acec6136c527e263c3eeb3c9beed32d5a97"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-sell-banner-v1.webp",
+      "bytes": 94492,
+      "sha256": "fcd8f4f35ca6e9814b8e6a038a90381e2df22457fe9b6375ba76b77b65bf9e62"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-showroom-color-v1.webp",
+      "bytes": 164760,
+      "sha256": "d1b6d0d6d3215e125a15b64f9c6d12bf459c8ab8c9d965beb94b01de99c5eb26"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-silver-color-v1.webp",
+      "bytes": 118976,
+      "sha256": "c74fced7b50da9dc45b4d37c66250343cfdf91eaadc06139636d3bcb6c81582d"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-01.webp",
+      "bytes": 278312,
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-02.webp",
+      "bytes": 248390,
+      "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-03.webp",
+      "bytes": 181070,
+      "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-04.webp",
+      "bytes": 182452,
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-05.webp",
+      "bytes": 280428,
+      "sha256": "d3a53c20bd0b5f59ebd5a053b5174ba75d2ec4429df9e45d2b61071ca99f981a"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-06.webp",
+      "bytes": 207938,
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-studio-cars-v1.webp",
+      "bytes": 49310,
+      "sha256": "23dd9e6f0cc391878bbc10a28479b5579a4905e333e3de587db8d503a1e3a2c3"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-studio-guide-v1.webp",
+      "bytes": 57486,
+      "sha256": "c01c841fab26485ffac3c5d8f23e046c07fb47afea7abf0e5893c0e4b0d3b9df"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-studio-keys-v1.webp",
+      "bytes": 38104,
+      "sha256": "993523b38286449b2e84cab96598203945fdbc84411aeed2afa40807c1267f1a"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-video-g-class.jpg",
+      "bytes": 72876,
+      "sha256": "b0ac53b05420d63ef003a15a798f8d1649fc90e1f857c50818370b90f83e8519"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-video-panamera.jpg",
+      "bytes": 63050,
+      "sha256": "80d061165773684c8beaff4785d04ed18728ed53ccbd57f6817c2cb335262c16"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-video-urus.jpg",
+      "bytes": 70812,
+      "sha256": "deb043717b97a0b6704e650baf65588960660c5e72f178608b7077516dee08d7"
+    },
+    {
+      "path": "static/assets/images/partner/par1.png",
+      "bytes": 2164,
+      "sha256": "943421922f5a231b07e4fcd74ed331e00333afe2e87dd071e48492ae347fce88"
+    },
+    {
+      "path": "static/assets/images/partner/par2.png",
+      "bytes": 1946,
+      "sha256": "ad57319564ce4e24c61e053ccb13e6d6992ee7e80ab1deed9b2b1ac49c410ebf"
+    },
+    {
+      "path": "static/assets/images/partner/par3.png",
+      "bytes": 2217,
+      "sha256": "0219ac21a5f9bbae7d22cfc3de27bd8044940869f5aa0cd55eb5d6c8f375d078"
+    },
+    {
+      "path": "static/assets/images/partner/par4.png",
+      "bytes": 1421,
+      "sha256": "4a20e7b310b4dc41a27fd586dc5c1cd7acb052c241fd026fab3186a6e1a652c3"
+    },
+    {
+      "path": "static/assets/images/partner/par5.png",
+      "bytes": 1739,
+      "sha256": "4f28ec3a0b7a7f5fc4acdb20cd7f2967bc18855079819d677049604f4610abc1"
+    },
+    {
+      "path": "static/assets/images/partner/par6.png",
+      "bytes": 1505,
+      "sha256": "b9b220c9ab29e91a90d4e6dbf8c458aaf15d9d750e4fd08b80017b212710e816"
+    },
+    {
+      "path": "static/assets/images/partner/parner10.png",
+      "bytes": 981,
+      "sha256": "c766fb50b11985cadfcd040a3f8b09861eac7bcd736818ad521c6a2ad54beb27"
+    },
+    {
+      "path": "static/assets/images/partner/parner11.png",
+      "bytes": 1241,
+      "sha256": "8441496b7499d543d5e2dfebc9b4ec0b1a354cb51f3e2895cc1139ce81fdf0ce"
+    },
+    {
+      "path": "static/assets/images/partner/parner12.png",
+      "bytes": 1261,
+      "sha256": "8cec077472ed19dec9e3a7f136f4de8ede5fe526383972364e71722dfb9bd6e7"
+    },
+    {
+      "path": "static/assets/images/partner/parner7.png",
+      "bytes": 785,
+      "sha256": "8f773623b38d2ed8f40655eece46ed49969957354e34df7dfb8e5806b44ab8fe"
+    },
+    {
+      "path": "static/assets/images/partner/parner8.png",
+      "bytes": 908,
+      "sha256": "5e0295c9b6b30f606f60ed3f3b8ec9c078d431fd2ac5064ef579d92a2487c107"
+    },
+    {
+      "path": "static/assets/images/partner/parner9.png",
+      "bytes": 1409,
+      "sha256": "2423d254763c975bd21259f9f350e817f601318cfea1fdaa5f3649376eac1bcb"
+    },
+    {
+      "path": "static/assets/images/partner/partner1.png",
+      "bytes": 7939,
+      "sha256": "fd0644a6659ed7b041a5a527b8cbe706e85a3d313f3c0cc2586ff4d91aa5b4e2"
+    },
+    {
+      "path": "static/assets/images/partner/partner2.png",
+      "bytes": 855,
+      "sha256": "72f825dd15c98d1c37d1960520587d7b2dcdb4308f569a3e674fffe1ae4dc36e"
+    },
+    {
+      "path": "static/assets/images/partner/partner3.png",
+      "bytes": 4398,
+      "sha256": "894f4d69cf82bf7aac80b2315bd5c570c1171b3f3e7f881b40643fa572c2f950"
+    },
+    {
+      "path": "static/assets/images/partner/partner4.png",
+      "bytes": 1162,
+      "sha256": "95e13967fff39b7ca18813314f66a18c61540fb2b780d93f2df8cacd539d9fce"
+    },
+    {
+      "path": "static/assets/images/partner/partner5.png",
+      "bytes": 1980,
+      "sha256": "65fb90df18b8d8ac9c4cc1a683a73c5d34d436a268d257ae43945d286f37a8c2"
+    },
+    {
+      "path": "static/assets/images/partner/partner6.png",
+      "bytes": 2475,
+      "sha256": "d496020efe2c13f27e3167ea3804f0f07fd316b8ec3672be7fde878c56559432"
+    },
+    {
+      "path": "static/assets/images/section/bg-12.jpg",
+      "bytes": 181376,
+      "sha256": "6e83f0f876739eeed9397afc21d1adb2b80361cc4fd4bbfa40e9f8a011fcb620"
+    },
+    {
+      "path": "static/assets/images/section/bg-4.jpg",
+      "bytes": 447246,
+      "sha256": "442c996e79c246489c92f48a1483f31dcf63a02fcee27237a86ce845540369da"
+    },
+    {
+      "path": "static/assets/images/section/bg-6.jpg",
+      "bytes": 199583,
+      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
+    },
+    {
+      "path": "static/assets/images/section/car-slide1.png",
+      "bytes": 41257,
+      "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72"
+    },
+    {
+      "path": "static/assets/images/section/car-slide2.png",
+      "bytes": 32424,
+      "sha256": "deb4dd110aad16100226bb9584fa8bd8658d1526b644579ade21d1853178e279"
+    },
+    {
+      "path": "static/assets/images/section/car-slide3.png",
+      "bytes": 27720,
+      "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a"
+    },
+    {
+      "path": "static/favicon.ico",
+      "bytes": 520,
+      "sha256": "17479d0354ba5cede84e623dbb0ceb77b638784a9535ea829e5ac9969c5a94eb"
+    },
+    {
+      "path": "svelte.config.js",
+      "bytes": 404,
+      "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 340,
+      "sha256": "d365eb34f8cb5002d00158ebc356b495f2bf0238ad64807deca526050ffde4f5"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 150,
+      "sha256": "9d4b2226788d1516171086ad871eb5e4fd6e17d0453bde84c1dda75bc995ca8a"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 270,
+      "sha256": "986e839ded781587bab66ca8793d66da71ca99a1b3c455dd08b9d3e435f0db93"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 42,
+      "sha256": "bfe2e7093f352205764534b2fc590dd92addf7e46dc6e29e66e6701706a9e581",
+      "supplementedAt": "2026-09-06T14:49:41.260Z"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 562,
+      "sha256": "fc366628445d07863dfc09f8664220b3a91b9c7e196dd7ddb924d7e5008a5a22",
+      "supplementedAt": "2026-09-06T14:49:41.268Z"
+    },
+    {
+      "path": ".vercelignore",
+      "bytes": 749,
+      "sha256": "28c742b5673ffd02fd48cfb0091c623cea98e72819496141cfdc15d7dc5dfb0c",
+      "supplementedAt": "2026-09-06T14:49:41.281Z"
+    }
+  ],
+  "excluded": [
+    ".agency-os",
+    ".git",
+    ".github",
+    ".svelte-kit",
+    ".vercel",
+    "AGENTS.md",
+    "artifacts",
+    "node_modules",
+    "SVELTE_TASKS.md"
+  ],
+  "links": [],
+  "bytes": 7822988,
+  "configurationSupplement": {
+    "at": "2026-09-06T14:52:29.899Z",
+    "files": [
+      ".gitattributes",
+      ".gitignore",
+      ".vercelignore"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "detail": "/inventory/volvo-s60-441521",
+  "errors": [],
+  "homeBudgets": [
+    {
+      "value": "under-10000",
+      "count": 0
+    },
+    {
+      "value": "under-20000",
+      "count": 11
+    },
+    {
+      "value": "under-30000",
+      "count": 15
+    },
+    {
+      "value": "under-50000",
+      "count": 15
+    },
+    {
+      "value": "over-50000",
+      "count": 0
+    }
+  ],
+  "homeBudgetPass": true,
+  "priceFilterCount": 11,
+  "priceFilterExpected": 11,
+  "mileageFilterCount": 10,
+  "mileageFilterExpected": 10,
+  "numericPass": true,
+  "phoneLabels": 1,
+  "viberLabels": 1,
+  "unsupportedServices": 0,
+  "mobileGalleryChanged": true,
+  "pass": false
+}

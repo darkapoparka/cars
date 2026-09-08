@@ -1,0 +1,10 @@
+{
+    "Template":  "auto-best",
+    "Project":  "J:\\cars\\clients\\astracar\\auto-best",
+    "PID":  34232,
+    "Port":  6636,
+    "Url":  "http://127.0.0.1:6636",
+    "Stdout":  "J:\\cars\\runtime\\auto-best-6636-20260907-185128.out.log",
+    "Stderr":  "J:\\cars\\runtime\\auto-best-6636-20260907-185128.err.log",
+    "Status":  "stopped-after-qa"
+}

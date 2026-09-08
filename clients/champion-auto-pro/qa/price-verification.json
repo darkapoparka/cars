@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-09-06T22:12:15.440Z",
+  "method": "Price-only line containing EUR symbol; excludes title text.",
+  "corrections": [
+    {
+      "title": "BMW iX 40Xdrive",
+      "old": 36043800,
+      "actual": 43800
+    }
+  ],
+  "verified": [
+    {
+      "id": "11787294758482309",
+      "title": "BMW iX 40Xdrive",
+      "priceEur": 43800,
+      "source": "https://championautopro.mobile.bg/obiava-11787294758482309-bmw-ix-40xdrive-m-sport-h-k-360"
+    },
+    {
+      "id": "11787311251312869",
+      "title": "Audi A6 50TDI Quattro",
+      "priceEur": 23000,
+      "source": "https://championautopro.mobile.bg/obiava-11787311251312869-audi-a6-50tdi-quattro"
+    },
+    {
+      "id": "11784794853353090",
+      "title": "Smart Forfour 22kw.-26000км.",
+      "priceEur": 12900,
+      "source": "https://championautopro.mobile.bg/obiava-11784794853353090-smart-forfour-22kw-26000km"
+    },
+    {
+      "id": "11784640487309304",
+      "title": "Mercedes-Benz S 500 AMG Packet 63 Long",
+      "priceEur": 27999,
+      "source": "https://championautopro.mobile.bg/obiava-11784640487309304-mercedes-benz-s-500-amg-packet-63-long"
+    },
+    {
+      "id": "11771862221224289",
+      "title": "Mercedes-Benz S 400 LONG-FULL",
+      "priceEur": 89999,
+      "source": "https://championautopro.mobile.bg/obiava-11771862221224289-mercedes-benz-s-400-long-full"
+    },
+    {
+      "id": "21784732491989700",
+      "title": "Mercedes-Benz ML 350 AMG Packet",
+      "priceEur": 15999,
+      "source": "https://championautopro.mobile.bg/obiava-21784732491989700-mercedes-benz-ml-350-amg-packet"
+    },
+    {
+      "id": "11784720940119234",
+      "title": "Audi A7 S-Line FULL",
+      "priceEur": 35999,
+      "source": "https://championautopro.mobile.bg/obiava-11784720940119234-audi-a7-s-line-full-108000km"
+    },
+    {
+      "id": "11783584641538327",
+      "title": "Mercedes-Benz B 200 AMG Line",
+      "priceEur": 17999,
+      "source": "https://championautopro.mobile.bg/obiava-11783584641538327-mercedes-benz-b-200-amg-line"
+    },
+    {
+      "id": "21778484741555035",
+      "title": "Audi SQ7 S-Line",
+      "priceEur": 33000,
+      "source": "https://championautopro.mobile.bg/obiava-21778484741555035-audi-sq7-s-line"
+    },
+    {
+      "id": "11758265694582686",
+      "title": "Audi Rs5 2.9TFSI V6 Quattro",
+      "priceEur": 39999,
+      "source": "https://championautopro.mobile.bg/obiava-11758265694582686-audi-rs5-2-9tfsi-v6-quattro"
+    },
+    {
+      "id": "11773307576284789",
+      "title": "Audi E-Tron 2 X S-Line",
+      "priceEur": 31000,
+      "source": "https://championautopro.mobile.bg/obiava-11773307576284789-audi-e-tron-2-x-s-line"
+    },
+    {
+      "id": "11787215050268120",
+      "title": "VW ID.5 PRO 82kw",
+      "priceEur": 29999,
+      "source": "https://championautopro.mobile.bg/obiava-11787215050268120-vw-id-5-pro-82kw-garantsionen-104000km"
+    },
+    {
+      "id": "21787142969943440",
+      "title": "Toyota Highlander 60000km Газ Prins",
+      "priceEur": 26800,
+      "source": "https://championautopro.mobile.bg/obiava-21787142969943440-toyota-highlander-60000km-gaz-prins"
+    },
+    {
+      "id": "21787197677876419",
+      "title": "Mercedes-Benz EQE 300",
+      "priceEur": 44999,
+      "source": "https://championautopro.mobile.bg/obiava-21787197677876419-mercedes-benz-eqe-300-led-navi-kam"
+    },
+    {
+      "id": "21787200936302723",
+      "title": "Mercedes-Benz EQC 400",
+      "priceEur": 38800,
+      "source": "https://championautopro.mobile.bg/obiava-21787200936302723-mercedes-benz-eqc-400-4matic-amg-hud-360kam"
+    },
+    {
+      "id": "11786100747512292",
+      "title": "Renault Captur",
+      "priceEur": 9200,
+      "source": "https://championautopro.mobile.bg/obiava-11786100747512292-renault-captur-55000-km"
+    }
+  ]
+}

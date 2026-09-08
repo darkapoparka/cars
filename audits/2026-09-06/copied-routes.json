@@ -1,0 +1,26 @@
+[
+  {
+    "key": "carwow",
+    "port": 6463,
+    "route": "/",
+    "label": "copied-home"
+  },
+  {
+    "key": "carwow",
+    "port": 6463,
+    "route": "/inventory",
+    "label": "copied-inventory"
+  },
+  {
+    "key": "import",
+    "port": 6464,
+    "route": "/",
+    "label": "copied-home"
+  },
+  {
+    "key": "showroom",
+    "port": 6465,
+    "route": "/inventory",
+    "label": "copied-inventory"
+  }
+]

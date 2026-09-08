@@ -1,0 +1,5 @@
+import fs from 'node:fs/promises';import path from 'node:path';
+const slugs=['automarket-varna','elit-auto-import','legend-auto'];
+const pattern=/Day\s*(?:&|and|и)\s*Night|АСКО\s*96|ELIQ|Елик|Кристиян Кирилов|Спартак Ауто|0885072555|0895996559|0877800921/gi;
+async function walk(dir){let rows=[];for(const e of await fs.readdir(dir,{withFileTypes:true}).catch(()=>[])){if(e.name==='node_modules'||e.name.startsWith('.'))continue;const p=path.join(dir,e.name);if(e.isDirectory())rows.push(...await walk(p));else if(/\.(svelte|tsx?|json)$/.test(e.name)){const text=await fs.readFile(p,'utf8');for(const [i,line]of text.split(/\r?\n/).entries()){pattern.lastIndex=0;if(pattern.test(line))rows.push({path:p,line:i+1,text:line.slice(0,350)});}}}return rows;}
+for(const slug of slugs){const root='J:/cars/clients/'+slug;const rows=[];for(const dir of ['auto-best/src','carwow/src','modern/apps/web/app','modern/packages/marketplace','modern/packages/marketplace-ui','modern/packages/marketplace-domain'])rows.push(...await walk(root+'/'+dir));await fs.writeFile(root+'/qa-final/identity-scan.json',JSON.stringify(rows,null,2));console.log(slug,rows.length,rows.slice(0,4));}

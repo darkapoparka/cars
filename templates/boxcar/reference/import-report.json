@@ -1,0 +1,2804 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "title": "Boxcar"
+    },
+    {
+      "route": "/listings/",
+      "title": "Listings – Boxcar"
+    },
+    {
+      "route": "/listings/page/2/",
+      "title": "Listings – Page 2 – Boxcar"
+    },
+    {
+      "route": "/blog/",
+      "title": "Blog – Boxcar"
+    },
+    {
+      "route": "/blog/page/2/",
+      "title": "Blog – Page 2 – Boxcar"
+    },
+    {
+      "route": "/listing/ranger-white-2022/",
+      "title": "Ranger White – 2022 – Boxcar"
+    },
+    {
+      "route": "/bmw-x6-m50i-is-designed-to-exceed-your-sportiest/",
+      "title": "BMW X6 M50i is designed to exceed your sportiest. – Boxcar"
+    },
+    {
+      "route": "/contact-us/",
+      "title": "Contact Us – Boxcar"
+    },
+    {
+      "route": "/about-us/",
+      "title": "About Us – Boxcar"
+    },
+    {
+      "route": "/calculator/",
+      "title": "Calculator – Boxcar"
+    },
+    {
+      "route": "/compare/",
+      "title": "Compare – Boxcar"
+    },
+    {
+      "route": "/services/",
+      "title": "Services – Boxcar"
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "title": "Terms and Conditions – Boxcar"
+    },
+    {
+      "route": "/listing/ranger-black-2021/",
+      "title": "Ranger Black – 2021 – Boxcar"
+    },
+    {
+      "route": "/listing/mercedes-benz-c-class/",
+      "title": "Mercedes-Benz, C Class – Boxcar"
+    },
+    {
+      "route": "/listing/toyota-camry-new/",
+      "title": "Toyota Camry New – Boxcar"
+    },
+    {
+      "route": "/listing/ford-explorer-2023/",
+      "title": "Ford Explorer 2023 – Boxcar"
+    },
+    {
+      "route": "/listing/c-class-2023/",
+      "title": "C-Class – 2023 – Boxcar"
+    },
+    {
+      "route": "/listing/t-cross-2023/",
+      "title": "T-Cross – 2023 – Boxcar"
+    },
+    {
+      "route": "/listing/ford-transit-2021/",
+      "title": "Ford Transit – 2021 – Boxcar"
+    },
+    {
+      "route": "/listing/new-glc-2023/",
+      "title": "New GLC – 2023 – Boxcar"
+    },
+    {
+      "route": "/listing/audi-a6-3-5-new/",
+      "title": "Audi A6 3.5 – New – Boxcar"
+    },
+    {
+      "route": "/listing/corolla-altis-2023/",
+      "title": "Corolla Altis – 2023 – Boxcar"
+    },
+    {
+      "route": "/listing/bmw-x8-5-0/",
+      "title": "BMW X8 – 5.0 – Boxcar"
+    },
+    {
+      "route": "/listing/audi-a4-4-5-new/",
+      "title": "Audi A4, 4.5 New – Boxcar"
+    },
+    {
+      "route": "/listing/new-range-rover-evoque/",
+      "title": "Audi A4 – 2022 – Boxcar"
+    },
+    {
+      "route": "/listing/audi-a5-2023/",
+      "title": "Audi A5 – 2023 – Boxcar"
+    },
+    {
+      "route": "/2024-bmw-alpina-xb7-with-exclusive-details-extraordinary/",
+      "title": "2024 BMW ALPINA XB7 with exclusive details, extraordinary – Boxcar"
+    },
+    {
+      "route": "/bmw-x5-gold-2024-sport-review-light-on-sport/",
+      "title": "BMW X5 Gold 2024 Sport Review: Light on Sport – Boxcar"
+    },
+    {
+      "route": "/2024-audi-hybrid-gives-up-nothing-with-its-optimized/",
+      "title": "2024 Audi Hybrid gives up nothing with its optimized – Boxcar"
+    },
+    {
+      "route": "/2024-kia-sorento-hybrid-review-big-vehicle-with-small-vehicle/",
+      "title": "2024 Kia Sorento Hybrid Review: Big Vehicle With Small-Vehicle – Boxcar"
+    },
+    {
+      "route": "/2024-bmw-x3-m-sport-seats-available-as-a-standalone-option/",
+      "title": "2024 BMW X3 M Sport Seats – available as a standalone option – Boxcar"
+    },
+    {
+      "route": "/2023-carnival-standard-blind-spot-forward-collision-avoidance/",
+      "title": "2023 Carnival Standard blind-spot & forward collision avoidance – Boxcar"
+    },
+    {
+      "route": "/golf-vs-polo-a-comparison-of-two-volkswagen-classics/",
+      "title": "Golf vs Polo: A Comparison of Two Volkswagen Classics – Boxcar"
+    },
+    {
+      "route": "/battle-of-the-suvs-kia-sportage-vs-hyundai-tucson/",
+      "title": "Battle of the SUVs – Kia Sportage vs Hyundai Tucson – Boxcar"
+    }
+  ],
+  "assetCount": 442,
+  "failures": [
+    "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/images/layers.png 404",
+    "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/images/layers-2x.png 404",
+    "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/images/marker-icon.png 404"
+  ],
+  "assets": [
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.3",
+      "local": "/assets/cf8ba209f6266ebe6e.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=8.3.4",
+      "local": "/assets/17c1561c3e4ce5cec9.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=8.3.4",
+      "local": "/assets/ef422447089abce685.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=8.3.4",
+      "local": "/assets/808a56e52d1bb74e4e.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/magnific/magnific-popup.css?ver=1.1.0",
+      "local": "/assets/5050b7b70956c5e9d0.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-private-message/assets/css/perfect-scrollbar.css?ver=7.1",
+      "local": "/assets/73ad724587eebba8ed.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/leaflet.css?ver=1.5.1",
+      "local": "/assets/08ba14f49f9974d3bc.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.23.0",
+      "local": "/assets/88d682b3fa0f032524.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.17.3",
+      "local": "/assets/2cbcf982265746753a.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5",
+      "local": "/assets/10421b56ed8e91a455.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-7.css?ver=1701765261",
+      "local": "/assets/9eb99d665e084a30a3.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-24.css?ver=1764557649",
+      "local": "/assets/469dda1fdd2ab25932.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/woocommerce.css?ver=1.0",
+      "local": "/assets/7e90e98fa8bcc3d5ba.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/css?family=DM%20Sans:300,400,500,600,700,800,300,400,500,600,700,800&subset=latin%2Clatin-ext%2Clatin%2Clatin-ext",
+      "local": "/assets/7c9a1df6114eb47bf5.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/all-awesome.css?ver=5.11.2",
+      "local": "/assets/e11fb70d23a3fb3649.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/flaticon.css?ver=1.0.0",
+      "local": "/assets/af4e181c76b1e3f172.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/themify-icons.css?ver=1.0.0",
+      "local": "/assets/d03bdbb19743f18693.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/animate.css?ver=3.6.0",
+      "local": "/assets/e334455963cefc17ac.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/bootstrap.css?ver=3.2.0",
+      "local": "/assets/bf00ad810bad615e53.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/slick.css?ver=1.8.0",
+      "local": "/assets/a2171050387286bbc7.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/magnific-popup.css?ver=1.1.0",
+      "local": "/assets/b876fd2dac6409c1fa.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/perfect-scrollbar.css?ver=0.6.12",
+      "local": "/assets/0569cbdfa8e96115f9.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/sliding-menu.min.css?ver=0.3.0",
+      "local": "/assets/d0c5040dbc50ec0319.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/template.css?ver=1.0",
+      "local": "/assets/0c2caeb4e9043a7805.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/style.css?ver=1.0",
+      "local": "/assets/84c3a3fc0fc7e8ddbf.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CRoboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&ver=7.1",
+      "local": "/assets/e0bd0b27f6a67a2113.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-1391.css?ver=1701765261",
+      "local": "/assets/182e1d845e4fe884bf.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-4871.css?ver=1701765261",
+      "local": "/assets/9196e442d2845bf13a.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-1398.css?ver=1701765261",
+      "local": "/assets/c3e053faa6d12de9f5.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/select2/select2.min.css?ver=4.0.5",
+      "local": "/assets/be24d41cd14bc1a184.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-2390.css?ver=1701765261",
+      "local": "/assets/390fea1a7664f50b69.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-273.css?ver=1701765261",
+      "local": "/assets/031b7f81499d76ae49.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-2409.css?ver=1701765262",
+      "local": "/assets/5cb354ea7692406eaa.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-2418.css?ver=1701765262",
+      "local": "/assets/7cf2f0dc982de8b9c6.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-1407.css?ver=1701765262",
+      "local": "/assets/8cb0c6fd33c7fac74e.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.17.3",
+      "local": "/assets/e2831bca7eea005a45.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3",
+      "local": "/assets/147c7f800d2db74a3f.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3",
+      "local": "/assets/08f0c32125333d9b9b.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.12",
+      "local": "/assets/00a2faff4fb8f81ab4.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css",
+      "local": "/assets/5ff5cf2ee01bc7bd9a.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/images/logo-white.svg",
+      "local": "/assets/9fb8c429be992ac53d.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/logo.svg",
+      "local": "/assets/dfdf99a20995bf40f6.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/b1.jpg",
+      "local": "/assets/c22b2dcd10b4ee81db.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/b2.jpg",
+      "local": "/assets/cc319261da157adc0e.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/b3.jpg",
+      "local": "/assets/095941bc0b6febc5af.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/b4.jpg",
+      "local": "/assets/478073cf5372d35f16.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/b5.jpg",
+      "local": "/assets/ec2ab31622f4c2debf.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/b6.jpg",
+      "local": "/assets/09ffdb7b9e2443047a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car8-660x440.jpg",
+      "local": "/assets/f4c0e252fa87ae7783.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car9-660x440.jpg",
+      "local": "/assets/ee9f1ef6ba8473bc80.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car14-660x440.jpg",
+      "local": "/assets/d4b1334d2109c04747.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car13-660x440.jpg",
+      "local": "/assets/ff1a1faf2e9dc28a20.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car19-660x440.jpg",
+      "local": "/assets/4e055a7ec63d4566ba.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car12-660x440.jpg",
+      "local": "/assets/6b1fbd6fbad2a88cf1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car5-660x440.jpg",
+      "local": "/assets/f427bb3ce3455953f1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car1-660x440.jpg",
+      "local": "/assets/0e12a89ba2155113f5.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car10-660x440.jpg",
+      "local": "/assets/f4db4356ccdb16651a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car17-660x440.jpg",
+      "local": "/assets/cd42495e0570687011.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car11-660x440.jpg",
+      "local": "/assets/0ce8c89bcc551b522f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car20-660x440.jpg",
+      "local": "/assets/d38f4192abbac4fd97.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car3-660x440.jpg",
+      "local": "/assets/0a545ac0958f5cb1cd.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/f1.svg",
+      "local": "/assets/7d66da09722f971d54.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/f2.svg",
+      "local": "/assets/eb4d5b608c675c9233.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/f3.svg",
+      "local": "/assets/ce230a40c04e60920d.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/f4.svg",
+      "local": "/assets/ca0f067a4b606d97a1.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car12-640x550.jpg",
+      "local": "/assets/153d24cb642084a1c3.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car17-640x550.jpg",
+      "local": "/assets/74e6c446478bd6c5cc.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car15-660x440.jpg",
+      "local": "/assets/4f297758120f6fef78.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car15-640x550.jpg",
+      "local": "/assets/d819ba2aa58ccaa7f4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car20-640x550.jpg",
+      "local": "/assets/b21558c6a3a3b22229.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car13-640x550.jpg",
+      "local": "/assets/6bca240326dbd99c84.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car1-640x550.jpg",
+      "local": "/assets/89ef7f49a2ea52513a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car11-640x550.jpg",
+      "local": "/assets/ea6e6d2b00140a8774.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car3-640x550.jpg",
+      "local": "/assets/384e8de13a9ca649c4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car14-640x550.jpg",
+      "local": "/assets/f214fcc3adb3f697e4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car19-640x550.jpg",
+      "local": "/assets/c2a831bc0ef156b565.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car6-660x440.jpg",
+      "local": "/assets/67e9aff5e37e2c60c1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car6-640x550.jpg",
+      "local": "/assets/999cb5df97392e85db.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/test1.jpg",
+      "local": "/assets/0465c2732d33593f52.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/test1-286x300.jpg",
+      "local": "/assets/d825f4caacce8dd165.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/test2.jpg",
+      "local": "/assets/b351b5fe0b05e156c8.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/test2-286x300.jpg",
+      "local": "/assets/368b68450249ce1ca0.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/test3.jpg",
+      "local": "/assets/f332e1d1049b2f127f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/test3-286x300.jpg",
+      "local": "/assets/f44539e7c98c2290ed.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/detail-post-qgcqjbpfnsa2eljzsmpa5fzwhwfyhukx3izjwiox88.jpg",
+      "local": "/assets/4508eed59f5687b5c0.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog9-qgcqjcn9umbcq7imn53wpxrd3abbpjonfnn1dsnj20.jpg",
+      "local": "/assets/726eee6703853d0435.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog7-qgcqjcn9umbcq7imn53wpxrd3abbpjonfnn1dsnj20.jpg",
+      "local": "/assets/5331618ae022640dbe.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/electric-car.svg",
+      "local": "/assets/d9a60160cb79f65d95.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/electric-car2.svg",
+      "local": "/assets/9153033ee2434b2243.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-1432.css?ver=1702207661",
+      "local": "/assets/7dcaf084548dbd2b58.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-4323.css?ver=1701765849",
+      "local": "/assets/14442052600902e9e9.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/detail-post-qgcqjbph00xuy3uyhebc7kt3g1undu4m9rabnkydqo.jpg",
+      "local": "/assets/110b84c44787720053.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog9-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/21df6aee1f7a92d462.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog7-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/4dd6801458bb439f36.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog8-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/239b415960496b0c3a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog6-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/b33d22b7c0ac964399.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog4-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/2f46a0813b3d9e12d0.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog5-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/4811a001dda6c66fb1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog1-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/7f4b127a85fdecd368.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog3-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/0fd080e497f5c4e502.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog2-qgcqjcnb6uz59ptlbwpys2kk1fq0lj8clvxt4uwzkg.jpg",
+      "local": "/assets/6f157646e3cfdc4593.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-3696.css?ver=1702213786",
+      "local": "/assets/883c28fd4f254d7d83.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/css/flaticon.css?ver=1.1.4",
+      "local": "/assets/0dd549cdab86967f52.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/ranger-white-2022/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar3.jpg",
+      "local": "/assets/2315b16fde7ced69c6.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Franger-white-2022%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar3.jpg",
+      "local": "/assets/d2981ffcde68c9c497.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car3.jpg",
+      "local": "/assets/5db4f1c378bcd05085.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car3-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/744deedbf8c5bd1b7d.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car9.jpg",
+      "local": "/assets/64ddadd0eabcb65b2f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car9-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/1860fd81918905911f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car10.jpg",
+      "local": "/assets/35732976197f0f3589.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car10-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/6c396ce7617b073763.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car11.jpg",
+      "local": "/assets/dd8204eb6501e18898.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car11-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/1f49b2f52a683b55ad.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team2-150x150.jpg",
+      "local": "/assets/e9bfcbb61149b650ef.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/test1-150x150.jpg",
+      "local": "/assets/392f5ced3f4c6a0ce0.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog9.jpg",
+      "local": "/assets/6d4dab83e7e5a2ae84.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog9-600x212.jpg",
+      "local": "/assets/e6cf970d877baa4511.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog9-300x106.jpg",
+      "local": "/assets/74545bbd5252878b3f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog9-1024x361.jpg",
+      "local": "/assets/599af86cc17e4d5c20.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog9-768x271.jpg",
+      "local": "/assets/8d845450eea34abd0e.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog9-1536x542.jpg",
+      "local": "/assets/5e4c8920546e4a5d4b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/detail-post.jpg",
+      "local": "/assets/a257d60879cc777033.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/detail-post-600x292.jpg",
+      "local": "/assets/6f01862495543d213f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/detail-post-300x146.jpg",
+      "local": "/assets/40b5ef0a71fce8b504.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/detail-post-768x374.jpg",
+      "local": "/assets/8966cdbcec522f1bc9.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/bmw-x6-m50i-is-designed-to-exceed-your-sportiest/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog9.jpg",
+      "local": "/assets/de633b9046cc0dd133.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fbmw-x6-m50i-is-designed-to-exceed-your-sportiest%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog9.jpg",
+      "local": "/assets/04e6e3ef26f8d6878c.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://secure.gravatar.com/avatar/?s=40&d=mm&r=g",
+      "local": "/assets/838a6fb27f069a784b.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://secure.gravatar.com/avatar/?s=80&d=mm&r=g",
+      "local": "/assets/099288c236292aeece.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog7-qgcqjcnfxw83mqykviqlyke5bd8ytltacwub2eq7lo.jpg",
+      "local": "/assets/a149d97350657a4f45.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog8-qgcqjcnfxw83mqykviqlyke5bd8ytltacwub2eq7lo.jpg",
+      "local": "/assets/118bc58c397b67cb6b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog4-qgcqjcnfxw83mqykviqlyke5bd8ytltacwub2eq7lo.jpg",
+      "local": "/assets/7147ab9a213e67832e.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-49.css?ver=1702216583",
+      "local": "/assets/42fdd01ffb61ab43b9.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/pin.svg",
+      "local": "/assets/f8da4c21015321afed.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/mail-1.svg",
+      "local": "/assets/fd6cde7c54c3277908.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/phone-1.svg",
+      "local": "/assets/0bfac3c5daec6d1f51.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-47.css?ver=1786853432",
+      "local": "/assets/b4cc8a5e002c1bf885.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g1.jpg",
+      "local": "/assets/5b1b2e05c207499f15.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g1-150x150.jpg",
+      "local": "/assets/1f492f4e103c6eb3e1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g2.jpg",
+      "local": "/assets/4c0b67227ef29da04c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g2-300x286.jpg",
+      "local": "/assets/5755d13493a6dc39b3.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g3.jpg",
+      "local": "/assets/22fa610e86f869fd0b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g3-300x159.jpg",
+      "local": "/assets/c29584c2a92f25d5cc.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g4.jpg",
+      "local": "/assets/060d9cc3c51b35f53a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g4-150x150.jpg",
+      "local": "/assets/50004cf4abccecb5b4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g5.jpg",
+      "local": "/assets/50cee7364b4b62cb6a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/g5-300x191.jpg",
+      "local": "/assets/de1c28eb8d7ff1bc3f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team1.jpg",
+      "local": "/assets/b8232c8708db0de4b2.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team1-247x300.jpg",
+      "local": "/assets/031b484f6c5557ff76.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team2.jpg",
+      "local": "/assets/aa8e80bc2376c69f1c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team2-247x300.jpg",
+      "local": "/assets/637b619e4a02f3ed33.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team3.jpg",
+      "local": "/assets/94e888db23b3925516.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team3-247x300.jpg",
+      "local": "/assets/a686bbf5a2816d260e.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team4.jpg",
+      "local": "/assets/5884637dedb998a753.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/team4-247x300.jpg",
+      "local": "/assets/9f32cef77628c7d6ca.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/test1-300x300.jpg",
+      "local": "/assets/9b2ad92429c43ffd9e.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/test1-410x410.jpg",
+      "local": "/assets/71fbf569e2b0d262f0.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/team3-150x150.jpg",
+      "local": "/assets/019f01927519731854.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/team3-300x300.jpg",
+      "local": "/assets/6e64141d4d1b7f4a22.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/team5-150x150.jpg",
+      "local": "/assets/0a2231ad3e1a6e886d.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/team5-300x300.jpg",
+      "local": "/assets/6049c59ff6ae56bf3f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/team6-150x150.jpg",
+      "local": "/assets/10ca6e5c08ceea9e59.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/team6-300x300.jpg",
+      "local": "/assets/57959da826ecb051ec.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/team8-150x150.jpg",
+      "local": "/assets/10ba85812e88b6a845.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/team8-300x300.jpg",
+      "local": "/assets/6440147c695b394af3.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-4313.css?ver=1702210954",
+      "local": "/assets/23a066b3fe46a1bfd4.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-54.css?ver=1702216555",
+      "local": "/assets/d1283ff4fb57e2525b.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/service1.jpg",
+      "local": "/assets/46face03e8431b1e3f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/service1-600x525.jpg",
+      "local": "/assets/71478e10ab64138592.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/service1-300x262.jpg",
+      "local": "/assets/2b5def16b3256ca3a8.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/detail-post-qgcqjbpg0xx93gt1kjd8mgrwzc0c60xo14u4nrrtt2.jpg",
+      "local": "/assets/90605297e208812826.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog9-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/ce41a1c513e7a6b519.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog7-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/79319b0eda0d77dd0b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog8-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/2932a6224c4480cebd.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog6-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/8c148d3c18dcae2c29.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog4-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/7b85de857698ee90f5.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog5-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/c23df746027baff8cc.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog1-qgcqjcna7ryjf2rof1rv6yjdkpvpdq1ed9hm51qfmu.jpg",
+      "local": "/assets/f998c04361c18be9e3.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-51.css?ver=1702216659",
+      "local": "/assets/170208e0026db71b06.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-3577.css?ver=1701765837",
+      "local": "/assets/1d93587114aaad2462.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/ranger-black-2021/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar11.jpg",
+      "local": "/assets/4668c1bfb6b93f3d44.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Franger-black-2021%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar11.jpg",
+      "local": "/assets/edfde321069dbc250d.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car8.jpg",
+      "local": "/assets/6d1ea3ea554ba1a861.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car8-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/b213dc4b7391716527.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-3610.css?ver=1702213772",
+      "local": "/assets/de9da985c6a355d10b.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car6.jpg",
+      "local": "/assets/e78f8c24264b92830b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car6-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/0212dd260e92696d2a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car14.jpg",
+      "local": "/assets/7d3f7c8cb533840132.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car14-qgcqjcnfpk9aba3s9dq1z9f5si5k0ovmj8ewvsz6m4.jpg",
+      "local": "/assets/30c9f5902904eab72c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+      "local": "/assets/094f3160101515aa4a.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://secure.gravatar.com/avatar/?s=140&d=mm&r=g",
+      "local": "/assets/e763736fdd1db8fb66.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-2387.css?ver=1701765831",
+      "local": "/assets/46119d96f207e03cd4.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/toyota-camry-new/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar8.jpg",
+      "local": "/assets/ba97b2025fee9b1bcf.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Ftoyota-camry-new%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar8.jpg",
+      "local": "/assets/9ae53bf4a952bbe2db.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car8-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/02086fca0e3942c7dd.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car3-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/520386f778f58bf061.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car11-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/4b8cea068f60ae32ff.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car10-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/7a3552785a015b6c76.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car1.jpg",
+      "local": "/assets/49f405a54a3345b361.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car1-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/f2a40c09b0f4cc052b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/css/post-3639.css?ver=1702214473",
+      "local": "/assets/26384a42c4f8b9cce6.css",
+      "ext": "css",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car1-qgcqjcnddsss7s8qpk5bfq2ly15dba7rggqweofhj0.jpg",
+      "local": "/assets/9b0f74ea49a8de79be.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car15.jpg",
+      "local": "/assets/4cabb09ee99a5c1e6c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car15-qgcqjcnddsss7s8qpk5bfq2ly15dba7rggqweofhj0.jpg",
+      "local": "/assets/ccab057c17fa0f6f7a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car14-qgcqjcnddsss7s8qpk5bfq2ly15dba7rggqweofhj0.jpg",
+      "local": "/assets/c4b0b117c4ff8e06d9.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car11-qgcqjcnddsss7s8qpk5bfq2ly15dba7rggqweofhj0.jpg",
+      "local": "/assets/89890a692ec8dd654f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car10-qgcqjcnddsss7s8qpk5bfq2ly15dba7rggqweofhj0.jpg",
+      "local": "/assets/2d235d4884742a21f5.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/ford-explorer-2023/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar1.jpg",
+      "local": "/assets/630b066a5cfea171ac.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fford-explorer-2023%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar1.jpg",
+      "local": "/assets/804b1c1b7aa1a5f40d.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/c-class-2023/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar14.jpg",
+      "local": "/assets/a786fd106418079611.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fc-class-2023%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar14.jpg",
+      "local": "/assets/a2f4842e7e8d809ba8.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car14-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/03d74ec972a9d18471.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car6-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/96b1be405840e45c37.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car8-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/b1e55b378a7c74e8b9.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/h43.jpg",
+      "local": "/assets/2ef23beae8790ebe2b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/h43-qgcqjbpdmzicyh70yp2hg0nfp5cd954u2ag0um6aoc.jpg",
+      "local": "/assets/e237fbe3a2d2ff8f05.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/slider23.jpg",
+      "local": "/assets/ca0ba04d7b8361355c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/slider23-qgcqjdl20nkxlp4anpvql06cvx33ojcaqjqzt63ibw.jpg",
+      "local": "/assets/02d48ada08201d4324.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/t-cross-2023/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar9.jpg",
+      "local": "/assets/fefef749ba4cf11e06.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Ft-cross-2023%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar9.jpg",
+      "local": "/assets/7d7eca5622b12aec16.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car9-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/4190cc3eb0e985e34b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car9-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/315b487fb669520a97.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/ford-transit-2021/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar13.jpg",
+      "local": "/assets/0d941b246529e09af6.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fford-transit-2021%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar13.jpg",
+      "local": "/assets/2042962c92f2ccc0b3.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car13.jpg",
+      "local": "/assets/1c52beac5ce815257d.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car13-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/f1bff578ceb4a59053.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car13-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/ba848b1745f1b1ae81.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car12.jpg",
+      "local": "/assets/08f3b0d00e02d1c6aa.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car12-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/5b5296110ae205c060.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car15-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/58222e3e59fc2dbc73.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car14-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/dde1bc7434b1a45f24.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/new-glc-2023/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar19.jpg",
+      "local": "/assets/bacdb6697993758d01.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fnew-glc-2023%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar19.jpg",
+      "local": "/assets/dcf6681b25c8b5ccce.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car19.jpg",
+      "local": "/assets/cd26addcf723c56dbd.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car19-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/310fc2ec177aa2610c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car20.jpg",
+      "local": "/assets/926a23a2c222b64556.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car20-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/9dd4dd68ab18e84baa.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car19-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/c032bd598d6e12ecc4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car17.jpg",
+      "local": "/assets/3fb285887bee5d8779.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car17-qgcqjcn7ttjna35nt7h40iewaj7qgu8kef3ibw4wi4.jpg",
+      "local": "/assets/08302c37700df34e0f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/audi-a6-3-5-new/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar12.jpg",
+      "local": "/assets/0f124ac4209ad9e704.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Faudi-a6-3-5-new%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar12.jpg",
+      "local": "/assets/212c4f66182c0b7186.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car12-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/85c5dae9ad278b7f98.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/corolla-altis-2023/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar5.jpg",
+      "local": "/assets/973272a8ba7b6a8116.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fcorolla-altis-2023%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar5.jpg",
+      "local": "/assets/720d6e502fe51ed09a.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/car5.jpg",
+      "local": "/assets/0af4593e4fd98ec1e9.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car5-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/4852ae17d58650074b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/bmw-x8-5-0/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar10.jpg",
+      "local": "/assets/d74ca3ca3724e714fc.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fbmw-x8-5-0%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar10.jpg",
+      "local": "/assets/de61368771e2c36b06.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car10-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/69327b0731fa1a3a8a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/audi-a4-4-5-new/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar17.jpg",
+      "local": "/assets/02085bccf09e162058.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Faudi-a4-4-5-new%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar17.jpg",
+      "local": "/assets/f91294078651f304f2.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car17-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/431f00868c115a30c2.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/new-range-rover-evoque/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar20.jpg",
+      "local": "/assets/e41eaf2872d31d169c.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Fnew-range-rover-evoque%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar20.jpg",
+      "local": "/assets/bb903c478879e77304.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car20-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/cf70b20a693b1d154a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/listing/audi-a5-2023/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar15.jpg",
+      "local": "/assets/6deeb0d911f399afdf.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Flisting%2Faudi-a5-2023%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fcar15.jpg",
+      "local": "/assets/7cd3e330116087c2e6.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/car15-qgcqjcne9diluefjkeisezftm5aptwpff8w6kr9wn0.jpg",
+      "local": "/assets/e317a0b4d21a112105.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/2024-bmw-alpina-xb7-with-exclusive-details-extraordinary/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F09%2Fdetail-post.jpg",
+      "local": "/assets/cbe6cda76e7842568e.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2F2024-bmw-alpina-xb7-with-exclusive-details-extraordinary%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F09%2Fdetail-post.jpg",
+      "local": "/assets/f1a33e1fce89135d8c.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog1-qgcqjcnfxw83mqykviqlyke5bd8ytltacwub2eq7lo.jpg",
+      "local": "/assets/8228d1a74ad6e3b091.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog3-qgcqjcnfxw83mqykviqlyke5bd8ytltacwub2eq7lo.jpg",
+      "local": "/assets/5764561e758e33faff.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog7.jpg",
+      "local": "/assets/10a376d2d90df54b27.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog7-600x212.jpg",
+      "local": "/assets/6a649d73bab08f5c19.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog7-300x106.jpg",
+      "local": "/assets/83de36c7ca23c311ac.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog7-1024x361.jpg",
+      "local": "/assets/ae9a0bcbde5258f2bf.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog7-768x271.jpg",
+      "local": "/assets/85f9110f0f740d6faf.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog7-1536x542.jpg",
+      "local": "/assets/9c8c5bfa9d4f028422.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/bmw-x5-gold-2024-sport-review-light-on-sport/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog7.jpg",
+      "local": "/assets/6dbe2003fe5e3b3128.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fbmw-x5-gold-2024-sport-review-light-on-sport%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog7.jpg",
+      "local": "/assets/2a442557c6ae3bb627.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/blog9-qgcqjcnfxw83mqykviqlyke5bd8ytltacwub2eq7lo.jpg",
+      "local": "/assets/016a888cebadb1d34a.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog6.jpg",
+      "local": "/assets/12d18e88199caec851.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog6-600x212.jpg",
+      "local": "/assets/99099c69b493f2aee0.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog6-300x106.jpg",
+      "local": "/assets/851883af45cb2fd3b8.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog6-1024x361.jpg",
+      "local": "/assets/0a8ea3dde34ca9be75.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog6-768x271.jpg",
+      "local": "/assets/66e38caf0f63ed03e4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog6-1536x542.jpg",
+      "local": "/assets/05a0be16145af7d9c8.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/2024-audi-hybrid-gives-up-nothing-with-its-optimized/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog6.jpg",
+      "local": "/assets/eb22c3add6b6e840e3.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2F2024-audi-hybrid-gives-up-nothing-with-its-optimized%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog6.jpg",
+      "local": "/assets/379c2efbd8a6a61ed0.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog8.jpg",
+      "local": "/assets/87c5b7f7b415e59cd4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog8-600x212.jpg",
+      "local": "/assets/a79ca1a63fb69c5926.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog8-300x106.jpg",
+      "local": "/assets/929ced3018ecd162a1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog8-1024x361.jpg",
+      "local": "/assets/615505cf2c24b41101.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog8-768x271.jpg",
+      "local": "/assets/3b2b7aca99f4eda9f4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog8-1536x542.jpg",
+      "local": "/assets/b84a0195914657d7f6.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/2024-kia-sorento-hybrid-review-big-vehicle-with-small-vehicle/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog8.jpg",
+      "local": "/assets/63aba7cb5ab8e937a2.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2F2024-kia-sorento-hybrid-review-big-vehicle-with-small-vehicle%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog8.jpg",
+      "local": "/assets/cb740c08ab4afdf1c0.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog4.jpg",
+      "local": "/assets/8156d9560c75dd5fd4.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog4-600x212.jpg",
+      "local": "/assets/d22e09e0b9bdb392b2.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog4-300x106.jpg",
+      "local": "/assets/46555e9dc9863fc6ca.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog4-1024x361.jpg",
+      "local": "/assets/1c140001e28ff8cc9b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog4-768x271.jpg",
+      "local": "/assets/9c37a57c2bf2a3c358.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog4-1536x542.jpg",
+      "local": "/assets/ab4365e98bb5b13987.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/2024-bmw-x3-m-sport-seats-available-as-a-standalone-option/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog4.jpg",
+      "local": "/assets/c0f059b3e76c0c0939.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2F2024-bmw-x3-m-sport-seats-available-as-a-standalone-option%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog4.jpg",
+      "local": "/assets/50feb79dcfb5fc3027.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/elementor/thumbs/detail-post-qgcqjbplr26tb4zy10bze2mopzdllwpk0s6tl4rlrw.jpg",
+      "local": "/assets/ffb7a389e59eabd8ce.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog5.jpg",
+      "local": "/assets/a86b94c93e1401154b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog5-600x212.jpg",
+      "local": "/assets/c233da379edffb5a6e.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog5-300x106.jpg",
+      "local": "/assets/587692a71b1b655d93.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog5-1024x361.jpg",
+      "local": "/assets/36a02e1a22bf960b34.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog5-768x271.jpg",
+      "local": "/assets/fc288ccf6895e3e30f.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog5-1536x542.jpg",
+      "local": "/assets/f3c3ae3dd8bace788c.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/2023-carnival-standard-blind-spot-forward-collision-avoidance/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog5.jpg",
+      "local": "/assets/b1aca5eaf372b786b2.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2F2023-carnival-standard-blind-spot-forward-collision-avoidance%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog5.jpg",
+      "local": "/assets/e617d0f440b45b2cae.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog1.jpg",
+      "local": "/assets/95cdaa6e534ecc1c15.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog1-600x212.jpg",
+      "local": "/assets/e33347d67043ab3414.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog1-300x106.jpg",
+      "local": "/assets/9620128e0032e0c467.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog1-1024x361.jpg",
+      "local": "/assets/19e1c2116f6debfd02.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog1-768x271.jpg",
+      "local": "/assets/cc2e737c72c3446399.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog1-1536x542.jpg",
+      "local": "/assets/6761630b6aa12e8ea3.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/golf-vs-polo-a-comparison-of-two-volkswagen-classics/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog1.jpg",
+      "local": "/assets/c4d68b47856c5daf08.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fgolf-vs-polo-a-comparison-of-two-volkswagen-classics%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog1.jpg",
+      "local": "/assets/bde6538bfd93592c6b.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog3.jpg",
+      "local": "/assets/b1ec94eafcc5b00cb9.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog3-600x212.jpg",
+      "local": "/assets/8a55f7a2ac10b94f89.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog3-300x106.jpg",
+      "local": "/assets/6e7253b73aa9f8d50b.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog3-1024x361.jpg",
+      "local": "/assets/ec674e068438db9fb1.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog3-768x271.jpg",
+      "local": "/assets/4fac61f3d58f3d2c10.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/11/blog3-1536x542.jpg",
+      "local": "/assets/294d52a7c65b94eb36.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://www.facebook.com/sharer.php?s=100&u=https://demoapus1.com/boxcar/battle-of-the-suvs-kia-sportage-vs-hyundai-tucson/&i=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog3.jpg",
+      "local": "/assets/0e3ce216baf8a16762.php",
+      "ext": "php",
+      "done": true
+    },
+    {
+      "url": "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fbattle-of-the-suvs-kia-sportage-vs-hyundai-tucson%2F&media=https%3A%2F%2Fdemoapus1.com%2Fboxcar%2Fwp-content%2Fuploads%2F2023%2F11%2Fblog3.jpg",
+      "local": "/assets/30cd7f6dad715514a8.bin",
+      "ext": "bin",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-includes/js/jquery/jquery.min.js",
+      "local": "/assets/b634d7f2675fd5c2f8.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/js/slick.min.js",
+      "local": "/assets/a62a5ea9afbaafaffc.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/js/bootstrap.bundle.min.js",
+      "local": "/assets/625170f923f353f2f0.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/select2/select2.full.min.js",
+      "local": "/assets/031624eb506e45b93f.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-includes/js/jquery/ui/core.min.js",
+      "local": "/assets/ab08309862a8ef2791.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-includes/js/jquery/ui/mouse.min.js",
+      "local": "/assets/e63121f0058d152900.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-includes/js/jquery/ui/slider.min.js",
+      "local": "/assets/c33a5b164556c20292.js",
+      "ext": "js",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/star.eot",
+      "local": "/assets/7d4c0480c936334735.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/star.eot?#iefix",
+      "local": "/assets/26756857b9494ff45a.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/star.woff",
+      "local": "/assets/d08dcfbcf8ca7c1ada.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/star.ttf",
+      "local": "/assets/9bd5438d39e0916c3b.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/star.svg#star",
+      "local": "/assets/9f0bcd451ca106e796.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot",
+      "local": "/assets/65033b45c037906bfd.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix",
+      "local": "/assets/56994ad90dc5161cac.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+      "local": "/assets/914657b72a762bd00f.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf",
+      "local": "/assets/37466d32633abb17c9.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce",
+      "local": "/assets/44c3ad58c5003e49a3.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/loader.svg",
+      "local": "/assets/23d725aafa5931a6ec.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+      "local": "/assets/597f99113dbe00a5a5.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+      "local": "/assets/67682ef7459422eeab.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+      "local": "/assets/c492d8399b6fc4b37e.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+      "local": "/assets/a670deb22a1f8277a9.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+      "local": "/assets/815a577971ce07a9e1.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+      "local": "/assets/740d11a14003899174.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+      "local": "/assets/4de9642cc0dab09e4e.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+      "local": "/assets/e9a57fadf4c8be2f48.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.23.0",
+      "local": "/assets/b83c0c9c8c91f39d1c.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.23.0#iefix",
+      "local": "/assets/7cba43412cb067ac69.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.23.0",
+      "local": "/assets/0c28b1dd671b8731a4.woff2",
+      "ext": "woff2",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.23.0",
+      "local": "/assets/954252101775f2f8a7.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.23.0",
+      "local": "/assets/377b61b2800ed4b1e8.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.23.0#eicon",
+      "local": "/assets/b4277119444d27abf5.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/10/slider1.jpg",
+      "local": "/assets/88217a3020d01f6c76.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/uploads/2023/09/bg-video.jpg",
+      "local": "/assets/733e52f31c55191361.jpg",
+      "ext": "jpg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/images/layers.png",
+      "local": "/assets/eec91d67953a93b28a.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/images/layers-2x.png",
+      "local": "/assets/05962fdd833016d228.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/wp-cardealer/assets/js/leaflet/images/marker-icon.png",
+      "local": "/assets/bf216bb4ed4a052b4b.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/flaticon.eot",
+      "local": "/assets/a1e7411f9cdaeeab8d.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/flaticon.eot?#iefix",
+      "local": "/assets/d489ca0d189c25a8cd.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/flaticon.woff2",
+      "local": "/assets/5b86305ea7a0053fb8.woff2",
+      "ext": "woff2",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/flaticon.woff",
+      "local": "/assets/a892e0669e7a4fb732.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/flaticon.ttf",
+      "local": "/assets/c4500fc2b5693d503f.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/flaticon.svg#flaticon",
+      "local": "/assets/b168e49231fe512909.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/themify.eot",
+      "local": "/assets/faf094ed9d3b233e87.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/themify.woff",
+      "local": "/assets/39020ed97bb22514b5.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/themify.ttf",
+      "local": "/assets/ed7b32d3152c6b0dc1.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/themify.svg",
+      "local": "/assets/14d6144a687c85d89a.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-brands-400.eot",
+      "local": "/assets/edbb00b85c076b21b2.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-brands-400.eot?#iefix",
+      "local": "/assets/e926a3f19d13f0879b.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-brands-400.woff2",
+      "local": "/assets/3333142e7bb3724d73.woff2",
+      "ext": "woff2",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-brands-400.woff",
+      "local": "/assets/b59d8014a5d8b595b8.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-brands-400.ttf",
+      "local": "/assets/9662fe5f9baad08706.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-brands-400.svg#fontawesome",
+      "local": "/assets/7991fec1979ba35f20.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-regular-400.eot",
+      "local": "/assets/a587a576ef0d18d221.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-regular-400.eot?#iefix",
+      "local": "/assets/fa06782da4dd2b6987.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-regular-400.woff2",
+      "local": "/assets/5b1fd267b7e236e74f.woff2",
+      "ext": "woff2",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-regular-400.woff",
+      "local": "/assets/e826ee7d5cd4a5f088.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-regular-400.ttf",
+      "local": "/assets/f1706e6cec9fdd5291.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-regular-400.svg#fontawesome",
+      "local": "/assets/95636cb9ac8cf4d4c0.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-solid-900.eot",
+      "local": "/assets/e9efd3a4e6e892098d.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-solid-900.eot?#iefix",
+      "local": "/assets/90624c272989f35fed.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-solid-900.woff2",
+      "local": "/assets/a88e1208fb41cbfd09.woff2",
+      "ext": "woff2",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-solid-900.woff",
+      "local": "/assets/7d456b9003d2a90229.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-solid-900.ttf",
+      "local": "/assets/8168565afc7646b5e1.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/fonts/fa-solid-900.svg#fontawesome",
+      "local": "/assets/e0ca2109a0bac709ee.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwA_JxRR23z.ttf",
+      "local": "/assets/c5acdfc28c7759cbe3.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRR23z.ttf",
+      "local": "/assets/fd09da0e254d731a97.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAkJxRR23z.ttf",
+      "local": "/assets/36c4b80dab169c6441.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAfJtRR23z.ttf",
+      "local": "/assets/764c1a626bec563bcc.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZtRR23z.ttf",
+      "local": "/assets/03ecb0741a40075cbd.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAIptRR23z.ttf",
+      "local": "/assets/4a700106133ae2bd58.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/images/loading-quick.gif",
+      "local": "/assets/7084c64bb10b4c4d16.gif",
+      "ext": "gif",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/images/select.png",
+      "local": "/assets/be73e1a32dd2a8edfe.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/images/filter.png",
+      "local": "/assets/efff5f5a691d35bf4f.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/themes/boxcar/images/loading.gif",
+      "local": "/assets/e6a01b94ab9eb4d3f9.gif",
+      "ext": "gif",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHRuAj-lg.ttf",
+      "local": "/assets/def8cea2b3d1f9371f.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLgHQuAj-lg.ttf",
+      "local": "/assets/5da69473dd9a7b5e10.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLt_QuAj-lg.ttf",
+      "local": "/assets/a44854ad440b070e2b.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQuAj-lg.ttf",
+      "local": "/assets/57840d188d076ff004.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLrPQuAj-lg.ttf",
+      "local": "/assets/3c93c68b7b1962bb2a.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLl_XuAj-lg.ttf",
+      "local": "/assets/8b5dd3c6f579c93f40.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXuAj-lg.ttf",
+      "local": "/assets/a94867f6c4f07af04f.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLgHXuAj-lg.ttf",
+      "local": "/assets/d8b35333e951b9e28b.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLijXuAj-lg.ttf",
+      "local": "/assets/1d93757d4ae55157f4.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbFmUiA8.ttf",
+      "local": "/assets/fa6d7d8703e6f432d8.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZEbVmUiA8.ttf",
+      "local": "/assets/8ebef1be9847e12d05.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiA8.ttf",
+      "local": "/assets/212ed85bd6e1de21e8.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiA8.ttf",
+      "local": "/assets/98b910f0208e132f8f.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiA8.ttf",
+      "local": "/assets/3001ffbd8d2d6b8504.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYaalmUiA8.ttf",
+      "local": "/assets/c44a41dc0c1c25a029.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjalmUiA8.ttf",
+      "local": "/assets/a0ab9869bed1d24417.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZEalmUiA8.ttf",
+      "local": "/assets/5b3d973cf49707b82a.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZtalmUiA8.ttf",
+      "local": "/assets/c961e282dd6d8743db.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWmb2Rm.ttf",
+      "local": "/assets/0e814212f41c876604.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISmb2Rm.ttf",
+      "local": "/assets/59f804a0f6197a7129.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSmb2Rm.ttf",
+      "local": "/assets/712df8cd0373f95837.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf",
+      "local": "/assets/a9a89d88d784c899e4.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSmb2Rm.ttf",
+      "local": "/assets/eeb3191b4fa44682b8.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOmb2Rm.ttf",
+      "local": "/assets/9d4439110788061536.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4Omb2Rm.ttf",
+      "local": "/assets/33da2dd2cc8aba2eaf.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOmb2Rm.ttf",
+      "local": "/assets/ae5fe26220b31e1760.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmb2Rm.ttf",
+      "local": "/assets/430bc50ffe91ef1805.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot",
+      "local": "/assets/cb1b287bb17c7f868f.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot?#iefix",
+      "local": "/assets/7d0c291da1a672d485.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2",
+      "local": "/assets/b85a7421bc91f12a73.woff2",
+      "ext": "woff2",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff",
+      "local": "/assets/3cd555d84c1185a00d.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf",
+      "local": "/assets/2b02e928134c1ebbb5.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg#fontawesome",
+      "local": "/assets/2cfbcad68396c4dfaf.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888",
+      "local": "/assets/1ea35bb25c1e14d4b4.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888#iefix",
+      "local": "/assets/0c49e90e380006cdc6.eot",
+      "ext": "eot",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888",
+      "local": "/assets/d44af923f69a70d2a0.woff",
+      "ext": "woff",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.ttf?5510888",
+      "local": "/assets/16c52c0bb1f148053c.ttf",
+      "ext": "ttf",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.svg?5510888#revicons",
+      "local": "/assets/3440a44aa9aef4a67d.svg",
+      "ext": "svg",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/css/openhand.cur",
+      "local": "/assets/49000406b2ac5b3eb8.cur",
+      "ext": "cur",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/css/closedhand.cur",
+      "local": "/assets/82d26b2c31ac9427ce.cur",
+      "ext": "cur",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/assets/gridtile.png",
+      "local": "/assets/53468661048d707d17.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/assets/gridtile_white.png",
+      "local": "/assets/21fc57da7b66ccf428.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/assets/gridtile_3x3.png",
+      "local": "/assets/2ca04082902707c90c.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/assets/gridtile_3x3_white.png",
+      "local": "/assets/919ae4d8fc77b26d29.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/assets/coloredbg.png",
+      "local": "/assets/add712e659e0cdc74d.png",
+      "ext": "png",
+      "done": true
+    },
+    {
+      "url": "https://demoapus1.com/boxcar/wp-content/plugins/revslider/public/assets/assets/loader.gif",
+      "local": "/assets/5da8bf8b07fce6e124.gif",
+      "ext": "gif",
+      "done": true
+    }
+  ]
+}

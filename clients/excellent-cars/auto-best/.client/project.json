@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "client": "excellent-cars",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:48:28.241Z",
+  "state": "local-demo-verified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "verifiedAt": "2026-09-08T03:44:08.553Z",
+    "widths": [
+      390,
+      1440
+    ],
+    "routeChecks": 10,
+    "interactionPasses": 2,
+    "evidence": "J:/cars/clients/excellent-cars/qa-final/excellent-cars/auto-best/result.json",
+    "build": "qa-final/auto-validate.log: current architecture, assets, Svelte check and build passed",
+    "visualReview": "Viewport screenshots manually inspected; current logo contrast and contact destinations corrected."
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localPreviewUrl": "http://127.0.0.1:6621/",
+  "knownLimits": [
+    "Local prospect demo only; no public preview or CRM registration.",
+    "Stock and prices are the dated 2026-09-07 source snapshot, not a live feed.",
+    "No enquiry delivery, private account, chat backend or live import-feed integration verified.",
+    "Retained sample admin/team/partner routes are template demo surfaces, not evidence of real staff or partnerships."
+  ]
+}

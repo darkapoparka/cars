@@ -1,0 +1,122 @@
+[
+  {
+    "width": 390,
+    "name": "home",
+    "url": "/",
+    "status": 200,
+    "errors": [],
+    "title": "Day & Night Auto Group — Премиум автомобили в София",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "name": "inventory",
+    "url": "/listing-grid?make=BMW&sort=price-asc",
+    "status": 200,
+    "errors": [],
+    "title": "Налични автомобили — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "name": "vehicle",
+    "url": "/listing-detail-v1/4",
+    "status": 200,
+    "errors": [],
+    "title": "BMW X6 M Sport — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "name": "leasing",
+    "url": "/contact?topic=leasing&vehicle=4",
+    "status": 200,
+    "errors": [],
+    "title": "Контакти — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "name": "about",
+    "url": "/about-us",
+    "status": 200,
+    "errors": [],
+    "title": "За нас — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 390,
+    "name": "article",
+    "url": "/blog-detail/1",
+    "status": 200,
+    "errors": [],
+    "title": "Проверка преди покупка — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "name": "home",
+    "url": "/",
+    "status": 200,
+    "errors": [],
+    "title": "Day & Night Auto Group — Премиум автомобили в София",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "name": "inventory",
+    "url": "/listing-grid?make=BMW&sort=price-asc",
+    "status": 200,
+    "errors": [],
+    "title": "Налични автомобили — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "name": "vehicle",
+    "url": "/listing-detail-v1/4",
+    "status": 200,
+    "errors": [],
+    "title": "BMW X6 M Sport — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "name": "leasing",
+    "url": "/contact?topic=leasing&vehicle=4",
+    "status": 200,
+    "errors": [],
+    "title": "Контакти — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "name": "about",
+    "url": "/about-us",
+    "status": 200,
+    "errors": [],
+    "title": "За нас — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  },
+  {
+    "width": 1440,
+    "name": "article",
+    "url": "/blog-detail/1",
+    "status": 200,
+    "errors": [],
+    "title": "Проверка преди покупка — Day & Night Auto Group",
+    "overflow": false,
+    "broken": []
+  }
+]

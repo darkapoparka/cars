@@ -1,0 +1,51 @@
+{
+  "key": "rencar",
+  "name": "Rencar",
+  "aliases": [
+    "6430"
+  ],
+  "path": "templates/rencar",
+  "version": "2026.09.06-baseline",
+  "family": "rencar",
+  "stack": "vite-svelte",
+  "sourcePort": 6430,
+  "libraryPort": 6430,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "home01",
+      "route": "/"
+    },
+    {
+      "id": "home02",
+      "route": "/index-2.html"
+    },
+    {
+      "id": "home03",
+      "route": "/index-3.html"
+    },
+    {
+      "id": "home04",
+      "route": "/index-4.html"
+    },
+    {
+      "id": "home05",
+      "route": "/index-5.html"
+    }
+  ],
+  "desktop": 7.5,
+  "mobile": 5.5,
+  "priority": "polish-next",
+  "readiness": "dealer-adaptation-needed",
+  "reskinEffort": "high-until-dealer-pass",
+  "brandFiles": [
+    "src/pages",
+    "src/template.js",
+    "public/assets/css",
+    "public/assets"
+  ],
+  "note": "Five real homepages and 45 compiled pages. Prefer Home 2 or 5 for a future dealer adaptation; long mobile heroes and stacked booking filters need a single shared template pass. Rental semantics require more than wording.",
+  "sourceSnapshot": null,
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed"
+}

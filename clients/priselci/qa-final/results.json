@@ -1,0 +1,6011 @@
+[
+  {
+    "client": "priselci",
+    "name": "Автокъща Приселци",
+    "template": "auto-best",
+    "port": 6646,
+    "startedAt": "2026-09-07T22:12:07.479Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автокъща Приселци — Употребявани автомобили в Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "До 4 000 €",
+            "href": "/listing-grid?price_max=4000"
+          },
+          {
+            "text": "4–5 000 €",
+            "href": "/listing-grid?price_min=4000&price_max=5000"
+          },
+          {
+            "text": "Audi",
+            "href": "/listing-grid?make=Audi"
+          },
+          {
+            "text": "Mercedes",
+            "href": "/listing-grid?make=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/listing-grid?make=BMW"
+          },
+          {
+            "text": "Разгледай",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Заяви оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "До 4 000 €\n8 автомобила",
+            "href": "/listing-grid?price_max=4000"
+          },
+          {
+            "text": "4–5 000 €\n3 автомобила",
+            "href": "/listing-grid?price_min=4000&price_max=5000"
+          },
+          {
+            "text": "Над 5 000 €\n5 автомобила",
+            "href": "/listing-grid?price_min=5000"
+          },
+          {
+            "text": "Виж всички\n16 автомобила",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Седан",
+            "href": "/listing-grid?body=Sedan"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/listing-grid?body=Hatchback"
+          },
+          {
+            "text": "SUV",
+            "href": "/listing-grid?body=SUV"
+          },
+          {
+            "text": "Кросоувър",
+            "href": "/listing-grid?body=Crossover"
+          },
+          {
+            "text": "Комби",
+            "href": "/listing-grid?body=Wagon"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "235 193 км\n2007\n\nХечбек\n\nVW Golf 1.4 БЕНЗИН\nБензин\nРъчна\n3600 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "179 848 км\n2010\n\nКомби\n\nVW Passat 1.4 БЕНЗИН\nБензин\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "210 534 км\n2008\n\nКомби\n\nVW Passat 2.0TDI COMMONRAIL\nДизел\nРъчна\n3900 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "175 532 км\n2010\n\nХечбек\n\nSeat Ibiza 1.2 БЕНЗИН\nБензин\nРъчна\n3499 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/listing-grid?make=Land%20Rover"
+          },
+          {
+            "text": "Kia",
+            "href": "/listing-grid?make=Kia"
+          },
+          {
+            "text": "Toyota",
+            "href": "/listing-grid?make=Toyota"
+          },
+          {
+            "text": "Jeep",
+            "href": "/listing-grid?make=Jeep"
+          },
+          {
+            "text": "Nissan",
+            "href": "/listing-grid?make=Nissan"
+          },
+          {
+            "text": "Всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nПопитайте дали е възможен внос след потвърждение според критерии за модел, бюджет и оборудване.",
+            "href": "/blog"
+          },
+          {
+            "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+            "href": "/blog"
+          },
+          {
+            "text": "Заяви внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Виж условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Разгледай",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай/Бартер",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Заяви оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заяви внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Виж условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/listing-grid",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Налични автомобили — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН\n2007\n235 193 км\nБензин\nРъчна\n3600 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН\n2010\n179 848 км\nБензин\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL\n2008\n210 534 км\nДизел\nРъчна\n3900 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН\n2010\n175 532 км\nБензин\nРъчна\n3499 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Renault Koleos 2.0 ДИЗЕЛ 4Х4\n2010\n181 246 км\nДизел\nРъчна\n44 299 €",
+            "href": "/listing-detail-v1/5"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО\n2006\n205 664 км\nБензин\nРъчна\n2899 €",
+            "href": "/listing-detail-v1/6"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL\n2009\n235 788 км\nДизел\nРъчна\n3299 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С\n2011\n210 452 км\nДизел\nРъчна\n5099 €",
+            "href": "/listing-detail-v1/8"
+          },
+          {
+            "text": "Mercedes-Benz C 200 2.2 CDI\n2004\n218 432 км\nДизел\nРъчна\n2799 €",
+            "href": "/listing-detail-v1/9"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С\n2010\n185 783 км\nДизел\nРъчна\n3499 €",
+            "href": "/listing-detail-v1/10"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps\n2009\n253 746 км\nДизел\nРъчна\n4699 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ\n2009\n136 016 км\nБензин\nРъчна\n2500 €",
+            "href": "/listing-detail-v1/12"
+          },
+          {
+            "text": "Renault Grand scenic 1.5DCI\n2012\n199 811 км\nДизел\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/13"
+          },
+          {
+            "text": "BMW X3 2.0 ДИЗЕЛ 4Х4\n2007\n207 195 км\nДизел\nРъчна\n44 399 €",
+            "href": "/listing-detail-v1/14"
+          },
+          {
+            "text": "Nissan Qashqai 1.5 DCI\n2012\n192 641 км\nДизел\nРъчна\n5499 €",
+            "href": "/listing-detail-v1/15"
+          },
+          {
+            "text": "Mercedes-Benz E 280 3.0CDI V6\n2005\n208 357 км\nДизел\nАвтоматик\n64 100 €",
+            "href": "/listing-detail-v1/16"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/listing-detail-v1/1",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Golf 1.4 БЕНЗИН — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Получете реална оферта",
+            "href": "/contact?topic=leasing&vehicle=VW%20Golf%201.4%20%D0%91%D0%95%D0%9D%D0%97%D0%98%D0%9D"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН\n4299 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL\n3900 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН\n3499 €",
+            "href": "/listing-detail-v1/4"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Контакти — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Контакти и адрес",
+            "href": "#contact-intent"
+          },
+          {
+            "text": "Обадете се ·\n0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Адрес\nбул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Посещения\nУточнете работното време и огледа по телефона",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Телефон\n0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/about-us",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Попитайте за внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Обсъдете лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автокъща Приселци — Употребявани автомобили в Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте колекцията",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Към автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продажба или бартер",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Седан",
+            "href": "/listing-grid?body=Sedan"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/listing-grid?body=Hatchback"
+          },
+          {
+            "text": "Пикап",
+            "href": "/listing-grid?body=Pickup%20Truck"
+          },
+          {
+            "text": "SUV",
+            "href": "/listing-grid?body=SUV"
+          },
+          {
+            "text": "Кросоувър",
+            "href": "/listing-grid?body=Crossover"
+          },
+          {
+            "text": "Миниван",
+            "href": "/listing-grid?body=Minivan"
+          },
+          {
+            "text": "Комби",
+            "href": "/listing-grid?body=Wagon"
+          },
+          {
+            "text": "Кабриолет",
+            "href": "/listing-grid?body=Convertible"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "235 193 км\n2007\n\nХечбек\n\nVW Golf 1.4 БЕНЗИН\nБензин\nРъчна\n3600 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "179 848 км\n2010\n\nКомби\n\nVW Passat 1.4 БЕНЗИН\nБензин\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "210 534 км\n2008\n\nКомби\n\nVW Passat 2.0TDI COMMONRAIL\nДизел\nРъчна\n3900 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "175 532 км\n2010\n\nХечбек\n\nSeat Ibiza 1.2 БЕНЗИН\nБензин\nРъчна\n3499 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/listing-grid?make=Land%20Rover"
+          },
+          {
+            "text": "Kia",
+            "href": "/listing-grid?make=Kia"
+          },
+          {
+            "text": "Toyota",
+            "href": "/listing-grid?make=Toyota"
+          },
+          {
+            "text": "Jeep",
+            "href": "/listing-grid?make=Jeep"
+          },
+          {
+            "text": "Nissan",
+            "href": "/listing-grid?make=Nissan"
+          },
+          {
+            "text": "Ford",
+            "href": "/listing-grid?make=Ford"
+          },
+          {
+            "text": "Foton",
+            "href": "/listing-grid?make=Foton"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/listing-grid?make=Mercedes-Benz"
+          },
+          {
+            "text": "Dongfeng",
+            "href": "/listing-grid?make=Dongfeng"
+          },
+          {
+            "text": "Isuzu",
+            "href": "/listing-grid?make=Isuzu"
+          },
+          {
+            "text": "Audi",
+            "href": "/listing-grid?make=Audi"
+          },
+          {
+            "text": "BMW",
+            "href": "/listing-grid?make=BMW"
+          },
+          {
+            "text": "Вижте всички статии",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nМожем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nПопитайте дали е възможен внос след потвърждение според критерии за модел, бюджет и оборудване.",
+            "href": "/blog"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заявете внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Вижте колекцията",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Към автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продажба или бартер",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заявете внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/listing-grid",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Налични автомобили — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "235 193 км\n2007\n\nХечбек\n\nVW Golf 1.4 БЕНЗИН\nБензин\nРъчна\n3600 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "179 848 км\n2010\n\nКомби\n\nVW Passat 1.4 БЕНЗИН\nБензин\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "210 534 км\n2008\n\nКомби\n\nVW Passat 2.0TDI COMMONRAIL\nДизел\nРъчна\n3900 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "175 532 км\n2010\n\nХечбек\n\nSeat Ibiza 1.2 БЕНЗИН\nБензин\nРъчна\n3499 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "181 246 км\n2010\n\nSUV\n\nRenault Koleos 2.0 ДИЗЕЛ 4Х4\nДизел\nРъчна\n44 299 €",
+            "href": "/listing-detail-v1/5"
+          },
+          {
+            "text": "205 664 км\n2006\n\nКабрио\n\nPeugeot 307 CC КАБРИО\nБензин\nРъчна\n2899 €",
+            "href": "/listing-detail-v1/6"
+          },
+          {
+            "text": "235 788 км\n2009\n\nКомби\n\nFord Mondeo 2.0 DIZEL\nДизел\nРъчна\n3299 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "210 452 км\n2011\n\nВан\n\nPeugeot 5008 2.0HDI 150К.С\nДизел\nРъчна\n5099 €",
+            "href": "/listing-detail-v1/8"
+          },
+          {
+            "text": "218 432 км\n2004\n\nКомби\n\nMercedes-Benz C 200 2.2 CDI\nДизел\nРъчна\n2799 €",
+            "href": "/listing-detail-v1/9"
+          },
+          {
+            "text": "185 783 км\n2010\n\nХечбек\n\nCitroen C3 Picasso 1.6HDI 90К.С\nДизел\nРъчна\n3499 €",
+            "href": "/listing-detail-v1/10"
+          },
+          {
+            "text": "253 746 км\n2009\n\nХечбек\n\nAudi A3 1.9 TDI 105ps\nДизел\nРъчна\n4699 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "136 016 км\n2009\n\nХечбек\n\nDacia Sandero 1.4 БЕНЗИН/ГАЗ\nБензин\nРъчна\n2500 €",
+            "href": "/listing-detail-v1/12"
+          },
+          {
+            "text": "199 811 км\n2012\n\nВан\n\nRenault Grand scenic 1.5DCI\nДизел\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/13"
+          },
+          {
+            "text": "207 195 км\n2007\n\nSUV\n\nBMW X3 2.0 ДИЗЕЛ 4Х4\nДизел\nРъчна\n44 399 €",
+            "href": "/listing-detail-v1/14"
+          },
+          {
+            "text": "192 641 км\n2012\n\nSUV\n\nNissan Qashqai 1.5 DCI\nДизел\nРъчна\n5499 €",
+            "href": "/listing-detail-v1/15"
+          },
+          {
+            "text": "208 357 км\n2005\n\nСедан\n\nMercedes-Benz E 280 3.0CDI V6\nДизел\nАвтоматик\n64 100 €",
+            "href": "/listing-detail-v1/16"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/listing-detail-v1/1",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Golf 1.4 БЕНЗИН — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Назад",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Получете реална оферта",
+            "href": "/contact?topic=leasing&vehicle=VW%20Golf%201.4%20%D0%91%D0%95%D0%9D%D0%97%D0%98%D0%9D"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН\n4299 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL\n3900 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН\n3499 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Контакти — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/about-us",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас — Автокъща Приселци",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Попитайте за внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Обсъдете лизинг",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте оценка",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за лизинг\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "VW",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6646/listing-grid?q=VW",
+        "afterCount": 3,
+        "search": true,
+        "detailHref": "/listing-detail-v1/1",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiryHref": "/contact?topic=inspection",
+        "enquiry": true,
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "VW",
+        "beforeCount": 16,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6646/listing-grid?make=VW",
+        "afterCount": 3,
+        "search": true,
+        "detailHref": "/listing-detail-v1/1",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiryHref": "/contact",
+        "enquiry": true,
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "auto-best",
+      "Project": "J:\\cars\\clients\\priselci\\auto-best",
+      "PID": 67240,
+      "Port": 6646,
+      "Url": "http://127.0.0.1:6646",
+      "Stdout": "J:\\cars\\runtime\\auto-best-6646-20260908-011208.out.log",
+      "Stderr": "J:\\cars\\runtime\\auto-best-6646-20260908-011208.err.log",
+      "Status": "started-not-yet-browser-verified",
+      "status": "stopped-after-verification"
+    },
+    "pass": true
+  },
+  {
+    "client": "priselci",
+    "name": "Автокъща Приселци",
+    "template": "modern",
+    "port": 6647,
+    "startedAt": "2026-09-08T03:06:44.447Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили от Автокъща Приселци | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11784527405061757"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН\n\n3 600 €\n\n2007\n235 193 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11784527405061757"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11758270885113337"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН\n\n4 299 €\n\n2010\n179 848 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11758270885113337"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11753962633467246"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL\n\n3 900 €\n\n2008\n210 534 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11753962633467246"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11784527857493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН\n\n3 499 €\n\n2010\n175 532 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11784527857493559"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-21754395406651747"
+          },
+          {
+            "text": "Renault Koleos 2.0 ДИЗЕЛ 4Х4\n\n44 299 €\n\n2010\n181 246 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-21754395406651747"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11781856640282742"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО\n\n2 899 €\n\n2006\n205 664 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11781856640282742"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11759747090481666"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL\n\n3 299 €\n\n2009\n235 788 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11759747090481666"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11776863022154449"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С\n\n5 099 €\n\n2011\n210 452 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11776863022154449"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11751891575433302"
+          },
+          {
+            "text": "Mercedes-Benz C 200 2.2 CDI\n\n2 799 €\n\n2004\n218 432 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11751891575433302"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11787126157294169"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С\n\n3 499 €\n\n2010\n185 783 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11787126157294169"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11784638939574277"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps\n\n4 699 €\n\n2009\n253 746 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11784638939574277"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11779190417819998"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ\n\n2 500 €\n\n2009\n136 016 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11779190417819998"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11770812815337634"
+          },
+          {
+            "text": "Renault Grand scenic 1.5DCI\n\n4 299 €\n\n2012\n199 811 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11770812815337634"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-21786691566300206"
+          },
+          {
+            "text": "BMW X3 2.0 ДИЗЕЛ 4Х4\n\n44 399 €\n\n2007\n207 195 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-21786691566300206"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-21787900875118991"
+          },
+          {
+            "text": "Nissan Qashqai 1.5 DCI\n\n5 499 €\n\n2012\n192 641 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-21787900875118991"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11763969547989753"
+          },
+          {
+            "text": "Mercedes-Benz E 280 3.0CDI V6\n\n64 100 €\n\n2005\n208 357 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/priselci-11763969547989753"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/listing/priselci-11784527405061757",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Golf 1.4 БЕНЗИН | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/bg/lease?vehicle=priselci-11784527405061757"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "4299 €\n\nVW Passat 1.4 БЕНЗИН\n\n179 848 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/priselci-11758270885113337"
+          },
+          {
+            "text": "3900 €\n\nVW Passat 2.0TDI COMMONRAIL\n\n210 534 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/priselci-11753962633467246"
+          },
+          {
+            "text": "3499 €\n\nSeat Ibiza 1.2 БЕНЗИН\n\n175 532 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/priselci-11784527857493559"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас и контакти | Приселци | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Обадете ни се\n0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Посетете шоурума\nбул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Автомобили в наличност",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос по заявка",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Внос на автомобил по заявка | Приселци | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили от Автокъща Приселци | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11784527405061757"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН\n\n3 600 €\n\n2007\n235 193 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11784527405061757"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11758270885113337"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН\n\n4 299 €\n\n2010\n179 848 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11758270885113337"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11753962633467246"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL\n\n3 900 €\n\n2008\n210 534 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11753962633467246"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11784527857493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН\n\n3 499 €\n\n2010\n175 532 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11784527857493559"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-21754395406651747"
+          },
+          {
+            "text": "Renault Koleos 2.0 ДИЗЕЛ 4Х4\n\n44 299 €\n\n2010\n181 246 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-21754395406651747"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11781856640282742"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО\n\n2 899 €\n\n2006\n205 664 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11781856640282742"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11759747090481666"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL\n\n3 299 €\n\n2009\n235 788 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11759747090481666"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11776863022154449"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С\n\n5 099 €\n\n2011\n210 452 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11776863022154449"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11751891575433302"
+          },
+          {
+            "text": "Mercedes-Benz C 200 2.2 CDI\n\n2 799 €\n\n2004\n218 432 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11751891575433302"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11787126157294169"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С\n\n3 499 €\n\n2010\n185 783 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11787126157294169"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11784638939574277"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps\n\n4 699 €\n\n2009\n253 746 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11784638939574277"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11779190417819998"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ\n\n2 500 €\n\n2009\n136 016 км\nБензин\nРъчна",
+            "href": "/bg/listing/priselci-11779190417819998"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11770812815337634"
+          },
+          {
+            "text": "Renault Grand scenic 1.5DCI\n\n4 299 €\n\n2012\n199 811 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-11770812815337634"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-21786691566300206"
+          },
+          {
+            "text": "BMW X3 2.0 ДИЗЕЛ 4Х4\n\n44 399 €\n\n2007\n207 195 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-21786691566300206"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-21787900875118991"
+          },
+          {
+            "text": "Nissan Qashqai 1.5 DCI\n\n5 499 €\n\n2012\n192 641 км\nДизел\nРъчна",
+            "href": "/bg/listing/priselci-21787900875118991"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/priselci-11763969547989753"
+          },
+          {
+            "text": "Mercedes-Benz E 280 3.0CDI V6\n\n64 100 €\n\n2005\n208 357 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/priselci-11763969547989753"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/listing/priselci-11784527405061757",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Golf 1.4 БЕНЗИН | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Назад към търсенето",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "4299 €\n\nVW Passat 1.4 БЕНЗИН\n\n179 848 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/priselci-11758270885113337"
+          },
+          {
+            "text": "3900 €\n\nVW Passat 2.0TDI COMMONRAIL\n\n210 534 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/priselci-11753962633467246"
+          },
+          {
+            "text": "3499 €\n\nSeat Ibiza 1.2 БЕНЗИН\n\n175 532 км · Бензин\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/priselci-11784527857493559"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Виж финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Варна\nбул. „Цар Освободител“ 285, България",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас и контакти | Приселци | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Вижте наличностите",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Телефон\n0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Шоурум · бул. „Цар Освободител“ 285\nбул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос по заявка\nКажете какво търсите и започнете разговор.",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Запитване за лизинг\nОбсъдете вариант според автомобила и бюджета ви.",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Внос на автомобил по заявка | Приселци | Автокъща Приселци",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Опишете автомобил",
+            "href": "/bg/imports?start=1#import-request"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "BMW",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6647/cars?q=BMW",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/bg/listing/priselci-21786691566300206",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "BMW",
+        "beforeCount": 16,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6647/cars?q=BMW",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/bg/listing/priselci-21786691566300206",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "modern",
+      "Project": "J:\\cars\\clients\\priselci\\modern",
+      "PID": 6740,
+      "Port": 6647,
+      "Url": "http://127.0.0.1:6647",
+      "Stdout": "J:\\cars\\runtime\\modern-6647-20260908-060645.out.log",
+      "Stderr": "J:\\cars\\runtime\\modern-6647-20260908-060645.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true
+  },
+  {
+    "client": "priselci",
+    "name": "Автокъща Приселци",
+    "template": "carwow",
+    "port": 6648,
+    "startedAt": "2026-09-08T03:08:19.475Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Приселци Варна - автомобили от обяви и бърз контакт",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Всички 16 коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory?transmission=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "До 10 000 EUR\n13 коли",
+            "href": "/inventory?price=under-10000"
+          },
+          {
+            "text": "До 20 000 EUR\n13 коли",
+            "href": "/inventory?price=under-20000"
+          },
+          {
+            "text": "До 30 000 EUR\n13 коли",
+            "href": "/inventory?price=under-30000"
+          },
+          {
+            "text": "До 50 000 EUR\n15 коли",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "Над 50 000 EUR\n1 коли",
+            "href": "/inventory?price=over-50000"
+          },
+          {
+            "text": "Без бюджет\nВсички 16 коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "BMW\n1 автомобил",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Mercedes\n2 автомобила",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "Audi\n1 автомобил",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Porsche\nЗапитване за автомобил",
+            "href": "/inventory?brand=Porsche"
+          },
+          {
+            "text": "Mazda\nЗапитване за автомобил",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Honda\nЗапитване за автомобил",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Toyota\nЗапитване за автомобил",
+            "href": "/inventory?brand=Toyota"
+          },
+          {
+            "text": "Volvo\nЗапитване за автомобил",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Ford\nЗапитване за автомобил",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Hyundai\nЗапитване за автомобил",
+            "href": "/inventory?brand=Hyundai"
+          },
+          {
+            "text": "Tesla\nЗапитване за автомобил",
+            "href": "/inventory?brand=Tesla"
+          },
+          {
+            "text": "Всички марки",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Хечбек\n5 коли",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Комби\n4 коли",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Джип\n3 коли",
+            "href": "/inventory?body=SUV"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "",
+            "href": "https://priselci.mobile.bg/"
+          },
+          {
+            "text": "",
+            "href": "https://priselci.mobile.bg/"
+          },
+          {
+            "text": "",
+            "href": "https://priselci.mobile.bg/"
+          },
+          {
+            "text": "0886 251 705\nОбаждане / Viber",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили в наличност | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Публикувана обява\nDacia Sandero 1.4 БЕНЗИН/ГАЗ\n2500 €\nУсловия по запитване\n136 016 км\n2009\nБензин\nРъчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Публикувана обява\nMercedes-Benz C 200 2.2 CDI\n2799 €\nУсловия по запитване\n218 432 км\n2004\nДизел\nРъчна",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 307 CC КАБРИО\n2899 €\nУсловия по запитване\n205 664 км\n2006\nБензин\nРъчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Публикувана обява\nFord Mondeo 2.0 DIZEL\n3299 €\nУсловия по запитване\n235 788 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Публикувана обява\nSeat Ibiza 1.2 БЕНЗИН\n3499 €\nУсловия по запитване\n175 532 км\n2010\nБензин\nРъчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Публикувана обява\nCitroen C3 Picasso 1.6HDI 90К.С\n3499 €\nУсловия по запитване\n185 783 км\n2010\nДизел\nРъчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Публикувана обява\nVW Golf 1.4 БЕНЗИН\n3600 €\nУсловия по запитване\n235 193 км\n2007\nБензин\nРъчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 2.0TDI COMMONRAIL\n3900 €\nУсловия по запитване\n210 534 км\n2008\nДизел\nРъчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 1.4 БЕНЗИН\n4299 €\nУсловия по запитване\n179 848 км\n2010\nБензин\nРъчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Публикувана обява\nRenault Grand scenic 1.5DCI\n4299 €\nУсловия по запитване\n199 811 км\n2012\nДизел\nРъчна",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Публикувана обява\nAudi A3 1.9 TDI 105ps\n4699 €\nУсловия по запитване\n253 746 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 5008 2.0HDI 150К.С\n5099 €\nУсловия по запитване\n210 452 км\n2011\nДизел\nРъчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Публикувана обява\nNissan Qashqai 1.5 DCI\n5499 €\nУсловия по запитване\n192 641 км\n2012\nДизел\nРъчна",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Публикувана обява\nRenault Koleos 2.0 ДИЗЕЛ 4Х4\n44 299 €\nУсловия по запитване\n181 246 км\n2010\nДизел\nРъчна",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "Публикувана обява\nBMW X3 2.0 ДИЗЕЛ 4Х4\n44 399 €\nУсловия по запитване\n207 195 км\n2007\nДизел\nРъчна",
+            "href": "/inventory/bmw-x3-2-0-4-4-300206"
+          },
+          {
+            "text": "Публикувана обява\nMercedes-Benz E 280 3.0CDI V6\n64 100 €\nУсловия по запитване\n208 357 км\n2005\nДизел\nАвтоматик",
+            "href": "/inventory/mercedes-benz-e-280-3-0cdi-v6-989753"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory/dacia-sandero-1-4-819998",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ 2009 г., Бензин, 136 016 км, Публикувана обява | Приселци",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Viber",
+            "href": "viber://chat?number=%2B359886251705"
+          },
+          {
+            "text": "Приселци\nАвтокъща Приселци, Варна, България",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Контакти | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "КОЛИ",
+            "href": "/inventory"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/about",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "ВСИЧКИ",
+            "href": "/team"
+          },
+          {
+            "text": "Екип продажби Приселци\nКонтакт за продажби",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "Въпрос за замяна\nВъзможността се потвърждава",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "Въпроси за документи\nДокументи и финансиране",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/financing",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Финансиране | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359886251705",
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory?price=under-10000",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили в наличност | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Публикувана обява\nDacia Sandero 1.4 БЕНЗИН/ГАЗ\n2500 €\nУсловия по запитване\n136 016 км\n2009\nБензин\nРъчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Публикувана обява\nMercedes-Benz C 200 2.2 CDI\n2799 €\nУсловия по запитване\n218 432 км\n2004\nДизел\nРъчна",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 307 CC КАБРИО\n2899 €\nУсловия по запитване\n205 664 км\n2006\nБензин\nРъчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Публикувана обява\nFord Mondeo 2.0 DIZEL\n3299 €\nУсловия по запитване\n235 788 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Публикувана обява\nSeat Ibiza 1.2 БЕНЗИН\n3499 €\nУсловия по запитване\n175 532 км\n2010\nБензин\nРъчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Публикувана обява\nCitroen C3 Picasso 1.6HDI 90К.С\n3499 €\nУсловия по запитване\n185 783 км\n2010\nДизел\nРъчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Публикувана обява\nVW Golf 1.4 БЕНЗИН\n3600 €\nУсловия по запитване\n235 193 км\n2007\nБензин\nРъчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 2.0TDI COMMONRAIL\n3900 €\nУсловия по запитване\n210 534 км\n2008\nДизел\nРъчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 1.4 БЕНЗИН\n4299 €\nУсловия по запитване\n179 848 км\n2010\nБензин\nРъчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Публикувана обява\nRenault Grand scenic 1.5DCI\n4299 €\nУсловия по запитване\n199 811 км\n2012\nДизел\nРъчна",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Публикувана обява\nAudi A3 1.9 TDI 105ps\n4699 €\nУсловия по запитване\n253 746 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 5008 2.0HDI 150К.С\n5099 €\nУсловия по запитване\n210 452 км\n2011\nДизел\nРъчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Публикувана обява\nNissan Qashqai 1.5 DCI\n5499 €\nУсловия по запитване\n192 641 км\n2012\nДизел\nРъчна",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true,
+        "budgetCount": 13,
+        "expectedBudgetCount": 13,
+        "originalHarnessCount": 13,
+        "focusedEvidence": "../focused.json"
+      },
+      {
+        "width": 390,
+        "route": "/inventory?price=under-20000",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили в наличност | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Публикувана обява\nDacia Sandero 1.4 БЕНЗИН/ГАЗ\n2500 €\nУсловия по запитване\n136 016 км\n2009\nБензин\nРъчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Публикувана обява\nMercedes-Benz C 200 2.2 CDI\n2799 €\nУсловия по запитване\n218 432 км\n2004\nДизел\nРъчна",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 307 CC КАБРИО\n2899 €\nУсловия по запитване\n205 664 км\n2006\nБензин\nРъчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Публикувана обява\nFord Mondeo 2.0 DIZEL\n3299 €\nУсловия по запитване\n235 788 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Публикувана обява\nSeat Ibiza 1.2 БЕНЗИН\n3499 €\nУсловия по запитване\n175 532 км\n2010\nБензин\nРъчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Публикувана обява\nCitroen C3 Picasso 1.6HDI 90К.С\n3499 €\nУсловия по запитване\n185 783 км\n2010\nДизел\nРъчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Публикувана обява\nVW Golf 1.4 БЕНЗИН\n3600 €\nУсловия по запитване\n235 193 км\n2007\nБензин\nРъчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 2.0TDI COMMONRAIL\n3900 €\nУсловия по запитване\n210 534 км\n2008\nДизел\nРъчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 1.4 БЕНЗИН\n4299 €\nУсловия по запитване\n179 848 км\n2010\nБензин\nРъчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Публикувана обява\nRenault Grand scenic 1.5DCI\n4299 €\nУсловия по запитване\n199 811 км\n2012\nДизел\nРъчна",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Публикувана обява\nAudi A3 1.9 TDI 105ps\n4699 €\nУсловия по запитване\n253 746 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 5008 2.0HDI 150К.С\n5099 €\nУсловия по запитване\n210 452 км\n2011\nДизел\nРъчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Публикувана обява\nNissan Qashqai 1.5 DCI\n5499 €\nУсловия по запитване\n192 641 км\n2012\nДизел\nРъчна",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true,
+        "budgetCount": 13,
+        "expectedBudgetCount": 13,
+        "originalHarnessCount": 13,
+        "focusedEvidence": "../focused.json"
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Приселци Варна - автомобили от обяви и бърз контакт",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=SUV"
+          },
+          {
+            "text": "Комби",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "До 10 000 EUR",
+            "href": "/inventory?price=under-10000"
+          },
+          {
+            "text": "До 20 000 EUR",
+            "href": "/inventory?price=under-20000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Виж всички 16 автомобила",
+            "href": "/inventory"
+          },
+          {
+            "text": "Купи автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Разгледай автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Продай автомобил",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Всички типове",
+            "href": "/inventory"
+          },
+          {
+            "text": "Джип\n\n3 автомобила",
+            "href": "/inventory?body=SUV"
+          },
+          {
+            "text": "Комби\n\n4 автомобила",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Хечбек\n\n5 автомобила",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Седан\n\n1 автомобил",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Ван\n\n2 автомобила",
+            "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+          },
+          {
+            "text": "Кабриолет\n\n1 автомобил",
+            "href": "/inventory?body=%D0%9A%D0%B0%D0%B1%D1%80%D0%B8%D0%BE"
+          },
+          {
+            "text": "Всички марки",
+            "href": "/inventory"
+          },
+          {
+            "text": "BMW\n\n1 автомобил",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Mercedes\n\n2 автомобила",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "Audi\n\n1 автомобил",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Honda\n\nВиж марката",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Toyota\n\nВиж марката",
+            "href": "/inventory?brand=Toyota"
+          },
+          {
+            "text": "Volvo\n\nВиж марката",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Ford\n\n1 автомобил",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Hyundai\n\nВиж марката",
+            "href": "/inventory?brand=Hyundai"
+          },
+          {
+            "text": "Kia\n\nВиж марката",
+            "href": "/inventory?brand=Kia"
+          },
+          {
+            "text": "Mazda\n\nВиж марката",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Ferrari\n\nВиж марката",
+            "href": "/inventory?brand=Ferrari"
+          },
+          {
+            "text": "Tesla\n\nВиж марката",
+            "href": "/inventory?brand=Tesla"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили в наличност | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "Ван",
+            "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+          },
+          {
+            "text": "Налични",
+            "href": "/inventory?availability=available"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "До 50 000 EUR",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "До 100 000 км",
+            "href": "/inventory?mileage=under-100000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-koleos-2-0-4-4-651747"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Mercedes-Benz C 200 2.2 CDI",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Renault Grand scenic 1.5DCI",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "",
+            "href": "/inventory/bmw-x3-2-0-4-4-300206"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/bmw-x3-2-0-4-4-300206"
+          },
+          {
+            "text": "BMW X3 2.0 ДИЗЕЛ 4Х4",
+            "href": "/inventory/bmw-x3-2-0-4-4-300206"
+          },
+          {
+            "text": "",
+            "href": "/inventory/bmw-x3-2-0-4-4-300206"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Nissan Qashqai 1.5 DCI",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-e-280-3-0cdi-v6-989753"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/mercedes-benz-e-280-3-0cdi-v6-989753"
+          },
+          {
+            "text": "Mercedes-Benz E 280 3.0CDI V6",
+            "href": "/inventory/mercedes-benz-e-280-3-0cdi-v6-989753"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-e-280-3-0cdi-v6-989753"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory/vw-golf-1-4-061757",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "VW Golf 1.4 БЕНЗИН 2007 г., Бензин, 235 193 км, Публикувана обява | Приселци",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Назад",
+            "href": "/inventory"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "Заяви видео преглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Заяви още снимки",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж локация",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Добавете отзив",
+            "href": "#reviewForm"
+          },
+          {
+            "text": "Виж всички Няма потвърдени отзиви",
+            "href": "/reviews"
+          },
+          {
+            "text": "Изпратете отзив",
+            "href": "/contact?intent=review"
+          },
+          {
+            "text": "",
+            "href": "/terms"
+          },
+          {
+            "text": "Приселци",
+            "href": "/about/daynight-auto-plovdiv"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Виж локация",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Обади се за оглед",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Viber чат",
+            "href": "viber://chat?number=%2B359886251705"
+          },
+          {
+            "text": "Споразумение с потребителите.",
+            "href": "/terms"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Контакти | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact#contact-form"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се / Viber",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Виж карта",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Отвори в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/about",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "За нас | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705",
+          "tel:+359886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Виж автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:+359886251705"
+          },
+          {
+            "text": "Виж екипа",
+            "href": "/team"
+          },
+          {
+            "text": "",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "Александър Петров",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "Николай Димитров",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "Мария Иванова",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/team/klientski-zapitvania"
+          },
+          {
+            "text": "Елена Георгиева",
+            "href": "/team/klientski-zapitvania"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "Свържи се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Chevrolet",
+            "href": "/inventory?brand=Chevrolet"
+          },
+          {
+            "text": "Chrysler",
+            "href": "/inventory?brand=Chrysler"
+          },
+          {
+            "text": "Citroen",
+            "href": "/inventory?brand=Citroen"
+          },
+          {
+            "text": "Ford",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Honda",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Jaguar",
+            "href": "/inventory?brand=Jaguar"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/inventory?brand=Land%20Rover"
+          },
+          {
+            "text": "Mazda",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Opel",
+            "href": "/inventory?brand=Opel"
+          },
+          {
+            "text": "Peugeot",
+            "href": "/inventory?brand=Peugeot"
+          },
+          {
+            "text": "Porsche",
+            "href": "/inventory?brand=Porsche"
+          },
+          {
+            "text": "Skoda",
+            "href": "/inventory?brand=Skoda"
+          },
+          {
+            "text": "VW",
+            "href": "/inventory?brand=VW"
+          },
+          {
+            "text": "Volvo",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продажба и бартер\n\nИзпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.\n\nПродай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Документи и финансиране\n\nСъдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.\n\nРазгледай услугите",
+            "href": "/services"
+          },
+          {
+            "text": "Уговори оглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Отвори маршрута",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/financing",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Финансиране | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?intent=financing"
+          },
+          {
+            "text": "Търсете според месечния бюджет",
+            "href": "/calculator"
+          },
+          {
+            "text": "Изберете подходяща оферта",
+            "href": "/inventory"
+          },
+          {
+            "text": "Приселци\nАвгуст 2025\nСЪВЕТИ\n\nКак да купим употребяван автомобил без риск\n\nПреглед, история и документи — стъпките, които спестяват скъпи грешки при покупка...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "Приселци\nАвгуст 2025\nФИНАНСИРАНЕ\n\nЛизинг или разсрочено плащане — кое е за вас?\n\nСравнение на вариантите за финансиране според бюджет, месечна вноска и срок...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "Приселци\nАвгуст 2025\nПОЛЕЗНО\n\nБартер при покупка: как се оценява автомобилът ви\n\nКакво гледа екипът при оценката и как бартерът намалява крайната сума за плащане...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory?price=under-10000",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили в наличност | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "Ван",
+            "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+          },
+          {
+            "text": "Налични",
+            "href": "/inventory?availability=available"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "До 50 000 EUR",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "До 100 000 км",
+            "href": "/inventory?mileage=under-100000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Mercedes-Benz C 200 2.2 CDI",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Renault Grand scenic 1.5DCI",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Nissan Qashqai 1.5 DCI",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true,
+        "budgetCount": 13,
+        "expectedBudgetCount": 13,
+        "originalHarnessCount": 14,
+        "focusedEvidence": "../focused.json"
+      },
+      {
+        "width": 1440,
+        "route": "/inventory?price=under-20000",
+        "errors": [],
+        "consoleErrors": [],
+        "title": "Автомобили в наличност | Приселци Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0886251705"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "Ван",
+            "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+          },
+          {
+            "text": "Налични",
+            "href": "/inventory?availability=available"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "До 50 000 EUR",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "До 100 000 км",
+            "href": "/inventory?mileage=under-100000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "VW Golf 1.4 БЕНЗИН",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-4-061757"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "VW Passat 1.4 БЕНЗИН",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-1-4-113337"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "VW Passat 2.0TDI COMMONRAIL",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-commonrail-467246"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "Seat Ibiza 1.2 БЕНЗИН",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-ibiza-1-2-493559"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "Peugeot 307 CC КАБРИО",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-307-cc-282742"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "Ford Mondeo 2.0 DIZEL",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "",
+            "href": "/inventory/ford-mondeo-2-0-dizel-481666"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "Peugeot 5008 2.0HDI 150К.С",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-5008-2-0hdi-150-154449"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "Mercedes-Benz C 200 2.2 CDI",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "",
+            "href": "/inventory/mercedes-benz-c-200-2-2-cdi-433302"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "Citroen C3 Picasso 1.6HDI 90К.С",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/citroen-c3-picasso-1-6hdi-90-294169"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "Audi A3 1.9 TDI 105ps",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-a3-1-9-tdi-105ps-574277"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/dacia-sandero-1-4-819998"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "Renault Grand scenic 1.5DCI",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-grand-scenic-1-5dci-337634"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "Nissan Qashqai 1.5 DCI",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "",
+            "href": "/inventory/nissan-qashqai-1-5-dci-118991"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Отзиви — няма потвърдени публикации",
+            "href": "/reviews"
+          },
+          {
+            "text": "0886 251 705",
+            "href": "tel:0886251705"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "бул. „Цар Освободител“ 285, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true,
+        "budgetCount": 13,
+        "expectedBudgetCount": 13,
+        "originalHarnessCount": 14,
+        "focusedEvidence": "../focused.json"
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "BMW",
+        "beforeCount": 16,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6648/inventory",
+        "afterCount": 1,
+        "search": true,
+        "detailHref": "/inventory/bmw-x3-2-0-4-4-300206",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "BMW",
+        "beforeCount": 17,
+        "menu": "No visible menu button at this width",
+        "searchUrl": "http://127.0.0.1:6648/inventory?q=BMW",
+        "afterCount": 5,
+        "search": true,
+        "detailHref": "/inventory/bmw-x3-2-0-4-4-300206",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiryHref": "/contact",
+        "enquiry": true,
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "carwow",
+      "Project": "J:\\cars\\clients\\priselci\\carwow",
+      "PID": 9464,
+      "Port": 6648,
+      "Url": "http://127.0.0.1:6648",
+      "Stdout": "J:\\cars\\runtime\\carwow-6648-20260908-060820.out.log",
+      "Stderr": "J:\\cars\\runtime\\carwow-6648-20260908-060820.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true,
+    "focusedProof": "focused.json"
+  }
+]

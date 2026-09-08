@@ -1,0 +1,164 @@
+Scope: all 31 workspace projects
+? Verifying lockfile against supply-chain policies (1789 entries)...
+
+   ╭──────────────────────────────────────────────╮
+   │                                              │
+   │      Update available! 11.4.0 → 12.3.4.      │
+   │     Changelog: https://pnpm.io/v/12.3.4      │
+   │   To update, run: corepack use pnpm@12.3.4   │
+   │                                              │
+   ╰──────────────────────────────────────────────╯
+
+✓ Lockfile passes supply-chain policies (1789 entries in 35.3s)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1516
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1516, reused 0, downloaded 38, added 0
+Progress: resolved 1516, reused 0, downloaded 85, added 10
+Progress: resolved 1516, reused 0, downloaded 144, added 23
+Progress: resolved 1516, reused 0, downloaded 163, added 27
+Progress: resolved 1516, reused 0, downloaded 177, added 29
+Progress: resolved 1516, reused 0, downloaded 202, added 34
+Progress: resolved 1516, reused 0, downloaded 225, added 39
+Progress: resolved 1516, reused 0, downloaded 231, added 39
+Progress: resolved 1516, reused 0, downloaded 235, added 40
+Progress: resolved 1516, reused 0, downloaded 247, added 41
+Progress: resolved 1516, reused 0, downloaded 265, added 44
+Progress: resolved 1516, reused 0, downloaded 274, added 46
+Progress: resolved 1516, reused 0, downloaded 292, added 49
+Progress: resolved 1516, reused 0, downloaded 321, added 55
+Progress: resolved 1516, reused 0, downloaded 334, added 58
+Progress: resolved 1516, reused 0, downloaded 345, added 59
+Progress: resolved 1516, reused 0, downloaded 351, added 61
+Progress: resolved 1516, reused 0, downloaded 357, added 63
+Progress: resolved 1516, reused 0, downloaded 360, added 63
+Progress: resolved 1516, reused 0, downloaded 370, added 63
+Progress: resolved 1516, reused 0, downloaded 384, added 67
+Progress: resolved 1516, reused 0, downloaded 395, added 67
+Progress: resolved 1516, reused 0, downloaded 412, added 71
+Progress: resolved 1516, reused 0, downloaded 425, added 75
+Progress: resolved 1516, reused 0, downloaded 442, added 77
+Progress: resolved 1516, reused 0, downloaded 468, added 82
+Progress: resolved 1516, reused 0, downloaded 487, added 86
+Progress: resolved 1516, reused 0, downloaded 506, added 89
+Progress: resolved 1516, reused 0, downloaded 514, added 90
+Progress: resolved 1516, reused 0, downloaded 522, added 93
+Progress: resolved 1516, reused 0, downloaded 534, added 94
+Progress: resolved 1516, reused 0, downloaded 541, added 95
+Progress: resolved 1516, reused 0, downloaded 554, added 98
+Progress: resolved 1516, reused 0, downloaded 567, added 100
+Progress: resolved 1516, reused 0, downloaded 581, added 102
+Progress: resolved 1516, reused 0, downloaded 593, added 105
+Progress: resolved 1516, reused 0, downloaded 616, added 109
+Progress: resolved 1516, reused 0, downloaded 647, added 115
+Progress: resolved 1516, reused 0, downloaded 688, added 124
+Progress: resolved 1516, reused 0, downloaded 715, added 129
+Progress: resolved 1516, reused 0, downloaded 738, added 133
+Progress: resolved 1516, reused 0, downloaded 758, added 137
+Progress: resolved 1516, reused 0, downloaded 771, added 138
+Progress: resolved 1516, reused 0, downloaded 780, added 139
+Progress: resolved 1516, reused 0, downloaded 805, added 144
+Progress: resolved 1516, reused 0, downloaded 826, added 150
+Progress: resolved 1516, reused 0, downloaded 841, added 150
+Progress: resolved 1516, reused 0, downloaded 850, added 154
+Progress: resolved 1516, reused 0, downloaded 870, added 157
+Progress: resolved 1516, reused 0, downloaded 909, added 162
+Progress: resolved 1516, reused 0, downloaded 949, added 169
+Progress: resolved 1516, reused 0, downloaded 955, added 171
+Progress: resolved 1516, reused 0, downloaded 978, added 174
+Progress: resolved 1516, reused 0, downloaded 983, added 177
+Progress: resolved 1516, reused 0, downloaded 985, added 177
+Progress: resolved 1516, reused 0, downloaded 994, added 178
+Progress: resolved 1516, reused 0, downloaded 1004, added 179
+Progress: resolved 1516, reused 0, downloaded 1010, added 180
+Progress: resolved 1516, reused 0, downloaded 1020, added 182
+Progress: resolved 1516, reused 0, downloaded 1028, added 183
+Progress: resolved 1516, reused 0, downloaded 1033, added 184
+Progress: resolved 1516, reused 0, downloaded 1036, added 186
+Progress: resolved 1516, reused 0, downloaded 1040, added 186
+Progress: resolved 1516, reused 0, downloaded 1041, added 186
+Progress: resolved 1516, reused 0, downloaded 1044, added 187
+Progress: resolved 1516, reused 0, downloaded 1048, added 187
+Progress: resolved 1516, reused 0, downloaded 1051, added 187
+Progress: resolved 1516, reused 0, downloaded 1055, added 190
+Progress: resolved 1516, reused 0, downloaded 1058, added 190
+Progress: resolved 1516, reused 0, downloaded 1065, added 190
+Progress: resolved 1516, reused 0, downloaded 1067, added 191
+Progress: resolved 1516, reused 0, downloaded 1079, added 194
+Progress: resolved 1516, reused 0, downloaded 1105, added 197
+Progress: resolved 1516, reused 0, downloaded 1133, added 202
+Progress: resolved 1516, reused 0, downloaded 1167, added 208
+Progress: resolved 1516, reused 0, downloaded 1183, added 213
+Progress: resolved 1516, reused 0, downloaded 1209, added 220
+Progress: resolved 1516, reused 0, downloaded 1235, added 227
+Progress: resolved 1516, reused 0, downloaded 1269, added 232
+Progress: resolved 1516, reused 0, downloaded 1300, added 236
+Progress: resolved 1516, reused 0, downloaded 1343, added 246
+Progress: resolved 1516, reused 0, downloaded 1358, added 251
+Progress: resolved 1516, reused 0, downloaded 1365, added 251
+Progress: resolved 1516, reused 0, downloaded 1393, added 259
+Progress: resolved 1516, reused 0, downloaded 1403, added 260
+Progress: resolved 1516, reused 0, downloaded 1425, added 264
+Progress: resolved 1516, reused 0, downloaded 1437, added 267
+Progress: resolved 1516, reused 0, downloaded 1455, added 271
+Progress: resolved 1516, reused 0, downloaded 1482, added 274
+Progress: resolved 1516, reused 0, downloaded 1507, added 284
+Progress: resolved 1516, reused 0, downloaded 1509, added 285
+Progress: resolved 1516, reused 0, downloaded 1510, added 337
+Progress: resolved 1516, reused 0, downloaded 1510, added 376
+Progress: resolved 1516, reused 0, downloaded 1512, added 390
+Progress: resolved 1516, reused 0, downloaded 1512, added 434
+Progress: resolved 1516, reused 0, downloaded 1512, added 469
+Progress: resolved 1516, reused 0, downloaded 1512, added 569
+Progress: resolved 1516, reused 0, downloaded 1513, added 630
+Progress: resolved 1516, reused 0, downloaded 1514, added 921
+Progress: resolved 1516, reused 0, downloaded 1514, added 1042
+Progress: resolved 1516, reused 0, downloaded 1514, added 1150
+Progress: resolved 1516, reused 0, downloaded 1514, added 1209
+Progress: resolved 1516, reused 0, downloaded 1514, added 1359
+Progress: resolved 1516, reused 0, downloaded 1514, added 1404
+Progress: resolved 1516, reused 0, downloaded 1514, added 1459
+Progress: resolved 1516, reused 0, downloaded 1514, added 1512
+Progress: resolved 1516, reused 0, downloaded 1514, added 1516, done
+.../node_modules/@sentry/cli postinstall$ node ./scripts/install.js
+.../node_modules/bufferutil install$ node-gyp-build
+.../esbuild@0.25.10/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.28.1/node_modules/esbuild postinstall$ node install.js
+.../node_modules/@sentry/cli postinstall: Done
+.../node_modules/bufferutil install: Done
+.../esbuild@0.28.1/node_modules/esbuild postinstall: Done
+.../esbuild@0.25.10/node_modules/esbuild postinstall: Done
+.../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+.../esbuild@0.27.7/node_modules/esbuild postinstall$ node install.js
+.../node_modules/core-js-pure postinstall$ node -e "try{require('./postinstall')}catch(e){}"
+.../node_modules/@prisma/engines postinstall$ node scripts/postinstall.js
+.../core-js@3.49.0/node_modules/core-js postinstall$ node -e "try{require('./postinstall')}catch(e){}"
+.../node_modules/@clerk/shared postinstall$ node ./scripts/postinstall.mjs
+.../node_modules/core-js-pure postinstall: Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+.../node_modules/core-js-pure postinstall: The project needs your help! Please consider supporting core-js:
+.../node_modules/core-js-pure postinstall: > https://opencollective.com/core-js 
+.../node_modules/core-js-pure postinstall: > https://patreon.com/zloirock 
+.../node_modules/core-js-pure postinstall: > https://boosty.to/zloirock 
+.../node_modules/core-js-pure postinstall: > bitcoin: bc1qlea7544qtsmj2rayg0lthvza9fau63ux0fstcz 
+.../node_modules/core-js-pure postinstall: I highly recommend reading this: https://github.com/zloirock/core-js/blob/master/docs/2023-02-14-so-whats-next.md 
+.../node_modules/core-js-pure postinstall: Done
+.../core-js@3.49.0/node_modules/core-js postinstall: Done
+.../node_modules/@clerk/shared postinstall: Done
+.../esbuild@0.27.7/node_modules/esbuild postinstall: Done
+.../node_modules/@prisma/engines postinstall: Done
+.../node_modules/prisma preinstall$ node scripts/preinstall-entry.js
+.../node_modules/prisma preinstall: Done
+
+devDependencies:
++ @biomejs/biome 2.4.6
++ @repo/typescript-config 0.0.0 <- packages\typescript-config
++ @turbo/gen 2.9.16
++ @types/node 25.3.5
++ turbo 2.9.16
++ typescript 5.9.3
++ ultracite 7.2.5
++ vitest 4.1.8
+
+Done in 3m 12s using pnpm v11.4.0

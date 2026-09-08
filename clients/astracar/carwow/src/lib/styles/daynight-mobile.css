@@ -1,0 +1,74 @@
+/*
+ * Астракар — mobile global styles (focus ring, .sr-only, entrance helpers).
+ * Design tokens now live in tokens.css, imported before this file in
+ * src/routes/+layout.svelte.
+ */
+
+/* Preserve the mobile focus treatment without leaking its halo into desktop fields. */
+@media (max-width: 991px) {
+	:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+		outline: 2px solid #fff !important;
+		outline-offset: 2px !important;
+		box-shadow: 0 0 0 3px rgba(23, 100, 216, 0.6) !important;
+	}
+}
+
+@media (min-width: 992px) {
+	:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+		outline: 2px solid #d50028;
+		outline-offset: 3px;
+	}
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	clip-path: inset(50%) !important;
+	color: #fff !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: -1px !important;
+}
+
+/* Entrance helpers — applied via global class names so Svelte's per-component
+ * keyframe scoping doesn't rename them. Stagger with inline --sa-delay. */
+@keyframes sa-rise {
+	from {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes sa-fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.sa-rise {
+	animation: sa-rise 0.6s var(--sa-ease-out) both;
+	animation-delay: var(--sa-delay, 0ms);
+}
+
+.sa-fade {
+	animation: sa-fade 0.7s var(--sa-ease-out) both;
+	animation-delay: var(--sa-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sa-rise,
+	.sa-fade {
+		animation: none;
+	}
+}

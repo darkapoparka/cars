@@ -1,0 +1,147 @@
+{
+  "pass": true,
+  "values": [
+    {
+      "id": "11747499643415236",
+      "price": 4000,
+      "mileage": 143100,
+      "expectedPrice": 4000,
+      "expectedMileage": 143100,
+      "pass": true
+    },
+    {
+      "id": "21755975324167565",
+      "price": 9500,
+      "mileage": 127663,
+      "expectedPrice": 9500,
+      "expectedMileage": 127663,
+      "pass": true
+    },
+    {
+      "id": "11737822623289964",
+      "price": 14600,
+      "mileage": 177390,
+      "expectedPrice": 14600,
+      "expectedMileage": 177390,
+      "pass": true
+    },
+    {
+      "id": "11763446260159317",
+      "price": 4000,
+      "mileage": 181000,
+      "expectedPrice": 4000,
+      "expectedMileage": 181000,
+      "pass": true
+    },
+    {
+      "id": "11752951085157214",
+      "price": 7900,
+      "mileage": 165170,
+      "expectedPrice": 7900,
+      "expectedMileage": 165170,
+      "pass": true
+    },
+    {
+      "id": "11762018600091690",
+      "price": 3900,
+      "mileage": 139800,
+      "expectedPrice": 3900,
+      "expectedMileage": 139800,
+      "pass": true
+    },
+    {
+      "id": "11755359473275644",
+      "price": 8900,
+      "mileage": 162148,
+      "expectedPrice": 8900,
+      "expectedMileage": 162148,
+      "pass": true
+    },
+    {
+      "id": "11766248164423161",
+      "price": 4200,
+      "mileage": 150052,
+      "expectedPrice": 4200,
+      "expectedMileage": 150052,
+      "pass": true
+    },
+    {
+      "id": "11780761931333448",
+      "price": 8999,
+      "mileage": 159400,
+      "expectedPrice": 8999,
+      "expectedMileage": 159400,
+      "pass": true
+    },
+    {
+      "id": "21780733368439452",
+      "price": 49000,
+      "mileage": 190000,
+      "expectedPrice": 49000,
+      "expectedMileage": 190000,
+      "pass": true
+    },
+    {
+      "id": "11773504878088103",
+      "price": 4600,
+      "mileage": 136574,
+      "expectedPrice": 4600,
+      "expectedMileage": 136574,
+      "pass": true
+    },
+    {
+      "id": "21783183116609383",
+      "price": 7999,
+      "mileage": 56178,
+      "expectedPrice": 7999,
+      "expectedMileage": 56178,
+      "pass": true
+    },
+    {
+      "id": "21783791992541606",
+      "price": 9500,
+      "mileage": 182887,
+      "expectedPrice": 9500,
+      "expectedMileage": 182887,
+      "pass": true
+    },
+    {
+      "id": "11782577422662538",
+      "price": 14000,
+      "mileage": 36216,
+      "expectedPrice": 14000,
+      "expectedMileage": 36216,
+      "pass": true
+    },
+    {
+      "id": "11782575631736534",
+      "price": 8500,
+      "mileage": 186586,
+      "expectedPrice": 8500,
+      "expectedMileage": 186586,
+      "pass": true
+    }
+  ],
+  "budgets": [
+    {
+      "max": 10000,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "max": 20000,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "max": 30000,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "max": 50000,
+      "actual": 15,
+      "expected": 15
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+/* Owner-requested motion and surface polish. Original page markup stays intact. */
+:root {
+  --rencar-content-width: 1200px;
+  --rencar-header-overhang: 24px;
+  --rencar-header-width: calc(var(--rencar-content-width) + 2 * var(--rencar-header-overhang));
+  --rencar-section-space: 80px;
+  --transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  --transition2: var(--transition);
+}
+
+/* Content is visible immediately, including below the fold. */
+.wow,
+.hero-slider [data-animation] {
+  visibility: visible !important;
+  animation: none !important;
+}
+.navbar.fixed-top,
+.site-heading .heading-divider::after,
+.play-btn i::after {
+  animation: none;
+}
+
+/* Keep button silhouettes; replace the expanding wipe with a short colour fade. */
+.theme-btn,
+.theme-btn2,
+.theme-border-btn,
+.theme-btn:hover,
+.theme-btn2:hover,
+.theme-border-btn:hover {
+  transition: var(--transition);
+}
+.theme-btn::before,
+.theme-btn2::before {
+  display: none;
+}
+.theme-btn:hover,
+.theme-btn2:hover,
+.cta-btn .theme-btn:hover {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+.theme-btn:hover i,
+.theme-btn2:hover i,
+.theme-border-btn:hover i {
+  transform: rotate(-40deg);
+}
+.feature-item:hover,
+.service-item:hover,
+.contact-info:hover,
+.car-type-item:hover,
+.blog-item:hover .blog-img img,
+.service-item:hover .service-img img {
+  transform: none;
+}
+
+/* Retain dropdowns and search behaviour without the flip and long entrance delay. */
+@media (min-width: 992px) {
+  .navbar .dropdown-menu.fade-down {
+    top: 100%;
+    transform: none;
+    transition: opacity 160ms ease, visibility 160ms ease;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    transition: opacity 160ms ease, visibility 160ms ease;
+  }
+}
+.search-popup { transition: transform 200ms ease, margin-top 200ms ease; }
+.search-popup form,
+.search-active .search-popup form {
+  transform: none;
+  transition: none;
+}
+.search-active .search-popup .close-search { transition-delay: 0s; }
+
+/* Home 1's existing white header surface, now inset and rounded at both ends.
+   Do not clip the navbar: dropdowns and the mobile offcanvas extend outside it. */
+.header-2 .navbar,
+.header-2 .navbar.fixed-top {
+  background: transparent;
+  box-shadow: none;
+}
+.header-2 .navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: min(var(--rencar-header-width), calc(100% - 24px));
+  margin-inline: auto;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: 50px;
+}
+.header-2 .navbar.fixed-top { top: 8px; }
+.header-2 .navbar.fixed-top::before { box-shadow: var(--box-shadow2); }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-2 { --rencar-header-width: 1008px; }
+}
+
+.booking-form-wrap.bkf-w {
+  width: min(var(--rencar-content-width), calc(100% - 48px));
+  margin-inline: auto;
+  border-radius: 24px;
+}
+@media (max-width: 991px) {
+  .header-2 { background: var(--color-dark); }
+  .header-2 .navbar::before { border-radius: 28px; }
+  .header-2 .navbar > .container { padding-inline: 28px; }
+  .booking-form-wrap.bkf-w { width: calc(100% - 24px); }
+}
+
+/* Explicit Home 1 section refinement. Other Rencar variants retain their composition. */
+.about-area.about-centered {
+  padding-block: var(--rencar-section-space);
+}
+.about-centered .site-heading,
+.about-centered .about-text {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+.about-centered .about-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-block: 40px 32px;
+}
+.about-centered .about-item { margin: 0; }
+.about-centered .about-item .icon { flex-shrink: 0; }
+.about-centered .about-item .icon i { color: var(--color-white); font-size: 30px; line-height: 65px; }
+.about-centered .about-action { text-align: center; }
+@media (max-width: 767px) {
+  .about-area.about-centered { padding-block: 48px; }
+  .about-centered .about-content { grid-template-columns: 1fr; gap: 24px; margin-block: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}

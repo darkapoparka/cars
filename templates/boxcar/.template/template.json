@@ -1,0 +1,36 @@
+{
+  "key": "boxcar",
+  "name": "Boxcar",
+  "aliases": [
+    "boxcars",
+    "6450"
+  ],
+  "path": "templates/boxcar",
+  "version": "2026.09.06-baseline",
+  "family": "boxcar",
+  "stack": "vite-svelte",
+  "sourcePort": 6450,
+  "libraryPort": 6450,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "home01",
+      "route": "/"
+    }
+  ],
+  "desktop": 8,
+  "mobile": 6.5,
+  "priority": "polish-next",
+  "readiness": "reference-content-candidate",
+  "reskinEffort": "medium-high",
+  "brandFiles": [
+    "public/pages",
+    "public/assets",
+    "src/local.css",
+    "src/interactions.ts"
+  ],
+  "note": "Only Home 1 is currently implemented locally; other home menu entries alias it. Strong inventory and detail patterns; mobile needs compaction. Captured content and local behavior adapters.",
+  "sourceSnapshot": null,
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed"
+}

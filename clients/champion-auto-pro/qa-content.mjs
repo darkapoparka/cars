@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+const root=import.meta.dirname;const a=`${root}/auto-best`,c=`${root}/carwow`,m=`${root}/modern`;const read=p=>fs.readFile(p,'utf8');const edit=async(p,fn)=>fs.writeFile(p,fn(await read(p)));
+await edit(`${a}/src/lib/config/brand.ts`,s=>s.replace(/"(?:instagramUrl|facebookUrl|youtubeUrl)": "[^"]*"/g,m=>m.replace(/: ".*"/,': ""')));
+await edit(`${a}/src/lib/components/home/VideoSection.svelte`,s=>s.replace('href={brand.youtubeUrl}','href="https://championautopro.mobile.bg/"'));
+await edit(`${a}/src/lib/components/layout/Header.svelte`,s=>s.replace(/(<a \{\.\.\.\{ href: brand\.(instagramUrl|youtubeUrl|facebookUrl) \}\}[^\n]*<\/a>)/g,'{#if brand.$2}$1{/if}'));
+for(const file of ['AboutHero','ContactIntent'])await edit(`${a}/src/lib/components/company/${file}.svelte`,s=>s.replace(/\{#each (social\w*) as /g,'{#each $1.filter(item => item.href) as '));
+await edit(`${a}/src/lib/components/company/ShowroomMap.svelte`,s=>s.replace(/\s*import \{ showroomCoordinates \} from '\$data\/company';/,''));
+await edit(`${c}/src/lib/components/home/desktop/DesktopHomeReviews.svelte`,s=>s.replaceAll('Отзиви от клиенти','Информация за посещение').replace(/const starIds = .*;\r?\n/,''));
+await edit(`${c}/src/lib/components/home/desktop/DesktopHome.svelte`,s=>s.replaceAll('Виж всички отзиви','Виж информацията'));
+await edit(`${c}/src/lib/components/reviews/ReviewsContent.svelte`,s=>s.replace('<h2>Отзиви от клиенти</h2>','<h2>Отзиви от клиенти</h2><p>В този демонстрационен сайт няма публикувани клиентски отзиви.</p>'));
+await edit(`${c}/src/lib/data/daynight-reviews.ts`,s=>s.replace('export const daynightReviews = [] satisfies DayNightReview[];','export const daynightReviews: DayNightReview[] = [];'));
+await edit(`${m}/apps/web/app/[locale]/blog/page.tsx`,s=>s.replaceAll('Day &amp; Night','Champion Auto Pro'));
+console.log('Unverified social links suppressed; review claims removed.');

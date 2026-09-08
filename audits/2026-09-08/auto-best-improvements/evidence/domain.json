@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "records": 8,
+  "checks": [
+    "record validity",
+    "filter roundtrip",
+    "equipment deduplication",
+    "numeric boundaries",
+    "dependent reset",
+    "safe return destinations",
+    "known vehicle context",
+    "CSS token ownership"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "client": "asko-96",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T20:48:48.418Z",
+  "state": "local-review-ready",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "widths": [
+      390,
+      1440
+    ],
+    "routes": "9 routes at each width: 200, no page errors, broken images or horizontal overflow",
+    "interactions": "Toyota filter to one result, detail and phone link; sell enquiry review without sending; mobile menu Escape dismissal",
+    "validation": "npm ci Node 22.23.2; npm run validate: architecture/assets/Svelte 0 errors 0 warnings/production build passed",
+    "artifacts": ".client/qa/",
+    "autofixer": "28 changed components reviewed; external tel/social/map URL false positives and preexisting attachment/effect style suggestions retained"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "previewUrl": "http://127.0.0.1:6611/",
+  "updatedAt": "2026-09-06T21:05:10.663Z",
+  "businessName": "АСКО 96",
+  "stockSnapshotDate": "2026-09-06",
+  "stockCount": 16,
+  "changes": [
+    "Official ASKO96 wordmark/logo, gold accents with readable foregrounds, verified phone/address/hours/map and social channels",
+    "16 source-backed ASKO96 stock listings and local photos, tailored make/fuel/year/price filters and budgets",
+    "Official showroom/stock editorial imagery, three verified official YouTube videos",
+    "Existing staff and partner demo cards carry verified services and stock brands within retained layout"
+  ],
+  "knownGaps": [
+    "Local review only; not deployed or registered in CRM; no external messages sent",
+    "Original decorative hero/cutout car artwork retained to preserve template composition; it does not represent actual ASKO96 inventory",
+    "Source detail design uses one stock image per vehicle; all actual inventory photographs displayed belong to ASKO96 adverts",
+    "Stock is a dated curated snapshot; availability, specifications and finance conditions require dealer confirmation",
+    "Enquiry wizard prepares an unsent summary and optional device sharing; no server delivery is configured",
+    "External maps and video playback depend on provider/browser access; channel IDs and map destination verified",
+    "Full official logo retained in secondary placements includes its source 28-year medal; main navigation uses official wordmark"
+  ],
+  "runtime": {
+    "project": "J:/cars/clients/asko-96/auto-best",
+    "pid": 77816,
+    "port": 6611,
+    "node": "22.23.2",
+    "verified": "Browser screenshot captured after final runtime restart"
+  }
+}

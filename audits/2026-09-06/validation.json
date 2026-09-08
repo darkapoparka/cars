@@ -1,0 +1,152 @@
+{
+  "date": "2026-09-06",
+  "completedAt": "2026-09-06T15:00:18.302Z",
+  "templates": 10,
+  "clientScaffolds": [
+    "dayandnight",
+    "eliqauto",
+    "asko96"
+  ],
+  "sourceHandling": {
+    "movedIntact": 4,
+    "copiedWorkingTrees": 6,
+    "originalSourceProjectsModified": false,
+    "applicationDesignChanges": false,
+    "independentLibraryPreviews": 10,
+    "integrityFile": "library-integrity.json",
+    "configurationCorrections": "config-restoration.json",
+    "verifiedSourceFiles": 6256,
+    "integrityPassed": true,
+    "runtimeGeneratedDifferences": [
+      {
+        "template": "modern",
+        "file": "apps/web/next-env.d.ts",
+        "change": "Next dev route-type import",
+        "original": ".template/source-next-env.d.ts"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "template": "auto-best",
+      "command": "npm run validate",
+      "pass": true,
+      "observed": {
+        "nativeFiles": 73,
+        "guardedAssets": 85,
+        "svelteErrors": 0,
+        "svelteWarnings": 0,
+        "productionBuild": "passed"
+      }
+    },
+    {
+      "template": "autodeal",
+      "command": "npm run build",
+      "pass": true,
+      "observed": {
+        "routes": 150,
+        "resources": 479,
+        "localeCatalogs": 9
+      }
+    },
+    {
+      "template": "boxcar",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "boxcar-check.txt"
+    },
+    {
+      "template": "rencar",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "rencar-check.txt"
+    },
+    {
+      "template": "motoria",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "motoria-check.txt"
+    },
+    {
+      "template": "nusavo",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "nusavo-check.txt"
+    },
+    {
+      "template": "carwow",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "carwow-check.txt"
+    },
+    {
+      "template": "import",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "import-check.txt"
+    },
+    {
+      "template": "showroom",
+      "command": "npm run check",
+      "pass": true,
+      "evidence": "showroom-check.txt"
+    },
+    {
+      "template": "modern",
+      "command": "pnpm --filter @repo/database build",
+      "pass": true,
+      "evidence": "modern-prisma-generate.txt"
+    },
+    {
+      "template": "modern",
+      "command": "pnpm --filter web typecheck",
+      "pass": true,
+      "evidence": "modern-typecheck-confirmation.txt"
+    },
+    {
+      "template": "clone-helper",
+      "command": "node --test scripts/copy-source.test.mjs",
+      "pass": true,
+      "evidence": "copy-helper-test.txt"
+    },
+    {
+      "template": "client-planner",
+      "command": "node scripts/new-client.mjs --client asko96 --templates rencar,autodeal,6212 --dry-run",
+      "pass": true,
+      "evidence": "client-plan-example.json"
+    }
+  ],
+  "browser": {
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "originalAndVariantSamples": 110,
+    "distinctInitialPortRoutePairs": 50,
+    "carwowImportShowroomConfirmation": {
+      "samples": 8,
+      "pass": true
+    },
+    "modernCopyConfirmation": {
+      "samples": 6,
+      "pass": true
+    },
+    "interactions": "interactions-followup.json",
+    "allRencarHomesInspected": 5,
+    "allAutoDealHomesInspected": 10
+  },
+  "limits": [
+    "Design scores are comparative visual judgement.",
+    "Bounded route/viewport and interaction sampling; not exhaustive accessibility, real-device or performance certification.",
+    "Source branding and demo content remain and need personalization.",
+    "Modern public copy uses existing static demo mode; API/private app/provider delivery not configured and production build not run.",
+    "Existing Carwow focus-return issue, Nusavo CSS-mask CORS issue, missing favicons and per-template content/route/dealer-fit findings are in REPORT.md.",
+    "No deployment, CRM mutation, lead form submission or outbound contact."
+  ]
+}

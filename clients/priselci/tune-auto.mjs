@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+const r='J:/cars/clients/priselci/auto-best';
+for(const rel of ['src/lib/components/home/MobileBudget.svelte','src/lib/components/home/SearchBox.svelte']){const p=`${r}/${rel}`;let s=await fs.readFile(p,'utf8');s=s.replaceAll('60000','4000').replaceAll('70000','5000').replaceAll('60 000','4 000').replaceAll('70 000','5 000').replaceAll('60–70 000','4–5 000').replaceAll('60–5 000','4–5 000');await fs.writeFile(p,s);}
+const p=`${r}/src/lib/components/layout/Header.svelte`;let s=await fs.readFile(p,'utf8');s=s.replace('<img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />','<picture><source media="(max-width: 767px)" srcset={brand.logoLight} /><img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" /></picture>');await fs.writeFile(p,s);

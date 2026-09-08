@@ -1,0 +1,25 @@
+[
+  {
+    "action": "mobile brand Toyota",
+    "url": "http://127.0.0.1:6613/inventory",
+    "text": "Автомобили на склад — АСКО 96\nТърси автомобили\nФилтри\nСортирай\nToyota\nМодел\nГориво\nПробег\nКаросерия\nВсички 16\nПубликувана обява\nToyota Rav4 HYBRID\n36 500 €\nЛизинг по запитване\n14 000 км\n2024\nХибрид\nАвтоматик"
+  },
+  {
+    "action": "mobile import nav",
+    "url": "http://127.0.0.1:6613/contact?intent=import",
+    "title": "Внос на автомобил | АСКО 96 София"
+  },
+  {
+    "action": "desktop Audi filter",
+    "url": "http://127.0.0.1:6613/inventory?brand=Audi",
+    "vehicles": [
+      "Налични автомобили"
+    ],
+    "text": "Налични автомобили\nТърсене\nТърси по марка, модел, година, гориво, екстри...\nAudi\nМодел\nЦена\nПробег\nГориво\nОще филтри\nВсички\nMercedes-Benz\nBMW\nAudi\nДжип\nСедан\nКупе\nВан\nНалични\nДизел\nБензин\nДо 50 000 EUR\nДо 100 000 км\n\n3 автомобила\n\nНай-подходящи\n\nПубликувана обява\n\nАвтоматик\n\n4\n\nAudi A7 S-LINE\n\n211 000 км\n2011\nБензин\n14 000 €\nЛизинг по запитване\n\nПубликувана обява\n\nАвтоматик\n\n4\n\nAudi SQ7 FUL LED\n\n170 000 км\n2018\nДизел\n32 000 €\nЛизинг по запитване\n"
+  },
+  {
+    "action": "Mobile menu dismissal after exit animation",
+    "closed": true,
+    "verification": "Close button, wait1600ms, zero dialogs and menu aria-expanded=false; same source6517 behavior"
+  }
+]

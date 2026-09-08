@@ -1,0 +1,2553 @@
+{
+  "source": "https://autodealnextjs.vercel.app",
+  "acquiredAt": "2026-08-13T05:09:17.976Z",
+  "routes": [
+    "/",
+    "/home02",
+    "/home03",
+    "/home04",
+    "/home05",
+    "/home06",
+    "/home07",
+    "/home08",
+    "/home09",
+    "/home10",
+    "/listing-grid",
+    "/listing-grid2",
+    "/listing-list",
+    "/listing-grid-map",
+    "/listing-list-map",
+    "/listing-detail-v1/1",
+    "/listing-detail-v2/1",
+    "/listing-detail-v3/1",
+    "/listing-detail-v4/1",
+    "/listing-detail-v5/1",
+    "/about-us",
+    "/pricing",
+    "/compare",
+    "/dealer-listing",
+    "/dealer-detail/1",
+    "/sale-agents",
+    "/sale-agents-detail/1",
+    "/blog",
+    "/blog-grid",
+    "/blog-detail/1",
+    "/faq",
+    "/contact",
+    "/add-listing",
+    "/dashboard",
+    "/my-favorite",
+    "/listing-detail-v1/20",
+    "/listing-detail-v1/21",
+    "/listing-detail-v1/22",
+    "/listing-detail-v1/23",
+    "/listing-detail-v1/24",
+    "/listing-detail-v1/25",
+    "/listing-detail-v1/26",
+    "/listing-detail-v1/27",
+    "/listing-detail-v1/4",
+    "/listing-detail-v1/5",
+    "/listing-detail-v1/6",
+    "/listing-detail-v1/7",
+    "/blog-detail/2",
+    "/blog-detail/3",
+    "/listing-detail-v2/2",
+    "/listing-detail-v2/3",
+    "/listing-detail-v3/12",
+    "/listing-detail-v3/13",
+    "/listing-detail-v3/14",
+    "/listing-detail-v3/15",
+    "/listing-detail-v3/16",
+    "/listing-detail-v3/17",
+    "/listing-detail-v3/18",
+    "/listing-detail-v3/19",
+    "/listing-detail-v5/4",
+    "/listing-detail-v5/5",
+    "/listing-detail-v5/8",
+    "/listing-detail-v5/9",
+    "/listing-detail-v5/10",
+    "/listing-detail-v5/11",
+    "/listing-detail-v1/32",
+    "/listing-detail-v1/33",
+    "/listing-detail-v1/34",
+    "/listing-detail-v1/35",
+    "/sale-agents-detail/2",
+    "/sale-agents-detail/3",
+    "/sale-agents-detail/4",
+    "/blog-detail/18",
+    "/blog-detail/19",
+    "/blog-detail/20",
+    "/blog-detail/21",
+    "/listing-detail-v5/6",
+    "/listing-detail-v5/7",
+    "/listing-detail-v2/32",
+    "/listing-detail-v2/33",
+    "/listing-detail-v2/34",
+    "/listing-detail-v2/35",
+    "/blog-detail/25",
+    "/blog-detail/26",
+    "/blog-detail/27",
+    "/blog-detail/28",
+    "/listing-detail-v3/32",
+    "/listing-detail-v3/33",
+    "/listing-detail-v3/34",
+    "/listing-detail-v3/35",
+    "/listing-detail-v3/4",
+    "/listing-detail-v3/5",
+    "/listing-detail-v3/6",
+    "/listing-detail-v3/7",
+    "/listing-detail-v3/8",
+    "/listing-detail-v3/9",
+    "/listing-detail-v3/10",
+    "/listing-detail-v3/11",
+    "/listing-detail-v1/2",
+    "/listing-detail-v1/3",
+    "/listing-detail-v1/8",
+    "/listing-detail-v1/9",
+    "/listing-detail-v1/10",
+    "/listing-detail-v1/11",
+    "/listing-detail-v1/12",
+    "/dealer-detail/2",
+    "/dealer-detail/3",
+    "/dealer-detail/4",
+    "/dealer-detail/5",
+    "/dealer-detail/6",
+    "/dealer-detail/7",
+    "/dealer-detail/8",
+    "/dealer-detail/9",
+    "/dealer-detail/10",
+    "/listing-detail-v2/36",
+    "/listing-detail-v2/37",
+    "/sale-agents-detail/5",
+    "/sale-agents-detail/6",
+    "/sale-agents-detail/7",
+    "/sale-agents-detail/8",
+    "/sale-agents-detail/9",
+    "/sale-agents-detail/10",
+    "/sale-agents-detail/11",
+    "/sale-agents-detail/12",
+    "/blog-detail/4",
+    "/blog-detail/5",
+    "/blog-detail/6",
+    "/blog-detail/7",
+    "/blog-detail/8",
+    "/blog-detail/22",
+    "/blog-detail/23",
+    "/blog-detail/24",
+    "/blog-detail/9",
+    "/blog-detail/10",
+    "/blog-detail/11",
+    "/blog-detail/12",
+    "/blog-detail/13",
+    "/blog-detail/14",
+    "/blog-detail/15",
+    "/blog-detail/16",
+    "/blog-detail/17",
+    "/my-listing",
+    "/message",
+    "/my-review",
+    "/my-profile",
+    "/change-password",
+    "/listing-detail-v1/28",
+    "/listing-detail-v1/29",
+    "/listing-detail-v1/30",
+    "/listing-detail-v1/31"
+  ],
+  "resources": [
+    {
+      "pathname": "/_next/static/chunks/5471.eefa8750c27dcdbd.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 80041
+    },
+    {
+      "pathname": "/_next/static/css/d143484b118bfc33.css",
+      "type": "text/css; charset=utf-8",
+      "bytes": 4875
+    },
+    {
+      "pathname": "/_next/static/css/3b2d1fd40941b3de.css",
+      "type": "text/css; charset=utf-8",
+      "bytes": 163031
+    },
+    {
+      "pathname": "/_next/static/css/252041ef5a5a9ba8.css",
+      "type": "text/css; charset=utf-8",
+      "bytes": 61707
+    },
+    {
+      "pathname": "/_next/static/css/1f7463975c61f4a5.css",
+      "type": "text/css; charset=utf-8",
+      "bytes": 227814
+    },
+    {
+      "pathname": "/_next/static/css/a982bdb7975d3827.css",
+      "type": "text/css; charset=utf-8",
+      "bytes": 251853
+    },
+    {
+      "pathname": "/_next/static/css/9b3d09951a9787aa.css",
+      "type": "text/css; charset=utf-8",
+      "bytes": 4908
+    },
+    {
+      "pathname": "/_next/static/chunks/webpack-f4c502ed09367214.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 4081
+    },
+    {
+      "pathname": "/_next/static/chunks/fd9d1056-ccd57be4b1c7457c.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 172832
+    },
+    {
+      "pathname": "/_next/static/chunks/2117-8cb1f81f518df224.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 123528
+    },
+    {
+      "pathname": "/_next/static/chunks/main-app-dd9357982cbe95c2.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 464
+    },
+    {
+      "pathname": "/_next/static/chunks/785-7a3651d7cea74be6.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 14077
+    },
+    {
+      "pathname": "/_next/static/chunks/7648-b8b0e063d2afa7d7.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 20458
+    },
+    {
+      "pathname": "/_next/static/chunks/22-b951a285c8f01cf1.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 105508
+    },
+    {
+      "pathname": "/_next/static/chunks/595-3410bcaa54b38145.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 24799
+    },
+    {
+      "pathname": "/_next/static/chunks/2450-335160ffaea2cfdc.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 8275
+    },
+    {
+      "pathname": "/_next/static/chunks/7569-b08748315dd53bc3.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 20931
+    },
+    {
+      "pathname": "/_next/static/chunks/1233-79d1532bd934df97.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 24244
+    },
+    {
+      "pathname": "/_next/static/chunks/4383-a6a12182bac52df6.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 27051
+    },
+    {
+      "pathname": "/_next/static/chunks/9460-bfd6b432ee22d5c5.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 27225
+    },
+    {
+      "pathname": "/_next/static/chunks/9806-4b17ef59757bb9ed.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 6168
+    },
+    {
+      "pathname": "/_next/static/chunks/app/page-9b0e17310b5717ec.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 166424
+    },
+    {
+      "pathname": "/_next/static/chunks/app/layout-215aa49e2262fb03.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 26329
+    },
+    {
+      "pathname": "/favicon.ico",
+      "type": "image/x-icon",
+      "bytes": 520
+    },
+    {
+      "pathname": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 112594
+    },
+    {
+      "pathname": "/assets/images/logo/logo2.png",
+      "type": "image/png",
+      "bytes": 1786
+    },
+    {
+      "pathname": "/assets/images/logo/logo@2x.png",
+      "type": "image/png",
+      "bytes": 7278
+    },
+    {
+      "pathname": "/assets/images/slider/slide1.jpg",
+      "type": "image/jpeg",
+      "bytes": 238259
+    },
+    {
+      "pathname": "/assets/images/author/avt-slide.png",
+      "type": "image/png",
+      "bytes": 4390
+    },
+    {
+      "pathname": "/assets/images/slider/slide2.jpg",
+      "type": "image/jpeg",
+      "bytes": 453076
+    },
+    {
+      "pathname": "/assets/images/car-list/car4.jpg",
+      "type": "image/jpeg",
+      "bytes": 28444
+    },
+    {
+      "pathname": "/assets/images/author/8.png",
+      "type": "image/png",
+      "bytes": 4448
+    },
+    {
+      "pathname": "/assets/images/car-list/car13.jpg",
+      "type": "image/jpeg",
+      "bytes": 31684
+    },
+    {
+      "pathname": "/assets/images/car-list/car6.jpg",
+      "type": "image/jpeg",
+      "bytes": 29699
+    },
+    {
+      "pathname": "/assets/images/author/16.png",
+      "type": "image/png",
+      "bytes": 6623
+    },
+    {
+      "pathname": "/assets/images/car-list/car8.jpg",
+      "type": "image/jpeg",
+      "bytes": 31149
+    },
+    {
+      "pathname": "/assets/images/author/3.png",
+      "type": "image/png",
+      "bytes": 4374
+    },
+    {
+      "pathname": "/assets/images/car-list/car9.jpg",
+      "type": "image/jpeg",
+      "bytes": 32219
+    },
+    {
+      "pathname": "/assets/images/author/6.png",
+      "type": "image/png",
+      "bytes": 6690
+    },
+    {
+      "pathname": "/assets/images/partner/partner1.png",
+      "type": "image/png",
+      "bytes": 7939
+    },
+    {
+      "pathname": "/assets/images/partner/partner2.png",
+      "type": "image/png",
+      "bytes": 855
+    },
+    {
+      "pathname": "/assets/images/partner/partner3.png",
+      "type": "image/png",
+      "bytes": 1320
+    },
+    {
+      "pathname": "/assets/images/partner/partner4.png",
+      "type": "image/png",
+      "bytes": 1162
+    },
+    {
+      "pathname": "/assets/images/partner/partner5.png",
+      "type": "image/png",
+      "bytes": 1980
+    },
+    {
+      "pathname": "/assets/images/partner/partner6.png",
+      "type": "image/png",
+      "bytes": 2475
+    },
+    {
+      "pathname": "/assets/images/car-list/car16.jpg",
+      "type": "image/jpeg",
+      "bytes": 25771
+    },
+    {
+      "pathname": "/assets/images/author/avt-cm3.jpg",
+      "type": "image/jpeg",
+      "bytes": 3751
+    },
+    {
+      "pathname": "/assets/images/car-list/car17.jpg",
+      "type": "image/jpeg",
+      "bytes": 28387
+    },
+    {
+      "pathname": "/assets/images/author/avt-cm2.jpg",
+      "type": "image/jpeg",
+      "bytes": 3005
+    },
+    {
+      "pathname": "/assets/images/car-list/car14.jpg",
+      "type": "image/jpeg",
+      "bytes": 23407
+    },
+    {
+      "pathname": "/assets/images/car-list/car15.jpg",
+      "type": "image/jpeg",
+      "bytes": 24799
+    },
+    {
+      "pathname": "/assets/images/img-box/find-car-1.png",
+      "type": "image/png",
+      "bytes": 36930
+    },
+    {
+      "pathname": "/assets/images/img-box/find-car-2.png",
+      "type": "image/png",
+      "bytes": 30833
+    },
+    {
+      "pathname": "/assets/images/section/car-review.jpg",
+      "type": "image/jpeg",
+      "bytes": 352222
+    },
+    {
+      "pathname": "/assets/images/section/car-review3.jpg",
+      "type": "image/jpeg",
+      "bytes": 91809
+    },
+    {
+      "pathname": "/assets/images/blog/blog-5.jpg",
+      "type": "image/jpeg",
+      "bytes": 52086
+    },
+    {
+      "pathname": "/assets/images/blog/blog-3.jpg",
+      "type": "image/jpeg",
+      "bytes": 94447
+    },
+    {
+      "pathname": "/assets/images/blog/blog-2.jpg",
+      "type": "image/jpeg",
+      "bytes": 34864
+    },
+    {
+      "pathname": "/assets/images/partner/par1.png",
+      "type": "image/png",
+      "bytes": 2164
+    },
+    {
+      "pathname": "/assets/images/partner/par2.png",
+      "type": "image/png",
+      "bytes": 1946
+    },
+    {
+      "pathname": "/assets/images/partner/par3.png",
+      "type": "image/png",
+      "bytes": 2217
+    },
+    {
+      "pathname": "/assets/images/partner/par4.png",
+      "type": "image/png",
+      "bytes": 1421
+    },
+    {
+      "pathname": "/assets/images/partner/par5.png",
+      "type": "image/png",
+      "bytes": 1739
+    },
+    {
+      "pathname": "/assets/images/partner/par6.png",
+      "type": "image/png",
+      "bytes": 1505
+    },
+    {
+      "pathname": "/assets/images/logo/logo-footer@2x.png",
+      "type": "image/png",
+      "bytes": 5367
+    },
+    {
+      "pathname": "/assets/images/section/login.jpg",
+      "type": "image/jpeg",
+      "bytes": 15642
+    },
+    {
+      "pathname": "/assets/images/section/register.jpg",
+      "type": "image/jpeg",
+      "bytes": 36573
+    },
+    {
+      "pathname": "/_next/static/css/d143484b118bfc33.css\\",
+      "type": "text/css; charset=utf-8",
+      "bytes": 4875
+    },
+    {
+      "pathname": "/_next/static/css/3b2d1fd40941b3de.css\\",
+      "type": "text/css; charset=utf-8",
+      "bytes": 163031
+    },
+    {
+      "pathname": "/_next/static/css/252041ef5a5a9ba8.css\\",
+      "type": "text/css; charset=utf-8",
+      "bytes": 61707
+    },
+    {
+      "pathname": "/_next/static/css/1f7463975c61f4a5.css\\",
+      "type": "text/css; charset=utf-8",
+      "bytes": 227814
+    },
+    {
+      "pathname": "/_next/static/css/a982bdb7975d3827.css\\",
+      "type": "text/css; charset=utf-8",
+      "bytes": 251853
+    },
+    {
+      "pathname": "/_next/static/css/9b3d09951a9787aa.css\\",
+      "type": "text/css; charset=utf-8",
+      "bytes": 4908
+    },
+    {
+      "pathname": "/assets/images/img-box/find-car-1.png\\",
+      "type": "image/png",
+      "bytes": 36930
+    },
+    {
+      "pathname": "/assets/images/img-box/find-car-2.png\\",
+      "type": "image/png",
+      "bytes": 30833
+    },
+    {
+      "pathname": "/_next/static/chunks/7672-ffc843d4cefaa6bd.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 5732
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home02/page-576574efb2cba642.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 37027
+    },
+    {
+      "pathname": "/assets/images/section/video.mp4",
+      "type": "video/mp4",
+      "bytes": 103230582
+    },
+    {
+      "pathname": "/assets/images/car-list/car1.jpg",
+      "type": "image/jpeg",
+      "bytes": 37694
+    },
+    {
+      "pathname": "/assets/images/car-list/car2.jpg",
+      "type": "image/jpeg",
+      "bytes": 40701
+    },
+    {
+      "pathname": "/assets/images/car-list/car3.jpg",
+      "type": "image/jpeg",
+      "bytes": 45485
+    },
+    {
+      "pathname": "/assets/images/author/avt-cm1.jpg",
+      "type": "image/jpeg",
+      "bytes": 3119
+    },
+    {
+      "pathname": "/assets/images/car-list/car18.jpg",
+      "type": "image/jpeg",
+      "bytes": 20784
+    },
+    {
+      "pathname": "/assets/images/car-list/car19.jpg",
+      "type": "image/jpeg",
+      "bytes": 30508
+    },
+    {
+      "pathname": "/assets/images/car-list/car20.jpg",
+      "type": "image/jpeg",
+      "bytes": 30508
+    },
+    {
+      "pathname": "/assets/images/car-list/car21.jpg",
+      "type": "image/jpeg",
+      "bytes": 25681
+    },
+    {
+      "pathname": "/assets/images/car-list/car22.jpg",
+      "type": "image/jpeg",
+      "bytes": 31604
+    },
+    {
+      "pathname": "/assets/images/author/9.jpg",
+      "type": "image/jpeg",
+      "bytes": 63472
+    },
+    {
+      "pathname": "/assets/images/car-list/car23.jpg",
+      "type": "image/jpeg",
+      "bytes": 20711
+    },
+    {
+      "pathname": "/assets/images/car-list/car24.jpg",
+      "type": "image/jpeg",
+      "bytes": 28474
+    },
+    {
+      "pathname": "/assets/images/car-list/car25.jpg",
+      "type": "image/jpeg",
+      "bytes": 32646
+    },
+    {
+      "pathname": "/assets/images/section/specs1.jpg",
+      "type": "image/jpeg",
+      "bytes": 69728
+    },
+    {
+      "pathname": "/assets/images/section/specs2.png",
+      "type": "image/png",
+      "bytes": 51992
+    },
+    {
+      "pathname": "/assets/images/author/avt2.jpg",
+      "type": "image/jpeg",
+      "bytes": 20556
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list1.png",
+      "type": "image/png",
+      "bytes": 5245
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list2.png",
+      "type": "image/png",
+      "bytes": 5587
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list3.png",
+      "type": "image/png",
+      "bytes": 4974
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list4.png",
+      "type": "image/png",
+      "bytes": 5340
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list5.png",
+      "type": "image/png",
+      "bytes": 5455
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list6.png",
+      "type": "image/png",
+      "bytes": 4918
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list7.png",
+      "type": "image/png",
+      "bytes": 4351
+    },
+    {
+      "pathname": "/assets/images/icon-box/car-list8.png",
+      "type": "image/png",
+      "bytes": 4351
+    },
+    {
+      "pathname": "/assets/images/img-box/compare1.jpg",
+      "type": "image/jpeg",
+      "bytes": 69081
+    },
+    {
+      "pathname": "/assets/images/img-box/compare2.jpg",
+      "type": "image/jpeg",
+      "bytes": 55261
+    },
+    {
+      "pathname": "/assets/images/img-box/compare3.jpg",
+      "type": "image/jpeg",
+      "bytes": 54966
+    },
+    {
+      "pathname": "/assets/images/img-box/compare4.jpg",
+      "type": "image/jpeg",
+      "bytes": 63150
+    },
+    {
+      "pathname": "/assets/images/img-box/compare5.jpg",
+      "type": "image/jpeg",
+      "bytes": 62997
+    },
+    {
+      "pathname": "/assets/images/img-box/compare6.jpg",
+      "type": "image/jpeg",
+      "bytes": 47767
+    },
+    {
+      "pathname": "/assets/images/section/specs1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 69728
+    },
+    {
+      "pathname": "/assets/images/section/specs2.png\\",
+      "type": "image/png",
+      "bytes": 51992
+    },
+    {
+      "pathname": "/assets/images/author/avt2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 20556
+    },
+    {
+      "pathname": "/assets/images/img-box/compare1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 69081
+    },
+    {
+      "pathname": "/assets/images/img-box/compare2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 55261
+    },
+    {
+      "pathname": "/assets/images/img-box/compare3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 54966
+    },
+    {
+      "pathname": "/assets/images/img-box/compare4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 63150
+    },
+    {
+      "pathname": "/assets/images/img-box/compare5.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 62997
+    },
+    {
+      "pathname": "/assets/images/img-box/compare6.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 47767
+    },
+    {
+      "pathname": "/_next/static/chunks/106-e58532edced5a749.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 19493
+    },
+    {
+      "pathname": "/_next/static/chunks/9493-a0e8977d0ef2cb58.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 16922
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home03/page-19030e1af8fb7298.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 43549
+    },
+    {
+      "pathname": "/assets/images/slider/slide3.jpg",
+      "type": "image/jpeg",
+      "bytes": 218587
+    },
+    {
+      "pathname": "/assets/images/slider/slide4.jpg",
+      "type": "image/jpeg",
+      "bytes": 310661
+    },
+    {
+      "pathname": "/assets/images/car-list/car28.jpg",
+      "type": "image/jpeg",
+      "bytes": 18838
+    },
+    {
+      "pathname": "/assets/images/car-list/car29.jpg",
+      "type": "image/jpeg",
+      "bytes": 17680
+    },
+    {
+      "pathname": "/assets/images/author/15.png",
+      "type": "image/png",
+      "bytes": 5589
+    },
+    {
+      "pathname": "/assets/images/author/4.jpg",
+      "type": "image/jpeg",
+      "bytes": 90324
+    },
+    {
+      "pathname": "/assets/images/car-list/car27.jpg",
+      "type": "image/jpeg",
+      "bytes": 23407
+    },
+    {
+      "pathname": "/assets/images/author/13.jpg",
+      "type": "image/jpeg",
+      "bytes": 181717
+    },
+    {
+      "pathname": "/assets/images/section/wcu-1.jpg",
+      "type": "image/jpeg",
+      "bytes": 55402
+    },
+    {
+      "pathname": "/assets/images/section/wcu-2.png",
+      "type": "image/png",
+      "bytes": 46899
+    },
+    {
+      "pathname": "/assets/images/img-box/team1.jpg",
+      "type": "image/jpeg",
+      "bytes": 13209
+    },
+    {
+      "pathname": "/assets/images/img-box/team2.jpg",
+      "type": "image/jpeg",
+      "bytes": 20556
+    },
+    {
+      "pathname": "/assets/images/img-box/team3.jpg",
+      "type": "image/jpeg",
+      "bytes": 18029
+    },
+    {
+      "pathname": "/assets/images/img-box/team4.jpg",
+      "type": "image/jpeg",
+      "bytes": 21356
+    },
+    {
+      "pathname": "/assets/images/img-box/find-car-4.png",
+      "type": "image/png",
+      "bytes": 27707
+    },
+    {
+      "pathname": "/assets/images/section/app-store.png",
+      "type": "image/png",
+      "bytes": 1211
+    },
+    {
+      "pathname": "/assets/images/section/google-play.png",
+      "type": "image/png",
+      "bytes": 1450
+    },
+    {
+      "pathname": "/assets/images/section/star-5.png",
+      "type": "image/png",
+      "bytes": 576
+    },
+    {
+      "pathname": "/assets/images/author/1.jpg",
+      "type": "image/jpeg",
+      "bytes": 98449
+    },
+    {
+      "pathname": "/assets/images/img-box/car30.jpg",
+      "type": "image/jpeg",
+      "bytes": 19808
+    },
+    {
+      "pathname": "/assets/images/img-box/car31.jpg",
+      "type": "image/jpeg",
+      "bytes": 16538
+    },
+    {
+      "pathname": "/assets/images/img-box/car32.jpg",
+      "type": "image/jpeg",
+      "bytes": 14783
+    },
+    {
+      "pathname": "/assets/images/img-box/car33.jpg",
+      "type": "image/jpeg",
+      "bytes": 19529
+    },
+    {
+      "pathname": "/assets/images/img-box/car34.jpg",
+      "type": "image/jpeg",
+      "bytes": 16836
+    },
+    {
+      "pathname": "/assets/images/img-box/car35.jpg",
+      "type": "image/jpeg",
+      "bytes": 20069
+    },
+    {
+      "pathname": "/assets/images/blog/blog-15.jpg",
+      "type": "image/jpeg",
+      "bytes": 29942
+    },
+    {
+      "pathname": "/assets/images/blog/blog-16.jpg",
+      "type": "image/jpeg",
+      "bytes": 29205
+    },
+    {
+      "pathname": "/assets/images/blog/blog-17.jpg",
+      "type": "image/jpeg",
+      "bytes": 20548
+    },
+    {
+      "pathname": "/assets/images/blog/blog-18.jpg",
+      "type": "image/jpeg",
+      "bytes": 32185
+    },
+    {
+      "pathname": "/assets/images/section/wcu-1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 55402
+    },
+    {
+      "pathname": "/assets/images/section/wcu-2.png\\",
+      "type": "image/png",
+      "bytes": 46899
+    },
+    {
+      "pathname": "/assets/images/img-box/team1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 13209
+    },
+    {
+      "pathname": "/assets/images/img-box/team2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 20556
+    },
+    {
+      "pathname": "/assets/images/img-box/team3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 18029
+    },
+    {
+      "pathname": "/assets/images/img-box/team4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 21356
+    },
+    {
+      "pathname": "/assets/images/img-box/find-car-4.png\\",
+      "type": "image/png",
+      "bytes": 27707
+    },
+    {
+      "pathname": "/assets/images/section/app-store.png\\",
+      "type": "image/png",
+      "bytes": 1211
+    },
+    {
+      "pathname": "/assets/images/section/google-play.png\\",
+      "type": "image/png",
+      "bytes": 1450
+    },
+    {
+      "pathname": "/assets/images/img-box/car30.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 19808
+    },
+    {
+      "pathname": "/assets/images/img-box/car31.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 16538
+    },
+    {
+      "pathname": "/assets/images/img-box/car32.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 14783
+    },
+    {
+      "pathname": "/assets/images/img-box/car33.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 19529
+    },
+    {
+      "pathname": "/assets/images/img-box/car34.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 16836
+    },
+    {
+      "pathname": "/assets/images/img-box/car35.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 20069
+    },
+    {
+      "pathname": "/_next/static/chunks/3286-cc444908df70cd9e.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 9558
+    },
+    {
+      "pathname": "/_next/static/chunks/1226-1f622e7ae33fa626.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 8721
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home04/page-422ce8c97e1e1f14.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 35781
+    },
+    {
+      "pathname": "/assets/images/slider/slide5.jpg",
+      "type": "image/jpeg",
+      "bytes": 510340
+    },
+    {
+      "pathname": "/assets/images/section/wcu-3.jpg",
+      "type": "image/jpeg",
+      "bytes": 30504
+    },
+    {
+      "pathname": "/assets/images/section/wcu-4.jpg",
+      "type": "image/jpeg",
+      "bytes": 22475
+    },
+    {
+      "pathname": "/assets/images/img-box/car36.jpg",
+      "type": "image/jpeg",
+      "bytes": 69081
+    },
+    {
+      "pathname": "/assets/images/img-box/car37.jpg",
+      "type": "image/jpeg",
+      "bytes": 55261
+    },
+    {
+      "pathname": "/assets/images/img-box/car38.jpg",
+      "type": "image/jpeg",
+      "bytes": 54966
+    },
+    {
+      "pathname": "/assets/images/img-box/car39.jpg",
+      "type": "image/jpeg",
+      "bytes": 63150
+    },
+    {
+      "pathname": "/assets/images/img-box/car40.jpg",
+      "type": "image/jpeg",
+      "bytes": 62997
+    },
+    {
+      "pathname": "/assets/images/img-box/car41.jpg",
+      "type": "image/jpeg",
+      "bytes": 47767
+    },
+    {
+      "pathname": "/assets/images/section/wcu-3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 30504
+    },
+    {
+      "pathname": "/assets/images/section/wcu-4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 22475
+    },
+    {
+      "pathname": "/assets/images/img-box/car36.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 69081
+    },
+    {
+      "pathname": "/assets/images/img-box/car37.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 55261
+    },
+    {
+      "pathname": "/assets/images/img-box/car38.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 54966
+    },
+    {
+      "pathname": "/assets/images/img-box/car39.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 63150
+    },
+    {
+      "pathname": "/assets/images/img-box/car40.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 62997
+    },
+    {
+      "pathname": "/assets/images/img-box/car41.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 47767
+    },
+    {
+      "pathname": "/_next/static/chunks/6217-e4d045e57e4a5f9f.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 53904
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home05/page-fc3754dc9c6eef6a.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 46889
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home06/page-8db2b48af747d8f7.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 28287
+    },
+    {
+      "pathname": "/assets/images/slider/slide6.jpg",
+      "type": "image/jpeg",
+      "bytes": 448942
+    },
+    {
+      "pathname": "/assets/images/partner/parner7.png",
+      "type": "image/png",
+      "bytes": 785
+    },
+    {
+      "pathname": "/assets/images/partner/parner8.png",
+      "type": "image/png",
+      "bytes": 908
+    },
+    {
+      "pathname": "/assets/images/partner/parner9.png",
+      "type": "image/png",
+      "bytes": 1409
+    },
+    {
+      "pathname": "/assets/images/partner/parner10.png",
+      "type": "image/png",
+      "bytes": 981
+    },
+    {
+      "pathname": "/assets/images/partner/parner11.png",
+      "type": "image/png",
+      "bytes": 1241
+    },
+    {
+      "pathname": "/assets/images/partner/parner12.png",
+      "type": "image/png",
+      "bytes": 1261
+    },
+    {
+      "pathname": "/assets/images/blog/blog-19.jpg",
+      "type": "image/jpeg",
+      "bytes": 69679
+    },
+    {
+      "pathname": "/assets/images/blog/blog-20.jpg",
+      "type": "image/jpeg",
+      "bytes": 22304
+    },
+    {
+      "pathname": "/assets/images/blog/blog-21.jpg",
+      "type": "image/jpeg",
+      "bytes": 10489
+    },
+    {
+      "pathname": "/assets/images/blog/blog-22.jpg",
+      "type": "image/jpeg",
+      "bytes": 7722
+    },
+    {
+      "pathname": "/assets/images/blog/blog-19.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 69679
+    },
+    {
+      "pathname": "/assets/images/blog/blog-20.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 22304
+    },
+    {
+      "pathname": "/assets/images/blog/blog-21.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 10489
+    },
+    {
+      "pathname": "/assets/images/blog/blog-22.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 7722
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home07/page-b51a566deae43eeb.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 39845
+    },
+    {
+      "pathname": "/assets/images/slider/slide7.jpg",
+      "type": "image/jpeg",
+      "bytes": 265867
+    },
+    {
+      "pathname": "/assets/images/section/car-slide1.png",
+      "type": "image/png",
+      "bytes": 41257
+    },
+    {
+      "pathname": "/assets/images/section/car-slide2.png",
+      "type": "image/png",
+      "bytes": 32424
+    },
+    {
+      "pathname": "/assets/images/section/car-slide3.png",
+      "type": "image/png",
+      "bytes": 27720
+    },
+    {
+      "pathname": "/assets/images/img-box/list1.jpg",
+      "type": "image/jpeg",
+      "bytes": 18391
+    },
+    {
+      "pathname": "/assets/images/img-box/list2.jpg",
+      "type": "image/jpeg",
+      "bytes": 15641
+    },
+    {
+      "pathname": "/assets/images/img-box/list3.jpg",
+      "type": "image/jpeg",
+      "bytes": 20394
+    },
+    {
+      "pathname": "/assets/images/img-box/list4.jpg",
+      "type": "image/jpeg",
+      "bytes": 18565
+    },
+    {
+      "pathname": "/assets/images/img-box/list5.jpg",
+      "type": "image/jpeg",
+      "bytes": 18931
+    },
+    {
+      "pathname": "/_next/static/chunks/200-53b662ef089a81ad.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 41237
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home08/page-56c7489d1fa5967d.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 10333
+    },
+    {
+      "pathname": "/assets/images/slider/slide8.png",
+      "type": "image/png",
+      "bytes": 72960
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home09/page-295f13f8d3497df7.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 25991
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(homes)/home10/page-308f6c4fbace09f6.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 24658
+    },
+    {
+      "pathname": "/assets/images/slider/slide10.jpg",
+      "type": "image/jpeg",
+      "bytes": 530534
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-listings)/listing-grid/page-20dd10b125f74559.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 28700
+    },
+    {
+      "pathname": "/_next/static/chunks/9191-e667c1b6598c5088.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 13194
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-listings)/listing-grid2/page-5c5628aeeeaae4b0.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 19889
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-listings)/listing-list/page-37fa5f80d4161cfa.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 19704
+    },
+    {
+      "pathname": "/_next/static/chunks/4e6af11a-4bf0f9ccf0f95c4b.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 145817
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-listings)/listing-grid-map/page-ab8ea8d582d6d7a5.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 12067
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-listings)/listing-list-map/page-6ffba86a0cb84a1d.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 16433
+    },
+    {
+      "pathname": "/_next/static/chunks/2596-d64f1869df480eeb.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 14797
+    },
+    {
+      "pathname": "/_next/static/chunks/3528-55a88524d0b52103.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 18136
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-details)/listing-detail-v1/%5Bid%5D/page-39b8d211353d65ea.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 4740
+    },
+    {
+      "pathname": "/assets/images/section/slider-listing1.jpg",
+      "type": "image/jpeg",
+      "bytes": 63355
+    },
+    {
+      "pathname": "/assets/images/author/avt1.jpg",
+      "type": "image/jpeg",
+      "bytes": 18441
+    },
+    {
+      "pathname": "/assets/images/author/avt1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 18441
+    },
+    {
+      "pathname": "/assets/images/car-list/car28.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 18838
+    },
+    {
+      "pathname": "/assets/images/car-list/car29.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 17680
+    },
+    {
+      "pathname": "/assets/images/car-list/car25.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 32646
+    },
+    {
+      "pathname": "/assets/images/car-list/car27.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 23407
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-details)/listing-detail-v2/%5Bid%5D/page-972e377c81392e3c.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 4990
+    },
+    {
+      "pathname": "/assets/images/section/listing-detai-1.jpg",
+      "type": "image/jpeg",
+      "bytes": 70434
+    },
+    {
+      "pathname": "/assets/images/section/listing-detai-2.jpg",
+      "type": "image/jpeg",
+      "bytes": 55876
+    },
+    {
+      "pathname": "/assets/images/section/listing-detai-3.jpg",
+      "type": "image/jpeg",
+      "bytes": 57758
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-details)/listing-detail-v3/%5Bid%5D/page-66c878c64ddec9e9.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 5001
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-details)/listing-detail-v4/%5Bid%5D/page-7a21ec805310280d.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 5001
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(car-details)/listing-detail-v5/%5Bid%5D/page-11046cdc3ff69895.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 8649
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(other-pages)/about-us/page-7b8e6517c19cc375.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 4571
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(other-pages)/pricing/page-7780fa1f837c2874.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 12062
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(other-pages)/compare/page-349d955b144665e3.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 19848
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dealer)/dealer-listing/page-1651ac91a94d5a65.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 15541
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealde-item.png",
+      "type": "image/png",
+      "bytes": 4620
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list6.png",
+      "type": "image/png",
+      "bytes": 4816
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list5.png",
+      "type": "image/png",
+      "bytes": 4391
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list4.png",
+      "type": "image/png",
+      "bytes": 6198
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list3.png",
+      "type": "image/png",
+      "bytes": 4869
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list2.png",
+      "type": "image/png",
+      "bytes": 5950
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list1.png",
+      "type": "image/png",
+      "bytes": 4620
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list7.png",
+      "type": "image/png",
+      "bytes": 4816
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealde-item.png\\",
+      "type": "image/png",
+      "bytes": 4620
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list6.png\\",
+      "type": "image/png",
+      "bytes": 4816
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list5.png\\",
+      "type": "image/png",
+      "bytes": 4391
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list4.png\\",
+      "type": "image/png",
+      "bytes": 6198
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list3.png\\",
+      "type": "image/png",
+      "bytes": 4869
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list2.png\\",
+      "type": "image/png",
+      "bytes": 5950
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list1.png\\",
+      "type": "image/png",
+      "bytes": 4620
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-list7.png\\",
+      "type": "image/png",
+      "bytes": 4816
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dealer)/dealer-detail/%5Bid%5D/page-91123c8b7ee290a5.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 11353
+    },
+    {
+      "pathname": "/assets/images/dashboard/single-dealer.jpg",
+      "type": "image/jpeg",
+      "bytes": 33561
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent4.jpg",
+      "type": "image/jpeg",
+      "bytes": 5732
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent3.jpg",
+      "type": "image/jpeg",
+      "bytes": 7233
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent2.jpg",
+      "type": "image/jpeg",
+      "bytes": 7323
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent1.jpg",
+      "type": "image/jpeg",
+      "bytes": 7333
+    },
+    {
+      "pathname": "/assets/images/dashboard/single-dealer.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 33561
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 5732
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 7233
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 7323
+    },
+    {
+      "pathname": "/assets/images/dashboard/agent1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 7333
+    },
+    {
+      "pathname": "/assets/images/author/13.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 181717
+    },
+    {
+      "pathname": "/assets/images/author/avt-cm1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 3119
+    },
+    {
+      "pathname": "/assets/images/author/15.png\\",
+      "type": "image/png",
+      "bytes": 5589
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(agents)/sale-agents/page-4647e0bb69ec6c7a.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 4946
+    },
+    {
+      "pathname": "/assets/images/img-box/team5.jpg",
+      "type": "image/jpeg",
+      "bytes": 18441
+    },
+    {
+      "pathname": "/assets/images/img-box/team6.jpg",
+      "type": "image/jpeg",
+      "bytes": 19129
+    },
+    {
+      "pathname": "/assets/images/img-box/team7.jpg",
+      "type": "image/jpeg",
+      "bytes": 26615
+    },
+    {
+      "pathname": "/assets/images/img-box/team8.jpg",
+      "type": "image/jpeg",
+      "bytes": 17711
+    },
+    {
+      "pathname": "/assets/images/img-box/team9.jpg",
+      "type": "image/jpeg",
+      "bytes": 19263
+    },
+    {
+      "pathname": "/assets/images/img-box/team10.jpg",
+      "type": "image/jpeg",
+      "bytes": 31602
+    },
+    {
+      "pathname": "/assets/images/img-box/team11.jpg",
+      "type": "image/jpeg",
+      "bytes": 20635
+    },
+    {
+      "pathname": "/assets/images/img-box/team12.jpg",
+      "type": "image/jpeg",
+      "bytes": 12946
+    },
+    {
+      "pathname": "/assets/images/img-box/team5.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 18441
+    },
+    {
+      "pathname": "/assets/images/img-box/team6.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 19129
+    },
+    {
+      "pathname": "/assets/images/img-box/team7.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 26615
+    },
+    {
+      "pathname": "/assets/images/img-box/team8.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 17711
+    },
+    {
+      "pathname": "/assets/images/img-box/team9.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 19263
+    },
+    {
+      "pathname": "/assets/images/img-box/team10.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 31602
+    },
+    {
+      "pathname": "/assets/images/img-box/team11.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 20635
+    },
+    {
+      "pathname": "/assets/images/img-box/team12.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 12946
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(agents)/sale-agents-detail/%5Bid%5D/page-a019ca5ef338a35f.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 10947
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(blogs)/blog/page-359337a7e41054bb.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 12113
+    },
+    {
+      "pathname": "/assets/images/blog/blog-1.jpg",
+      "type": "image/jpeg",
+      "bytes": 93721
+    },
+    {
+      "pathname": "/assets/images/blog/blog-4.jpg",
+      "type": "image/jpeg",
+      "bytes": 165710
+    },
+    {
+      "pathname": "/assets/images/blog/blog-post-1.jpg",
+      "type": "image/jpeg",
+      "bytes": 14163
+    },
+    {
+      "pathname": "/assets/images/blog/blog-post-2.jpg",
+      "type": "image/jpeg",
+      "bytes": 7102
+    },
+    {
+      "pathname": "/assets/images/blog/blog-post-3.jpg",
+      "type": "image/jpeg",
+      "bytes": 4552
+    },
+    {
+      "pathname": "/assets/images/blog/blog-1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 93721
+    },
+    {
+      "pathname": "/assets/images/blog/blog-2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 34864
+    },
+    {
+      "pathname": "/assets/images/blog/blog-3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 94447
+    },
+    {
+      "pathname": "/assets/images/blog/blog-4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 165710
+    },
+    {
+      "pathname": "/assets/images/blog/blog-5.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 52086
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(blogs)/blog-grid/page-193c8f190d130aed.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 4946
+    },
+    {
+      "pathname": "/assets/images/blog/blog-6.jpg",
+      "type": "image/jpeg",
+      "bytes": 86362
+    },
+    {
+      "pathname": "/assets/images/blog/blog-7.jpg",
+      "type": "image/jpeg",
+      "bytes": 48660
+    },
+    {
+      "pathname": "/assets/images/blog/blog-8.jpg",
+      "type": "image/jpeg",
+      "bytes": 38400
+    },
+    {
+      "pathname": "/assets/images/blog/blog-9.jpg",
+      "type": "image/jpeg",
+      "bytes": 92539
+    },
+    {
+      "pathname": "/assets/images/blog/blog-10.jpg",
+      "type": "image/jpeg",
+      "bytes": 55499
+    },
+    {
+      "pathname": "/assets/images/blog/blog-11.jpg",
+      "type": "image/jpeg",
+      "bytes": 73160
+    },
+    {
+      "pathname": "/assets/images/blog/blog-12.jpg",
+      "type": "image/jpeg",
+      "bytes": 163578
+    },
+    {
+      "pathname": "/assets/images/blog/blog-13.jpg",
+      "type": "image/jpeg",
+      "bytes": 87897
+    },
+    {
+      "pathname": "/assets/images/blog/blog-14.jpg",
+      "type": "image/jpeg",
+      "bytes": 95283
+    },
+    {
+      "pathname": "/assets/images/blog/blog-6.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 86362
+    },
+    {
+      "pathname": "/assets/images/blog/blog-7.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 48660
+    },
+    {
+      "pathname": "/assets/images/blog/blog-8.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 38400
+    },
+    {
+      "pathname": "/assets/images/blog/blog-9.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 92539
+    },
+    {
+      "pathname": "/assets/images/blog/blog-10.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 55499
+    },
+    {
+      "pathname": "/assets/images/blog/blog-11.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 73160
+    },
+    {
+      "pathname": "/assets/images/blog/blog-12.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 163578
+    },
+    {
+      "pathname": "/assets/images/blog/blog-13.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 87897
+    },
+    {
+      "pathname": "/assets/images/blog/blog-14.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 95283
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(blogs)/blog-detail/%5Bid%5D/page-229d7c998e4e054d.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 7409
+    },
+    {
+      "pathname": "/assets/images/blog/blog-details-1.jpg",
+      "type": "image/jpeg",
+      "bytes": 170078
+    },
+    {
+      "pathname": "/assets/images/blog/blog-details-2.jpg",
+      "type": "image/jpeg",
+      "bytes": 95909
+    },
+    {
+      "pathname": "/assets/images/blog/blog-details-3.jpg",
+      "type": "image/jpeg",
+      "bytes": 75049
+    },
+    {
+      "pathname": "/assets/images/blog/blog-details-1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 170078
+    },
+    {
+      "pathname": "/assets/images/blog/blog-details-2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 95909
+    },
+    {
+      "pathname": "/assets/images/blog/blog-details-3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 75049
+    },
+    {
+      "pathname": "/assets/images/author/avt-cm2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 3005
+    },
+    {
+      "pathname": "/assets/images/author/avt-cm3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 3751
+    },
+    {
+      "pathname": "/assets/images/blog/blog-post-1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 14163
+    },
+    {
+      "pathname": "/assets/images/blog/blog-post-2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 7102
+    },
+    {
+      "pathname": "/assets/images/blog/blog-post-3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 4552
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(other-pages)/faq/page-850609b49f6c5668.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 9053
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(other-pages)/contact/page-6c407775a2653d39.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 8365
+    },
+    {
+      "pathname": "/_next/static/chunks/2224-a14751042170061a.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 35528
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/add-listing/page-2b377ead768a5a8e.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 34433
+    },
+    {
+      "pathname": "/assets/images/dashboard/logo.png",
+      "type": "image/png",
+      "bytes": 5909
+    },
+    {
+      "pathname": "/assets/images/dashboard/avatar.png",
+      "type": "image/png",
+      "bytes": 1041
+    },
+    {
+      "pathname": "/assets/images/logo/logo.png",
+      "type": "image/png",
+      "bytes": 1783
+    },
+    {
+      "pathname": "/assets/images/dashboard/thumb-media1.jpg",
+      "type": "image/jpeg",
+      "bytes": 24315
+    },
+    {
+      "pathname": "/assets/images/dashboard/thumb-media2.jpg",
+      "type": "image/jpeg",
+      "bytes": 22807
+    },
+    {
+      "pathname": "/assets/images/dashboard/thumb-media3.jpg",
+      "type": "image/jpeg",
+      "bytes": 24310
+    },
+    {
+      "pathname": "/assets/images/dashboard/thumb-media4.jpg",
+      "type": "image/jpeg",
+      "bytes": 21242
+    },
+    {
+      "pathname": "/assets/images/dashboard/thumb-media5.jpg",
+      "type": "image/jpeg",
+      "bytes": 24689
+    },
+    {
+      "pathname": "/_next/static/chunks/ca377847-8101107b598d0df7.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 143359
+    },
+    {
+      "pathname": "/_next/static/chunks/3912-7211a85b8c6d335b.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 40066
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/dashboard/page-f218e9d8ff1c3c0a.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 3407
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview1.svg",
+      "type": "image/svg+xml",
+      "bytes": 2131
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview4.svg",
+      "type": "image/svg+xml",
+      "bytes": 4789
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview3.svg",
+      "type": "image/svg+xml",
+      "bytes": 3148
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview2.svg",
+      "type": "image/svg+xml",
+      "bytes": 2914
+    },
+    {
+      "pathname": "/assets/images/dashboard/pen.svg",
+      "type": "image/svg+xml",
+      "bytes": 582
+    },
+    {
+      "pathname": "/assets/images/dashboard/hide.svg",
+      "type": "image/svg+xml",
+      "bytes": 596
+    },
+    {
+      "pathname": "/assets/images/dashboard/trash.svg",
+      "type": "image/svg+xml",
+      "bytes": 946
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate4.png",
+      "type": "image/png",
+      "bytes": 2440
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate3.png",
+      "type": "image/png",
+      "bytes": 2370
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate2.png",
+      "type": "image/png",
+      "bytes": 2566
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate1.png",
+      "type": "image/png",
+      "bytes": 2580
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview1.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 2131
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview4.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 4789
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview3.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 3148
+    },
+    {
+      "pathname": "/assets/images/dashboard/overview2.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 2914
+    },
+    {
+      "pathname": "/assets/images/car-list/car6.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 29699
+    },
+    {
+      "pathname": "/assets/images/dashboard/pen.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 582
+    },
+    {
+      "pathname": "/assets/images/dashboard/hide.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 596
+    },
+    {
+      "pathname": "/assets/images/dashboard/trash.svg\\",
+      "type": "image/svg+xml",
+      "bytes": 946
+    },
+    {
+      "pathname": "/assets/images/car-list/car8.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 31149
+    },
+    {
+      "pathname": "/assets/images/car-list/car9.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 32219
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate4.png\\",
+      "type": "image/png",
+      "bytes": 2440
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate3.png\\",
+      "type": "image/png",
+      "bytes": 2370
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate2.png\\",
+      "type": "image/png",
+      "bytes": 2566
+    },
+    {
+      "pathname": "/assets/images/dashboard/rate1.png\\",
+      "type": "image/png",
+      "bytes": 2580
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/my-favorite/page-ea0cb481387ec344.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 2579
+    },
+    {
+      "pathname": "/assets/images/car-list/car11.jpg",
+      "type": "image/jpeg",
+      "bytes": 18588
+    },
+    {
+      "pathname": "/assets/images/car-list/car12.jpg",
+      "type": "image/jpeg",
+      "bytes": 25286
+    },
+    {
+      "pathname": "/assets/images/car-list/car10.jpg",
+      "type": "image/jpeg",
+      "bytes": 26174
+    },
+    {
+      "pathname": "/assets/images/car-list/car4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 28444
+    },
+    {
+      "pathname": "/assets/images/author/8.png\\",
+      "type": "image/png",
+      "bytes": 4448
+    },
+    {
+      "pathname": "/assets/images/car-list/car13.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 31684
+    },
+    {
+      "pathname": "/assets/images/author/16.png\\",
+      "type": "image/png",
+      "bytes": 6623
+    },
+    {
+      "pathname": "/assets/images/author/3.png\\",
+      "type": "image/png",
+      "bytes": 4374
+    },
+    {
+      "pathname": "/assets/images/author/6.png\\",
+      "type": "image/png",
+      "bytes": 6690
+    },
+    {
+      "pathname": "/assets/images/car-list/car11.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 18588
+    },
+    {
+      "pathname": "/assets/images/car-list/car12.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 25286
+    },
+    {
+      "pathname": "/assets/images/car-list/car10.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 26174
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/my-listing/page-10e37f2770664f44.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 2579
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/message/page-54b1cf2e7830c4de.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 309
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt4.jpg",
+      "type": "image/jpeg",
+      "bytes": 4587
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt3.jpg",
+      "type": "image/jpeg",
+      "bytes": 5473
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt2.jpg",
+      "type": "image/jpeg",
+      "bytes": 5633
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt1.jpg",
+      "type": "image/jpeg",
+      "bytes": 5089
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt7.jpg",
+      "type": "image/jpeg",
+      "bytes": 5282
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt6.jpg",
+      "type": "image/jpeg",
+      "bytes": 5192
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt5.jpg",
+      "type": "image/jpeg",
+      "bytes": 4456
+    },
+    {
+      "pathname": "/assets/images/dashboard/attrach1.png",
+      "type": "image/png",
+      "bytes": 1294
+    },
+    {
+      "pathname": "/assets/images/dashboard/attrach2.png",
+      "type": "image/png",
+      "bytes": 1133
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt4.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 4587
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt3.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 5473
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt2.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 5633
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt1.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 5089
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt7.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 5282
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt6.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 5192
+    },
+    {
+      "pathname": "/assets/images/dashboard/chat-avt5.jpg\\",
+      "type": "image/jpeg",
+      "bytes": 4456
+    },
+    {
+      "pathname": "/assets/images/dashboard/attrach1.png\\",
+      "type": "image/png",
+      "bytes": 1294
+    },
+    {
+      "pathname": "/assets/images/dashboard/attrach2.png\\",
+      "type": "image/png",
+      "bytes": 1133
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/my-review/page-8f8aef3d70a158f3.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 1361
+    },
+    {
+      "pathname": "/assets/images/dashboard/review9.png",
+      "type": "image/png",
+      "bytes": 2209
+    },
+    {
+      "pathname": "/assets/images/dashboard/review8.png",
+      "type": "image/png",
+      "bytes": 2471
+    },
+    {
+      "pathname": "/assets/images/dashboard/review7.png",
+      "type": "image/png",
+      "bytes": 2330
+    },
+    {
+      "pathname": "/assets/images/dashboard/review6.png",
+      "type": "image/png",
+      "bytes": 2365
+    },
+    {
+      "pathname": "/assets/images/dashboard/review5.png",
+      "type": "image/png",
+      "bytes": 1837
+    },
+    {
+      "pathname": "/assets/images/dashboard/review4.png",
+      "type": "image/png",
+      "bytes": 2361
+    },
+    {
+      "pathname": "/assets/images/dashboard/review3.png",
+      "type": "image/png",
+      "bytes": 2543
+    },
+    {
+      "pathname": "/assets/images/dashboard/review2.png",
+      "type": "image/png",
+      "bytes": 2404
+    },
+    {
+      "pathname": "/assets/images/dashboard/review1.png",
+      "type": "image/png",
+      "bytes": 2448
+    },
+    {
+      "pathname": "/assets/images/dashboard/review10.png",
+      "type": "image/png",
+      "bytes": 1926
+    },
+    {
+      "pathname": "/assets/images/dashboard/review9.png\\",
+      "type": "image/png",
+      "bytes": 2209
+    },
+    {
+      "pathname": "/assets/images/dashboard/review8.png\\",
+      "type": "image/png",
+      "bytes": 2471
+    },
+    {
+      "pathname": "/assets/images/dashboard/review7.png\\",
+      "type": "image/png",
+      "bytes": 2330
+    },
+    {
+      "pathname": "/assets/images/dashboard/review6.png\\",
+      "type": "image/png",
+      "bytes": 2365
+    },
+    {
+      "pathname": "/assets/images/dashboard/review5.png\\",
+      "type": "image/png",
+      "bytes": 1837
+    },
+    {
+      "pathname": "/assets/images/dashboard/review4.png\\",
+      "type": "image/png",
+      "bytes": 2361
+    },
+    {
+      "pathname": "/assets/images/dashboard/review3.png\\",
+      "type": "image/png",
+      "bytes": 2543
+    },
+    {
+      "pathname": "/assets/images/dashboard/review2.png\\",
+      "type": "image/png",
+      "bytes": 2404
+    },
+    {
+      "pathname": "/assets/images/dashboard/review1.png\\",
+      "type": "image/png",
+      "bytes": 2448
+    },
+    {
+      "pathname": "/assets/images/dashboard/review10.png\\",
+      "type": "image/png",
+      "bytes": 1926
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/my-profile/page-9f4fa7c9fcd20bfd.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 5623
+    },
+    {
+      "pathname": "/assets/images/dashboard/avt-profile.jpg",
+      "type": "image/jpeg",
+      "bytes": 16782
+    },
+    {
+      "pathname": "/_next/static/chunks/app/(dashboard)/change-password/page-d1cb5f6f1ef06039.js",
+      "type": "application/javascript; charset=utf-8",
+      "bytes": 265
+    },
+    {
+      "pathname": "/assets/fonts/fa-brands-400.eot",
+      "type": "application/vnd.ms-fontobject",
+      "bytes": 133034
+    },
+    {
+      "pathname": "/assets/fonts/fa-brands-400.woff2",
+      "type": "font/woff2",
+      "bytes": 76636
+    },
+    {
+      "pathname": "/assets/fonts/fa-brands-400.woff",
+      "type": "font/woff",
+      "bytes": 89824
+    },
+    {
+      "pathname": "/assets/fonts/fa-brands-400.ttf",
+      "type": "font/ttf",
+      "bytes": 132728
+    },
+    {
+      "pathname": "/assets/fonts/fa-brands-400.svg",
+      "type": "image/svg+xml",
+      "bytes": 715847
+    },
+    {
+      "pathname": "/assets/fonts/fa-duotone-900.eot",
+      "type": "application/vnd.ms-fontobject",
+      "bytes": 572078
+    },
+    {
+      "pathname": "/assets/fonts/fa-duotone-900.woff2",
+      "type": "font/woff2",
+      "bytes": 188560
+    },
+    {
+      "pathname": "/assets/fonts/fa-duotone-900.woff",
+      "type": "font/woff",
+      "bytes": 268072
+    },
+    {
+      "pathname": "/assets/fonts/fa-duotone-900.ttf",
+      "type": "font/ttf",
+      "bytes": 571780
+    },
+    {
+      "pathname": "/assets/fonts/fa-duotone-900.svg",
+      "type": "image/svg+xml",
+      "bytes": 2591189
+    },
+    {
+      "pathname": "/assets/fonts/fa-light-300.eot",
+      "type": "application/vnd.ms-fontobject",
+      "bytes": 495342
+    },
+    {
+      "pathname": "/assets/fonts/fa-light-300.woff2",
+      "type": "font/woff2",
+      "bytes": 190440
+    },
+    {
+      "pathname": "/assets/fonts/fa-light-300.woff",
+      "type": "font/woff",
+      "bytes": 252876
+    },
+    {
+      "pathname": "/assets/fonts/fa-light-300.ttf",
+      "type": "font/ttf",
+      "bytes": 495060
+    },
+    {
+      "pathname": "/assets/fonts/fa-light-300.svg",
+      "type": "image/svg+xml",
+      "bytes": 2422529
+    },
+    {
+      "pathname": "/assets/fonts/fa-regular-400.eot",
+      "type": "application/vnd.ms-fontobject",
+      "bytes": 455974
+    },
+    {
+      "pathname": "/assets/fonts/fa-regular-400.woff2",
+      "type": "font/woff2",
+      "bytes": 174360
+    },
+    {
+      "pathname": "/assets/fonts/fa-regular-400.woff",
+      "type": "font/woff",
+      "bytes": 231248
+    },
+    {
+      "pathname": "/assets/fonts/fa-regular-400.ttf",
+      "type": "font/ttf",
+      "bytes": 455680
+    },
+    {
+      "pathname": "/assets/fonts/fa-regular-400.svg",
+      "type": "image/svg+xml",
+      "bytes": 2164714
+    },
+    {
+      "pathname": "/assets/fonts/fa-solid-900.eot",
+      "type": "application/vnd.ms-fontobject",
+      "bytes": 388846
+    },
+    {
+      "pathname": "/assets/fonts/fa-solid-900.woff2",
+      "type": "font/woff2",
+      "bytes": 141600
+    },
+    {
+      "pathname": "/assets/fonts/fa-solid-900.woff",
+      "type": "font/woff",
+      "bytes": 188716
+    },
+    {
+      "pathname": "/assets/fonts/fa-solid-900.ttf",
+      "type": "font/ttf",
+      "bytes": 388564
+    },
+    {
+      "pathname": "/assets/fonts/fa-solid-900.svg",
+      "type": "image/svg+xml",
+      "bytes": 1770444
+    },
+    {
+      "pathname": "/_next/static/media/autodeal.d2f870a4.eot",
+      "type": "application/vnd.ms-fontobject",
+      "bytes": 30740
+    },
+    {
+      "pathname": "/_next/static/media/autodeal.5cfafcd9.ttf",
+      "type": "font/ttf",
+      "bytes": 30572
+    },
+    {
+      "pathname": "/_next/static/media/autodeal.59370f41.woff",
+      "type": "font/woff",
+      "bytes": 30648
+    },
+    {
+      "pathname": "/_next/static/media/autodeal.a49b9a71.svg",
+      "type": "image/svg+xml",
+      "bytes": 112878
+    },
+    {
+      "pathname": "/assets/images/section/bg-1.jpg",
+      "type": "image/jpeg",
+      "bytes": 264035
+    },
+    {
+      "pathname": "/assets/images/section/bg-3.jpg",
+      "type": "image/jpeg",
+      "bytes": 189927
+    },
+    {
+      "pathname": "/assets/images/section/bg-4.jpg",
+      "type": "image/jpeg",
+      "bytes": 447246
+    },
+    {
+      "pathname": "/assets/images/section/bg-11.jpg",
+      "type": "image/jpeg",
+      "bytes": 184836
+    },
+    {
+      "pathname": "/assets/images/section/bg-7.jpg",
+      "type": "image/jpeg",
+      "bytes": 233211
+    },
+    {
+      "pathname": "/assets/images/section/bg-8.jpg",
+      "type": "image/jpeg",
+      "bytes": 87058
+    },
+    {
+      "pathname": "/assets/images/section/bg-6.jpg",
+      "type": "image/jpeg",
+      "bytes": 199583
+    },
+    {
+      "pathname": "/assets/images/section/bg-2.jpg",
+      "type": "image/jpeg",
+      "bytes": 154846
+    },
+    {
+      "pathname": "/assets/images/section/bg-9.jpg",
+      "type": "image/jpeg",
+      "bytes": 138677
+    },
+    {
+      "pathname": "/assets/images/section/bg-5.jpg",
+      "type": "image/jpeg",
+      "bytes": 240426
+    },
+    {
+      "pathname": "/assets/images/section/bg-10.jpg",
+      "type": "image/jpeg",
+      "bytes": 125959
+    },
+    {
+      "pathname": "/assets/images/slider/slide9.jpg",
+      "type": "image/jpeg",
+      "bytes": 460879
+    },
+    {
+      "pathname": "/assets/images/dashboard/map-marker.png",
+      "type": "image/png",
+      "bytes": 2170
+    },
+    {
+      "pathname": "/assets/images/dashboard/dealder-pagetitle.jpg",
+      "type": "image/jpeg",
+      "bytes": 108512
+    },
+    {
+      "pathname": "/assets/images/section/bg-12.jpg",
+      "type": "image/jpeg",
+      "bytes": 181376
+    },
+    {
+      "pathname": "/assets/images/section/bg-13.jpg",
+      "type": "image/jpeg",
+      "bytes": 153462
+    },
+    {
+      "pathname": "/_next/static/media/preload.89416e7a.png",
+      "type": "image/png",
+      "bytes": 2227
+    }
+  ]
+}

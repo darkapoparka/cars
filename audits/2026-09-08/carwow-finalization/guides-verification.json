@@ -1,0 +1,56 @@
+[
+  {
+    "width": 390,
+    "articles": 6,
+    "articleSections": 3,
+    "saleCards": 2,
+    "searchCards": 5,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "articles": 6,
+    "articleSections": 3,
+    "saleCards": 2,
+    "searchCards": 5,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "url": "http://127.0.0.1:6463/blog/kak-da-kupim-upotrebyavan-avtomobil",
+    "status": 200,
+    "sections": 3,
+    "brokenImages": 0
+  },
+  {
+    "url": "http://127.0.0.1:6463/blog/vaprosi-predi-ogled",
+    "status": 200,
+    "sections": 3,
+    "brokenImages": 0
+  },
+  {
+    "url": "http://127.0.0.1:6463/blog/sravnyavane-na-avtomobilni-obyavi",
+    "status": 200,
+    "sections": 3,
+    "brokenImages": 0
+  },
+  {
+    "url": "http://127.0.0.1:6463/blog/testovo-shofirane-kakvo-da-proverite",
+    "status": 200,
+    "sections": 3,
+    "brokenImages": 0
+  },
+  {
+    "url": "http://127.0.0.1:6463/blog/kak-da-podgotvim-avtomobil-za-prodazhba",
+    "status": 200,
+    "sections": 3,
+    "brokenImages": 0
+  },
+  {
+    "url": "http://127.0.0.1:6463/blog/snimki-na-avtomobil-za-obyava",
+    "status": 200,
+    "sections": 3,
+    "brokenImages": 0
+  }
+]

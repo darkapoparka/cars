@@ -1,0 +1,235 @@
+{
+  "checkedAt": "2026-09-08T03:15:35.073Z",
+  "module": "carwow/src/lib/data/daynight-vehicles.ts",
+  "stockCount": 16,
+  "vehicleCount": 16,
+  "records": [
+    {
+      "slug": "ford-focus-1-6d-711434",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11785576029711434-ford-focus-1-6d-115hp",
+      "price": 5112,
+      "mileage": 249000,
+      "stockPrice": 5112,
+      "stockMileage": 249000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "opel-astra-1-4i-555032",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11714813323555032-opel-astra-1-4i-90hp",
+      "price": 2555.95,
+      "mileage": 208000,
+      "stockPrice": 2555.95,
+      "stockMileage": 208000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "opel-corsa-1-2i-802527",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11776340911802527-opel-corsa-1-2i-80hp-gpl",
+      "price": 2999,
+      "mileage": 165000,
+      "stockPrice": 2999,
+      "stockMileage": 165000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "ford-fiesta-1-25i-735625",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11749035353735625-ford-fiesta-1-25i-82hp-face-lift",
+      "price": 3799,
+      "mileage": 227000,
+      "stockPrice": 3799,
+      "stockMileage": 227000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "honda-jazz-1-4-417474",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11646385836417474-honda-jazz-1-4-i-vtec-99hp-face-lift",
+      "price": 3885.31,
+      "mileage": 197000,
+      "stockPrice": 3885.31,
+      "stockMileage": 197000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "opel-meriva-1-4-658789",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11730904111658789-opel-meriva-1-4-turbo-120hp-gpl",
+      "price": 4499,
+      "mileage": 156000,
+      "stockPrice": 4499,
+      "stockMileage": 156000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "vw-golf-1-6tdi-646848",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11664339654646848-vw-golf-1-6tdi-105hp-dsg",
+      "price": 4999,
+      "mileage": 213000,
+      "stockPrice": 4999,
+      "stockMileage": 213000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "nissan-qashqai-1-6i-932817",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-21702843989932817-nissan-qashqai-1-6i-117hp-face-lift",
+      "price": 5799,
+      "mileage": 223000,
+      "stockPrice": 5799,
+      "stockMileage": 223000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "dacia-duster-1-5dci-477562",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-21777122320477562-dacia-duster-1-5dci-110hp-awd-e5a",
+      "price": 5799,
+      "mileage": 232000,
+      "stockPrice": 5799,
+      "stockMileage": 232000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "mazda-cx-3-1-5d-688076",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-21777123440688076-mazda-cx-3-1-5d-skyactiv-105hp-awd-auto",
+      "price": 9999,
+      "mileage": 155000,
+      "stockPrice": 9999,
+      "stockMileage": 155000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "vw-passat-2-0tdi-990623",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11764611602990623-vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic",
+      "price": 12399,
+      "mileage": 207000,
+      "stockPrice": 12399,
+      "stockMileage": 207000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "suzuki-swift-1-2-900410",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11770373711900410-suzuki-swift-1-2-hybrid-83hp-automatic",
+      "price": 12781,
+      "mileage": 39000,
+      "stockPrice": 12781,
+      "stockMileage": 39000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "bmw-x3-233954",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-21732197261233954-bmw-x3-2-0-x-drive-184hp",
+      "price": 12526,
+      "mileage": 249000,
+      "stockPrice": 12526,
+      "stockMileage": 249000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "vw-tiguan-2-0tdi-828599",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-21781689983828599-vw-tiguan-2-0tdi-200hp-allspace-4-motion",
+      "price": 24999,
+      "mileage": 147000,
+      "stockPrice": 24999,
+      "stockMileage": 147000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "mercedes-benz-glc-144582",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-21784142258144582-mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi",
+      "price": 21999,
+      "mileage": 165000,
+      "stockPrice": 21999,
+      "stockMileage": 165000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "audi-a4-495216",
+      "sourceUrl": "https://automarket.mobile.bg/obiava-11750340593495216-audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital",
+      "price": 15999,
+      "mileage": 218000,
+      "stockPrice": 15999,
+      "stockMileage": 218000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    }
+  ],
+  "budgetCounts": [
+    {
+      "value": "under-10000",
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "value": "under-20000",
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "value": "under-30000",
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "value": "under-50000",
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "value": "over-50000",
+      "actual": 0,
+      "expected": 0
+    }
+  ],
+  "mileageCounts": [
+    {
+      "value": "under-50000",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "value": "under-100000",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "value": "under-150000",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "value": "under-200000",
+      "actual": 7,
+      "expected": 7
+    }
+  ],
+  "priceComparison": "Runtime EUR values compared to source snapshot within 0.51 EUR to allow retained whole-EUR snapshot rounding; exact values recorded.",
+  "pass": true
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "key": "auto-best",
+    "restored": [
+      ".gitattributes",
+      ".gitignore",
+      ".vercelignore"
+    ]
+  },
+  {
+    "key": "modern",
+    "restored": [
+      ".gitignore",
+      ".node-version",
+      ".npmrc",
+      ".nvmrc",
+      "packages/security/inventory-credentials.test.ts",
+      "packages/security/inventory-credentials.ts"
+    ]
+  },
+  {
+    "key": "carwow",
+    "restored": [
+      ".gitignore",
+      ".npmrc",
+      ".nvmrc",
+      ".prettierignore",
+      ".prettierrc"
+    ]
+  },
+  {
+    "key": "import",
+    "restored": [
+      ".gitattributes",
+      ".gitignore",
+      ".npmrc",
+      ".prettierignore",
+      ".prettierrc"
+    ]
+  },
+  {
+    "key": "showroom",
+    "restored": [
+      ".gitattributes",
+      ".gitignore",
+      ".npmrc",
+      ".prettierignore",
+      ".prettierrc"
+    ]
+  },
+  {
+    "key": "autodeal",
+    "restored": [
+      ".gitignore"
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "Port": 5173,
+    "PID": 51708,
+    "Cwd": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night\\",
+    "Command": "\"C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe\" artifacts/about-flow-fix/dev-runtime.mjs"
+  },
+  {
+    "Port": 6212,
+    "PID": 47852,
+    "Cwd": "M:\\leads-cars\\projects\\bulgaria\\day-night-auto-group\\apps\\web\\",
+    "Command": "C:\\Users\\radev\\AppData\\Local\\nvm\\v22.22.0\\node.exe M:\\leads-cars\\projects\\bulgaria\\day-night-auto-group\\node_modules\\.pnpm\\next@16.2.11_@babel+core@7._52572e0ac85e574b530e1e8e53eabb80\\node_modules\\next\\dist\\server\\lib\\start-server.js"
+  },
+  {
+    "Port": 6404,
+    "PID": 46816,
+    "Cwd": "M:\\codex\\agency-os-projects\\leads\\automotive\\eliq-auto\\bohemcars\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" M:/codex/agency-os-projects/leads/automotive/eliq-auto/bohemcars/node_modules/vite/bin/vite.js dev --host 127.0.0.1 --port 6404 --strictPort"
+  },
+  {
+    "Port": 6420,
+    "PID": 38248,
+    "Cwd": "J:\\cars\\templates\\nusavo\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6420 --strictPort"
+  },
+  {
+    "Port": 6430,
+    "PID": 76436,
+    "Cwd": "J:\\cars\\templates\\rencar\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6430 --strictPort"
+  },
+  {
+    "Port": 6440,
+    "PID": 26720,
+    "Cwd": "J:\\cars\\templates\\motoria\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6440 --strictPort"
+  },
+  {
+    "Port": 6450,
+    "PID": 38144,
+    "Cwd": "J:\\cars\\templates\\boxcar\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6450 --strictPort"
+  },
+  {
+    "Port": 6460,
+    "PID": 58472,
+    "Cwd": "J:\\cars\\templates\\autodeal\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" server.mjs"
+  },
+  {
+    "Port": 6461,
+    "PID": 26468,
+    "Cwd": "J:\\cars\\templates\\auto-best\\",
+    "Command": "\"C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6461 --strictPort"
+  },
+  {
+    "Port": 6462,
+    "PID": 8216,
+    "Cwd": "J:\\cars\\templates\\modern\\apps\\web\\",
+    "Command": "C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe J:\\cars\\templates\\modern\\node_modules\\.pnpm\\next@16.2.11_@babel+core@7._52572e0ac85e574b530e1e8e53eabb80\\node_modules\\next\\dist\\server\\lib\\start-server.js"
+  },
+  {
+    "Port": 6463,
+    "PID": 56756,
+    "Cwd": "J:\\cars\\templates\\carwow\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6463 --strictPort"
+  },
+  {
+    "Port": 6464,
+    "PID": 73240,
+    "Cwd": "J:\\cars\\templates\\import\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6464 --strictPort"
+  },
+  {
+    "Port": 6465,
+    "PID": 40144,
+    "Cwd": "J:\\cars\\templates\\showroom\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6465 --strictPort"
+  },
+  {
+    "Port": 6517,
+    "PID": 54884,
+    "Cwd": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\spartak-style\\",
+    "Command": "C:\\nvm4w\\nodejs\\node.exe M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\spartak-style\\node_modules\\vite\\bin\\vite.js dev --host 127.0.0.1 --port 6517 --strictPort"
+  },
+  {
+    "Port": 6518,
+    "PID": 64552,
+    "Cwd": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\bohemcars-style\\",
+    "Command": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js dev --host 127.0.0.1 --port 6518 --strictPort"
+  }
+]

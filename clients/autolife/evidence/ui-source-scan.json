@@ -1,0 +1,710 @@
+{
+  "filesScanned": 468,
+  "findingCount": 88,
+  "findings": [
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\company\\AboutTeam.svelte",
+      "line": 132,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(4px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\home\\VehicleQuickSearch.svelte",
+      "line": 409,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(4px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\listing\\VehicleSearchDialog.svelte",
+      "line": 385,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\listing\\VehicleSearchDialog.svelte",
+      "line": 416,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(4px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\listing\\VehicleSearchDialog.svelte",
+      "line": 499,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\vehicles\\VehicleCard.svelte",
+      "line": 131,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(5px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\routes\\listing-grid\\listing.css",
+      "line": 120,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\routes\\listing-grid\\listing.css",
+      "line": 149,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\routes\\listing-grid\\listing.css",
+      "line": 518,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": ".dn-listing-filter__search-field:focus-within { border-color: #777e88; box-shadow: 0 0 0 3px rgba(32,35,41,.12); }"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\blog\\BlogIndexPage.svelte",
+      "line": 773,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.14);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\calculator\\CalculatorContent.svelte",
+      "line": 678,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.14);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\MobileContactPage.svelte",
+      "line": 1202,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(3px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\MobileContactPage.svelte",
+      "line": 1310,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(6px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\detail\\mobile\\MobileDetailPage.svelte",
+      "line": 543,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: saturate(1.15) blur(10px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\HomeQuickFilterModalStyles.svelte",
+      "line": 23,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\desktop\\DesktopHome.svelte",
+      "line": 213,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\desktop\\DesktopHome.svelte",
+      "line": 214,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\desktop\\DesktopHome.svelte",
+      "line": 640,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\desktop\\DesktopHome.svelte",
+      "line": 642,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\desktop\\DesktopHomeInventoryCard.svelte",
+      "line": 153,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+      "line": 321,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: saturate(1.08) blur(14px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+      "line": 322,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: saturate(1.08) blur(14px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+      "line": 495,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(8px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+      "line": 496,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(8px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileHeader.svelte",
+      "line": 41,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(18px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\DropdownFilterControl.svelte",
+      "line": 294,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.14) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\InventoryQuickFilterModalStyles.svelte",
+      "line": 21,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\MapVehicleCard.svelte",
+      "line": 223,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\MapVehicleCard.svelte",
+      "line": 224,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\VehicleCard.svelte",
+      "line": 225,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\VehicleCard.svelte",
+      "line": 226,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-base.css",
+      "line": 94,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-base.css",
+      "line": 95,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-base.css",
+      "line": 371,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 1px #e7e7e7;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-base.css",
+      "line": 385,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 2px #B00000;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-layout.css",
+      "line": 450,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-layout.css",
+      "line": 1113,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-template-head.css",
+      "line": 565,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\inventory-desktop-template-head.css",
+      "line": 566,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\mobile\\mobileInventory.css",
+      "line": 170,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.13);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\DesktopDealerFooter.svelte",
+      "line": 99,
+      "rule": "tracked-eyebrow",
+      "severity": "review",
+      "message": "Tiny uppercase tracked labels above headings are a common generated-UI tell.",
+      "excerpt": ".dealer-footer h2 { margin: 4px 0 20px; font-size: 13px; line-height: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; color: #fff; }"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\DesktopYellowRouteHero.svelte",
+      "line": 237,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\SiteSearchDialog.svelte",
+      "line": 109,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "class=\"absolute inset-0 cursor-pointer border-0 bg-sa-ink/50 p-0 backdrop-blur-[2px]\""
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+      "line": 1119,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(2px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+      "line": 1216,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(6px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\services\\MobileServicesPage.svelte",
+      "line": 692,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.11);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\shared\\CompareTray.svelte",
+      "line": 77,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\shared\\CompareTray.svelte",
+      "line": 78,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\ui\\drawer\\drawer-overlay.svelte",
+      "line": 16,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "'data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 fixed inset-0 z-50 bg-black/10 supports-backdrop-filter:backdrop-blur-xs',"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\ui\\sheet\\sheet-overlay.svelte",
+      "line": 16,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "'data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0 fixed inset-0 z-50 bg-black/10 duration-100 supports-backdrop-filter:backdrop-blur-xs',"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\ui\\sidebar\\sidebar-menu-button.svelte",
+      "line": 10,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "'bg-background hover:bg-sidebar-accent hover:text-sidebar-accent-foreground shadow-[0_0_0_1px_var(--sidebar-border)] hover:shadow-[0_0_0_1px_var(--sidebar-accent)]'"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 469,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 470,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 717,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 1px #e7e7e7;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 737,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 2px var(--sa-blue);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 759,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 1px #e7e7e7;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 769,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 2px var(--sa-blue);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 1014,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-detail-desktop.css",
+      "line": 1015,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 1312,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(16px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 1315,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 1832,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(8px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 1833,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(8px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 1950,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 1951,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2016,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.12);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2143,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.12);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2339,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(8px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2340,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(8px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2676,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(10px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2677,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(10px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2773,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(18px) saturate(1.1);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 2774,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(18px) saturate(1.1);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 4362,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 4448,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 4579,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.28) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 5096,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 5242,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.16);"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 7857,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.14) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 8678,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(12px) saturate(0.76) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 8679,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px) saturate(0.76) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 8861,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: blur(12px) saturate(0.76) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 8862,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: blur(12px) saturate(0.76) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 9018,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "-webkit-backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-home-desktop.css",
+      "line": 9020,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "backdrop-filter: none !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\styles\\daynight-mobile.css",
+      "line": 12,
+      "rule": "decorative-glow",
+      "severity": "review",
+      "message": "Glow or colored halo needs an explicit brand or reference reason.",
+      "excerpt": "box-shadow: 0 0 0 3px rgba(23, 100, 216, 0.6) !important;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\apps\\web\\app\\[locale]\\collections\\chinese-ev-hybrids\\page.tsx",
+      "line": 141,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": "<div className=\"absolute inset-x-0 bottom-0 bg-black/60 px-5 py-3 text-white backdrop-blur-[2px]\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\apps\\web\\app\\[locale]\\components\\public-marketplace-frame.tsx",
+      "line": 179,
+      "rule": "decorative-glass",
+      "severity": "review",
+      "message": "Backdrop blur or glass treatment needs a functional or reference reason.",
+      "excerpt": ": \"sticky top-0 z-40 border-border border-b bg-card/95 backdrop-blur-xl lg:hidden\""
+    }
+  ]
+}

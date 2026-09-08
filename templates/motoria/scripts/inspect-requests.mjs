@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+import { writeFile } from 'node:fs/promises';
+const browser=await chromium.connectOverCDP(process.argv[2]);
+const page=await browser.contexts()[0].newPage();
+const requests=[];
+page.on('request',r=>{if(r.url().includes('admin-ajax'))requests.push({url:r.url(),body:r.postData()});});
+await page.goto('http://127.0.0.1:6440/loan-calculators/',{waitUntil:'domcontentloaded'});
+await page.waitForTimeout(2500);
+console.log(requests);
+await page.goto('http://127.0.0.1:6440/inventory/',{waitUntil:'domcontentloaded'});
+await page.waitForTimeout(1500);
+await page.evaluate(()=>window.jQuery('select[name="make"]').val('bmw').trigger('change'));
+await page.waitForTimeout(1000);
+console.log(requests.slice(2));
+await writeFile('references/ajax-requests.json',JSON.stringify(requests,null,2));
+await page.close();await browser.close();

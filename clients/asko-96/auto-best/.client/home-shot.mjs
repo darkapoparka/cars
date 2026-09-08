@@ -1,0 +1,1 @@
+import {chromium} from 'playwright';const b=await chromium.launch({headless:true});for(const width of [390,1440]){const p=await b.newPage({viewport:{width,height:900}});await p.goto('http://127.0.0.1:6611',{waitUntil:'networkidle'});await p.screenshot({path:'.client/qa/home-final-'+width+'.png'});await p.close();}await b.close();

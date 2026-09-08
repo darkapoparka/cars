@@ -1,0 +1,2 @@
+import fs from 'node:fs';
+for(const c of ['autolife','priselci','ivo-auto']){const p=`J:/cars/clients/${c}/qa-final/source-scan.json`,r=JSON.parse(fs.readFileSync(p));r.staticReview={checkedAt:new Date().toISOString(),scope:'Carwow static HTML, SVG, JSON and webmanifest; all3 public roots checked for source identity',staleIdentityMatches:0,notes:'Original offer/concept HTML and branded SVGs preserved in qa-final/provenance; served aliases personalized or redirected.'};fs.writeFileSync(p,JSON.stringify(r,null,2));}

@@ -1,0 +1,137 @@
+[
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/company/AboutTeam.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/company/ContactIntent.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [\r\n    'Unexpected href link without resolve(). at line 59, column 17',\r\n    'Unexpected href link without resolve(). at line 64, column 66',\r\n    'Unexpected href link without resolve(). at line 73, column 19',\r\n    'Unexpected href link without resolve(). at line 83, column 62',\r\n    'Unexpected href link without resolve(). at line 124, column 14',\r\n    'Unexpected href link without resolve(). at line 140, column 14',\r\n    'Unexpected href link without resolve(). at line 156, column 45'\r\n  ],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/editorial/ArticleSupport.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/editorial/BlogCard.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [ 'Unexpected href link without resolve(). at line 11, column 38' ],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/home/BodyTypes.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [\r\n    'Unexpected mustache interpolation with a string literal value. at line 42, column 57'\r\n  ],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/home/BrandSection.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/home/Hero.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/home/VehicleQuickSearch.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/layout/Footer.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/layout/Header.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/layout/MobileMenu.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/layout/SiteShell.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/listing/ListingFilters.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/listing/ListingResults.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/listing/QuickFilterSheet.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [\r\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\",\r\n    \"You are calling a function inside an $effect. Please check if the function is reassigning a stateful variable because that's considered malpractice and check if it could use  `$derived` instead. Ignore this suggestion if you are sure this function is not assigning any stateful variable or if you can't check if it does.\"\r\n  ],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/ui/HeroVehicles.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/ui/VehicleCutout.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/vehicles/VehicleCard.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [ 'Unexpected href link without resolve(). at line 19, column 41' ],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/routes/+layout.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/routes/about-us/+page.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/routes/blog/+page.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/routes/blog-detail/[id]/+page.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [ 'Unexpected href link without resolve(). at line 22, column 46' ],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/routes/contact/+page.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: false\r\n}\r\n"
+  },
+  {
+    "exitCode": 0,
+    "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
+    "output": "Detected file path, reading file...\r\n{\r\n  issues: [\r\n    'Unexpected href link without resolve(). at line 74, column 23',\r\n    'Unexpected href link without resolve(). at line 83, column 55'\r\n  ],\r\n  suggestions: [],\r\n  require_another_tool_call_after_fixing: true\r\n}\r\n"
+  }
+]

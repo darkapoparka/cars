@@ -1,0 +1,32 @@
+[
+  {
+    "width": 390,
+    "filteredUrl": "http://127.0.0.1:6641/listing-grid?q=BMW",
+    "filteredTitles": [
+      "BMW X4 2.0D-190",
+      "BMW X1 2.0D-150",
+      "Екстри"
+    ],
+    "filtersDismissed": true,
+    "menuOpened": true,
+    "menuDismissed": true,
+    "galleryCount": "2 / 4",
+    "phone": 6,
+    "enquiryOpened": true,
+    "enquiryDismissed": true
+  },
+  {
+    "width": 1440,
+    "filteredUrl": "http://127.0.0.1:6641/listing-grid?q=BMW",
+    "filteredTitles": [
+      "BMW X4 2.0D-190",
+      "BMW X1 2.0D-150",
+      "Екстри"
+    ],
+    "navigationEscape": true,
+    "galleryCount": "2 / 4",
+    "phone": 6,
+    "enquiryOpened": true,
+    "enquiryDismissed": true
+  }
+]

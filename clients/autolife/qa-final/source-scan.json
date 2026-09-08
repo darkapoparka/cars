@@ -1,0 +1,463 @@
+{
+  "checkedAt": "2026-09-08T02:13:00.331Z",
+  "scope": "public source files; excludes tests, generated files and historic docs",
+  "staleIdentity": [],
+  "contactReferences": [
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\company\\ContactIntent.svelte",
+      "line": 10,
+      "text": "const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\company\\ShowroomMap.svelte",
+      "line": 5,
+      "text": "const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\company\\ShowroomMap.svelte",
+      "line": 6,
+      "text": "const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\components\\home\\VideoSection.svelte",
+      "line": 68,
+      "text": "<a href={`https://www.youtube.com/watch?v=${video.id}`} target=\"_blank\" rel=\"noopener noreferrer\" aria-label={`${video.title} — гледайте в Mobile.bg (нов раздел)`}>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\config\\brand.ts",
+      "line": 9,
+      "text": "\"phoneHref\": \"tel:+359895766736\","
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\data\\navigation.ts",
+      "line": 13,
+      "text": "| `tel:${string}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\auto-best\\src\\lib\\data\\navigation.ts",
+      "line": 15,
+      "text": "export type InternalNavigationHref = Exclude<NavigationHref, `tel:${string}`>;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\apps\\web\\app\\[locale]\\components\\footer.tsx",
+      "line": 101,
+      "text": "href: `mailto:${leadSite.email}`,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\apps\\web\\app\\[locale]\\components\\footer.tsx",
+      "line": 266,
+      "text": "href={`mailto:${leadSite.email}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace\\lead-site.ts",
+      "line": 34,
+      "text": "\"contactUrl\": \"tel:+359895766736\","
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace\\lead-site.ts",
+      "line": 42,
+      "text": "\"mapsEmbedUrl\": \"https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed\","
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace\\lead-site.ts",
+      "line": 43,
+      "text": "\"mapsUrl\": \"https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778\","
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace\\lead-site.ts",
+      "line": 46,
+      "text": "\"phoneHref\": \"tel:+359895766736\","
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace-ui\\components\\mobile-contact-bar.tsx",
+      "line": 22,
+      "text": "const directPhone = contactHref?.startsWith(\"tel:\") ?? false;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace-ui\\components\\seller-transaction-card.tsx",
+      "line": 83,
+      "text": "{contactHref.startsWith(\"tel:\") ? ("
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\modern\\packages\\marketplace-ui\\lib\\seller-contact-policy.ts",
+      "line": 88,
+      "text": "if (!contactHref?.startsWith(\"tel:\")) {"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\about\\DesktopAboutPage.svelte",
+      "line": 43,
+      "text": "const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(daynightSite.location)}&z=16&output=embed`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\about\\DesktopAboutPage.svelte",
+      "line": 62,
+      "text": "<a href={`tel:+359${daynightSite.phone.slice(1)}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\about\\DesktopAboutPage.svelte",
+      "line": 100,
+      "text": "href={`tel:${member.phone}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\about\\DesktopDealerProfilePage.svelte",
+      "line": 23,
+      "text": "const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\about\\DesktopDealerProfilePage.svelte",
+      "line": 27,
+      "text": "href: `tel:${daynightSite.phone}`"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\about\\MobileAboutPage.svelte",
+      "line": 16,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardProfile.svelte",
+      "line": 139,
+      "text": "value: 'http://www.facebook.com/avitex'"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\admin\\dashboard\\DesktopDashboardProfile.svelte",
+      "line": 173,
+      "text": "`https://www.google.com/maps?q=${encodeURIComponent(daynightSite.location)}&output=embed`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\blog\\BlogArticlePage.svelte",
+      "line": 40,
+      "text": "href: `https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\blog\\BlogArticlePage.svelte",
+      "line": 45,
+      "text": "href: `mailto:?subject=${encodedShareTitle}&body=${encodedShareUrl}`"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\blog\\BlogArticlePage.svelte",
+      "line": 191,
+      "text": "<a href={`mailto:${daynightSite.email}`} class=\"text-highlight text-sm\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\DesktopContactPage.svelte",
+      "line": 37,
+      "text": "const mapEmbedSrc = 'https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed';"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\DesktopContactPage.svelte",
+      "line": 259,
+      "text": "href={`tel:${daynightSite.phone}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\DesktopContactPage.svelte",
+      "line": 281,
+      "text": "<a href={`tel:${daynightSite.phone}`} class=\"daynight-contact-detail-value\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\MobileContactPage.svelte",
+      "line": 35,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\contact\\MobileContactPage.svelte",
+      "line": 37,
+      "text": "const mapEmbedSrc = 'https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed';"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\detail\\desktop\\DesktopDetailDealerPanel.svelte",
+      "line": 5,
+      "text": "const phoneHref = `tel:${daynightSite.phone}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\detail\\desktop\\DesktopDetailLocationMap.svelte",
+      "line": 6,
+      "text": "const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\detail\\mobile\\MobileDetailPage.svelte",
+      "line": 30,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\financing\\DesktopFinancingPage.svelte",
+      "line": 201,
+      "text": "<a class=\"text-underline\" href={`tel:${daynightSite.phone}`}>Обадете се</a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\financing\\MobileFinancingPage.svelte",
+      "line": 14,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileBottomDock.svelte",
+      "line": 27,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\home\\mobile\\MobileHome.svelte",
+      "line": 57,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\desktop\\InventoryMapPageShell.svelte",
+      "line": 39,
+      "text": "const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\inventory\\mobile\\MobileInventoryTop.svelte",
+      "line": 17,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\DayNightFooter.svelte",
+      "line": 8,
+      "text": "const phoneHref = `tel:${daynightSite.phone}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\DesktopDealerFooter.svelte",
+      "line": 54,
+      "text": "<a class=\"dealer-footer__contact-row\" href={`tel:${daynightSite.phone}`}>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\SiteChromeContactList.svelte",
+      "line": 4,
+      "text": "const phoneHref = `tel:${daynightSite.phone}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\SiteChromeNavRow.svelte",
+      "line": 25,
+      "text": "const phoneHref = `tel:${daynightSite.phone}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\SiteChromePrimaryRow.svelte",
+      "line": 20,
+      "text": "const phoneHref = `tel:${daynightSite.phone}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\layout\\SiteChromeTopBar.svelte",
+      "line": 23,
+      "text": "const phoneHref = `tel:${daynightSite.phone}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\sell\\DesktopSellYourCarPage.svelte",
+      "line": 26,
+      "text": "const phoneHref: `tel:${string}` = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\sell\\MobileSellYourCarPage.svelte",
+      "line": 97,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\services\\DesktopServicesPage.svelte",
+      "line": 166,
+      "text": "Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\services\\MobileServicesPage.svelte",
+      "line": 18,
+      "text": "const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\shared\\MobileHeroBar.svelte",
+      "line": 18,
+      "text": "href={`tel:+359${daynightSite.phone.slice(1)}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+      "line": 29,
+      "text": "const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+      "line": 32,
+      "text": "const phoneLinkProps = $derived({ href: `tel:${member.phone}` });"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+      "line": 70,
+      "text": "<a href={`mailto:${member.email}`} class=\"sa-cta sa-cta-ghost\"> Изпрати имейл </a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamMemberPage.svelte",
+      "line": 81,
+      "text": "<a href={`mailto:${member.email}`}>{member.email}</a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamPage.svelte",
+      "line": 115,
+      "text": "<a href={`tel:${member.phone}`} title=\"Обади се за оглед\" aria-label=\"Обади се за оглед\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamPage.svelte",
+      "line": 122,
+      "text": "href={`mailto:${member.email}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamPage.svelte",
+      "line": 141,
+      "text": "<a href={`tel:${member.phone}`} title=\"Обади се за оглед\" aria-label=\"Обади се за оглед\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\components\\team\\DesktopTeamPage.svelte",
+      "line": 148,
+      "text": "href={`mailto:${member.email}`}"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\data\\daynight-site.ts",
+      "line": 14,
+      "text": "mapUrl: 'https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778',"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-chrome.ts",
+      "line": 350,
+      "text": "href: `tel:${daynightSite.phone}`,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-chrome.ts",
+      "line": 410,
+      "text": "<a href=\"tel:${daynightSite.phone}\" class=\"flex items-start h7\">${daynightSite.phoneLabel}</a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-chrome.ts",
+      "line": 454,
+      "text": "<a href=\"tel:${daynightSite.phone}\" class=\"icon\" aria-label=\"Обади се на Аутолайф\">${phoneIcon()}</a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-chrome.ts",
+      "line": 456,
+      "text": "<a class=\"text\" href=\"tel:${daynightSite.phone}\">${daynightSite.phoneLabel}</a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-chrome.ts",
+      "line": 463,
+      "text": "<a href=\"tel:${daynightSite.phone}\">Обади се</a>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 180,
+      "text": "const daynightMapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(daynightMapEmbedQuery)}&output=embed`;"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 318,
+      "text": "<a href=\"tel:${phoneHref}\" title=\"${daynightSite.phoneCta}\" aria-label=\"${daynightSite.phoneCta}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 327,
+      "text": "<a href=\"mailto:${member.email}\" title=\"Имейл към Аутолайф\" aria-label=\"Имейл към Аутолайф\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 342,
+      "text": "<a href=\"tel:${phoneHref}\" title=\"${daynightSite.phoneCta}\" aria-label=\"${daynightSite.phoneCta}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 351,
+      "text": "<a href=\"mailto:${member.email}\" title=\"Имейл към ${member.name}\" aria-label=\"Имейл към ${member.name}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 378,
+      "text": "<a href=\"tel:${daynightSite.phone}\" class=\"hover-stroke-white\" title=\"Свържете се с Аутолайф по телефон или Viber.\" aria-label=\"Свържете се с Аутолайф по телефон или Viber.\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 1770,
+      "text": "<li><a href=\"https://www.facebook.com/sharer/sharer.php?u=${shareUrl}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Сподели във Facebook\">${renderBlogSocialIcon('facebook')}</a></li>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 1773,
+      "text": "<li><a href=\"mailto:?subject=${shareText}&body=${shareUrl}\" aria-label=\"Изпрати по имейл\">${renderBlogSocialIcon('mail')}</a></li>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 1787,
+      "text": "<li><a href=\"mailto:${daynightSite.email}\" aria-label=\"Имейл към Аутолайф\">${renderBlogSocialIcon('mail')}</a></li>"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 2695,
+      "text": "/<a href=\"tel:[^\"]+\" class=\"text-secondary\">\\s*[^<]+\\s*<\\/a>\\s*<a href=\"tel:[^\"]+\" class=\"text-secondary\">\\s*[^<]+\\s*<\\/a>/,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 2696,
+      "text": "`<a href=\"tel:${daynightSite.phone}\" class=\"text-secondary\">${daynightSite.phoneLabel}</a><a href=\"mailto:${daynightSite.email}\" class=\"text-secondary\">${daynightSite.email}</a>`"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3334,
+      "text": "`<a href=\"tel:${daynightSite.phone}\" class=\"flex gap-16\">`"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3517,
+      "text": "/<ul class=\"contact-info mb-28\">\\s*<li class=\"items-center\">\\s*<p class=\"icon\"><img src=\"\\/assets\\/icons\\/PhoneCall\\.svg\" alt=\"phone\"><\\/p>\\s*<div class=\"flex flex-col\">\\s*<a href=\"tel:[^\"]+\">\\s*[^<]+\\s*<\\/a>\\s*<a href=\"tel:[^\"]+\">\\s*[^<]+\\s*<\\/a>\\s*<\\/div>\\s*<\\/li>\\s*<\\/ul>/,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3522,
+      "text": "<a href=\"tel:${daynightSite.phone}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3525,
+      "text": "<a href=\"mailto:${daynightSite.email}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3539,
+      "text": "`<a href=\"tel:${daynightSite.phone}\" class=\"${match.includes('mb-12') ? 'btn btn-medium btn-primary-3 font-weight-600 mb-12 gap-5' : 'btn btn-medium btn-primary-3 font-weight-600 gap-5'}\">${inner}</a>`"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3594,
+      "text": "/<ul class=\"contact-info mb-28\">\\s*<li class=\"items-center\">\\s*<p class=\"icon\"><img src=\"\\/assets\\/icons\\/PhoneCall\\.svg\" alt=\"phone\"><\\/p>\\s*<div class=\"flex flex-col\">\\s*<a href=\"tel:[^\"]+\">\\s*[^<]+\\s*<\\/a>\\s*<a href=\"tel:[^\"]+\">\\s*[^<]+\\s*<\\/a>\\s*<\\/div>\\s*<\\/li>\\s*<\\/ul>/,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3599,
+      "text": "<a href=\"tel:${daynightSite.phone}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3602,
+      "text": "<a href=\"mailto:${daynightSite.email}\">"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3616,
+      "text": "`<a href=\"tel:${daynightSite.phone}\" class=\"${match.includes('mb-12') ? 'btn btn-medium btn-primary-3 font-weight-600 mb-12 gap-5' : 'btn btn-medium btn-primary-3 font-weight-600 gap-5'}\">${inner}</a>`"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3678,
+      "text": "/<a href=\"tel:0895 766 736\" class=\"text-sm text-white\">0895 766 736<\\/a>\\s*<a href=\"tel:0895 766 736\" class=\"text-sm text-white\">0895 766 736<\\/a>/,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-content.ts",
+      "line": 3679,
+      "text": "'<a href=\"tel:0895 766 736\" class=\"text-sm text-white\">0895 766 736</a><a href=\"mailto:demo@getrich.local\" class=\"text-sm text-white\">demo@getrich.local</a>'"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\lib\\server\\daynight-template-renderer.ts",
+      "line": 93,
+      "text": "/href=([\"'])(?!https?:|mailto:|tel:|#)(?:\\.\\/|\\/)?([^\"']+\\.html)\\1/g,"
+    },
+    {
+      "file": "J:\\cars\\clients\\autolife\\carwow\\src\\routes\\admin\\leads\\+page.svelte",
+      "line": 66,
+      "text": "return kind === 'email' ? `mailto:${value}` : `tel:${value.replace(/\\s+/g, '')}`;"
+    }
+  ],
+  "staticReview": {
+    "checkedAt": "2026-09-08T02:13:02.158Z",
+    "scope": "Carwow static HTML, SVG, JSON and webmanifest; all3 public roots checked for source identity",
+    "staleIdentityMatches": 0,
+    "notes": "Original offer/concept HTML and branded SVGs preserved in qa-final/provenance; served aliases personalized or redirected."
+  }
+}

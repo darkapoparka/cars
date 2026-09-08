@@ -1,0 +1,3292 @@
+{
+  "client": "autolife",
+  "name": "Аутолайф",
+  "template": "carwow",
+  "port": 6643,
+  "startedAt": "2026-09-08T03:04:34.490Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Аутолайф Варна - проверени автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Всички 16 коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory?transmission=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "До 10 000 EUR\n8 коли",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR\n13 коли",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "До 30 000 EUR\n15 коли",
+          "href": "/inventory?price=under-30000"
+        },
+        {
+          "text": "До 50 000 EUR\n16 коли",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "Над 50 000 EUR\n0 коли",
+          "href": "/inventory?price=over-50000"
+        },
+        {
+          "text": "Без бюджет\nВсички 16 коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n2 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n1 автомобил",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n2 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Porsche\nТърсене на автомобил",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Mazda\nТърсене на автомобил",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Honda\nТърсене на автомобил",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\nТърсене на автомобил",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\nТърсене на автомобил",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\n1 автомобил",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\nТърсене на автомобил",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Tesla\nТърсене на автомобил",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Джип\n6 коли",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Хечбек\n4 коли",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "",
+          "href": "https://autolife.mobile.bg/"
+        },
+        {
+          "text": "0895 766 736\nОбаждане / Viber",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nVolvo S60 НАПЪЛНО\n2500 €\nЛизинг: попитайте за условия\n470 000 км\n2007\nДизел\nАвтоматик",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Публикувана обява\nCitroen C5 2.2\n3700 €\nЛизинг: попитайте за условия\n217 000 км\n2008\nДизел\nРъчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Публикувана обява\nSeat Altea FACELIFT\n3999 €\nЛизинг: попитайте за условия\n242 000 км\n2010\nБензин\nРъчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Публикувана обява\nVW Golf 1.6TDI\n4500 €\nЛизинг: попитайте за условия\n250 000 км\n2010\nДизел\nРъчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Публикувана обява\nVW Passat 2.0TDI-140\n6300 €\nЛизинг: попитайте за условия\n237 000 км\n2012\nДизел\nРъчна",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "Публикувана обява\nFord Ka +\n6999 €\nЛизинг: попитайте за условия\n119 000 км\n2018\nДизел\nРъчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Публикувана обява\nAudi Q5 2.0TDI-170\n7999 €\nЛизинг: попитайте за условия\n224 000 км\n2009\nДизел\nАвтоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Публикувана обява\nVW Polo 1.6\n9999 €\nЛизинг: попитайте за условия\n140 000 км\n2020\nДизел\nАвтоматик",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "Публикувана обява\nBMW X1 2.0D-150\n11 500 €\nЛизинг: попитайте за условия\n250 000 км\n2016\nДизел\nРъчна",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "Публикувана обява\nSeat Alhambra 2.0TDI-150\n11 999 €\nЛизинг: попитайте за условия\n244 000 км\n2015\nДизел\nАвтоматик",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Публикувана обява\nPeugeot 508 ACTIVE\n12 300 €\nЛизинг: попитайте за условия\n175 000 км\n2019\nДизел\nАвтоматик",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "Публикувана обява\nVW Touran 2.0TDI-150\n13 999 €\nЛизинг: попитайте за условия\n145 000 км\n2021\nДизел\nАвтоматик",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "Публикувана обява\nVW Tiguan FACELIFT\n14 999 €\nЛизинг: попитайте за условия\n214 000 км\n2019\nДизел\nАвтоматик",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "Публикувана обява\nBMW X4 2.0D-190\n20 500 €\nЛизинг: попитайте за условия\n190 000 км\n2017\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "Публикувана обява\nAudi A4 Sline\n20 500 €\nЛизинг: попитайте за условия\n186 000 км\n2021\nДизел\nАвтоматик",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "Публикувана обява\nMercedes-Benz GLE Coupe\n34 500 €\nЛизинг: попитайте за условия\n189 000 км\n2017\nДизел\nАвтоматик",
+          "href": "/inventory/mercedes-benz-gle-coupe-199416"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory/volvo-s60-388381",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Volvo S60 НАПЪЛНО 2007 г., Дизел, 470 000 км, Публикувана обява | Аутолайф",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359895766736"
+        },
+        {
+          "text": "Аутолайф\nАутолайф, Варна, България",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "КОЛИ",
+          "href": "/inventory"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "ВСИЧКИ",
+          "href": "/team"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/financing",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Финансиране | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359895766736",
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory?price=under-10000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nVolvo S60 НАПЪЛНО\n2500 €\nЛизинг: попитайте за условия\n470 000 км\n2007\nДизел\nАвтоматик",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Публикувана обява\nCitroen C5 2.2\n3700 €\nЛизинг: попитайте за условия\n217 000 км\n2008\nДизел\nРъчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Публикувана обява\nSeat Altea FACELIFT\n3999 €\nЛизинг: попитайте за условия\n242 000 км\n2010\nБензин\nРъчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Публикувана обява\nVW Golf 1.6TDI\n4500 €\nЛизинг: попитайте за условия\n250 000 км\n2010\nДизел\nРъчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Публикувана обява\nVW Passat 2.0TDI-140\n6300 €\nЛизинг: попитайте за условия\n237 000 км\n2012\nДизел\nРъчна",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "Публикувана обява\nFord Ka +\n6999 €\nЛизинг: попитайте за условия\n119 000 км\n2018\nДизел\nРъчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Публикувана обява\nAudi Q5 2.0TDI-170\n7999 €\nЛизинг: попитайте за условия\n224 000 км\n2009\nДизел\nАвтоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Публикувана обява\nVW Polo 1.6\n9999 €\nЛизинг: попитайте за условия\n140 000 км\n2020\nДизел\nАвтоматик",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 8,
+      "expectedBudgetCount": 8,
+      "originalHarnessCount": 8,
+      "focusedEvidence": "../focused.json"
+    },
+    {
+      "width": 390,
+      "route": "/inventory?price=under-20000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nVolvo S60 НАПЪЛНО\n2500 €\nЛизинг: попитайте за условия\n470 000 км\n2007\nДизел\nАвтоматик",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Публикувана обява\nCitroen C5 2.2\n3700 €\nЛизинг: попитайте за условия\n217 000 км\n2008\nДизел\nРъчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Публикувана обява\nSeat Altea FACELIFT\n3999 €\nЛизинг: попитайте за условия\n242 000 км\n2010\nБензин\nРъчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Публикувана обява\nVW Golf 1.6TDI\n4500 €\nЛизинг: попитайте за условия\n250 000 км\n2010\nДизел\nРъчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Публикувана обява\nVW Passat 2.0TDI-140\n6300 €\nЛизинг: попитайте за условия\n237 000 км\n2012\nДизел\nРъчна",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "Публикувана обява\nFord Ka +\n6999 €\nЛизинг: попитайте за условия\n119 000 км\n2018\nДизел\nРъчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Публикувана обява\nAudi Q5 2.0TDI-170\n7999 €\nЛизинг: попитайте за условия\n224 000 км\n2009\nДизел\nАвтоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Публикувана обява\nVW Polo 1.6\n9999 €\nЛизинг: попитайте за условия\n140 000 км\n2020\nДизел\nАвтоматик",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "Публикувана обява\nBMW X1 2.0D-150\n11 500 €\nЛизинг: попитайте за условия\n250 000 км\n2016\nДизел\nРъчна",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "Публикувана обява\nSeat Alhambra 2.0TDI-150\n11 999 €\nЛизинг: попитайте за условия\n244 000 км\n2015\nДизел\nАвтоматик",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Публикувана обява\nPeugeot 508 ACTIVE\n12 300 €\nЛизинг: попитайте за условия\n175 000 км\n2019\nДизел\nАвтоматик",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "Публикувана обява\nVW Touran 2.0TDI-150\n13 999 €\nЛизинг: попитайте за условия\n145 000 км\n2021\nДизел\nАвтоматик",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "Публикувана обява\nVW Tiguan FACELIFT\n14 999 €\nЛизинг: попитайте за условия\n214 000 км\n2019\nДизел\nАвтоматик",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 13,
+      "expectedBudgetCount": 13,
+      "originalHarnessCount": 13,
+      "focusedEvidence": "../focused.json"
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Аутолайф Варна - проверени автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=SUV"
+        },
+        {
+          "text": "Комби",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "До 10 000 EUR",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "BMW X4 2.0D-190",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Seat Alhambra 2.0TDI-150",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ford Ka +",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "VW Golf 1.6TDI",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Seat Altea FACELIFT",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "Audi A4 Sline",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Citroen C5 2.2",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж всички 16 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Купи автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Разгледай автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Продай автомобил",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Всички типове",
+          "href": "/inventory"
+        },
+        {
+          "text": "Комби\n\n2 автомобила",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Хечбек\n\n4 автомобила",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Седан\n\n2 автомобила",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Ван\n\n2 автомобила",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n\n2 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n\n1 автомобил",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n\n2 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Honda\n\nВиж марката",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\n\nВиж марката",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\n\n1 автомобил",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\n\n1 автомобил",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\n\nВиж марката",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Kia\n\nВиж марката",
+          "href": "/inventory?brand=Kia"
+        },
+        {
+          "text": "Mazda\n\nВиж марката",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Ferrari\n\nВиж марката",
+          "href": "/inventory?brand=Ferrari"
+        },
+        {
+          "text": "Tesla\n\nВиж марката",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/financing"
+        },
+        {
+          "text": "Всички видеа",
+          "href": "https://autolife.mobile.bg/"
+        },
+        {
+          "text": "Виж всички отзиви",
+          "href": "/reviews"
+        },
+        {
+          "text": "Получих ясна информация за автомобила, бърза организация за оглед и коректно съдействие по документите.\n\nИван Димитров\n\nКлиент на Аутолайф",
+          "href": "/reviews"
+        },
+        {
+          "text": "Финансирането беше обяснено спокойно и разбираемо, а автомобилът отговаряше на описанието и снимките.\n\nМария Георгиева\n\nПокупка с финансиране",
+          "href": "/reviews"
+        },
+        {
+          "text": "Огледът мина без изненади, а екипът помогна с проверката, регистрацията и следващите стъпки.\n\nНиколай Петров\n\nКлиент от Варна",
+          "href": "/reviews"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "BMW X4 2.0D-190",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x4-2-0d-190-171886"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Seat Alhambra 2.0TDI-150",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ford Ka +",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "VW Golf 1.6TDI",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Seat Altea FACELIFT",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "Audi A4 Sline",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-sline-915323"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Citroen C5 2.2",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "VW Touran 2.0TDI-150",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-gle-coupe-199416"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/mercedes-benz-gle-coupe-199416"
+        },
+        {
+          "text": "Mercedes-Benz GLE Coupe",
+          "href": "/inventory/mercedes-benz-gle-coupe-199416"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mercedes-benz-gle-coupe-199416"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "BMW X1 2.0D-150",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "Peugeot 508 ACTIVE",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "VW Tiguan FACELIFT",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Volvo S60 НАПЪЛНО",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "VW Passat 2.0TDI-140",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "VW Polo 1.6",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory/bmw-x4-2-0d-190-171886",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "BMW X4 2.0D-190 2017 г., Дизел, 190 000 км, Публикувана обява | Аутолайф",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Назад",
+          "href": "/inventory"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "Заяви видео преглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Заяви още снимки",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Добавете отзив",
+          "href": "#reviewForm"
+        },
+        {
+          "text": "Информация за отзиви",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратете отзив",
+          "href": "/contact?intent=review"
+        },
+        {
+          "text": "",
+          "href": "/terms"
+        },
+        {
+          "text": "Аутолайф",
+          "href": "/about/daynight-auto-plovdiv"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Обади се за оглед",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Viber чат",
+          "href": "viber://chat?number=%2B359895766736"
+        },
+        {
+          "text": "Споразумение с потребителите.",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "BMW X1 2.0D-150",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "VW Tiguan FACELIFT",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ford Ka +",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact#contact-form"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се / Viber",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Виж карта",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Отвори в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736",
+        "tel:+359895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Виж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:+359895766736"
+        },
+        {
+          "text": "Виж екипа",
+          "href": "/team"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "Свържи се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Chevrolet",
+          "href": "/inventory?brand=Chevrolet"
+        },
+        {
+          "text": "Chrysler",
+          "href": "/inventory?brand=Chrysler"
+        },
+        {
+          "text": "Citroen",
+          "href": "/inventory?brand=Citroen"
+        },
+        {
+          "text": "Ford",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Honda",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Jaguar",
+          "href": "/inventory?brand=Jaguar"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/inventory?brand=Land%20Rover"
+        },
+        {
+          "text": "Mazda",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Opel",
+          "href": "/inventory?brand=Opel"
+        },
+        {
+          "text": "Peugeot",
+          "href": "/inventory?brand=Peugeot"
+        },
+        {
+          "text": "Porsche",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Skoda",
+          "href": "/inventory?brand=Skoda"
+        },
+        {
+          "text": "VW",
+          "href": "/inventory?brand=VW"
+        },
+        {
+          "text": "Volvo",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продажба и бартер\n\nИзпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.\n\nПродай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Документи и финансиране\n\nСъдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.\n\nРазгледай услугите",
+          "href": "/services"
+        },
+        {
+          "text": "Уговори оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Отвори маршрута",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/financing",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Финансиране | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Изпратете запитване",
+          "href": "/contact?intent=financing"
+        },
+        {
+          "text": "Търсете според месечния бюджет",
+          "href": "/calculator"
+        },
+        {
+          "text": "Изберете подходяща оферта",
+          "href": "/inventory"
+        },
+        {
+          "text": "Аутолайф\nАвгуст 2025\nСЪВЕТИ\n\nКак да купим употребяван автомобил без риск\n\nПреглед, история и документи — стъпките, които спестяват скъпи грешки при покупка...",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "Аутолайф\nАвгуст 2025\nФИНАНСИРАНЕ\n\nЛизинг или разсрочено плащане — кое е за вас?\n\nСравнение на вариантите за финансиране според бюджет, месечна вноска и срок...",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "Аутолайф\nАвгуст 2025\nПОЛЕЗНО\n\nБартер при покупка: как се оценява автомобилът ви\n\nКакво гледа екипът при оценката и как бартерът намалява крайната сума за плащане...",
+          "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory?price=under-10000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ford Ka +",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "VW Golf 1.6TDI",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Seat Altea FACELIFT",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Citroen C5 2.2",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Volvo S60 НАПЪЛНО",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "VW Passat 2.0TDI-140",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "VW Polo 1.6",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 8,
+      "expectedBudgetCount": 8,
+      "originalHarnessCount": 9,
+      "focusedEvidence": "../focused.json"
+    },
+    {
+      "width": 1440,
+      "route": "/inventory?price=under-20000",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | Аутолайф Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0895766736"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Тополи, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "Seat Alhambra 2.0TDI-150",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-alhambra-2-0tdi-150-901387"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "Ford Ka +",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/ford-ka-965725"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "VW Golf 1.6TDI",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-golf-1-6tdi-623319"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "Seat Altea FACELIFT",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/seat-altea-facelift-885033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "Citroen C5 2.2",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "",
+          "href": "/inventory/citroen-c5-2-2-433166"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "Audi Q5 2.0TDI-170",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-2-0tdi-170-024883"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "VW Touran 2.0TDI-150",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-touran-2-0tdi-150-551646"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "BMW X1 2.0D-150",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-2-0d-150-685033"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "Peugeot 508 ACTIVE",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-508-active-356749"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "VW Tiguan FACELIFT",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-tiguan-facelift-063175"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "Volvo S60 НАПЪЛНО",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-s60-388381"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "VW Passat 2.0TDI-140",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-2-0tdi-140-129616"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "VW Polo 1.6",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-polo-1-6-509132"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0895 766 736",
+          "href": "tel:0895766736"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, ГП4, разклон за с. Тополи",
+          "href": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true,
+      "budgetCount": 13,
+      "expectedBudgetCount": 13,
+      "originalHarnessCount": 14,
+      "focusedEvidence": "../focused.json"
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Volvo",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6643/inventory",
+      "afterCount": 1,
+      "search": true,
+      "detailHref": "/inventory/volvo-s60-388381",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 17,
+      "menu": "No visible menu button at this width",
+      "searchUrl": "http://127.0.0.1:6643/inventory?q=BMW",
+      "afterCount": 9,
+      "search": true,
+      "detailHref": "/inventory/bmw-x4-2-0d-190-171886",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "carwow",
+    "Project": "J:\\cars\\clients\\autolife\\carwow",
+    "PID": 24956,
+    "Port": 6643,
+    "Url": "http://127.0.0.1:6643",
+    "Stdout": "J:\\cars\\runtime\\carwow-6643-20260908-060437.out.log",
+    "Stderr": "J:\\cars\\runtime\\carwow-6643-20260908-060437.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true,
+  "focusedProof": "focused.json"
+}

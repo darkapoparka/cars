@@ -1,0 +1,2 @@
+import{a as r,C as i,m as s,g as o,q as l,p as m,u as e,D as p}from"./convert-case-to-camel-case.utils-DRsbC-qG.js";const _={class:"ccb-header-title"},d=["src"],g=r({__name:"HeaderTitle",props:{title:{},icon:{}},setup(a){const c=a,{title:n,icon:t}=i(c);return(u,h)=>(o(),s("div",_,[e(t)?(o(),s("img",{key:0,src:e(t),width:"20",height:"20",alt:"ccb total summary icon"},null,8,d)):l("",!0),m("span",null,p(e(n)),1)]))}});export{g as _};
+//# sourceMappingURL=HeaderTitle.vue_vue_type_style_index_0_lang-Bjzlv5Ub.js.map

@@ -1,0 +1,5700 @@
+[
+  {
+    "client": "legend-auto",
+    "name": "LEGEND AUTO",
+    "template": "auto-best",
+    "port": 6671,
+    "startedAt": "2026-09-08T01:51:12.597Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "LEGEND AUTO — Премиум автомобили в Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "До 10 000 €",
+            "href": "/listing-grid?price_max=10000"
+          },
+          {
+            "text": "10–20 000 €",
+            "href": "/listing-grid?price_min=10000&price_max=20000"
+          },
+          {
+            "text": "Audi",
+            "href": "/listing-grid?make=Audi"
+          },
+          {
+            "text": "Mercedes",
+            "href": "/listing-grid?make=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/listing-grid?make=BMW"
+          },
+          {
+            "text": "Разгледай",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Свържи се",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "До 10 000 €\n9 автомобила",
+            "href": "/listing-grid?price_max=10000"
+          },
+          {
+            "text": "10–20 000 €\n3 автомобила",
+            "href": "/listing-grid?price_min=10000&price_max=20000"
+          },
+          {
+            "text": "Над 20 000 €\n2 автомобила",
+            "href": "/listing-grid?price_min=20000"
+          },
+          {
+            "text": "Виж всички\n14 автомобила",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Седан",
+            "href": "/listing-grid?body=Sedan"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/listing-grid?body=Hatchback"
+          },
+          {
+            "text": "SUV",
+            "href": "/listing-grid?body=SUV"
+          },
+          {
+            "text": "Кросоувър",
+            "href": "/listing-grid?body=Crossover"
+          },
+          {
+            "text": "Комби",
+            "href": "/listing-grid?body=Wagon"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "29 000 км\n2024\n\nДжип\n\nAudi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\nЕлектрически\nАвтоматик\n37 999 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "200 000 км\n2017\n\nХечбек\n\nSeat Leon 2.0TDI\nДизел\nРъчна\n7999 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "122 000 км\n2019\n\nДжип\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\nДизел\nАвтоматик\n16 999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "220 000 км\n2015\n\nКомби\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\nДизел\nАвтоматик\n9999 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Всички автомобили\nРазгледайте цялата колекция\nВиж всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/listing-grid?make=Land%20Rover"
+          },
+          {
+            "text": "Kia",
+            "href": "/listing-grid?make=Kia"
+          },
+          {
+            "text": "Toyota",
+            "href": "/listing-grid?make=Toyota"
+          },
+          {
+            "text": "Jeep",
+            "href": "/listing-grid?make=Jeep"
+          },
+          {
+            "text": "Nissan",
+            "href": "/listing-grid?make=Nissan"
+          },
+          {
+            "text": "Всички",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nПоискайте документите за автомобила и обсъдете проверка на състоянието преди решение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nРазгледайте обявите и потвърдете с автокъщата подходящ автомобил и условия.",
+            "href": "/blog"
+          },
+          {
+            "text": "Още полезно\nСъвети за избор, оглед и внос\nПрочети всички",
+            "href": "/blog"
+          },
+          {
+            "text": "Заяви внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Виж условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "Снимки и подробности",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "Снимки и подробности",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Снимки и подробности",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Разгледай",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Уговори оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Свържи се",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заяви внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Условия за покупка",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Виж условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/listing-grid",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Налични автомобили — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\n2024\n29 000 км\nЕлектрически\nАвтоматик\n37 999 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "Seat Leon 2.0TDI\n2017\n200 000 км\nДизел\nРъчна\n7999 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n2019\n122 000 км\nДизел\nАвтоматик\n16 999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n2015\n220 000 км\nДизел\nАвтоматик\n9999 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "VW Golf 1.9TDI 105к.с\n2005\n205 000 км\nДизел\nРъчна\n3599 €",
+            "href": "/listing-detail-v1/5"
+          },
+          {
+            "text": "Toyota Yaris 1.5 Хибрид Камера 4л/100км\n2012\n169 000 км\nХибрид\nАвтоматик\n7999 €",
+            "href": "/listing-detail-v1/6"
+          },
+          {
+            "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n2022\n252 000 км\nХибрид\nАвтоматик\n26 999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "Toyota Auris 2.0D4D\n2009\n229 000 км\nДизел\nРъчна\n4399 €",
+            "href": "/listing-detail-v1/8"
+          },
+          {
+            "text": "Skoda Scala 1.6TDI\n2019\n180 000 км\nДизел\nРъчна\n11 999 €",
+            "href": "/listing-detail-v1/9"
+          },
+          {
+            "text": "Renault Zoe 52kw 78000km Собствена батерия\n2020\n78 000 км\nЕлектрически\nАвтоматик\n14 299 €",
+            "href": "/listing-detail-v1/10"
+          },
+          {
+            "text": "Renault Clio 1.2 БЕНЗИН\n2014\n150 000 км\nБензин\nРъчна\n5199 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "Peugeot 508 2.0HDI\n2013\n232 000 км\nДизел\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/12"
+          },
+          {
+            "text": "Opel Astra 1.6\n2017\n193 000 км\nДизел\nРъчна\n6599 €",
+            "href": "/listing-detail-v1/13"
+          },
+          {
+            "text": "Opel Agila 1.3i Внос от Италия\n2008\n120 000 км\nБензин\nРъчна\n2500 €",
+            "href": "/listing-detail-v1/14"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/listing-detail-v1/1",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Получете реална оферта",
+            "href": "/contact?topic=leasing&vehicle=Audi%20Q4%20Q4%20e-tron%2045%20QUATTRO%2C%20DIGITAL%2C%20%D0%A2%D0%95%D0%A0%D0%9C%D0%9E%D0%9F%D0%9E%D0%9C%D0%9F%D0%90%2029000km"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n16 999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n26 999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "Seat Leon 2.0TDI\n7999 €",
+            "href": "/listing-detail-v1/2"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Контакти — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Контакти и адрес",
+            "href": "#contact-intent"
+          },
+          {
+            "text": "Обадете се ·\n0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Адрес\nбул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Посещения\nПонеделник – събота: 09:00–17:30 · Неделя: почивен ден",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Телефон\n0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/about-us",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "За нас — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Продай",
+            "href": "/contact?topic=trade-in"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Уговорете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Попитайте за транспорт",
+            "href": "/contact"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "LEGEND AUTO — Премиум автомобили в Варна",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте колекцията",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Към автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед във Варна",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Уговорете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Седан",
+            "href": "/listing-grid?body=Sedan"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/listing-grid?body=Hatchback"
+          },
+          {
+            "text": "Пикап",
+            "href": "/listing-grid?body=Pickup%20Truck"
+          },
+          {
+            "text": "SUV",
+            "href": "/listing-grid?body=SUV"
+          },
+          {
+            "text": "Кросоувър",
+            "href": "/listing-grid?body=Crossover"
+          },
+          {
+            "text": "Миниван",
+            "href": "/listing-grid?body=Minivan"
+          },
+          {
+            "text": "Комби",
+            "href": "/listing-grid?body=Wagon"
+          },
+          {
+            "text": "Кабриолет",
+            "href": "/listing-grid?body=Convertible"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "29 000 км\n2024\n\nДжип\n\nAudi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\nЕлектрически\nАвтоматик\n37 999 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "200 000 км\n2017\n\nХечбек\n\nSeat Leon 2.0TDI\nДизел\nРъчна\n7999 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "122 000 км\n2019\n\nДжип\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\nДизел\nАвтоматик\n16 999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "220 000 км\n2015\n\nКомби\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\nДизел\nАвтоматик\n9999 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/listing-grid?make=Land%20Rover"
+          },
+          {
+            "text": "Kia",
+            "href": "/listing-grid?make=Kia"
+          },
+          {
+            "text": "Toyota",
+            "href": "/listing-grid?make=Toyota"
+          },
+          {
+            "text": "Jeep",
+            "href": "/listing-grid?make=Jeep"
+          },
+          {
+            "text": "Nissan",
+            "href": "/listing-grid?make=Nissan"
+          },
+          {
+            "text": "Ford",
+            "href": "/listing-grid?make=Ford"
+          },
+          {
+            "text": "Foton",
+            "href": "/listing-grid?make=Foton"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/listing-grid?make=Mercedes-Benz"
+          },
+          {
+            "text": "Dongfeng",
+            "href": "/listing-grid?make=Dongfeng"
+          },
+          {
+            "text": "Isuzu",
+            "href": "/listing-grid?make=Isuzu"
+          },
+          {
+            "text": "Audi",
+            "href": "/listing-grid?make=Audi"
+          },
+          {
+            "text": "BMW",
+            "href": "/listing-grid?make=BMW"
+          },
+          {
+            "text": "Вижте всички статии",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nИма ли офис в Варна и как се посещава?\nДа — офисът е в Варна. Свържете се с нас предварително, за да потвърдим удобен час за посещение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nКакво можем да проверим преди покупка?\nПоискайте документите за автомобила и обсъдете проверка на състоянието преди решение.",
+            "href": "/blog"
+          },
+          {
+            "text": "Полезно\nРъководство\nМоже ли автомобил да се внесе по поръчка?\nРазгледайте обявите и потвърдете с автокъщата подходящ автомобил и условия.",
+            "href": "/blog"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заявете внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Условия за покупка",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "Снимки и подробности",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "Снимки и подробности",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Снимки и подробности",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Вижте колекцията",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Към автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед във Варна",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Уговорете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Заявете внос",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "Условия за покупка",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/listing-grid",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Налични автомобили — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "29 000 км\n2024\n\nДжип\n\nAudi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\nЕлектрически\nАвтоматик\n37 999 €",
+            "href": "/listing-detail-v1/1"
+          },
+          {
+            "text": "200 000 км\n2017\n\nХечбек\n\nSeat Leon 2.0TDI\nДизел\nРъчна\n7999 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "122 000 км\n2019\n\nДжип\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\nДизел\nАвтоматик\n16 999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "220 000 км\n2015\n\nКомби\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\nДизел\nАвтоматик\n9999 €",
+            "href": "/listing-detail-v1/4"
+          },
+          {
+            "text": "205 000 км\n2005\n\nХечбек\n\nVW Golf 1.9TDI 105к.с\nДизел\nРъчна\n3599 €",
+            "href": "/listing-detail-v1/5"
+          },
+          {
+            "text": "169 000 км\n2012\n\nХечбек\n\nToyota Yaris 1.5 Хибрид Камера 4л/100км\nХибрид\nАвтоматик\n7999 €",
+            "href": "/listing-detail-v1/6"
+          },
+          {
+            "text": "252 000 км\n2022\n\nДжип\n\nToyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\nХибрид\nАвтоматик\n26 999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "229 000 км\n2009\n\nХечбек\n\nToyota Auris 2.0D4D\nДизел\nРъчна\n4399 €",
+            "href": "/listing-detail-v1/8"
+          },
+          {
+            "text": "180 000 км\n2019\n\nКомби\n\nSkoda Scala 1.6TDI\nДизел\nРъчна\n11 999 €",
+            "href": "/listing-detail-v1/9"
+          },
+          {
+            "text": "78 000 км\n2020\n\nХечбек\n\nRenault Zoe 52kw 78000km Собствена батерия\nЕлектрически\nАвтоматик\n14 299 €",
+            "href": "/listing-detail-v1/10"
+          },
+          {
+            "text": "150 000 км\n2014\n\nХечбек\n\nRenault Clio 1.2 БЕНЗИН\nБензин\nРъчна\n5199 €",
+            "href": "/listing-detail-v1/11"
+          },
+          {
+            "text": "232 000 км\n2013\n\nКомби\n\nPeugeot 508 2.0HDI\nДизел\nРъчна\n4299 €",
+            "href": "/listing-detail-v1/12"
+          },
+          {
+            "text": "193 000 км\n2017\n\nКомби\n\nOpel Astra 1.6\nДизел\nРъчна\n6599 €",
+            "href": "/listing-detail-v1/13"
+          },
+          {
+            "text": "120 000 км\n2008\n\nХечбек\n\nOpel Agila 1.3i Внос от Италия\nБензин\nРъчна\n2500 €",
+            "href": "/listing-detail-v1/14"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Условия за покупка\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/listing-detail-v1/1",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Назад",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Заявете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Получете реална оферта",
+            "href": "/contact?topic=leasing&vehicle=Audi%20Q4%20Q4%20e-tron%2045%20QUATTRO%2C%20DIGITAL%2C%20%D0%A2%D0%95%D0%A0%D0%9C%D0%9E%D0%9F%D0%9E%D0%9C%D0%9F%D0%90%2029000km"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n16 999 €",
+            "href": "/listing-detail-v1/3"
+          },
+          {
+            "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n26 999 €",
+            "href": "/listing-detail-v1/7"
+          },
+          {
+            "text": "Seat Leon 2.0TDI\n7999 €",
+            "href": "/listing-detail-v1/2"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Условия за покупка\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Контакти — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Маршрут",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Условия за покупка\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/about-us",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "За нас — LEGEND AUTO",
+        "overflow": 0,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Уговорете оглед",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Попитайте за транспорт",
+            "href": "/contact"
+          },
+          {
+            "text": "Свържете се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "Отворете в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9C%D0%90%D0%9A%D0%90%D0%9E%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Подбрани автомобили\nРазгледайте актуалната селекция",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Оглед в Варна\nС предварителна уговорка",
+            "href": "/contact?topic=inspection"
+          },
+          {
+            "text": "Условия за покупка\nПопитайте за актуалните условия",
+            "href": "/contact?topic=leasing"
+          },
+          {
+            "text": "Запитване за автомобил\nУточнете критериите с екипа",
+            "href": "/contact?topic=import"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/listing-grid"
+          },
+          {
+            "text": "Употребявани",
+            "href": "/listing-grid?condition=used"
+          },
+          {
+            "text": "Нови автомобили",
+            "href": "/listing-grid?condition=new"
+          },
+          {
+            "text": "За нас",
+            "href": "/about-us"
+          },
+          {
+            "text": "Полезно",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "бул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "Audi",
+        "beforeCount": 14,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6671/listing-grid?q=Audi",
+        "afterCount": 1,
+        "search": true,
+        "detailHref": "/listing-detail-v1/1",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiryHref": "/contact?topic=inspection",
+        "enquiry": true,
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "Audi",
+        "beforeCount": 14,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6671/listing-grid?make=Audi",
+        "afterCount": 1,
+        "search": true,
+        "detailHref": "/listing-detail-v1/1",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiryHref": "/contact",
+        "enquiry": true,
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "auto-best",
+      "Project": "J:\\cars\\clients\\legend-auto\\auto-best",
+      "PID": 36192,
+      "Port": 6671,
+      "Url": "http://127.0.0.1:6671",
+      "Stdout": "J:\\cars\\runtime\\auto-best-6671-20260908-045113.out.log",
+      "Stderr": "J:\\cars\\runtime\\auto-best-6671-20260908-045113.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true,
+    "frameworkEvidence": [
+      {
+        "path": "J:/cars/clients/legend-auto/validate-auto.log",
+        "modifiedAt": "2026-09-06T22:05:46.770Z"
+      }
+    ]
+  },
+  {
+    "client": "legend-auto",
+    "name": "LEGEND AUTO",
+    "template": "modern",
+    "port": 6672,
+    "startedAt": "2026-09-08T01:52:18.390Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Автомобили от LEGEND AUTO | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11774263732166588"
+          },
+          {
+            "text": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\n\n37 999 €\n\n2024\n29 000 км\nЕлектрически\nАвтоматик",
+            "href": "/bg/listing/legend-11774263732166588"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11784618839120443"
+          },
+          {
+            "text": "Seat Leon 2.0TDI\n\n7 999 €\n\n2017\n200 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11784618839120443"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-21785269571488349"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n16 999 €\n\n2019\n122 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/legend-21785269571488349"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11788186558085673"
+          },
+          {
+            "text": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n9 999 €\n\n2015\n220 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/legend-11788186558085673"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11788202283254523"
+          },
+          {
+            "text": "VW Golf 1.9TDI 105к.с\n\n3 599 €\n\n2005\n205 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11788202283254523"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11782331844226239"
+          },
+          {
+            "text": "Toyota Yaris 1.5 Хибрид Камера 4л/100км\n\n7 999 €\n\n2012\n169 000 км\nХибрид\nАвтоматик",
+            "href": "/bg/listing/legend-11782331844226239"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-21787135215316819"
+          },
+          {
+            "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n\n26 999 €\n\n2022\n252 000 км\nХибрид\nАвтоматик",
+            "href": "/bg/listing/legend-21787135215316819"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11786699392982478"
+          },
+          {
+            "text": "Toyota Auris 2.0D4D\n\n4 399 €\n\n2009\n229 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11786699392982478"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11787054081251501"
+          },
+          {
+            "text": "Skoda Scala 1.6TDI\n\n11 999 €\n\n2019\n180 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11787054081251501"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11787771672265620"
+          },
+          {
+            "text": "Renault Zoe 52kw 78000km Собствена батерия\n\n14 299 €\n\n2020\n78 000 км\nЕлектрически\nАвтоматик",
+            "href": "/bg/listing/legend-11787771672265620"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11777013326319103"
+          },
+          {
+            "text": "Renault Clio 1.2 БЕНЗИН\n\n5 199 €\n\n2014\n150 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/legend-11777013326319103"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11764232323880460"
+          },
+          {
+            "text": "Peugeot 508 2.0HDI\n\n4 299 €\n\n2013\n232 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11764232323880460"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11786966551654053"
+          },
+          {
+            "text": "Opel Astra 1.6\n\n6 599 €\n\n2017\n193 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11786966551654053"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11725562013563390"
+          },
+          {
+            "text": "Opel Agila 1.3i Внос от Италия\n\n2 500 €\n\n2008\n120 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/legend-11725562013563390"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/listing/legend-11774263732166588",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Запитване за лизинг",
+            "href": "/bg/lease?vehicle=legend-11774263732166588"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "7999 €\n\nSeat Leon 2.0TDI\n\n200 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/legend-11784618839120443"
+          },
+          {
+            "text": "16 999 €\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n122 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/legend-21785269571488349"
+          },
+          {
+            "text": "9999 €\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n220 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/legend-11788186558085673"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "За нас и контакти | LEGEND AUTO | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Обадете ни се\n0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Посетете шоурума\nбул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Автомобили в наличност",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Запитване за автомобил",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Условия за покупка",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Внос на автомобил по заявка | LEGEND AUTO | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Коли",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/cars",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Автомобили от LEGEND AUTO | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11774263732166588"
+          },
+          {
+            "text": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\n\n37 999 €\n\n2024\n29 000 км\nЕлектрически\nАвтоматик",
+            "href": "/bg/listing/legend-11774263732166588"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11784618839120443"
+          },
+          {
+            "text": "Seat Leon 2.0TDI\n\n7 999 €\n\n2017\n200 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11784618839120443"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-21785269571488349"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n16 999 €\n\n2019\n122 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/legend-21785269571488349"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11788186558085673"
+          },
+          {
+            "text": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n9 999 €\n\n2015\n220 000 км\nДизел\nАвтоматик",
+            "href": "/bg/listing/legend-11788186558085673"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11788202283254523"
+          },
+          {
+            "text": "VW Golf 1.9TDI 105к.с\n\n3 599 €\n\n2005\n205 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11788202283254523"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11782331844226239"
+          },
+          {
+            "text": "Toyota Yaris 1.5 Хибрид Камера 4л/100км\n\n7 999 €\n\n2012\n169 000 км\nХибрид\nАвтоматик",
+            "href": "/bg/listing/legend-11782331844226239"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-21787135215316819"
+          },
+          {
+            "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n\n26 999 €\n\n2022\n252 000 км\nХибрид\nАвтоматик",
+            "href": "/bg/listing/legend-21787135215316819"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11786699392982478"
+          },
+          {
+            "text": "Toyota Auris 2.0D4D\n\n4 399 €\n\n2009\n229 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11786699392982478"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11787054081251501"
+          },
+          {
+            "text": "Skoda Scala 1.6TDI\n\n11 999 €\n\n2019\n180 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11787054081251501"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11787771672265620"
+          },
+          {
+            "text": "Renault Zoe 52kw 78000km Собствена батерия\n\n14 299 €\n\n2020\n78 000 км\nЕлектрически\nАвтоматик",
+            "href": "/bg/listing/legend-11787771672265620"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11777013326319103"
+          },
+          {
+            "text": "Renault Clio 1.2 БЕНЗИН\n\n5 199 €\n\n2014\n150 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/legend-11777013326319103"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11764232323880460"
+          },
+          {
+            "text": "Peugeot 508 2.0HDI\n\n4 299 €\n\n2013\n232 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11764232323880460"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11786966551654053"
+          },
+          {
+            "text": "Opel Astra 1.6\n\n6 599 €\n\n2017\n193 000 км\nДизел\nРъчна",
+            "href": "/bg/listing/legend-11786966551654053"
+          },
+          {
+            "text": "",
+            "href": "/bg/listing/legend-11725562013563390"
+          },
+          {
+            "text": "Opel Agila 1.3i Внос от Италия\n\n2 500 €\n\n2008\n120 000 км\nБензин\nРъчна",
+            "href": "/bg/listing/legend-11725562013563390"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/listing/legend-11774263732166588",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Назад към търсенето",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Виж всички",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "7999 €\n\nSeat Leon 2.0TDI\n\n200 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/legend-11784618839120443"
+          },
+          {
+            "text": "16 999 €\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n122 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/legend-21785269571488349"
+          },
+          {
+            "text": "9999 €\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n220 000 км · Дизел\n\nАвтомобил в Варна, България",
+            "href": "/bg/listing/legend-11788186558085673"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Виж финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Варна\nбул. Цар Освободител 289, срещу МАКАО, България",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "За нас и контакти | LEGEND AUTO | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Вижте наличностите",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Телефон\n0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Шоурум · бул. Цар Освободител 289\nбул. Цар Освободител 289, срещу МАКАО, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Запитване за автомобил\nКажете какво търсите и започнете разговор.",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Условия за покупка\nОбсъдете вариант според автомобила и бюджета ви.",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/bg/imports",
+        "errors": [],
+        "consoleErrors": [],
+        "visibleContent": true,
+        "title": "Внос на автомобил по заявка | LEGEND AUTO | LEGEND AUTO",
+        "overflow": -15,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Купи",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Продай",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Внос",
+            "href": "/bg/imports"
+          },
+          {
+            "text": "Лизинг",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Шоурум",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Всички",
+            "href": "/bg/imports?origin=ALL"
+          },
+          {
+            "text": "Китай",
+            "href": "/bg/imports?origin=CN"
+          },
+          {
+            "text": "Германия",
+            "href": "/bg/imports?origin=DE"
+          },
+          {
+            "text": "САЩ",
+            "href": "/bg/imports?origin=US"
+          },
+          {
+            "text": "Япония",
+            "href": "/bg/imports?origin=JP"
+          },
+          {
+            "text": "Южна Корея",
+            "href": "/bg/imports?origin=KR"
+          },
+          {
+            "text": "Опишете автомобил",
+            "href": "/bg/imports?start=1#import-request"
+          },
+          {
+            "text": "",
+            "href": "/bg"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/bg/cars"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/bg/lease"
+          },
+          {
+            "text": "Продайте ни автомобил",
+            "href": "/bg/sell"
+          },
+          {
+            "text": "Съвети за покупка",
+            "href": "/bg/guides"
+          },
+          {
+            "text": "Прозрачност на обявите",
+            "href": "/bg/guides/dealer-listing-transparency"
+          },
+          {
+            "text": "За нас и контакти",
+            "href": "/bg/contact"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "Audi",
+        "beforeCount": 14,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6672/cars?q=Audi",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/bg/listing/legend-11774263732166588",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "Audi",
+        "beforeCount": 14,
+        "menu": "No visible menu button at this width",
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6672/cars?q=Audi",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/bg/listing/legend-11774263732166588",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "modern",
+      "Project": "J:\\cars\\clients\\legend-auto\\modern",
+      "PID": 53424,
+      "Port": 6672,
+      "Url": "http://127.0.0.1:6672",
+      "Stdout": "J:\\cars\\runtime\\modern-6672-20260908-045219.out.log",
+      "Stderr": "J:\\cars\\runtime\\modern-6672-20260908-045219.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true,
+    "frameworkEvidence": [
+      {
+        "path": "J:/cars/clients/legend-auto/qa-final/modern-typecheck-retry.log",
+        "modifiedAt": "2026-09-08T01:49:37.084Z"
+      },
+      {
+        "path": "J:/cars/clients/legend-auto/qa-final/modern-build-retry.log",
+        "modifiedAt": "2026-09-08T01:50:24.097Z"
+      }
+    ],
+    "supplementalGallery": {
+      "path": "J:/cars/clients/legend-auto/qa-final/modern-gallery.json",
+      "results": [
+        {
+          "width": 390,
+          "galleryChanged": true,
+          "galleryDismissed": true,
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "galleryChanged": true,
+          "galleryDismissed": true,
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  },
+  {
+    "client": "legend-auto",
+    "name": "LEGEND AUTO",
+    "template": "carwow",
+    "port": 6673,
+    "startedAt": "2026-09-08T02:05:03.487Z",
+    "routes": [
+      {
+        "width": 390,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "counter-scroll daynight-home-page daynight-page-home-header is_light",
+        "landmarks": [
+          {
+            "tag": "DIV",
+            "class": "mobile-home svelte-lqo9i2",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 2759.328125
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "mh-hero svelte-lqo9i2",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 290.65625
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-lqo9i2",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 276.65625,
+              "width": 385,
+              "height": 1964.359375
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "LEGEND AUTO Варна - проверени автомобили и бърз контакт",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Всички 14 коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory?transmission=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "До 10 000 EUR\n9 коли",
+            "href": "/inventory?price=under-10000"
+          },
+          {
+            "text": "До 20 000 EUR\n12 коли",
+            "href": "/inventory?price=under-20000"
+          },
+          {
+            "text": "До 30 000 EUR\n13 коли",
+            "href": "/inventory?price=under-30000"
+          },
+          {
+            "text": "До 50 000 EUR\n14 коли",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "Над 50 000 EUR\n0 коли",
+            "href": "/inventory?price=over-50000"
+          },
+          {
+            "text": "Без бюджет\nВсички 14 коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "BMW\nЗапитване за автомобил",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Mercedes\nЗапитване за автомобил",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "Audi\n1 автомобил",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Porsche\nЗапитване за автомобил",
+            "href": "/inventory?brand=Porsche"
+          },
+          {
+            "text": "Mazda\nЗапитване за автомобил",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Honda\nЗапитване за автомобил",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Toyota\n3 автомобила",
+            "href": "/inventory?brand=Toyota"
+          },
+          {
+            "text": "Volvo\nЗапитване за автомобил",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Ford\nЗапитване за автомобил",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Hyundai\nЗапитване за автомобил",
+            "href": "/inventory?brand=Hyundai"
+          },
+          {
+            "text": "Tesla\nЗапитване за автомобил",
+            "href": "/inventory?brand=Tesla"
+          },
+          {
+            "text": "Всички марки",
+            "href": "/inventory"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Хечбек\n7 коли",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Комби\n4 коли",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Джип\n3 коли",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/contacts"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/contacts"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "0899 877 305\nОбаждане / Viber",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 2377
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Автомобили в наличност | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Публикувана обява\nOpel Agila 1.3i\n2500 €\nУсловия по запитване\n120 000 км\n2008\nБензин\nРъчна",
+            "href": "/inventory/opel-agila-1-3i-563390"
+          },
+          {
+            "text": "Публикувана обява\nVW Golf 1.9TDI\n3599 €\nУсловия по запитване\n205 000 км\n2005\nДизел\nРъчна",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "Публикувана обява\nPeugeot 508 2.0HDI\n4299 €\nУсловия по запитване\n232 000 км\n2013\nДизел\nРъчна",
+            "href": "/inventory/peugeot-508-2-0hdi-880460"
+          },
+          {
+            "text": "Публикувана обява\nToyota Auris 2.0D4D\n4399 €\nУсловия по запитване\n229 000 км\n2009\nДизел\nРъчна",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "Публикувана обява\nRenault Clio 1.2\n5199 €\nУсловия по запитване\n150 000 км\n2014\nБензин\nРъчна",
+            "href": "/inventory/renault-clio-1-2-319103"
+          },
+          {
+            "text": "Публикувана обява\nOpel Astra 1.6\n6599 €\nУсловия по запитване\n193 000 км\n2017\nДизел\nРъчна",
+            "href": "/inventory/opel-astra-1-6-654053"
+          },
+          {
+            "text": "Публикувана обява\nSeat Leon 2.0TDI\n7999 €\nУсловия по запитване\n200 000 км\n2017\nДизел\nРъчна",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "Публикувана обява\nToyota Yaris 1.5\n7999 €\nУсловия по запитване\n169 000 км\n2012\nХибрид\nАвтоматик",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "Публикувана обява\nVW Passat 2.0TDI\n9999 €\nУсловия по запитване\n220 000 км\n2015\nДизел\nАвтоматик",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "Публикувана обява\nSkoda Scala 1.6TDI\n11 999 €\nУсловия по запитване\n180 000 км\n2019\nДизел\nРъчна",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "Публикувана обява\nRenault Zoe 52kw\n14 299 €\nУсловия по запитване\n78 000 км\n2020\nЕлектрич.\nАвтоматик",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "Публикувана обява\nVW Tiguan 2.0TDI\n16 999 €\nУсловия по запитване\n122 000 км\n2019\nДизел\nАвтоматик",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "Публикувана обява\nToyota Rav4 2.5\n26 999 €\nУсловия по запитване\n252 000 км\n2022\nХибрид\nАвтоматик",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Публикувана обява\nAudi Q4\n37 999 €\nУсловия по запитване\n29 000 км\n2024\nЕлектрич.\nАвтоматик",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/inventory/opel-agila-1-3i-563390",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "MAIN",
+            "class": "mobile-detail svelte-pltl0v",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 900
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "mobile-detail-sheet__head svelte-pltl0v",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 14,
+              "y": 404,
+              "width": 357,
+              "height": 62
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Opel Agila 1.3i 2008 г., Бензин, 120 000 км, Наличен | LEGEND AUTO",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Viber",
+            "href": "viber://chat?number=%2B359899877305"
+          },
+          {
+            "text": "LEGEND AUTO\nLEGEND AUTO, Варна, България",
+            "href": "/contact"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "mobile-contact-hero svelte-1hmsaaa",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 297.375
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-1hmsaaa",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 297.375,
+              "width": 385,
+              "height": 1005.609375
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Контакти | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Обади се",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "КОЛИ",
+            "href": "/inventory"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/about",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "mobile-about-hero svelte-ddok02",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 385,
+              "height": 297.375
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-ddok02",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 297.375,
+              "width": 385,
+              "height": 1362.09375
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "За нас | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "ВСИЧКИ",
+            "href": "/team"
+          },
+          {
+            "text": "LEGEND AUTO\nПродажба на автомобили",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "LEGEND AUTO\nВъпрос за автомобил",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "LEGEND AUTO\nУсловия за покупка",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 390,
+        "route": "/financing",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "mobile-financing-hero svelte-p4z26y",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 108,
+              "width": 385,
+              "height": 297.375
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-p4z26y",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 405.375,
+              "width": 385,
+              "height": 1267.5625
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-u36ghs",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Финансиране | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:+359899877305",
+          "tel:0899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Коли",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Внос",
+            "href": "/contact?intent=import"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "counter-scroll daynight-home-page daynight-page-home-header is_light",
+        "landmarks": [
+          {
+            "tag": "DIV",
+            "class": "daynight-home-shell daynight-home-shell--original svelte-ixawm0",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 4647.625
+            }
+          },
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-ixawm0",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 4114.625
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "LEGEND AUTO Варна - проверени автомобили и бърз контакт",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=SUV"
+          },
+          {
+            "text": "Комби",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Хечбек",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "До 10 000 EUR",
+            "href": "/inventory?price=under-10000"
+          },
+          {
+            "text": "До 20 000 EUR",
+            "href": "/inventory?price=under-20000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "Audi Q4",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "Seat Leon 2.0TDI",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "VW Passat 2.0TDI",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "VW Golf 1.9TDI",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "Toyota Yaris 1.5",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Toyota Rav4 2.5",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "Toyota Auris 2.0D4D",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "Финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Виж всички 14 автомобила",
+            "href": "/inventory"
+          },
+          {
+            "text": "Купи автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Разгледай автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Продай автомобил",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Всички типове",
+            "href": "/inventory"
+          },
+          {
+            "text": "Електрически\n\n2 автомобила",
+            "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+          },
+          {
+            "text": "Комби\n\n4 автомобила",
+            "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+          },
+          {
+            "text": "Хечбек\n\n7 автомобила",
+            "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+          },
+          {
+            "text": "Всички марки",
+            "href": "/inventory"
+          },
+          {
+            "text": "BMW\n\nВиж марката",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Mercedes\n\nВиж марката",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "Audi\n\n1 автомобил",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Honda\n\nВиж марката",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Toyota\n\n3 автомобила",
+            "href": "/inventory?brand=Toyota"
+          },
+          {
+            "text": "Volvo\n\nВиж марката",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Ford\n\nВиж марката",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Hyundai\n\nВиж марката",
+            "href": "/inventory?brand=Hyundai"
+          },
+          {
+            "text": "Kia\n\nВиж марката",
+            "href": "/inventory?brand=Kia"
+          },
+          {
+            "text": "Mazda\n\nВиж марката",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Ferrari\n\nВиж марката",
+            "href": "/inventory?brand=Ferrari"
+          },
+          {
+            "text": "Tesla\n\nВиж марката",
+            "href": "/inventory?brand=Tesla"
+          },
+          {
+            "text": "Вижте автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Запазете оглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Поискайте условия",
+            "href": "/contact"
+          },
+          {
+            "text": "Всички обяви",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/obiava-11774263732166588-audi-q4-q4-e-tron-45-quattro-digital-termopompa-29000km"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/obiava-11784618839120443-seat-leon-2-0tdi"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/obiava-21785269571488349-vw-tiguan-2-0tdi-150-k-s-dsg-122000km-navigatsiya"
+          },
+          {
+            "text": "Полезна информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "Разгледайте автомобилите на LEGEND AUTO. Потвърдете наличността преди посещение.\n\nАвтомобили\n\nПубликувани предложения",
+            "href": "/reviews"
+          },
+          {
+            "text": "Обадете се на 0899 877 305 за автомобила и удобен час за оглед.\n\nОглед\n\nПредварителна уговорка",
+            "href": "/reviews"
+          },
+          {
+            "text": "Транспортът е посочен в обявите на LEGEND AUTO. Уточнете цената и условията по телефона.\n\nТранспорт\n\nДо всяка точка на страната",
+            "href": "/reviews"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "inventory-refined pb-[100px] svelte-2pubfh",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 1521.3125
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Автомобили в наличност | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Всички",
+            "href": "/inventory"
+          },
+          {
+            "text": "Mercedes-Benz",
+            "href": "/inventory?brand=Mercedes-Benz"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "Джип",
+            "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+          },
+          {
+            "text": "Седан",
+            "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+          },
+          {
+            "text": "Купе",
+            "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+          },
+          {
+            "text": "Ван",
+            "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+          },
+          {
+            "text": "Налични",
+            "href": "/inventory?availability=available"
+          },
+          {
+            "text": "Дизел",
+            "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+          },
+          {
+            "text": "Бензин",
+            "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+          },
+          {
+            "text": "До 50 000 EUR",
+            "href": "/inventory?price=under-50000"
+          },
+          {
+            "text": "До 100 000 км",
+            "href": "/inventory?mileage=under-100000"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "Audi Q4",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "",
+            "href": "/inventory/audi-q4-166588"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "Seat Leon 2.0TDI",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "",
+            "href": "/inventory/seat-leon-2-0tdi-120443"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "VW Passat 2.0TDI",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-passat-2-0tdi-085673"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "VW Golf 1.9TDI",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-golf-1-9tdi-254523"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "Toyota Yaris 1.5",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-yaris-1-5-226239"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Toyota Rav4 2.5",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "Toyota Auris 2.0D4D",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-auris-2-0d4d-982478"
+          },
+          {
+            "text": "",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "Skoda Scala 1.6TDI",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "Renault Zoe 52kw",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-clio-1-2-319103"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/renault-clio-1-2-319103"
+          },
+          {
+            "text": "Renault Clio 1.2",
+            "href": "/inventory/renault-clio-1-2-319103"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-clio-1-2-319103"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-508-2-0hdi-880460"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/peugeot-508-2-0hdi-880460"
+          },
+          {
+            "text": "Peugeot 508 2.0HDI",
+            "href": "/inventory/peugeot-508-2-0hdi-880460"
+          },
+          {
+            "text": "",
+            "href": "/inventory/peugeot-508-2-0hdi-880460"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-astra-1-6-654053"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-astra-1-6-654053"
+          },
+          {
+            "text": "Opel Astra 1.6",
+            "href": "/inventory/opel-astra-1-6-654053"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-astra-1-6-654053"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-agila-1-3i-563390"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/opel-agila-1-3i-563390"
+          },
+          {
+            "text": "Opel Agila 1.3i",
+            "href": "/inventory/opel-agila-1-3i-563390"
+          },
+          {
+            "text": "",
+            "href": "/inventory/opel-agila-1-3i-563390"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/inventory/audi-q4-166588",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Audi Q4 2024 г., Електрически, 29 000 км, Наличен | LEGEND AUTO",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Назад",
+            "href": "/inventory"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "Заяви видео преглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Заяви още снимки",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж локация",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Добавете отзив",
+            "href": "#reviewForm"
+          },
+          {
+            "text": "Полезна информация",
+            "href": "/reviews"
+          },
+          {
+            "text": "Изпратете отзив",
+            "href": "/contact?intent=review"
+          },
+          {
+            "text": "",
+            "href": "/terms"
+          },
+          {
+            "text": "LEGEND AUTO",
+            "href": "/about/daynight-auto-plovdiv"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "Виж локация",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Обади се за оглед",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Viber чат",
+            "href": "viber://chat?number=%2B359899877305"
+          },
+          {
+            "text": "Споразумение с потребителите.",
+            "href": "/terms"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "Toyota Rav4 2.5",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "",
+            "href": "/inventory/toyota-rav4-2-5-316819"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "VW Tiguan 2.0TDI",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "",
+            "href": "/inventory/vw-tiguan-2-0tdi-488349"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "Автоматик",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "Renault Zoe 52kw",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "",
+            "href": "/inventory/renault-zoe-52kw-265620"
+          },
+          {
+            "text": "",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "Ръчна",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "Skoda Scala 1.6TDI",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "",
+            "href": "/inventory/skoda-scala-1-6tdi-251501"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface is-fixed is-custom is-visible fixed left-0 right-0 top-0 z-[900] min-h-[58px] bg-[#f3f6fa] shadow-sa-md svelte-1v8ox06",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 62
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-1y5r016",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 1548.546875
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Контакти | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact#contact-form"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Обади се / Viber",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Виж карта",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Отвори в Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/about",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "about-page svelte-4cyxiw",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "width": 1435,
+              "height": 2557.234375
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "За нас | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0899877305",
+          "tel:+359899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Виж автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. Цар Освободител 289",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:+359899877305"
+          },
+          {
+            "text": "Виж екипа",
+            "href": "/team"
+          },
+          {
+            "text": "",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "LEGEND AUTO",
+            "href": "/team/prodazhbi-showroom"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "LEGEND AUTO",
+            "href": "/team/barter-i-ocenka"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "LEGEND AUTO",
+            "href": "/team/dokumenti-finansirane"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/team/klientski-zapitvania"
+          },
+          {
+            "text": "LEGEND AUTO",
+            "href": "/team/klientski-zapitvania"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "Свържи се с нас",
+            "href": "/contact"
+          },
+          {
+            "text": "Всички автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Audi",
+            "href": "/inventory?brand=Audi"
+          },
+          {
+            "text": "BMW",
+            "href": "/inventory?brand=BMW"
+          },
+          {
+            "text": "Chevrolet",
+            "href": "/inventory?brand=Chevrolet"
+          },
+          {
+            "text": "Chrysler",
+            "href": "/inventory?brand=Chrysler"
+          },
+          {
+            "text": "Citroen",
+            "href": "/inventory?brand=Citroen"
+          },
+          {
+            "text": "Ford",
+            "href": "/inventory?brand=Ford"
+          },
+          {
+            "text": "Honda",
+            "href": "/inventory?brand=Honda"
+          },
+          {
+            "text": "Jaguar",
+            "href": "/inventory?brand=Jaguar"
+          },
+          {
+            "text": "Land Rover",
+            "href": "/inventory?brand=Land%20Rover"
+          },
+          {
+            "text": "Mazda",
+            "href": "/inventory?brand=Mazda"
+          },
+          {
+            "text": "Opel",
+            "href": "/inventory?brand=Opel"
+          },
+          {
+            "text": "Peugeot",
+            "href": "/inventory?brand=Peugeot"
+          },
+          {
+            "text": "Porsche",
+            "href": "/inventory?brand=Porsche"
+          },
+          {
+            "text": "Skoda",
+            "href": "/inventory?brand=Skoda"
+          },
+          {
+            "text": "VW",
+            "href": "/inventory?brand=VW"
+          },
+          {
+            "text": "Volvo",
+            "href": "/inventory?brand=Volvo"
+          },
+          {
+            "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продажба и бартер\n\nИзпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.\n\nПродай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Документи и финансиране\n\nЗа документите и условията за покупка се свържете с автокъщата.\n\nРазгледай услугите",
+            "href": "/services"
+          },
+          {
+            "text": "Уговори оглед",
+            "href": "/contact"
+          },
+          {
+            "text": "Отвори маршрута",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "route": "/financing",
+        "errors": [],
+        "consoleErrors": [],
+        "bodyClass": "",
+        "landmarks": [
+          {
+            "tag": "HEADER",
+            "class": "group w-full bg-sa-surface relative z-[60] svelte-1v8ox06",
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 45,
+              "width": 1435,
+              "height": 94
+            }
+          },
+          {
+            "tag": "MAIN",
+            "class": "svelte-u36ghs",
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 139,
+              "width": 1435,
+              "height": 3607.515625
+            }
+          }
+        ],
+        "visibleContent": true,
+        "title": "Финансиране | LEGEND AUTO Варна",
+        "overflow": -5,
+        "broken": [],
+        "phones": [
+          "tel:0899877305"
+        ],
+        "links": [
+          {
+            "text": "Към основното съдържание",
+            "href": "#main-content"
+          },
+          {
+            "text": "Виж наличните автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "бул. Цар Освободител 289, Варна",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "",
+            "href": "/contact"
+          },
+          {
+            "text": "",
+            "href": "/compare"
+          },
+          {
+            "text": "",
+            "href": "/favorites"
+          },
+          {
+            "text": "",
+            "href": "/sell-your-car/request"
+          },
+          {
+            "text": "Начало",
+            "href": "/"
+          },
+          {
+            "text": "Автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Виж автомобили",
+            "href": "/inventory"
+          },
+          {
+            "text": "Изпрати запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "Обадете се",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Изпратете запитване",
+            "href": "/contact?intent=financing"
+          },
+          {
+            "text": "Търсете според месечния бюджет",
+            "href": "/calculator"
+          },
+          {
+            "text": "Изберете подходяща оферта",
+            "href": "/inventory"
+          },
+          {
+            "text": "LEGEND AUTO\nАвгуст 2025\nСЪВЕТИ\n\nКак да купим употребяван автомобил без риск\n\nПреглед, история и документи — стъпките, които спестяват скъпи грешки при покупка...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "LEGEND AUTO\nАвгуст 2025\nФИНАНСИРАНЕ\n\nЛизинг или разсрочено плащане — кое е за вас?\n\nСравнение на вариантите за финансиране според бюджет, месечна вноска и срок...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "LEGEND AUTO\nАвгуст 2025\nПОЛЕЗНО\n\nБартер при покупка: как се оценява автомобилът ви\n\nКакво гледа екипът при оценката и как бартерът намалява крайната сума за плащане...",
+            "href": "/blog/kak-da-kupim-upotrebyavan-avtomobil"
+          },
+          {
+            "text": "",
+            "href": "/"
+          },
+          {
+            "text": "За нас",
+            "href": "/about"
+          },
+          {
+            "text": "Нашият екип",
+            "href": "/team"
+          },
+          {
+            "text": "Услуги",
+            "href": "/services"
+          },
+          {
+            "text": "Често задавани въпроси",
+            "href": "/faq"
+          },
+          {
+            "text": "Новини и съвети",
+            "href": "/blog"
+          },
+          {
+            "text": "Контакти",
+            "href": "/contact"
+          },
+          {
+            "text": "Намери автомобил",
+            "href": "/inventory"
+          },
+          {
+            "text": "Продай или замени",
+            "href": "/sell-your-car"
+          },
+          {
+            "text": "Лизинг и финансиране",
+            "href": "/financing"
+          },
+          {
+            "text": "Карта на автомобилите",
+            "href": "/inventory/map"
+          },
+          {
+            "text": "Калкулатор за внос",
+            "href": "/calculator"
+          },
+          {
+            "text": "Информация за покупката",
+            "href": "/reviews"
+          },
+          {
+            "text": "0899 877 305",
+            "href": "tel:0899877305"
+          },
+          {
+            "text": "Онлайн запитване",
+            "href": "/contact"
+          },
+          {
+            "text": "гр. Варна, бул. Цар Освободител 289, срещу МАКАО",
+            "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+          },
+          {
+            "text": "",
+            "href": "https://legendauto1.mobile.bg/"
+          },
+          {
+            "text": "Условия за ползване",
+            "href": "/terms"
+          },
+          {
+            "text": "Поверителност",
+            "href": "/terms"
+          },
+          {
+            "text": "Бисквитки",
+            "href": "/terms"
+          }
+        ],
+        "overlay": false,
+        "status": 200,
+        "staleIdentity": [],
+        "pass": true
+      }
+    ],
+    "interactions": [
+      {
+        "width": 390,
+        "errors": [],
+        "query": "Opel",
+        "beforeCount": 14,
+        "menuOpened": true,
+        "menuDismissed": true,
+        "menuFocus": true,
+        "filterOpened": true,
+        "filterDismissed": true,
+        "searchUrl": "http://127.0.0.1:6673/inventory",
+        "afterCount": 2,
+        "search": true,
+        "detailHref": "/inventory/opel-agila-1-3i-563390",
+        "navigation": true,
+        "detailPhone": true,
+        "enquiry": true,
+        "enquiryMode": "telephone link inspected, no call placed",
+        "pass": true
+      },
+      {
+        "width": 1440,
+        "errors": [],
+        "query": "Audi",
+        "beforeCount": 15,
+        "menu": "No visible menu button at this width",
+        "searchUrl": "http://127.0.0.1:6673/inventory?q=Audi",
+        "afterCount": 33,
+        "search": true,
+        "detailHref": "/inventory/audi-q4-166588",
+        "navigation": true,
+        "detailPhone": true,
+        "galleryChanged": true,
+        "enquiryHref": "/contact",
+        "enquiry": true,
+        "pass": true
+      }
+    ],
+    "runtime": {
+      "Template": "carwow",
+      "Project": "J:\\cars\\clients\\legend-auto\\carwow",
+      "PID": 41716,
+      "Port": 6673,
+      "Url": "http://127.0.0.1:6673",
+      "Stdout": "J:\\cars\\runtime\\carwow-6673-20260908-050505.out.log",
+      "Stderr": "J:\\cars\\runtime\\carwow-6673-20260908-050505.err.log",
+      "Status": "stopped-after-verification"
+    },
+    "pass": true,
+    "frameworkEvidence": [
+      {
+        "path": "J:/cars/clients/legend-auto/qa-final/carwow-numeric-check.log",
+        "modifiedAt": "2026-09-08T03:15:09.014Z"
+      },
+      {
+        "path": "J:/cars/clients/legend-auto/qa-final/carwow-numeric-build.log",
+        "modifiedAt": "2026-09-08T03:15:34.412Z"
+      }
+    ],
+    "finalContactCopy": {
+      "path": "J:/cars/clients/legend-auto/qa-final/carwow-final-contact-copy.json",
+      "detail": "/inventory/opel-agila-1-3i-563390",
+      "errors": [],
+      "homeBudgets": [
+        {
+          "value": "under-10000",
+          "count": 9
+        },
+        {
+          "value": "under-20000",
+          "count": 12
+        },
+        {
+          "value": "under-30000",
+          "count": 13
+        },
+        {
+          "value": "under-50000",
+          "count": 14
+        },
+        {
+          "value": "over-50000",
+          "count": 0
+        }
+      ],
+      "homeBudgetPass": true,
+      "priceFilterCount": 12,
+      "priceFilterExpected": 12,
+      "mileageFilterCount": 2,
+      "mileageFilterExpected": 2,
+      "numericPass": true,
+      "phoneLabels": 1,
+      "viberLabels": 1,
+      "viberHref": "viber://chat?number=%2B359899877305",
+      "unsupportedServices": 0,
+      "mobileGalleryChanged": true,
+      "pass": true
+    },
+    "numericStockProof": {
+      "path": "J:/cars/clients/legend-auto/qa-final/numeric-stock-proof.json",
+      "checkedAt": "2026-09-08T03:15:35.219Z",
+      "module": "carwow/src/lib/data/daynight-vehicles.ts",
+      "stockCount": 14,
+      "vehicleCount": 14,
+      "records": [
+        {
+          "slug": "audi-q4-166588",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11774263732166588-audi-q4-q4-e-tron-45-quattro-digital-termopompa-29000km",
+          "price": 37999,
+          "mileage": 29000,
+          "stockPrice": 37999,
+          "stockMileage": 29000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "seat-leon-2-0tdi-120443",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11784618839120443-seat-leon-2-0tdi",
+          "price": 7999,
+          "mileage": 200000,
+          "stockPrice": 7999,
+          "stockMileage": 200000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "vw-tiguan-2-0tdi-488349",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-21785269571488349-vw-tiguan-2-0tdi-150-k-s-dsg-122000km-navigatsiya",
+          "price": 16999,
+          "mileage": 122000,
+          "stockPrice": 16999,
+          "stockMileage": 122000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "vw-passat-2-0tdi-085673",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11788186558085673-vw-passat-2-0tdi-dsg-navigatsiya-podgrev-na-sedalki",
+          "price": 9999,
+          "mileage": 220000,
+          "stockPrice": 9999,
+          "stockMileage": 220000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "vw-golf-1-9tdi-254523",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11788202283254523-vw-golf-1-9tdi-105k-s",
+          "price": 3599,
+          "mileage": 205000,
+          "stockPrice": 3599,
+          "stockMileage": 205000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "toyota-yaris-1-5-226239",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11782331844226239-toyota-yaris-1-5-hibrid-kamera-4l-100km",
+          "price": 7999,
+          "mileage": 169000,
+          "stockPrice": 7999,
+          "stockMileage": 169000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "toyota-rav4-2-5-316819",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-21787135215316819-toyota-rav4-2-5-hybrid-gaz-full-navigatsiya-kozhen-salon-full",
+          "price": 26999,
+          "mileage": 252000,
+          "stockPrice": 26999,
+          "stockMileage": 252000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "toyota-auris-2-0d4d-982478",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11786699392982478-toyota-auris-2-0d4d",
+          "price": 4399,
+          "mileage": 229000,
+          "stockPrice": 4399,
+          "stockMileage": 229000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "skoda-scala-1-6tdi-251501",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11787054081251501-skoda-scala-1-6tdi",
+          "price": 11999,
+          "mileage": 180000,
+          "stockPrice": 11999,
+          "stockMileage": 180000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "renault-zoe-52kw-265620",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11787771672265620-renault-zoe-52kw-78000km-sobstvena-bateriya",
+          "price": 14299,
+          "mileage": 78000,
+          "stockPrice": 14299,
+          "stockMileage": 78000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "renault-clio-1-2-319103",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11777013326319103-renault-clio-1-2-benzin",
+          "price": 5199,
+          "mileage": 150000,
+          "stockPrice": 5199,
+          "stockMileage": 150000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "peugeot-508-2-0hdi-880460",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11764232323880460-peugeot-508-2-0hdi",
+          "price": 4299,
+          "mileage": 232000,
+          "stockPrice": 4299,
+          "stockMileage": 232000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "opel-astra-1-6-654053",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11786966551654053-opel-astra-1-6",
+          "price": 6599,
+          "mileage": 193000,
+          "stockPrice": 6599,
+          "stockMileage": 193000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        },
+        {
+          "slug": "opel-agila-1-3i-563390",
+          "sourceUrl": "https://legendauto1.mobile.bg/obiava-11725562013563390-opel-agila-1-3i-vnos-ot-italiya",
+          "price": 2500,
+          "mileage": 120000,
+          "stockPrice": 2500,
+          "stockMileage": 120000,
+          "finite": true,
+          "priceMatchesSnapshot": true,
+          "mileageMatchesSnapshot": true
+        }
+      ],
+      "budgetCounts": [
+        {
+          "value": "under-10000",
+          "actual": 9,
+          "expected": 9
+        },
+        {
+          "value": "under-20000",
+          "actual": 12,
+          "expected": 12
+        },
+        {
+          "value": "under-30000",
+          "actual": 13,
+          "expected": 13
+        },
+        {
+          "value": "under-50000",
+          "actual": 14,
+          "expected": 14
+        },
+        {
+          "value": "over-50000",
+          "actual": 0,
+          "expected": 0
+        }
+      ],
+      "mileageCounts": [
+        {
+          "value": "under-50000",
+          "actual": 1,
+          "expected": 1
+        },
+        {
+          "value": "under-100000",
+          "actual": 2,
+          "expected": 2
+        },
+        {
+          "value": "under-150000",
+          "actual": 5,
+          "expected": 5
+        },
+        {
+          "value": "under-200000",
+          "actual": 9,
+          "expected": 9
+        }
+      ],
+      "priceComparison": "Runtime EUR values compared to source snapshot within 0.51 EUR to allow retained whole-EUR snapshot rounding; exact values recorded.",
+      "pass": true
+    }
+  }
+]

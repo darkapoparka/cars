@@ -1,0 +1,272 @@
+[
+  {
+    "path": "src/lib/components/about/DesktopAboutPage.svelte",
+    "kind": "modified",
+    "sha256": "4390429949c0ab072de1f34a1db8fffa2324e0923b5021c221224bf12b7946aa"
+  },
+  {
+    "path": "src/lib/components/about/DesktopDealerProfilePage.svelte",
+    "kind": "modified",
+    "sha256": "8034e7f746e8c8ce1c7862a4b37d2da00486c751d59eeb67df7d2a9ecd90df83"
+  },
+  {
+    "path": "src/lib/components/about/MobileAboutPage.svelte",
+    "kind": "modified",
+    "sha256": "ead37df9f304f0fd3ae02a0c1b0e9e5508ae22176a534de5aa3cbaafc4379c0d"
+  },
+  {
+    "path": "src/lib/components/blog/BlogArticlePage.svelte",
+    "kind": "modified",
+    "sha256": "9cc6635f8eb271fc3ab4fdf66a54a0a53fe6b99b3135548e525ed8651b823d0c"
+  },
+  {
+    "path": "src/lib/components/blog/BlogIndexPage.svelte",
+    "kind": "modified",
+    "sha256": "cbf8441ec451f4ba8fa3d29d3faa2579eaa208f2adb5cd453b0bf03d26539f85"
+  },
+  {
+    "path": "src/lib/components/calculator/CalculatorContent.svelte",
+    "kind": "modified",
+    "sha256": "d183e65db0f24873d4b4cb199f596779b3e19f53a9b325c49794cacde8ea73c6"
+  },
+  {
+    "path": "src/lib/components/chat/ChatLauncher.svelte",
+    "kind": "modified",
+    "sha256": "9868b67eed417475e40a33e6a9a21733f752bed57e88a48f291c330d09c85682"
+  },
+  {
+    "path": "src/lib/components/chat/ChatThread.svelte",
+    "kind": "modified",
+    "sha256": "3157cd52f63b94f2adbdabd505a825e5c9cb24a91cdae184f9b092607f5f4dcb"
+  },
+  {
+    "path": "src/lib/components/chat/ChatWidget.svelte",
+    "kind": "modified",
+    "sha256": "9a5e79dc30c335fc9424c20061cba72db3ed9b1eedf152c66f7c9bef49b15dcb"
+  },
+  {
+    "path": "src/lib/components/compare/CompareContent.svelte",
+    "kind": "modified",
+    "sha256": "a591b67c048a6b6c76e4e8377bcf4c08797caf6a525d0c15f61ca538cf03e9d7"
+  },
+  {
+    "path": "src/lib/components/contact/DesktopContactPage.svelte",
+    "kind": "modified",
+    "sha256": "6156fa0cd3e54c1568e8d6679ab1fa540e45f0cb6c0d2a0447941f720ec74cca"
+  },
+  {
+    "path": "src/lib/components/contact/MobileContactPage.svelte",
+    "kind": "modified",
+    "sha256": "45972f808c2ef3ca80ec03bbd020b5378e29bc6465afbd3b4d5e637b12870dca"
+  },
+  {
+    "path": "src/lib/components/detail/desktop/desktop-detail-reviews-data.ts",
+    "kind": "modified",
+    "sha256": "cd384a99004ed85018b2465caca84fecbf74dd92546755c6a946fce981d9e860"
+  },
+  {
+    "path": "src/lib/components/detail/desktop/DesktopDetailFinanceCalculator.svelte",
+    "kind": "modified",
+    "sha256": "650719ad867ec69814efcd2b884157b2b0656427248cdbfd6f9f8b5276100ac5"
+  },
+  {
+    "path": "src/lib/components/detail/desktop/DesktopDetailGallery.svelte",
+    "kind": "modified",
+    "sha256": "f804f4ac564e44e486a01f6952f4f14be2fb42c863000583ed6bddec5bbf8907"
+  },
+  {
+    "path": "src/lib/components/detail/desktop/DesktopDetailReviews.svelte",
+    "kind": "modified",
+    "sha256": "085c6fd088dc0460269df2b802e806fbd254a6b6757e98c39ad833ee81796de6"
+  },
+  {
+    "path": "src/lib/components/detail/desktop/DetailPageShell.svelte",
+    "kind": "modified",
+    "sha256": "5c64978bc530915582135095f96a851521458085f594b22845f5ab67a0c99df2"
+  },
+  {
+    "path": "src/lib/components/faq/FaqContent.svelte",
+    "kind": "modified",
+    "sha256": "8cb24c186b417b7cab05468dcd634e1567f58db01576ead2fec6c7da4c93f830"
+  },
+  {
+    "path": "src/lib/components/favorites/desktop/DesktopFavoritesPage.svelte",
+    "kind": "modified",
+    "sha256": "05f6397c2400de0d658254af2f39096000024f42486fa2b63f25212db415d96c"
+  },
+  {
+    "path": "src/lib/components/financing/DesktopFinancingPage.svelte",
+    "kind": "modified",
+    "sha256": "d769383e56e3a4ba153ddd26b7628d0a14e8e80da7e1d57cf8350ace19959fd2"
+  },
+  {
+    "path": "src/lib/components/financing/MobileFinancingPage.svelte",
+    "kind": "modified",
+    "sha256": "b426aba839f92c5e9fc18ceeb9696e4a2f41c1e4b783414af417f7a1c0627ad9"
+  },
+  {
+    "path": "src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+    "kind": "modified",
+    "sha256": "47aed4a141482de3195da9c21164d8c6627c9b5aac6a57f6754e82c462bdc341"
+  },
+  {
+    "path": "src/lib/components/home/mobile/MobileHome.svelte",
+    "kind": "modified",
+    "sha256": "1bd3a23fb8e9ec98d1d3da74bd1745a49a1c2eb103ae7157c544a4744722d0f1"
+  },
+  {
+    "path": "src/lib/components/inventory/desktop/desktop-inventory-context.svelte.ts",
+    "kind": "modified",
+    "sha256": "c21d1c1ee9b8c6f5b3f34c8d3ef5eaf118ee2365125586055664f2e8d70bfbb8"
+  },
+  {
+    "path": "src/lib/components/inventory/mobile/MobileFilterSheet.svelte",
+    "kind": "modified",
+    "sha256": "805bbeb5950a05fbd651f10c94dff923815e139385220f12d3651eddc10074b8"
+  },
+  {
+    "path": "src/lib/components/inventory/mobile/MobileInventoryPage.svelte",
+    "kind": "modified",
+    "sha256": "27bf4ae6f22237b07ac0d7f728eecce5d72e9fab10cd676a1b3de1f235f90a14"
+  },
+  {
+    "path": "src/lib/components/inventory/mobile/MobileInventoryQuickFilters.svelte",
+    "kind": "modified",
+    "sha256": "f00c5606eed057ce4f8b18150c79319e751a4e37d60829bbedf981e6970922d6"
+  },
+  {
+    "path": "src/lib/components/layout/daynight-footer-data.ts",
+    "kind": "modified",
+    "sha256": "ff1dfd46db100138813d2530dcf222ee4b45c25ea4e545eb632d874f0cf18d0e"
+  },
+  {
+    "path": "src/lib/components/layout/DayNightFooter.svelte",
+    "kind": "modified",
+    "sha256": "15f059b739023d3dbfda4438df91e3d7385f8f4561c3ab62a1b79a226ed99c05"
+  },
+  {
+    "path": "src/lib/components/layout/DesktopDealerFooter.svelte",
+    "kind": "modified",
+    "sha256": "42aa1db39520060b04869f93bc354265bc537b55f05893d2546edffadaec2102"
+  },
+  {
+    "path": "src/lib/components/layout/SiteChromePrimaryRow.svelte",
+    "kind": "modified",
+    "sha256": "30e4bb91f7b5d9737f8f6e0f07d485dd5a0670ce4a6e412d62e065f92ab7e509"
+  },
+  {
+    "path": "src/lib/components/reviews/ReviewsContent.svelte",
+    "kind": "modified",
+    "sha256": "9dc5dc42e794e79bd1e8b22b614004c49097cc21827ccea0b1ecc9705e05755b"
+  },
+  {
+    "path": "src/lib/components/sell/MobileSellYourCarPage.svelte",
+    "kind": "modified",
+    "sha256": "45f946f2ea3023ae7e10093c66f30d21c409ee9798576f254dacb495809130fd"
+  },
+  {
+    "path": "src/lib/components/shared/mobile/MobileFullSheet.svelte",
+    "kind": "modified",
+    "sha256": "5ed619fa89485bd1b7460920c2bde139cc38d4ab6eb09c84e79a9aabbd1ac761"
+  },
+  {
+    "path": "src/lib/components/team/DesktopTeamMemberPage.svelte",
+    "kind": "modified",
+    "sha256": "5baec62edb524b075b61593a2984f3cb6a42cdca629d8660e410fc41ec7a0acd"
+  },
+  {
+    "path": "src/lib/components/team/DesktopTeamPage.svelte",
+    "kind": "modified",
+    "sha256": "9c929e3d29ce60554bc83f43b249eee40271816409635a6bba56aa7c13790cb6"
+  },
+  {
+    "path": "src/lib/components/terms/TermsContent.svelte",
+    "kind": "modified",
+    "sha256": "f374216d1ae7c22e2dcee06957779edb694a9fb2cb473946a7857d171cd83f21"
+  },
+  {
+    "path": "src/lib/data/daynight-blog.ts",
+    "kind": "modified",
+    "sha256": "07c8b114df3410c14e5fd17a115a1cadf05931d546535561748b4429b99fb21b"
+  },
+  {
+    "path": "src/lib/data/daynight-reviews.ts",
+    "kind": "modified",
+    "sha256": "5042359e6974da59814d2c5735e1fb7a244f1f5b0af0ed5c466caab4389569b3"
+  },
+  {
+    "path": "src/lib/data/daynight-site.ts",
+    "kind": "modified",
+    "sha256": "9dde84db3e932c7075cf4d70b50b11323b081145d56752bdad3c2b266f04a151"
+  },
+  {
+    "path": "src/lib/data/daynight-team.ts",
+    "kind": "modified",
+    "sha256": "cb81bb9d4064c8c85bef0d1c17dcde49ebf0384b1fe3019135895a4dd9ef0069"
+  },
+  {
+    "path": "src/lib/data/daynight-vehicles.ts",
+    "kind": "modified",
+    "sha256": "d84bc41ad30ce6a204ddb61060da28a0235480377b7c337c70b226ac612d485d"
+  },
+  {
+    "path": "src/lib/state/inventory-filters.svelte.ts",
+    "kind": "modified",
+    "sha256": "7212d7783fa200922ce7638aa8c1a3c822b9c0cf21004d927b2e6b1ac91ba2b9"
+  },
+  {
+    "path": "src/lib/utils/contact-intent.test.ts",
+    "kind": "added",
+    "sha256": "91d3e4a5e1e314871594484994acb5777ca812e4cdf378ef6abfda45d3b41882"
+  },
+  {
+    "path": "src/lib/utils/contact-intent.ts",
+    "kind": "added",
+    "sha256": "0396187a7e5d814ba3150c5f8d55c9d14c4fed24fd8d554ed073809a1a2d3def"
+  },
+  {
+    "path": "src/lib/utils/finance-estimate.test.ts",
+    "kind": "added",
+    "sha256": "99ede6065b77b8582e10d3967adba818e1b231af2026eea75850ff4a6673ab34"
+  },
+  {
+    "path": "src/lib/utils/finance-estimate.ts",
+    "kind": "added",
+    "sha256": "74e01bfbecaa86665331d3a033340aa1f403f22a44133a94f7e7143d50748f9b"
+  },
+  {
+    "path": "src/lib/utils/inventory-url.test.ts",
+    "kind": "added",
+    "sha256": "c096c62a220fa0cd6ffffceea6f924093a7df713b4a344223bd00573a91cdfaf"
+  },
+  {
+    "path": "src/lib/utils/inventory-url.ts",
+    "kind": "added",
+    "sha256": "b4464c59fdb7623e0057bc730455ab23f9e0588705540ad6859ae0111757214a"
+  },
+  {
+    "path": "src/lib/utils/modal-focus.ts",
+    "kind": "added",
+    "sha256": "846b7d9d7319a647c1efde6721b1873e4844c387d3aa4581b24a95ca888f702e"
+  },
+  {
+    "path": "src/routes/+layout.svelte",
+    "kind": "modified",
+    "sha256": "b7b7d95127fc0685d237d97cee1c4aecc5ff4912297f0edda709a0f5191b0c28"
+  },
+  {
+    "path": "src/routes/calculator/+page.server.ts",
+    "kind": "modified",
+    "sha256": "a93a94f7d3f4311f00363112818bd2a5c6fbf90395024f1fe8f67d146b894dd8"
+  },
+  {
+    "path": "src/routes/contact/+page.server.ts",
+    "kind": "modified",
+    "sha256": "e693aa1d4b596f57eefc2895ee8e3e26b4f876af840a3512ecc88c857cb9fd3b"
+  },
+  {
+    "path": "src/routes/contact/+page.svelte",
+    "kind": "modified",
+    "sha256": "124bb4dc987c33ecabdeb6427ae1dd576acdca498aee957ba0c9ae593d3fad6a"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "processes": [
+    {
+      "PID": 22044,
+      "Cwd": "J:\\cars\\clients\\dayandnight\\rencar\\",
+      "CommandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6601 --strictPort"
+    },
+    {
+      "PID": 76436,
+      "Cwd": "J:\\cars\\templates\\rencar\\",
+      "CommandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6430 --strictPort"
+    }
+  ],
+  "checkedAt": "2026-09-06T18:52:24.2243928Z",
+  "listeners": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 6601,
+      "OwningProcess": 22044
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 6430,
+      "OwningProcess": 76436
+    }
+  ]
+}

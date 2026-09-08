@@ -1,0 +1,32 @@
+[
+  {
+    "PID": 21500,
+    "Cwd": "J:\\cars\\templates\\carwow\\",
+    "CommandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6463 --strictPort"
+  },
+  {
+    "PID": 28564,
+    "Cwd": "J:\\cars\\clients\\asko-96\\carwow\\",
+    "CommandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6613 --strictPort"
+  },
+  {
+    "PID": 40596,
+    "Cwd": "J:\\cars\\templates\\auto-best\\",
+    "CommandLine": "\"C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6461 --strictPort"
+  },
+  {
+    "PID": 58808,
+    "Cwd": "J:\\cars\\templates\\modern\\apps\\web\\",
+    "CommandLine": "C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe J:\\cars\\templates\\modern\\node_modules\\.pnpm\\next@16.2.11_@babel+core@7._52572e0ac85e574b530e1e8e53eabb80\\node_modules\\next\\dist\\server\\lib\\start-server.js"
+  },
+  {
+    "PID": 77780,
+    "Cwd": "J:\\cars\\clients\\asko-96\\modern\\apps\\web\\",
+    "CommandLine": "C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe J:\\cars\\clients\\asko-96\\modern\\node_modules\\.pnpm\\next@16.2.11_@babel+core@7._52572e0ac85e574b530e1e8e53eabb80\\node_modules\\next\\dist\\server\\lib\\start-server.js"
+  },
+  {
+    "PID": 77816,
+    "Cwd": "J:\\cars\\clients\\asko-96\\auto-best\\",
+    "CommandLine": "\"C:\\Users\\radev\\AppData\\Local\\nvm\\v22.23.2\\node.exe\" node_modules/vite/bin/vite.js --host 127.0.0.1 --port 6611 --strictPort"
+  }
+]

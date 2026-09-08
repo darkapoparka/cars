@@ -1,0 +1,8 @@
+
+> getrich-day-night-auto-group-daynight@0.0.1 check
+> svelte-kit sync && node ./node_modules/svelte-check/bin/svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: j:\cars\templates\carwow
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';const r='J:/cars/clients/autolife';
+let p=r+'/auto-best/src/app.html',s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replace('/favicon.ico','/assets/autolife/wordmark.svg'));await fs.unlink(r+'/auto-best/static/favicon.ico');p=r+'/auto-best/scripts/check-assets.mjs';s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replace('guardedMediaCount = 151','guardedMediaCount = 150'));
+p=r+'/carwow/src/app.html';s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replaceAll('/brand/daynight-favicon.png','/assets/autolife/wordmark.svg').replaceAll('image/png','image/svg+xml').replace('#d71920','#a46d24'));
+await fs.writeFile(r+'/carwow/static/site.webmanifest',JSON.stringify({name:'Аутолайф',short_name:'AUTOLIFE',description:'Автомобили във Варна',lang:'bg',start_url:'/',scope:'/',display:'standalone',background_color:'#ffffff',theme_color:'#a46d24',icons:[{src:'/assets/autolife/wordmark.svg',sizes:'any',type:'image/svg+xml'}]},null,2));
+p=r+'/carwow/src/lib/components/contact/DesktopContactPage.svelte';s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replace('Делнични дни: 9:00 - 18:00 · Неделя: по уговорка','Работно време: уточнете предварително на 0895 766 736'));
+p=r+'/modern/apps/web/app/[locale]/layout.tsx';s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replace('type: "image/png", url: leadSite.logoPath','type: "image/svg+xml", url: leadSite.logoPath'));
+p=r+'/modern/apps/web/lib/public-metadata.ts';s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replace('/-/opengraph-image.png','/assets/autolife/cover.jpg'));
+for(const f of ['apple-icon.png','icon.png','opengraph-image.png']){await fs.unlink(r+'/modern/apps/web/app/-/'+f);}await fs.copyFile(r+'/assets/wordmark.svg',r+'/modern/apps/web/app/-/icon.svg');
+p=r+'/RESTART.md';s=await fs.readFile(p,'utf8');await fs.writeFile(p,s.replace('carwow -Port 6643 -NodePath C:/Users/radev/AppData/Local/nvm/v22.23.2/node.exe','carwow -Port 6643 -NodePath C:/nvm4w/nodejs/node.exe'));
+console.log('Favicons, manifest, social metadata and remaining hours corrected');

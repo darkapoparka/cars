@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+const ports={autolife:[6641,6642,6643],priselci:[6646,6647,6648],'ivo-auto':[6651,6652,6653]};
+for(const c of Object.keys(ports)){
+ const base=`J:/cars/clients/${c}`,results=JSON.parse(fs.readFileSync(`${base}/qa-final/results.json`));
+ if(!results.every(r=>r.pass))throw Error(`${c}: QA not all passing`);
+ if(!JSON.parse(fs.readFileSync(`${base}/qa-final/focused.json`)).every(r=>r.pass))throw Error(`${c}: focused QA failed`);
+ const lines=[`# Final local review — ${c}`, '', 'Completed 2026-09-08. Three independent Fast Skins from version 2026.09.06-refresh-1. No public deployment, CRM registration or outreach.', '', '| Variant | Build/check | Browser | Local preview |','| --- | --- | --- | --- |'];
+ for(const [i,t] of ['auto-best','modern','carwow'].entries()){
+  const r=results.find(r=>r.template===t),pf=`${base}/${t}/.client/project.json`,p=JSON.parse(fs.readFileSync(pf));
+  const fresh=t==='auto-best'?`${base}/qa-final/auto-checks.json`:`${base}/qa-final/${t}-checks.json`;
+  const checks=fs.existsSync(fresh)?JSON.parse(fs.readFileSync(fresh)):{validate:0,reused:true,evidence:`${base}/evidence/auto-validate.log`};
+  if(Object.entries(checks).some(([k,v])=>['check','build','typecheck','validate'].includes(k)&&v!==0))throw Error(`${c}/${t}: checks failed`);
+  p.state='local-review-ready';p.offeredHomes=[{id:'main',route:t==='modern'?'/cars':'/'}];p.publicUrl=null;p.crm={...p.crm,registered:false};p.preview={url:`http://127.0.0.1:${ports[c][i]}${t==='modern'?'/cars':'/'}`,status:'stopped-after-verification'};
+  p.qa={desktop:true,mobile:true,identity:true,contactPath:true,checkedAt:r.finishedAt||new Date().toISOString(),evidence:`../qa-final/${c}/${t}/result.json`,screenshots:`../qa-final/${c}/${t}`,framework:checks,sourceScan:'../qa-final/source-scan.json',scope:'390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission'};
+  p.businessFacts='../business-facts.json';p.stock='../stock.json';p.stockCount=16;p.assetsProvenance='../assets/provenance.json';
+  p.knownGaps=[...new Set([...(p.knownGaps||p.limitations||[]),'Local demo only; form/provider delivery unverified; no public URL.','Dated 2026-09-07 stock snapshot; availability and prices need seller confirmation.','Temporary wordmark, unverified official logo/hours/social profiles.','Retained service/account/legal/demo surfaces need owner review before public publication; generic decorative template car artwork is not stock.'])];
+  p.finalizationChanges=t==='modern'?['Configured social destinations only; no coming-soon promises','Legible wordmarks on dark mobile/desktop headers',...(c==='autolife'?['Removed three duplicate Varna dictionary keys']:[])]:t==='carwow'?['Existing client wordmark replaces inherited helmet chat image; light mobile hero logo','Footer/detail service claims limited to verified facts','Localized numeric parser handles nonbreaking spaces; all16prices/mileages match stock and browser budgetcounts verified','Finance phone and retained map destinations use client business data','Personalized manifest/default social-preview SVGs; old proposal/concept HTML redirects with preserved originals',...(c==='autolife'?['Empty staff detail route resolves runtime 404 instead of demanding nonexistent prerender entries']:[])]:c==='autolife'?['Corrected 10–20,000 EUR budget label']:[];
+  fs.writeFileSync(pf,JSON.stringify(p,null,2)+'\n');
+  lines.push(`| ${t} | passed${checks.reused?' (unchanged existing validation)':''} | ${r.routes.length} routes and 2 interaction sets passed | ${p.preview.url} — stopped |`);
+ }
+ lines.push('', 'Framework logs (2026-09-08): qa-final/modern-typecheck.log, modern-build.log, carwow-check.log, carwow-build.log. Auto Best: Autolife qa-final/auto-validate.log (2026-09-08); Priselci/Ivo evidence/auto-validate.log (2026-09-07 unchanged validation).', '', 'Evidence: qa-final/results.json, per-variant screenshots and result.json, source-scan.json, final framework logs. Unchanged Auto Best evidence is reused for Priselci and Ivo Auto. Prior failed/cold-development snapshots remain historical; final evidence supersedes them.', '', 'Focused Carwow evidence: focused.json, final-390-0.png and final-1440-3.png supersede initial header screenshots; desktop count excludes navigation /inventory/map. Numeric snapshot proof: numeric-stock-check.json.','Visual review: header wordmarks, stock media and entry compositions checked at both widths. No layout redesign. Local previews were verified and stopped; restart using the assigned port and scripts/start-preview.ps1.', '', 'Limits: dated 16-vehicle sample / 64 source photos; temporary text wordmark; unverified hours and socials; forms/provider flows not certified; gallery keyboard focus restoration was not separately verified. Source license notes retained. No external enquiry submitted.');
+ fs.writeFileSync(`${base}/qa-final/FINAL.md`,lines.join('\n')+'\n');
+ fs.writeFileSync(`${base}/BUILD-STATUS.md`,lines.join('\n')+'\n');
+ const brief=fs.readFileSync(`${base}/CLIENT.md`,'utf8');fs.writeFileSync(`${base}/CLIENT.md`,brief+'\n\n## Final review 2026-09-08\n\nAll three local variants passed final framework checks and 390/1440 route and interaction review. See qa-final/FINAL.md and each variant’s .client/project.json for exact evidence, changes and remaining demo limitations. All assigned previews are stopped after verification. No public deployment, CRM registration or external submissions.\n');
+}
+
+

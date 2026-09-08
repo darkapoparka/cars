@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-06T18:52:20.372Z",
+  "pages": 45,
+  "matchingElements": 28178,
+  "matchingClasses": 17950,
+  "matchingIds": 343,
+  "matchingControls": 1178,
+  "matchingForms": 74,
+  "sourceCssFilesUnchanged": 9,
+  "sourceWidgetFilesUnchanged": 13,
+  "sourceEntryFilesUnchanged": [
+    "src/App.svelte",
+    "src/main.js",
+    "src/template.js"
+  ],
+  "allLoggedSubstitutionsReplay": true,
+  "autofixer": "Master and client App plus five homes: no issues/suggestions",
+  "browserComparisonPairs": 10
+}

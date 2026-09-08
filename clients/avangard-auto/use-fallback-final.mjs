@@ -1,0 +1,1 @@
+import fs from 'node:fs';for(const p of ['J:/cars/clients/avangard-auto/supplement-final.mjs','J:/cars/clients/avangard-auto/logo-capture-final.mjs']){let s=fs.readFileSync(p,'utf8');s=s.replaceAll(/await p\.screenshot\(\{timeout:12000,animations:'disabled',path:(`[^`]+`)\}\)/g,'await capture(p,$1)');fs.writeFileSync(p,s);}

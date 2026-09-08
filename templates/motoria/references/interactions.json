@@ -1,0 +1,54 @@
+{
+  "results": [
+    {
+      "test": "Inventory Make filter",
+      "count": 5,
+      "result": "pass"
+    },
+    {
+      "test": "Inventory empty state",
+      "result": "pass"
+    },
+    {
+      "test": "Inventory pagination",
+      "result": "pass"
+    },
+    {
+      "test": "loan-calculators recalculates",
+      "result": "pass"
+    },
+    {
+      "test": "leasing-calculators recalculates",
+      "result": "pass"
+    },
+    {
+      "test": "import-car-calculator recalculates",
+      "result": "pass"
+    },
+    {
+      "test": "insurance-calculator recalculates",
+      "result": "pass"
+    },
+    {
+      "test": "Pricing defaults to style 7",
+      "result": "pass"
+    },
+    {
+      "test": "Homepage popular vehicles tab",
+      "result": "pass"
+    },
+    {
+      "test": "BMW gallery thumbnail changes main image",
+      "result": "pass"
+    },
+    {
+      "test": "Inventory mobile navigation opens",
+      "result": "pass"
+    },
+    {
+      "test": "Contact form gives honest local feedback",
+      "result": "pass"
+    }
+  ],
+  "errors": []
+}

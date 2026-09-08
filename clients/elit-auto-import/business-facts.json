@@ -1,0 +1,56 @@
+{
+  "name": "ELIT AUTO IMPORT EXPORT",
+  "shortName": "ELIT AUTO",
+  "accent": "#30343b",
+  "accentDark": "#17191d",
+  "phoneDisplay": "0887 777 887",
+  "phoneHref": "tel:+359887777887",
+  "address": "ул. „Прилеп“ 74А, м-т Пчелина",
+  "city": "Варна",
+  "country": "България",
+  "email": "",
+  "hours": null,
+  "hoursNote": "Работното време се уточнява по телефона.",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
+  "stockUrl": "https://elitautoimport.mobile.bg/",
+  "services": [
+    "Продажба на автомобили",
+    "Внос от Европа, САЩ и Япония",
+    "Доставка в страната със собствен транспорт",
+    "Проверка в сервиз по избор на клиента"
+  ],
+  "languages": [
+    "Български",
+    "Руски"
+  ],
+  "socialLinks": {},
+  "logo": "/assets/elit/logo.png",
+  "showroom": "/assets/elit/cover.png",
+  "stockCount": 15,
+  "capturedAt": "2026-09-07",
+  "stockNote": "Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача.",
+  "sources": [
+    "https://elitautoimport.mobile.bg/",
+    "https://elitautoimport.mobile.bg/about",
+    "https://elitautoimport.mobile.bg/contacts"
+  ],
+  "excluded": [
+    {
+      "title": "Mercedes-Benz E 220 КОМБИ НА ЧАСТИ",
+      "url": "https://elitautoimport.mobile.bg/obiava-11726047535185293-mercedes-benz-e-220-kombi-na-chasti",
+      "reason": "Parts-only"
+    },
+    {
+      "title": "Subaru Forester 2.5",
+      "url": "https://elitautoimport.mobile.bg/obiava-11731496419950309-subaru-forester-2-5",
+      "reason": "Description is Скоростна кутия Cvt; gearbox-only advert, not whole car."
+    }
+  ],
+  "limitations": [
+    "No matching official social profile found in direct profile links or name/phone web searches.",
+    "No published email or opening hours.",
+    "Original monochrome raster logo has dark background; preserved without inventing a new logo.",
+    "Advertised mileage unit conflicts retained in descriptions; no assertion of verified mileage."
+  ]
+}

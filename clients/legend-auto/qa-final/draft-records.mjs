@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';
+const base='J:/cars/clients/';
+for(const slug of ['automarket-varna','elit-auto-import','legend-auto']){
+ const r=base+slug, facts=JSON.parse(await fs.readFile(r+'/business-facts.json'));
+ const stock=JSON.parse(await fs.readFile(r+'/stock.json'));
+ const note=`# ${facts.name} — Fast Skin final verification\n\nThree independent copies of masters 2026.09.06-refresh-1. Entry: Auto Best /, Modern /cars, Carwow /. Production and browser verification is being finalized; see results.json and build-status.txt for the actual current outcomes. No CRM, deployment, commit or outreach was performed.\n\nFinal bounded corrections: Modern hides unconfigured social promises; Carwow uses real client logo in existing chat button, real configured financing phone and detail map. LEGEND Modern synthetic directory was replaced with its source-backed dealer and sampled vehicles.\n\nUnchanged Auto Best browser evidence is reused from J:/cars/audits/2026-09-08/verify/${slug}/auto-best/result.json and screenshots. Current Modern and Carwow evidence will be stored under this qa-final directory.\n\nCaptured stock remains a dated sample (${stock.length} vehicles), not live provider inventory. Forms, chats and finance UI remain demonstrations; no message delivery or finance approval was tested. Generic template vehicle cutouts remain decoration. Existing low-resolution logos are retained without invented replacement branding.\n\n${slug==='legend-auto'?'Assigned ports 6666–6668 require explicit Chrome allowlisting in the QA runner and are not normal-browser review URLs. Safe replacement ports require explicit allocation; no port was silently changed.\n':''}`;
+ await fs.writeFile(r+'/qa-final/FINAL.md',note);
+}

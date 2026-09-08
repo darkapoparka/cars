@@ -1,0 +1,168 @@
+[
+  {
+    "name": "finance-390",
+    "before": [
+      "68 804 €",
+      "1147 €"
+    ],
+    "after": [
+      "58 804 €",
+      "4900 €"
+    ],
+    "clamped": "68804",
+    "url": "http://127.0.0.1:6461/listing-detail-v1/1",
+    "vehicleVisible": false,
+    "body": "Собствен лизинг\nКонтакти и адрес\n\nПолучете актуални условия според избрания автомобил и конкретната сделка.\n\nОбсъдете с екипа\nАвтомобилът, който сте избрали\nПървоначална вноска и срок\nАктуални условия за конкретната сделка\nОбадете се ·\n087 982 4625\nСоциални мрежи\nКонтакти\nАдрес\nул. „Атанас Манчев“ 18, Студентски град, София\nПосещения\nПосещения с предварителна уговорка\nТелефон\n087 982 4625\nПосетете ни в София\n\nул. „Атанас Манчев“ 18, Студентски град, София · Посещения с предварителна уговорка\n\nОтворете в Google Maps"
+  },
+  {
+    "name": "detail-return-390",
+    "count": 2,
+    "detail": "http://127.0.0.1:6461/listing-grid?make=BMW&sort=price-asc",
+    "returned": "http://127.0.0.1:6461/listing-grid",
+    "returnedCount": 8
+  },
+  {
+    "name": "gallery-390",
+    "html": "<div class=\"dn-detail-gallery__count\" aria-hidden=\"true\"><span></span><span></span><span></span></div>",
+    "cursor": "auto",
+    "images": 1,
+    "buttons": 0
+  },
+  {
+    "name": "blog-search-390",
+    "url": "http://127.0.0.1:6461/blog",
+    "filteredUrl": "http://127.0.0.1:6461/blog?q=%D0%B2%D0%BD%D0%BE%D1%81&category=%D0%92%D0%BD%D0%BE%D1%81",
+    "before": "Внос\nВнос и документи\nОбсъдете търсене, транспорт и подготовката за регистрация в България.\nВнос\nРегистрация след внос\nЕкипът ориентира за следващите стъпки след пристигане на автомобила.",
+    "after": "Внос\nВнос и документи\nОбсъдете търсене, транспорт и подготовката за регистрация в България.\nВнос\nРегистрация след внос\nЕкипът ориентира за следващите стъпки след пристигане на автомобила."
+  },
+  {
+    "name": "video-390",
+    "frameCount": 1,
+    "src": "https://www.youtube-nocookie.com/embed/6S3dLIgeAT8?autoplay=1&rel=0&playsinline=1",
+    "frameUrls": [
+      "http://127.0.0.1:6461/",
+      "https://www.youtube-nocookie.com/embed/6S3dLIgeAT8?autoplay=1&rel=0&playsinline=1"
+    ],
+    "buttons": [
+      ""
+    ],
+    "focusReturned": true
+  },
+  {
+    "name": "home-discovery-390",
+    "counts": [
+      {
+        "route": "/listing-grid?make=Kia",
+        "count": 0,
+        "empty": true
+      },
+      {
+        "route": "/listing-grid?body=Sedan",
+        "count": 0,
+        "empty": true
+      },
+      {
+        "route": "/listing-grid?condition=new",
+        "count": 0,
+        "empty": true
+      },
+      {
+        "route": "/listing-grid?make=Audi",
+        "count": 2,
+        "empty": false
+      }
+    ]
+  },
+  {
+    "name": "mobile-menu",
+    "initial": "Затворете менюто",
+    "tabContained": true,
+    "inert": false,
+    "restored": true
+  },
+  {
+    "name": "home-mode-keyboard",
+    "selected": "true"
+  },
+  {
+    "name": "finance-1440",
+    "before": [
+      "68 804 €",
+      "1147 €"
+    ],
+    "after": [
+      "58 804 €",
+      "4900 €"
+    ],
+    "clamped": "68804",
+    "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=Audi%20RS%206%20Avant",
+    "vehicleVisible": false,
+    "body": "Собствен лизинг\n\nУсловия според избрания автомобил\n\nКонтакти и следващи стъпки\nСвържете се с екипа\n\nПолучете актуални условия според избрания автомобил и конкретната сделка.\n\nОбадете се ·\n087 982 4625\nСоциални мрежи\nКонтакти\n\nИзберете адрес, посещение или директно обаждане.\n\nАдрес\nул. „Атанас Манчев“ 18, Студентски град, София\nПосещения\nПосещения с предварителна уговорка\nТелефон\n087 982 4625\nОбадете се\nМаршрут\nПосетете ни в София\n\nул. „Атанас Манчев“ 18, Студентски град, София · Посещения с предварителна уговорка\n\nОтворете в Google Maps"
+  },
+  {
+    "name": "detail-return-1440",
+    "count": 2,
+    "detail": "http://127.0.0.1:6461/listing-grid?make=BMW&sort=price-asc",
+    "returned": "http://127.0.0.1:6461/listing-grid",
+    "returnedCount": 8
+  },
+  {
+    "name": "gallery-1440",
+    "html": "<div class=\"dn-detail-gallery__count\" aria-hidden=\"true\"><span></span><span></span><span></span></div>",
+    "cursor": "auto",
+    "images": 1,
+    "buttons": 0
+  },
+  {
+    "name": "blog-search-1440",
+    "url": "http://127.0.0.1:6461/blog?q=%D0%B2%D0%BD%D0%BE%D1%81",
+    "filteredUrl": "http://127.0.0.1:6461/blog?q=%D0%B2%D0%BD%D0%BE%D1%81&category=%D0%92%D0%BD%D0%BE%D1%81",
+    "before": "Day & Night Auto Group\nВнос\nВнос и документи\nОбсъдете търсене, транспорт и подготовката за регистрация в България.\nDay & Night Auto Group\nВнос\nРегистрация след внос\nЕкипът ориентира за следващите стъпки след пристигане на автомобила.",
+    "after": "Day & Night Auto Group\nВнос\nВнос и документи\nОбсъдете търсене, транспорт и подготовката за регистрация в България.\nDay & Night Auto Group\nВнос\nРегистрация след внос\nЕкипът ориентира за следващите стъпки след пристигане на автомобила."
+  },
+  {
+    "name": "video-1440",
+    "frameCount": 1,
+    "src": "https://www.youtube-nocookie.com/embed/6S3dLIgeAT8?autoplay=1&rel=0&playsinline=1",
+    "frameUrls": [
+      "http://127.0.0.1:6461/",
+      "https://www.youtube-nocookie.com/embed/6S3dLIgeAT8?autoplay=1&rel=0&playsinline=1"
+    ],
+    "buttons": [
+      ""
+    ],
+    "focusReturned": true
+  },
+  {
+    "name": "home-discovery-1440",
+    "counts": [
+      {
+        "route": "/listing-grid?make=Kia",
+        "count": 0,
+        "empty": true
+      },
+      {
+        "route": "/listing-grid?body=Sedan",
+        "count": 0,
+        "empty": true
+      },
+      {
+        "route": "/listing-grid?condition=new",
+        "count": 0,
+        "empty": true
+      },
+      {
+        "route": "/listing-grid?make=Audi",
+        "count": 2,
+        "empty": false
+      }
+    ]
+  },
+  {
+    "name": "desktop-menu",
+    "expanded": "true",
+    "firstFocus": "SUVПростор и комфорт",
+    "closed": "false",
+    "focusReturned": true
+  }
+]

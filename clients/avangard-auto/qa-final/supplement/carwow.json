@@ -1,0 +1,50 @@
+[
+  {
+    "template": "carwow",
+    "width": 390,
+    "errors": [],
+    "home": {
+      "title": "AVANGARD AUTO Варна - проверени автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "status": 200,
+      "pass": true
+    },
+    "phones": [
+      "tel:+359877800921",
+      "tel:+359877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921"
+    ],
+    "phoneCorrect": true,
+    "pass": true
+  },
+  {
+    "template": "carwow",
+    "width": 1440,
+    "errors": [],
+    "home": {
+      "title": "AVANGARD AUTO Варна - проверени автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "status": 200,
+      "pass": true
+    },
+    "phones": [
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921",
+      "tel:0877800921"
+    ],
+    "phoneCorrect": true,
+    "pass": true
+  }
+]

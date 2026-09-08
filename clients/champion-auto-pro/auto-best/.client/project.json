@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "client": "champion-auto-pro",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:48:25.696Z",
+  "state": "personalized-local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "verifiedAt": "2026-09-08T03:48:52.634Z",
+    "widths": [
+      390,
+      1440
+    ],
+    "browserEvidence": "J:/cars/clients/champion-auto-pro/qa-final/FINAL.md",
+    "routeChecks": 10,
+    "interactionChecks": 2
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "previewState": "stopped",
+  "preview": {
+    "url": "http://127.0.0.1:6631/",
+    "state": "running-owner-review"
+  },
+  "businessFacts": "J:/cars/clients/champion-auto-pro/business-facts.json",
+  "stock": "J:/cars/clients/champion-auto-pro/stock.json",
+  "assetProvenance": "J:/cars/clients/champion-auto-pro/assets/provenance.json",
+  "limitations": [
+    "Local unpublished prospect demo; no agreement or CRM registration implied.",
+    "Dated representative stock, not a live feed; confirm availability and prices.",
+    "Forms/calculators/provider flows remain demos; no message delivery verified or external enquiry sent.",
+    "Generic decorative source artwork and explicitly labelled sample administration remain.",
+    "Original asset/license provenance retained; no new rights determination.",
+    "Modern exact gallery-trigger focus restoration was not certified; inherited accessibility behavior remains."
+  ]
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "file": "src\\lib\\components\\company\\AboutHero.svelte",
+    "issues": [
+      "Unexpected href link without resolve(). at line 42, column 19"
+    ],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": true
+  },
+  {
+    "file": "src\\lib\\components\\company\\AboutProcess.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\company\\ShowroomMap.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\home\\Hero.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\home\\MobileBudget.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\home\\SearchBox.svelte",
+    "issues": [],
+    "suggestions": [
+      "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.",
+      "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.",
+      "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible."
+    ],
+    "require_another_tool_call_after_fixing": true
+  },
+  {
+    "file": "src\\lib\\components\\home\\TrustActions.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\home\\VideoSection.svelte",
+    "issues": [
+      "Unexpected href link without resolve(). at line 30, column 67",
+      "Unexpected href link without resolve(). at line 78, column 45"
+    ],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": true
+  },
+  {
+    "file": "src\\lib\\components\\layout\\Footer.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\layout\\Header.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\lib\\components\\ui\\RouteHeroArtwork.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\routes\\+page.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\routes\\about-us\\+page.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "src\\routes\\listing-detail-v1\\[id]\\+page.svelte",
+    "issues": [
+      "Unexpected href link without resolve(). at line 138, column 27"
+    ],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": true
+  },
+  {
+    "file": "src\\routes\\listing-grid\\+page.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  }
+]

@@ -1,0 +1,2071 @@
+body {
+	background: var(--bc-bg);
+	background-color: var(--bc-bg);
+}
+
+body[class*='auxero-template-'] {
+	background: var(--bc-bg) !important;
+	background-color: var(--bc-bg) !important;
+}
+
+.modal {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 101 !important;
+	display: flex !important;
+	width: 100% !important;
+	height: 100% !important;
+	align-items: center !important;
+	justify-content: center !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	visibility: hidden !important;
+}
+
+.modal.active {
+	opacity: 1 !important;
+	pointer-events: auto !important;
+	visibility: visible !important;
+}
+
+/* Vaul drawers (inventory + PDP): keep library-owned drag/focus behavior, but
+   shorten the default 0.5s open/close motion to match the faster CSS sheets. */
+[data-vaul-drawer],
+[data-vaul-overlay] {
+	animation-duration: 0.28s !important;
+	transition-duration: 0.28s !important;
+}
+
+.daynight-no-image-zoom.card-box.active .card--img,
+.daynight-no-image-zoom.card-box:hover .card--img,
+.daynight-no-image-zoom.card-box-style-1.active .card--img,
+.daynight-no-image-zoom.card-box-style-1:hover .card--img,
+.daynight-no-image-zoom.card-box-style-8.active .card--img,
+.daynight-no-image-zoom.card-box-style-8:hover .card--img,
+.daynight-no-image-zoom.card-box-style-9.active .card--img,
+.daynight-no-image-zoom.card-box-style-9:hover .card--img {
+	transform: none !important;
+}
+
+html .card-box.active .content .card-box__title a,
+html .card-box:hover .content .card-box__title a,
+html .card-box.active .card-box__title a,
+html .card-box:hover .card-box__title a,
+html .card-box.active .content .bottom .category a,
+html .card-box:hover .content .bottom .category a,
+html .card-box.active .bottom .category a,
+html .card-box:hover .bottom .category a,
+html .card-box .card-box__title a:hover,
+html .card-box .bottom .category a:hover {
+	text-decoration: none !important;
+}
+
+.daynight-no-image-zoom.post-style-2:hover .post--img,
+.daynight-no-image-zoom.post-style-3:hover .post--img img,
+.daynight-no-image-zoom.post-style-6:hover .post--img {
+	transform: none !important;
+}
+
+.daynight-no-image-zoom.image-effect-scale:hover img {
+	transform: none !important;
+}
+
+.sale-agent-box.active,
+.sale-agent-box:hover {
+	box-shadow: none !important;
+	transform: none !important;
+}
+
+.sale-agent-box.active .card-top img,
+.sale-agent-box:hover .card-top img {
+	transform: none !important;
+}
+
+.sale-agent-box .sale-agent-social li a:hover,
+.sale-agent-box .card-bottom .contact li a:hover {
+	border-color: var(--bc-border) !important;
+	background-color: var(--bc-surface) !important;
+}
+
+.daynight-no-image-zoom.card-box-style-1.active,
+.daynight-no-image-zoom.card-box-style-1:hover,
+.daynight-no-image-zoom.card-box-style-9.active,
+.daynight-no-image-zoom.card-box-style-9:hover,
+.daynight-calm-hover.active,
+.daynight-calm-hover:hover {
+	box-shadow: none !important;
+	transform: none !important;
+}
+
+.daynight-no-image-zoom.card-box-style-1 .image {
+	aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 992px) {
+	.card-box[data-daynight-slug] {
+		border: 0 !important;
+		background: var(--bc-card-bg) !important;
+		color: var(--bc-card-ink);
+		transition: background-color 0.22s ease;
+	}
+
+	.card-box[data-daynight-slug]:hover,
+	.card-box[data-daynight-slug]:focus-within {
+		background: var(--bc-card-hover) !important;
+		box-shadow: none !important;
+	}
+
+	.card-box[data-daynight-slug] .image {
+		background: var(--bc-card-media);
+	}
+
+	.card-box[data-daynight-slug] .content {
+		background: var(--bc-card-bg) !important;
+	}
+
+	.card-box[data-daynight-slug]:hover .content,
+	.card-box[data-daynight-slug]:focus-within .content {
+		background: var(--bc-card-hover) !important;
+	}
+
+	.card-box[data-daynight-slug] .top .highlight {
+		border: 1px solid rgba(28, 28, 28, 0.1);
+		background: #ffffff !important;
+		box-shadow: 0 4px 12px rgba(28, 28, 28, 0.14);
+		color: var(--bc-card-ink) !important;
+	}
+
+	.card-box[data-daynight-slug] .bottom .category {
+		border-color: rgba(255, 255, 255, 0.18);
+		background-color: var(--bc-card-pill);
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+	}
+
+	.card-box[data-daynight-slug]:hover .bottom .category,
+	.card-box[data-daynight-slug]:focus-within .bottom .category {
+		border-color: rgba(255, 255, 255, 0.24);
+		background-color: var(--bc-card-pill-hover);
+	}
+
+	.card-box[data-daynight-slug] .bottom .category a,
+	.card-box[data-daynight-slug]:hover .bottom .category a,
+	.card-box[data-daynight-slug]:focus-within .bottom .category a {
+		color: #ffffff !important;
+		text-decoration: none !important;
+	}
+
+	.card-box[data-daynight-slug] .content .tag li {
+		border-color: var(--bc-card-chip-border) !important;
+		background: var(--bc-card-chip) !important;
+	}
+
+	.card-box[data-daynight-slug] .content .tag li span {
+		color: var(--bc-card-muted) !important;
+	}
+
+	.card-box[data-daynight-slug] .card-box__price,
+	.card-box[data-daynight-slug] .daynight-card-price__amount {
+		color: var(--bc-card-ink) !important;
+	}
+
+	.card-box[data-daynight-slug] .daynight-card-price__amount,
+	.card-box[data-daynight-slug]:hover .daynight-card-price__amount,
+	.card-box[data-daynight-slug]:focus-within .daynight-card-price__amount {
+		background: transparent !important;
+	}
+
+	.card-box[data-daynight-slug] .daynight-card-price__finance-link {
+		color: var(--bc-card-muted) !important;
+	}
+}
+
+/* Keep the homepage section hierarchy deliberate: headings carry the visual
+   weight while the CTA remains a supporting action, not a tiny bold badge. */
+@media (min-width: 768px) {
+	body.auxero-template-home-05-html .title-section h2 {
+		font-family: var(--bc-font-heading);
+		font-size: clamp(48px, 3.2vw, 54px);
+		font-weight: 700;
+		letter-spacing: -0.035em;
+		line-height: 1.06;
+	}
+}
+
+@media (max-width: 767px) {
+	body.auxero-template-home-05-html .title-section h2 {
+		font-family: var(--bc-font-heading);
+		font-size: 28px;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		line-height: 1.12;
+	}
+}
+
+/* The Auxero `capitalize` utility title-cases every word, which mis-cases
+   Bulgarian copy ("Основни данни" -> "Основни Данни", "Внос и покупка" ->
+   "Внос И Покупка"). The source strings are already correctly cased, so disable
+   capitalize for the Bulgarian locale only — English mode keeps title-casing.
+   The theme also bakes capitalize into FAQ accordion titles, blog card titles
+   and the 404 title, so those selectors need the same guard. */
+html[lang='bg'] .capitalize,
+html[lang='bg'] .flat-accordion .flat-toggle .toggle-title,
+html[lang='bg'] .post-style-6 .title,
+html[lang='bg'] .post-style-7 .title,
+html[lang='bg'] .error-page .title {
+	text-transform: none;
+}
+
+/* Desktop sell-your-car: keep the Auxero page, but rebalance the heavier
+   Day Night Auto intake content so the first viewport feels intentional. */
+@media (min-width: 992px) {
+	body.auxero-template-sell-your-car-html .daynight-sell-hero {
+		background: #ffffff;
+		padding-bottom: 76px !important;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-hero > .container > .tf-spacing-style3 {
+		height: 34px !important;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-page-title {
+		margin-bottom: 0 !important;
+		font-size: 42px;
+		font-weight: 500;
+		line-height: 48px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.95fr) minmax(480px, 1fr);
+		gap: 54px;
+		align-items: start;
+		margin: 0;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-hero-grid > [class*='col-'] {
+		width: auto;
+		max-width: none;
+		padding: 0;
+		flex: none;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-copy {
+		padding-top: 22px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-eyebrow {
+		font-size: 13px;
+		line-height: 18px;
+		letter-spacing: 0;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-copy h2 {
+		max-width: 560px;
+		font-size: 36px;
+		font-weight: 500;
+		line-height: 42px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-copy > p.text-secondary {
+		max-width: 560px;
+		font-size: 17px;
+		line-height: 26px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-checklist li {
+		align-items: flex-start;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-checklist p {
+		margin: 0;
+		font-size: 17px;
+		line-height: 24px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-actions {
+		flex-wrap: wrap;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-phone {
+		align-items: center;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-phone img {
+		width: 48px;
+		height: 48px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-phone p {
+		margin: 0;
+		line-height: 26px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-intake {
+		margin-top: 6px;
+		padding: 20px 24px 22px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-intake .overflow-x-auto {
+		margin-bottom: 18px !important;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-intake .menu-tab-style7.large {
+		width: 100%;
+		padding: 4px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-intake .menu-tab-style7.large li {
+		min-height: 42px;
+		height: 42px;
+		padding: 0 22px;
+		font-size: 15px;
+		line-height: 20px;
+		white-space: nowrap;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-form .grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px !important;
+		margin-bottom: 18px !important;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-form p.mb-8 {
+		margin-bottom: 6px !important;
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-form input.input-large {
+		height: 44px;
+		padding: 0 16px;
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-form button[type='submit'] {
+		height: 52px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-section-gap {
+		height: 54px !important;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .mb-40 {
+		margin-bottom: 32px !important;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process h2 {
+		font-weight: 500;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box-wrapper {
+		gap: 42px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box::before,
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box::after {
+		top: 33px;
+		width: calc(50% + 21px);
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box::before {
+		left: -21px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box::after {
+		right: -21px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box .number {
+		width: 68px;
+		height: 68px;
+		margin-bottom: 22px;
+		font-size: 28px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box a {
+		max-width: 240px;
+		font-size: 22px;
+		line-height: 28px;
+		text-align: center;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-process .sell-your-car-box p {
+		max-width: 265px;
+		margin: 0;
+		line-height: 26px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	body.auxero-template-sell-your-car-html .daynight-sell-hero-grid {
+		grid-template-columns: minmax(0, 1fr) minmax(430px, 1fr);
+		gap: 34px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-copy h2 {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	body.auxero-template-sell-your-car-html .daynight-sell-checklist p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+/* =====================================================================
+   MOBILE-ONLY POLISH — phones + the mobile nav drawer.
+   Desktop (>=992px) is intentionally left untouched.
+   ===================================================================== */
+
+/* Mobile drawer: the "Вход" (Login) button rendered white-on-white and was
+   invisible. Give it a legible secondary style + icon recolor. The
+   #main-nav-mobile scope only exists in the mobile drawer, so desktop is safe. */
+#main-nav-mobile .header-button-mobile {
+	flex-direction: column;
+	align-items: stretch;
+	gap: 12px;
+	width: 100%;
+	padding: 16px 20px 8px;
+}
+
+#main-nav-mobile .header-button-mobile .btn {
+	width: 100%;
+	height: 50px;
+	justify-content: center;
+}
+
+#main-nav-mobile .header-button-mobile .btn-primary-3 {
+	background-color: #ffffff !important;
+	color: #1c1c1c !important;
+}
+
+#main-nav-mobile .header-button-mobile .btn-primary-3 svg path {
+	stroke: #1c1c1c;
+}
+
+/* Mobile drawer: the drawer is dark (#1c1c1c) but reused the light-background
+   (dark-ink) header logo, so it was illegible/clipped. Swap to the dark-bg
+   logo asset that the footer already uses. */
+#main-nav-mobile .logo-mobile img {
+	display: none;
+}
+
+#main-nav-mobile .logo-mobile a {
+	display: block;
+	width: 168px;
+	height: 34px;
+	background: url('/brand/daynight-wordmark.svg') left center / contain no-repeat;
+}
+
+/* Comfortable >=44px touch targets for the compact header controls
+   (search, compare, wishlist, hamburger) on phones. */
+@media (max-width: 767.98px) {
+	.header-wrapper-style-4 .logo a,
+	body.inner-page .header-wrapper .logo a,
+	.dashboard-container .dashboard-content > .header .logo a,
+	.dashboard-container .dashboard-content > .header a.logo {
+		display: inline-flex !important;
+		min-height: 44px !important;
+		align-items: center !important;
+	}
+
+	body.auxero-template-home-05-html .header-wrapper-style-4 .logo-mobile,
+	body.auxero-template-home-05-html .header-wrapper-style-4 #main-nav-mobile .logo-mobile {
+		display: none !important;
+		visibility: hidden !important;
+	}
+
+	.daynight-inventory-desktop-route,
+	.daynight-sell-desktop-route,
+	.daynight-favorites-desktop-route {
+		display: none !important;
+	}
+
+	.header-wrapper-style-4 .mobile-button,
+	.header-wrapper-style-4 #searchToggle,
+	.header-wrapper-style-4 .header-action-btn.header-action-icon {
+		min-width: 44px;
+		min-height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* Hero category tabs were centered and clipped at the right edge. Left-align
+   and let them scroll horizontally (parent is already overflow-x:auto). */
+@media (max-width: 767.98px) {
+	.menu-tab.menu-tab-style1 {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		justify-content: flex-start !important;
+		padding-left: 2px;
+		padding-right: 24px;
+	}
+}
+
+/* Scroll-to-top FAB: dark utility control so it never reads as a stray
+   duplicate of the "Виж всички" section CTAs it floats over. */
+.progress-wrap {
+	background: #1c1c1c !important;
+	box-shadow: 0 10px 26px rgba(12, 21, 23, 0.22) !important;
+}
+
+.progress-wrap .progress-circle path {
+	stroke: var(--bc-accent-soft) !important;
+}
+
+/* Vehicle detail has a right-hand inquiry sidebar; the floating utility button
+   otherwise lands on top of form fields while the buyer is reading financing. */
+body.auxero-template-listing-details-3-html .progress-wrap {
+	display: none !important;
+}
+
+/* Scroll-to-top FAB: tuck tighter into the corner on phones. */
+@media (max-width: 767.98px) {
+	.progress-wrap {
+		right: 16px !important;
+		bottom: 16px !important;
+	}
+}
+
+@media (max-width: 767.98px) {
+	body.inner-page .header-wrapper {
+		height: 64px !important;
+		min-height: 64px !important;
+	}
+
+	body.inner-page .header-wrapper .header.bg-white.header-style-1 {
+		height: 64px !important;
+		min-height: 64px !important;
+		border-bottom: 1px solid var(--bc-border);
+		box-shadow: none;
+	}
+
+	body.inner-page .header-wrapper .header-container-fluid,
+	body.inner-page .header-wrapper .header-inner {
+		height: 64px !important;
+		min-height: 64px !important;
+	}
+
+	body.inner-page .header-wrapper .header-container-fluid {
+		padding-right: 12px !important;
+		padding-left: 12px !important;
+	}
+
+	body.inner-page .header-wrapper .logo {
+		display: flex !important;
+		width: 176px;
+		align-items: center;
+	}
+
+	body.inner-page .header-wrapper .logo img {
+		width: 142px !important;
+		max-width: 142px !important;
+		height: auto;
+		max-height: none;
+		filter: none;
+	}
+
+	body.inner-page .header-wrapper .logo-mobile,
+	body.inner-page .header-wrapper #main-nav,
+	body.inner-page .header-wrapper .header-button,
+	body.inner-page .header-wrapper .header-button-mobile,
+	body.inner-page .header-wrapper .header-actions,
+	body.inner-page .header-wrapper .mobile-button {
+		display: none !important;
+	}
+
+	body.inner-page .header-wrapper .main-nav-wrapper,
+	body.inner-page .header-wrapper .header-right {
+		width: auto !important;
+		margin-left: auto !important;
+		gap: 0 !important;
+		justify-content: flex-end !important;
+	}
+
+	body.inner-page .header-wrapper .header-actions {
+		margin-left: auto !important;
+		gap: 8px !important;
+	}
+
+	body.inner-page .header-wrapper .mobile-button {
+		color: var(--bc-accent);
+	}
+
+	body.inner-page .header-wrapper + section.background-light,
+	body.inner-page .header-wrapper + section.mb-22.background-light {
+		display: none !important;
+	}
+
+	body.inner-page .header-wrapper + section.background-light + section.pb-100,
+	body.inner-page .header-wrapper + section.background-light + section.bg-white.pb-84,
+	body.inner-page .header-wrapper + section.background-light + section.py-100 {
+		padding-top: 32px !important;
+	}
+
+	body.inner-page .header-wrapper + section.background-light + section.pb-100 > .tf-spacing-style4 {
+		display: none !important;
+	}
+
+	body.inner-page .daynight-about-page__intro {
+		padding-top: 32px !important;
+	}
+
+	body.inner-page .title-section {
+		margin-bottom: 24px !important;
+	}
+
+	.dashboard-container .dashboard-content > .header.bg-white {
+		height: 56px !important;
+		min-height: 56px !important;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+		background: #090a0b !important;
+		box-shadow: none;
+	}
+
+	.dashboard-container .dashboard-content > .header .header-container-fluid,
+	.dashboard-container .dashboard-content > .header .header-inner {
+		height: 56px !important;
+		min-height: 56px !important;
+	}
+
+	.dashboard-container .dashboard-content > .header .header-container-fluid {
+		padding-right: 12px !important;
+		padding-left: 15px !important;
+	}
+
+	.dashboard-container .dashboard-content > .header .hidden.xl-show {
+		display: flex !important;
+		align-items: center;
+	}
+
+	.dashboard-container .dashboard-content > .header .logo {
+		display: flex !important;
+		align-items: center;
+	}
+
+	.dashboard-container .dashboard-content > .header .logo img {
+		width: 168px !important;
+		max-width: 168px !important;
+		height: auto !important;
+		max-height: 48px !important;
+	}
+
+	/* Both template logo slots point at the same Day Night asset. Keep one slot so the
+	   mobile dashboard appbar matches the public Home and Sell chrome exactly. */
+	.dashboard-container .dashboard-content > .header .logo-mobile {
+		display: none !important;
+	}
+
+	.dashboard-container .dashboard-content > .header .header-right,
+	.dashboard-container .dashboard-content > .header .mobile-button {
+		display: none !important;
+	}
+
+	body.dashboard,
+	body.dashboard #wrapper,
+	body.dashboard .dashboard-container,
+	body.dashboard .dashboard-content {
+		background: var(--bc-bg) !important;
+		background-color: var(--bc-bg) !important;
+	}
+
+	body.dashboard .dashboard-content--inner {
+		padding: 18px 14px 92px !important;
+	}
+
+	body.dashboard .dashboard-content--inner > .h3 {
+		margin-bottom: 18px !important;
+		font-size: 30px !important;
+		font-weight: 700 !important;
+		line-height: 36px !important;
+	}
+
+	body.dashboard .dashboard-toggle-btn {
+		position: absolute !important;
+		top: 6px !important;
+		right: 12px !important;
+		z-index: 1002 !important;
+		display: grid !important;
+		width: 44px !important;
+		height: 44px !important;
+		min-height: 44px !important;
+		place-items: center !important;
+		overflow: hidden !important;
+		border: 1px solid rgba(255, 255, 255, 0.28) !important;
+		border-radius: 999px !important;
+		background: #17191b !important;
+		box-shadow: none !important;
+		color: transparent !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		font-size: 0 !important;
+		line-height: 0 !important;
+	}
+
+	body.dashboard .dashboard-menu-toggle-input {
+		position: absolute !important;
+		width: 1px !important;
+		height: 1px !important;
+		overflow: hidden !important;
+		opacity: 0 !important;
+		pointer-events: none !important;
+	}
+
+	body.dashboard .dashboard-menu-toggle-input:focus-visible ~ .dashboard-toggle-btn {
+		border-color: #ffffff !important;
+		outline: 2px solid rgba(255, 255, 255, 0.92) !important;
+		outline-offset: 2px !important;
+	}
+
+	body.dashboard .dashboard-menu-backdrop {
+		position: fixed;
+		inset: 0;
+		z-index: 1000;
+		display: none;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	body.dashboard .dashboard-container:has(.dashboard-menu-toggle-input:checked) .dashboard-sidebar {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+	}
+
+	body.dashboard
+		.dashboard-container:has(.dashboard-menu-toggle-input:checked)
+		.dashboard-menu-backdrop {
+		display: block;
+	}
+
+	body.dashboard .dashboard-toggle-btn::before {
+		position: relative !important;
+		z-index: 1 !important;
+		width: 18px;
+		height: 14px;
+		border-top: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+		background: transparent !important;
+		content: '';
+		transform: none !important;
+	}
+
+	body.dashboard .dashboard-toggle-btn::after {
+		position: absolute !important;
+		top: 50% !important;
+		left: 50% !important;
+		z-index: 1 !important;
+		width: 18px;
+		height: 2px;
+		background: #ffffff;
+		content: '';
+		transform: translate(-50%, -50%) !important;
+	}
+
+	body.dashboard .dashboard-toggle-btn:hover,
+	body.dashboard .dashboard-toggle-btn:focus-visible {
+		border-color: #ffffff !important;
+		background: #202326 !important;
+	}
+
+	body.dashboard .core-dropdown__button,
+	body.dashboard .search-form-listing button,
+	body.dashboard .search-form-contact button,
+	body.dashboard .message-chat__actions .core-dropdown__button {
+		min-width: var(--bc-control-height-standard) !important;
+		min-height: var(--bc-control-height-standard) !important;
+	}
+
+	body.dashboard .search-form-listing button,
+	body.dashboard .search-form-contact button {
+		display: inline-flex !important;
+		width: var(--bc-control-height-standard) !important;
+		height: var(--bc-control-height-standard) !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	body.dashboard .dashboard-box.bg-white {
+		border: 1px solid var(--bc-border) !important;
+		background: var(--bc-surface) !important;
+		box-shadow: none !important;
+	}
+
+	body.dashboard .dashboard-box input:not([type='checkbox']):not([type='radio']),
+	body.dashboard .dashboard-box select,
+	body.dashboard .dashboard-box textarea {
+		border-color: var(--bc-border) !important;
+		background: #ffffff !important;
+		box-shadow: none !important;
+	}
+
+	body.dashboard .message-container,
+	body.dashboard .message-sidebar,
+	body.dashboard .message-chat {
+		border-color: var(--bc-border) !important;
+		background: var(--bc-surface) !important;
+	}
+
+	body.dashboard .message-search,
+	body.dashboard .message-chat__header,
+	body.dashboard .message-chat .message__action {
+		border-color: var(--bc-border) !important;
+		background: var(--bc-surface) !important;
+	}
+
+	body.dashboard .message-contact:hover,
+	body.dashboard .message-contact.active,
+	body.dashboard .message-chat__body {
+		background: var(--bc-surface-soft) !important;
+	}
+
+	body.dashboard .message-search input,
+	body.dashboard .message-chat__input-field,
+	body.dashboard .message-item__text {
+		border-color: var(--bc-border) !important;
+		background: #ffffff !important;
+		box-shadow: none !important;
+	}
+
+	body.dashboard .message-chat__attach {
+		display: inline-grid !important;
+		width: var(--bc-control-height-compact) !important;
+		height: var(--bc-control-height-compact) !important;
+		min-width: var(--bc-control-height-compact) !important;
+		min-height: var(--bc-control-height-compact) !important;
+		place-items: center !important;
+		border-radius: var(--bc-radius-md) !important;
+	}
+
+	body.dashboard .message-chat__attach svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.sale-agent-box .sale-agent-social li a,
+	.sale-agent-box .card-bottom .contact li a,
+	.sale-agent-box .btn.btn-small {
+		display: inline-flex !important;
+		min-width: 44px !important;
+		min-height: 44px !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.daynight-favorite,
+	.card-box .heart {
+		display: inline-flex !important;
+		min-width: 44px !important;
+		min-height: 44px !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.daynight-card-price__finance-link {
+		display: inline-flex !important;
+		min-height: 44px !important;
+		align-items: center !important;
+		margin-block: -14px !important;
+	}
+
+	.compare-item-remove-table {
+		min-width: 44px !important;
+		min-height: 44px !important;
+	}
+
+	.breadcrumb a,
+	ul.flex.items-center.flex-wrap a.text-white {
+		display: inline-flex !important;
+		min-width: 44px !important;
+		min-height: 44px !important;
+		align-items: center !important;
+	}
+
+	ul.flex.items-center.flex-wrap a.text-highlight {
+		display: inline-flex !important;
+		min-height: 44px !important;
+		align-items: center !important;
+		margin-block: -9px !important;
+		padding-block: 9px !important;
+	}
+
+	.card-box .card-box__title a,
+	.sale-agent-box .sale-agent-title {
+		display: inline-flex !important;
+		min-height: 44px !important;
+		align-items: center !important;
+		margin-block: -8px !important;
+		padding-block: 8px !important;
+	}
+
+	.card-box .category a.text-xs.text-white.uppercase {
+		display: inline-flex !important;
+		min-width: 44px !important;
+		min-height: 44px !important;
+		align-items: center !important;
+		justify-content: center !important;
+		margin-block: -12px !important;
+		padding-block: 12px !important;
+	}
+
+	.card-box .compare-details.btn.btn-small.open-modal,
+	.card-box .view-details {
+		display: inline-flex !important;
+		min-height: 44px !important;
+		align-items: center !important;
+	}
+
+	.swiper-pagination .swiper-pagination-bullet {
+		box-sizing: content-box !important;
+		width: 20px !important;
+		height: 20px !important;
+		margin: -12px 2px !important;
+		border: 12px solid transparent !important;
+		background-clip: padding-box !important;
+	}
+}
+
+@media (max-width: 767.98px) {
+	body.auxero-template-listing-grid3-columns-html,
+	body.auxero-template-listing-grid4-columns-html,
+	body.auxero-template-listing-gridstyle-halfmap-html,
+	body.auxero-template-listing-grid3-columns-html #wrapper,
+	body.auxero-template-listing-grid4-columns-html #wrapper,
+	body.auxero-template-listing-gridstyle-halfmap-html #wrapper {
+		background: #ffffff !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-banner,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-banner,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-banner,
+	body.auxero-template-listing-grid3-columns-html section.pb-100 > .container > h2,
+	body.auxero-template-listing-grid4-columns-html section.pb-100 > .container > h2,
+	body.auxero-template-listing-gridstyle-halfmap-html section.pb-100 > .container > h2,
+	body.auxero-template-listing-grid3-columns-html .daynight-view-toggle,
+	body.auxero-template-listing-grid4-columns-html .daynight-view-toggle,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-view-toggle {
+		display: none !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html section.pb-100,
+	body.auxero-template-listing-grid4-columns-html section.pb-100,
+	body.auxero-template-listing-gridstyle-halfmap-html section.pb-100 {
+		background: #ffffff !important;
+		padding-top: 12px !important;
+		padding-bottom: 88px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html section.pb-100 > .container,
+	body.auxero-template-listing-grid4-columns-html section.pb-100 > .container,
+	body.auxero-template-listing-gridstyle-halfmap-html section.pb-100 > .container,
+	body.auxero-template-listing-grid3-columns-html .flat-tabs[data-custom='true'],
+	body.auxero-template-listing-grid4-columns-html .flat-tabs[data-custom='true'],
+	body.auxero-template-listing-gridstyle-halfmap-html .flat-tabs[data-custom='true'] {
+		width: 100% !important;
+		max-width: none !important;
+		padding-right: 14px !important;
+		padding-left: 14px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar {
+		margin: 0 !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		background: #ffffff !important;
+		box-shadow: none !important;
+		padding: 10px 0 12px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__row,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__row,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__row {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 10px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__primary,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__primary,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__primary {
+		order: 1 !important;
+		grid-template-columns: auto minmax(0, 1fr) auto !important;
+		width: 100% !important;
+		height: 48px !important;
+		min-height: 48px !important;
+		border: 1px solid var(--bc-border) !important;
+		border-radius: 8px !important;
+		background: var(--bc-surface) !important;
+		padding: 4px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__search,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__search,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__search {
+		min-width: 0 !important;
+		padding: 0 12px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__search input,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__search input,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__search input {
+		font-size: 16px !important;
+		line-height: 20px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__submit,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__submit,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__submit {
+		width: 82px !important;
+		height: 44px !important;
+		min-height: 44px !important;
+		border-radius: 7px !important;
+		padding: 0 !important;
+		font-size: 15px !important;
+		font-weight: 600 !important;
+		line-height: 44px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__filter,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__filter,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__filter {
+		order: 0 !important;
+		align-self: center !important;
+		width: max-content !important;
+		min-width: 106px !important;
+		height: 44px !important;
+		min-height: 44px !important;
+		gap: 8px !important;
+		border: 1px solid var(--bc-border) !important;
+		border-radius: 7px !important;
+		background: #f7f8f9 !important;
+		padding: 0 13px !important;
+		color: #1c1c1c !important;
+		font-size: 14px !important;
+		font-weight: 700 !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-searchbar__filter span,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-searchbar__filter span,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-searchbar__filter span {
+		display: inline-block !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-brand-pills,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-brand-pills,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-brand-pills {
+		margin-top: 10px !important;
+		margin-right: -14px !important;
+		margin-left: -14px !important;
+		padding: 0 14px 2px !important;
+		scrollbar-width: none;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .tf-spacing-style3,
+	body.auxero-template-listing-grid4-columns-html .tf-spacing-style3,
+	body.auxero-template-listing-gridstyle-halfmap-html .tf-spacing-style3 {
+		height: 16px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-brand-pills .menu-tab-style2,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-brand-pills .menu-tab-style2,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-brand-pills
+		.menu-tab-style2 {
+		gap: 8px !important;
+		padding-right: 14px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-quick-pill,
+	body.auxero-template-listing-grid4-columns-html .daynight-quick-pill,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-quick-pill,
+	body.auxero-template-listing-grid3-columns-html .daynight-quick-pill a,
+	body.auxero-template-listing-grid4-columns-html .daynight-quick-pill a,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-quick-pill a {
+		min-height: 44px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-quick-pill,
+	body.auxero-template-listing-grid4-columns-html .daynight-quick-pill,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-quick-pill {
+		border-color: var(--bc-border) !important;
+		border-radius: 8px !important;
+		background: var(--bc-surface) !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-quick-pill a,
+	body.auxero-template-listing-grid4-columns-html .daynight-quick-pill a,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-quick-pill a {
+		padding: 0 13px !important;
+		font-size: 14px !important;
+		font-weight: 700 !important;
+		line-height: 18px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-toolbar-row,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-toolbar-row,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-toolbar-row {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+		gap: 9px !important;
+		margin: 8px 0 12px !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		background: #ffffff !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-toolbar-row > [class*='col-'],
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-toolbar-row > [class*='col-'],
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-toolbar-row
+		> [class*='col-'] {
+		width: 100% !important;
+		max-width: none !important;
+		flex: none !important;
+		padding: 0 !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-toolbar-row
+		> [class*='col-']:nth-child(2),
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-toolbar-row
+		> [class*='col-']:nth-child(2),
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-toolbar-row
+		> [class*='col-']:nth-child(2),
+	body.auxero-template-listing-grid3-columns-html #filterDivider,
+	body.auxero-template-listing-grid4-columns-html #filterDivider,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterDivider {
+		display: none !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-result-count,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-result-count,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-result-count {
+		display: block !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-result-count p,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-result-count p,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-result-count p {
+		color: #1c1c1c !important;
+		font-size: 13px !important;
+		line-height: 18px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-toolbar-row .justify-end,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-toolbar-row .justify-end,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-toolbar-row .justify-end {
+		justify-content: flex-start !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-toolbar-row .core-dropdown,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-toolbar-row .core-dropdown,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-toolbar-row
+		.core-dropdown {
+		width: 100% !important;
+		min-width: 0 !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-toolbar-row
+		.core-dropdown__button,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-toolbar-row
+		.core-dropdown__button,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-toolbar-row
+		.core-dropdown__button {
+		min-height: 46px !important;
+		border: 1px solid var(--bc-border) !important;
+		background: var(--bc-surface) !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterResults,
+	body.auxero-template-listing-grid4-columns-html #filterResults,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterResults {
+		display: flex !important;
+		flex-wrap: wrap !important;
+		gap: 8px !important;
+		align-items: center !important;
+		margin: 0 0 12px !important;
+		color: #1c1c1c !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterResults > p,
+	body.auxero-template-listing-grid4-columns-html #filterResults > p,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterResults > p {
+		font-size: 14px !important;
+		line-height: 20px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterTags,
+	body.auxero-template-listing-grid4-columns-html #filterTags,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterTags {
+		display: flex !important;
+		flex-wrap: wrap !important;
+		gap: 8px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html #filterResults .select-item,
+	body.auxero-template-listing-grid4-columns-html #filterResults .select-item,
+	body.auxero-template-listing-gridstyle-halfmap-html #filterResults .select-item,
+	body.auxero-template-listing-grid3-columns-html #btnClearAll,
+	body.auxero-template-listing-grid4-columns-html #btnClearAll,
+	body.auxero-template-listing-gridstyle-halfmap-html #btnClearAll {
+		min-height: 32px !important;
+		border-radius: 999px !important;
+		font-size: 12px !important;
+		font-weight: 700 !important;
+		line-height: 16px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-content,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-content,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-content {
+		border: 0 !important;
+		border-radius: 0 !important;
+		background: #ffffff !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.content-inner
+		> .grid,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.content-inner
+		> .grid,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.content-inner
+		> .grid {
+		grid-template-columns: 1fr !important;
+		gap: 10px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-content .card-box-style-1,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-content .card-box-style-1,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1 {
+		display: grid !important;
+		grid-template-columns: 132px minmax(0, 1fr) !important;
+		min-height: 168px !important;
+		overflow: hidden !important;
+		border: 1px solid var(--bc-border) !important;
+		border-radius: 8px !important;
+		background: var(--bc-surface) !important;
+		box-shadow: none !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.image {
+		grid-column: 1 !important;
+		grid-row: 1 !important;
+		width: 132px !important;
+		height: 100% !important;
+		min-height: 168px !important;
+		aspect-ratio: auto !important;
+		border-radius: 8px 0 0 8px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.image
+		img,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.image
+		img,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.image
+		img {
+		width: 100% !important;
+		height: 100% !important;
+		border-radius: 8px 0 0 8px !important;
+		object-fit: cover !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.content {
+		grid-column: 2 !important;
+		grid-row: 1 !important;
+		min-width: 0 !important;
+		border: 0 !important;
+		background: var(--bc-surface) !important;
+		padding: 10px 10px 9px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1,
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1
+		.image,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1
+		.image {
+		background: #ffffff !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1
+		.content,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-desktop-route
+		.daynight-inventory-content
+		.card-box-style-1
+		.content {
+		background: var(--bc-surface) !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.bottom,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.bottom,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.bottom {
+		display: none !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top {
+		right: auto !important;
+		left: 0 !important;
+		width: 132px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top
+		.highlight,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top
+		.highlight,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top
+		.highlight {
+		top: 8px !important;
+		left: 8px !important;
+		min-height: 24px !important;
+		border-radius: 7px !important;
+		padding: 0 8px !important;
+		font-size: 11px !important;
+		font-weight: 650 !important;
+		line-height: 24px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top
+		.heart,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top
+		.heart,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.top
+		.heart {
+		display: none !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.card-box__title,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.card-box__title,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.card-box-style-1
+		.card-box__title {
+		min-height: auto !important;
+		margin-bottom: 6px !important;
+		font-size: 17px !important;
+		font-weight: 650 !important;
+		line-height: 22px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-content .daynight-card-specs,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-content .daynight-card-specs,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-specs {
+		display: flex !important;
+		flex-wrap: nowrap !important;
+		gap: 5px !important;
+		margin-bottom: 6px !important;
+		overflow: hidden !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-specs
+		li,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-specs
+		li,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-specs
+		li {
+		display: flex !important;
+		flex: 1 1 0 !important;
+		font-size: 12px !important;
+		justify-content: flex-start !important;
+		line-height: 16px !important;
+		min-width: 0 !important;
+		padding: 5px 6px !important;
+		white-space: nowrap !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-specs
+		li
+		span,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-specs
+		li
+		span,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-specs
+		li
+		span {
+		min-width: 0 !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-content .daynight-card-price,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-content .daynight-card-price,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-price {
+		align-items: flex-start !important;
+		flex-direction: column !important;
+		gap: 1px !important;
+		margin-bottom: 7px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__amount,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__amount,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-price__amount {
+		font-size: 20px !important;
+		font-weight: 700 !important;
+		line-height: 24px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__finance,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__finance,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-price__finance {
+		align-items: flex-start !important;
+		text-align: left !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__monthly,
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__finance-link,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__monthly,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-price__finance-link,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-price__monthly,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-price__finance-link {
+		font-size: 12px !important;
+		line-height: 16px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html .daynight-inventory-content .divider,
+	body.auxero-template-listing-grid4-columns-html .daynight-inventory-content .divider,
+	body.auxero-template-listing-gridstyle-halfmap-html .daynight-inventory-content .divider {
+		margin-bottom: 7px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-actions {
+		gap: 7px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.compare-details,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.compare-details,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.compare-details {
+		height: 44px !important;
+		min-height: 44px !important;
+		min-width: auto !important;
+		padding: 0 9px !important;
+		font-size: 14px !important;
+		font-weight: 600 !important;
+		line-height: 44px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.compare-details
+		svg,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.compare-details
+		svg,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.compare-details
+		svg {
+		width: 14px !important;
+		height: 14px !important;
+	}
+
+	body.auxero-template-listing-grid3-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.view-details,
+	body.auxero-template-listing-grid4-columns-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.view-details,
+	body.auxero-template-listing-gridstyle-halfmap-html
+		.daynight-inventory-content
+		.daynight-card-actions
+		.view-details {
+		min-width: 0 !important;
+		font-size: 14px !important;
+		font-weight: 600 !important;
+		line-height: 18px !important;
+		white-space: nowrap !important;
+	}
+}
+
+/* ── Near-static motion ────────────────────────────────────────────────
+   Resale buyers expect a fast, calm page, so the template's scroll-reveal
+   and load-in animations are switched off. Template button fills remain
+   owned by Auxero's original classes. */
+.wow {
+	visibility: visible !important;
+	opacity: 1 !important;
+	animation: none !important;
+}
+
+.effect-item,
+.effect-up,
+.effect-zoom-item {
+	opacity: 1 !important;
+	transform: none !important;
+	animation: none !important;
+}
+
+.btn.btn-primary-3.daynight-section-cta,
+.btn.btn-primary-3.daynight-section-cta:hover,
+.btn.btn-primary-3.daynight-section-cta:focus-visible,
+.btn.btn-primary-3.daynight-section-cta:active,
+.daynight-type-gallery__cta,
+.daynight-type-gallery__cta:hover,
+.daynight-type-gallery__cta:focus-visible,
+.daynight-type-gallery__cta:active {
+	background-color: var(--bc-accent) !important;
+	border-color: var(--bc-accent) !important;
+	color: #ffffff !important;
+	transform: none !important;
+}
+
+.btn.btn-primary-3.daynight-section-cta:hover,
+.btn.btn-primary-3.daynight-section-cta:focus-visible,
+.btn.btn-primary-3.daynight-section-cta:active {
+	background-color: var(--bc-accent-hover) !important;
+	border-color: var(--bc-accent-hover) !important;
+	color: #ffffff !important;
+}
+
+.daynight-type-gallery__cta:hover,
+.daynight-type-gallery__cta:focus-visible,
+.daynight-type-gallery__cta:active {
+	background-color: #1c1c1c !important;
+	border-color: #1c1c1c !important;
+	color: #ffffff !important;
+}
+
+/* White is correct for the circular icon-button variant on the accent surface.
+   Plain text links keep their component-owned ink. */
+.daynight-card-actions .daynight-card-detail-circle,
+.daynight-card-actions .view-details.daynight-card-detail-circle {
+	color: #ffffff !important;
+}
+
+.daynight-card-actions .daynight-card-detail-circle:hover,
+.daynight-card-actions .daynight-card-detail-circle:focus-visible,
+.daynight-card-actions .view-details.daynight-card-detail-circle:hover,
+.daynight-card-actions .view-details.daynight-card-detail-circle:focus-visible {
+	background-color: var(--bc-accent) !important;
+	border-color: var(--bc-accent) !important;
+	color: #ffffff !important;
+}
+
+.daynight-card-actions .daynight-card-detail-circle::after,
+.daynight-card-actions .view-details.daynight-card-detail-circle::after {
+	display: none !important;
+}
+
+.daynight-card-actions .daynight-card-detail-circle svg,
+.daynight-card-actions .view-details.daynight-card-detail-circle svg {
+	display: none !important;
+}
+
+body.daynight-inventory-template .daynight-inventory-content .daynight-card-actions .view-details {
+	align-items: center !important;
+	display: inline-flex !important;
+	flex: 1 1 0 !important;
+	justify-content: center !important;
+	width: auto !important;
+	min-width: 0 !important;
+	height: 44px !important;
+	min-height: 44px !important;
+	border: 1px solid var(--bc-accent) !important;
+	border-radius: var(--bc-radius-control) !important;
+	background: var(--bc-accent) !important;
+	color: #ffffff !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	line-height: 1 !important;
+	padding: 0 6px !important;
+	text-decoration: none !important;
+}
+
+body.daynight-inventory-template
+	.daynight-inventory-content
+	.daynight-card-actions
+	.view-details:hover,
+body.daynight-inventory-template
+	.daynight-inventory-content
+	.daynight-card-actions
+	.view-details:focus-visible {
+	border-color: #1c1c1c !important;
+	background: #1c1c1c !important;
+	color: #ffffff !important;
+}
+
+body.daynight-inventory-template
+	.daynight-inventory-content
+	.daynight-card-actions
+	.view-details::before,
+body.daynight-inventory-template
+	.daynight-inventory-content
+	.daynight-card-actions
+	.view-details::after {
+	display: none !important;
+}
+
+html body.auxero-template-home-05-html .search-cars__search:is(:hover, :focus-visible) {
+	border-color: var(--bc-accent-hover) !important;
+	background: var(--bc-accent-hover) !important;
+	color: #ffffff !important;
+}
+
+html body.auxero-template-home-05-html .search-cars__search:is(:hover, :focus-visible) img {
+	filter: brightness(0) invert(1) !important;
+}
+
+html
+	body.daynight-inventory-template
+	.daynight-inventory-banner
+	.daynight-inventory-searchbar__submit:is(:hover, :focus-visible) {
+	border-color: var(--bc-accent-hover) !important;
+	background: var(--bc-accent-hover) !important;
+	color: #ffffff !important;
+}
+
+html
+	body.daynight-inventory-template
+	.daynight-inventory-content
+	.daynight-card-actions
+	.view-details:is(:hover, :focus-visible) {
+	border-color: #1c1c1c !important;
+	background: #1c1c1c !important;
+	color: #ffffff !important;
+}
+
+body.daynight-inventory-template
+	.daynight-inventory-content
+	.daynight-card-actions
+	.view-details
+	img {
+	display: none !important;
+}
+
+/* ── Desktop hover system ──────────────────────────────────────────────
+   Keep desktop controls responsive without Auxero's older sliding fills,
+   lift transforms, zooms, or glow/shadow-heavy feedback. */
+@media (min-width: 992px) {
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.daynight-home-two-shell
+		)
+		:where(
+			.btn,
+			button,
+			[role='button'],
+			.header-action-btn,
+			.icon-button,
+			.core-dropdown__button,
+			.daynight-favorite,
+			.heart,
+			.car-box,
+			.menu-tab-style2,
+			.filter-select-dropdown__button,
+			.view-details,
+			.compare-details,
+			.daynight-section-cta,
+			.daynight-type-gallery__cta,
+			.dash-icon-button,
+			.dash-user-button,
+			.dash-primary-button,
+			.dash-secondary-button
+		) {
+		transition:
+			background-color var(--bc-motion-hover),
+			border-color var(--bc-motion-hover),
+			color var(--bc-motion-hover),
+			filter var(--bc-motion-hover),
+			opacity var(--bc-motion-hover) !important;
+	}
+
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.daynight-home-two-shell
+		)
+		:where(
+			.btn,
+			button,
+			[role='button'],
+			.header-action-btn,
+			.icon-button,
+			.core-dropdown__button,
+			.daynight-favorite,
+			.heart,
+			.car-box,
+			.menu-tab-style2,
+			.filter-select-dropdown__button,
+			.compare-details,
+			.daynight-section-cta,
+			.daynight-type-gallery__cta,
+			.dash-icon-button,
+			.dash-user-button,
+			.dash-primary-button,
+			.dash-secondary-button
+		):where(:hover, :focus-visible, :active) {
+		box-shadow: none !important;
+		transform: none !important;
+	}
+
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.daynight-home-two-shell
+		)
+		:where(.btn, .btn-line-hover, .hover-fill-white, .hover-stroke-white)::before,
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.daynight-home-two-shell
+		)
+		:where(.btn, .btn-line-hover, .hover-fill-white, .hover-stroke-white)::after {
+		display: none !important;
+		width: 0 !important;
+		height: 0 !important;
+		background: transparent !important;
+		content: none !important;
+		opacity: 0 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+
+	:where(body[class*='auxero-template-'], .search-modal)
+		:where(
+			.btn-primary,
+			.btn-primary-3,
+			.bg-sign-in,
+			button[type='submit'],
+			.daynight-section-cta,
+			.daynight-type-gallery__cta,
+			.daynight-sell-form button[type='submit'],
+			.search-form-listing button,
+			.search-form-contact button
+		):where(:hover, :focus-visible, :active),
+	body.dashboard :where(.dash-primary-button):where(:hover, :focus-visible, :active),
+	.site-header :where(.header-pill--solid):where(:hover, :focus-visible),
+	.search-modal :where(.search-modal__form .btn):where(:hover, :focus-visible),
+	.daynight-home-two-shell
+		:where(
+			button[type='submit'],
+			a[class*='cta'],
+			a[class*='action'],
+			.home2-browse-cta,
+			.home2-header__action
+		):where(:hover, :focus-visible) {
+		border-color: var(--bc-hover-accent) !important;
+		background: var(--bc-hover-accent) !important;
+		background-color: var(--bc-hover-accent) !important;
+		color: var(--bc-hover-accent-ink) !important;
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .daynight-home-two-shell)
+		:where(
+			.btn-line-style-2,
+			.btn-line-hover,
+			.btn-filter,
+			.core-dropdown__button,
+			.filter-select-dropdown__button,
+			.car-box,
+			.menu-tab-style2,
+			.dashboard-toggle-btn,
+			.dash-secondary-button,
+			.dash-user-button
+		):where(:hover, :focus-visible, :active),
+	.site-header :where(.header-pill--outline):where(:hover, :focus-visible),
+	.search-modal :where(.search-modal__close):where(:hover, :focus-visible),
+	.daynight-home-two-shell :where(summary, .home2-search__tabs a):where(:hover, :focus-visible) {
+		border-color: var(--bc-hover-border) !important;
+		background: var(--bc-hover-surface) !important;
+		background-color: var(--bc-hover-surface) !important;
+		color: var(--bc-hover-quiet-ink) !important;
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .site-header, .daynight-home-two-shell)
+		:where(.header-action-btn, .icon-button, .daynight-favorite, .heart, .dash-icon-button):where(
+			:hover,
+			:focus-visible,
+			:active
+		) {
+		border-color: var(--bc-hover-accent) !important;
+		background: var(--bc-hover-accent) !important;
+		background-color: var(--bc-hover-accent) !important;
+		color: var(--bc-hover-accent-ink) !important;
+		opacity: 1 !important;
+	}
+
+	:where(
+			body[class*='auxero-template-'],
+			body.dashboard,
+			.site-header,
+			.search-modal,
+			.daynight-home-two-shell
+		)
+		:where(
+			.btn,
+			button,
+			[role='button'],
+			.header-action-btn,
+			.icon-button,
+			.daynight-favorite,
+			.heart,
+			.car-box,
+			.menu-tab-style2,
+			.filter-select-dropdown__button,
+			.compare-details,
+			.dash-icon-button,
+			.dash-primary-button,
+			.dash-secondary-button
+		):where(:hover, :focus-visible, :active)
+		:where(svg, svg *) {
+		color: currentColor !important;
+		stroke: currentColor !important;
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .site-header, .daynight-home-two-shell)
+		:where(.daynight-favorite, .heart, .btn-icon-circle):where(:hover, :focus-visible, :active)
+		:where(svg path) {
+		fill: none !important;
+		stroke: currentColor !important;
+	}
+
+	:where(body[class*='auxero-template-'], body.dashboard, .site-header, .daynight-home-two-shell)
+		:where(.daynight-favorite.is-active, .heart.is-active):where(:hover, :focus-visible, :active)
+		:where(svg path) {
+		fill: currentColor !important;
+		stroke: currentColor !important;
+	}
+
+	:where(body[class*='auxero-template-'], .daynight-home-two-shell)
+		:where(
+			.card-box__title a,
+			.view-details,
+			.daynight-card-price__finance-link,
+			.sale-agent-title,
+			.post-title a,
+			.breadcrumb a
+		):where(:hover, :focus-visible),
+	.site-header :where(.site-nav__link):where(:hover, :focus-visible),
+	.daynight-home-two-shell
+		:where(a:not([class*='cta']):not([class*='action'])):where(:hover, :focus-visible) {
+		background: transparent !important;
+		color: var(--bc-hover-accent) !important;
+		text-decoration: none !important;
+	}
+
+	:where(body[class*='auxero-template-'])
+		:where(.view-details, .daynight-card-price__finance-link):where(:hover, :focus-visible)
+		img {
+		filter: brightness(0) saturate(100%) invert(16%) sepia(97%) saturate(3538%) hue-rotate(348deg)
+			brightness(90%) contrast(93%);
+		opacity: 0.95;
+	}
+
+	:where(body[class*='auxero-template-'])
+		:where(.compare-details.open-modal, .compare-details.btn):where(
+			:hover,
+			:focus-visible,
+			:active
+		) {
+		border-color: var(--bc-hover-accent) !important;
+		background: var(--bc-hover-accent) !important;
+		background-color: var(--bc-hover-accent) !important;
+		color: var(--bc-hover-accent-ink) !important;
+	}
+
+	:where(body[class*='auxero-template-'])
+		:where(.compare-details.open-modal, .compare-details.btn):where(:hover, :focus-visible, :active)
+		:where(svg, svg *) {
+		color: currentColor !important;
+		stroke: currentColor !important;
+	}
+}

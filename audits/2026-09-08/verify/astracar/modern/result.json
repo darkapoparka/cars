@@ -1,0 +1,93 @@
+{
+  "client": "astracar",
+  "name": "Астракар",
+  "template": "modern",
+  "port": 6637,
+  "startedAt": "2026-09-07T22:04:54.771Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "DETAIL",
+      "error": "No vehicle detail link found"
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/bg/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/bg/contact\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/bg/imports\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/bg/imports\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "DETAIL",
+      "error": "No vehicle detail link found"
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/bg/contact\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/bg/contact\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/bg/imports\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/bg/imports\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:6637/cars\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:6637/cars\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "pass": false
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\astracar\\modern",
+    "PID": 9056,
+    "Port": 6637,
+    "Url": "http://127.0.0.1:6637",
+    "Stdout": "J:\\cars\\runtime\\modern-6637-20260908-010455.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6637-20260908-010455.err.log",
+    "Status": "started-not-yet-browser-verified",
+    "status": "stopped-after-verification"
+  },
+  "pass": false
+}

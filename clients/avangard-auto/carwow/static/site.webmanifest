@@ -1,0 +1,17 @@
+{
+  "name": "AVANGARD AUTO",
+  "short_name": "AVANGARD AUTO",
+  "description": "AVANGARD AUTO: автомобили, огледи и контакт във Варна.",
+  "lang": "bg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#252a30",
+  "icons": [
+    {
+      "src": "/assets/avangard/wordmark.svg",
+      "type": "image/svg+xml"
+    }
+  ]
+}

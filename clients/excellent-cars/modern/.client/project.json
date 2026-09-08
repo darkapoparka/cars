@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "client": "excellent-cars",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:48:54.233Z",
+  "state": "local-demo-verified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "verifiedAt": "2026-09-08T03:44:08.556Z",
+    "widths": [
+      390,
+      1440
+    ],
+    "routeChecks": 8,
+    "interactionPasses": 2,
+    "evidence": "J:/cars/clients/excellent-cars/qa-final/excellent-cars/modern/result.json",
+    "build": "qa-final/build-results.json: current framework check and production build passed",
+    "visualReview": "Viewport screenshots manually inspected; current logo contrast and contact destinations corrected."
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localPreviewUrl": "http://127.0.0.1:6622/cars",
+  "knownLimits": [
+    "Local prospect demo only; no public preview or CRM registration.",
+    "Stock and prices are the dated 2026-09-07 source snapshot, not a live feed.",
+    "No enquiry delivery, private account, chat backend or live import-feed integration verified.",
+    "Retained sample admin/team/partner routes are template demo surfaces, not evidence of real staff or partnerships.",
+    "Gallery opens, changes photos and closes; inherited keyboard focus restoration is imperfect (mobile returns to body, desktop to a different gallery trigger)."
+  ]
+}

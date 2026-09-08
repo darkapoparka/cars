@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Sell direct/reload cannot confirm; failed/valid fixture responses drive actual outcomes",
+    "pass": true
+  },
+  {
+    "name": "Mobile filter draft cancel, Apply URL, reload and focus trap",
+    "pass": true
+  },
+  {
+    "name": "Calculator recalculates, rejects invalid input, preserves detail handoff",
+    "pass": true
+  },
+  {
+    "name": "Compare identify/remove and modal chat focus 320",
+    "pass": true
+  },
+  {
+    "name": "Compare identify/remove and modal chat focus 390",
+    "pass": true
+  },
+  {
+    "name": "Compare identify/remove and modal chat focus 430",
+    "pass": true
+  },
+  {
+    "name": "Compare identify/remove and modal chat focus 1440",
+    "pass": true
+  },
+  {
+    "name": "Photo/video enquiry retains vehicle context and no live send",
+    "pass": true
+  }
+]

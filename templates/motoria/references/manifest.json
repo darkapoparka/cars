@@ -1,0 +1,4430 @@
+[
+  {
+    "name": "home",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/",
+    "route": "/",
+    "title": "Motors Classified Elementor – Car Dealership WordPress Theme",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "15 000+",
+      "Vehicle Available",
+      "Browse by Make",
+      "Browse by Body",
+      "New/Used Cars",
+      "New/Used Cars",
+      "News & Reviews",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2772,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "max_price",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "max_price",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "max_price",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "max_price",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "phone",
+            "type": "text"
+          },
+          {
+            "name": "make",
+            "type": "text"
+          },
+          {
+            "name": "model",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inventory",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+    "route": "/inventory/",
+    "title": "Inventory – Motors",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "Top Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Cars for sale",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Request car price"
+    ],
+    "height": 4531,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "select-one"
+          },
+          {
+            "name": "body",
+            "type": "select-one"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "min_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "max_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "ca-year",
+            "type": "select-one"
+          },
+          {
+            "name": "min_price",
+            "type": "hidden"
+          },
+          {
+            "name": "max_price",
+            "type": "hidden"
+          },
+          {
+            "name": "transmission",
+            "type": "select-one"
+          },
+          {
+            "name": "exterior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "interior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "listing_status",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "text"
+          },
+          {
+            "name": "stm_keywords",
+            "type": "text"
+          },
+          {
+            "name": "view_type",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_filter_link",
+            "type": "hidden"
+          },
+          {
+            "name": "popular",
+            "type": "hidden"
+          },
+          {
+            "name": "s",
+            "type": "hidden"
+          },
+          {
+            "name": "sort_order",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "posttype",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "mc4wp-form-1",
+        "fields": [
+          {
+            "name": "EMAIL",
+            "type": "email"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "_mc4wp_honeypot",
+            "type": "text"
+          },
+          {
+            "name": "_mc4wp_timestamp",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_id",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_element_id",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "bmw-m5",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/listings/bmw-m5/",
+    "route": "/listings/bmw-m5/",
+    "title": "BMW M5 – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Certified Used 2021  BMW M5",
+      "Mohamed Ali",
+      "Mohamed Ali",
+      "Schedule a Test Drive",
+      "Offer Price",
+      "Calculate Payment",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 3012,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/listings/bmw-m5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/listings/bmw-m5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/listings/bmw-m5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/listings/bmw-m5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/listings/bmw-m5/#wpcf7-f92090-p91049-o1",
+        "id": "",
+        "fields": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden"
+          },
+          {
+            "name": "message",
+            "type": "textarea"
+          },
+          {
+            "name": "fullname",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "tel",
+            "type": "tel"
+          },
+          {
+            "name": "privacy[]",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "stm_changed_recepient",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-trade-offer-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "trade_price",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "pricing",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/pricing/",
+    "route": "/pricing/",
+    "title": "Pricing – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Style 1",
+      "Style 2",
+      "Style 3",
+      "Style 4",
+      "Style 5",
+      "Style 6",
+      "Style 7",
+      "Style 8",
+      "Style 9",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 7505,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/pricing/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/pricing/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/pricing/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/pricing/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "contact-us",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/contact-us/",
+    "route": "/contact-us/",
+    "title": "Contact Us – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "CONTACT US",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 1528,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/contact-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/contact-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/contact-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/contact-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/contact-us/#wpcf7-f2083-p2080-o1",
+        "id": "",
+        "fields": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden"
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden"
+          },
+          {
+            "name": "first-name",
+            "type": "text"
+          },
+          {
+            "name": "last-name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "subscribe[]",
+            "type": "checkbox"
+          },
+          {
+            "name": "message",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "about-us",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/about-us/",
+    "route": "/about-us/",
+    "title": "About Us – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "WELCOME TO THE MOTORS",
+      "CORE VALUES",
+      "MEDIA GALLERY",
+      "OUR ADVANTAGES",
+      "CUSTOMER TESTIMONIALS",
+      "OUR TEAM",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2566,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/about-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/about-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/about-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/about-us/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "blog",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/blog/",
+    "route": "/blog/",
+    "title": "Blog – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2116,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/blog/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/blog/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/blog/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/blog/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "",
+        "fields": [
+          {
+            "name": "s",
+            "type": "search"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "loan-calculators",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/loan-calculators/",
+    "route": "/loan-calculators/",
+    "title": "Loan Calculators – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Percentage Loan Calculator​",
+      "Auto Loan Calculator",
+      "Amount Loan Calculator",
+      "Auto Loan Calculator",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2338,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/loan-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/loan-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/loan-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/loan-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "leasing-calculators",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/leasing-calculators/",
+    "route": "/leasing-calculators/",
+    "title": "Leasing Calculators – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Leasing Calculator — Standart",
+      "Leasing Calculator",
+      "Leasing Calculator — Andvanced",
+      "Leasing Calculator",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2596,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/leasing-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/leasing-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/leasing-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/leasing-calculators/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "import-car-calculator",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/import-car-calculator/",
+    "route": "/import-car-calculator/",
+    "title": "Import Car Calculator – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Import Car Calculator",
+      "Import Car Calculator",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2213,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/import-car-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/import-car-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/import-car-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/import-car-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "insurance-calculator",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-one/insurance-calculator/",
+    "route": "/insurance-calculator/",
+    "title": "Insurance Calculator – Motors Classified Elementor",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "All Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Insurance Calculator",
+      "Insurance Calculator",
+      "Schedule a Test Drive",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Schedule a Test Drive",
+      "Request car price"
+    ],
+    "height": 2949,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/insurance-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/insurance-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/insurance-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/insurance-calculator/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "",
+            "type": "text"
+          },
+          {
+            "name": "stm-footer-search-name",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "request-test-drive-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "date",
+            "type": "text"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          },
+          {
+            "name": "vehicle_name",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-one/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "g-recaptcha-response",
+            "type": "textarea"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inventory-page-2",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+    "route": "/inventory/page/2/",
+    "title": "Inventory – Page 2 – Motors",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "Top Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Cars for sale",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Request car price"
+    ],
+    "height": 4487,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "select-one"
+          },
+          {
+            "name": "body",
+            "type": "select-one"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "min_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "max_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "ca-year",
+            "type": "select-one"
+          },
+          {
+            "name": "min_price",
+            "type": "hidden"
+          },
+          {
+            "name": "max_price",
+            "type": "hidden"
+          },
+          {
+            "name": "transmission",
+            "type": "select-one"
+          },
+          {
+            "name": "exterior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "interior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "listing_status",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "text"
+          },
+          {
+            "name": "stm_keywords",
+            "type": "text"
+          },
+          {
+            "name": "view_type",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_filter_link",
+            "type": "hidden"
+          },
+          {
+            "name": "popular",
+            "type": "hidden"
+          },
+          {
+            "name": "s",
+            "type": "hidden"
+          },
+          {
+            "name": "sort_order",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "posttype",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/2/",
+        "id": "mc4wp-form-1",
+        "fields": [
+          {
+            "name": "EMAIL",
+            "type": "email"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "_mc4wp_honeypot",
+            "type": "text"
+          },
+          {
+            "name": "_mc4wp_timestamp",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_id",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_element_id",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inventory-page-3",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+    "route": "/inventory/page/3/",
+    "title": "Inventory – Page 3 – Motors",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "Top Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Cars for sale",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Request car price"
+    ],
+    "height": 4192,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "select-one"
+          },
+          {
+            "name": "body",
+            "type": "select-one"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "min_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "max_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "ca-year",
+            "type": "select-one"
+          },
+          {
+            "name": "min_price",
+            "type": "hidden"
+          },
+          {
+            "name": "max_price",
+            "type": "hidden"
+          },
+          {
+            "name": "transmission",
+            "type": "select-one"
+          },
+          {
+            "name": "exterior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "interior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "listing_status",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "text"
+          },
+          {
+            "name": "stm_keywords",
+            "type": "text"
+          },
+          {
+            "name": "view_type",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_filter_link",
+            "type": "hidden"
+          },
+          {
+            "name": "popular",
+            "type": "hidden"
+          },
+          {
+            "name": "s",
+            "type": "hidden"
+          },
+          {
+            "name": "sort_order",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "posttype",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/3/",
+        "id": "mc4wp-form-1",
+        "fields": [
+          {
+            "name": "EMAIL",
+            "type": "email"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "_mc4wp_honeypot",
+            "type": "text"
+          },
+          {
+            "name": "_mc4wp_timestamp",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_id",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_element_id",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inventory-page-4",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+    "route": "/inventory/page/4/",
+    "title": "Inventory – Page 4 – Motors",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "Top Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Cars for sale",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Request car price"
+    ],
+    "height": 3583,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "select-one"
+          },
+          {
+            "name": "body",
+            "type": "select-one"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "min_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "max_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "ca-year",
+            "type": "select-one"
+          },
+          {
+            "name": "min_price",
+            "type": "hidden"
+          },
+          {
+            "name": "max_price",
+            "type": "hidden"
+          },
+          {
+            "name": "transmission",
+            "type": "select-one"
+          },
+          {
+            "name": "exterior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "interior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "listing_status",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "text"
+          },
+          {
+            "name": "stm_keywords",
+            "type": "text"
+          },
+          {
+            "name": "view_type",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_filter_link",
+            "type": "hidden"
+          },
+          {
+            "name": "popular",
+            "type": "hidden"
+          },
+          {
+            "name": "s",
+            "type": "hidden"
+          },
+          {
+            "name": "sort_order",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "posttype",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/4/",
+        "id": "mc4wp-form-1",
+        "fields": [
+          {
+            "name": "EMAIL",
+            "type": "email"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "_mc4wp_honeypot",
+            "type": "text"
+          },
+          {
+            "name": "_mc4wp_timestamp",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_id",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_element_id",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inventory-page-5",
+    "source": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+    "route": "/inventory/page/5/",
+    "title": "Inventory – Page 5 – Motors",
+    "headings": [
+      "Top Makes",
+      "Top Vehicles",
+      "Top Makes",
+      "Top Makes",
+      "Top Vehicles",
+      "Cars for sale",
+      "Scan QR to view mobile version",
+      "MOTORS DEMOS",
+      "Creating Sandbox...",
+      "Sandbox is Ready!",
+      "Request car price"
+    ],
+    "height": 3583,
+    "forms": [
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "stm_user_password",
+            "type": "password"
+          },
+          {
+            "name": "stm_remember_me",
+            "type": "checkbox"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "",
+        "fields": [
+          {
+            "name": "stm_link_send_to",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_user_login",
+            "type": "text"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/",
+        "id": "",
+        "fields": [
+          {
+            "name": "security",
+            "type": "hidden"
+          },
+          {
+            "name": "condition",
+            "type": "select-one"
+          },
+          {
+            "name": "body",
+            "type": "select-one"
+          },
+          {
+            "name": "make",
+            "type": "select-one"
+          },
+          {
+            "name": "serie",
+            "type": "select-one"
+          },
+          {
+            "name": "min_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "max_mileage",
+            "type": "hidden"
+          },
+          {
+            "name": "ca-year",
+            "type": "select-one"
+          },
+          {
+            "name": "min_price",
+            "type": "hidden"
+          },
+          {
+            "name": "max_price",
+            "type": "hidden"
+          },
+          {
+            "name": "transmission",
+            "type": "select-one"
+          },
+          {
+            "name": "exterior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "interior-color",
+            "type": "select-one"
+          },
+          {
+            "name": "listing_status",
+            "type": "select-one"
+          },
+          {
+            "name": "ca_location",
+            "type": "text"
+          },
+          {
+            "name": "stm_lat",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_lng",
+            "type": "hidden"
+          },
+          {
+            "name": "max_search_radius",
+            "type": "text"
+          },
+          {
+            "name": "stm_keywords",
+            "type": "text"
+          },
+          {
+            "name": "view_type",
+            "type": "hidden"
+          },
+          {
+            "name": "stm_filter_link",
+            "type": "hidden"
+          },
+          {
+            "name": "popular",
+            "type": "hidden"
+          },
+          {
+            "name": "s",
+            "type": "hidden"
+          },
+          {
+            "name": "sort_order",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "posttype",
+            "type": "hidden"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/inventory/page/5/",
+        "id": "mc4wp-form-1",
+        "fields": [
+          {
+            "name": "EMAIL",
+            "type": "email"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "_mc4wp_honeypot",
+            "type": "text"
+          },
+          {
+            "name": "_mc4wp_timestamp",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_id",
+            "type": "hidden"
+          },
+          {
+            "name": "_mc4wp_form_element_id",
+            "type": "hidden"
+          }
+        ]
+      },
+      {
+        "action": "https://motors.stylemixthemes.com/elementor-classified-four/",
+        "id": "get-car-price-form",
+        "fields": [
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "phone",
+            "type": "tel"
+          },
+          {
+            "name": "",
+            "type": "submit"
+          },
+          {
+            "name": "vehicle_id",
+            "type": "hidden"
+          }
+        ]
+      }
+    ]
+  }
+]

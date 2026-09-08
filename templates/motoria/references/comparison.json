@@ -1,0 +1,212 @@
+[
+  {
+    "name": "home",
+    "viewport": "desktop",
+    "referenceHeight": 2826,
+    "localHeight": 2826,
+    "diffPercent": 0
+  },
+  {
+    "name": "home",
+    "viewport": "mobile",
+    "referenceHeight": 7387,
+    "localHeight": 7387,
+    "diffPercent": 0.26
+  },
+  {
+    "name": "inventory",
+    "viewport": "desktop",
+    "referenceHeight": 4585,
+    "localHeight": 4585,
+    "diffPercent": 0
+  },
+  {
+    "name": "inventory",
+    "viewport": "mobile",
+    "referenceHeight": 10728,
+    "localHeight": 10728,
+    "diffPercent": 0.01
+  },
+  {
+    "name": "bmw-m5",
+    "viewport": "desktop",
+    "referenceHeight": 3066,
+    "localHeight": 3066,
+    "diffPercent": 0.38
+  },
+  {
+    "name": "bmw-m5",
+    "viewport": "mobile",
+    "referenceHeight": 5197,
+    "localHeight": 5197,
+    "diffPercent": 0.88
+  },
+  {
+    "name": "pricing",
+    "viewport": "desktop",
+    "referenceHeight": 7559,
+    "localHeight": 7559,
+    "diffPercent": 0
+  },
+  {
+    "name": "pricing",
+    "viewport": "mobile",
+    "referenceHeight": 19829,
+    "localHeight": 19829,
+    "diffPercent": 0.08
+  },
+  {
+    "name": "contact-us",
+    "viewport": "desktop",
+    "referenceHeight": 1582,
+    "localHeight": 1582,
+    "diffPercent": 0.6
+  },
+  {
+    "name": "contact-us",
+    "viewport": "mobile",
+    "referenceHeight": 2401,
+    "localHeight": 2401,
+    "diffPercent": 6.32
+  },
+  {
+    "name": "about-us",
+    "viewport": "desktop",
+    "referenceHeight": 2620,
+    "localHeight": 2620,
+    "diffPercent": 0
+  },
+  {
+    "name": "about-us",
+    "viewport": "mobile",
+    "referenceHeight": 5023,
+    "localHeight": 5023,
+    "diffPercent": 0.48
+  },
+  {
+    "name": "blog",
+    "viewport": "desktop",
+    "referenceHeight": 2170,
+    "localHeight": 2170,
+    "diffPercent": 0
+  },
+  {
+    "name": "blog",
+    "viewport": "mobile",
+    "referenceHeight": 6409,
+    "localHeight": 6409,
+    "diffPercent": 0.02
+  },
+  {
+    "name": "loan-calculators",
+    "viewport": "desktop",
+    "referenceHeight": 2392,
+    "localHeight": 2392,
+    "diffPercent": 0
+  },
+  {
+    "name": "loan-calculators",
+    "viewport": "mobile",
+    "referenceHeight": 3071,
+    "localHeight": 3071,
+    "diffPercent": 0.03
+  },
+  {
+    "name": "leasing-calculators",
+    "viewport": "desktop",
+    "referenceHeight": 2650,
+    "localHeight": 2650,
+    "diffPercent": 0
+  },
+  {
+    "name": "leasing-calculators",
+    "viewport": "mobile",
+    "referenceHeight": 3661,
+    "localHeight": 3661,
+    "diffPercent": 0.22
+  },
+  {
+    "name": "import-car-calculator",
+    "viewport": "desktop",
+    "referenceHeight": 2267,
+    "localHeight": 2267,
+    "diffPercent": 0
+  },
+  {
+    "name": "import-car-calculator",
+    "viewport": "mobile",
+    "referenceHeight": 2927,
+    "localHeight": 2927,
+    "diffPercent": 0.03
+  },
+  {
+    "name": "insurance-calculator",
+    "viewport": "desktop",
+    "referenceHeight": 3003,
+    "localHeight": 3003,
+    "diffPercent": 0
+  },
+  {
+    "name": "insurance-calculator",
+    "viewport": "mobile",
+    "referenceHeight": 4059,
+    "localHeight": 4059,
+    "diffPercent": 0.2
+  },
+  {
+    "name": "inventory-page-2",
+    "viewport": "desktop",
+    "referenceHeight": 4541,
+    "localHeight": 4541,
+    "diffPercent": 0
+  },
+  {
+    "name": "inventory-page-2",
+    "viewport": "mobile",
+    "referenceHeight": 10639,
+    "localHeight": 10639,
+    "diffPercent": 0.01
+  },
+  {
+    "name": "inventory-page-3",
+    "viewport": "desktop",
+    "referenceHeight": 4246,
+    "localHeight": 4246,
+    "diffPercent": 0
+  },
+  {
+    "name": "inventory-page-3",
+    "viewport": "mobile",
+    "referenceHeight": 9937,
+    "localHeight": 9937,
+    "diffPercent": 0.09
+  },
+  {
+    "name": "inventory-page-4",
+    "viewport": "desktop",
+    "referenceHeight": 3637,
+    "localHeight": 3637,
+    "diffPercent": 0.04
+  },
+  {
+    "name": "inventory-page-4",
+    "viewport": "mobile",
+    "referenceHeight": 8428,
+    "localHeight": 8428,
+    "diffPercent": 0.18
+  },
+  {
+    "name": "inventory-page-5",
+    "viewport": "desktop",
+    "referenceHeight": 3637,
+    "localHeight": 3637,
+    "diffPercent": 0.04
+  },
+  {
+    "name": "inventory-page-5",
+    "viewport": "mobile",
+    "referenceHeight": 8428,
+    "localHeight": 8428,
+    "diffPercent": 0.1
+  }
+]

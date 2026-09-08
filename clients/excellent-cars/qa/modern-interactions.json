@@ -1,0 +1,58 @@
+[
+  {
+    "width": 390,
+    "errors": [],
+    "menuOpened": true,
+    "menuDismissed": false,
+    "filterOpened": true,
+    "filterDismissed": true,
+    "inputs": [
+      {
+        "placeholder": "Търси марка, модел…",
+        "name": "q",
+        "type": "search"
+      }
+    ],
+    "searchUrl": "http://127.0.0.1:6622/cars?q=Cupra",
+    "search": true,
+    "detailHref": "/bg/listing/excellent-11786795820524833",
+    "detailUrl": "http://127.0.0.1:6622/listing/excellent-11786795820524833",
+    "phones": [
+      "tel:+359895996559"
+    ],
+    "phoneEnquiry": true,
+    "returnUrl": "http://127.0.0.1:6622/cars?q=Cupra",
+    "returnPreservesSearch": true,
+    "contact": true,
+    "formStatus": [
+      "Обадете ни се"
+    ]
+  },
+  {
+    "width": 1440,
+    "errors": [],
+    "inputs": [
+      {
+        "placeholder": "Търсете по марка, модел или ключова дума…",
+        "name": "q",
+        "type": "search"
+      }
+    ],
+    "searchUrl": "http://127.0.0.1:6622/cars?q=Cupra",
+    "search": true,
+    "detailHref": "/bg/listing/excellent-11786795820524833",
+    "detailUrl": "http://127.0.0.1:6622/listing/excellent-11786795820524833",
+    "phones": [
+      "tel:+359895996559"
+    ],
+    "phoneEnquiry": true,
+    "returnUrl": "http://127.0.0.1:6622/cars?q=Cupra",
+    "returnPreservesSearch": true,
+    "contact": true,
+    "formStatus": [
+      "Обадете се",
+      "Изпратете данни за автомобила и заявете оценка.",
+      "Обадете се"
+    ]
+  }
+]

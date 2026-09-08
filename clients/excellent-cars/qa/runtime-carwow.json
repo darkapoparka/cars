@@ -1,0 +1,10 @@
+{
+    "Template":  "carwow",
+    "Project":  "J:\\cars\\clients\\excellent-cars\\carwow",
+    "PID":  63820,
+    "Port":  6623,
+    "Url":  "http://127.0.0.1:6623",
+    "Stdout":  "J:\\cars\\runtime\\carwow-6623-20260907-185357.out.log",
+    "Stderr":  "J:\\cars\\runtime\\carwow-6623-20260907-185357.err.log",
+    "Status":  "stopped-after-qa"
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "key": "boxcar",
+    "source": "J:\\cars\\boxcar",
+    "destination": "J:\\cars\\templates\\boxcar",
+    "oldPID": 37692,
+    "packageSHA256": "1BEF85463CA154017BAC56BF855604DC5AC9AB19AABC3962382C6D148991BAA7",
+    "restart": {
+      "Template": "boxcar",
+      "Project": "J:\\cars\\templates\\boxcar",
+      "PID": 38144,
+      "Port": 6450,
+      "Url": "http://127.0.0.1:6450",
+      "Stdout": "J:\\cars\\runtime\\boxcar-6450-20260906-171845.out.log",
+      "Stderr": "J:\\cars\\runtime\\boxcar-6450-20260906-171845.err.log",
+      "Status": "started-not-yet-browser-verified"
+    }
+  },
+  {
+    "key": "rencar",
+    "source": "J:\\cars\\rencar",
+    "destination": "J:\\cars\\templates\\rencar",
+    "oldPID": 44940,
+    "packageSHA256": "93EB40C4A1460B833CFCEC7A1EC25D1395D0B69D4857ECC5E9FFF101152EB98C",
+    "restart": {
+      "Template": "rencar",
+      "Project": "J:\\cars\\templates\\rencar",
+      "PID": 76436,
+      "Port": 6430,
+      "Url": "http://127.0.0.1:6430",
+      "Stdout": "J:\\cars\\runtime\\rencar-6430-20260906-171846.out.log",
+      "Stderr": "J:\\cars\\runtime\\rencar-6430-20260906-171846.err.log",
+      "Status": "started-not-yet-browser-verified"
+    }
+  },
+  {
+    "key": "nusavo",
+    "source": "J:\\cars\\nusavo",
+    "destination": "J:\\cars\\templates\\nusavo",
+    "oldPID": 65000,
+    "packageSHA256": "072D88FE401051FCBBBBFCD236D1F89FFB7CC9FDDA3E0B0895EA4C84781B6490",
+    "restart": {
+      "Template": "nusavo",
+      "Project": "J:\\cars\\templates\\nusavo",
+      "PID": 38248,
+      "Port": 6420,
+      "Url": "http://127.0.0.1:6420",
+      "Stdout": "J:\\cars\\runtime\\nusavo-6420-20260906-171847.out.log",
+      "Stderr": "J:\\cars\\runtime\\nusavo-6420-20260906-171847.err.log",
+      "Status": "started-not-yet-browser-verified"
+    }
+  },
+  {
+    "key": "motoria",
+    "source": "J:\\cars\\motoria",
+    "destination": "J:\\cars\\templates\\motoria",
+    "oldPID": 23920,
+    "packageSHA256": "0DE66D71F06CD31C837AE2358010B2B790435C228585180A2EFA4888008B70DB",
+    "restart": {
+      "Template": "motoria",
+      "Project": "J:\\cars\\templates\\motoria",
+      "PID": 26720,
+      "Port": 6440,
+      "Url": "http://127.0.0.1:6440",
+      "Stdout": "J:\\cars\\runtime\\motoria-6440-20260906-171856.out.log",
+      "Stderr": "J:\\cars\\runtime\\motoria-6440-20260906-171856.err.log",
+      "Status": "started-not-yet-browser-verified"
+    }
+  }
+]

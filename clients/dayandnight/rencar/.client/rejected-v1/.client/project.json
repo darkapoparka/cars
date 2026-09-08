@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "client": "dayandnight",
+  "templateKey": "rencar",
+  "templateVersion": "2026.09.06-baseline",
+  "createdAt": "2026-09-06T17:39:56.807Z",
+  "state": "local-review",
+  "selectedHome": "home02",
+  "availableHomes": [
+    {
+      "id": "home01",
+      "route": "/index.html"
+    },
+    {
+      "id": "home02",
+      "route": "/index-2.html"
+    },
+    {
+      "id": "home03",
+      "route": "/index-3.html"
+    },
+    {
+      "id": "home04",
+      "route": "/index-4.html"
+    },
+    {
+      "id": "home05",
+      "route": "/index-5.html"
+    }
+  ],
+  "offeredHomes": [
+    "home01",
+    "home02",
+    "home03",
+    "home04",
+    "home05"
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "svelteCheck": true,
+    "build": true,
+    "routeSamples": 22,
+    "interactionChecks": 19,
+    "responsiveSamples": 12,
+    "checkedAt": "2026-09-06T18:23:52.803Z",
+    "report": ".client/QA.md"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false,
+    "note": "This client copy was not registered and existing M: CRM identities were not modified. No live CRM refresh was performed for this trial."
+  },
+  "projectKey": "day-and-night-rencar",
+  "clientVersion": "2026.09.06-daynight-v1",
+  "updatedAt": "2026-09-06T18:23:52.803Z",
+  "buildType": "owner-requested dealer adaptation prototype",
+  "entryRoute": "/",
+  "localUrl": "http://127.0.0.1:6601/",
+  "comparisonUrl": "http://127.0.0.1:6601/variants.html",
+  "changes": [
+    "Five Rencar-derived homes with Home 2 primary",
+    "Day & Night logo, colors, Bulgarian copy and 18 imported media files from current 5173 source",
+    "Native dealer search, model catalog, details, contact topics and direct enquiry destinations",
+    "URL-preserving search/filter/sort and related-model return flow",
+    "Mobile dialogs, focus restoration, 320px geometry and 200 percent text reflow",
+    "Comparison page with exact homepage screenshots"
+  ],
+  "knownGaps": [
+    "Local preview only; no public deployment",
+    "Model showcase and prices by enquiry, without live stock synchronization",
+    "Generated/decorative media do not establish actual stock or premises",
+    "Direct external contact links; no local message-delivery backend",
+    "Shared Rencar master still requires a separately requested dealer adaptation"
+  ],
+  "provenance": {
+    "templateManifest": ".template/source-manifest.json",
+    "donorAssets": ".client/provenance/assets.json",
+    "facts": ".client/provenance/facts.json",
+    "comparisonScreenshots": ".client/provenance/preview-screenshots.json"
+  },
+  "runtime": {
+    "port": 6601,
+    "verifiedPid": 22044,
+    "source": "J:/cars/clients/dayandnight/rencar",
+    "evidence": ".client/qa/listeners.json"
+  }
+}

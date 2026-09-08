@@ -1,0 +1,213 @@
+{
+  "checkedAt": "2026-09-08T03:15:35.219Z",
+  "module": "carwow/src/lib/data/daynight-vehicles.ts",
+  "stockCount": 14,
+  "vehicleCount": 14,
+  "records": [
+    {
+      "slug": "audi-q4-166588",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11774263732166588-audi-q4-q4-e-tron-45-quattro-digital-termopompa-29000km",
+      "price": 37999,
+      "mileage": 29000,
+      "stockPrice": 37999,
+      "stockMileage": 29000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "seat-leon-2-0tdi-120443",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11784618839120443-seat-leon-2-0tdi",
+      "price": 7999,
+      "mileage": 200000,
+      "stockPrice": 7999,
+      "stockMileage": 200000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "vw-tiguan-2-0tdi-488349",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-21785269571488349-vw-tiguan-2-0tdi-150-k-s-dsg-122000km-navigatsiya",
+      "price": 16999,
+      "mileage": 122000,
+      "stockPrice": 16999,
+      "stockMileage": 122000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "vw-passat-2-0tdi-085673",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11788186558085673-vw-passat-2-0tdi-dsg-navigatsiya-podgrev-na-sedalki",
+      "price": 9999,
+      "mileage": 220000,
+      "stockPrice": 9999,
+      "stockMileage": 220000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "vw-golf-1-9tdi-254523",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11788202283254523-vw-golf-1-9tdi-105k-s",
+      "price": 3599,
+      "mileage": 205000,
+      "stockPrice": 3599,
+      "stockMileage": 205000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "toyota-yaris-1-5-226239",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11782331844226239-toyota-yaris-1-5-hibrid-kamera-4l-100km",
+      "price": 7999,
+      "mileage": 169000,
+      "stockPrice": 7999,
+      "stockMileage": 169000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "toyota-rav4-2-5-316819",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-21787135215316819-toyota-rav4-2-5-hybrid-gaz-full-navigatsiya-kozhen-salon-full",
+      "price": 26999,
+      "mileage": 252000,
+      "stockPrice": 26999,
+      "stockMileage": 252000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "toyota-auris-2-0d4d-982478",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11786699392982478-toyota-auris-2-0d4d",
+      "price": 4399,
+      "mileage": 229000,
+      "stockPrice": 4399,
+      "stockMileage": 229000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "skoda-scala-1-6tdi-251501",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11787054081251501-skoda-scala-1-6tdi",
+      "price": 11999,
+      "mileage": 180000,
+      "stockPrice": 11999,
+      "stockMileage": 180000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "renault-zoe-52kw-265620",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11787771672265620-renault-zoe-52kw-78000km-sobstvena-bateriya",
+      "price": 14299,
+      "mileage": 78000,
+      "stockPrice": 14299,
+      "stockMileage": 78000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "renault-clio-1-2-319103",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11777013326319103-renault-clio-1-2-benzin",
+      "price": 5199,
+      "mileage": 150000,
+      "stockPrice": 5199,
+      "stockMileage": 150000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "peugeot-508-2-0hdi-880460",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11764232323880460-peugeot-508-2-0hdi",
+      "price": 4299,
+      "mileage": 232000,
+      "stockPrice": 4299,
+      "stockMileage": 232000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "opel-astra-1-6-654053",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11786966551654053-opel-astra-1-6",
+      "price": 6599,
+      "mileage": 193000,
+      "stockPrice": 6599,
+      "stockMileage": 193000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    },
+    {
+      "slug": "opel-agila-1-3i-563390",
+      "sourceUrl": "https://legendauto1.mobile.bg/obiava-11725562013563390-opel-agila-1-3i-vnos-ot-italiya",
+      "price": 2500,
+      "mileage": 120000,
+      "stockPrice": 2500,
+      "stockMileage": 120000,
+      "finite": true,
+      "priceMatchesSnapshot": true,
+      "mileageMatchesSnapshot": true
+    }
+  ],
+  "budgetCounts": [
+    {
+      "value": "under-10000",
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "value": "under-20000",
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "value": "under-30000",
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "value": "under-50000",
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "value": "over-50000",
+      "actual": 0,
+      "expected": 0
+    }
+  ],
+  "mileageCounts": [
+    {
+      "value": "under-50000",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "value": "under-100000",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "value": "under-150000",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "value": "under-200000",
+      "actual": 9,
+      "expected": 9
+    }
+  ],
+  "priceComparison": "Runtime EUR values compared to source snapshot within 0.51 EUR to allow retained whole-EUR snapshot rounding; exact values recorded.",
+  "pass": true
+}

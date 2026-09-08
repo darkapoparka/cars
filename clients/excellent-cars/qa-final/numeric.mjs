@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import vm from 'node:vm';
+const base='J:/cars/clients/excellent-cars/carwow/src/lib/data/';
+const source=await fs.readFile(base+'daynight-vehicles.ts','utf8');
+const parser=source.match(/const parseLocalizedNumber = \(value: string\) => \{([\s\S]*?)\n\};/)[1];
+const parse=vm.runInNewContext(`(value)=>{${parser}}`);
+const inventory=await fs.readFile(base+'daynight-current-inventory.ts','utf8');
+const rows=JSON.parse(inventory.slice(inventory.indexOf('= [')+2).trim().replace(/;$/,''));
+const stock=JSON.parse(await fs.readFile(base+'excellent-stock.json','utf8'));
+const evidence=rows.map(row=>{const raw=stock.find(s=>s.id===row.id); const price=parse(row.priceEur),mileage=parse(row.mileage);return {id:row.id,price,mileage,pass:Number.isFinite(price)&&Number.isFinite(mileage)&&price===raw.priceEur&&mileage===raw.mileageKm};});
+const budgets=[10000,20000,30000,50000].map(limit=>({limit,count:evidence.filter(r=>r.price>0&&r.price<=limit).length,expected:stock.filter(r=>r.priceEur>0&&r.priceEur<=limit).length}));
+await fs.writeFile(new URL('numeric-stock.json',import.meta.url),JSON.stringify({evidence,budgets},null,2));
+if(evidence.some(r=>!r.pass)||budgets.some(r=>r.count!==r.expected))throw Error('Numeric stock mismatch');
+console.log({rows:evidence.length,budgets});

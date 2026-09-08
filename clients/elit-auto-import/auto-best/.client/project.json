@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "client": "elit-auto-import",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-06T21:48:47.255Z",
+  "state": "local-qa-passed",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": true,
+    "mobile": true,
+    "identity": true,
+    "contactPath": true,
+    "evidence": "J:/cars/audits/2026-09-08/verify/elit-auto-import/auto-best/result.json",
+    "frameworkChecks": true,
+    "checkedAt": "2026-09-08T03:40:50.037Z",
+    "limits": [
+      "Local demo only; no provider or form delivery verified.",
+      "Stock is a dated source-backed sample."
+    ],
+    "latestFrameworkEvidence": [
+      {
+        "path": "J:/cars/clients/elit-auto-import/validate-auto-final.log",
+        "modifiedAt": "2026-09-06T22:07:24.864Z"
+      }
+    ],
+    "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6661/",
+    "state": "stopped-after-verification"
+  },
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 15,
+    "photosPerVehicle": 5,
+    "assetsProvenance": "../assets/provenance.json",
+    "officialLogo": true,
+    "sourceTemplateVersion": "2026.09.06-refresh-1",
+    "captureDate": "2026-09-07",
+    "notes": [
+      "Full source composition preserved; generic decorative vehicle cutouts retained.",
+      "No confirmed social profiles, email or opening hours.",
+      "No dealer financing, buyback or trade-in service confirmed. Existing inquiry routes remain demo templates with copy limitations.",
+      "Mileage field and seller description conflicts explicitly disclosed."
+    ]
+  }
+}

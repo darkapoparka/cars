@@ -1,0 +1,35 @@
+{
+  "key": "motoria",
+  "name": "Motoria (Motors source)",
+  "aliases": [
+    "motors",
+    "6440"
+  ],
+  "path": "templates/motoria",
+  "version": "2026.09.06-baseline",
+  "family": "motors",
+  "stack": "sveltekit",
+  "sourcePort": 6440,
+  "libraryPort": 6440,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "classified-one",
+      "route": "/"
+    }
+  ],
+  "desktop": 6.5,
+  "mobile": 5,
+  "priority": "hold",
+  "readiness": "route-completion-needed",
+  "reskinEffort": "high",
+  "brandFiles": [
+    "src/lib/snapshots",
+    "static",
+    "static/local-runtime.js"
+  ],
+  "note": "The folder name is motoria, but source is Motors by Stylemix. Different from Agency OS's historical Motoria/inventory family. One home, nine pricing styles, one captured vehicle detail. Many cards still leave for the vendor site.",
+  "sourceSnapshot": null,
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed"
+}

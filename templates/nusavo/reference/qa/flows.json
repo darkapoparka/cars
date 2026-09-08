@@ -1,0 +1,24 @@
+{
+  "checks": [
+    "Mobile menu opens accessibly",
+    "Escape closes menu",
+    "Keyboard opens menu",
+    "Fleet carousel initialized",
+    "Partner logos visible",
+    "Fleet category filters to one electric car",
+    "All filter restores eight cars",
+    "FAQ expands",
+    "FAQ collapses",
+    "Vehicle image opens",
+    "Image closes with Escape",
+    "Book action adds correct vehicle",
+    "Quantity recalculates total",
+    "Cart survives reload",
+    "Remove restores empty cart",
+    "Checkout prevents empty required fields",
+    "Checkout reaches honest local summary",
+    "Contact form provides local feedback",
+    "No JavaScript errors during flows"
+  ],
+  "errors": []
+}

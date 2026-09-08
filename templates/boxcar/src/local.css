@@ -1,0 +1,20 @@
+/* Only local behavior and accessibility additions. The imported theme owns visual styling. */
+.elementor-invisible{visibility:visible!important}
+.apus-page-loading{display:none!important}
+.wrapper-container{overflow-x:clip}
+img{max-width:100%}
+.slick-carousel:not(.slick-initialized){visibility:hidden}
+.elementor-counter-number{font-variant-numeric:tabular-nums}
+.local-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);max-width:min(620px,calc(100vw - 32px));background:#050b20;color:white;padding:16px 48px 16px 22px;border-radius:12px;box-shadow:0 6px 28px #0003;z-index:99999;font:15px/1.5 'DM Sans',sans-serif}
+.local-toast button{position:absolute;right:10px;top:9px;border:0;background:none;color:white;font-size:26px}
+.local-dialog{width:min(620px,calc(100vw - 32px));max-height:90vh;border:0;border-radius:16px;padding:36px;background:white;color:#050b20}
+.local-dialog::backdrop{background:#050b20b3}.local-dialog h2{font-size:26px;margin:0 32px 24px 0}.local-dialog-close{position:absolute;top:12px;right:15px;border:0;background:none;font-size:28px;width:36px;height:36px;cursor:pointer}
+.local-contact-form{display:grid;gap:16px}.local-contact-form label{display:grid;gap:6px}.local-lightbox-image{width:100%;height:auto;border-radius:10px}.local-dialog:has(.local-lightbox-image){width:min(1100px,95vw)}.local-video{width:100%;aspect-ratio:16/9;border:0}
+.local-selected{color:#405ff2!important;background:#edf1ff!important}
+.local-not-found{max-width:900px;margin:120px auto;padding:32px}
+.local-menu-open{overflow:hidden}.local-submenu-open>.sub-menu{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;transform:none!important}
+#apus-mobile-menu .sub-menu{display:none}#apus-mobile-menu .navbar-nav{display:block}
+.navbar-nav li:focus-within>.dropdown-menu{display:block;opacity:1;visibility:visible;transform:none}
+a:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:2px solid #405ff2;outline-offset:4px}
+.form-control:focus-visible{outline:2px solid #405ff2;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

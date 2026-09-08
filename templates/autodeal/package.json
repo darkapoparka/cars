@@ -1,0 +1,19 @@
+{
+	"name": "agency-os-automotive-autodeal-template",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"mirror": "node scripts/mirror-reference.mjs",
+		"dev": "node server.mjs",
+		"extract:i18n": "node scripts/extract-i18n-catalog.mjs",
+		"generate:i18n-preserve": "node scripts/generate-i18n-preserve.mjs",
+		"build:i18n": "node scripts/build-i18n-catalogs.mjs",
+		"build": "node scripts/check-mirror.mjs && node scripts/check-i18n.mjs && node --check i18n/runtime.js && node --check server.mjs",
+		"preview": "node server.mjs"
+	},
+	"dependencies": {}
+}

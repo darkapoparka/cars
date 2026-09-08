@@ -1,0 +1,3496 @@
+[
+  {
+    "key": "shortlist-carwow",
+    "port": 6517,
+    "label": "import-actual",
+    "settle": 400,
+    "route": "/contact?intent=import",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "Внос на автомобил | Day Night Auto София",
+      "url": "http://127.0.0.1:6517/contact?intent=import",
+      "width": 1440,
+      "scrollWidth": 1435,
+      "height": 2170,
+      "text": "Към основното съдържание\nВиж наличните автомобили\nСтудентски град, София\n·\n0877 733 110\nБГ\nНачало\nАвтомобили\nПродай\nУслуги\nЗа нас\nЗаявка за внос на автомобил\n\nИзпратете линк, модел или бюджет и ще Ви върнем конкретна следваща стъпка.\n\nИзпрати запитване\nВиж автомобили\nШоурум в София\nЗаявка за внос на автомобил\n\nИзпратете линк, модел или бюджет и ще Ви изпратим конкретни варианти за внос.\n\nОбади се / Viber\nВиж карта\n\nАдрес\n\nгр. София, Студентски град, ул. Атанас Манчев 18\n\nТелефон / Viber\n\n0877 733 110\n\nПисмен контакт\n\nИзползвайте формата за запитване\n\nРаботно време\n\nДелнични дни: 9:00 - 18:00 · Неделя: по уговорка\n\nДанни за внос\n\nПопълнете контакт и линк към обява, ако вече сте избрали автомобил.\n\nНе попълвайте това поле \n\nИме\n\nТема\n\nИмейл\n\nТелефон\n\nЛинк към обява\n\nКакво търсите\n\nИзпрати заявка\n\nDAY NIGHT AUTO\n\nгр. София, Студентски град, ул. Атанас Манчев 18\n\nОтвори в Google Maps\n\nРаботно време:\n\nПонеделник–петък 9:00 – 18:00\nОгледи през уикенда с уговорка\nБЪРЗИ ВРЪЗКИ\nЗа нас\nНашият екип\nУслуги\nЧесто задавани въпроси\nНовини и съвети\nКонтакти\nПОКУПКА И ПРОДАЖБА\nНамери автомобил\nПродай или замени\nЛизинг и финансиране\nКарта на автомобилите\nКалкулатор за внос\nОтзиви от клиенти\n0877 733 110\nОнлайн запитване\nгр. София, Студентски град, ул. Атанас Манчев 18\n\n©2026 Day Night Auto Group. Всички права запазени.\n\nУсловия за ползване\nПоверителност\nБисквитки",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Заявка за внос на автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "Заявка за внос на автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "Бързи връзки"
+        },
+        {
+          "tag": "H2",
+          "text": "Покупка и продажба"
+        }
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Студентски град, София",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Day Night Auto",
+          "href": "/"
+        },
+        {
+          "text": "Day Night Auto",
+          "href": "/"
+        },
+        {
+          "text": "Обади се на 0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Вход / Профил",
+          "href": "/contact"
+        },
+        {
+          "text": "Сравни",
+          "href": "/compare"
+        },
+        {
+          "text": "Запазени автомобили",
+          "href": "/favorites"
+        },
+        {
+          "text": "Продай автомобил",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Day Night Auto",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Обади се на 0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Вход / Профил",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "Продай автомобил",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact#contact-form"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се / Viber",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Виж карта",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Отвори в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018"
+        },
+        {
+          "text": "Day Night Auto — начална страница",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. София, Студентски град, ул. Атанас Манчев 18",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "YouTube",
+          "href": "https://www.youtube.com/@kristiankirilov1355/videos"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        },
+        {
+          "text": "Day Night Auto начална страница",
+          "href": "/"
+        },
+        {
+          "text": "За Day Night Auto",
+          "href": "/about"
+        },
+        {
+          "text": "Профил на автокъщата",
+          "href": "/about/daynight-auto-plovdiv"
+        },
+        {
+          "text": "Екип",
+          "href": "/team"
+        },
+        {
+          "text": "Отзиви",
+          "href": "/reviews"
+        },
+        {
+          "text": "Полезно",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Налични автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Калкулатор",
+          "href": "/calculator"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Сравнение",
+          "href": "/compare"
+        },
+        {
+          "text": "ЧЗВ",
+          "href": "/faq"
+        },
+        {
+          "text": "Контакт за оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Заявка за оценка",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "ЧЗВ",
+          "href": "/faq"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "гр. София, Студентски град, ул. Атанас Манчев 18",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Свържете се с Day Night Auto по телефон или Viber.",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Виж наличните автомобили в mobile.bg",
+          "href": "https://daynight.mobile.bg/"
+        },
+        {
+          "text": "Отвори локацията на Day Night Auto в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018"
+        },
+        {
+          "text": "Свържете се",
+          "href": "/contact"
+        },
+        {
+          "text": "Day Night Auto",
+          "href": "/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "БГ",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Отвори търсене",
+          "type": "button",
+          "id": "searchToggle"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Отвори търсене",
+          "type": "button",
+          "id": "mobileSearchToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "text",
+          "id": "contact-company-website"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Вашето име",
+          "type": "text",
+          "id": "contact-name"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Тема на запитването",
+          "type": "text",
+          "id": "contact-subject"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Имейл",
+          "type": "email",
+          "id": "contact-email"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Телефон",
+          "type": "tel",
+          "id": "contact-phone"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Линк към обява",
+          "type": "text",
+          "id": "contact-source-url"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Изпрати заявка",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Имейл за нови оферти",
+          "type": "email",
+          "id": "footer-email"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Изпрати интерес към нови оферти",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Към началото",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Open chat",
+          "type": "button",
+          "id": ""
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [],
+      "sourceModules": []
+    }
+  },
+  {
+    "key": "shortlist-carwow",
+    "port": 6517,
+    "label": "import-actual",
+    "settle": 400,
+    "route": "/contact?intent=import",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "Внос на автомобил | Day Night Auto София",
+      "url": "http://127.0.0.1:6517/contact?intent=import",
+      "width": 390,
+      "scrollWidth": 385,
+      "height": 1251,
+      "text": "Към основното съдържание\nНамерете автомобила. Ние ще го внесем.\n\nПоставете линк — ние поемаме оттам.\n\nmobile.de, AutoScout24 или друга обява\n\nНямам линк\nКак работи вносът\nОт обявата до конкретна оферта и срок.\nВиж стъпките\nКакво поемаме ние\nПроверка, транспорт, документи и предаване.\nВиж услугата\nИмате въпрос?\nЩе Ви ориентираме преди да изпратите заявка.\nОбади се\nЛОКАЦИЯ\nШоурум в София\nКОЛИ\nНачало\nКоли\nПродай\nВнос\nМеню",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Намерете автомобила. Ние ще го внесем."
+        },
+        {
+          "tag": "H2",
+          "text": "Шоурум в София"
+        },
+        {
+          "tag": "H2",
+          "text": "Какво поемаме ние"
+        }
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Day Night Auto начало",
+          "href": "/"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "КОЛИ",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се на 0877 733 110",
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "INPUT",
+          "text": "Линк към обява за внос",
+          "type": "url",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Продължи",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Нямам линк",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Как работи вносът\nОт обявата до конкретна оферта и срок.\nВиж стъпките",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Какво поемаме ние\nПроверка, транспорт, документи и предаване.\nВиж услугата",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [],
+      "sourceModules": []
+    }
+  },
+  {
+    "key": "shortlist-import",
+    "port": 6518,
+    "label": "home-settled",
+    "settle": 10000,
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "Day Night Auto — автомобили и подбор на автомобили",
+      "url": "http://127.0.0.1:6518/",
+      "width": 1440,
+      "scrollWidth": 1432,
+      "height": 4584,
+      "text": "Начало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nКупи автомобил\n\nПодбрани автомобили\n\nПродай автомобила си\n\nКупи\nВнос\nПродай\nТърси\nИЗБЕРИ МАРКА\nВсички марки\nИЗБЕРИ МОДЕЛ\nВсички модели\nМАКС. ЦЕНА\nВсички цени\nПРОБЕГ\nПробег\nНай-нови автомобили\n\n79 000 km\n\nMERCEDES-BENZ\n\nMercedes-Benz GLA\n45 AMG 4M AMG Night Package\n\n2015\nБензин\nАвтомат\n\n19 500 €\n271 €/мес.\n\nВиж детайли\n→\n\n80 000 km\n\nMERCEDES-BENZ\n\nMercedes-Benz CLS\n53 AMG 4M Night Package\n\n2019\nБензин\nАвтомат\n\n46 500 €\n646 €/мес.\n\nВиж детайли\n→\n\n100 000 km\n\nBMW\n\nBMW X3\n30e xDrive\n\n2022\nХибрид\nАвтомат\n\n31 000 €\n431 €/мес.\n\nВиж детайли\n→\n\n81 000 km\n\nMERCEDES-BENZ\n\nMercedes-Benz GLC\n300 4M AMG Package\n\n2020\nБензин\nАвтомат\n\n30 000 €\n417 €/мес.\n\nВиж детайли\n→\nВиж всички\nПродай автомобила си · Автомобил на лизинг\nПродай автомобила си\n\nИзпрати ни данни и снимки за оценка.\n\nЗаяви оценка\nАвтомобил на лизинг\n\nИзчисли ориентировъчна месечна вноска.\n\nИзчисли вноска\nРазгледай по марка\nВиж всички марки\n\nBMW\n\n15 автомобила\n\nMercedes\n\n15 автомобила\n\nAudi\n\n9 автомобила\n\nPorsche\n\n2 автомобила\n\nMazda\n\n1 автомобил\n\nHonda\n\nВнос по заявка\n\nToyota\n\nВнос по заявка\n\nVolvo\n\nВнос по заявка\n\nFord\n\nВнос по заявка\n\nHyundai\n\nВнос по заявка\n\nTesla\n\nВнос по заявка\n\nВсички марки\n\n42 автомобила\n\nРазгледай по тип\nВиж всички типове\nЕлектрически\nСедан\nSUV\nПикап\nХечбек\nКросоувър\nКабрио\nВиж всички\nПодбрани автомобили · Запази консултация\nПодбрани автомобили\n\nПодбор, проверка, документи и доставка от Европа.\n\nВиж процеса\nЗапази консултация\n\nУточни внос, документи, оглед и следващи стъпки с консултант.\n\nЗапази час\nDay Night Auto в\nYouTube\nНай-желаната кола в България | Lamborghini Urus\nГледай в YouTube\nПродадох най-новата Панамера\nГледай в YouTube\nПродадох най-скъпия Брабус в България\nГледай в YouTube\nОтзиви от клиенти\nВиж всички\n\nЕкипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.\n\nAleksandar Vytev\n\nКлиент на Day Night Auto\n\nDay Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.\n\nKrasimir Georgiev\n\nКлиент с внос\n\nИзпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.\n\nIliyan Petrov\n\nПродава клиентски автомобил\n\nЕкипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.\n\nAleksandar Vytev\n\nКлиент на Day Night Auto\n\nDay Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.\n\nKrasimir Georgiev\n\nКлиент с внос\n\nИзпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.\n\nIliyan Petrov\n\nПродава клиентски автомобил\n\nСъвети от Day Night Auto\nВсички статии\nПодбрани автомобили\nКакво проверява Day Night Auto преди внос на автомобил от Европа\nМай 2026\nПрочети повече\nДокументи\nКакво означава „готов за регистрация“\nМай 2026\nПрочети повече\nПродай автомобила си\nКак Day Night Auto преглежда клиентски автомобил\nМай 2026\nПрочети повече\n\nРаботно време:\n\nПонеделник-петък 9:00 - 18:00\n\nОгледи през уикенда с уговорка\n\nБЪРЗИ ВРЪЗКИ\nЗа нас\nПокупка с Day Night Auto\nПродай автомобила си\nУслуги\nFAQ\nНовини\nКонтакт с Day Night Auto\nПОКУПКА И ПРОДАЖБА\nУслуги\nНамери автомобил\nНамери консултант\nКарта на наличните\nПроверени обяви\nКалкулатор за внос\nОтзиви от клиенти\n0877 733 110\nОнлайн запитване\nгр. София, Студентски град, ул. Атанас Манчев 18\n\n©2026 Day Night Auto Group. Всички права запазени.\n\nОбщи условия\nПоверителност\nБисквитки",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Купи автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "Пловдив, Индустриална зона - Юг"
+        },
+        {
+          "tag": "H1",
+          "text": "Купи автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "Най-нови автомобили Нови коли"
+        },
+        {
+          "tag": "H2",
+          "text": "Продай автомобила си · Автомобил на лизинг"
+        },
+        {
+          "tag": "H3",
+          "text": "Продай автомобила си"
+        },
+        {
+          "tag": "H3",
+          "text": "Автомобил на лизинг"
+        },
+        {
+          "tag": "H2",
+          "text": "Разгледай по марка Марки"
+        },
+        {
+          "tag": "H2",
+          "text": "Разгледай по тип Категория"
+        },
+        {
+          "tag": "H2",
+          "text": "Подбрани автомобили · Запази консултация"
+        },
+        {
+          "tag": "H3",
+          "text": "Подбрани автомобили"
+        },
+        {
+          "tag": "H3",
+          "text": "Запази консултация"
+        },
+        {
+          "tag": "H2",
+          "text": "Day Night Auto в YouTube"
+        },
+        {
+          "tag": "H2",
+          "text": "Отзиви от клиенти"
+        },
+        {
+          "tag": "H2",
+          "text": "Съвети от Day Night Auto"
+        },
+        {
+          "tag": "H3",
+          "text": "Какво проверява Day Night Auto преди внос на автомобил от Европа"
+        },
+        {
+          "tag": "H3",
+          "text": "Какво означава „готов за регистрация“"
+        },
+        {
+          "tag": "H3",
+          "text": "Как Day Night Auto преглежда клиентски автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "БЪРЗИ ВРЪЗКИ"
+        },
+        {
+          "tag": "H2",
+          "text": "ПОКУПКА И ПРОДАЖБА"
+        },
+        {
+          "tag": "H2",
+          "text": "Log In"
+        },
+        {
+          "tag": "H2",
+          "text": "Forgot Password"
+        },
+        {
+          "tag": "H2",
+          "text": "Търси в наличните автомобили"
+        },
+        {
+          "tag": "H2",
+          "text": "Sign Up"
+        },
+        {
+          "tag": "H2",
+          "text": "Избери автомобили"
+        },
+        {
+          "tag": "H2",
+          "text": "Автомобили"
+        },
+        {
+          "tag": "H2",
+          "text": "Day Night Auto"
+        }
+      ],
+      "links": [
+        {
+          "text": "Day Night Auto начало",
+          "href": "/"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Пиши ни",
+          "href": "viber://chat?number=%2B359877733110"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW X5 40i 36 500 EUR · Бензин Виж Детайли",
+          "href": "/inventory/21764342419542174"
+        },
+        {
+          "text": "BMW X4 M Competition 43 500 EUR · Бензин Виж Детайли",
+          "href": "/inventory/21778068579001193"
+        },
+        {
+          "text": "Audi SQ5 Black Optic 33 000 EUR · Бензин Виж Детайли",
+          "href": "/inventory/21778067767337633"
+        },
+        {
+          "text": "Audi A7 Black Optic 35 000 EUR · Бензин Виж Детайли",
+          "href": "/inventory/11774283016080050"
+        },
+        {
+          "text": "Виж всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Изглед с карти",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Карта",
+          "href": "/inventory?view=map"
+        },
+        {
+          "text": "Сравни автомобили",
+          "href": "/compare"
+        },
+        {
+          "text": "SUV",
+          "href": "/inventory?bodyType=SUV"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?bodyType=Sedan"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?bodyType=Coupe"
+        },
+        {
+          "text": "Комби",
+          "href": "/inventory?bodyType=Wagon"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=Petrol"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=Diesel"
+        },
+        {
+          "text": "Хибрид",
+          "href": "/inventory?fuel=Hybrid"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=EV"
+        },
+        {
+          "text": "Внос и покупка",
+          "href": "/services"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Нашите консултанти",
+          "href": "/agents"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Сравни автомобили",
+          "href": "/compare"
+        },
+        {
+          "text": "Запази консултация",
+          "href": "/contact"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашите консултанти",
+          "href": "/agents"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faqs"
+        },
+        {
+          "text": "Съвети от Day Night Auto",
+          "href": "/blog"
+        },
+        {
+          "text": "Посети офиса",
+          "href": "/contact"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "",
+          "href": "/?lang=bg"
+        },
+        {
+          "text": "",
+          "href": "/?lang=en"
+        },
+        {
+          "text": "Вход",
+          "href": "/account"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Сравни",
+          "href": "/compare"
+        },
+        {
+          "text": "Любими",
+          "href": "/account/favorites"
+        },
+        {
+          "text": "Вход",
+          "href": "/account"
+        },
+        {
+          "text": "Всички 42 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Отвори карта",
+          "href": "https://www.google.com/maps/search/?api=1&query=Day Night Auto%20Plovdiv%20South%20Industrial%20Zone"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "До 10 000",
+          "href": "/inventory?maxPrice=10000"
+        },
+        {
+          "text": "До 20 000",
+          "href": "/inventory?maxPrice=20000"
+        },
+        {
+          "text": "До 30 000",
+          "href": "/inventory?maxPrice=30000"
+        },
+        {
+          "text": "Нови обяви",
+          "href": "/inventory?status=New%20listing"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?status=Available"
+        },
+        {
+          "text": "Купи",
+          "href": "/"
+        },
+        {
+          "text": "Внос",
+          "href": "/?intent=import"
+        },
+        {
+          "text": "Продай",
+          "href": "/?intent=sell"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21754658377544573"
+        },
+        {
+          "text": "MERCEDES-BENZ",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz GLA\n45 AMG 4M AMG Night Package",
+          "href": "/inventory/21754658377544573"
+        },
+        {
+          "text": "271 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли\n→",
+          "href": "/inventory/21754658377544573"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11776435520256611"
+        },
+        {
+          "text": "MERCEDES-BENZ",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz CLS\n53 AMG 4M Night Package",
+          "href": "/inventory/11776435520256611"
+        },
+        {
+          "text": "646 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли\n→",
+          "href": "/inventory/11776435520256611"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21775141376627460"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW X3\n30e xDrive",
+          "href": "/inventory/21775141376627460"
+        },
+        {
+          "text": "431 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли\n→",
+          "href": "/inventory/21775141376627460"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21775058692833860"
+        },
+        {
+          "text": "MERCEDES-BENZ",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz GLC\n300 4M AMG Package",
+          "href": "/inventory/21775058692833860"
+        },
+        {
+          "text": "417 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли\n→",
+          "href": "/inventory/21775058692833860"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11771333081390334"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz GLE 450 AMG Package Mercedes-Benz GLE 450 AMG Package",
+          "href": "/inventory/11771333081390334"
+        },
+        {
+          "text": "535 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11771333081390334"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21767709109743680"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW X7 40i M Sport Shadow Line BMW X7 40i M Sport Shadow Line",
+          "href": "/inventory/21767709109743680"
+        },
+        {
+          "text": "868 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/21767709109743680"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11752855706606008"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW M3 V8 M DCT BMW M3 V8 M DCT",
+          "href": "/inventory/11752855706606008"
+        },
+        {
+          "text": "568 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11752855706606008"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11753712237624672"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW M3 Cabrio M DCT BMW M3 Cabrio M DCT",
+          "href": "/inventory/11753712237624672"
+        },
+        {
+          "text": "604 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11753712237624672"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай автомобила си\n\nИзпрати ни данни и снимки за оценка.\n\nЗаяви оценка",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Автомобил на лизинг\n\nИзчисли ориентировъчна месечна вноска.\n\nИзчисли вноска",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n\n15 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n\n15 автомобила",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n\n9 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Porsche\n\n2 автомобила",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Mazda\n\n1 автомобил",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Honda\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Toyota\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Volvo\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Ford\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Hyundai\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Tesla\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Всички марки\n\n42 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Виж всички типове",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Електрически",
+          "href": "/import"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?bodyType=Sedan"
+        },
+        {
+          "text": "SUV",
+          "href": "/inventory?bodyType=SUV"
+        },
+        {
+          "text": "Пикап",
+          "href": "/import"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/import"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/import"
+        },
+        {
+          "text": "Кабрио",
+          "href": "/inventory?bodyType=Cabriolet"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Подбрани автомобили\n\nПодбор, проверка, документи и доставка от Европа.\n\nВиж процеса",
+          "href": "/services"
+        },
+        {
+          "text": "Запази консултация\n\nУточни внос, документи, оглед и следващи стъпки с консултант.\n\nЗапази час",
+          "href": "/contact"
+        },
+        {
+          "text": "Най-желаната кола в България | Lamborghini Urus\nГледай в YouTube",
+          "href": "https://www.youtube.com/watch?v=6S3dLIgeAT8"
+        },
+        {
+          "text": "Продадох най-новата Панамера\nГледай в YouTube",
+          "href": "https://www.youtube.com/watch?v=zG6rjLpT4u8"
+        },
+        {
+          "text": "Продадох най-скъпия Брабус в България\nГледай в YouTube",
+          "href": "https://www.youtube.com/watch?v=1QKWyaZWSG8"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/reviews"
+        },
+        {
+          "text": "Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.\n\nAleksandar Vytev\n\nКлиент на Day Night Auto",
+          "href": "/reviews"
+        },
+        {
+          "text": "Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.\n\nKrasimir Georgiev\n\nКлиент с внос",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.\n\nIliyan Petrov\n\nПродава клиентски автомобил",
+          "href": "/reviews"
+        },
+        {
+          "text": "Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.\n\nAleksandar Vytev\n\nКлиент на Day Night Auto",
+          "href": "/reviews"
+        },
+        {
+          "text": "Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.\n\nKrasimir Georgiev\n\nКлиент с внос",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.\n\nIliyan Petrov\n\nПродава клиентски автомобил",
+          "href": "/reviews"
+        },
+        {
+          "text": "Отзиви от клиенти  ★★★★★ Виж всички отзиви Прочети още реални истории Виж всички",
+          "href": "/reviews"
+        },
+        {
+          "text": "Всички статии",
+          "href": "/blog"
+        },
+        {
+          "text": "Подбрани автомобили\nКакво проверява Day Night Auto преди внос на автомобил от Европа\nМай 2026\nПрочети повече",
+          "href": "/blog/vnos-ot-kanada-proverka"
+        },
+        {
+          "text": "Документи\nКакво означава „готов за регистрация“\nМай 2026\nПрочети повече",
+          "href": "/blog/gotov-za-registracia"
+        },
+        {
+          "text": "Продай автомобила си\nКак Day Night Auto преглежда клиентски автомобил\nМай 2026\nПрочети повече",
+          "href": "/blog/prodai-avtomobila-si"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Покупка с Day Night Auto",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "FAQ",
+          "href": "/faqs"
+        },
+        {
+          "text": "Новини",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакт с Day Night Auto",
+          "href": "/contact"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Намери консултант",
+          "href": "/agents"
+        },
+        {
+          "text": "Карта на наличните",
+          "href": "/inventory?view=map"
+        },
+        {
+          "text": "Проверени обяви",
+          "href": "/inventory?status=available"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "https://daynight.mobile.bg/contacts"
+        },
+        {
+          "text": "гр. София, Студентски град, ул. Атанас Манчев 18",
+          "href": "/contact"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359877733110"
+        },
+        {
+          "text": "Общи условия",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Покупка с Day Night Auto",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "FAQ",
+          "href": "/faqs"
+        },
+        {
+          "text": "Новини",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакт с Day Night Auto",
+          "href": "/contact"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Намери консултант",
+          "href": "/agents"
+        },
+        {
+          "text": "Карта на наличните",
+          "href": "/inventory?view=map"
+        },
+        {
+          "text": "Проверени обяви",
+          "href": "/inventory?status=available"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. София, Студентски град, ул. Атанас Манчев 18",
+          "href": "/contact"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359877733110"
+        },
+        {
+          "text": "Общи условия",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/import"
+        },
+        {
+          "text": "Продай автомобил Безплатна оценка за минута",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Обади се",
+          "href": "/contact"
+        },
+        {
+          "text": "Пиши ни",
+          "href": "/contact"
+        },
+        {
+          "text": "Всички коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Подбрани автомобили",
+          "href": "/import"
+        },
+        {
+          "text": "Сравни автомобили",
+          "href": "/compare"
+        },
+        {
+          "text": "Любими автомобили",
+          "href": "/account/favorites"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Съобщения",
+          "href": "/account/messages"
+        },
+        {
+          "text": "Вход / профил",
+          "href": "/account"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "Карта",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Български — смени езика",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Карта",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси в наличните автомобили",
+          "type": "button",
+          "id": "searchToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "daynight-mobile-location-toggle"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Купи",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Внос",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси марка, модел, цена...",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Покажи",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори избор на локация",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Отвори филтри",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Търси марка, модел или ключова дума",
+          "type": "search",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "ИЗБЕРИ МАРКА\nВсички марки",
+          "type": "button",
+          "id": "Home05BrandSelectToggle-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "ИЗБЕРИ МОДЕЛ\nВсички модели",
+          "type": "button",
+          "id": "Home05ModelSelectToggle-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "МАКС. ЦЕНА\nВсички цени",
+          "type": "button",
+          "id": "Home05MaxPriceSelectToggle-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "ПРОБЕГ\nПробег",
+          "type": "button",
+          "id": "home-mileage-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05FuelSelectToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05TransmissionSelectToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05StatusSelectToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature0"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature1"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature2"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature3"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature4"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature5"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature6"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature7"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz CLS 53 AMG 4M Night Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW X3 30e xDrive",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz GLC 300 4M AMG Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz GLE 450 AMG Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW X7 40i M Sport Shadow Line",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW M3 V8 M DCT",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW M3 Cabrio M DCT",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Въведете имейл",
+          "type": "text",
+          "id": "footer-email"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Абонирай се",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Enter your email",
+          "type": "email",
+          "id": "email-login"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Password",
+          "type": "password",
+          "id": "Password-login"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Username or email address *",
+          "type": "email",
+          "id": "email-forgot-password"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори търсенето",
+          "type": "button",
+          "id": "searchModalClose"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Търси в наличните автомобили",
+          "type": "text",
+          "id": "searchModalInput"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси в наличните автомобили",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Enter your email",
+          "type": "email",
+          "id": "SignUp-login"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Password",
+          "type": "password",
+          "id": "Password-SignUp"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Password",
+          "type": "password",
+          "id": "ConfirmPassword-SignUp"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори избора на автомобили",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Отвори меню",
+          "type": "checkbox",
+          "id": "mobile-bottom-menu-toggle"
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [
+        "http://127.0.0.1:6518/assets/js/swiper-bundle.min.js"
+      ],
+      "sourceModules": []
+    }
+  },
+  {
+    "key": "shortlist-import",
+    "port": 6518,
+    "label": "home-settled",
+    "settle": 10000,
+    "route": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": [],
+    "failed": [],
+    "status": 200,
+    "page": {
+      "title": "Day Night Auto — автомобили и подбор на автомобили",
+      "url": "http://127.0.0.1:6518/",
+      "width": 390,
+      "scrollWidth": 382,
+      "height": 4503,
+      "text": "Купи автомобил\nКупи\nВнос\nТърси марка, модел, цена...\nВсички 42 автомобила\nДо 10 000\nДо 20 000\nДо 30 000\nНови обяви\nНалични\n\n79 000 km\n\nMercedes-Benz GLA 45 AMG 4M AMG Night Package\n\n2015\nБензин\nАвтомат\n\n19 500 €\n271 €/мес.\n\n80 000 km\n\nMercedes-Benz CLS 53 AMG 4M Night Package\n\n2019\nБензин\nАвтомат\n\n46 500 €\n646 €/мес.\n\n100 000 km\n\nBMW X3 30e xDrive\n\n2022\nХибрид\nАвтомат\n\n31 000 €\n431 €/мес.\n\n81 000 km\n\nMercedes-Benz GLC 300 4M AMG Package\n\n2020\nБензин\nАвтомат\n\n30 000 €\n417 €/мес.\n\n129 000 km\n\nMercedes-Benz GLE 450 AMG Package\n\n2020\nБензин\nАвтомат\n\n38 500 €\n535 €/мес.\n\n111 000 km\n\nBMW X7 40i M Sport Shadow Line\n\n2023\nБензин\nАвтомат\n\n62 500 €\n868 €/мес.\n\n99 000 km\n\nBMW M3 V8 M DCT\n\n2011\nБензин\nАвтомат\n\n40 903 €\n568 €/мес.\n\n97 000 km\n\nBMW M3 Cabrio M DCT\n\n2011\nБензин\nАвтомат\n\n43 460 €\n604 €/мес.\n\nВиж всички\nМарки\n\nBMW\n\n15 автомобила\n\nMercedes\n\n15 автомобила\n\nAudi\n\n9 автомобила\n\nPorsche\n\n2 автомобила\n\nMazda\n\n1 автомобил\n\nHonda\n\nВнос по заявка\n\nToyota\n\nВнос по заявка\n\nVolvo\n\nВнос по заявка\n\nFord\n\nВнос по заявка\n\nHyundai\n\nВнос по заявка\n\nTesla\n\nВнос по заявка\n\nВсички марки\n\n42 автомобила\n\nКатегория\nЕлектрически\nСедан\nSUV\nПикап\nХечбек\nКросоувър\nКабрио\nВиж всички\nПодбрани автомобили · Запази консултация\nПодбрани автомобили\n\nПодбор, проверка, документи и доставка от Европа.\n\nВиж процеса\nЗапази консултация\n\nУточни внос, документи, оглед и следващи стъпки с консултант.\n\nЗапази час\nDay Night Auto в\nYouTube\nНай-желаната кола в България | Lamborghini Urus\nГледай в YouTube\nПродадох най-новата Панамера\nГледай в YouTube\nПродадох най-скъпия Брабус в България\nГледай в YouTube\nОтзиви от клиенти\n\nЕкипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.\n\nAleksandar Vytev\n\nКлиент на Day Night Auto\n\nDay Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.\n\nKrasimir Georgiev\n\nКлиент с внос\n\nИзпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.\n\nIliyan Petrov\n\nПродава клиентски автомобил\n\nОТЗИВИ ОТ КЛИЕНТИ\n★★★★★\nВиж всички отзиви\nПрочети още реални истории\nВиж всички\nСъвети от Day Night Auto\nВсички статии\nПодбрани автомобили\nКакво проверява Day Night Auto преди внос на автомобил от Европа\nМай 2026\nПрочети повече\nДокументи\nКакво означава „готов за регистрация“\nМай 2026\nПрочети повече\nПродай автомобила си\nКак Day Night Auto преглежда клиентски автомобил\nМай 2026\nПрочети повече\n\nРАБОТНО ВРЕМЕ:\n\nПонеделник-петък 9:00 - 18:00\nОгледи през уикенда с уговорка\n\nБЪРЗИ ВРЪЗКИ\n+\n\nПОКУПКА И ПРОДАЖБА\n+\n\n0877 733 110\n\nгр. София, Студентски град, ул. Атанас Манчев 18\n\n©2026 Day Night Auto Group. Всички права запазени.\n\nОбщи условия\nПоверителност\nБисквитки\nНачало\nКоли\nПродай\nВнос\nМеню",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Купи автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "Пловдив, Индустриална зона - Юг"
+        },
+        {
+          "tag": "H1",
+          "text": "Купи автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "Най-нови автомобили Нови коли"
+        },
+        {
+          "tag": "H2",
+          "text": "Продай автомобила си · Автомобил на лизинг"
+        },
+        {
+          "tag": "H3",
+          "text": "Продай автомобила си"
+        },
+        {
+          "tag": "H3",
+          "text": "Автомобил на лизинг"
+        },
+        {
+          "tag": "H2",
+          "text": "Разгледай по марка Марки"
+        },
+        {
+          "tag": "H2",
+          "text": "Разгледай по тип Категория"
+        },
+        {
+          "tag": "H2",
+          "text": "Подбрани автомобили · Запази консултация"
+        },
+        {
+          "tag": "H3",
+          "text": "Подбрани автомобили"
+        },
+        {
+          "tag": "H3",
+          "text": "Запази консултация"
+        },
+        {
+          "tag": "H2",
+          "text": "Day Night Auto в YouTube"
+        },
+        {
+          "tag": "H2",
+          "text": "Отзиви от клиенти"
+        },
+        {
+          "tag": "H2",
+          "text": "Съвети от Day Night Auto"
+        },
+        {
+          "tag": "H3",
+          "text": "Какво проверява Day Night Auto преди внос на автомобил от Европа"
+        },
+        {
+          "tag": "H3",
+          "text": "Какво означава „готов за регистрация“"
+        },
+        {
+          "tag": "H3",
+          "text": "Как Day Night Auto преглежда клиентски автомобил"
+        },
+        {
+          "tag": "H2",
+          "text": "БЪРЗИ ВРЪЗКИ"
+        },
+        {
+          "tag": "H2",
+          "text": "ПОКУПКА И ПРОДАЖБА"
+        },
+        {
+          "tag": "H2",
+          "text": "Log In"
+        },
+        {
+          "tag": "H2",
+          "text": "Forgot Password"
+        },
+        {
+          "tag": "H2",
+          "text": "Търси в наличните автомобили"
+        },
+        {
+          "tag": "H2",
+          "text": "Sign Up"
+        },
+        {
+          "tag": "H2",
+          "text": "Избери автомобили"
+        },
+        {
+          "tag": "H2",
+          "text": "Автомобили"
+        },
+        {
+          "tag": "H2",
+          "text": "Day Night Auto"
+        }
+      ],
+      "links": [
+        {
+          "text": "Day Night Auto начало",
+          "href": "/"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Пиши ни",
+          "href": "viber://chat?number=%2B359877733110"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW X5 40i 36 500 EUR · Бензин Виж Детайли",
+          "href": "/inventory/21764342419542174"
+        },
+        {
+          "text": "BMW X4 M Competition 43 500 EUR · Бензин Виж Детайли",
+          "href": "/inventory/21778068579001193"
+        },
+        {
+          "text": "Audi SQ5 Black Optic 33 000 EUR · Бензин Виж Детайли",
+          "href": "/inventory/21778067767337633"
+        },
+        {
+          "text": "Audi A7 Black Optic 35 000 EUR · Бензин Виж Детайли",
+          "href": "/inventory/11774283016080050"
+        },
+        {
+          "text": "Виж всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Изглед с карти",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Карта",
+          "href": "/inventory?view=map"
+        },
+        {
+          "text": "Сравни автомобили",
+          "href": "/compare"
+        },
+        {
+          "text": "SUV",
+          "href": "/inventory?bodyType=SUV"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?bodyType=Sedan"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?bodyType=Coupe"
+        },
+        {
+          "text": "Комби",
+          "href": "/inventory?bodyType=Wagon"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=Petrol"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=Diesel"
+        },
+        {
+          "text": "Хибрид",
+          "href": "/inventory?fuel=Hybrid"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=EV"
+        },
+        {
+          "text": "Внос и покупка",
+          "href": "/services"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Нашите консултанти",
+          "href": "/agents"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Сравни автомобили",
+          "href": "/compare"
+        },
+        {
+          "text": "Запази консултация",
+          "href": "/contact"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашите консултанти",
+          "href": "/agents"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faqs"
+        },
+        {
+          "text": "Съвети от Day Night Auto",
+          "href": "/blog"
+        },
+        {
+          "text": "Посети офиса",
+          "href": "/contact"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Български",
+          "href": "/?lang=bg"
+        },
+        {
+          "text": "English",
+          "href": "/?lang=en"
+        },
+        {
+          "text": "Вход",
+          "href": "/account"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Сравни",
+          "href": "/compare"
+        },
+        {
+          "text": "Любими",
+          "href": "/account/favorites"
+        },
+        {
+          "text": "Вход",
+          "href": "/account"
+        },
+        {
+          "text": "Всички 42 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=Day Night Auto%20Plovdiv%20South%20Industrial%20Zone"
+        },
+        {
+          "text": "",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "До 10 000",
+          "href": "/inventory?maxPrice=10000"
+        },
+        {
+          "text": "До 20 000",
+          "href": "/inventory?maxPrice=20000"
+        },
+        {
+          "text": "До 30 000",
+          "href": "/inventory?maxPrice=30000"
+        },
+        {
+          "text": "Нови обяви",
+          "href": "/inventory?status=New%20listing"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?status=Available"
+        },
+        {
+          "text": "Купи",
+          "href": "/"
+        },
+        {
+          "text": "Внос",
+          "href": "/?intent=import"
+        },
+        {
+          "text": "Продай",
+          "href": "/?intent=sell"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21754658377544573"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "href": "/inventory/21754658377544573"
+        },
+        {
+          "text": "271 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/21754658377544573"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11776435520256611"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+          "href": "/inventory/11776435520256611"
+        },
+        {
+          "text": "646 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11776435520256611"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21775141376627460"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW X3 30e xDrive",
+          "href": "/inventory/21775141376627460"
+        },
+        {
+          "text": "431 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/21775141376627460"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21775058692833860"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz GLC 300 4M AMG Package",
+          "href": "/inventory/21775058692833860"
+        },
+        {
+          "text": "417 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/21775058692833860"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11771333081390334"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Mercedes-Benz GLE 450 AMG Package",
+          "href": "/inventory/11771333081390334"
+        },
+        {
+          "text": "535 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11771333081390334"
+        },
+        {
+          "text": "",
+          "href": "/inventory/21767709109743680"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW X7 40i M Sport Shadow Line",
+          "href": "/inventory/21767709109743680"
+        },
+        {
+          "text": "868 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/21767709109743680"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11752855706606008"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW M3 V8 M DCT",
+          "href": "/inventory/11752855706606008"
+        },
+        {
+          "text": "568 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11752855706606008"
+        },
+        {
+          "text": "",
+          "href": "/inventory/11753712237624672"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "BMW M3 Cabrio M DCT",
+          "href": "/inventory/11753712237624672"
+        },
+        {
+          "text": "604 €/мес.",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж детайли →",
+          "href": "/inventory/11753712237624672"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай автомобила си Изпрати ни данни и снимки за оценка. Заяви оценка",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Автомобил на лизинг Изчисли ориентировъчна месечна вноска. Изчисли вноска",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n\n15 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n\n15 автомобила",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n\n9 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Porsche\n\n2 автомобила",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Mazda\n\n1 автомобил",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Honda\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Toyota\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Volvo\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Ford\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Hyundai\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Tesla\n\nВнос по заявка",
+          "href": "/import"
+        },
+        {
+          "text": "Всички марки\n\n42 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Виж всички типове",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Електрически",
+          "href": "/import"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?bodyType=Sedan"
+        },
+        {
+          "text": "SUV",
+          "href": "/inventory?bodyType=SUV"
+        },
+        {
+          "text": "Пикап",
+          "href": "/import"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/import"
+        },
+        {
+          "text": "Кросоувър",
+          "href": "/import"
+        },
+        {
+          "text": "Кабрио",
+          "href": "/inventory?bodyType=Cabriolet"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Подбрани автомобили\n\nПодбор, проверка, документи и доставка от Европа.\n\nВиж процеса",
+          "href": "/services"
+        },
+        {
+          "text": "Запази консултация\n\nУточни внос, документи, оглед и следващи стъпки с консултант.\n\nЗапази час",
+          "href": "/contact"
+        },
+        {
+          "text": "Най-желаната кола в България | Lamborghini Urus\nГледай в YouTube",
+          "href": "https://www.youtube.com/watch?v=6S3dLIgeAT8"
+        },
+        {
+          "text": "Продадох най-новата Панамера\nГледай в YouTube",
+          "href": "https://www.youtube.com/watch?v=zG6rjLpT4u8"
+        },
+        {
+          "text": "Продадох най-скъпия Брабус в България\nГледай в YouTube",
+          "href": "https://www.youtube.com/watch?v=1QKWyaZWSG8"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/reviews"
+        },
+        {
+          "text": "Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.\n\nAleksandar Vytev\n\nКлиент на Day Night Auto",
+          "href": "/reviews"
+        },
+        {
+          "text": "Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.\n\nKrasimir Georgiev\n\nКлиент с внос",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.\n\nIliyan Petrov\n\nПродава клиентски автомобил",
+          "href": "/reviews"
+        },
+        {
+          "text": "Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.  Aleksandar Vytev Клиент на Day Night Auto",
+          "href": "/reviews"
+        },
+        {
+          "text": "Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.  Krasimir Georgiev Клиент с внос",
+          "href": "/reviews"
+        },
+        {
+          "text": "Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.  Iliyan Petrov Продава клиентски автомобил",
+          "href": "/reviews"
+        },
+        {
+          "text": "ОТЗИВИ ОТ КЛИЕНТИ\n★★★★★\nВиж всички отзиви\nПрочети още реални истории\nВиж всички",
+          "href": "/reviews"
+        },
+        {
+          "text": "Всички статии",
+          "href": "/blog"
+        },
+        {
+          "text": "Подбрани автомобили\nКакво проверява Day Night Auto преди внос на автомобил от Европа\nМай 2026\nПрочети повече",
+          "href": "/blog/vnos-ot-kanada-proverka"
+        },
+        {
+          "text": "Документи\nКакво означава „готов за регистрация“\nМай 2026\nПрочети повече",
+          "href": "/blog/gotov-za-registracia"
+        },
+        {
+          "text": "Продай автомобила си\nКак Day Night Auto преглежда клиентски автомобил\nМай 2026\nПрочети повече",
+          "href": "/blog/prodai-avtomobila-si"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Покупка с Day Night Auto",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "FAQ",
+          "href": "/faqs"
+        },
+        {
+          "text": "Новини",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакт с Day Night Auto",
+          "href": "/contact"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Намери консултант",
+          "href": "/agents"
+        },
+        {
+          "text": "Карта на наличните",
+          "href": "/inventory?view=map"
+        },
+        {
+          "text": "Проверени обяви",
+          "href": "/inventory?status=available"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "tel:0877733110"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "https://daynight.mobile.bg/contacts"
+        },
+        {
+          "text": "гр. София, Студентски град, ул. Атанас Манчев 18",
+          "href": "/contact"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359877733110"
+        },
+        {
+          "text": "Общи условия",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Покупка с Day Night Auto",
+          "href": "/inventory?view=4"
+        },
+        {
+          "text": "Продай автомобила си",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "FAQ",
+          "href": "/faqs"
+        },
+        {
+          "text": "Новини",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакт с Day Night Auto",
+          "href": "/contact"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Намери консултант",
+          "href": "/agents"
+        },
+        {
+          "text": "Карта на наличните",
+          "href": "/inventory?view=map"
+        },
+        {
+          "text": "Проверени обяви",
+          "href": "/inventory?status=available"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Отзиви от клиенти",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 733 110",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. София, Студентски град, ул. Атанас Манчев 18",
+          "href": "/contact"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359877733110"
+        },
+        {
+          "text": "Общи условия",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/import"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/inventory"
+        },
+        {
+          "text": "",
+          "href": "/import"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/account/favorites"
+        },
+        {
+          "text": "",
+          "href": "/calculator"
+        },
+        {
+          "text": "",
+          "href": "/about"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/account/messages"
+        },
+        {
+          "text": "",
+          "href": "/account"
+        }
+      ],
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "text": "Карта",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Български — смени езика",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Карта",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси в наличните автомобили",
+          "type": "button",
+          "id": "searchToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "daynight-mobile-location-toggle"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Купи",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Внос",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси марка, модел, цена...",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Покажи",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори избор на локация",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Отвори филтри",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Търси марка, модел или ключова дума",
+          "type": "search",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Избери марка Всички марки",
+          "type": "button",
+          "id": "Home05BrandSelectToggle-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Избери модел Всички модели",
+          "type": "button",
+          "id": "Home05ModelSelectToggle-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Макс. цена Всички цени",
+          "type": "button",
+          "id": "Home05MaxPriceSelectToggle-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "hidden",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Пробег Пробег",
+          "type": "button",
+          "id": "home-mileage-popover-trigger"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05FuelSelectToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05TransmissionSelectToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05StatusSelectToggle"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature0"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature1"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature2"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature3"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature4"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature5"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature6"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": "Home05Feature7"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz CLS 53 AMG 4M Night Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW X3 30e xDrive",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz GLC 300 4M AMG Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази Mercedes-Benz GLE 450 AMG Package",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW X7 40i M Sport Shadow Line",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW M3 V8 M DCT",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Запази BMW M3 Cabrio M DCT",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Въведете имейл",
+          "type": "text",
+          "id": "footer-email"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Абонирай се",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Enter your email",
+          "type": "email",
+          "id": "email-login"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Password",
+          "type": "password",
+          "id": "Password-login"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Username or email address *",
+          "type": "email",
+          "id": "email-forgot-password"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори търсенето",
+          "type": "button",
+          "id": "searchModalClose"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Търси в наличните автомобили",
+          "type": "text",
+          "id": "searchModalInput"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Търси в наличните автомобили",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Enter your email",
+          "type": "email",
+          "id": "SignUp-login"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Password",
+          "type": "password",
+          "id": "Password-SignUp"
+        },
+        {
+          "tag": "INPUT",
+          "text": "Password",
+          "type": "password",
+          "id": "ConfirmPassword-SignUp"
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "type": "checkbox",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "submit",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори избора на автомобили",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Затвори",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "type": "button",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "text": "Отвори меню",
+          "type": "checkbox",
+          "id": "mobile-bottom-menu-toggle"
+        }
+      ],
+      "brokenImages": [],
+      "scripts": [],
+      "sourceModules": []
+    }
+  }
+]

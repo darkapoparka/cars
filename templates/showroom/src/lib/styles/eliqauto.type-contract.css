@@ -1,0 +1,98 @@
+/*
+ * Public type / touch floors.
+ * Spec: docs/final-polish/TYPE_SPACING_TOUCH.md
+ *
+ * Unlayered, so this beats layered Auxero `app.css`. Component styles can
+ * still override — they must use tokens, not 10–12px.
+ */
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+html,
+body {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+	text-rendering: geometricPrecision;
+}
+
+.text-xs {
+	font-size: var(--bc-text-micro);
+	line-height: var(--bc-leading-micro);
+}
+
+.btn.btn-small,
+.btn.btn-small-2 {
+	min-height: var(--bc-touch);
+	height: var(--bc-touch);
+	padding: 10px 16px;
+	font-size: var(--bc-text-control);
+	line-height: 1.2;
+}
+
+body[class*='auxero-template-'] .header-action-btn.header-action-icon,
+body[class*='auxero-template-'] #searchToggle,
+body.eliqauto-inventory-template .header-action-btn.header-action-icon {
+	display: inline-flex;
+	width: var(--bc-touch);
+	min-width: var(--bc-touch);
+	height: var(--bc-touch);
+	min-height: var(--bc-touch);
+	flex: 0 0 var(--bc-touch);
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+body[class*='auxero-template-'] .header-top-bar a,
+body[class*='auxero-template-'] .header-top-bar button {
+	min-height: var(--bc-touch);
+}
+
+body[class*='auxero-template-'] .eliqauto-filter-pill,
+body[class*='auxero-template-'] .eliqauto-filter-pill a,
+body[class*='auxero-template-'] .menu-tab-style2 li a {
+	min-height: var(--bc-touch);
+}
+
+body[class*='auxero-template-'] input:not([type='checkbox']):not([type='radio']):not(
+		[type='hidden']
+	):not([type='file']):not([type='range']):not([type='image']),
+body[class*='auxero-template-'] select,
+body[class*='auxero-template-'] textarea,
+body.eliqauto-inventory-template input:not([type='checkbox']):not([type='radio']):not(
+		[type='hidden']
+	):not([type='file']):not([type='range']):not([type='image']),
+body.eliqauto-inventory-template select,
+body.eliqauto-inventory-template textarea {
+	font-size: max(16px, var(--bc-text-control));
+}
+
+.heart.eliqauto-favorite {
+	display: inline-flex;
+	width: var(--bc-touch);
+	min-width: var(--bc-touch);
+	height: var(--bc-touch);
+	min-height: var(--bc-touch);
+	align-items: center;
+	justify-content: center;
+}
+
+.card-box .bottom .category a {
+	display: inline-flex;
+	min-height: var(--bc-touch);
+	align-items: center;
+	font-size: var(--bc-text-micro);
+}
+
+	.swiper-pagination-bullet {
+		position: relative;
+	}
+
+	.swiper-pagination-bullet::before {
+		position: absolute;
+		inset: -17px;
+		content: '';
+	}

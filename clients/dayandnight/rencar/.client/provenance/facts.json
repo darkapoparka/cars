@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-09-06",
+  "sources": [
+    "https://daynight.mobile.bg/",
+    "https://daynight.mobile.bg/contacts",
+    "https://daynight.mobile.bg/about"
+  ],
+  "phone": "+359877733110",
+  "address": "Sofia, Studentski grad, ul. Atanas Manchev 18",
+  "hours": "No opening hours claimed; visits by arrangement",
+  "services": [
+    "vehicle sales",
+    "import enquiry",
+    "own leasing enquiry"
+  ],
+  "donorPhoneNotUsed": "+359879824625",
+  "socialLinks": {
+    "source": "Current owner-supplied 5173 src/lib/config/brand.ts",
+    "independentlyRevalidated": false
+  },
+  "inventory": {
+    "type": "Retained original Rencar sample content",
+    "verifiedForDayAndNight": false,
+    "liveSynchronized": false
+  },
+  "crmChanged": false,
+  "activeScope": "Branding-only visual draft",
+  "sourcePlaceholderLimits": [
+    "Example email/hours",
+    "Rental controls",
+    "Sample stock/prices/reviews"
+  ]
+}

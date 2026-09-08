@@ -1,0 +1,2302 @@
+{
+  "client": "avangard-auto",
+  "name": "AVANGARD AUTO",
+  "template": "carwow",
+  "port": 6628,
+  "startedAt": "2026-09-08T01:41:57.412Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "AVANGARD AUTO Варна - проверени автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "Всички 16 коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory?transmission=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "До 10 000 EUR\n7 коли",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR\n13 коли",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "До 30 000 EUR\n16 коли",
+          "href": "/inventory?price=under-30000"
+        },
+        {
+          "text": "До 50 000 EUR\n16 коли",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "Над 50 000 EUR\n0 коли",
+          "href": "/inventory?price=over-50000"
+        },
+        {
+          "text": "Без бюджет\nВсички 16 коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n3 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\nТранспорт в България",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n5 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Porsche\nТранспорт в България",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Mazda\nТранспорт в България",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Honda\nТранспорт в България",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\nТранспорт в България",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\n2 автомобила",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\nТранспорт в България",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\nТранспорт в България",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Tesla\nТранспорт в България",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Джип\n11 коли",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Комби\n3 коли",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "https://avangard-auto.mobile.bg/"
+        },
+        {
+          "text": "0877 800 921\nОбаждане / Viber",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | AVANGARD AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Публикувана обява\nPeugeot 208 1.6HDI\n5800 €\nУсловия по запитване\n214 000 км\n2016\nДизел\nРъчна",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "Публикувана обява\nBMW X1\n5999 €\nУсловия по запитване\n187 000 км\n2010\nДизел\nРъчна",
+          "href": "/inventory/bmw-x1-349714"
+        },
+        {
+          "text": "Публикувана обява\nBMW 320\n6300 €\nУсловия по запитване\n187 000 км\n2013\nБензин\nРъчна",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "Публикувана обява\nAudi A4\n6300 €\nУсловия по запитване\n202 000 км\n2011\nДизел\nАвтоматик",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "Публикувана обява\nPeugeot 2008 1.6HDI\n6999 €\nУсловия по запитване\n216 000 км\n2013\nДизел\nРъчна",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "Публикувана обява\nKia Sportage 1.7CRDI\n8500 €\nУсловия по запитване\n179 000 км\n2014\nДизел\nРъчна",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "Публикувана обява\nMitsubishi Outlander 2.2DI-D\n9350 €\nУсловия по запитване\n167 000 км\n2014\nДизел\nРъчна",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "Публикувана обява\nNissan Qashqai 1.5dCi\n11 500 €\nУсловия по запитване\n175 000 км\n2018\nДизел\nРъчна",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Публикувана обява\nVW Passat Alltrack\n13 500 €\nУсловия по запитване\n220 000 км\n2018\nДизел\nАвтоматик",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "Публикувана обява\nBMW X1\n14 500 €\nУсловия по запитване\n138 000 км\n2016\nДизел\nАвтоматик",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "Публикувана обява\nVolvo XC40 T5\n16 900 €\nУсловия по запитване\n278 000 км\n2019\nБензин\nАвтоматик",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "Публикувана обява\nVolvo XC40 2.0D\n17 999 €\nУсловия по запитване\n166 000 км\n2019\nДизел\nАвтоматик",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "Публикувана обява\nAudi Q5\n17 999 €\nУсловия по запитване\n206 000 км\n2018\nБензин\nАвтоматик",
+          "href": "/inventory/audi-q5-293800"
+        },
+        {
+          "text": "Публикувана обява\nAudi Q7\n20 500 €\nУсловия по запитване\n255 000 км\n2017\nБензин\nАвтоматик",
+          "href": "/inventory/audi-q7-697018"
+        },
+        {
+          "text": "Публикувана обява\nAudi SQ5\n21 999 €\nУсловия по запитване\n197 000 км\n2018\nБензин\nАвтоматик",
+          "href": "/inventory/audi-sq5-955793"
+        },
+        {
+          "text": "Публикувана обява\nAudi Q5\n21 999 €\nУсловия по запитване\n197 000 км\n2018\nБензин\nАвтоматик",
+          "href": "/inventory/audi-q5-945718"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/inventory/peugeot-208-1-6hdi-679744",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Peugeot 208 1.6HDI 2016 г., Дизел, 214 000 км, Наличен | AVANGARD AUTO",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "Viber",
+          "href": "viber://chat?number=%2B359877800921"
+        },
+        {
+          "text": "AVANGARD AUTO\nAVANGARD AUTO, Варна, България",
+          "href": "/contact"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти | AVANGARD AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "Обади се",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "КОЛИ",
+          "href": "/inventory"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас | AVANGARD AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:+359877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "ВСИЧКИ",
+          "href": "/team"
+        },
+        {
+          "text": "Автомобили\nПубликувани предложения",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "Регистрация\nСъдействие в КАТ",
+          "href": "/team/barter-i-ocenka"
+        },
+        {
+          "text": "Транспорт\nВ България",
+          "href": "/team/dokumenti-finansirane"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Коли",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Внос",
+          "href": "/contact?intent=import"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "AVANGARD AUTO Варна - проверени автомобили и бърз контакт",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Електрически",
+          "href": "/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=SUV"
+        },
+        {
+          "text": "Комби",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Хечбек",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "До 10 000 EUR",
+          "href": "/inventory?price=under-10000"
+        },
+        {
+          "text": "До 20 000 EUR",
+          "href": "/inventory?price=under-20000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "VW Passat Alltrack",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "Volvo XC40 2.0D",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "Volvo XC40 T5",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "Peugeot 208 1.6HDI",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "Peugeot 2008 1.6HDI",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Nissan Qashqai 1.5dCi",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "Mitsubishi Outlander 2.2DI-D",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "Kia Sportage 1.7CRDI",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Виж всички 16 автомобила",
+          "href": "/inventory"
+        },
+        {
+          "text": "Купи автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Разгледай автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Продай автомобил",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Всички типове",
+          "href": "/inventory"
+        },
+        {
+          "text": "Комби\n\n3 автомобила",
+          "href": "/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8"
+        },
+        {
+          "text": "Хечбек\n\n2 автомобила",
+          "href": "/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA"
+        },
+        {
+          "text": "Всички марки",
+          "href": "/inventory"
+        },
+        {
+          "text": "BMW\n\n3 автомобила",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Mercedes\n\nВиж марката",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "Audi\n\n5 автомобила",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Honda\n\nВиж марката",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Toyota\n\nВиж марката",
+          "href": "/inventory?brand=Toyota"
+        },
+        {
+          "text": "Volvo\n\n2 автомобила",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Ford\n\nВиж марката",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Hyundai\n\nВиж марката",
+          "href": "/inventory?brand=Hyundai"
+        },
+        {
+          "text": "Kia\n\n1 автомобил",
+          "href": "/inventory?brand=Kia"
+        },
+        {
+          "text": "Mazda\n\nВиж марката",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Ferrari\n\nВиж марката",
+          "href": "/inventory?brand=Ferrari"
+        },
+        {
+          "text": "Tesla\n\nВиж марката",
+          "href": "/inventory?brand=Tesla"
+        },
+        {
+          "text": "Вижте автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Запазете оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Поискайте условия",
+          "href": "/financing"
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "",
+          "href": "https://avangard-auto.mobile.bg/obiava-11785010475119627-vw-passat-alltrack-2-0tdi-190k-s-4h4"
+        },
+        {
+          "text": "",
+          "href": "https://avangard-auto.mobile.bg/obiava-21783748809976935-volvo-xc40-2-0d-150k-s-4h4"
+        },
+        {
+          "text": "",
+          "href": "https://avangard-auto.mobile.bg/obiava-21766322242220471-volvo-xc40-t5-inscription-lizing-bez-parvonachalna-vnoska"
+        },
+        {
+          "text": "Виж всички отзиви",
+          "href": "/reviews"
+        },
+        {
+          "text": "Разгледайте 16 избрани обяви. За актуална наличност се свържете с AVANGARD AUTO.\n\nАвтомобили\n\nПубликувани предложения",
+          "href": "/reviews"
+        },
+        {
+          "text": "В обявите се предлага съдействие при регистрация и издаване на транзитни номера.\n\nРегистрация\n\nСъдействие в КАТ",
+          "href": "/reviews"
+        },
+        {
+          "text": "В обявите се предлага транспорт до всяка точка в България. Уточнете цена и условия.\n\nТранспорт\n\nВ България",
+          "href": "/reviews"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Полезна информация",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Автомобили в наличност | AVANGARD AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Всички",
+          "href": "/inventory"
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "/inventory?brand=Mercedes-Benz"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "Джип",
+          "href": "/inventory?body=%D0%94%D0%B6%D0%B8%D0%BF"
+        },
+        {
+          "text": "Седан",
+          "href": "/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD"
+        },
+        {
+          "text": "Купе",
+          "href": "/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5"
+        },
+        {
+          "text": "Ван",
+          "href": "/inventory?body=%D0%92%D0%B0%D0%BD"
+        },
+        {
+          "text": "Налични",
+          "href": "/inventory?availability=available"
+        },
+        {
+          "text": "Дизел",
+          "href": "/inventory?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB"
+        },
+        {
+          "text": "Бензин",
+          "href": "/inventory?fuel=%D0%91%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD"
+        },
+        {
+          "text": "До 50 000 EUR",
+          "href": "/inventory?price=under-50000"
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "/inventory?mileage=under-100000"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "VW Passat Alltrack",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "",
+          "href": "/inventory/vw-passat-alltrack-119627"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "Volvo XC40 2.0D",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-xc40-2-0d-976935"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "Volvo XC40 T5",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "",
+          "href": "/inventory/volvo-xc40-t5-220471"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "Peugeot 208 1.6HDI",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-208-1-6hdi-679744"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "Peugeot 2008 1.6HDI",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "",
+          "href": "/inventory/peugeot-2008-1-6hdi-415648"
+        },
+        {
+          "text": "",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Nissan Qashqai 1.5dCi",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "Mitsubishi Outlander 2.2DI-D",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "",
+          "href": "/inventory/mitsubishi-outlander-2-2di-d-228539"
+        },
+        {
+          "text": "",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "Kia Sportage 1.7CRDI",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "",
+          "href": "/inventory/kia-sportage-1-7crdi-842805"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "BMW X1",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-349714"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/bmw-x1-349714"
+        },
+        {
+          "text": "BMW X1",
+          "href": "/inventory/bmw-x1-349714"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-349714"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "BMW 320",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-sq5-955793"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-sq5-955793"
+        },
+        {
+          "text": "Audi SQ5",
+          "href": "/inventory/audi-sq5-955793"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-sq5-955793"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q7-697018"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q7-697018"
+        },
+        {
+          "text": "Audi Q7",
+          "href": "/inventory/audi-q7-697018"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q7-697018"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-945718"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-945718"
+        },
+        {
+          "text": "Audi Q5",
+          "href": "/inventory/audi-q5-945718"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-945718"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-293800"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-q5-293800"
+        },
+        {
+          "text": "Audi Q5",
+          "href": "/inventory/audi-q5-293800"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-q5-293800"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "Audi A4",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Полезна информация",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/inventory/vw-passat-alltrack-119627",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "VW Passat Alltrack 2018 г., Дизел, 220 000 км, Наличен | AVANGARD AUTO",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Назад",
+          "href": "/inventory"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "Заяви видео преглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Заяви още снимки",
+          "href": "/contact"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Свържете се",
+          "href": "#reviewForm"
+        },
+        {
+          "text": "Всички акценти",
+          "href": "/reviews"
+        },
+        {
+          "text": "Попитайте екипа",
+          "href": "/contact?intent=review"
+        },
+        {
+          "text": "",
+          "href": "/terms"
+        },
+        {
+          "text": "AVANGARD AUTO",
+          "href": "/about/daynight-auto-plovdiv"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "Виж локация",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Обади се за оглед",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Viber чат",
+          "href": "viber://chat?number=%2B359877800921"
+        },
+        {
+          "text": "Споразумение с потребителите.",
+          "href": "/terms"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "BMW 320",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-320-689299"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "Audi A4",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "",
+          "href": "/inventory/audi-a4-096424"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "Автоматик",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "BMW X1",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "",
+          "href": "/inventory/bmw-x1-488667"
+        },
+        {
+          "text": "",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Ръчна",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "Nissan Qashqai 1.5dCi",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "",
+          "href": "/inventory/nissan-qashqai-1-5dci-452600"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Полезна информация",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "Контакти | AVANGARD AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Изпрати запитване",
+          "href": "/contact#contact-form"
+        },
+        {
+          "text": "Виж автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Обади се / Viber",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Виж карта",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Отвори в Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Полезна информация",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "errors": [],
+      "consoleErrors": [],
+      "title": "За нас | AVANGARD AUTO Варна",
+      "overflow": -5,
+      "broken": [],
+      "phones": [
+        "tel:0877800921",
+        "tel:+359877800921"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "Виж наличните автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/contact"
+        },
+        {
+          "text": "",
+          "href": "/compare"
+        },
+        {
+          "text": "",
+          "href": "/favorites"
+        },
+        {
+          "text": "",
+          "href": "/sell-your-car/request"
+        },
+        {
+          "text": "Начало",
+          "href": "/"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Виж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Владислав Варненчик",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:+359877800921"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "Виж екипа",
+          "href": "/team"
+        },
+        {
+          "text": "",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "Автомобили",
+          "href": "/team/prodazhbi-showroom"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/team/barter-i-ocenka"
+        },
+        {
+          "text": "Контакт",
+          "href": "/team/barter-i-ocenka"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/team/dokumenti-finansirane"
+        },
+        {
+          "text": "Регистрация",
+          "href": "/team/dokumenti-finansirane"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "",
+          "href": "/team/klientski-zapitvania"
+        },
+        {
+          "text": "Посещение",
+          "href": "/team/klientski-zapitvania"
+        },
+        {
+          "text": "",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Полезна информация",
+          "href": "/reviews"
+        },
+        {
+          "text": "Свържи се с нас",
+          "href": "/contact"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/inventory"
+        },
+        {
+          "text": "Audi",
+          "href": "/inventory?brand=Audi"
+        },
+        {
+          "text": "BMW",
+          "href": "/inventory?brand=BMW"
+        },
+        {
+          "text": "Chevrolet",
+          "href": "/inventory?brand=Chevrolet"
+        },
+        {
+          "text": "Chrysler",
+          "href": "/inventory?brand=Chrysler"
+        },
+        {
+          "text": "Citroen",
+          "href": "/inventory?brand=Citroen"
+        },
+        {
+          "text": "Ford",
+          "href": "/inventory?brand=Ford"
+        },
+        {
+          "text": "Honda",
+          "href": "/inventory?brand=Honda"
+        },
+        {
+          "text": "Jaguar",
+          "href": "/inventory?brand=Jaguar"
+        },
+        {
+          "text": "Land Rover",
+          "href": "/inventory?brand=Land%20Rover"
+        },
+        {
+          "text": "Mazda",
+          "href": "/inventory?brand=Mazda"
+        },
+        {
+          "text": "Opel",
+          "href": "/inventory?brand=Opel"
+        },
+        {
+          "text": "Peugeot",
+          "href": "/inventory?brand=Peugeot"
+        },
+        {
+          "text": "Porsche",
+          "href": "/inventory?brand=Porsche"
+        },
+        {
+          "text": "Skoda",
+          "href": "/inventory?brand=Skoda"
+        },
+        {
+          "text": "VW",
+          "href": "/inventory?brand=VW"
+        },
+        {
+          "text": "Volvo",
+          "href": "/inventory?brand=Volvo"
+        },
+        {
+          "text": "Избор и оглед\n\nРазгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.\n\nВиж автомобилите",
+          "href": "/inventory"
+        },
+        {
+          "text": "Въпрос за автомобил\n\nПопитай екипа дали може да съдейства за твоя автомобил. Услугите се потвърждават индивидуално.\n\nПродай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Документи и финансиране\n\nСъдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.\n\nРазгледай услугите",
+          "href": "/services"
+        },
+        {
+          "text": "Уговори оглед",
+          "href": "/contact"
+        },
+        {
+          "text": "Отвори маршрута",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "За нас",
+          "href": "/about"
+        },
+        {
+          "text": "Нашият екип",
+          "href": "/team"
+        },
+        {
+          "text": "Услуги",
+          "href": "/services"
+        },
+        {
+          "text": "Често задавани въпроси",
+          "href": "/faq"
+        },
+        {
+          "text": "Новини и съвети",
+          "href": "/blog"
+        },
+        {
+          "text": "Контакти",
+          "href": "/contact"
+        },
+        {
+          "text": "Намери автомобил",
+          "href": "/inventory"
+        },
+        {
+          "text": "Продай или замени",
+          "href": "/sell-your-car"
+        },
+        {
+          "text": "Лизинг и финансиране",
+          "href": "/financing"
+        },
+        {
+          "text": "Карта на автомобилите",
+          "href": "/inventory/map"
+        },
+        {
+          "text": "Калкулатор за внос",
+          "href": "/calculator"
+        },
+        {
+          "text": "Полезна информация",
+          "href": "/reviews"
+        },
+        {
+          "text": "0877 800 921",
+          "href": "tel:0877800921"
+        },
+        {
+          "text": "Онлайн запитване",
+          "href": "/contact"
+        },
+        {
+          "text": "гр. Варна, Владислав Варненчик, бул. Цар Освободител 289",
+          "href": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/61566304063141/"
+        },
+        {
+          "text": "",
+          "href": "https://www.facebook.com/avangardautovarna/"
+        },
+        {
+          "text": "",
+          "href": "https://www.instagram.com/daynight.auto.plovdiv/"
+        },
+        {
+          "text": "Условия за ползване",
+          "href": "/terms"
+        },
+        {
+          "text": "Поверителност",
+          "href": "/terms"
+        },
+        {
+          "text": "Бисквитки",
+          "href": "/terms"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Peugeot",
+      "beforeCount": 16,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6628/inventory",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/inventory/peugeot-208-1-6hdi-679744",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "BMW",
+      "beforeCount": 17,
+      "menu": "No visible menu button at this width",
+      "searchUrl": "http://127.0.0.1:6628/inventory?q=BMW",
+      "afterCount": 13,
+      "search": true,
+      "detailHref": "/inventory/bmw-x1-488667",
+      "navigation": true,
+      "detailPhone": true,
+      "galleryChanged": true,
+      "enquiryHref": "/contact",
+      "enquiry": true,
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "carwow",
+    "Project": "J:\\cars\\clients\\avangard-auto\\carwow",
+    "PID": 65748,
+    "Port": 6628,
+    "Url": "http://127.0.0.1:6628",
+    "Stdout": "J:\\cars\\runtime\\carwow-6628-20260908-044202.out.log",
+    "Stderr": "J:\\cars\\runtime\\carwow-6628-20260908-044202.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true
+}

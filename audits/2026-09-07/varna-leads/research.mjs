@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import {chromium} from '../../../templates/boxcar/node_modules/playwright/index.mjs';
+const out='audits/2026-09-07/varna-leads';
+const candidates=[['excellent','Excellent Cars Варна'],['avangard-auto','AVANGARD AUTO Варна'],['championautopro','Champion Auto Pro Варна'],['automarket','Аутомаркет Варна'],['dsvarnaauto','ДС Варна Ауто'],['priselci','Автокъща Приселци Варна'],['astracar','Астракар Варна'],['odesos','Автосалон Одесос Варна'],['autolife','Автокъща Аутолайф Варна'],['classic','Автокъща Класик Варна'],['ivoauto-varna','Иво Ауто Варна'],['elitautoimport','ELIT AUTO IMPORT EXPORT Варна'],['legendauto1','LEGEND AUTO Варна'],['dynamicautovarna','Dynamic Auto Varna']];
+const browser=await chromium.launch({channel:'chrome',headless:true});const records=[];
+for(let i=0;i<candidates.length;i+=3)await Promise.all(candidates.slice(i,i+3).map(async([key,name])=>{
+const p=await browser.newPage();const r={key,name,checkedAt:new Date().toISOString()};
+for(const [kind,url] of [['stock',`https://${key}.mobile.bg/`],['contact',`https://${key}.mobile.bg/contacts`]]){try{await p.goto(url,{waitUntil:'domcontentloaded',timeout:30000});r[kind]=await p.evaluate(()=>({url:location.href,title:document.title,text:document.body.innerText,links:[...document.querySelectorAll('a[href]')].map(a=>({text:a.innerText,href:a.href})),photos:[...document.images].slice(0,15).map(i=>({src:i.src,alt:i.alt}))}));}catch(e){r[kind]={error:e.message}}}
+records.push(r);await fs.writeFile(`${out}/${key}.json`,JSON.stringify(r,null,2));console.log(JSON.stringify({key,title:r.stock.title,stock:r.stock.text?.match(/\d+\s*-\s*\d+ от общо \d+[^\n]*/)?.[0],contact:r.contact.text?.slice(0,1000)}));await p.close();
+}));
+await fs.writeFile(`${out}/candidates.json`,JSON.stringify(records,null,2));
+const p=await browser.newPage();for(const [key,name] of candidates){try{await p.goto('https://www.google.com/search?q='+encodeURIComponent(name+' сайт')+'&hl=bg',{waitUntil:'domcontentloaded',timeout:25000});const reject=p.getByRole('button',{name:/Reject all|Отхвърляне на всички/});if(await reject.count())await reject.first().click();await p.waitForTimeout(600);const r=await p.evaluate(()=>({url:location.href,text:document.body.innerText,links:[...document.querySelectorAll('a:has(h3)')].map(a=>({text:a.innerText,href:a.href}))}));await fs.writeFile(`${out}/google-${key}.json`,JSON.stringify(r,null,2));console.log(JSON.stringify({google:key,text:r.text.slice(0,180),links:r.links.slice(0,8)}));if(/unusual traffic|необичаен трафик/.test(r.text))break;}catch(e){console.log(JSON.stringify({google:key,error:e.message}))}}
+await browser.close();

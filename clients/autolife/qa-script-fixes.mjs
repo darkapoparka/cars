@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';
+const file='J:/cars/clients/autolife/qa-auto-final.mjs';let s=await fs.readFile(file,'utf8');s=s.replace("getByRole('button',{name:/Покажи/}).click()","getByRole('button',{name:/Покажи/}).last().click()");await fs.writeFile(file,s);
+const r='J:/cars/clients/autolife/qa-routes.mjs';s=await fs.readFile(r,'utf8');s=s.replace("for(const width of [390,1440])","try { for(const width of [390,1440])");s=s.replace("await b.close();","} finally { await b.close(); }");s=s.replace('fullPage:true','fullPage:true,animations:"disabled",timeout:60000');await fs.writeFile(r,s);

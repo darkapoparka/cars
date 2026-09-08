@@ -1,0 +1,1934 @@
+[
+  {
+    "kind": "source",
+    "key": "home1",
+    "width": 1440,
+    "route": "/",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1 hs-1-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-90"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home1",
+    "width": 1440,
+    "route": "/",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1 hs-1-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-90"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home2",
+    "width": 1440,
+    "route": "/index-2.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-2"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home2",
+    "width": 1440,
+    "route": "/index-2.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-2"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home3",
+    "width": 1440,
+    "route": "/index-3.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-3",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-3"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home3",
+    "width": 1440,
+    "route": "/index-3.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-3",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-3"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home4",
+    "width": 1440,
+    "route": "/index-4.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-4",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area bg pt-80 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home4",
+    "width": 1440,
+    "route": "/index-4.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-4",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area bg pt-80 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home5",
+    "width": 1440,
+    "route": "/index-5.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-4"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-border pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home5",
+    "width": 1440,
+    "route": "/index-5.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-4"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-border pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home1",
+    "width": 390,
+    "route": "/",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1 hs-1-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-90"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home1",
+    "width": 390,
+    "route": "/",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1 hs-1-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-90"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home2",
+    "width": 390,
+    "route": "/index-2.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-2"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home2",
+    "width": 390,
+    "route": "/index-2.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-2"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home3",
+    "width": 390,
+    "route": "/index-3.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-3",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-3"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home3",
+    "width": 390,
+    "route": "/index-3.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-3",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-3"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg pt-70 pb-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-bg pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area pb-120"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home4",
+    "width": 390,
+    "route": "/index-4.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-4",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area bg pt-80 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home4",
+    "width": 390,
+    "route": "/index-4.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-4",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-1"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "service-area bg pt-80 pb-150"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-destination pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "source",
+    "key": "home5",
+    "width": 390,
+    "route": "/index-5.html",
+    "errors": [],
+    "title": "Rencar - Car Rental And Booking HTML5 Template",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-4"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-border pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/assets/img/logo/logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  },
+  {
+    "kind": "skin",
+    "key": "home5",
+    "width": 390,
+    "route": "/index-5.html",
+    "errors": [],
+    "title": "Day & Night — Rencar visual preview",
+    "bodyClass": "home-2",
+    "sections": [
+      {
+        "tag": "DIV",
+        "class": "hero-section hs-4"
+      },
+      {
+        "tag": "DIV",
+        "class": "booking-form ng-mt"
+      },
+      {
+        "tag": "DIV",
+        "class": "about-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-type-area bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "counter-area"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-area car-border pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-rate py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "choose-area choose-bg py-80"
+      },
+      {
+        "tag": "DIV",
+        "class": "process-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "car-city pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "feature-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "video-area pt-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "faq-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "download-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "team-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "testimonial-area ts-bg py-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "blog-area py-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "brand-area pb-120"
+      },
+      {
+        "tag": "DIV",
+        "class": "cta-area pb-100"
+      },
+      {
+        "tag": "DIV",
+        "class": "newsletter-area"
+      }
+    ],
+    "nav": "navbar navbar-expand-lg",
+    "forms": 3,
+    "inputs": 24,
+    "overflow": 0,
+    "brokenImages": [],
+    "logo": "/daynight/day-night-logo.png",
+    "font": "\"Prosto One\", sans-serif",
+    "customV1Mounted": false
+  }
+]

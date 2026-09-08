@@ -1,0 +1,976 @@
+{
+  "client": "legend-auto",
+  "name": "LEGEND AUTO",
+  "template": "modern",
+  "port": 6672,
+  "startedAt": "2026-09-08T01:52:18.390Z",
+  "routes": [
+    {
+      "width": 390,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Автомобили от LEGEND AUTO | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11774263732166588"
+        },
+        {
+          "text": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\n\n37 999 €\n\n2024\n29 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/legend-11774263732166588"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11784618839120443"
+        },
+        {
+          "text": "Seat Leon 2.0TDI\n\n7 999 €\n\n2017\n200 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11784618839120443"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-21785269571488349"
+        },
+        {
+          "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n16 999 €\n\n2019\n122 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/legend-21785269571488349"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11788186558085673"
+        },
+        {
+          "text": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n9 999 €\n\n2015\n220 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/legend-11788186558085673"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11788202283254523"
+        },
+        {
+          "text": "VW Golf 1.9TDI 105к.с\n\n3 599 €\n\n2005\n205 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11788202283254523"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11782331844226239"
+        },
+        {
+          "text": "Toyota Yaris 1.5 Хибрид Камера 4л/100км\n\n7 999 €\n\n2012\n169 000 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/legend-11782331844226239"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-21787135215316819"
+        },
+        {
+          "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n\n26 999 €\n\n2022\n252 000 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/legend-21787135215316819"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11786699392982478"
+        },
+        {
+          "text": "Toyota Auris 2.0D4D\n\n4 399 €\n\n2009\n229 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11786699392982478"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11787054081251501"
+        },
+        {
+          "text": "Skoda Scala 1.6TDI\n\n11 999 €\n\n2019\n180 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11787054081251501"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11787771672265620"
+        },
+        {
+          "text": "Renault Zoe 52kw 78000km Собствена батерия\n\n14 299 €\n\n2020\n78 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/legend-11787771672265620"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11777013326319103"
+        },
+        {
+          "text": "Renault Clio 1.2 БЕНЗИН\n\n5 199 €\n\n2014\n150 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/legend-11777013326319103"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11764232323880460"
+        },
+        {
+          "text": "Peugeot 508 2.0HDI\n\n4 299 €\n\n2013\n232 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11764232323880460"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11786966551654053"
+        },
+        {
+          "text": "Opel Astra 1.6\n\n6 599 €\n\n2017\n193 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11786966551654053"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11725562013563390"
+        },
+        {
+          "text": "Opel Agila 1.3i Внос от Италия\n\n2 500 €\n\n2008\n120 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/legend-11725562013563390"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/listing/legend-11774263732166588",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за лизинг",
+          "href": "/bg/lease?vehicle=legend-11774263732166588"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "7999 €\n\nSeat Leon 2.0TDI\n\n200 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/legend-11784618839120443"
+        },
+        {
+          "text": "16 999 €\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n122 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/legend-21785269571488349"
+        },
+        {
+          "text": "9999 €\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n220 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/legend-11788186558085673"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "За нас и контакти | LEGEND AUTO | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Обадете ни се\n0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Посетете шоурума\nбул. Цар Освободител 289, срещу МАКАО, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Автомобили в наличност",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за автомобил",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Условия за покупка",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Внос на автомобил по заявка | LEGEND AUTO | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Коли",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/cars",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Автомобили от LEGEND AUTO | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11774263732166588"
+        },
+        {
+          "text": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km\n\n37 999 €\n\n2024\n29 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/legend-11774263732166588"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11784618839120443"
+        },
+        {
+          "text": "Seat Leon 2.0TDI\n\n7 999 €\n\n2017\n200 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11784618839120443"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-21785269571488349"
+        },
+        {
+          "text": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n16 999 €\n\n2019\n122 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/legend-21785269571488349"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11788186558085673"
+        },
+        {
+          "text": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n9 999 €\n\n2015\n220 000 км\nДизел\nАвтоматик",
+          "href": "/bg/listing/legend-11788186558085673"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11788202283254523"
+        },
+        {
+          "text": "VW Golf 1.9TDI 105к.с\n\n3 599 €\n\n2005\n205 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11788202283254523"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11782331844226239"
+        },
+        {
+          "text": "Toyota Yaris 1.5 Хибрид Камера 4л/100км\n\n7 999 €\n\n2012\n169 000 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/legend-11782331844226239"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-21787135215316819"
+        },
+        {
+          "text": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL\n\n26 999 €\n\n2022\n252 000 км\nХибрид\nАвтоматик",
+          "href": "/bg/listing/legend-21787135215316819"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11786699392982478"
+        },
+        {
+          "text": "Toyota Auris 2.0D4D\n\n4 399 €\n\n2009\n229 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11786699392982478"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11787054081251501"
+        },
+        {
+          "text": "Skoda Scala 1.6TDI\n\n11 999 €\n\n2019\n180 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11787054081251501"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11787771672265620"
+        },
+        {
+          "text": "Renault Zoe 52kw 78000km Собствена батерия\n\n14 299 €\n\n2020\n78 000 км\nЕлектрически\nАвтоматик",
+          "href": "/bg/listing/legend-11787771672265620"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11777013326319103"
+        },
+        {
+          "text": "Renault Clio 1.2 БЕНЗИН\n\n5 199 €\n\n2014\n150 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/legend-11777013326319103"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11764232323880460"
+        },
+        {
+          "text": "Peugeot 508 2.0HDI\n\n4 299 €\n\n2013\n232 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11764232323880460"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11786966551654053"
+        },
+        {
+          "text": "Opel Astra 1.6\n\n6 599 €\n\n2017\n193 000 км\nДизел\nРъчна",
+          "href": "/bg/listing/legend-11786966551654053"
+        },
+        {
+          "text": "",
+          "href": "/bg/listing/legend-11725562013563390"
+        },
+        {
+          "text": "Opel Agila 1.3i Внос от Италия\n\n2 500 €\n\n2008\n120 000 км\nБензин\nРъчна",
+          "href": "/bg/listing/legend-11725562013563390"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/listing/legend-11774263732166588",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Назад към търсенето",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Виж всички",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "7999 €\n\nSeat Leon 2.0TDI\n\n200 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/legend-11784618839120443"
+        },
+        {
+          "text": "16 999 €\n\nVW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ\n\n122 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/legend-21785269571488349"
+        },
+        {
+          "text": "9999 €\n\nVW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ\n\n220 000 км · Дизел\n\nАвтомобил в Варна, България",
+          "href": "/bg/listing/legend-11788186558085673"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Виж финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Варна\nбул. Цар Освободител 289, срещу МАКАО, България",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/contact",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "За нас и контакти | LEGEND AUTO | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Вижте наличностите",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Телефон\n0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Шоурум · бул. Цар Освободител 289\nбул. Цар Освободител 289, срещу МАКАО, Варна",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Автомобили в наличност\nРазгледайте предложенията и планирайте оглед.",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Запитване за автомобил\nКажете какво търсите и започнете разговор.",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Условия за покупка\nОбсъдете вариант според автомобила и бюджета ви.",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте автомобила си\nИзпратете данни за автомобила и заявете оценка.",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/bg/imports",
+      "errors": [],
+      "consoleErrors": [],
+      "visibleContent": true,
+      "title": "Внос на автомобил по заявка | LEGEND AUTO | LEGEND AUTO",
+      "overflow": -15,
+      "broken": [],
+      "phones": [
+        "tel:+359899877305"
+      ],
+      "links": [
+        {
+          "text": "Към основното съдържание",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Купи",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Продай",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Внос",
+          "href": "/bg/imports"
+        },
+        {
+          "text": "Лизинг",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Шоурум",
+          "href": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0"
+        },
+        {
+          "text": "Всички",
+          "href": "/bg/imports?origin=ALL"
+        },
+        {
+          "text": "Китай",
+          "href": "/bg/imports?origin=CN"
+        },
+        {
+          "text": "Германия",
+          "href": "/bg/imports?origin=DE"
+        },
+        {
+          "text": "САЩ",
+          "href": "/bg/imports?origin=US"
+        },
+        {
+          "text": "Япония",
+          "href": "/bg/imports?origin=JP"
+        },
+        {
+          "text": "Южна Корея",
+          "href": "/bg/imports?origin=KR"
+        },
+        {
+          "text": "Опишете автомобил",
+          "href": "/bg/imports?start=1#import-request"
+        },
+        {
+          "text": "",
+          "href": "/bg"
+        },
+        {
+          "text": "Обадете се",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "Всички автомобили",
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Финансиране",
+          "href": "/bg/lease"
+        },
+        {
+          "text": "Продайте ни автомобил",
+          "href": "/bg/sell"
+        },
+        {
+          "text": "Съвети за покупка",
+          "href": "/bg/guides"
+        },
+        {
+          "text": "Прозрачност на обявите",
+          "href": "/bg/guides/dealer-listing-transparency"
+        },
+        {
+          "text": "За нас и контакти",
+          "href": "/bg/contact"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        },
+        {
+          "text": "0899 877 305",
+          "href": "tel:+359899877305"
+        }
+      ],
+      "overlay": false,
+      "status": 200,
+      "staleIdentity": [],
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "width": 390,
+      "errors": [],
+      "query": "Audi",
+      "beforeCount": 14,
+      "menuOpened": true,
+      "menuDismissed": true,
+      "menuFocus": true,
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6672/cars?q=Audi",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/bg/listing/legend-11774263732166588",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "errors": [],
+      "query": "Audi",
+      "beforeCount": 14,
+      "menu": "No visible menu button at this width",
+      "filterOpened": true,
+      "filterDismissed": true,
+      "searchUrl": "http://127.0.0.1:6672/cars?q=Audi",
+      "afterCount": 2,
+      "search": true,
+      "detailHref": "/bg/listing/legend-11774263732166588",
+      "navigation": true,
+      "detailPhone": true,
+      "enquiry": true,
+      "enquiryMode": "telephone link inspected, no call placed",
+      "pass": true
+    }
+  ],
+  "runtime": {
+    "Template": "modern",
+    "Project": "J:\\cars\\clients\\legend-auto\\modern",
+    "PID": 53424,
+    "Port": 6672,
+    "Url": "http://127.0.0.1:6672",
+    "Stdout": "J:\\cars\\runtime\\modern-6672-20260908-045219.out.log",
+    "Stderr": "J:\\cars\\runtime\\modern-6672-20260908-045219.err.log",
+    "Status": "stopped-after-verification"
+  },
+  "pass": true
+}

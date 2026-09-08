@@ -1,0 +1,8 @@
+[
+  {"key":"auto-best","source":"M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/autodeal-best-day-night","destination":"J:/cars/templates/auto-best","sourceUrl":"http://127.0.0.1:5173/"},
+  {"key":"carwow","source":"M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/spartak-style","destination":"J:/cars/templates/carwow","sourceUrl":"http://127.0.0.1:6517/"},
+  {"key":"modern","source":"M:/leads-cars/projects/bulgaria/day-night-auto-group","destination":"J:/cars/templates/modern","sourceUrl":"http://127.0.0.1:6212/cars"},
+  {"key":"import","source":"M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/bohemcars-style","destination":"J:/cars/templates/import","sourceUrl":"http://127.0.0.1:6518/"},
+  {"key":"showroom","source":"M:/codex/agency-os-projects/leads/automotive/eliq-auto/bohemcars","destination":"J:/cars/templates/showroom","sourceUrl":"http://127.0.0.1:6404/inventory"},
+  {"key":"autodeal","source":"M:/codex/agency-os-templates/verticals/automotive/templates/autodeal","destination":"J:/cars/templates/autodeal","sourceUrl":"https://autodealnextjs.vercel.app/"}
+]

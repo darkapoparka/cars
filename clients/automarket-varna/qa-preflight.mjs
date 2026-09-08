@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';import path from 'node:path';const root=import.meta.dirname;
+async function walk(dir){let out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){if(e.isDirectory())out.push(...await walk(path.join(dir,e.name)));else out.push(path.join(dir,e.name))}return out}
+for(const p of await walk(root+'/carwow/src')){if(!/\.(ts|svelte)$/.test(p))continue;let s=await fs.readFile(p,'utf8');s=s.replace(/\/assets\/[^'"`\s]*(?:showroom|portrait|kristian|daynight-team)[^'"`\s]*\.(?:webp|jpg|png)/g,'/assets/automarket/vehicle-14-1.webp').replace('const starIndexes = [1, 2, 3, 4, 5] as const;','const starIndexes: number[] = [];').replace(/`viber:\/\/chat\?number=[^`]+`/g,"'tel:+359886424400'").replaceAll('>Viber<','>Обади се<');await fs.writeFile(p,s);}
+const p=root+'/browser-qa.mjs';let s=await fs.readFile(p,'utf8');s=s.replace("waitUntil:'networkidle',timeout:60000","waitUntil:'domcontentloaded',timeout:45000").replace("await p.evaluate(async()=>{await document.fonts.ready});","await p.waitForTimeout(900);await p.evaluate(async()=>{await document.fonts.ready});");await fs.writeFile(p,s);
+for(const v of ['auto-best','carwow']){const job=root+`/qa-${v}.ps1`;let s=await fs.readFile(job,'utf8');const pre=` & C:/nvm4w/nodejs/node.exe '${root.replaceAll('\\','/')}/svelte-review.mjs' '${v}' *> '${root.replaceAll('\\','/')}/evidence/${v}-autofixer.log'\n`;
+if(v==='carwow')s=s.replace('$qaStarted=$null',`& '${root.replaceAll('\\','/')}/check-carwow.ps1'\nif($LASTEXITCODE -ne 0){exit $LASTEXITCODE}\n$qaStarted=$null`);
+s=s.replace('try {\n',`try {\n${pre}`);await fs.writeFile(job,s);}
+console.log('QA preflight prepared; no servers launched');

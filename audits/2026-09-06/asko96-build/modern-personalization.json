@@ -1,0 +1,31 @@
+{
+  "changes": [],
+  "stockCount": 16,
+  "config": {
+    "accent": "#d7ae35",
+    "address": "бул. „Ботевградско шосе“ 300",
+    "city": "София",
+    "contactUrl": "tel:+359899769696",
+    "country": "България",
+    "countryCode": "BG",
+    "currency": "EUR",
+    "email": "askogroup@abv.bg",
+    "heroPath": "/assets/asko96/asko96-showroom.jpg",
+    "locale": "bg-BG",
+    "logoPath": "/assets/asko96/asko96-wordmark.png",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
+    "name": "АСКО 96",
+    "phoneDisplay": "0899 76 96 96",
+    "phoneHref": "tel:+359899769696",
+    "shortName": "АСКО 96",
+    "slug": "asko-96",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/p/Asko96-100050328800477/",
+      "youtube": "https://www.youtube.com/@asko96bulgaria"
+    },
+    "staticDemoMode": true,
+    "tagline": "Автомобили, внос по поръчка и собствен лизинг в София."
+  },
+  "detailRoute": "/bg/listing/asko-21788444587626928"
+}

@@ -1,0 +1,2 @@
+import fs from 'node:fs';
+for(const c of ['autolife','priselci','ivo-auto']){const results=[];for(const t of ['auto-best','modern','carwow']){const src=`J:/cars/audits/2026-09-08/verify/${c}/${t}`;fs.cpSync(src,`J:/cars/clients/${c}/qa-final/${c}/${t}`,{recursive:true});results.push(JSON.parse(fs.readFileSync(`${src}/result.json`)));}fs.writeFileSync(`J:/cars/clients/${c}/qa-final/results.json`,JSON.stringify(results,null,2));}

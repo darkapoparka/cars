@@ -1,0 +1,18 @@
+[
+  {
+    "file": "components/home/MobileBudget.svelte",
+    "issues": [],
+    "suggestions": [],
+    "require_another_tool_call_after_fixing": false
+  },
+  {
+    "file": "components/home/SearchBox.svelte",
+    "issues": [],
+    "suggestions": [
+      "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.",
+      "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible.",
+      "The usage of `bind:this` can often be replaced with an easier to read `action` or even better an `attachment`. Consider using the latter if possible."
+    ],
+    "require_another_tool_call_after_fixing": true
+  }
+]

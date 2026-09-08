@@ -1,0 +1,102 @@
+[
+  {
+    "width": 390,
+    "route": "/",
+    "errors": [],
+    "visible": true,
+    "logo": "/assets/autolife/wordmark-light.svg",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "route": "/inventory?price=under-10000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/volvo-s60-388381",
+      "/inventory/citroen-c5-2-2-433166",
+      "/inventory/seat-altea-facelift-885033",
+      "/inventory/vw-golf-1-6tdi-623319",
+      "/inventory/vw-passat-2-0tdi-140-129616",
+      "/inventory/ford-ka-965725",
+      "/inventory/audi-q5-2-0tdi-170-024883",
+      "/inventory/vw-polo-1-6-509132"
+    ],
+    "count": 8,
+    "expected": 8,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "route": "/inventory?price=under-20000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/volvo-s60-388381",
+      "/inventory/citroen-c5-2-2-433166",
+      "/inventory/seat-altea-facelift-885033",
+      "/inventory/vw-golf-1-6tdi-623319",
+      "/inventory/vw-passat-2-0tdi-140-129616",
+      "/inventory/ford-ka-965725",
+      "/inventory/audi-q5-2-0tdi-170-024883",
+      "/inventory/vw-polo-1-6-509132",
+      "/inventory/bmw-x1-2-0d-150-685033",
+      "/inventory/seat-alhambra-2-0tdi-150-901387",
+      "/inventory/peugeot-508-active-356749",
+      "/inventory/vw-touran-2-0tdi-150-551646",
+      "/inventory/vw-tiguan-facelift-063175"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "errors": [],
+    "visible": true,
+    "logo": "/assets/images/placeholder/transparent-1x1.svg",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/inventory?price=under-10000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/ford-ka-965725",
+      "/inventory/vw-golf-1-6tdi-623319",
+      "/inventory/seat-altea-facelift-885033",
+      "/inventory/citroen-c5-2-2-433166",
+      "/inventory/audi-q5-2-0tdi-170-024883",
+      "/inventory/volvo-s60-388381",
+      "/inventory/vw-passat-2-0tdi-140-129616",
+      "/inventory/vw-polo-1-6-509132",
+      "/inventory/map"
+    ],
+    "count": 8,
+    "expected": 8,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/inventory?price=under-20000",
+    "errors": [],
+    "hrefs": [
+      "/inventory/seat-alhambra-2-0tdi-150-901387",
+      "/inventory/ford-ka-965725",
+      "/inventory/vw-golf-1-6tdi-623319",
+      "/inventory/seat-altea-facelift-885033",
+      "/inventory/citroen-c5-2-2-433166",
+      "/inventory/audi-q5-2-0tdi-170-024883",
+      "/inventory/vw-touran-2-0tdi-150-551646",
+      "/inventory/bmw-x1-2-0d-150-685033",
+      "/inventory/peugeot-508-active-356749",
+      "/inventory/vw-tiguan-facelift-063175",
+      "/inventory/volvo-s60-388381",
+      "/inventory/vw-passat-2-0tdi-140-129616",
+      "/inventory/vw-polo-1-6-509132",
+      "/inventory/map"
+    ],
+    "count": 13,
+    "expected": 13,
+    "pass": true
+  }
+]

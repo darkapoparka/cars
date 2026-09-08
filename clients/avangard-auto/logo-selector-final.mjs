@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='J:/cars/clients/avangard-auto/logo-capture-final.mjs';let s=fs.readFileSync(p,'utf8');s=s.replace('img[alt="AVANGARD AUTO"]','.dealer-desktop-brand img, img[alt="AVANGARD AUTO"]');fs.writeFileSync(p,s);
