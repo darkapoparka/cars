@@ -5,7 +5,7 @@
   "updatedAt": "2026-09-08",
   "candidates": [
     {
-      "leadId":"bg-burgas-mg7-group","clientPath":"clients/mg7-group","state":"blocked","commitShas":[],"evidenceCommitShas":[],
+      "leadId":"bg-burgas-mg7-group","clientPath":"clients/mg7-group","state":"blocked","commitShas":[],"evidenceCommitShas":["cb7b6de89d0eaf31816a9322904a3efea6733f8d"],
       "publicEvidencePaths":["clients/mg7-group/SOURCE-PACK.json","clients/mg7-group/HANDOFF.md"],
       "variants":{
         "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Essential-media gate blocked before copying"],"proposedPort":7421},
@@ -19,12 +19,19 @@
       ]
     },
     {
-      "leadId":"ae-sharjah-al-aayan-used-cars","clientPath":"clients/al-aayan-used-cars","state":"pending","commitShas":[],"evidenceCommitShas":[],"publicEvidencePaths":[],
+      "leadId":"ae-sharjah-al-aayan-used-cars","clientPath":"clients/al-aayan-used-cars","state":"blocked","commitShas":[],"evidenceCommitShas":[],
+      "publicEvidencePaths":["clients/al-aayan-used-cars/SOURCE-PACK.json","clients/al-aayan-used-cars/HANDOFF.md"],
+      "sourceChecks":{"scope":"source-data-only","runtime":"Python 3.13.5","workingDirectory":"/mnt/data/session-03","checkedBlobSha":"1005009da0c990da372fa0ecd9cb9e9be883c215","passed":["JSON parse","8 unique source IDs","2 exclusions without overlap","Source IDs in detail URLs","Native AED/km and positive advertised prices","No available-stock, local-media or application-completion claim"]},
       "variants":{
-        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7424},
-        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7425},
-        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Not started"],"proposedPort":7426}
-      },"blockers":[]
+        "auto-best":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Permitted local media pack unresolved"],"proposedPort":7424},
+        "modern":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Permitted local media pack unresolved"],"proposedPort":7425},
+        "carwow":{"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["Application not created; install/build/runtime QA not run"],"knownLimitations":["Permitted local media pack unresolved"],"proposedPort":7426}
+      },
+      "blockers":[
+        {"id":"essential-media-access","detail":"Direct published-logo and Land Cruiser image downloads failed; no local images acquired."},
+        {"id":"media-permission","detail":"No reuse grant established; DubiCars terms do not provide a commercial demo licence.","sourceUrl":"https://www.dubicars.com/copyright.html"},
+        {"id":"creative-tool-unavailable","detail":"No callable image generation and no generated or placeholder logo."}
+      ]
     },
     {
       "leadId":"ae-sharjah-al-fareed-used-cars","clientPath":"clients/al-fareed-used-cars","state":"pending","commitShas":[],"evidenceCommitShas":[],"publicEvidencePaths":[],
@@ -37,5 +44,5 @@
   ],
   "reuseInspection":{"leadId":"bg-varna-champion-auto-pro","clientPath":"clients/champion-auto-pro","state":"pending","mode":"read-only","variants":[],"checksPassed":[],"checksNotRun":["Current metadata and source inspection pending after assigned candidate outcomes"]},
   "counts":{"applicationsImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0},
-  "publishing":{"protocol":"fresh-head-current-tree-owned-delta-non-force","applicationCommitShas":[],"evidenceCommitShas":[]}
+  "publishing":{"protocol":"fresh-head-current-tree-owned-delta-non-force","applicationCommitShas":[],"evidenceCommitShas":["cb7b6de89d0eaf31816a9322904a3efea6733f8d"]}
 }
