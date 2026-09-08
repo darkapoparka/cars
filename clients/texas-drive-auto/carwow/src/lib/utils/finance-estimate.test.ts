@@ -49,11 +49,11 @@ describe('illustrative finance calculation', () => {
 		expect(calculateFinance({ ...financeDefaults, months: '1.5' }).valid).toBe(false);
 	});
 	it('accepts localized field values and legacy vehicle handoff', () => {
-		expect(parseFinanceNumber('46 300 €')).toBe(46300);
+		expect(parseFinanceNumber('46 300 $')).toBe(46300);
 		expect(parseFinanceNumber('1,20%')).toBe(1.2);
 		const input = readFinanceInputs(
 			new URLSearchParams(
-				'FinancingCalculatorCarPrice=20000&FinancingCalculatorLoanTerm=60+месеца&FinancingCalculatorDownPayment=1000'
+				'FinancingCalculatorCarPrice=20000&FinancingCalculatorLoanTerm=60+months&FinancingCalculatorDownPayment=1000'
 			)
 		);
 		expect(input.price).toBe('20000');

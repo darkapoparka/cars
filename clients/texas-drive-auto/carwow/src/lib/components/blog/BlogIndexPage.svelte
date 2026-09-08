@@ -30,13 +30,13 @@
 	type BlogFilterHref = '/blog' | `/blog?${string}`;
 
 	const blogCategories: DayNightArticleCategory[] = [
-		'Покупка',
-		'Продажба',
-		'Новини',
-		'Съвети',
-		'Финансиране',
-		'Документи',
-		'Марки'
+		'Buying',
+		'Selling',
+		'News',
+		'Tips',
+		'Buyer-arranged funding',
+		'Paperwork',
+		'Makes'
 	];
 
 	let { articles, filters }: { articles: DayNightArticle[]; filters: BlogFilters } = $props();
@@ -93,7 +93,7 @@
 	);
 	const tagOptions = $derived.by(() =>
 		[...new Set(articles.flatMap((article) => article.tags))]
-			.sort((first, second) => first.localeCompare(second, 'bg-BG'))
+			.sort((first, second) => first.localeCompare(second, 'en-US'))
 			.slice(0, 12)
 			.map((tag) => ({ value: tag, label: tag, count: countTag(tag) }))
 	);
@@ -113,7 +113,7 @@
 	);
 
 	function normalize(value: string) {
-		return value.trim().toLocaleLowerCase('bg-BG');
+		return value.trim().toLocaleLowerCase('en-US');
 	}
 
 	function articleArchiveValue(article: DayNightArticle) {
@@ -137,7 +137,7 @@
 	}
 
 	function formatArticleDate(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat('en-US', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
@@ -145,7 +145,7 @@
 	}
 
 	function formatArticleArchive(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat('en-US', {
 			month: 'long',
 			year: 'numeric'
 		}).format(new Date(`${value}-01T00:00:00+02:00`));
@@ -185,7 +185,7 @@
 
 {#snippet articleMeta(article: DayNightArticle, tone: 'light' | 'dark' = 'dark')}
 	<div class={tone === 'light' ? 'blog-meta blog-meta--light' : 'blog-meta'}>
-		{#if article.author}<span>от {article.author}</span>{/if}
+		{#if article.author}<span>of {article.author}</span>{/if}
 		<span>{formatArticleDate(article.date)}</span>
 		<span class="text-highlight text-underline uppercase">{article.category}</span>
 	</div>
@@ -263,45 +263,45 @@
 	<section class="pb-100">
 		<div class="container">
 			<div class="blog-page-title">
-				<p class="eyebrow">Блог</p>
-				<h1>Съвети за покупка и продажба</h1>
+				<p class="eyebrow">Blog</p>
+				<h1>Buying and selling tips</h1>
 				<p class="h7 text-secondary line-height-28">
-					Огледи, сравнение на обяви и подготовка за продажба.
+					Vehicle inspections, listing comparisons, and preparing to sell.
 				</p>
 			</div>
 
 			{#if !articles.length}
 				<div class="blog-empty" data-daynight-blog-empty>
-					<h2>Все още няма публикувани статии.</h2>
-					<p>Имате въпрос за покупка или продажба на автомобил?</p>
-					<a class="sa-cta sa-cta-primary" href={resolve('/contact')}>Свържете се с нас</a>
+					<h2>No articles published yet.</h2>
+					<p>Have a question about buying or selling a vehicle?</p>
+					<a class="sa-cta sa-cta-primary" href={resolve('/contact')}>Contact us</a>
 				</div>
 			{:else}
 			<div class="innerpage-container blog-index-layout">
-				<div class="blog-controls" aria-label="Търсене и категории">
+				<div class="blog-controls" aria-label="Search and categories">
 					<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
-						<label class="sr-only" for="blog-search">Търсене в публикациите</label>
+						<label class="sr-only" for="blog-search">Search posts</label>
 						<input
 							class="input-normal"
 							type="search"
 							name="q"
 							id="blog-search"
-							placeholder="Търсене в публикациите..."
+							placeholder="Search posts..."
 							value={filters.q}
 						/>
 						{#each searchHiddenFilters() as [name, value] (name)}
 							<input type="hidden" {name} {value} />
 						{/each}
-						<button type="submit" class="widget-search-btn" aria-label="Търси">
+						<button type="submit" class="widget-search-btn" aria-label="Search">
 							<Search size={22} />
 						</button>
 					</form>
 
-					<p class="h4 mb-16">Категории</p>
+					<p class="h4 mb-16">Categories</p>
 					<ul class="widget-categories mb-32">
 						<li>
 							<a href={resolve(filterHref({}))} class={!hasActiveFilters ? 'active' : ''}>
-								<span class="label">Всички публикации</span>
+								<span class="label">All posts</span>
 								<span>({articles.length})</span>
 							</a>
 						</li>
@@ -334,15 +334,15 @@
 
 						{#if !visibleArticles.length}
 							<p class="h5 text-secondary daynight-blog-empty mb-40">
-								Няма публикации по избраните филтри.
+								No posts match the selected filters.
 							</p>
 						{/if}
 					</div>
 				</div>
 
-				<aside class="innerpage__sidebar" aria-label="Още публикации и филтри">
+				<aside class="innerpage__sidebar" aria-label="More posts and filters">
 					<div class="divider mb-32 w-full"></div>
-					<p class="h4 mb-16 capitalize">Последни публикации</p>
+					<p class="h4 mb-16 capitalize">Recent posts</p>
 					<div class="mb-32">
 						{#each articles.slice(0, 4) as article, index (article.slug)}
 							<a
@@ -370,10 +370,10 @@
 					</div>
 
 					<div class="divider mb-32 w-full"></div>
-					{@render filterList('Архив', archiveOptions, 'archive')}
+					{@render filterList('Archive', archiveOptions, 'archive')}
 
 					<div class="divider mb-32 w-full"></div>
-					{@render filterList('Тагове', tagOptions, 'tag')}
+					{@render filterList('Tags', tagOptions, 'tag')}
 				</aside>
 			</div>
 			{/if}

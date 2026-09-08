@@ -55,7 +55,7 @@
 						href={phoneHref}
 						class={homePhoneClasses}
 						data-daynight-header-tool="phone"
-						aria-label={`Обади се на ${daynightSite.phoneLabel}`}
+						aria-label={`Call ${daynightSite.phoneLabel}`}
 						title={daynightSite.phoneCta}
 					>
 						<SiteChromeIcon name="phone" />
@@ -78,8 +78,8 @@
 						]}
 						id="mobileSearchToggle"
 						data-daynight-header-tool="search"
-						aria-label="Отвори търсене"
-						title="Отвори търсене"
+						aria-label="Open search"
+						title="Open search"
 						aria-expanded={searchOpen}
 						aria-controls="searchForm"
 						onclick={onSearchToggle}
@@ -90,7 +90,7 @@
 						href={resolve('/compare')}
 						class={navToolClasses}
 						data-daynight-header-tool="compare"
-						aria-label="Сравни"
+						aria-label="Compare"
 					>
 						<SiteChromeIcon name="compare" />
 						{#if compareBadge > 0}<span class={badgeClasses} aria-hidden="true">{compareBadge}</span
@@ -100,7 +100,7 @@
 						href={resolve('/favorites')}
 						class={navToolClasses}
 						data-daynight-header-tool="favorites"
-						aria-label="Запазени автомобили"
+						aria-label="Saved vehicles"
 					>
 						<SiteChromeIcon name="heart" />
 						{#if favoritesBadge > 0}<span class={badgeClasses} aria-hidden="true"

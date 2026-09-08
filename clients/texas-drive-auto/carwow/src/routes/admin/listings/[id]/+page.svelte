@@ -57,7 +57,7 @@
 			<Card.Footer class="text-muted-foreground flex-wrap gap-3 text-sm">
 				<span>{data.vehicle.year}</span>
 				<span>{data.vehicle.fuel || 'Fuel not set'}</span>
-				<span>{data.vehicle.mileage_text || `${data.vehicle.mileage_value} км`}</span>
+				<span>{data.vehicle.mileage_text || `${data.vehicle.mileage_value} mi`}</span>
 				<span>{formatPrice(data.vehicle)}</span>
 			</Card.Footer>
 		</Card.Root>

@@ -48,7 +48,7 @@
 	);
 
 	function formatTime(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat('en-US', {
 			hour: '2-digit',
 			minute: '2-digit'
 		}).format(new Date(value));
@@ -79,11 +79,11 @@
 <section class="chat-thread" aria-live="polite">
 	<header class="chat-thread__header">
 		<div>
-			<p class="chat-thread__eyebrow">Day Night Auto</p>
-			<h2 id="daynight-chat-title">Чат с екипа</h2>
+			<p class="chat-thread__eyebrow">Texas Drive Auto</p>
+			<h2 id="daynight-chat-title">Chat preview</h2>
 		</div>
 		<span class="chat-thread__status">
-			{conversation?.status === 'closed' ? 'Приключен разговор' : 'Изпратете въпрос'}
+			{conversation?.status === 'closed' ? 'Conversation ended' : 'Ask a question'}
 		</span>
 	</header>
 
@@ -92,21 +92,21 @@
 	{/if}
 
 	{#if loading}
-		<div class="chat-thread__loading">Зареждане...</div>
+		<div class="chat-thread__loading">Loading...</div>
 	{:else if !conversation}
 		<form class="chat-thread__start" onsubmit={submitStart}>
 			<label>
-				<span>Име</span>
+				<span>Name</span>
 				<input bind:value={name} name="name" autocomplete="name" maxlength="140" />
 			</label>
 			<label>
-				<span>Съобщение</span>
+				<span>Message</span>
 				<textarea bind:value={startMessage} name="message" rows="4" maxlength="1200" required
 				></textarea>
 			</label>
 			<button type="submit" disabled={sending || !startMessage.trim()}>
 				<Send aria-hidden="true" />
-				Започни чат
+				Start chat
 			</button>
 		</form>
 	{:else}
@@ -118,13 +118,13 @@
 					>
 						<p>{message.body}</p>
 						<footer>
-							<span>{message.senderType === 'staff' ? 'Day Night Auto' : message.senderName}</span>
+							<span>{message.senderType === 'staff' ? 'Texas Drive Auto' : message.senderName}</span>
 							<time datetime={message.createdAt}>{formatTime(message.createdAt)}</time>
 						</footer>
 					</article>
 				{/each}
 			{:else}
-				<p class="chat-thread__empty">Изпратете въпрос и ще отговорим възможно най-скоро.</p>
+				<p class="chat-thread__empty">Draft a question. Live replies are unavailable in this preview.</p>
 			{/if}
 		</div>
 
@@ -134,12 +134,12 @@
 				name="message"
 				rows="3"
 				maxlength="1200"
-				placeholder="Напишете съобщение"
+				placeholder="Type a message"
 				required
 			></textarea>
 			<button type="submit" disabled={sending || !draft.trim()}>
 				<Send aria-hidden="true" />
-				Изпрати
+				Send
 			</button>
 		</form>
 	{/if}

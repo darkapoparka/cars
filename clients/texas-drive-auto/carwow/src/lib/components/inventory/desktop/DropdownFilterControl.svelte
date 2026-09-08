@@ -35,27 +35,27 @@
 	}
 
 	// Closed-state summary — mirrors the legacy `quickSelectionSummary` so the
-	// e2e label assertions (`Audi + BMW`, `2 екстри`, `N модела`) keep matching.
+	// e2e label assertions (`Audi + BMW`, `2 features`, `N models`) keep matching.
 	const visibleLabel = $derived.by(() => {
 		if (!selectedValues.length) return closedPlaceholder;
 		const display = selectedValues.map((value) =>
 			getQuickDisplayLabel(filter.name, value, labelFor(value))
 		);
 		if (display.length === 1) return display[0];
-		if (filter.name === 'feature') return `${display.length} екстри`;
-		if (filter.name === 'model') return `${display.length} модела`;
+		if (filter.name === 'feature') return `${display.length} features`;
+		if (filter.name === 'model') return `${display.length} models`;
 		if (display.length === 2) return `${display[0]} + ${display[1]}`;
-		return `${display[0]} + още ${display.length - 1}`;
+		return `${display[0]} + more ${display.length - 1}`;
 	});
 
 	const fullLabel = $derived(
 		selectedValues.length ? selectedValues.map(labelFor).join(', ') : placeholder
 	);
 
-	// Searchable menus filter their visible options by the in-menu query; the Модел
+	// Searchable menus filter their visible options by the in-menu query; the Model
 	// menu additionally hides options outside the chosen brand(s).
 	const visibleOptions = $derived.by(() => {
-		const needle = optionQuery.trim().toLocaleLowerCase('bg-BG');
+		const needle = optionQuery.trim().toLocaleLowerCase('en-US');
 		return filter.options.filter((option) => {
 			if (
 				filter.name === 'model' &&
@@ -64,7 +64,7 @@
 				return false;
 			}
 			if (!needle) return true;
-			return option.label.toLocaleLowerCase('bg-BG').includes(needle);
+			return option.label.toLocaleLowerCase('en-US').includes(needle);
 		});
 	});
 
@@ -103,7 +103,7 @@
 		filters.syncUrl();
 	}
 
-	// "Прозорец" mode opens a per-field modal instead of the inline popover.
+	// "Window" mode opens a per-field modal instead of the inline popover.
 	const useModal = $derived(filterUxMode === 'modal');
 
 	function closeField() {
@@ -153,8 +153,8 @@
 			data-daynight-quick-clear
 			disabled={!hasSelection}
 			tabindex={hasSelection ? 0 : -1}
-			aria-label={`Изчисти ${filter.label}`}
-			title={`Изчисти ${filter.label}`}
+			aria-label={`Clear ${filter.label}`}
+			title={`Clear ${filter.label}`}
 			onclick={clearField}
 		>
 			<span aria-hidden="true">x</span>

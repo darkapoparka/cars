@@ -25,10 +25,10 @@
 		data-daynight-inventory-filter
 		data-daynight-filter-ux-form={filterUxMode}
 		aria-label={filterUxMode === 'modal'
-			? 'Модални филтри'
+			? 'Modal filters'
 			: layoutMode === 'sidebar'
-				? 'Sidebar филтри'
-				: 'Бързи филтри'}
+				? 'Sidebar filters'
+				: 'Quick filters'}
 	>
 		{#if layoutMode === 'grid'}
 			<InventoryResultsQuickFilters {filters} />

@@ -14,7 +14,7 @@ export function parseFinanceNumber(value: string): number {
 	const clean = value
 		.trim()
 		.replace(/\s/g, '')
-		.replace(/(?:EUR|€|%)/gi, '')
+		.replace(/(?:EUR|$|%)/gi, '')
 		.replace(',', '.');
 	return /^\d+(?:\.\d+)?$/.test(clean) ? Number(clean) : NaN;
 }
@@ -33,7 +33,7 @@ export function readFinanceInputs(params: URLSearchParams): FinanceInputs {
 		Object.entries(financeDefaults).map(([key, fallback]) => {
 			const field = key as keyof FinanceInputs;
 			let value = params.get(field) ?? params.get(legacy[field]) ?? fallback;
-			if (field === 'months') value = value.replace(/\s*месеца?\s*$/, '');
+			if (field === 'months') value = value.replace(/\s*months?\s*$/, '');
 			return [key, value];
 		})
 	) as FinanceInputs;
@@ -48,18 +48,18 @@ export function calculateFinance(inputs: FinanceInputs) {
 	if (Object.values(values).some((value) => !Number.isFinite(value)))
 		return {
 			valid: false as const,
-			error: 'Въведете валидни неотрицателни числа във всички полета.'
+			error: 'Enter valid nonnegative numbers in all fields.'
 		};
 	if (price <= 0 || price > 10000000)
-		return { valid: false as const, error: 'Въведете цена между 0 и 10 000 000 €.' };
+		return { valid: false as const, error: 'Enter a price between 0 and 10 000 000 USD.' };
 	if (!Number.isInteger(months) || months < 1 || months > 120)
-		return { valid: false as const, error: 'Срокът трябва да е от 1 до 120 цели месеца.' };
+		return { valid: false as const, error: 'The term must be a whole number from 1 to 120 months.' };
 	if (annualRate > 100 || feePercent > 100)
-		return { valid: false as const, error: 'Лихвата и таксите трябва да са между 0 и 100%.' };
+		return { valid: false as const, error: 'Interest and fees must be between 0 and 100%.' };
 	if (deposit + tradeIn > price)
 		return {
 			valid: false as const,
-			error: 'Първоначалната вноска и бартерът не могат да надвишават цената.'
+			error: 'The down payment and estimated trade-in value cannot exceed the price. Trade-in acceptance is unconfirmed.'
 		};
 	const fees = (price * feePercent) / 100;
 	const principal = price - deposit - tradeIn + fees;
@@ -82,7 +82,7 @@ export function calculateFinance(inputs: FinanceInputs) {
 }
 
 export function formatFinanceEur(value: number) {
-	return new Intl.NumberFormat('bg-BG', {
+	return new Intl.NumberFormat('en-US', {
 		style: 'currency',
 		currency: 'EUR',
 		maximumFractionDigits: 2

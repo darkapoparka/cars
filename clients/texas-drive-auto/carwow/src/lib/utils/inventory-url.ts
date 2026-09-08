@@ -43,10 +43,10 @@ export function parseInventoryFilters(params: URLSearchParams): InventoryCriteri
 	];
 	const rawCondition = (params.get('condition') || params.get('type') || '')
 		.trim()
-		.toLocaleLowerCase('bg-BG');
-	const condition = ['new', 'nov', 'novi', 'нов', 'нови', 'нов внос'].includes(rawCondition)
+		.toLocaleLowerCase('en-US');
+	const condition = ['new', 'nov', 'novi', 'new', 'new', 'recently imported'].includes(rawCondition)
 		? 'new'
-		: ['used', 'upotrebyavani', 'употребявани', 'употребяван'].includes(rawCondition)
+		: ['used', 'upotrebyavani', 'used', 'used'].includes(rawCondition)
 			? 'used'
 			: '';
 	return {

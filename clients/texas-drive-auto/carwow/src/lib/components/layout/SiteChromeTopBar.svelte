@@ -11,7 +11,7 @@
 		onLanguageToggle: () => void;
 	} = $props();
 
-	const locationShort = 'Студентски град, София';
+	const locationShort = 'Location unavailable in this preview';
 
 	const socialLinkBase =
 		'site-chrome-topbar__social-link inline-grid size-9 place-items-center text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-sa-surface/70 [&_img]:size-[22px] [&_svg]:size-[22px]';
@@ -35,7 +35,7 @@
 			<a
 				{...mapLinkProps}
 				class="site-chrome-topbar__location flex min-w-0 items-center gap-1.5 leading-none text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-4 [&_svg]:fill-current"
-				aria-label={`Отвори в Google Maps: ${daynightSite.location}`}
+				aria-label={`Open in Google Maps: ${daynightSite.location}`}
 			>
 				<SiteChromeIcon name="location" />
 				<span class="truncate">{locationShort}</span>
@@ -44,14 +44,14 @@
 			<a
 				href={phoneHref}
 				class="site-chrome-topbar__phone flex shrink-0 items-center gap-1.5 leading-none text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-4 [&_svg]:fill-current"
-				aria-label={`Обади се на ${daynightSite.phoneLabel}`}
+				aria-label={`Call ${daynightSite.phoneLabel}`}
 			>
 				<SiteChromeIcon name="phone" />
 				<span>{daynightSite.phoneLabel}</span>
 			</a>
 		</div>
 		<div class="flex shrink-0 items-center gap-2.5">
-			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
+			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Social channels">
 				<li>
 					<a
 						href="https://www.facebook.com/61566304063141/"
@@ -79,13 +79,13 @@
 				<button
 					class="site-chrome-topbar__language inline-flex h-8 min-w-0 cursor-pointer items-center justify-center gap-1 border-0 bg-transparent px-1 leading-none text-sa-surface transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_span]:text-white [&_svg]:size-3.5 [&_svg_path]:stroke-current"
 					type="button"
-					aria-label="Език: Български"
+					aria-label="Language: English"
 					aria-haspopup="listbox"
 					aria-controls="headerLanguageMenu"
 					aria-expanded={languageOpen}
 					onclick={onLanguageToggle}
 				>
-					<span>БГ</span>
+					<span>EN</span>
 					<SiteChromeIcon name="chevron-down" class="text-sa-surface" />
 				</button>
 				<div
@@ -95,13 +95,13 @@
 					]}
 					id="headerLanguageMenu"
 				>
-					<ul class="m-0 list-none p-0" role="listbox" aria-label="Избор на език">
+					<ul class="m-0 list-none p-0" role="listbox" aria-label="Choose a language">
 						<li
 							class="rounded-sa-xs bg-sa-muted px-2.5 py-2 text-sa-base leading-6 font-medium text-sa-ink"
 							role="option"
 							aria-selected="true"
 						>
-							Български (активен)
+							English (active)
 						</li>
 						<li
 							class="text-sa-muted-foreground rounded-sa-xs px-2.5 py-2 text-sa-base leading-6"
@@ -109,7 +109,7 @@
 							aria-selected="false"
 							aria-disabled="true"
 						>
-							English (скоро)
+							Additional languages (unavailable)
 						</li>
 						<li
 							class="text-sa-muted-foreground rounded-sa-xs px-2.5 py-2 text-sa-base leading-6"
@@ -117,7 +117,7 @@
 							aria-selected="false"
 							aria-disabled="true"
 						>
-							Други езици (скоро)
+							Other languages (unavailable)
 						</li>
 					</ul>
 				</div>

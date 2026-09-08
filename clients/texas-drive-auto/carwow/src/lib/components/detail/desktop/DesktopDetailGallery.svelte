@@ -26,7 +26,7 @@
 		(vehicle.gallery.length ? vehicle.gallery : [vehicle.image]).map((src, index) => ({
 			id: `thumb-${index}-${src}`,
 			src,
-			alt: `${vehicle.shortTitle} снимка ${index + 1}`
+			alt: `${vehicle.shortTitle} photo ${index + 1}`
 		}))
 	);
 
@@ -58,7 +58,7 @@
 
 {#snippet galleryActions()}
 	<div class="listing-details-item--content">
-		<a class="listing-details-item--button" href={resolve(buildVehicleContactHref(vehicle, 'video'))} title="Заяви видео преглед">
+		<a class="listing-details-item--button" href={resolve(buildVehicleContactHref(vehicle, 'video'))} title="Request a video walkthrough">
 			<img
 				src={resolve('/assets/icons/playcircle.svg')}
 				alt=""
@@ -67,9 +67,9 @@
 				decoding="async"
 				loading="eager"
 			/>
-			Заяви видео преглед
+			Request a video walkthrough
 		</a>
-		<a class="listing-details-item--button" href={resolve(buildVehicleContactHref(vehicle, 'photos'))} title="Заяви още снимки">
+		<a class="listing-details-item--button" href={resolve(buildVehicleContactHref(vehicle, 'photos'))} title="Request more photos">
 			<img
 				src={resolve('/assets/icons/view-all-photo.svg')}
 				alt=""
@@ -78,7 +78,7 @@
 				decoding="async"
 				loading="eager"
 			/>
-			Заяви още снимки
+			Request more photos
 		</a>
 	</div>
 {/snippet}
@@ -128,7 +128,7 @@
 	<button
 		type="button"
 		class="swiper-button navigation-prev swiper-listing-details-main-prev"
-		aria-label="Предишна снимка"
+		aria-label="Previous photo"
 		disabled={!hasMultipleSlides}
 		onclick={showPreviousSlide}
 	>
@@ -137,7 +137,7 @@
 	<button
 		type="button"
 		class="swiper-button navigation-next swiper-listing-details-main-next"
-		aria-label="Следваща снимка"
+		aria-label="Next photo"
 		disabled={!hasMultipleSlides}
 		onclick={showNextSlide}
 	>
@@ -152,7 +152,7 @@
 				<button
 					type="button"
 					class={['listing-details-thumb', index === activeSlideIndex && 'is-active']}
-					aria-label={`Покажи снимка ${index + 1}`}
+					aria-label={`Show photo ${index + 1}`}
 					aria-current={index === activeSlideIndex ? 'true' : undefined}
 					onclick={() => setActiveSlide(index)}
 				>

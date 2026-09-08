@@ -17,11 +17,11 @@
 	// "Browse by Price" budget tiers with live counts — mirrors the exact server
 	// logic in daynight-template-content.ts so the rendered counts stay 1:1.
 	const budgetTiers = [
-		{ label: 'До 10 000 EUR', value: 'under-10000', limit: 10000 },
-		{ label: 'До 20 000 EUR', value: 'under-20000', limit: 20000 },
-		{ label: 'До 30 000 EUR', value: 'under-30000', limit: 30000 },
-		{ label: 'До 50 000 EUR', value: 'under-50000', limit: 50000 },
-		{ label: 'Над 50 000 EUR', value: 'over-50000', min: 50000 }
+		{ label: 'Up to 10 000 USD', value: 'under-10000', limit: 10000 },
+		{ label: 'Up to 20 000 USD', value: 'under-20000', limit: 20000 },
+		{ label: 'Up to 30 000 USD', value: 'under-30000', limit: 30000 },
+		{ label: 'Up to 50 000 USD', value: 'under-50000', limit: 50000 },
+		{ label: 'Over 50 000 USD', value: 'over-50000', min: 50000 }
 	] as const;
 
 	const budgetBoxes = budgetTiers.map((tier) => {
@@ -30,7 +30,7 @@
 		).length;
 
 		return {
-			countLabel: `${count} ${count === 1 ? 'автомобил' : 'автомобила'}`,
+			countLabel: `${count} ${count === 1 ? 'vehicle' : 'vehicles'}`,
 			label: tier.label,
 			value: tier.value
 		};
@@ -44,48 +44,48 @@
 
 	const faqItems: readonly FaqItem[] = [
 		{
-			question: 'Какво представлява финансирането?',
+			question: 'What is buyer-arranged funding?',
 			open: true,
 			paragraphs: [
-				'Финансирането позволява да платите автомобила на месечни вноски за избран срок. Вноската зависи от цената, първоначалната вноска, срока и лихвения процент — калкулаторът дава ориентировъчна сметка преди разговор с екипа.',
-				'Голяма част от покупките на автомобили у нас се финансират — разсроченото плащане прави месечната вноска постижима, вместо да се плаща цялата цена наведнъж.',
-				'Екипът на Day Night Auto съдейства с варианти за финансиране, лизинг и собствено разсрочено плащане според автомобила и бюджета. Получавате ориентировъчни условия предварително и избирате най-подходящия вариант.'
+				'A loan arranged independently with a lender may let you pay for a vehicle in monthly installments. Payments depend on the price, down payment, term, interest rate, and fees. This calculator provides an illustrative estimate only. Texas Drive Auto offers no dealer financing or payment plans.',
+				'If you plan to borrow, compare payment estimates and total borrowing costs with an independent lender. Buyer-arranged funding is separate from the dealership.',
+				'Financing services are unavailable in this Texas Drive Auto preview. Texas Drive Auto offers no dealer financing, leasing, or payment plans. Buyers must arrange any funding independently.'
 			]
 		},
 		{
-			question: 'Как се изчислява месечната вноска?',
+			question: 'How is the monthly payment estimated?',
 			paragraphs: [
-				'Месечната вноска се изчислява от цената на автомобила минус първоначалната вноска и бартера, разпределена за избрания срок, плюс лихва и такси. Променете стойностите в калкулатора и сметката се обновява веднага.'
+				'The calculator estimates payments using the vehicle price minus the down payment and any hypothetical trade-in credit, plus interest and financed fees over the selected term. Adjust the values to update the estimate. Trade-in acceptance is not confirmed, and this is not a dealer financing offer.'
 			]
 		},
 		{
-			question: 'Бюджет и цена на автомобила?',
+			question: 'Vehicle budget and price?',
 			paragraphs: [
-				'Изберете бюджет, който оставя резерв за регистрация, застраховка и поддръжка. Калкулаторът помага да сравните различни срокове и първоначални вноски преди запитване.'
+				'Choose a budget that leaves room for registration, insurance, and maintenance. Use the calculator to compare illustrative terms and down payments before discussing buyer-arranged funding with an independent lender.'
 			]
 		},
 		{
-			question: 'Първоначална вноска?',
+			question: 'Down payment?',
 			paragraphs: [
-				'Първоначалната вноска намалява финансираната сума и месечната вноска. По-висока първоначална вноска обикновено означава по-добри условия — екипът на Day Night Auto предлага варианти според бюджета.'
+				'A down payment reduces the amount borrowed and the estimated monthly payment. Ask your independent lender how different down payments affect its terms. No financing options are available through this Texas Drive Auto preview.'
 			]
 		},
 		{
-			question: 'Бартер / замяна?',
+			question: 'Trade-in?',
 			paragraphs: [
-				'Можете да дадете настоящия си автомобил като бартер — оценката му се приспада от цената и намалява финансираната сума. Day Night Auto прави оглед и ясна оценка преди сделката.'
+				'Trade-in acceptance and valuations are not confirmed in this Texas Drive Auto preview. Ask whether a trade-in is possible before including its value in your purchase budget.'
 			]
 		},
 		{
-			question: 'Данъци и такси?',
+			question: 'Taxes and fees?',
 			paragraphs: [
-				'Към цената се добавят такси за прехвърляне, регистрация и застраховка. Калкулаторът показва ориентировъчна стойност — точните суми се уточняват при огледа според конкретния автомобил.'
+				'Taxes, title and registration fees, and insurance may add to your budget. The calculator uses illustrative fees only and does not confirm actual costs. Request an itemized purchase total for the specific vehicle.'
 			]
 		},
 		{
-			question: 'Лихвен процент?',
+			question: 'Interest rate?',
 			paragraphs: [
-				'Лихвеният процент зависи от финансиращата институция, срока и профила на клиента. Стойността в калкулатора е ориентировъчна — екипът съдейства с конкретни оферти от партньорски банки и лизинг.'
+				'Your independent lender determines the interest rate and loan terms. The calculator’s rate is illustrative only. Texas Drive Auto offers no dealer financing, payment plans, or financing approval.'
 			]
 		}
 	];
@@ -104,19 +104,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>More</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Калкулатор</span>
+					<span>Calculator</span>
 				</li>
 			</ul>
 		</div>
@@ -128,18 +128,18 @@
 		<div class="tf-spacing-style3"></div>
 
 		<div class="container">
-			<h1 class="mb-12 text-center">Калкулатор за месечна вноска</h1>
+			<h1 class="mb-12 text-center">Monthly payment estimator</h1>
 			<p class="text-secondary h7 line-height-28 mb-40 text-center">
-				Ориентировъчна сметка за бюджет, първоначална вноска и месечна вноска.
+				Illustrative estimates for buyer-arranged funding. No dealer financing or payment plans.
 			</p>
 
 			<div class="lg-grid-cols-1 grid grid-cols-2 gap-40">
 				<div class="border-box">
-					<h2 class="h3 mb-28">Изчислете ориентировъчна месечна вноска</h2>
+					<h2 class="h3 mb-28">Estimate a monthly payment</h2>
 					<form class="calculate-form" onsubmit={(event) => event.preventDefault()}>
 						<div class="grid grid-cols-1 gap-15">
 							<div>
-								<label class="mb-8" for="calculatePrice">Цена на автомобила (€)</label>
+								<label class="mb-8" for="calculatePrice">Vehicle price (USD)</label>
 								<input
 									class="active input-large"
 									id="calculatePrice"
@@ -153,7 +153,7 @@
 							</div>
 
 							<div>
-								<label class="mb-8" for="КалкулаторPayment">Първоначална вноска (€)</label>
+								<label class="mb-8" for="КалкулаторPayment">Down payment (USD)</label>
 								<input
 									class="input-large"
 									id="КалкулаторPayment"
@@ -170,7 +170,7 @@
 
 							<div>
 								<label class="mb-8" for="КалкулаторInterestRate"
-									>Срок <span class="text-muted">(месеци)</span></label
+									>Term <span class="text-muted">(months)</span></label
 								>
 								<input
 									id="КалкулаторInterestRate"
@@ -189,11 +189,11 @@
 							</div>
 
 							<div>
-								<label class="mb-8" for="КалкулаторTrade">Бартер / замяна (€; 0 без бартер)</label>
+								<label class="mb-8" for="КалкулаторTrade">Hypothetical trade-in credit (USD; 0 without trade-in)</label>
 								<input
 									class="input-large"
 									id="КалкулаторTrade"
-									placeholder="0 €"
+									placeholder="0 $"
 									name="КалкулаторTrade"
 									type="text"
 									inputmode="decimal"
@@ -205,7 +205,7 @@
 								/>
 							</div>
 							<div>
-								<label class="mb-8" for="КалкулаторInterestRate2">Годишна лихва (%)</label>
+								<label class="mb-8" for="КалкулаторInterestRate2">Annual interest rate (%)</label>
 								<input
 									class="input-large"
 									id="КалкулаторInterestRate2"
@@ -220,7 +220,7 @@
 								/>
 							</div>
 							<div>
-								<label class="mb-8" for="КалкулаторTax">Финансирани такси (% от цената)</label>
+								<label class="mb-8" for="КалкулаторTax">Financed fees (% of price)</label>
 								<input
 									class="input-large"
 									id="КалкулаторTax"
@@ -237,65 +237,65 @@
 						</div>
 					</form>
 					<p id="finance-assumptions" class="h7 text-secondary finance-assumptions">
-						* Примерни входни стойности, не оферта. Сметката е в евро с равни месечни вноски и
-						фиксирана годишна лихва. Таксите са процент от цената и се финансират. Други разходи и
-						застраховки не са включени; условията се потвърждават по запитване.
+						* Example inputs, not an offer. Estimates use USD, equal monthly payments, and
+						a fixed annual interest rate. Fees are a percentage of the price and included in the amount borrowed. Other costs and
+						insurance are excluded; confirm terms with your independent lender. No dealer financing or payment plans.
 					</p>
 				</div>
 
 				<div class="border-box">
-					<h2 class="h3 mb-8">Ориентировъчна месечна вноска*</h2>
+					<h2 class="h3 mb-8">Estimated monthly payment*</h2>
 					{#if !estimate.valid}<p role="alert">{estimate.error}</p>{/if}
 					<p class="mb-10">
 						<span class="text-56 font-weight-600"
 							>{amount(estimate.valid ? estimate.monthly : undefined)}</span
-						><span class="h3 font-weight-600">/месец</span>
+						><span class="h3 font-weight-600">/month</span>
 					</p>
 					<p class="h5 mb-28 capitalize">
 						{estimate.valid
-							? `за срок от ${estimate.months} месеца`
-							: 'Проверете въведените стойности'}
+							? `for a term of ${estimate.months} months`
+							: 'Check your entries'}
 					</p>
 					<div class="divider mb-28 w-full"></div>
 
-					<p class="h4 mb-20">Обобщение на сметката</p>
+					<p class="h4 mb-20">Estimate summary</p>
 
 					<div class="mb-28 flex flex-col gap-18">
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Цена на автомобила</span>
+							<span class="h7 text-secondary">Vehicle price</span>
 							<span class="h7">{amount(estimate.valid ? estimate.price : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Първоначална вноска</span>
+							<span class="h7 text-secondary">Down payment</span>
 							<span class="h7">{amount(estimate.valid ? -estimate.deposit : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Бартер / замяна</span>
+							<span class="h7 text-secondary">Hypothetical trade-in credit</span>
 							<span class="h7">{amount(estimate.valid ? -estimate.tradeIn : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Обща лихва за срока</span>
+							<span class="h7 text-secondary">Total interest over the term</span>
 							<span class="h7">{amount(estimate.valid ? estimate.interest : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Финансирани такси</span>
+							<span class="h7 text-secondary">Financed fees</span>
 							<span class="h7">{amount(estimate.valid ? estimate.fees : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Други такси</span>
-							<span class="h7">не са включени</span>
+							<span class="h7 text-secondary">Other fees</span>
+							<span class="h7">not included</span>
 						</p>
 					</div>
 
 					<div class="divider mb-28 w-full"></div>
 
 					<div class="mb-16 flex justify-between gap-8">
-						<p class="h4">Общо с вноска и бартер</p>
+						<p class="h4">Total before taxes and fees</p>
 						<p class="h4">{amount(estimate.valid ? estimate.total : undefined)}</p>
 					</div>
 
 					<div class="flex justify-between gap-8">
-						<p class="h4">Месечна вноска</p>
+						<p class="h4">No dealer payment plans</p>
 						<p class="h4">{amount(estimate.valid ? estimate.monthly : undefined)}</p>
 					</div>
 				</div>
@@ -304,7 +304,7 @@
 
 		<div class="tf-spacing"></div>
 
-		<h2 class="mb-40 text-center capitalize">Разгледай по бюджет</h2>
+		<h2 class="mb-40 text-center capitalize">Browse by budget</h2>
 
 		<div class="container">
 			<div
@@ -324,7 +324,7 @@
 			</div>
 
 			<div class="flex justify-center">
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> View all </a>
 			</div>
 		</div>
 	</section>
@@ -332,7 +332,7 @@
 
 	<section class="background-light py-100">
 		<div class="container">
-			<h2 class="mb-40 text-center">Често задавани въпроси</h2>
+			<h2 class="mb-40 text-center">Frequently asked questions</h2>
 			<div class="max-width-930 mx-auto w-full">
 				<div
 					class="flat-accordion max-width-930 flex flex-col gap-18"

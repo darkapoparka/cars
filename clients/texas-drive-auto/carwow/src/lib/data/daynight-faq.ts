@@ -35,25 +35,25 @@ export type FaqGroup = {
 const stepsAnswer: readonly FaqAnswerParagraph[] = [
 	{
 		class: 'mb-8 h7 text-secondary line-height-28',
-		text: 'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
+		text: 'Browse the vehicle preview, then ask Texas Drive Auto about availability, a viewing, and a test drive. No dealer financing or payment plans are offered. Buyer-arranged funding is separate; trade-in availability is unconfirmed.'
 	},
 	{
 		class: 'h7 text-secondary line-height-28',
-		text: 'Подгответе лична карта и нужните документи. След като се договорим за условията, оформяме документите, правите оглед на автомобила и финализираме сделката.'
+		text: 'Ask which identification and purchase documents are required. Confirm the terms, inspect the vehicle, and review the paperwork before completing a purchase.'
 	}
 ];
 
 const exploreAnswer: readonly FaqAnswerParagraph[] = [
 	{
 		class: 'h7 text-secondary line-height-28',
-		text: 'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
+		text: 'Browse the vehicle preview, then ask Texas Drive Auto about availability, a viewing, and a test drive. No dealer financing or payment plans are offered. Buyer-arranged funding is separate; trade-in availability is unconfirmed.'
 	}
 ];
 
 const termsAnswer: readonly FaqAnswerParagraph[] = [
 	{
 		class: 'h7 text-secondary line-height-28',
-		text: 'Условията зависят от конкретния автомобил и избраната схема. Свържете се с екипа на Day Night Auto за актуална информация, оценка на замяна и съдействие по документите.'
+		text: 'Ask Texas Drive Auto about the selected vehicle, accepted payment methods, and required paperwork. Trade-in availability and valuations are not confirmed in this preview.'
 	}
 ];
 
@@ -62,37 +62,37 @@ export const daynightFaqGroups: readonly FaqGroup[] = [
 		id: 'how-to-buy',
 		containerClass: 'container mb-60',
 		headingClass: 'h3 mb-20 text-center capitalize',
-		heading: 'Как протича покупката?',
+		heading: 'How does buying a car work?',
 		items: [
 			{
 				// Base classes only — the initial open `active` state is applied by the
 				// native accordion (openId defaults to this item), never baked in here.
 				id: 'steps',
-				question: 'Какви са стъпките за покупка?',
+				question: 'What are the steps to buy a car?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: stepsAnswer
 			},
 			{
 				id: 'financing-documents',
-				question: 'Какви документи трябват за финансиране?',
+				question: 'What documents does my own lender require?',
 				toggleClass: 'flat-toggle',
 				answer: exploreAnswer
 			},
 			{
 				id: 'reserve',
-				question: 'Може ли автомобил да бъде запазен?',
+				question: 'Can I reserve a vehicle?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: termsAnswer
 			},
 			{
 				id: 'payment-methods',
-				question: 'Какви варианти за плащане има?',
+				question: 'What payment methods are accepted?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: termsAnswer
 			},
 			{
 				id: 'test-drive',
-				question: 'Как се организира оглед или тест?',
+				question: 'How do I arrange a viewing or test drive?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: termsAnswer
 			}
@@ -102,29 +102,29 @@ export const daynightFaqGroups: readonly FaqGroup[] = [
 		id: 'exchanges',
 		containerClass: 'container mb-60',
 		headingClass: 'h3 mb-20 text-center capitalize',
-		heading: 'Бартер и замяна',
+		heading: 'Are trade-ins accepted?',
 		items: [
 			{
 				id: 'trade-in-accepted',
-				question: 'Приемате ли стария ми автомобил като бартер?',
+				question: 'Do you accept trade-ins?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: stepsAnswer
 			},
 			{
 				id: 'trade-in-valuation',
-				question: 'Как се оценява автомобил за замяна?',
+				question: 'How would a trade-in be valued?',
 				toggleClass: 'flat-toggle',
 				answer: exploreAnswer
 			},
 			{
 				id: 'trade-in-topup',
-				question: 'Мога ли да доплатя разликата при замяна?',
+				question: 'Can I pay the difference on a trade-in?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: termsAnswer
 			},
 			{
 				id: 'trade-in-documents',
-				question: 'Какви документи са нужни за бартер?',
+				question: 'What documents would a trade-in require?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: termsAnswer
 			}
@@ -134,23 +134,23 @@ export const daynightFaqGroups: readonly FaqGroup[] = [
 		id: 'refund',
 		containerClass: 'container',
 		headingClass: 'h3 mb-18 text-center capitalize',
-		heading: 'Гаранция и доставка',
+		heading: 'Warranty and delivery questions',
 		items: [
 			{
 				id: 'warranty',
-				question: 'Има ли гаранция за автомобилите?',
+				question: 'Do any vehicles include a warranty?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: stepsAnswer
 			},
 			{
 				id: 'history-check',
-				question: 'Проверявате ли историята на автомобила?',
+				question: 'Is vehicle history information available?',
 				toggleClass: 'flat-toggle',
 				answer: exploreAnswer
 			},
 			{
 				id: 'delivery',
-				question: 'Предлагате ли доставка до друг град?',
+				question: 'Is delivery to another city available?',
 				toggleClass: 'flat-toggle bg-white',
 				answer: termsAnswer
 			}

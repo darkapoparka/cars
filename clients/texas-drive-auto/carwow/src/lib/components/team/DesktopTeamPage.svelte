@@ -116,7 +116,7 @@
 {#snippet teamHoverActions(member: DayNightTeamMember)}
 	<ul class="sale-agent-social flex gap-8">
 		<li>
-			<a href={`tel:${member.phone}`} title="Обади се за оглед" aria-label="Обади се за оглед">
+			<a href={`tel:${member.phone}`} title="Call about a viewing" aria-label="Call about a viewing">
 				{@render phoneIcon(20)}
 			</a>
 		</li>
@@ -124,15 +124,15 @@
 			<li>
 				<a
 					href={`mailto:${member.email}`}
-					title={`Имейл към ${member.name}`}
-					aria-label={`Имейл към ${member.name}`}
+					title={`Email ${member.name}`}
+					aria-label={`Email ${member.name}`}
 				>
 					{@render mailIcon(20)}
 				</a>
 			</li>
 		{/if}
 		<li>
-			<a href={resolve(teamHref(member.slug))} title="Виж профила" aria-label="Виж профила">
+			<a href={resolve(teamHref(member.slug))} title="View profile" aria-label="View profile">
 				{@render profileIcon()}
 			</a>
 		</li>
@@ -142,7 +142,7 @@
 {#snippet teamContactActions(member: DayNightTeamMember)}
 	<ul class="contact">
 		<li>
-			<a href={`tel:${member.phone}`} title="Обади се за оглед" aria-label="Обади се за оглед">
+			<a href={`tel:${member.phone}`} title="Call about a viewing" aria-label="Call about a viewing">
 				{@render phoneIcon(24)}
 			</a>
 		</li>
@@ -150,8 +150,8 @@
 			<li>
 				<a
 					href={`mailto:${member.email}`}
-					title="Имейл към Day Night Auto"
-					aria-label="Имейл към Day Night Auto"
+					title="Email Texas Drive Auto"
+					aria-label="Email Texas Drive Auto"
 				>
 					{@render mailIcon(24)}
 				</a>
@@ -166,7 +166,7 @@
 			<a
 				class="flex w-full"
 				href={resolve(teamHref(member.slug))}
-				aria-label={`Виж профила на ${member.name}`}
+				aria-label={`View profile for ${member.name}`}
 			>
 				<img class="w-full" src={asset(member.image as AssetHref)} alt={member.name} />
 			</a>
@@ -189,19 +189,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<a href={resolve('/')}>Още</a>
+					<a href={resolve('/')}>More</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на Day Night Auto</span>
+					<span>Texas Drive Auto sample team profiles</span>
 				</li>
 			</ul>
 		</div>
@@ -209,7 +209,7 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на Day Night Auto</h1>
+			<h1>Texas Drive Auto sample team profiles</h1>
 			<p class="team-disclosure">{daynightTeamDisclosure}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>

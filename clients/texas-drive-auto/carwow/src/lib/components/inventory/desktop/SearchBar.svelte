@@ -17,8 +17,8 @@
 
 	const searchPlaceholder = $derived(
 		layoutMode === 'sidebar'
-			? 'Търси по марка, модел, година...'
-			: 'Търси по марка, модел, година, гориво, екстри...'
+			? 'Search by make, model, year...'
+			: 'Search by make, model, year, fuel, features...'
 	);
 
 	// Typing filters live (the store derives the grid reactively); submit/Enter only
@@ -43,7 +43,7 @@
 
 <div class="daynight-inventory-searchbar">
 	<div class="daynight-inventory-search">
-		<label class="daynight-inventory-searchbar__label" for={searchId}>Търсене</label>
+		<label class="daynight-inventory-searchbar__label" for={searchId}>Search</label>
 		{#if onOpen}
 			<button
 				id={searchId}
@@ -51,8 +51,8 @@
 				class="daynight-inventory-search__input daynight-inventory-search__trigger"
 				class:has-query={!!filters.store.query}
 				aria-label={filters.store.query
-					? `Търсене: ${filters.store.query}`
-					: 'Търсене на автомобили'}
+					? `Search: ${filters.store.query}`
+					: 'Search vehicles'}
 				aria-haspopup="dialog"
 				disabled={!hydrated}
 				onclick={onOpen}>{filters.store.query || searchPlaceholder}</button
@@ -73,15 +73,15 @@
 		<button
 			class="daynight-inventory-searchbar__submit"
 			type="button"
-			aria-label="Търси автомобили"
-			title="Търси автомобили"
+			aria-label="Search vehicles"
+			title="Search vehicles"
 			aria-haspopup={onOpen ? 'dialog' : undefined}
 			disabled={onOpen && !hydrated}
 			data-daynight-inventory-search-action
 			onclick={submit}
 		>
 			<Search size={20} strokeWidth={2} aria-hidden="true" />
-			{#if !onOpen}<span>Търси</span>{/if}
+			{#if !onOpen}<span>Search</span>{/if}
 		</button>
 	</div>
 </div>

@@ -49,53 +49,53 @@
 	const dashboardStats: DashboardStat[] = [
 		{
 			id: 'listings',
-			label: 'Моите автомобили',
+			label: 'My vehicles',
 			value: String(daynightVehicles.length),
 			icon: '/assets/images/dashboard/car.svg'
 		},
 		{
 			id: 'pending',
-			label: 'В процес',
+			label: 'In progress',
 			value: '03',
 			icon: '/assets/images/dashboard/clockCountdown.svg'
 		},
 		{
 			id: 'favorites',
-			label: 'Запазени автомобили',
+			label: 'Saved vehicles',
 			value: '08',
 			icon: '/assets/images/dashboard/star.svg'
 		},
 		{
 			id: 'reviews',
-			label: 'Моите отзиви',
+			label: 'My reviews',
 			value: '137',
 			icon: '/assets/images/dashboard/chats.svg'
 		}
 	];
 
 	const chartRanges: ChartRange[] = [
-		{ id: '3-month', label: '3 месеца' },
-		{ id: '6-month', label: '6 месеца', active: true },
-		{ id: '12-month', label: '12 месеца' }
+		{ id: '3-month', label: '3 months' },
+		{ id: '6-month', label: '6 months', active: true },
+		{ id: '12-month', label: '12 months' }
 	];
 
 	const sortOptions: SortOption[] = [
-		{ id: 'best-match', label: 'Най-подходящи' },
-		{ id: 'lowest-price', label: 'Най-ниска цена', active: true },
-		{ id: 'highest-price', label: 'Най-висока цена' },
-		{ id: 'lowest-mileage', label: 'Най-малък пробег' },
-		{ id: 'highest-mileage', label: 'Най-голям пробег' },
-		{ id: 'newest-year', label: 'Най-нова година' },
-		{ id: 'oldest-year', label: 'Най-стара година' }
+		{ id: 'best-match', label: 'Best match' },
+		{ id: 'lowest-price', label: 'Lowest price', active: true },
+		{ id: 'highest-price', label: 'Highest price' },
+		{ id: 'lowest-mileage', label: 'Lowest mileage' },
+		{ id: 'highest-mileage', label: 'Highest mileage' },
+		{ id: 'newest-year', label: 'Newest year' },
+		{ id: 'oldest-year', label: 'Oldest year' }
 	];
 
 	const listingHeaders = [
-		'Автомобил',
-		'Марка',
-		'Година',
-		'Скорости',
-		'Гориво',
-		'Действия'
+		'Vehicle',
+		'Make',
+		'Year',
+		'Transmission',
+		'Fuel',
+		'Actions'
 	] as const;
 	const paginationPages = [1, 2, 3] as const;
 
@@ -107,7 +107,7 @@
 		imageLoading: index < 2 ? 'eager' : 'lazy',
 		title: vehicle.title,
 		subtitle: vehicle.conditionLine,
-		price: vehicle.priceEur,
+		price: vehicle.priceLabel,
 		brand: vehicle.brand,
 		year: String(vehicle.year),
 		transmission: vehicle.transmission,
@@ -118,26 +118,26 @@
 		{
 			id: 'review-ivan',
 			avatar: '/assets/images/avatar/avatar-4.png',
-			name: 'Иван Д.',
-			date: 'Август 2025',
-			title: 'Отлично преживяване',
-			body: 'Получих ясна информация за автомобила, документите и следващите стъпки. Огледът беше организиран спокойно, без натиск и без излишни обещания.'
+			name: 'Ivan D.',
+			date: 'August 2025',
+			title: 'Reviews unavailable in preview',
+			body: 'Customer reviews are unavailable in this preview. Ask about vehicle details, paperwork, next steps, and scheduling a viewing.'
 		},
 		{
 			id: 'review-maria',
 			avatar: '/assets/images/avatar/coment-avatar-1.png',
-			name: 'Мария Г.',
-			date: 'Август 2025',
-			title: 'Лесно и удобно',
-			body: 'Сайтът е удобен и сравних няколко автомобила за минути. Вариантите за финансиране бяха обяснени ясно и намерих подходящ за бюджета ми.'
+			name: 'Maria G.',
+			date: 'August 2025',
+			title: 'Funding information',
+			body: 'Texas Drive Auto offers no dealer financing or payment plans. Any buyer-arranged funding is separate. Customer reviews are unavailable in this preview.'
 		},
 		{
 			id: 'review-nikolay',
 			avatar: '/assets/images/avatar/coment-avatar-2.png',
-			name: 'Николай П.',
-			date: 'Август 2025',
-			title: 'Коректно и надеждно',
-			body: 'Автомобилът беше представен коректно, със снимки, цена и обяснение за състоянието. Сделката мина бързо и подредено.'
+			name: 'Nikolay P.',
+			date: 'August 2025',
+			title: 'Vehicle information',
+			body: 'Customer reviews are unavailable in this preview. Ask about vehicle photos, price, condition, and the purchase process.'
 		}
 	];
 
@@ -146,7 +146,7 @@
 		brand: vehicle.brand,
 		model: vehicle.model,
 		year: vehicle.year,
-		priceBgn: vehicle.priceBgn,
+		secondaryPrice: vehicle.secondaryPrice,
 		fuel: vehicle.fuel,
 		gearbox: vehicle.transmission,
 		category: vehicle.body,
@@ -160,7 +160,7 @@
 
 	let isPreviewVisible = $state(false);
 	const previewText = $derived(isPreviewVisible ? buildXml() : '');
-	const previewButtonLabel = $derived(isPreviewVisible ? 'Скрий feed-а' : 'Преглед на feed-а');
+	const previewButtonLabel = $derived(isPreviewVisible ? 'Hide feed' : 'Preview feed');
 
 	const xmlEsc = (value: unknown) =>
 		String(value ?? '')
@@ -172,7 +172,7 @@
 	function buildXml() {
 		const lines = [
 			'<?xml version="1.0" encoding="UTF-8"?>',
-			'<ads source="Day Night Auto" type="demo-feed">'
+			'<ads source="Texas Drive Auto" type="demo-feed">'
 		];
 
 		for (const vehicle of exportFeed) {
@@ -181,7 +181,7 @@
 			lines.push(`    <make>${xmlEsc(vehicle.brand)}</make>`);
 			lines.push(`    <model>${xmlEsc(vehicle.model)}</model>`);
 			lines.push(`    <year>${xmlEsc(vehicle.year)}</year>`);
-			lines.push(`    <price currency="BGN">${xmlEsc(vehicle.priceBgn)}</price>`);
+			lines.push(`    <price currency="BGN">${xmlEsc(vehicle.secondaryPrice)}</price>`);
 			lines.push(`    <fuel>${xmlEsc(vehicle.fuel)}</fuel>`);
 			lines.push(`    <gearbox>${xmlEsc(vehicle.gearbox)}</gearbox>`);
 			lines.push(`    <category>${xmlEsc(vehicle.category)}</category>`);
@@ -228,7 +228,7 @@
 					vehicle.brand,
 					vehicle.model,
 					vehicle.year,
-					vehicle.priceBgn,
+					vehicle.secondaryPrice,
 					vehicle.fuel,
 					vehicle.gearbox,
 					vehicle.category,
@@ -323,13 +323,13 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Toggle Моят профил"
+			aria-label="Toggle My account"
 			type="button"
 		>
-			Меню профил
+			Profile menu
 		</button>
 
-		<p class="h3 mb-30">Моят профил</p>
+		<p class="h3 mb-30">My profile</p>
 
 		<div class="xl-grid-cols-2 sm-grid-cols-1 mb-30 grid grid-cols-4 gap-30">
 			{#each dashboardStats as stat (stat.id)}
@@ -355,26 +355,26 @@
 		<div class="dashboard-box daynight-export bg-white">
 			<div class="daynight-export__head">
 				<div>
-					<p class="h4">Експорт към mobile.bg / cars.bg</p>
+					<p class="h4">Export to mobile.bg / cars.bg</p>
 					<span class="daynight-export__sub"
-						>Въведете автомобила веднъж — изтеглете готов файл за качване във всяка платформа. Край
-						на ръчното дублиране на обяви.</span
+						>Enter the vehicle once — download a file to upload to each platform. No more
+						manually duplicating listings.</span
 					>
 				</div>
-				<span class="daynight-export__count">{exportFeed.length} активни обяви</span>
+				<span class="daynight-export__count">{exportFeed.length} active listings</span>
 			</div>
 			<div class="daynight-export__actions">
 				<button
 					type="button"
 					class="daynight-export__btn daynight-export__btn--primary"
 					data-export="mobilebg"
-					onclick={() => handleExport('mobilebg')}>Свали mobile.bg feed (XML)</button
+					onclick={() => handleExport('mobilebg')}>Download mobile.bg feed (XML)</button
 				>
 				<button
 					type="button"
 					class="daynight-export__btn"
 					data-export="carsbg"
-					onclick={() => handleExport('carsbg')}>Свали cars.bg feed (CSV)</button
+					onclick={() => handleExport('carsbg')}>Download cars.bg feed (CSV)</button
 				>
 				<button
 					type="button"
@@ -385,17 +385,17 @@
 			</div>
 			<pre class="daynight-export__preview" hidden={!isPreviewVisible}>{previewText}</pre>
 			<p class="daynight-export__hint">
-				Файлът се качва в дилърския панел на mobile.bg / cars.bg → „Импорт на обяви". Снимките се
-				обслужват от публични URL адреси.
+				Upload the file in the mobile.bg / cars.bg dealer dashboard → “Import listings". Photos are
+				served from public URLs.
 			</p>
 		</div>
 
 		<div class="dashboard-box car-views-chart mb-30 bg-white">
 			<div class="car-views-chart__header">
-				<p class="h4 car-views-chart__title">Интерес към автомобили</p>
+				<p class="h4 car-views-chart__title">Vehicle interest</p>
 				<div class="core-dropdown style-2">
 					<button class="core-dropdown__button dropdown__normal" type="button">
-						<span class="core-dropdown__selected">6 месеца</span>
+						<span class="core-dropdown__selected">6 months</span>
 						<img
 							src={resolve('/assets/icons/chevron-down-primary.svg')}
 							alt="chevron"
@@ -427,7 +427,7 @@
 		</div>
 
 		<div class="dashboard-box style-2 mb-30 bg-white">
-			<p class="h4 mb-20">Всички заявки</p>
+			<p class="h4 mb-20">All requests</p>
 
 			<div class="mb-20 flex flex-wrap items-center justify-between gap-20">
 				<form action={resolve('/dashboard')} class="search-form-listing" method="get">
@@ -445,14 +445,14 @@
 				</form>
 
 				<div class="flex items-center gap-8">
-					<p class="text-secondary">Сортиране:</p>
+					<p class="text-secondary">Sort:</p>
 					<div class="core-dropdown style-2 listing">
 						<button
 							class="core-dropdown__button dropdown__normal"
 							type="button"
 							id="coreDropdownBtn"
 						>
-							<span class="core-dropdown__selected">Най-нови</span>
+							<span class="core-dropdown__selected">Newest</span>
 							<img
 								src={resolve('/assets/icons/chevron-down-primary.svg')}
 								alt="chevron"
@@ -526,12 +526,12 @@
 								>
 									{@render editIcon()}
 
-									<p class="tooltip">Редактирай</p>
+									<p class="tooltip">Edit</p>
 								</a>
 								<div class="hover-fill-white cart-item__remove action">
 									{@render deleteIcon()}
 
-									<p class="tooltip">Изтрий</p>
+									<p class="tooltip">Delete</p>
 								</div>
 							</div>
 						</div>
@@ -562,14 +562,14 @@
 						</li>
 					</ul>
 					<p class="text-secondary">
-						Показани {listingRows.length} от {daynightVehicles.length} обяви
+						Showing {listingRows.length} of {daynightVehicles.length} listings
 					</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="dashboard-box bg-white">
-			<p class="h4 mb-20">Последни отзиви</p>
+			<p class="h4 mb-20">Recent reviews</p>
 			<div class="comments">
 				{#each reviewCards as review (review.id)}
 					<div class="comment-box">

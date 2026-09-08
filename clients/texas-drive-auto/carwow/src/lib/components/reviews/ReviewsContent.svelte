@@ -10,7 +10,7 @@
 	// (Svelte scopes it to this component's own markup — no legacy template CSS is
 	// needed). Brand colours route through tokens (--sa-*); template neutrals stay
 	// literal for an exact baseline match. The breadcrumb labels are written in
-	// their final (runtime-localized) Bulgarian form — "Начало"/"Още" — to match
+	// their final (runtime-localized) Bulgarian form — "Home"/"More" — to match
 	// the rendered DOM, exactly like /faq and /terms. The legacy /assets chevron
 	// img is replaced with @lucide/svelte's ChevronRight, like FaqContent.
 
@@ -25,19 +25,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>More</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Отзиви от клиенти</span>
+					<span>Customer reviews unavailable in this preview</span>
 				</li>
 			</ul>
 		</div>
@@ -47,7 +47,7 @@
 	<!-- New Cars -->
 	<section class="pb-100">
 		<div class="container">
-			<h1>Отзиви от клиенти</h1>
+			<h1>Customer reviews unavailable in this preview</h1>
 			<p class="review-disclosure">{daynightReviewDisclosure}</p>
 			<div class="tf-spacing-style3"></div>
 
@@ -56,7 +56,7 @@
 					<div class="testimonior-box">
 						<div
 							class="mb-16 flex items-center gap-4"
-							aria-label={`${review.rating} от 5 — примерна оценка`}
+							aria-label={`${review.rating} out of 5 — placeholder, not a customer rating`}
 						>
 							{#each Array.from({ length: review.rating }, (_, i) => i) as star (star)}
 								<img src="/assets/icons/star-6.svg" alt="" />

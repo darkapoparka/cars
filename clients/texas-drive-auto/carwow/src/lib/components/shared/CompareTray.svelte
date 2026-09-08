@@ -15,25 +15,25 @@
 </script>
 
 {#if vehicles.length || garage.formMessage}
-	<aside class="compare-tray" data-compare-tray aria-label="Избрани автомобили за сравнение">
+	<aside class="compare-tray" data-compare-tray aria-label="Vehicles selected for comparison">
 		{#if vehicles.length}
 			<div class="compare-tray__main">
 				<div class="compare-tray__heading">
 					<span class="compare-tray__icon" aria-hidden="true"><GitCompare size={17} /></span>
 					<div>
-						<strong>Сравнение</strong>
-						<span>{vehicles.length} от 3 автомобила</span>
+						<strong>Compare</strong>
+						<span>{vehicles.length} of 3 vehicles</span>
 					</div>
 				</div>
 
-				<div class="compare-tray__items" aria-label="Избрани за сравнение">
+				<div class="compare-tray__items" aria-label="Selected for comparison">
 					{#each vehicles as vehicle (vehicle.slug)}
 						<div class="compare-tray__item">
 							<img src={vehicle.image} alt="" loading="lazy" decoding="async" />
 							<span>{vehicle.shortTitle}</span>
 							<button
 								type="button"
-								aria-label={`Премахни ${vehicle.shortTitle} от сравнение`}
+								aria-label={`Remove ${vehicle.shortTitle} from comparison`}
 								onclick={() => garage.toggleCompare(vehicle.slug)}
 							>
 								<X size={15} strokeWidth={2.4} />
@@ -44,10 +44,10 @@
 
 				<div class="compare-tray__actions">
 					<a class="compare-tray__open" href={resolve('/compare')}>
-						Сравни <ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
+						Compare <ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
 					</a>
 					<button type="button" class="compare-tray__clear" onclick={() => garage.clearCompare()}>
-						Изчисти
+						Clear
 					</button>
 				</div>
 			</div>

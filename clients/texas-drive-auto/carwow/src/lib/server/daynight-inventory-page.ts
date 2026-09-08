@@ -23,7 +23,7 @@ export function toInventoryListVehicle(vehicle: Car): InventoryListVehicle {
 		body: vehicle.body,
 		color: vehicle.color,
 		price: vehicle.price,
-		priceEur: vehicle.priceEur,
+		priceLabel: vehicle.priceLabel,
 		monthly: vehicle.monthly,
 		image: vehicle.image,
 		gallery: vehicle.gallery,
@@ -66,14 +66,14 @@ function toOptions(values: string[]): InventoryQuickFilterOption[] {
 }
 
 const mileageOptions: InventoryQuickFilterOption[] = [
-	{ value: 'under-100000', label: 'До 100 000 км' },
-	{ value: 'under-150000', label: 'До 150 000 км' },
-	{ value: 'under-200000', label: 'До 200 000 км' },
-	{ value: 'over-200000', label: 'Над 200 000 км' }
+	{ value: 'under-100000', label: 'Up to 100 000 miles' },
+	{ value: 'under-150000', label: 'Up to 150 000 miles' },
+	{ value: 'under-200000', label: 'Up to 200 000 miles' },
+	{ value: 'over-200000', label: 'Over 200 000 miles' }
 ];
 
-// Each model carries the brands that stock it, so the Модел menu can be
-// scoped to the chosen Марка at runtime.
+// Each model carries the brands that stock it, so the Model menu can be
+// scoped to the chosen Make at runtime.
 function toModelOptions(vehicles: Car[]): InventoryQuickFilterOption[] {
 	const brandsByModel = new Map<string, Set<string>>();
 	for (const vehicle of vehicles) {
@@ -92,56 +92,56 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 	return [
 		{
 			name: 'brand',
-			label: 'Марка',
-			placeholder: 'Всички марки',
+			label: 'Make',
+			placeholder: 'All makes',
 			options: toOptions(vehicles.map((vehicle) => vehicle.brand))
 		},
 		{
 			name: 'model',
-			label: 'Модел',
-			placeholder: 'Всички модели',
+			label: 'Model',
+			placeholder: 'All models',
 			options: toModelOptions(vehicles)
 		},
 		{
 			name: 'price',
-			label: 'Цена',
-			placeholder: 'Всички цени',
+			label: 'Price',
+			placeholder: 'All prices',
 			options: [
-				{ value: 'under-10000', label: 'До 10 000 EUR' },
-				{ value: 'under-20000', label: 'До 20 000 EUR' },
-				{ value: 'under-30000', label: 'До 30 000 EUR' },
-				{ value: 'under-50000', label: 'До 50 000 EUR' },
-				{ value: 'over-50000', label: 'Над 50 000 EUR' }
+				{ value: 'under-10000', label: 'Up to 10 000 USD' },
+				{ value: 'under-20000', label: 'Up to 20 000 USD' },
+				{ value: 'under-30000', label: 'Up to 30 000 USD' },
+				{ value: 'under-50000', label: 'Up to 50 000 USD' },
+				{ value: 'over-50000', label: 'Over 50 000 USD' }
 			]
 		},
 		{
 			name: 'mileage',
-			label: 'Пробег',
-			placeholder: 'Всички пробези',
+			label: 'Mileage',
+			placeholder: 'All mileage',
 			options: mileageOptions
 		},
 		{
 			name: 'fuel',
-			label: 'Гориво',
-			placeholder: 'Всички горива',
+			label: 'Fuel',
+			placeholder: 'All fuel types',
 			options: toOptions(vehicles.map((vehicle) => vehicle.fuel))
 		},
 		{
 			name: 'transmission',
-			label: 'Скорости',
-			placeholder: 'Всички скорости',
+			label: 'Transmission',
+			placeholder: 'All transmissions',
 			options: toOptions(vehicles.map((vehicle) => vehicle.transmission))
 		},
 		{
 			name: 'body',
-			label: 'Каросерия',
-			placeholder: 'Всички каросерии',
+			label: 'Body style',
+			placeholder: 'All body styles',
 			options: toOptions(vehicles.map((vehicle) => vehicle.body))
 		},
 		{
 			name: 'feature',
-			label: 'Екстри',
-			placeholder: 'Всички екстри',
+			label: 'Features',
+			placeholder: 'All features',
 			options: toOptions(vehicles.flatMap((vehicle) => vehicle.features))
 		}
 	];

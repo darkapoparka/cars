@@ -16,7 +16,7 @@
 		showHeaderCta = true,
 		showBelowCta = false,
 		balancedActionCards = false,
-		ctaLabel = 'Виж всички'
+		ctaLabel = 'View all'
 	}: {
 		showReviews?: boolean;
 		showActionCards?: boolean;
@@ -51,43 +51,43 @@
 			id: 'buy-confidently',
 			modifier: 'inventory',
 			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
-			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
-			title: 'Купи автомобил уверено',
-			balancedTitle: 'Купи автомобил',
+			alt: 'Mercedes-Benz G-Class and Lamborghini Urus',
+			title: 'Explore your next vehicle',
+			balancedTitle: 'Buy a vehicle',
 			titleHref: '/inventory',
 			bullets: [
-				'Прегледайте актуалната наличност.',
-				'Филтрирайте по марка, цена, гориво и пробег.',
-				'Получете съдействие за оглед и проверка.'
+				'Browse current inventory.',
+				'Filter by make, price, fuel type, and mileage.',
+				'Ask about viewing and inspection options.'
 			],
 			balancedBullets: [
-				'Вижте актуалната наличност.',
-				'Филтрирайте по цена и пробег.',
-				'Уговорете оглед с екипа.'
+				'View current inventory.',
+				'Filter by price and mileage.',
+				'Ask to schedule a viewing.'
 			],
 			ctaHref: '/inventory',
-			ctaLabel: 'Разгледай автомобилите'
+			ctaLabel: 'Browse vehicles'
 		},
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
 			image: '/assets/images/home-promos/urus-rear-v4.webp',
-			alt: 'Продай или замени автомобил',
-			title: 'Продай или замени лесно',
-			balancedTitle: 'Продай или замени',
+			alt: 'Ask about selling or trading in',
+			title: 'Selling or trading in?',
+			balancedTitle: 'Ask about selling or trading',
 			titleHref: '/sell-your-car',
 			bullets: [
-				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на Day Night Auto.',
-				'Обсъдете продажба, бартер и следващи стъпки.'
+				'Add photos and vehicle details to your draft.',
+				'Prepare a question for Texas Drive Auto.',
+				'Ask whether selling or trading in is available and what the next steps are.'
 			],
 			balancedBullets: [
-				'Изпратете снимки и данни.',
-				'Получете отговор от екипа.',
-				'Обсъдете продажба или замяна.'
+				'Add photos and details.',
+				'Response details are unavailable in this preview.',
+				'Ask whether selling or trading in is available.'
 			],
 			ctaHref: '/sell-your-car/request',
-			ctaLabel: 'Продай автомобил'
+			ctaLabel: 'Sell a vehicle'
 		}
 	];
 </script>
@@ -97,12 +97,12 @@
 	class:daynight-home-section--reviews-with-banner={showReviews}
 	class:daynight-home-section--actions={!showReviews && showActionCards}
 	class:daynight-home-section--balanced-actions={balancedActionCards}
-	aria-label={!showReviews && showActionCards ? 'Купи или продай' : undefined}
+	aria-label={!showReviews && showActionCards ? 'Buy or sell' : undefined}
 >
 	{#if showReviews}
 		<div class="daynight-home-container home-reviews-heading">
 			<DesktopSectionHeading
-				title="Отзиви от клиенти"
+				title="Customer reviews unavailable in this preview"
 				href={showHeaderCta ? resolve('/reviews') : undefined}
 				label={ctaLabel}
 			/>

@@ -20,9 +20,9 @@
 	const currentSeo = $derived(
 		browser && page.url.searchParams.get('intent') === 'import'
 			? {
-					title: 'Внос на автомобил | Day Night Auto София',
+					title: 'Vehicle Import Questions | Texas Drive Auto',
 					description:
-						'Изпратете обява или опишете желания автомобил и получете конкретни варианти за внос от Day Night Auto.'
+						'Have questions about importing a vehicle? Import services are unconfirmed in this Texas Drive Auto preview.'
 				}
 			: data.seo
 	);

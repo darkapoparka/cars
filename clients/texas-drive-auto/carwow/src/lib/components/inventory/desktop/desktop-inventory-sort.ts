@@ -21,13 +21,13 @@ export type DesktopSortOption = {
 };
 
 export const desktopSortOptions: DesktopSortOption[] = [
-	{ value: 'best-match', label: 'Най-подходящи' },
-	{ value: 'lowest-price', label: 'Най-ниска цена' },
-	{ value: 'highest-price', label: 'Най-висока цена' },
-	{ value: 'lowest-mileage', label: 'Най-малък пробег' },
-	{ value: 'highest-mileage', label: 'Най-голям пробег' },
-	{ value: 'newest-year', label: 'Най-нова година' },
-	{ value: 'oldest-year', label: 'Най-стара година' }
+	{ value: 'best-match', label: 'Best match' },
+	{ value: 'lowest-price', label: 'Lowest price' },
+	{ value: 'highest-price', label: 'Highest price' },
+	{ value: 'lowest-mileage', label: 'Lowest mileage' },
+	{ value: 'highest-mileage', label: 'Highest mileage' },
+	{ value: 'newest-year', label: 'Newest year' },
+	{ value: 'oldest-year', label: 'Oldest year' }
 ];
 
 const comparators: Record<

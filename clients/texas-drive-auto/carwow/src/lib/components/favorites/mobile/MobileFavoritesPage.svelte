@@ -24,7 +24,7 @@
 	);
 
 	const countLabel = $derived(
-		vehicles.length === 1 ? '1 запазен автомобил' : `${vehicles.length} запазени автомобила`
+		vehicles.length === 1 ? '1 saved vehicle' : `${vehicles.length} saved vehicles`
 	);
 
 	function remove(slug: string) {
@@ -32,13 +32,13 @@
 	}
 </script>
 
-<div class="mobile-favorites" aria-label="Запазени автомобили">
+<div class="mobile-favorites" aria-label="Saved vehicles">
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-favorites-top">
-			<a class="mobile-favorites-top__back" href={resolve('/')}>← Към сайта</a>
-			<span>Любими</span>
-			<h1>Запазени</h1>
-			<p>{vehicles.length ? countLabel : 'Запазвайте автомобили, за да ги намерите тук.'}</p>
+			<a class="mobile-favorites-top__back" href={resolve('/')}>← Back to site</a>
+			<span>Favorites</span>
+			<h1>Saved</h1>
+			<p>{vehicles.length ? countLabel : 'Save vehicles to find them here.'}</p>
 		</section>
 
 		<section class="mobile-favorites-results" aria-live="polite">
@@ -59,7 +59,7 @@
 										data-daynight-image-fallback
 										use:daynightImageFallback
 									/>
-									<span>{vehicle.badges[0] ?? 'Наличен'}</span>
+									<span>{vehicle.badges[0] ?? 'Available'}</span>
 								</div>
 								<div class="mobile-favorites-card__body">
 									<div class="mobile-favorites-card__title">
@@ -68,11 +68,11 @@
 											<h3>{vehicle.shortTitle}</h3>
 										</div>
 										<div class="mobile-favorites-card__price">
-											<strong>{vehicle.priceEur}</strong>
+											<strong>{vehicle.priceLabel}</strong>
 											<span>{vehicle.monthly}</span>
 										</div>
 									</div>
-									<ul aria-label="Основни данни">
+									<ul aria-label="Key specs">
 										<li>
 											<DayNightSpecIcon name="mileage" size={15} />
 											{vehicle.mileage}
@@ -95,7 +95,7 @@
 							<button
 								type="button"
 								class="mobile-favorites-card__fav"
-								aria-label={`Премахни ${vehicle.shortTitle} от запазени`}
+								aria-label={`Remove ${vehicle.shortTitle} from saved`}
 								onclick={() => remove(vehicle.slug)}
 							>
 								<Heart size={18} strokeWidth={2.3} />
@@ -106,11 +106,11 @@
 			{:else}
 				<div class="mobile-favorites-empty">
 					<Heart size={28} strokeWidth={2.2} />
-					<h2>Нямате запазени автомобили</h2>
-					<p>Докоснете сърцето в обявата, за да добавите автомобил към запазените.</p>
+					<h2>No saved vehicles yet</h2>
+					<p>Tap the heart on a listing to save a vehicle.</p>
 					<a href={resolve('/inventory')}>
 						<Car size={17} strokeWidth={2.2} />
-						Разгледай автомобилите
+						Browse vehicles
 					</a>
 				</div>
 			{/if}

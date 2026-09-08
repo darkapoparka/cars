@@ -4,97 +4,72 @@ import {
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const location = 'гр. София, Студентски град, ул. Атанас Манчев 18';
-
+const location = '10511 Olympic Drive, Dallas, TX 75220';
 export const daynightSite = {
-	name: 'DAY NIGHT AUTO GROUP',
-	shortName: 'Day Night Auto',
-	phone: '0877733110',
-	phoneLabel: '0877 733 110',
-	email: '',
-	location,
-	locationShort: 'Студентски град, София',
-	hoursLabel: 'Огледи с предварителна уговорка',
-	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
-	mapUrl:
-		'https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018',
-	mapLabel: 'Day Night Auto Group, София, България',
-	sourceInventory: 'https://daynight.mobile.bg/',
-	inventoryCount: 40,
-	logoLight: '/brand/daynight-logo-generated.png',
-	logoDark: '/brand/daynight-logo-generated.png',
-	primaryCta: 'Виж наличните автомобили',
-	sellCarCta: 'Продай автомобил',
-	accountCta: 'Свържи се с екипа',
-	phoneCta: 'Обади се за оглед',
-	heroTitle: 'DAY NIGHT AUTO GROUP',
-	heroSubtitle: 'София - Премиум автомобили в София с подреден процес за оглед и запитване',
-	reviewCount: daynightReviewCount,
-	reviewCountLabel: daynightReviewCountLabel,
-	reviewLinkLabel: daynightReviewLinkLabel
+name:'Texas Drive Auto',shortName:'Texas Drive Auto',phone:'+12149723233',phoneLabel:'(214) 972-3233',email:'',location,locationShort:'Dallas, TX',hoursLabel:'Monday–Saturday 10 AM–6 PM; Sunday closed',mapEmbedSrc:'https://www.google.com/maps?q='+encodeURIComponent(location)+'&z=16&output=embed',mapUrl:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(location),mapLabel:'Texas Drive Auto, Dallas, Texas',sourceInventory:'https://www.texasdriveauto.com/cars-for-sale',inventoryCount:8,logoLight:'/brand/logo-on-dark.png',logoDark:'/brand/logo-on-light.png',primaryCta:'Browse listing samples',sellCarCta:'Purchase questions',accountCta:'Contact the dealer',phoneCta:'Call before visiting',heroTitle:'TEXAS DRIVE AUTO',heroSubtitle:'Dated used-vehicle listing samples in Dallas. Advertised USD prices and original miles; confirm availability directly.',reviewCount:daynightReviewCount,reviewCountLabel:daynightReviewCountLabel,reviewLinkLabel:daynightReviewLinkLabel,dealerFinance:false,currency:'USD',mileageUnit:'mi',stockAsOf:'2026-09-08',preview:true
 } as const;
 
 export const publicNavItems = [
-	{ label: 'Начало', href: '/' },
-	{ label: 'Автомобили', href: '/inventory' },
-	{ label: 'Продай', href: '/sell-your-car' },
-	{ label: 'Услуги', href: '/services' },
-	{ label: 'За нас', href: '/about' },
-	{ label: 'Блог', href: '/blog' },
-	{ label: 'Контакти', href: '/contact' }
+	{ label: 'Home', href: '/' },
+	{ label: 'Vehicles', href: '/inventory' },
+	{ label: 'Sell', href: '/sell-your-car' },
+	{ label: 'Services', href: '/services' },
+	{ label: 'About us', href: '/about' },
+	{ label: 'Blog', href: '/blog' },
+	{ label: 'Contact', href: '/contact' }
 ] as const;
 
 export const publicNavGroups = [
-	{ label: 'Начало', href: '/' },
+	{ label: 'Home', href: '/' },
 	{
-		label: 'Автомобили',
+		label: 'Vehicles',
 		href: '/inventory',
 		children: [
-			{ label: 'Всички автомобили', href: '/inventory' },
-			{ label: 'Карта', href: '/inventory/map' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'Калкулатор', href: '/calculator' }
+			{ label: 'All vehicles', href: '/inventory' },
+			{ label: 'Map', href: '/inventory/map' },
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'Calculator', href: '/calculator' }
 		]
 	},
 	{
-		label: 'Продай',
+		label: 'Sell',
 		href: '/sell-your-car',
 		children: [
-			{ label: 'Продай или замени', href: '/sell-your-car' },
-			{ label: 'Заявка за оценка', href: '/sell-your-car/request' }
+			{ label: 'Ask about selling or trading', href: '/sell-your-car' },
+			{ label: 'Request an appraisal', href: '/sell-your-car/request' }
 		]
 	},
 	{
-		label: 'Услуги',
+		label: 'Services',
 		href: '/services',
 		children: [
-			{ label: 'Дилърски услуги', href: '/services' },
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'ЧЗВ', href: '/faq' }
+			{ label: 'Dealership services', href: '/services' },
+			{ label: 'Buyer-arranged funding', href: '/financing' },
+			{ label: 'FAQ', href: '/faq' }
 		]
 	},
 	{
-		label: 'За нас',
+		label: 'About us',
 		href: '/about',
 		children: [
-			{ label: 'За Day Night Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
-			{ label: 'Екип', href: '/team' },
-			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Блог', href: '/blog' },
-			{ label: 'Условия', href: '/terms' }
+			{ label: 'About Texas Drive Auto', href: '/about' },
+			{ label: 'Dealership profile', href: '/about/daynight-auto-plovdiv' },
+			{ label: 'Contact options', href: '/team' },
+			{ label: 'Reviews', href: '/reviews' },
+			{ label: 'Blog', href: '/blog' },
+			{ label: 'Terms', href: '/terms' }
 		]
 	},
-	{ label: 'Контакти', href: '/contact' }
+	{ label: 'Contact', href: '/contact' }
 ] as const;
 
 export const footerNavItems = [
-	{ label: 'Налични автомобили', href: '/inventory' },
-	{ label: 'Карта на автомобили', href: '/inventory/map' },
-	{ label: 'Финансиране', href: '/financing' },
-	{ label: 'Калкулатор', href: '/calculator' },
-	{ label: 'Продай или замени', href: '/sell-your-car' },
-	{ label: 'Заявка за оценка', href: '/sell-your-car/request' },
-	{ label: 'Услуги', href: '/services' },
-	{ label: 'ЧЗВ', href: '/faq' }
+	{ label: 'Vehicle inventory', href: '/inventory' },
+	{ label: 'Vehicle map', href: '/inventory/map' },
+	{ label: 'Buyer-arranged funding', href: '/financing' },
+	{ label: 'Calculator', href: '/calculator' },
+	{ label: 'Ask about selling or trading', href: '/sell-your-car' },
+	{ label: 'Request an appraisal', href: '/sell-your-car/request' },
+	{ label: 'Services', href: '/services' },
+	{ label: 'FAQ', href: '/faq' }
 ] as const;

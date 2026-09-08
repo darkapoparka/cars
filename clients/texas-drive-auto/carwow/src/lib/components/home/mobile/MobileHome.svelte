@@ -133,7 +133,7 @@
 	});
 
 	// Full lists for the facet drill-in (everything, not just the popular chips).
-	const facetNormalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
+	const facetNormalize = (value: string) => value.toLocaleLowerCase('en-US').trim();
 
 	const allModelOptions = $derived(
 		data.modelOptions.filter(
@@ -165,7 +165,7 @@
 	});
 
 	const facetTitle = $derived(
-		searchView === 'brand' ? 'Марка' : searchView === 'model' ? 'Модел' : 'Каросерия'
+		searchView === 'brand' ? 'Make' : searchView === 'model' ? 'Model' : 'Body style'
 	);
 
 	function openFacet(view: 'brand' | 'model' | 'body') {
@@ -230,7 +230,7 @@
 	const budgetCardHref = (budget: string) =>
 		budget === 'all' ? inventoryPath : budgetHref(budget);
 	const brandCountLabel = (count: number) =>
-		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Внос по заявка';
+		count > 0 ? `${count} ${count === 1 ? 'vehicle' : 'vehicles'}` : 'Import questions';
 	function appendParams(params: URLSearchParams, name: string, values: string[]) {
 		for (const value of values) {
 			if (value) params.append(name, value);
@@ -267,24 +267,24 @@
 
 	const quickFilters: QuickFilter[] = [
 		{
-			label: 'Дизел',
+			label: 'Diesel',
 			icon: 'car-line',
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Дизел')}`
+			href: `${inventoryPath}?fuel=${encodeURIComponent('Diesel')}`
 		},
 		{
-			label: 'Бензин',
+			label: 'Gasoline',
 			icon: 'car-line',
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Бензин')}`
+			href: `${inventoryPath}?fuel=${encodeURIComponent('Gasoline')}`
 		},
 		{
-			label: 'Автоматик',
+			label: 'Automatic',
 			icon: Settings2,
-			href: `${inventoryPath}?transmission=${encodeURIComponent('Автоматик')}`
+			href: `${inventoryPath}?transmission=${encodeURIComponent('Automatic')}`
 		},
 		{
-			label: 'Електрически',
+			label: 'Electric',
 			icon: 'car-line',
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Електрически')}`
+			href: `${inventoryPath}?fuel=${encodeURIComponent('Electric')}`
 		}
 	];
 </script>
@@ -431,10 +431,10 @@
 	</svg>
 {/snippet}
 
-<div class="mobile-home" aria-label="Day Night Auto — начало">
+<div class="mobile-home" aria-label="Texas Drive Auto — home">
 	<header class="mh-hero">
 		<div class="mh-hero__bar">
-			<a class="mh-hero__brand" href={resolve('/')} aria-label="Day Night Auto home">
+			<a class="mh-hero__brand" href={resolve('/')} aria-label="Texas Drive Auto home">
 				<img
 					class="mh-hero__logo"
 					src={resolve('/brand/daynight-logo-generated.png')}
@@ -445,7 +445,7 @@
 				<button
 					class="mh-hero__bar-action"
 					type="button"
-					aria-label={`Локация: ${daynightSite.locationShort}`}
+					aria-label={`Location: ${daynightSite.locationShort}`}
 					onclick={() => (locationOpen = true)}
 				>
 					<MapPinned size={19} strokeWidth={2.2} aria-hidden="true" />
@@ -453,19 +453,19 @@
 				<a
 					class="mh-hero__bar-action mh-hero__bar-action--call"
 					href={phoneHref}
-					aria-label="Обади се на Day Night Auto"
+					aria-label="Call Texas Drive Auto"
 				>
 					<Phone size={19} strokeWidth={2.35} aria-hidden="true" />
 				</a>
 			</div>
 		</div>
 
-		<h1 class="mh-hero__title">Day Night Auto</h1>
+		<h1 class="mh-hero__title">Texas Drive Auto</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
 				class={`mh-hero__modes${heroToggle === 'segmented' ? ' mh-hero__modes--segmented' : ''}`}
-				aria-label="Избери действие"
+				aria-label="Choose an action"
 			>
 				<button
 					type="button"
@@ -473,7 +473,7 @@
 					aria-pressed={heroMode === 'buy'}
 					onclick={() => (heroMode = 'buy')}
 				>
-					Купи
+					Buy
 				</button>
 				<button
 					type="button"
@@ -481,12 +481,12 @@
 					aria-pressed={heroMode === 'import'}
 					onclick={() => (heroMode = 'import')}
 				>
-					Внос
+					Import inquiry
 				</button>
 			</div>
 			<button class="mh-hero__search" type="button" onclick={openSearch}>
 				<span class="mh-hero__search-label">
-					{heroMode === 'buy' ? 'Търси марка, модел, цена…' : 'Какъв автомобил търсиш?'}
+					{heroMode === 'buy' ? 'Search make, model, price…' : 'What vehicle are you looking for?'}
 				</span>
 				<span class="mh-hero__search-go" aria-hidden="true">
 					{#if heroMode === 'buy'}
@@ -498,12 +498,12 @@
 			</button>
 			{#if heroMode === 'buy'}
 				<a class="mh-hero__all" href={inventoryHref}>
-					<span>Всички {total} коли</span>
+					<span>All {total} cars</span>
 					<ChevronRight size={12} strokeWidth={2.8} aria-hidden="true" />
 				</a>
 			{:else}
 				<button class="mh-hero__all" type="button" onclick={openSearch}>
-					<span>Заяви внос</span>
+					<span>Ask about imports</span>
 					<ChevronRight size={12} strokeWidth={2.8} aria-hidden="true" />
 				</button>
 			{/if}
@@ -511,7 +511,7 @@
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mh-quick" aria-label="Бързи филтри">
+		<nav class="mh-quick" aria-label="Quick filters">
 			{#each quickFilters as item (item.label)}
 				<a class="mh-quick__pill" href={resolve(item.href)}>
 					{#if item.icon === 'car-line'}
@@ -527,8 +527,8 @@
 
 		<section class="mh-section mh-section--budget" aria-labelledby="mh-budget-title">
 			<div class="mh-section__head">
-				<h2 id="mh-budget-title">По цена</h2>
-				<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+				<h2 id="mh-budget-title">By price</h2>
+				<a href={inventoryHref}>All <ChevronRight size={13} strokeWidth={2.6} /></a>
 			</div>
 			<div class="mh-budget-grid">
 				{#each budgetTiles as tile (tile.value)}
@@ -548,7 +548,7 @@
 						</span>
 						<span class="mh-budget-card__copy">
 							<strong>{tile.label}</strong>
-							<span>{tile.caption ?? `${tile.count} коли`}</span>
+							<span>{tile.caption ?? `${tile.count} cars`}</span>
 						</span>
 					</a>
 				{/each}
@@ -557,8 +557,8 @@
 
 		<section class="mh-section mh-section--featured" aria-labelledby="mh-featured-title">
 			<div class="mh-section__head">
-				<h2 id="mh-featured-title">Избрани</h2>
-				<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+				<h2 id="mh-featured-title">Selected</h2>
+				<a href={inventoryHref}>All <ChevronRight size={13} strokeWidth={2.6} /></a>
 			</div>
 			<div class="mh-carlist">
 				{#each featuredCars as car (car.slug)}
@@ -585,20 +585,20 @@
 								<span class="mh-car__meta">{car.year} · {shortFuel(car.fuel)} · {car.mileage}</span>
 							</span>
 							<span class="mh-car__foot">
-								<span class="mh-car__price">{car.priceEur}</span>
+								<span class="mh-car__price">{car.priceLabel}</span>
 								<span class="mh-car__go" aria-hidden="true">
 									<ChevronRight size={18} strokeWidth={3} />
 								</span>
 							</span>
 						</a>
-						<div class="mh-car__tools" aria-label="Действия за автомобила">
+						<div class="mh-car__tools" aria-label="Vehicle actions">
 							<button
 								type="button"
 								class:is-active={isCompared}
 								aria-pressed={isCompared}
 								aria-label={isCompared
-									? `Премахни ${car.shortTitle} от сравнение`
-									: `Добави ${car.shortTitle} за сравнение`}
+									? `Remove ${car.shortTitle} from comparison`
+									: `Add ${car.shortTitle} to comparison`}
 								onclick={() => garage.toggleCompare(car.slug)}
 							>
 								<GitCompare size={17} strokeWidth={2.25} />
@@ -608,8 +608,8 @@
 								class:is-active={isFavorite}
 								aria-pressed={isFavorite}
 								aria-label={isFavorite
-									? `Премахни ${car.shortTitle} от любими`
-									: `Добави ${car.shortTitle} в любими`}
+									? `Remove ${car.shortTitle} from favorites`
+									: `Add ${car.shortTitle} to favorites`}
 								onclick={() => garage.toggleFavorite(car.slug)}
 							>
 								<Heart size={17} strokeWidth={2.25} />
@@ -622,8 +622,8 @@
 
 		<section class="mh-section mh-section--brands" aria-labelledby="mh-brand-title">
 			<div class="mh-section__head">
-				<h2 id="mh-brand-title">Марки</h2>
-				<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+				<h2 id="mh-brand-title">Makes</h2>
+				<a href={inventoryHref}>All <ChevronRight size={13} strokeWidth={2.6} /></a>
 			</div>
 			<div class="mh-brand-grid">
 				{#each brandTiles as tile (tile.brand)}
@@ -650,15 +650,15 @@
 					<span class="mh-brandcard__all-icon" aria-hidden="true">
 						<ArrowRight size={22} strokeWidth={2} />
 					</span>
-					<span class="mh-brandcard__name">Всички марки</span>
+					<span class="mh-brandcard__name">All makes</span>
 				</a>
 			</div>
 		</section>
 
 		<section class="mh-section" aria-labelledby="mh-type-title">
 			<div class="mh-section__head">
-				<h2 id="mh-type-title">По тип</h2>
-				<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+				<h2 id="mh-type-title">By type</h2>
+				<a href={inventoryHref}>All <ChevronRight size={13} strokeWidth={2.6} /></a>
 			</div>
 			<div class="mh-rail mh-rail--cat">
 				{#each bodyTiles as tile (tile.body)}
@@ -668,28 +668,28 @@
 						</span>
 						<span class="mh-cat__foot">
 							<span class="mh-cat__label">{bodyLabel(tile.body)}</span>
-							<span class="mh-cat__count">{tile.count} коли</span>
+							<span class="mh-cat__count">{tile.count} cars</span>
 						</span>
 					</a>
 				{/each}
 			</div>
 		</section>
 
-		<section class="mh-cta-wrap" aria-label="Призив за действие">
+		<section class="mh-cta-wrap" aria-label="Call to action">
 			<div class="mh-cta">
 				<div class="mh-cta__copy">
-					<strong>{total} обяви · Оглед в София</strong>
-					<span>Финансиране · бартер · съдействие с документите</span>
+					<strong>{total} listings · Viewing in Dallas</strong>
+					<span>No dealer financing · Ask about trade-ins and paperwork</span>
 				</div>
 				<div class="mh-cta__actions">
-					<a class="is-browse" href={inventoryHref}>Всички автомобили</a>
-					<a class="is-call" href={phoneHref}>Обади се</a>
+					<a class="is-browse" href={inventoryHref}>All vehicles</a>
+					<a class="is-call" href={phoneHref}>Call</a>
 				</div>
 			</div>
 			<div class="mh-trust">
-				<span>Проверени коли</span>
-				<span>В София</span>
-				<span>Оглед по уговорка</span>
+				<span>Vehicle condition details unavailable in preview</span>
+				<span>In Dallas</span>
+				<span>Viewing by appointment</span>
 			</div>
 		</section>
 	</main>
@@ -702,11 +702,11 @@
 				alt={daynightSite.name}
 			/>
 			<p>
-				Автокъща в София с подбрани употребявани автомобили. Съдействие за документи, регистрация,
-				финансиране и доставка.
+				Browse this used-car dealership preview. Ask about paperwork and registration;
+				delivery details are unavailable in this preview. No dealer financing or payment plans are offered.
 			</p>
 		</div>
-		<nav class="mh-footer__social" aria-label="Социални канали и обяви">
+		<nav class="mh-footer__social" aria-label="Social channels and listings">
 			{#snippet footerSocialIcon(icon: FooterSocialIcon)}
 				{#if icon === 'facebook'}
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -792,13 +792,13 @@
 		<div class="mh-footer__contact">
 			<a class="mh-footer__phone" href={phoneHref}>
 				<strong>{daynightSite.phoneLabel}</strong>
-				<span>Обаждане / Viber</span>
+				<span>Call / Viber</span>
 			</a>
 			<a class="mh-footer__loc" href={mapHref} target="_blank" rel="external noopener noreferrer">
 				{daynightSite.location}
 			</a>
 		</div>
-		<span class="mh-footer__copy">© 2026 Day Night Auto София. Всички права запазени.</span>
+		<span class="mh-footer__copy">© 2026 Texas Drive Auto Dallas. All rights reserved.</span>
 	</footer>
 
 	<MobileBottomDock />
@@ -813,10 +813,10 @@
 				{#if searchView === 'main'}
 					<header>
 						<div>
-							<span>Търсене</span>
-							<strong id="mh-search-title">Намери автомобил</strong>
+							<span>Search</span>
+							<strong id="mh-search-title">Find a vehicle</strong>
 						</div>
-						<button type="button" aria-label="Затвори" onclick={closeSearch}>
+						<button type="button" aria-label="Close" onclick={closeSearch}>
 							<X size={19} strokeWidth={2.5} />
 						</button>
 					</header>
@@ -827,9 +827,9 @@
 							<input
 								type="search"
 								bind:value={query}
-								placeholder="Търси марка, модел…"
+								placeholder="Search make, model…"
 								autocomplete="off"
-								aria-label="Търсене"
+								aria-label="Search"
 								enterkeyhint="search"
 								onkeydown={(event) => {
 									if (event.key !== 'Enter') return;
@@ -841,14 +841,14 @@
 
 						<div class="mh-search-sheet__group">
 							<div class="mh-search-sheet__group-head">
-								<span>Марка</span>
+								<span>Make</span>
 								{#if data.brands.length > popularBrands.length}
 									<button
 										type="button"
 										class="mh-search-sheet__all"
 										onclick={() => openFacet('brand')}
 									>
-										Всички {data.brands.length}
+										All {data.brands.length}
 										<ChevronRight size={13} strokeWidth={2.6} aria-hidden="true" />
 									</button>
 								{/if}
@@ -878,14 +878,14 @@
 
 						<div class="mh-search-sheet__group">
 							<div class="mh-search-sheet__group-head">
-								<span>Модел</span>
+								<span>Model</span>
 								{#if allModelOptions.length > modelChips.length}
 									<button
 										type="button"
 										class="mh-search-sheet__all"
 										onclick={() => openFacet('model')}
 									>
-										Всички {allModelOptions.length}
+										All {allModelOptions.length}
 										<ChevronRight size={13} strokeWidth={2.6} aria-hidden="true" />
 									</button>
 								{/if}
@@ -907,14 +907,14 @@
 
 						<div class="mh-search-sheet__group">
 							<div class="mh-search-sheet__group-head">
-								<span>Каросерия</span>
+								<span>Body style</span>
 								{#if data.bodyTypes.length > bodyChips.length}
 									<button
 										type="button"
 										class="mh-search-sheet__all"
 										onclick={() => openFacet('body')}
 									>
-										Всички {data.bodyTypes.length}
+										All {data.bodyTypes.length}
 										<ChevronRight size={13} strokeWidth={2.6} aria-hidden="true" />
 									</button>
 								{/if}
@@ -936,19 +936,19 @@
 						</div>
 					</div>
 
-					<a class="mh-search-sheet__go" href={resolve(searchHref)}>Виж автомобилите →</a>
+					<a class="mh-search-sheet__go" href={resolve(searchHref)}>View vehicles →</a>
 				{:else}
 					<header>
 						<div class="mh-facet-head">
-							<button type="button" class="mh-facet-back" aria-label="Назад" onclick={backToMain}>
+							<button type="button" class="mh-facet-back" aria-label="Back" onclick={backToMain}>
 								<ChevronLeft size={20} strokeWidth={2.5} />
 							</button>
 							<div>
-								<span>Избери</span>
+								<span>Select</span>
 								<strong id="mh-search-title">{facetTitle}</strong>
 							</div>
 						</div>
-						<button type="button" aria-label="Затвори" onclick={closeSearch}>
+						<button type="button" aria-label="Close" onclick={closeSearch}>
 							<X size={19} strokeWidth={2.5} />
 						</button>
 					</header>
@@ -960,9 +960,9 @@
 								<input
 									type="search"
 									bind:value={facetQuery}
-									placeholder={searchView === 'brand' ? 'Търси марка' : 'Търси модел'}
+									placeholder={searchView === 'brand' ? 'Search makes' : 'Search models'}
 									autocomplete="off"
-									aria-label={searchView === 'brand' ? 'Търси марка' : 'Търси модел'}
+									aria-label={searchView === 'brand' ? 'Search makes' : 'Search models'}
 								/>
 							</label>
 						{/if}
@@ -995,7 +995,7 @@
 									</button>
 								{/each}
 								{#if !facetBrandList.length}
-									<p class="mh-facet-empty">Няма марки по това търсене.</p>
+									<p class="mh-facet-empty">No makes match your search.</p>
 								{/if}
 							{:else if searchView === 'model'}
 								{#each facetModelList as option (option.model)}
@@ -1015,7 +1015,7 @@
 									</button>
 								{/each}
 								{#if !facetModelList.length}
-									<p class="mh-facet-empty">Няма модели по това търсене.</p>
+									<p class="mh-facet-empty">No models match your search.</p>
 								{/if}
 							{:else}
 								{#each data.bodyTypes as body (body)}
@@ -1039,17 +1039,17 @@
 						</div>
 					</div>
 
-					<button class="mh-search-sheet__go" type="button" onclick={backToMain}>Готово →</button>
+					<button class="mh-search-sheet__go" type="button" onclick={backToMain}>Done →</button>
 				{/if}
 			</div>
 		{:else}
 			<div class="mh-search-sheet mh-search-sheet--sell">
 				<header>
 					<div>
-						<span>Внос по поръчка</span>
-						<strong id="mh-import-title">Внос на автомобил</strong>
+						<span>Import questions</span>
+						<strong id="mh-import-title">Vehicle import questions</strong>
 					</div>
-					<button type="button" aria-label="Затвори" onclick={closeSearch}>
+					<button type="button" aria-label="Close" onclick={closeSearch}>
 						<X size={19} strokeWidth={2.5} />
 					</button>
 				</header>
@@ -1057,25 +1057,25 @@
 				<div class="mh-search-sheet__body">
 					<div class="mh-sell-grid">
 						<label class="mh-sell-field mh-sell-field--wide">
-							<span>Какво търсите</span>
+							<span>What you’re looking for</span>
 							<input
 								type="text"
 								bind:value={importQuery}
-								placeholder="BMW X5, дизел, до 2020..."
+								placeholder="BMW X5, diesel, up to 2020..."
 								autocomplete="off"
-								aria-label="Търсен автомобил за внос"
+								aria-label="Vehicle of interest for import"
 							/>
 						</label>
 						<label class="mh-sell-field">
-							<span>Марка</span>
+							<span>Make</span>
 							<input type="text" bind:value={importMake} placeholder="BMW" autocomplete="off" />
 						</label>
 						<label class="mh-sell-field">
-							<span>Модел</span>
+							<span>Model</span>
 							<input type="text" bind:value={importModel} placeholder="X5" autocomplete="off" />
 						</label>
 						<label class="mh-sell-field">
-							<span>Година от</span>
+							<span>Min. year</span>
 							<input
 								type="text"
 								inputmode="numeric"
@@ -1085,7 +1085,7 @@
 							/>
 						</label>
 						<label class="mh-sell-field">
-							<span>Бюджет</span>
+							<span>Budget</span>
 							<input
 								type="text"
 								inputmode="numeric"
@@ -1095,7 +1095,7 @@
 							/>
 						</label>
 						<label class="mh-sell-field mh-sell-field--wide">
-							<span>Телефон</span>
+							<span>Phone</span>
 							<input
 								type="tel"
 								bind:value={importPhone}
@@ -1104,7 +1104,7 @@
 							/>
 						</label>
 						<label class="mh-sell-field mh-sell-field--wide">
-							<span>Линк към обява</span>
+							<span>Listing link</span>
 							<input
 								type="text"
 								inputmode="url"
@@ -1116,15 +1116,15 @@
 					</div>
 
 					<p class="mh-import-note">
-						Оставете насока за марка, модел и бюджет. Екипът ще Ви изпрати варианти за внос и
-						следващи стъпки.
+						Enter your preferred make, model, and budget. Import availability and
+						next steps are unconfirmed in this preview.
 					</p>
 				</div>
 
-				<a class="mh-search-sheet__go" href={resolve(importLeadHref)}>Изпрати заявка →</a>
+				<a class="mh-search-sheet__go" href={resolve(importLeadHref)}>Save draft →</a>
 				<a class="mh-search-sheet__ghost" href={phoneHref}>
 					<PhoneCall size={17} strokeWidth={2.45} aria-hidden="true" />
-					<span>Обади се</span>
+					<span>Call</span>
 				</a>
 			</div>
 		{/if}
@@ -1134,10 +1134,10 @@
 		<div class="mh-location-sheet">
 			<header>
 				<div>
-					<span>Локация</span>
+					<span>Location</span>
 					<strong id="mh-location-title">{daynightSite.locationShort}</strong>
 				</div>
-				<button type="button" aria-label="Затвори" onclick={() => (locationOpen = false)}>
+				<button type="button" aria-label="Close" onclick={() => (locationOpen = false)}>
 					<X size={19} strokeWidth={2.5} />
 				</button>
 			</header>
@@ -1146,7 +1146,7 @@
 				<span class="mh-location-sheet__pin">
 					<MapPin size={24} strokeWidth={2.5} />
 				</span>
-				<span>София</span>
+				<span>Dallas</span>
 				<strong>{daynightSite.location}</strong>
 			</div>
 
@@ -1155,9 +1155,9 @@
 			<div class="mh-location-sheet__actions">
 				<a class="is-primary" href={mapHref} target="_blank" rel="external noreferrer">
 					<Navigation size={16} strokeWidth={2.4} aria-hidden="true" />
-					Отвори карта
+					Open map
 				</a>
-				<a href={phoneHref}>Обади се</a>
+				<a href={phoneHref}>Call</a>
 			</div>
 		</div>
 	</MobileDrawer>

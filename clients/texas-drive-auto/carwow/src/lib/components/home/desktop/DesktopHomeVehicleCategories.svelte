@@ -11,72 +11,72 @@
 	const bodyCount = (body: string) => cars.filter((car) => car.body === body).length;
 
 	const formatCount = (count: number) =>
-		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Няма наличност';
+		count > 0 ? `${count} ${count === 1 ? 'vehicle' : 'vehicles'}` : 'Out of stock';
 
 	// Counts come from live inventory; the canonical desktop can expose the full taxonomy
 	// while keeping zero-stock categories honest and visually quiet.
 	const allVehicleCategories = [
 		{
 			id: 'electric',
-			title: 'Електрически',
-			query: `fuel=${encodeURIComponent('Електрически')}`,
-			count: cars.filter((car) => car.fuel === 'Електрически').length,
+			title: 'Electric',
+			query: `fuel=${encodeURIComponent('Electric')}`,
+			count: cars.filter((car) => car.fuel === 'Electric').length,
 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp'
 		},
 		{
 			id: 'suv',
-			title: 'Джип',
+			title: 'SUV',
 			query: 'body=SUV',
 			count: bodyCount('SUV'),
 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 		},
 		{
 			id: 'wagon',
-			title: 'Комби',
-			query: `body=${encodeURIComponent('Комби')}`,
-			count: bodyCount('Комби'),
+			title: 'Wagon',
+			query: `body=${encodeURIComponent('Wagon')}`,
+			count: bodyCount('Wagon'),
 			image: '/assets/images/body-type/generated/body-wagon-studio-card-v1.webp'
 		},
 		{
 			id: 'hatchback',
-			title: 'Хечбек',
-			query: `body=${encodeURIComponent('Хечбек')}`,
-			count: bodyCount('Хечбек'),
+			title: 'Hatchback',
+			query: `body=${encodeURIComponent('Hatchback')}`,
+			count: bodyCount('Hatchback'),
 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 		},
 		{
 			id: 'sedan',
-			title: 'Седан',
-			query: `body=${encodeURIComponent('Седан')}`,
-			count: bodyCount('Седан'),
+			title: 'Sedan',
+			query: `body=${encodeURIComponent('Sedan')}`,
+			count: bodyCount('Sedan'),
 			image: '/assets/images/body-type/generated/body-sedan-studio-card-v1.webp'
 		},
 		{
 			id: 'coupe',
-			title: 'Купе',
-			query: `body=${encodeURIComponent('Купе')}`,
-			count: bodyCount('Купе'),
+			title: 'Coupe',
+			query: `body=${encodeURIComponent('Coupe')}`,
+			count: bodyCount('Coupe'),
 			image: '/assets/images/body-type/generated/body-coupe-studio-card-v1.webp'
 		},
 		{
 			id: 'van',
-			title: 'Ван',
-			query: `body=${encodeURIComponent('Ван')}`,
-			count: bodyCount('Ван'),
+			title: 'Van',
+			query: `body=${encodeURIComponent('Van')}`,
+			count: bodyCount('Van'),
 			image: '/assets/images/body-type/generated/body-mpv-studio-card-v1.webp'
 		},
 		{
 			id: 'convertible',
-			title: 'Кабриолет',
-			query: `body=${encodeURIComponent('Кабрио')}`,
-			count: bodyCount('Кабрио'),
+			title: 'Convertible',
+			query: `body=${encodeURIComponent('Convertible')}`,
+			count: bodyCount('Convertible'),
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 		}
 	];
 
 	let {
-		title = 'Автомобили по тип',
-		ctaLabel = 'Виж всички типове',
+		title = 'Vehicles by type',
+		ctaLabel = 'View all types',
 		showHeaderCta = true,
 		showBelowCta = false,
 		showEmptyCategories = false,

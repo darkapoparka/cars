@@ -9,15 +9,15 @@
 </script>
 
 <header class="mobile-home-header">
-	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="Day Night Auto home">
+	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="Texas Drive Auto home">
 		<img
 			src={resolve('/brand/daynight-logo-generated.png')}
 			alt={daynightSite.shortName}
 		/>
 	</a>
 
-	<nav class="mobile-home-header__actions" aria-label="Бързи действия">
-		<a class="mobile-home-header__icon" href={resolve(searchHref)} aria-label="Търсене">
+	<nav class="mobile-home-header__actions" aria-label="Quick actions">
+		<a class="mobile-home-header__icon" href={resolve(searchHref)} aria-label="Search">
 			<Search size={19} strokeWidth={2.4} />
 		</a>
 	</nav>

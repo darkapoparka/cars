@@ -18,25 +18,25 @@
 	const campaigns = [
 		{
 			id: 'collection',
-			title: 'Вижте колекцията',
-			copy: 'Разгледайте селекцията и попитайте за наличност.',
-			cta: 'Вижте автомобилите',
+			title: 'View the collection',
+			copy: 'Browse the selection and ask about availability.',
+			cta: 'View vehicles',
 			href: '/inventory',
 			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
 		},
 		{
 			id: 'viewing',
-			title: 'Запазете оглед',
-			copy: 'Изберете автомобил и уговорете удобно посещение.',
-			cta: 'Запазете оглед',
+			title: 'Schedule a visit',
+			copy: 'Choose a vehicle and arrange a convenient visit.',
+			cta: 'Schedule a visit',
 			href: '/contact',
 			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
 		},
 		{
 			id: 'financing',
-			title: 'Лизинг и замяна',
-			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
-			cta: 'Поискайте условия',
+			title: 'Purchase questions',
+			copy: 'Ask about purchase details for your chosen vehicle.',
+			cta: 'Ask about purchase details',
 			href: '/financing',
 			image: '/assets/images/home-promos/leasing-calculator-cutout-v7.webp'
 		}
@@ -55,25 +55,25 @@
 		{
 			id: 'stock',
 			value: String(daynightVehicles.length),
-			label: 'Налични автомобила',
+			label: 'Available vehicles',
 			hasDivider: true
 		},
 		{
 			id: 'brands',
 			value: String(new Set(daynightVehicles.map((vehicle) => vehicle.brand)).size),
-			label: 'марки в наличност',
+			label: 'brands in stock',
 			hasDivider: true
 		},
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в София',
+			label: 'location in Dallas',
 			hasDivider: true
 		},
 		{
 			id: 'contact',
 			value: '4',
-			label: 'директни канала за контакт'
+			label: 'direct contact channels'
 		}
 	] as const;
 </script>
@@ -81,7 +81,7 @@
 <section class="daynight-home-section daynight-home-section--why">
 	<div class="daynight-home-container">
 		{#if variant === 'campaign-grid'}
-			<div class="daynight-home-campaign-grid" aria-label="Възможности за покупка и контакт">
+			<div class="daynight-home-campaign-grid" aria-label="Purchase options and contact">
 				{#each campaigns as campaign (campaign.id)}
 					<article
 						class={`daynight-home-campaign-card daynight-home-campaign-card--${campaign.id}`}
@@ -128,13 +128,13 @@
 				</div>
 
 				<div class="daynight-home-why__content">
-					<h2 class="daynight-home-why__title">Лизинг и замяна</h2>
+					<h2 class="daynight-home-why__title">Purchase questions</h2>
 					<p class="daynight-home-why__copy">
-						Попитайте за индивидуални условия според избрания автомобил.
+						Ask about purchase details for your chosen vehicle.
 					</p>
 
 					<a href={resolve('/financing')} class="daynight-home-why__cta">
-						<span>Поискайте условия</span>
+						<span>Ask about purchase details</span>
 						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
 							<path
 								d="M5 12h14M13 6l6 6-6 6"

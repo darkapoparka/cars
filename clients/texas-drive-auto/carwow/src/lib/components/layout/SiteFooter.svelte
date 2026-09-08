@@ -11,12 +11,12 @@
 		<div class="site-footer__brand">
 			<img src={daynightSite.logoLight} alt={daynightSite.name} />
 			<p>
-				Проверени автомобили в София със съдействие за оглед, документи, регистрация, финансиране
-				и бартер.
+				Browse used vehicles and ask about viewings, paperwork
+				and registration.
 			</p>
 		</div>
 		<div>
-			<p class="footer-title">Автомобили</p>
+			<p class="footer-title">Vehicles</p>
 			<ul>
 				{#each buyingLinks as link (link.href)}
 					<li><a href={resolve(link.href)}>{link.label}</a></li>
@@ -24,7 +24,7 @@
 			</ul>
 		</div>
 		<div>
-			<p class="footer-title">Поддръжка</p>
+			<p class="footer-title">Support</p>
 			<ul>
 				{#each supportLinks as link (link.href)}
 					<li><a href={resolve(link.href)}>{link.label}</a></li>
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 		<div>
-			<p class="footer-title">Контакти</p>
+			<p class="footer-title">Contact</p>
 			<p>{daynightSite.phoneLabel}</p>
 			{#if daynightSite.email}<p>{daynightSite.email}</p>{/if}
 			<p>{daynightSite.location}</p>
@@ -40,11 +40,11 @@
 	</div>
 	<div class="site-footer__bottom">
 		<div class="container">
-			<span>©2026 {daynightSite.shortName}. Всички права запазени.</span>
+			<span>©2026 {daynightSite.shortName}. All rights reserved.</span>
 			<div>
-				<a href={resolve('/terms')}>Условия</a>
-				<a href={resolve('/contact')}>Поверителност</a>
-				<a href={resolve('/contact')}>Контакти</a>
+				<a href={resolve('/terms')}>Terms</a>
+				<a href={resolve('/contact')}>Privacy</a>
+				<a href={resolve('/contact')}>Contact</a>
 			</div>
 		</div>
 	</div>

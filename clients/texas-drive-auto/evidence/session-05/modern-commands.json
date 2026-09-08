@@ -1,0 +1,19 @@
+[
+  {
+    "name": "modern-install",
+    "workingDirectory": "C:/Users/radev/AppData/Local/Temp/cars-session-05-active-20260909/clients/texas-drive-auto/modern",
+    "nodeVersion": "22.22.0",
+    "command": [
+      "J:/cars-session-05-tools/node22/node.exe",
+      "J:/cars-session-05-tools/managers/node_modules/pnpm/bin/pnpm.cjs",
+      "install",
+      "--frozen-lockfile"
+    ],
+    "startedAt": "2026-09-08T23:29:35.681Z",
+    "endedAt": "2026-09-08T23:32:40.270Z",
+    "exitCode": 4294967295,
+    "error": null,
+    "log": "modern-install.txt",
+    "scope": "Local source application only; no real provider credentials, migrations or delivery"
+  }
+]

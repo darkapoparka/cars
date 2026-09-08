@@ -1699,7 +1699,7 @@ export function renderDayNightTemplateHeadStyles(templateFile: string) {
 	/* DayNight: tighter, more "static" section rhythm (was 100px top/bottom). */
 
 	/* DayNight: brands as a static, full-width row (spans the same width as the
-	   "Автомобили по тип" section) — 6 per row, no carousel, no centered cap. */
+	   "Vehicles by type" section) — 6 per row, no carousel, no centered cap. */
 
 	/* DayNight: rotate the dropdown caret 180° when its menu opens. */
 	body.home-style-9 #main-nav .menu > li > a .chevron-down {
@@ -2792,7 +2792,7 @@ export function renderDayNightTemplateHeadStyles(templateFile: string) {
 	}
 
 	/* Bulgarian sentence-case: the template title-cases headings, which on
-	   Cyrillic reads machine-translated ("Преглед На Автомобила", FAQ toggles).
+	   Cyrillic reads machine-translated ("Vehicle Overview", FAQ toggles).
 	   Bulgarian does not title-case, so neutralize text-transform site-wide. */
 	.capitalize,
 	.post-style-6 .title,

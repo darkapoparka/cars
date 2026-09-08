@@ -28,45 +28,45 @@ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 
 const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
-	'Покупка',
-	'Продажба',
-	'Новини',
-	'Съвети',
-	'Финансиране',
-	'Документи',
-	'Марки'
+	'Buying',
+	'Selling',
+	'News',
+	'Tips',
+	'Buyer-arranged funding',
+	'Paperwork',
+	'Makes'
 ]);
 const cyrillicSlugMap: Record<string, string> = {
-	а: 'a',
-	б: 'b',
-	в: 'v',
-	г: 'g',
-	д: 'd',
-	е: 'e',
-	ж: 'zh',
-	з: 'z',
-	и: 'i',
-	й: 'y',
-	к: 'k',
-	л: 'l',
-	м: 'm',
-	н: 'n',
-	о: 'o',
-	п: 'p',
-	р: 'r',
-	с: 's',
-	т: 't',
-	у: 'u',
-	ф: 'f',
-	х: 'h',
-	ц: 'ts',
-	ч: 'ch',
-	ш: 'sh',
-	щ: 'sht',
-	ъ: 'a',
-	ь: '',
-	ю: 'yu',
-	я: 'ya'
+	a: 'a',
+	b: 'b',
+	v: 'v',
+	g: 'g',
+	d: 'd',
+	e: 'e',
+	zh: 'zh',
+	z: 'z',
+	i: 'i',
+	y: 'y',
+	k: 'k',
+	l: 'l',
+	m: 'm',
+	n: 'n',
+	o: 'o',
+	p: 'p',
+	r: 'r',
+	s: 's',
+	t: 't',
+	u: 'u',
+	f: 'f',
+	h: 'h',
+	ts: 'ts',
+	ch: 'ch',
+	sh: 'sh',
+	sht: 'sht',
+	a: 'a',
+	y: '',
+	yu: 'yu',
+	ya: 'ya'
 };
 
 function readText(formData: FormData, key: keyof PostFormInput) {
@@ -108,7 +108,7 @@ function normalizePostCategory(
 		return trimmed as DayNightArticleCategory;
 	}
 
-	return type === 'news' ? 'Новини' : 'Съвети';
+	return type === 'news' ? 'News' : 'Tips';
 }
 
 function postKind(type: PostRow['type']): DayNightArticleKind {
@@ -193,7 +193,7 @@ async function buildPostWrite(
 		cover_url: input.coverUrl || null,
 		category: input.category || null,
 		tags: splitTags(input.tags),
-		author: input.author || 'Day Night Auto',
+		author: input.author || 'Texas Drive Auto',
 		read_minutes: input.readMinutes,
 		status: input.status,
 		published_at: publishedAt
@@ -238,7 +238,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		category,
 		kind: postKind(post.type),
 		date: (post.published_at ?? post.updated_at ?? post.created_at).slice(0, 10),
-		author: post.author || 'Day Night Auto',
+		author: post.author || 'Texas Drive Auto',
 		image: post.cover_url || fallbackPostImage,
 		readMinutes:
 			post.read_minutes ||
@@ -246,7 +246,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		summary: summary.length ? summary : [description],
 		sections: [
 			{
-				heading: post.category?.trim() || (post.type === 'news' ? 'Новина' : 'Полезно'),
+				heading: post.category?.trim() || (post.type === 'news' ? 'News' : 'Helpful'),
 				paragraphs: sectionParagraphs
 			}
 		],

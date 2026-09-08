@@ -115,36 +115,36 @@
 	const mileageLabel = $derived(
 		mileageOptions.find((option) => option.value === mileage)?.label ?? ''
 	);
-	const brandSummary = $derived(selectionSummary(selectedBrands.map(brandShortName), 'марки'));
-	const modelSummary = $derived(selectionSummary(selectedModels, 'модела'));
-	const bodySummary = $derived(selectionSummary(selectedBodies, 'каросерии'));
+	const brandSummary = $derived(selectionSummary(selectedBrands.map(brandShortName), 'makes'));
+	const modelSummary = $derived(selectionSummary(selectedModels, 'models'));
+	const bodySummary = $derived(selectionSummary(selectedBodies, 'body styles'));
 	const fuelSummary = $derived(fuel);
 	const sortOverviewLabel = $derived(
 		sort === 'price-asc' ? '' : (sortOptions.find((option) => option.value === sort)?.label ?? '')
 	);
 	const filterSheetEyebrow = $derived.by(() => {
-		if (filterSheetMode === 'search') return 'Търсене';
-		if (filterSheetMode === 'brand') return 'Марка';
-		if (filterSheetMode === 'model') return 'Модел';
-		if (filterSheetMode === 'sort') return 'Подредба';
-		if (filterSheetMode === 'fuel') return 'Гориво';
-		if (filterSheetMode === 'mileage') return 'Пробег';
-		if (filterSheetMode === 'body') return 'Каросерия';
-		if (filterSheetMode === 'price') return 'Цена';
-		if (filterSheetMode === 'transmission') return 'Скорости';
-		return 'Филтри';
+		if (filterSheetMode === 'search') return 'Search';
+		if (filterSheetMode === 'brand') return 'Make';
+		if (filterSheetMode === 'model') return 'Model';
+		if (filterSheetMode === 'sort') return 'Layout';
+		if (filterSheetMode === 'fuel') return 'Fuel';
+		if (filterSheetMode === 'mileage') return 'Mileage';
+		if (filterSheetMode === 'body') return 'Body style';
+		if (filterSheetMode === 'price') return 'Price';
+		if (filterSheetMode === 'transmission') return 'Transmission';
+		return 'Filters';
 	});
 	const filterSheetClearLabel = $derived.by(() => {
-		if (filterSheetMode === 'search') return 'Изчисти търсене';
-		if (filterSheetMode === 'brand') return 'Изчисти марка';
-		if (filterSheetMode === 'model') return 'Изчисти модел';
-		if (filterSheetMode === 'sort') return 'Стандартна';
-		if (filterSheetMode === 'fuel') return 'Изчисти гориво';
-		if (filterSheetMode === 'mileage') return 'Изчисти пробег';
-		if (filterSheetMode === 'body') return 'Изчисти каросерия';
-		if (filterSheetMode === 'price') return 'Изчисти цена';
-		if (filterSheetMode === 'transmission') return 'Изчисти скорости';
-		return 'Изчисти';
+		if (filterSheetMode === 'search') return 'Clear search';
+		if (filterSheetMode === 'brand') return 'Clear make';
+		if (filterSheetMode === 'model') return 'Clear model';
+		if (filterSheetMode === 'sort') return 'Standard';
+		if (filterSheetMode === 'fuel') return 'Clear fuel';
+		if (filterSheetMode === 'mileage') return 'Clear mileage';
+		if (filterSheetMode === 'body') return 'Clear body style';
+		if (filterSheetMode === 'price') return 'Clear price';
+		if (filterSheetMode === 'transmission') return 'Clear transmission';
+		return 'Clear';
 	});
 	const hasActiveFilters = $derived(
 		Boolean(
@@ -186,8 +186,8 @@
 	const resultCountLabel = $derived(formatVehicleCount(filteredVehicles.length));
 	const filterSheetActionLabel = $derived(
 		filterSheetMode === 'all' || filterSheetMode === 'search'
-			? `Покажи ${filteredVehicles.length}`
-			: 'Към филтри'
+			? `Show ${filteredVehicles.length}`
+			: 'Go to filters'
 	);
 	const sortedVehicles = $derived(sortVehicles(filteredVehicles, sort));
 
@@ -247,7 +247,7 @@
 			.map((word) => word[0])
 			.join('')
 			.slice(0, 2)
-			.toLocaleUpperCase('bg-BG');
+			.toLocaleUpperCase('en-US');
 	}
 
 	const brandShortNames: Record<string, string> = {
@@ -529,9 +529,9 @@
 	}
 </script>
 
-<div class="mobile-inventory" aria-label="Мобилна страница автомобили">
+<div class="mobile-inventory" aria-label="Mobile inventory page">
 	<main id="main-content" tabindex="-1">
-		<h1 class="sr-only">Автомобили на склад — Ден и Нощ Ауто Груп</h1>
+		<h1 class="sr-only">Vehicles in stock — Texas Drive Auto</h1>
 		<MobileInventoryTop {mode} {query} onOpenSearch={() => openFilterSheet('search')} />
 
 		<section class="mobile-inventory-results" aria-live="polite">

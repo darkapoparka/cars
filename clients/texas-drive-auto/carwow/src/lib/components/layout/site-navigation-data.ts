@@ -46,87 +46,87 @@ export const inventoryMegaMenuVehicleTiles = [
 		label: 'Chrysler 300C',
 		slug: 'chrysler-300c-2018-gaz',
 		image: '/assets/images/megamenu/chrysler-300c.webp',
-		meta: '17 000 EUR · Газ/Бензин'
+		meta: '17 000 USD · LPG/Gasoline'
 	},
 	{
 		label: 'BMW i7',
 		slug: 'bmw-i7-2023-full-maxx',
 		image: '/assets/images/megamenu/bmw-i7.webp',
-		meta: '81 000 EUR · Електрически'
+		meta: '81 000 USD · Electric'
 	},
 	{
 		label: 'BMW 520i',
 		slug: 'bmw-520i-2006-avtomatik',
 		image: '/assets/images/megamenu/bmw-520i.webp',
-		meta: '4 500 EUR · Бензин'
+		meta: '4 500 USD · Gasoline'
 	},
 	{
 		label: 'Mercedes E 350 D',
 		slug: 'mercedes-benz-e-350-d-2015-64594',
 		image: '/assets/images/megamenu/mercedes-e220d.webp',
-		meta: '11 500 EUR · Дизел'
+		meta: '11 500 USD · Diesel'
 	},
 	{
 		label: 'Audi Q8',
 		slug: 'audi-q8-5-0tdi-2020-95331',
 		image: '/assets/images/megamenu/audi-q8-side-normalized.webp',
-		meta: '43 000 EUR · Дизел'
+		meta: '43 000 USD · Diesel'
 	},
 	{
 		label: 'BMW X6',
 		slug: 'bmw-x6-2017-84431',
 		image: '/assets/images/megamenu/bmw-x6-side-normalized.webp',
-		meta: '25 500 EUR · Бензин'
+		meta: '25 500 USD · Gasoline'
 	},
 	{
 		label: 'Mercedes E 220 D',
 		slug: 'mercedes-benz-e-220-d-2023-53599',
 		image: '/assets/images/megamenu/mercedes-e220d-side-normalized.webp',
-		meta: '31 000 EUR · Дизел'
+		meta: '31 000 USD · Diesel'
 	},
 	{
 		label: 'VW Touran',
 		slug: 'vw-touran-1-6d-2017-08568',
 		image: '/assets/images/megamenu/vw-touran-side-normalized.webp',
-		meta: '9 000 EUR · Дизел'
+		meta: '9 000 USD · Diesel'
 	}
 ] satisfies readonly MegaMenuVehicleTile[];
 
 export const inventoryMegaMenuLinkColumns = [
 	{
-		title: 'Наличност',
+		title: 'Availability',
 		links: [
-			{ label: 'Всички автомобили', href: '/inventory' },
-			{ label: 'Автомобили на карта', href: '/inventory/map' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'Калкулатор', href: '/calculator' }
+			{ label: 'All vehicles', href: '/inventory' },
+			{ label: 'Vehicles on a map', href: '/inventory/map' },
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'Calculator', href: '/calculator' }
 		]
 	},
 	{
-		title: 'По тип',
+		title: 'By type',
 		links: [
-			{ label: 'Седан', href: '/inventory?body=Седан' },
-			{ label: 'Джип', href: '/inventory?body=SUV' },
-			{ label: 'Купе', href: '/inventory?body=Купе' },
-			{ label: 'Комби', href: '/inventory?body=Комби' }
+			{ label: 'Sedan', href: '/inventory?body=Sedan' },
+			{ label: 'SUV', href: '/inventory?body=SUV' },
+			{ label: 'Coupe', href: '/inventory?body=Coupe' },
+			{ label: 'Wagon', href: '/inventory?body=Wagon' }
 		]
 	},
 	{
-		title: 'По гориво',
+		title: 'By fuel type',
 		links: [
-			{ label: 'Дизел', href: '/inventory?fuel=Дизел' },
-			{ label: 'Бензин', href: '/inventory?fuel=Бензин' },
-			{ label: 'Газ/Бензин', href: '/inventory?fuel=Газ/Бензин' },
-			{ label: 'Електрически', href: '/inventory?fuel=Електрически' }
+			{ label: 'Diesel', href: '/inventory?fuel=Diesel' },
+			{ label: 'Gasoline', href: '/inventory?fuel=Gasoline' },
+			{ label: 'LPG/Gasoline', href: '/inventory?fuel=LPG/Gasoline' },
+			{ label: 'Electric', href: '/inventory?fuel=Electric' }
 		]
 	},
 	{
-		title: 'Помощ при избор',
+		title: 'Help choosing a vehicle',
 		links: [
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'Услуги', href: '/services' },
-			{ label: 'Често задавани въпроси', href: '/faq' },
-			{ label: 'Полезно за купувачи', href: '/blog' }
+			{ label: 'Buyer-arranged funding', href: '/financing' },
+			{ label: 'Services', href: '/services' },
+			{ label: 'Frequently asked questions', href: '/faq' },
+			{ label: 'Buyer resources', href: '/blog' }
 		]
 	}
 ] satisfies readonly MegaMenuColumn[];

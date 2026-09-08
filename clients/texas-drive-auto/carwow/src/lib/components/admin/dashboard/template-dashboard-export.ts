@@ -11,7 +11,7 @@ export function setupDashboardExportPanel() {
 		brand: vehicle.brand,
 		model: vehicle.model,
 		year: vehicle.year,
-		priceBgn: vehicle.priceBgn,
+		secondaryPrice: vehicle.secondaryPrice,
 		fuel: vehicle.fuel,
 		gearbox: vehicle.transmission,
 		category: vehicle.body,
@@ -36,7 +36,7 @@ export function setupDashboardExportPanel() {
 	const buildXml = () => {
 		const lines = [
 			'<?xml version="1.0" encoding="UTF-8"?>',
-			'<ads source="Day Night Auto" type="demo-feed">'
+			'<ads source="Texas Drive Auto" type="demo-feed">'
 		];
 		feed.forEach((vehicle) => {
 			lines.push('  <ad>');
@@ -44,7 +44,7 @@ export function setupDashboardExportPanel() {
 			lines.push(`    <make>${xmlEsc(vehicle.brand)}</make>`);
 			lines.push(`    <model>${xmlEsc(vehicle.model)}</model>`);
 			lines.push(`    <year>${xmlEsc(vehicle.year)}</year>`);
-			lines.push(`    <price currency="BGN">${xmlEsc(vehicle.priceBgn)}</price>`);
+			lines.push(`    <price currency="BGN">${xmlEsc(vehicle.secondaryPrice)}</price>`);
 			lines.push(`    <fuel>${xmlEsc(vehicle.fuel)}</fuel>`);
 			lines.push(`    <gearbox>${xmlEsc(vehicle.gearbox)}</gearbox>`);
 			lines.push(`    <category>${xmlEsc(vehicle.category)}</category>`);
@@ -86,7 +86,7 @@ export function setupDashboardExportPanel() {
 					vehicle.brand,
 					vehicle.model,
 					vehicle.year,
-					vehicle.priceBgn,
+					vehicle.secondaryPrice,
 					vehicle.fuel,
 					vehicle.gearbox,
 					vehicle.category,
@@ -119,18 +119,18 @@ export function setupDashboardExportPanel() {
 	panel.innerHTML = `
 		<div class="daynight-export__head">
 			<div>
-				<p class="h4">Експорт към mobile.bg / cars.bg</p>
-				<span class="daynight-export__sub">Въведете автомобила веднъж — изтеглете готов файл за качване във всяка платформа. Край на ръчното дублиране на обяви.</span>
+				<p class="h4">Export to mobile.bg / cars.bg</p>
+				<span class="daynight-export__sub">Enter the vehicle once — download a file for uploading to each platform. Skip manually duplicating listings.</span>
 			</div>
-			<span class="daynight-export__count">${feed.length} активни обяви</span>
+			<span class="daynight-export__count">${feed.length} active listings</span>
 		</div>
 		<div class="daynight-export__actions">
-			<button type="button" class="daynight-export__btn daynight-export__btn--primary" data-export="mobilebg">Свали mobile.bg feed (XML)</button>
-			<button type="button" class="daynight-export__btn" data-export="carsbg">Свали cars.bg feed (CSV)</button>
-			<button type="button" class="daynight-export__btn daynight-export__btn--ghost" data-export="preview">Преглед на feed-а</button>
+			<button type="button" class="daynight-export__btn daynight-export__btn--primary" data-export="mobilebg">Download mobile.bg feed (XML)</button>
+			<button type="button" class="daynight-export__btn" data-export="carsbg">Download cars.bg feed (CSV)</button>
+			<button type="button" class="daynight-export__btn daynight-export__btn--ghost" data-export="preview">Preview feed</button>
 		</div>
 		<pre class="daynight-export__preview" hidden></pre>
-		<p class="daynight-export__hint">Файлът се качва в дилърския панел на mobile.bg / cars.bg → „Импорт на обяви". Снимките се обслужват от публични URL адреси.</p>
+		<p class="daynight-export__hint">Upload the file in the mobile.bg / cars.bg dealer dashboard → “Import listings". Photos are served from public URLs.</p>
 	`;
 
 	const stats = details.querySelector('.grid.grid-cols-4');
@@ -158,10 +158,10 @@ export function setupDashboardExportPanel() {
 			if (preview.hasAttribute('hidden')) {
 				preview.textContent = buildXml();
 				preview.removeAttribute('hidden');
-				button.textContent = 'Скрий feed-а';
+				button.textContent = 'Hide feed';
 			} else {
 				preview.setAttribute('hidden', '');
-				button.textContent = 'Преглед на feed-а';
+				button.textContent = 'Preview feed';
 			}
 		}
 	};

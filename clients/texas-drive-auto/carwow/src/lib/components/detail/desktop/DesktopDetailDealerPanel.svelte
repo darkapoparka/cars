@@ -16,7 +16,7 @@
 		<div class="listing-details--contact-dealer mb-28">
 			<img
 				src="/assets/images/avatar/contact-avatar.webp"
-				alt="Day Night Auto"
+				alt="Texas Drive Auto"
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
@@ -24,7 +24,7 @@
 
 			<div class="content">
 				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
-					Day Night Auto
+					Texas Drive Auto
 				</a>
 
 				<div class="verify">
@@ -35,7 +35,7 @@
 						decoding="async"
 						loading="lazy"
 					/>
-					<p class="text-highlight text-sm">Проверена автокъща</p>
+					<p class="text-highlight text-sm">Dealership preview</p>
 				</div>
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 				</p>
 				<div class="flex flex-col gap-4">
 					<a {...mapLinkProps}>{daynightSite.location}</a>
-					<a {...mapLinkProps} class="text-underline text-highlight text-sm"> Виж локация </a>
+					<a {...mapLinkProps} class="text-underline text-highlight text-sm"> View location </a>
 				</div>
 			</li>
 		</ul>
@@ -87,7 +87,7 @@
 				decoding="async"
 				loading="lazy"
 			/>
-			Обади се за оглед
+			Call about a viewing
 		</a>
 
 		<a href={viberHref} class="sa-cta sa-cta-ghost sa-cta-compact w-full">
@@ -99,7 +99,7 @@
 				decoding="async"
 				loading="lazy"
 			/>
-			Viber чат
+			Viber chat
 		</a>
 	</div>
 </div>

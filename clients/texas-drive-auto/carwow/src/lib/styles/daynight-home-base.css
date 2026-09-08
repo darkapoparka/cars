@@ -14,7 +14,7 @@
 }
 
 /* Heading + image element defaults from the legacy app.css baseline. Several home
-   headings (e.g. the reviews "Отзиви от клиенти" h2) set only `color` in the
+   headings (e.g. the reviews "Customer reviews unavailable in this preview" h2) set only `color` in the
    component stylesheet and inherited their size/line-height/weight from app.css's
    element rules — without these they collapse to the `*` 16px/26px/400 baseline.
    Component class rules (higher specificity) still win where they set their own

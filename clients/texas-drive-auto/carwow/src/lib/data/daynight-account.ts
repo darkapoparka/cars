@@ -1,14 +1,14 @@
 export const daynightAccount = {
-	title: 'Моят профил',
+	title: 'My profile',
 	subtitle:
-		'Управлявайте запитвания, запазени автомобили и заявки за продажба или бартер към Day Night Auto.',
-	listingsTitle: 'Моите автомобили',
-	newListingCta: 'Нова заявка за продажба',
-	messagesTitle: 'Запитвания',
-	favoritesTitle: 'Запазени автомобили',
-	profileTitle: 'Данни за контакт',
-	reviewsTitle: 'Моите отзиви',
-	passwordTitle: 'Сигурност на профила',
+		'Preview inquiries, saved vehicles, and questions about selling or trading a vehicle to Texas Drive Auto.',
+	listingsTitle: 'My vehicles',
+	newListingCta: 'New sale request',
+	messagesTitle: 'Inquiries',
+	favoritesTitle: 'Saved vehicles',
+	profileTitle: 'Contact details',
+	reviewsTitle: 'My reviews',
+	passwordTitle: 'Account security',
 	authNote:
-		'Това е фронтенд MVP на клиентски профил. Реална регистрация, вход и съхранение на данни се свързват след избор на backend/auth.'
+		'This is a customer account preview. Registration, sign-in, and data storage are unavailable.'
 } as const;

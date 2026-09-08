@@ -16,8 +16,8 @@ export interface Agent {
 export const agents: Agent[] = [
 	{
 		slug: 'prodazhbi-daynight-auto',
-		name: daynightTeam[0]?.name ?? 'Day Night Auto Sales Team',
-		title: daynightTeam[0]?.role ?? 'Консултанти продажби',
+		name: daynightTeam[0]?.name ?? 'Texas Drive Auto Sales Team',
+		title: daynightTeam[0]?.role ?? 'Sample sales profiles',
 		phone: daynightSite.phoneLabel,
 		email: daynightSite.email,
 		image: daynightTeam[0]?.image ?? daynightSite.logoDark,
@@ -25,12 +25,12 @@ export const agents: Agent[] = [
 		sales: daynightSite.inventoryCount,
 		bio:
 			daynightTeam[0]?.bio ??
-			'Екипът съдейства при избор на автомобил, оглед, документи, бартер и финансиране.'
+			'Ask about vehicle selection, inspections, paperwork, and trade-in availability. No dealer financing or payment plans are offered.'
 	},
 	{
 		slug: 'barter-i-ocenka',
-		name: daynightTeam[1]?.name ?? 'Day Night Auto Trade-In Team',
-		title: daynightTeam[1]?.role ?? 'Оценка, покупка и бартер',
+		name: daynightTeam[1]?.name ?? 'Texas Drive Auto Trade-In Team',
+		title: daynightTeam[1]?.role ?? 'Appraisal, purchase, and trade-in questions',
 		phone: daynightSite.phoneLabel,
 		email: daynightSite.email,
 		image: daynightTeam[1]?.image ?? daynightSite.logoDark,
@@ -38,12 +38,12 @@ export const agents: Agent[] = [
 		sales: 0,
 		bio:
 			daynightTeam[1]?.bio ??
-			'Екипът приема заявки за продажба или замяна на автомобил и подготвя следващите стъпки за оглед.'
+			'Ask whether the dealership buys vehicles or accepts trade-ins, and what an appraisal would require.'
 	},
 	{
 		slug: 'dokumenti-finansirane',
-		name: daynightTeam[2]?.name ?? 'Екип документи и финансиране',
-		title: daynightTeam[2]?.role ?? 'Документи и финансиране',
+		name: daynightTeam[2]?.name ?? 'Paperwork and buyer-arranged funding questions',
+		title: daynightTeam[2]?.role ?? 'Paperwork and payment',
 		phone: daynightSite.phoneLabel,
 		email: daynightSite.email,
 		image: daynightTeam[2]?.image ?? daynightSite.logoDark,
@@ -51,12 +51,12 @@ export const agents: Agent[] = [
 		sales: 0,
 		bio:
 			daynightTeam[2]?.bio ??
-			'Екипът съдейства с документи, регистрация, финансиране и практични стъпки след избора на автомобил.'
+			'Ask about paperwork, registration, and next steps after choosing a vehicle. Funding must be arranged independently.'
 	},
 	{
 		slug: 'klientski-zapitvania',
-		name: daynightTeam[3]?.name ?? 'Екип клиентски заявки',
-		title: daynightTeam[3]?.role ?? 'Огледи и следващи стъпки',
+		name: daynightTeam[3]?.name ?? 'Customer inquiry preview',
+		title: daynightTeam[3]?.role ?? 'Viewings and next steps',
 		phone: daynightSite.phoneLabel,
 		email: daynightSite.email,
 		image: daynightTeam[3]?.image ?? daynightSite.logoDark,
@@ -64,7 +64,7 @@ export const agents: Agent[] = [
 		sales: 0,
 		bio:
 			daynightTeam[3]?.bio ??
-			'Екипът координира клиентските запитвания, огледите и следващите стъпки до посещението на място.'
+			'Contact the dealership to confirm how to request a viewing and prepare for a visit.'
 	}
 ];
 

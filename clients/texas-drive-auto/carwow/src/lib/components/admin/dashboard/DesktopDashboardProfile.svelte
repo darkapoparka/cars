@@ -84,10 +84,10 @@
 		{
 			id: 'last_name',
 			name: 'last_name',
-			label: 'Фамилия*',
+			label: 'Last name*',
 			value: 'Smith',
-			placeholder: 'Фамилия*',
-			ariaLabel: 'Фамилия',
+			placeholder: 'Last name*',
+			ariaLabel: 'Last name',
 			className: 'input-large input-clear',
 			wrapperClass: 'md-col-span-2 padding-0',
 			clear: true
@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'Dallas, Dallas, Dallas City, Studentski Grad, 18 Atanas Manchev St.';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -167,7 +167,7 @@
 		}
 	];
 	const description =
-		'Това е фронтенд MVP на клиентски профил. Реална регистрация, вход и съхранение на данни се свързват след избор на backend/auth. \n                                        ';
+		'This is a frontend MVP of a customer profile. Live registration, sign-in, and data storage will be connected after a backend/auth solution is selected. \n                                        ';
 	const mapSrc =
 		'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97101.88872869895!2d-74.22688511715344!3d40.487336736141906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1689125037376!5m2!1svi!2s';
 </script>
@@ -213,7 +213,7 @@
 							id={field.target}
 							accept="image/png,image/jpeg,image/jpg,image/svg+xml"
 							class="upload-input"
-							aria-label="Поле"
+							aria-label="Field"
 						/>
 						<span class="text-muted file-name text-xs" data-target={field.target}
 							>No file choose</span
@@ -273,12 +273,12 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Toggle Моят профил"
+			aria-label="Toggle My account"
 			type="button"
 		>
-			Show Моят профил
+			Show My account
 		</button>
-		<p class="h3 mb-40">Данни за контакт</p>
+		<p class="h3 mb-40">Contact details</p>
 		<form action="#">
 			<div class="dashboard-box style-5 mb-38 bg-white">
 				<p class="h4 mb-20">Become Dealer</p>
@@ -297,7 +297,7 @@
 					</a>
 				</div>
 
-				<p class="h4 mb-20">Информация</p>
+				<p class="h4 mb-20">Information</p>
 
 				{#each uploadFields as field (field.id)}
 					{@render uploadField(field)}
@@ -311,13 +311,13 @@
 					<div class="padding-0 col-span-2">
 						<p class="font-weight-600 mb-8">Description*</p>
 						<textarea
-							placeholder="Вашето съобщение*"
+							placeholder="Your message*"
 							rows="4"
 							name="message"
 							class="message textarea-primary text-secondary"
 							id="message"
 							required
-							aria-label="Съобщение">{description}</textarea
+							aria-label="Message">{description}</textarea
 						>
 					</div>
 				</div>
@@ -344,7 +344,7 @@
 							name="DayofBirth"
 							id="DayofBirth"
 							value="1994-03-22"
-							aria-label="Поле"
+							aria-label="Field"
 						/>
 					</div>
 				</div>
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="Texas Drive Auto map"
 					></iframe>
 				</div>
 			</div>

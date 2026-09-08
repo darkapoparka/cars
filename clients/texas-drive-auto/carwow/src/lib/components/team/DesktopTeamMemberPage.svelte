@@ -39,9 +39,9 @@
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={resolve('/')}>Home</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/team')}>Екип</a></li>
+				<li><a href={resolve('/team')}>Contact options</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><span>{member.name}</span></li>
 			</ul>
@@ -55,7 +55,7 @@
 					<img src={member.image} alt={member.name} loading="eager" decoding="async" />
 				</div>
 				<div class="team-member-profile__content">
-					<p class="eyebrow">Примерен профил</p>
+					<p class="eyebrow">Sample profile</p>
 					<h1>{member.name}</h1>
 					<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 					<p class="h5 text-highlight mb-18">{member.role}</p>
@@ -63,26 +63,26 @@
 					<p class="h7 line-height-28 mb-30">{member.detail}</p>
 					<div class="team-member-profile__actions">
 						<a {...phoneLinkProps} class="sa-cta-large sa-cta sa-cta-primary">
-							Обади се за оглед
+							Call about a viewing
 						</a>
 						{#if member.email}
-							<a href={`mailto:${member.email}`} class="sa-cta sa-cta-ghost"> Изпрати имейл </a>
+							<a href={`mailto:${member.email}`} class="sa-cta sa-cta-ghost"> Send email </a>
 						{/if}
 					</div>
 					<div class="team-member-profile__facts">
 						<div>
-							<span>Телефон</span>
+							<span>Phone</span>
 							<a {...phoneLinkProps}>{member.phone}</a>
 						</div>
 						{#if member.email}
 							<div>
-								<span>Имейл</span>
+								<span>Email</span>
 								<a href={`mailto:${member.email}`}>{member.email}</a>
 							</div>
 						{/if}
 						<div>
-							<span>Локация</span>
-							<a {...mapLinkProps}>София</a>
+							<span>Location</span>
+							<a {...mapLinkProps}>Dallas</a>
 						</div>
 					</div>
 				</div>
@@ -93,8 +93,8 @@
 	<section class="pb-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Препоръчани автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
+				<h2>Recommended vehicles</h2>
+				<a href={resolve('/inventory')} class="sa-cta-compact sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each recommendedVehicles as vehicle (vehicle.slug)}
@@ -103,7 +103,7 @@
 						<div>
 							<p class="h5 mb-8">{vehicle.shortTitle} {vehicle.year}</p>
 							<p class="text-secondary mb-10">{vehicle.mileage} · {vehicle.fuel}</p>
-							<p class="h5 text-highlight">{vehicle.priceEur}</p>
+							<p class="h5 text-highlight">{vehicle.priceLabel}</p>
 						</div>
 					</a>
 				{/each}
@@ -115,10 +115,10 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<div>
-					<h2>Отзиви от клиенти</h2>
+					<h2>Customer reviews unavailable in this preview</h2>
 					<p class="text-secondary">{daynightReviewDisclosure}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/reviews')} class="sa-cta-compact sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}
@@ -136,16 +136,16 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">Day Night Auto София</p>
-					<h2>Запази час за оглед</h2>
+					<p class="eyebrow">Texas Drive Auto</p>
+					<h2>Request a viewing appointment</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
+						Contact the dealership to confirm availability, viewing arrangements, paperwork, and whether trade-ins are accepted. Funding must be arranged independently.
 					</p>
 					<a {...phoneLinkProps} class="sa-cta sa-cta-primary">
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="320" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Map to Texas Drive Auto" height="320" />
 			</div>
 		</div>
 	</section>
@@ -153,7 +153,7 @@
 	{#if otherMembers.length}
 		<section class="pb-100">
 			<div class="container">
-				<h2 class="mb-30">Още от екипа</h2>
+				<h2 class="mb-30">More sample profiles</h2>
 				<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 					{#each otherMembers as teammate (teammate.slug)}
 						<a href={resolve('/team/[slug]', { slug: teammate.slug })} class="team-teammate-card">

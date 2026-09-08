@@ -27,7 +27,7 @@
 		title={daynightSite.sellCarCta}
 	>
 		{#if mobile}
-			{compact ? 'Продай' : daynightSite.sellCarCta}
+			{compact ? 'Sell' : daynightSite.sellCarCta}
 		{:else}
 			<SiteChromeIcon name="plus-circle" />
 		{/if}

@@ -59,7 +59,7 @@
 	<SiteChrome />
 
 	<main id="main-content" tabindex="-1" aria-labelledby="inventory-map-title">
-		<h1 id="inventory-map-title" class="sr-only">Карта на наличните автомобили</h1>
+		<h1 id="inventory-map-title" class="sr-only">Available vehicles map</h1>
 
 		<section class="inventory-map-section">
 			<div class="inventory-map-grid">
@@ -81,10 +81,10 @@
 												fill="#1C1C1C"
 											/>
 										</svg>
-										Филтри</button
+										Filters</button
 									>
 									<p class="md-hidden">
-										Карта на наличните автомобили · {filters.resultCount} автомобила
+										Available vehicles map · {filters.resultCount} vehicles
 									</p>
 								</div>
 							</div>
@@ -96,7 +96,7 @@
 									<button
 										class={isListPanelActive ? 'item-menu active' : 'item-menu'}
 										type="button"
-										aria-label="Списъчен изглед"
+										aria-label="List view"
 										aria-pressed={isListPanelActive}
 										onclick={() => showPanel('list')}
 									>
@@ -134,7 +134,7 @@
 									<button
 										class={isGridPanelActive ? 'item-menu active' : 'item-menu'}
 										type="button"
-										aria-label="Картов изглед"
+										aria-label="Map view"
 										aria-pressed={isGridPanelActive}
 										onclick={() => showPanel('grid')}
 									>
@@ -155,7 +155,7 @@
 							</div>
 							<div class="inventory-map-toolbar__cell inventory-map-toolbar__cell--sort">
 								<div class="flex h-full items-center justify-end gap-[8px]">
-									<p class="md-hidden">Сортиране</p>
+									<p class="md-hidden">Sorting</p>
 									<SortDropdown />
 								</div>
 							</div>
@@ -167,7 +167,7 @@
 								data-show="false"
 							>
 								<p class="inline gap-[4px]">
-									<span id="filterMatchesCount">{filters.resultCount} </span> автомобила
+									<span id="filterMatchesCount">{filters.resultCount} </span> vehicles
 								</p>
 								<div
 									class="divider-vertical-style2 inline-block h-[16px] align-middle"
@@ -177,7 +177,7 @@
 								<div id="filterTags" class="inline gap-[8px]"></div>
 
 								<button class="btn-clear-items" id="btnClearAll">
-									Изчисти
+									Clear
 									<img src="/assets/icons/X-White.svg" alt="X" />
 								</button>
 							</div>
@@ -206,7 +206,7 @@
 					id="map"
 					class="daynight-inventory-map-panel"
 					iframeClass="daynight-inventory-map-panel__iframe"
-					title="Карта до Day Night Auto София"
+					title="Map to Texas Drive Auto"
 					src={mapEmbedSrc}
 					width="100%"
 					height="100%"
@@ -225,12 +225,12 @@
 						></span>
 						<span class="daynight-inventory-map-panel__pin"></span>
 						<div class="daynight-inventory-map-panel__card">
-							<strong>Day Night Auto София</strong>
+							<strong>Texas Drive Auto</strong>
 							<span>{daynightSite.location}</span>
 						</div>
 					</div>
 					<a class="daynight-inventory-map-panel__open" {...mapLinkAttributes}>
-						Отвори в Google Maps
+						Open in Google Maps
 					</a>
 				</LazyMapEmbed>
 			</div>

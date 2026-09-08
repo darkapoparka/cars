@@ -26,8 +26,8 @@
 		| 'status'
 		| 'condition'
 		| 'price'
-		| 'priceEur'
-		| 'priceBgn'
+		| 'priceLabel'
+		| 'secondaryPrice'
 		| 'monthly'
 		| 'mileageValue'
 		| 'mileageText'
@@ -116,8 +116,8 @@
 			status: vehicle.status,
 			condition: vehicle.condition,
 			price: String(vehicle.price),
-			priceEur: textValue(vehicle.price_eur),
-			priceBgn: textValue(vehicle.price_bgn),
+			priceLabel: textValue(vehicle.price_eur),
+			secondaryPrice: textValue(vehicle.price_bgn),
 			monthly: textValue(vehicle.monthly),
 			mileageValue: String(vehicle.mileage_value),
 			mileageText: textValue(vehicle.mileage_text),
@@ -333,13 +333,13 @@
 				</div>
 
 				<div class="grid gap-2">
-					<Label for="priceEur">EUR label</Label>
-					<Input id="priceEur" name="priceEur" value={field('priceEur')} autocomplete="off" />
+					<Label for="priceLabel">EUR label</Label>
+					<Input id="priceLabel" name="priceLabel" value={field('priceLabel')} autocomplete="off" />
 				</div>
 
 				<div class="grid gap-2">
-					<Label for="priceBgn">BGN label</Label>
-					<Input id="priceBgn" name="priceBgn" value={field('priceBgn')} autocomplete="off" />
+					<Label for="secondaryPrice">BGN label</Label>
+					<Input id="secondaryPrice" name="secondaryPrice" value={field('secondaryPrice')} autocomplete="off" />
 				</div>
 
 				<div class="grid gap-2 md:col-span-2">
@@ -494,7 +494,7 @@
 						<div class="bg-background rounded-lg border p-3">
 							<p class="text-muted-foreground text-xs">Price</p>
 							<p class="truncate font-medium">
-								{field('priceEur') || field('price') || 'No price'}
+								{field('priceLabel') || field('price') || 'No price'}
 							</p>
 						</div>
 						<div class="bg-background rounded-lg border p-3">

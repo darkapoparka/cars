@@ -12,7 +12,7 @@ function uniqueImages(images: string[]) {
 }
 
 function formatMileage(value: number) {
-	return `${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} км`;
+	return `${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} mi`;
 }
 
 function photosForVehicle(photos: VehiclePhotoRow[], vehicleId: string) {
@@ -52,8 +52,8 @@ export function mapPublishedVehicleToCar(vehicle: VehicleRow, photos: VehiclePho
 		drive: vehicle.drive,
 		color: vehicle.color,
 		price: vehicle.price,
-		priceEur: vehicle.price_eur,
-		priceBgn: vehicle.price_bgn,
+		priceLabel: vehicle.price_eur,
+		secondaryPrice: vehicle.price_bgn,
 		monthly: vehicle.monthly,
 		image,
 		gallery,

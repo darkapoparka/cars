@@ -65,12 +65,12 @@
 			address: {
 				'@type': 'PostalAddress',
 				streetAddress: daynightSite.location,
-				addressLocality: 'София',
-				addressRegion: 'София',
+				addressLocality: 'Dallas',
+				addressRegion: 'Dallas',
 				addressCountry: 'BG'
 			},
 			areaServed: 'BG',
-			priceRange: '€€'
+			priceRange: '$$'
 		}).replaceAll('<', '\\u003c')
 	);
 
@@ -91,7 +91,7 @@
 	<JsonLdScript json={dealerJsonLd} />
 </svelte:head>
 
-<a class="skip-to-content" href="#main-content">Към основното съдържание</a>
+<a class="skip-to-content" href="#main-content">Skip to main content</a>
 
 <RouteBodyClassRuntime bodyClasses={routeBodyClasses} />
 

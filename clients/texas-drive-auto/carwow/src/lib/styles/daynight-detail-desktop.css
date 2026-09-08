@@ -237,7 +237,7 @@
 }
 /* The legacy PDP rendered these headings sentence-case despite their `.capitalize`
    hooks (a template override that vanished with app.css). Preserve that: Bulgarian
-   Title Case would wrongly capitalise prepositions, e.g. "Преглед На Автомобила". */
+   Title Case would wrongly capitalise prepositions, e.g. "Vehicle Overview". */
 .daynight-detail .capitalize {
 	text-transform: none;
 }

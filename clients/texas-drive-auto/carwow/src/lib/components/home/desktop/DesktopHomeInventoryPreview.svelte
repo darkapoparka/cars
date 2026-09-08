@@ -28,11 +28,11 @@
 	<div class="daynight-home-container home-browse-heading">
 		<DesktopSectionHeading
 			centered={!showHeaderCta}
-			title="Най-нови автомобили"
+			title="Latest vehicles"
 			href={showHeaderCta ? resolve('/inventory') : undefined}
-			label={`Виж всички ${inventoryCount} автомобила`}
+			label={`View all ${inventoryCount} vehicles`}
 			copy={showHeaderSubtitle
-				? 'Последно добавени предложения от наличността на Day Night Auto.'
+				? 'Recently added listings from Texas Drive Auto’s inventory.'
 				: undefined}
 		/>
 	</div>
@@ -48,7 +48,7 @@
 				<div class="inventory-browse-footer">
 					<DesktopBrowseLink
 						href={resolve('/inventory')}
-						label={`Виж всички ${inventoryCount} автомобила`}
+						label={`View all ${inventoryCount} vehicles`}
 					/>
 				</div>
 			{/if}

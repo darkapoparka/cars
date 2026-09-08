@@ -21,8 +21,8 @@
 {:else}
 	<div class="mobile-inventory-empty">
 		<Car size={28} strokeWidth={2.2} />
-		<h2>Няма автомобили по тези филтри</h2>
-		<p>Пробвайте с друга марка, модел или изчистете търсенето.</p>
-		<button type="button" onclick={onClearFilters}>Покажи всички</button>
+		<h2>No vehicles match these filters</h2>
+		<p>Try another make or model, or clear your search.</p>
+		<button type="button" onclick={onClearFilters}>Show all</button>
 	</div>
 {/if}

@@ -2942,7 +2942,7 @@ body.daynight-home-page
 		border-color: #d71920 !important;
 		border-radius: 11px !important;
 		box-shadow: 0 14px 32px rgba(215, 25, 32, 0.22) !important;
-		/* Auto basis so the live-count label ("Търси в 54 автомобила") never clips. */
+		/* Auto basis so the live-count label ("Search в 54 vehicles") never clips. */
 		flex: 0 0 auto;
 		min-height: 60px;
 		min-width: 220px !important;
@@ -4309,7 +4309,7 @@ body.daynight-home-page .daynight-home-inventory__card:hover {
 }
 
 /* DayNight: brands as a static, full-width row (spans the same width as the
-	   "Автомобили по тип" section) — 6 per row, no carousel, no centered cap. */
+	   "Vehicles by type" section) — 6 per row, no carousel, no centered cap. */
 /* DayNight: rotate the dropdown caret 180° when its menu opens. */
 body.daynight-home-page
 	#daynight-home-main-nav
@@ -5327,7 +5327,7 @@ body.daynight-home-page .daynight-home-metric__label {
 }
 
 /* Bulgarian sentence-case: title-casing headings in Cyrillic reads
-	   machine-translated ("Преглед На Автомобила", FAQ toggles).
+	   machine-translated ("Vehicle Overview", FAQ toggles).
 	   Bulgarian does not title-case, so neutralize text-transform site-wide. */
 .capitalize,
 .post-style-6 .title,

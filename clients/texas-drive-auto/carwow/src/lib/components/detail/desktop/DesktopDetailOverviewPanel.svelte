@@ -7,68 +7,68 @@
 		{
 			id: 'mileage',
 			icon: '/assets/icons/icon-gauge.svg',
-			label: 'Пробег:',
+			label: 'Mileage:',
 			value: vehicle.mileage
 		},
 		{
 			id: 'year',
 			icon: '/assets/icons/calendar.svg',
-			label: 'Година:',
+			label: 'Year:',
 			value: `${vehicle.year}`
 		},
 		{
 			id: 'fuel',
 			icon: '/assets/icons/gaspump.svg',
-			label: 'Гориво:',
+			label: 'Fuel:',
 			value: vehicle.fuel
 		},
 		{
 			id: 'color',
 			icon: '/assets/icons/palette.svg',
-			label: 'Цвят:',
+			label: 'Color:',
 			value: vehicle.color
 		},
 		{
 			id: 'location',
 			icon: '/assets/icons/MapPin.svg',
-			label: 'Локация:',
-			value: 'София'
+			label: 'Location:',
+			value: 'Dallas'
 		},
 		{
 			id: 'interior',
 			icon: '/assets/icons/Seatbelt.svg',
-			label: 'Интериор:',
-			value: 'Тъмен салон'
+			label: 'Interior:',
+			value: 'Dark interior'
 		},
 		{
 			id: 'engine',
 			icon: '/assets/icons/Frame.svg',
-			label: 'Двигател:',
+			label: 'Engine:',
 			value: vehicle.engine
 		},
 		{
 			id: 'transmission',
 			icon: '/assets/icons/transmission-2.svg',
-			label: 'Скоростна кутия:',
+			label: 'Transmission:',
 			value: vehicle.transmission
 		},
 		{
 			id: 'vin',
 			icon: '/assets/icons/Barcode.svg',
 			label: 'VIN:',
-			value: 'предоставя се при оглед'
+			value: 'ask at the viewing'
 		},
 		{
 			id: 'lot',
 			icon: '/assets/icons/QrCode.svg',
-			label: 'Референтен №:',
+			label: 'Reference No.:',
 			value: vehicle.lot
 		}
 	]);
 </script>
 
 <div class="listing-details--sidebar-box mb-40">
-	<p class="h5 mb-4 capitalize">Преглед на автомобила</p>
+	<p class="h5 mb-4 capitalize">Vehicle overview</p>
 	<ul class="car-overview-list-style2">
 		{#each overviewItems as item (item.id)}
 			<li class="grid grid-cols-2">

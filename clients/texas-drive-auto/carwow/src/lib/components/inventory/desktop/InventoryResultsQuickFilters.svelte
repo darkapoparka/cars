@@ -51,7 +51,7 @@
 <section
 	class="daynight-inventory-results-quick-filters daynight-inventory-filterbar daynight-inventory-results-filterbar"
 	data-daynight-results-quick-filters
-	aria-label="Бързи филтри"
+	aria-label="Quick filters"
 >
 	<div class="daynight-inventory-results-filterbar__fields">
 		{#each quickFilters as filter (filter.name)}
@@ -66,13 +66,13 @@
 			onclick={toggleAdvanced}
 		>
 			<SlidersHorizontal aria-hidden="true" size={17} strokeWidth={2.2} />
-			<span>Още филтри</span>
+			<span>More filters</span>
 			{#if advancedSelectionCount > 0}
 				<span class="daynight-inventory-results-filterbar__count">{advancedSelectionCount}</span>
 			{/if}
 		</button>
 		<div class="daynight-inventory-results-filterbar__sort">
-			<SortDropdown buttonLabel="Сортиране" />
+			<SortDropdown buttonLabel="Sorting" />
 		</div>
 	</div>
 
@@ -87,10 +87,10 @@
 		>
 			<div class="daynight-inventory-results-filterbar__advanced-head">
 				<div>
-					<strong>Допълнителни филтри</strong>
-					<span>Скорости, каросерия и екстри</span>
+					<strong>Additional filters</strong>
+					<span>Transmission, body style, and features</span>
 				</div>
-				<button type="button" aria-label="Затвори допълнителните филтри" onclick={closeAdvanced}>
+				<button type="button" aria-label="Close additional filters" onclick={closeAdvanced}>
 					<X aria-hidden="true" size={18} strokeWidth={2.2} />
 				</button>
 			</div>

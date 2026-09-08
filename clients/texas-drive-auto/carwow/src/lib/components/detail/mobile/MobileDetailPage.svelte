@@ -34,22 +34,22 @@
 	const activePhotoSrc = $derived(photos[activePhoto] ?? photos[0] ?? vehicle.image);
 	const visiblePhotos = $derived(photos.slice(0, 6));
 	const specs = $derived<{ icon: DayNightSpecIconName; label: string; value: string }[]>([
-		{ icon: 'year', label: 'Година', value: String(vehicle.year) },
-		{ icon: 'mileage', label: 'Пробег', value: vehicle.mileage },
-		{ icon: 'fuel', label: 'Гориво', value: vehicle.fuel },
-		{ icon: 'transmission', label: 'Скорости', value: vehicle.transmission }
+		{ icon: 'year', label: 'Year', value: String(vehicle.year) },
+		{ icon: 'mileage', label: 'Mileage', value: vehicle.mileage },
+		{ icon: 'fuel', label: 'Fuel', value: vehicle.fuel },
+		{ icon: 'transmission', label: 'Transmission', value: vehicle.transmission }
 	]);
 	const detailSpecs = $derived([
-		['Каросерия', vehicle.body],
-		['Двигател', vehicle.engine],
-		['Мощност', vehicle.power],
-		['Цвят', vehicle.color],
-		['Лот', vehicle.lot]
+		['Body style', vehicle.body],
+		['Engine', vehicle.engine],
+		['Power', vehicle.power],
+		['Color', vehicle.color],
+		['Lot', vehicle.lot]
 	]);
 	const tabs = [
-		{ key: 'info', label: 'Инфо' },
-		{ key: 'data', label: 'Данни' },
-		{ key: 'extras', label: 'Екстри' }
+		{ key: 'info', label: 'Info' },
+		{ key: 'data', label: 'Specs' },
+		{ key: 'extras', label: 'Features' }
 	] as const;
 	const COLLAPSED_SNAP_RATIO = 0.58;
 	const FULL_SNAP_OFFSET = 52;
@@ -150,14 +150,14 @@
 
 	async function shareVehicle() {
 		const url = globalThis.location?.href ?? resolve(`/inventory/${vehicle.slug}`);
-		const title = `${vehicle.shortTitle} - ${vehicle.priceEur}`;
+		const title = `${vehicle.shortTitle} - ${vehicle.priceLabel}`;
 
 		try {
 			if (navigator.share) {
 				await navigator.share({ title, text: vehicle.conditionLine, url });
 			} else if (navigator.clipboard) {
 				await navigator.clipboard.writeText(url);
-				shareState = 'Копирано';
+				shareState = 'Copied';
 				setTimeout(() => (shareState = ''), 1600);
 			}
 		} catch {
@@ -172,12 +172,12 @@
 	id="main-content"
 	tabindex="-1"
 	class="mobile-detail"
-	aria-label="Детайли за автомобил"
+	aria-label="Vehicle details"
 	style={mediaHeightPx === null ? undefined : `--pdp-media-h: ${mediaHeightPx}px`}
 >
 	<section
 		class="mobile-detail__media"
-		aria-label="Основна снимка"
+		aria-label="Main photo"
 		ontouchstart={handleMediaTouchStart}
 		ontouchend={handleMediaTouchEnd}
 	>
@@ -195,7 +195,7 @@
 			<a
 				class="mobile-detail__nav-button mobile-detail__nav-button--back"
 				href={resolve('/inventory')}
-				aria-label="Назад към автомобили"
+				aria-label="Back to vehicles"
 			>
 				<ChevronLeft size={22} strokeWidth={2.35} />
 			</a>
@@ -205,7 +205,7 @@
 					class:is-saved={isSaved}
 					type="button"
 					aria-pressed={isSaved}
-					aria-label={isSaved ? 'Премахни от запазени' : 'Запази'}
+					aria-label={isSaved ? 'Remove from saved' : 'Save'}
 					onclick={() => garage.toggleFavorite(vehicle.slug)}
 				>
 					<Heart size={19} strokeWidth={2.15} />
@@ -215,7 +215,7 @@
 					class:is-saved={isCompared}
 					type="button"
 					aria-pressed={isCompared}
-					aria-label={isCompared ? 'Премахни от сравнение' : 'Добави за сравнение'}
+					aria-label={isCompared ? 'Remove from comparison' : 'Add to comparison'}
 					onclick={() => garage.toggleCompare(vehicle.slug)}
 				>
 					<GitCompare size={19} strokeWidth={2.15} />
@@ -223,7 +223,7 @@
 				<button
 					class="mobile-detail__nav-button mobile-detail__nav-button--share"
 					type="button"
-					aria-label="Сподели"
+					aria-label="Share"
 					onclick={shareVehicle}
 				>
 					<Share size={19} strokeWidth={2.15} />
@@ -232,12 +232,12 @@
 		</div>
 
 		{#if photos.length > 1}
-			<div class="mobile-detail__thumbs" aria-label="Снимки">
+			<div class="mobile-detail__thumbs" aria-label="Photos">
 				{#each visiblePhotos as photo, index (photo)}
 					<button
 						type="button"
 						class:is-active={index === activePhoto}
-						aria-label={`Снимка ${index + 1}`}
+						aria-label={`Photo ${index + 1}`}
 						aria-pressed={index === activePhoto}
 						onclick={() => (activePhoto = index)}
 					>
@@ -271,7 +271,7 @@
 	>
 		<Drawer.Content
 			class="mobile-detail-sheet"
-			aria-label="Информация за автомобила"
+			aria-label="Vehicle information"
 			data-expanded={sheetExpanded}
 			data-full={sheetFull}
 		>
@@ -284,15 +284,15 @@
 				<small class="mobile-detail-sheet__price-monthly">{vehicle.monthly}</small>
 				<h1 class="mobile-detail-sheet__title">{vehicle.shortTitle}</h1>
 				<div class="mobile-detail-sheet__price">
-					<strong class="mobile-detail-sheet__price-eur">{vehicle.priceEur}</strong>
-					<span class="mobile-detail-sheet__price-bgn">{vehicle.priceBgn}</span>
+					<strong class="mobile-detail-sheet__price-eur">{vehicle.priceLabel}</strong>
+					<span class="mobile-detail-sheet__price-bgn">{vehicle.secondaryPrice}</span>
 				</div>
 			</header>
 
 			<div class="mobile-detail-sheet__actions">
 				<a class="is-primary" href={phoneHref}>
 					<PhoneCall size={18} strokeWidth={2.4} />
-					Обади се
+					Call
 				</a>
 				<a class="is-viber" href={viberHref}>
 					<svg
@@ -337,7 +337,7 @@
 			<div
 				class="mobile-detail-tabs"
 				role="tablist"
-				aria-label="Детайли"
+				aria-label="Details"
 				data-active-tab={activeTab}
 			>
 				{#each tabs as tab (tab.key)}
@@ -365,12 +365,12 @@
 			>
 				{#if activeTab === 'info'}
 					<section class="mobile-detail__section">
-						<h2>Описание</h2>
+						<h2>Description</h2>
 						<p class="mobile-detail__section-lead">{vehicle.conditionLine}</p>
 						<p>{vehicle.description}</p>
 					</section>
 				{:else if activeTab === 'data'}
-					<div class="mobile-detail__spec-grid" aria-label="Основни данни">
+					<div class="mobile-detail__spec-grid" aria-label="Key specs">
 						{#each specs as spec (spec.label)}
 							<div>
 								<span class="mobile-detail__spec-icon">
@@ -383,7 +383,7 @@
 					</div>
 
 					<section class="mobile-detail__section">
-						<h2>Детайли</h2>
+						<h2>Details</h2>
 						<dl>
 							{#each detailSpecs as [label, value] (label)}
 								<div>
@@ -395,7 +395,7 @@
 					</section>
 				{:else if activeTab === 'extras'}
 					<section class="mobile-detail__section">
-						<h2>Екстри</h2>
+						<h2>Features</h2>
 						<ul>
 							{#each vehicle.features as feature (feature)}
 								<li>{feature}</li>
@@ -405,12 +405,12 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Day Night Auto предлага</strong>
+					<strong>Questions for Texas Drive Auto</strong>
 					<ul class="mobile-detail-sheet__offer-list">
-						<li>Финансиране и лизинг</li>
-						<li>Бартер и замяна</li>
-						<li>Съдействие с документите</li>
-						<li>Оглед в София</li>
+						<li>Buying with your own funding?</li>
+						<li>Are trade-ins accepted?</li>
+						<li>What paperwork is needed?</li>
+						<li>How can I arrange a viewing?</li>
 					</ul>
 				</div>
 

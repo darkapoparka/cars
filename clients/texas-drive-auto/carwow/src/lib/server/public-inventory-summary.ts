@@ -7,11 +7,11 @@ import { getDealerBySlug } from '$lib/server/repositories/dealers';
 import type { InventoryCountSummary } from '$lib/types/inventory';
 
 const budgetTiers = [
-	{ label: 'До 10 000 EUR', value: 'under-10000', limit: 10000 },
-	{ label: 'До 20 000 EUR', value: 'under-20000', limit: 20000 },
-	{ label: 'До 30 000 EUR', value: 'under-30000', limit: 30000 },
-	{ label: 'До 50 000 EUR', value: 'under-50000', limit: 50000 },
-	{ label: 'Над 50 000 EUR', value: 'over-50000', min: 50000 }
+	{ label: 'Up to 10 000 USD', value: 'under-10000', limit: 10000 },
+	{ label: 'Up to 20 000 USD', value: 'under-20000', limit: 20000 },
+	{ label: 'Up to 30 000 USD', value: 'under-30000', limit: 30000 },
+	{ label: 'Up to 50 000 USD', value: 'under-50000', limit: 50000 },
+	{ label: 'Over 50 000 USD', value: 'over-50000', min: 50000 }
 ] as const;
 
 type SummaryVehicle = Pick<Car, 'slug' | 'brand' | 'body' | 'price'>;

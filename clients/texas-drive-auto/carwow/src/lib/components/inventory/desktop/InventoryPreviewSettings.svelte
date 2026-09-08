@@ -17,10 +17,10 @@
 	} = $props();
 
 	const densityOptions = [
-		{ index: 0, label: '2 колони' },
-		{ index: 1, label: '3 колони' },
-		{ index: 2, label: '4 колони' },
-		{ index: 3, label: '5 колони' }
+		{ index: 0, label: '2 columns' },
+		{ index: 1, label: '3 columns' },
+		{ index: 2, label: '4 columns' },
+		{ index: 3, label: '5 columns' }
 	];
 
 	let open = $state(false);
@@ -38,19 +38,19 @@
 
 <div class="inventory-preview-settings" data-daynight-preview-settings>
 	{#if open}
-		<section class="inventory-preview-settings__panel" aria-label="Настройки на изгледа">
+		<section class="inventory-preview-settings__panel" aria-label="View settings">
 			<header>
 				<div>
-					<span>Демо настройки</span>
-					<strong>Преглед на инвентара</strong>
+					<span>Demo settings</span>
+					<strong>Inventory preview</strong>
 				</div>
-				<button type="button" aria-label="Затвори настройките" onclick={close}>
+				<button type="button" aria-label="Close settings" onclick={close}>
 					<X aria-hidden="true" size={18} strokeWidth={2.2} />
 				</button>
 			</header>
 
 			<div class="inventory-preview-settings__group">
-				<span>Подредба</span>
+				<span>Layout</span>
 				<div class="inventory-preview-settings__segmented">
 					<button
 						class:active={layoutMode === 'grid'}
@@ -59,7 +59,7 @@
 						onclick={() => onLayoutChange('grid')}
 					>
 						<LayoutGrid aria-hidden="true" size={17} />
-						Без колона
+						Without sidebar
 					</button>
 					<button
 						class:active={layoutMode === 'sidebar'}
@@ -68,13 +68,13 @@
 						onclick={() => onLayoutChange('sidebar')}
 					>
 						<PanelLeft aria-hidden="true" size={17} />
-						С колона
+						With sidebar
 					</button>
 				</div>
 			</div>
 
 			<div class="inventory-preview-settings__group">
-				<span>Карти на ред</span>
+				<span>Cards per row</span>
 				<div class="inventory-preview-settings__density">
 					{#each densityOptions as option (option.index)}
 						<button
@@ -90,14 +90,14 @@
 				</div>
 			</div>
 
-			<p>Тези контроли са само за сравнение на демо вариантите.</p>
+			<p>These controls are only for comparing demo variants.</p>
 		</section>
 	{/if}
 
 	<button
 		class="inventory-preview-settings__launcher"
 		type="button"
-		aria-label={open ? 'Затвори настройките на изгледа' : 'Настройки на изгледа'}
+		aria-label={open ? 'Close view settings' : 'View settings'}
 		aria-expanded={open}
 		onclick={() => (open = !open)}
 	>

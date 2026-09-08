@@ -35,16 +35,16 @@
 	}
 
 	const specRows: { icon: string; label: string; value: (vehicle: Car) => string }[] = [
-		{ icon: 'mileage', label: 'Пробег', value: (vehicle) => vehicle.mileage },
-		{ icon: 'years', label: 'Година', value: (vehicle) => String(vehicle.year) },
-		{ icon: 'fuel', label: 'Гориво', value: (vehicle) => vehicle.fuel },
-		{ icon: 'transmission', label: 'Скоростна кутия', value: (vehicle) => vehicle.transmission },
-		{ icon: 'auto', label: 'Каросерия', value: (vehicle) => vehicle.body },
-		{ icon: 'engine', label: 'Двигател', value: (vehicle) => vehicle.engine },
-		{ icon: 'icon-gauge', label: 'Мощност', value: (vehicle) => vehicle.power },
-		{ icon: 'color', label: 'Цвят', value: (vehicle) => vehicle.color },
-		{ icon: 'location', label: 'Локация', value: () => daynightSite.location },
-		{ icon: 'QrCode', label: 'Реф. номер', value: (vehicle) => vehicle.lot }
+		{ icon: 'mileage', label: 'Mileage', value: (vehicle) => vehicle.mileage },
+		{ icon: 'years', label: 'Year', value: (vehicle) => String(vehicle.year) },
+		{ icon: 'fuel', label: 'Fuel', value: (vehicle) => vehicle.fuel },
+		{ icon: 'transmission', label: 'Transmission', value: (vehicle) => vehicle.transmission },
+		{ icon: 'auto', label: 'Body style', value: (vehicle) => vehicle.body },
+		{ icon: 'engine', label: 'Engine', value: (vehicle) => vehicle.engine },
+		{ icon: 'icon-gauge', label: 'Power', value: (vehicle) => vehicle.power },
+		{ icon: 'color', label: 'Color', value: (vehicle) => vehicle.color },
+		{ icon: 'location', label: 'Location', value: () => daynightSite.location },
+		{ icon: 'QrCode', label: 'Reference number', value: (vehicle) => vehicle.lot }
 	];
 </script>
 
@@ -54,19 +54,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>More</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Сравнение</span>
+					<span>Compare</span>
 				</li>
 			</ul>
 		</div>
@@ -78,48 +78,48 @@
 		<div class="tf-spacing-style3"></div>
 
 		<div class="container">
-			<h1 class="mb-12 text-center capitalize">Сравнение на автомобили</h1>
+			<h1 class="mb-12 text-center capitalize">Compare vehicles</h1>
 			<p class="text-secondary h7 line-height-28 mb-40 text-center">
-				Сравнете пробег, гориво, оборудване и цена преди оглед.
+				Compare mileage, fuel type, features, and price before a viewing.
 			</p>
 
 			{#if vehicles.length}
-				<ul class="compare-selection" aria-label="Управление на избраните автомобили">
+				<ul class="compare-selection" aria-label="Manage selected vehicles">
 					{#each vehicles as vehicle (vehicle.slug)}
 						<li>
 							<a href={resolve(vehicleHref(vehicle.slug))}>{vehicle.shortTitle}</a>
 							<div>
 								<button
 									type="button"
-									aria-label={`Премахни ${vehicle.shortTitle}`}
-									onclick={() => garage.toggleCompare(vehicle.slug)}>Премахни</button
+									aria-label={`Remove ${vehicle.shortTitle}`}
+									onclick={() => garage.toggleCompare(vehicle.slug)}>Remove</button
 								>
 								<a
 									href={resolve('/inventory')}
 									onclick={() => garage.toggleCompare(vehicle.slug)}
-									aria-label={`Замени ${vehicle.shortTitle}`}>Замени</a
+									aria-label={`Replace ${vehicle.shortTitle}`}>Replace</a
 								>
 							</div>
 						</li>
 					{/each}
 				</ul>
 				<p class="compare-scroll-hint" id="compare-scroll-hint">
-					Плъзнете таблицата наляво и надясно, за да видите всички автомобили.
+					Swipe the table left or right to see all vehicles.
 				</p>
 				{#if vehicles.length < 3}<a class="compare-add" href={resolve('/inventory')}
-						>Добави автомобил за сравнение</a
+						>Add a vehicle to compare</a
 					>{/if}
 				<!-- Keyboard users must be able to focus and scroll this overflow region. -->
 				<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 				<div
 					class="card-details"
 					role="region"
-					aria-label="Таблица за сравнение"
+					aria-label="Comparison table"
 					aria-describedby="compare-scroll-hint"
 					tabindex="0"
 				>
 					<table class="card-details--table" style:--vehicle-count={vehicles.length}>
-						<caption class="sr-only">Характеристики на избраните автомобили</caption>
+						<caption class="sr-only">Selected vehicle specifications</caption>
 						<tbody>
 							<tr>
 								<td></td>
@@ -128,7 +128,7 @@
 										<div class="top relative">
 											<a
 												href={resolve(vehicleHref(vehicle.slug))}
-												aria-label={`Виж ${vehicle.shortTitle}`}
+												aria-label={`View ${vehicle.shortTitle}`}
 											>
 												<img
 													class="radius-16 image mb-10"
@@ -140,7 +140,7 @@
 											<p class="h4 text-center">
 												<a href={resolve(vehicleHref(vehicle.slug))}>{vehicle.shortTitle}</a>
 											</p>
-											<p class="text-secondary text-center">{vehicle.priceEur}</p>
+											<p class="text-secondary text-center">{vehicle.priceLabel}</p>
 										</div>
 									</td>
 								{/each}
@@ -164,10 +164,10 @@
 			{:else}
 				<div class="compare-empty" role="status">
 					<div class="compare-empty__mark" aria-hidden="true"><GitCompare size={26} /></div>
-					<h3>Няма избрани автомобили</h3>
-					<p>Добавете до 3 автомобила от наличността, за да сравните параметрите им.</p>
+					<h3>No vehicles selected</h3>
+					<p>Add up to 3 vehicles from inventory to compare their specifications.</p>
 					<a class="compare-empty__cta sa-cta sa-cta-primary" href={resolve('/inventory')}
-						>Разгледай автомобилите</a
+						>Browse vehicles</a
 					>
 				</div>
 			{/if}
@@ -596,7 +596,7 @@
 
 	/* Label cell text: 18px / 500 / #1c1c1c, line-height 26px — the legacy baseline
 	   pinned every label to app.css's universal 26px line box (verified 26px). The
-	   wrapping "Локация" rows depend on this 26px to land at the baseline row height. */
+	   wrapping "Location" rows depend on this 26px to land at the baseline row height. */
 	.card-details--table td:nth-child(1) span {
 		font-size: 18px;
 		font-weight: 500;

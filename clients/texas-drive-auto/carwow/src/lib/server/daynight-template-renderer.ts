@@ -153,48 +153,48 @@ function injectLocalBehavior(html: string, templateFile: string) {
 	document.body.classList.add('${pageClass}');
 	const inventoryTotal = () => window.__daynightVisibleInventoryCount ?? ${daynightVehicles.length};
 	const labelMap = new Map([
-		['Home', 'Начало'],
-		['Listing', 'Автомобили'],
-		['Pages', 'Още'],
-		['All Brand', 'Всички марки'],
-		['All Model', 'Всички модели'],
-		['All Miles', 'Всички пробези'],
-		['All Price', 'Всички цени'],
-		['All Car', 'Всички'],
-		['New Car', 'Нови'],
-		['Used Car', 'Употребявани'],
-		['Автомобили по тип', 'По тип автомобил'],
-		['Check All Car Type', 'Всички типове'],
-		['Check Всички Type', 'Виж всички типове'],
-		['View All Brand', 'Всички марки'],
-		['View Всички марки', 'Виж всички марки'],
-		['Filters', 'Филтри'],
-		['Lowest Price', 'Най-ниска цена'],
-		['No accidents', 'Без удари'],
-		['Great Price', 'Добра цена'],
-		['Black', 'Черен'],
-		['REMOVE ALL', 'Изчисти'],
-		['Remove All', 'Изчисти'],
-		['Special', 'Специално'],
-		['Compare', 'Сравни'],
-		['PREV', 'ПРЕДИШНА'],
-		['NEXT', 'СЛЕДВАЩА'],
-		['Play Video', 'Видео преглед'],
-		['View All Photo', 'Виж всички снимки'],
-		['View All Photos', 'Виж всички снимки'],
-		['Write A Review', 'Добавете отзив'],
-		['Login To Add A Review', 'Вход за добавяне на отзив'],
+		['Home', 'Home'],
+		['Listing', 'Vehicles'],
+		['Pages', 'More'],
+		['All Brand', 'All makes'],
+		['All Model', 'All models'],
+		['All Miles', 'All mileage'],
+		['All Price', 'All prices'],
+		['All Car', 'All'],
+		['New Car', 'New'],
+		['Used Car', 'Used'],
+		['Vehicles by type', 'By vehicle type'],
+		['Check All Car Type', 'All types'],
+		['Check All Types', 'View all types'],
+		['View All Brand', 'All makes'],
+		['View All Makes', 'View all makes'],
+		['Filters', 'Filters'],
+		['Lowest Price', 'Lowest price'],
+		['No accidents', 'Accident history unverified'],
+		['Great Price', 'Good price'],
+		['Black', 'Black'],
+		['REMOVE ALL', 'Clear'],
+		['Remove All', 'Clear'],
+		['Special', 'Featured'],
+		['Compare', 'Compare'],
+		['PREV', 'PREVIOUS'],
+		['NEXT', 'NEXT'],
+		['Play Video', 'Video overview'],
+		['View All Photo', 'View all photos'],
+		['View All Photos', 'View all photos'],
+		['Write A Review', 'Add feedback'],
+		['Login To Add A Review', 'Sign in to add a review'],
 		['View More Reviews (98)', '${daynightSite.reviewLinkLabel}'],
 		['Chat via WhatsApp', 'Viber / WhatsApp'],
-		['View details', 'Виж детайли'],
-		['See Finance', 'Финансиране'],
+		['View details', 'View details'],
+		['See Finance', 'Buyer-arranged funding'],
 		['AUDI', '${daynightVehicles[0]?.brand.toUpperCase() ?? 'CHRYSLER'}'],
 		['HYUNDAI', '${daynightVehicles[1]?.brand.toUpperCase() ?? 'BMW'}'],
 		['KIA', '${daynightVehicles[2]?.brand.toUpperCase() ?? 'BMW'}'],
 		['CHEVROLET', '${daynightVehicles[3]?.brand.toUpperCase() ?? 'MERCEDES-BENZ'}'],
-		['Benzin Auto', 'Бензин Автоматик'],
-		['Diesel Auto', 'Дизел Автоматик'],
-		['You might also like', 'Подобни автомобили']
+		['Benzin Auto', 'Gasoline Automatic'],
+		['Diesel Auto', 'Diesel Automatic'],
+		['You might also like', 'Similar vehicles']
 	]);
 	const translateLabels = () => {
 		document.querySelectorAll('a, span, button, option, p, div, .current').forEach((element) => {
@@ -205,10 +205,10 @@ function injectLocalBehavior(html: string, templateFile: string) {
 					node.textContent = node.textContent.replace(current, labelMap.get(current));
 				}
 				if (/\\bVehicles\\b/.test(node.textContent)) {
-					node.textContent = node.textContent.replaceAll('Vehicles', 'автомобила');
+					node.textContent = node.textContent.replaceAll('Vehicles', 'vehicles');
 				}
 				if (/\\b27 matches\\b/.test(node.textContent)) {
-					node.textContent = node.textContent.replaceAll('27 matches', inventoryTotal() + ' автомобила');
+					node.textContent = node.textContent.replaceAll('27 matches', inventoryTotal() + ' vehicles');
 				}
 			});
 		});
@@ -220,7 +220,7 @@ function injectLocalBehavior(html: string, templateFile: string) {
 			}
 			const next = matchesCount.nextSibling;
 			if (next && next.nodeType === Node.TEXT_NODE && next.textContent.includes('matches')) {
-				next.textContent = next.textContent.replace('matches', 'автомобила');
+				next.textContent = next.textContent.replace('matches', 'vehicles');
 			}
 		}
 	};
@@ -238,7 +238,7 @@ function injectLocalBehavior(html: string, templateFile: string) {
 		if (!cards.length) return;
 
 		const vehicleData = ${inventoryFilterData};
-		const normalize = (value) => (value || '').toString().toLocaleLowerCase('bg-BG').trim();
+		const normalize = (value) => (value || '').toString().toLocaleLowerCase('en-US').trim();
 		const parsePrice = (value) => Number(((value || '').match(/[\\d\\s]+/)?.[0] || '0').replace(/\\s/g, ''));
 		const findMeta = (title) => {
 			const normalizedTitle = normalize(title);
@@ -304,8 +304,8 @@ function injectLocalBehavior(html: string, templateFile: string) {
 		let selectedCondition = '';
 		const normalizeCondition = (value) => {
 			const normalized = normalize(value);
-			if (['new', 'nov', 'novi', 'нов', 'нови', 'нов внос'].includes(normalized)) return 'new';
-			if (['used', 'upotrebyavani', 'употребявани', 'употребяван'].includes(normalized)) return 'used';
+			if (['new', 'nov', 'novi', 'new', 'new', 'recently imported'].includes(normalized)) return 'new';
+			if (['used', 'upotrebyavani', 'used', 'used'].includes(normalized)) return 'used';
 			return '';
 		};
 		const setDropdownOpen = (dropdown, isOpen) => {
@@ -354,13 +354,13 @@ function injectLocalBehavior(html: string, templateFile: string) {
 				'over-50000': '> 50k EUR'
 			},
 			mileage: {
-				'under-100000': '≤ 100k км',
-				'under-150000': '≤ 150k км',
-				'under-200000': '≤ 200k км',
-				'over-200000': '> 200k км'
+				'under-100000': '≤ 100k miles',
+				'under-150000': '≤ 150k miles',
+				'under-200000': '≤ 200k miles',
+				'over-200000': '> 200k miles'
 			},
 			transmission: {
-				Автоматик: 'Автомат'
+				Automatic: 'Automatic'
 			}
 		};
 		const getCompactQuickLabel = (name, value, fallback) => {
@@ -483,10 +483,10 @@ function injectLocalBehavior(html: string, templateFile: string) {
 			window.__daynightVisibleInventoryCount = visibleCount;
 			document.querySelectorAll('p').forEach((paragraph) => {
 				const text = paragraph.textContent || '';
-				if (/Показани\\s+\\d+\\s+автомобила/.test(text)) {
-					paragraph.textContent = 'Показани ' + visibleCount + ' автомобила';
-				} else if (/^\\s*\\d+\\s+автомобила\\s*$/.test(text)) {
-					paragraph.textContent = visibleCount + ' автомобила';
+				if (/Showing\\s+\\d+\\s+vehicles/.test(text)) {
+					paragraph.textContent = 'Showing ' + visibleCount + ' vehicles';
+				} else if (/^\\s*\\d+\\s+vehicles\\s*$/.test(text)) {
+					paragraph.textContent = visibleCount + ' vehicles';
 				}
 			});
 			const matchesCount = document.querySelector('#filterMatchesCount');

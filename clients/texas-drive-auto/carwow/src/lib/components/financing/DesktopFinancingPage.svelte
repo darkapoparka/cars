@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Native 1:1 rebuild of the localized /financing (financing.html) desktop main
-	// content: breadcrumb + hero (advantages) + "Как работи" process steps + the
-	// "Полезно" blog cards + the FAQ accordion. The copy and data are kept verbatim;
+	// content: breadcrumb + hero (advantages) + "How it works" process steps + the
+	// "Helpful" blog cards + the FAQ accordion. The copy and data are kept verbatim;
 	// the look that used to come from app.css + StorefrontTemplateContent's :global
 	// stylesheet is now reproduced as a SELF-CONTAINED scoped style block below,
 	// confirmed against getComputedStyle at 1440px (see the comments per section for
@@ -51,37 +51,37 @@
 
 	const benefits: Benefit[] = [
 		{
-			title: 'Съдействие по документи и прехвърляне',
-			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.'
+			title: 'Questions about paperwork and title transfer',
+			copy: 'Ask what documents you need and how the title transfer works.'
 		},
 		{
-			title: 'Ясни условия предварително',
-			copy: 'Получавате ориентировъчна месечна вноска и условия още преди да дойдете за оглед.'
+			title: 'Confirm purchase terms in advance',
+			copy: 'No dealer financing or payment plans are offered. Arrange any outside funding separately.'
 		},
 		{
-			title: 'Отнема само няколко минути',
-			copy: 'Изпратете запитване с автомобила и бюджета - екипът ще Ви изпрати конкретни следващи стъпки.'
+			title: 'Prepare your questions',
+			copy: 'Draft an inquiry with the vehicle and your budget. Preview inquiries are not sent.'
 		}
 	];
 
 	const steps: Step[] = [
 		{
 			number: '1',
-			title: 'Изпратете запитване',
-			copy: 'Кажете кой автомобил ви интересува и какъв месечен бюджет е удобен — без ангажимент и без влияние върху решението ви.',
+			title: 'Draft an inquiry',
+			copy: 'Note the vehicle you’re interested in and your purchase budget. This preview does not send inquiries or apply for credit.',
 			href: '/contact?intent=financing'
 		},
 		{
 			number: '2',
-			title: 'Търсете според месечния бюджет',
-			copy: 'Използвайте калкулатора, за да сравните първоначална вноска, срок и ориентировъчна месечна вноска.',
+			title: 'Review your purchase budget',
+			copy: 'Use the calculator for hypothetical outside funding estimates based on down payment and term. It is not a dealer financing offer.',
 			href: '/calculator',
 			active: true
 		},
 		{
 			number: '3',
-			title: 'Изберете подходяща оферта',
-			copy: 'Изберете автомобил от наличността, уточнете условията с екипа и запазете оглед в София.',
+			title: 'Choose a vehicle',
+			copy: 'Choose a vehicle from inventory, then ask about purchase terms and viewing availability.',
 			href: '/inventory'
 		}
 	];
@@ -90,55 +90,55 @@
 		{
 			image: '/assets/images/blog/post-32.jpg',
 			href: '/faq',
-			category: 'СЪВЕТИ',
-			title: 'Въпроси преди покупка',
-			copy: 'Отговори за оглед, документи и процеса на покупка.'
+			category: 'TIPS',
+			title: 'Questions before buying',
+			copy: 'Questions to ask about viewings, paperwork, and the buying process.'
 		},
 		{
 			image: '/assets/images/blog/post-31.jpg',
 			href: '/calculator',
-			category: 'ФИНАНСИРАНЕ',
-			title: 'Калкулатор за финансиране',
-			copy: 'Ориентировъчна сметка според цена, първоначална вноска и срок.'
+			category: 'BUYER-ARRANGED FUNDING',
+			title: 'Buyer-arranged funding calculator',
+			copy: 'Hypothetical outside funding estimate based on price, down payment, and term.'
 		},
 		{
 			image: '/assets/images/blog/post-23.jpg',
 			href: '/sell-your-car',
-			category: 'ПОЛЕЗНО',
-			title: 'Продажба или бартер',
-			copy: 'Изпратете данни за вашия автомобил и обсъдете възможностите с екипа.'
+			category: 'HELPFUL INFO',
+			title: 'Selling or trading in a vehicle?',
+			copy: 'Ask whether vehicle purchases or trade-ins are accepted. Availability is not confirmed in this preview.'
 		}
 	];
 
 	const faqs: FaqItem[] = [
 		{
 			id: 'documents',
-			question: 'Какви документи са нужни за финансиране?',
+			question: 'What documents would an outside lender require?',
 			answers: [
-				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото и съдейства през целия процес.',
-				'Конкретните изисквания зависят от избрания финансов партньор и автомобила.'
+				'Ask your chosen outside lender about required documents. The dealership offers no financing or payment plans.',
+				'Any outside lender sets its own requirements. Buyer-arranged funding is separate from the dealership.'
 			],
 			active: true
 		},
 		{
 			id: 'owe-money',
-			question: 'Мога ли да участвам с бартер при финансиране?',
+			question: 'Can I use a trade-in with outside funding?',
 			answers: [
-				'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума. Условията се уточняват според автомобила, бюджета и документите.'
+				'Trade-in availability is not confirmed in this preview. Ask the dealer about trade-ins and your outside lender about any funding implications.'
 			]
 		},
 		{
 			id: 'leasing',
-			question: 'Каква първоначална вноска е нужна?',
+			question: 'What down payment would an outside lender require?',
 			answers: [
-				'Зависи от автомобила и избраната схема. Екипът може да насочи към подходящ вариант и ориентировъчна месечна вноска още при запитването.'
+				'Ask your chosen outside lender about down payment requirements and terms. No dealer financing or payment plans are offered.'
 			]
 		},
 		{
 			id: 'benefits',
-			question: 'Колко време отнема одобрението?',
+			question: 'How long would an outside lender’s approval take?',
 			answers: [
-				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават окончателно при огледа и подготовката на документите.'
+				'Ask your chosen outside lender about its review timeline. The dealership does not provide financing approval.'
 			]
 		}
 	];
@@ -159,11 +159,11 @@
 	<main id="main-content" tabindex="-1" aria-labelledby="daynight-financing-title">
 		<DesktopYellowRouteHero
 			headingId="daynight-financing-title"
-			title="Финансиране"
-			copy="Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед."
-			primaryLabel="Изпрати запитване"
+			title="Buyer-arranged funding"
+			copy="Review your budget and any independently arranged funding before a viewing. Calculator results are hypothetical estimates."
+			primaryLabel="Send inquiry"
 			primaryHref="/contact"
-			secondaryLabel="Виж автомобили"
+			secondaryLabel="View vehicles"
 			secondaryHref="/inventory"
 		/>
 
@@ -178,11 +178,11 @@
 						     exact 1:1 height match. -->
 						<p class="mb-12"></p>
 						<h2 class="mb-12 capitalize">
-							Финансиране и разсрочено плащане без излишни усложнения
+							No dealer financing or payment plans
 						</h2>
 						<p class="h7 line-height-28 text-secondary mb-42">
-							Сравнете варианти за финансиране и ориентировъчна месечна вноска за минути — с ясни
-							условия и съдействие от екипа.
+							Any funding must be arranged independently — confirm
+							terms directly with your chosen outside lender.
 						</p>
 						<ul class="benefit-list mb-40">
 							{#each benefits as benefit (benefit.title)}
@@ -198,11 +198,11 @@
 
 						<div class="hero-actions">
 							<a href={resolve('/contact')} class="btn-large-3 sa-cta sa-cta-primary">
-								Изпрати запитване
+								Send inquiry
 							</a>
 							<p class="hero-actions__call">
-								<span>Предпочитате разговор?</span>
-								<a class="text-underline" href={`tel:${daynightSite.phone}`}>Обадете се</a>
+								<span>Prefer to talk?</span>
+								<a class="text-underline" href={`tel:${daynightSite.phone}`}>Call</a>
 							</p>
 						</div>
 					</div>
@@ -215,9 +215,9 @@
 		<section class="background-light py-100">
 			<div class="container">
 				<div class="section-head">
-					<h2 class="mb-14 capitalize">Как работи финансирането</h2>
+					<h2 class="mb-14 capitalize">Understanding buyer-arranged funding</h2>
 					<p class="text-secondary h7 line-height-28">
-						Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед.
+						Review your budget and any independently arranged funding before a viewing. Calculator results are hypothetical estimates.
 					</p>
 				</div>
 
@@ -240,9 +240,9 @@
 		<section class="bg-white py-100">
 			<div class="container">
 				<div class="mb-40">
-					<h2 class="mb-12 capitalize">Полезно при покупка с финансиране</h2>
+					<h2 class="mb-12 capitalize">Planning a purchase with outside funding</h2>
 					<p class="text-secondary h7 line-height-28">
-						Отговори, калкулатор и запитване за вашия автомобил.
+						Questions, hypothetical estimates, and a vehicle inquiry draft.
 					</p>
 				</div>
 
@@ -269,7 +269,7 @@
 		<!-- faq -->
 		<section class="background-light py-100">
 			<div class="container">
-				<h2 class="mb-40 text-center capitalize">Често задавани въпроси за финансирането</h2>
+				<h2 class="mb-40 text-center capitalize">Buyer-arranged funding FAQ</h2>
 				<div class="max-width-930 mx-auto w-full">
 					<div class="flat-accordion flex flex-col gap-18" data-daynight-native-accordion>
 						{#each faqs as faq (faq.id)}

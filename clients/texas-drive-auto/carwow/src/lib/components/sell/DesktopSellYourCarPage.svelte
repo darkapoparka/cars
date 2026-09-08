@@ -82,7 +82,7 @@
 	let sellSubmitState = $state<SellSubmitState>('idle');
 	let sellSubmitMessage = $state('');
 
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = `Your request was not sent. Please try again or call ${daynightSite.phoneLabel}.`;
 
 	const leadPath = $derived.by((): SellRequestHref => {
 		const params = new SvelteURLSearchParams();
@@ -101,12 +101,12 @@
 
 	function buildNotes() {
 		return [
-			['Рег. номер', plate.trim().toUpperCase()],
+			['Plate number', plate.trim().toUpperCase()],
 			['VIN', vin.trim().toUpperCase()],
-			['Марка', make.trim()],
-			['Модел', model.trim()],
-			['Година', year.trim()],
-			['Километри', mileage.trim()]
+			['Make', make.trim()],
+			['Model', model.trim()],
+			['Year', year.trim()],
+			['Mileage', mileage.trim()]
 		]
 			.filter(([, value]) => value)
 			.map(([label, value]) => `${label}: ${value}`)
@@ -121,7 +121,7 @@
 		const contactValue = phone.trim();
 		if (!contactValue) {
 			sellSubmitState = 'error';
-			sellSubmitMessage = 'Моля, въведете телефон, за да Ви изпратим оценка и следваща стъпка.';
+			sellSubmitMessage = 'Please enter a phone number for your valuation inquiry draft.';
 			return;
 		}
 
@@ -129,7 +129,7 @@
 		sellSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: 'Заявка за оценка от сайта',
+			customerName: 'Website valuation inquiry',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
@@ -140,7 +140,7 @@
 
 		if (result.ok) {
 			sellSubmitState = 'success';
-			sellSubmitMessage = 'Заявката е изпратена. Екипът ще Ви изпрати оценка и следваща стъпка.';
+			sellSubmitMessage = 'Draft only — not sent';
 			return;
 		}
 
@@ -149,21 +149,21 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-sell" aria-label="Продай или замени автомобил">
+<main id="main-content" tabindex="-1" class="desktop-sell" aria-label="Ask about selling or trading in">
 	<DesktopYellowRouteHero
 		sectionId="sell-intake"
 		headingId="daynight-sell-title"
-		title="Продай автомобила си"
+		title="Sell your car"
 		panel="light"
 		compact
 	>
 		<div class="sell-intake-card">
-			<p>Продажба или бартер? Изпрати данните за автомобила и ще се свържем с теб за оценка.</p>
+			<p>Considering selling or trading in? Add your vehicle details to draft an inquiry about available options.</p>
 			<a
 				class="sell-action desktop-primary-action"
 				href={resolve(leadPath)}
 				onclick={openValuation}
-				aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
+				aria-haspopup="dialog">Draft a valuation inquiry <ArrowRight size={18} /></a
 			>
 		</div>
 	</DesktopYellowRouteHero>
@@ -175,11 +175,11 @@
 		onkeydown={handleModalKeydown}
 	>
 		<div class="sell-modal__heading">
-			<h2 id="sell-modal-title">Заявка за оценка</h2>
+			<h2 id="sell-modal-title">Request an appraisal</h2>
 			<button
 				class="sell-modal__close"
 				type="button"
-				aria-label="Затвори"
+				aria-label="Close"
 				onclick={() => valuationDialog?.close()}><X size={22} /></button
 			>
 		</div>
@@ -192,14 +192,14 @@
 		>
 			<div class="desktop-sell-form__top">
 				<div class="desktop-sell-form__mode">
-					<div class="desktop-sell-form__switch" aria-label="Начин на въвеждане">
+					<div class="desktop-sell-form__switch" aria-label="Entry method">
 						<button
 							type="button"
 							class={[intakeMode === 'plate' && 'active']}
 							aria-pressed={intakeMode === 'plate'}
 							onclick={() => (intakeMode = 'plate')}
 						>
-							Рег. номер
+							Plate number
 						</button>
 						<button
 							type="button"
@@ -215,7 +215,7 @@
 
 			<div class="desktop-sell-form__grid">
 				<label class="desktop-sell-field desktop-sell-field--wide">
-					<span>{intakeMode === 'plate' ? 'Регистрационен номер' : 'VIN номер'}</span>
+					<span>{intakeMode === 'plate' ? 'License plate number' : 'VIN'}</span>
 					{#if intakeMode === 'plate'}
 						<input
 							name="plate"
@@ -229,17 +229,17 @@
 							name="vin"
 							type="text"
 							bind:value={vin}
-							placeholder="17 символа VIN"
+							placeholder="17-character VIN"
 							autocomplete="off"
 						/>
 					{/if}
 				</label>
 				<label class="desktop-sell-field">
-					<span>Марка</span>
+					<span>Make</span>
 					<input name="make" type="text" bind:value={make} placeholder="BMW" autocomplete="off" />
 				</label>
 				<label class="desktop-sell-field">
-					<span>Модел</span>
+					<span>Model</span>
 					<input
 						name="model"
 						type="text"
@@ -249,11 +249,11 @@
 					/>
 				</label>
 				<label class="desktop-sell-field">
-					<span>Година</span>
+					<span>Year</span>
 					<input name="year" type="text" inputmode="numeric" bind:value={year} placeholder="2019" />
 				</label>
 				<label class="desktop-sell-field">
-					<span>Километри</span>
+					<span>Mileage</span>
 					<input
 						name="mileage"
 						type="text"
@@ -263,7 +263,7 @@
 					/>
 				</label>
 				<label class="desktop-sell-field desktop-sell-field--wide">
-					<span>Телефон за връзка *</span>
+					<span>Contact phone *</span>
 					<input
 						name="phone"
 						type="tel"
@@ -275,7 +275,7 @@
 				</label>
 
 				<label class="desktop-sell-honeypot" aria-hidden="true">
-					<span>Компания</span>
+					<span>Company</span>
 					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 				</label>
 			</div>
@@ -296,7 +296,7 @@
 					type="submit"
 					disabled={sellSubmitState === 'submitting'}
 				>
-					<span>{sellSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати за оценка'}</span>
+					<span>{sellSubmitState === 'submitting' ? 'Sending...' : 'Create valuation draft'}</span>
 				</button>
 			</div>
 		</form>
@@ -304,7 +304,7 @@
 
 	<section class="sell-process sell-section" aria-labelledby="sell-process-title">
 		<div class="sell-container">
-			<h2 id="sell-process-title" class="sell-section-title">Как работи</h2>
+			<h2 id="sell-process-title" class="sell-section-title">How it works</h2>
 			<ol class="sell-steps">
 				{#each desktopSellProcessSteps as step, index (step.title)}
 					{@const StepIcon = processIcons[index]}
@@ -323,15 +323,15 @@
 	<section class="sell-benefits" aria-labelledby="sell-benefits-title">
 		<div class="sell-container sell-benefits__layout">
 			<div class="sell-benefits__content">
-				<h2 id="sell-benefits-title">Продажба<br />или бартер.</h2>
+				<h2 id="sell-benefits-title">Selling<br />or trade-in questions.</h2>
 				<p class="sell-benefits__copy">
-					Продай автомобила си или го замени с модел от нашата наличност. Оценяваме състоянието му и
-					ти съдействаме с документите.
+					Considering selling your car or trading it toward an in-stock model? Ask about available options and
+					required paperwork.
 				</p>
 				<div class="sell-benefits__actions">
 					<DesktopBrowseLink
 						href={resolve('/inventory')}
-						label="Избери следващия автомобил"
+						label="Find your next car"
 						tone="dark"
 					/>
 				</div>
@@ -351,7 +351,7 @@
 
 	<section class="sell-faq sell-section" aria-labelledby="sell-faq-title">
 		<div class="sell-container sell-faq__content">
-			<h2 id="sell-faq-title" class="sell-section-title">Често задавани въпроси</h2>
+			<h2 id="sell-faq-title" class="sell-section-title">Frequently asked questions</h2>
 			<div class="sell-faq__items">
 				{#each desktopSellFaqItems as item (item.question)}
 					<details name="sell-faq">
@@ -365,13 +365,13 @@
 
 	<section class="sell-final" aria-labelledby="sell-final-title">
 		<div class="sell-container sell-final__layout">
-			<h2 id="sell-final-title" class="sell-section-title">Твоята следваща стъпка</h2>
+			<h2 id="sell-final-title" class="sell-section-title">Your next step</h2>
 			<div class="sell-final__actions">
 				<a
 					class="sell-action desktop-primary-action"
 					href={resolve(leadPath)}
 					onclick={openValuation}
-					aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
+					aria-haspopup="dialog">Draft a valuation inquiry <ArrowRight size={18} /></a
 				>
 				<a class="sell-phone" href={phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
 			</div>

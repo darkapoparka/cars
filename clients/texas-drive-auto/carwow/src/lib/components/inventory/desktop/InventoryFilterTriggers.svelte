@@ -27,7 +27,7 @@
 </script>
 
 <div class="inventory-filter-triggers" class:inventory-filter-triggers--sidebar={sidebar}>
-	{#if sidebar}<h2>Филтри</h2>{/if}
+	{#if sidebar}<h2>Filters</h2>{/if}
 	{#each visible as field (field.name)}
 		{@const selected = inventory.getFieldValues(field.name)}
 		<button
@@ -52,7 +52,7 @@
 		class="all-filters"
 		aria-haspopup="dialog"
 		onclick={() => onOpen()}
-		><SlidersHorizontal size={18} /><span>{sidebar ? 'Всички филтри' : 'Още филтри'}</span></button
+		><SlidersHorizontal size={18} /><span>{sidebar ? 'All filters' : 'More filters'}</span></button
 	>
 </div>
 

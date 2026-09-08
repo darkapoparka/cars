@@ -32,29 +32,29 @@
 	<div class="daynight-inventory-results-toolbar">
 		<div class="daynight-inventory-results-count-cell">
 			<p class="daynight-inventory-result-count">
-				<span id="filterMatchesCount">{count}</span> автомобила
+				<span id="filterMatchesCount">{count}</span> vehicles
 			</p>
 		</div>
 		<div class="inventory-toolbar-actions">
 			<div class="daynight-inventory-sort-control">
 				<SortDropdown />
 			</div>
-			<div class="inventory-view-buttons" aria-label="Изглед на автомобилите">
+			<div class="inventory-view-buttons" aria-label="Vehicle view">
 				<button
 					type="button"
-					aria-label="Решетка"
+					aria-label="Grid"
 					aria-pressed={!listView}
 					onclick={() => onViewChange(false)}><LayoutGrid size={18} /></button
 				>
 				<button
 					type="button"
-					aria-label="Списък"
+					aria-label="List"
 					aria-pressed={listView}
 					onclick={() => onViewChange(true)}><List size={19} /></button
 				>
 				<button
 					type="button"
-					aria-label="Филтри в лява колона"
+					aria-label="Filters in left column"
 					aria-pressed={layoutMode === 'sidebar'}
 					onclick={onSidebarChange}><PanelLeft size={18} /></button
 				>
@@ -74,8 +74,8 @@
 	data-daynight-has-tags={hasTags ? 'true' : undefined}
 	aria-live="polite"
 	aria-label={hasTags
-		? `Активни филтри: ${filters.appliedTags.map((tag) => tag.label).join(', ')}`
-		: 'Активни филтри'}
+		? `Active filters: ${filters.appliedTags.map((tag) => tag.label).join(', ')}`
+		: 'Active filters'}
 	hidden={!hasTags}
 	style:display={hasTags ? '' : 'none'}
 >
@@ -86,7 +86,7 @@
 				type="button"
 				data-daynight-clear-field={tag.field}
 				data-daynight-clear-value={tag.value}
-				aria-label={`Премахни филтър ${tag.label}`}
+				aria-label={`Remove filter ${tag.label}`}
 				title={tag.label}
 				onclick={() => filters.removeTag(tag.field, tag.value)}
 			>
@@ -102,7 +102,7 @@
 		style:display={hasTags ? '' : 'none'}
 		onclick={clearAll}
 	>
-		Изчисти
+		Clear
 		<img src="/assets/icons/X-White.svg" alt="" aria-hidden="true" />
 	</button>
 </div>

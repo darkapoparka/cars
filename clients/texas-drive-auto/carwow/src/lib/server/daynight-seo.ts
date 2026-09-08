@@ -11,13 +11,13 @@ export function routeSeo(routePath: string): PageSeo {
 }
 
 export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
-	const facts = [vehicle.priceEur, vehicle.mileage, vehicle.fuel, vehicle.transmission]
+	const facts = [vehicle.priceLabel, vehicle.mileage, vehicle.fuel, vehicle.transmission]
 		.map((value) => (value ?? '').toString().trim())
 		.filter(Boolean);
 
 	return {
-		title: `${vehicle.title} | Day Night Auto`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Day Night Auto с опция за финансиране.`
+		title: `${vehicle.title} | Texas Drive Auto`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Ask Texas Drive Auto about vehicle condition. No dealer financing or payment plans; buyer-arranged funding is separate.`
 	};
 }
 

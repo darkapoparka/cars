@@ -13,43 +13,43 @@
 	const services = [
 		{
 			id: 'inspection',
-			title: 'Проверка преди покупка',
-			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
+			title: 'Pre-purchase inspection',
+			summary: 'Ask about an independent inspection and available vehicle history information before deciding.',
 			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'documents',
-			title: 'Документи и регистрация',
-			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
+			title: 'Paperwork and registration',
+			summary: 'Ask which title, registration, and insurance steps are required after a purchase.',
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'financing',
-			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+			title: 'Buyer-arranged funding',
+			summary: 'Texas Drive Auto offers no dealer financing or payment plans. Buyer-arranged funding is separate.',
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'trade-in',
-			title: 'Бартер и оценка',
-			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
+			title: 'Trade-in and valuation questions',
+			summary: 'Trade-in availability is not confirmed in this preview. Ask whether your vehicle can be considered.',
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'sourcing',
-			title: 'Търсене по задание',
-			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
+			title: 'Vehicle search request',
+			summary: 'Share your preferred make, budget, and features, and ask whether vehicle sourcing is available.',
 			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'delivery',
-			title: 'Доставка и предаване',
-			summary: 'Координираме транспорт, предаване и последните практически детайли.',
+			title: 'Delivery and pickup questions',
+			summary: 'Delivery is not confirmed in this preview. Ask about pickup arrangements and any available transport options.',
 			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		}
@@ -97,9 +97,9 @@
 
 	function buildServiceNotes() {
 		return [
-			['Услуга', selectedServiceItem.title],
-			['Автомобил', vehicle.trim()],
-			['Съобщение', message.trim()]
+			['Service', selectedServiceItem.title],
+			['Vehicle', vehicle.trim()],
+			['Message', message.trim()]
 		]
 			.filter(([, value]) => value)
 			.map(([label, value]) => `${label}: ${value}`)
@@ -114,7 +114,7 @@
 		const contactValue = phone.trim();
 		if (!contactValue) {
 			serviceSubmitState = 'error';
-			serviceSubmitMessage = 'Моля, въведете телефон, за да уточним следващата стъпка.';
+			serviceSubmitMessage = 'Please enter a phone number for your inquiry draft.';
 			return;
 		}
 
@@ -122,7 +122,7 @@
 		serviceSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: name.trim() || 'Заявка за услуга от сайта',
+			customerName: name.trim() || 'Website service inquiry',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
@@ -134,26 +134,26 @@
 		if (result.ok) {
 			serviceSubmitState = 'success';
 			serviceSubmitMessage =
-				'Запитването е изпратено. Екипът ще се свърже с Вас за следващата стъпка.';
+				'Draft only — not sent';
 			return;
 		}
 
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
 			result.error ||
-			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
+			`Your inquiry was not sent. Please call ${daynightSite.phoneLabel}.`;
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Day Night Auto">
+<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Texas Drive Auto services">
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
-		title="Услуги за твоя автомобил"
+		title="Services for your car"
 		panel="light"
 		compact
 	>
 		<div class="services-chooser">
-			<h2 id="services-choice-title">Какво ти е необходимо?</h2>
+			<h2 id="services-choice-title">What do you need?</h2>
 			<nav class="services-shortcuts" aria-labelledby="services-choice-title">
 				{#each services as service (service.id)}
 					<a
@@ -163,8 +163,8 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
-					>Обади ни се</a
+				Not sure which service you need? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
+					>Call us</a
 				>
 			</p>
 		</div>
@@ -172,14 +172,14 @@
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Day Night Auto</h2>
+			<h2 class="desktop-services-sr-only">Service questions for Texas Drive Auto</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}
 					<a
 						class="desktop-services-card"
 						href={resolve(serviceRequestPath(service.id))}
-						aria-label={`Заяви услуга: ${service.title}`}
+						aria-label={`Request service: ${service.title}`}
 						onclick={(event) => chooseService(service.id, event)}
 					>
 						<span
@@ -193,7 +193,7 @@
 							<h3>{service.title}</h3>
 							<p>{service.summary}</p>
 							<span class="desktop-services-card__cta" aria-hidden="true">
-								<span>Избери услугата</span><ArrowRight size={18} />
+								<span>Select a service</span><ArrowRight size={18} />
 							</span>
 						</div>
 					</a>
@@ -205,10 +205,10 @@
 	<section class="desktop-services-request" id="services-request">
 		<div class="desktop-services-request__shell container">
 			<div class="desktop-services-request__copy">
-				<h2>Да уточним<br />детайлите.</h2>
+				<h2>Let’s discuss<br />the details.</h2>
 				<p>
-					Остави телефон и ни разкажи за автомобила. Ще се свържем с теб, за да обсъдим услугата,
-					документите и удобен срок.
+					Enter your phone number and tell us about the vehicle. This preview saves no request and sends nothing. Prepare questions about the service,
+					paperwork, and timing.
 				</p>
 			</div>
 
@@ -220,28 +220,28 @@
 			>
 				<input type="hidden" name="intent" value="services" />
 				<label class="desktop-services-honeypot" aria-hidden="true">
-					<span>Компания</span>
+					<span>Company</span>
 					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 				</label>
 
 				<div class="desktop-services-form__grid">
 					<label class="desktop-services-field">
-						<span>Име</span>
-						<input name="name" type="text" bind:value={name} placeholder="Име и фамилия" />
+						<span>Name</span>
+						<input name="name" type="text" bind:value={name} placeholder="Full name" />
 					</label>
 					<label class="desktop-services-field">
-						<span>Телефон</span>
+						<span>Phone</span>
 						<input
 							name="phone"
 							type="tel"
 							bind:value={phone}
-							placeholder="Телефон за връзка"
+							placeholder="Phone number"
 							autocomplete="tel"
 							required
 						/>
 					</label>
 					<label class="desktop-services-field" for="desktop-services-service">
-						<span>Услуга</span>
+						<span>Service</span>
 						<select id="desktop-services-service" name="service" bind:value={selectedService}>
 							{#each services as service (service.id)}
 								<option value={service.id}>{service.title}</option>
@@ -249,21 +249,21 @@
 						</select>
 					</label>
 					<label class="desktop-services-field">
-						<span>Автомобил</span>
+						<span>Vehicle</span>
 						<input
 							name="vehicle"
 							type="text"
 							bind:value={vehicle}
-							placeholder="Марка, модел или линк към обява"
+							placeholder="Make, model, or listing link"
 						/>
 					</label>
 					<label class="desktop-services-field desktop-services-field--wide">
-						<span>Съобщение</span>
+						<span>Message</span>
 						<textarea
 							name="message"
 							bind:value={message}
 							rows="2"
-							placeholder="Какво искате да уточним?"
+							placeholder="What would you like to discuss?"
 						></textarea>
 					</label>
 				</div>
@@ -284,7 +284,7 @@
 					type="submit"
 					disabled={serviceSubmitState === 'submitting'}
 				>
-					<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}</span>
+					<span>{serviceSubmitState === 'submitting' ? 'Sending...' : 'Send inquiry'}</span>
 				</button>
 			</form>
 		</div>

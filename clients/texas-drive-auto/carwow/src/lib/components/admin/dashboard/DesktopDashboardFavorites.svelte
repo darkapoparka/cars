@@ -36,7 +36,7 @@
 	const cards: FavoriteCard[] = [
 		{
 			id: 'chrysler-300c',
-			highlightText: 'Специално',
+			highlightText: 'Featured',
 			highlightClass: 'bg-primary-2 text-white highlight',
 			imageHref: '/inventory/chrysler-300c-2018-gaz',
 			imageSrc: 'https://mobistatic3.focus.bg/mobile/photosorg/017/1/11776804395836017_yX.webp',
@@ -45,12 +45,12 @@
 			brandClass: 'text-white uppercase text-xs',
 			brandText: 'Audi',
 			titleHref: '/inventory/chrysler-300c-2018-gaz',
-			titleText: 'Chrysler 300C 2018 г., Газ/Бензин, 105 000 км, Топ състояние',
+			titleText: 'Chrysler 300C 2018, LPG/Gasoline, 105 000 miles, Top condition',
 			stats: [
-				{ icon: '/assets/icons/icon-gauge.svg', text: '105 000 км' },
+				{ icon: '/assets/icons/icon-gauge.svg', text: '105 000 miles' },
 				{ icon: '/assets/icons/calendar.svg', text: '2022' },
-				{ icon: '/assets/icons/gaspump.svg', text: 'Газ/Бензин' },
-				{ icon: '/assets/icons/manual.svg', text: 'Автоматик' }
+				{ icon: '/assets/icons/gaspump.svg', text: 'LPG/Gasoline' },
+				{ icon: '/assets/icons/manual.svg', text: 'Automatic' }
 			],
 			priceClass: 'card-box__price mb-15',
 			priceText: '17 000 EUR',
@@ -59,7 +59,7 @@
 		},
 		{
 			id: 'bmw-i7',
-			highlightText: 'Добра цена',
+			highlightText: 'Good price',
 			highlightClass: 'bg-green text-white highlight',
 			imageHref: '/inventory/chrysler-300c-2018-gaz',
 			imageSrc: '/assets/images/card/card-2.jpg',
@@ -68,18 +68,18 @@
 			brandClass: 'text-white',
 			brandText: 'Hyundai',
 			titleHref: '/inventory/chrysler-300c-2018-gaz',
-			titleText: 'BMW i7 2023 г., Електрически, 127 000 км, FULL MAX',
+			titleText: 'BMW i7 2023, Electric, 127 000 miles, FULL MAX',
 			stats: [
-				{ icon: '/assets/icons/icon-gauge.svg', text: '127 000 км' },
+				{ icon: '/assets/icons/icon-gauge.svg', text: '127 000 miles' },
 				{ icon: '/assets/icons/calendar.svg', text: '2018' },
-				{ icon: '/assets/icons/gaspump.svg', text: 'Бензин' },
-				{ icon: '/assets/icons/auto.svg', text: 'Автоматик' }
+				{ icon: '/assets/icons/gaspump.svg', text: 'Gasoline' },
+				{ icon: '/assets/icons/auto.svg', text: 'Automatic' }
 			],
 			priceClass: 'h6 card-box__price mb-15 flex justify-between gap-8 items-center',
 			priceText: '81 000 EUR',
-			monthlyText: '588 лв./мес.',
+			monthlyText: '588 USD/month — unavailable; no dealer payment plans',
 			monthlyHref: '/inventory/chrysler-300c-2018-gaz',
-			monthlyLinkText: 'Виж вноска',
+			monthlyLinkText: 'View payment information',
 			compareClass: 'compare-details btn btn-small compare open-modal',
 			viewHref: '/inventory/chrysler-300c-2018-gaz'
 		},
@@ -92,12 +92,12 @@
 			brandClass: 'text-white',
 			brandText: 'Kia',
 			titleHref: '/inventory/chrysler-300c-2018-gaz',
-			titleText: 'BMW 520i 2006 г., Бензин, 201 000 км, Топ състояние',
+			titleText: 'BMW 520i 2006, Gasoline, 201 000 miles, Top condition',
 			stats: [
-				{ icon: '/assets/icons/icon-gauge.svg', text: '201 000 км' },
+				{ icon: '/assets/icons/icon-gauge.svg', text: '201 000 miles' },
 				{ icon: '/assets/icons/calendar.svg', text: '2020' },
 				{ icon: '/assets/icons/gaspump.svg', text: 'Diesel' },
-				{ icon: '/assets/icons/auto.svg', text: 'Автоматик' }
+				{ icon: '/assets/icons/auto.svg', text: 'Automatic' }
 			],
 			priceClass: 'card-box__price mb-15',
 			priceText: '4 500 EUR',
@@ -114,12 +114,12 @@
 			brandClass: 'text-white',
 			brandText: 'Chevrolet',
 			titleHref: '/inventory/chrysler-300c-2018-gaz',
-			titleText: 'BMW X4 2.0D 2017 г., Дизел, 171 000 км, M Pack',
+			titleText: 'BMW X4 2.0D 2017, Diesel, 171 000 miles, M Pack',
 			stats: [
-				{ icon: '/assets/icons/icon-gauge.svg', text: '171 000 км' },
+				{ icon: '/assets/icons/icon-gauge.svg', text: '171 000 miles' },
 				{ icon: '/assets/icons/calendar.svg', text: '2023' },
-				{ icon: '/assets/icons/gaspump.svg', text: 'Бензин' },
-				{ icon: '/assets/icons/auto.svg', text: 'Автоматик' }
+				{ icon: '/assets/icons/gaspump.svg', text: 'Gasoline' },
+				{ icon: '/assets/icons/auto.svg', text: 'Automatic' }
 			],
 			priceClass: 'card-box__price mb-15',
 			priceText: '17 500 EUR',
@@ -135,12 +135,12 @@
 			brandClass: 'text-white',
 			brandText: 'Audi',
 			titleHref: '/inventory/chrysler-300c-2018-gaz',
-			titleText: 'BMW 730 D 2009 г., Дизел, 225 000 км, 4x4',
+			titleText: 'BMW 730 D 2009, Diesel, 225 000 miles, 4x4',
 			stats: [
-				{ icon: '/assets/icons/icon-gauge.svg', text: '225 000 км' },
+				{ icon: '/assets/icons/icon-gauge.svg', text: '225 000 miles' },
 				{ icon: '/assets/icons/calendar.svg', text: '2022' },
-				{ icon: '/assets/icons/gaspump.svg', text: 'Газ/Бензин' },
-				{ icon: '/assets/icons/manual.svg', iconClass: 'w-20 h-20', text: 'Автоматик' }
+				{ icon: '/assets/icons/gaspump.svg', text: 'LPG/Gasoline' },
+				{ icon: '/assets/icons/manual.svg', iconClass: 'w-20 h-20', text: 'Automatic' }
 			],
 			priceClass: 'card-box__price mb-15',
 			priceText: '4 500 EUR',
@@ -149,7 +149,7 @@
 		},
 		{
 			id: 'genesis-g80',
-			highlightText: 'Специално',
+			highlightText: 'Featured',
 			highlightClass: 'bg-primary-2 text-white highlight',
 			imageHref: '/inventory/chrysler-300c-2018-gaz',
 			imageSrc: '/assets/images/card/card-6.jpg',
@@ -160,10 +160,10 @@
 			titleHref: '/inventory/chrysler-300c-2018-gaz',
 			titleText: 'Genesis Electrified G80',
 			stats: [
-				{ icon: '/assets/icons/icon-gauge.svg', text: '51600 км' },
+				{ icon: '/assets/icons/icon-gauge.svg', text: '51600 miles' },
 				{ icon: '/assets/icons/calendar.svg', text: '2021' },
 				{ icon: '/assets/icons/gaspump.svg', text: 'Diesel' },
-				{ icon: '/assets/icons/auto.svg', text: 'Автоматик' }
+				{ icon: '/assets/icons/auto.svg', text: 'Automatic' }
 			],
 			priceClass: 'card-box__price mb-15',
 			priceText: '$24.900,00',
@@ -321,11 +321,11 @@
 			<div class="flex justify-between">
 				<p class={card.compareClass} data-modal-id="#CompareModal">
 					{@render compareIcon()}
-					Сравни
+					Compare
 				</p>
 
 				<a href={resolve(card.viewHref)} class="view-details">
-					Виж детайли
+					View details
 					<img
 						class="ml-4"
 						src={resolve('/assets/icons/CaretCircleRight.svg')}
@@ -345,12 +345,12 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Toggle Моят профил"
+			aria-label="Toggle My account"
 			type="button"
 		>
-			Show Моят профил
+			Show My account
 		</button>
-		<p class="h3 mb-40">Запазени автомобили</p>
+		<p class="h3 mb-40">Saved vehicles</p>
 
 		<div
 			class="dashboard-box style-4 wow fadeIn animated bg-white"

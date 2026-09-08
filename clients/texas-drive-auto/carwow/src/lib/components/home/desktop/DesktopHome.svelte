@@ -25,11 +25,11 @@
 				showHeaderSubtitle={false}
 			/>
 			<DesktopHomeReviews showReviews={false} balancedActionCards />
-			<DesktopHomeVehicleCategories title="Избери тип автомобил" ctaLabel="Всички типове" />
+			<DesktopHomeVehicleCategories title="Choose a vehicle type" ctaLabel="All types" />
 			<DesktopHomeBrandStrip
 				brands={brandStrip.slice(0, 12)}
-				title="Избери марка"
-				ctaLabel="Всички марки"
+				title="Choose a make"
+				ctaLabel="All makes"
 			/>
 			<DesktopHomeWhyDayNight showMetrics={false} variant="campaign-grid" />
 			<DesktopHomeVideos />
@@ -37,7 +37,7 @@
 				showActionCards={false}
 				showHeaderCta={true}
 				showBelowCta={false}
-				ctaLabel="Виж всички отзиви"
+				ctaLabel="Reviews unavailable in preview"
 			/>
 		</main>
 		<DesktopHomeFooter />

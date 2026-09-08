@@ -16,52 +16,52 @@
 	const benefits = [
 		{
 			id: 'documents',
-			title: 'Съдействие по документи',
-			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.',
+			title: 'Paperwork questions',
+			copy: 'Ask what documents you need and how the title transfer works.',
 			icon: ClipboardCheck
 		},
 		{
 			id: 'terms',
-			title: 'Ясни условия предварително',
-			copy: 'Ориентировъчна месечна вноска и условия още преди да дойдете за оглед.',
+			title: 'Confirm purchase terms in advance',
+			copy: 'Confirm any outside funding terms directly with your chosen lender before a viewing.',
 			icon: BadgeCheck
 		},
 		{
 			id: 'fast',
-			title: 'Отнема няколко минути',
-			copy: 'Изпращате запитване с автомобил и бюджет - екипът ще Ви изпрати конкретни стъпки.',
+			title: 'Prepare an inquiry draft',
+			copy: 'Draft an inquiry with a vehicle and budget. Preview inquiries are not sent.',
 			icon: Clock
 		}
 	] as const;
 
 	const steps = [
-		'Изпращаш запитване с автомобил и месечен бюджет.',
-		'Получаваш ориентировъчна вноска и условия.',
-		'Оглед в София и финализиране с екипа.'
+		'Draft an inquiry with your vehicle choice and purchase budget.',
+		'Ask your outside lender for any payment estimates and terms.',
+		'Ask about a viewing and the steps to complete your purchase.'
 	] as const;
 
 	const faqs = [
 		{
 			id: 'documents',
-			question: 'Какви документи са нужни?',
+			question: 'What documents are needed?',
 			answer:
-				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото.'
+				'Ask the dealer about purchase paperwork and your outside lender about any separate funding documents.'
 		},
 		{
 			id: 'trade-in',
-			question: 'Може ли с бартер?',
-			answer: 'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума.'
+			question: 'Are trade-ins accepted?',
+			answer: 'Trade-in availability and valuation are not confirmed in this preview. Ask the dealer directly.'
 		},
 		{
 			id: 'speed',
-			question: 'Колко време отнема одобрението?',
+			question: 'How long would an outside lender’s approval take?',
 			answer:
-				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават при огледа.'
+				'Response times are not confirmed in this preview. Ask the dealer about viewing availability and purchase terms.'
 		}
 	] as const;
 </script>
 
-<div class="mobile-financing-app" aria-label="Финансиране от Day Night Auto">
+<div class="mobile-financing-app" aria-label="Funding information at Texas Drive Auto">
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
@@ -70,18 +70,18 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-financing-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="Texas Drive Auto home">
 				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 			</a>
-			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
+			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Call">
 				<Phone size={19} strokeWidth={2.45} />
 			</a>
 		</div>
 
 		<div class="mobile-financing-hero__copy">
-			<span>Финансиране</span>
-			<h1>Финансиране и разсрочено плащане</h1>
-			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в София.</p>
+			<span>Buyer-arranged funding</span>
+			<h1>No dealer financing or payment plans</h1>
+			<p>Buyer-arranged funding is separate. No dealer financing or payment plans are offered.</p>
 		</div>
 
 		<div class="mobile-financing-actions">
@@ -90,14 +90,14 @@
 				href={resolve('/contact')}
 			>
 				<Send size={18} strokeWidth={2.5} />
-				<span>Изпрати запитване</span>
+				<span>Send inquiry</span>
 			</a>
 			<a
 				class="mobile-financing-action mobile-financing-action--secondary"
 				href={resolve('/inventory')}
 			>
 				<CarFront size={19} strokeWidth={2.5} />
-				<span>Виж автомобили</span>
+				<span>View vehicles</span>
 			</a>
 		</div>
 	</header>
@@ -105,8 +105,8 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-benefits-title">
 			<div class="mobile-financing-heading">
-				<span>Предимства</span>
-				<h2 id="mobile-financing-benefits-title">Защо с нас</h2>
+				<span>Benefits</span>
+				<h2 id="mobile-financing-benefits-title">Why choose us</h2>
 			</div>
 
 			<div class="mobile-financing-cards">
@@ -125,8 +125,8 @@
 
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-process-title">
 			<div class="mobile-financing-heading">
-				<span>Процес</span>
-				<h2 id="mobile-financing-process-title">Как работи</h2>
+				<span>Process</span>
+				<h2 id="mobile-financing-process-title">How it works</h2>
 			</div>
 
 			<ol class="mobile-financing-steps">
@@ -142,8 +142,8 @@
 
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-faq-title">
 			<div class="mobile-financing-heading">
-				<span>Въпроси</span>
-				<h2 id="mobile-financing-faq-title">Често задавани</h2>
+				<span>Questions</span>
+				<h2 id="mobile-financing-faq-title">Frequently asked questions</h2>
 			</div>
 
 			<div class="mobile-financing-faq">
@@ -158,9 +158,9 @@
 
 		<section class="mobile-financing-cta" aria-labelledby="mobile-financing-cta-title">
 			<div>
-				<span>Следваща стъпка</span>
-				<h2 id="mobile-financing-cta-title">Кажи автомобил и бюджет</h2>
-				<p>Екипът ще Ви изпрати конкретни следващи стъпки в рамките на работния ден.</p>
+				<span>Next step</span>
+				<h2 id="mobile-financing-cta-title">Choose a vehicle and budget</h2>
+				<p>Response timing is unavailable in this preview.</p>
 				<a href={phoneHref}>
 					<PhoneCall size={18} strokeWidth={2.45} />
 					<span>{daynightSite.phoneLabel}</span>

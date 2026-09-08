@@ -58,12 +58,12 @@
 		}
 	});
 	const messagesMenuLabel = $derived(
-		page.routePath === 'dashboard/messages' ? daynightAccount.messagesTitle : 'Съобщения'
+		page.routePath === 'dashboard/messages' ? daynightAccount.messagesTitle : 'Messages'
 	);
 	const newListingMenuLabel = $derived(
 		['dashboard', 'dashboard/listings', 'dashboard/listings/new'].includes(page.routePath)
 			? daynightAccount.newListingCta
-			: 'Автомобили'
+			: 'Vehicles'
 	);
 	const dashboardMenuItems = $derived.by((): DashboardMenuItem[] => [
 		{
@@ -127,7 +127,7 @@
 			id: 'logout',
 			href: '/',
 			icon: '/assets/images/dashboard/Logout.svg',
-			label: 'Изход'
+			label: 'Sign out'
 		}
 	]);
 </script>
@@ -170,7 +170,7 @@
 		</ul>
 
 		<p class="dashboard-bottom text-muted text-center text-sm" style="margin-top: auto;">
-			©2026 <a class="text-sm text-white" href={resolve('/')} target="_blank">Day Night Auto</a>. All
+			©2026 <a class="text-sm text-white" href={resolve('/')} target="_blank">Texas Drive Auto</a>. All
 			Rights Reserved.
 		</p>
 	</div>
@@ -193,12 +193,12 @@
 						/>
 					</a>
 					<div class="daynight-dashboard-header__summary">
-						<span>Клиентски профил</span>
+						<span>Customer profile</span>
 						<strong>{dashboardTitle}</strong>
 					</div>
 					<div class="daynight-dashboard-header__actions">
 						<a class="daynight-dashboard-header__ghost" href={resolve('/inventory')}
-							>Налични автомобили</a
+							>Vehicle inventory</a
 						>
 						<a class="daynight-dashboard-header__user" href={resolve('/dashboard/profile')}>
 							<img
@@ -209,11 +209,11 @@
 								decoding="async"
 								loading="eager"
 							/>
-							<span>Клиентски профил</span>
+							<span>Customer profile</span>
 						</a>
 						<a class="daynight-dashboard-header__cta" href={resolve('/dashboard/listings/new')}>
 							<span aria-hidden="true">+</span>
-							Нова заявка за продажба
+							New sale request
 						</a>
 					</div>
 				</div>

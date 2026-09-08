@@ -4,15 +4,15 @@
 	const phoneHref = `tel:${daynightSite.phone}`;
 </script>
 
-<ul class="contact-actions" aria-label="Бързи контакти">
+<ul class="contact-actions" aria-label="Quick contacts">
 	<li class="contact-action contact-action--phone">
 		<a
 			href={phoneHref}
 			class="contact-action__trigger"
-			aria-label={`Обади се на ${daynightSite.phoneLabel}`}
+			aria-label={`Call ${daynightSite.phoneLabel}`}
 		>
 			<strong>{daynightSite.phoneLabel}</strong>
-			<span>Обаждане / Viber</span>
+			<span>Call / Viber</span>
 		</a>
 	</li>
 </ul>

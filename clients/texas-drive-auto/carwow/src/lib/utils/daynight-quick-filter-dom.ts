@@ -9,13 +9,13 @@ const compactQuickLabels: Record<string, Record<string, string>> = {
 		'over-50000': '> 50k EUR'
 	},
 	mileage: {
-		'under-100000': '≤ 100k км',
-		'under-150000': '≤ 150k км',
-		'under-200000': '≤ 200k км',
-		'over-200000': '> 200k км'
+		'under-100000': '≤ 100k miles',
+		'under-150000': '≤ 150k miles',
+		'under-200000': '≤ 200k miles',
+		'over-200000': '> 200k miles'
 	},
 	transmission: {
-		Автоматик: 'Автомат'
+		Automatic: 'Automatic'
 	}
 };
 
@@ -55,10 +55,10 @@ export function getQuickDisplayLabel(name: string, value: string, label: string)
 function quickSelectionSummary(name: string, labels: string[]) {
 	if (!labels.length) return '';
 	if (labels.length === 1) return labels[0];
-	if (name === 'feature') return `${labels.length} екстри`;
-	if (name === 'model') return `${labels.length} модела`;
+	if (name === 'feature') return `${labels.length} features`;
+	if (name === 'model') return `${labels.length} models`;
 	if (labels.length === 2) return `${labels[0]} + ${labels[1]}`;
-	return `${labels[0]} + още ${labels.length - 1}`;
+	return `${labels[0]} + more ${labels.length - 1}`;
 }
 
 export function syncQuickDropdown(dropdown: Element) {
@@ -98,7 +98,7 @@ export function syncQuickDropdown(dropdown: Element) {
 	dropdown.classList.toggle('is-selected', selectedValues.length > 0);
 	if (clearButton) {
 		const hasSelection = selectedValues.length > 0;
-		const clearLabel = hasSelection ? `Изчисти ${baseLabel}: ${fullLabel}` : `Изчисти ${baseLabel}`;
+		const clearLabel = hasSelection ? `Clear ${baseLabel}: ${fullLabel}` : `Clear ${baseLabel}`;
 		clearButton.disabled = !hasSelection;
 		clearButton.tabIndex = hasSelection ? 0 : -1;
 		clearButton.setAttribute('aria-label', clearLabel);
@@ -114,13 +114,13 @@ export function syncQuickDropdowns(root: ParentNode = document) {
 }
 
 export function normalize(value: unknown) {
-	return (value || '').toString().toLocaleLowerCase('bg-BG').trim();
+	return (value || '').toString().toLocaleLowerCase('en-US').trim();
 }
 
 export function normalizeCondition(value: unknown) {
 	const normalized = normalize(value);
-	if (['new', 'nov', 'novi', 'нов', 'нови', 'нов внос'].includes(normalized)) return 'new';
-	if (['used', 'upotrebyavani', 'употребявани', 'употребяван'].includes(normalized)) {
+	if (['new', 'nov', 'novi', 'new', 'new', 'recently imported'].includes(normalized)) return 'new';
+	if (['used', 'upotrebyavani', 'used', 'used'].includes(normalized)) {
 		return 'used';
 	}
 
@@ -128,8 +128,8 @@ export function normalizeCondition(value: unknown) {
 }
 
 export function conditionLabel(value: string) {
-	if (value === 'new') return 'Нови';
-	if (value === 'used') return 'Употребявани';
+	if (value === 'new') return 'New';
+	if (value === 'used') return 'Used';
 	return '';
 }
 

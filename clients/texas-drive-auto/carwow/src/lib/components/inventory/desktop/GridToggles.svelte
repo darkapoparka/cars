@@ -14,10 +14,10 @@
 	} = $props();
 
 	const toggles = [
-		{ index: 0, label: 'Две колони', width: 14, circles: [3, 11] },
-		{ index: 1, label: 'Три колони', width: 22, circles: [3, 11, 19] },
-		{ index: 2, label: 'Четири колони', width: 30, circles: [3, 11, 19, 27] },
-		{ index: 3, label: 'Пет колони', width: 38, circles: [3, 11, 19, 27, 35] }
+		{ index: 0, label: 'Two columns', width: 14, circles: [3, 11] },
+		{ index: 1, label: 'Three columns', width: 22, circles: [3, 11, 19] },
+		{ index: 2, label: 'Four columns', width: 30, circles: [3, 11, 19, 27] },
+		{ index: 3, label: 'Five columns', width: 38, circles: [3, 11, 19, 27, 35] }
 	];
 
 	// The sidebar layout caps the grid at 4 columns, so the 5-column toggle is hidden there.
@@ -62,9 +62,9 @@
 			: ''}"
 		type="button"
 		data-daynight-layout-toggle="sidebar"
-		aria-label="Филтри в лява колона"
+		aria-label="Filters in left column"
 		aria-pressed={layoutMode === 'sidebar' ? 'true' : 'false'}
-		title={layoutMode === 'sidebar' ? 'Скрий лявата колона' : 'Филтри в лява колона'}
+		title={layoutMode === 'sidebar' ? 'Hide left column' : 'Filters in left column'}
 		onclick={() => onSidebarChange?.()}
 	>
 		<PanelLeft aria-hidden="true" size={18} strokeWidth={2.2} />

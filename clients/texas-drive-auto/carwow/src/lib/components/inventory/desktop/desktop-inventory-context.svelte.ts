@@ -29,19 +29,19 @@ export type InventoryShortcut = {
 };
 
 export const inventoryShortcuts: InventoryShortcut[] = [
-	{ label: 'Всички', clearsAll: true },
+	{ label: 'All', clearsAll: true },
 	{ label: 'Mercedes-Benz', field: 'brand', value: 'Mercedes-Benz' },
 	{ label: 'BMW', field: 'brand', value: 'BMW' },
 	{ label: 'Audi', field: 'brand', value: 'Audi' },
-	{ label: 'Джип', field: 'body', value: 'Джип' },
-	{ label: 'Седан', field: 'body', value: 'Седан' },
-	{ label: 'Купе', field: 'body', value: 'Купе' },
-	{ label: 'Ван', field: 'body', value: 'Ван' },
-	{ label: 'Налични', field: 'availability', value: 'available' },
-	{ label: 'Дизел', field: 'fuel', value: 'Дизел' },
-	{ label: 'Бензин', field: 'fuel', value: 'Бензин' },
-	{ label: 'До 50 000 EUR', field: 'price', value: 'under-50000' },
-	{ label: 'До 100 000 км', field: 'mileage', value: 'under-100000' }
+	{ label: 'SUV', field: 'body', value: 'SUV' },
+	{ label: 'Sedan', field: 'body', value: 'Sedan' },
+	{ label: 'Coupe', field: 'body', value: 'Coupe' },
+	{ label: 'Van', field: 'body', value: 'Van' },
+	{ label: 'Available', field: 'availability', value: 'available' },
+	{ label: 'Diesel', field: 'fuel', value: 'Diesel' },
+	{ label: 'Gasoline', field: 'fuel', value: 'Gasoline' },
+	{ label: 'Up to 50 000 USD', field: 'price', value: 'under-50000' },
+	{ label: 'Up to 100 000 miles', field: 'mileage', value: 'under-100000' }
 ];
 
 function hasShortcutFor(field: string, value: string): boolean {
@@ -83,8 +83,8 @@ export class DesktopInventoryFilters {
 	) {
 		this.store = createInventoryFilterState(getVehicles, init);
 		this.sort = readDesktopSort(init?.get('sort') ?? null);
-		// Map each Модел option → the brands that stock it, so the menu can scope to
-		// the chosen Марка and stale model selections can be pruned when it changes.
+		// Map each Model option → the brands that stock it, so the menu can scope to
+		// the chosen Make and stale model selections can be pruned when it changes.
 		const quickFilterGroups = typeof quickFilters === 'function' ? quickFilters() : quickFilters;
 		const modelGroup = quickFilterGroups?.find((group) => group.name === 'model');
 		for (const option of modelGroup?.options ?? []) {
@@ -115,7 +115,7 @@ export class DesktopInventoryFilters {
 
 	/**
 	 * Applied-filter chips for `#filterTags`. A filter value that has a matching
-	 * type-pill (e.g. body=SUV, fuel=Електрически, price=under-10000) is NOT
+	 * type-pill (e.g. body=SUV, fuel=Electric, price=under-10000) is NOT
 	 * rendered as a chip — the pill already represents it (legacy behaviour). This
 	 * is what makes `#filterResults`/`#btnClearAll` stay hidden for pill filters
 	 * but appear for brand/feature multi-selects.
@@ -143,7 +143,7 @@ export class DesktopInventoryFilters {
 		pushSingle(
 			'availability',
 			s.availability,
-			s.availability === 'incoming' ? 'Очакван внос' : 'Налични'
+			s.availability === 'incoming' ? 'Import status unconfirmed' : 'Available'
 		);
 		if (s.query) tags.push({ field: 'q', value: s.query, label: s.query });
 		return tags;
@@ -216,7 +216,7 @@ export class DesktopInventoryFilters {
 
 	/**
 	 * Drop any selected model that no longer belongs to the chosen brand(s) — same
-	 * guard the legacy runtime ran when the Марка changed (`syncModelOptionsToBrands`).
+	 * guard the legacy runtime ran when the Make changed (`syncModelOptionsToBrands`).
 	 * `optionBrandsByModel` is set once from the rendered option metadata.
 	 */
 	// Static metadata (set once in the constructor) — a plain record, never reactive.

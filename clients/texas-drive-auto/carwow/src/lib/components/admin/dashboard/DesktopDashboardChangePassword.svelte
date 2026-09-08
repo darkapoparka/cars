@@ -54,12 +54,12 @@
 		<button
 			class="btn btn-primary btn-large font-weight-600 dashboard-toggle-btn mb-24"
 			id="dashboardToggleBtn"
-			aria-label="Toggle Моят профил"
+			aria-label="Toggle My account"
 			type="button"
 		>
-			Show Моят профил
+			Show My account
 		</button>
-		<p class="h3 mb-40">Сигурност на профила</p>
+		<p class="h3 mb-40">Account security</p>
 		<form action="#">
 			<div class="dashboard-box style-5 bg-white">
 				<div class="change-password-wrapper flex flex-col gap-23">
@@ -80,7 +80,7 @@
 
 					<div class="flex">
 						<button type="submit" class="btn btn-primary btn-large-3 font-weight-600">
-							Сигурност на профила
+							Account security
 						</button>
 					</div>
 				</div>

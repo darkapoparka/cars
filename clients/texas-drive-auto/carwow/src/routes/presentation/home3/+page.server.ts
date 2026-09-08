@@ -1,18 +1,18 @@
 import { cars } from '$lib/data/daynight-vehicles';
 
 const fuelLabels: Record<string, string> = {
-	Бензин: 'Petrol',
-	'Газ/Бензин': 'Petrol/LPG',
-	'Бензин/Газ': 'Petrol/LPG',
-	Дизел: 'Diesel',
-	Електрически: 'Electric',
-	Хибриден: 'Hybrid'
+	Gasoline: 'Petrol',
+	'LPG/Gasoline': 'Petrol/LPG',
+	'Gasoline/LPG': 'Petrol/LPG',
+	Diesel: 'Diesel',
+	Electric: 'Electric',
+	Hybrid: 'Hybrid'
 };
 
 const transmissionLabels: Record<string, string> = {
-	Автоматик: 'Automatic',
-	Ръчна: 'Manual',
-	Ръчни: 'Manual'
+	Automatic: 'Automatic',
+	Manual: 'Manual',
+	Manual: 'Manual'
 };
 
 const brandLogoPaths: Record<string, string> = {
@@ -35,24 +35,24 @@ const brandLogoPaths: Record<string, string> = {
 };
 
 const bodyLabels: Record<string, string> = {
-	Седан: 'Saloons',
-	Комби: 'Estate cars',
-	Хечбек: 'Hatchbacks',
-	Ван: 'Vans',
-	Лимузина: 'Luxury cars',
-	Купе: 'Coupes',
-	Кабрио: 'Convertibles'
+	Sedan: 'Saloons',
+	Wagon: 'Estate cars',
+	Hatchback: 'Hatchbacks',
+	Van: 'Vans',
+	Sedan: 'Luxury cars',
+	Coupe: 'Coupes',
+	Convertible: 'Convertibles'
 };
 
 const bodyImagePaths: Record<string, string> = {
 	SUV: '/assets/images/body-type/normalized/body-suv-transparent.webp',
-	Седан: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Комби: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
-	Хечбек: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
-	Ван: '/assets/images/body-type/normalized/body-mpv-transparent.webp',
-	Лимузина: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Купе: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
-	Кабрио: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
+	Sedan: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Wagon: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
+	Hatchback: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+	Van: '/assets/images/body-type/normalized/body-mpv-transparent.webp',
+	Sedan: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Coupe: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
+	Convertible: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 };
 
 const featuredSlugs = [

@@ -57,7 +57,7 @@ export const homeBrandLogoByBrand = new Map<string, string>([
 export const homeBrandDisplayNameByBrand = new Map<string, string>([['Mercedes-Benz', 'Mercedes']]);
 
 export function formatHomeBrandVehicleCount(count: number) {
-	return count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Виж марката';
+	return count > 0 ? `${count} ${count === 1 ? 'vehicle' : 'vehicles'}` : 'View make';
 }
 
 export function buildHomeBrandStripItems(vehicles: readonly HomeBrandStripVehicle[]) {

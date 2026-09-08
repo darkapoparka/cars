@@ -10,8 +10,8 @@
 
 	let {
 		brands,
-		title = 'Марки в наличност',
-		ctaLabel = 'Виж всички марки',
+		title = 'Makes in stock',
+		ctaLabel = 'View all makes',
 		showHeaderCta = true,
 		showBelowCta = false,
 		showHeading = true,

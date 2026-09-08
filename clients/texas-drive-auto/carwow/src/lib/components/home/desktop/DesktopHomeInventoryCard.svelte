@@ -41,7 +41,7 @@
 	<div class="daynight-home-inventory-card__media">
 		<a
 			href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
-			aria-label={`Виж ${vehicle.shortTitle}`}
+			aria-label={`View ${vehicle.shortTitle}`}
 		>
 			<img
 				class="daynight-home-inventory-card__image"
@@ -94,11 +94,11 @@
 			</li>
 		</ul>
 		<p class="daynight-home-inventory-card__price">
-			<span class="daynight-card-price__value">{vehicle.priceEur}</span>
+			<span class="daynight-card-price__value">{vehicle.priceLabel}</span>
 			<span class="daynight-card-price__meta"
 				><span class="daynight-card-price__monthly">{vehicle.monthly}</span><a
 					href={resolve('/financing')}
-					class="daynight-card-price__link">Финансиране</a
+					class="daynight-card-price__link">Buyer-arranged funding</a
 				></span
 			>
 		</p>

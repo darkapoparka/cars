@@ -21,10 +21,10 @@
 			<DesktopHomeInventoryPreview vehicles={data.vehicles} />
 			<DesktopHomeBrandStrip
 				brands={brandStrip.slice(0, 12)}
-				title="Избери марка"
-				ctaLabel="Всички марки"
+				title="Choose a make"
+				ctaLabel="All makes"
 			/>
-			<DesktopHomeVehicleCategories title="Тип каросерия" ctaLabel="Всички типове" />
+			<DesktopHomeVehicleCategories title="Body style" ctaLabel="All types" />
 			<DesktopHomeWhyDayNight showMetrics={false} />
 			<DesktopHomeReviews />
 		</main>

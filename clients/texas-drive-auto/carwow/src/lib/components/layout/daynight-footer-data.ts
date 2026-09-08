@@ -29,38 +29,38 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'TEXAS DRIVE AUTO',
 		links: [
-			{ href: '/about', label: 'За Day Night Auto' },
-			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
-			{ href: '/team', label: 'Екип' },
-			{ href: '/reviews', label: 'Отзиви' },
-			{ href: '/blog', label: 'Блог' },
-			{ href: '/contact', label: 'Контакти' }
+			{ href: '/about', label: 'About Texas Drive Auto' },
+			{ href: '/about/daynight-auto-plovdiv', label: 'Dealership profile' },
+			{ href: '/team', label: 'Contact options' },
+			{ href: '/reviews', label: 'Reviews' },
+			{ href: '/blog', label: 'Blog' },
+			{ href: '/contact', label: 'Contact' }
 		]
 	},
 	{
-		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
+		title: 'SERVICES AND TOOLS',
 		links: [
-			{ href: '/inventory', label: 'Налични автомобили' },
-			{ href: '/financing', label: 'Финансиране' },
-			{ href: '/calculator', label: 'Калкулатор' },
-			{ href: '/sell-your-car', label: 'Продай или замени' },
-			{ href: '/compare', label: 'Сравнение' },
-			{ href: '/faq', label: 'ЧЗВ' }
+			{ href: '/inventory', label: 'Vehicle inventory' },
+			{ href: '/financing', label: 'Buyer-arranged funding' },
+			{ href: '/calculator', label: 'Calculator' },
+			{ href: '/sell-your-car', label: 'Ask about selling or trading' },
+			{ href: '/compare', label: 'Compare' },
+			{ href: '/faq', label: 'FAQ' }
 		]
 	},
 	{
-		title: 'ЗАПИТВАНИЯ',
+		title: 'INQUIRIES',
 		links: [
-			{ href: '/contact', label: 'Контакт за оглед' },
-			{ href: '/sell-your-car/request', label: 'Заявка за оценка' },
-			{ href: '/sell-your-car', label: 'Продай или замени' },
-			{ href: '/faq', label: 'ЧЗВ' }
+			{ href: '/contact', label: 'Contact for a viewing' },
+			{ href: '/sell-your-car/request', label: 'Request an appraisal' },
+			{ href: '/sell-your-car', label: 'Ask about selling or trading' },
+			{ href: '/faq', label: 'FAQ' }
 		]
 	}
 ];
 
 export const daynightFooterBottomLinks: DayNightFooterLink[] = [
-	{ href: '/terms', label: 'Условия за ползване' }
+	{ href: '/terms', label: 'Terms of use' }
 ];

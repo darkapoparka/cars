@@ -68,14 +68,14 @@
 			>{vehicle.meta}</span
 		>
 		<span class="flex justify-center text-sa-sm leading-[18px] font-semibold text-sa-ink">
-			Виж детайли
+			View details
 		</span>
 	</a>
 {/snippet}
 
 <li class={topItemClasses}>
 	<a class={topLinkClasses} href={resolve('/inventory')}>
-		Автомобили
+		Vehicles
 		<SiteChromeIcon name="chevron-down" class={chevronClasses} />
 	</a>
 	<div class={megaMenuClasses} data-daynight-mega-menu>
@@ -91,14 +91,14 @@
 				>
 					<a
 						class="inline-flex min-h-11 items-center justify-center rounded-sa-xs bg-sa-blue px-4 text-sa-nav-sub leading-sa-nav-sub font-medium text-sa-surface no-underline transition duration-150 ease-sa hover:bg-sa-red focus-visible:bg-sa-red"
-						href={resolve('/inventory')}>Виж всички автомобили</a
+						href={resolve('/inventory')}>View all vehicles</a
 					>
 					<div class="grid gap-0.5 text-right">
 						<strong class="text-sa-base leading-6 font-medium text-sa-ink"
-							>{vehicleCount} проверени автомобила в наличност</strong
+							>{vehicleCount} vehicles listed in this preview</strong
 						>
 						<span class="text-sa-base leading-6 text-sa-muted"
-							>С филтри по марка, цена, гориво, пробег и екстри.</span
+							>Filter by make, price, fuel, mileage and features.</span
 						>
 					</div>
 				</div>
