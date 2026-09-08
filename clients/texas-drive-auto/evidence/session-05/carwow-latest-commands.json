@@ -1,0 +1,18 @@
+[
+  {
+    "job": "install",
+    "workingDirectory": "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-session-05-active-20260909\\clients\\texas-drive-auto\\carwow",
+    "node": "v24.18.0",
+    "command": [
+      "C:\\Users\\radev\\AppData\\Local\\nvm\\v24.18.0\\node.exe",
+      "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-session-05-active-20260909\\clients\\texas-drive-auto\\node_modules\\.lead-build-tools/node_modules/npm/bin/npm-cli.js",
+      "ci",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "startedAt": "2026-09-08T23:41:25.514Z",
+    "exitCode": null,
+    "status": "running",
+    "log": "carwow-install-2026-09-08T23-41-25-512Z.txt"
+  }
+]
