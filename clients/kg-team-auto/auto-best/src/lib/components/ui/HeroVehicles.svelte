@@ -64,7 +64,7 @@
       width: calc(var(--car-height) * var(--art-width-ratio));
       height: calc(var(--car-height) * var(--art-height-ratio));
     }
-    .dn-hero-vehicles__car--left { left: var(--car-edge); transform: scaleX(-1); }
+    .dn-hero-vehicles__car--left { left: var(--car-edge); transform: none; }
     .dn-hero-vehicles__car--right { right: var(--car-edge); }
   }
 </style>

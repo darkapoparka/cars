@@ -10,29 +10,7 @@ export type FooterSocialLink = {
 
 export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | 'mpv';
 
-export const footerSocialLinks: FooterSocialLink[] = [
-	{
-		label: 'Facebook',
-		href: 'https://www.facebook.com/61566304063141/',
-		title: 'Facebook',
-		icon: 'facebook',
-		external: true
-	},
-	{
-		label: 'Instagram',
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
-		title: 'Instagram',
-		icon: 'instagram',
-		external: true
-	},
-	{
-		label: 'Mobile.bg',
-		href: daynightSite.sourceInventory,
-		title: 'Виж наличните автомобили в mobile.bg',
-		icon: 'mobilebg',
-		external: true
-	}
-];
+export const footerSocialLinks: FooterSocialLink[] = [{label:'Mobile.bg',href:daynightSite.sourceInventory,title:'Публикувани обяви на продавача',icon:'mobilebg',external:true}];
 
 export const brandLogos: Record<string, string> = {
 	Audi: '/assets/images/brand/brand-3.png',

@@ -28,7 +28,7 @@
 	// 1280) and 1500px blocks are kept for smaller desktops. Brand colours stay literal
 	// for an exact visual match.
 
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/assets/${string}` | `/dealer/${string}`;
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const contactBannerSrc: AssetHref =

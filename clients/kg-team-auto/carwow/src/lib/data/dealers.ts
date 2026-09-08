@@ -13,43 +13,24 @@ export interface Dealer {
 	specialties: string[];
 }
 
+// One unclaimed preview profile; rating 0 denotes no confirmed rating, not a customer score.
 export const dealers: Dealer[] = [
-	{
-		slug: "day-night-auto-group",
-		name: daynightSite.name,
-		location: "Пловдив",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/dealer/11701247770704576-1.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.8,
-		specialties: ['Обявени автомобили', 'Оглед с уговорка', 'Финансиране']
-	},
-	{
-		slug: "day-night-auto-group-documents",
-		name: "K-G Team Auto Документи и съдействие",
-		location: "Пловдив",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/dealer/11782979504874945-1.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Документи', 'Регистрация', 'Съдействие']
-	},
-	{
-		slug: "day-night-auto-group-sourcing",
-		name: "K-G Team Auto Подбор на автомобил",
-		location: "Пловдив",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: '/dealer/logo.png',
-		cover: '/dealer/logo.png',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
-	}
+  {
+    "slug": "kg-team-auto",
+    "name": "K-G Team Auto",
+    "location": "Пловдив",
+    "address": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "phone": "0877 34 62 62",
+    "logo": "/dealer/logo.png",
+    "cover": "/dealer/11783754278742708-1.webp",
+    "inventory": 10,
+    "rating": 0,
+    "specialties": [
+      "Датирани обяви",
+      "Пловдив",
+      "Потвърдете наличността"
+    ]
+  }
 ];
 
 export function getDealerBySlug(slug: string) {
