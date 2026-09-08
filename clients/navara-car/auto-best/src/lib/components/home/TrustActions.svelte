@@ -3,71 +3,52 @@
   import Icon from '$components/ui/Icon.svelte';
   import VehicleCutout from '$components/ui/VehicleCutout.svelte';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
+  import source from '$data/navara-data.json';
   let { group, variant = 'banners' }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards' } = $props();
 
   const actions = [
     {
-      title: 'Вижте колекцията',
-      artwork: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
-      vehicle: 'urus',
-      tone: 'black',
-      mobileTitle: 'Автомобили',
-      mobileCta: 'Разгледай',
-      description: 'Разгледайте автомобилите с удобни филтри.',
-      bannerDescription: ['Изберете автомобил', 'с удобни филтри.'],
-      cta: 'Към автомобилите',
-      href: '/listing-grid',
-      icon: 'car'
+      title: 'Автомобили във Варна',
+      artwork: { src: source.vehicles[4].images[0], width: 1000, height: 667, bounds: [0, 0, 1000, 667], view: 'front-pair' },
+      vehicle: 'urus', tone: 'black', mobileTitle: 'Автомобили', mobileCta: 'Разгледай',
+      description: 'Девет публикувани предложения към 08.09.2026 г.',
+      bannerDescription: ['Обяви към 08.09.2026', 'с удобни филтри.'],
+      cta: 'Към автомобилите', href: '/listing-grid', icon: 'car'
     },
     {
-      title: 'Продажба или бартер',
-      artwork: { src: '/assets/images/lead/day-night-sell-banner-v2.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
-      vehicle: 'gclass',
-      tone: 'red',
-      mobileTitle: 'Продай/Бартер',
-      mobileCta: 'Заяви оценка',
-      description: 'Получете оценка за продажба или бартер.',
-      bannerDescription: ['Получете оценка', 'за продажба или бартер.'],
-      cta: 'Поискайте оценка',
-      href: '/contact?topic=trade-in',
-      icon: 'value'
+      title: 'Уточнете оглед',
+      artwork: { src: source.vehicles[3].images[0], width: 1000, height: 750, bounds: [0, 0, 1000, 750], view: 'three-quarter' },
+      vehicle: 'gclass', tone: 'red', mobileTitle: 'Оглед', mobileCta: 'Попитай',
+      description: 'Потвърдете наличността, цената и удобен час по телефона.',
+      bannerDescription: ['Потвърдете наличността', 'преди посещение.'],
+      cta: 'Уточнете посещението', href: '/contact?topic=inspection', icon: 'value'
     },
     {
-      title: 'Внос по заявка',
-      vehicle: 'gclass',
-      tone: 'red',
-      mobileTitle: 'Внос по заявка',
-      mobileCta: 'Заяви внос',
-      description: 'Споделете модел и бюджет за внос по заявка.',
-      bannerDescription: ['Споделете своя бюджет', 'и модел за внос.'],
-      cta: 'Заявете внос',
-      href: '/contact?topic=import',
-      icon: 'contact'
+      title: 'Регистрация и документи', vehicle: 'gclass', tone: 'red',
+      mobileTitle: 'Регистрация', mobileCta: 'Попитай',
+      description: 'В обявите е посочено съдействие за КАТ Варна или транзитни номера.',
+      bannerDescription: ['Попитайте за документите', 'и отделните разходи.'],
+      cta: 'Попитайте за съдействие', href: '/contact?topic=import', icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
-      vehicle: 'urus',
-      tone: 'black',
-      mobileTitle: 'Собствен лизинг',
-      mobileCta: 'Виж условия',
-      description: 'Попитайте за първоначална вноска, срок и условия.',
-      bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],
-      cta: 'Поискайте условия',
-      href: '/contact?topic=leasing',
-      icon: 'finance'
+      title: 'Лизинг по запитване', vehicle: 'urus', tone: 'black',
+      mobileTitle: 'Лизинг', mobileCta: 'Попитай за условия',
+      description: 'Означението присъства в част от обявите. Няма предварително обещани условия.',
+      bannerDescription: ['Потвърдете доставчика', 'и конкретните условия.'],
+      cta: 'Попитайте за условия', href: '/contact?topic=leasing', icon: 'finance'
     }
   ] as const;
   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
 </script>
 
-<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}>
+<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Преди покупка' : group === 'browse' ? 'Автомобили и оглед' : 'Документи и условия'}>
   <div class="container">
     <div class="dn-trust-actions__panel">
       {#if variant === 'cards'}
         <div class="dn-services-heading dn-home-section-heading">
-          <h2 class="dn-home-section-title">Как можем да помогнем</h2>
-          <p>Изберете услуга или се свържете директно с екипа.</p>
-          <a class="dn-home-section-action" href={resolve('/contact')}>Свържете се с нас</a>
+          <h2 class="dn-home-section-title">Преди покупка</h2>
+          <p>Публикувани възможности и въпроси към продавача.</p>
+          <a class="dn-home-section-action" href={resolve('/contact')}>Контакт с Навара кар</a>
         </div>
       {/if}
       <div class="dn-trust-actions__grid" aria-label="Следващи стъпки">
@@ -88,10 +69,7 @@
                 <div class="dn-trust-card__vehicle"><VehicleCutout vehicle={action.vehicle} framing="banner" /></div>
               {/if}
             {/if}
-            <div class="dn-trust-card__icon" aria-hidden="true">
-              <OriginalActionIcon name={action.icon} />
-            </div>
-
+            <div class="dn-trust-card__icon" aria-hidden="true"><OriginalActionIcon name={action.icon} /></div>
             <div class="dn-trust-card__content">
               <h3 id={`trust-${variant}-${action.icon}`}>
                 {#if variant === 'banners'}

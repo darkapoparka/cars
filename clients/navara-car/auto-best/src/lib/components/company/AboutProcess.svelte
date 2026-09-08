@@ -2,7 +2,7 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import AboutServiceIcon from './AboutServiceIcon.svelte';
-  import { brand } from '$config/brand';
+  import { brand, dealerSource } from '$config/brand';
   import { companyServices } from '$data/company';
 </script>
 
@@ -10,29 +10,22 @@
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
+      <p>Автокъща във Варна с публикуван каталог на градски автомобили, SUV, комби и електромобили. Преди посещение потвърдете наличността и условията по конкретната обява.</p>
+      <p>{dealerSource.inventoryNotice}</p>
       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
         Вижте автомобилите <Icon name="arrow-right" size={18} />
       </a>
     </div>
-
     <div class="dn-about-services">
       {#each companyServices as service (service.index)}
         <article class="dn-about-service-card">
-          <div class="dn-about-service-card__icon" aria-hidden="true">
-            <AboutServiceIcon name={service.icon} />
-          </div>
-          <div>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </div>
+          <div class="dn-about-service-card__icon" aria-hidden="true"><AboutServiceIcon name={service.icon} /></div>
+          <div><h3>{service.title}</h3><p>{service.description}</p></div>
           <a href={resolve(service.href as '/contact')}>
-            <span>{service.cta}</span>
-            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+            <span>{service.cta}</span><Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </a>
         </article>
       {/each}
     </div>
-
   </div>
 </section>
