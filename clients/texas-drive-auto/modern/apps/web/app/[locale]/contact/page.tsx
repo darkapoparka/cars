@@ -33,7 +33,7 @@ const pageCopy = {
     heroImageAlt: "Нощен автомобилен шоурум",
     title: "Премиум автомобили. Внос. Лизинг.",
     description:
-      "Вижте автомобилите в наличност или говорете директно с Day & Night за следващия си автомобил.",
+      "Вижте автомобилите в наличност или говорете директно с Texas Drive Auto за следващия си автомобил.",
     inventoryAction: "Вижте наличностите",
     phoneAction: "Обадете се",
     contactTitle: "Говорете директно с нас.",
@@ -46,7 +46,7 @@ const pageCopy = {
       "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
     sellHandoffAction: "Обадете се за оферта",
     sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Day & Night, за да уточним оглед и конкретна оферта.",
+      "Данните за автомобила са готови. Обадете се на Texas Drive Auto, за да уточним оглед и конкретна оферта.",
     sellHandoffEditAction: "Редактирайте данните",
     sellHandoffTitle: "Заявете оценка за автомобила",
     sellCategoryLabel: "Категория",
@@ -86,7 +86,7 @@ const pageCopy = {
     heroImageAlt: "Night-time automotive showroom",
     title: "Premium vehicles. Imports. Leasing.",
     description:
-      "Browse the vehicles in stock or speak directly with Day & Night about your next vehicle.",
+      "Browse the vehicles in stock or speak directly with Texas Drive Auto about your next vehicle.",
     inventoryAction: "View available vehicles",
     phoneAction: "Call us",
     contactTitle: "Speak directly with us.",
@@ -99,7 +99,7 @@ const pageCopy = {
       "From a vehicle in stock to an import on request, our team is one call away.",
     sellHandoffAction: "Call for an offer",
     sellHandoffDescription:
-      "Your vehicle details are ready. Call Day & Night to arrange an inspection and a concrete offer.",
+      "Your vehicle details are ready. Call Texas Drive Auto to arrange an inspection and a concrete offer.",
     sellHandoffEditAction: "Edit vehicle details",
     sellHandoffTitle: "Request a vehicle appraisal",
     sellCategoryLabel: "Category",
@@ -184,14 +184,14 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? "Texas Drive Auto в София — автомобили в наличност, внос по заявка и собствен лизинг."
+      : "Texas Drive Auto in Sofia — vehicles in stock, import on request, and in-house leasing.",
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
     title: isBg
-      ? "За нас и контакти | Day & Night"
-      : "About and contact | Day & Night",
+      ? "За нас и контакти | Texas Drive Auto"
+      : "About and contact | Texas Drive Auto",
   });
 };
 

@@ -1,0 +1,47 @@
+
+> day-and-night-autodeal@0.1.0 validate
+> npm run check:architecture && npm run check:assets && npm run check:domain && npm run check && npm run build
+
+
+> day-and-night-autodeal@0.1.0 check:architecture
+> node scripts/check-architecture.mjs
+
+Architecture check passed across 88 native application/configuration files.
+
+> day-and-night-autodeal@0.1.0 check:assets
+> node scripts/check-assets.mjs
+
+
+Expected exactly 98 guarded static media files, found 112
+Expected exactly 98 referenced public assets, found 79
+Unreferenced static media: /apple-touch-icon.png
+Unreferenced static media: /assets/images/img-box/team1.jpg
+Unreferenced static media: /assets/images/img-box/team2.jpg
+Unreferenced static media: /assets/images/img-box/team3.jpg
+Unreferenced static media: /assets/images/img-box/team4.jpg
+Unreferenced static media: /assets/images/lead/day-night-logo.png
+Unreferenced static media: /assets/images/lead/day-night-stock-02.webp
+Unreferenced static media: /assets/images/lead/day-night-stock-04.webp
+Unreferenced static media: /assets/images/lead/day-night-stock-05.webp
+Unreferenced static media: /assets/images/lead/day-night-video-g-class.jpg
+Unreferenced static media: /assets/images/lead/day-night-video-panamera.jpg
+Unreferenced static media: /assets/images/lead/day-night-video-urus.jpg
+Unreferenced static media: /assets/images/partner/par1.png
+Unreferenced static media: /assets/images/partner/par2.png
+Unreferenced static media: /assets/images/partner/par3.png
+Unreferenced static media: /assets/images/partner/par4.png
+Unreferenced static media: /assets/images/partner/par5.png
+Unreferenced static media: /assets/images/partner/par6.png
+Unreferenced static media: /brand/favicon.ico
+Unreferenced static media: /brand/icon-180.png
+Unreferenced static media: /brand/icon-192.png
+Unreferenced static media: /brand/icon-32.png
+Unreferenced static media: /brand/icon-512.png
+Unreferenced static media: /brand/logo-on-dark.png
+Unreferenced static media: /brand/logo-on-light.png
+Unreferenced static media: /brand/published-logo.jpg
+Unreferenced static media: /media/photo-unavailable.svg
+Unreferenced static media: /office.webp
+Unreferenced static media: /stock/127361904-1.webp
+Unreferenced static media: /stock/127361913-1.webp
+Unreferenced static media: /stock/127361925-1.webp
