@@ -1,47 +1,37 @@
 import { brand } from '$config/brand';
+import source from './navara-data.json';
 
 export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
-
 type CompanyService = {
-  index: string;
-  icon: CompanyServiceIcon;
-  title: string;
-  description: string;
-  href: string;
-  cta: string;
+  index: string; icon: CompanyServiceIcon; title: string;
+  description: string; href: string; cta: string;
 };
-
 type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
-
 export type ContactTopic = {
-  id: ContactTopicId;
-  label: string;
-  title: string;
-  description: string;
-  mobileDescription?: string;
+  id: ContactTopicId; label: string; title: string;
+  description: string; mobileDescription?: string;
 };
 
-/** Conversation prompts, not a promise of service or a submitted enquiry. */
+/** Retained query IDs keep existing routes usable; no unverified service is promised. */
 export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
   'trade-in': {
-    title: 'Подгответе за разговора',
-    items: ['Марка, модел и година', 'Пробег и състояние', 'Снимки или линк към обява']
+    title: 'Първо попитайте за възможността',
+    items: ['Продажба и бартер не са потвърдени услуги в този преглед', 'Посочете марка, модел и година', 'Не изпращайте лични документи през демонстрацията']
   },
   import: {
-    title: 'Какъв автомобил търсите?',
-    items: ['Марка, модел и предпочитания', 'Бюджет за покупката и вноса', 'Линк към обява, ако вече сте избрали']
+    title: 'Регистрация и документи',
+    items: ['Посочете избраната обява', 'Попитайте за регистрация в КАТ Варна или транзитни номера', 'Уточнете документите, разходите и срока с продавача']
   },
   leasing: {
-    title: 'Обсъдете с екипа',
-    items: ['Автомобилът, който сте избрали', 'Първоначална вноска и срок', 'Актуални условия за конкретната сделка']
+    title: 'Попитайте за условията',
+    items: ['Посочете избраната обява', 'Потвърдете дали за нея се предлага лизинг', 'Поискайте писмени условия от действителния доставчик']
   },
   inspection: {
-    title: 'Уговорете посещението',
-    items: ['Автомобилът, който искате да видите', 'Удобен ден и час', 'Потвърждение от екипа по телефона']
+    title: 'Уточнете посещението',
+    items: ['Автомобилът, който искате да видите', 'Потвърждение за наличност и цена', 'Удобен ден, час и точен вход на автокъщата']
   }
 };
 
-/** Validate a user-provided listing link without fetching or inspecting its destination. */
 export function resolveImportUrl(value: string | null): string | null {
   const candidate = value?.trim();
   if (!candidate || candidate.length > 2048) return null;
@@ -49,85 +39,26 @@ export function resolveImportUrl(value: string | null): string | null {
     const url = new URL(candidate);
     if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) return null;
     return url.href;
-  } catch {
-    return null;
-  }
+  } catch { return null; }
 }
 
 export const companyServices: CompanyService[] = [
-  {
-    index: '01',
-    icon: 'inspection',
-    title: `Оглед в ${brand.city}`,
-    description: `Посещение в ${brand.city} с предварителна уговорка.`,
-    href: '/contact?topic=inspection',
-    cta: 'Запазете оглед'
-  },
-  {
-    index: '02',
-    icon: 'import',
-    title: 'Внос по заявка',
-    description: 'Обсъдете автомобил, бюджет и внос с екипа.',
-    href: '/contact?topic=import',
-    cta: 'Попитайте за внос'
-  },
-  {
-    index: '03',
-    icon: 'leasing',
-    title: 'Собствен лизинг',
-    description: 'Условия според избрания автомобил.',
-    href: '/contact?topic=leasing',
-    cta: 'Обсъдете лизинг'
-  },
-  {
-    index: '04',
-    icon: 'trade-in',
-    title: 'Оценка за бартер',
-    description: 'Предложете своя автомобил за индивидуална оценка.',
-    href: '/contact?topic=trade-in',
-    cta: 'Поискайте оценка'
-  }
+  { index: '01', icon: 'inspection', title: `Оглед във ${brand.city}`, description: 'Потвърдете наличността и удобен час по публикувания телефон.', href: '/contact?topic=inspection', cta: 'Уточнете оглед' },
+  { index: '02', icon: 'import', title: source.business.services[1].title, description: source.business.services[1].description, href: '/contact?topic=import', cta: 'Попитайте за регистрация' },
+  { index: '03', icon: 'leasing', title: source.business.services[2].title, description: 'Част от обявите са означени с „Лизинг“. Условията се уточняват, а не се обещават от тази демонстрация.', href: '/contact?topic=leasing', cta: 'Попитайте за условията' },
+  { index: '04', icon: 'trade-in', title: 'Избор от каталога', description: 'Сравнете публикуваните данни за градски автомобили, SUV, комби и електромобили.', href: '/listing-grid', cta: 'Вижте автомобилите' }
 ];
 
 export const contactTopics: ContactTopic[] = [
-  {
-    id: 'general',
-    label: 'Общ въпрос',
-    title: 'Разговор с екипа',
-    description: `За наличност, следващи стъпки или друг въпрос за ${brand.name}.`
-  },
-  {
-    id: 'inspection',
-    label: 'Оглед',
-    title: `Оглед в ${brand.city}`,
-    description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
-  },
-  {
-    id: 'import',
-    label: 'Внос',
-    title: 'Внос по заявка',
-    description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
-    mobileDescription: 'Добавете обява или опишете какво търсите.'
-  },
-  {
-    id: 'leasing',
-    label: 'Лизинг',
-    title: 'Собствен лизинг',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
-  },
-  {
-    id: 'trade-in',
-    label: 'Бартер',
-    title: 'Бартер и оценка',
-    description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
-    mobileDescription: 'Поискайте оценка за продажба или бартер.'
-  }
+  { id: 'general', label: 'Общ въпрос', title: `Контакт с ${brand.name}`, description: 'Потвърдете данните от обявата директно с продавача.' },
+  { id: 'inspection', label: 'Оглед', title: `Оглед във ${brand.city}`, description: 'Работно време не е публикувано. Обадете се предварително за наличност, час и точен вход.' },
+  { id: 'import', label: 'Регистрация', title: 'Регистрация и документи', description: source.business.services[1].description, mobileDescription: 'Попитайте за регистрация или транзитни номера.' },
+  { id: 'leasing', label: 'Лизинг', title: 'Лизинг по запитване', description: source.business.services[2].description },
+  { id: 'trade-in', label: 'Друг автомобил', title: 'Въпрос за друг автомобил', description: 'Продажба, бартер или внос по поръчка не са потвърдени услуги в този преглед. Първо попитайте продавача дали може да съдейства.', mobileDescription: 'Първо потвърдете дали услугата се предлага.' }
 ];
 
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
 
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+// No independently verified map pin was published. Maps use an address search instead.
+export const showroomCoordinates = { latitude: null, longitude: null } as const;

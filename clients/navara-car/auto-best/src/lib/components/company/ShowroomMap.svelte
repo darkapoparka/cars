@@ -1,20 +1,16 @@
 <script lang="ts">
-  import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
-
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+  import { brand, dealerMapEmbedUrl, dealerMapUrl } from '$config/brand';
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
-    src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    src={dealerMapEmbedUrl}
+    title={`Търсене по публикувания адрес на ${brand.name}; точният вход се уточнява по телефона`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+  <a class="dn-showroom-map__link" href={dealerMapUrl} target="_blank" rel="noreferrer">Търсене на адреса в Google Maps</a>
 </div>
 
 <style>
@@ -26,14 +22,12 @@
     border-radius: 24px;
     background: #e9ebee;
   }
-
   .dn-showroom-map__frame {
     display: block;
     width: 100%;
     height: 460px;
     border: 0;
   }
-
   .dn-showroom-map__link {
     position: absolute;
     right: 16px;
@@ -52,31 +46,15 @@
     font-size: 14px;
     font-weight: 700;
   }
-
   .dn-showroom-map__link:hover,
-  .dn-showroom-map__link:focus-visible {
-    color: var(--dn-red);
-  }
-
+  .dn-showroom-map__link:focus-visible { color: var(--dn-red); }
   @media (max-width: 767px) {
     .dn-showroom-map,
-    .dn-showroom-map__frame {
-      min-height: 320px;
-      height: 320px;
-    }
+    .dn-showroom-map__frame { min-height: 320px; height: 320px; }
   }
-
   @media (max-width: 480px) {
     .dn-showroom-map,
-    .dn-showroom-map__frame {
-      min-height: 280px;
-      height: 280px;
-    }
-
-    .dn-showroom-map__link {
-      right: 12px;
-      bottom: 12px;
-      left: 12px;
-    }
+    .dn-showroom-map__frame { min-height: 280px; height: 280px; }
+    .dn-showroom-map__link { right: 12px; bottom: 12px; left: 12px; }
   }
 </style>

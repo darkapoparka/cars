@@ -1,3 +1,5 @@
+import source from '$data/navara-data.json';
+
 export type BrandConfig = {
   name: string;
   shortName: string;
@@ -8,27 +10,24 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  youtubeUrl?: `https://${string}`;
+  instagramUrl?: `https://${string}`;
+  facebookUrl?: `https://${string}`;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
+const business = source.business;
+export const brand: BrandConfig = {
+  name: business.name,
+  shortName: business.name,
+  city: business.city,
+  addressLine: business.addressLine,
+  address: business.address,
+  phone: business.phoneDisplay,
+  phoneHref: `tel:${business.phoneE164}`,
+  appointment: 'Работно време не е публикувано. Уточнете посещението по телефона.',
+  logo: '/navara/wordmark.svg'
+};
 
-export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
-} as const satisfies BrandConfig;
+export const dealerSource = source;
+export const dealerMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.name}, ${business.address}`)}`;
+export const dealerMapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${business.name}, ${business.address}`)}&z=14&hl=bg&output=embed`;

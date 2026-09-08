@@ -1,6 +1,7 @@
 import { featuredVehicles } from './inventory';
 import { bodyLabel } from './listing';
 import { brand } from '$config/brand';
+import source from './navara-data.json';
 
 const bodyArtwork = [
   { label: 'Седан', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 150, height: 80 },
@@ -10,24 +11,14 @@ const bodyArtwork = [
   { label: 'Кросоувър', query: 'Crossover', image: '/assets/images/icon-box/car-list5.png', width: 206, height: 95 },
   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
   { label: 'Комби', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
-  { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
-  { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
-  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
+  { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 }
 ] as const;
 
+// Generic manufacturer marks belong to the retained template, not to another dealer.
 const brandArtwork = [
-  { label: 'Land Rover', image: '/assets/images/partner/partner1.png' },
-  { label: 'Kia', image: '/assets/images/partner/partner2.png' },
-  { label: 'Toyota', image: '/assets/images/partner/partner3.png' },
-  { label: 'Jeep', image: '/assets/images/partner/partner4.png' },
   { label: 'Nissan', image: '/assets/images/partner/partner5.png' },
-  { label: 'Ford', image: '/assets/images/partner/partner6.png' },
-  { label: 'Foton', image: '/assets/images/partner/parner7.png' },
   { label: 'Mercedes-Benz', image: '/assets/images/partner/parner8.png' },
-  { label: 'Dongfeng', image: '/assets/images/partner/parner9.png' },
-  { label: 'Isuzu', image: '/assets/images/partner/parner10.png' },
-  { label: 'Audi', image: '/assets/images/partner/parner11.png' },
-  { label: 'BMW', image: '/assets/images/partner/parner12.png' }
+  { label: 'Audi', image: '/assets/images/partner/parner11.png' }
 ] as const;
 
 export const bodyTypes = [...new Set(featuredVehicles.map(vehicle => vehicle.body))].map(query => {
@@ -38,28 +29,7 @@ export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle 
   .map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
 
 export const editorial = [
-  {
-    title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
-    image: '/assets/images/lead/day-night-guide-inspection.webp',
-    href: '/contact',
-    meta: 'Полезно',
-    category: 'Ръководство'
-  },
-  {
-    title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
-    image: '/assets/images/lead/day-night-guide-import.webp',
-    href: '/blog-detail/1',
-    meta: 'Полезно',
-    category: 'Ръководство'
-  },
-  {
-    title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
-    image: '/assets/images/lead/day-night-guide-leasing.webp',
-    href: '/blog-detail/2',
-    meta: 'Полезно',
-    category: 'Ръководство'
-  }
+  { title: `Къде е ${brand.name}?`, text: 'Варна, Кайсиева градина, бул. „Цар Освободител“. Потвърдете точния вход и часа за посещение по телефона.', image: source.vehicles[3].images[1], href: '/contact', meta: '08.09.2026', category: 'Контакти' },
+  { title: 'Как да използвате тази селекция?', text: 'Сравнете обявените цени, пробег и оборудване. Данните са от публикации към посочената дата, а не от система за текуща наличност.', image: source.vehicles[0].images[0], href: '/blog-detail/1', meta: '08.09.2026', category: 'Каталог' },
+  { title: 'Регистрация и лизинг: какво да уточните?', text: 'Продавачът посочва съдействие за регистрация и означение „Лизинг“ в част от обявите. Конкретните разходи и условия се потвърждават отделно.', image: source.vehicles[4].images[0], href: '/blog-detail/2', meta: '08.09.2026', category: 'Въпроси' }
 ] as const;
