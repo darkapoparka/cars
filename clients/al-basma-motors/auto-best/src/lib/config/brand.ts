@@ -13,22 +13,22 @@ export type BrandConfig = {
   facebookUrl: `https://${string}`;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
+const name = 'Al Basma Motors';
+const shortName = 'Al Basma';
+const city = 'Sharjah';
+const addressLine = 'Showroom 61, Souq Al Haraj';
 
 export const brand = {
   name,
   shortName,
   city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
+  youtubeUrl: 'https://albasmamotors.com/',
+  instagramUrl: 'https://www.instagram.com/albasmamotors',
+  facebookUrl: 'https://www.facebook.com/albasmamotors',
+  phone: '+971 54 342 2222',
+  phoneHref: 'tel:+971543422222',
   addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  address: `${addressLine}, ${city}, UAE`,
+  appointment: 'Contact the showroom before travelling',
+  logo: '/dealer/brand/logo-on-light.png'
 } as const satisfies BrandConfig;
