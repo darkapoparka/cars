@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "session": "09",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "clientSlug": "nova-cars-sofia",
+  "existingIdentitySlug": "nova-cars-luxury-sales",
+  "crmAccountId": null,
+  "crmOperations": "none",
+  "publishedName": "NOVA CARS Luxury Sales",
+  "officialWebsite": "https://novacars.bg/",
+  "assignedMarketplace": "https://novacars.mobile.bg/",
+  "identityMatch": {
+    "basis": ["same official domain", "same assigned marketplace", "primary phone +359898880599", "Sofia, Amsterdam 5"],
+    "legacyReferences": ["M:/codex/agency-os-projects/leads/automotive/nova-cars-luxury-sales/spartak-style/AGENCY_BRIEF.md", "M:/codex/agency-os-projects/leads/automotive/nova-cars-luxury-sales/bohemcars-style/AGENCY_BRIEF.md"],
+    "legacyBriefDate": "2026-07-11",
+    "conclusion": "same public dealership identity; no new account created",
+    "legacyCatalogScope": "Both briefs explicitly retain reusable-template inventory rather than verified NOVA CARS stock."
+  },
+  "publicContacts": {
+    "primaryPhone": "+359898880599",
+    "additionalOfficialSitePhones": ["+359882980098", "+359892244622"],
+    "address": "1592 Sofia, Amsterdam 5, Bulgaria",
+    "hoursPublished": "Mon–Sun 09:00–18:00",
+    "source": "https://novacars.bg/",
+    "currentEmail": null,
+    "historicalEmailOnly": {"value": "info@novacars.bg", "source": "legacy AGENCY_BRIEF.md dated 2026-07-11", "currentVerification": false},
+    "marketplaceContactsFetch": "Unicode decoding error; no contacts-page verification claimed"
+  },
+  "branding": {
+    "sourceUrl": "https://novacars.bg/wp-content/uploads/2025/01/PNG-without-background-1.webp",
+    "visualInspection": "Actual image opened with Remote Desktop Commander URL reader: wide NOVA CARS wordmark in pale gold with dark LUXURY SALES subtitle.",
+    "existingLocalAsset": "M:/codex/agency-os-projects/leads/automotive/nova-cars-luxury-sales/spartak-style/static/brand/nova-cars-logo.webp",
+    "existingApprovalEvidence": "bohemcars-style/AGENCY_BRIEF.md: official website logo copied from the approved local brand asset",
+    "approvalScope": "recorded local logo; not a covering real-stock-photo approval",
+    "generatedAsset": false,
+    "copiedAssets": []
+  },
+  "social": [
+    {"url": "https://www.instagram.com/novacarsluxurysales/", "matchBasis": "handle published in current marketplace descriptions and exact URL in matched legacy brief", "retrieval": "Cache miss", "recentPostDate": null, "recentPostPermalink": null, "activityVerified": false},
+    {"url": "https://www.facebook.com/p/NOVA-CARS-61571170120264/", "matchBasis": "matched legacy brief; current marketplace names Facebook Nova Cars but does not establish the exact page ID", "retrieval": "Cache miss", "currentPageMatchFullyVerified": false, "recentPostDate": null, "recentPostPermalink": null, "activityVerified": false}
+  ],
+  "catalogueReview": {
+    "method": "parsed public pages, not rendered browser comparison",
+    "marketplaceRetrievedCategoryTotal": 66,
+    "marketplaceSource": "https://novacars.mobile.bg/",
+    "officialHomeDisplayedTotal": 23,
+    "officialInventoryDisplayedTotal": 48,
+    "officialInventorySource": "https://novacars.bg/inventory/",
+    "officialInventoryCrawlLabel": "5 days ago",
+    "countQualification": "Different page/category snapshots, not independently verified available cars; do not sum or choose one as a live-stock claim.",
+    "availableCount": null,
+    "priceCurrency": "EUR",
+    "mileageUnit": "km",
+    "observations": [
+      {"source": "https://novacars.bg/inventory/", "recordUrl": "https://novacars.bg/listings/mercedes-benz-g63-amg-suv-2026/", "title": "Mercedes-Benz G63 AMG 2026", "sourceLabel": "Sold", "action": "exclude from available stock unless a later record-level source establishes a changed status"},
+      {"source": "https://novacars.bg/inventory/", "title": "Mercedes-Benz G63 AMG 2025", "sourceLabel": "Sold", "action": "exclude from available-stock sample"},
+      {"source": "https://novacars.mobile.bg/", "title": "Porsche 911 Turbo S Наличен", "price": null, "priceLabel": "Запитване", "taxText": "Цената е без ДДС", "action": "show Цена при запитване, never zero"},
+      {"source": "https://novacars.mobile.bg/", "title": "Land Rover Range rover L Autobiography", "advertisedPriceEUR": 33999, "taxText": "Не се начислява ДДС", "action": "retain record-specific tax qualification"},
+      {"source": "https://novacars.mobile.bg/", "title": "Porsche Cayenne Coupe E-Hybrid Crayon Лизинг Гаранция", "recordUrl": "https://novacars.mobile.bg/obiava-21788867190181219-porsche-cayenne-coupe-e-hybrid-crayon-lizing-garantsiya", "advertisedPriceEUR": 89999, "taxText": "Цената е без ДДС", "year": 2024, "mileageKm": 29500, "detailFetch": "Cache miss", "recordComplete": false}
+    ],
+    "crossSiteIdentityRule": "Matching make/model/year is not enough to merge vehicles or treat an official Sold car as the same currently advertised marketplace car; match listing identifiers/VIN/photos first.",
+    "existingTradeInInterface": true,
+    "tradeInSource": "https://novacars.bg/",
+    "externalFormsSubmitted": false,
+    "financeClaims": "Marketplace advertises leasing assistance including own leasing and barter. No lender terms, universal approval, guarantee or delivery is verified.",
+    "completeFactAndGalleryPack": false
+  },
+  "mediaGate": {
+    "realStockPermission": "not established in inspected material",
+    "legacyStockSuitable": false,
+    "reason": "Legacy briefs expressly retain unrelated template/demo stock. The recorded logo approval does not establish rights for current real listing photographs.",
+    "permissionDenied": false,
+    "needed": "A covering permission or an already-authorized same-dealer real listing/photo pack, followed by current status and price verification"
+  },
+  "duplicateCheck": {"mainBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca", "requestedDestinationInInspectedMainIndex": false, "requestedDestinationInInspectedOldAstraClientTree": false, "requestedTrioInLegacyFolder": false, "scope": "Inspected index, client directory trees, public account-link/screening records and the matched legacy folder; not an exhaustive private CRM audit."},
+  "requestedVariants": ["auto-best", "modern", "carwow"],
+  "implementedVariants": [],
+  "checksRun": ["public-source reads", "read-only legacy directory/brief inspection", "actual published logo image inspection"],
+  "checksNotRun": ["master or client install", "validate", "typecheck", "build", "rendered official mobile journey", "390/1440 master-to-client comparisons", "320px header review", "route/gallery/filter/focus/back-state/enquiry tests", "console/image-load/overflow tests"],
+  "ownerManualReview": "pending"
+}
