@@ -431,13 +431,13 @@
 	</svg>
 {/snippet}
 
-<div class="mobile-home" aria-label="Day Night Auto — начало">
+<div class="mobile-home" aria-label="Valentino — начало">
 	<header class="mh-hero">
 		<div class="mh-hero__bar">
-			<a class="mh-hero__brand" href={resolve('/')} aria-label="Day Night Auto home">
+			<a class="mh-hero__brand" href={resolve('/')} aria-label="Valentino home">
 				<img
 					class="mh-hero__logo"
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/brand/logo.webp')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -453,14 +453,14 @@
 				<a
 					class="mh-hero__bar-action mh-hero__bar-action--call"
 					href={phoneHref}
-					aria-label="Обади се на Day Night Auto"
+					aria-label="Обади се на Valentino"
 				>
 					<Phone size={19} strokeWidth={2.35} aria-hidden="true" />
 				</a>
 			</div>
 		</div>
 
-		<h1 class="mh-hero__title">Day Night Auto</h1>
+		<h1 class="mh-hero__title">Valentino</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
@@ -698,7 +698,7 @@
 		<div class="mh-footer__brand">
 			<img
 				class="mh-footer__logo"
-				src={resolve('/brand/daynight-logo-generated.png')}
+				src={resolve('/brand/logo.webp')}
 				alt={daynightSite.name}
 			/>
 			<p>
@@ -798,7 +798,7 @@
 				{daynightSite.location}
 			</a>
 		</div>
-		<span class="mh-footer__copy">© 2026 Day Night Auto София. Всички права запазени.</span>
+		<span class="mh-footer__copy">© 2026 Valentino София. Всички права запазени.</span>
 	</footer>
 
 	<MobileBottomDock />

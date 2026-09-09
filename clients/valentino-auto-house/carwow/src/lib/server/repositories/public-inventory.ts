@@ -74,7 +74,8 @@ export async function getPublishedPublicInventory(
 		staticFallback?: Car[];
 	} = {}
 ): Promise<Car[]> {
-	if (!options.db && !hasDatabaseUrl()) {
+	// The branch demo never acquires a database from ambient environment values.
+	if (!options.db) {
 		return options.staticFallback ?? daynightVehicles;
 	}
 

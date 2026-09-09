@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Студентски град · ул. Атанас Манчев 18</span>
+						<span>Горубляне · ул. Самоковско шосе 1</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Day Night Auto"
+						aria-label="Отвори Google Maps до Valentino"
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,18 +120,18 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">DAY NIGHT AUTO GROUP</span>
+							<span class="daynight-home-hero__location-map-label">VALENTINO AUTO HOUSE</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Day Night Auto София</strong>
-							<span>гр. София, Студентски град, ул. Атанас Манчев 18</span>
+							<strong>Valentino София</strong>
+							<span>гр. София, Горубляне, ул. Самоковско шосе 1</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Проверени автомобили.</span>
+						<span>Данни по публикувани обяви.</span>
 						<strong>Ясни условия.</strong>
 					</span>
 				</h1>

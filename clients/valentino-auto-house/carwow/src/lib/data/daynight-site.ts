@@ -4,7 +4,7 @@ const dealer = dealerPack.dealer;
 const location = dealer.address;
 export const daynightSite = {
   name: dealer.name, shortName: dealer.shortName,
-  phone: dealer.phoneE164, phoneLabel: dealer.phone, email: '',
+  phone: dealer.phoneE164.replace(/^\+359/, '0'), phoneE164: dealer.phoneE164, phoneLabel: dealer.phone, email: '',
   location, locationShort: `${dealer.district}, ${dealer.city}`,
   hoursLabel: `Пон–Пет ${dealer.openingHours.weekdays} · Събота ${dealer.openingHours.saturday} · Неделя: ${dealer.openingHours.sunday}. Потвърдете посещението.`,
   mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`,

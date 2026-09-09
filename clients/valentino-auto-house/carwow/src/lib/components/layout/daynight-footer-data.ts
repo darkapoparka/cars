@@ -29,9 +29,9 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'VALENTINO AUTO HOUSE',
 		links: [
-			{ href: '/about', label: 'За Day Night Auto' },
+			{ href: '/about', label: 'За Valentino' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
 			{ href: '/team', label: 'Екип' },
 			{ href: '/reviews', label: 'Отзиви' },
@@ -42,7 +42,7 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ href: '/inventory', label: 'Налични автомобили' },
+			{ href: '/inventory', label: 'Обяви за автомобили' },
 			{ href: '/financing', label: 'Финансиране' },
 			{ href: '/calculator', label: 'Калкулатор' },
 			{ href: '/sell-your-car', label: 'Продай или замени' },
