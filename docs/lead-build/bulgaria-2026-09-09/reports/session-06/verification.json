@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "branch": "codex/astra-bg-06",
+  "baseSha": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "qualificationHeadSha": "804bb08035991f7cf415f3c78fcab749eb9b5172",
+  "comparisonOfQualificationHead": {"status": "ahead", "aheadBy": 5, "behindBy": 0, "addedTextFiles": 19, "existingBaseFilesModified": 0, "existingBaseFilesDeleted": 0, "allChangedPathsInsideWriteAllowlist": true},
+  "implementedApplications": 0,
+  "finishedDealerTrios": 0,
+  "clientOutcomes": [
+    {"slug": "golden-dreams-auto", "status": "blocked", "qualificationCommit": "3dcde3b24039e5bce8faa1d111cd28f24c8a52a3", "apps": []},
+    {"slug": "g-auto", "status": "blocked", "qualificationCommit": "dbbea25987c43a1886986ac956b0c09fa6c571fb", "apps": []},
+    {"slug": "kris-car-plovdiv", "status": "blocked", "qualificationCommit": "a41c5c43c1022ca63e97811f118623886efbb4e2", "apps": []},
+    {"slug": "slavi-cars", "status": "blocked", "qualificationCommit": "b807587d35c6a963983146a9f94034f9fe84ab96", "apps": []},
+    {"slug": "fresh-motors-sheremetya", "status": "blocked", "qualificationCommit": "804bb08035991f7cf415f3c78fcab749eb9b5172", "apps": []}
+  ],
+  "sourceBytesReadBackAtImmutableCommits": true,
+  "applicationChecks": {
+    "install": {"status": "not-run", "exitCode": null},
+    "autoBestValidate": {"status": "not-run", "exitCode": null},
+    "modernDatabasePackageBuild": {"status": "not-run", "exitCode": null},
+    "modernWebTypecheckBuild": {"status": "not-run", "exitCode": null},
+    "carwowCheckBuild": {"status": "not-run", "exitCode": null},
+    "routeInteractions": "not-run",
+    "masterClient390px": "not-run",
+    "masterClient1440px": "not-run",
+    "header320px": "not-run"
+  },
+  "screenshots": [],
+  "generatedAssets": [],
+  "committedMediaAssets": [],
+  "sharedPublicOriginIntegration": "not-implemented",
+  "deployment": "not-performed",
+  "windowsWrites": false,
+  "windowsProcessesStarted": [],
+  "ownerManualReviewComplete": false,
+  "closingCommitNote": "The commit containing this file updates G Auto/Slavi visual observations and adds handoff records; final remote readback and comparison are reported in the final response. This is not an application verification."
+}

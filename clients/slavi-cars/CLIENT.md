@@ -1,6 +1,6 @@
 # Slavi Cars — Dupnitsa
 
-Status: **blocked** at visual/media qualification; no applications created. Owner manual review: pending. Session 06, bulgaria-2026-09-09, branch `codex/astra-bg-06`.
+Status: **blocked** at media reuse qualification; no applications created. Owner manual review: pending. Session 06, bulgaria-2026-09-09, branch `codex/astra-bg-06`.
 
 ## Identity and existing website
 
@@ -12,12 +12,14 @@ The existing services page explicitly says it helps arrange finance rather than 
 
 ## Current stock and media
 
-The Chevrolet Trax candidate is corroborated across the marketplace catalogue and independent catalogue. Candidate records are in `sources.json`, not approved inventory. Its EUR cash price is separate from the owned site's illustrative monthly-payment figure; the marketplace says VAT is not charged.
+The Chevrolet Trax candidate has matching specifications and price across the marketplace catalogue and independent catalogue. Candidate records are in `sources.json`, not approved inventory. Its EUR cash price is separate from the owned site's illustrative monthly-payment figure; the marketplace says VAT is not charged.
 
-A marketplace cover, showroom gallery and independent-site vehicle photos are present as actual linked resources. The cover renderer rejected application/octet-stream; a showroom image and two independent stock-image URLs returned Cache miss. Both independent vehicle detail links and the canonical/dealer-host Trax detail attempts also returned Cache miss. The public Drive URL shown on the marketplace about page could not be opened by the research tool. These outcomes do not establish an absence of artwork or photos. No image was successfully visually inspected for this dealer, no replacement logo was generated, and no permission-backed media set was established in the inspected supplied/repository records. The independent-site footer reserves rights; it supplies no observed reuse grant.
+The initial checkpoint recorded failed web image opens. **Follow-up on 2026-09-09 successfully rendered both independent-site vehicle photographs with Desktop Commander's read-only URL reader.** The images show a white Chevrolet SUV and a dark Porsche coupe, each with Slavi Cars signage. The visible branding is a burgundy italic wordmark with a car-roof outline. These actual visual observations supersede the earlier claim that no image could be inspected; they do not establish a photo reuse grant or an approved logo kit.
+
+The marketplace `.pic` cover remains unrendered, individual detail opens returned Cache miss, and the public Drive link on the marketplace about page was not read. No replacement logo was generated and no permission-backed media set was established in the inspected supplied/repository records. The independent-site footer reserves rights; it supplies no observed reuse grant. No assertion is made that the owner lacks a separate agreement.
 
 ## Exact resume point
 
-Establish the reuse scope for the original branding and current gallery set, obtain viewable local bytes and verify individual listing details. Reconcile contact hours source-by-source, select 8–12 current representative cars, then implement all three retained masters. No matched official Facebook page or recent social-post date was established by the bounded exact-phone/name searches; marketplace share buttons are not dealer social profiles.
+Establish the applicable reuse scope for original branding/current photos, obtain the permitted local gallery bytes and verify individual listing details. Reconcile contact hours source-by-source, complete the 8–12-car selection, then implement all three retained masters. No matched official Facebook page or recent social-post date was established by the bounded exact-phone/name searches; marketplace share buttons are not dealer social profiles.
 
-There are no applications, runtime checks, screenshots or public previews in this checkpoint. The main/old-astra inventories inspected did not contain the assigned trio; the read-only legacy automotive directory had no exact Slavi Cars folder. Default-branch `slavicars` code search returned no matches, which is not an exhaustive all-branch search. No substitute Dupnitsa dealer or private CRM identity was assigned.
+There are no applications, runtime checks, screenshots or public previews. The main/old-astra inventories inspected did not contain the assigned trio; the read-only legacy automotive directory had no exact Slavi Cars folder. Default-branch `slavicars` code search returned no matches, which is not an exhaustive all-branch search. No substitute Dupnitsa dealer or private CRM identity was assigned.
