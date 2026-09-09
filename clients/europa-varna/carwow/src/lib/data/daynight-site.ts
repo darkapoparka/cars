@@ -1,8 +1,12 @@
 import { dealer, stock, mapsEmbedUrl, mapsUrl } from './dealer';
 import { daynightReviewCount, daynightReviewCountLabel, daynightReviewLinkLabel } from './daynight-reviews';
 
+// Retain the master's national-number contract: legacy consumers add +359
+// after dropping the initial 0. New consumers can use the explicit phoneHref.
+const nationalPhone = dealer.phoneE164.replace(/^\+359/, '0');
+
 export const daynightSite = {
-  name:dealer.name,shortName:dealer.shortName,phone:dealer.phoneE164,phoneLabel:dealer.phone,email:'',
+  name:dealer.name,shortName:dealer.shortName,phone:nationalPhone,phoneHref:dealer.phoneHref,phoneLabel:dealer.phone,email:'',
   location:dealer.address,locationShort:dealer.city,hoursLabel:dealer.hours,
   mapEmbedSrc:mapsEmbedUrl,mapUrl:mapsUrl,mapLabel:`${dealer.name}, ${dealer.city}, ${dealer.country}`,
   sourceInventory:dealer.sourceUrl,inventoryCount:stock.length,

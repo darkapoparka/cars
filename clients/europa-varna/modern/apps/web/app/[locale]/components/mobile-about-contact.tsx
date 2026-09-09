@@ -41,7 +41,7 @@ export function MobileAboutContact({
         tone="contact"
       >
         <h1 className="flex h-full items-center justify-center px-1 text-center font-semibold text-[26px] text-white leading-8 tracking-tight">
-          {isBg ? "За нас и контакти" : "About and contact"}
+          {isBg ? `${leadSite.name} · Контакти` : `${leadSite.name} · Contact`}
         </h1>
       </MobileDealerServiceHero>
       <div className="relative -mt-3 rounded-t-2xl bg-white px-4 pt-4 pb-6">
@@ -53,7 +53,7 @@ export function MobileAboutContact({
             />
             <span className="min-w-0 flex-1">
               <span className="block text-[14px] text-zinc-600 leading-5">
-                {isBg ? "Обадете ни се" : "Call us"}
+                {isBg ? "Потвърдете наличността" : "Confirm availability"}
               </span>
               <span className="mt-1 block font-semibold text-[21px] text-zinc-950 tabular-nums leading-7">
                 {leadSite.phoneDisplay}
@@ -76,10 +76,10 @@ export function MobileAboutContact({
             />
             <span className="min-w-0 flex-1">
               <span className="block font-semibold text-[16px] leading-6">
-                {isBg ? "Посетете шоурума" : "Visit the showroom"}
+                {isBg ? "Публикуван адрес" : "Published address"}
               </span>
               <span className="mt-1 block text-[14px] text-zinc-600 leading-5">
-                {leadSite.address}, {leadSite.city}
+                {leadSite.address}
               </span>
             </span>
             <DealerUiIcon
@@ -90,7 +90,7 @@ export function MobileAboutContact({
         </div>
         <section className="mt-5">
           <h2 className="mb-3 font-semibold text-[18px] leading-6">
-            {isBg ? "С какво можем да помогнем" : "How we can help"}
+            {isBg ? "Въпроси към автокъщата" : "Questions for the dealership"}
           </h2>
           <div className="grid gap-2">
             {services.map((service) => {
