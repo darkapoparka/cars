@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09T04:25:14.122Z",
+  "sourceBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "verifiedApplicationHead": "663814e20e813ec15cb20540c7f25d302a7fae74",
+  "branch": "codex/astra-bg-06",
+  "totalApplicationSources": 12,
+  "totalTrackedApplicationFiles": 11625,
+  "dealers": [
+    {
+      "slug": "golden-dreams-auto",
+      "apps": []
+    },
+    {
+      "slug": "g-auto",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "39e7c90e47831334ad5dbc51f39a27f2aa38205c",
+          "fileCount": 274,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "89fec574923eb0300c2e5e826ecfe6d76c63f195",
+          "fileCount": 1264,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "265c423b0b8e4da9801c3da20b7a06a826cc4651",
+          "fileCount": 1367,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "kris-car-plovdiv",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "6bbb942e89a7895c72adbc810b3f66ef8b0e1a95",
+          "fileCount": 274,
+          "localDealerAssets": 38,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "30ec1bc7d203d2687ef312f66d80a250ef760ae0",
+          "fileCount": 1267,
+          "localDealerAssets": 38,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "637b5caef185a364566afb10082ccf7fe93c8553",
+          "fileCount": 1369,
+          "localDealerAssets": 38,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "slavi-cars",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "653d7d6253bb8c0b4080e077f5cff371956fc9ed",
+          "fileCount": 274,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "1361c47b702234cccafb9a6df66e456d58111c70",
+          "fileCount": 1264,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "effc01edd26dc1731cdbb302edab16214d934ceb",
+          "fileCount": 1367,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "fresh-motors-sheremetya",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "27a0eb5a02d77f271dc9ec1ddb23631132ec9933",
+          "fileCount": 274,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "00de33f676a2a54eab1385abc36bb127288fb4b9",
+          "fileCount": 1264,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "abf66dcb88941b3e0558c3c79058abbd7df9d98d",
+          "fileCount": 1367,
+          "localDealerAssets": 37,
+          "state": "implemented-unverified"
+        }
+      ]
+    }
+  ],
+  "scopeVerification": {
+    "method": "Recursive Git tree comparison: equal hashes short-circuit; any changed path outside owned prefixes fails",
+    "allowedPrefixes": [
+      "clients/golden-dreams-auto",
+      "clients/g-auto",
+      "clients/kris-car-plovdiv",
+      "clients/slavi-cars",
+      "clients/fresh-motors-sheremetya",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-06"
+    ],
+    "changedRoots": [
+      "clients/fresh-motors-sheremetya",
+      "clients/g-auto",
+      "clients/golden-dreams-auto",
+      "clients/kris-car-plovdiv",
+      "clients/slavi-cars",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-06"
+    ],
+    "result": "passed",
+    "protectedRootEqual": true,
+    "unrelatedClientTreesEqual": true
+  },
+  "krisAssetReadback": {
+    "expectedUniqueBlobs": 38,
+    "verifiedFilesAcrossThreeApps": 114,
+    "result": "passed"
+  },
+  "krisAssetVisualInspection": {
+    "reference": "clients/kris-car-plovdiv/checks/asset-contact-sheet.png",
+    "sourceCommit": "663814e20e813ec15cb20540c7f25d302a7fae74",
+    "result": "Original Cyrillic logo and К icon are legible; eight first gallery photographs correspond visually to the selected makes/models. White background treatment is intentional. Not a browser UI comparison."
+  },
+  "fullRuntimeVerified": false,
+  "ownerReviewed": false,
+  "deployed": false
+}

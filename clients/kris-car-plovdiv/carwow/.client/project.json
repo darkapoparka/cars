@@ -35,7 +35,7 @@
   "deliveryBranch": "codex/astra-bg-06",
   "verificationScope": "Source compiler and data checks only; installation, full typecheck, build and browser review not executed.",
   "verification": {
-    "sourceEvidence": "../checks/source-verification.json",
+    "sourceEvidence": "../../checks/source-verification.json",
     "syntaxOnly": true,
     "targetedDataSemantic": true,
     "fullTypecheck": false,
