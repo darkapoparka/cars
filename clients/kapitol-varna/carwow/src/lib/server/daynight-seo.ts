@@ -1,3 +1,4 @@
+import dealer from '$lib/data/dealer-stock.json';
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 import { DEFAULT_DESCRIPTION, DAY_SITE_TITLE, getPublicStaticRoute } from './public-routes';
 
@@ -14,10 +15,9 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 	const facts = [vehicle.priceEur, vehicle.mileage, vehicle.fuel, vehicle.transmission]
 		.map((value) => (value ?? '').toString().trim())
 		.filter(Boolean);
-
 	return {
-		title: `${vehicle.title} | Капитол`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Капитол с опция за финансиране.`
+		title: `${vehicle.title} | ${dealer.shortName}`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Данни от публична обява на ${dealer.name}; потвърдете актуалния статус, състоянието и условията директно с продавача.`
 	};
 }
 
