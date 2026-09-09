@@ -68,8 +68,7 @@
 <main class="home3-shell">
 	<header class="home3-header" aria-label="Home3 navigation">
 		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Крис Кар Home3">
-			<span>DAY</span>
-			<strong>AUTO</strong>
+			<img src="/dealer/brand/logo-light.png" width="142" height="52" alt="Крис Кар" />
 		</a>
 
 		<nav class="home3-nav" aria-label="Primary">
@@ -156,12 +155,11 @@
 
 		<section class="home3-sell-panel" aria-labelledby="home3-sell-title">
 			<div class="home3-sell-panel__copy">
-				<h2 id="home3-sell-title">Sell your car for what it’s really worth</h2>
+				<h2 id="home3-sell-title">Въпрос за вашия автомобил</h2>
 				<p>
-					We’ll put your car in front of 5,500+ verified dealers. Fast payment, home collection,
-					completely free.
+					Обсъдете с Крис Кар дали е възможна замяна или продажба. Този преглед не извършва онлайн оценка и не обещава сделка.
 				</p>
-				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
+				<a href={resolve('/sell-your-car')}>Попитайте автокъщата</a>
 			</div>
 
 			<div class="home3-sell-panel__media" aria-hidden="true">

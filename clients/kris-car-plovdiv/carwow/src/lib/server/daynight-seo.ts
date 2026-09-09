@@ -17,7 +17,7 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 
 	return {
 		title: `${vehicle.title} | Крис Кар`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Крис Кар с опция за финансиране.`
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Демонстрационна обява на Крис Кар към 09.09.2026. Потвърдете наличност и условия с продавача.`
 	};
 }
 

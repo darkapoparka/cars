@@ -757,7 +757,7 @@ function injectLocalBehavior(html: string, templateFile: string) {
 		const listingCard = event.target.closest('.card-box a, .view-details');
 		if (listingCard && /listing-details/i.test(listingCard.getAttribute('href') || '')) {
 			event.preventDefault();
-			go('/inventory/audi-a6-avant-e-tron');
+			go('/inventory/toyota-camry-2-5-hybrid-comfort-361582');
 		}
 	});
 	document.addEventListener('submit', (event) => {

@@ -2284,7 +2284,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds = [];
+export const mockSavedListingIds = [] as string[];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));

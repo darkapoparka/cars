@@ -42,54 +42,54 @@ export type MegaMenuVehicleTile = {
 export const blogBuyerGuideHref: BlogArticleHref = '/blog';
 
 export const inventoryMegaMenuVehicleTiles = [
-	{
-		label: 'Chrysler 300C',
-		slug: 'chrysler-300c-2018-gaz',
-		image: '/assets/images/megamenu/chrysler-300c.webp',
-		meta: '17 000 EUR · Газ/Бензин'
-	},
-	{
-		label: 'BMW i7',
-		slug: 'bmw-i7-2023-full-maxx',
-		image: '/assets/images/megamenu/bmw-i7.webp',
-		meta: '81 000 EUR · Електрически'
-	},
-	{
-		label: 'BMW 520i',
-		slug: 'bmw-520i-2006-avtomatik',
-		image: '/assets/images/megamenu/bmw-520i.webp',
-		meta: '4 500 EUR · Бензин'
-	},
-	{
-		label: 'Mercedes E 350 D',
-		slug: 'mercedes-benz-e-350-d-2015-64594',
-		image: '/assets/images/megamenu/mercedes-e220d.webp',
-		meta: '11 500 EUR · Дизел'
-	},
-	{
-		label: 'Audi Q8',
-		slug: 'audi-q8-5-0tdi-2020-95331',
-		image: '/assets/images/megamenu/audi-q8-side-normalized.webp',
-		meta: '43 000 EUR · Дизел'
-	},
-	{
-		label: 'BMW X6',
-		slug: 'bmw-x6-2017-84431',
-		image: '/assets/images/megamenu/bmw-x6-side-normalized.webp',
-		meta: '25 500 EUR · Бензин'
-	},
-	{
-		label: 'Mercedes E 220 D',
-		slug: 'mercedes-benz-e-220-d-2023-53599',
-		image: '/assets/images/megamenu/mercedes-e220d-side-normalized.webp',
-		meta: '31 000 EUR · Дизел'
-	},
-	{
-		label: 'VW Touran',
-		slug: 'vw-touran-1-6d-2017-08568',
-		image: '/assets/images/megamenu/vw-touran-side-normalized.webp',
-		meta: '9 000 EUR · Дизел'
-	}
+  {
+    "label": "Toyota Camry 2.5 Hybrid Comfort",
+    "slug": "toyota-camry-2-5-hybrid-comfort-361582",
+    "image": "/dealer/stock/11788863173361582-1.webp",
+    "meta": "29 460 EUR · Хибрид"
+  },
+  {
+    "label": "SEAT Ateca 4x4 2.0 TDI",
+    "slug": "seat-ateca-4x4-2-0-tdi-448667",
+    "image": "/dealer/stock/21788856265448667-1.webp",
+    "meta": "21 960 EUR · Дизел"
+  },
+  {
+    "label": "Volkswagen Tiguan Elegance 4x4",
+    "slug": "volkswagen-tiguan-elegance-4x4-250424",
+    "image": "/dealer/stock/21781080017250424-1.webp",
+    "meta": "32 560 EUR · Дизел"
+  },
+  {
+    "label": "Volkswagen Golf 1.5 eTSI",
+    "slug": "volkswagen-golf-1-5-etsi-207389",
+    "image": "/dealer/stock/11780494813207389-1.webp",
+    "meta": "21 860 EUR · Хибрид"
+  },
+  {
+    "label": "Volkswagen Arteon 2.0 TDI",
+    "slug": "volkswagen-arteon-2-0-tdi-592650",
+    "image": "/dealer/stock/11788352260592650-1.webp",
+    "meta": "25 460 EUR · Дизел"
+  },
+  {
+    "label": "Toyota Yaris 1.5 Hybrid",
+    "slug": "toyota-yaris-1-5-hybrid-930244",
+    "image": "/dealer/stock/11760713901930244-1.webp",
+    "meta": "17 560 EUR · Хибрид"
+  },
+  {
+    "label": "Toyota Corolla 1.6 Executive",
+    "slug": "toyota-corolla-1-6-executive-736167",
+    "image": "/dealer/stock/11762013228736167-1.webp",
+    "meta": "19 760 EUR · Бензин"
+  },
+  {
+    "label": "Škoda Superb 2.0 TDI",
+    "slug": "skoda-superb-2-0-tdi-224639",
+    "image": "/dealer/stock/11744304007224639-1.webp",
+    "meta": "26 860 EUR · Дизел"
+  }
 ] satisfies readonly MegaMenuVehicleTile[];
 
 export const inventoryMegaMenuLinkColumns = [

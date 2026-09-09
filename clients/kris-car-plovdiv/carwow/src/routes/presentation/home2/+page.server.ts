@@ -10,25 +10,11 @@ function countBy<T>(items: T[], getKey: (item: T) => string) {
 	return counts;
 }
 
-const featuredSlugs = [
-	'mercedes-benz-gle-coupe-400d-2021-68018',
-	'bmw-i7-2023-full-maxx',
-	'mercedes-benz-amg-gt-53-2020-00956'
-];
+const featuredSlugs = ["toyota-camry-2-5-hybrid-comfort-361582","seat-ateca-4x4-2-0-tdi-448667","volkswagen-tiguan-elegance-4x4-250424"];
 
-const featuredSummaries: Record<string, string> = {
-	'mercedes-benz-gle-coupe-400d-2021-68018': 'Premium coupe SUV with clear history',
-	'bmw-i7-2023-full-maxx': 'Electric flagship comfort, ready to view',
-	'mercedes-benz-amg-gt-53-2020-00956': 'AMG performance with everyday usability'
-};
+const featuredSummaries: Record<string, string> = {};
 
-const featuredCardImages: Record<string, string> = {
-	'mercedes-benz-gle-coupe-400d-2021-68018':
-		'/assets/images/body-type/normalized/body-suv-transparent.webp',
-	'bmw-i7-2023-full-maxx': '/assets/images/megamenu/bmw-i7.webp',
-	'mercedes-benz-amg-gt-53-2020-00956':
-		'/assets/images/body-type/normalized/body-coupe-transparent.webp'
-};
+const featuredCardImages: Record<string, string> = {};
 
 const fuelLabels: Record<string, string> = {
 	Бензин: 'Petrol',
@@ -82,12 +68,12 @@ function featuredCars() {
 		slug: car.slug,
 		title: car.shortTitle,
 		subtitle: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
-		summary: featuredSummaries[car.slug] ?? 'Verified Крис Кар stock',
+		summary: featuredSummaries[car.slug] ?? 'Обява на Крис Кар · 09.09.2026',
 		image: car.image,
 		cardImage: featuredCardImages[car.slug] ?? car.image,
 		price: car.priceEur,
 		badge: car.badges[0] ?? 'Checked',
-		saving: 'DayNight inspected'
+		saving: 'Обява · потвърдете наличност'
 	}));
 }
 
@@ -137,8 +123,8 @@ export function load() {
 		stats: {
 			total: daynightSite.inventoryCount,
 			dealers: 'Пловдив',
-			rating: '4.9/5',
-			reviews: '240+'
+			rating: '—',
+			reviews: 'Няма добавени отзиви'
 		},
 		shortcutPills: [
 			'Used cars',

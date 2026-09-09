@@ -324,7 +324,7 @@ function renderTeamContactActions(member: (typeof daynightTeam)[number]) {
 									</a>
 								</li>
 								<li>
-									<a href="mailto:${member.email}" title="Имейл към Крис Кар" aria-label="Имейл към Крис Кар">
+									<a href="mailto:${member.email}" title="Публикуван телефон на Крис Кар" aria-label="Имейл към Крис Кар">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 											<path d="M3.75 7.5L10.94 12.2933C11.5667 12.7111 12.4333 12.7111 13.06 12.2933L20.25 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M4.5 5.25H19.5C20.3284 5.25 21 5.92157 21 6.75V17.25C21 18.0784 20.3284 18.75 19.5 18.75H4.5C3.67157 18.75 3 18.0784 3 17.25V6.75C3 5.92157 3.67157 5.25 4.5 5.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -369,20 +369,10 @@ function renderTeamHoverActions(member: (typeof daynightTeam)[number], route: st
 function renderContactPageSocialLinks() {
 	return `<ul class="contact-page-info-social flex gap-8">
 							<li>
-								<a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" class="hover-fill-white" title="Facebook" aria-label="Facebook">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<path d="M11.5541 20V10.8777H14.6148L15.074 7.32156H11.5541V5.05147C11.5541 4.0222 11.8387 3.32076 13.3164 3.32076L15.1979 3.31999V0.13923C14.8725 0.0969453 13.7556 0 12.4556 0C9.74098 0 7.88252 1.65697 7.88252 4.69927V7.32156H4.8125V10.8777H7.88252V20H11.5541Z" fill="#1C1C1C"/>
-									</svg>
-								</a>
+								<a href="https://kris_car.mobile.bg/" target="_blank" rel="noopener noreferrer" aria-label="Крис Кар в Mobile.bg">Mobile.bg</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" class="hover-stroke-white" title="Instagram" aria-label="Instagram">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<rect x="2.5" y="2.5" width="15" height="15" rx="4.5" stroke="#1C1C1C" stroke-width="1.5"/>
-										<circle cx="10" cy="10" r="3.15" stroke="#1C1C1C" stroke-width="1.5"/>
-										<circle cx="14.05" cy="5.95" r="0.9" fill="#1C1C1C"/>
-									</svg>
-								</a>
+								<a href="https://kris_car.mobile.bg/" target="_blank" rel="noopener noreferrer" aria-label="Крис Кар в Mobile.bg">Mobile.bg</a>
 							</li>
 							<li>
 								<a href="tel:${daynightSite.phone}" class="hover-stroke-white" title="Свържете се с Крис Кар по телефон или Viber." aria-label="Свържете се с Крис Кар по телефон или Viber.">
@@ -505,7 +495,7 @@ function renderAboutBrandGrid() {
 				<div class="title-section flex align-end justify-between mb-30">
 					<h2 class="">Марки, с които работим</h2>
 					<a href="/inventory" class="btn btn-line btn-large hover-fill-white effect-line-primary">
-						Виж наличните
+						Виж обявите
 						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path d="M8.125 0C6.51803 0 4.94714 0.476523 3.611 1.36931C2.27485 2.2621 1.23344 3.53105 0.618482 5.0157C0.00352044 6.50035 -0.157382 8.13401 0.156123 9.71011C0.469628 11.2862 1.24346 12.7339 2.37976 13.8702C3.51606 15.0065 4.9638 15.7804 6.5399 16.0939C8.11599 16.4074 9.74966 16.2465 11.2343 15.6315C12.719 15.0166 13.9879 13.9752 14.8807 12.639C15.7735 11.3029 16.25 9.73197 16.25 8.125C16.2477 5.97081 15.391 3.90551 13.8677 2.38227C12.3445 0.85903 10.2792 0.00227486 8.125 0ZM11.6922 8.56719L9.19219 11.0672C9.07492 11.1845 8.91586 11.2503 8.75 11.2503C8.58415 11.2503 8.42509 11.1845 8.30782 11.0672C8.19054 10.9499 8.12466 10.7909 8.12466 10.625C8.12466 10.4591 8.19054 10.3001 8.30782 10.1828L9.74141 8.75H5C4.83424 8.75 4.67527 8.68415 4.55806 8.56694C4.44085 8.44973 4.375 8.29076 4.375 8.125C4.375 7.95924 4.44085 7.80027 4.55806 7.68306C4.67527 7.56585 4.83424 7.5 5 7.5H9.74141L8.30782 6.06719C8.19054 5.94991 8.12466 5.79085 8.12466 5.625C8.12466 5.45915 8.19054 5.30009 8.30782 5.18281C8.42509 5.06554 8.58415 4.99965 8.75 4.99965C8.91586 4.99965 9.07492 5.06554 9.19219 5.18281L11.6922 7.68281C11.7503 7.74086 11.7964 7.80979 11.8279 7.88566C11.8593 7.96154 11.8755 8.04287 11.8755 8.125C11.8755 8.20713 11.8593 8.28846 11.8279 8.36434C11.7964 8.44021 11.7503 8.50914 11.6922 8.56719Z" fill="#1C1C1C"></path>
 						</svg>
@@ -1126,7 +1116,7 @@ function renderAboutShowroomSection() {
 				<p class="text-secondary h7 line-height-28">Крис Кар предлага внимателно подбрани автомобили с наличност за потвърждение, съдействие при оглед, документи, регистрация, финансиране и бартер.</p>
 				<ul class="daynight-about-location__list">
 					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Огледи на място и в доверен сервиз</li>
-					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Съдействие за документи, регистрация и финансиране</li>
+					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Въпроси за документи и финансиране</li>
 					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Бартер, оценка и търсене по задание</li>
 				</ul>
 				<div class="daynight-about-location__actions">
@@ -1222,7 +1212,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('1G1ZD5ST0PF', vehicle.lot)
 		.replaceAll('165921', vehicle.lot)
 		.replaceAll('Mike Hanley', salesTeam?.name ?? 'Крис Кар')
-		.replaceAll('Verified Dealer', 'Проверена автокъща')
+		.replaceAll('Verified Dealer', 'Публикуван профил')
 		.replaceAll('/assets/images/pages/sale-agent-9.jpg', salesTeam?.image ?? daynightSite.logoDark)
 		.replaceAll('Get Directions', 'Виж локация')
 		.replaceAll('Call To Dealer', daynightSite.phoneCta)
@@ -1792,9 +1782,9 @@ function renderBlogDetailAuthorBox() {
 			<a href="/about/kris-car-plovdiv" class="h4 mb-4 font-weight-600">Крис Кар</a>
 			<p class="text-secondary mb-18">Автокъща в Пловдив</p>
 			<ul class="blog-detail-social flex gap-12">
-				<li><a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" aria-label="Facebook канал">${renderBlogSocialIcon('facebook')}</a></li>
-				<li><a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" aria-label="Instagram канал">${renderBlogSocialIcon('instagram')}</a></li>
-				<li><a href="mailto:${daynightSite.email}" aria-label="Имейл към Крис Кар">${renderBlogSocialIcon('mail')}</a></li>
+				<li><a href="https://kris_car.mobile.bg/" target="_blank" rel="noopener noreferrer" aria-label="Крис Кар в Mobile.bg">Mobile.bg</a></li>
+				<li><a href="https://kris_car.mobile.bg/" target="_blank" rel="noopener noreferrer" aria-label="Крис Кар в Mobile.bg">Mobile.bg</a></li>
+				<li><a href="tel:${daynightSite.phone}" aria-label="Имейл към Крис Кар">${renderBlogSocialIcon('mail')}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -2618,7 +2608,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Aurexo Atlanta', 'Крис Кар Пловдив')
 			.replaceAll('Euro Workshop', 'Крис Кар Пловдив')
 			.replaceAll('537 Orchard St, NY', daynightSite.location)
-			.replaceAll('Verified Dealer', 'Проверена автокъща')
+			.replaceAll('Verified Dealer', 'Публикуван профил')
 			.replaceAll('Dealer Inventory', 'Демонстрационна селекция')
 			.replaceAll('About Dealer', 'За автокъщата')
 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
@@ -3306,7 +3296,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Sale Agents', 'Екипът на Крис Кар')
 		.replaceAll('Senior Sales Agent', salesTeam?.role ?? 'Консултанти продажби')
 		.replaceAll('Senior Dealer Partner', salesTeam?.role ?? 'Консултанти продажби')
-		.replaceAll('Verified Dealer', 'Проверена автокъща')
+		.replaceAll('Verified Dealer', 'Публикуван профил')
 		.replaceAll('Emily Johnson', 'Клиент на Крис Кар')
 		.replaceAll('CEO Avitex', 'Клиент на Крис Кар')
 		.replaceAll('Benjamin Parker', 'Клиент от Пловдив')

@@ -55,17 +55,9 @@ const bodyImagePaths: Record<string, string> = {
 	Кабрио: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 };
 
-const featuredSlugs = [
-	'mercedes-benz-gle-coupe-400d-2021-68018',
-	'bmw-i7-2023-full-maxx',
-	'porsche-macan-s-2015-02733'
-];
+const featuredSlugs = ["toyota-camry-2-5-hybrid-comfort-361582","seat-ateca-4x4-2-0-tdi-448667","volkswagen-tiguan-elegance-4x4-250424"];
 
-const fallbackFeatureImages = [
-	'/assets/images/body-type/normalized/body-suv-transparent.webp',
-	'/assets/images/megamenu/bmw-i7.webp',
-	'/assets/images/body-type/normalized/body-suv-transparent.webp'
-];
+const fallbackFeatureImages = ["/dealer/stock/11788863173361582-1.webp","/dealer/stock/21788856265448667-1.webp","/dealer/stock/21781080017250424-1.webp"];
 
 function pickFeaturedCars() {
 	const bySlug = new Map(cars.map((car) => [car.slug, car]));
@@ -78,17 +70,12 @@ function pickFeaturedCars() {
 
 	return [...selected, ...fallback].slice(0, 3).map((car, index) => ({
 		slug: car.slug,
-		title:
-			index === 0
-				? 'Mercedes-Benz GLC 300d 4MATIC'
-				: index === 1
-					? 'BMW i5 eDrive40 M Sport'
-					: 'Porsche Macan T',
+		title: car.shortTitle,
 		meta: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
-		image: fallbackFeatureImages[index] ?? car.image,
-		cash: index === 0 ? '£41,990' : index === 1 ? '£53,990' : '£69,990',
-		lease: index === 0 ? '£499 / month' : index === 1 ? '£599 / month' : '£779 / month',
-		badge: 'DayNight inspected'
+		image: car.image,
+		cash: car.priceEur,
+		lease: 'Условия по запитване',
+		badge: 'Обява · потвърдете наличност'
 	}));
 }
 
@@ -134,40 +121,40 @@ export function load() {
 			{ label: 'SUVs', icon: 'suv' },
 			{ label: 'Hybrids', icon: 'fuel' },
 			{ label: 'Big boot', icon: 'box' },
-			{ label: 'Below £30k', icon: 'tag' }
+			{ label: 'Below €30k', icon: 'tag' }
 		],
-		sellPoints: ['5,500+ dealers competing for your car', 'Free home collection', 'Fast payment'],
+		sellPoints: ['Разговор с автокъщата', 'Условия по запитване', 'Няма онлайн оценка'],
 		budgetTiles: [
 			{
-				label: 'Under £10k',
-				count: `${Math.max(148, countBetween(0, 10000))} cars`,
+				label: 'Under €10k',
+				count: `${countBetween(0, 10000)} cars`,
 				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 			},
 			{
-				label: 'Under £20k',
-				count: `${Math.max(326, countBetween(10000, 20000))} cars`,
+				label: 'Under €20k',
+				count: `${countBetween(10000, 20000)} cars`,
 				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
 				tone: 'blue'
 			},
 			{
-				label: 'Under £30k',
-				count: `${Math.max(412, countBetween(20000, 30000))} cars`,
+				label: 'Under €30k',
+				count: `${countBetween(20000, 30000)} cars`,
 				image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 			},
 			{
-				label: 'Under £40k',
-				count: `${Math.max(276, countBetween(30000, 40000))} cars`,
+				label: 'Under €40k',
+				count: `${countBetween(30000, 40000)} cars`,
 				image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
 				tone: 'dark'
 			},
 			{
-				label: 'Under £50k',
-				count: `${Math.max(184, countBetween(40000, 50000))} cars`,
+				label: 'Under €50k',
+				count: `${countBetween(40000, 50000)} cars`,
 				image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 			},
 			{
-				label: 'Over £50k',
-				count: '112 cars',
+				label: 'Over €50k',
+				count: `${countBetween(50000, Infinity)} cars`,
 				image: '/assets/images/budget/open-budget-supercar-v2.webp',
 				tone: 'red'
 			}

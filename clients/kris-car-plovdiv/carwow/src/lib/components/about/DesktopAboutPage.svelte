@@ -70,7 +70,7 @@
 		<div class="about-container">
 			<div class="about-section-heading">
 				<h2 id="about-team-title">Екипът зад твоя избор</h2>
-				<DesktopBrowseLink href={resolve('/team')} label="Виж екипа" />
+				<DesktopBrowseLink href={resolve('/team')} label="Виж контактите" />
 			</div>
 			<p class="about-demo-label">{daynightTeamDisclosure}</p>
 			<div class="about-team-grid">

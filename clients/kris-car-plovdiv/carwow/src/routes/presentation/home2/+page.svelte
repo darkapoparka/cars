@@ -31,7 +31,7 @@
 	let activeTab = $state<SearchTab>('find');
 	let query = $state('');
 	const activeSearch = $derived(searchTabs.find((tab) => tab.id === activeTab) ?? searchTabs[0]);
-	const starIndices = [0, 1, 2, 3, 4] as const;
+	const starIndices = [] as number[];
 
 	const pillIcons = [
 		Car,
@@ -46,27 +46,27 @@
 	];
 
 	const reviews = [
-		{
-			title: 'Outstanding service',
-			body: 'The car was ready, the history was clear, and every document was handled on time.',
-			author: 'Nikolay, 1 hour ago'
-		},
-		{
-			title: 'Clear pricing',
-			body: 'I saw the price, checked the car, and got finance support without surprises.',
-			author: 'Maria, 2 hours ago'
-		},
-		{
-			title: 'Smooth part exchange',
-			body: 'I left my old car and drove away in the new one the same day. Very fair process.',
-			author: 'Georgi, 3 hours ago'
-		},
-		{
-			title: 'Inspection support',
-			body: 'They helped with inspection and registration. The whole process felt organised.',
-			author: 'Iva, 5 hours ago'
-		}
-	];
+  {
+    "title": "Наличност",
+    "body": "Това е извадка от обяви към 09.09.2026. Потвърдете наличността с Крис Кар.",
+    "author": "Информация, не клиентски отзив"
+  },
+  {
+    "title": "История",
+    "body": "Поискайте сервизната история и документите за конкретния автомобил.",
+    "author": "Подготовка за оглед"
+  },
+  {
+    "title": "Гаранционни условия",
+    "body": "Твърденията на продавача не са независимо проверени. Поискайте приложимия сертификат и условия.",
+    "author": "Проверете документите"
+  },
+  {
+    "title": "Състояние на батерията",
+    "body": "Не е измерено в този преглед. Уговорете подходящ независим преглед за хибрид.",
+    "author": "Въпрос преди покупка"
+  }
+];
 
 	const guideCards = [
 		{

@@ -1,11 +1,9 @@
-# Крис Кар — Plovdiv
+# Крис Кар — Пловдив
 
-Status: **pending**. Auto Best, Modern and Carwow applications have not been built for this dealer. Owner manual review remains pending.
+**implemented-unverified**: Auto Best, full Modern workspace and Carwow are implemented from the exact published masters. Eight matched source records, four local photos per vehicle and the original published logo are integrated in every app.
 
-Read `CURRENT-RESEARCH.md` for the current identity, matched Cars.bg profile, published hours, eight individually inspected listing candidates and visual branding observations. The prior `sources.json` and session qualification report are retained as historical evidence, not a current GitHub-capability finding.
+Демонстрационен каталог с 8 обяви към 09.09.2026 г. Наличността и условията се потвърждават с автокъщата.
 
-The Mobile.bg and Cars.bg profile artwork is a small forecourt photograph. It was viewed and preserved as `evidence/published-cover.gif`; no suitable dealer wordmark was established. The image-generation attempt returned unrelated output and was rejected rather than claimed as a finished logo or repository screenshot.
+Цариградско шосе, до бензиностанция Алпи, Индустриална зона - Изток, Пловдив; 0885 232 858. Пон–Пет 09:00–19:00 · Съб 09:30–19:00 · Нед 10:00–16:00.
 
-A current Camry photograph was viewed successfully. Candidate prices and specifications were read from individual listing pages; the RAV4 candidate has contradictory power and warranty fields and must be replaced. No vehicle condition, manufacturer warranty or battery health is independently certified.
-
-Resume by completing the brand asset and representative stock/gallery set, then personalize the actual three masters. No application build, browser verification, public preview, deployment or dealership contact is claimed. This is pending implementation, not a GitHub write-access blocker.
+Read [HANDOFF.md](HANDOFF.md), [REVIEW.md](REVIEW.md) and [source verification](checks/source-verification.json). Framework installation/build and full visual review remain undone; owner acceptance is pending. No deployment, provider setup or outreach. The earlier research-only checkpoint is superseded by actual application sources, not removed from Git history.

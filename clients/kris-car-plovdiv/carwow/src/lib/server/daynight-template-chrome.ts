@@ -31,35 +31,35 @@ type PresentationIconLink = {
 	kind: 'direct' | 'external';
 };
 
-const daynightFacebookUrl = 'https://www.facebook.com/61566304063141/';
-const daynightInstagramUrl = 'https://www.instagram.com/daynight.auto.plovdiv/';
+const daynightFacebookUrl = daynightSite.sourceInventory;
+const daynightInstagramUrl = daynightSite.mapUrl;
 
 const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
-	{
-		label: 'Chrysler 300C',
-		href: '/inventory/chrysler-300c-2018-gaz',
-		image: '/assets/images/megamenu/chrysler-300c.webp',
-		meta: '17 000 EUR · Газ/Бензин'
-	},
-	{
-		label: 'BMW i7',
-		href: '/inventory/bmw-i7-2023-full-maxx',
-		image: '/assets/images/megamenu/bmw-i7.webp',
-		meta: '81 000 EUR · Електрически'
-	},
-	{
-		label: 'BMW 520i',
-		href: '/inventory/bmw-520i-2006-avtomatik',
-		image: '/assets/images/megamenu/bmw-520i.webp',
-		meta: '4 500 EUR · Бензин'
-	},
-	{
-		label: 'Mercedes E 350 D',
-		href: '/inventory/mercedes-benz-e-350-d-2015-64594',
-		image: '/assets/images/megamenu/mercedes-e220d.webp',
-		meta: '11 500 EUR · Дизел'
-	}
-] as const;
+  {
+    "label": "Toyota Camry 2.5 Hybrid Comfort",
+    "href": "/inventory/toyota-camry-2-5-hybrid-comfort-361582",
+    "image": "/dealer/stock/11788863173361582-1.webp",
+    "meta": "29 460 EUR · Хибрид"
+  },
+  {
+    "label": "SEAT Ateca 4x4 2.0 TDI",
+    "href": "/inventory/seat-ateca-4x4-2-0-tdi-448667",
+    "image": "/dealer/stock/21788856265448667-1.webp",
+    "meta": "21 960 EUR · Дизел"
+  },
+  {
+    "label": "Volkswagen Tiguan Elegance 4x4",
+    "href": "/inventory/volkswagen-tiguan-elegance-4x4-250424",
+    "image": "/dealer/stock/21781080017250424-1.webp",
+    "meta": "32 560 EUR · Дизел"
+  },
+  {
+    "label": "Volkswagen Golf 1.5 eTSI",
+    "href": "/inventory/volkswagen-golf-1-5-etsi-207389",
+    "image": "/dealer/stock/11780494813207389-1.webp",
+    "meta": "21 860 EUR · Хибрид"
+  }
+];
 
 const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 	{
@@ -268,17 +268,11 @@ ${chevronDownIcon('#1C1C1C', 'icon-chevron')}
 function renderHeaderTopBarSocialLinks() {
 	const links: readonly PresentationIconLink[] = [
 		{
-			label: 'Facebook',
-			href: daynightFacebookUrl,
-			title: 'Facebook',
-			icon: facebookIcon(),
+			label: 'Mobile.bg', href: daynightFacebookUrl, title: 'Публикувани обяви', icon: searchIcon(),
 			kind: 'external'
 		},
 		{
-			label: 'Instagram',
-			href: daynightInstagramUrl,
-			title: 'Instagram',
-			icon: instagramIcon(),
+			label: 'Карта', href: daynightInstagramUrl, title: 'Крис Кар — локация', icon: locationIcon(),
 			kind: 'external'
 		}
 	];
@@ -332,17 +326,11 @@ function renderFooterSocialLinks() {
 	const whiteLocationIcon = resizeSvg(locationIcon().replaceAll('currentColor', '#FFFFFF'), 20, 20);
 	const links: readonly PresentationIconLink[] = [
 		{
-			label: 'Facebook',
-			href: daynightFacebookUrl,
-			title: 'Facebook',
-			icon: facebookIcon(),
+			label: 'Mobile.bg', href: daynightFacebookUrl, title: 'Публикувани обяви', icon: searchIcon(),
 			kind: 'external'
 		},
 		{
-			label: 'Instagram',
-			href: daynightInstagramUrl,
-			title: 'Instagram',
-			icon: instagramIcon(),
+			label: 'Карта', href: daynightInstagramUrl, title: 'Крис Кар — локация', icon: locationIcon(),
 			kind: 'external'
 		},
 		{

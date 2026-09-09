@@ -14,8 +14,8 @@
 
 	const highlights = [
 		'Обяви за автомобили с наличност за потвърждение',
-		'Съдействие за документи, регистрация и финансиране',
-		'Бартер, оценка и оглед в доверен сервиз'
+		'Въпроси за документи и финансиране',
+		'Попитайте за замяна и независим оглед'
 	] as const;
 	const vehicles = featuredDayNightVehicles.slice(0, 3);
 	const reviews = daynightReviews.slice(0, 3);
@@ -48,7 +48,7 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Проверена автокъща</p>
+					<p class="eyebrow">Публикуван профил</p>
 					<h1>Крис Кар Пловдив</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Автокъща в Пловдив с подбрани употребявани автомобили, ясна информация за състояние,
@@ -63,7 +63,7 @@
 						{/each}
 					</ul>
 					<div class="dealer-profile-hero__actions">
-						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> Виж наличните </a>
+						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> Виж обявите </a>
 						<a {...phoneLinkProps} class="sa-cta sa-cta-ghost">
 							{daynightSite.phoneLabel}
 						</a>
@@ -113,9 +113,7 @@
 					<p class="eyebrow">За автокъщата</p>
 					<h2>Подреден процес от избора до документите</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Екипът помага с сравнение на автомобили, запазване на оглед, проверка на документи,
-						регистрация, финансиране и бартер. Фокусът е клиентът да има реална информация преди
-						решение, без излишни обещания.
+						Преди посещение потвърдете автомобила и удобен час с Крис Кар. Попитайте за документи, сервизна история, финансиране и възможност за замяна. Този сайт е демонстрационна селекция, не потвърждение на услуги или наличност.
 					</p>
 					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
 				</div>
@@ -127,8 +125,8 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Екип</h2>
-				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж екипа</a>
+				<h2>Контакт и теми за разговор</h2>
+				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж контактите</a>
 			</div>
 			<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">

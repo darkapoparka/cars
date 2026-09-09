@@ -1,11 +1,12 @@
 # Крис Кар review
 
-**Blocked before implementation.** See `CLIENT.md` and `sources.json` for published contact facts, candidate vehicle evidence and the unresolved artwork/stock-photo gate.
+Status: implemented-unverified; owner review pending.
 
-| Requested application | Implemented | Review entry |
-| --- | --- | --- |
-| Auto Best (`auto-best/`) | No | None |
-| Modern (`modern/`) | No | None |
-| Carwow (`carwow/`) | No | None |
+See [HANDOFF.md](HANDOFF.md) for exact install, launcher, runtime, route and evidence instructions.
 
-No install/start commands or successful route checks apply to nonexistent apps. All build/typecheck/browser/320–1440 px comparisons are not run. Owner review is pending. No public origin, design FAB, deployment or external form delivery exists.
+Proposed entries after coordinator integration and port checks:
+- Auto Best: http://127.0.0.1:6631/
+- Modern: http://127.0.0.1:6632/cars
+- Carwow: http://127.0.0.1:6633/
+
+These are not running servers or public previews. All desktop/mobile/browser acceptance checks remain pending.

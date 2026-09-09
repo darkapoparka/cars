@@ -215,7 +215,7 @@
 			/listing-details/i.test(listingLink.getAttribute('href') || '')
 		) {
 			event.preventDefault();
-			go('/inventory/chrysler-300c-2018-gaz');
+			go('/inventory/toyota-camry-2-5-hybrid-comfort-361582');
 		}
 	}
 
