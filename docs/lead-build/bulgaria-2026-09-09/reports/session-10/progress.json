@@ -40,6 +40,31 @@
         "localBytes": true,
         "uniqueIds": true
       }
+    },
+    {
+      "slug": "fresh-auto-ruse",
+      "name": "Фреш Ауто",
+      "commit": "d74c1f9ad6ce8096176d681aa767067e9378a61d",
+      "state": "implemented-unverified",
+      "vehicles": 8,
+      "localMediaAssets": 33,
+      "appTrees": {
+        "auto-best": "40a48d167b45c93df2cf7000ab43d89ec2ce143b",
+        "modern": "9d82cba63a275da48b2623d55e98781400d5e2bd",
+        "carwow": "1fc6a7494cb75f3a33b078b2dc83dff6bb6279df"
+      },
+      "dataChecks": {
+        "counts": [
+          8,
+          8,
+          8
+        ],
+        "samePrices": true,
+        "sameMileages": true,
+        "sameGallery": true,
+        "localBytes": true,
+        "uniqueIds": true
+      }
     }
   ],
   "currentDealer": {
@@ -47,9 +72,9 @@
     "state": "implemented-unverified",
     "sourceCount": 8,
     "appTrees": {
-      "auto-best": "40a48d167b45c93df2cf7000ab43d89ec2ce143b",
-      "modern": "9d82cba63a275da48b2623d55e98781400d5e2bd",
-      "carwow": "1fc6a7494cb75f3a33b078b2dc83dff6bb6279df"
+      "auto-best": "387e3911d29ec475a57714be33c4d21866edc090",
+      "modern": "37baa7dcee585e6b0ed48c7248c91ff0fc38fd9a",
+      "carwow": "96ae4b97cfe4a0d8fe6db107c892f68a4ffd5fb3"
     }
   },
   "pending": [
