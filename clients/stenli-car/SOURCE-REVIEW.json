@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "session": "09",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "clientSlug": "stenli-car",
+  "publishedName": "СТЕНЛИ КАР",
+  "city": "София",
+  "officialWebsite": "https://stenlicar.com/",
+  "assignedMarketplace": "https://stenlicar.mobile.bg/",
+  "identity": {
+    "conclusion": "Same public dealer corroborated by mutual domain references and shared landline; current location/contact differences remain unresolved.",
+    "sharedPhone": "+35929290213",
+    "websiteToMarketplaceEvidence": "https://stenlicar.com/contact-us/ links www.stenlicar.mobile.bg",
+    "marketplaceToWebsiteEvidence": "https://stenlicar.mobile.bg/ listing descriptions direct readers to stenlicar.com",
+    "crmOperations": "none"
+  },
+  "contactSources": [
+    {
+      "url": "https://stenlicar.com/contact-us/",
+      "address": "София, кв. Суходол, ул. Кирил Христов 78",
+      "phones": ["+359888702002", "+35929290213"],
+      "emailInContactBody": "info@stenlicar.com",
+      "emailInHeaderAndFooter": "stenlicar@gmx.at",
+      "hours": "Понеделник–събота 09:00–18:00; неделя почивен ден",
+      "retrieval": "Parsed official page; not a rendered/current-premises inspection"
+    },
+    {
+      "url": "https://stenlicar.mobile.bg/contacts",
+      "phones": ["+35929290213", "+359899386456"],
+      "retrieval": "Web reader Unicode error; URL reader returned HTML with corrupted Cyrillic but intact numeric phones and six 10:00–17:00 rows",
+      "addressNotTranscribedFromCorruptedHtml": true
+    },
+    {
+      "url": "https://stenlicar.mobile.bg/obiava-11758665439356094-vw-passat-1-4i-dsg-digital-cockpit",
+      "address": "София, Суходол, Околовръстен път — ул. Трети Март 24",
+      "phones": ["+35929290213", "+359899386456"],
+      "retrieval": "Decoded indexed dealer listing; crawl label two months ago, not independently verified current address"
+    }
+  ],
+  "contactDecision": "Keep source-specific facts separate. No evidence establishes a second branch, relocation date, preferred mobile or canonical current map pin.",
+  "hoursConflict": "Official contact page says 09:00–18:00; marketplace contact HTML shows 10:00–17:00; different ad descriptions say 09:30–18:00 or 10:00–16:00, excluding Sunday.",
+  "branding": {
+    "logoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h11214206991906169.pic",
+    "coverSource": "https://cdn2.focus.bg/mobile/images/housespicts/h11214206991906169.pic",
+    "sourceDiscovery": "Actual marketplace contacts HTML image references",
+    "visualInspection": "not-completed",
+    "attempts": "Web image opens failed; URL reader misclassified .pic JPEG as text. Decoded binary text is not visual evidence.",
+    "generatedAsset": false,
+    "copiedAssets": []
+  },
+  "social": [
+    {"url": "https://www.facebook.com/pages/StenliCarcom/620845604605069", "matchBasis": "linked from official website", "retrieval": "Cache miss", "recentPostDate": null, "recentPostPermalink": null, "activityVerified": false},
+    {"url": "https://www.youtube.com/user/STENLICAR/feed?activity_view=3", "matchBasis": "linked from official website", "retrieval": "Cache miss", "recentPostDate": null, "activityVerified": false}
+  ],
+  "catalogue": {
+    "source": "https://stenlicar.mobile.bg/",
+    "retrievedCategoryCount": 76,
+    "countMeaning": "Advertised cars/SUV category entries, including unsuitable damaged stock; not independently verified available cars",
+    "availableCount": null,
+    "currency": "EUR",
+    "mileageUnit": "km",
+    "examples": [
+      {"title": "Mini Countryman ALL4-4X4-АВТОМАТИК", "vin": "WMWXD51080WU11168", "sourceYearMonth": "2016-10", "mileageKm": 130510, "advertisedPriceEUR": 11999, "tax": "VAT included", "status": "advertised; not independently verified", "galleryNotPrepared": true},
+      {"title": "Skoda Octavia 2.0TDI-4X4-SCOUT-DSG", "vin": "TMBLK7NE0F0097164", "structuredYearMonth": "2015-01", "descriptionYearMonth": "2014-11", "action": "Resolve discrepancy before selecting final year; do not invent production/registration meaning"},
+      {"title": "BMW X5 ///M Sport B58", "url": "https://stenlicar.mobile.bg/obiava-21787789326594478-bmw-x5-m-sport-b58", "advertisedPriceEUR": 19999, "sellerStatus": "Description says scrapped total loss and cannot be registered in Bulgaria", "action": "Exclude from ordinary available whole-road-car sample", "detailFetch": "Cache miss; status read from dealer catalogue description"}
+    ],
+    "fullFactAndGalleryPack": false,
+    "serviceScope": "Dealer advertises insurance/registration assistance, transport, leasing and buyback. No universal approval, warranty or provider integration was verified."
+  },
+  "duplicateCheck": {"inspectedMainBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca", "requestedTrioFound": false, "scope": "Main index, old-astra client directory, public account-link/Sofia screening and legacy automotive top-level listing; not an exhaustive CRM or concurrent-branch audit"},
+  "blockers": ["A covering permission or already-authorized same-dealer real stock-photo pack was not established in inspected material", "Current address/mobile/hours selection is unresolved across corroborated same-business sources"],
+  "requestedVariants": ["auto-best", "modern", "carwow"],
+  "implementedVariants": [],
+  "runtimeChecks": "No install, validate, typecheck, build, browser, route or viewport checks run",
+  "ownerManualReview": "pending"
+}
