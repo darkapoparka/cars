@@ -52,6 +52,7 @@
 			<div class="tf-spacing-style3"></div>
 
 			<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">
+				{#if !daynightReviews.length}<div class="testimonior-box"><h2 class="h5">Няма публикувани мнения</h2><p class="testimonior-box--desc">В тази демонстрация не са добавени отзиви или оценки от клиенти.</p><a href={resolve('/contact')}>Контакт с автокъщата</a></div>{/if}
 				{#each daynightReviews as review (review.id)}
 					<div class="testimonior-box">
 						<div

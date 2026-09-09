@@ -57,16 +57,16 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/brand/daynight-logo-generated.png`,
-			logo: `${origin}/brand/daynight-logo-generated.png`,
+			image: `${origin}/brand/logo.png`,
+			logo: `${origin}/brand/logo.png`,
 			url: `${origin}/`,
 			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',
 				streetAddress: daynightSite.location,
-				addressLocality: 'София',
-				addressRegion: 'София',
+				addressLocality: 'Варна',
+				addressRegion: 'Варна',
 				addressCountry: 'BG'
 			},
 			areaServed: 'BG',
@@ -80,6 +80,7 @@
 </script>
 
 <svelte:head>
+	<meta name="robots" content="noindex, nofollow" />
 	<link
 		rel="preload"
 		href={geistCyrillicFont}

@@ -14,42 +14,42 @@
 		{
 			id: 'inspection',
 			title: 'Проверка преди покупка',
-			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
+			summary: 'Попитайте за оглед, документи и възможност за независим преглед на избрания автомобил.',
 			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'documents',
 			title: 'Документи и регистрация',
-			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
+			summary: 'Уточнете кои документи и разходи са включени в конкретната сделка.',
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'financing',
 			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+			summary: 'Поискайте индивидуални условия; в демото няма кредитна оферта или одобрение.',
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'trade-in',
 			title: 'Бартер и оценка',
-			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
+			summary: 'Подгответе данни за автомобила си и попитайте дали е възможен бартер.',
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'sourcing',
 			title: 'Търсене по задание',
-			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
+			summary: 'Продавачът посочва внос по поръчка. Обсъдете конкретен автомобил, бюджет и условия.',
 			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'delivery',
 			title: 'Доставка и предаване',
-			summary: 'Координираме транспорт, предаване и последните практически детайли.',
+			summary: 'Доставка, цена на транспорта и срокове се уточняват директно с продавача.',
 			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		}
@@ -145,7 +145,7 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Day Night Auto">
+<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Exclusive Auto">
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
 		title="Услуги за твоя автомобил"
@@ -163,7 +163,7 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				Не знаеш коя услуга ти трябва? <a href={`tel:${daynightSite.phone}`}
 					>Обади ни се</a
 				>
 			</p>
@@ -172,7 +172,7 @@
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Day Night Auto</h2>
+			<h2 class="desktop-services-sr-only">Конкретни услуги от Exclusive Auto</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}

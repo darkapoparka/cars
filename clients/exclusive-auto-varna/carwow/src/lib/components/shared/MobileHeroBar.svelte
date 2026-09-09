@@ -5,9 +5,9 @@
 </script>
 
 <div class="mobile-hero-bar">
-	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
+	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Exclusive Auto начало">
 		<img
-			src={resolve('/brand/daynight-logo-generated.png')}
+			src={resolve('/brand/logo.png')}
 			alt={daynightSite.shortName}
 			width="170"
 			height="44"
@@ -15,7 +15,7 @@
 	</a>
 	<a
 		class="mobile-hero-bar__call"
-		href={`tel:+359${daynightSite.phone.slice(1)}`}
+		href={`tel:${daynightSite.phone}`}
 		aria-label="Обади се"
 		title="Обади се"
 	>

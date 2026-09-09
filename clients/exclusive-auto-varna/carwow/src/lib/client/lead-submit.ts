@@ -1,4 +1,5 @@
 import { resolve } from '$app/paths';
+import { daynightSite } from '$lib/data/daynight-site';
 
 export type LeadSubmitPayload = {
 	customerName: string;
@@ -40,6 +41,7 @@ function readResponseMessage(body: unknown, fallback: string) {
 }
 
 export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmitResult> {
+	if (daynightSite.previewMode) return { ok: false, status: 503, error: `Демонстрация: нищо не е изпратено. За реално запитване използвайте ${daynightSite.phoneLabel}.` };
 	try {
 		const response = await fetch(resolve('/api/leads'), {
 			method: 'POST',

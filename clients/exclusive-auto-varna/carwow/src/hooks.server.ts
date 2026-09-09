@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import { daynightSite } from '$lib/data/daynight-site';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
@@ -18,7 +19,7 @@ function warnMissingProductionDatabaseUrl() {
 	warnedMissingProductionDatabase = true;
 	console.error(
 		[
-			'DAY NIGHT AUTO GROUP PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
+			'EXCLUSIVE AUTO PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
 			'The storefront will use demo-only static inventory fallback and admin/write endpoints will fail closed.',
 			'Set DATABASE_URL before promoting this Vercel deployment.'
 		].join(' ')
@@ -55,13 +56,17 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 }
 
 export const handle: Handle = async ({ event, resolve }) => {
-	const hasDb = hasDatabaseUrl();
-	if (!hasDb) warnMissingProductionDatabaseUrl();
+	if (daynightSite.previewMode && !['GET', 'HEAD', 'OPTIONS'].includes(event.request.method)) {
+		return new Response(JSON.stringify({ error: 'Демонстрация: нищо не е изпратено или записано.' }), { status: 503, headers: { 'content-type': 'application/json; charset=utf-8', 'x-robots-tag': 'noindex, nofollow' } });
+	}
+	event.setHeaders({ 'x-robots-tag': 'noindex, nofollow' });
+	const hasDb = !daynightSite.previewMode && hasDatabaseUrl();
+	if (!hasDb && !daynightSite.previewMode) warnMissingProductionDatabaseUrl();
 
 	event.locals.db = hasDb ? createDb() : null;
 	event.locals.staffProfile = null;
 
-	const { session, user } = await getAuthSession(event);
+	const { session, user } = daynightSite.previewMode ? { session: null, user: null } : await getAuthSession(event);
 	event.locals.session = session;
 	event.locals.user = user;
 
@@ -74,7 +79,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const resolveWithBodyClasses = (eventToResolve: RequestEvent) =>
 		resolve(eventToResolve, resolveOptions);
 
-	if (hasAuthRuntimeConfig()) {
+	if (!daynightSite.previewMode && hasAuthRuntimeConfig()) {
 		return svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,

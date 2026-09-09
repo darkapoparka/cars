@@ -55,7 +55,7 @@
 					<img src={member.image} alt={member.name} loading="eager" decoding="async" />
 				</div>
 				<div class="team-member-profile__content">
-					<p class="eyebrow">Примерен профил</p>
+					<p class="eyebrow">Контактна тема</p>
 					<h1>{member.name}</h1>
 					<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 					<p class="h5 text-highlight mb-18">{member.role}</p>
@@ -82,7 +82,7 @@
 						{/if}
 						<div>
 							<span>Локация</span>
-							<a {...mapLinkProps}>София</a>
+							<a {...mapLinkProps}>Варна</a>
 						</div>
 					</div>
 				</div>
@@ -136,7 +136,7 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">Day Night Auto София</p>
+					<p class="eyebrow">Exclusive Auto Варна</p>
 					<h2>Запази час за оглед</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
@@ -145,7 +145,7 @@
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="320" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Exclusive Auto Варна" height="320" />
 			</div>
 		</div>
 	</section>
@@ -153,7 +153,7 @@
 	{#if otherMembers.length}
 		<section class="pb-100">
 			<div class="container">
-				<h2 class="mb-30">Още от екипа</h2>
+				<h2 class="mb-30">Други теми за разговор</h2>
 				<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 					{#each otherMembers as teammate (teammate.slug)}
 						<a href={resolve('/team/[slug]', { slug: teammate.slug })} class="team-teammate-card">

@@ -1,11 +1,10 @@
 {
-  "name": "Exclusive Auto",
+  "name": "Exclusive Auto — demo",
   "short_name": "Exclusive Auto",
-  "lang": "bg",
   "start_url": "/",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#805b19",
+  "theme_color": "#181918",
   "icons": [
     {
       "src": "/icon-192.png",

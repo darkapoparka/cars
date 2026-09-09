@@ -11,6 +11,7 @@ export const DealerMobileBrandBar = ({
   isBg,
   locale,
   tone = "dark",
+  wordmarkTone = "original",
   onNavigate,
 }: {
   readonly isBg: boolean;
@@ -60,11 +61,11 @@ export const DealerMobileBrandBar = ({
           <Image
             alt={leadSite.name}
             className="h-full w-full object-contain"
-            height={124}
+            height={280}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            width={336}
+            src={wordmarkTone === "light" || tone === "dark" ? "/brand/logo-light.png" : "/brand/logo-dark.png"}
+            width={960}
           />
         </span>
       </Link>

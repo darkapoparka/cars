@@ -1,25 +1,23 @@
-export function formatPrice(value: number, options: Intl.NumberFormatOptions = {}) {
-	return new Intl.NumberFormat('en-US', {
+export function formatPrice(value: number | null | undefined, options: Intl.NumberFormatOptions = {}) {
+	if (typeof value !== 'number' || !Number.isFinite(value) || value <= 0) return 'Цена при запитване';
+	return new Intl.NumberFormat('bg-BG', {
 		style: 'currency',
-		currency: 'USD',
+		currency: 'EUR',
 		maximumFractionDigits: 0,
 		...options
 	}).format(value);
 }
 
-export function formatTemplatePrice(value: number) {
-	return `$${new Intl.NumberFormat('de-DE', {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	}).format(value)}`;
+export function formatTemplatePrice(value: number | null | undefined) {
+ return formatPrice(value);
 }
 
 export function formatMileage(value: number) {
-	return `${new Intl.NumberFormat('en-US').format(value)} miles`;
+	return `${new Intl.NumberFormat('bg-BG').format(value)} км`;
 }
 
 export function formatNumber(value: number) {
-	return new Intl.NumberFormat('en-US').format(value);
+	return new Intl.NumberFormat('bg-BG').format(value);
 }
 
 export function calculateMonthlyPayment(

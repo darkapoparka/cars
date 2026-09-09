@@ -8,6 +8,7 @@ const location = 'бул. Цар Освободител 176, Възраждан�
 
 export const daynightSite = {
 	name: 'EXCLUSIVE AUTO',
+	previewMode: true as boolean,
 	shortName: 'Exclusive Auto',
 	phone: '+359895303009',
 	phoneLabel: '0895 303 009',
@@ -20,8 +21,8 @@ export const daynightSite = {
 	mapLabel: 'Exclusive Auto, бул. Цар Освободител 176, Варна',
 	sourceInventory: 'https://exclusiveauto.mobile.bg/',
 	inventoryCount: 8,
-	logoLight: '/brand/logo.png',
-	logoDark: '/brand/logo.png',
+	logoLight: '/brand/logo-light.png',
+	logoDark: '/brand/logo-dark.png',
 	primaryCta: 'Разгледай автомобилите',
 	sellCarCta: 'Запитване за автомобил',
 	accountCta: 'Свържи се с автокъщата',

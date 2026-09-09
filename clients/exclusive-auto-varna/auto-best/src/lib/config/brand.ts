@@ -25,7 +25,7 @@ export const brand = {
   "phone": "0895 303 009",
   "phoneHref": "tel:+359895303009",
   "appointment": "Работното време не е публикувано. Уточнете посещението по телефона.",
-  "logo": "/brand/logo.png",
+  "logo": "/brand/logo-dark.png",
   "logoLight": "/brand/logo-light.png",
   "logoDark": "/brand/logo-dark.png",
   "youtubeUrl": null,

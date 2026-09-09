@@ -56,7 +56,7 @@
 <footer class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
-      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
+      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logoLight} alt={brand.name} width="220" height="58" /></a>
       <p>Подбрани премиум автомобили, внос и лизинг по запитване с директен контакт с екипа.</p>
     </div>
     <nav aria-label="Автомобили">

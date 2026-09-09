@@ -13,7 +13,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const teamMembers = daynightTeam.slice(0, 3);
 
 	const trustPoints = [
@@ -56,17 +56,17 @@
 	}
 </script>
 
-<div class="mobile-about-app" aria-label="За Day Night Auto">
+<div class="mobile-about-app" aria-label="За Exclusive Auto">
 	<header class="mobile-about-hero">
 		<img
 			class="mobile-about-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-lot-v1.webp')}
+			src={resolve('/inventory/11755373421680634-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-about-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+			<a href={resolve('/')} aria-label="Exclusive Auto начало">
+				<img src={resolve('/brand/logo.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -75,8 +75,8 @@
 
 		<div class="mobile-about-hero__copy">
 			<span>За нас</span>
-			<h1>Проверени автомобили и ясен процес</h1>
-			<p>Day Night Auto в София помага с избор, оглед, документи, финансиране и бартер.</p>
+			<h1>Публикувани автомобили и ясен процес</h1>
+			<p>Exclusive Auto в Варна помага с избор, оглед, документи, финансиране и бартер.</p>
 		</div>
 
 		<div class="mobile-about-actions">
@@ -98,7 +98,7 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-about-section" aria-labelledby="mobile-about-trust-title">
 			<div class="mobile-about-heading">
-				<span>Day Night Auto</span>
+				<span>Exclusive Auto</span>
 				<h2 id="mobile-about-trust-title">Защо при нас</h2>
 			</div>
 
@@ -118,13 +118,13 @@
 
 		<section class="mobile-about-location" aria-labelledby="mobile-about-location-title">
 			<img
-				src={resolve('/assets/images/pages/daynight-about-consultation-v1.webp')}
-				alt="Консултация със Day Night Auto"
+				src={resolve('/assets/images/home-promos/finance-documents-cutout-v5.webp')}
+				alt="Консултация със Exclusive Auto"
 				loading="lazy"
 				decoding="async"
 			/>
 			<div>
-				<span>Шоурум в София</span>
+				<span>Шоурум в Варна</span>
 				<h2 id="mobile-about-location-title">Огледи и съдействие на място</h2>
 				<p>{daynightSite.location}</p>
 				<button type="button" onclick={openMap}>

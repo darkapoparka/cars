@@ -1,18 +1,20 @@
 {
-	"name": "Ден и Нощ Ауто Груп",
-	"short_name": "Day Night Auto",
-	"description": "Day Night Auto: налични автомобили, огледи и контакт в София.",
-	"lang": "bg",
-	"start_url": "/",
-	"scope": "/",
-	"display": "standalone",
-	"background_color": "#ffffff",
-	"theme_color": "#d71920",
-	"icons": [
-		{
-			"src": "/brand/daynight-favicon.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
+  "name": "Exclusive Auto — demo",
+  "short_name": "Exclusive Auto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#181918",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

@@ -44,7 +44,7 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title="За Exclusive Auto"
 		panel="light"
 		compact
 	>
@@ -53,26 +53,10 @@
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				<a href={`tel:${daynightSite.phone}`}
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
-				<div class="about-hero-socials">
-					<a
-						href="https://www.facebook.com/61566304063141/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
-					>
-					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
-					>
-					<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-						<img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
-					</a>
-				</div>
+				<div class="about-hero-socials"><a href={daynightSite.sourceInventory} target="_blank" rel="noopener noreferrer" aria-label="Публикувани обяви в Mobile.bg"><SiteChromeIcon name="search" /></a></div>
 			</nav>
 		{/snippet}
 		<div class="about-hero-strip">
@@ -83,7 +67,7 @@
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-team-title">Екипът зад твоя избор</h2>
+				<h2 id="about-team-title">Теми за разговор</h2>
 				<DesktopBrowseLink href={resolve('/team')} label="Виж екипа" />
 			</div>
 			<p class="about-demo-label">{daynightTeamDisclosure}</p>
@@ -93,7 +77,7 @@
 						<a class="about-team-card__image" href={resolve(teamHref(member.slug))}
 							><img
 								src={resolve(member.image as AssetHref)}
-								alt={`Демо портрет: ${member.name}`}
+								alt={`Контактна тема: ${member.name}`}
 								width="500"
 								height="500"
 								loading="lazy"
@@ -127,7 +111,7 @@
 			<img
 				class="about-story__image"
 				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				alt="Илюстративна визия на Exclusive Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -135,11 +119,11 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
+					Exclusive Auto е автокъща в Варна. При нас можеш да разгледаш наличните автомобили, да
 					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети в Възраждане 1. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -192,11 +176,11 @@
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Exclusive Auto Варна" height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, София</strong>
+						<strong>Възраждане 1, Варна</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

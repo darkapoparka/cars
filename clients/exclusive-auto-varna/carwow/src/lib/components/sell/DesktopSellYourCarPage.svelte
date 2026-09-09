@@ -23,7 +23,7 @@
 	type IntakeMode = 'plate' | 'vin';
 	type SellSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
-	const phoneHref: `tel:${string}` = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref: `tel:${string}` = `tel:${daynightSite.phone}`;
 	const processIcons = [ClipboardPen, Camera, BadgeEuro, KeyRound];
 
 	let valuationDialog: HTMLDialogElement | undefined = $state();

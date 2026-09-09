@@ -19,9 +19,9 @@
 	<div class="rating-box__content">
 		<div class="rating-box__overview">
 			<div class="rating-box__average">
-				<span class="rating-box__score">{daynightReviewAverage.toFixed(1)}</span>
+				<span class="rating-box__score">{desktopDetailReviews.length ? daynightReviewAverage.toFixed(1) : '—'}</span>
 				<div class="rating-box__stars">
-					{#each desktopDetailStarIndexes as starIndex (starIndex)}
+					{#each desktopDetailReviews.length ? desktopDetailStarIndexes : [] as starIndex (starIndex)}
 						<img
 							src="/assets/icons/star-2.svg"
 							alt=""
@@ -65,6 +65,7 @@
 </div>
 
 <div class="comments mb-40">
+  {#if !desktopDetailReviews.length}<div class="comment-box"><p>Няма публикувани мнения или оценка за този автомобил в демото. Проверете информацията при продавача.</p></div>{/if}
 	{#each desktopDetailReviews as review (review.id)}
 		<div class="comment-box">
 			<div class="comment-box__header mb-20">
@@ -113,7 +114,7 @@
 
 <div id="reviewForm">
 	<h2 class="h4 mb-8 capitalize">Добавете отзив</h2>
-	<p class="mb-20">Изпратете мнение през формата за контакт. Публикуването се уточнява с екипа.</p>
+	<p class="mb-20">Формата е демонстрационна и не изпраща мнения. За обратна връзка използвайте публикувания телефон.</p>
 
 	<a
 		href={resolve('/contact?intent=review')}

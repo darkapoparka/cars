@@ -54,11 +54,11 @@
 :root {
 	/* Brand — Day & Night uses black/graphite for structure and red for action.
 	 * The legacy --sa-blue aliases remain for compatibility, but resolve to ink. */
-	--sa-red: #d71920;
-	--sa-red-strong: #a50f15;
-	--sa-red-soft: #fee2e2;
-	--sa-red-tint: #fff5f5;
-	--sa-yellow: #f5c542;
+	--sa-red: #8a632b;
+	--sa-red-strong: #6d4d20;
+	--sa-red-soft: #f2e4c9;
+	--sa-red-tint: #fcf8ef;
+	--sa-yellow: #ebd4a1;
 	--sa-blue: #050505;
 	--sa-blue-strong: #000000;
 	--sa-blue-soft: #fee2e2;

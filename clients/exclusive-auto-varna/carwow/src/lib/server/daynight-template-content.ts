@@ -55,7 +55,7 @@ function replaceCommonCopy(html: string) {
 					.replaceAll('6205 Peachtree Dunwoody Rd, Atlanta, GA 30328', daynightSite.location)
 					.replaceAll('6205 Peachtree Dunwoody Rd, Atlanta, GA', daynightSite.location)
 					.replaceAll('6205 Peachtree Dunwoody Rd, Atlanta,', daynightSite.location)
-					.replaceAll('Tampa, FL', 'София')
+					.replaceAll('Tampa, FL', 'Варна')
 					.replaceAll('GA 30328', '')
 					.replaceAll('VIEW ON MAP', 'ВИЖ КАРТА')
 					.replaceAll('View on map', 'Виж карта')
@@ -65,20 +65,20 @@ function replaceCommonCopy(html: string) {
 					.replaceAll('Add Listing', daynightSite.sellCarCta)
 					.replaceAll('Sign In', daynightSite.accountCta)
 					.replaceAll('Dealer Listings', 'заявки към автокъщата')
-					.replaceAll('Dealer Listing', 'Профил на Day Night Auto София')
+					.replaceAll('Dealer Listing', 'Профил на Exclusive Auto Варна')
 					.replaceAll(
 						'Mike Hanley (@mike_hanley) is a writer who draws. He’s the Bestselling author of “Number of The Year”.',
-						'Day Night Auto публикува практични съвети за покупка, оглед, документи, финансиране и последващи стъпки.'
+						'Exclusive Auto публикува практични съвети за покупка, оглед, документи, финансиране и последващи стъпки.'
 					)
-					.replaceAll('Mike Hanley', 'Day Night Auto')
+					.replaceAll('Mike Hanley', 'Exclusive Auto')
 					.replaceAll('@mike_hanley', '@daynightauto')
-					.replaceAll('Michael Carter', 'Клиент на Day Night Auto')
-					.replaceAll('Sophia Carter', 'Клиент от София')
+					.replaceAll('Michael Carter', 'Клиент на Exclusive Auto')
+					.replaceAll('Sophia Carter', 'Клиент от Варна')
 					.replaceAll('Contact', 'Контакти')
 					.replaceAll('About', 'За нас')
 					.replaceAll('News', 'Полезно')
 					.replaceAll('Контакти Us', 'Контакти')
-					.replaceAll('Heather Dick', 'Клиент на Day Night Auto')
+					.replaceAll('Heather Dick', 'Клиент на Exclusive Auto')
 					.replaceAll(
 						'Owned since 2010. Drove it through all kinds of weather, from hot summers to snowy roads, and it never let me down. A few minor repairs here and there — mostly wear and tear — but the engine just keeps going.',
 						'Коректно съдействие при огледа, документите и избора на автомобил. Получих ясна информация за състояние, цена и следващи стъпки.'
@@ -168,12 +168,12 @@ function escapeRegExp(value: string) {
 }
 
 const daynightPageAssets = {
-	aboutExterior: '/assets/images/pages/daynight-about-lot-v1.webp',
-	aboutConsultation: '/assets/images/pages/daynight-about-consultation-v1.webp',
+	aboutExterior: '/inventory/11755373421680634-1.webp',
+	aboutConsultation: '/assets/images/home-promos/finance-documents-cutout-v5.webp',
 	aboutShowroomVehicle: '/assets/images/pages/daynight-about-showroom-suv-v1.webp',
 	servicesInspection: '/assets/images/pages/daynight-services-inspection-v1.webp',
-	servicesConsultation: '/assets/images/pages/daynight-services-consultation-v1.webp',
-	dealerProfileMark: '/brand/daynight-logo-generated.png'
+	servicesConsultation: '/assets/images/home-promos/finance-documents-cutout-v5.webp',
+	dealerProfileMark: '/brand/logo.png'
 } as const;
 
 const daynightMapEmbedQuery = `${daynightSite.mapLabel}, ${daynightSite.location}`;
@@ -200,9 +200,9 @@ const supportHeroByTemplateFile: Record<
 > = {
 	'about-us.html': {
 		modifier: 'about',
-		title: 'За Day Night Auto',
+		title: 'За Exclusive Auto',
 		description:
-			'Проверени автомобили, ясна история и съдействие от избора до документите в София.',
+			'Публикувани автомобили, ясна история и съдействие от избора до документите в Варна.',
 		image: daynightPageAssets.aboutExterior,
 		primaryHref: '/inventory',
 		primaryLabel: 'Виж автомобили',
@@ -235,7 +235,7 @@ const supportHeroByTemplateFile: Record<
 function buildDayNightMapIframe(height: string, loading: 'lazy' | 'eager' = 'lazy') {
 	// The Google Maps embed pulls ~2MB of map JS. Defer it: render without `src` and let
 	// TemplateLocalBehaviors load it (via IntersectionObserver) when scrolled into view.
-	return `<iframe title="Карта до Day Night Auto София" data-map-src="${daynightMapEmbedSrc}" data-daynight-scroll-map height="${height}" style="border:0;width: 100%;" allowfullscreen="" loading="${loading}" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+	return `<iframe title="Карта до Exclusive Auto Варна" data-map-src="${daynightMapEmbedSrc}" data-daynight-scroll-map height="${height}" style="border:0;width: 100%;" allowfullscreen="" loading="${loading}" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 }
 
 function renderSupportHero(templateFile: string) {
@@ -324,7 +324,7 @@ function renderTeamContactActions(member: (typeof daynightTeam)[number]) {
 									</a>
 								</li>
 								<li>
-									<a href="mailto:${member.email}" title="Имейл към Day Night Auto" aria-label="Имейл към Day Night Auto">
+									<a href="mailto:${member.email}" title="Имейл към Exclusive Auto" aria-label="Имейл към Exclusive Auto">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 											<path d="M3.75 7.5L10.94 12.2933C11.5667 12.7111 12.4333 12.7111 13.06 12.2933L20.25 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M4.5 5.25H19.5C20.3284 5.25 21 5.92157 21 6.75V17.25C21 18.0784 20.3284 18.75 19.5 18.75H4.5C3.67157 18.75 3 18.0784 3 17.25V6.75C3 5.92157 3.67157 5.25 4.5 5.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -368,24 +368,10 @@ function renderTeamHoverActions(member: (typeof daynightTeam)[number], route: st
 
 function renderContactPageSocialLinks() {
 	return `<ul class="contact-page-info-social flex gap-8">
+							
+							
 							<li>
-								<a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" class="hover-fill-white" title="Facebook" aria-label="Facebook">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<path d="M11.5541 20V10.8777H14.6148L15.074 7.32156H11.5541V5.05147C11.5541 4.0222 11.8387 3.32076 13.3164 3.32076L15.1979 3.31999V0.13923C14.8725 0.0969453 13.7556 0 12.4556 0C9.74098 0 7.88252 1.65697 7.88252 4.69927V7.32156H4.8125V10.8777H7.88252V20H11.5541Z" fill="#1C1C1C"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" class="hover-stroke-white" title="Instagram" aria-label="Instagram">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<rect x="2.5" y="2.5" width="15" height="15" rx="4.5" stroke="#1C1C1C" stroke-width="1.5"/>
-										<circle cx="10" cy="10" r="3.15" stroke="#1C1C1C" stroke-width="1.5"/>
-										<circle cx="14.05" cy="5.95" r="0.9" fill="#1C1C1C"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="tel:${daynightSite.phone}" class="hover-stroke-white" title="Свържете се с Day Night Auto по телефон или Viber." aria-label="Свържете се с Day Night Auto по телефон или Viber.">
+								<a href="tel:${daynightSite.phone}" class="hover-stroke-white" title="Свържете се с Exclusive Auto по публикувания телефон." aria-label="Свържете се с Exclusive Auto по публикувания телефон.">
 									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 										<path d="M14.25 4.5C15.5114 4.83218 16.6621 5.4932 17.5844 6.41557C18.5068 7.33793 19.1678 8.48858 19.5 9.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										<path d="M13.5 7.5C15.0488 7.91438 16.0856 8.95125 16.5 10.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -404,7 +390,7 @@ function renderContactPageSocialLinks() {
 								</a>
 							</li>
 							<li>
-								<a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="hover-stroke-white" title="Отвори локацията на Day Night Auto в Google Maps" aria-label="Отвори локацията на Day Night Auto в Google Maps">
+								<a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="hover-stroke-white" title="Отвори локацията на Exclusive Auto в Google Maps" aria-label="Отвори локацията на Exclusive Auto в Google Maps">
 									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 										<path d="M12 12.75C13.6569 12.75 15 11.4069 15 9.75C15 8.09315 13.6569 6.75 12 6.75C10.3431 6.75 9 8.09315 9 9.75C9 11.4069 10.3431 12.75 12 12.75Z" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										<path d="M19.5 9.75C19.5 16.5 12 21.75 12 21.75C12 21.75 4.5 16.5 4.5 9.75C4.5 7.76088 5.29018 5.85322 6.6967 4.4467C8.10322 3.04018 10.0109 2.25 12 2.25C13.9891 2.25 15.8968 3.04018 17.3033 4.4467C18.7098 5.85322 19.5 7.76088 19.5 9.75Z" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -723,7 +709,7 @@ function replaceSharedCounterMetrics(html: string) {
 			(_match, before, after, close) => `${before}100${after}100${close}%`
 		)
 		.replace(
-			/<p class="font-weight-500 text-muted h7 text-center">Проверени автомобили<\/p>/,
+			/<p class="font-weight-500 text-muted h7 text-center">Публикувани автомобили<\/p>/,
 			'<p class="font-weight-500 text-muted h7 text-center">съдействие по документи</p>'
 		);
 }
@@ -867,7 +853,7 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Engine:', 'Двигател:')
 		.replaceAll('VIN:', 'Реф. номер:')
 		.replaceAll('Stock Number:', 'Вътрешен номер:')
-		.replaceAll('Tampa, FL', 'София')
+		.replaceAll('Tampa, FL', 'Варна')
 		.replaceAll('Listing GridStyle Half Map', 'Карта на наличните автомобили')
 		.replaceAll('Listing GridStyle HalfMap', 'Карта на наличните автомобили')
 		.replaceAll('Grid Style Half Map', 'Карта на наличните автомобили')
@@ -894,7 +880,7 @@ function replaceMapModeEmbed(html: string, templateFile: string) {
 		return html;
 	}
 
-	const mapEmbed = `<div id="map" data-map-zoom="16" data-map-scroll="true"><iframe title="Карта до Day Night Auto София" data-map-src="${daynightMapEmbedSrc}" data-daynight-scroll-map width="100%" height="100%" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
+	const mapEmbed = `<div id="map" data-map-zoom="16" data-map-scroll="true"><iframe title="Карта до Exclusive Auto Варна" data-map-src="${daynightMapEmbedSrc}" data-daynight-scroll-map width="100%" height="100%" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
 
 	return html
 		.replace(/<div id="map" data-map-zoom="16" data-map-scroll="true"><\/div>/, mapEmbed)
@@ -951,12 +937,12 @@ function replaceSectionByMarker(html: string, marker: string, replacement: strin
 
 const supportReviews = [
 	{
-		name: 'Клиент от София',
+		name: 'Клиент от Варна',
 		label: 'Покупка и документи',
 		text: 'Получих ясна информация за автомобила, документите и следващите стъпки. Огледът беше организиран спокойно, без натиск.'
 	},
 	{
-		name: 'Клиент на Day Night Auto',
+		name: 'Клиент на Exclusive Auto',
 		label: 'Финансиране',
 		text: 'Екипът ми помогна да сравня няколко автомобила и да планирам бюджета с вариант за разсрочено плащане.'
 	},
@@ -1121,9 +1107,9 @@ function renderAboutShowroomSection() {
 	<div class="container">
 		<div class="daynight-about-location">
 			<div class="daynight-about-location__content">
-				<p class="eyebrow">Шоурум в София</p>
+				<p class="eyebrow">Шоурум в Варна</p>
 				<h2>Автомобили с ясна история и подреден процес</h2>
-				<p class="text-secondary h7 line-height-28">Day Night Auto предлага внимателно подбрани автомобили с реална наличност, съдействие при оглед, документи, регистрация, финансиране и бартер.</p>
+				<p class="text-secondary h7 line-height-28">Exclusive Auto предлага внимателно подбрани автомобили с реална наличност, съдействие при оглед, документи, регистрация, финансиране и бартер.</p>
 				<ul class="daynight-about-location__list">
 					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Огледи на място и в доверен сервиз</li>
 					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Съдействие за документи, регистрация и финансиране</li>
@@ -1136,8 +1122,8 @@ function renderAboutShowroomSection() {
 			</div>
 			<div class="daynight-about-location__visual">
 				<div class="daynight-about-location__images">
-					<img src="${daynightPageAssets.aboutShowroomVehicle}" alt="Шоурум на Day Night Auto">
-					<img src="${daynightPageAssets.aboutConsultation}" alt="Консултация със Day Night Auto">
+					<img src="${daynightPageAssets.aboutShowroomVehicle}" alt="Шоурум на Exclusive Auto">
+					<img src="${daynightPageAssets.aboutConsultation}" alt="Консултация със Exclusive Auto">
 				</div>
 				<div class="daynight-about-location__map">${buildDayNightMapIframe('260')}</div>
 			</div>
@@ -1159,7 +1145,7 @@ function polishAboutPageStructure(html: string) {
 
 function polishServicesPageStructure(html: string) {
 	let output = replaceSectionByMarker(html, 'Как съдействаме', '');
-	output = replaceSectionByMarker(output, 'Изберете автомобил с подкрепа от Day Night Auto', '');
+	output = replaceSectionByMarker(output, 'Изберете автомобил с подкрепа от Exclusive Auto', '');
 
 	return output;
 }
@@ -1213,7 +1199,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('51600 km', vehicle.mileage)
 		.replaceAll('2022', String(vehicle.year))
 		.replaceAll('Benzin + Plin', vehicle.fuel)
-		.replaceAll('Tampa, FL', 'София')
+		.replaceAll('Tampa, FL', 'Варна')
 		.replaceAll('White', vehicle.color)
 		.replaceAll('Jet Black', 'Тъмен салон')
 		.replaceAll('1.5L Inline', vehicle.engine)
@@ -1221,7 +1207,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replace('1G1ZD5ST0PF', 'предоставя се при оглед')
 		.replaceAll('1G1ZD5ST0PF', vehicle.lot)
 		.replaceAll('165921', vehicle.lot)
-		.replaceAll('Mike Hanley', salesTeam?.name ?? 'Day Night Auto')
+		.replaceAll('Mike Hanley', salesTeam?.name ?? 'Exclusive Auto')
 		.replaceAll('Verified Dealer', 'Проверена автокъща')
 		.replaceAll('/assets/images/pages/sale-agent-9.jpg', salesTeam?.image ?? daynightSite.logoDark)
 		.replaceAll('Get Directions', 'Виж локация')
@@ -1601,7 +1587,7 @@ ${renderBlogTagsWidget(articles)}`;
 function renderBlogStandardContent(articles: DayNightArticle[]) {
 	const [featured, ...cards] = articles;
 	if (!featured) {
-		return `<p class="h5 text-secondary mb-40">Очаквайте публикации от Day Night Auto.</p>`;
+		return `<p class="h5 text-secondary mb-40">Очаквайте публикации от Exclusive Auto.</p>`;
 	}
 
 	return `<div data-daynight-blog-index>
@@ -1789,16 +1775,16 @@ function renderBlogDetailAuthorBox() {
 	<div class="listing-details--contact-dealer mb-20">
 		<img src="${daynightPageAssets.dealerProfileMark}" alt="${daynightSite.shortName}">
 		<div class="content">
-			<a href="/about/daynight-auto-plovdiv" class="h4 mb-4 font-weight-600">Day Night Auto</a>
-			<p class="text-secondary mb-18">Автокъща в София</p>
+			<a href="/about/daynight-auto-plovdiv" class="h4 mb-4 font-weight-600">Exclusive Auto</a>
+			<p class="text-secondary mb-18">Автокъща в Варна</p>
 			<ul class="blog-detail-social flex gap-12">
-				<li><a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" aria-label="Facebook канал">${renderBlogSocialIcon('facebook')}</a></li>
-				<li><a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" aria-label="Instagram канал">${renderBlogSocialIcon('instagram')}</a></li>
-				<li><a href="mailto:${daynightSite.email}" aria-label="Имейл към Day Night Auto">${renderBlogSocialIcon('mail')}</a></li>
+				<li><a href="${daynightSite.sourceInventory}" target="_blank" rel="noopener" aria-label="Публични обяви на автокъщата">Mobile.bg</a></li>
+				
+				<li><a href="mailto:${daynightSite.email}" aria-label="Имейл към Exclusive Auto">${renderBlogSocialIcon('mail')}</a></li>
 			</ul>
 		</div>
 	</div>
-	<p class="h7 line-height-28">Day Night Auto публикува практични съвети и новини за наличност, покупка, оглед, документи, регистрация и финансиране на употребявани автомобили в София.</p>
+	<p class="h7 line-height-28">Exclusive Auto публикува практични съвети и новини за наличност, покупка, оглед, документи, регистрация и финансиране на употребявани автомобили в Варна.</p>
 </div>`;
 }
 
@@ -1844,7 +1830,7 @@ function renderBlogDetailComments() {
 			inner: true
 		},
 		{
-			name: 'Day Night Auto',
+			name: 'Exclusive Auto',
 			time: 'преди 2 дни',
 			text: 'Да, най-добре е да сравним бюджет, пробег, гориво и реална наличност преди оглед.',
 			avatar: daynightPageAssets.dealerProfileMark,
@@ -1916,7 +1902,7 @@ function renderBlogDetailMainSection(article: DayNightArticle, articles: DayNigh
 				<p class="h4 mb-14 capitalize">"Провереният избор започва с документи, история, реален оглед и ясен бюджет."</p>
 				<p class="h7 flex items-center gap-8">
 					<img src="/assets/icons/line.svg" alt="quote">
-					Day Night Auto
+					Exclusive Auto
 				</p>
 			</div>
 			<img class="icon-quote" src="/assets/icons/quote.svg" alt="quote">
@@ -2029,7 +2015,7 @@ function replaceBlogDetailCopy(
 		.replaceAll('title-2 mb-16 capitalize text-center', 'title-2 mb-16 text-center')
 		.replaceAll('by Admin', `от ${article.author}`)
 		.replaceAll('Admin', article.author)
-		.replaceAll('John Smith', 'Day Night Auto')
+		.replaceAll('John Smith', 'Exclusive Auto')
 		.replaceAll('August 5, 2025', formattedDate)
 		.replaceAll('Aug. 5, 2025', formattedDate)
 		.replaceAll('3. Performance and Capability', '3. Сравнете цена, обслужване и финансиране')
@@ -2039,7 +2025,7 @@ function replaceBlogDetailCopy(
 			'"Choosing the right SUV isn’t just about size—it’s about finding the perfect fit for your lifestyle, needs, and adventures."',
 			'Провереният избор започва с документи, история, реален оглед и ясен бюджет.'
 		)
-		.replaceAll('Nelson Mandela', 'Day Night Auto')
+		.replaceAll('Nelson Mandela', 'Exclusive Auto')
 		.replaceAll(
 			'From the size and space they offer to their fuel efficiency, performance capabilities, and overall cost of ownership, each type of SUV caters to different priorities and preferences. By carefully weighing these aspects, you can make a more informed choice that not only meets your immediate requirements but also supports your long-term goals and lifestyle.',
 			article.body[0] ?? article.description
@@ -2150,10 +2136,10 @@ function replaceBlogDetailCopy(
 function replaceSupportPageCopy(html: string, templateFile: string, routePath: string) {
 	if (templateFile === 'about-us.html') {
 		let output = html
-			.replaceAll('About Us', 'За Day Night Auto')
+			.replaceAll('About Us', 'За Exclusive Auto')
 			.replaceAll(
 				'Premium vehicles for every lifestyle',
-				'проверени употребявани автомобили, съдействие за документи, регистрация, финансиране и огледи в София.'
+				'проверени употребявани автомобили, съдействие за документи, регистрация, финансиране и огледи в Варна.'
 			)
 			.replaceAll('Quality Services', 'проверени употребявани автомобили')
 			.replaceAll(
@@ -2161,15 +2147,15 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				'Автомобили с ясна история и подреден процес'
 			)
 			.replaceAll(
-				'At Day Night Auto, we make car ownership simple and accessible with expert guidance, personalized solutions, and exceptional service. Our team is committed to helping you find the perfect vehicle while ensuring a hassle-free experience.',
-				'Екипът на Day Night Auto помага с избор на автомобил, оглед, документи, регистрация, финансиране и следващи стъпки без излишен шум.'
+				'At Exclusive Auto, we make car ownership simple and accessible with expert guidance, personalized solutions, and exceptional service. Our team is committed to helping you find the perfect vehicle while ensuring a hassle-free experience.',
+				'Екипът на Exclusive Auto помага с избор на автомобил, оглед, документи, регистрация, финансиране и следващи стъпки без излишен шум.'
 			)
 			.replaceAll('Experienced Automotive Experts', 'Опитен екип за избор и оглед')
 			.replaceAll('Transparent Pricing, No Hidden Fees', 'Ясни цени и реални условия')
 			.replaceAll('Quick Process, Smooth Transactions', 'Подреден процес и спокойна сделка')
 			.replaceAll('Clients Reviews', 'Отзиви от клиенти')
-			.replaceAll('Individual Service Team', 'Консултанти на Day Night Auto')
-			.replaceAll('Индивидуална услуга Team', 'Консултанти на Day Night Auto')
+			.replaceAll('Individual Service Team', 'Консултанти на Exclusive Auto')
+			.replaceAll('Индивидуална услуга Team', 'Консултанти на Exclusive Auto')
 			.replaceAll('President and Chief Individual Service Officer', 'Консултант продажби')
 			.replaceAll('President and Chief Индивидуална услуга Officer', 'Консултант продажби')
 			.replaceAll('Chief Operating Officer', 'Оценка, покупка и бартер')
@@ -2177,11 +2163,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Chief Financial Officer', 'Консултант клиентски услуги')
 			.replace(
 				/<p class="text-secondary h7 line-height-28 mb-32">[\s\S]*?<\/p>/,
-				'<p class="text-secondary h7 line-height-28 mb-32">Day Night Auto предлага внимателно подбрани и проверени автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.</p>'
+				'<p class="text-secondary h7 line-height-28 mb-32">Exclusive Auto предлага внимателно подбрани и публикувани автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.</p>'
 			)
 			.replace(
-				/At Day Night Auto, we make car ownership simple and accessible[\s\S]*?hassle-free experience\./,
-				'Day Night Auto предлага внимателно подбрани и проверени автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.'
+				/At Exclusive Auto, we make car ownership simple and accessible[\s\S]*?hassle-free experience\./,
+				'Exclusive Auto предлага внимателно подбрани и публикувани автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.'
 			)
 			.replaceAll('/assets/images/pages/about-1.jpg', daynightPageAssets.aboutExterior)
 			.replaceAll('/assets/images/pages/about-2.jpg', daynightPageAssets.aboutConsultation)
@@ -2212,11 +2198,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 	if (templateFile === 'sell-your-car.html') {
 		return html
 			.replaceAll('Sell Your Car', 'Продайте или заменете автомобила си')
-			.replaceAll('Get a fair price', 'Получете предложение за покупка или бартер от Day Night Auto')
-			.replaceAll('Certified Dealers', 'Day Night Auto')
+			.replaceAll('Get a fair price', 'Получете предложение за покупка или бартер от Exclusive Auto')
+			.replaceAll('Certified Dealers', 'Exclusive Auto')
 			.replaceAll(
 				'Answer a few questions about your vehicle, and then connect with one of thousands of Certified Dealers who can pay you directly for your used car.',
-				'Опишете автомобила, изпратете снимки и екипът на Day Night Auto ще Ви изпрати следващи стъпки за оглед, покупка или бартер.'
+				'Опишете автомобила, изпратете снимки и екипът на Exclusive Auto ще Ви изпрати следващи стъпки за оглед, покупка или бартер.'
 			)
 			.replaceAll('Secure Transactions And Title Transfer', 'Съдействие по документи и прехвърляне')
 			.replaceAll('Secure Transactions', 'Съдействие по документи')
@@ -2244,14 +2230,14 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Receive Your Offer', 'Получете обратна връзка')
 			.replaceAll(
 				'Ready to sell? Get a personalized offer from a local dealer.',
-				'Екипът на Day Night Auto ще Ви изпрати следващи стъпки за оглед, покупка или бартер.'
+				'Екипът на Exclusive Auto ще Ви изпрати следващи стъпки за оглед, покупка или бартер.'
 			)
 			.replaceAll('Complete the Sale Easily', 'Финализирайте спокойно')
 			.replaceAll(
 				'Finalize the deal with secure transactions & hassle-free paperwork assistance.',
 				'Подготвяме документите и координираме процеса до финализиране.'
 			)
-			.replaceAll('Get In Touch With Us', 'Свържете се със Day Night Auto')
+			.replaceAll('Get In Touch With Us', 'Свържете се със Exclusive Auto')
 			.replaceAll(
 				'We’re here to assist with any questions, concerns, or inquiries contact us today!',
 				'Свържете се за оглед, документи, регистрация, финансиране, бартер или въпрос за наличен автомобил.'
@@ -2268,7 +2254,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replaceAll(
 				'Usually, you will need the current registration for the vehicle signed by all registered owners, along with the car title and your ID or driver’s license. You may also need to provide warranty information. To complete your sale transaction, you will likely need to complete a bill of sale.',
-				'Обикновено са нужни талон, документ за собственост, лична карта и допълнителни документи според конкретния автомобил. Екипът на Day Night Auto уточнява точния набор при оглед.'
+				'Обикновено са нужни талон, документ за собственост, лична карта и допълнителни документи според конкретния автомобил. Екипът на Exclusive Auto уточнява точния набор при оглед.'
 			)
 			.replaceAll(
 				'Check with your local DMV to confirm what you’ll need in your state.',
@@ -2379,7 +2365,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replaceAll(
 				'Get in touch with us for expert service and support. Whether you need routine maintenance, urgent repairs, or professional guidance, our dedicated team is here to ensure your vehicle stays in top condition.',
-				'Свържете се със Day Night Auto за документи, регистрация, финансиране, бартер, оглед, доставка или търсене на автомобил по задание.'
+				'Свържете се със Exclusive Auto за документи, регистрация, финансиране, бартер, оглед, доставка или търсене на автомобил по задание.'
 			)
 			.replaceAll('Expert Technicians', 'Практично съдействие')
 			.replaceAll('Quick Turnaround Time', 'Ясни следващи стъпки')
@@ -2399,19 +2385,19 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Model', 'Модел')
 			.replaceAll(
 				'Find Your Perfect Used Car Anytime, Anywhere!',
-				'Изберете автомобил с подкрепа от Day Night Auto'
+				'Изберете автомобил с подкрепа от Exclusive Auto'
 			)
 			.replaceAll(
 				'Experience hassle-free car shopping with our app. Browse, compare, and buy used cars wherever you are - it’s fast, simple, and convenient.',
-				'Съдействаме при оглед, документи, финансиране, бартер и регистрация в София.'
+				'Съдействаме при оглед, документи, финансиране, бартер и регистрация в Варна.'
 			)
 			.replaceAll(
 				'Experience hassle-free car shopping with our app. Browse, compare, and buy used cars wherever you are – it’s fast, simple, and convenient.',
-				'Съдействаме при оглед, документи, финансиране, бартер и регистрация в София.'
+				'Съдействаме при оглед, документи, финансиране, бартер и регистрация в Варна.'
 			)
 			.replace(
 				/Experience hassle-free car shopping with our app\. Browse, compare, and buy used cars\s*<br class="lg-hidden" \/>\s*wherever you are - it’s fast, simple, and convenient\./g,
-				'Съдействаме при оглед, документи, финансиране, бартер и регистрация в София.'
+				'Съдействаме при оглед, документи, финансиране, бартер и регистрация в Варна.'
 			)
 			.replaceAll(
 				'/assets/images/banner/bg-service-center.jpg',
@@ -2449,7 +2435,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 	if (templateFile === 'clients-reviews.html') {
 		return html
 			.replaceAll('Clients Reviews', 'Отзиви от клиенти')
-			.replaceAll('What our clients say', 'Реални впечатления от клиенти на Day Night Auto')
+			.replaceAll('What our clients say', 'Реални впечатления от клиенти на Exclusive Auto')
 			.replaceAll(
 				'I had an amazing experience buying my car from this website. The selection was huge, and I found the perfect car in no time. The process was smooth, and the customer support team was very helpful throughout.',
 				'Получих ясна информация за автомобила, документите и следващите стъпки. Огледът беше организиран спокойно, без натиск и без излишни обещания.'
@@ -2486,39 +2472,39 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				'This platform was fast, efficient, and very easy to use for finding a car. I found the right vehicle quickly, and the entire process was hassle-free and transparent. Definitely recommend this service to everyone!',
 				'Процесът беше прозрачен и добре организиран от първото обаждане до финалните документи.'
 			)
-			.replaceAll('Emily Johnson', 'Клиент на Day Night Auto')
-			.replaceAll('Benjamin Parker', 'Клиент от София')
-			.replaceAll('Olivia Williams', 'Клиент на Day Night Auto')
-			.replaceAll('Sophia Martinez', 'Клиент от София')
-			.replaceAll('Daniel Wright', 'Клиент на Day Night Auto')
-			.replaceAll('Sarah Nguyen', 'Клиент от София')
-			.replaceAll('Manager, NexTech', 'Клиент на Day Night Auto')
-			.replaceAll('Freelance Designer', 'Клиент от София')
-			.replaceAll('Entrepreneur', 'Клиент на Day Night Auto')
-			.replaceAll('Accountant', 'Клиент от София')
-			.replaceAll('CEO BMW', 'Клиент на Day Night Auto')
-			.replaceAll('CEO Day Night Auto', 'Клиент на Day Night Auto')
-			.replaceAll('James Anderson', 'Клиент от София')
-			.replaceAll('Project Manager', 'Клиент на Day Night Auto')
-			.replaceAll('Avitex', 'Day Night Auto')
-			.replaceAll('Tesla', 'Day Night Auto')
-			.replaceAll('Aurexo', 'Day Night Auto');
+			.replaceAll('Emily Johnson', 'Клиент на Exclusive Auto')
+			.replaceAll('Benjamin Parker', 'Клиент от Варна')
+			.replaceAll('Olivia Williams', 'Клиент на Exclusive Auto')
+			.replaceAll('Sophia Martinez', 'Клиент от Варна')
+			.replaceAll('Daniel Wright', 'Клиент на Exclusive Auto')
+			.replaceAll('Sarah Nguyen', 'Клиент от Варна')
+			.replaceAll('Manager, NexTech', 'Клиент на Exclusive Auto')
+			.replaceAll('Freelance Designer', 'Клиент от Варна')
+			.replaceAll('Entrepreneur', 'Клиент на Exclusive Auto')
+			.replaceAll('Accountant', 'Клиент от Варна')
+			.replaceAll('CEO BMW', 'Клиент на Exclusive Auto')
+			.replaceAll('CEO Exclusive Auto', 'Клиент на Exclusive Auto')
+			.replaceAll('James Anderson', 'Клиент от Варна')
+			.replaceAll('Project Manager', 'Клиент на Exclusive Auto')
+			.replaceAll('Avitex', 'Exclusive Auto')
+			.replaceAll('Tesla', 'Exclusive Auto')
+			.replaceAll('Aurexo', 'Exclusive Auto');
 	}
 
 	if (templateFile === 'sale-agents.html') {
 		let output = html
-			.replaceAll('Sale Agents', 'Екипът на Day Night Auto')
+			.replaceAll('Sale Agents', 'Екипът на Exclusive Auto')
 			.replaceAll('Our Agents', 'Консултанти')
-			.replaceAll('Brooklyn Simmons', daynightTeam[0]?.name ?? 'Екипът на Day Night Auto')
+			.replaceAll('Brooklyn Simmons', daynightTeam[0]?.name ?? 'Екипът на Exclusive Auto')
 			.replaceAll(
 				'Darrell Steward',
-				daynightTeam[1]?.name ?? daynightTeam[0]?.name ?? 'Екипът на Day Night Auto'
+				daynightTeam[1]?.name ?? daynightTeam[0]?.name ?? 'Екипът на Exclusive Auto'
 			)
 			.replaceAll(
 				'Senior Dealer Partner',
 				daynightTeam[0]?.role.toLowerCase() ?? 'консултант продажби'
 			)
-			.replaceAll('Mike Hanley', daynightTeam[0]?.name ?? 'Екипът на Day Night Auto');
+			.replaceAll('Mike Hanley', daynightTeam[0]?.name ?? 'Екипът на Exclusive Auto');
 
 		output = replaceDivInnerByExactClass(output, daynightTeamGridClass, renderTeamGrid('team'));
 		output = output.replace(
@@ -2536,7 +2522,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 		let output = html
 			.replaceAll('Sale Agent Details', 'Профил на консултант')
 			.replaceAll('Senior Dealer Partner', member?.role ?? 'Консултант продажби')
-			.replaceAll('Mike Hanley', member?.name ?? 'Екипът на Day Night Auto')
+			.replaceAll('Mike Hanley', member?.name ?? 'Екипът на Exclusive Auto')
 			.replaceAll('Dealer Inventory', 'Препоръчани автомобили')
 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
 			.replaceAll('Write A Review', 'Добавете отзив')
@@ -2558,8 +2544,8 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('View More Reviews (98)', daynightSite.reviewLinkLabel)
 			.replaceAll('Login To Add A Review', 'Изпратете отзив')
 			.replaceAll('(1,968 Ratings)', `(${daynightSite.reviewCountLabel})`)
-			.replaceAll('Randynox', 'Клиент на Day Night Auto')
-			.replaceAll('Mista Nyroom', 'Клиент от София')
+			.replaceAll('Randynox', 'Клиент на Exclusive Auto')
+			.replaceAll('Mista Nyroom', 'Клиент от Варна')
 			.replace(/<p class="mb-8">Name<\/p>/g, '<p class="mb-8">Име</p>')
 			.replace(/<p class="mb-8">Email<\/p>/g, '<p class="mb-8">Имейл</p>')
 			.replace(/<p class="mb-8">Phone<\/p>/g, '<p class="mb-8">Телефон</p>')
@@ -2612,11 +2598,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 
 	if (templateFile === 'dealer-details.html') {
 		let output = html
-			.replaceAll('Dealer Listing', 'Профил на Day Night Auto София')
-			.replaceAll('Dealer Details', 'Профил на Day Night Auto София')
-			.replaceAll('Dealer Detail', 'Профил на Day Night Auto София')
-			.replaceAll('Aurexo Atlanta', 'Day Night Auto София')
-			.replaceAll('Euro Workshop', 'Day Night Auto София')
+			.replaceAll('Dealer Listing', 'Профил на Exclusive Auto Варна')
+			.replaceAll('Dealer Details', 'Профил на Exclusive Auto Варна')
+			.replaceAll('Dealer Detail', 'Профил на Exclusive Auto Варна')
+			.replaceAll('Aurexo Atlanta', 'Exclusive Auto Варна')
+			.replaceAll('Euro Workshop', 'Exclusive Auto Варна')
 			.replaceAll('537 Orchard St, NY', daynightSite.location)
 			.replaceAll('Verified Dealer', 'Проверена автокъща')
 			.replaceAll('Dealer Inventory', 'Налични автомобили')
@@ -2630,7 +2616,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('(751 review)', `(${daynightSite.reviewCountLabel})`)
 			.replaceAll(
 				'Darrell Steward is a dedicated automotive professional with over 15 years of experience in the car dealership industry. Known for his customer-first approach and in-depth knowledge of the market, Darrell has helped countless clients find their perfect vehicle while ensuring a seamless and enjoyable buying experience.',
-				'Day Night Auto София предлага проверени употребявани автомобили, съдействие за документи, регистрация, финансиране, бартер и оглед в доверен сервиз. Екипът работи с ясна информация за цена, пробег, състояние и следващи стъпки след избора на автомобил.'
+				'Exclusive Auto Варна предлага проверени употребявани автомобили, съдействие за документи, регистрация, финансиране, бартер и оглед в доверен сервиз. Екипът работи с ясна информация за цена, пробег, състояние и следващи стъпки след избора на автомобил.'
 			)
 			.replaceAll(
 				'His passion for automobiles began at a young age, driving him to excel in understanding every aspect of car sales, from customer service to financing solutions. Darrell is committed to building lasting relationships with his clients, always prioritizing trust and transparency.',
@@ -2638,7 +2624,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replaceAll(
 				'Darrell Steward is a dedicated automotive professional with over 15 years of experience in the car dealership industry. Known for his customer-first approach and in-depth knowledge of the market, Darrell has helped countless clients find their perfect vehicle while ensuring a seamless and enjoyable buying experience. His passion for automobiles began at a young age, driving him to excel in understanding every aspect of car sales, from customer service to financing solutions. Darrell is committed to building lasting relationships with clients, offering honest advice, transparent deals, and personalized support every step of the way.',
-				'Day Night Auto София предлага проверени употребявани автомобили, съдействие за документи, регистрация, финансиране, бартер и оглед в доверен сервиз. Екипът работи с ясна информация за цена, пробег, състояние и следващи стъпки след избора на автомобил.'
+				'Exclusive Auto Варна предлага проверени употребявани автомобили, съдействие за документи, регистрация, финансиране, бартер и оглед в доверен сервиз. Екипът работи с ясна информация за цена, пробег, състояние и следващи стъпки след избора на автомобил.'
 			)
 			.replaceAll('/assets/images/pages/volvo.png', daynightPageAssets.dealerProfileMark)
 			.replace(/<p class="mb-8">Name<\/p>/g, '<p class="mb-8">Име</p>')
@@ -2677,8 +2663,8 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 	if (templateFile === 'contact-us.html') {
 		let output = promoteContactContentBeforeMap(html)
 			.replaceAll('Contact Us', 'Контакти')
-			.replaceAll('Get In Touch', 'Свържете се със Day Night Auto')
-			.replaceAll('get in touch', 'Свържете се със Day Night Auto')
+			.replaceAll('Get In Touch', 'Свържете се със Exclusive Auto')
+			.replaceAll('get in touch', 'Свържете се със Exclusive Auto')
 			.replaceAll('<p class="mb-8">Message</p>', '<p class="mb-8">Съобщение</p>')
 			.replaceAll('<p class="mb-8">Email</p>', '<p class="mb-8">Имейл</p>')
 			.replaceAll('<p class="mb-8">First Name</p>', '<p class="mb-8">Име</p>')
@@ -2708,11 +2694,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 
 		output = output
 			.replace(
-				/<div class="bg-white radius-20 contact-page-form">\s*<p class="h3 mb-12">Свържете се със Day Night Auto<\/p>/,
+				/<div class="bg-white radius-20 contact-page-form">\s*<p class="h3 mb-12">Свържете се със Exclusive Auto<\/p>/,
 				'<div class="bg-white radius-20 contact-page-form">\n\t\t\t\t\t\t<p class="h3 mb-12">Пишете ни за автомобил</p>'
 			)
 			.replace(
-				/<p class="text-secondary">гр\. София, София, гр. София, Студентски град, ул. Атанас Манчев 18<\/p>/,
+				/<p class="text-secondary">гр\. Варна, Варна, бул. Цар Освободител 176, Възраждане 1, Варна<\/p>/,
 				`<a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="text-secondary">${daynightSite.location}</a>`
 			);
 
@@ -2762,7 +2748,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Timeframes for receiving a refund?', 'Предлагате ли доставка до друг град?')
 			.replaceAll(
 				'To purchase a car from our dealership, start by exploring our inventory online or visiting us in person to find the vehicle that suits your needs. Schedule a test drive to ensure it’s the right fit, then review financing or leasing options with our team.',
-				'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
+				'Изберете автомобил от наличността онлайн или на място в Варна, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Exclusive Auto.'
 			)
 			.replaceAll(
 				'Provide the necessary documents, such as your ID, proof of insurance, and income verification. Once terms are agreed upon, finalize the paperwork, inspect the car, and drive away with your new vehicle!',
@@ -2770,7 +2756,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replaceAll(
 				'An auto loan is a sum of money that you borrow in order to buy a car. The person or organization lending you the money is known as the lender, and the person or organization who borrows the money is the borrower. The borrower agrees to pay back the full amount they borrowed by a certain date in the future. They also pay interest, which is a percentage of the loan amount. They usually pay both these amounts via monthly payments.',
-				'Условията зависят от конкретния автомобил и избраната схема. Свържете се с екипа на Day Night Auto за актуална информация, оценка на замяна и съдействие по документите.'
+				'Условията зависят от конкретния автомобил и избраната схема. Свържете се с екипа на Exclusive Auto за актуална информация, оценка на замяна и съдействие по документите.'
 			);
 	}
 
@@ -2829,7 +2815,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replace(
 				/You can get an auto loan[\s\S]*?pay off the loan\./g,
-				'Екипът на Day Night Auto съдейства с варианти за финансиране, лизинг и собствено разсрочено плащане според автомобила и бюджета. Получавате ориентировъчни условия предварително и избирате най-подходящия вариант.'
+				'Екипът на Exclusive Auto съдейства с варианти за финансиране, лизинг и обсъждане на разсрочено плащане според автомобила и бюджета. Получавате ориентировъчни условия предварително и избирате най-подходящия вариант.'
 			)
 			// The raw template repeats the same English paragraph under all 7 FAQ
 			// headings. Non-global replaces swap them out one by one, in document
@@ -2848,11 +2834,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replace(
 				/An auto loan is a sum of money[\s\S]*?monthly payments\./,
-				'Първоначалната вноска намалява финансираната сума и месечната вноска. По-висока първоначална вноска обикновено означава по-добри условия — екипът на Day Night Auto предлага варианти според бюджета.'
+				'Първоначалната вноска намалява финансираната сума и месечната вноска. По-висока първоначална вноска обикновено означава по-добри условия — екипът на Exclusive Auto предлага варианти според бюджета.'
 			)
 			.replace(
 				/An auto loan is a sum of money[\s\S]*?monthly payments\./,
-				'Можете да дадете настоящия си автомобил като бартер — оценката му се приспада от цената и намалява финансираната сума. Day Night Auto прави оглед и ясна оценка преди сделката.'
+				'Можете да дадете настоящия си автомобил като бартер — оценката му се приспада от цената и намалява финансираната сума. Exclusive Auto прави оглед и ясна оценка преди сделката.'
 			)
 			.replace(
 				/An auto loan is a sum of money[\s\S]*?monthly payments\./,
@@ -2936,11 +2922,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				)
 				.replaceAll(
 					'Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie a, finibus nec ex.',
-					'Day Night Auto полага усилия съдържанието да е точно и актуално, но не носи отговорност за непълноти или технически грешки в обявите.'
+					'Exclusive Auto полага усилия съдържанието да е точно и актуално, но не носи отговорност за непълноти или технически грешки в обявите.'
 				)
 				.replaceAll(
 					'Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie ',
-					'Day Night Auto може да актуализира услугите и условията по всяко време, като валидна е версията, публикувана към момента на ползване на сайта. '
+					'Exclusive Auto може да актуализира услугите и условията по всяко време, като валидна е версията, публикувана към момента на ползване на сайта. '
 				)
 				.replaceAll(
 					'Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie',
@@ -2952,11 +2938,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				)
 				.replaceAll(
 					'Etiam eleifend metus at nunc ultricies facilisis.',
-					'Огледът и тестът се организират предварително по уговорка в София.'
+					'Огледът и тестът се организират предварително по уговорка в Варна.'
 				)
 				.replaceAll(
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.',
-					'Информацията в този сайт има информативен характер. Актуалните цени, наличност и условия за финансиране се потвърждават директно със Day Night Auto преди сделка.'
+					'Информацията в този сайт има информативен характер. Актуалните цени, наличност и условия за финансиране се потвърждават директно със Exclusive Auto преди сделка.'
 				)
 		);
 	}
@@ -3047,8 +3033,8 @@ function replaceAccountPageCopy(html: string, templateFile: string) {
 			.replaceAll('Продай автомобил', daynightAccount.newListingCta)
 			.replaceAll('Vehicle Information', 'Данни за автомобила')
 			.replaceAll('Your Package', 'Данни за автомобила')
-			.replaceAll('Save & Publish', 'Изпрати към Day Night Auto')
-			.replaceAll('Submit Listing', 'Изпрати към Day Night Auto')
+			.replaceAll('Save & Publish', 'Изпрати към Exclusive Auto')
+			.replaceAll('Submit Listing', 'Изпрати към Exclusive Auto')
 			.replaceAll('Upload Photos', 'Снимки на автомобила');
 	}
 
@@ -3060,14 +3046,14 @@ function replaceAccountPageCopy(html: string, templateFile: string) {
 			.replaceAll('Inbox', 'Входящи')
 			.replaceAll('Marvin McKinney', 'Клиент от сайта')
 			.replaceAll('John Smith', 'Клиент от сайта')
-			.replaceAll('Brooklyn Simmons', 'Клиент от София')
-			.replaceAll('Arlene McCoy', 'Клиент от София')
-			.replaceAll('Darrell Steward', 'Day Night Auto')
+			.replaceAll('Brooklyn Simmons', 'Клиент от Варна')
+			.replaceAll('Arlene McCoy', 'Клиент от Варна')
+			.replaceAll('Darrell Steward', 'Exclusive Auto')
 			.replaceAll('Theresa Webb', 'Клиент от сайта')
-			.replaceAll('Aurexo Support', 'Day Night Auto')
-			.replaceAll('Day Night Auto Support', 'Day Night Auto')
+			.replaceAll('Aurexo Support', 'Exclusive Auto')
+			.replaceAll('Exclusive Auto Support', 'Exclusive Auto')
 			.replaceAll('Send Message', 'Изпрати съобщение')
-			.concat(html.includes('Day Night Auto') ? '' : ' Day Night Auto');
+			.concat(html.includes('Exclusive Auto') ? '' : ' Exclusive Auto');
 	}
 
 	if (templateFile === 'my-favorites.html') {
@@ -3104,8 +3090,8 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Clients Reviews', 'Отзиви от клиенти')
 		.replace(/\bView All\b/g, 'Виж всички')
 		.replaceAll('View Всички марки', 'Виж всички марки')
-		.replaceAll('Why Choose Us?', 'Защо Day Night Auto?')
-		.replaceAll('Why Choose Us', 'Защо Day Night Auto')
+		.replaceAll('Why Choose Us?', 'Защо Exclusive Auto?')
+		.replaceAll('Why Choose Us', 'Защо Exclusive Auto')
 		.replaceAll(
 			'Explore our wide selection, competitive prices, and exceptional service for a hassle-free car-buying experience.',
 			'Изберете автомобил с ясна информация, реална наличност и съдействие при оглед, документи, регистрация и финансиране.'
@@ -3128,13 +3114,13 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replaceAll('Find Your Car Now!', 'Виж наличните автомобили')
 		.replaceAll('18K+', `${daynightVehicles.length}+`)
-		.replaceAll('Car For Sale', 'Налични автомобила')
+		.replaceAll('Car For Sale', 'автомобила в извадката')
 		.replaceAll('8k+', '2019')
 		.replaceAll('Visitors per day', 'присъствие в mobile.bg')
 		.replaceAll('4,5k+', `${daynightBrandsInStock}`)
-		.replaceAll('Dealer Reviews', 'марки в наличност')
+		.replaceAll('Dealer Reviews', 'марки в извадката')
 		.replaceAll('3,5k+', '100%')
-		.replaceAll('Verified Dealers', 'Проверени автомобили')
+		.replaceAll('Verified Dealers', 'Публикувани автомобили')
 		.replace(
 			/<a href="\/sell-your-car" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">\s*Виж наличните автомобили\s*<\/a>/g,
 			'<a href="/inventory" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">Виж наличните автомобили</a>'
@@ -3146,15 +3132,15 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Free vehicle history report', 'Преглед на състоянието и историята')
 		.replaceAll('How It Works', 'Как работи')
 		.replaceAll('How it works', 'Как работи')
-		.replaceAll('Certified Dealers', 'Day Night Auto')
+		.replaceAll('Certified Dealers', 'Exclusive Auto')
 		.replaceAll(
-			'Answer a few questions about your vehicle, and then connect with one of thousands of Day Night Auto who can pay you directly for your used car.',
-			'Опишете автомобила, изпратете снимки и екипът на Day Night Auto ще Ви изпрати следващи стъпки за оглед, покупка или бартер.'
+			'Answer a few questions about your vehicle, and then connect with one of thousands of Exclusive Auto who can pay you directly for your used car.',
+			'Опишете автомобила, изпратете снимки и екипът на Exclusive Auto ще Ви изпрати следващи стъпки за оглед, покупка или бартер.'
 		)
-		.replaceAll('Reach Out to Us', 'Свържете се със Day Night Auto')
-		.replaceAll('Reach Out To Us', 'Свържете се със Day Night Auto')
-		.replaceAll('Get In Touch', 'Свържете се със Day Night Auto')
-		.replaceAll('get in touch', 'Свържете се със Day Night Auto')
+		.replaceAll('Reach Out to Us', 'Свържете се със Exclusive Auto')
+		.replaceAll('Reach Out To Us', 'Свържете се със Exclusive Auto')
+		.replaceAll('Get In Touch', 'Свържете се със Exclusive Auto')
+		.replaceAll('get in touch', 'Свържете се със Exclusive Auto')
 		.replaceAll('Have any Question?', 'Имате въпрос?')
 		.replaceAll(
 			'We’re here to assist with any questions, concerns, or inquiries—contact us today!',
@@ -3171,15 +3157,15 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Subscribe To Our Newletter!', 'Абонирайте се за нови обяви')
 		.replaceAll(
 			'Sign Up For Updates On Our Latest News & Events.',
-			'Получавайте нови наличности и полезни съвети от Day Night Auto.'
+			'Получавайте нови наличности и полезни съвети от Exclusive Auto.'
 		)
 		.replaceAll(
 			'Sign Up For Updates On Our Latest Полезно & Events.',
-			'Получавайте нови наличности и полезни съвети от Day Night Auto.'
+			'Получавайте нови наличности и полезни съвети от Exclusive Auto.'
 		)
 		.replace(
 			/Sign Up For Updates On Our\s*<br class="lg-hidden">\s*Latest (?:News|Полезно) & Events\./g,
-			'Получавайте нови наличности и полезни съвети от Day Night Auto.'
+			'Получавайте нови наличности и полезни съвети от Exclusive Auto.'
 		)
 		.replaceAll('ПолезноletterModal', 'NewsletterModal')
 		.replaceAll('Enter your e-mail', 'Въведете имейл')
@@ -3204,7 +3190,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Sunday: Closed', 'Неделя: по уговорка')
 		.replaceAll('Sunday: Close', 'Неделя: по уговорка')
 		.replaceAll('Sun: Closed', 'Неделя: по уговорка')
-		.replaceAll('Follow Us On social media:', 'Последвайте Day Night Auto:')
+		.replaceAll('Follow Us On social media:', 'Последвайте Exclusive Auto:')
 		.replaceAll('First Name', 'Име')
 		.replaceAll('Last Name', 'Фамилия')
 		.replaceAll('Phone Number', 'Телефон')
@@ -3218,7 +3204,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Steps to purchase a car from our dealership?', 'Какви са стъпките за покупка?')
 		.replaceAll(
 			'To purchase a car from our dealership, start by exploring our inventory online or visiting us in person to find the vehicle that suits your needs. Schedule a test drive to ensure it’s the right fit, then review financing or leasing options with our team.',
-			'Изберете автомобил от наличността, свържете се за оглед и уточнете документи, финансиране или бартер с екипа на Day Night Auto.'
+			'Изберете автомобил от наличността, свържете се за оглед и уточнете документи, финансиране или бартер с екипа на Exclusive Auto.'
 		)
 		.replaceAll(
 			'Provide the necessary documents, such as your ID, proof of insurance, and income verification. Once terms are agreed upon, finalize the paperwork, inspect the car, and drive away with your new vehicle!',
@@ -3253,7 +3239,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Risks', 'Уточнения')
 		.replaceAll(
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed euismod justo, sit amet efficitur dui. Aliquam sodales vestibulum velit, eget sollicitudin quam. Donec non aliquam eros. Etiam sit amet lectus vel justo dignissim condimentum.',
-			'Информацията в сайта има информативен характер. Актуални цени, наличност, условия за финансиране и конкретни документи се потвърждават директно със Day Night Auto преди сделка.'
+			'Информацията в сайта има информативен характер. Актуални цени, наличност, условия за финансиране и конкретни документи се потвърждават директно със Exclusive Auto преди сделка.'
 		)
 		.replaceAll(
 			'In malesuada neque quis libero laoreet posuere. In consequat vitae ligula quis rutrum. Morbi dolor orci, maximus a pulvinar sed, bibendum ac lacus. Suspendisse in consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam elementum, est sed interdum cursus, felis ex pharetra nisi, ut elementum tortor urna eu nulla. Donec rhoncus in purus quis blandit.',
@@ -3261,7 +3247,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replaceAll(
 			'Etiam eleifend metus at nunc ultricies facilisis. Morbi finibus tristique interdum. Nullam vel eleifend est, eu posuere risus. Vestibulum ligula ex, ullamcorper sit amet molestie',
-			'Day Night Auto може да съдейства с документи, регистрация, финансиране, бартер и проверка според конкретния случай.'
+			'Exclusive Auto може да съдейства с документи, регистрация, финансиране, бартер и проверка според конкретния случай.'
 		)
 		.replaceAll('EXPERT REVIEW', 'Съвети')
 		.replaceAll('EXPERT RГАЗ/БЕНЗИНIEW', 'Съвети')
@@ -3271,16 +3257,16 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 			'2025 BMW 5 Series Priced From $59,375; i5 Газ/Бензин From $68,275',
 			'Как да изберем автомобил според бюджета'
 		)
-		.replaceAll('by Admin', 'Day Night Auto')
+		.replaceAll('by Admin', 'Exclusive Auto')
 		.replaceAll('Super Admin', 'Клиентски профил')
-		.replaceAll('Or Purchase New Package', 'Заявка към Day Night Auto')
+		.replaceAll('Or Purchase New Package', 'Заявка към Exclusive Auto')
 		.replaceAll('Choose Your Package', 'Изберете услуга')
 		.replaceAll('MOST POPULAR', 'Полезно')
 		.replaceAll('Basic Plan', 'Основна заявка')
 		.replaceAll('Starter', 'Оглед')
 		.replaceAll('Professional', 'Пълно съдействие')
 		.replaceAll('Executive', 'Индивидуална услуга')
-		.replaceAll('Индивидуална услуга Team', 'Консултанти на Day Night Auto')
+		.replaceAll('Индивидуална услуга Team', 'Консултанти на Exclusive Auto')
 		.replaceAll('President and Chief Индивидуална услуга Officer', 'Консултант продажби')
 		.replaceAll('FREE', 'Без такса')
 		.replaceAll('$5.00', 'По заявка')
@@ -3291,42 +3277,42 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('List Up to 10 Cars', 'Снимки и описание')
 		.replaceAll('List Up to 20 Cars', 'Оценка от екипа')
 		.replaceAll('List Up to 30 Cars', 'Индивидуално съдействие')
-		.replaceAll('Apply for Dealer Listings', 'Заявка към Day Night Auto')
-		.replaceAll('Apply for 50 Dealer Listings', 'Разширена заявка към Day Night Auto')
-		.replaceAll('Apply for 150 Dealer Listings', 'Персонална заявка към Day Night Auto')
+		.replaceAll('Apply for Dealer Listings', 'Заявка към Exclusive Auto')
+		.replaceAll('Apply for 50 Dealer Listings', 'Разширена заявка към Exclusive Auto')
+		.replaceAll('Apply for 150 Dealer Listings', 'Персонална заявка към Exclusive Auto')
 		.replaceAll('Highlighted Dealer Profile', 'Контакт с консултант')
 		.replaceAll('Inquiry Messenger for Buyers', 'Проследяване на запитване')
 		.replaceAll('Inquiry Messenger Services', 'Проследяване на запитване')
 		.replaceAll('Unlimited Video Calls with Buyers', 'Допълнителни снимки при нужда')
 		.replaceAll('Unlimited Video Calls with Potential Buyers', 'Допълнителни уточнения при нужда')
-		.replaceAll('24/7 Live Chat Support', 'Отговор от екипа на Day Night Auto')
+		.replaceAll('24/7 Live Chat Support', 'Отговор от екипа на Exclusive Auto')
 		.replaceAll('Live Chatbot', 'Контакт с екипа')
 		.replaceAll('Sale Agents Detail', 'Профил на екипа')
 		.replaceAll('Sale Agents List', 'Екип')
-		.replaceAll('Sale Agents', 'Екипът на Day Night Auto')
+		.replaceAll('Sale Agents', 'Екипът на Exclusive Auto')
 		.replaceAll('Senior Sales Agent', salesTeam?.role ?? 'Консултанти продажби')
 		.replaceAll('Senior Dealer Partner', salesTeam?.role ?? 'Консултанти продажби')
 		.replaceAll('Verified Dealer', 'Проверена автокъща')
-		.replaceAll('Emily Johnson', 'Клиент на Day Night Auto')
-		.replaceAll('CEO Avitex', 'Клиент на Day Night Auto')
-		.replaceAll('Benjamin Parker', 'Клиент от София')
-		.replaceAll('CEO Tesla', 'Клиент от София')
-		.replaceAll('Olivia Williams', 'Клиент на Day Night Auto')
-		.replaceAll('CEO BMW', 'Клиент на Day Night Auto')
-		.replaceAll('CEO Day Night Auto', 'Клиент на Day Night Auto')
-		.replaceAll('James Anderson', 'Клиент от София')
-		.replaceAll('Project Manager', 'Клиент на Day Night Auto')
-		.replaceAll('Robert Fox', salesTeam?.name ?? 'Day Night Auto Sales Team')
-		.replaceAll('Bessie Cooper', tradeInTeam?.name ?? 'Day Night Auto Trade-In Team')
-		.replaceAll('Brooklyn Simmons', salesTeam?.name ?? 'Day Night Auto Sales Team')
-		.replaceAll('Kristin Watson', tradeInTeam?.name ?? 'Day Night Auto Trade-In Team')
-		.replaceAll('Guy Hawkins', salesTeam?.name ?? 'Day Night Auto Sales Team')
-		.replaceAll('Darrell Steward', salesTeam?.name ?? 'Day Night Auto Sales Team')
-		.replaceAll('Cody Fisher', tradeInTeam?.name ?? 'Day Night Auto Trade-In Team')
-		.replaceAll('Eleanor Pena', salesTeam?.name ?? 'Day Night Auto Sales Team')
-		.replaceAll('Los Angeles,California', 'София, България')
+		.replaceAll('Emily Johnson', 'Клиент на Exclusive Auto')
+		.replaceAll('CEO Avitex', 'Клиент на Exclusive Auto')
+		.replaceAll('Benjamin Parker', 'Клиент от Варна')
+		.replaceAll('CEO Tesla', 'Клиент от Варна')
+		.replaceAll('Olivia Williams', 'Клиент на Exclusive Auto')
+		.replaceAll('CEO BMW', 'Клиент на Exclusive Auto')
+		.replaceAll('CEO Exclusive Auto', 'Клиент на Exclusive Auto')
+		.replaceAll('James Anderson', 'Клиент от Варна')
+		.replaceAll('Project Manager', 'Клиент на Exclusive Auto')
+		.replaceAll('Robert Fox', salesTeam?.name ?? 'Exclusive Auto Sales Team')
+		.replaceAll('Bessie Cooper', tradeInTeam?.name ?? 'Exclusive Auto Trade-In Team')
+		.replaceAll('Brooklyn Simmons', salesTeam?.name ?? 'Exclusive Auto Sales Team')
+		.replaceAll('Kristin Watson', tradeInTeam?.name ?? 'Exclusive Auto Trade-In Team')
+		.replaceAll('Guy Hawkins', salesTeam?.name ?? 'Exclusive Auto Sales Team')
+		.replaceAll('Darrell Steward', salesTeam?.name ?? 'Exclusive Auto Sales Team')
+		.replaceAll('Cody Fisher', tradeInTeam?.name ?? 'Exclusive Auto Trade-In Team')
+		.replaceAll('Eleanor Pena', salesTeam?.name ?? 'Exclusive Auto Sales Team')
+		.replaceAll('Los Angeles,California', 'Варна, България')
 		.replaceAll('FROM:', 'Локация:')
-		.replaceAll('two-sided marketplace business', 'дейността на Day Night Auto')
+		.replaceAll('two-sided marketplace business', 'дейността на Exclusive Auto')
 		.replaceAll(
 			'responsible for driving profitable growth strategies for its two-sided marketplace business, Society6.',
 			'отговаря за ясна комуникация, огледи, документи и следващи стъпки при покупка или бартер.'
@@ -3335,8 +3321,8 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 			'Prior to Leaf Group, Oliver was Director of Finance at Ogin, Inc., a private equity backed clean technology company.',
 			'Екипът работи с реална информация за наличност, цена, пробег и състояние на автомобила.'
 		)
-		.replaceAll('How the adventure ended will...', 'Проверен автомобил от Day Night Auto.')
-		.replaceAll('How the adventure ended will be seen soon.', 'Проверен автомобил от Day Night Auto.')
+		.replaceAll('How the adventure ended will...', 'Обявен автомобил от Exclusive Auto.')
+		.replaceAll('How the adventure ended will be seen soon.', 'Обявен автомобил от Exclusive Auto.')
 		.replaceAll('Vehicle Information', 'Данни за автомобила')
 		.replaceAll('Car Details', 'Данни за автомобила')
 		.replace(
@@ -3345,11 +3331,11 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replace(
 			/<a href="#" class="h4 font-weight-600 mb-8 capitalize">/g,
-			'<a href="/contact" class="h4 font-weight-600 mb-8 capitalize" title="Свържете се със Day Night Auto за тази услуга">'
+			'<a href="/contact" class="h4 font-weight-600 mb-8 capitalize" title="Свържете се със Exclusive Auto за тази услуга">'
 		)
 		.replace(
 			/<a href="#" class="h4 font-weight-600 mb-8">/g,
-			'<a href="/sell-your-car/request" class="h4 font-weight-600 mb-8" title="Изпратете заявка към Day Night Auto">'
+			'<a href="/sell-your-car/request" class="h4 font-weight-600 mb-8" title="Изпратете заявка към Exclusive Auto">'
 		)
 		.replace(
 			/<a href="#" class="([^"]*\bhover-fill-white\b[^"]*)">/g,
@@ -3365,11 +3351,11 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replace(
 			/<a href="#">\s*<img class="h-40" src="\/assets\/images\/brand\/app-store-primary\.png" alt="app-store">/g,
-			'<a href="/contact" title="Мобилно приложение на Day Night Auto"><img class="h-40" src="/assets/images/brand/app-store-primary.png" alt="app-store">'
+			'<a href="/contact" title="Мобилно приложение на Exclusive Auto"><img class="h-40" src="/assets/images/brand/app-store-primary.png" alt="app-store">'
 		)
 		.replace(
 			/<a href="#">\s*<img class="h-40" src="\/assets\/images\/brand\/google-play-primary\.png" alt="google-play">/g,
-			'<a href="/contact" title="Мобилно приложение на Day Night Auto"><img class="h-40" src="/assets/images/brand/google-play-primary.png" alt="google-play">'
+			'<a href="/contact" title="Мобилно приложение на Exclusive Auto"><img class="h-40" src="/assets/images/brand/google-play-primary.png" alt="google-play">'
 		)
 		.replaceAll(
 			'Darrell Steward is a dedicated automotive professional with over 15 years of experience in the car dealership industry. Known for his customer-first approach and in-depth knowledge of the market, Darrell has helped countless clients find their perfect vehicle while ensuring a seamless and enjoyable buying experience.',
@@ -3494,11 +3480,11 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 				'<a href="/terms" class="text-underline text-highlight">Автомобил по ДДС</a>'
 			)
 			.replace(
-				/<a href="#" class="h4 mb-8 font-weight-600">Day Night Auto<\/a>/g,
-				'<a href="/about/daynight-auto-plovdiv" class="h4 mb-8 font-weight-600">Day Night Auto</a>'
+				/<a href="#" class="h4 mb-8 font-weight-600">Exclusive Auto<\/a>/g,
+				'<a href="/about/daynight-auto-plovdiv" class="h4 mb-8 font-weight-600">Exclusive Auto</a>'
 			)
 			.replace(
-				/<a href="#">\s*гр\. София, София, гр. София, Студентски град, ул. Атанас Манчев 18\s*<\/a>/g,
+				/<a href="#">\s*гр\. Варна, Варна, бул. Цар Освободител 176, Възраждане 1, Варна\s*<\/a>/g,
 				`<a href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.location}</a>`
 			)
 			.replace(
@@ -3520,7 +3506,7 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 		);
 		output = output
 			.replace(
-				/<a href="#">\s*гр\. София, София, гр. София, Студентски град, ул. Атанас Манчев 18\s*<\/a>/g,
+				/<a href="#">\s*гр\. Варна, Варна, бул. Цар Освободител 176, Възраждане 1, Варна\s*<\/a>/g,
 				`<a href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.location}</a>`
 			)
 			.replace(
@@ -3597,7 +3583,7 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 		);
 		output = output
 			.replace(
-				/<a href="#">\s*гр\. София, София, гр. София, Студентски град, ул. Атанас Манчев 18\s*<\/a>/g,
+				/<a href="#">\s*гр\. Варна, Варна, бул. Цар Освободител 176, Възраждане 1, Варна\s*<\/a>/g,
 				`<a href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.location}</a>`
 			)
 			.replace(
@@ -3668,10 +3654,10 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 			)
 			.replaceAll('By using this service, you accept our ', 'С изпращането на формата приемате ')
 			.replaceAll('Visitor Agreement.', 'условията за ползване.')
-			.replaceAll('CEO Day Night Auto', 'Клиент на Day Night Auto')
+			.replaceAll('CEO Exclusive Auto', 'Клиент на Exclusive Auto')
 			.replaceAll(
 				member?.name ?? '',
-				member?.name ?? daynightTeam[0]?.name ?? 'Екипът на Day Night Auto'
+				member?.name ?? daynightTeam[0]?.name ?? 'Екипът на Exclusive Auto'
 			);
 	}
 
@@ -3685,8 +3671,8 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 			.replaceAll('Phone (optional)', 'Телефон')
 			.replaceAll('placeholder="Телефон (optional)"', 'placeholder="Телефон"')
 			.replace(
-				/<a href="tel:0877 733 110" class="text-sm text-white">0877 733 110<\/a>\s*<a href="tel:0877 733 110" class="text-sm text-white">0877 733 110<\/a>/,
-				'<a href="tel:0877 733 110" class="text-sm text-white">0877 733 110</a><a href="mailto:demo@getrich.local" class="text-sm text-white">demo@getrich.local</a>'
+				/<a href="tel:0895 303 009" class="text-sm text-white">0895 303 009<\/a>\s*<a href="tel:0895 303 009" class="text-sm text-white">0895 303 009<\/a>/,
+				'<a href="tel:0895 303 009" class="text-sm text-white">0895 303 009</a><a href="mailto:demo@getrich.local" class="text-sm text-white">demo@getrich.local</a>'
 			)
 			.replaceAll('Огледи: с предварителна уговорка', 'Огледи: с предварителна уговорка')
 			.replaceAll(
@@ -3769,12 +3755,12 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 				'<a href="/contact" class="comments-post$1">'
 			)
 			.replace(
-				/<a href="#" class="h4 mb-8 font-weight-600">Day Night Auto<\/a>/g,
-				'<a href="/about/daynight-auto-plovdiv" class="h4 mb-8 font-weight-600">Day Night Auto</a>'
+				/<a href="#" class="h4 mb-8 font-weight-600">Exclusive Auto<\/a>/g,
+				'<a href="/about/daynight-auto-plovdiv" class="h4 mb-8 font-weight-600">Exclusive Auto</a>'
 			)
 			.replace(
-				/<a class="text-white" href="#">Day Night Auto<\/a>/g,
-				'<a class="text-white" href="/about/daynight-auto-plovdiv">Day Night Auto</a>'
+				/<a class="text-white" href="#">Exclusive Auto<\/a>/g,
+				'<a class="text-white" href="/about/daynight-auto-plovdiv">Exclusive Auto</a>'
 			)
 			.replace(
 				/<a class="text-white" href="#">Aug\. 8, 2025<\/a>/g,
@@ -3840,6 +3826,6 @@ export function applyDayNightTemplateContent(
 	output = replaceSharedCounterMetrics(output);
 
 	return restoreTemplateAssetPaths(output)
-		.replaceAll('Car Dealer, Rental & Listing HTML Template', 'Day Night Auto София')
-		.replaceAll('Aurexo |', 'Day Night Auto |');
+		.replaceAll('Car Dealer, Rental & Listing HTML Template', 'Exclusive Auto Варна')
+		.replaceAll('Aurexo |', 'Exclusive Auto |');
 }

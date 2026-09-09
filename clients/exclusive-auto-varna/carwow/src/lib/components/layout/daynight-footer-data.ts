@@ -29,9 +29,9 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'EXCLUSIVE AUTO',
 		links: [
-			{ href: '/about', label: 'За Day Night Auto' },
+			{ href: '/about', label: 'За Exclusive Auto' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
 			{ href: '/team', label: 'Екип' },
 			{ href: '/reviews', label: 'Отзиви' },

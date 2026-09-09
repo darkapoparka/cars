@@ -1,34 +1,25 @@
 <script lang="ts">
-	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
-	import { homeVideos, youtubeChannelUrl } from '$lib/data/daynight-videos';
+  import { resolve } from '$app/paths';
+  import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
+  import { featuredDayNightVehicles } from '$lib/data/daynight-vehicles';
 </script>
 
-<section class="home-videos" aria-label="Day Night Auto в YouTube">
-	<div class="daynight-home-container">
-		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="Всички видеа">
-			{#snippet titleContent()}
-				<span class="home-videos__title">Day Night Auto в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
-			{/snippet}
-		</DesktopSectionHeading>
-		<div class="home-videos__grid">
-			{#each homeVideos as video (video.id)}
-				<article class="home-video">
-					<div class="home-video__image">
-						<iframe
-							src={`https://www.youtube-nocookie.com/embed/${video.id}?playsinline=1&rel=0&hl=bg`}
-							title={video.title}
-							width="480"
-							height="270"
-							loading="lazy"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
-					</div>
-				</article>
-			{/each}
-		</div>
-	</div>
+<section class="home-videos" aria-label="Снимки и допълнителна информация">
+  <div class="daynight-home-container">
+    <DesktopSectionHeading title="Още за автомобилите" href={resolve('/inventory')} label="Всички обяви" />
+    <p>Видео прегледи не са предоставени. Разгледайте снимките от обявите и поискайте допълнителни кадри от продавача.</p>
+    <div class="home-videos__grid">
+      {#each featuredDayNightVehicles.slice(0, 3) as vehicle (vehicle.slug)}
+        <article class="home-video">
+          <a href={resolve('/inventory/[slug]', { slug: vehicle.slug })}>
+            <div class="home-video__image"><img src={vehicle.image} alt={vehicle.shortTitle} width="480" height="270" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+            <h3>{vehicle.shortTitle}</h3>
+            <p>Снимки, данни и източник на обявата</p>
+          </a>
+        </article>
+      {/each}
+    </div>
+  </div>
 </section>
 
 <style>

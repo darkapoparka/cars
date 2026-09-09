@@ -65,6 +65,7 @@
 		<div class="tf-spacing-style3"></div>
 
 		<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">
+			{#if !reviews.length}<div class="testimonior-box"><h3 class="h5">Няма публикувани мнения</h3><p class="testimonior-box--desc">Демонстрацията не представя измислени отзиви или оценки.</p><a href={resolve('/contact')}>Контакт с автокъщата</a></div>{/if}
 			{#each reviews as review (review.id)}
 				{@render reviewCard(review)}
 			{/each}
