@@ -280,5 +280,22 @@
       "observedAt": "2026-09-09",
       "evidenceLevel": "catalogue; detail opened"
     }
-  ]
+  ],
+  "branding": {
+    "publishedBranding": "matched Cars.bg dark sports-car image with red PRESTIGE wordmark visually inspected; final logo export pending",
+    "sourceLogoUrl": "https://g1-bg.cars.bg/users_logos/31e74b15f983be7cb0d15cbdc299f651.jpg",
+    "workingLogoPath": "/dealer/logo-dark.svg",
+    "creationMethod": "manually authored outlined vector demo proposal, informed by observed source identity; not Image Gen",
+    "approvalStatus": "unapproved-demo-proposal",
+    "assetHashes": {
+      "logo-dark.svg": "1000e8e59cc5192abe781e813d9a20197159f112d1a44c95f28f5353a80cd4a7",
+      "logo-light.svg": "a34f358746a67777fc77c47749238fa22bca4e8c8461238e1ecbbc1b58bc44f3",
+      "favicon.svg": "8a78f83277c79dbd14bab40f71eb904ee374623b79e5b56d4f0dc9294c96116b",
+      "logo.png": "423fff424e91b90b416cd27e2c12561e30c937b4f30dd6901f9034fda0f9c0ec",
+      "apple-touch-icon.png": "c417cf0bedaf151f021de65a5db384ef87793924fed73242373cb395626b57f0",
+      "favicon-32x32.png": "93368b04db29fabe89193d0da845dd73f0b91b0655c8d52442870c88c624e91c",
+      "favicon-16x16.png": "585483bcd596105df497c94aa259e474479d315353de930f00a69b329c2695d9",
+      "opengraph.png": "78c09f1e8c6689b41584350ec59790bbcbd50d7866a6e26dd6b963404f44fb94"
+    }
+  }
 }

@@ -115,7 +115,7 @@
 
 		<header class="home2-nav" aria-label="Home2 navigation">
 			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="ПРЕСТИЖ Home2">
-				<img src="/dealer/logo-pending.svg" alt="ПРЕСТИЖ" />
+				<img src="/dealer/logo-dark.svg" alt="ПРЕСТИЖ" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">

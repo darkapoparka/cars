@@ -8,12 +8,12 @@ import {
 const location = `${dealer.address}, ${dealer.city}`;
 
 export const daynightSite = {
-  name: dealer.name, shortName: dealer.shortName, phone: dealer.phoneE164, phoneLabel: dealer.phone, email: dealer.email,
+  name: dealer.name, shortName: dealer.shortName, phone: dealer.phoneE164, phoneLabel: dealer.phone, secondaryPhone: dealer.secondaryPhone, email: dealer.email,
   location, locationShort: dealer.city, hoursLabel: dealer.hours,
   mapEmbedSrc: `https://maps.google.com/maps?q=${encodeURIComponent(location)}&z=15&hl=bg&output=embed`,
   mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`, mapLabel: location,
   sourceInventory: dealer.profile, inventoryCount: dealer.inventory.length,
-  logoLight: '/dealer/logo-pending.svg', logoDark: '/dealer/logo-pending.svg',
+  logoLight: '/dealer/logo-light.svg', logoDark: '/dealer/logo-dark.svg',
   primaryCta: 'Разгледай автомобилите', sellCarCta: 'Запитване за автомобил', accountCta: 'Свържи се с продавача', phoneCta: 'Попитай за оглед',
   heroTitle: dealer.name, heroSubtitle: `Автомобилни обяви от ${dealer.name}, ${dealer.city}. Потвърдете наличността преди посещение.`,
   reviewCount: daynightReviewCount, reviewCountLabel: daynightReviewCountLabel, reviewLinkLabel: daynightReviewLinkLabel
