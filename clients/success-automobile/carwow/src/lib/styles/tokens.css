@@ -1,0 +1,285 @@
+@font-face {
+	font-display: block;
+	font-family: 'DayNight Geist';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('@fontsource-variable/geist/files/geist-cyrillic-ext-wght-normal.woff2')
+		format('woff2-variations');
+	unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+	font-display: block;
+	font-family: 'DayNight Geist';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('@fontsource-variable/geist/files/geist-cyrillic-wght-normal.woff2')
+		format('woff2-variations');
+	unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+	font-display: block;
+	font-family: 'DayNight Geist';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('@fontsource-variable/geist/files/geist-latin-ext-wght-normal.woff2')
+		format('woff2-variations');
+	unicode-range:
+		U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+		U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+		U+A720-A7FF;
+}
+
+@font-face {
+	font-display: block;
+	font-family: 'DayNight Geist';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('@fontsource-variable/geist/files/geist-latin-wght-normal.woff2')
+		format('woff2-variations');
+	unicode-range:
+		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+		U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+ * Success Automobile — design tokens (single source of truth).
+ * Relocated verbatim from daynight-mobile.css (Phase 1.1). Imported FIRST in
+ * src/routes/+layout.svelte (before daynight-mobile.css) so values also reach
+ * vaul drawers, which portal to <body> outside the page wrappers.
+ * Brand-hex unification (mobile #8A0000 vs desktop #B00000) and --sa-home-*
+ * aliasing are deferred to Phase 6 (deliberate colour decisions, not 1:1).
+ */
+:root {
+	/* Brand — Success Automobile uses black/graphite for structure and red for action.
+	 * The legacy --sa-blue aliases remain for compatibility, but resolve to ink. */
+	--sa-red: #6a5038;
+	--sa-red-strong: #4c3a28;
+	--sa-red-soft: #e9edf6;
+	--sa-red-tint: #f5f7fb;
+	--sa-yellow: #f5c542;
+	--sa-blue: #050505;
+	--sa-blue-strong: #000000;
+	--sa-blue-soft: #fee2e2;
+
+	/* Ink + neutrals (unifies the many near-identical grays in components) */
+	--sa-ink: #0f1417;
+	--sa-ink-soft: #3b454f;
+	--sa-muted: #6a7480;
+	--sa-faint: #8a94a0;
+	--sa-line: #e5e9ef;
+	--sa-line-strong: #d7dee7;
+
+	/* Price — one dark, dominant treatment on every surface (home card, inventory,
+	 * favorites, PDP). Dominance comes from size + weight, not hue — the carwow
+	 * pattern — which keeps blue for navigation and red for action, and avoids a
+	 * coloured price reading as a nested link inside a clickable card. Single source,
+	 * so all surfaces match and it is a one-line change. */
+	--sa-price: var(--sa-ink);
+
+	/* Surfaces — VALIDATED direction: white page canvas (--sa-surface), flat
+	 * grey-fill components (--sa-fill / --sa-fill-2) sitting directly on it —
+	 * no borders/shadows on cards. --sa-bg is a soft grey reserved for the few
+	 * sub-surfaces that need separation. (Grey canvas + white cards was the
+	 * rejected model — do not flip back.) */
+	--sa-surface: #ffffff;
+	--sa-bg: #f4f6f8;
+	--sa-fill: #eef1f6;
+	--sa-fill-2: #e9eef4;
+	--sa-dark: #0d1014;
+	--sa-dark-2: #15191f;
+
+	/* Radii */
+	--sa-r-xs: 8px;
+	--sa-r-sm: 10px;
+	--sa-r-md: 14px;
+	--sa-r-lg: 18px;
+	--sa-r-xl: 24px;
+	--sa-r-pill: 999px;
+
+	/* Mobile density system.
+	 * Search is a larger affordance, primary actions/navigation are standard
+	 * thumb targets, horizontal pills are compact scan controls, and form fields
+	 * are compressed without dropping input text below iOS-safe 16px. */
+	--sa-mobile-gutter: 14px;
+	--sa-mobile-gutter-wide: 16px;
+	--sa-mobile-gap-xs: 6px;
+	--sa-mobile-gap-sm: 8px;
+	--sa-mobile-gap-md: 12px;
+	--sa-mobile-gap-lg: 16px;
+	--sa-mobile-section-gap: 12px;
+	--sa-mobile-page-gap: 22px;
+	--sa-mobile-search-h: 48px;
+	--sa-mobile-action-h: 44px;
+	--sa-mobile-pill-h: 44px;
+	--sa-mobile-hero-cta-h: 40px;
+	--sa-mobile-card-action: 36px;
+	--sa-mobile-mini-action: 32px;
+	--sa-mobile-section-action-h: 28px;
+	--sa-mobile-form-field-h: 58px;
+	--sa-mobile-list-row-h: 66px;
+	--sa-mobile-inner-control-h: 32px;
+	--sa-mobile-dock-item-h: 50px;
+	--sa-mobile-drawer-handle-w: 46px;
+
+	/* Desktop rhythm — page and card spacing for desktop-only storefront sections. */
+	--sa-space-1: 0.25rem; /* 4px */
+	--sa-space-2: 0.5rem; /* 8px */
+	--sa-space-3: 0.75rem; /* 12px */
+	--sa-space-4: 1rem; /* 16px */
+	--sa-space-5: 1.25rem; /* 20px */
+	--sa-space-6: 1.5rem; /* 24px */
+	--sa-space-8: 2rem; /* 32px */
+	--sa-space-10: 2.5rem; /* 40px */
+	--sa-space-13: 3.25rem; /* 52px */
+	--sa-space-19: 4.75rem; /* 76px */
+	--sa-desktop-grid-gap: var(--sa-space-4);
+	--sa-desktop-card-pad: var(--sa-space-6);
+	--sa-desktop-section-y-sm: var(--sa-space-10);
+	--sa-desktop-section-y-md: var(--sa-space-13);
+	--sa-desktop-section-y-lg: var(--sa-space-19);
+	--sa-heading-copy-gap: var(--sa-space-4);
+	--sa-heading-block-gap: 1.875rem; /* 30px */
+	--sa-card-heading-copy-gap: var(--sa-space-3);
+
+	/* Elevation — layered, soft, premium */
+	--sa-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 4px 12px rgba(16, 24, 40, 0.05);
+	--sa-shadow-md: 0 2px 6px rgba(16, 24, 40, 0.05), 0 12px 28px rgba(16, 24, 40, 0.1);
+	--sa-shadow-lg: 0 8px 20px rgba(16, 24, 40, 0.1), 0 28px 60px rgba(16, 24, 40, 0.16);
+	--sa-shadow-red: 0 8px 20px rgba(215, 25, 32, 0.32);
+	--sa-shadow-blue: 0 8px 18px rgba(0, 0, 0, 0.26);
+
+	/* Type — Geist Variable is the storefront brand face. The packaged local
+	 * variable font includes Cyrillic, avoiding the old Manrope/Geist split and
+	 * the external Google Fonts dependency. */
+	--sa-font:
+		'DayNight Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		sans-serif;
+
+	/* Type scale — primitives plus role tokens for the desktop storefront rhythm.
+	 * Roles separate by size + weight + colour, never arbitrary one-off values. */
+	--sa-text-xs: 0.75rem; /* 12px — counts, tiny badges, trust metadata */
+	--sa-text-caption: 0.8125rem; /* 13px — supporting card/meta text */
+	--sa-text-card-eyebrow: var(--sa-text-body-sm); /* 15px — repeated card eyebrow labels */
+	--sa-text-eyebrow: 1.25rem; /* 20px — desktop section eyebrows/kickers */
+	--sa-text-sm: 0.875rem; /* 14px — car specs, brand names, button labels */
+	--sa-text-body-sm: 0.9375rem; /* 15px — compact card/body copy */
+	--sa-text-desktop-meta: 0.875rem; /* 14px — tiny metadata, badges, counters */
+	--sa-text-desktop-dense: 1rem; /* 16px — dense desktop UI and compact copy */
+	--sa-text-desktop-body: 1.125rem; /* 18px — important desktop body and CTAs */
+	--sa-text-desktop-lead: 1.25rem; /* 20px — leads and prominent actions */
+	--sa-text-desktop-card-title: 1.375rem; /* 22px — content card titles */
+	--sa-text-desktop-panel-title: 1.75rem; /* 28px — compact panel headings */
+	--sa-text-desktop-action-sm: var(--sa-text-desktop-dense);
+	--sa-text-desktop-action: var(--sa-text-desktop-body);
+	--sa-text-desktop-action-lg: var(--sa-text-desktop-lead);
+	--sa-text-inventory-control: var(--sa-text-desktop-dense);
+	--sa-text-inventory-pill: var(--sa-text-body-sm);
+	--sa-leading-inventory-control: 1.25;
+	--sa-text-base: 1rem; /* 16px — card titles, card labels, inputs */
+	--sa-text-nav: 1.25rem; /* 20px — desktop header navigation */
+	--sa-text-nav-sub: 1.125rem; /* 18px — desktop header dropdown navigation */
+	--sa-text-chrome-top: 0.9375rem; /* 15px — desktop topbar */
+	--sa-text-chrome-meta: 0.875rem; /* 14px — desktop header metadata */
+	--sa-text-chrome-contact: 0.9375rem; /* 15px — desktop header contact */
+	--sa-text-chrome-badge: 0.6875rem; /* 11px — desktop icon badge */
+	--sa-text-chrome-cta: 1.0625rem; /* 17px base; desktop overrides to 18px */
+	--sa-text-hero-control: 1.25rem; /* 20px — desktop hero controls */
+	--sa-text-hero-tab: 1.125rem; /* 18px — desktop hero segmented tabs */
+	--sa-text-hero-lead: clamp(1.375rem, 1.45vw, 1.5625rem); /* 22–25px */
+	--sa-text-desktop-hero-title: clamp(3rem, 3vw, 3.75rem); /* 48–60px — shared desktop route hero */
+	--sa-leading-desktop-hero-title: 0.98;
+	--sa-tracking-desktop-hero-title: -0.04em;
+	--sa-text-control: 1.0625rem; /* 17px base; desktop overrides to 18px */
+	--sa-text-lg: 1.125rem; /* 18px — price, hero tabs */
+	--sa-text-lead: 1.1875rem; /* 19px — hero/supporting lead copy */
+	--sa-text-xl: 1.25rem; /* 20px — section titles */
+	--sa-text-card-title: 1.375rem; /* 22px — repeated card titles */
+	--sa-text-panel-title: 1.75rem; /* 28px — compact form/panel headings */
+	--sa-text-2xl: 1.5rem; /* 24px — reserved (hero / PDP numerals) */
+	--sa-text-stat: 2.625rem; /* 42px — large stats and display numerals */
+	--sa-heading-hero: clamp(3.125rem, 4.45vw, 4.625rem); /* 50–74px */
+	--sa-heading-section: clamp(2.25rem, 2.85vw, 3.125rem); /* 36–50px */
+	--sa-heading-page: clamp(2rem, 3.2vw, 3rem); /* 32–48px */
+	--sa-heading-panel: var(--sa-text-panel-title);
+	--sa-heading-card: var(--sa-text-card-title);
+
+	/* Weight scale — the only allowed storefront weights. The rule: display (800)
+	 * is for large numerals/logotype emphasis only; small text never exceeds
+	 * semibold (600), so Cyrillic does not read as a heavy block. */
+	--sa-weight-regular: 400;
+	--sa-weight-medium: 500;
+	--sa-weight-semibold: 600;
+	--sa-weight-strong: 700;
+	--sa-weight-display: 800;
+	--sa-weight-body: var(--sa-weight-regular);
+	--sa-weight-body-emphasis: var(--sa-weight-medium);
+	--sa-weight-label: var(--sa-weight-semibold);
+	--sa-weight-heading: var(--sa-weight-semibold);
+	--sa-weight-heading-strong: var(--sa-weight-strong);
+	--sa-weight-card-eyebrow: var(--sa-weight-medium);
+	--sa-weight-eyebrow: var(--sa-weight-medium);
+	--sa-button-font-weight: var(--sa-weight-semibold);
+
+	/* Line-height scale — none = single-line chips/numerals, tight = titles &
+	 * prices, snug = tab labels & rows, normal/body = readable copy. */
+	--sa-leading-none: 1;
+	--sa-leading-tight: 1.15;
+	--sa-leading-snug: 1.3;
+	--sa-leading-body-sm: 1.45;
+	--sa-leading-normal: 1.5;
+	--sa-leading-body: 1.56;
+	--sa-leading-lead: 1.46;
+	--sa-leading-hero: 1.04;
+	--sa-leading-heading: 1.1;
+	--sa-leading-card: 1.18;
+	--sa-leading-button: 1.15;
+	--sa-leading-nav: 1.22;
+	--sa-leading-nav-sub: 1.35;
+	--sa-leading-card-eyebrow: var(--sa-leading-snug);
+	--sa-leading-eyebrow: var(--sa-leading-tight);
+
+	/* Tracking — wide opens up small UPPERCASE labels/badges so they don't read
+	 * cramped. Keep title tracking neutral for clean Cyrillic rendering. */
+	--sa-tracking-tight: 0;
+	--sa-tracking-wide: 0.04em;
+	--sa-tracking-card-eyebrow: 0;
+	--sa-tracking-eyebrow: 0;
+
+	/* Heading rhythm — eyebrow and title should read as one heading unit. */
+	--sa-heading-eyebrow-gap: 0.125rem;
+
+	/* Buttons — shared CTA typography lives here, not in page CSS. */
+	--sa-button-font-size: var(--sa-text-body-sm);
+	--sa-button-line-height: var(--sa-leading-button);
+
+	/* Pill / chip geometry — single source of truth for filter pills & selectable
+	 * chips across home + inventory (height = --sa-mobile-pill-h, fill = --sa-fill,
+	 * ink = --sa-ink, font = --sa-text-sm). Stops per-surface drift. */
+	--sa-pill-radius: 12px;
+	--sa-pill-pad-x: 12px;
+	--sa-pill-gap: 6px;
+	--sa-pill-weight: var(--sa-weight-semibold);
+
+	/* Motion */
+	--sa-ease: cubic-bezier(0.22, 0.7, 0.18, 1);
+	--sa-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 992px) {
+	:root {
+		--sa-text-desktop-section-title: clamp(2.25rem, 2.8vw, 2.75rem); /* 36–44px */
+		--sa-text-body-sm: var(--sa-text-desktop-dense);
+		--sa-text-card-eyebrow: var(--sa-text-desktop-dense);
+		--sa-text-chrome-top: var(--sa-text-desktop-dense);
+		--sa-text-chrome-contact: var(--sa-text-desktop-dense);
+		--sa-text-chrome-cta: var(--sa-text-desktop-action);
+		--sa-text-control: var(--sa-text-desktop-body);
+		--sa-text-card-title: var(--sa-text-desktop-card-title);
+		--sa-button-font-size: var(--sa-text-desktop-action);
+	}
+}
+
+/* Original published dealer artwork: do not apply inherited monochrome masks. */
+img[src*="/dealer/logo-"], img[srcset*="/dealer/logo-"], img[src*="dealer%2Flogo-"] { filter:none !important; clip-path:none !important; object-fit:contain !important; }

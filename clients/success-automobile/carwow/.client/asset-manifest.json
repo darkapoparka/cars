@@ -1,0 +1,4560 @@
+{
+  "schemaVersion": 1,
+  "root": "static",
+  "files": [
+    {
+      "path": "/assets/brands/youtube-logo.png",
+      "gitBlob": "bf9621d21f7267c226b46f48986224fbf9f91293",
+      "bytes": 19896,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-left-1x-flat-2400x1600.jpg",
+      "gitBlob": "24f84a631b624ef5075d125926426fdaa6cf7684",
+      "bytes": 430090,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-left-2x-flat-4800x3200.jpg",
+      "gitBlob": "88d7bd70f3551c3b788eac39c61796722c06707b",
+      "bytes": 1263843,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-right-1x-flat-2400x1600.jpg",
+      "gitBlob": "a4327dedefc568ffd1ae5b36dc1d29c5d80c423d",
+      "bytes": 466407,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-right-2x-flat-4800x3200.jpg",
+      "gitBlob": "f0ac203d7871fa0713c969777b76609fc924014f",
+      "bytes": 1360930,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-left-1x-flat-2400x1600.jpg",
+      "gitBlob": "5d3eaf3f70e605e442fe290114b89910834bb3bc",
+      "bytes": 452364,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-left-2x-flat-4800x3200.jpg",
+      "gitBlob": "400ae0960fa1f87508a16b4c4cb5073bf041c0ea",
+      "bytes": 1318375,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-right-1x-flat-2400x1600.jpg",
+      "gitBlob": "1617fe1fdeb415ef841bb74ce5659c8298ed1415",
+      "bytes": 450776,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-right-2x-flat-4800x3200.jpg",
+      "gitBlob": "36272f147037fcc9c52dc454cba73353dd4389b8",
+      "bytes": 1350755,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-left-1x-flat-2400x1600.jpg",
+      "gitBlob": "ad9a83e4a25653b2a2eb04c37482ed733c84f383",
+      "bytes": 395940,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-left-2x-flat-4800x3200.jpg",
+      "gitBlob": "c7c5faa116644b4da90d120f96bfd21ac7c89637",
+      "bytes": 1178956,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-right-1x-flat-2400x1600.jpg",
+      "gitBlob": "221fd76319dd9d7215a9e405e6171cf147c40784",
+      "bytes": 407205,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-right-2x-flat-4800x3200.jpg",
+      "gitBlob": "7636ad6c8d732a5a09ce54e99486951d5d6b6226",
+      "bytes": 1217980,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-left-1x-flat-2400x1600.jpg",
+      "gitBlob": "6537910be92b140445ae30086271aa0e214b59c6",
+      "bytes": 432241,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-left-2x-flat-4800x3200.jpg",
+      "gitBlob": "4bdf6933a2c16bb1218f6573162697c8639a3643",
+      "bytes": 1271379,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-right-1x-flat-2400x1600.jpg",
+      "gitBlob": "50a477c1001674b103b62a3502248df9a6391ee8",
+      "bytes": 417665,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-right-2x-flat-4800x3200.jpg",
+      "gitBlob": "5936671289faccdbddd0eb428407e663cdec871a",
+      "bytes": 1234670,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-left-1x-flat-2400x1600.jpg",
+      "gitBlob": "5374c9596d0efa27caa452f32c92fd9cc0adf77c",
+      "bytes": 406930,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-left-2x-flat-4800x3200.jpg",
+      "gitBlob": "c8cbbab58f17e741cc8ff43d566bfa4c54a874d0",
+      "bytes": 1218790,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-right-1x-flat-2400x1600.jpg",
+      "gitBlob": "971099107d79aa316bf7e6e72470c83718759333",
+      "bytes": 407950,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-right-2x-flat-4800x3200.jpg",
+      "gitBlob": "930a9d5c675f8e866c806ae90b095611c072e356",
+      "bytes": 1220035,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/audi-q5-silver-right-1x-transparent-2400x1600.png",
+      "gitBlob": "3bf6674258ee6863ce30462c036531b5fb761a15",
+      "bytes": 2421962,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/bmw-x5-dark-grey-left-1x-transparent-2400x1600.png",
+      "gitBlob": "42c1e9bf7ce24c92aaae3bbca21b946f12124a48",
+      "bytes": 2338192,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/mercedes-e-black-left-1x-transparent-2400x1600.png",
+      "gitBlob": "a075f0436b2a02efee2555591fb116125db5e863",
+      "bytes": 2021892,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/mercedes-e-black-right-1x-transparent-2400x1600.png",
+      "gitBlob": "747e14dccb08039c968f0faabd1ba5da0b10beee",
+      "bytes": 2064711,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/volvo-xc90-white-left-1x-transparent-2400x1600.png",
+      "gitBlob": "21250f7e1e66fc7f85a0495420676de28f13763a",
+      "bytes": 2124008,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/volvo-xc90-white-right-1x-transparent-2400x1600.png",
+      "gitBlob": "eda88e9ecc56d78391da4def211fc80612d23231",
+      "bytes": 2059637,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/vw-golf-compact-left-1x-transparent-2400x1600.png",
+      "gitBlob": "bbb1400979b3b7d307322edf9f17a1b6c780f72f",
+      "bytes": 2078990,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-png/vw-golf-compact-right-1x-transparent-2400x1600.png",
+      "gitBlob": "fefaca097918c732af81222af9efbba7bb608d65",
+      "bytes": 2123872,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-left-hero-1200.webp",
+      "gitBlob": "6d95f3c9853a95544cf91399ba81271b65cf1a4b",
+      "bytes": 74164,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+      "gitBlob": "bb6e2b22dbcd80411745edd74a9bfa5719763e79",
+      "bytes": 105592,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+      "gitBlob": "c19a64dfb14f3064101bb174fe5f2d1fc7e78b21",
+      "bytes": 105388,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-right-hero-1200.webp",
+      "gitBlob": "990a034152564b183113cf3da00c00d9a8de6df5",
+      "bytes": 74974,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/about-lot-banner-1x-2400x1100.jpg",
+      "gitBlob": "ba1673c370736ada666deab7c5bc0a10aff47024",
+      "bytes": 466863,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/about-lot-banner-2x-4800x2200.jpg",
+      "gitBlob": "99b8fe0afa97b97f5abed0dc4334a50ab4c36e6d",
+      "bytes": 1303432,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/budget-promo-tile-1x-1600x1000.jpg",
+      "gitBlob": "e3fae5fcf1fe49895f82feac93ccfb9a11459332",
+      "bytes": 339851,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/budget-promo-tile-2x-3200x2000.jpg",
+      "gitBlob": "097b291c43103b7458cd5501fc8aac64d5d9fe03",
+      "bytes": 955812,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/contact-showroom-entrance-banner-1x-2400x1100.jpg",
+      "gitBlob": "25552ade46b70a41784a367cb19524d6c91faf60",
+      "bytes": 472196,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/contact-showroom-entrance-banner-2x-4800x2200.jpg",
+      "gitBlob": "731d4b5b354db953ee8bcb3f32bf902c634fcf4a",
+      "bytes": 1312462,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/financing-consultation-banner-1x-2400x1100.jpg",
+      "gitBlob": "b754b61c820ff194b824ab28ae685c6510778f34",
+      "bytes": 303438,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/financing-consultation-banner-2x-4800x2200.jpg",
+      "gitBlob": "b187b86cb5b0dcf0725d578da91fef7418c4da0f",
+      "bytes": 942903,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/home-desktop-hero-bg-1x-2400x1100.jpg",
+      "gitBlob": "ec17b58eba90b9cbe92ad3f32678d35f3b133a4b",
+      "bytes": 474949,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/home-desktop-hero-bg-2x-4800x2200.jpg",
+      "gitBlob": "4a3ac8e6f9bab8652da968707c7306652c4fad9c",
+      "bytes": 1300418,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/home-mobile-hero-1x-1080x1600.jpg",
+      "gitBlob": "6b1751cebfb17a65afb0054de260d28156a9bf95",
+      "bytes": 229935,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/home-mobile-hero-2x-2160x3200.jpg",
+      "gitBlob": "bd31fc6981a6f3c1ee4eded6c3a9dec16087ea1d",
+      "bytes": 674457,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/road-driving-plovdiv-banner-1x-2400x1100.jpg",
+      "gitBlob": "f22c15bc063386e645523b73a506b64e68e7ded2",
+      "bytes": 346182,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/road-driving-plovdiv-banner-2x-4800x2200.jpg",
+      "gitBlob": "3b47dee5d865c3e83eaec202a9797908a51b9b55",
+      "bytes": 1009587,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/sell-consultation-banner-1x-2400x1100.jpg",
+      "gitBlob": "3fc8b4c2f1ff84848eaf52ddafeee2312857d0dd",
+      "bytes": 330457,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/sell-consultation-banner-2x-4800x2200.jpg",
+      "gitBlob": "77bf196b0544a6ca7ab313e20568e191b9242cf9",
+      "bytes": 994552,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/sell-mobile-hero-1x-1080x1600.jpg",
+      "gitBlob": "7b44568ec2088ba555e4e9ef30bd3991860f0c0a",
+      "bytes": 203553,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/sell-mobile-hero-2x-2160x3200.jpg",
+      "gitBlob": "1b35c28b49b3887ab0e4772f414d1554aee701b5",
+      "bytes": 649924,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/services-inspection-banner-1x-2400x1100.jpg",
+      "gitBlob": "c12f61c686d65ad7ae23876808fecc274dcf6258",
+      "bytes": 388416,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/services-inspection-banner-2x-4800x2200.jpg",
+      "gitBlob": "a489c1695fed7fc72aeb45d0f8bba2cc36aa6023",
+      "bytes": 1106130,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/services-mobile-hero-1x-1080x1600.jpg",
+      "gitBlob": "e09c617c20b2adfff07ae765b4ed4e2c0c9d40da",
+      "bytes": 221598,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/services-mobile-hero-2x-2160x3200.jpg",
+      "gitBlob": "d4ed5157670093db2b5ddd0be4d2b2eeacb07095",
+      "bytes": 697117,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-customer-handoff-card-1x-1200x900.jpg",
+      "gitBlob": "f2ea566e7970c7a4fb54ef2414db9c830f974142",
+      "bytes": 234043,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-customer-handoff-card-2x-2400x1800.jpg",
+      "gitBlob": "784db3f7b155eb1626dc4dd29298480ef34faa78",
+      "bytes": 679052,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-documents-card-1x-1200x900.jpg",
+      "gitBlob": "fa6b789cc288da761a63aaeb6bbe6be4ed103650",
+      "bytes": 216878,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-documents-card-2x-2400x1800.jpg",
+      "gitBlob": "c2ecd5bd729d75689e4bffee00d5d782621de088",
+      "bytes": 648202,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-evaluation-card-1x-1200x900.jpg",
+      "gitBlob": "beec9f8f062c9ccf2e80a5406bbb880c8831ce60",
+      "bytes": 207843,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-evaluation-card-2x-2400x1800.jpg",
+      "gitBlob": "f1baf6a9c0c86e7e3ebfd173c1f5ee8c093bfaa6",
+      "bytes": 613614,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-sales-card-1x-1200x900.jpg",
+      "gitBlob": "23c11db0734dadaa28a6a47e0109b27876274991",
+      "bytes": 218201,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/team-sales-card-2x-2400x1800.jpg",
+      "gitBlob": "9e74f0073d7031a0212bbcecc7a79740c6b7d68b",
+      "bytes": 646988,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/why-daynight-card-1x-1600x1000.jpg",
+      "gitBlob": "64ea80a82e523b14c3d80798e12b73eb62435458",
+      "bytes": 359887,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/jpg/why-daynight-card-2x-3200x2000.jpg",
+      "gitBlob": "1c4aae12353950bde395e0bcdd1dac50ed451de8",
+      "bytes": 1020267,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/about-lot-banner-1x-2400x1100.webp",
+      "gitBlob": "1207ac180db1a48967776b131a64fad9885bbef2",
+      "bytes": 265194,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/about-lot-banner-2x-4800x2200.webp",
+      "gitBlob": "dcc5cfd62996f38728ecbefce6385dab4c91a866",
+      "bytes": 598566,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/budget-promo-tile-1x-1600x1000.webp",
+      "gitBlob": "48e3ecedb0b05e035d3611eae305de26341e730a",
+      "bytes": 216984,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/budget-promo-tile-2x-3200x2000.webp",
+      "gitBlob": "c02524f63beb4be4307b829bf0dd3b9a52abce3d",
+      "bytes": 478438,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+      "gitBlob": "b8991ef4f136a65b43ec924a2df0e0deb53658a0",
+      "bytes": 264986,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-2x-4800x2200.webp",
+      "gitBlob": "d40e0cda5305adaf0864f8f85c35d3a087085be5",
+      "bytes": 598676,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/financing-consultation-banner-1x-2400x1100.webp",
+      "gitBlob": "f4eca94bdfc23f407d57bd6b6dde5832e57e39ab",
+      "bytes": 127132,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/financing-consultation-banner-2x-4800x2200.webp",
+      "gitBlob": "cf2af729053ce0949a210136836b6348f38476de",
+      "bytes": 320278,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/home-desktop-hero-bg-1x-2400x1100.webp",
+      "gitBlob": "1980e2ded297a414cb03c30cd92fb0378a8f49b9",
+      "bytes": 263818,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/home-desktop-hero-bg-2x-4800x2200.webp",
+      "gitBlob": "2307b84129da26c325a9257af35fe6303f1494a7",
+      "bytes": 573048,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/home-mobile-hero-1x-1080x1600.webp",
+      "gitBlob": "9ae9066dba8e32639a3e6a31d3a6957c4c1d7fd9",
+      "bytes": 115248,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/home-mobile-hero-2x-2160x3200.webp",
+      "gitBlob": "2ea222f6d306faeff5873824e543c5a120c15181",
+      "bytes": 257712,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/road-driving-plovdiv-banner-1x-2400x1100.webp",
+      "gitBlob": "a37e4e0e869b5f4d96b4e9463d8a2b493ab5f944",
+      "bytes": 156448,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/road-driving-plovdiv-banner-2x-4800x2200.webp",
+      "gitBlob": "5c8e588bbac35a3ab7806d7ca22a1b0d6c3b5467",
+      "bytes": 375886,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/sell-consultation-banner-1x-2400x1100.webp",
+      "gitBlob": "1bb8fd67bb3b53d650146f1d704cb6e11981375e",
+      "bytes": 148720,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/sell-consultation-banner-2x-4800x2200.webp",
+      "gitBlob": "adc9fddda1e80c9f53558194e7f8db7d58d61a5e",
+      "bytes": 358274,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/sell-mobile-hero-1x-1080x1600.webp",
+      "gitBlob": "672d5e6099ba9dd9dcd614e6b09ad69832173500",
+      "bytes": 94774,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/sell-mobile-hero-2x-2160x3200.webp",
+      "gitBlob": "72808b258641f4abf930fecd65275f003957d922",
+      "bytes": 231736,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/services-inspection-banner-1x-2400x1100.webp",
+      "gitBlob": "e166845709c1d0bcdc7fc1178ae140c0faa185ad",
+      "bytes": 198692,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/services-inspection-banner-2x-4800x2200.webp",
+      "gitBlob": "c95b689d7a20c22eedeb6d28a535a4e4f780e59e",
+      "bytes": 443430,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/services-mobile-hero-1x-1080x1600.webp",
+      "gitBlob": "da4bcfed15b483d90e6ecfc1db1d20c480b18c67",
+      "bytes": 107164,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/services-mobile-hero-2x-2160x3200.webp",
+      "gitBlob": "ddc7dc8af08f2e557fedab7653984c4fc88160e9",
+      "bytes": 261148,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-customer-handoff-card-1x-1200x900.webp",
+      "gitBlob": "dd5b11817e69516d08ecc1bf06fd775c343f1131",
+      "bytes": 137772,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-customer-handoff-card-2x-2400x1800.webp",
+      "gitBlob": "5b7736abfc6ab3b0568d3dfb20c93fc9fbbbf495",
+      "bytes": 327822,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-documents-card-1x-1200x900.webp",
+      "gitBlob": "305f135c2980a437f302adf4f484d75216beec1e",
+      "bytes": 129354,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-documents-card-2x-2400x1800.webp",
+      "gitBlob": "aa1a71da3f90988b29879cc3a2658b0f5c05291b",
+      "bytes": 309030,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-evaluation-card-1x-1200x900.webp",
+      "gitBlob": "05c22fbbaaaa9d9021e8bad913e3590d1b9dd8ca",
+      "bytes": 116474,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-evaluation-card-2x-2400x1800.webp",
+      "gitBlob": "0438aa45cafd29846155c23bf3b7ae50043c704a",
+      "bytes": 280196,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-sales-card-1x-1200x900.webp",
+      "gitBlob": "954707b4c144804107a024f3ad611f34dd733c85",
+      "bytes": 127870,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/team-sales-card-2x-2400x1800.webp",
+      "gitBlob": "bd2a76828c1e6ce07d6af20333c48e67ca892b3d",
+      "bytes": 302842,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/why-daynight-card-1x-1600x1000.webp",
+      "gitBlob": "e633bb0cdeae2c0a930c1d161b05135ffa10be6e",
+      "bytes": 232734,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-auto-v3/class-b-banners/webp/why-daynight-card-2x-3200x2000.webp",
+      "gitBlob": "9723fc99ecd57ba71f6bbd191da533bc3c05cb37",
+      "bytes": 514858,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight-contact/contact-support-cutouts.webp",
+      "gitBlob": "72d1801aafa7fde940c53b17d745c8ddcaf87d3b",
+      "bytes": 119066,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11774291387702102.webp",
+      "gitBlob": "4898219baf6137bd8f36d179da58c394b5970b3f",
+      "bytes": 19472,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11775198338574112.webp",
+      "gitBlob": "36f9b5fcd584e23129a571888ecbe72ec282c6b5",
+      "bytes": 18998,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11775899765171119.webp",
+      "gitBlob": "d751824fec3eae8e1be06da0f9e366c63c06e40a",
+      "bytes": 21796,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11777018671764829.webp",
+      "gitBlob": "bf893b6c8f36449c4821a58ae4946dc5d8efca2a",
+      "bytes": 9840,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11778085846169037.webp",
+      "gitBlob": "4a03e1f49713e2f68311160d9ec36bf9ddc25007",
+      "bytes": 23526,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11778179700610297.webp",
+      "gitBlob": "a4df293dd07ca0398af19709076a426201bf5a35",
+      "bytes": 20276,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11778599312336917.webp",
+      "gitBlob": "8b7cb091e1a1d99fd109b463984652c83db18ce6",
+      "bytes": 20760,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11779001443562014.webp",
+      "gitBlob": "dac76b66e1024f9ebf377bd4e5cc1b21cf1ca03a",
+      "bytes": 15374,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11781282994167628.webp",
+      "gitBlob": "c8837b894beefd5144ef611d5597b1c65e60f2c2",
+      "bytes": 15952,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11781786688563618.webp",
+      "gitBlob": "b6bb52351726d1063270a9b871cfa93ae46c8513",
+      "bytes": 11948,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11781790478711568.webp",
+      "gitBlob": "bacf2590fc424e8aad8e4d6f660c9aff190e46ec",
+      "bytes": 14220,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11781969350224394.webp",
+      "gitBlob": "60c7bdc7ec15c79360fb9a34f4f632d25690e2ad",
+      "bytes": 19786,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11782122632841845.webp",
+      "gitBlob": "aef08730fda2bfae06c422bd0fcdb2aaea45c750",
+      "bytes": 22894,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11782329384140338.webp",
+      "gitBlob": "0fc672c0d3b642b1b23137cee5663e76efc08c08",
+      "bytes": 18246,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11782479430635636.webp",
+      "gitBlob": "2a3fd700ba66b2684eb7781b83ad31f79778d270",
+      "bytes": 22170,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11782540302515038.webp",
+      "gitBlob": "3eadf6fc4b0ff39dd865b162948a06a8d1e427e3",
+      "bytes": 23294,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11782541049698048.webp",
+      "gitBlob": "6f2c46146cadf9281e54eb655ea4cfa3bd5005c1",
+      "bytes": 23306,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11783434857807146.webp",
+      "gitBlob": "69ce8504cf862553ace03bcada9d3d39d1e679d2",
+      "bytes": 20878,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11784130537689775.webp",
+      "gitBlob": "1363208137bec477f75772b1e0f9157dad79bdb5",
+      "bytes": 17058,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11784224743668074.webp",
+      "gitBlob": "dab0573ca4fa594b7548f1700965a6fd34c2c82d",
+      "bytes": 20624,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/11784380846697521.webp",
+      "gitBlob": "2f7d407f7fd6eb6926ed2227b5547236a9f8a3ab",
+      "bytes": 19396,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21758203454344162.webp",
+      "gitBlob": "02806f350295858ada76687708c4c1f811b88c78",
+      "bytes": 22786,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21762334502775312.webp",
+      "gitBlob": "a06315d32588a45ed029948328f21143176c9d47",
+      "bytes": 21846,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21765900685685588.webp",
+      "gitBlob": "68ae2d9a24c0123bcb21872ae0342cb5ea94d536",
+      "bytes": 12830,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21775198700636300.webp",
+      "gitBlob": "8fe1d5663422f3bbcffeb988c8d6a3e34996080c",
+      "bytes": 15616,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21777637702876978.webp",
+      "gitBlob": "46ec2783854b94613cf2c1582382b8883dd8f22e",
+      "bytes": 20736,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21780050061781136.webp",
+      "gitBlob": "c4b484e78398b51edd79a626394fe0b0c7373db4",
+      "bytes": 24504,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21781097577012835.webp",
+      "gitBlob": "6387732292184f58266eb148bcc0f2a89f1bd497",
+      "bytes": 20834,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21781186627237038.webp",
+      "gitBlob": "54de3c77377091cf720b023eccf1d567739423f9",
+      "bytes": 17496,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21781366888650416.webp",
+      "gitBlob": "69976f469722d7e0c664757d0aea9e19f9971444",
+      "bytes": 14538,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21781787768273938.webp",
+      "gitBlob": "a02aaf457af45ef24c1cb785d080cfedd10618fa",
+      "bytes": 16926,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21782329010196509.webp",
+      "gitBlob": "1d9e4e90506336c866cd79fb25145d489f443133",
+      "bytes": 16812,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21782329865022942.webp",
+      "gitBlob": "d74ce365b8611c9e2eed83a9577559b01af3486e",
+      "bytes": 18610,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21782661898906066.webp",
+      "gitBlob": "920b95f1158e9583e94bab7e85f7f17a97b9a09b",
+      "bytes": 11154,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21782920140707096.webp",
+      "gitBlob": "ef1e1c1edb96dcd9acfcbb8caf46ec762932c55d",
+      "bytes": 17092,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21783785043166128.webp",
+      "gitBlob": "cb1dfc3d3e761bd7ea4f43b249f0ab9964fb3cdb",
+      "bytes": 20086,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21784134153263153.webp",
+      "gitBlob": "2d63fb3311c91aa7d9cf11da2820a55ceb02a45e",
+      "bytes": 13258,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21784136402983332.webp",
+      "gitBlob": "ef45af7df2990fe6af91dc80fb4b4526e7df34b9",
+      "bytes": 7980,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21784223776383846.webp",
+      "gitBlob": "0a1b224de9569186a9c91dd0609e079a3ba2adfb",
+      "bytes": 13942,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory-current/21784728210405323.webp",
+      "gitBlob": "f47bff1a75c086552cb68fd79e3a24babd21838c",
+      "bytes": 15986,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory/inventory-banner-night-v1.png",
+      "gitBlob": "06e9892dde03a5b978d5c46bf14d95c98de4bd15",
+      "bytes": 1646989,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory/inventory-banner-night-v1.webp",
+      "gitBlob": "4dbf525048a96b9b950774518f59b6c8e832723b",
+      "bytes": 75514,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory/inventory-banner-showroom-v2.png",
+      "gitBlob": "b093304304788cb8493292f451499d8b96c55313",
+      "bytes": 1686260,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory/inventory-banner-showroom-v2.webp",
+      "gitBlob": "0ddd97afd03227982f1625770df6022dda4d2a13",
+      "bytes": 129216,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory/inventory-cutout-black-suv-v1.webp",
+      "gitBlob": "98887957f53e404c3305f00cb45455f6f6b330dd",
+      "bytes": 91712,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/daynight/inventory/inventory-cutout-silver-crossover-v1.webp",
+      "gitBlob": "467362b49fcbf5b2ac86e1a85e06dde9665b0c72",
+      "bytes": 90924,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Alarm-white.svg",
+      "gitBlob": "e25214394d2eed4125f515746b4ce393eb07e118",
+      "bytes": 782,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Alarm.svg",
+      "gitBlob": "c52504d108e0d54ec9daa7c56eb309cbb9c9a591",
+      "bytes": 774,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/ApplePay.svg",
+      "gitBlob": "f9a8b875435d907ea8d65fae05e74ded934fe343",
+      "bytes": 1295,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Barcode.svg",
+      "gitBlob": "8fb32129737b85f31c54c924f18586db04d98837",
+      "bytes": 3657,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/CaretCircleRight.svg",
+      "gitBlob": "97fe8f77a645c005d6b3b7b5d3f62b9d78ff78f3",
+      "bytes": 572,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/ChatCircleDots.svg",
+      "gitBlob": "ebb16804b57ec10dc016d7250cd11d525a3fdce7",
+      "bytes": 3171,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Frame.svg",
+      "gitBlob": "915fa9bb615f49398fb6846e64638fcd862fbae1",
+      "bytes": 3856,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Google.svg",
+      "gitBlob": "0368426528b537adab8cf7f4ccd66f8e2da25b0a",
+      "bytes": 1899,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Info.svg",
+      "gitBlob": "b257969641f3fccdf602956c2e107c8f8362d457",
+      "bytes": 957,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/MapPin.svg",
+      "gitBlob": "c131b03d58e129fe1869402f3727bed54a7632ac",
+      "bytes": 1849,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Payment.png",
+      "gitBlob": "c3f159ba290464ed44d5ae34510a9693b15032be",
+      "bytes": 7786,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/PhoneCall-2.svg",
+      "gitBlob": "8fbeb264aa37404ce21eb32c83c938b5b3e6f442",
+      "bytes": 3324,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/PhoneCall-3.svg",
+      "gitBlob": "b7ce88d317c7566892a5c2b269f2582b8b2a370d",
+      "bytes": 3867,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/PhoneCall.svg",
+      "gitBlob": "445111b5d22fcbd3ce712344ebb657c3cac911af",
+      "bytes": 3797,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/QrCode.svg",
+      "gitBlob": "326640e82949a0ed7f157fe62b005073d5e0f274",
+      "bytes": 4719,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/SealCheck.svg",
+      "gitBlob": "3e00a0625eb7674fb68ffb9595270d9754db22e6",
+      "bytes": 2265,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Seatbelt.svg",
+      "gitBlob": "a657208f3e6745918a2d94d1b023ccc34240d5c9",
+      "bytes": 2940,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/Twitter.svg",
+      "gitBlob": "a1a4c3b9887dcb091d271ebc9cf63444237a4896",
+      "bytes": 668,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/VIN.svg",
+      "gitBlob": "8fb32129737b85f31c54c924f18586db04d98837",
+      "bytes": 3657,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/X-White.svg",
+      "gitBlob": "a4e9ba0875c8ebdc455b2db78475b6c10b1a4c72",
+      "bytes": 311,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/X.svg",
+      "gitBlob": "971babd7583b2fbe8aeb28ff8ad42128174f9191",
+      "bytes": 1188,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/auto-2.svg",
+      "gitBlob": "1998ec63f8de4520e7a0d0278111a438eba35c75",
+      "bytes": 1209,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/auto.svg",
+      "gitBlob": "e5cfbb11b0e74827ee910eb91588c8a972a1a065",
+      "bytes": 1209,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/calendar-2.svg",
+      "gitBlob": "a1dfaa62f45e785ef687d717231da36cb8f98d71",
+      "bytes": 917,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/calendar.svg",
+      "gitBlob": "4c0e7cb62831248af661c7b9c521b8bcef1b248d",
+      "bytes": 917,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/check-2.svg",
+      "gitBlob": "3340dee4bf3ce514f752adfb86f11e54fb5213fe",
+      "bytes": 983,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/check-white.svg",
+      "gitBlob": "e0535034f3fdda9be93dde4e62b1223bd77bf1dc",
+      "bytes": 735,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/check.svg",
+      "gitBlob": "f374984b62ca3345795d861ae8a8afb26591af03",
+      "bytes": 982,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/checkbox-2.svg",
+      "gitBlob": "18b3229e31d03813611096d3124bec015fca7cc9",
+      "bytes": 951,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/checkbox.svg",
+      "gitBlob": "daaca5662af857e220b9513410070a7864c1929c",
+      "bytes": 202,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/checked-2.svg",
+      "gitBlob": "082a72a2a5c1afd899d710935f0ca16696b3ee59",
+      "bytes": 1322,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/checked.svg",
+      "gitBlob": "151ab746314027aebc3fe68362f4e7f147bd57d9",
+      "bytes": 277,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/chevron-down-black.svg",
+      "gitBlob": "4f8dada56081258924bfe7064371f17dbd326f08",
+      "bytes": 219,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/chevron-down-primary.svg",
+      "gitBlob": "75f3edb14b8504e90455595752547e843b9fc178",
+      "bytes": 968,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/chevron-down-white.svg",
+      "gitBlob": "ec70050db1ad0cb714cb9e1718b19d15fc6b1db8",
+      "bytes": 222,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/clear.svg",
+      "gitBlob": "c95d0c3b5dbab34a2a28941ad903df0668efc233",
+      "bytes": 2493,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/close-modal.svg",
+      "gitBlob": "eab4b2b47ce2799551505b817aba1ea19764ce35",
+      "bytes": 1530,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/color.svg",
+      "gitBlob": "984e314b2fbd43c195ce9d3417b5c3df2ea786b6",
+      "bytes": 3437,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/doc.svg",
+      "gitBlob": "a34f67787c41eb9f6f5f6d1f197195e8a9d9e1a1",
+      "bytes": 4192,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/engine.svg",
+      "gitBlob": "915fa9bb615f49398fb6846e64638fcd862fbae1",
+      "bytes": 3856,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/eye-dark.svg",
+      "gitBlob": "dc56e2593b7c99943b0023ee2b278a1f4256bfdf",
+      "bytes": 799,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/eye-slash-dark.svg",
+      "gitBlob": "0c63c8b599daa674419a70e3c0e42a8c38a24cc9",
+      "bytes": 1392,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/eye-slash.svg",
+      "gitBlob": "83ee1c4c435b3b7b949119674f4fbc2bc0ae16e0",
+      "bytes": 1392,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/eye.svg",
+      "gitBlob": "072e1f1970c166c013bd66b6179cf0e5c91ad77a",
+      "bytes": 799,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/facebook.svg",
+      "gitBlob": "dc8c34df8da1fb11293d544affbcc3e334729ddb",
+      "bytes": 659,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/filter.svg",
+      "gitBlob": "8eb2c1749da9d8a2185be4ce6bc355c1d0d4209f",
+      "bytes": 1223,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/flash.png",
+      "gitBlob": "65c5515fce4b9c7403a18fe9584b0d2a71d805c3",
+      "bytes": 3559,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/fuel.svg",
+      "gitBlob": "4ec78ece0e6814400a809acc66708e7e8be2b8a2",
+      "bytes": 2359,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/gaspump-2.svg",
+      "gitBlob": "707a7d9d8b826fa1bbc206f27e2e0869ed7616cc",
+      "bytes": 1122,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/gaspump.svg",
+      "gitBlob": "1429f09a740faf81064238dd0a52a8f2e56a2fb7",
+      "bytes": 1120,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/icon-gauge-2.svg",
+      "gitBlob": "aa39bd6695936d4c6187ddb3dafce39ffc64c0d2",
+      "bytes": 1104,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/icon-gauge.svg",
+      "gitBlob": "9b02887d3390f5d4df74a8e86d67132e6d6ce5ac",
+      "bytes": 1104,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/icon_setting.svg",
+      "gitBlob": "f11e4d48570908fed8231869815fdbcc1553e3fa",
+      "bytes": 4188,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/icon_setting_white.svg",
+      "gitBlob": "8a973e3f0c38db18101ab842218c1b7b4e921356",
+      "bytes": 4184,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/input-facebook.svg",
+      "gitBlob": "7c41687af5f81f15664cc25f69370355d27cf810",
+      "bytes": 1702,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/input-instagram.svg",
+      "gitBlob": "7532dcee623f3dbc7fd70d0d89e18dbb5d57f93c",
+      "bytes": 956,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/input-skype.svg",
+      "gitBlob": "9abd9ddd7ca87bdd76e93e5e6c22bcfc31986fff",
+      "bytes": 1404,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/input-telegram.svg",
+      "gitBlob": "e483220778daca7475bd3c690c1db60316da8f23",
+      "bytes": 1443,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/input-x.svg",
+      "gitBlob": "3a49bda464a3ce9f6550bfba0f1ae0d83c8852e8",
+      "bytes": 631,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/input-youtube.svg",
+      "gitBlob": "7045136ecaad4dcbdc64c230f08e58ab6337ce28",
+      "bytes": 2243,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/instagram-official-gradient.svg",
+      "gitBlob": "0292cc23edd88ad12c295d52a8dc97b88d6e1cf1",
+      "bytes": 1384,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/interior.svg",
+      "gitBlob": "a657208f3e6745918a2d94d1b023ccc34240d5c9",
+      "bytes": 2940,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/line.svg",
+      "gitBlob": "d031924fcf5784a8c8fa80fc88c9f2388079d03b",
+      "bytes": 157,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/location.svg",
+      "gitBlob": "c131b03d58e129fe1869402f3727bed54a7632ac",
+      "bytes": 1849,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/manual-2.svg",
+      "gitBlob": "cf745bb27cf9a1901d4eeee4880d0031e2a4c436",
+      "bytes": 6325,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/manual.svg",
+      "gitBlob": "3ecb44b9102c6d19aa7308e7791261611df86d68",
+      "bytes": 6298,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/mileage.svg",
+      "gitBlob": "6e48545a532a0960d295eb91b0fb1f5f17800ce8",
+      "bytes": 1856,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/minus.svg",
+      "gitBlob": "fc6dc17463c0ef0d856236b2a1c97ce4ca1bdbfe",
+      "bytes": 517,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/more.svg",
+      "gitBlob": "fd5cf6031c1a623e2c8039f3a2fab610b29fcd28",
+      "bytes": 1572,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/palette.svg",
+      "gitBlob": "984e314b2fbd43c195ce9d3417b5c3df2ea786b6",
+      "bytes": 3437,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/paypal.svg",
+      "gitBlob": "1935100c89c27778688bfd1e685c90147e52cee7",
+      "bytes": 6593,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/pdf.svg",
+      "gitBlob": "4f66977ac7a5b4e8419ef27d529f54df3a78ba42",
+      "bytes": 2883,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/picture.svg",
+      "gitBlob": "80373062e26fece85472a6cbf316c83c712d6da9",
+      "bytes": 1155,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/play.svg",
+      "gitBlob": "a0965a8c6dc4855c98b8ecc7738587a51ca9f6e1",
+      "bytes": 1147,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/playcircle.svg",
+      "gitBlob": "382d8ae6ad19f89394450008189b7f3353c0a3d0",
+      "bytes": 1753,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/plug.svg",
+      "gitBlob": "ce800d3e00fdde8cb653154833033b1541f7e575",
+      "bytes": 217,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/preload.svg",
+      "gitBlob": "bef32bd29c0df3abe436e86bcec192d858098ba4",
+      "bytes": 2905,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/quote.svg",
+      "gitBlob": "f6fc9b45a557d8ae67d4f7487c38e755e5fe2b12",
+      "bytes": 2328,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/radio-checked.svg",
+      "gitBlob": "c9acfcd6b3024ff63178758645767565aa5a06e3",
+      "bytes": 219,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/radio.svg",
+      "gitBlob": "7d0ca0e0d84353f043851899fb3d3bf66c397807",
+      "bytes": 1042,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/radio2-checked.svg",
+      "gitBlob": "d32206cb6f8558b107aaa09cbe4e5af21215b8c3",
+      "bytes": 234,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/radio2.svg",
+      "gitBlob": "2a2527026f7bda19b2c33c9cc95f05070899c4d7",
+      "bytes": 187,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/right.svg",
+      "gitBlob": "c9af2bae41c7dbe245c5e6a859ea6cd36bd59702",
+      "bytes": 937,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/search-icon.svg",
+      "gitBlob": "aeeb61bebd8211e414b70a11d9b2200a96a18401",
+      "bytes": 1419,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/search.svg",
+      "gitBlob": "8f65437fa00b67b17e8bb0954149ed8d0bd82bb0",
+      "bytes": 596,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/ship-icon.svg",
+      "gitBlob": "b42941412bc8e3737fa2026642aa659f1fb0dcd9",
+      "bytes": 2028,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star-2.svg",
+      "gitBlob": "36328030ce6796b668d89bdd3c4edd0dbaf4aa53",
+      "bytes": 1250,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star-3.svg",
+      "gitBlob": "723fce03995811666642e584cd2a869a527882fe",
+      "bytes": 2469,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star-4.svg",
+      "gitBlob": "632c630e6c956b1b5f7a80ead56e9b9213c23bd0",
+      "bytes": 1272,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star-5.svg",
+      "gitBlob": "5346055769652be12fb917ca2030cf88e89a8c73",
+      "bytes": 606,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star-6.svg",
+      "gitBlob": "a0ecbb00183dff1de123d5efb424aa2111bdc958",
+      "bytes": 1289,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star-7.svg",
+      "gitBlob": "53d133620d7362c8ad4b31f6a55d80285bdd807b",
+      "bytes": 606,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/star.svg",
+      "gitBlob": "c15476d46cb5981e7cecd19cd248263a2bd999e9",
+      "bytes": 1306,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/tiktok-official-circle.png",
+      "gitBlob": "37ac9316adf9c8f8a9724e6aed35b9e2ba0f3eaa",
+      "bytes": 18423,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/top.svg",
+      "gitBlob": "e760d9229132eaf2c96086ef9a2af545acc20d28",
+      "bytes": 460,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/transmission-2.svg",
+      "gitBlob": "7c6c5ecec1304bf93e27e609e61502b441f21ce1",
+      "bytes": 5561,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/transmission.svg",
+      "gitBlob": "7c6c5ecec1304bf93e27e609e61502b441f21ce1",
+      "bytes": 5561,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/trash.svg",
+      "gitBlob": "aafc3283ef20427e631d2c878281f5f74d631b0f",
+      "bytes": 1681,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/video.svg",
+      "gitBlob": "29a0d49c4d82706c699b4414be01e4168cebc997",
+      "bytes": 1482,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/view-all-photo.svg",
+      "gitBlob": "a6cf1a24a64e607e46305d34beadfff8490addea",
+      "bytes": 2453,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/years.svg",
+      "gitBlob": "3083aa53e7fb0719d0d8f541ede43edb46609d53",
+      "bytes": 2305,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/icons/youtube-footer.svg",
+      "gitBlob": "ffd47b955d31a65bdfae369718b3e61db5c528c0",
+      "bytes": 447,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/admin/cms-login-banner.png",
+      "gitBlob": "e7b0072ab93f33db8ec990d64035c0bbdf6c4c0d",
+      "bytes": 1881001,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-1.png",
+      "gitBlob": "9d30557f5c3aec3ffcbe616fe166d64508078a48",
+      "bytes": 9265,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-10.jpg",
+      "gitBlob": "88112aa22d0cb1f70d471a32df26b3d88b4b95d1",
+      "bytes": 12183,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-11.jpg",
+      "gitBlob": "090a0d933fd68c69102e2afcab974bdfc9b08059",
+      "bytes": 36219,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-2.png",
+      "gitBlob": "b8fd03ac04056a7f9740965247877bfcd00d3059",
+      "bytes": 8400,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-3.webp",
+      "gitBlob": "e86b110729ac989365458a644319e5670fc744cc",
+      "bytes": 4044,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-4.png",
+      "gitBlob": "692324436deaa9e5786c306d8367be8001d0d81c",
+      "bytes": 8577,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-5.png",
+      "gitBlob": "467070e89d8a6e26fb367a70ffe520d760624e0e",
+      "bytes": 7404,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-6.png",
+      "gitBlob": "22019f2f7d6439a1ac5a31bd03f04f9250af89f1",
+      "bytes": 8000,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-7.png",
+      "gitBlob": "cb57e26c89a247dacbaf387811be4b4ba8cf5216",
+      "bytes": 7223,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-8.png",
+      "gitBlob": "52ec7de8296db6741717b7ed545c55596c54abf3",
+      "bytes": 7026,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/avatar-9.png",
+      "gitBlob": "0b520c3f091d0fffef088b5cf854584834bf3031",
+      "bytes": 7506,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/client-1.png",
+      "gitBlob": "79476f2d8639a17ac06d4f8044d000ef3cc98254",
+      "bytes": 4751,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/client-2.png",
+      "gitBlob": "fc104daf6e71384dddb399952af2f500e10dc6b5",
+      "bytes": 7141,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/client-3.png",
+      "gitBlob": "8ac925d4fc3309c6fa0e84de163630e67d2b82af",
+      "bytes": 7626,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/client-4.png",
+      "gitBlob": "95131fba8303979134f75a20cfe490596ddba756",
+      "bytes": 7895,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/coment-avatar-1.png",
+      "gitBlob": "f043f471e242c6cc76deb4719eab4cf524e0bf08",
+      "bytes": 9068,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/coment-avatar-2.png",
+      "gitBlob": "4914fe919ef0df768c69686908a0710fa03d5ab0",
+      "bytes": 9451,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/contact-avatar-2.png",
+      "gitBlob": "669958b98dabba34efa6ea8f98b0b479d7b840af",
+      "bytes": 731,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/avatar/contact-avatar.webp",
+      "gitBlob": "262ad9f7d700c3cd6ddeca344bfaff484e14dd91",
+      "bytes": 5254,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/background/bg-fixed.jpg",
+      "gitBlob": "cbb3df6ead492569b0ac3df3620f5c69e1520fb5",
+      "bytes": 167169,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/banner/bg-cta.jpg",
+      "gitBlob": "a9d781379731af3c91dc9f407c6de6a14406a9e7",
+      "bytes": 255896,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/banner/bg-service-center.jpg",
+      "gitBlob": "3945c0654b62d14676eafd6ea2f466aa290a721f",
+      "bytes": 92171,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/banner/bg-video.jpg",
+      "gitBlob": "90af1cd06c4a0d44fab22b5f2fb9905346808900",
+      "bytes": 109686,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/banner/comming-soon.jpg",
+      "gitBlob": "1ca7011cf6b0bb09fae06e07e31d0413b1dd5131",
+      "bytes": 328763,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/blog-details-2.jpg",
+      "gitBlob": "69438ead5198bba24349edcd5e1faf75eced3d32",
+      "bytes": 321879,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/blog-details.jpg",
+      "gitBlob": "7e032395ac421fa0c9eedc8f9065a5d51bd66bb3",
+      "bytes": 223296,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/comments-post-1.jpg",
+      "gitBlob": "3d9e70990e401f446f64af5279ddf8acdce783e6",
+      "bytes": 3949,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/comments-post-2.jpg",
+      "gitBlob": "111377a2755768f2b1c6d189d9e95d00c70599b5",
+      "bytes": 4750,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/comments-post-3.jpg",
+      "gitBlob": "48c925f19f8591547e4de5dbe91a8b1be529807a",
+      "bytes": 4983,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/overlay-blogdetails.png",
+      "gitBlob": "d6e75e258cdec8708aaa6a42df98799bb51c4463",
+      "bytes": 24511,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-1.jpg",
+      "gitBlob": "ef84a3b9f15bae617a7dba8b0871e76322f68b69",
+      "bytes": 66074,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-10.jpg",
+      "gitBlob": "38c4176d048e325231f786eb0b29cd9d7ca5b228",
+      "bytes": 37075,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-11.jpg",
+      "gitBlob": "82adc7f04c6c9efe58699cb30b05ccbbf9bbaffb",
+      "bytes": 40329,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-12.jpg",
+      "gitBlob": "5cfae25a2908c0fb5878e560052b9d5d2e8bbf64",
+      "bytes": 71470,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-13.jpg",
+      "gitBlob": "fed87f179c80f7dd39397adc26e411d8af9b4261",
+      "bytes": 105367,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-14.jpg",
+      "gitBlob": "920b71e3b040402f76b672e85f6a54685cade482",
+      "bytes": 111528,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-18.jpg",
+      "gitBlob": "7a6890a6c0f10344b9301ca349c08f86f3d020cd",
+      "bytes": 184763,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-19.jpg",
+      "gitBlob": "f279a5e800360c0c4ca84731574aeb43c089b54c",
+      "bytes": 121970,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-2.jpg",
+      "gitBlob": "6938e8d78a813e83bb99b1efbbf1dde246756f5a",
+      "bytes": 75581,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-20.jpg",
+      "gitBlob": "83e7de2faab28965e7c953003078f6bc5eef3b42",
+      "bytes": 54592,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-21.jpg",
+      "gitBlob": "555648ca15bd6f4d406f12a607128ea6be283028",
+      "bytes": 44949,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-22.jpg",
+      "gitBlob": "1e0d7152911756a0767ada0c302f03b30bf80f39",
+      "bytes": 38446,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-23.jpg",
+      "gitBlob": "e96f3a5f1533830029aeae1d751a66db39d9d787",
+      "bytes": 41219,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-24.jpg",
+      "gitBlob": "253f8460f6893c09616b7950ef691594c6ab2e65",
+      "bytes": 64151,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-25.jpg",
+      "gitBlob": "308f83534c34758c34aa93c3052dee20d48a71cd",
+      "bytes": 13152,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-26.jpg",
+      "gitBlob": "7dcea1762acc354f27fb1d82de7232efcb23ece9",
+      "bytes": 12313,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-27.jpg",
+      "gitBlob": "f01b8d6d725b03facbe85adfaa6f2bed49160227",
+      "bytes": 9694,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-28.jpg",
+      "gitBlob": "dde56be9fdb848526170fbf483f9a8b0948781bb",
+      "bytes": 14391,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-3.jpg",
+      "gitBlob": "7f3f16ef4b199e70ad315d62b1ed8972c6384971",
+      "bytes": 54660,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-30.jpg",
+      "gitBlob": "857814efd46c05c1bbe413c8e2816c87c4442945",
+      "bytes": 28461,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-31.jpg",
+      "gitBlob": "0cc381a217a810ac7cd902c59d5b75abffaba6d1",
+      "bytes": 26193,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-32.jpg",
+      "gitBlob": "306e20c8289cf2895c7d14b1db1904277e677e9b",
+      "bytes": 57162,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-33.jpg",
+      "gitBlob": "9af01fe6600ff38b3cb257c8e71320dba0d578c5",
+      "bytes": 114968,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-34.jpg",
+      "gitBlob": "d63cf33d3f4d3b97ce84b8ed4bc6a80695505ce0",
+      "bytes": 138385,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-35.jpg",
+      "gitBlob": "576266028bda92007fa1d93161d2f2f9d030b26a",
+      "bytes": 93199,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-36.jpg",
+      "gitBlob": "904d9f8a53cd837685d78eb4d8eb13495e38695b",
+      "bytes": 112683,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-37.jpg",
+      "gitBlob": "1aa60e717c20e50e1abd105b62de1d4f6bea4499",
+      "bytes": 109370,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-38.jpg",
+      "gitBlob": "092b3b39666fbc64acd7242dc52a293b45153837",
+      "bytes": 80889,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-39.jpg",
+      "gitBlob": "19fe17e14e26d1ae81c88b848675a27906a9bfa3",
+      "bytes": 51338,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-4.jpg",
+      "gitBlob": "9da0aa09dc3febfd881871ecc22c217107a7fca8",
+      "bytes": 75470,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-40.jpg",
+      "gitBlob": "f0ea3b42d1a6b330f2f4c9752c9960b7b8089e6f",
+      "bytes": 157986,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-41.jpg",
+      "gitBlob": "119af0a5be6b98a27463c49d69a502f03803885b",
+      "bytes": 44404,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-42.jpg",
+      "gitBlob": "b91008e9a377fbdba1191287f59b8f046fbdd870",
+      "bytes": 27343,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-43.jpg",
+      "gitBlob": "5577832e99c200b39cf3cdc96f6a459c008c4ac6",
+      "bytes": 104345,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-44.jpg",
+      "gitBlob": "452788af3e08e2a013349c3ca2ca7afbe6a627f2",
+      "bytes": 60239,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-5.jpg",
+      "gitBlob": "304f2142d4b98ebee58225e41d0ebe792530b834",
+      "bytes": 51866,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-6.jpg",
+      "gitBlob": "138bed26f2e2710252dd9d464460d0a3466aa0a2",
+      "bytes": 46074,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-7.jpg",
+      "gitBlob": "8e886867f99d8420e723eee4ec95003add53711a",
+      "bytes": 40199,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-8.jpg",
+      "gitBlob": "ba0b6591168701b6f4834098fcde417278e9b433",
+      "bytes": 54503,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/blog/post-9.jpg",
+      "gitBlob": "3dceddbc771a257093fb43e7621716ef94f90829",
+      "bytes": 43469,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-coupe-v1.png",
+      "gitBlob": "cfd4c5ff4bc847116f891d7b40e2f77dd152098a",
+      "bytes": 300486,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-hatchback-v1.png",
+      "gitBlob": "5228f2ff30f6ce6746cf829edf6f674569a34950",
+      "bytes": 301681,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-mpv-v1.png",
+      "gitBlob": "3ffb9d3bf5a3d8878d7738fec37c159720165d85",
+      "bytes": 328899,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-sedan-v1.png",
+      "gitBlob": "912634f0a02cbef00ad49457342659fff2fc638f",
+      "bytes": 308763,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-suv-v1.png",
+      "gitBlob": "6519eb6d4e2738b95cc69fcabe279a31c238f171",
+      "bytes": 328341,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-types-sheet-v1.png",
+      "gitBlob": "054e5ca30cafe9e0420c365738aee89031bc479a",
+      "bytes": 1673835,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/body-wagon-v1.png",
+      "gitBlob": "5d78dc6f4640223b988825e9566082675ffc69af",
+      "bytes": 334828,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/generated/body-coupe-studio-card-v1.webp",
+      "gitBlob": "25cda069c3c5d958521389eb63309bbae9151b5d",
+      "bytes": 30748,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/generated/body-mpv-studio-card-v1.webp",
+      "gitBlob": "1c99daa2061c31c1ec298be9b96bb4d6e0b1a423",
+      "bytes": 38548,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/generated/body-sedan-studio-card-v1.webp",
+      "gitBlob": "6b3c809d5654dab389edab56c9900ebe8d9f7428",
+      "bytes": 32502,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/generated/body-wagon-studio-card-v1.webp",
+      "gitBlob": "a80967fd8abc2857ca2c971e1c67ff3b75f18e6a",
+      "bytes": 35632,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-coupe-transparent-mobile.webp",
+      "gitBlob": "2c0ac27f34782714d0468500f624a90da7a8dcee",
+      "bytes": 9866,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-coupe-transparent.webp",
+      "gitBlob": "c5b59b3d8877d5ee79bd5bf1da359c0da4cbeb98",
+      "bytes": 23398,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+      "gitBlob": "b43925d8173852f3b9fc542b4e923d182e63c434",
+      "bytes": 10992,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-hatchback-transparent.webp",
+      "gitBlob": "d865df8205aa0d589ec0a2055e90d4d7cf462f26",
+      "bytes": 25644,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-mpv-transparent-mobile.webp",
+      "gitBlob": "8e688ba267070a3b6e41c5083799afe5470ebe1f",
+      "bytes": 10676,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-mpv-transparent.webp",
+      "gitBlob": "00b68959d82c7a1d16767bf98f4c523da46f2f50",
+      "bytes": 25560,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+      "gitBlob": "7d7a128235c7ee8c5edd45ebd3a472cd661f8f57",
+      "bytes": 10034,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-sedan-transparent.webp",
+      "gitBlob": "a88eaa2e459a4ced54369887b30fcb046ecb007e",
+      "bytes": 24360,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+      "gitBlob": "5d23f83d5be009f47a1ead7bce0dd9feab055b47",
+      "bytes": 11550,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-suv-transparent.webp",
+      "gitBlob": "01c360bc1b69a53ea5a2e3fa44cca24bc9773643",
+      "bytes": 27252,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+      "gitBlob": "8435e381e419057ad77da7233730ddb983b49733",
+      "bytes": 10726,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/body-type/normalized/body-wagon-transparent.webp",
+      "gitBlob": "499d3d15d0367118b2031aa68555e3ad8077333f",
+      "bytes": 26396,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/app-store-dark.png",
+      "gitBlob": "299f62b897e06b31a84f1f760be09179ce433681",
+      "bytes": 3911,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/app-store-primary.png",
+      "gitBlob": "0fed86f3859056718755aaa934495d8012e78ea0",
+      "bytes": 3996,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/app-store.png",
+      "gitBlob": "92f4afe28c866189b1c9389dc4e64073ad2a7e80",
+      "bytes": 3924,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/banner-brand.png",
+      "gitBlob": "14404958c9b2e93ad657ab6df3e3df890f376103",
+      "bytes": 546868,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-1.webp",
+      "gitBlob": "5087f4b08b4d993b32e9ec263b8276d18ceb770e",
+      "bytes": 8588,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-10.png",
+      "gitBlob": "70df17a01e0dd64d3e1c2af18b30dc218949f8d5",
+      "bytes": 7609,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-11.png",
+      "gitBlob": "e867ab71ebdcb33979203807e1a44e039452d8ed",
+      "bytes": 6633,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-12.png",
+      "gitBlob": "6c94d301cdcd7a7d45fcfa4ce6ca7a863b1ca9fa",
+      "bytes": 3573,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-13.png",
+      "gitBlob": "cf115e8b9f38e8ea8b86f213045871a54efb8ac8",
+      "bytes": 24736,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-14.png",
+      "gitBlob": "041a7fb12c365f587958c10e142ac45925de206d",
+      "bytes": 37174,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-15.png",
+      "gitBlob": "2bfa69c455e324df22b71da85504750843ade8c8",
+      "bytes": 14900,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-16.png",
+      "gitBlob": "5eca5a14414f17139c65775e73e46a4faf700f9e",
+      "bytes": 15231,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-17.png",
+      "gitBlob": "0832b70d8c250a136294c309a6d890d97a03e360",
+      "bytes": 8336,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-2.webp",
+      "gitBlob": "cbb3e8cb22225e9d039dae57f3c51ba4fd4d7219",
+      "bytes": 16814,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-3.png",
+      "gitBlob": "82cb886bd413436d10b184805ac128a805a5c02e",
+      "bytes": 8465,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-4.webp",
+      "gitBlob": "23995ac9a9cf0c18399f1d68824891b9cefacc7e",
+      "bytes": 14054,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-5.webp",
+      "gitBlob": "9c635107f8b02c581829bc983ca020e4654dbd46",
+      "bytes": 13528,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-6.png",
+      "gitBlob": "bd24b3bfee344b040822675790dd10379fddb570",
+      "bytes": 6114,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-7.png",
+      "gitBlob": "9bbaf846608ec5b0feb8c72eefce1773a52b2d71",
+      "bytes": 5591,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-8.png",
+      "gitBlob": "a1624ad3e0549d80bcc8f092438e61ec562602be",
+      "bytes": 3703,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/brand-9.png",
+      "gitBlob": "c6e9ac5975f809c478c0f0be27170b02181af8c6",
+      "bytes": 3907,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/google-play-dark.png",
+      "gitBlob": "ef9268eda2d70893d10b004b26089f00a7a07dc0",
+      "bytes": 6330,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/google-play-primary.png",
+      "gitBlob": "78aa4943990a27b4e8334a8db56b6067c9094627",
+      "bytes": 6327,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/google-play.png",
+      "gitBlob": "a2650f5eb1cc71e5d23fb5d2288c52222191b25f",
+      "bytes": 5855,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/audi.svg",
+      "gitBlob": "6e82f44d8730120b13095c2066dd3c002ab44520",
+      "bytes": 2128,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/bmw.svg",
+      "gitBlob": "7e19afd2b5db985e8e47c8d2f385eda271ab11eb",
+      "bytes": 1613,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/chevrolet.svg",
+      "gitBlob": "a084b51e621b05a7b0a75bb265dcf152555924b9",
+      "bytes": 511,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/chrysler.svg",
+      "gitBlob": "e143cca4390f516555d3ef47564ea9e50016471c",
+      "bytes": 6148,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/citroen.svg",
+      "gitBlob": "06a0c8033b7caab12f07feb534aabc28d43cb33f",
+      "bytes": 620,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/ford.svg",
+      "gitBlob": "56a4da2e8e50f9b8a61799bfbfeea46b00743fcc",
+      "bytes": 4177,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/honda.svg",
+      "gitBlob": "2dd905b24b6aa922771076d206fd0b376f61bee0",
+      "bytes": 1773,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/jaguar.svg",
+      "gitBlob": "e7c731be2185eedc5bbffbe8f595d1264eb5b767",
+      "bytes": 2540,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/land-rover.svg",
+      "gitBlob": "9a41551ef72bd49dd8838161ada2797e31f54f57",
+      "bytes": 4028,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/mazda.svg",
+      "gitBlob": "80ab6c7916c86b829a1a230bd4b8893c59c4b0d8",
+      "bytes": 1566,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/opel.svg",
+      "gitBlob": "d8172f387649b4f576c10187567aa277ce323d3b",
+      "bytes": 574,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/peugeot.svg",
+      "gitBlob": "350cca0d52d94da41d358105b3c140f84fc1bed6",
+      "bytes": 10518,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/porsche.svg",
+      "gitBlob": "3f8bca631f2a2c46b45ce345a242b9fe13e56f83",
+      "bytes": 24198,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/skoda.svg",
+      "gitBlob": "503cd2612440e046e0931f024d922451e2f68c63",
+      "bytes": 1145,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/volkswagen.svg",
+      "gitBlob": "f4adec2ffcbb13032d376621b2e1c95fa921afd1",
+      "bytes": 1103,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/mobile/volvo.svg",
+      "gitBlob": "feda71e903dbc88c25db5be2d30d35c8d07b5376",
+      "bytes": 1384,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/oem/citroen.svg",
+      "gitBlob": "352220166f5768bd8d46a0d0907304b394603a23",
+      "bytes": 4948,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/oem/land-rover.svg",
+      "gitBlob": "1e0213c00c20fb280bd8fa1360f35227857d4e5f",
+      "bytes": 7062,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/oem/opel.svg",
+      "gitBlob": "297eceab1dc26f032445d9655c28e5072970eb5b",
+      "bytes": 2561,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/brand/oem/porsche.webp",
+      "gitBlob": "31c7499275db813403cf7adbe6ed3db809c0b135",
+      "bytes": 27706,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/budget/open-budget-supercar-v1.png",
+      "gitBlob": "e8b26663a93c6569372342840efab249f5bb77e3",
+      "bytes": 382054,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/budget/open-budget-supercar-v2.webp",
+      "gitBlob": "5add8f7060c87416afbcd219973b9a6af37d5d09",
+      "bytes": 39666,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-1.jpg",
+      "gitBlob": "c508996f5dc5c2cdb53e35faa2fce9a52113f21a",
+      "bytes": 71582,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-10.jpg",
+      "gitBlob": "fe2d4f154cac3edba28a09459c895f1817c4a276",
+      "bytes": 51957,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-11.jpg",
+      "gitBlob": "163e84e5e6abd9b17f57e742e54be677ad41c6ee",
+      "bytes": 20809,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-11.png",
+      "gitBlob": "94abec5eeaa17397c3d973322ed034d51ffb9c6e",
+      "bytes": 21954,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-12.jpg",
+      "gitBlob": "0a337233427e459aaf3910be41d46286b165c31c",
+      "bytes": 18429,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-12.png",
+      "gitBlob": "834d99b05816ec0acbf6ecb9c2d3fe4c647f104a",
+      "bytes": 22030,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-13.jpg",
+      "gitBlob": "297465dd6d3db7d20fc84b55db378cd637912d6d",
+      "bytes": 28390,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-13.png",
+      "gitBlob": "1f3320cb98263a0ccdf10bea7f479b64318ccd25",
+      "bytes": 28342,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-14.jpg",
+      "gitBlob": "c81de9f6f0bc49e87f60c761029e64d4ee5a9ad2",
+      "bytes": 22282,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-14.png",
+      "gitBlob": "83fa6212a9847b013ba58a6487040683c764272e",
+      "bytes": 21101,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-15.png",
+      "gitBlob": "e4db821c95be51da320be24b162eab3482c1d6b2",
+      "bytes": 19251,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-16.png",
+      "gitBlob": "c779bb4205845a3b85848097117cfea679ea61e6",
+      "bytes": 71816,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-17.png",
+      "gitBlob": "866228d2cea33fdbfd8e24178ad2c64a0de308d1",
+      "bytes": 88835,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-18.png",
+      "gitBlob": "41feee18e96f8f518118a2a0a9acd5ec2c213638",
+      "bytes": 83770,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-19.png",
+      "gitBlob": "554d2a1b52c0ce4994c829a7df3488177c51e720",
+      "bytes": 70797,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-2.jpg",
+      "gitBlob": "b23dec5f711fe4c9d31fe5f0c6743ad7b114fe0f",
+      "bytes": 92755,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-20.png",
+      "gitBlob": "40c1d948e91328a81e79ddfc8ff8690f19bef21a",
+      "bytes": 58045,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-21.png",
+      "gitBlob": "7267e4de4a704eb28ca6a3c702dd025286951bef",
+      "bytes": 16680,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-22.png",
+      "gitBlob": "4ca89d109f28c74ea142d4cab772f77d6c30eb04",
+      "bytes": 17057,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-23.png",
+      "gitBlob": "e329975d541b85d8e53f66bba6afe5ff3c0adfc4",
+      "bytes": 16100,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-24.png",
+      "gitBlob": "987b74682e2a2e2079632d76cfd86d3e900ed6a6",
+      "bytes": 21792,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-25.webp",
+      "gitBlob": "3b180fefec64bb885f792d5dd21d7059ec48ee10",
+      "bytes": 105466,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-26.webp",
+      "gitBlob": "7e9f0aeee880d942b1933d227d435417ecbd4176",
+      "bytes": 50478,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-27.png",
+      "gitBlob": "76d04d6fcb7b5382c296554dfe6f552e18cc5e45",
+      "bytes": 36772,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-28.png",
+      "gitBlob": "1261be91a4465a2abbe2bcff10a8d7884614565e",
+      "bytes": 40001,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-29.png",
+      "gitBlob": "57f47728adf6dc59f62caf93f8ae3dbf71ea1506",
+      "bytes": 50711,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-3.jpg",
+      "gitBlob": "ff348cc468502e58b9ad5214f91bd68d7637aea5",
+      "bytes": 92548,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-30.png",
+      "gitBlob": "84873bf7bfe206c41d4849d35ede5cd4524b5a36",
+      "bytes": 35962,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-31.png",
+      "gitBlob": "3e3e8f096c652f0cb8637e75d697efe9906d298e",
+      "bytes": 44543,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-32.png",
+      "gitBlob": "b32b76b46be74d76162b6c06d99b64eb0d640455",
+      "bytes": 60228,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-33.png",
+      "gitBlob": "3765aa7cfb88c8333e5dae5a860ca187f282667a",
+      "bytes": 46095,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-34.png",
+      "gitBlob": "dbe326ccb57a6c9dfc2abf3f7e6613e2cba4b819",
+      "bytes": 39832,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-35.png",
+      "gitBlob": "d3703be7add46679e3de49e3eb6b276c48966ccc",
+      "bytes": 14798,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-36.png",
+      "gitBlob": "7a98fe21c9b54983be42f98e5d5b6374c0745d0c",
+      "bytes": 17743,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-37.jpg",
+      "gitBlob": "856f75d878f6408cecf1182796cb4b1ba443995e",
+      "bytes": 53396,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-38.jpg",
+      "gitBlob": "4b13066b1a574fde5d39da8c48beeb022ab8b3f2",
+      "bytes": 79197,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-39.jpg",
+      "gitBlob": "e35ff36a98612282177fb750e134123df6b3178e",
+      "bytes": 45803,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-4.jpg",
+      "gitBlob": "fbf5561a7b971dc263e085515b7874d3dd11731a",
+      "bytes": 72629,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-40.jpg",
+      "gitBlob": "a198290cbe4b5095750a870fba402cae87e23c6f",
+      "bytes": 40277,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-41.jpg",
+      "gitBlob": "953c7dcb47005e0091b24f5af711d1a41767b7d9",
+      "bytes": 21544,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-42.jpg",
+      "gitBlob": "06057e68c71bb522705bc9cb56341d2229d99daa",
+      "bytes": 75323,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-44.jpg",
+      "gitBlob": "eab068a111a9f52b7a1099a6b75a2655ff97bc67",
+      "bytes": 76307,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-45.jpg",
+      "gitBlob": "42028e836634deca5669c2054a5c6bf28fc5b1f4",
+      "bytes": 98081,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-46.jpg",
+      "gitBlob": "c29a67a9a744bf280a9478389cd1f1c30ee0cd0f",
+      "bytes": 98065,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-48.jpg",
+      "gitBlob": "1248c7b4849122c4d4e7c270ecadac54491a10de",
+      "bytes": 181956,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-5.jpg",
+      "gitBlob": "11ed1c9fa6949520de85083d18acee02d15ea17d",
+      "bytes": 69041,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-50.jpg",
+      "gitBlob": "8bdb00ad2efde2627aec9183c54caf3d277363ac",
+      "bytes": 67191,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-51.jpg",
+      "gitBlob": "2be47efb2fd1c09c0b34914d5fd94dc736235bb4",
+      "bytes": 125228,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-52.jpg",
+      "gitBlob": "986eaca1123285a3bf1fb27a92e32605141f1403",
+      "bytes": 54833,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-54.jpg",
+      "gitBlob": "8891d90114b60e02281cbf12705aa15a9845b875",
+      "bytes": 84832,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-55.jpg",
+      "gitBlob": "64c4ea125e22b3642cacafd69cd400be389cffd5",
+      "bytes": 84930,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-56.jpg",
+      "gitBlob": "2df14aec430201971e3bc2a8def95131d55a528a",
+      "bytes": 73018,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-57.jpg",
+      "gitBlob": "d11a58afb3402ab728bdff5e61d8a39d42e8bfe9",
+      "bytes": 58255,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-58.jpg",
+      "gitBlob": "f82a3b3bb85b7e6a17ec7d3b78d14dcf14693465",
+      "bytes": 83910,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-59.jpg",
+      "gitBlob": "899dc90b9542efbcc829c90772f2bf021e46e4b4",
+      "bytes": 32695,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-6.jpg",
+      "gitBlob": "61807a68ce898ee0207637171405597a749a423d",
+      "bytes": 80588,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-60.jpg",
+      "gitBlob": "b0a4e90f3079016acd7f1a515c2c1313985a8eaf",
+      "bytes": 30109,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-61.jpg",
+      "gitBlob": "7e0ecf3209b48ff95950c87131f3c7751ff9fa98",
+      "bytes": 187907,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-62.jpg",
+      "gitBlob": "9ac92095e94c5cccf53cb2729f7479a2dd6c9892",
+      "bytes": 64302,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-7.jpg",
+      "gitBlob": "d5b3f49ef49d34ed6232a312b357e58d55b4ea16",
+      "bytes": 98706,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-8.jpg",
+      "gitBlob": "8cc53eaecbec7c9bbd393082ada3122dad3de958",
+      "bytes": 81534,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/card-9.jpg",
+      "gitBlob": "58b8f4a6e716a2947065cfda77b15d0d326ce592",
+      "bytes": 60246,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/card/why-choose-us.webp",
+      "gitBlob": "1ddcddc71fd36c51ceb8c0c2a5fd5313c9328d0d",
+      "bytes": 101256,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/chat/daynight-helper-helmet-v1.png",
+      "gitBlob": "d3eee8be0b898a150ecc81ee85e0908755cc9b5a",
+      "bytes": 203608,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/AddListing.svg",
+      "gitBlob": "e2d0ffbec52b6a1bab7f3bfc75e4b9a07b537a44",
+      "bytes": 692,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/ChangePassword.svg",
+      "gitBlob": "c7a31ad491a0c5720f8f98c8e0a571c87e6510c3",
+      "bytes": 458,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/Dashboard.svg",
+      "gitBlob": "8a173d4e9b1d4d081cd37e3243cf08717d7364ad",
+      "bytes": 416,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/Logout.svg",
+      "gitBlob": "af837674ce79fc45a9050cdb75c8523bb475cbf2",
+      "bytes": 411,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/Messages.svg",
+      "gitBlob": "cca3c2218658f482829603d7508c0df2dfabe171",
+      "bytes": 487,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/MyFavorites.svg",
+      "gitBlob": "718016d0ac7bfa359c4760e16e411eac462c8b5b",
+      "bytes": 550,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/MyListing.svg",
+      "gitBlob": "e0fe0452136b654137943089d687e9eb2555543a",
+      "bytes": 584,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/MyProfile.svg",
+      "gitBlob": "bbb24235ecb8f9b13651d9766b0c2481a7215f67",
+      "bytes": 389,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/MyReviews.svg",
+      "gitBlob": "c3889ffb0dadbba40953c8fade7de5c3472c87cc",
+      "bytes": 899,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/car.svg",
+      "gitBlob": "8b4ef903ff8d6ceab0d6983e1e031bac362a9444",
+      "bytes": 683,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/card-1.jpg",
+      "gitBlob": "08a0085e1f69badd20dba41356f2b73fe477d99b",
+      "bytes": 23340,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/card-2.png",
+      "gitBlob": "fae0fc2b7c3e5187ec54635b3f1c3d66ac09170d",
+      "bytes": 28023,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/card-3.png",
+      "gitBlob": "190f22abede17b11b2cc3f30d3ca391af604d149",
+      "bytes": 25789,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/card-4.jpg",
+      "gitBlob": "7c6ed8bcbc68da6b5437a1eef4b64329e439444d",
+      "bytes": 24868,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/card-5.jpg",
+      "gitBlob": "02dfd6ac061b190f5400fe86b292205266de6d66",
+      "bytes": 22011,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/chats.svg",
+      "gitBlob": "1b585056db3ac068230c854372a20d1b01faefe5",
+      "bytes": 519,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/clockCountdown.svg",
+      "gitBlob": "946c5575e32d474829570533a4f8e1b5e16a389a",
+      "bytes": 539,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/dashbroard_avatar.png",
+      "gitBlob": "91b2ea7e06be062def67cfc3a32dbf6d402550d6",
+      "bytes": 7134,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/dashboard/star.svg",
+      "gitBlob": "0e08abb4f80ae25fe39ec826cad1192e14d79a6c",
+      "bytes": 907,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-estate-combi-1x-800x600.jpg",
+      "gitBlob": "ce44867228ccb120bdf76e7563a47303c62a6931",
+      "bytes": 36439,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-estate-combi-2x-1600x1200.jpg",
+      "gitBlob": "f3161971f1befb0b95797677057bfd385c2f9c37",
+      "bytes": 109466,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-executive-sedan-1x-800x600.jpg",
+      "gitBlob": "6dc8e108e626d28d3c980ffa0e26705d1b346cf4",
+      "bytes": 36382,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-executive-sedan-2x-1600x1200.jpg",
+      "gitBlob": "9e64717c34af1460dcf700c31586bf871327d77b",
+      "bytes": 108247,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-family-suv-1x-800x600.jpg",
+      "gitBlob": "e2005d87d675d35fabfec9ef0ec8b12231c14b93",
+      "bytes": 38212,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-family-suv-2x-1600x1200.jpg",
+      "gitBlob": "e5173e11b7001475c9938ebc995d6248859c7c24",
+      "bytes": 112114,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-hatchback-1x-800x600.jpg",
+      "gitBlob": "84996c157d14e38e3c563f80572b1b6d5f52f006",
+      "bytes": 34043,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/category-hatchback-2x-1600x1200.jpg",
+      "gitBlob": "5d70c8bd6d1bc578925e48b32a2f83bffbf8f8d5",
+      "bytes": 101929,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/desktop-home-hero-1x-2400x1100.jpg",
+      "gitBlob": "614b978507e1e6a717dd9f081bb09922f060d470",
+      "bytes": 216427,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/desktop-home-hero-2x-4800x2200.jpg",
+      "gitBlob": "864df256938436bacfbf073ad3bdc6efe56e4c6e",
+      "bytes": 575088,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/sell-trade-in-banner-1x-1600x900.jpg",
+      "gitBlob": "0881bed86489833c102dc6710373817974ab0dca",
+      "bytes": 88211,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/sell-trade-in-banner-2x-3200x1800.jpg",
+      "gitBlob": "5397a75d1736d6aba3b4648397b365f1551e8471",
+      "bytes": 245569,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/services-financing-strip-1x-2000x600.jpg",
+      "gitBlob": "810a5c8c0ce2dd7617c411e7287528d6f148d58e",
+      "bytes": 62982,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/services-financing-strip-2x-4000x1200.jpg",
+      "gitBlob": "7e0b3a1ad112f1baed195dd12afd22d27da96963",
+      "bytes": 176897,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/social-og-background-1x-1200x630.jpg",
+      "gitBlob": "957afdb009744dc6602aeffd14da55f7849a5b34",
+      "bytes": 79643,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/jpg/social-og-background-2x-2400x1260.jpg",
+      "gitBlob": "92f589fdbef4efc361118342304f63c501885f42",
+      "bytes": 240238,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/brands-in-stock-imagegen-v3.webp",
+      "gitBlob": "92f715d81ea5f1730dde10e3e9bf2dfa6a12eab3",
+      "bytes": 21964,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-estate-combi-1x-800x600.webp",
+      "gitBlob": "efb55d531b1cef530729bee6f583d146053dada7",
+      "bytes": 22534,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-estate-combi-2x-1600x1200.webp",
+      "gitBlob": "47d4deb7f089b95aa86f17a8c34cdb88451bdd15",
+      "bytes": 63266,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-executive-sedan-1x-800x600.webp",
+      "gitBlob": "7da3de020c7d36c011ed7736c4b75586005a4521",
+      "bytes": 20794,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-executive-sedan-2x-1600x1200.webp",
+      "gitBlob": "26c6a65154f32eb3c3ac4afb4d4c1e4c9678241e",
+      "bytes": 57020,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-family-suv-1x-800x600.webp",
+      "gitBlob": "0fc4c45770b83e8942a9b950976af9e0e0ad5856",
+      "bytes": 21728,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-family-suv-2x-1600x1200.webp",
+      "gitBlob": "6f5c2fe5ec91bd58bf3edcd0db1fabeb3b6c48b9",
+      "bytes": 57792,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-hatchback-1x-800x600.webp",
+      "gitBlob": "fb557345a112340eb278a661601e7e62c1e274db",
+      "bytes": 19496,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/category-hatchback-2x-1600x1200.webp",
+      "gitBlob": "f18eac31a4fe0c2ae1bae6bd9f7868575f31f57c",
+      "bytes": 53384,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/desktop-home-hero-1x-2400x1100.webp",
+      "gitBlob": "c8a7cd4f2e6fd8ded0a3798aebbd7988c44155d3",
+      "bytes": 119548,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/desktop-home-hero-2x-4800x2200.webp",
+      "gitBlob": "d73edeec139fefa4105ee74c9a03e97821bccfd3",
+      "bytes": 274672,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/inventory-latest-front-v1.png",
+      "gitBlob": "b528304d7271a47580a6e3e1dce5c646efec3f13",
+      "bytes": 1443769,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/inventory-latest-imagegen-v4.webp",
+      "gitBlob": "03a54b36d8f495b0b99b222a0813e0e3daf14e6a",
+      "bytes": 84836,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/sell-trade-in-banner-1x-1600x900.webp",
+      "gitBlob": "ba3b36d9f886edf7710df668990ccb6a320de0d7",
+      "bytes": 46628,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/sell-trade-in-banner-2x-3200x1800.webp",
+      "gitBlob": "e591468190e242fec79b0e6318070e5532b35222",
+      "bytes": 112678,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/services-financing-strip-1x-2000x600.webp",
+      "gitBlob": "c2203c8eee56e5490d60c90f8f8f03024e586d88",
+      "bytes": 34862,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/services-financing-strip-2x-4000x1200.webp",
+      "gitBlob": "01a385ab4e75d8fc2c1018f4ce648184eca5950d",
+      "bytes": 83072,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/social-og-background-1x-1200x630.webp",
+      "gitBlob": "807e0673544a3a470b20470f9977ec40591e9dd7",
+      "bytes": 47628,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/social-og-background-2x-2400x1260.webp",
+      "gitBlob": "cf73e1bd14403d4c0b0ba78907ed2e6431f317f7",
+      "bytes": 122604,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/daynight-premium-banners/webp/vehicle-types-imagegen-v3.webp",
+      "gitBlob": "e8f68762ab5e93aed087ed805835c0177b0d8646",
+      "bytes": 47632,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/favicon.png",
+      "gitBlob": "1e830b7766fca89fbb17970aad6cd25a9cfb34f2",
+      "bytes": 1186,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-collection-v2.webp",
+      "gitBlob": "ba98454e409baef5083ced4cd8854b3712116a30",
+      "bytes": 69364,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-collection-v3.webp",
+      "gitBlob": "86141578dc473c3e9625e7329a285cab46bb747c",
+      "bytes": 95306,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-financing-v2.webp",
+      "gitBlob": "b4539e222eec7a833139d41c059a71350fe0c740",
+      "bytes": 70066,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-financing-v3.webp",
+      "gitBlob": "3d14c8e62c5517f5903a6b844d002c4a4339f2fb",
+      "bytes": 53318,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-financing-v4.webp",
+      "gitBlob": "6c5278e58ff422393f17a5be9c9ab460a2a96fc8",
+      "bytes": 92838,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-viewing-v2.webp",
+      "gitBlob": "9063fd22c640625d8afb0f34f69a50db005895d7",
+      "bytes": 53812,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-viewing-v3.webp",
+      "gitBlob": "651402344c2b0fb3d6ab7df56a56e9aef7c9e4e4",
+      "bytes": 44964,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/campaign-viewing-v4.webp",
+      "gitBlob": "67e0ef3a361553d7cd15ccc29ce84ebc8370f359",
+      "bytes": 105714,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/finance-documents-cutout-v5.webp",
+      "gitBlob": "2e96901a2428e3462b8ac00c740e1c99154d9a80",
+      "bytes": 66814,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/gclass-urus-pair-v4.webp",
+      "gitBlob": "38681d43a7a862161158c3b3bf518ac4ea83c1ca",
+      "bytes": 214256,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/inventory-studio-v1.webp",
+      "gitBlob": "ddcb28c8db74d7fe8c55ec946b726a06de615d67",
+      "bytes": 42780,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/kristian-financing-campaign-v1.webp",
+      "gitBlob": "411c4b321b5c410c05cf637a3100ff5bb9221ec6",
+      "bytes": 26424,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/kristian-original-instagram-DNyKbke2D83.jpg",
+      "gitBlob": "7efe4575935f7413f6b1debf0255b2e9c9cc5931",
+      "bytes": 62625,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/kristian-phone-cutout-v5.webp",
+      "gitBlob": "e22dc34b1c5b89181042ef682b917afcaf1bd702",
+      "bytes": 70692,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.png",
+      "gitBlob": "0f5588757e584d3ef142fd39729f11366a99e35a",
+      "bytes": 537217,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.webp",
+      "gitBlob": "fe22cafd43f5575c6d56f8faabf9747d740dfebb",
+      "bytes": 47558,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/leasing-calculator-cutout-v7.webp",
+      "gitBlob": "429c0bf9da5afc07991865bff537eaf1e9c9d6c4",
+      "bytes": 182734,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/phone-portrait-generated-v7.png",
+      "gitBlob": "23dc81ef25d72ad2db79e32d49e688078dcdb5ff",
+      "bytes": 1799416,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/phone-portrait-generated-v7.webp",
+      "gitBlob": "31d7c7e40f94fbf2b77e2bca2965f0723b03c73c",
+      "bytes": 152610,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/sell-studio-v1.webp",
+      "gitBlob": "e84e731b1317842d1f4c3b4340bb54bd28733cc3",
+      "bytes": 42512,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home-promos/urus-rear-v4.webp",
+      "gitBlob": "a207d3e35c5fc42039c988f7636b6b01c110d1b0",
+      "bytes": 185458,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/banner-calulator.png",
+      "gitBlob": "3c516d75a0d591a6a2a9520455fbd6ae108eefd1",
+      "bytes": 179556,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/banner-download-app.jpg",
+      "gitBlob": "ac4a9cf1f1632b73b65b3cc1801c022972a24487",
+      "bytes": 89611,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-1.jpg",
+      "gitBlob": "71332c243f141e00c32737c4a7382b9961974b5f",
+      "bytes": 81739,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-10.jpg",
+      "gitBlob": "858ded3608e5f551fde6765c9c700c5bb762ef45",
+      "bytes": 65738,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-2.jpg",
+      "gitBlob": "ee46dd5aa19923ff4dfd0a485555310f9eb79786",
+      "bytes": 76711,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-3.jpg",
+      "gitBlob": "9b05b7d012755639bfcb73e7a313fbb47a29ac4e",
+      "bytes": 68404,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-4.jpg",
+      "gitBlob": "93551b42c6aa80d71bfae92c5b9000f0fbe0ecb0",
+      "bytes": 69248,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-5.jpg",
+      "gitBlob": "bd1feffd6d2d69e91c69e8f0db43c09e3d84758c",
+      "bytes": 69423,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-6.jpg",
+      "gitBlob": "b265cf0c94ff3b3202af1d8e4359ff2f630e8f55",
+      "bytes": 83439,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-7.jpg",
+      "gitBlob": "e328caae90c4222c4ebbea4e165fdc9463e4810e",
+      "bytes": 81670,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-8.jpg",
+      "gitBlob": "06d78ad3c65c8043f5acb9956968bd13dfb07e28",
+      "bytes": 80683,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home/home-9.jpg",
+      "gitBlob": "c1fc9c05d273db18fac310ed462c55837d9f9770",
+      "bytes": 82985,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home2/daynight-buybox-blue-bg-v1.png",
+      "gitBlob": "4a1609137302dff57961b2e73f9c2f45b71bb2c1",
+      "bytes": 1484821,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp",
+      "gitBlob": "ea826370fdd47124bb47e25372f7df52c4530241",
+      "bytes": 69542,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home2/daynight-hero-showroom-v2.webp",
+      "gitBlob": "1b47f6b5d4eb06bb29e55547665cfba3a25fdbd6",
+      "bytes": 45888,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/home2/daynight-sell-banner-v2.webp",
+      "gitBlob": "960a7b2489c60cadd72f6d8deb1be1babb99b878",
+      "bytes": 49792,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/import/import-delivery-handoff-banner-v1.webp",
+      "gitBlob": "311c2b0b6a9d79bd4b43095aa05b5db3c5e21795",
+      "bytes": 33184,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/import/import-handoff-graphite-campaign-v2.webp",
+      "gitBlob": "f74dbbfd115120f83b43a39009184aa2a9a94439",
+      "bytes": 32300,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/import/import-listing-review-banner-v1.webp",
+      "gitBlob": "2adf499d91133e565f7a172882620eed02096d99",
+      "bytes": 29146,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/import/import-review-red-campaign-v2.webp",
+      "gitBlob": "ff9100dc2bc19d683c81107ce81adc23a4ab7ae7",
+      "bytes": 43536,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-1.jpg",
+      "gitBlob": "13d7d2166982c0bb22ada143dffbc3f2fef633b7",
+      "bytes": 124353,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-10.jpg",
+      "gitBlob": "d3c683d844728d999323811243e5cd488cf014e9",
+      "bytes": 16501,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-11.jpg",
+      "gitBlob": "3939f24546beae07822fc681e556b704fd36604c",
+      "bytes": 39550,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-12.jpg",
+      "gitBlob": "2b09be34678619ba338ec6bc46fc3e6c710206ec",
+      "bytes": 56011,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-13.jpg",
+      "gitBlob": "cef8c748a5ef1c097b6bb7f2fd7cce87043271cd",
+      "bytes": 100038,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-14.jpg",
+      "gitBlob": "8e3b58975e886b968b2ddd617ffad04f5d9cd57a",
+      "bytes": 81967,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-15.jpg",
+      "gitBlob": "8155b2c64a91db6512dacac1dcd1135f88afdc83",
+      "bytes": 73579,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-16.jpg",
+      "gitBlob": "d65819d72e1f6d45c328f8e9f832b8670878ea94",
+      "bytes": 95774,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-17.jpg",
+      "gitBlob": "44d42f63afb609a7a20fd22c6c51b316a77918ef",
+      "bytes": 76978,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-18.jpg",
+      "gitBlob": "06679b7303df5a37ece0c404ca269fbdf5cc522c",
+      "bytes": 146618,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-19.jpg",
+      "gitBlob": "c839706e1d1788db48fe9097eec7d390c7ed7a42",
+      "bytes": 146187,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-2.jpg",
+      "gitBlob": "685ca9777d2346ec6d936f270b2ee9b37aa15143",
+      "bytes": 120759,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-20.jpg",
+      "gitBlob": "77ac585c5b39eda8d982cb82c8c3479ea4a33a2d",
+      "bytes": 148965,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-21.jpg",
+      "gitBlob": "4698dfcb8f272730ca86ca5cbbb77fb4351f0570",
+      "bytes": 356163,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-22.jpg",
+      "gitBlob": "eda18c8b84b7d100d328d1b9c44f0d0cb016d869",
+      "bytes": 28786,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-23.jpg",
+      "gitBlob": "f19a9b0ddc5e14236c2e95ca9c63441311f470eb",
+      "bytes": 27230,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-24.jpg",
+      "gitBlob": "5a079f22c123c69ee4303a07ecef373e04962025",
+      "bytes": 28895,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-25.jpg",
+      "gitBlob": "ff9e9aa69b04ef20aa2b87065795d2a6829619c5",
+      "bytes": 31016,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-26.jpg",
+      "gitBlob": "06eebdcfd49a391d5c67d939dc270e9b0b5c1904",
+      "bytes": 31882,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-3.jpg",
+      "gitBlob": "48fb279fbae50b4c912fd5c5f2910f0578df71f9",
+      "bytes": 138057,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-4.jpg",
+      "gitBlob": "05951e3df18bec555d83ef3ebaaaa3789e583569",
+      "bytes": 223798,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-5.jpg",
+      "gitBlob": "9b50b4617d88d70b987a267566adffaee13fa818",
+      "bytes": 136005,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-6.jpg",
+      "gitBlob": "69161921de36872b1f3f633e66753e49b6b9b4ca",
+      "bytes": 35820,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-7.jpg",
+      "gitBlob": "8f829df73e4b63da7541d1508334456d2b2e1a6d",
+      "bytes": 31331,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-8.jpg",
+      "gitBlob": "119f81ff129932fc84678c1baea6e71510f5630e",
+      "bytes": 34434,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/inner-page/slide-listing-details-9.jpg",
+      "gitBlob": "cfbb612bd36b35f80970c2848a66e39d773b27ca",
+      "bytes": 27945,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/logo-white.png",
+      "gitBlob": "dced61cacbb9db20ea5dca72b01e1ab93a0dc37c",
+      "bytes": 5405,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/logo.png",
+      "gitBlob": "5baa090297a1afd831c7ca14656bba70aa36fc05",
+      "bytes": 5852,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/audi-q8-side-normalized.webp",
+      "gitBlob": "2b8c1d970944c89e97feab12ddb12ce8e2329280",
+      "bytes": 18802,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/bmw-520i.webp",
+      "gitBlob": "0b6553671fd0dbf0c3cd3022e00fd6b34ac7f70a",
+      "bytes": 17714,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/bmw-i7.webp",
+      "gitBlob": "7f32784d16f80fd2607db6705a5e2c0c8947e29d",
+      "bytes": 16522,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/bmw-x6-side-normalized.webp",
+      "gitBlob": "69a451040318339dccf2459a31710f7be9959828",
+      "bytes": 20834,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/chrysler-300c.webp",
+      "gitBlob": "3a50462c5bb979d614444ea82d01afcb7a87c5ac",
+      "bytes": 18100,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/mercedes-e220d-side-normalized.webp",
+      "gitBlob": "6f58b91968122fc9c1f979240c59d5bd2c3c4bbe",
+      "bytes": 21060,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/mercedes-e220d.webp",
+      "gitBlob": "c0f0210ced3b471f685ad6d55c7ec2f3d2a4e73a",
+      "bytes": 15822,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/megamenu/vw-touran-side-normalized.webp",
+      "gitBlob": "548cc99be25c3d467fd41c3aa642895c42690aa3",
+      "bytes": 17382,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-1.jpg",
+      "gitBlob": "65cc2c0040ea8a46526f81320e2780a5050ef61f",
+      "bytes": 154665,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-10.jpg",
+      "gitBlob": "f5556a6db62f0a35bc36726e4e560f7fdf1e3a64",
+      "bytes": 90487,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-2.jpg",
+      "gitBlob": "f8aba44e3e7893e9aebad6682da9fe965fa773f5",
+      "bytes": 127061,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-3.jpg",
+      "gitBlob": "06269a479e71017925215f7a8a1937e09323b2e4",
+      "bytes": 161301,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-4.jpg",
+      "gitBlob": "06a12506d91ee1b346c25900cb9b16091194ac17",
+      "bytes": 179136,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-5.jpg",
+      "gitBlob": "b26bb75d5c461b13c67a41c50674c084bd401618",
+      "bytes": 248225,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-6.jpg",
+      "gitBlob": "043188fadf689a8d48d10f5577e02414cd715ed9",
+      "bytes": 115275,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/banner-9.jpg",
+      "gitBlob": "931ce2f313900b303e0fd02320b73b2ac8c04a09",
+      "bytes": 238429,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/page-title-7.png",
+      "gitBlob": "fbc2d1fd0b88b492509731c8af4a205bd426b2fb",
+      "bytes": 179219,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/page-title/page-title-8.png",
+      "gitBlob": "edf648ff6e623772437842537119bc2c22c5b8e5",
+      "bytes": 270320,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/404.jpg",
+      "gitBlob": "678d57089a1c095e0e13a8fb46f5f1e59715deb1",
+      "bytes": 53041,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/about-1.jpg",
+      "gitBlob": "a5597f3083eb4067d02d05171179f878f7035506",
+      "bytes": 47036,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/about-2.jpg",
+      "gitBlob": "072d3468032980c73af2594cbbf0b8b1170476ab",
+      "bytes": 15080,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-1.png",
+      "gitBlob": "b8e254444c1d93d8dabdab11a849b46c77c7e72c",
+      "bytes": 6502,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-2.png",
+      "gitBlob": "c13ed1e4986adb8e3fb41208a471d42233a8eb7a",
+      "bytes": 7977,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-3.png",
+      "gitBlob": "dd8db4d539d3cccc2a0210f0ee9e957efc0b69c7",
+      "bytes": 7578,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-4.png",
+      "gitBlob": "62c0ee8560def8cf628db29474aa67fea22933dd",
+      "bytes": 7373,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-5.png",
+      "gitBlob": "eeaf8e9854d2b684d03e7b6373e1997563e2ae87",
+      "bytes": 6347,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-6.png",
+      "gitBlob": "0081b3a94dde9780f634fba6a853e035965ad95d",
+      "bytes": 10872,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-7.png",
+      "gitBlob": "bf90a8f5611a6902b1b50b7b5efd2878c564ef70",
+      "bytes": 5535,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/car-8.png",
+      "gitBlob": "a420225efbbd47df704f09bc8d435723389e6903",
+      "bytes": 5565,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-about-consultation-v1.webp",
+      "gitBlob": "2c4c1ecddc35d931b0e2ae7b3d64cb9e5bccc3f9",
+      "bytes": 76446,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-about-lot-v1.webp",
+      "gitBlob": "a8adc4f280a6ab49eed53d2064745e078e6fa411",
+      "bytes": 99854,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-about-showroom-suv-v1.webp",
+      "gitBlob": "51b9040a65507d1f21a47b9fc3d6cf6f5fc7ca33",
+      "bytes": 65902,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-services-consultation-v1.webp",
+      "gitBlob": "b87898cf6e5f9a3dc920feb480ba755d6d5a5f5a",
+      "bytes": 47906,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-services-inspection-v1.webp",
+      "gitBlob": "14ff40e6bca0776093f42b5b16c2931f019f2b87",
+      "bytes": 95830,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-customer-v1-thumb.webp",
+      "gitBlob": "95b98d10f888bf46c0ff893b71538e27c82e8a14",
+      "bytes": 6716,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-customer-v1.webp",
+      "gitBlob": "9e1b5a60d5140297b5f9d5f073f036c2dc70b6dd",
+      "bytes": 90784,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-documents-v1-thumb.webp",
+      "gitBlob": "257f80476d009cce3dbb686186e6647b591af1e3",
+      "bytes": 6748,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-documents-v1.webp",
+      "gitBlob": "20b54eed8b93f9a9ee7974c2a23b9d081c96a42d",
+      "bytes": 80058,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-evaluation-v1-thumb.webp",
+      "gitBlob": "567f5164b1b273584394907b857608f21cc2597b",
+      "bytes": 5768,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-evaluation-v1.webp",
+      "gitBlob": "493003a806d2abff7a6f852c4f6f25afb777ebc6",
+      "bytes": 89646,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-sales-v1-thumb.webp",
+      "gitBlob": "97be09ea19b9d2fa647447be55d66f0d1ce974b0",
+      "bytes": 6954,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/daynight-team-sales-v1.webp",
+      "gitBlob": "b96198ec172b736dc1b565fcc44e75e2c28ae5b8",
+      "bytes": 91288,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/newletter.jpg",
+      "gitBlob": "62bb7b0f4f33bb6208f9bd90c0347f3cffaa24b3",
+      "bytes": 76698,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-1.jpg",
+      "gitBlob": "6555b98bf0446e9c6d9afcf9d0f96be10e6a58a1",
+      "bytes": 23561,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-2.jpg",
+      "gitBlob": "c3f01d79e751c3d20bdd1171c0f0756e7fa2480e",
+      "bytes": 20909,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-3.jpg",
+      "gitBlob": "7a8019356d3aab63e02049acfd95eb1e73d31f3f",
+      "bytes": 23927,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-4.jpg",
+      "gitBlob": "c26a1c5cb45c547affbea9953205f67d22d4d956",
+      "bytes": 24015,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-5.jpg",
+      "gitBlob": "2da77345d91d748e7c9f42d5a45ca58b902d6814",
+      "bytes": 23932,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-6.jpg",
+      "gitBlob": "f24814237a9ae95a7c444b0a369160ed9818f8a1",
+      "bytes": 27043,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-7.jpg",
+      "gitBlob": "820bc5b1141537914cd5a15dc1102fccf8f840d9",
+      "bytes": 27636,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-8.jpg",
+      "gitBlob": "677dff42c4d8d6f725fa6e85cbd8bf2786d48f04",
+      "bytes": 18170,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/sale-agent-9.jpg",
+      "gitBlob": "e5f50551c5bbc27d9d44f1fd2fa84d4dcd3cc394",
+      "bytes": 65185,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/services-center.png",
+      "gitBlob": "9d504bb9ee746a2493a2f6d81bb2b08394bc5933",
+      "bytes": 261565,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/pages/volvo.png",
+      "gitBlob": "ece8e3b7922e8e76b6d912184ac5356a70727abd",
+      "bytes": 7521,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/placeholder/transparent-1x1.svg",
+      "gitBlob": "647bc16d4265bb3a7d3a9871548943dda2dc10c6",
+      "bytes": 63,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/kristian-trust-disclosure-list-v1.webp",
+      "gitBlob": "bad0c6173878f0587ad7bd725e7f4c2e30c78fb5",
+      "bytes": 21246,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-card-details-v1.webp",
+      "gitBlob": "3483ebe2f2d0d2987fd66f3291526008b0b185f4",
+      "bytes": 27098,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-card-final-v1.webp",
+      "gitBlob": "6cccbacb3c1999aff3cfd7efbe9435e130f41db9",
+      "bytes": 39516,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-card-offer-v1.webp",
+      "gitBlob": "55a8b057c4e78799621b1cb40d7a75033b002613",
+      "bytes": 28352,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-card-photos-v1.webp",
+      "gitBlob": "cc7cccbade6334d44255a3c6481158d0706d7d9e",
+      "bytes": 31474,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-describe-v1.png",
+      "gitBlob": "5b6beea2299b20ae6a5b4869b68dfe294164b5b7",
+      "bytes": 1807381,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-disclosure-list-v1.webp",
+      "gitBlob": "8b2ead4588743b9cc3cd204a57e0a01e2c0a199a",
+      "bytes": 14798,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-offer-v1.png",
+      "gitBlob": "b31d0289408ca412cbe9ef0b68da46db865d2025",
+      "bytes": 1714927,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/process-photos-v1.png",
+      "gitBlob": "9efd6ba1c7ffab36c0e9e13170e98a4e8842a293",
+      "bytes": 1690895,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/trade-in-promo-v1.webp",
+      "gitBlob": "f2c1110bb9c0c5e132a352baaf8c1cba3f0b7f95",
+      "bytes": 30670,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/sell/valuation-trust-v2.webp",
+      "gitBlob": "d28aef58b2ad1ea380f2cc0347c081f59149bc3a",
+      "bytes": 35266,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-delivery-daynight-v2.webp",
+      "gitBlob": "06aee0f21246b280aedd3b9ea45d470ddc721449",
+      "bytes": 122672,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-delivery-imagegen-v1.webp",
+      "gitBlob": "d8c7e2673d2b9c644c7ff5b1195cc8a97c67b7fb",
+      "bytes": 49892,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-documents-daynight-v2.webp",
+      "gitBlob": "fdd63ebc88fdb58da9e3f85d2f1fd00532a522f1",
+      "bytes": 82778,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-documents-imagegen-v1.webp",
+      "gitBlob": "de62eecd62a566886d981eb99d268777268ff972",
+      "bytes": 62786,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-financing-daynight-v2.webp",
+      "gitBlob": "090bbd907a04f7a4a7ceecd1a03b99d7fb5ae8ff",
+      "bytes": 76636,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-financing-imagegen-v1.webp",
+      "gitBlob": "1cff1008e41b92b279cf934ec6682930eba73c69",
+      "bytes": 49368,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-inspection-daynight-v2.webp",
+      "gitBlob": "eb9f6827ac3c54454ef5a816da9470073d802c0f",
+      "bytes": 91180,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-inspection-imagegen-v1.webp",
+      "gitBlob": "81671aa71ecf558ee571258e0003def35c4511f1",
+      "bytes": 72864,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-sourcing-daynight-v2.webp",
+      "gitBlob": "28e4e25f244d0944131bcafaf541939fb902b1e6",
+      "bytes": 70236,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-sourcing-imagegen-v1.webp",
+      "gitBlob": "465d0e3b2ca5d72642cf3783523162424a67fee2",
+      "bytes": 75390,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-trade-in-daynight-v2.webp",
+      "gitBlob": "06c0d24bddf56383d77b634458f804174e3eed29",
+      "bytes": 69666,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/service-card-trade-in-imagegen-v1.webp",
+      "gitBlob": "21a8cfc5e958edca7b7fad23eaeb1258323086c9",
+      "bytes": 61966,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/services/support-hero-v1.webp",
+      "gitBlob": "e9d1ae96d5da8b3a8b8d041ac9f7542b004ef2ba",
+      "bytes": 40790,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/checkout-1.png",
+      "gitBlob": "4ff1863a75cbb2fe6169df395fd5a723c47c3961",
+      "bytes": 2008,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/checkout-2.png",
+      "gitBlob": "7644e6bea7d0ddf42e00c10d2bf1cfc2d1d2846f",
+      "bytes": 1891,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/checkout-3.png",
+      "gitBlob": "8ed099d20e9d8ac70f2e94cc3fe8456216a7d954",
+      "bytes": 1879,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/checkout-4.png",
+      "gitBlob": "0aee6c6319af2838d76276d77c12f5bb9b34b64f",
+      "bytes": 1416,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/checkout-5.png",
+      "gitBlob": "729f3ce0b8326694cda4f4df8d3d9ccf61e6239e",
+      "bytes": 1630,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/checkout-6.png",
+      "gitBlob": "3721f19dda359d7b16e49a78ce3091bd9e3eef6a",
+      "bytes": 2607,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-1.jpg",
+      "gitBlob": "9e49e5a3f271054b4a409fa5ac355971246c4864",
+      "bytes": 20468,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-10.jpg",
+      "gitBlob": "e1080dfd3ce918c63130a9b9501a0a9044aa591d",
+      "bytes": 54779,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-11.jpg",
+      "gitBlob": "9d2de8ab8d25446225813e15ad5a565b3f45f4fe",
+      "bytes": 52298,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-12.jpg",
+      "gitBlob": "6454fa54b2e8611d366a5e15101d9ab8f247f273",
+      "bytes": 48820,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-13.jpg",
+      "gitBlob": "e8aa38a9284e692c03118d87a7710ef7a53ff199",
+      "bytes": 40542,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-2.jpg",
+      "gitBlob": "14a744e31dfb42fdf5cac87d9dc6499a72988922",
+      "bytes": 12877,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-3.jpg",
+      "gitBlob": "9841672bc0d132af64951d465cc5003745f45fd7",
+      "bytes": 10651,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-4.jpg",
+      "gitBlob": "2af4875d96e7f4f1d560d6cac14cc0252f382873",
+      "bytes": 21320,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-5.jpg",
+      "gitBlob": "f4c55a0948aa4d263ccc26b64e7dc98637148d02",
+      "bytes": 18226,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-6.jpg",
+      "gitBlob": "014515cbd0fc75be5059bb8ef338c42d70457294",
+      "bytes": 17646,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-7.jpg",
+      "gitBlob": "8207c42c74517fae3bf87a4215ca58c45df911e9",
+      "bytes": 13750,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-8.jpg",
+      "gitBlob": "a5ae85b077d4ace6d58d6939d71791aa5d4a14ae",
+      "bytes": 14914,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/assets/images/shop/product-9.jpg",
+      "gitBlob": "4418d66a77101034ebd764f1f75e250e6c82e440",
+      "bytes": 17637,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-emblem-transparent.png",
+      "gitBlob": "5fdf50dbb12bc91295c370f72b07378a16509ae4",
+      "bytes": 66467,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-helmet-emblem-v2-cropped.png",
+      "gitBlob": "c7a584d072230dec67656d201b38f35f500ddb68",
+      "bytes": 204661,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-helmet-outline-dark.png",
+      "gitBlob": "4c3182b3c469027920837de3e5c15337b9f37853",
+      "bytes": 41245,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-hero-banner-dealership-v1.webp",
+      "gitBlob": "a60f957bf274227bc69e0458a90bc461d32a6012",
+      "bytes": 89182,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-hero-mobile-search-composed.webp",
+      "gitBlob": "e2d1e1c89d806114a4989e27dbd39340cba5eb65",
+      "bytes": 221828,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-hero-search-composed.webp",
+      "gitBlob": "bd273950ab222da75043eee8d0ad6650b7b5fbbf",
+      "bytes": 146638,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-og-share.png",
+      "gitBlob": "0048cae819b684a13c1e1ef9aa7937731ecce135",
+      "bytes": 93754,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-og.svg",
+      "gitBlob": "f0fb9dd2bd0a89fe5ff2e5804d9e52b62237883a",
+      "bytes": 734,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-team-placeholder.svg",
+      "gitBlob": "efb78d85fcde5a6686e7e1fb9cc9dd290bf10b5d",
+      "bytes": 591,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-wordmark-no-lines-dark.png",
+      "gitBlob": "8858a4a3c5d691cd1ed25c79ef7b1b5737967363",
+      "bytes": 26863,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-wordmark-no-lines-light.png",
+      "gitBlob": "3d761bdf63ac9ef40f615e3af7dafd9634c6af53",
+      "bytes": 3710,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/daynight-wordmark.svg",
+      "gitBlob": "910e5c6aee3858863eb8410131425e69f4a764df",
+      "bytes": 559,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/getrich-favicon.svg",
+      "gitBlob": "e37c6114b9bb8ab3ff22c65634045a029a690205",
+      "bytes": 357,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/getrich-logo-dark.png",
+      "gitBlob": "bbd563e9cb56d15ac687762eec6850000f242d44",
+      "bytes": 35931,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/brand/getrich-logo-light.png",
+      "gitBlob": "60c8a2d5b11c8782315e7ca77d39a5ec06ea31b3",
+      "bytes": 35674,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/icons/apple-touch-icon.png",
+      "gitBlob": "bf20be0d081412d333b2853c1fcba232145ee2bc",
+      "bytes": 22488,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/icons/icon-192.png",
+      "gitBlob": "306a33545fa19733392b2b8763324119e75bca4b",
+      "bytes": 25267,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/icons/icon-512.png",
+      "gitBlob": "d38099fa88520cb5c1546ef2e805b3885c21465b",
+      "bytes": 126422,
+      "basis": "retained-template-provenance"
+    },
+    {
+      "path": "/dealer/stock/11784220398560751-1.webp",
+      "gitBlob": "3e3acf3639d96f6d208fdedb18200bea30e5be01",
+      "bytes": 677070,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11788284441880300-1.webp",
+      "gitBlob": "57aa4b1f644a85df44b5a712725feba65ab50110",
+      "bytes": 683162,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21787149042592643-1.webp",
+      "gitBlob": "edd7c1bd3ff5a43c294a1b8910770e399da96dea",
+      "bytes": 445434,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11784220398560751-2.webp",
+      "gitBlob": "c6ef8ee973a2c34407c4961c09a23dd3acb0d71e",
+      "bytes": 798892,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11787147891422780-1.webp",
+      "gitBlob": "b2cdee307882158d500da34a7038da5d78d6b26e",
+      "bytes": 636912,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11784220398560751-3.webp",
+      "gitBlob": "164650e558288306b7cb264af079bcf22585145f",
+      "bytes": 780190,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11788284441880300-2.webp",
+      "gitBlob": "596498c9c61cc4d1f89a4431dc1375b6d03aa865",
+      "bytes": 750948,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21787149042592643-2.webp",
+      "gitBlob": "25cfae9f4272d684ec36f521400e20efa721d74b",
+      "bytes": 442228,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11784220398560751-4.webp",
+      "gitBlob": "9fb1f7afe08ed2514890a84afcfdca9c9471b2dc",
+      "bytes": 412712,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11788284441880300-3.webp",
+      "gitBlob": "578befc250a5053bedaf0f76d6052f43f27a6d36",
+      "bytes": 548886,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21787149042592643-3.webp",
+      "gitBlob": "8b5aa2767ddf74c993d30fefc498870ef9ad5d39",
+      "bytes": 622796,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11784220398560751-5.webp",
+      "gitBlob": "42733938da9dccc5ee65d42b83418fff3aa082bc",
+      "bytes": 334132,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11788284441880300-4.webp",
+      "gitBlob": "d4b1de3d15d19eef1a21cd51e9ccf93925a17c4d",
+      "bytes": 283024,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11784220398560751-6.webp",
+      "gitBlob": "efd9b612cf7c79ee0375bae0a7c2a69ac543baf6",
+      "bytes": 384906,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21787149042592643-4.webp",
+      "gitBlob": "d82ac902a9b82d7b1509dd2dc52bce6be1b0c507",
+      "bytes": 510084,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11788284441880300-5.webp",
+      "gitBlob": "69b62b524edd72a97aa8fb45e0b81e014207df0c",
+      "bytes": 366646,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21705706946317965-1.webp",
+      "gitBlob": "6a7c7443e68f8a4012647ddd4e926fbd05d21c48",
+      "bytes": 757738,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11787147891422780-2.webp",
+      "gitBlob": "97780a21edb024a86594211269e5fead76c3c08c",
+      "bytes": 555676,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11788284441880300-6.webp",
+      "gitBlob": "753ed115e800729abfa85be06d481f8e1aede300",
+      "bytes": 521476,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21705706946317965-2.webp",
+      "gitBlob": "1a418e32fb8ec6e9f20285bff539e4d888bc2b6c",
+      "bytes": 728852,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11787147891422780-3.webp",
+      "gitBlob": "c35cc8f447bf0ef24873f8d94840bc3db3439c21",
+      "bytes": 319842,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21705706946317965-3.webp",
+      "gitBlob": "0beadc0c8c5c3aa9b4572ff46a1b11c270f648aa",
+      "bytes": 296386,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11787147891422780-4.webp",
+      "gitBlob": "4471580a127bd38d1fbd0dc2f8a6e85f1576dfa2",
+      "bytes": 412656,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21705706946317965-4.webp",
+      "gitBlob": "b870ebf728673fb74e52161b401db1bfe6350bac",
+      "bytes": 273958,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21787149042592643-5.webp",
+      "gitBlob": "5b91727c70f0751ab5a8f690b45674a06287c0de",
+      "bytes": 249784,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11787147891422780-5.webp",
+      "gitBlob": "9dfdd49f3145ac83fbb135de4e823e2f97d371ab",
+      "bytes": 241872,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21705706946317965-5.webp",
+      "gitBlob": "9e59cb0a2804e30fedf3f5c81c0d8751c3a57f10",
+      "bytes": 176884,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21787149042592643-6.webp",
+      "gitBlob": "dc73871d3e52d9eb1e22ba053c7882ae918e1687",
+      "bytes": 384288,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11787147891422780-6.webp",
+      "gitBlob": "ebf9c05236ea263330dbdf7229f2440f69d0ced6",
+      "bytes": 197328,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21705706946317965-6.webp",
+      "gitBlob": "126e137f82263023cd55d1ea6c2958e279dafbe2",
+      "bytes": 266234,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11762241395630584-1.webp",
+      "gitBlob": "7e68d645e39808c8ef81127c3e521898cee1e117",
+      "bytes": 649860,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11762241395630584-2.webp",
+      "gitBlob": "fd229f79e8f9140c602864a2f71384c8306d29ce",
+      "bytes": 604946,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11762241395630584-3.webp",
+      "gitBlob": "dc3ed032a6e2ac449e12e4f3bfa8881eb0f32d67",
+      "bytes": 386546,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21752669153003762-1.webp",
+      "gitBlob": "e8b540a1456cb7b54c56d9bc17e285c63c9b0a46",
+      "bytes": 487820,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11762241395630584-4.webp",
+      "gitBlob": "6e728f4c052f3ebffc335342aaab1a07a7586e78",
+      "bytes": 280600,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21752669153003762-2.webp",
+      "gitBlob": "5755f4755baa61fef7cd4e360ad9f1edc203a1dc",
+      "bytes": 517530,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11777465890049135-1.webp",
+      "gitBlob": "988e57a94a4ef701b9829f7097817a6f223d68b1",
+      "bytes": 665888,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11762241395630584-5.webp",
+      "gitBlob": "3e2234e79ef3e0a3843f1016c1b5eada065315d4",
+      "bytes": 438394,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21752669153003762-3.webp",
+      "gitBlob": "e3a28a1cf242135819fe5f263d940585fcb3feac",
+      "bytes": 559844,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11762241395630584-6.webp",
+      "gitBlob": "fec9eba12aa218278704d5e265a6f529b277fe8c",
+      "bytes": 453850,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21684066785818426-1.webp",
+      "gitBlob": "827f2bc2ae2e88d5b94cf2b4890d4e2d8706d7a7",
+      "bytes": 843040,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11777465890049135-2.webp",
+      "gitBlob": "9e76e44d1b193d2e05322c34ab9978063f97bc63",
+      "bytes": 698472,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21752669153003762-4.webp",
+      "gitBlob": "84bc2cb53d9ac5efd9d3d6e24ae774c5a50e7d66",
+      "bytes": 299416,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11777465890049135-3.webp",
+      "gitBlob": "04e138b93d219649d95a5b3d11693971d67d5707",
+      "bytes": 628300,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11747591068099753-1.webp",
+      "gitBlob": "2e3631444961fc46955849dc5f4a45bf8583ba08",
+      "bytes": 651962,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21752669153003762-5.webp",
+      "gitBlob": "d63f8cc639f6b673eb2604872a593bc10ff3b958",
+      "bytes": 274478,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11777465890049135-4.webp",
+      "gitBlob": "e4e9235fed47d4646f6ce1641bef7279ad91c5f4",
+      "bytes": 329496,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11747591068099753-2.webp",
+      "gitBlob": "5cf438c5f2775bda53aef9153dab1a5ca31f8c73",
+      "bytes": 786854,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21752669153003762-6.webp",
+      "gitBlob": "634f53fa6c8918f067c4b670e87ae3327c815a48",
+      "bytes": 259632,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11777465890049135-5.webp",
+      "gitBlob": "6cf264bdcb65e02cc7af56753a6ba13c4f71c9a3",
+      "bytes": 480476,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11747591068099753-3.webp",
+      "gitBlob": "d4d077e63fafd243df560856fef0bdd6eb2bb4dd",
+      "bytes": 327198,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11777465890049135-6.webp",
+      "gitBlob": "91327871b64e83e146ea4cd1cc758de431957d73",
+      "bytes": 212664,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11747591068099753-4.webp",
+      "gitBlob": "db55e96d22a1bc27812d0ff586fa4fbf03dac7ca",
+      "bytes": 318168,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21684066785818426-2.webp",
+      "gitBlob": "5cb006fbd6bdab7427a4054748596d4f94e48d36",
+      "bytes": 881420,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11747591068099753-5.webp",
+      "gitBlob": "c82d1204c8328639f21b23a8b34ae5d28953aaea",
+      "bytes": 249110,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21684066785818426-3.webp",
+      "gitBlob": "95d49277e9dae4ecf53d2959349f399dcce081eb",
+      "bytes": 361188,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/11747591068099753-6.webp",
+      "gitBlob": "07c29e01c237744de05c8ffe298eb88471b1de2e",
+      "bytes": 201908,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21684066785818426-4.webp",
+      "gitBlob": "517b8c0a8e9efc3f9e97432e5ca12a9fbd337808",
+      "bytes": 434162,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21684066785818426-5.webp",
+      "gitBlob": "a633aba16f47aa0f498e299e4d8b2dd2eea38652",
+      "bytes": 509302,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/stock/21684066785818426-6.webp",
+      "gitBlob": "2f090c252c8b0eca9edbd23eda7b7962717c9eda",
+      "bytes": 198110,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/logo-light.png",
+      "gitBlob": "d70068e6d7783ec37ec7ed040729e565789430f8",
+      "bytes": 9880,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/logo-dark.png",
+      "gitBlob": "d70068e6d7783ec37ec7ed040729e565789430f8",
+      "bytes": 9880,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/favicon.png",
+      "gitBlob": "5c8fa7f694b723956327435d0611e7235297ba13",
+      "bytes": 2698,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/apple-touch-icon.png",
+      "gitBlob": "42e01a4746e37e057812e4990ddf895d0a5dc219",
+      "bytes": 16911,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/icon-192.png",
+      "gitBlob": "469e6a0e1b4653a3ce61592c8385db189d987d9c",
+      "bytes": 18800,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/icon-512.png",
+      "gitBlob": "8da1b4f3cd0dc99b6e2921cfc3cd3595e0e4b2ab",
+      "bytes": 100250,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/dealer/og-image.png",
+      "gitBlob": "b877674efeb05fddbf1ff183223a83d475b5a5d2",
+      "bytes": 845435,
+      "basis": "dealer-source-or-derivative"
+    },
+    {
+      "path": "/favicon.ico",
+      "gitBlob": "eeeddc6378fdca446041f0b87457a400345f68c9",
+      "bytes": 1054,
+      "basis": "dealer-source-or-derivative"
+    }
+  ]
+}
