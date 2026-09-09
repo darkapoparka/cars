@@ -25,3 +25,11 @@ All three isolated catalogue-adapter execution checks and targeted data/config n
 Still open: real photos, complete supporting-page content acceptance including FAQ/article service wording, full installs/framework checks/builds and browser/viewport route-interaction review. No public preview, real delivery service, dealer approval or owner review is claimed.
 
 Use `REVIEW.md` for coordinator commands. The shared client index is intentionally unchanged; it must be synchronized by the coordinator during integration before the index-based `start-client.ps1` launcher recognizes this new slug. No deployment or outreach occurred.
+
+## Supporting-content and favicon repair — 2026-09-09
+
+This continuation replaces inherited editorial/service assertions through the actual Auto Best, Modern and Carwow data consumers, preserves article routes, connects contact addresses in both Modern languages, and replaces the root favicon ICO in each app with the existing dealer mark. Article illustrations use the already-local proposed-brand Open Graph image; they are not stock or premises photographs.
+
+`CONTENT-VERIFICATION.json` records the exact input hashes and executed source checks. From this client folder, after the retained dependencies are installed, run `node scripts/check-editorial.mjs` to repeat the isolated checks. The recorded run used Node 24.18.0 and TypeScript 5.9.3 through an in-memory payload, not a Windows client checkout. The marketplace barrel was narrowed to the exact editorial export module for this isolated test; full package/React integration remains unverified.
+
+No source prices, inventory records, template layouts, master files or shared launchers were changed. Real stock-photo/gallery integration, the rest of the supporting-page review, dependency installs, full framework builds and 320/390/1440 browser checks are still incomplete. Owner review remains pending. The earlier research-only state does not describe the existing application trees.

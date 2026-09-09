@@ -1,0 +1,84 @@
+{
+  "slug": "prestige-varna",
+  "node": "v24.18.0",
+  "typescript": "5.9.3",
+  "mode": "isolated source/module checks; no framework build or browser",
+  "parsedFiles": 14,
+  "parseErrors": 0,
+  "strictDataDiagnostics": 0,
+  "coreResults": [
+    {
+      "file": "auto-best/src/lib/data/dealer-editorial.ts",
+      "records": 10,
+      "localeFields": "bg/en"
+    },
+    {
+      "file": "modern/packages/marketplace/dealer-editorial.ts",
+      "records": 10,
+      "localeFields": "bg/en"
+    },
+    {
+      "file": "carwow/src/lib/data/dealer-editorial.ts",
+      "records": 10,
+      "localeFields": "bg/en"
+    }
+  ],
+  "autoArticles": 9,
+  "carwowArticles": 9,
+  "carwowFaq": 12,
+  "modernGuides": 3,
+  "homeLinksRetained": true,
+  "contactTopicsRetained": true,
+  "contactAddressFields": "source driven in bg/en",
+  "stockRecordsUnchanged": 8,
+  "checkedAt": "2026-09-09T03:43:53.421023+00:00",
+  "sourceBase": "ce9102792d7ab518a796a9398d381df1c8c44ed0",
+  "checkerSha256": "32bf56960ff886b7a1941858f40d355fbddfe0697ce08b7faaa201a86409c1a7",
+  "inputFileSha256": {
+    "auto-best/src/lib/data/dealer-stock.json": "ce43b03ba259d8427f346c94eb0db6b20f9b821faeedb6b4ec377a7d15e2a001",
+    "auto-best/src/lib/data/dealer-editorial.ts": "621f23d2ba654789b5f0494c34cd8e0df901025e0e7763b231a68ad749c0cf1c",
+    "auto-best/src/lib/data/editorial.ts": "63f1b8162ef4a2de9da4e2b3d8e415eb3a965fbec11d1a62de678bf002f1d4ed",
+    "auto-best/src/lib/data/home.ts": "2013f551045fc48fd99d32a0dd65e0e68bb8ec1455b9cf5ca8031774827caa7f",
+    "auto-best/src/lib/data/company.ts": "2d6d176c520db7b87161695a9fda1e25978b144e0bc51d36b40ec71e0305654c",
+    "auto-best/src/lib/config/brand.ts": "5438d011ce431dbb0f15099383391a66123a58c0eb48d97f9f96d8f5ee08daed",
+    "auto-best/src/lib/data/inventory.ts": "8117f6dd645cd1e8094d6259585de16c0826aa11d458deb39a516d98feb5d18e",
+    "auto-best/src/lib/data/listing.ts": "5f9319268f572b14a684b674a384d90b7ee5d32c6a90e3bbf66444e3fdd1f6d3",
+    "modern/packages/marketplace-domain/dealer-stock.json": "ce43b03ba259d8427f346c94eb0db6b20f9b821faeedb6b4ec377a7d15e2a001",
+    "modern/packages/marketplace/dealer-editorial.ts": "d0171e0be122b2309990f57d21d82aada263a2fdfbc43f5a2417003fd2065d3d",
+    "modern/packages/marketplace/lead-site.ts": "68dcd2e5744069f513592c41fd6a53d4309a926c6a1e24e559736f4643baa6b6",
+    "modern/apps/web/lib/vehicle-guides.ts": "a785e95458d09f27c28348608f792c79025c707886c7bb98dfabdbf7b0f5f441",
+    "modern/apps/web/app/[locale]/contact/page.tsx": "18b45d85c83509c32ece010dfe18b1961e90f548bd74d22aa1a8f51929d2a54c",
+    "carwow/src/lib/data/dealer-stock.json": "ce43b03ba259d8427f346c94eb0db6b20f9b821faeedb6b4ec377a7d15e2a001",
+    "carwow/src/lib/data/dealer-editorial.ts": "621f23d2ba654789b5f0494c34cd8e0df901025e0e7763b231a68ad749c0cf1c",
+    "carwow/src/lib/data/daynight-blog.ts": "8e08c70a473117bca866e6466dff18fca82fa717d77cb135c59b380a1eacdb4e",
+    "carwow/src/lib/data/daynight-faq.ts": "a5e251cb7fd8bcf7a74b564e62d50d4f16c779993eda9956f14238ebc72156fc"
+  },
+  "iconChecks": [
+    {
+      "path": "auto-best/static/favicon.ico",
+      "bytes": 508,
+      "sha256": "7140eb616e883a962249592d2ec1ec156f25c1a67e112028e867940740c5c914",
+      "format": "ICO with existing dealer 32x32 PNG; no visual/browser pass"
+    },
+    {
+      "path": "modern/apps/web/public/favicon.ico",
+      "bytes": 508,
+      "sha256": "7140eb616e883a962249592d2ec1ec156f25c1a67e112028e867940740c5c914",
+      "format": "ICO with existing dealer 32x32 PNG; no visual/browser pass"
+    },
+    {
+      "path": "carwow/static/favicon.ico",
+      "bytes": 508,
+      "sha256": "7140eb616e883a962249592d2ec1ec156f25c1a67e112028e867940740c5c914",
+      "format": "ICO with existing dealer 32x32 PNG; no visual/browser pass"
+    }
+  ],
+  "notExecuted": [
+    "dependency installs",
+    "full application or workspace typechecks",
+    "Prisma generation",
+    "framework builds",
+    "browser/viewport comparisons"
+  ],
+  "photoGalleryIntegration": "unchanged; real stock photos not integrated"
+}
