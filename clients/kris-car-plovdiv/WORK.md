@@ -1,0 +1,3 @@
+# Active Kris Car implementation
+
+Session 06 branch-only worker is implementing this exact account in memory using Remote Desktop Commander Node REPL tool PID 67992 (Node child 21340, cwd C:/). No Windows source checkout is written. Current step: original published logo and eight current source listings, followed by all three master-based applications. Other fresh branch changes, including the Slavi Cars implementation at e28281f22f9d4040be68fc1b03bcccc2a58080a6, are preserved and are not edited by this work. Avoid parallel edits to clients/kris-car-plovdiv until this checkpoint changes to implemented-unverified.
