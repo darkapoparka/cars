@@ -43,43 +43,41 @@ const pageCopy = {
     detailsLabel: "Екстри и бележки",
     detailsPlaceholder:
       "Състояние, сервизна история, екстри или нещо важно за автомобила.",
-    description:
-      "Дайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.",
-    faqTitle: "Как протича оценката",
+    description: `Подгответе основните данни и се свържете с ${leadSite.name}, за да попитате дали разглеждат изкупуване, бартер или оценка за конкретния случай. Демото не изпраща заявка.`,
+    faqTitle: "Преди да предложите автомобил",
     faqs: [
       {
-        answer:
-          "Не. Можете да предложите автомобила за директно изкупуване, без да купувате друг.",
-        question: "Задължителен ли е бартерът?",
+        answer: `Попитайте ${leadSite.name} дали разглеждат директно изкупуване, бартер или друг вариант за Вашия автомобил. Наличието на тази демо страница не е обещание за такава услуга.`,
+        question: "Какви варианти мога да обсъдя?",
       },
       {
         answer:
-          "Марка, модел, година и пробег са достатъчни за първоначалния разговор. Подгответе и телефон за връзка.",
-        question: "Какви данни са необходими?",
+          "Марка, модел, година, пробег, състояние и известни забележки са добра отправна точка за разговор. Не изпращайте лични документи през демонстрацията.",
+        question: "Какви данни да подготвя?",
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в бул. Цар Освободител, район Владислав Варненчик, Варна.",
-        question: "Може ли оценка само по снимки?",
+          "Снимките могат да помогнат за първоначален разговор, но не представляват оценка. Ако продавачът разглежда предложението, уточнете дали е нужен оглед и къде ще се проведе.",
+        question: "Достатъчни ли са снимки?",
       },
       {
         answer:
-          "Регистрационните документи, сервизната история и информацията за ремонти помагат за по-бърза оценка.",
-        question: "Какво да подготвя за огледа?",
+          "Първо уточнете с продавача дали предложението Ви е в обхвата му. След това поискайте конкретен списък с необходимите документи за избрания вариант.",
+        question: "Какви документи ще са нужни?",
       },
     ],
     formDescription:
-      "Без регистрация. Започнете с основните данни, а ние ще уточним следващата стъпка.",
-    formLabel: "Заявете оценка на автомобил",
+      "Формата подготвя данните за контактната стъпка. Тя не изпраща заявка, не извършва оценка и не приема автомобил.",
+    formLabel: "Подгответе данни за автомобил",
     makeLabel: "Марка",
     mileageLabel: "Пробег",
     mileagePlaceholder: "62 000 км",
     modelLabel: "Модел",
     modelPlaceholder: "напр. Octavia",
-    primaryAction: "Продължи",
+    primaryAction: "Към контакт",
     changeVehicle: "Променете автомобила",
     selectedVehicleLabel: "Избран автомобил",
-    title: "Продайте ни автомобила си",
+    title: "Обсъдете Вашия автомобил",
     yearLabel: "Година",
     yearPlaceholder: "2022",
   },
@@ -90,43 +88,41 @@ const pageCopy = {
     detailsLabel: "Extras and notes",
     detailsPlaceholder:
       "Condition, service history, extras, or anything important about the vehicle.",
-    description:
-      "Give us the essentials about your vehicle. Our team will contact you to arrange an inspection and a concrete offer.",
-    faqTitle: "How the appraisal works",
+    description: `Prepare the basic vehicle details and contact ${leadSite.name} to ask whether they consider purchase, trade-in or appraisal for the specific case. This demo does not submit a request.`,
+    faqTitle: "Before offering a vehicle",
     faqs: [
       {
-        answer:
-          "No. You can offer the vehicle for direct purchase without buying another car.",
-        question: "Is a trade-in required?",
+        answer: `Ask ${leadSite.name} whether they consider direct purchase, trade-in or another option for your vehicle. This demo page does not promise that service.`,
+        question: "Which options can I discuss?",
       },
       {
         answer:
-          "Make, model, year, and mileage are enough for the initial conversation. Please also leave a phone number.",
-        question: "What information do you need?",
+          "Make, model, year, mileage, condition and known issues are a useful starting point. Do not send identity documents through the demo.",
+        question: "Which details should I prepare?",
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Варна.",
-        question: "Can you appraise it from photos only?",
+          "Photos can help with an initial conversation but are not an appraisal. If the seller considers the proposal, confirm whether an inspection is needed and where it would take place.",
+        question: "Are photos enough?",
       },
       {
         answer:
-          "Registration documents, service history, and repair information help us appraise the car faster.",
-        question: "What should I prepare?",
+          "First confirm that the seller considers your proposal, then ask for the specific document list required for the agreed option.",
+        question: "Which documents will be required?",
       },
     ],
     formDescription:
-      "No account required. Start with the essentials and we will agree the next step with you.",
-    formLabel: "Request a vehicle appraisal",
+      "The form prepares vehicle details for the contact step. It does not submit a request, perform an appraisal or accept a vehicle.",
+    formLabel: "Prepare vehicle details",
     makeLabel: "Make",
     mileageLabel: "Mileage",
     mileagePlaceholder: "62,000 km",
     modelLabel: "Model",
     modelPlaceholder: "e.g. Octavia",
-    primaryAction: "Continue",
+    primaryAction: "Go to contact",
     changeVehicle: "Change vehicle",
     selectedVehicleLabel: "Selected vehicle",
-    title: "Sell us your vehicle",
+    title: "Discuss your vehicle",
     yearLabel: "Year",
     yearPlaceholder: "2022",
   },
@@ -181,11 +177,11 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Предложете автомобила си за изкупуване или бартер на ${leadSite.name}.`
-      : `Offer your vehicle to ${leadSite.name} for purchase or trade-in.`,
+      ? `Подгответе данни за автомобил и се свържете с ${leadSite.name}, за да обсъдите възможните варианти. Демото не изпраща заявка.`
+      : `Prepare vehicle details and contact ${leadSite.name} to discuss possible options. The demo does not submit a request.`,
     locale,
     path: "/sell",
-    title: isBg ? "Продайте ни автомобил" : "Sell us your vehicle",
+    title: isBg ? "Обсъдете Вашия автомобил" : "Discuss your vehicle",
   });
 };
 
@@ -249,8 +245,8 @@ export default async function SellPage({
             ) : (
               <p className="py-6 text-center text-sm text-zinc-600">
                 {normalizedLocale === "bg"
-                  ? "В момента няма налични автомобили."
-                  : "No cars are currently available."}
+                  ? "В момента няма показани автомобили."
+                  : "No vehicles are currently displayed."}
               </p>
             )
           }
@@ -267,11 +263,7 @@ export default async function SellPage({
             data-slot="sell-hero"
           >
             <Image
-              alt={
-                normalizedLocale === "bg"
-                  ? "Автомобили пред модерен шоурум"
-                  : "Vehicles outside a modern showroom"
-              }
+              alt={normalizedLocale === "bg" ? "Демо визуализация" : "Demo artwork"}
               className="object-cover object-center"
               fill
               priority
@@ -294,8 +286,8 @@ export default async function SellPage({
                 <p className="mx-auto mt-3 max-w-[17rem] text-center text-muted-foreground text-sm leading-6 lg:max-w-2xl lg:text-body">
                   <span className="lg:hidden">
                     {normalizedLocale === "bg"
-                      ? "Започнете с основните данни. Ще се свържем с вас за оглед и оферта."
-                      : "Start with the essentials. We will contact you to arrange an inspection and offer."}
+                      ? "Подгответе основните данни и продължете към контакт. Нищо не се изпраща от демото."
+                      : "Prepare the essentials and continue to contact. Nothing is submitted by the demo."}
                   </span>
                   <span className="hidden lg:inline">{copy.description}</span>
                 </p>
@@ -426,15 +418,15 @@ export default async function SellPage({
                 <div className="mt-5 flex flex-col items-start justify-center gap-2 border-border border-t pt-4 text-sm sm:flex-row sm:items-center sm:gap-7 lg:mt-5">
                   <p className="text-muted-foreground">
                     {normalizedLocale === "bg"
-                      ? "Търсите автомобил за бартер?"
-                      : "Looking for a trade-in vehicle?"}{" "}
+                      ? "Разглеждате и друг автомобил?"
+                      : "Also considering another vehicle?"}{" "}
                     <Link
                       className="font-medium text-foreground underline-offset-4 hover:underline"
                       href={localize("/cars")}
                     >
                       {normalizedLocale === "bg"
-                        ? "Вижте наличностите"
-                        : "Browse inventory"}
+                        ? "Вижте обявите"
+                        : "Browse listings"}
                     </Link>
                   </p>
                   <p className="text-muted-foreground">
