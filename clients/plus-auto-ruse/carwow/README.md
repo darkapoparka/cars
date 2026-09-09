@@ -1,7 +1,5 @@
-# Plus Auto — Carwow (work in progress)
+# Plus Auto — carwow
 
-Independent copy of the published Carwow master, preserving its existing SvelteKit app, responsive compositions, routes, static assets and lockfile. This checkpoint is not a finished dealer demo.
+Independent personalized carwow master copy. Read ../CLIENT.md, ../REVIEW.md and .client/project.json.
 
-Read `../CLIENT.md`, `../REVIEW.md` and `.client/project.json`. The initial master still contains source-dealer content; do not present it as Plus Auto. All app QA flags are false. No deployment or message delivery is configured or certified.
-
-Source: `templates/carwow` at `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`, tree `d4a08817e87cf84d08c4db1c08a515937245f2dd`.
+Status: implemented-unverified. This branch-only owner preview uses dated seller-advertised listings, not live stock. No form delivery, deployment or business approval is implied. Existing TEMPLATE.md and source provenance describe the original master, not checks of this dealer.

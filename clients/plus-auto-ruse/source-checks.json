@@ -1,0 +1,36 @@
+{
+  "observedAt": "2026-09-09T02:40:58.695Z",
+  "runtime": "v24.18.0",
+  "sourceOnly": true,
+  "checks": {
+    "svelteParsers": {
+      "autoBest": "5.57.0",
+      "carwow": "5.55.9"
+    },
+    "typescriptParser": "5.9.3",
+    "changedSourceSyntaxErrors": [],
+    "executedDataModels": {
+      "counts": [
+        8,
+        8,
+        8
+      ],
+      "samePrices": true,
+      "sameGallery": true,
+      "localBytes": true,
+      "uniqueIds": true
+    }
+  },
+  "notRun": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review"
+  ],
+  "limits": [
+    "No isolated application runner is available; the owner Windows source checkout was not modified.",
+    "Public-source media commercial reuse and dealer approval are not established; this is branch-only owner evaluation."
+  ]
+}

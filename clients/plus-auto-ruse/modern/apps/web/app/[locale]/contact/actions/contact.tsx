@@ -1,4 +1,5 @@
 "use server";
+import { leadSite } from "@repo/marketplace";
 
 import { getReliableEmailDelivery } from "@repo/email";
 import { ContactTemplate } from "@repo/email/templates/contact";
@@ -42,12 +43,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "The form is ready, but message delivery is not configured yet. Call Day & Night directly."
+          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Plus Auto.",
+          "The form is ready, but message delivery is not configured yet. Call Plus Auto directly."
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "Message delivery is not configured yet. Call Day & Night directly."
+          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Plus Auto.",
+          "Message delivery is not configured yet. Call Plus Auto directly."
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +60,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на Day & Night."
-        : "Запитването е изпратено до екипа на Day & Night.",
-      "Your request has been sent to the Day & Night team."
+        ? "Заявката е изпратена до екипа на Plus Auto."
+        : "Запитването е изпратено до екипа на Plus Auto.",
+      "Your request has been sent to the Plus Auto team."
     ),
   };
 };
@@ -141,6 +142,7 @@ export const submitContactRequest = async (
   formData: FormData
 ): Promise<ContactActionState> => {
   const isBg = formData.get("locale") === "bg";
+  if (leadSite.staticDemoMode) return { status: "error", message: isBg ? `Демо: нищо не е изпратено. Обадете се на ${leadSite.phoneDisplay} за наличност и условия.` : `Preview: nothing was sent. Call ${leadSite.phoneDisplay} to confirm availability and terms.` };
   const isImportRequest = formData.get("context") === "import-request";
   const copy = getCopy(isBg, isImportRequest);
   const requestHeaders = await headers();
@@ -168,7 +170,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Day & Night: ${topic.en}`,
+          subject: `Plus Auto: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

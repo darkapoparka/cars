@@ -32,7 +32,7 @@
 			id: 'location',
 			icon: '/assets/icons/MapPin.svg',
 			label: 'Локация:',
-			value: 'София'
+			value: 'Русе'
 		},
 		{
 			id: 'interior',

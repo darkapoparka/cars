@@ -31,8 +31,8 @@
 	<div class="dealer-footer__container">
 		<div class="dealer-footer__grid">
 			<div class="dealer-footer__brand">
-				<a href={resolve('/')} aria-label="Day Night Auto — начална страница">
-					<img src={daynightSite.logoLight} width="220" height="68" alt="Day Night Auto Group" loading="lazy" />
+				<a href={resolve('/')} aria-label="Plus Auto — начална страница">
+					<img src={daynightSite.logoLight} width="220" height="68" alt="Plus Auto" loading="lazy" />
 				</a>
 				<div class="dealer-footer__hours">
 					<p>Работно време:</p>
@@ -60,14 +60,14 @@
 					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
 				</a>
 				<div class="dealer-footer__socials" aria-label="Социални мрежи">
-					<a href="https://www.facebook.com/61566304063141/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a>
+					
 					<a {...youtubeLink} aria-label="YouTube"><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a>
-					<a href="https://www.instagram.com/daynight.auto.plovdiv/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a>
+					
 				</div>
 			</div>
 		</div>
 		<div class="dealer-footer__bottom">
-			<p>©2026 Day Night Auto Group. Всички права запазени.</p>
+			<p>©2026 Plus Auto. Всички права запазени.</p>
 			<nav aria-label="Правна информация">
 				{#each daynightFooterBottomLinks as link (link.label)}
 					<a href={resolve(link.href)}>{link.label}</a>

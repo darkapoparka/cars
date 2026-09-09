@@ -57,20 +57,19 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/brand/daynight-logo-generated.png`,
-			logo: `${origin}/brand/daynight-logo-generated.png`,
+			image: `${origin}/dealer/logo-light.png`,
+			logo: `${origin}/dealer/logo-light.png`,
 			url: `${origin}/`,
 			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',
-				streetAddress: daynightSite.location,
-				addressLocality: 'София',
-				addressRegion: 'София',
+				addressLocality: 'Русе',
+				addressRegion: 'Русе',
 				addressCountry: 'BG'
 			},
 			areaServed: 'BG',
-			priceRange: '€€'
+			description: 'Демонстрационен сайт с датирана извадка от публични обяви; потвърдете условията с търговеца.'
 		}).replaceAll('<', '\\u003c')
 	);
 
@@ -80,6 +79,9 @@
 </script>
 
 <svelte:head>
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel="icon" type="image/png" href="/dealer/favicon-32.png" />
+	<link rel="apple-touch-icon" href="/dealer/apple-touch-icon.png" />
 	<link
 		rel="preload"
 		href={geistCyrillicFont}

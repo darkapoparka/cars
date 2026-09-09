@@ -10,7 +10,7 @@
   <HeroVehicles pair="blog" />
   <img
     class="dn-blog-hero__media"
-    src="/assets/images/lead/day-night-blog-hero-v2.webp"
+    src="/dealer/stock/21787593442542818-1.webp"
     alt=""
     width="1920"
     height="1080"

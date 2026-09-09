@@ -12,7 +12,7 @@ export type Car = {
 	fuel: string;
 	transmission: string;
 	body: string;
-	doors: number;
+	doors: number | string;
 	engine: string;
 	power: string;
 	drive: string;
@@ -34,7 +34,7 @@ export type Car = {
 
 const parseLocalizedNumber = (value: string) => {
 	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
-	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
+	return match ? Number(match[0].replace(/\s+/g, '').replace(',', '.')) : 0;
 };
 
 const normalizeFuel = (fuel: string) =>
@@ -54,30 +54,7 @@ const normalizeBody = (body: string) =>
 		Лимузина: 'Седан'
 	})[body] ?? body;
 
-const getVehicleIdentity = (listing: CurrentDayNightListing) => {
-	const brand = listing.title.startsWith('Mercedes-Benz')
-		? 'Mercedes-Benz'
-		: listing.title.startsWith('Land Rover')
-			? 'Land Rover'
-			: listing.title.split(' ')[0];
-	const remainder = listing.title.slice(brand.length).trim();
-	const patterns: Record<string, RegExp> = {
-		'Mercedes-Benz':
-			/^(?:GLA \d+(?: AMG)?|GLS \d+|GLE \d+(?: 4MATIC)?|GL \d+ AMG|G \d+(?: AMG)?|S \d+(?: AMG)?|E \d+(?: AMG)?|CLS \d+(?: AMG)?|AMG GT(?: S)?|V \d+)/i,
-		BMW: /^(?:X\d|M\d|\d{3})\b/i,
-		Audi: /^(?:RS\d|Q\d|A\d)\b/i,
-		'Land Rover': /^Range Rover Sport/i,
-		Lamborghini: /^Urus/i
-	};
-	const model =
-		remainder.match(patterns[brand] ?? /^\S+(?:\s+\S+)?/)?.[0] ?? remainder.split(' ')[0];
-
-	return {
-		brand,
-		model,
-		shortTitle: `${brand} ${model}`
-	};
-};
+const getVehicleIdentity = (listing: CurrentDayNightListing) => ({ brand: listing.make, model: listing.model, shortTitle: listing.title });
 
 const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const identity = getVehicleIdentity(listing);
@@ -88,7 +65,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const transmission = normalizeTransmission(listing.transmission);
 	const body = normalizeBody(listing.body);
 	const isIncoming = /очакван/i.test(listing.title);
-	const availability = isIncoming ? 'Очакван внос' : 'Наличен';
+	const availability = isIncoming ? 'Очакван внос' : 'По обява';
 	const drive = listing.features.some((feature) => /4x4|xdrive|quattro|4matic/i.test(feature))
 		? '4x4'
 		: '—';
@@ -97,9 +74,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		.replace(/[^a-z0-9]+/g, '-')
 		.replace(/^-|-$/g, '');
 	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
-	const conditionLine = isIncoming
-		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Наличен автомобил в София — свържете се за оглед.';
+	const conditionLine = `${listing.status} към 09.09.2026 — потвърдете наличност и място за оглед. ${listing.taxNote}`;
 
 	return {
 		slug: `${slugBase}-${listing.id.slice(-6)}`,
@@ -113,7 +88,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		fuel,
 		transmission,
 		body,
-		doors: body === 'Купе' ? 3 : 5,
+		doors: '—',
 		engine: '—',
 		power: listing.power,
 		drive,
@@ -121,19 +96,19 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		price,
 		priceEur: listing.priceEur,
 		priceBgn: listing.priceBgn,
-		monthly: 'Финансиране по запитване',
+		monthly: 'Условията се уточняват',
 		image: listing.image,
-		gallery: [listing.image],
+		gallery: listing.gallery,
 		badges: [
 			availability,
 			...(listing.status && listing.status !== availability ? [listing.status] : []),
 			identity.model.includes('AMG') ? 'AMG' : listing.power
 		],
 		conditionLine,
-		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
+		description: listing.description,
 		features,
 		highlights: [availability, listing.power, drive],
-		lot: `DN-${listing.id.slice(-6)}`,
+		lot: `AD-${listing.id.slice(-6)}`,
 		sourceUrl: listing.sourceUrl
 	};
 };

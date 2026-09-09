@@ -4,16 +4,53 @@
   "templateKey": "modern",
   "templateVersion": "2026.09.06-refresh-1",
   "createdAt": "2026-09-09",
-  "state": "in-progress",
-  "stage": "independent-full-workspace-copy-not-personalized",
+  "updatedAt": "2026-09-09T02:45:34.420Z",
+  "state": "implemented-unverified",
   "selectedHome": "main",
-  "availableHomes": [{"id":"main","route":"/cars"}],
-  "offeredHomes": [],
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    "main"
+  ],
   "publicUrl": null,
-  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
-  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
-  "source": {"repository":"darkapoparka/cars","commit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","path":"templates/modern","tree":"66bfb8196bbce18832ada6b34b02dda97baba25b"},
   "handoffBranch": "codex/astra-bg-10",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "path": "templates/modern",
+    "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+  },
   "fullWorkspaceRetained": true,
-  "limitations": ["Initial source checkpoint; inherited source identity and media are not Plus Auto facts.","Personalization, asset permission/integration and full exclusion/content audits are not complete.","No install, Prisma generation, typecheck, build or browser check has run."]
+  "sourceChecks": {
+    "syntax": true,
+    "dataModels": true,
+    "localAssetBytes": true
+  },
+  "verificationEvidence": "../source-checks.json",
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review",
+    "No isolated application runner is available; the owner Windows source checkout was not modified.",
+    "Public-source media commercial reuse and dealer approval are not established; this is branch-only owner evaluation."
+  ],
+  "publicOriginIntegration": false
 }

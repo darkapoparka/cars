@@ -89,7 +89,7 @@ const defaultVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Електрически SUV",
   },
   {
-    descriptionBg: `Налични автомобили в ${leadSite.city}`,
+    descriptionBg: `Публикувани автомобили в ${leadSite.city}`,
     descriptionEn: `Vehicles available in ${leadSite.city}`,
     id: `${leadSite.slug}-vehicles`,
     keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
@@ -162,18 +162,18 @@ const vehicleSuggestions = leadSite.staticDemoMode
 
 const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
   {
-    descriptionBg: "Проверен дилър · София",
-    descriptionEn: "Verified dealer · Sofia",
+    descriptionBg: "Проверен дилър · Русе",
+    descriptionEn: "Verified dealer · Ruse",
     id: "sofia-premium-cars",
     keywords: "sofia premium cars dealer дилър софия bmw audi",
     kind: "dealer",
-    label: "Sofia Premium Cars",
+    label: "Ruse Premium Cars",
     popular: true,
-    value: "Sofia Premium Cars",
+    value: "Ruse Premium Cars",
   },
   {
-    descriptionBg: "Вносител от Китай · София",
-    descriptionEn: "Importer from China · Sofia",
+    descriptionBg: "Вносител от Китай · Русе",
+    descriptionEn: "Importer from China · Ruse",
     id: "china-ev-import",
     keywords: "china ev import importer китай вносител софия byd geely",
     kind: "dealer",
@@ -201,14 +201,14 @@ const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Black Sea EV",
   },
   {
-    descriptionBg: "Дилъри и вносители в София",
-    descriptionEn: "Dealers and importers in Sofia",
+    descriptionBg: "Дилъри и вносители в Русе",
+    descriptionEn: "Dealers and importers in Ruse",
     id: "sofia-organizations",
     keywords: "sofia city софия дилъри вносители",
     kind: "location",
-    label: "София",
+    label: "Русе",
     popular: true,
-    value: "София",
+    value: "Русе",
   },
   {
     descriptionBg: "Дилъри и вносители във Варна",

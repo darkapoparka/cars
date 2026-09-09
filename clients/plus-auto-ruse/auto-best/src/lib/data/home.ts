@@ -11,8 +11,8 @@ const bodyArtwork = [
   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
   { label: 'Комби', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
   { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
-  { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
-  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
+  { label: 'Купе', query: 'Coupe', image: '/dealer/stock/21761073805702575-1.webp', width: 1000, height: 667 },
+  { label: 'Спортбек', query: 'Sportback', image: '/dealer/stock/11780378518049491-1.webp', width: 1000, height: 667 }
 ] as const;
 
 const brandArtwork = [
@@ -40,24 +40,24 @@ export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle 
 export const editorial = [
   {
     title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
-    image: '/assets/images/lead/day-night-guide-inspection.webp',
+    text: `Свържете се с търговеца в ${brand.city}, за да потвърдите адреса, работното време и удобен час за оглед.`,
+    image: '/dealer/stock/21788436132804046-1.webp',
     href: '/contact',
     meta: 'Полезно',
     category: 'Ръководство'
   },
   {
     title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
-    image: '/assets/images/lead/day-night-guide-import.webp',
+    text: 'Поискайте документи и сервизна история, уговорете независим преглед и потвърдете състоянието преди покупка.',
+    image: '/dealer/stock/21780935283938344-1.webp',
     href: '/blog-detail/1',
     meta: 'Полезно',
     category: 'Ръководство'
   },
   {
-    title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
-    image: '/assets/images/lead/day-night-guide-leasing.webp',
+    title: 'Как се потвърждават цена и условия?',
+    text: 'Цената и данъчните условия са от конкретната обява. Потвърдете актуалните условия с търговеца.',
+    image: '/dealer/stock/11788812131352849-1.webp',
     href: '/blog-detail/2',
     meta: 'Полезно',
     category: 'Ръководство'

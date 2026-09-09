@@ -9,12 +9,12 @@
 
   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
   const preparation = $derived(contactPreparation[topic.id]);
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
-  const socialPlatforms = [
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.mapQuery)}`;
+  const socialPlatforms = ([
     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
     { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
     { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
-  ] as const;
+  ] as const).filter(link => Boolean(link.href));
 </script>
 
 <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>

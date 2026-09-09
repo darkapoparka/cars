@@ -1,7 +1,5 @@
-# Plus Auto — Auto Best (work in progress)
+# Plus Auto — auto-best
 
-Independent copy of the published Auto Best master. This checkpoint preserves the real application, assets, routes, lockfile and styling; it is not a finished dealer demo.
+Independent personalized auto-best master copy. Read ../CLIENT.md, ../REVIEW.md and .client/project.json.
 
-Read `../CLIENT.md`, `../REVIEW.md` and `.client/project.json`. The initial master still contains source-dealer content; do not present it as Plus Auto. All app QA flags are false. No deployment or message delivery is configured or certified.
-
-Source: `templates/auto-best` at `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`, tree `97833980ab127f6de8f675ac1a188e4b7f717976`.
+Status: implemented-unverified. This branch-only owner preview uses dated seller-advertised listings, not live stock. No form delivery, deployment or business approval is implied. Existing TEMPLATE.md and source provenance describe the original master, not checks of this dealer.

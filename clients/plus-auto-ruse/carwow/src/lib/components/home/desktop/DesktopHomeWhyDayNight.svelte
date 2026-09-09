@@ -67,7 +67,7 @@
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в София',
+			label: 'локация в Русе',
 			hasDivider: true
 		},
 		{
@@ -117,7 +117,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
+							'/dealer/stock/11788812131352849-1.webp',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}

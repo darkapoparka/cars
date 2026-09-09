@@ -21,13 +21,13 @@
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} />
   <picture>
     {#if topic.id === 'trade-in'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/dealer/stock/11780378518049491-1.webp" />
     {:else if topic.id === 'import'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/dealer/stock/21780935283938344-1.webp" />
     {/if}
   <img
     class="dn-contact-hero__media"
-    src="/assets/images/lead/day-night-contact-hero-v2.webp"
+    src="/dealer/stock/21761073805702575-1.webp"
     alt=""
     width="1920"
     height="1080"

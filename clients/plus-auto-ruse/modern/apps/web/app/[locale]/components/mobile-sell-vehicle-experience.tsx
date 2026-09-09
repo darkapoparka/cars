@@ -39,7 +39,7 @@ export const MobileSellVehicleExperience = ({
             data-slot="sell-inline-inventory"
           >
             <h2 className="sr-only" id="sell-trade-in-heading">
-              {locale === "bg" ? "Налични автомобили" : "Available vehicles"}
+              {locale === "bg" ? "Публикувани автомобили" : "Available vehicles"}
             </h2>
             <div className="grid gap-2">{inventory}</div>
           </section>

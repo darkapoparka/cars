@@ -290,7 +290,7 @@
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Защо Day Night"
+					title="За търговеца"
 					description="Кристиян и екипът Ви дават ясен следващ вариант."
 					label="Виж предимствата"
 					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
@@ -470,7 +470,7 @@
 						src={resolve(
 							activeInfo === 'process'
 								? '/assets/images/sell/process-disclosure-list-v1.webp'
-								: '/assets/images/sell/kristian-trust-disclosure-list-v1.webp'
+								: '/dealer/stock/11776858009452516-1.webp'
 						)}
 						alt=""
 						aria-hidden="true"
@@ -478,7 +478,7 @@
 					<div class="ms-info-hero__handle" aria-hidden="true"></div>
 					<div class="ms-info-hero__title">
 						<h2 id="ms-info-title">
-							{activeInfo === 'process' ? 'Как работи' : 'Защо Day Night'}
+							{activeInfo === 'process' ? 'Как работи' : 'За търговеца'}
 						</h2>
 						<p>
 							{activeInfo === 'process'

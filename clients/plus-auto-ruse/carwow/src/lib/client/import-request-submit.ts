@@ -1,3 +1,4 @@
+import dealer from '../data/dealer-records.json';
 import { resolve } from '$app/paths';
 
 export type ImportRequestSubmitPayload = {
@@ -50,6 +51,7 @@ function readResponseMessage(body: unknown, fallback: string) {
 export async function submitImportRequest(
 	payload: ImportRequestSubmitPayload
 ): Promise<ImportRequestSubmitResult> {
+	if (dealer.previewOnly) return { ok: false, status: 503, error: `Демо: нищо не е изпратено. Обадете се на ${dealer.phone}, за да потвърдите избрания автомобил и условията.` };
 	try {
 		const response = await fetch(resolve('/api/import-requests'), {
 			method: 'POST',

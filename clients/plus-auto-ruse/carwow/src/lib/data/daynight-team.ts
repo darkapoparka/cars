@@ -1,4 +1,5 @@
-export const daynightTeamDisclosure = 'Демо профили и портрети: примерни роли, а не потвърдени членове на екипа.';
+import { daynightSite } from './daynight-site';
+export const daynightTeamDisclosure = 'Няма потвърдени данни за служители. Показан е бизнес контактът, не конкретен човек.';
 
 export type DayNightTeamMember = {
 	slug: string;
@@ -11,52 +12,7 @@ export type DayNightTeamMember = {
 	detail: string;
 };
 
-export const daynightTeam: DayNightTeamMember[] = [
-	{
-		slug: 'prodazhbi-showroom',
-		name: "Екип продажби Day Night Auto",
-		role: 'Консултант продажби',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-sales-v1.webp',
-		bio: 'Екипът съдейства при избор на автомобил, първи оглед, сравнение на наличните предложения и подреден процес до сделката.',
-		detail:
-			"Консултантите на Day Night Auto помагат с избор според бюджет, пробег, оборудване и реална наличност. При нужда подготвят оглед, запазване на автомобил и координация на следващите стъпки."
-	},
-	{
-		slug: 'barter-i-ocenka',
-		name: 'Екип бартер и оценка',
-		role: 'Оценка, покупка и бартер',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-evaluation-v1.webp',
-		bio: 'Екипът приема запитвания за продажба или замяна на автомобил и подготвя реалистична оценка според пазара и състоянието.',
-		detail:
-			'При бартер или директно изкупуване екипът разглежда автомобила, документите и сервизната история, след което дава ясен вариант за следващите стъпки.'
-	},
-	{
-		slug: 'dokumenti-finansirane',
-		name: 'Екип документи и финансиране',
-		role: 'Документи и финансиране',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-documents-v1.webp',
-		bio: 'Екипът координира документи, регистрация, разсрочено плащане и подготовка за предаване на автомобила.',
-		detail:
-			'След избор на автомобил екипът подрежда документите, комуникацията по финансирането и практичните стъпки до предаването.'
-	},
-	{
-		slug: 'klientski-zapitvania',
-		name: 'Екип клиентски заявки',
-		role: 'Огледи и следващи стъпки',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-customer-v1.webp',
-		bio: 'Екипът подготвя запитванията, уточнява часове за оглед и държи комуникацията подредена преди посещение на място.',
-		detail:
-			'Клиентските заявки минават през ясен контакт за телефон, имейл и оглед, така че всеки интерес да получи отговор с реална наличност и конкретно действие.'
-	}
-];
+export const daynightTeam: DayNightTeamMember[] = [{slug:'prodazhbi-showroom',name:daynightSite.name,role:'Публикуван бизнес контакт',phone:daynightSite.phone,email:daynightSite.email,image:daynightSite.logoDark,bio:'За наличност, цена, адрес и удобен час за оглед използвайте публикувания телефон.',detail:'Този профил представлява търговеца. Не твърди самоличност, опит или оценка на конкретен служител.'}];
 
 export const getDayNightTeamMemberBySlug = (slug: string) =>
 	daynightTeam.find((member) => member.slug === slug);

@@ -29,8 +29,8 @@ const fallbackLegalSlugs = ["privacy", "terms"] as const;
 const getPrivacyFallback = (isBg: boolean): FallbackLegalPage => ({
   title: isBg ? "Политика за поверителност" : "Privacy policy",
   description: isBg
-    ? "Как Day & Night Auto Group използва и защитава данните, които предоставяте при запитване за автомобил, внос, лизинг или продажба."
-    : "How Day & Night Auto Group uses and protects information you provide when asking about a vehicle, import, leasing, or selling your car.",
+    ? "Как Plus Auto използва и защитава данните, които предоставяте при запитване за автомобил, внос, лизинг или продажба."
+    : "How Plus Auto uses and protects information you provide when asking about a vehicle, import, leasing, or selling your car.",
   sections: isBg
     ? [
         {
@@ -73,13 +73,13 @@ const getPrivacyFallback = (isBg: boolean): FallbackLegalPage => ({
 const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
   title: isBg ? "Условия за ползване" : "Terms of use",
   description: isBg
-    ? "Основните правила за използване на сайта на Day & Night Auto Group и информацията за автомобили, внос и лизинг."
-    : "The core rules for using the Day & Night Auto Group website and its vehicle, import, and leasing information.",
+    ? "Основните правила за използване на сайта на Plus Auto и информацията за автомобили, внос и лизинг."
+    : "The core rules for using the Plus Auto website and its vehicle, import, and leasing information.",
   sections: isBg
     ? [
         {
-          heading: "Роля на Day & Night",
-          body: "Day & Night Auto Group представя собствени наличности и услуги за внос, лизинг и изкупуване на автомобили. Сайтът служи за информация и контакт; конкретните търговски условия се потвърждават в индивидуална писмена оферта или договор.",
+          heading: "Роля на Plus Auto",
+          body: "Plus Auto представя собствени наличности и услуги за внос, лизинг и изкупуване на автомобили. Сайтът служи за информация и контакт; конкретните търговски условия се потвърждават в индивидуална писмена оферта или договор.",
         },
         {
           heading: "Информация за автомобилите",
@@ -91,7 +91,7 @@ const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
         },
         {
           heading: "Цени и наличност",
-          body: "Цените, ориентировъчните месечни плащания, сроковете за доставка и наличността могат да се променят. Крайната цена, включените данъци и такси, гаранцията и доставката се потвърждават писмено от Day & Night.",
+          body: "Цените, ориентировъчните месечни плащания, сроковете за доставка и наличността могат да се променят. Крайната цена, включените данъци и такси, гаранцията и доставката се потвърждават писмено от Plus Auto.",
         },
         {
           heading: "Използване на сайта",
@@ -100,8 +100,8 @@ const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
       ]
     : [
         {
-          heading: "Day & Night's role",
-          body: "Day & Night Auto Group presents its vehicle stock and services for imports, leasing, and purchasing vehicles. The website provides information and contact options; specific commercial terms are confirmed in an individual written quotation or agreement.",
+          heading: "Plus Auto's role",
+          body: "Plus Auto presents its vehicle stock and services for imports, leasing, and purchasing vehicles. The website provides information and contact options; specific commercial terms are confirmed in an individual written quotation or agreement.",
         },
         {
           heading: "Vehicle information",
@@ -113,7 +113,7 @@ const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
         },
         {
           heading: "Prices and availability",
-          body: "Prices, indicative monthly payments, delivery times, and availability can change. Day & Night will confirm the final price, included taxes and fees, warranty, and delivery in writing.",
+          body: "Prices, indicative monthly payments, delivery times, and availability can change. Plus Auto will confirm the final price, included taxes and fees, warranty, and delivery in writing.",
         },
         {
           heading: "Use of the website",
@@ -179,7 +179,7 @@ const LegalPage = async ({ params }: LegalPageProperties) => {
         >
           <Link href={getLocalizedPath(normalizedLocale, "/")}>
             <ArrowLeft aria-hidden="true" className="size-4" />
-            {isBg ? "Към Day & Night" : "Back to Day & Night"}
+            {isBg ? "Към Plus Auto" : "Back to Plus Auto"}
           </Link>
         </Button>
 

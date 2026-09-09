@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'Русе, Русе, Русе — потвърдете мястото за оглед по телефона';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="Plus Auto map"
 					></iframe>
 				</div>
 			</div>

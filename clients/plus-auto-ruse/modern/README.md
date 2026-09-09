@@ -1,7 +1,5 @@
-# Plus Auto — Modern (work in progress)
+# Plus Auto — modern
 
-Independent copy of the complete published Modern workspace, including all apps, packages, workspace configuration and lockfile. This is not an extracted `apps/web` stub or a finished dealer demo.
+Independent personalized modern master copy. Read ../CLIENT.md, ../REVIEW.md and .client/project.json.
 
-Read `../CLIENT.md`, `../REVIEW.md` and `.client/project.json`. The initial master still contains source-dealer content; do not present it as Plus Auto. All app QA flags are false. No deployment, database or message provider has been provisioned.
-
-Source: `templates/modern` at `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`, tree `66bfb8196bbce18832ada6b34b02dda97baba25b`.
+Status: implemented-unverified. This branch-only owner preview uses dated seller-advertised listings, not live stock. No form delivery, deployment or business approval is implied. Existing TEMPLATE.md and source provenance describe the original master, not checks of this dealer.

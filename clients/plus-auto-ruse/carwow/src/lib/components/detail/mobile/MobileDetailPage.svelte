@@ -405,12 +405,12 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Day Night Auto предлага</strong>
+					<strong>Plus Auto предлага</strong>
 					<ul class="mobile-detail-sheet__offer-list">
 						<li>Финансиране и лизинг</li>
 						<li>Бартер и замяна</li>
 						<li>Съдействие с документите</li>
-						<li>Оглед в София</li>
+						<li>Оглед в Русе</li>
 					</ul>
 				</div>
 

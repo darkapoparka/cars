@@ -8,7 +8,7 @@
   const actions = [
     {
       title: 'Вижте колекцията',
-      artwork: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
+      artwork: { src: '/dealer/stock/11780378518049491-1.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
       vehicle: 'urus',
       tone: 'black',
       mobileTitle: 'Автомобили',
@@ -21,7 +21,7 @@
     },
     {
       title: 'Продажба или бартер',
-      artwork: { src: '/assets/images/lead/day-night-sell-banner-v2.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
+      artwork: { src: '/dealer/stock/11776858009452516-1.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
       vehicle: 'gclass',
       tone: 'red',
       mobileTitle: 'Продай/Бартер',
@@ -45,10 +45,10 @@
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
+      title: 'Условия за плащане',
       vehicle: 'urus',
       tone: 'black',
-      mobileTitle: 'Собствен лизинг',
+      mobileTitle: 'Условия за плащане',
       mobileCta: 'Виж условия',
       description: 'Попитайте за първоначална вноска, срок и условия.',
       bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],

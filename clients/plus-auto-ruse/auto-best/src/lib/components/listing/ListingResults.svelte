@@ -34,7 +34,7 @@
   <div class="container">
     <div class="dn-listing-results__heading">
       <h2 id="listing-results-title">
-        <span class="dn-listing-results__title-full">Налични автомобили</span>
+        <span class="dn-listing-results__title-full">Публикувани автомобили</span>
         <span class="dn-listing-results__title-mobile" aria-live="polite">{vehicles.length} {vehicles.length === 1 ? 'кола' : 'коли'}</span>
         <span class="dn-listing-results__count" aria-live="polite">{vehicles.length}</span>
       </h2>

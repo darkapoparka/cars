@@ -21,7 +21,7 @@
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
+      title: 'Условия за плащане',
       description: 'Попитайте за актуалните условия',
       href: '/contact?topic=leasing',
       icon: 'finance'
@@ -57,7 +57,7 @@
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+      <p>Подбрани премиум автомобили, внос и условия за плащане с директен контакт с екипа.</p>
     </div>
     <nav aria-label="Автомобили">
       <strong>Автомобили</strong>

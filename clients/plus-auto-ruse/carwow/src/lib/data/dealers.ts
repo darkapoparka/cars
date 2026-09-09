@@ -13,45 +13,8 @@ export interface Dealer {
 	specialties: string[];
 }
 
-export const dealers: Dealer[] = [
-	{
-		slug: "day-night-auto-group",
-		name: daynightSite.name,
-		location: "София",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/brand/daynight-hero-search-composed.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.8,
-		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Финансиране']
-	},
-	{
-		slug: "day-night-auto-group-documents",
-		name: "Day Night Auto Документи и съдействие",
-		location: "София",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/brand/daynight-hero-mobile-search-composed.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Документи', 'Регистрация', 'Съдействие']
-	},
-	{
-		slug: "day-night-auto-group-sourcing",
-		name: "Day Night Auto Подбор на автомобил",
-		location: "София",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: '/brand/daynight-logo-generated.png',
-		cover: '/brand/daynight-logo-generated.png',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
-	}
-];
+export const dealers: Dealer[] = [{slug:'day-night-auto-group',name:daynightSite.name,location:daynightSite.locationShort,address:daynightSite.location,phone:daynightSite.phoneLabel,logo:daynightSite.logoDark,cover:"/dealer/stock/21787593442542818-1.webp",inventory:daynightSite.inventoryCount,rating:0,specialties:['Публикувани обяви','Оглед след потвърждение','Условия по конкретната обява']}];
 
 export function getDealerBySlug(slug: string) {
-	return dealers.find((dealer) => dealer.slug === slug);
+	return dealers.find((dealer) => dealer.slug === slug) ?? (['daynight-auto-plovdiv','daynight-auto-sourcing','day-night-auto-group-documents','day-night-auto-group-sourcing'].includes(slug) ? dealers[0] : undefined);
 }

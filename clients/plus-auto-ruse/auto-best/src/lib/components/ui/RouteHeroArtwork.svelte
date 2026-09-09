@@ -1,15 +1,15 @@
 <script lang="ts">
   let { variant = 'cars', theme = 'light' }: { variant?: 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell'; theme?: 'light' | 'red' | 'charcoal' | 'yellow' } = $props();
   const images = {
-    cars: '/assets/images/lead/day-night-studio-cars-v1.webp',
-    keys: '/assets/images/lead/day-night-studio-keys-v1.webp',
-    guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
-    silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
-    graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
-    portrait: '/assets/images/lead/day-night-about-kristian-v1-light.webp',
-    phone: '/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp',
-    showroom: '/assets/images/lead/day-night-about-showroom-v1-light.webp',
-    email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
+    cars: '/dealer/stock/21780935283938344-1.webp',
+    keys: '/dealer/stock/11788812131352849-1.webp',
+    guide: '/dealer/stock/11788812131352849-1.webp',
+    silver: '/dealer/stock/11788812131352849-1.webp',
+    graphite: '/dealer/stock/11780378518049491-1.webp',
+    portrait: '/dealer/stock/21780935283938344-1.webp',
+    phone: '/dealer/stock/21787593442542818-1.webp',
+    showroom: '/dealer/stock/21787593442542818-1.webp',
+    email: '/dealer/stock/21780935283938344-1.webp'
   };
   const pairs = {
     cars: ['silver', 'graphite'],
@@ -20,14 +20,14 @@
     sell: ['portrait', 'keys']
   } as const;
   const coloredImages: Partial<Record<keyof typeof images, string>> = {
-    silver: '/assets/images/lead/day-night-silver-color-v1.webp',
-    graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
-    showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
-    portrait: '/assets/images/lead/day-night-portrait-color-v1.webp',
-    guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
-    keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
-    phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
-    email: '/assets/images/lead/day-night-contact-email-red-v1.webp'
+    silver: '/dealer/stock/11780378518049491-1.webp',
+    graphite: '/dealer/stock/21786648411892061-1.webp',
+    showroom: '/dealer/stock/21761073805702575-1.webp',
+    portrait: '/dealer/stock/21787593442542818-1.webp',
+    guide: '/dealer/stock/11776858009452516-1.webp',
+    keys: '/dealer/stock/21761073805702575-1.webp',
+    phone: '/dealer/stock/21761073805702575-1.webp',
+    email: '/dealer/stock/21787593442542818-1.webp'
   };
 </script>
 

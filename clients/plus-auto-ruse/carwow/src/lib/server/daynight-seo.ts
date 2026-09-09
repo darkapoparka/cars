@@ -16,8 +16,8 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 		.filter(Boolean);
 
 	return {
-		title: `${vehicle.title} | Day Night Auto`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Day Night Auto с опция за финансиране.`
+		title: `${vehicle.title} | Plus Auto`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Plus Auto с опция за финансиране.`
 	};
 }
 

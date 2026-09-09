@@ -1,17 +1,17 @@
-// Alpha bounds measured at opacity > 128; preserve natural proportions when aligning artwork.
+// Full-photo bounds: retain source photographs and visible watermarks; do not apply source cutout cropping.
 export const vehicleArtwork = {
-  silver: { src: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 154, 989, 516] },
-  graphite: { src: '/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [17, 162, 984, 476] },
-  gclass: { src: '/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 112, 995, 542] },
-  urus: { src: '/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [18, 156, 983, 495] },
-  golf: { src: '/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [15, 150, 984, 507] },
-  a45: { src: '/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [13, 146, 987, 511] },
-  porsche: { src: '/assets/images/lead/day-night-cutout-porsche-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 169, 987, 480] },
-  amggt: { src: '/assets/images/lead/day-night-cutout-amggt-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [14, 169, 980, 473] },
-  m5: { src: '/assets/images/lead/day-night-cutout-m5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 165, 990, 482] },
-  e63: { src: '/assets/images/lead/day-night-cutout-e63-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 168, 990, 482] },
-  m4: { src: '/assets/images/lead/day-night-cutout-m4-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [16, 161, 983, 484] },
-  rs5: { src: '/assets/images/lead/day-night-cutout-rs5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 166, 994, 488] },
+  silver: { src: '/dealer/stock/11788812131352849-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  graphite: { src: '/dealer/stock/21788436132804046-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  gclass: { src: '/dealer/stock/21761073805702575-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  urus: { src: '/dealer/stock/21787593442542818-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  golf: { src: '/dealer/stock/21788436132804046-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  a45: { src: '/dealer/stock/11776858009452516-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  porsche: { src: '/dealer/stock/21788436132804046-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  amggt: { src: '/dealer/stock/21786648411892061-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  m5: { src: '/dealer/stock/21787593442542818-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  e63: { src: '/dealer/stock/11776858009452516-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  m4: { src: '/dealer/stock/21787593442542818-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
+  rs5: { src: '/dealer/stock/11788812131352849-1.webp', width: 1000, height: 667, bounds: [0, 0, 1000, 667] },
 } as const;
 
 export type Vehicle = keyof typeof vehicleArtwork;

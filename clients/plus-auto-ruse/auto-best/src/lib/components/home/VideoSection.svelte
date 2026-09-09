@@ -25,12 +25,12 @@
   <div class="container">
     <div class="dn-videos__panel">
       <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледайте ни в</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Избрани автомобилни видеа с Кристиан Кирилов.</p>
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span>Всички видеа</span>
+        <h2 id="videos-title" class="dn-home-section-title">Медия от обявите</h2>
+        <p>Снимки от публикуваните автомобили. Няма потвърден видео канал на търговеца.</p>
+        <a class="dn-videos__channel dn-home-section-action" href="/listing-grid" target="_blank" rel="noopener noreferrer">
+          <span>Всички автомобили</span>
           <Icon name="arrow-right" size={16} />
-          <span class="dn-sr-only"> в YouTube (нов раздел)</span>
+          <span class="dn-sr-only"> в каталога</span>
         </a>
       </div>
 
@@ -42,16 +42,15 @@
                 class="dn-video-card__play"
                 type="button"
                 hidden={activeVideo === video.id}
-                aria-label={`Пуснете видеото: ${video.title}`}
-                onclick={(event) => play(video.id, event)}
+                disabled={!video.youtubeId}
+                aria-label={video.youtubeId ? `Пуснете видеото: ${video.title}` : `Снимка: ${video.title}; видео не е публикувано`}
+                onclick={(event) => { if (video.youtubeId) play(video.youtubeId, event); }}
               >
                 <img src={video.thumbnail} alt="" width="720" height="404" loading="lazy" decoding="async" />
-                <span class="dn-video-card__play-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
-                </span>
+                {#if video.youtubeId}<span class="dn-video-card__play-icon" aria-hidden="true">▶</span>{/if}
                 <span class="dn-video-card__duration">{video.duration}</span>
               </button>
-              {#if activeVideo === video.id}
+              {#if video.youtubeId && activeVideo === video.youtubeId}
                 <iframe
                   src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1`}
                   title={video.title}
@@ -65,21 +64,21 @@
             <div class="dn-video-card__content">
               <h3>{video.title}</h3>
               <div class="dn-video-card__actions">
-                <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" aria-label={`${video.title} — гледайте в YouTube (нов раздел)`}>
-                  Гледайте в YouTube <Icon name="arrow-right" size={16} />
+                <a href={video.href} target="_blank" rel="noopener noreferrer" aria-label={`${video.title} — гледайте в каталога`}>
+                  Снимки и данни <Icon name="arrow-right" size={16} />
                 </a>
-                {#if activeVideo === video.id}
+                {#if video.youtubeId && activeVideo === video.youtubeId}
                   <button type="button" onclick={stop} aria-label={`Затворете видеото: ${video.title}`}><Icon name="x" size={20} /></button>
                 {/if}
               </div>
             </div>
           </article>
         {/each}
-        <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
-          <strong>Всички видеа</strong>
-          <span>Гледайте в YouTube</span>
-          <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
+        <a class="dn-videos__all-card" href="/listing-grid" target="_blank" rel="noopener noreferrer">
+          <span class="dn-videos__all-icon"><Icon name="arrow-right" size={40} /></span>
+          <strong>Всички автомобили</strong>
+          <span>Снимки и данни</span>
+          <span class="dn-videos__all-arrow">Към каталога<Icon name="arrow-right" size={18} /></span>
           <span class="dn-sr-only">Отваря се в нов раздел</span>
         </a>
       </div>

@@ -1,29 +1,4 @@
-export interface FeaturedVideo {
-  id: string;
-  title: string;
-  duration: string;
-  thumbnail: string;
-}
-
-// Selected automotive videos from the owner-supplied channel, verified 2026-09-05.
-// This is a curated selection, not an automatically refreshed channel feed.
-export const featuredVideos: readonly FeaturedVideo[] = [
-  {
-    id: '6S3dLIgeAT8',
-    title: 'Най-желаната кола в България | Lamborghini Urus',
-    duration: '23:19',
-    thumbnail: '/assets/images/lead/day-night-video-urus.jpg'
-  },
-  {
-    id: 'zG6rjLpT4u8',
-    title: 'Продадох най-новата Панамера',
-    duration: '14:33',
-    thumbnail: '/assets/images/lead/day-night-video-panamera.jpg'
-  },
-  {
-    id: 'w_XaGmIWJFM',
-    title: 'Каква е разликата в G-класите',
-    duration: '23:03',
-    thumbnail: '/assets/images/lead/day-night-video-g-class.jpg'
-  }
-];
+import dealer from './dealer-records.json';
+export interface FeaturedVideo { id:string; title:string; duration:string; thumbnail:string; href:string; youtubeId?:string; }
+// No dealer video channel was verified. The retained media cards use actual listing photographs.
+export const featuredVideos:readonly FeaturedVideo[]=dealer.vehicles.slice(0,3).map(v=>({id:v.sourceId,title:v.title,duration:'Снимки',thumbnail:v.images[0],href:`/listing-detail-v1/${v.id}`}));

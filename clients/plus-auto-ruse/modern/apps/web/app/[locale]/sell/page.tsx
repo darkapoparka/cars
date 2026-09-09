@@ -59,7 +59,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+          "Финалната оценка се прави след оглед на място в шоурума ни в Русе.",
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -106,7 +106,7 @@ const pageCopy = {
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+          "The final appraisal follows an in-person inspection at our showroom in Ruse.",
         question: "Can you appraise it from photos only?",
       },
       {
@@ -249,7 +249,7 @@ export default async function SellPage({
             ) : (
               <p className="py-6 text-center text-sm text-zinc-600">
                 {normalizedLocale === "bg"
-                  ? "В момента няма налични автомобили."
+                  ? "В момента няма публикувани автомобили."
                   : "No cars are currently available."}
               </p>
             )

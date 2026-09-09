@@ -82,12 +82,12 @@ function featuredCars() {
 		slug: car.slug,
 		title: car.shortTitle,
 		subtitle: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
-		summary: featuredSummaries[car.slug] ?? 'Verified Day Night Auto stock',
+		summary: featuredSummaries[car.slug] ?? 'Verified Plus Auto stock',
 		image: car.image,
 		cardImage: featuredCardImages[car.slug] ?? car.image,
 		price: car.priceEur,
 		badge: car.badges[0] ?? 'Checked',
-		saving: 'DayNight inspected'
+		saving: 'По публикувана обява'
 	}));
 }
 
@@ -136,7 +136,7 @@ export function load() {
 		site: daynightSite,
 		stats: {
 			total: daynightSite.inventoryCount,
-			dealers: 'София',
+			dealers: 'Русе',
 			rating: '4.9/5',
 			reviews: '240+'
 		},

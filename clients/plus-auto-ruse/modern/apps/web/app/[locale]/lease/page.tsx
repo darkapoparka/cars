@@ -35,7 +35,7 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Финансиране от Day & Night",
+    badge: "Финансиране от Plus Auto",
     description:
       "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
     faqTitle: "Често задавани въпроси",
@@ -52,7 +52,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на Day & Night ще ви даде точен списък още при първия разговор.",
+          "Необходимите документи зависят от конкретния случай. Екипът на Plus Auto ще ви даде точен списък още при първия разговор.",
         question: "Какви документи ще са ми нужни?",
       },
       {
@@ -64,7 +64,7 @@ const pageCopy = {
     title: "Финансиране за следващия ви автомобил",
   },
   en: {
-    badge: "Financing from Day & Night",
+    badge: "Financing from Plus Auto",
     description:
       "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
     faqTitle: "Frequently asked questions",
@@ -81,7 +81,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Required documents depend on the individual case. The Day & Night team will give you an exact list during the first conversation.",
+          "Required documents depend on the individual case. The Plus Auto team will give you an exact list during the first conversation.",
         question: "Which documents will I need?",
       },
       {
@@ -103,8 +103,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от Day & Night Auto Group."
-      : "A tailored vehicle financing offer from Day & Night Auto Group.",
+      ? "Индивидуална оферта за финансиране на автомобил от Plus Auto."
+      : "A tailored vehicle financing offer from Plus Auto.",
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",
@@ -137,7 +137,7 @@ export default async function LeasePage({
     fuelLabel: formatFuelType(listing.spec.fuelType, normalizedLocale),
     id: listing.id,
     imageAlt: listing.images[0]?.alt || listing.title,
-    imageUrl: listing.images[0]?.url || "/lead-hero.jpg",
+    imageUrl: listing.images[0]?.url || "/dealer/stock/21787593442542818-1.webp",
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
     ...(listing.monthlyEstimate
       ? {

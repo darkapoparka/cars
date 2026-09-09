@@ -4,15 +4,53 @@
   "templateKey": "carwow",
   "templateVersion": "2026.09.08-repair-1",
   "createdAt": "2026-09-09",
-  "state": "in-progress",
-  "stage": "independent-master-copy-not-personalized",
+  "updatedAt": "2026-09-09T02:45:48.149Z",
+  "state": "implemented-unverified",
   "selectedHome": "main",
-  "availableHomes": [{"id":"main","route":"/"}],
-  "offeredHomes": [],
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    "main"
+  ],
   "publicUrl": null,
-  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
-  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
-  "source": {"repository":"darkapoparka/cars","commit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","path":"templates/carwow","tree":"d4a08817e87cf84d08c4db1c08a515937245f2dd"},
   "handoffBranch": "codex/astra-bg-10",
-  "limitations": ["Initial source checkpoint; inherited source identity and media are not Plus Auto facts.","Personalization, asset permission/integration and full exclusion/content audits are not complete.","No install, check, build or browser check has run."]
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "path": "templates/carwow",
+    "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+  },
+  "fullWorkspaceRetained": false,
+  "sourceChecks": {
+    "syntax": true,
+    "dataModels": true,
+    "localAssetBytes": true
+  },
+  "verificationEvidence": "../source-checks.json",
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review",
+    "No isolated application runner is available; the owner Windows source checkout was not modified.",
+    "Public-source media commercial reuse and dealer approval are not established; this is branch-only owner evaluation."
+  ],
+  "publicOriginIntegration": false
 }

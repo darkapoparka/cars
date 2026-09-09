@@ -32,7 +32,7 @@ function extractScriptSrcs(html: string) {
 
 function extractTitle(html: string) {
 	const match = html.match(/<title>([\s\S]*?)<\/title>/i);
-	return match?.[1].trim() || 'Day Night Auto';
+	return match?.[1].trim() || 'Plus Auto';
 }
 
 function extractBody(html: string) {

@@ -1,1 +1,14 @@
-{"schemaVersion":1,"method":"Git data tree/blob copy; independent normal Git files, not symlinks","sourceCommit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","sourceTree":"97833980ab127f6de8f675ac1a188e4b7f717976","removedSourceMetadata":["AGENTS.md",".template"],"sourceQACarriedForward":false,"fullCopyExclusionAudit":"pending"}
+{
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "templateVersion": "2026.09.08-polish-1",
+  "method": "Independent retained master blobs plus client-specific source and asset edits; no symlinks or copied deployment bindings",
+  "excluded": [
+    ".template/source-manifest.json",
+    ".template/source-readme.md",
+    ".template/template.json",
+    "AGENTS.md"
+  ],
+  "sourceQaIsNotDealerQa": true,
+  "templateRefRuntimeRetained": false
+}

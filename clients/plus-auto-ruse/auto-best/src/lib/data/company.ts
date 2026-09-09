@@ -66,16 +66,16 @@ export const companyServices: CompanyService[] = [
   {
     index: '02',
     icon: 'import',
-    title: 'Внос по заявка',
-    description: 'Обсъдете автомобил, бюджет и внос с екипа.',
+    title: 'Внос и документи',
+    description: 'Търговецът публикува директен внос. Уточнете произхода и документите на избрания автомобил.',
     href: '/contact?topic=import',
     cta: 'Попитайте за внос'
   },
   {
     index: '03',
     icon: 'leasing',
-    title: 'Собствен лизинг',
-    description: 'Условия според избрания автомобил.',
+    title: 'Условия за плащане',
+    description: 'Попитайте за приетите начини на плащане. Не е потвърден доставчик на финансиране.',
     href: '/contact?topic=leasing',
     cta: 'Обсъдете лизинг'
   },
@@ -105,15 +105,15 @@ export const contactTopics: ContactTopic[] = [
   {
     id: 'import',
     label: 'Внос',
-    title: 'Внос по заявка',
+    title: 'Внос и документи',
     description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
     mobileDescription: 'Добавете обява или опишете какво търсите.'
   },
   {
     id: 'leasing',
     label: 'Лизинг',
-    title: 'Собствен лизинг',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
+    title: 'Условия за плащане',
+    description: 'Обсъдете начините на плащане. Калкулаторът е пример, а не оферта за кредит.'
   },
   {
     id: 'trade-in',
@@ -127,7 +127,4 @@ export const contactTopics: ContactTopic[] = [
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
 
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+// Exact location differs between published pages; the map uses a business search, not an invented pin.

@@ -339,7 +339,7 @@
 			<img
 				class="sell-benefits__image"
 				src={resolve(
-					'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
+					'/dealer/stock/21780935283938344-1.webp'
 				)}
 				alt=""
 				width="1400"

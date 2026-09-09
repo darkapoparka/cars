@@ -1,9 +1,8 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
 
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+  const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(brand.mapQuery)}&z=13&hl=bg&output=embed`;
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.mapQuery)}`;
 </script>
 
 <div class="dn-showroom-map">

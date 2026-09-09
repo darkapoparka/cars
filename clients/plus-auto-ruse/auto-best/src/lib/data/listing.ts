@@ -54,9 +54,9 @@ export const listingFilterOptions = {
   transmissions: availableValues('transmission'),
   versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
   equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
-  years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
-  prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
-  mileages: ['', '50000', '75000', '100000'],
+  years: ['', ...new Set(featuredVehicles.map(v => String(v.yearNumber)))].sort(),
+  prices: ['', '5000', '10000', '15000', '20000', '30000', '50000', '75000', '100000'],
+  mileages: ['', '50000', '100000', '150000', '200000', '300000'],
   sorts: [
     ['default', 'Препоръчани'],
     ['newest', 'Най-нови'],

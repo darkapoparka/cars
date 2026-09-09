@@ -1,31 +1,37 @@
-# Plus Auto review — in-progress source checkpoint
+# Plus Auto — coordinator review
 
-These are expected local routes from the retained masters, NOT tested preview links. No server was started, no port is claimed available and no application QA passed in this session. Do not send this source-branded checkpoint to the dealer.
+Status: implemented-unverified. Three independent master applications; no iframe, deployment, live feed or public-origin switcher was added.
 
-## Coordinator review
+## Exact proposed local entries
 
-The working checkout remains the coordinator-owned J:/cars on main. Fetch this branch and inspect its diff before integrating; do not overwrite dirty work or launch another session in that checkout.
+Ports are proposals, not checked listeners. Confirm ownership and availability before launch.
 
-After deliberate integration, use the existing launcher from J:/cars:
+| Design | Folder | Entry | Example detail |
+|---|---|---|---|
+| Auto Best | auto-best | http://127.0.0.1:6631/ | http://127.0.0.1:6631/listing-detail-v1/1 |
+| Modern | modern/apps/web | http://127.0.0.1:6632/cars | http://127.0.0.1:6632/bg/listing/mercedes-benz-gle-coup-542818 |
+| Carwow | carwow | http://127.0.0.1:6633/ | http://127.0.0.1:6633/inventory/mercedes-benz-gle-coup-amg-542818 |
 
-```powershell
-./scripts/start-client.ps1 -Client plus-auto-ruse -Prepare
-./scripts/start-client.ps1 -Client plus-auto-ruse
-```
+## Install and check
 
-Expected entries with the launcher's default trio ports:
-- Auto Best: http://127.0.0.1:6631/ — clients/plus-auto-ruse/auto-best
-- Modern: http://127.0.0.1:6632/cars — clients/plus-auto-ruse/modern/apps/web
-- Carwow: http://127.0.0.1:6633/ — clients/plus-auto-ruse/carwow
+Use the existing coordinator workspace only after scoped branch review and integration; do not reset unrelated dirty files.
 
-Confirm listeners and physical working paths first. These URLs are instructions, not running services.
+Auto Best: Node 22.12+ in the 22 line; from auto-best run npm ci, then npm run validate.
 
-## Retained check commands — not run
+Modern: Node >=22.22.0 <23 and pnpm 11.4.0; from the complete modern workspace run pnpm install --frozen-lockfile, pnpm --filter @repo/database build, pnpm --filter web typecheck and pnpm --filter web build. Prisma generation is local only; no database/migration is needed for existing static demo mode. For local review set SKIP_ENV_VALIDATION=true, AUTOMARKET_PUBLIC_DATA_MODE=demo, NEXT_PUBLIC_WEB_URL=http://127.0.0.1:6632, NEXT_PUBLIC_API_URL=http://127.0.0.1:6636, NEXT_PUBLIC_APP_URL=http://127.0.0.1:6637. The origins are configuration suggestions, not running services.
 
-Auto Best (Node 22.12+ in Node 22): `npm ci`; `npm run validate` in auto-best.
+Carwow: Node 24; from carwow run npm ci, npm run check and npm run build.
 
-Modern (documented Node >=22.22.0 <23; pnpm 11.4.0): `pnpm install --frozen-lockfile`; `pnpm --filter @repo/database build`; `pnpm --filter web typecheck`; `pnpm --filter web build` in the full modern root. Retain static demo mode, set AUTOMARKET_PUBLIC_DATA_MODE=demo and distinct local NEXT_PUBLIC_WEB_URL/API_URL/APP_URL as the launcher does. Prisma generation is local only: no migrations or database provisioning. Do not run Next build and dev together.
+From J:/cars after coordinator integration: ./scripts/start-client.ps1 -Client plus-auto-ruse -Prepare; then ./scripts/start-client.ps1 -Client plus-auto-ruse. The existing launcher checks ports; do not use inherited fixed-port wrappers or run Next build and dev together.
 
-Carwow (retained .nvmrc: Node 24): `npm ci`; `npm run check`; `npm run build` in carwow. Use the existing launcher rather than the inherited fixed-port dev wrapper.
+## Review matrix — NOT EXECUTED
 
-Before claiming readiness: finish identity/content/assets, compare each application with its master at 390/1440 px, check 320px headers, catalogue/detail/contact, filters/reset/back state, gallery, menu dismissal/focus, images/overflow/console and enquiry destination without sending an external message.
+At 390 and 1440 px for all three designs: entry, inventory, matching detail/gallery, contact, filters/reset/back state, menu Escape/focus return, image loads, horizontal overflow and browser console. At 320 px check complete logo/header controls. No full application browser review, dependency install, framework check or build ran in this session.
+
+## Source checks actually executed
+
+See source-checks.json. Pinned Svelte compilers parsed changed components, TypeScript parsed changed TS/TSX, and transpiled data adapters were executed in memory to compare vehicle IDs, prices, galleries and bundled image bytes across the trio. These are source/model checks, NOT framework typechecks or application browser tests.
+
+## Boundaries
+
+Demo enquiry delivery is explicitly unavailable; do not send real messages. Published stock is a dated sample and must be confirmed. Original dealer media is locally bundled with ASSETS.json provenance; commercial reuse/dealer approval remains unconfirmed. Exact source facts, caveats and dates are in SOURCE_PACK.json. Owner acceptance remains pending.

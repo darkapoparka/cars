@@ -12,6 +12,8 @@
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
+  let gallerySelection = $state<Record<number,number>>({});
+  let galleryIndex = $derived(gallerySelection[data.vehicle.id] ?? 0);
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const detailTabs = [
@@ -53,7 +55,8 @@
     { label: 'Пробег', value: data.vehicle.mileage },
     { label: 'Гориво', value: data.vehicle.fuel },
     { label: 'Скоростна кутия', value: data.vehicle.transmission },
-    { label: 'Локация', value: brand.city }
+    { label: 'Локация', value: data.vehicle.location },
+    { label: 'Цена / данъци', value: data.vehicle.taxNote }
   ]);
 </script>
 
@@ -61,7 +64,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Публикувана обява от ${brand.name}; потвърдете наличността.`}
   />
 </svelte:head>
 
@@ -84,7 +87,7 @@
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
                 <img
-                  src={data.vehicle.image}
+                  src={data.vehicle.images[galleryIndex] ?? data.vehicle.image}
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
@@ -92,6 +95,11 @@
                   decoding="async"
                 />
               </figure>
+              <div class="dn-dealer-gallery-thumbs" aria-label="Снимки на автомобила">
+                {#each data.vehicle.images as image, index (image)}
+                  <button type="button" aria-label={`Снимка ${index + 1} от ${data.vehicle.images.length}`} aria-pressed={galleryIndex === index} onclick={() => { gallerySelection[data.vehicle.id] = index; }}><img src={image} alt="" width="120" height="80" loading="lazy" /></button>
+                {/each}
+              </div>
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label="Информация за автомобила">
@@ -130,9 +138,9 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
-                    екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
+                    {data.vehicle.description}
                   </p>
+                  <a href={data.vehicle.evidenceUrl} target="_blank" rel="noreferrer">Публикувана обява · източник</a>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
                     <Icon name="message" size={22} strokeWidth={1.7} />
                     Поискайте информация
@@ -154,6 +162,7 @@
                 <h2 id="location-title">Локация</h2>
                 <p><Icon name="map-pin" size={20} strokeWidth={1.7} />{brand.address}</p>
               </div>
+              <p>{brand.addressNote}</p>
               <ShowroomMap />
             </section>
           </div>
@@ -162,7 +171,7 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
-              <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
+              <p class="dn-detail-summary__availability">{data.vehicle.availability}<br />{data.vehicle.taxNote}</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
                 <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
@@ -217,3 +226,7 @@
       </div>
     </section>
 </div>
+
+<style>
+.dn-dealer-gallery-thumbs{display:flex;gap:10px;padding:12px;overflow:auto}.dn-dealer-gallery-thumbs button{flex:0 0 100px;border:2px solid transparent;padding:0;background:none;border-radius:8px;overflow:hidden;cursor:pointer}.dn-dealer-gallery-thumbs button[aria-pressed="true"]{border-color:var(--dn-red)}.dn-dealer-gallery-thumbs img{display:block;width:100%;height:66px;object-fit:cover}.dn-dealer-gallery-thumbs button:focus-visible{outline:3px solid var(--dn-ink);outline-offset:2px}
+</style>
