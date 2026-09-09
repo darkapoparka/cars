@@ -4,9 +4,9 @@ export const daynightSite = {
   name:'TROYA AUTO', shortName:'Troya Auto', phone:'0886067006', phoneLabel:'0886 067 006', email:'', location,
   locationShort:'Врана – Лозен, София', hoursLabel:'Пон–Пет 09:30–18:00 · Съб 10:00–17:00 · Неделя почивен ден',
   mapEmbedSrc:`https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`, mapUrl:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
-  mapLabel:'TROYA AUTO, София, България', sourceInventory:'https://troya-auto.mobile.bg/', inventoryCount:108,
+  mapLabel:'TROYA AUTO, София, България', sourceInventory:'https://troya-auto.mobile.bg/', inventoryCount:8,
   logoLight:'/brand/logo.svg', logoDark:'/brand/logo.svg', primaryCta:'Виж автомобилите', sellCarCta:'Предложи автомобил', accountCta:'Свържи се', phoneCta:'Обади се за оглед',
-  heroTitle:'TROYA AUTO', heroSubtitle:'Употребявани автомобили от Швейцария, Германия и Холандия. Наличността се потвърждава по телефона.',
+  heroTitle:'TROYA AUTO', heroSubtitle:'Представителна демо селекция от публикувани обяви. Наличността се потвърждава по телефона.',
   reviewCount:daynightReviewCount, reviewCountLabel:daynightReviewCountLabel, reviewLinkLabel:daynightReviewLinkLabel
 } as const;
 export const publicNavItems=[{label:'Начало',href:'/'},{label:'Автомобили',href:'/inventory'},{label:'Продай',href:'/sell-your-car'},{label:'Услуги',href:'/services'},{label:'За нас',href:'/about'},{label:'Блог',href:'/blog'},{label:'Контакти',href:'/contact'}] as const;
