@@ -100,7 +100,7 @@
 					><MapPin size={18} /><span>{footer.contact.address}</span><ArrowUpRight size={15} /></a
 				>
 				<div class="dn-footer__socials">
-					{#each footer.socialLinks as social (social.label)}
+					{#each footer.socialLinks.filter(social => social.href) as social (social.label)}
 						<a
 							{...externalHref(social.href)}
 							target="_blank"
@@ -203,7 +203,7 @@
 								</a>
 
 								<ul class="widget-socical mb-12">
-									{#each footer.socialLinks as social (social.label)}
+									{#each footer.socialLinks.filter(social => social.href) as social (social.label)}
 										<li>
 											<a
 												{...externalHref(social.href)}

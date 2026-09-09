@@ -65,7 +65,7 @@
 					class="daynight-action-card__img daynight-action-card__img--specialist"
 					src={ownership
 						? '/assets/daynight/banners/home-gclass-v1.png'
-						: '/dealer/logo.png'}
+						: '/assets/daynight/banners/home-gclass-v1.png'}
 					alt=""
 					width={ownership ? 1881 : 1774}
 					height={ownership ? 836 : 887}
@@ -90,7 +90,7 @@
 					class="daynight-action-card__img daynight-action-card__img--consultant"
 					src={ownership
 						? '/assets/daynight/banners/home-urus-v1.png'
-						: '/dealer/logo.png'}
+						: '/assets/daynight/banners/home-urus-v1.png'}
 					alt=""
 					width={ownership ? 2172 : 1774}
 					height={ownership ? 724 : 887}

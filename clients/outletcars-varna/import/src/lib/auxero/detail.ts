@@ -1,4 +1,4 @@
-import { daynightContact, daynightConsultants, daynightFetchedAt } from '$lib/data/daynight';
+import { daynightBrand, daynightContact, daynightConsultants, daynightFetchedAt } from '$lib/data/daynight';
 import type { Vehicle } from '$lib/data/vehicles';
 import {
 	getMessages,
@@ -236,12 +236,12 @@ const vehicleTrust = (vehicle: Vehicle, locale: Locale = 'en'): AuxeroVehicleTru
 	const mileage = formatInventoryKm(vehicle.mileage);
 
 	return {
-		verdict: bg ? 'Попитайте за историята' : 'Verified history',
+		verdict: bg ? 'Данни от обявата' : 'Advertised information',
 		summary: bg
-			? `${vehicle.year} · ${mileage} · внос с документи · пълна сервизна история`
-			: `${vehicle.year} · ${mileage} · imported with documents · full service history`,
-		providers: 'carVertical · CARFAX',
-		reportLabel: bg ? 'Виж отчета' : 'See report'
+			? `${vehicle.year} · ${mileage} · потвърдете историята с автокъщата`
+			: `${vehicle.year} · ${mileage} · confirm history with the dealership`,
+		providers: bg ? 'Няма приложен доклад' : 'No report supplied',
+		reportLabel: bg ? 'Попитай за историята' : 'Ask about history'
 	};
 };
 
@@ -251,7 +251,7 @@ export const vehicleDetailFromVehicle = (
 ): AuxeroVehicleDetailData => {
 	const consultant =
 		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ??
-		daynightConsultants[0];
+		daynightConsultants[0] ?? { image: '/dealer/logo.png', name: daynightBrand.name, slug: 'showroom-contact' };
 	const copy = getMessages(locale).detail;
 	const fallbackImage = vehicleImageFallback(vehicle);
 	const primaryImage = vehicleImageOverrides[vehicle.slug] ?? vehicle.image;

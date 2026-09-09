@@ -4,36 +4,21 @@
   "templateKey": "auto-best",
   "templateVersion": "2026.09.08-refresh-2",
   "createdAt": "2026-09-09T19:14:52.656Z",
-  "state": "personalized-awaiting-browser-qa",
+  "state": "ready-for-local-review",
   "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [],
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [{"id":"main","route":"/"}],
   "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
+  "qa": {"desktop":true,"mobile":true,"identity":true,"contactPath":true},
+  "verification": {
+    "node": "v22.23.2",
+    "check": {"command":"npm run check","exitCode":0},
+    "build": {"command":"npm run build","exitCode":0},
+    "browser": {"checks":18,"widths":[390,1440],"results":".client/evidence/browser/results.json"},
+    "scope": "Home, inventory, detail, contact, about, service, sell, blog; vehicle navigation and return; tested-route branding, assets, overflow, page errors and phone links.",
+    "notVerified": ["all secondary interactions","all alternate routes","full visual parity","real form delivery","external integrations","public hosted preview","dealer approval"]
   },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
-  "localPreview": {
-    "port": 6761,
-    "command": "npm run dev",
-    "running": false
-  },
-  "content": {
-    "facts": "../business-facts.json",
-    "stock": "../stock.json",
-    "inventorySnapshot": true,
-    "dealerApproval": false
-  }
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "localPreview": {"port":6761,"command":"npm run dev","url":"http://127.0.0.1:6761","requiresLocalServer":true},
+  "content": {"facts":"../business-facts.json","stock":"../stock.json","inventorySnapshot":true,"dealerApproval":false,"mediaRightsIndependentlyEstablished":false}
 }

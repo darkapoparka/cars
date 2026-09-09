@@ -196,7 +196,7 @@ export const daynightBrand = {
   "displayName": "OUTLETCARS.BG — Варна",
   "bulgarianName": "OUTLETCARS.BG — Варна",
   "domain": "outletcars-varna.example",
-  "tagline": "Автомобили въвъв Варна — предложения и огледи",
+  "tagline": "Автомобили във Варна — предложения и огледи",
   "legalNote": "Демонстрационен проект. Датирани обяви от публичния каталог; наличността се потвърждава от търговеца."
 } as const;
 

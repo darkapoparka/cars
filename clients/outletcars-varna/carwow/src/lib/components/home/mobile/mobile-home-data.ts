@@ -10,29 +10,7 @@ export type FooterSocialLink = {
 
 export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | 'mpv';
 
-export const footerSocialLinks: FooterSocialLink[] = [
-	{
-		label: 'Facebook',
-		href: '',
-		title: 'Facebook',
-		icon: 'facebook',
-		external: true
-	},
-	{
-		label: 'Instagram',
-		href: '',
-		title: 'Instagram',
-		icon: 'instagram',
-		external: true
-	},
-	{
-		label: 'Mobile.bg',
-		href: daynightSite.sourceInventory,
-		title: 'Виж наличните автомобили в mobile.bg',
-		icon: 'mobilebg',
-		external: true
-	}
-];
+export const footerSocialLinks: FooterSocialLink[] = [{ label: 'Mobile.bg', href: daynightSite.sourceInventory, title: 'Обяви в Mobile.bg', icon: 'mobilebg', external: true }];
 
 export const brandLogos: Record<string, string> = {
 	Audi: '/assets/images/brand/brand-3.png',

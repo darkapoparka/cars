@@ -554,21 +554,61 @@ const brandInventoryCounts = countBy(inventoryVehicles.map((vehicle) => vehicle.
 // "import on request" cards that route to the import flow instead of an
 // empty inventory result.
 const homeFiveBrandShowcase = [
-	{ image: '/assets/images/brand/brand-1.webp', name: 'BMW', query: 'BMW' },
-	{
-		image: '/assets/images/brand/brand-2.webp',
-		name: 'Mercedes',
-		query: 'Mercedes-Benz'
-	},
-	{ image: '/assets/images/brand/brand-3.webp', name: 'Audi', query: 'Audi' },
-	{ image: '/assets/daynight/brands/porsche.webp', name: 'Porsche', query: 'Porsche' },
-	{ image: '/assets/images/brand/brand-10.webp', name: 'Mazda', query: 'Mazda' },
-	{ image: '/assets/images/brand/brand-4.webp', name: 'Honda', query: 'Honda' },
-	{ image: '/assets/images/brand/brand-5.webp', name: 'Toyota', query: 'Toyota' },
-	{ image: '/assets/images/brand/brand-6.webp', name: 'Volvo', query: 'Volvo' },
-	{ image: '/assets/images/brand/brand-7.webp', name: 'Ford', query: 'Ford' },
-	{ image: '/assets/images/brand/brand-8.webp', name: 'Hyundai', query: 'Hyundai' },
-	{ image: '/assets/images/brand/brand-12.webp', name: 'Tesla', query: 'Tesla' }
+  {
+    "image": "/dealer/oem/audi.png",
+    "name": "Audi",
+    "query": "Audi"
+  },
+  {
+    "image": "/dealer/oem/citroen.svg",
+    "name": "Citroen",
+    "query": "Citroen"
+  },
+  {
+    "image": "/dealer/oem/opel.svg",
+    "name": "Opel",
+    "query": "Opel"
+  },
+  {
+    "image": "/dealer/oem/vw.svg",
+    "name": "VW",
+    "query": "VW"
+  },
+  {
+    "image": "/dealer/oem/peugeot.svg",
+    "name": "Peugeot",
+    "query": "Peugeot"
+  },
+  {
+    "image": "/dealer/oem/bmw.webp",
+    "name": "BMW",
+    "query": "BMW"
+  },
+  {
+    "image": "/dealer/oem/mercedes-benz.webp",
+    "name": "Mercedes",
+    "query": "Mercedes-Benz"
+  },
+  {
+    "image": "/dealer/oem/porsche.webp",
+    "name": "Porsche",
+    "query": "Porsche"
+  },
+  {
+    "image": "/dealer/oem/mazda.png",
+    "name": "Mazda",
+    "query": "Mazda"
+  },
+  {
+    "image": "/dealer/oem/honda.svg",
+    "name": "Honda",
+    "query": "Honda"
+  },
+  {
+    "image": "/dealer/oem/toyota.webp",
+    "name": "Toyota",
+    "query": "Toyota"
+  }
 ] as const;
 
 const showcaseBrandCountLabel = (locale: Locale, count: number) => {
@@ -586,8 +626,8 @@ const showcaseBrandCard = (
 	if (stockCount === 0) {
 		return {
 			...brand,
-			count: locale === 'bg' ? 'Внос по заявка' : 'Import on request',
-			href: '/import'
+			count: locale === 'bg' ? '0 обяви' : '0 listings',
+			href: `/inventory?brand=${encodeURIComponent(brand.query)}`
 		};
 	}
 
@@ -683,26 +723,7 @@ export const homeFiveHeaderDataForLocale = (
 
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
-export const homeFiveReviewItems: HomeFiveReview[] = [
-	{
-		name: 'Aleksandar Vytev',
-		role: 'Клиент на OUTLETCARS.BG — Варна',
-		avatar: '/assets/images/avatar/avatar-1.webp',
-		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
-	},
-	{
-		name: 'Krasimir Georgiev',
-		role: 'Клиент с внос',
-		avatar: '/assets/images/avatar/avatar-2.webp',
-		text: 'OUTLETCARS.BG — Варна запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
-	},
-	{
-		name: 'Iliyan Petrov',
-		role: 'Продава клиентски автомобил',
-		avatar: '/assets/images/avatar/avatar-3.webp',
-		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
-	}
-];
+export const homeFiveReviewItems: HomeFiveReview[] = [];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>
 	posts.slice(0, 3).map((post) => ({
@@ -729,7 +750,7 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 		phoneLabel: daynightContact.primaryPhoneLabel
 	},
 	copyright: `©2026 ${daynightBrand.name}. All Rights Reserved.`,
-	hours: ['Monday-Friday 9:00 - 18:00', 'Weekend viewings by appointment'],
+	hours: [daynightContact.appointmentNote],
 	labels: {
 		buyingSelling: 'BUYING & SELLING',
 		emailPlaceholder: 'Enter your e-mail',
@@ -778,7 +799,7 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 			{ href: '/reviews', label: 'Отзиви от клиенти' }
 		],
 		copyright: `©2026 ${daynightBrand.name}. Всички права запазени.`,
-		hours: ['Понеделник-петък 9:00 - 18:00', 'Огледи през уикенда с уговорка'],
+		hours: [daynightContact.appointmentNote],
 		labels: {
 			buyingSelling: 'ПОКУПКА И ПРОДАЖБА',
 			emailPlaceholder: 'Въведете имейл',

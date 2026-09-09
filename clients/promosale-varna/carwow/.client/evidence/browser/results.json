@@ -2,7 +2,7 @@
   "slug": "promosale-varna",
   "template": "carwow",
   "port": 6762,
-  "startedAt": "2026-09-09T20:03:18.446Z",
+  "startedAt": "2026-09-09T20:24:18.163Z",
   "routes": [
     {
       "width": 390,
@@ -10,10 +10,8 @@
       "route": "/",
       "status": 200,
       "title": "Promosale Varna Варна - проверени автомобили и бърз контакт",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "390-home.png"
     },
     {
@@ -62,10 +60,8 @@
       "route": "/financing",
       "status": 200,
       "title": "Финансиране | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "390-service.png"
     },
     {
@@ -84,10 +80,8 @@
       "route": "/blog",
       "status": 200,
       "title": "Блог | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "390-blog.png"
     },
     {
@@ -101,11 +95,8 @@
       "route": "/",
       "status": 200,
       "title": "Promosale Varna Варна - проверени автомобили и бърз контакт",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains",
-        "No sourced inventory image"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-home.png"
     },
     {
@@ -114,10 +105,8 @@
       "route": "/inventory",
       "status": 200,
       "title": "Автомобили в наличност | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-inventory.png"
     },
     {
@@ -126,10 +115,8 @@
       "route": "/inventory/mercedes-benz-eqe-552939",
       "status": 200,
       "title": "Mercedes-Benz EQE 2022 г., Електрически, 294 900 км, Обявен | Promosale Varna",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-detail.png"
     },
     {
@@ -138,10 +125,8 @@
       "route": "/contact",
       "status": 200,
       "title": "Контакти | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-contact.png"
     },
     {
@@ -150,10 +135,8 @@
       "route": "/about",
       "status": 200,
       "title": "За нас | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-about.png"
     },
     {
@@ -162,10 +145,8 @@
       "route": "/financing",
       "status": 200,
       "title": "Финансиране | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-service.png"
     },
     {
@@ -174,10 +155,8 @@
       "route": "/sell-your-car",
       "status": 200,
       "title": "Продай автомобила си | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-sell.png"
     },
     {
@@ -186,10 +165,8 @@
       "route": "/blog",
       "status": 200,
       "title": "Блог | Promosale Varna Варна",
-      "passed": false,
-      "failures": [
-        "Source dealer content remains"
-      ],
+      "passed": true,
+      "failures": [],
       "screenshot": "1440-blog.png"
     },
     {
@@ -198,6 +175,6 @@
       "passed": true
     }
   ],
-  "passed": false,
-  "finishedAt": "2026-09-09T20:03:49.542Z"
+  "passed": true,
+  "finishedAt": "2026-09-09T20:24:46.912Z"
 }

@@ -1,4 +1,4 @@
-import { daynightConsultants, daynightContact, daynightFetchedAt } from '$lib/data/daynight';
+import { daynightBrand, daynightConsultants, daynightContact, daynightFetchedAt } from '$lib/data/daynight';
 import type { Agent } from '$lib/data/agents';
 import { listManagedAgents, type ManagedAgent } from './agents';
 import {
@@ -1856,7 +1856,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 	const vehicle = getVehicleDetailOrFallback(options.slug);
 	const monthly = `${vehicle.monthly.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} EUR/mo`;
 	const consultant =
-		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0];
+		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0] ?? { image: '/dealer/logo.png', name: daynightBrand.name, slug: 'showroom-contact', title: 'Контакт с автокъщата' };
 	let next = html
 		// Lead with the actual price, not the financing estimate: make the Cash tab
 		// active by default so the headline shows the car price; Finance is one tab away.
