@@ -1,9 +1,7 @@
 # R.Q.S. Auto – Team — Varna
 
-Status: **in-progress**. Auto Best, full-workspace Modern and Carwow are real independent application sources on `codex/astra-bg-03`, with R.Q.S. contact/map identity, an eight-record dated public-ad snapshot, and ImageGen-assisted branding integrated into all three apps.
+Status: **implemented-unverified**. Auto Best, full-workspace Modern and Carwow are actual independent applications on `codex/astra-bg-03`. They consume R.Q.S. contact/map identity, an eight-record dated public-ad snapshot, and ImageGen-assisted `R.Q.S. Auto Team` demo branding in light/dark/favicon form across all three apps.
 
-Active branding: `R.Q.S. Auto Team`, refreshed from the published R.Q.S. visual reference. Image generation reference: `9a26afcd-be6c-4129-8eb0-9382b8ed9b95`. The integrated SVG/light-dark/favicon set is a demo proposal, not dealer-approved artwork.
+Image generation reference: `9a26afcd-be6c-4129-8eb0-9382b8ed9b95`. The integrated logo is a proposal, not dealer-approved artwork. Mileage/listing conflicts remain qualified rather than silently normalized. Unsupported inherited finance/import/trade-in claims were removed or converted to explicit direct-contact information pages. Carwow public home/header/footer identity is dealer-dynamic rather than Day Night/Sofia.
 
-Primary source: https://rqsautoteam.mobile.bg/ observed 2026-09-09; phone +359876997791. Mileage and conflicting listing details remain qualified rather than silently normalized.
-
-Remaining before a truthful `implemented-unverified` handoff: real vehicle galleries are not bundled and explicit missing-photo states remain; a retained Modern finance route still carries source-template Day & Night wording and must be neutralized or reviewed. Runtime/build/browser QA is for the local coordinator. No deployment or outreach was performed.
+Known limitation: permitted real vehicle galleries are not bundled; explicit missing-photo states remain and link users back to source information. Runtime/build/browser QA is intentionally pending for the local coordinator. No deployment or outreach was performed.
