@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "clientSlug": "success-automobile",
+  "leadId": "bg-plovdiv-success-automobile",
+  "status": "blocked",
+  "purpose": "Bounded identity, stock and asset-access evidence; not a complete current 8-12-car application pack.",
+  "identity": {
+    "name": "Success Automobile",
+    "city": "Пловдив",
+    "districtAsPublished": "Индустриална зона -Тракия",
+    "addressAsPublished": "Цариградско шосе !!!",
+    "streetNumber": null,
+    "phoneAsPublished": "0877333433",
+    "phoneE164": "+359877333433",
+    "email": null,
+    "openingHours": null,
+    "hoursNote": "The Mobile.bg contact profile explicitly says hours have not been entered.",
+    "mobileBgMemberSince": 2006,
+    "foundingYear": null,
+    "legalEntity": null,
+    "sources": ["https://success.mobile.bg/", "https://success.mobile.bg/contacts", "https://success.mobile.bg/about", "https://www.auto.bg/dealer/success"],
+    "independentWebsite": null,
+    "websiteFinding": "Not confidently matched in bounded name, phone and profile-domain searches; absence not proven.",
+    "matchedFacebook": null,
+    "matchedInstagram": null,
+    "recentSocialPostVerified": false,
+    "excludedNameMatch": "Success Automobile / Volkswagen in Indore, India is not this Plovdiv dealer.",
+    "serviceClaimsAccepted": [],
+    "excludedClaims": ["Seller lease-without-income-proof text is not an established finance provider, approval guarantee or demo integration.", "A directory company-name result sharing a phone was not sufficient to establish the legal entity."]
+  },
+  "inventory": {
+    "mobileBgAdvertisedEntries": 54,
+    "autoBgAdvertisedEntries": 54,
+    "verifiedAvailableCount": null,
+    "scope": "Profile and contact/about surfaces inspected; no complete availability audit of all 54 advertisements.",
+    "profileOnlyExample": {"title":"Kia Niro HYBRID","manufactureMonth":"2018-01","mileageKm":133000,"advertisedCashPrice":11999,"currency":"EUR","taxQualification":"VAT included","sourceUrl":"https://success.mobile.bg/","sourceId":null,"detailVerified":false,"availability":"advertised-unconfirmed"},
+    "detailAttempts": [
+      {"sourceId":"21705706946317965","sourceUrl":"https://success.mobile.bg/obiava-21705706946317965-porsche-cayenne-cupe-chrono-podgrev-obduh-panorama-face-lizi","outcome":"Cache miss","useAsVerifiedCurrentRecord":false,"conflict":"Search excerpt showed EUR 65,999 while profile showed EUR 66,999; no reconciliation by guesswork."},
+      {"sourceId":"11726166025888313","sourceUrl":"https://success.mobile.bg/obiava-11726166025888313-mercedes-benz-e-400-amg-4matic-headup-podgrev-burmes-pano-360cam","outcome":"HTTP 400 Unicode decoding error","useAsVerifiedCurrentRecord":false,"conflict":"Search excerpt and profile price differ; detail not reliably retrieved."},
+      {"sourceId":"14623605","sourceUrl":"https://www.car24.bg/obiava/14623605/bmw-x3-mpak-3-0-panorama-camera-navi-lizing","outcome":"Readable cached Car24 detail; tool reports crawled ten months ago, page publication 2025-05-10","title":"BMW X3 MPAK 3.0","manufactureMonth":"2005-01","mileageKm":200999,"advertisedCashPrice":10000,"currency":"BGN","displayedSecondaryPriceEur":5112.92,"taxQualification":"VAT not charged","phoneMatches":true,"useAsVerifiedCurrentRecord":false,"reason":"Stale source cannot establish September 2026 availability or price."}
+    ]
+  },
+  "brandingAndMedia": {
+    "coverSourceUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h11437247200639006.pic",
+    "coverReferencePage": "https://www.auto.bg/dealer/success",
+    "logoReferenceAsReturned": "https://www.car24.bg/cdn2.focus.bg/mobile/images/houseslogos/h11437247200639006.pic",
+    "logoReferenceNote": "Car24 tool resolution produced a malformed prefixed URL. A normalized CDN read was rejected; no image was visually accepted.",
+    "visualInspectionCompleted": false,
+    "noLogoClaim": false,
+    "coverAttempts": ["Web click: Cache miss", "container.download to /mnt/data/success-source-cover.pic: download failed"],
+    "historicalPhotoReference": "https://mobistatic2.focus.bg/mobile/photosorg/975/2/big/21739287310982975_6U.webp",
+    "historicalPhotoAttempt": "Web click: Cache miss; no local photo saved for implementation.",
+    "reuseBasis": "No grant covering a matched current real-stock photo set established in the inspected repository records or public source pages.",
+    "localRuntimeAssetPaths": [],
+    "imageGenerationCalled": false,
+    "permissionInvented": false
+  },
+  "repositoryCheck": {
+    "baseCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "priorMainAndAstraClientTreeInspection": "No Success application folder found.",
+    "defaultBranchKeywordSearch": "success.mobile.bg returned no results; not treated as exhaustive content clearance.",
+    "researchRecords": ["docs/lead-build/source/bulgaria.json", "docs/lead-research/bulgaria/profiles-other.json", "docs/lead-research/bulgaria/account-links.json"],
+    "newCrmIdentityCreated": false,
+    "unpublishedWorkerStateKnown": false
+  },
+  "applicationsCreated": [],
+  "checks": {"applicationCommands":[],"build":"not-run","typecheck":"not-run","browser320":"not-run","browser390":"not-run","browser1440":"not-run","ownerManualReview":"pending"},
+  "resumeRequirement": "Resolve visual branding and acquire a correctly matched, reusable current real-photo set; then complete individual listing facts and personalize the retained trio. Existing source snapshots alone are not a completed build."
+}
