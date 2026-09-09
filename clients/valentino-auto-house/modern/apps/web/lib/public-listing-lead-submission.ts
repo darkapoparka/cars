@@ -1,6 +1,7 @@
 // biome-ignore-all lint/complexity/noExcessiveCognitiveComplexity: public lead gates remain in one auditable fail-closed sequence.
 import {
   isoCountryCodeSchema,
+  leadSite,
   type PublicLeadInput,
   publicLeadFormInputSchema,
   publicLeadInputSchema,
@@ -72,6 +73,7 @@ export const submitPublicListingLead = async (
   dependencies: PublicListingLeadSubmissionDependencies
 ): Promise<PublicListingLeadSubmissionResult> => {
   const baseResult = { correlationId: requestContext.correlationId };
+  if (leadSite.staticDemoMode) return { ...baseResult, status: "unavailable" };
   const slug = String(formData.get("slug") ?? "").trim();
   const parsedBuyerCountryCode = isoCountryCodeSchema.safeParse(
     String(formData.get("buyerCountryCode") ?? "")

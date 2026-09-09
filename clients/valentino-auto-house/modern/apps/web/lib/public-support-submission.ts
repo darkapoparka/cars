@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import type { EmailDeliveryReceipt } from "@repo/email/delivery";
-import { isoCountryCodeSchema } from "@repo/marketplace";
+import { isoCountryCodeSchema, leadSite } from "@repo/marketplace";
 import { z } from "zod";
 import {
   fingerprintPublicValue,
@@ -194,6 +194,7 @@ export const submitPublicSupportRequest = async (
   dependencies: PublicSupportSubmissionDependencies
 ): Promise<PublicSupportSubmissionResult> => {
   const baseResult = { correlationId: requestContext.correlationId };
+  if (leadSite.staticDemoMode) return { ...baseResult, status: "unavailable" };
   if (
     !(
       requestContext.sameOrigin &&
