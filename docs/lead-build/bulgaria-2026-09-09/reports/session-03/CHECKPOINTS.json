@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "repository": "darkapoparka/cars",
+  "branch": "codex/astra-bg-03",
+  "baseCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "baseRootTree": "d674ef10a5d21d492e46c264640920944542b32a",
+  "lastVerifiedHeadBeforeThisLedger": "404bbd2b785fdead90e01e91f118c229036efff5",
+  "checkpoints": [
+    {"dealer": "sunny-varna", "commit": "7f40dbf222dcf2fca2a0e4e6991da176cd09841e", "tree": "5e766e9186fc71fa82dfbff0051663d907a4a65b", "parent": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca", "status": "blocked", "nonForceRefReadBack": true},
+    {"dealer": "rqs-auto-team", "commit": "f6a1103080aeb6d93bd5650254e9fb6fa4d9ddaa", "tree": "04f6a864d52bf97a907d51375b0e55bcc7cb992f", "parent": "7f40dbf222dcf2fca2a0e4e6991da176cd09841e", "status": "blocked", "nonForceRefReadBack": true},
+    {"dealer": "evrocar-varna-09", "commit": "84697fee848b3efafe03d5f14acc71ba4d704b76", "tree": "75aa47e3107a2959c3da8b0d7b98ade20a5b1f70", "parent": "f6a1103080aeb6d93bd5650254e9fb6fa4d9ddaa", "status": "blocked", "nonForceRefReadBack": true},
+    {"dealer": "sprint-auto-varna", "commit": "fa34e2d62e92e320be42a59f0ee71a0edbf3baec", "tree": "701f81bbd5eb4086e71141b94f1d171a334725b4", "parent": "84697fee848b3efafe03d5f14acc71ba4d704b76", "status": "blocked", "nonForceRefReadBack": true},
+    {"dealer": "europa-varna", "commit": "404bbd2b785fdead90e01e91f118c229036efff5", "tree": "032570a8ddcfe3d15afbda08c558e1b7e83519e9", "parent": "fa34e2d62e92e320be42a59f0ee71a0edbf3baec", "status": "blocked", "nonForceRefReadBack": true}
+  ],
+  "contentReadback": {
+    "ref": "404bbd2b785fdead90e01e91f118c229036efff5",
+    "method": "GitHub.fetch_file full UTF-8 content inspection and returned Git blob SHA; not a build or browser test",
+    "files": {
+      "clients/sunny-varna/CLIENT.md": "9db616d79a63f35f1f24cc390a3e110a6a65b9e2",
+      "clients/rqs-auto-team/CLIENT.md": "2dc6d956c4ef15563ef1448947dbefc347a8d483",
+      "clients/evrocar-varna-09/CLIENT.md": "40030e63faa17f86c95dd5486af5ae84eda5c4c9",
+      "clients/sprint-auto-varna/CLIENT.md": "fccb141dd1db1c7e38a59e6729eab9a51444d7af",
+      "clients/europa-varna/CLIENT.md": "a0edd7ee956ac18445806e9baad397c91a4ef526",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-03/BASELINE.json": "ffdf5999c1d4206fbf7eb5f403877fe4c1df4eb1",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-03/rqs-auto-team.json": "1e3292e4b5bd8e89c6ca87d0b88bd34fcea0fa1e",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-03/evrocar-varna-09.json": "c03184177348ffb2e883f967a0e8fe3560a2f3d7",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-03/sprint-auto-varna.json": "da61fd10b1ac10b3c2a96555b97c1117123c08bd",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-03/europa-varna.json": "14fc9c9b21dd57c9ccc0242dfdbec51a05bd6816"
+    }
+  },
+  "verifiedCompareBeforeThisLedger": {
+    "base": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "head": "404bbd2b785fdead90e01e91f118c229036efff5",
+    "aheadBy": 5,
+    "behindBy": 0,
+    "addedFiles": 11,
+    "deletedFiles": 0,
+    "allChangedPathsWithinAllowlist": true,
+    "applicationFilesAdded": 0
+  },
+  "initialTreeWriteBlock": "Indeterminate platform safety-status response; exact retry succeeded. No continuing write restriction inferred.",
+  "applicationsImplemented": 0,
+  "applicationsRequested": 15,
+  "generatedAssets": 0,
+  "appTestCommandsExecuted": [],
+  "appScreenshots": [],
+  "ownerReview": "pending",
+  "sharedOriginOrDesignFabImplemented": false,
+  "windowsConnectorUsed": false,
+  "backgroundJobsStarted": false,
+  "deployed": false,
+  "finalLedgerCommit": "Not self-referential; verify assigned remote ref and base compare after publishing this ledger."
+}
