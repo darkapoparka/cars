@@ -4,13 +4,15 @@
   import AboutServiceIcon from './AboutServiceIcon.svelte';
   import { brand } from '$config/brand';
   import { companyServices } from '$data/company';
+  import { dealer } from '$data/dealer';
 </script>
 
 <section class="dn-about-process dn-section" id="process" aria-labelledby="about-process-title">
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
+      <p>Разгледайте извадката от публикувани обяви и уточнете наличността, документите и удобния час за посещение директно с автокъщата в {brand.city}. Въпросите по-долу не са потвърждение за предлагани услуги.</p>
+      <p>{dealer.stockNotice}</p>
       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
         Вижте автомобилите <Icon name="arrow-right" size={18} />
       </a>

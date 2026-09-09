@@ -1,6 +1,7 @@
 <script lang="ts">
   import VehicleCutout from './VehicleCutout.svelte';
   import { heroVehiclePairs, vehicleArtwork, type HeroVehiclePair, type Vehicle } from '$data/vehicle-artwork';
+  import { dealer } from '$data/dealer';
 
   let { pair = 'home', mobile = false, mobileLeft = 'silver', mobileRight = 'urus' }: {
     pair?: HeroVehiclePair; mobile?: boolean; mobileLeft?: Vehicle; mobileRight?: Vehicle;
@@ -10,7 +11,7 @@
 </script>
 
 <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
-  {#if mobile}<picture><source media="(max-width: 767px)" srcset="/assets/images/lead/day-night-urus-front-v1.webp" /><img class="dn-hero-vehicles__front" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="600" height="600" decoding="async" /></picture>{/if}
+  {#if mobile}<picture><source media="(max-width: 767px)" srcset={dealer.hero} /><img class="dn-hero-vehicles__front" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="600" height="600" decoding="async" /></picture>{/if}
   {#each sides as side (side)}
     {@const vehicle = vehicles[side === 'left' ? 0 : 1]}
     {@const artwork = vehicleArtwork[vehicle]}
