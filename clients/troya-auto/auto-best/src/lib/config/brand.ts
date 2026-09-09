@@ -8,27 +8,27 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  youtubeUrl: string | null;
+  instagramUrl: string | null;
+  facebookUrl: string | null;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
+const name = 'TROYA AUTO';
+const shortName = 'Troya Auto';
 const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
+const addressLine = 'в.з. Врана – Лозен, ул. „Стар Лозенски път“ 45';
 
 export const brand = {
   name,
   shortName,
   city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
+  youtubeUrl: null,
+  instagramUrl: null,
+  facebookUrl: null,
+  phone: '0886 067 006',
+  phoneHref: 'tel:+359886067006',
   addressLine,
   address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  appointment: 'Пон–Пет 09:30–18:00 · Съб 10:00–17:00 · Неделя почивен ден; оглед извън работно време с уговорка',
+  logo: '/brand/logo.svg'
 } as const satisfies BrandConfig;
