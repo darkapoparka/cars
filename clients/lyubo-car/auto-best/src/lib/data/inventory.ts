@@ -1,56 +1,47 @@
-export type VehicleCondition = 'new' | 'used';
+import stock from './dealer-stock.json';
+
 export type VehicleEquipment =
-  | '4x4'
-  | '360° камера'
-  | 'Панорамен покрив'
-  | 'Подгряване на седалки'
-  | 'Навигация'
-  | 'Парктроник'
-  | 'Безключов достъп'
-  | 'Адаптивен круиз контрол';
-
+  | 'Apple CarPlay' | 'Android Auto' | '360° камера' | '4x4' | 'Кожен салон'
+  | 'Камера за заден ход' | 'Парктроник' | 'Навигация' | 'Климатроник'
+  | 'Подгрев на седалките' | 'Адаптивен круиз контрол' | 'Панорамен покрив'
+  | 'Въздушно окачване' | 'Head-up дисплей' | 'ISOFIX' | 'LED фарове'
+  | 'Ел. седалки с памет' | 'Асистент мъртва зона';
+export type VehicleTransmission = 'Automatic' | 'Manual';
+export type VehicleBody = 'SUV' | 'Sedan' | 'Wagon' | 'Coupe' | 'Hatchback';
+export type VehicleVerificationStatus = 'sample' | 'verified' | 'unverified';
 export type Vehicle = {
-  id: number;
-  verification: 'sample' | 'verified';
-  evidenceUrl?: string;
-  image: string;
-  category: string;
-  body: string;
-  make: string;
-  title: string;
-  year: string;
-  yearNumber: number;
-  mileage: string;
-  mileageKm: number;
-  fuel: string;
-  transmission: string;
-  equipment: readonly VehicleEquipment[];
-  condition: VehicleCondition;
-  priceEur: number;
-  href: `/listing-detail-v1/${number}`;
+  id: number; slug: string; name: string; category: string; year: string; mileage: string; fuel: string;
+  transmission: VehicleTransmission; body: VehicleBody; price: number; priceCurrency: 'EUR';
+  image: string; imageAlt: string; gallery: string[]; description: string; equipment: VehicleEquipment[];
+  verification: { status: VehicleVerificationStatus; sourceId: string; evidenceUrl: string; verifiedAt: string };
+  availabilityLabel: string; priceQualification: string;
 };
-
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
-  { id: 1, image: '/assets/images/lead/day-night-stock-04.webp', category: 'Комби', body: 'Wagon', make: 'Audi', title: 'Audi RS 6 Avant', yearNumber: 2024, mileageKm: 99701, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 68804 },
-  { id: 2, image: '/assets/images/lead/day-night-stock-01.webp', category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
-  { id: 3, image: '/assets/images/lead/day-night-stock-06.webp', category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
-  { id: 4, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
-  { id: 5, image: '/assets/images/lead/day-night-stock-05.webp', category: 'SUV', body: 'SUV', make: 'Land Rover', title: 'Range Rover Sport', yearNumber: 2019, mileageKm: 84426, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 68313 },
-  { id: 6, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
-  { id: 7, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
-  { id: 8, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
-];
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
-export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
-  ...record,
-  verification: 'sample',
+const bodyMap: Record<string, VehicleBody> = { SUV: 'SUV', Sedan: 'Sedan', Wagon: 'Wagon', Coupe: 'Coupe', Hatchback: 'Hatchback' };
+const allowedEquipment = new Set<VehicleEquipment>(['Apple CarPlay','Android Auto','360° камера','4x4','Кожен салон','Камера за заден ход','Парктроник','Навигация','Климатроник','Подгрев на седалките','Адаптивен круиз контрол','Панорамен покрив','Въздушно окачване','Head-up дисплей','ISOFIX','LED фарове','Ел. седалки с памет','Асистент мъртва зона']);
+const placeholder = '/brand/inventory-photo-pending.svg';
+const slug = (title: string, sourceId: string) => `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-${sourceId}`;
+export const vehicles: Vehicle[] = stock.listings.map((record, index) => ({
+  id: index + 1,
+  slug: slug(record.title, record.sourceId),
+  name: record.title,
+  category: 'cars',
   year: String(record.yearNumber),
   mileage: `${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,
-  href: `/listing-detail-v1/${record.id}`
+  fuel: record.fuel,
+  transmission: record.transmission === 'Автоматик' ? 'Automatic' : 'Manual',
+  body: bodyMap[record.category] ?? 'Sedan',
+  price: record.priceEur,
+  priceCurrency: 'EUR',
+  image: placeholder,
+  imageAlt: `Няма интегрирана разрешена снимка за ${record.title}; вижте източника на обявата.`,
+  gallery: [placeholder],
+  description: `${record.description} Данни от обява към ${record.observedAt}; наличността и състоянието не са независимо потвърдени.`,
+  equipment: record.equipment.filter((value): value is VehicleEquipment => allowedEquipment.has(value as VehicleEquipment)),
+  verification: { status: 'sample', sourceId: record.sourceId, evidenceUrl: record.evidenceUrl, verifiedAt: record.observedAt },
+  availabilityLabel: record.availability === 'sold-reserved' ? 'Продаден/капариран по обявата' : 'Обявен автомобил — потвърдете наличността',
+  priceQualification: record.priceQualification,
 }));
-
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+export const inventorySource = { observedAt: stock.observedAt, source: stock.source, meaning: stock.meaning } as const;
+export const findVehicle = (id: number) => vehicles.find((vehicle) => vehicle.id === id);
+export const findVehicleBySlug = (value: string) => vehicles.find((vehicle) => vehicle.slug === value);
+export const formatVehiclePrice = (vehicle: Pick<Vehicle, 'price'>) => vehicle.price > 0 ? `${new Intl.NumberFormat('bg-BG').format(vehicle.price)} €` : 'Цена при запитване';
