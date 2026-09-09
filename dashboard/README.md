@@ -1,23 +1,20 @@
 # Cars Lead Control Dashboard
 
-Local dashboard for the Cars workspace. It is deliberately a control plane over the existing repository rather than another CRM source of truth.
+Local control surface for the Cars workspace.
 
-## Data shown
+The dashboard treats Git refs as the source of truth for whether a three-design dealer project exists. It scans `origin/main`, `origin/astra`, and `origin/codex/astra-bg-*`, then keeps GitHub build state separate from local checkout presence and QA evidence.
 
-- `leads/bulgaria.json`, `leads/uae.json`, `leads/usa.json`, `leads/europe.json`
-- `clients/index.json`
-- actual `clients/<slug>/auto-best`, `modern`, and `carwow` folders
-- client `FACTS-AND-INVENTORY.json` and `.client/project.json` when present
-- `runtime/review-<slug>.json` for local preview state
+States are intentionally distinct:
 
-Private dashboard state (favorites, pipeline stage, notes and next action) is stored in ignored `runtime/lead-dashboard/state.json`. It never rewrites the public research files.
+- **GitHub build:** no build, partial, `3/3 on main`, or `3/3 branch-only`.
+- **QA:** passed, pending, or evidence missing. A complete codebase is not automatically QA-ready.
+- **Local:** whether the project is actually present in `J:/cars` and can be launched with existing scripts.
+- **Pipeline:** private local stage/notes stored under ignored `runtime/lead-dashboard/state.json`.
 
-## Start
+Run from the Cars root:
 
 ```powershell
 ./scripts/start-lead-dashboard.ps1 -Open
 ```
 
-Default URL: `http://127.0.0.1:6620/`.
-
-The dashboard can open a client folder, prepare dependencies, start the three existing designs through `scripts/start-client.ps1`, and stop only recorded preview PIDs that still own their recorded ports. It has no deploy, merge, delete, CRM-write or outreach controls.
+The **Refresh GitHub** control runs `git fetch origin --prune` without switching branches or altering the working tree. Project start/stop controls remain local-only and preserve the existing launcher ownership checks.
