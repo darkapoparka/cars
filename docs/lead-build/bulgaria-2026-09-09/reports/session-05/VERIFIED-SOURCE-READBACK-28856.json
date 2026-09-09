@@ -1,0 +1,976 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-09-09T03:54:19.130Z",
+  "verifiedHead": "7800ecbb7da9be3c971f0bd50ee338e77156a02f",
+  "base": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "scopeCheck": {
+    "base": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "head": "7800ecbb7da9be3c971f0bd50ee338e77156a02f",
+    "changedAllowedRoots": [
+      "clients/mg7-group",
+      "clients/icars-plovdiv",
+      "clients/success-automobile",
+      "clients/todorov-auto",
+      "clients/voivodov-auto-antonio",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-05"
+    ],
+    "outsideAllowlist": [],
+    "unchangedSubtrees": 33
+  },
+  "applications": [
+    {
+      "slug": "todorov-auto",
+      "state": "source-present-runtime-unverified",
+      "sourceCommit": "6390acdc2bf6ba8a01cd0b085fc65cc9bff0cb66",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "files": 3040,
+      "recordParity": [
+        {
+          "id": "11763371717307272",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11704208021161812",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11735041255980884",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11757098776259646",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11649235957114307",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11784299299170761",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21782384979656784",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11701427910651766",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21784126666986144",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11776511305281815",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        }
+      ],
+      "syntax": {
+        "svelteCompiled": 374,
+        "tsParsed": 463,
+        "errors": [],
+        "warnings": {
+          "css_unused_selector": 22
+        },
+        "fullFrameworkBuild": false
+      },
+      "photos": {
+        "count": 60,
+        "sha256AndImageDecodeErrors": []
+      },
+      "knownIssue": "Reachable Carwow presentation/home3 server still contains inherited GBP/fake-marketplace values. A non-applied correction is preserved separately."
+    },
+    {
+      "slug": "mg7-group",
+      "state": "source-present-runtime-unverified",
+      "sourceCommit": "9c20c3e94c2d6e89cdc6844d6709dc4eb78a2b5b",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "files": 3042,
+      "recordParity": [
+        {
+          "id": "21785564544332885",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21745605265440995",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11786258864975456",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21782394387362812",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11774522821457814",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11784017637362453",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11787220789122620",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11787219518736875",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11787042642128831",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11754657468074384",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        }
+      ],
+      "photos": {
+        "slug": "mg7-group",
+        "photographs": 60,
+        "bytes": 15166468,
+        "errors": [],
+        "gitBlobReadBack": true,
+        "sha256Checked": true,
+        "imageDecodeChecked": true,
+        "browserChecked": false
+      },
+      "syntax": {
+        "svelteCompiled": 374,
+        "tsParsed": 463,
+        "errors": [],
+        "warnings": {
+          "css_unused_selector": 22
+        },
+        "fullFrameworkBuild": false
+      }
+    },
+    {
+      "slug": "success-automobile",
+      "state": "source-present-runtime-unverified",
+      "sourceCommit": "19f82fc301bd0e2435e0b5710e8c5471d9c6566b",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "files": 3040,
+      "recordParity": [
+        {
+          "id": "11788284441880300",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21787149042592643",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11787147891422780",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11784220398560751",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21705706946317965",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21752669153003762",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11777465890049135",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21684066785818426",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11762241395630584",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11747591068099753",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        }
+      ],
+      "photos": {
+        "slug": "success-automobile",
+        "photographs": 60,
+        "bytes": 28051630,
+        "errors": [],
+        "gitBlobReadBack": true,
+        "sha256Checked": true,
+        "imageDecodeChecked": true,
+        "browserChecked": false
+      },
+      "syntax": {
+        "svelteCompiled": 374,
+        "tsParsed": 463,
+        "errors": [],
+        "warnings": {
+          "css_unused_selector": 22
+        },
+        "fullFrameworkBuild": false
+      }
+    },
+    {
+      "slug": "voivodov-auto-antonio",
+      "state": "source-present-runtime-unverified",
+      "sourceCommit": "b49719701286db1bd2e5c4ec2ac8b6769d355ec7",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "files": 3046,
+      "recordParity": [
+        {
+          "id": "21787584817368418",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21778688064239119",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11781437915261347",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21784640560836463",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21776177602007255",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11781213566653263",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21784225734010518",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11781101254100384",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21775747569183753",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11775730754815024",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        }
+      ],
+      "photos": {
+        "slug": "voivodov-auto-antonio",
+        "photographs": 60,
+        "bytes": 21233760,
+        "errors": [],
+        "gitBlobReadBack": true,
+        "sha256Checked": true,
+        "imageDecodeChecked": true,
+        "browserChecked": false
+      },
+      "branding": "Hand-authored vector proposal; not image-generated or dealer-approved. Explicit method exception requires owner review.",
+      "syntax": {
+        "svelteCompiled": 374,
+        "tsParsed": 463,
+        "errors": [],
+        "warnings": {
+          "css_unused_selector": 22
+        },
+        "fullFrameworkBuild": false
+      }
+    },
+    {
+      "slug": "icars-plovdiv",
+      "state": "source-present-runtime-unverified",
+      "sourceCommit": "7800ecbb7da9be3c971f0bd50ee338e77156a02f",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "files": 3040,
+      "recordParity": [
+        {
+          "id": "11760378435449508",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21769205380054749",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21782908599914903",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11782907735294061",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11752078175497458",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11780753459695554",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21751722135031902",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11695297184317225",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "21725449678653350",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        },
+        {
+          "id": "11711117396768513",
+          "allVariantsHaveRecord": true,
+          "price": true,
+          "mileage": true,
+          "galleries": true,
+          "assetTrees": true,
+          "passed": true
+        }
+      ],
+      "photos": {
+        "slug": "icars-plovdiv",
+        "photographs": 60,
+        "bytes": 19940934,
+        "errors": [],
+        "gitBlobReadBack": true,
+        "sha256Checked": true,
+        "imageDecodeChecked": true,
+        "browserChecked": false
+      },
+      "syntax": {
+        "svelteCompiled": 374,
+        "tsParsed": 463,
+        "errors": [],
+        "warnings": {
+          "css_unused_selector": 22
+        },
+        "fullFrameworkBuild": false
+      }
+    }
+  ],
+  "pendingAtHead": [],
+  "fullApplicationInstall": false,
+  "fullApplicationBuild": false,
+  "applicationBrowserTests": false,
+  "ownerReview": "pending",
+  "concurrency": {
+    "olderWorkingBase": "b6c792ef02cd620a6f6dfba9d6ce8967314b88ed",
+    "newerClientChangesPreserved": true,
+    "olderProposalFiles": 84,
+    "proposalCommit": "024662f5478a4b5f5e3155f2290e22deb2b598a7",
+    "proposalApplied": false,
+    "clientSourceWritesStopped": true
+  },
+  "windowsFilesystemWritten": false,
+  "serversStarted": false,
+  "latestSourceHead": "7800ecbb7da9be3c971f0bd50ee338e77156a02f",
+  "snapshotStability": [
+    {
+      "slug": "todorov-auto",
+      "files": 3040,
+      "changedSinceVerified": []
+    },
+    {
+      "slug": "mg7-group",
+      "files": 3042,
+      "changedSinceVerified": []
+    },
+    {
+      "slug": "success-automobile",
+      "files": 3040,
+      "changedSinceVerified": []
+    },
+    {
+      "slug": "voivodov-auto-antonio",
+      "files": 3046,
+      "changedSinceVerified": []
+    },
+    {
+      "slug": "icars-plovdiv",
+      "files": 3040,
+      "changedSinceVerified": []
+    }
+  ],
+  "filterModuleTests": [
+    {
+      "slug": "todorov-auto",
+      "module": "auto-best/src/lib/data/listing.ts",
+      "tests": [
+        {
+          "name": "empty-filter retains all ten",
+          "passed": true
+        },
+        {
+          "name": "make filter uses actual stock",
+          "passed": true
+        },
+        {
+          "name": "EUR budget filter",
+          "passed": true
+        },
+        {
+          "name": "ascending cash-price sort",
+          "passed": true
+        },
+        {
+          "name": "native-km filter",
+          "passed": true
+        },
+        {
+          "name": "filter URL roundtrip",
+          "passed": true
+        },
+        {
+          "name": "clearing make clears model",
+          "passed": true
+        },
+        {
+          "name": "invalid numeric inputs rejected",
+          "passed": true
+        }
+      ],
+      "failed": []
+    },
+    {
+      "slug": "mg7-group",
+      "module": "auto-best/src/lib/data/listing.ts",
+      "tests": [
+        {
+          "name": "empty-filter retains all ten",
+          "passed": true
+        },
+        {
+          "name": "make filter uses actual stock",
+          "passed": true
+        },
+        {
+          "name": "EUR budget filter",
+          "passed": true
+        },
+        {
+          "name": "ascending cash-price sort",
+          "passed": true
+        },
+        {
+          "name": "native-km filter",
+          "passed": true
+        },
+        {
+          "name": "filter URL roundtrip",
+          "passed": true
+        },
+        {
+          "name": "clearing make clears model",
+          "passed": true
+        },
+        {
+          "name": "invalid numeric inputs rejected",
+          "passed": true
+        }
+      ],
+      "failed": []
+    },
+    {
+      "slug": "success-automobile",
+      "module": "auto-best/src/lib/data/listing.ts",
+      "tests": [
+        {
+          "name": "empty-filter retains all ten",
+          "passed": true
+        },
+        {
+          "name": "make filter uses actual stock",
+          "passed": true
+        },
+        {
+          "name": "EUR budget filter",
+          "passed": true
+        },
+        {
+          "name": "ascending cash-price sort",
+          "passed": true
+        },
+        {
+          "name": "native-km filter",
+          "passed": true
+        },
+        {
+          "name": "filter URL roundtrip",
+          "passed": true
+        },
+        {
+          "name": "clearing make clears model",
+          "passed": true
+        },
+        {
+          "name": "invalid numeric inputs rejected",
+          "passed": true
+        }
+      ],
+      "failed": []
+    },
+    {
+      "slug": "voivodov-auto-antonio",
+      "module": "auto-best/src/lib/data/listing.ts",
+      "tests": [
+        {
+          "name": "empty-filter retains all ten",
+          "passed": true
+        },
+        {
+          "name": "make filter uses actual stock",
+          "passed": true
+        },
+        {
+          "name": "EUR budget filter",
+          "passed": true
+        },
+        {
+          "name": "ascending cash-price sort",
+          "passed": true
+        },
+        {
+          "name": "native-km filter",
+          "passed": true
+        },
+        {
+          "name": "filter URL roundtrip",
+          "passed": true
+        },
+        {
+          "name": "clearing make clears model",
+          "passed": true
+        },
+        {
+          "name": "invalid numeric inputs rejected",
+          "passed": true
+        }
+      ],
+      "failed": []
+    },
+    {
+      "slug": "icars-plovdiv",
+      "module": "auto-best/src/lib/data/listing.ts",
+      "tests": [
+        {
+          "name": "empty-filter retains all ten",
+          "passed": true
+        },
+        {
+          "name": "make filter uses actual stock",
+          "passed": true
+        },
+        {
+          "name": "EUR budget filter",
+          "passed": true
+        },
+        {
+          "name": "ascending cash-price sort",
+          "passed": true
+        },
+        {
+          "name": "native-km filter",
+          "passed": true
+        },
+        {
+          "name": "filter URL roundtrip",
+          "passed": true
+        },
+        {
+          "name": "clearing make clears model",
+          "passed": true
+        },
+        {
+          "name": "invalid numeric inputs rejected",
+          "passed": true
+        }
+      ],
+      "failed": []
+    }
+  ],
+  "legacyPresentationFindings": [
+    {
+      "slug": "todorov-auto",
+      "path": "carwow/src/routes/presentation/home3/+page.server.ts",
+      "inheritedGbpPrice": true,
+      "inflatedCounts": true,
+      "marketplaceClaim": true,
+      "offeredPrimaryRoute": "/",
+      "runtimeBrowserChecked": false
+    },
+    {
+      "slug": "mg7-group",
+      "path": "carwow/src/routes/presentation/home3/+page.server.ts",
+      "inheritedGbpPrice": true,
+      "inflatedCounts": true,
+      "marketplaceClaim": true,
+      "offeredPrimaryRoute": "/",
+      "runtimeBrowserChecked": false
+    },
+    {
+      "slug": "success-automobile",
+      "path": "carwow/src/routes/presentation/home3/+page.server.ts",
+      "inheritedGbpPrice": true,
+      "inflatedCounts": true,
+      "marketplaceClaim": true,
+      "offeredPrimaryRoute": "/",
+      "runtimeBrowserChecked": false
+    },
+    {
+      "slug": "voivodov-auto-antonio",
+      "path": "carwow/src/routes/presentation/home3/+page.server.ts",
+      "inheritedGbpPrice": true,
+      "inflatedCounts": true,
+      "marketplaceClaim": true,
+      "offeredPrimaryRoute": "/",
+      "runtimeBrowserChecked": false
+    },
+    {
+      "slug": "icars-plovdiv",
+      "path": "carwow/src/routes/presentation/home3/+page.server.ts",
+      "inheritedGbpPrice": true,
+      "inflatedCounts": true,
+      "marketplaceClaim": true,
+      "offeredPrimaryRoute": "/",
+      "runtimeBrowserChecked": false
+    }
+  ],
+  "applicationAcceptance": "Incomplete: runtime/browser checks and legacy presentation cleanup remain",
+  "totals": {
+    "dealers": 5,
+    "applicationCodebases": 15,
+    "sourceVehicleRecords": 50,
+    "galleryImageReferences": 300,
+    "distinctGalleryBlobs": 294,
+    "packagedImagePaths": 900,
+    "svelteComponentsCompiled": 1870,
+    "jsTsFilesParsed": 2315,
+    "syntaxErrors": 0,
+    "cssUnusedSelectorWarnings": 110,
+    "autoBestDataTests": 40,
+    "autoBestDataTestFailures": 0
+  },
+  "galleryDuplicateCheck": [
+    [
+      {
+        "dealer": "mg7-group",
+        "id": "21745605265440995",
+        "path": "/dealer/stock/21745605265440995-6.webp",
+        "source": "https://mobistatic3.focus.bg/mobile/photosorg/995/2/big1/21745605265440995_nw.webp"
+      },
+      {
+        "dealer": "mg7-group",
+        "id": "11786258864975456",
+        "path": "/dealer/stock/11786258864975456-6.webp",
+        "source": "https://cdn2.focus.bg/mobile/photosorg/456/1/big1/11786258864975456_GF.webp"
+      },
+      {
+        "dealer": "mg7-group",
+        "id": "21782394387362812",
+        "path": "/dealer/stock/21782394387362812-6.webp",
+        "source": "https://mobistatic1.focus.bg/mobile/photosorg/812/2/big1/21782394387362812_lR.webp"
+      },
+      {
+        "dealer": "mg7-group",
+        "id": "11774522821457814",
+        "path": "/dealer/stock/11774522821457814-6.webp",
+        "source": "https://mobistatic4.focus.bg/mobile/photosorg/814/1/big1/11774522821457814_Py.webp"
+      },
+      {
+        "dealer": "mg7-group",
+        "id": "11787220789122620",
+        "path": "/dealer/stock/11787220789122620-6.webp",
+        "source": "https://mobistatic3.focus.bg/mobile/photosorg/620/1/big1/11787220789122620_6u.webp"
+      },
+      {
+        "dealer": "mg7-group",
+        "id": "11787219518736875",
+        "path": "/dealer/stock/11787219518736875-6.webp",
+        "source": "https://mobistatic3.focus.bg/mobile/photosorg/875/1/big1/11787219518736875_YI.webp"
+      },
+      {
+        "dealer": "mg7-group",
+        "id": "11787042642128831",
+        "path": "/dealer/stock/11787042642128831-6.webp",
+        "source": "https://mobistatic1.focus.bg/mobile/photosorg/831/1/big1/11787042642128831_cX.webp"
+      }
+    ]
+  ]
+}
