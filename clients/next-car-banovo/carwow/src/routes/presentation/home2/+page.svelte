@@ -71,16 +71,16 @@
 	const guideCards = [
 		{
 			title: 'How to buy a used car with confidence',
-			image: '/assets/images/pages/daynight-services-inspection-v1.webp',
+			image: '/inventory/21776348634522888-1.webp',
 			href: '/blog'
 		},
 		{
 			title: 'Finance, registration and paperwork',
-			image: '/assets/images/pages/daynight-services-consultation-v1.webp',
+			image: '/inventory/21776348634522888-1.webp',
 			href: '/financing'
 		},
 		{
-			title: 'Sell or part exchange with Day Night Auto',
+			title: 'Sell or part exchange with NEXT CAR',
 			image: '/assets/images/sell/trade-in-promo-v1.webp',
 			href: '/sell-your-car'
 		}
@@ -96,10 +96,10 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Marketplace | Home2</title>
+	<title>NEXT CAR Marketplace | Home2</title>
 	<meta
 		name="description"
-		content="Browse, buy, sell and review verified cars from Day Night Auto София."
+		content="Browse, buy, sell and review verified cars from NEXT CAR Варна."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>
@@ -108,14 +108,14 @@
 	<section class="home2-hero" aria-labelledby="home2-title">
 		<img
 			class="home2-hero__cars"
-			src="/assets/images/home2/daynight-hero-showroom-v2.webp"
+			src="/inventory/21776348634522888-1.webp"
 			alt=""
 			aria-hidden="true"
 		/>
 
 		<header class="home2-nav" aria-label="Home2 navigation">
-			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Day Night Auto Home2">
-				<img src="/brand/daynight-logo-generated.png" alt="Day Night Auto" />
+			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="NEXT CAR Home2">
+				<img src="/brand/social-card.png" alt="NEXT CAR" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">
@@ -140,7 +140,7 @@
 
 		<h1 id="home2-title">
 			<span>Changing your car?</span>
-			<span>Day Night Auto can help</span>
+			<span>NEXT CAR can help</span>
 		</h1>
 
 		<form class="home2-search" onsubmit={submitSearch} aria-label="Find your next car">
@@ -188,13 +188,13 @@
 			<div class="home2-sell-card__copy">
 				<h2 id="sell-car-title">Sell your car for what it’s really worth</h2>
 				<p>
-					Get a clear valuation, part-exchange support, and help with the paperwork from our Plovdiv
+					Get a clear valuation, part-exchange support, and help with the paperwork from our Varna
 					team.
 				</p>
 				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
 			</div>
 			<div class="home2-sell-card__media">
-				<img src="/assets/images/home2/daynight-sell-banner-v2.webp" alt="" aria-hidden="true" />
+				<img src="/inventory/21767797586155338-1.webp" alt="" aria-hidden="true" />
 				<span>ENTER REG</span>
 			</div>
 		</section>
@@ -217,7 +217,7 @@
 				<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 				<div>
 					<h2 id="trending-title">Premium is trending</h2>
-					<p>Popular Day Night Auto picks, ready to compare side by side</p>
+					<p>Popular NEXT CAR picks, ready to compare side by side</p>
 				</div>
 			</div>
 
@@ -262,7 +262,7 @@
 				<Star size={55} fill="currentColor" strokeWidth={1.8} />
 				<div>
 					<h2 id="reviews-title">This is how it should feel</h2>
-					<p>Customers rate Day Night Auto as excellent for buying, selling and support</p>
+					<p>Customers rate NEXT CAR as excellent for buying, selling and support</p>
 				</div>
 			</div>
 
@@ -289,7 +289,7 @@
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/brand/daynight-team-placeholder.svg" alt="Day Night Auto consultant" />
+			<img src="/brand/logo.png" alt="NEXT CAR consultant" />
 			<div>
 				<h2 id="easy-title">We make car changing easy</h2>
 				<p>
@@ -315,7 +315,7 @@
 			<HeartHandshake size={58} fill="currentColor" strokeWidth={2.3} />
 			<div>
 				<h2 id="explore-title">Explore cars</h2>
-				<p>Browse Day Night Auto stock by the brands and body styles customers ask for most.</p>
+				<p>Browse NEXT CAR stock by the brands and body styles customers ask for most.</p>
 			</div>
 		</div>
 

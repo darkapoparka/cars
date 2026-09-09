@@ -24,7 +24,7 @@
 		{
 			id: 'marvin',
 			contact: 'marvin',
-			avatar: '/assets/images/avatar/avatar-5.png',
+			avatar: '/brand/logo.png',
 			alt: 'Клиент от сайта',
 			name: 'Клиент от сайта',
 			preview: "Hey! there I'm available",
@@ -35,7 +35,7 @@
 			id: 'john',
 			contact: 'john',
 			classes: 'active user-online',
-			avatar: '/assets/images/avatar/avatar-6.png',
+			avatar: '/brand/logo.png',
 			alt: 'Клиент от сайта',
 			name: 'Клиент от сайта',
 			preview: "Hey! there I'm available",
@@ -45,48 +45,48 @@
 			id: 'brooklyn',
 			contact: 'brooklyn',
 			classes: 'user-offline',
-			avatar: '/assets/images/avatar/avatar-7.png',
-			alt: 'Клиент от София',
-			name: 'Клиент от София',
+			avatar: '/brand/logo.png',
+			alt: 'Демонстрационен профил',
+			name: 'Демонстрационен профил',
 			preview: "Hey! there I'm available",
 			time: '14:10 PM',
 			badge: '2'
 		},
 		{
 			id: 'plovdiv-1123',
-			avatar: '/assets/images/avatar/avatar-8.png',
-			alt: 'Клиент от София',
-			name: 'Клиент от София',
+			avatar: '/brand/logo.png',
+			alt: 'Демонстрационен профил',
+			name: 'Демонстрационен профил',
 			preview: "Hey! there I'm available",
 			time: '11:23 AM'
 		},
 		{
 			id: 'daynight-auto',
-			avatar: '/assets/images/avatar/avatar-9.png',
-			alt: 'Day Night Auto',
-			name: 'Day Night Auto',
+			avatar: '/brand/logo.png',
+			alt: 'NEXT CAR',
+			name: 'NEXT CAR',
 			preview: "Hey! there I'm available",
 			time: 'Yesterday'
 		},
 		{
 			id: 'plovdiv-tuesday',
-			avatar: '/assets/images/avatar/avatar-5.png',
+			avatar: '/brand/logo.png',
 			alt: 'Клиент от сайта',
-			name: 'Клиент от София',
+			name: 'Демонстрационен профил',
 			preview: "Hey! there I'm available",
 			time: 'Tuesday'
 		},
 		{
 			id: 'plovdiv-june-1',
-			avatar: '/assets/images/avatar/avatar-6.png',
+			avatar: '/brand/logo.png',
 			alt: 'Клиент от сайта',
-			name: 'Клиент от София',
+			name: 'Демонстрационен профил',
 			preview: "Hey! there I'm available",
 			time: '01/06/2024'
 		},
 		{
 			id: 'site-june-6',
-			avatar: '/assets/images/avatar/avatar-7.png',
+			avatar: '/brand/logo.png',
 			alt: 'Клиент от сайта',
 			name: 'Клиент от сайта',
 			preview: "Hey! there I'm available",
@@ -267,7 +267,7 @@
 					<div class="message-chat__user">
 						<div class="message-chat__avatar user-online">
 							<img
-								src={resolve('/assets/images/avatar/avatar-6.png')}
+								src={resolve('/brand/logo.png')}
 								alt="Клиент от сайта"
 								data-daynight-img="1"
 								decoding="async"

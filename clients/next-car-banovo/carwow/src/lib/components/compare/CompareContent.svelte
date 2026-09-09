@@ -15,7 +15,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/${string}`;
 
 	const garage = getGarageContext();
 

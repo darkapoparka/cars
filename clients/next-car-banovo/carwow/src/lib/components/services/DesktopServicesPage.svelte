@@ -11,49 +11,49 @@
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
-		{
-			id: 'inspection',
-			title: 'Проверка преди покупка',
-			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
-			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
-			imagePosition: 'center bottom'
-		},
-		{
-			id: 'documents',
-			title: 'Документи и регистрация',
-			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
-			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
-			imagePosition: 'center bottom'
-		},
-		{
-			id: 'financing',
-			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
-			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
-			imagePosition: 'center bottom'
-		},
-		{
-			id: 'trade-in',
-			title: 'Бартер и оценка',
-			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
-			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
-			imagePosition: 'center bottom'
-		},
-		{
-			id: 'sourcing',
-			title: 'Търсене по задание',
-			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
-			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
-			imagePosition: 'center bottom'
-		},
-		{
-			id: 'delivery',
-			title: 'Доставка и предаване',
-			summary: 'Координираме транспорт, предаване и последните практически детайли.',
-			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
-			imagePosition: 'center bottom'
-		}
-	] as const;
+  {
+    "id": "inspection",
+    "title": "Въпрос за оглед",
+    "summary": "Потвърдете наличността, часа и възможността за независима проверка преди посещение.",
+    "image": "/inventory/21776348634522888-1.webp",
+    "imagePosition": "center"
+  },
+  {
+    "id": "documents",
+    "title": "Цена и документи",
+    "summary": "Данъчните бележки са по конкретната обява. Уточнете документите и крайните разходи с продавача.",
+    "image": "/inventory/21767797586155338-1.webp",
+    "imagePosition": "center"
+  },
+  {
+    "id": "financing",
+    "title": "Условия за финансиране",
+    "summary": "Попитайте за възможностите за избрания автомобил. Не са посочени потвърдени кредитор, лихва или одобрение.",
+    "image": "/inventory/11749039399452266-1.webp",
+    "imagePosition": "center"
+  },
+  {
+    "id": "trade-in",
+    "title": "Запитване за бартер",
+    "summary": "Някои обяви посочват договаряне при бартер. Приемането и стойността се уточняват индивидуално.",
+    "image": "/inventory/11773990804592505-1.webp",
+    "imagePosition": "center"
+  },
+  {
+    "id": "sourcing",
+    "title": "Запитване за внос",
+    "summary": "Посочете марка, бюджет и желано оборудване. Потвърдете дали автокъщата може да поеме конкретната заявка.",
+    "image": "/inventory/21747323307413606-1.webp",
+    "imagePosition": "center"
+  },
+  {
+    "id": "delivery",
+    "title": "Транспорт по уговорка",
+    "summary": "Попитайте за възможностите, цената и срока. В този прототип не е обещана доставка или покритие по градове.",
+    "image": "/inventory/21787335344586615-1.webp",
+    "imagePosition": "center"
+  }
+] as const;
 
 	type ServiceId = (typeof services)[number]['id'];
 	type ServicesRequestPath = `/services?service=${ServiceId}#services-request`;
@@ -145,7 +145,7 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Day Night Auto">
+<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги NEXT CAR">
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
 		title="Услуги за твоя автомобил"
@@ -163,7 +163,7 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				Не знаеш коя услуга ти трябва? <a href={`tel:${daynightSite.phone}`}
 					>Обади ни се</a
 				>
 			</p>
@@ -172,14 +172,14 @@
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Day Night Auto</h2>
+			<h2 class="desktop-services-sr-only">Теми за запитване към NEXT CAR</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}
 					<a
 						class="desktop-services-card"
 						href={resolve(serviceRequestPath(service.id))}
-						aria-label={`Заяви услуга: ${service.title}`}
+						aria-label={`Попитай за: ${service.title}`}
 						onclick={(event) => chooseService(service.id, event)}
 					>
 						<span
@@ -193,7 +193,7 @@
 							<h3>{service.title}</h3>
 							<p>{service.summary}</p>
 							<span class="desktop-services-card__cta" aria-hidden="true">
-								<span>Избери услугата</span><ArrowRight size={18} />
+								<span>Подготви въпрос</span><ArrowRight size={18} />
 							</span>
 						</div>
 					</a>
@@ -207,8 +207,7 @@
 			<div class="desktop-services-request__copy">
 				<h2>Да уточним<br />детайлите.</h2>
 				<p>
-					Остави телефон и ни разкажи за автомобила. Ще се свържем с теб, за да обсъдим услугата,
-					документите и удобен срок.
+					Подготви въпрос за избрания автомобил. Тази форма е демонстрационна и не изпраща съобщение. За реален контакт използвай публикувания телефон.
 				</p>
 			</div>
 

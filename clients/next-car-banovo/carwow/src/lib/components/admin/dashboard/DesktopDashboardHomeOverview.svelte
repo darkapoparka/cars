@@ -117,7 +117,7 @@
 	const reviewCards: DashboardReview[] = [
 		{
 			id: 'review-ivan',
-			avatar: '/assets/images/avatar/avatar-4.png',
+			avatar: '/brand/logo.png',
 			name: 'Иван Д.',
 			date: 'Август 2025',
 			title: 'Отлично преживяване',
@@ -125,7 +125,7 @@
 		},
 		{
 			id: 'review-maria',
-			avatar: '/assets/images/avatar/coment-avatar-1.png',
+			avatar: '/brand/logo.png',
 			name: 'Мария Г.',
 			date: 'Август 2025',
 			title: 'Лесно и удобно',
@@ -133,7 +133,7 @@
 		},
 		{
 			id: 'review-nikolay',
-			avatar: '/assets/images/avatar/coment-avatar-2.png',
+			avatar: '/brand/logo.png',
 			name: 'Николай П.',
 			date: 'Август 2025',
 			title: 'Коректно и надеждно',
@@ -172,7 +172,7 @@
 	function buildXml() {
 		const lines = [
 			'<?xml version="1.0" encoding="UTF-8"?>',
-			'<ads source="Day Night Auto" type="demo-feed">'
+			'<ads source="NEXT CAR" type="demo-feed">'
 		];
 
 		for (const vehicle of exportFeed) {

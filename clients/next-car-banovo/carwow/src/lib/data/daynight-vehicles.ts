@@ -1,4 +1,4 @@
-import { currentDayNightListings, type CurrentDayNightListing } from './daynight-current-inventory';
+import stock from './dealer-stock.json';
 
 export type Car = {
 	slug: string;
@@ -12,7 +12,7 @@ export type Car = {
 	fuel: string;
 	transmission: string;
 	body: string;
-	doors: number;
+	doors: number | string;
 	engine: string;
 	power: string;
 	drive: string;
@@ -20,6 +20,7 @@ export type Car = {
 	price: number;
 	priceEur: string;
 	priceBgn: string;
+ priceNote?: string;
 	monthly: string;
 	image: string;
 	gallery: string[];
@@ -32,133 +33,32 @@ export type Car = {
 	sourceUrl: string;
 };
 
-const parseLocalizedNumber = (value: string) => {
-	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
-	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
-};
-
-const normalizeFuel = (fuel: string) =>
-	({
-		Бензинов: 'Бензин',
-		Дизелов: 'Дизел',
-		Електрически: 'Електрически',
-		Хибриден: 'Хибрид'
-	})[fuel] ?? fuel;
-
-const normalizeTransmission = (transmission: string) =>
-	transmission === 'Автоматична' ? 'Автоматик' : transmission;
-
-const normalizeBody = (body: string) =>
-	({
-		'Стреч лимузина': 'Седан',
-		Лимузина: 'Седан'
-	})[body] ?? body;
-
-const getVehicleIdentity = (listing: CurrentDayNightListing) => {
-	const brand = listing.title.startsWith('Mercedes-Benz')
-		? 'Mercedes-Benz'
-		: listing.title.startsWith('Land Rover')
-			? 'Land Rover'
-			: listing.title.split(' ')[0];
-	const remainder = listing.title.slice(brand.length).trim();
-	const patterns: Record<string, RegExp> = {
-		'Mercedes-Benz':
-			/^(?:GLA \d+(?: AMG)?|GLS \d+|GLE \d+(?: 4MATIC)?|GL \d+ AMG|G \d+(?: AMG)?|S \d+(?: AMG)?|E \d+(?: AMG)?|CLS \d+(?: AMG)?|AMG GT(?: S)?|V \d+)/i,
-		BMW: /^(?:X\d|M\d|\d{3})\b/i,
-		Audi: /^(?:RS\d|Q\d|A\d)\b/i,
-		'Land Rover': /^Range Rover Sport/i,
-		Lamborghini: /^Urus/i
-	};
-	const model =
-		remainder.match(patterns[brand] ?? /^\S+(?:\s+\S+)?/)?.[0] ?? remainder.split(' ')[0];
-
-	return {
-		brand,
-		model,
-		shortTitle: `${brand} ${model}`
-	};
-};
-
-const listingToVehicle = (listing: CurrentDayNightListing): Car => {
-	const identity = getVehicleIdentity(listing);
-	const year = Number(listing.date.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? 0);
-	const mileageValue = Math.round(parseLocalizedNumber(listing.mileage));
-	const price = parseLocalizedNumber(listing.priceEur);
-	const fuel = normalizeFuel(listing.fuel);
-	const transmission = normalizeTransmission(listing.transmission);
-	const body = normalizeBody(listing.body);
-	const isIncoming = /очакван/i.test(listing.title);
-	const availability = isIncoming ? 'Очакван внос' : 'Наличен';
-	const drive = listing.features.some((feature) => /4x4|xdrive|quattro|4matic/i.test(feature))
-		? '4x4'
-		: '—';
-	const slugBase = identity.shortTitle
-		.toLocaleLowerCase('en-US')
-		.replace(/[^a-z0-9]+/g, '-')
-		.replace(/^-|-$/g, '');
-	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
-	const conditionLine = isIncoming
-		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Наличен автомобил в София — свържете се за оглед.';
-
-	return {
-		slug: `${slugBase}-${listing.id.slice(-6)}`,
-		title: `${identity.shortTitle} ${year} г., ${fuel}, ${listing.mileage}, ${availability}`,
-		shortTitle: identity.shortTitle,
-		brand: identity.brand,
-		model: identity.model,
-		year,
-		mileage: listing.mileage,
-		mileageValue,
-		fuel,
-		transmission,
-		body,
-		doors: body === 'Купе' ? 3 : 5,
-		engine: '—',
-		power: listing.power,
-		drive,
-		color: listing.color,
-		price,
-		priceEur: listing.priceEur,
-		priceBgn: listing.priceBgn,
-		monthly: 'Финансиране по запитване',
-		image: listing.image,
-		gallery: [listing.image],
-		badges: [
-			availability,
-			...(listing.status && listing.status !== availability ? [listing.status] : []),
-			identity.model.includes('AMG') ? 'AMG' : listing.power
-		],
-		conditionLine,
-		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
-		features,
-		highlights: [availability, listing.power, drive],
-		lot: `DN-${listing.id.slice(-6)}`,
-		sourceUrl: listing.sourceUrl
-	};
-};
-
-export const cars = currentDayNightListings.map(listingToVehicle);
+const number = (value: number) => new Intl.NumberFormat('bg-BG').format(value);
+/** Exact same record IDs, photographs, tax notes and prices as the other designs. */
+export const cars: Car[] = stock.vehicles.map((vehicle) => ({
+ slug: vehicle.slug, title: vehicle.title, shortTitle: vehicle.make + ' ' + vehicle.model,
+ brand: vehicle.make, model: vehicle.model, year: vehicle.year,
+ mileage: number(vehicle.mileageKm) + ' км', mileageValue: vehicle.mileageKm,
+ fuel: vehicle.fuelType === 'electric' ? 'Електрически' : vehicle.fuel,
+ transmission: vehicle.transmission === 'Автоматична' ? 'Автоматик' : vehicle.transmission,
+ body: vehicle.bodyLabel, doors: vehicle.doorsLabel,
+ engine: vehicle.engineCc ? number(vehicle.engineCc) + ' см³' : 'Не е посочен',
+ power: vehicle.powerHp ? number(vehicle.powerHp) + ' к.с.' : 'Не е посочена',
+ drive: vehicle.equipment.includes('4x4') ? '4x4' : 'По запитване', color: vehicle.color,
+ price: vehicle.priceEur, priceEur: vehicle.priceEur > 0 ? number(vehicle.priceEur) + ' €' : 'Цена при запитване',
+ priceBgn: '', priceNote: vehicle.priceNote, monthly: 'Условия по запитване',
+ image: vehicle.image, gallery: [...vehicle.gallery], badges: [vehicle.availabilityLabel],
+ conditionLine: vehicle.priceNote + ' ' + vehicle.conditionNote,
+ description: vehicle.description, features: [...vehicle.equipment],
+ highlights: [vehicle.availabilityLabel, vehicle.priceNote], lot: vehicle.sourceId, sourceUrl: vehicle.sourceUrl
+}));
 export const daynightVehicles = cars;
-
 export type DayNightVehicle = Car;
-export type DayNightVehicleCondition = 'new' | 'used';
+export type DayNightVehicleCondition = 'new' | 'used' | 'unknown';
 export type DayNightVehicleAvailability = 'available' | 'incoming';
-
-export const getDayNightVehicleCondition = (
-	vehicle: Pick<Car, 'mileageValue'>
-): DayNightVehicleCondition => (vehicle.mileageValue <= 100 ? 'new' : 'used');
-
-export const getDayNightVehicleAvailability = (
-	vehicle: Pick<Car, 'highlights'>
-): DayNightVehicleAvailability =>
-	vehicle.highlights.some((highlight) => /очакван внос/i.test(highlight))
-		? 'incoming'
-		: 'available';
-
-export const getDayNightVehicleBySlug = (slug: string) =>
-	daynightVehicles.find((car) => car.slug === slug);
-
+// Availability filter keys are retained for compatibility; public badges are source-qualified.
+export const getDayNightVehicleCondition = (vehicle: Pick<Car, 'slug'>): DayNightVehicleCondition => { const record = stock.vehicles.find((item) => item.slug === vehicle.slug); return record?.condition === 'new' ? 'new' : record?.condition === 'unknown' ? 'unknown' : 'used'; };
+export const getDayNightVehicleAvailability = (vehicle: Pick<Car, 'highlights'>): DayNightVehicleAvailability => vehicle.highlights.some((value) => /очакван внос/i.test(value)) ? 'incoming' : 'available';
+export const getDayNightVehicleBySlug = (slug: string) => daynightVehicles.find((vehicle) => vehicle.slug === slug);
 export const placeholderImageSlugs = new Set<string>();
-
 export const featuredDayNightVehicles = daynightVehicles.slice(0, 6);

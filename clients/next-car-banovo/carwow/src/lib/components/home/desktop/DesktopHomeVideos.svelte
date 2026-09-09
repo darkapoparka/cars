@@ -3,27 +3,18 @@
 	import { homeVideos, youtubeChannelUrl } from '$lib/data/daynight-videos';
 </script>
 
-<section class="home-videos" aria-label="Day Night Auto в YouTube">
+<section class="home-videos" aria-label="Снимки и детайли по обявите">
 	<div class="daynight-home-container">
-		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="Всички видеа">
+		<DesktopSectionHeading title="Снимки и детайли по обявите" href={youtubeChannelUrl} label="Всички автомобили">
 			{#snippet titleContent()}
-				<span class="home-videos__title">Day Night Auto в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
+				<span class="home-videos__title">Снимки и детайли по обявите</span>
 			{/snippet}
 		</DesktopSectionHeading>
 		<div class="home-videos__grid">
 			{#each homeVideos as video (video.id)}
 				<article class="home-video">
 					<div class="home-video__image">
-						<iframe
-							src={`https://www.youtube-nocookie.com/embed/${video.id}?playsinline=1&rel=0&hl=bg`}
-							title={video.title}
-							width="480"
-							height="270"
-							loading="lazy"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
+						<a href={video.url} aria-label={'Галерия: ' + video.title}><img src={video.thumbnail} alt={video.title} width="480" height="270" loading="lazy" /></a>
 					</div>
 				</article>
 			{/each}
@@ -38,5 +29,5 @@
 	.home-videos__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 	.home-video { border-radius: 12px; overflow: hidden; }
 	.home-video__image { aspect-ratio: 16 / 9; min-height: 200px; background: #24282c; }
-	.home-video__image iframe { display: block; width: 100%; height: 100%; min-height: 200px; border: 0; }
+	.home-video__image a, .home-video__image img { display: block; width: 100%; height: 100%; min-height: 200px; border: 0; object-fit: cover; }
 </style>

@@ -6,14 +6,14 @@
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
 
-	let activePaymentMode = $state<PaymentMode>('finance');
+	let activePaymentMode = $state<PaymentMode>('cash');
 	let isVatDropdownOpen = $state(false);
 
 	const vatRows = $derived([
-		{ id: 'price', label: 'Цена:', value: vehicle.priceBgn },
-		{ id: 'tax', label: 'Данък върху МПС:', value: 'уточняват се' },
-		{ id: 'total', label: 'Цена с данък:', value: vehicle.priceBgn }
-	]);
+ { id: 'price', label: 'Обявена цена:', value: vehicle.priceEur },
+ { id: 'tax', label: 'Данъчни условия:', value: vehicle.priceNote ?? vehicle.conditionLine },
+ { id: 'availability', label: 'Наличност:', value: vehicle.badges[0] ?? 'По запитване' }
+]);
 
 	function selectPaymentMode(mode: PaymentMode) {
 		activePaymentMode = mode;
@@ -66,7 +66,7 @@
 				<p class="pdp-payment-price mb-4">
 					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 				</p>
-				<p class="text-secondary mb-16">Цена без данъци и такси</p>
+				<p class="text-secondary mb-16">{vehicle.priceNote ?? vehicle.conditionLine}</p>
 
 				<p class="flex items-center gap-8">
 					<img
@@ -77,7 +77,7 @@
 						decoding="async"
 						loading="eager"
 					/>
-					<a href={resolve('/terms')} class="text-underline text-highlight">Автомобил по ДДС</a>
+					<a href={resolve('/terms')} class="text-underline text-highlight">Данъчни условия</a>
 				</p>
 			</div>
 
@@ -87,8 +87,8 @@
 					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 					<span class="pdp-payment-price__monthly">{vehicle.monthly}</span>
 				</p>
-				<p class="text-secondary mb-4">Вноска без данъци и такси</p>
-				<p class="text-secondary mb-16">Първоначална вноска · 72 мес. · 7.89% ГПР</p>
+				<p class="text-secondary mb-4">Кредитни условия не са потвърдени</p>
+				<p class="text-secondary mb-16">Илюстративна сметка, не оферта за кредит</p>
 
 				<div class={['core-dropdown flex items-center gap-8', isVatDropdownOpen && 'active']}>
 					<img
@@ -107,7 +107,7 @@
 						aria-controls="coreDropdownMenu"
 						onclick={toggleVatDropdown}
 					>
-						Автомобил по ДДС
+						Данъчни условия
 					</button>
 					<div class="core-dropdown__menu" id="coreDropdownMenu">
 						<ul class="core-dropdown__list">

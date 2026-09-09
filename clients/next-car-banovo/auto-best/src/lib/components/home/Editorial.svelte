@@ -72,7 +72,7 @@
     margin: 0 12px;
     padding: 82px 0 0;
     border-radius: 24px;
-    background-image: url('/assets/images/lead/day-night-editorial-banner-v2.webp');
+    background-image: url('/inventory/11749039399452266-1.webp');
     background-position: center 64%;
     background-repeat: no-repeat;
     background-size: cover;

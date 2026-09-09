@@ -59,8 +59,8 @@
 			.filter((field) => field.value);
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const phoneHref = `tel:${daynightSite.phone}`;
+	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 	const quickContext = $derived(
 		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
 	);
@@ -290,10 +290,10 @@
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Защо Day Night"
-					description="Кристиян и екипът Ви дават ясен следващ вариант."
+					title="За запитването"
+					description="Посочете автомобила и уточнете възможностите с продавача."
 					label="Виж предимствата"
-					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
+					image="/inventory/21776348634522888-1.webp"
 					tone="yellow"
 					portrait
 					onclick={() => openInfo('benefits')}
@@ -470,7 +470,7 @@
 						src={resolve(
 							activeInfo === 'process'
 								? '/assets/images/sell/process-disclosure-list-v1.webp'
-								: '/assets/images/sell/kristian-trust-disclosure-list-v1.webp'
+								: '/inventory/21767797586155338-1.webp'
 						)}
 						alt=""
 						aria-hidden="true"
@@ -478,7 +478,7 @@
 					<div class="ms-info-hero__handle" aria-hidden="true"></div>
 					<div class="ms-info-hero__title">
 						<h2 id="ms-info-title">
-							{activeInfo === 'process' ? 'Как работи' : 'Защо Day Night'}
+							{activeInfo === 'process' ? 'Как работи' : 'За запитването'}
 						</h2>
 						<p>
 							{activeInfo === 'process'

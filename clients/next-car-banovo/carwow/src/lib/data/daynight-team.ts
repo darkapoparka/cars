@@ -1,5 +1,5 @@
-export const daynightTeamDisclosure = 'Демо профили и портрети: примерни роли, а не потвърдени членове на екипа.';
-
+import { daynightSite } from './daynight-site';
+export const daynightTeamDisclosure = 'Теми за разговор с автокъщата. Това не са персонални профили или потвърдени отдели; всички използват единствения установен публичен телефон.';
 export type DayNightTeamMember = {
 	slug: string;
 	name: string;
@@ -10,53 +10,10 @@ export type DayNightTeamMember = {
 	bio: string;
 	detail: string;
 };
-
 export const daynightTeam: DayNightTeamMember[] = [
-	{
-		slug: 'prodazhbi-showroom',
-		name: "Екип продажби Day Night Auto",
-		role: 'Консултант продажби',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-sales-v1.webp',
-		bio: 'Екипът съдейства при избор на автомобил, първи оглед, сравнение на наличните предложения и подреден процес до сделката.',
-		detail:
-			"Консултантите на Day Night Auto помагат с избор според бюджет, пробег, оборудване и реална наличност. При нужда подготвят оглед, запазване на автомобил и координация на следващите стъпки."
-	},
-	{
-		slug: 'barter-i-ocenka',
-		name: 'Екип бартер и оценка',
-		role: 'Оценка, покупка и бартер',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-evaluation-v1.webp',
-		bio: 'Екипът приема запитвания за продажба или замяна на автомобил и подготвя реалистична оценка според пазара и състоянието.',
-		detail:
-			'При бартер или директно изкупуване екипът разглежда автомобила, документите и сервизната история, след което дава ясен вариант за следващите стъпки.'
-	},
-	{
-		slug: 'dokumenti-finansirane',
-		name: 'Екип документи и финансиране',
-		role: 'Документи и финансиране',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-documents-v1.webp',
-		bio: 'Екипът координира документи, регистрация, разсрочено плащане и подготовка за предаване на автомобила.',
-		detail:
-			'След избор на автомобил екипът подрежда документите, комуникацията по финансирането и практичните стъпки до предаването.'
-	},
-	{
-		slug: 'klientski-zapitvania',
-		name: 'Екип клиентски заявки',
-		role: 'Огледи и следващи стъпки',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-customer-v1.webp',
-		bio: 'Екипът подготвя запитванията, уточнява часове за оглед и държи комуникацията подредена преди посещение на място.',
-		detail:
-			'Клиентските заявки минават през ясен контакт за телефон, имейл и оглед, така че всеки интерес да получи отговор с реална наличност и конкретно действие.'
-	}
+ {slug:'prodazhbi-showroom',name:'Автомобили и оглед',role:'Публичен контакт на автокъщата',phone:daynightSite.phone,email:'',image:daynightSite.logoDark,bio:'Потвърдете наличността и адреса за избрания автомобил преди посещение.',detail:'Обадете се на публикувания телефон. Работно време, възможност за тест и проверка се уточняват лично; онлайн формата не резервира час.'},
+ {slug:'barter-i-ocenka',name:'Въпрос за бартер',role:'Тема за запитване, не отдел',phone:daynightSite.phone,email:'',image:daynightSite.logoDark,bio:'Някои обяви посочват договаряне на цената при бартер.',detail:'Посочете точната обява и данните за автомобила си. Не е обещана оценка, изкупуване или одобрение; условията са по индивидуална уговорка.'},
+ {slug:'dokumenti-finansirane',name:'Цена и документи',role:'Тема за запитване, не отдел',phone:daynightSite.phone,email:'',image:daynightSite.logoDark,bio:'Проверете данъчните условия и документите по конкретната обява.',detail:'Поискайте крайна цена и писмени условия за всички разходи. Кредитор, лихва, гаранция и процедура за регистрация не са потвърдени в този прототип.'},
+ {slug:'klientski-zapitvania',name:'Допълнителни снимки',role:'Тема за запитване, не отдел',phone:daynightSite.phone,email:'',image:daynightSite.logoDark,bio:'Посочете автомобила и конкретните детайли, които желаете да видите.',detail:'Галерията използва снимки от същата обява. Допълнителни кадри или видео следва да се поискат от продавача; не е добавен чужд YouTube канал.'}
 ];
-
-export const getDayNightTeamMemberBySlug = (slug: string) =>
-	daynightTeam.find((member) => member.slug === slug);
+export const getDayNightTeamMemberBySlug = (slug: string) => daynightTeam.find((member) => member.slug === slug);

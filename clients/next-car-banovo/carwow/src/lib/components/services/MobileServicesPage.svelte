@@ -15,55 +15,15 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
-		{
-			id: 'inspection',
-			label: 'Оглед',
-			title: 'Проверка преди покупка',
-			kicker: 'Оглед и история',
-			cta: 'Заяви оглед',
-			href: '/contact',
-			icon: ShieldCheck,
-			points: ['Проверка на историята', 'Оглед на място', 'Следващи стъпки преди капаро']
-		},
-		{
-			id: 'documents',
-			label: 'Документи',
-			title: 'Регистрация и документи',
-			kicker: 'Договор и прехвърляне',
-			cta: 'Попитай за документи',
-			href: '/contact',
-			icon: ClipboardCheck,
-			points: ['Договор и фактура', 'Прехвърляне и номера', 'Финални стъпки при предаване']
-		},
-		{
-			id: 'trade',
-			label: 'Бартер',
-			title: 'Бартер или изкупуване',
-			kicker: 'Оценка на автомобил',
-			cta: 'Заяви оценка',
-			href: '/sell-your-car',
-			icon: Repeat,
-			points: [
-				'Оценка на Вашия автомобил',
-				'Приспадане към следваща покупка',
-				'Опция за директно изкупуване'
-			]
-		},
-		{
-			id: 'finance',
-			label: 'Финансиране',
-			title: 'Финансиране',
-			kicker: 'Лизинг и бюджет',
-			cta: 'Виж варианти',
-			href: '/financing',
-			icon: Banknote,
-			points: ['Ориентировъчна месечна вноска', 'Съдействие с лизинг', 'Сравнение спрямо бюджет']
-		}
-	] as const;
+ {id:'inspection',label:'Оглед',title:'Въпрос за оглед',kicker:'Наличност по запитване',cta:'Попитай за оглед',href:'/contact',icon:ShieldCheck,points:['Потвърдете наличността','Уточнете час за посещение','Попитайте за независима проверка']},
+ {id:'documents',label:'Документи',title:'Цена и документи',kicker:'По конкретната обява',cta:'Попитай за документи',href:'/contact',icon:ClipboardCheck,points:['ДДС според обявата','Документи по запитване','Крайни разходи с потвърждение']},
+ {id:'trade',label:'Бартер',title:'Запитване за бартер',kicker:'Индивидуална уговорка',cta:'Подготви въпрос',href:'/sell-your-car',icon:Repeat,points:['Посочете конкретната обява','Опишете автомобила си','Няма обещана оценка или изкупуване']},
+ {id:'finance',label:'Финансиране',title:'Условия по запитване',kicker:'Не е оферта за кредит',cta:'Въпроси за финансиране',href:'/financing',icon:Banknote,points:['Илюстративен калкулатор','Кредитор и лихва не са потвърдени','Условията зависят от конкретната оферта']}
+] as const;
 
 	type ServiceId = (typeof services)[number]['id'];
 
@@ -134,7 +94,7 @@
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Услуги Day Night Auto">
+<div class="mobile-services-app" aria-label="Услуги NEXT CAR">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -143,9 +103,9 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="NEXT CAR начало">
 				<img
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/brand/social-card.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -157,7 +117,7 @@
 		<div class="mobile-services-hero__copy">
 			<span>Услуги</span>
 			<h1>Подкрепа преди и след покупка</h1>
-			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в София.</p>
+			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в Баново.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">
@@ -247,7 +207,7 @@
 						<BadgeCheck size={22} strokeWidth={2.45} />
 						<span>
 							<strong>Заявката е подготвена</strong>
-							<small>Екипът ще се свърже с Вас за следващата стъпка.</small>
+							<small>Демото не изпраща съобщения. Използвайте публикувания телефон.</small>
 						</span>
 					</div>
 				{:else}

@@ -11,67 +11,26 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 
-	const benefits = [
-		{
-			id: 'documents',
-			title: 'Съдействие по документи',
-			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.',
-			icon: ClipboardCheck
-		},
-		{
-			id: 'terms',
-			title: 'Ясни условия предварително',
-			copy: 'Ориентировъчна месечна вноска и условия още преди да дойдете за оглед.',
-			icon: BadgeCheck
-		},
-		{
-			id: 'fast',
-			title: 'Отнема няколко минути',
-			copy: 'Изпращате запитване с автомобил и бюджет - екипът ще Ви изпрати конкретни стъпки.',
-			icon: Clock
-		}
-	] as const;
+	const benefits = [{ id:"documents", title:"Проверете условията", copy:"Изискайте писмена информация за кредитор, лихва, срок, такси и обща сума. В демото те не са потвърдени.", icon:ClipboardCheck },{ id:"terms", title:"Разгледайте примерна сметка", copy:"Въведете собствени параметри в калкулатора. Изчислението не е кредитна оферта или одобрение.", icon:BadgeCheck },{ id:"fast", title:"Посочете конкретен автомобил", copy:"Цената и данъчните условия са по обявата. Обсъдете възможностите с продавача по публикувания телефон.", icon:Clock }] as const;
 
-	const steps = [
-		'Изпращаш запитване с автомобил и месечен бюджет.',
-		'Получаваш ориентировъчна вноска и условия.',
-		'Оглед в София и финализиране с екипа.'
-	] as const;
+	const steps = ["Изберете обявата и потвърдете наличността.","Сравнете свои примерни параметри в калкулатора.","Уточнете писмените условия с продавача и кредитора."] as const;
 
-	const faqs = [
-		{
-			id: 'documents',
-			question: 'Какви документи са нужни?',
-			answer:
-				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото.'
-		},
-		{
-			id: 'trade-in',
-			question: 'Може ли с бартер?',
-			answer: 'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума.'
-		},
-		{
-			id: 'speed',
-			question: 'Колко време отнема одобрението?',
-			answer:
-				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават при огледа.'
-		}
-	] as const;
+	const faqs = [{"id":"documents","question":"Какви документи са нужни?","answer":"Конкретните документи и изисквания се определят от избрания кредитор. В този прототип не е потвърден финансов партньор; не изпращайте лични документи през демо формата."},{"id":"trade-in","question":"Възможен ли е бартер?","answer":"Някои обяви посочват договаряне при бартер. Приемането, оценката и участието в сделка не са гарантирани и се уточняват за конкретния автомобил."},{"id":"speed","question":"Колко време отнема одобрението?","answer":"Не е потвърден срок за отговор или одобрение. Обадете се на продавача за текущи условия; демото не изпраща кредитна заявка."}] as const;
 </script>
 
-<div class="mobile-financing-app" aria-label="Финансиране от Day Night Auto">
+<div class="mobile-financing-app" aria-label="Финансиране от NEXT CAR">
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
-			src={resolve('/assets/images/pages/daynight-services-consultation-v1.webp')}
+			src={resolve('/inventory/21776348634522888-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-financing-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+			<a href={resolve('/')} aria-label="NEXT CAR начало">
+				<img src={resolve('/brand/social-card.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -81,7 +40,7 @@
 		<div class="mobile-financing-hero__copy">
 			<span>Финансиране</span>
 			<h1>Финансиране и разсрочено плащане</h1>
-			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в София.</p>
+			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в Баново.</p>
 		</div>
 
 		<div class="mobile-financing-actions">
@@ -160,7 +119,7 @@
 			<div>
 				<span>Следваща стъпка</span>
 				<h2 id="mobile-financing-cta-title">Кажи автомобил и бюджет</h2>
-				<p>Екипът ще Ви изпрати конкретни следващи стъпки в рамките на работния ден.</p>
+				<p>Срок за отговор не е потвърден. Свържете се по публикувания телефон.</p>
 				<a href={phoneHref}>
 					<PhoneCall size={18} strokeWidth={2.45} />
 					<span>{daynightSite.phoneLabel}</span>

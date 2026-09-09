@@ -1,13 +1,15 @@
 import { env } from '$env/dynamic/private';
+import { dealerPreviewMode } from '$lib/data/dealer-preview';
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from './schema';
 
 export function hasDatabaseUrl() {
-	return Boolean(env.DATABASE_URL?.trim());
+	return !dealerPreviewMode && Boolean(env.DATABASE_URL?.trim());
 }
 
 export function getDatabaseUrl() {
+ if (dealerPreviewMode) throw new Error('Database access is not enabled for this branch preview.');
 	const value = env.DATABASE_URL?.trim();
 
 	if (!value) {

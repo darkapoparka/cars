@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import { dealerPreviewMode, previewNotice } from '$lib/data/dealer-preview';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
@@ -11,14 +12,14 @@ const appBodyPattern = /<body\b(?=[^>]*\bdata-sveltekit-preload-data=)([^>]*)>/i
 let warnedMissingProductionDatabase = false;
 
 function warnMissingProductionDatabaseUrl() {
-	if (warnedMissingProductionDatabase || building || process.env.NODE_ENV !== 'production') {
+	if (dealerPreviewMode || warnedMissingProductionDatabase || building || process.env.NODE_ENV !== 'production') {
 		return;
 	}
 
 	warnedMissingProductionDatabase = true;
 	console.error(
 		[
-			'DAY NIGHT AUTO GROUP PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
+			'NEXT CAR PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
 			'The storefront will use demo-only static inventory fallback and admin/write endpoints will fail closed.',
 			'Set DATABASE_URL before promoting this Vercel deployment.'
 		].join(' ')
@@ -55,13 +56,16 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 }
 
 export const handle: Handle = async ({ event, resolve }) => {
+ if (dealerPreviewMode && !['GET', 'HEAD', 'OPTIONS'].includes(event.request.method)) {
+  return new Response(JSON.stringify({ message: previewNotice, delivered: false }), { status: 503, headers: { 'Content-Type': 'application/json; charset=utf-8', 'X-Robots-Tag': 'noindex, nofollow' } });
+ }
 	const hasDb = hasDatabaseUrl();
 	if (!hasDb) warnMissingProductionDatabaseUrl();
 
 	event.locals.db = hasDb ? createDb() : null;
 	event.locals.staffProfile = null;
 
-	const { session, user } = await getAuthSession(event);
+	const { session, user } = dealerPreviewMode ? { session: null, user: null } : await getAuthSession(event);
 	event.locals.session = session;
 	event.locals.user = user;
 
@@ -74,7 +78,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const resolveWithBodyClasses = (eventToResolve: RequestEvent) =>
 		resolve(eventToResolve, resolveOptions);
 
-	if (hasAuthRuntimeConfig()) {
+	if (!dealerPreviewMode && hasAuthRuntimeConfig()) {
 		return svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,
@@ -83,7 +87,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 		});
 	}
 
-	return resolveWithBodyClasses(event);
+	const response = await resolveWithBodyClasses(event);
+ if (dealerPreviewMode) response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+ return response;
 };
 
 export const handleError: HandleServerError = ({ error, event, status, message }) => {

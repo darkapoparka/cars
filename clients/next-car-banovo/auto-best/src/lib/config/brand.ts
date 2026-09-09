@@ -8,27 +8,15 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  youtubeUrl: string;
+  instagramUrl: string;
+  facebookUrl: string;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
 
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+ name: 'NEXT CAR', shortName: 'NEXT CAR', city: 'Баново, обл. Варна', addressLine: 'ул. 1-ва, с. Баново',
+ address: 'ул. 1-ва, с. Баново, обл. Варна', phone: '0898 770 707', phoneHref: 'tel:+359898770707',
+ appointment: 'Оглед с предварителна уговорка. Пон.–пет. 09:00–18:00; съб.–нед. 10:00–14:00.',
+ logo: '/brand/logo.png', youtubeUrl: '', instagramUrl: '', facebookUrl: ''
 } as const satisfies BrandConfig;

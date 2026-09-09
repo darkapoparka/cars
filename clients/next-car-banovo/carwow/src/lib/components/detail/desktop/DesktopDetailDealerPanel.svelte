@@ -3,7 +3,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 
 	const phoneHref = `tel:${daynightSite.phone}`;
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const viberHref = '/contact';
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
 		target: '_blank',
@@ -15,8 +15,8 @@
 	<div class="listing-details--contact">
 		<div class="listing-details--contact-dealer mb-28">
 			<img
-				src="/assets/images/avatar/contact-avatar.webp"
-				alt="Day Night Auto"
+				src="/brand/logo.png"
+				alt="NEXT CAR"
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
@@ -24,18 +24,18 @@
 
 			<div class="content">
 				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
-					Day Night Auto
+					NEXT CAR
 				</a>
 
 				<div class="verify">
 					<img
 						src="/assets/icons/SealCheck.svg"
-						alt="verified"
+						alt="" aria-hidden="true"
 						data-daynight-img="1"
 						decoding="async"
 						loading="lazy"
 					/>
-					<p class="text-highlight text-sm">Проверена автокъща</p>
+					<p class="text-highlight text-sm">Публичен профил</p>
 				</div>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 				decoding="async"
 				loading="lazy"
 			/>
-			Viber чат
+			Подготви запитване
 		</a>
 	</div>
 </div>

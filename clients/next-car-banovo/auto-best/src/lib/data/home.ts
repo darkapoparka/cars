@@ -11,8 +11,8 @@ const bodyArtwork = [
   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
   { label: 'Комби', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
   { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
-  { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
-  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
+  { label: 'Купе', query: 'Coupe', image: '/inventory/21776348634522888-1.webp', width: 1000, height: 667 },
+  { label: 'Спортбек', query: 'Sportback', image: '/inventory/11749039399452266-1.webp', width: 1000, height: 667 }
 ] as const;
 
 const brandArtwork = [
@@ -41,7 +41,7 @@ export const editorial = [
   {
     title: `Има ли офис в ${brand.city} и как се посещава?`,
     text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
-    image: '/assets/images/lead/day-night-guide-inspection.webp',
+    image: '/inventory/11749039399452266-1.webp',
     href: '/contact',
     meta: 'Полезно',
     category: 'Ръководство'
@@ -49,7 +49,7 @@ export const editorial = [
   {
     title: 'Какво можем да проверим преди покупка?',
     text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
-    image: '/assets/images/lead/day-night-guide-import.webp',
+    image: '/inventory/11749039399452266-1.webp',
     href: '/blog-detail/1',
     meta: 'Полезно',
     category: 'Ръководство'
@@ -57,7 +57,7 @@ export const editorial = [
   {
     title: 'Може ли автомобил да се внесе по поръчка?',
     text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
-    image: '/assets/images/lead/day-night-guide-leasing.webp',
+    image: '/inventory/11749039399452266-1.webp',
     href: '/blog-detail/2',
     meta: 'Полезно',
     category: 'Ръководство'

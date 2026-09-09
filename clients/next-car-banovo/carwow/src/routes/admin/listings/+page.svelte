@@ -75,7 +75,7 @@
 
 	function handleVehicleImageError(event: Event) {
 		const image = event.currentTarget as HTMLImageElement | null;
-		const fallbackSrc = resolve('/assets/images/card/card-1.jpg');
+		const fallbackSrc = resolve('/inventory/21776348634522888-1.webp');
 
 		if (!image || image.getAttribute('src') === fallbackSrc) return;
 
@@ -218,7 +218,7 @@
 											<div class="flex min-w-0 items-center gap-3">
 												<img
 													class="ring-border size-12 rounded-md object-cover ring-1"
-													src={vehicle.image || '/assets/images/card/card-1.jpg'}
+													src={vehicle.image || '/inventory/21776348634522888-1.webp'}
 													alt=""
 													onerror={handleVehicleImageError}
 												/>
@@ -368,7 +368,7 @@
 					<div class="grid gap-3 p-6">
 						<p class="text-sm font-medium">No listings match the current filters.</p>
 						<p class="text-muted-foreground text-sm">
-							Create a listing or clear the filters to see the full Day Night Auto inventory
+							Create a listing or clear the filters to see the full NEXT CAR inventory
 							workspace.
 						</p>
 						<div class="flex flex-wrap gap-2">

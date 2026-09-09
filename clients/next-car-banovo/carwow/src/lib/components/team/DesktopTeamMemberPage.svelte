@@ -82,7 +82,7 @@
 						{/if}
 						<div>
 							<span>Локация</span>
-							<a {...mapLinkProps}>София</a>
+							<a {...mapLinkProps}>Варна</a>
 						</div>
 					</div>
 				</div>
@@ -136,16 +136,16 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">Day Night Auto София</p>
+					<p class="eyebrow">NEXT CAR Варна</p>
 					<h2>Запази час за оглед</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
+						Свържете се с екипа за наличност по запитване, оглед, документи, бартер или финансиране.
 					</p>
 					<a {...phoneLinkProps} class="sa-cta sa-cta-primary">
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="320" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Карта до NEXT CAR Варна" height="320" />
 			</div>
 		</div>
 	</section>

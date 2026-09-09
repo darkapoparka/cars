@@ -48,7 +48,7 @@
 			sectionClass: 'upload-section mb-18',
 			previewClass: 'upload-preview upload-preview--avatar',
 			imageId: 'avatarPreview',
-			image: '/assets/images/avatar/avatar-10.jpg',
+			image: '/brand/logo.png',
 			imageAlt: 'Avatar Preview',
 			contentTitleClass: 'font-weight-600 mb-6',
 			descriptionClass: 'text-xs text-secondary mb-6',
@@ -61,7 +61,7 @@
 			previewWrapperClass: 'upload-preview--poster-wrapper',
 			previewClass: 'upload-preview--poster',
 			imageId: 'posterPreview',
-			image: '/assets/images/avatar/avatar-11.jpg',
+			image: '/brand/logo.png',
 			imageAlt: 'Dealer Poster Preview',
 			contentTitleClass: 'font-weight-600 mb-4',
 			descriptionClass: 'text-xs text-secondary mb-12',
@@ -135,7 +135,7 @@
 				id: 'Facebook',
 				name: 'Facebook',
 				icon: '/assets/icons/input-facebook.svg',
-				value: 'http://www.facebook.com/avitex'
+				value: '/contact'
 			},
 			{ id: 'skype', name: 'skype', icon: '/assets/icons/input-skype.svg', value: '' },
 			{ id: 'xUrl', name: 'xUrl', icon: '/assets/icons/input-x.svg', value: '' }
@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'бул. „Цар Освободител“ 176, Баново, обл. Варна';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -169,7 +169,7 @@
 	const description =
 		'Това е фронтенд MVP на клиентски профил. Реална регистрация, вход и съхранение на данни се свързват след избор на backend/auth. \n                                        ';
 	const mapSrc =
-		'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97101.88872869895!2d-74.22688511715344!3d40.487336736141906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1689125037376!5m2!1svi!2s';
+		"https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%E2%80%9E%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%E2%80%9C%20176%2C%20%D0%92%D1%8A%D0%B7%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B5%201%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed";
 </script>
 
 {#snippet clearButton(target: string)}
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="NEXT CAR map"
 					></iframe>
 				</div>
 			</div>

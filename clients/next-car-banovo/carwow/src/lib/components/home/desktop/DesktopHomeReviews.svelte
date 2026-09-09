@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Check from '@lucide/svelte/icons/check';
-	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
+	import { daynightReviews, daynightReviewDisclosure, reviewGuidance } from '$lib/data/daynight-reviews';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
@@ -44,24 +44,24 @@
 
 	const starIds = ['star-1', 'star-2', 'star-3', 'star-4', 'star-5'] as const;
 
-	const reviews = daynightReviews.slice(0, 3);
+	const reviews = daynightReviews.length ? daynightReviews.slice(0, 3) : reviewGuidance;
 
 	const actionCards: ActionCard[] = [
 		{
 			id: 'buy-confidently',
 			modifier: 'inventory',
-			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
+			image: '/inventory/21776348634522888-1.webp',
 			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
 			title: 'Купи автомобил уверено',
 			balancedTitle: 'Купи автомобил',
 			titleHref: '/inventory',
 			bullets: [
-				'Прегледайте актуалната наличност.',
+				'Прегледайте подбраните обяви.',
 				'Филтрирайте по марка, цена, гориво и пробег.',
 				'Получете съдействие за оглед и проверка.'
 			],
 			balancedBullets: [
-				'Вижте актуалната наличност.',
+				'Вижте подбраните обяви.',
 				'Филтрирайте по цена и пробег.',
 				'Уговорете оглед с екипа.'
 			],
@@ -71,14 +71,14 @@
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
-			image: '/assets/images/home-promos/urus-rear-v4.webp',
+			image: '/inventory/21776348634522888-1.webp',
 			alt: 'Продай или замени автомобил',
 			title: 'Продай или замени лесно',
 			balancedTitle: 'Продай или замени',
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на Day Night Auto.',
+				'Получете обратна връзка от екипа на NEXT CAR.',
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -102,7 +102,7 @@
 	{#if showReviews}
 		<div class="daynight-home-container home-reviews-heading">
 			<DesktopSectionHeading
-				title="Отзиви от клиенти"
+				title="Отзиви и полезна информация"
 				href={showHeaderCta ? resolve('/reviews') : undefined}
 				label={ctaLabel}
 			/>

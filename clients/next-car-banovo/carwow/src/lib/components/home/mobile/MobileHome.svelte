@@ -54,7 +54,7 @@
 	const inventoryPath = '/inventory' as const;
 	const importRequestPath = '/contact' as const;
 	const inventoryHref = resolve(inventoryPath);
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapHref = daynightSite.mapUrl;
 
 	type InventoryHref = typeof inventoryPath | `${typeof inventoryPath}?${string}`;
@@ -431,13 +431,13 @@
 	</svg>
 {/snippet}
 
-<div class="mobile-home" aria-label="Day Night Auto — начало">
+<div class="mobile-home" aria-label="NEXT CAR — начало">
 	<header class="mh-hero">
 		<div class="mh-hero__bar">
-			<a class="mh-hero__brand" href={resolve('/')} aria-label="Day Night Auto home">
+			<a class="mh-hero__brand" href={resolve('/')} aria-label="NEXT CAR home">
 				<img
 					class="mh-hero__logo"
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/brand/social-card.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -453,14 +453,14 @@
 				<a
 					class="mh-hero__bar-action mh-hero__bar-action--call"
 					href={phoneHref}
-					aria-label="Обади се на Day Night Auto"
+					aria-label="Обади се на NEXT CAR"
 				>
 					<Phone size={19} strokeWidth={2.35} aria-hidden="true" />
 				</a>
 			</div>
 		</div>
 
-		<h1 class="mh-hero__title">Day Night Auto</h1>
+		<h1 class="mh-hero__title">NEXT CAR</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
@@ -678,8 +678,8 @@
 		<section class="mh-cta-wrap" aria-label="Призив за действие">
 			<div class="mh-cta">
 				<div class="mh-cta__copy">
-					<strong>{total} обяви · Оглед в София</strong>
-					<span>Финансиране · бартер · съдействие с документите</span>
+					<strong>{total} обяви · Оглед във Баново</strong>
+					<span>Цени и условия по конкретната обява</span>
 				</div>
 				<div class="mh-cta__actions">
 					<a class="is-browse" href={inventoryHref}>Всички автомобили</a>
@@ -687,8 +687,8 @@
 				</div>
 			</div>
 			<div class="mh-trust">
-				<span>Проверени коли</span>
-				<span>В София</span>
+				<span>Подбрани обяви</span>
+				<span>Въвъв Баново</span>
 				<span>Оглед по уговорка</span>
 			</div>
 		</section>
@@ -698,12 +698,11 @@
 		<div class="mh-footer__brand">
 			<img
 				class="mh-footer__logo"
-				src={resolve('/brand/daynight-logo-generated.png')}
+				src={resolve('/brand/social-card.png')}
 				alt={daynightSite.name}
 			/>
 			<p>
-				Автокъща в София с подбрани употребявани автомобили. Съдействие за документи, регистрация,
-				финансиране и доставка.
+				Подбор от публикувани обяви на NEXT CAR въвъв Баново към 09.09.2026 г. Потвърдете цената, наличността и часа за оглед по телефона.
 			</p>
 		</div>
 		<nav class="mh-footer__social" aria-label="Социални канали и обяви">
@@ -792,13 +791,13 @@
 		<div class="mh-footer__contact">
 			<a class="mh-footer__phone" href={phoneHref}>
 				<strong>{daynightSite.phoneLabel}</strong>
-				<span>Обаждане / Viber</span>
+				<span>Запитване</span>
 			</a>
 			<a class="mh-footer__loc" href={mapHref} target="_blank" rel="external noopener noreferrer">
 				{daynightSite.location}
 			</a>
 		</div>
-		<span class="mh-footer__copy">© 2026 Day Night Auto София. Всички права запазени.</span>
+		<span class="mh-footer__copy">© 2026 NEXT CAR Варна. Всички права запазени.</span>
 	</footer>
 
 	<MobileBottomDock />
@@ -1146,7 +1145,7 @@
 				<span class="mh-location-sheet__pin">
 					<MapPin size={24} strokeWidth={2.5} />
 				</span>
-				<span>София</span>
+				<span>Варна</span>
 				<strong>{daynightSite.location}</strong>
 			</div>
 

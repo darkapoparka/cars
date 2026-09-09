@@ -43,7 +43,7 @@
     document.getElementById(`detail-tab-${nextTab}`)?.focus();
   }
 
-  const conditionLabel = (condition: Vehicle['condition']) => condition === 'new' ? 'Нов' : 'Употребяван';
+  const conditionLabel = (condition: Vehicle['condition']) => condition === 'new' ? 'Нов (по обява)' : condition === 'unknown' ? 'По запитване' : 'Употребяван (по обява)';
 
   const overview = $derived([
     { label: 'Марка', value: data.vehicle.make },
@@ -53,7 +53,9 @@
     { label: 'Пробег', value: data.vehicle.mileage },
     { label: 'Гориво', value: data.vehicle.fuel },
     { label: 'Скоростна кутия', value: data.vehicle.transmission },
-    { label: 'Локация', value: brand.city }
+    { label: 'Локация за оглед', value: data.vehicle.sourceLocation },
+    { label: 'Мощност', value: `${data.vehicle.powerHp} к.с.` },
+    { label: 'Данъчни условия', value: data.vehicle.priceNote }
   ]);
 </script>
 
@@ -61,7 +63,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Публикувана обява от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -130,8 +132,7 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
-                    екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
+                    {data.vehicle.description}
                   </p>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
                     <Icon name="message" size={22} strokeWidth={1.7} />
@@ -162,7 +163,7 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
-              <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
+              <p class="dn-detail-summary__availability">{data.vehicle.priceNote} · Наличността се потвърждава по телефона.</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
                 <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
@@ -198,7 +199,7 @@
           <div class="dn-detail-related__header">
             <div>
               <h2 id="related-title">Подбрани автомобили</h2>
-              <p>Още предложения от актуалната селекция</p>
+              <p>Още обяви от датирания подбор</p>
             </div>
             <a class="dn-detail-related__all" href={resolve('/listing-grid')}>Вижте всички автомобили</a>
           </div>

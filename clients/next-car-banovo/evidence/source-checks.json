@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-09",
+  "status": "in-progress",
+  "node": "v24.18.0",
+  "compilers": {
+    "svelte": "5.55.9",
+    "typescript": "6.0.3"
+  },
+  "syntax": {
+    "counts": {
+      "svelte": 83,
+      "typescript": 48,
+      "json": 2
+    },
+    "errors": [],
+    "warnings": [
+      {
+        "path": "clients/next-car-banovo/carwow/src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+        "code": "css_unused_selector",
+        "line": 28
+      }
+    ]
+  },
+  "dataChecks": {
+    "passed": true,
+    "variants": [
+      "auto-best",
+      "carwow"
+    ],
+    "records": 8,
+    "photoBuffers": 24,
+    "assertions": [
+      "same source IDs",
+      "same source EUR amounts",
+      "same km values",
+      "three same-record gallery paths",
+      "new/used/unknown condition preserved by source ID"
+    ]
+  },
+  "notExecuted": [
+    "lockfile install",
+    "full framework typecheck",
+    "framework build",
+    "browser navigation/filter/gallery tests",
+    "320/390/1440 viewport checks"
+  ],
+  "mediaCommitted": false,
+  "modernPersonalized": false,
+  "note": "In-memory source compiler and data checks only. Downloaded and processed photo buffers are not committed app assets. No runtime or visual pass is claimed."
+}

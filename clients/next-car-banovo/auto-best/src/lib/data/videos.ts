@@ -12,18 +12,18 @@ export const featuredVideos: readonly FeaturedVideo[] = [
     id: '6S3dLIgeAT8',
     title: 'Най-желаната кола в България | Lamborghini Urus',
     duration: '23:19',
-    thumbnail: '/assets/images/lead/day-night-video-urus.jpg'
+    thumbnail: '/inventory/11749039399452266-1.webp'
   },
   {
     id: 'zG6rjLpT4u8',
     title: 'Продадох най-новата Панамера',
     duration: '14:33',
-    thumbnail: '/assets/images/lead/day-night-video-panamera.jpg'
+    thumbnail: '/inventory/11749039399452266-1.webp'
   },
   {
     id: 'w_XaGmIWJFM',
     title: 'Каква е разликата в G-класите',
     duration: '23:03',
-    thumbnail: '/assets/images/lead/day-night-video-g-class.jpg'
+    thumbnail: '/inventory/21767797586155338-1.webp'
   }
 ];

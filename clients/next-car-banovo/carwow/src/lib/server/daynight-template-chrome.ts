@@ -31,8 +31,8 @@ type PresentationIconLink = {
 	kind: 'direct' | 'external';
 };
 
-const daynightFacebookUrl = 'https://www.facebook.com/61566304063141/';
-const daynightInstagramUrl = 'https://www.instagram.com/daynight.auto.plovdiv/';
+const daynightFacebookUrl = '/contact';
+const daynightInstagramUrl = '/contact';
 
 const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
 	{
@@ -102,9 +102,9 @@ const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 
 const footerLinkGroups: readonly FooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'NEXT CAR',
 		links: [
-			{ label: 'За Day Night Auto', href: '/about' },
+			{ label: 'За NEXT CAR', href: '/about' },
 			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
@@ -362,7 +362,7 @@ function renderFooterSocialLinks() {
 		{
 			label: 'Google Maps',
 			href: daynightSite.mapUrl,
-			title: 'Отвори локацията на Day Night Auto в Google Maps',
+			title: 'Отвори локацията на NEXT CAR в Google Maps',
 			kind: 'external',
 			icon: whiteLocationIcon
 		}
@@ -410,13 +410,13 @@ ${footerColumns}
 <a href="tel:${daynightSite.phone}" class="flex items-start h7">${daynightSite.phoneLabel}</a>
 </p>
 <a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="block font-weight-500 text-white mb-20 h7">${daynightSite.location}</a>
-<p class="text-sm text-muted mb-16">Day Night Auto предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
+<p class="text-sm text-muted mb-16">NEXT CAR предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
 ${renderFooterSocialLinks()}
 </div>
 <div>
 <p class="text-sm text-white font-weight-600 mb-8">Имате въпрос?</p>
 <div class="flex items-center gap-12">
-<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Day Night Auto">Свържете се</a>
+<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със NEXT CAR">Свържете се</a>
 </div>
 </div>
 </div>
@@ -428,7 +428,7 @@ ${renderFooterSocialLinks()}
 <div class="footer-bottom">
 <div class="container">
 <div class="flex justify-between md-flex-col">
-<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Day Night Auto</a>. Всички права запазени.</p>
+<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">NEXT CAR</a>. Всички права запазени.</p>
 <ul class="footer-bottom-links">
 <li><a href="/terms">Условия за ползване</a></li>
 <li><a href="/terms">Поверителност</a></li>
@@ -447,36 +447,36 @@ function renderLink(item: PublicNavLink, className = 'menu-item') {
 }
 
 export function renderHeaderContact() {
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const viberHref = '/contact';
 
 	return `<ul class="header-contact">
 <li class="daynight-header-contact daynight-header-contact--phone">
-<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на Day Night Auto">${phoneIcon()}</a>
+<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на NEXT CAR">${phoneIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="tel:${daynightSite.phone}">${daynightSite.phoneLabel}</a>
-<a class="text-xs font-weight-500" href="${viberHref}">Обаждане / Viber</a>
+<a class="text-xs font-weight-500" href="${viberHref}">Запитване</a>
 </div>
 <div class="daynight-contact-popover" role="group" aria-label="Контакт по телефон">
 <strong>Свържете се веднага</strong>
-<span>Изберете обаждане или Viber чат.</span>
+<span>Изберете обаждане или Подготви запитване.</span>
 <div class="daynight-contact-popover__actions">
 <a href="tel:${daynightSite.phone}">Обади се</a>
-<a href="${viberHref}">Viber</a>
+<a href="${viberHref}">Запитване</a>
 </div>
 </div>
 </li>
 <li class="daynight-header-contact daynight-header-contact--location">
-<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до Day Night Auto">${locationIcon()}</a>
+<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до NEXT CAR">${locationIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.mapLabel}</a>
 <a class="text-xs font-weight-500 uppercase" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">ВИЖ КАРТА</a>
 </div>
-<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до Day Night Auto">
+<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до NEXT CAR">
 <span class="daynight-map-preview__thumb">
 <span class="daynight-map-preview__pin"></span>
 </span>
 <span class="daynight-map-preview__body">
-<strong>Day Night Auto София</strong>
+<strong>NEXT CAR Варна</strong>
 <span>${daynightSite.mapLabel}</span>
 <em>Отвори в Google Maps</em>
 </span>

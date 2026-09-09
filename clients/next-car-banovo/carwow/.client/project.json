@@ -10,6 +10,20 @@
   "entry": "/",
   "selectedHomepage": "main",
   "personalized": false,
-  "verification": { "install": false, "typecheck": false, "build": false, "browser": false, "ownerReview": "pending" },
-  "note": "Independent retained Carwow master with original compositions and routes. Personalization is in progress; not an accepted dealer demo."
+  "implementation": {
+    "identityConnected": true,
+    "catalogueConnected": true,
+    "sourceRecordCount": 8,
+    "mediaCommitted": false,
+    "fullContentSweepComplete": false
+  },
+  "verification": {
+    "sourceSyntax": "evidence/source-checks.json",
+    "install": false,
+    "typecheck": false,
+    "build": false,
+    "browser": false,
+    "ownerReview": "pending"
+  },
+  "note": "Actual client-local source changes connect the shared dated catalogue and verified public contact details. Critical new media is not committed; full content and runtime checks are incomplete. Do not treat this as a finished demo."
 }

@@ -16,7 +16,7 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
-	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
+	import { daynightReviews, daynightReviewDisclosure, reviewGuidance } from '$lib/data/daynight-reviews';
 </script>
 
 <div class="reviews-page">
@@ -52,11 +52,11 @@
 			<div class="tf-spacing-style3"></div>
 
 			<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">
-				{#each daynightReviews as review (review.id)}
+				{#each (daynightReviews.length ? daynightReviews : reviewGuidance) as review (review.id)}
 					<div class="testimonior-box">
 						<div
 							class="mb-16 flex items-center gap-4"
-							aria-label={`${review.rating} от 5 — примерна оценка`}
+							aria-label={review.rating > 0 ? `${review.rating} от 5` : 'Информация, не клиентски отзив'}
 						>
 							{#each Array.from({ length: review.rating }, (_, i) => i) as star (star)}
 								<img src="/assets/icons/star-6.svg" alt="" />

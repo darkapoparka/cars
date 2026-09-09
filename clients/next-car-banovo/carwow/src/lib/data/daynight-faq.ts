@@ -35,7 +35,7 @@ export type FaqGroup = {
 const stepsAnswer: readonly FaqAnswerParagraph[] = [
 	{
 		class: 'mb-8 h7 text-secondary line-height-28',
-		text: 'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
+		text: 'Изберете автомобил от наличността онлайн или на място в Баново, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на NEXT CAR.'
 	},
 	{
 		class: 'h7 text-secondary line-height-28',
@@ -46,114 +46,172 @@ const stepsAnswer: readonly FaqAnswerParagraph[] = [
 const exploreAnswer: readonly FaqAnswerParagraph[] = [
 	{
 		class: 'h7 text-secondary line-height-28',
-		text: 'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
+		text: 'Изберете автомобил от наличността онлайн или на място в Баново, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на NEXT CAR.'
 	}
 ];
 
 const termsAnswer: readonly FaqAnswerParagraph[] = [
 	{
 		class: 'h7 text-secondary line-height-28',
-		text: 'Условията зависят от конкретния автомобил и избраната схема. Свържете се с екипа на Day Night Auto за актуална информация, оценка на замяна и съдействие по документите.'
+		text: 'Условията зависят от конкретния автомобил и избраната схема. Свържете се с екипа на NEXT CAR за актуална информация, оценка на замяна и съдействие по документите.'
 	}
 ];
 
 export const daynightFaqGroups: readonly FaqGroup[] = [
-	{
-		id: 'how-to-buy',
-		containerClass: 'container mb-60',
-		headingClass: 'h3 mb-20 text-center capitalize',
-		heading: 'Как протича покупката?',
-		items: [
-			{
-				// Base classes only — the initial open `active` state is applied by the
-				// native accordion (openId defaults to this item), never baked in here.
-				id: 'steps',
-				question: 'Какви са стъпките за покупка?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: stepsAnswer
-			},
-			{
-				id: 'financing-documents',
-				question: 'Какви документи трябват за финансиране?',
-				toggleClass: 'flat-toggle',
-				answer: exploreAnswer
-			},
-			{
-				id: 'reserve',
-				question: 'Може ли автомобил да бъде запазен?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			},
-			{
-				id: 'payment-methods',
-				question: 'Какви варианти за плащане има?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			},
-			{
-				id: 'test-drive',
-				question: 'Как се организира оглед или тест?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			}
-		]
-	},
-	{
-		id: 'exchanges',
-		containerClass: 'container mb-60',
-		headingClass: 'h3 mb-20 text-center capitalize',
-		heading: 'Бартер и замяна',
-		items: [
-			{
-				id: 'trade-in-accepted',
-				question: 'Приемате ли стария ми автомобил като бартер?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: stepsAnswer
-			},
-			{
-				id: 'trade-in-valuation',
-				question: 'Как се оценява автомобил за замяна?',
-				toggleClass: 'flat-toggle',
-				answer: exploreAnswer
-			},
-			{
-				id: 'trade-in-topup',
-				question: 'Мога ли да доплатя разликата при замяна?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			},
-			{
-				id: 'trade-in-documents',
-				question: 'Какви документи са нужни за бартер?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			}
-		]
-	},
-	{
-		id: 'refund',
-		containerClass: 'container',
-		headingClass: 'h3 mb-18 text-center capitalize',
-		heading: 'Гаранция и доставка',
-		items: [
-			{
-				id: 'warranty',
-				question: 'Има ли гаранция за автомобилите?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: stepsAnswer
-			},
-			{
-				id: 'history-check',
-				question: 'Проверявате ли историята на автомобила?',
-				toggleClass: 'flat-toggle',
-				answer: exploreAnswer
-			},
-			{
-				id: 'delivery',
-				question: 'Предлагате ли доставка до друг град?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			}
-		]
-	}
+  {
+    "id": "how-to-buy",
+    "containerClass": "container mb-60",
+    "headingClass": "h3 mb-20 text-center capitalize",
+    "heading": "Как протича покупката?",
+    "items": [
+      {
+        "id": "steps",
+        "question": "Какви са стъпките за покупка?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "mb-8 h7 text-secondary line-height-28",
+            "text": "Изберете конкретна обява, потвърдете наличността и уговорете посещение по телефона. Сайтът показва датиран подбор, а не гарантиран текущ склад."
+          }
+        ]
+      },
+      {
+        "id": "financing-documents",
+        "question": "Какви документи трябват за финансиране?",
+        "toggleClass": "flat-toggle",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Конкретните документи и изисквания се определят от избрания кредитор. В този прототип не е потвърден финансов партньор; не изпращайте лични документи през демо формата."
+          }
+        ]
+      },
+      {
+        "id": "reserve",
+        "question": "Може ли автомобил да бъде запазен?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Възможност за запазване, капаро и условия следва да се уточнят писмено с продавача. Прототипът не приема плащания или резервации."
+          }
+        ]
+      },
+      {
+        "id": "payment-methods",
+        "question": "Какви варианти за плащане има?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Уточнете начина на плащане, ДДС и всички допълнителни разходи по конкретната обява."
+          }
+        ]
+      },
+      {
+        "id": "test-drive",
+        "question": "Как се организира оглед или тест?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Обадете се за часа, адреса и условията за оглед или тест. Не е публикуван потвърден график."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exchanges",
+    "containerClass": "container mb-60",
+    "headingClass": "h3 mb-20 text-center capitalize",
+    "heading": "Бартер и замяна",
+    "items": [
+      {
+        "id": "trade-in-accepted",
+        "question": "Приемате ли стария ми автомобил като бартер?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "mb-8 h7 text-secondary line-height-28",
+            "text": "Някои обяви посочват договаряне при бартер. Приемането, оценката и участието в сделка не са гарантирани и се уточняват за конкретния автомобил."
+          }
+        ]
+      },
+      {
+        "id": "trade-in-valuation",
+        "question": "Как се оценява автомобил за замяна?",
+        "toggleClass": "flat-toggle",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Някои обяви посочват договаряне при бартер. Приемането, оценката и участието в сделка не са гарантирани и се уточняват за конкретния автомобил."
+          }
+        ]
+      },
+      {
+        "id": "trade-in-topup",
+        "question": "Мога ли да доплатя разликата при замяна?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Някои обяви посочват договаряне при бартер. Приемането, оценката и участието в сделка не са гарантирани и се уточняват за конкретния автомобил."
+          }
+        ]
+      },
+      {
+        "id": "trade-in-documents",
+        "question": "Какви документи са нужни за бартер?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Някои обяви посочват договаряне при бартер. Приемането, оценката и участието в сделка не са гарантирани и се уточняват за конкретния автомобил."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "refund",
+    "containerClass": "container",
+    "headingClass": "h3 mb-18 text-center capitalize",
+    "heading": "Гаранция и доставка",
+    "items": [
+      {
+        "id": "warranty",
+        "question": "Има ли гаранция за автомобилите?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "mb-8 h7 text-secondary line-height-28",
+            "text": "Не е потвърдена обща гаранционна програма. Твърденията в отделните обяви са на продавача; поискайте писмени условия."
+          }
+        ]
+      },
+      {
+        "id": "history-check",
+        "question": "Проверявате ли историята на автомобила?",
+        "toggleClass": "flat-toggle",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Пробегът и спецификациите са по публикуваната обява, не независима проверка. Поискайте VIN и сервизни документи и обсъдете преглед."
+          }
+        ]
+      },
+      {
+        "id": "delivery",
+        "question": "Предлагате ли доставка до друг град?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Възможност, цена и срок за транспорт се уточняват индивидуално. Не е потвърдена обща услуга за доставка."
+          }
+        ]
+      }
+    ]
+  }
 ];

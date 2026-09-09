@@ -13,7 +13,7 @@
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
 	const highlights = [
-		'Проверени автомобили с реална наличност',
+		'Публикувани автомобили с реална наличност',
 		'Съдействие за документи, регистрация и финансиране',
 		'Бартер, оценка и оглед в доверен сервиз'
 	] as const;
@@ -39,7 +39,7 @@
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><a href={resolve('/about')}>За нас</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>Профил на Day Night Auto</span></li>
+				<li><span>Профил на NEXT CAR</span></li>
 			</ul>
 		</div>
 	</section>
@@ -48,10 +48,10 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Проверена автокъща</p>
-					<h1>Day Night Auto София</h1>
+					<p class="eyebrow">Публичен профил</p>
+					<h1>NEXT CAR Варна</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Автокъща в София с подбрани употребявани автомобили, ясна информация за състояние,
+						Автокъща в Баново с подбрани употребявани автомобили, ясна информация за състояние,
 						съдействие при документи и практични следващи стъпки след оглед.
 					</p>
 					<ul class="dealer-profile-hero__highlights">
@@ -70,8 +70,8 @@
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img class="dealer-profile-card__logo" src="/brand/daynight-logo-generated.png" alt="" />
-					<p class="dealer-profile-card__title mb-6">Day Night Auto</p>
+					<img class="dealer-profile-card__logo" src="/brand/social-card.png" alt="" />
+					<p class="dealer-profile-card__title mb-6">NEXT CAR</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
 					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
 				</div>
@@ -119,7 +119,7 @@
 					</p>
 					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="330" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Карта до NEXT CAR Варна" height="330" />
 			</div>
 		</div>
 	</section>

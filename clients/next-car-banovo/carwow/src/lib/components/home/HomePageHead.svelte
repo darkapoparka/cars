@@ -2,8 +2,8 @@
 	import { page } from '$app/state';
 
 	const DEFAULT_DESCRIPTION =
-		'Day Night Auto предлага проверени автомобили, финансиране и съдействие при покупка в София.';
-	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
+		'Предложение за сайт на NEXT CAR, Варна. Публикувани автомобили към 09.09.2026 г.; наличност и условия по запитване.';
+	const DEFAULT_OG_IMAGE = '/brand/social-card.png';
 
 	let {
 		title,
@@ -41,7 +41,7 @@
 	{/if}
 
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Day Night Auto София" />
+	<meta property="og:site_name" content="NEXT CAR Варна" />
 	<meta property="og:locale" content="bg_BG" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
@@ -52,7 +52,7 @@
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:alt" content="Day Night Auto София" />
+	<meta property="og:image:alt" content="NEXT CAR Варна" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />

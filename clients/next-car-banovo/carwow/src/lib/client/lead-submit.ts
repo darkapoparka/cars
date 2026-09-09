@@ -1,4 +1,5 @@
 import { resolve } from '$app/paths';
+import { dealerPreviewMode, previewNotice } from '$lib/data/dealer-preview';
 
 export type LeadSubmitPayload = {
 	customerName: string;
@@ -40,6 +41,7 @@ function readResponseMessage(body: unknown, fallback: string) {
 }
 
 export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmitResult> {
+ if (dealerPreviewMode) return { ok: false, status: 503, error: previewNotice };
 	try {
 		const response = await fetch(resolve('/api/leads'), {
 			method: 'POST',
@@ -57,7 +59,7 @@ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmit
 				status: response.status,
 				error: readResponseMessage(
 					body,
-					'Запитването не беше изпратено. Моля, обадете се или пишете във Viber.'
+					'Запитването не беше изпратено. Моля, обадете се или използвайте публикувания телефон.'
 				),
 				details: isJsonObject(body) ? body.details : undefined
 			};
@@ -71,7 +73,7 @@ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmit
 			return {
 				ok: false,
 				status: response.status,
-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
+				error: 'Получихме неочакван отговор. Моля, обадете се или използвайте публикувания телефон.'
 			};
 		}
 
@@ -88,7 +90,7 @@ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmit
 			error:
 				error instanceof Error
 					? error.message
-					: 'Запитването не може да бъде изпратено. Моля, обадете се или пишете във Viber.'
+					: 'Запитването не може да бъде изпратено. Моля, обадете се или използвайте публикувания телефон.'
 		};
 	}
 }

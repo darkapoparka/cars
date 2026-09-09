@@ -32,7 +32,7 @@
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 	type ImportInfo = 'process' | 'coverage';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const initialSearchParams = appPage.url.searchParams;
 	const contactContext = readContactIntent(initialSearchParams);
@@ -132,8 +132,8 @@
 	let importInfoDialog: HTMLDialogElement | undefined = $state();
 	let activeImportInfo = $state<ImportInfo | null>(null);
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 
 	async function revealImportForm() {
 		importExpanded = true;
@@ -247,13 +247,13 @@
 	<header class:mobile-contact-hero--import={isImportMode} class="mobile-contact-hero">
 		<img
 			class="mobile-contact-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-showroom-suv-v1.webp')}
+			src={resolve('/inventory/21747323307413606-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
-					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<a href={resolve('/')} aria-label="NEXT CAR начало">
+					<img src={resolve('/brand/social-card.png')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -263,7 +263,7 @@
 		<div class="mobile-contact-hero__copy">
 			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Запитване за внос по поръчка' : 'Свържете се със NEXT CAR'}
 			</h1>
 			<p>
 				{isImportMode
@@ -491,7 +491,7 @@
 					title="Какво поемаме ние"
 					description="Проверка, транспорт, документи и предаване."
 					label="Виж услугата"
-					image="/assets/images/home-promos/gclass-urus-pair-v4.webp"
+					image="/inventory/21776348634522888-1.webp"
 					cars
 					onclick={() => openImportInfo('coverage')}
 				/>
@@ -513,7 +513,7 @@
 			<div class="mobile-contact-map__head">
 				<div>
 					<span>Локация</span>
-					<h2>Шоурум в София</h2>
+					<h2>Шоурум в Баново</h2>
 				</div>
 				<a href={resolve('/inventory')}>
 					<CarFront size={18} strokeWidth={2.45} />
@@ -522,7 +522,7 @@
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Карта до NEXT CAR Варна"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/brand/daynight-logo-generated.png')}
+						src={resolve('/brand/social-card.png')}
 						alt=""
 						aria-hidden="true"
 					/>

@@ -15,7 +15,7 @@
 		type DayNightTeamMember
 	} from '$lib/data/daynight-team';
 
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/${string}`;
 
 	const teamMembers = daynightTeam.slice(0, 4);
 
@@ -150,8 +150,8 @@
 			<li>
 				<a
 					href={`mailto:${member.email}`}
-					title="Имейл към Day Night Auto"
-					aria-label="Имейл към Day Night Auto"
+					title="Имейл към NEXT CAR"
+					aria-label="Имейл към NEXT CAR"
 				>
 					{@render mailIcon(24)}
 				</a>
@@ -201,7 +201,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на Day Night Auto</span>
+					<span>Контакт с NEXT CAR</span>
 				</li>
 			</ul>
 		</div>
@@ -209,7 +209,7 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на Day Night Auto</h1>
+			<h1>Контакт с NEXT CAR</h1>
 			<p class="team-disclosure">{daynightTeamDisclosure}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>

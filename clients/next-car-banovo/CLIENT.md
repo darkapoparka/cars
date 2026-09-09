@@ -1,20 +1,21 @@
 # NEXT CAR — Banovo, Varna province
 
-Status: **in-progress**. These are three actual independent master copies, not completed skins. Auto Best, the full Modern workspace and Carwow retain their compositions, source code, lockfiles and licensing/provenance. They must not be presented as accepted or ready to publish.
+Status: **in-progress; not ready for review as a finished dealer demo**.
 
-## Identity checked 2026-09-09
+## Implemented source
 
-Published profile: https://next_car.mobile.bg/
-Contact page: https://next_car.mobile.bg/contacts
+All three applications contain real independent master files from main faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Auto Best and Carwow now import the same eight dated records in their actual catalogue data consumers. Their contact identity, source-qualified EUR/km data and main metadata are personalized. Carwow also has client-local contact-topic cards instead of invented staff, unavailable-review guidance instead of fabricated testimonials, actual listing-photo gallery links instead of the inherited video channel, and a no-delivery/no-database preview guard. Modern is the full retained workspace but is not yet personalized.
 
-The current contact page gives ул. 1-ва, с. Баново, обл. Варна; phone 0898770707. Weekday hours are 09:00–18:00; Saturday and Sunday 10:00–14:00. Viewings require prior arrangement. This is not NEXT AUTO in Pernik. Older Varna-city addresses are not used as the current showroom.
+## Current public identity
 
-Eight whole-car listings and 24 matching photographs were read in this session. Original published NEXT CAR branding was visually inspected. Source and media integration are still being completed. A bulk media-upload operation was refused by the tool; no successful asset publication is claimed for that operation.
+Source: https://next_car.mobile.bg/ and https://next_car.mobile.bg/contacts, read 2026-09-09. Address: ул. 1-ва, с. Баново, обл. Варна. Phone: 0898 770 707. Published hours: Monday–Friday 09:00–18:00; Saturday–Sunday 10:00–14:00. Viewings require prior arrangement. This is not NEXT AUTO Pernik; older Varna-city addresses are not used as the current showroom.
 
-## Source lineage
+## Incomplete work — do not hide
 
-All three masters are from published main commit faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Exact source tree/version and excluded paths are recorded in each application's CLIENT_SOURCE.json and .client/project.json. No source QA passes were inherited.
+The original NEXT CAR logo and 24 exact listing photos were downloaded and inspected/processed, but their bulk upload call was refused before execution. Those new media bytes are **not** in these applications. Source code currently references the intended local paths, so image completeness is a known failure, not an unavailable test or a pass. A Modern source-preparation call was also refused and did not run. The applications require the remaining media integration, Modern personalization and full content/interaction checks. No alternate upload path or success claim was used.
 
-## Review state
+## Evidence
 
-No application install, full typecheck, framework build or browser review was executed for these copies. No public preview or delivery integration exists. Do not use the unpersonalized copies for an offer. The coordinator's shared checkout was not written, switched, installed into or used for servers.
+See evidence/source-checks.json. 83 edited Svelte files compiled in memory; 48 edited TypeScript files passed syntax transpilation; two catalogue JSON files parsed. There was one unused CSS selector warning. Two catalogue adapters passed source-ID, price, distance, gallery-buffer and new/used/unknown condition checks. These used Node v24.18.0, Svelte 5.55.9 and TypeScript 6.0.3 read from an installed compiler without modifying the Windows checkout. No lockfile install, full typecheck, framework build, route test, screenshot or viewport acceptance was performed.
+
+No public preview, shared-origin mounting, FAB or deployment exists. Owner review remains pending.

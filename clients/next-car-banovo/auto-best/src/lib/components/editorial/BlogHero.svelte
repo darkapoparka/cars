@@ -10,7 +10,7 @@
   <HeroVehicles pair="blog" />
   <img
     class="dn-blog-hero__media"
-    src="/assets/images/lead/day-night-blog-hero-v2.webp"
+    src="/brand/social-card.png"
     alt=""
     width="1920"
     height="1080"

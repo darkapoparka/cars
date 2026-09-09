@@ -170,7 +170,7 @@
 		</ul>
 
 		<p class="dashboard-bottom text-muted text-center text-sm" style="margin-top: auto;">
-			©2026 <a class="text-sm text-white" href={resolve('/')} target="_blank">Day Night Auto</a>. All
+			©2026 <a class="text-sm text-white" href={resolve('/')} target="_blank">NEXT CAR</a>. All
 			Rights Reserved.
 		</p>
 	</div>
@@ -203,7 +203,7 @@
 						<a class="daynight-dashboard-header__user" href={resolve('/dashboard/profile')}>
 							<img
 								class="avatar"
-								src={resolve('/assets/images/dashboard/dashbroard_avatar.png')}
+								src={resolve('/brand/logo.png')}
 								alt=""
 								data-daynight-img="1"
 								decoding="async"

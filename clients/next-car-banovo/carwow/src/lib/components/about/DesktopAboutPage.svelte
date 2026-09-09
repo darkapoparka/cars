@@ -6,31 +6,16 @@
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
+ import { daynightVehicles } from '$lib/data/daynight-vehicles';
+ import { brandLogos } from '$lib/components/home/mobile/mobile-home-data';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
-	type AssetHref = `/assets/${string}`;
-	const brands = [
-		{ brand: 'Audi', image: 'audi' },
-		{ brand: 'BMW', image: 'bmw' },
-		{ brand: 'Chevrolet', image: 'chevrolet' },
-		{ brand: 'Chrysler', image: 'chrysler' },
-		{ brand: 'Citroen', image: 'citroen' },
-		{ brand: 'Ford', image: 'ford' },
-		{ brand: 'Honda', image: 'honda' },
-		{ brand: 'Jaguar', image: 'jaguar' },
-		{ brand: 'Land Rover', image: 'land-rover' },
-		{ brand: 'Mazda', image: 'mazda' },
-		{ brand: 'Opel', image: 'opel' },
-		{ brand: 'Peugeot', image: 'peugeot' },
-		{ brand: 'Porsche', image: 'porsche' },
-		{ brand: 'Skoda', image: 'skoda' },
-		{ brand: 'VW', image: 'volkswagen' },
-		{ brand: 'Volvo', image: 'volvo' }
-	] as const;
+	type AssetHref = `/${string}`;
+	const brands = [...new Set(daynightVehicles.map((car) => car.brand))].map((brand) => ({ brand, image: brandLogos[brand] }));
 	const support = [
 		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
 		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
-		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
+		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Попитайте за документите, крайните разходи и възможностите за конкретната обява.', href: '/services', action: 'Разгледай услугите' }
 	] as const;
 
 	const teamMembers = daynightTeam.slice(0, 4);
@@ -44,7 +29,7 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title="За NEXT CAR"
 		panel="light"
 		compact
 	>
@@ -53,18 +38,18 @@
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				<a href={`tel:${daynightSite.phone}`}
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
 				<div class="about-hero-socials">
 					<a
-						href="https://www.facebook.com/61566304063141/"
+						href="/contact"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
 					>
 					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						href="/contact"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
@@ -83,7 +68,7 @@
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-team-title">Екипът зад твоя избор</h2>
+				<h2 id="about-team-title">Теми за разговор с автокъщата</h2>
 				<DesktopBrowseLink href={resolve('/team')} label="Виж екипа" />
 			</div>
 			<p class="about-demo-label">{daynightTeamDisclosure}</p>
@@ -126,8 +111,8 @@
 		<div class="about-container about-story">
 			<img
 				class="about-story__image"
-				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				src={resolve('/inventory/21767797586155338-1.webp')}
+				alt="Автомобил от публикувана обява на NEXT CAR"
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -135,11 +120,11 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
+					NEXT CAR е автокъща в Баново. При нас можеш да разгледаш наличните автомобили, да
 					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети в Баново. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -156,7 +141,7 @@
 			<div class="about-brands">
 				{#each brands as brand (brand.brand)}
 					<a href={resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`)}>
-						<img src={resolve(`/assets/images/brand/mobile/${brand.image}.svg`)} alt="" width="36" height="28" loading="lazy" />
+						{#if brand.image}<img src={brand.image} alt="" width="36" height="28" loading="lazy" />{/if}
 						<span>{brand.brand}</span>
 					</a>
 				{/each}
@@ -166,7 +151,7 @@
 
 	<section class="about-section about-support" aria-labelledby="about-support-title">
 		<div class="about-container">
-			<div class="about-section-heading"><h2 id="about-support-title">С какво можем да помогнем</h2></div>
+			<div class="about-section-heading"><h2 id="about-support-title">Какво да уточните преди оглед</h2></div>
 			<div class="about-support-grid">
 				{#each support as item (item.href)}
 					<a class="about-support-card" href={resolve(item.href)}>
@@ -192,11 +177,11 @@
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title="Карта до NEXT CAR Варна" height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, София</strong>
+						<strong>Баново, обл. Варна</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

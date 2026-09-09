@@ -79,7 +79,7 @@
 <section class="chat-thread" aria-live="polite">
 	<header class="chat-thread__header">
 		<div>
-			<p class="chat-thread__eyebrow">Day Night Auto</p>
+			<p class="chat-thread__eyebrow">NEXT CAR</p>
 			<h2 id="daynight-chat-title">Чат с екипа</h2>
 		</div>
 		<span class="chat-thread__status">
@@ -118,7 +118,7 @@
 					>
 						<p>{message.body}</p>
 						<footer>
-							<span>{message.senderType === 'staff' ? 'Day Night Auto' : message.senderName}</span>
+							<span>{message.senderType === 'staff' ? 'NEXT CAR' : message.senderName}</span>
 							<time datetime={message.createdAt}>{formatTime(message.createdAt)}</time>
 						</footer>
 					</article>

@@ -90,7 +90,7 @@
 
 	function handleVehicleImageError(event: Event) {
 		const image = event.currentTarget as HTMLImageElement | null;
-		const fallbackSrc = resolve('/assets/images/card/card-1.jpg');
+		const fallbackSrc = resolve('/inventory/21776348634522888-1.webp');
 
 		if (!image || image.getAttribute('src') === fallbackSrc) return;
 
@@ -253,7 +253,7 @@
 											<a class="flex min-w-60 items-center gap-3" href={resolve('/admin/listings')}>
 												<img
 													class="ring-border size-12 rounded-md object-cover ring-1"
-													src={vehicle.image || '/assets/images/card/card-1.jpg'}
+													src={vehicle.image || '/inventory/21776348634522888-1.webp'}
 													alt=""
 													onerror={handleVehicleImageError}
 												/>
