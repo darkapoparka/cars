@@ -1,3 +1,4 @@
+import { dealerGuides } from './dealer-editorial';
 import { featuredVehicles } from './inventory';
 import { bodyLabel } from './listing';
 import { brand } from '$config/brand';
@@ -37,29 +38,10 @@ export const bodyTypes = [...new Set(featuredVehicles.map(vehicle => vehicle.bod
 export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle => vehicle.make === item.label))
   .map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
 
-export const editorial = [
-  {
-    title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
-    image: '/dealer/media-pending.svg',
-    href: '/contact',
-    meta: 'Полезно',
-    category: 'Ръководство'
-  },
-  {
-    title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
-    image: '/dealer/media-pending.svg',
-    href: '/blog-detail/1',
-    meta: 'Полезно',
-    category: 'Ръководство'
-  },
-  {
-    title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
-    image: '/dealer/media-pending.svg',
-    href: '/blog-detail/2',
-    meta: 'Полезно',
-    category: 'Ръководство'
-  }
-] as const;
+export const editorial = [5, 1, 2].map(id => {
+  const guide = dealerGuides.find(item => item.id === id)!;
+  return {
+    title: guide.title.bg, text: guide.description.bg, image: '/dealer/opengraph.png',
+    href: id === 5 ? '/contact' : `/blog-detail/${id}`, meta: 'Полезно', category: 'Ръководство'
+  };
+});

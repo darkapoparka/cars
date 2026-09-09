@@ -53,5 +53,13 @@
     "favicon": "/dealer/favicon.svg",
     "imageGeneration": "attempted-not-started"
   },
-  "verificationEvidence": "../VERIFICATION.json"
+  "verificationEvidence": "../VERIFICATION.json",
+  "lastSourceRepair": {
+    "date": "2026-09-09",
+    "kind": "supporting-content-and-favicon",
+    "evidence": "../../CONTENT-VERIFICATION.json",
+    "frameworkBuildVerified": false,
+    "browserVerified": false,
+    "scope": "dealer editorial data/adapters, Modern contact copy and favicon ICO; not the complete content sweep"
+  }
 }
