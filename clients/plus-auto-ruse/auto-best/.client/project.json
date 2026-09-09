@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "client": "plus-auto-ruse",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "stage": "independent-master-copy-not-personalized",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "source": {"repository":"darkapoparka/cars","commit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","path":"templates/auto-best","tree":"97833980ab127f6de8f675ac1a188e4b7f717976"},
+  "handoffBranch": "codex/astra-bg-10",
+  "limitations": ["Initial source checkpoint; inherited source identity and media are not Plus Auto facts.","Personalization, asset permission/integration and full exclusion/content audits are not complete.","No install, build, typecheck or browser check has run."]
+}
