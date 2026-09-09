@@ -1,1 +1,1 @@
-export * from "@repo/marketplace-domain/testing/mock-data";
+export * from '@repo/marketplace-domain/testing/mock-data';import {mockListings} from '@repo/marketplace-domain/testing/mock-data';import {leadListings} from './lead-listings';mockListings.splice(0,mockListings.length,...leadListings);

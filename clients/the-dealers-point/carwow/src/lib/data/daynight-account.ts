@@ -1,14 +1,1 @@
-export const daynightAccount = {
-	title: 'Моят профил',
-	subtitle:
-		'Управлявайте запитвания, запазени автомобили и заявки за продажба или бартер към Day Night Auto.',
-	listingsTitle: 'Моите автомобили',
-	newListingCta: 'Нова заявка за продажба',
-	messagesTitle: 'Запитвания',
-	favoritesTitle: 'Запазени автомобили',
-	profileTitle: 'Данни за контакт',
-	reviewsTitle: 'Моите отзиви',
-	passwordTitle: 'Сигурност на профила',
-	authNote:
-		'Това е фронтенд MVP на клиентски профил. Реална регистрация, вход и съхранение на данни се свързват след избор на backend/auth.'
-} as const;
+export const daynightAccount={title:'Preview account',subtitle:'Demo-only saved cars and enquiry preparation for The Dealers Point.',listingsTitle:'My vehicles',newListingCta:'Prepare a vehicle enquiry',messagesTitle:'Enquiries',favoritesTitle:'Saved cars',profileTitle:'Contact details',reviewsTitle:'Reviews',passwordTitle:'Demo profile',authNote:'Frontend demo only. No real account, message delivery or stored customer record is configured.'} as const;
