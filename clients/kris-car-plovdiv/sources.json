@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "clientSlug": "kris-car-plovdiv",
+  "status": "blocked",
+  "canonicalSource": "https://kris_car.mobile.bg/",
+  "identity": {
+    "name": "Крис Кар",
+    "city": "Пловдив",
+    "publishedAddress": "Индустриална зона - Изток, Цариградско шосе, до бензиностанция Алпи",
+    "phones": ["+359885232858", "+359884541828"],
+    "contactSource": "https://kris_car.mobile.bg/contacts",
+    "corroboratingSource": "https://www.auto.bg/dealer/kris-car",
+    "hours": {"mondayToFriday": "09:00-19:00", "saturday": "09:30-19:00", "sunday": "10:00-16:00"},
+    "officialFacebook": null,
+    "independentWebsite": null,
+    "searchScope": "Dealer name, both public phones, exact marketplace profile and English name/location; no matching official social or owned domain established. Not an absence claim."
+  },
+  "catalogue": {"openedAdvertisedTotal": 109, "verifiedAvailableCount": null, "note": "Other retrieved marketplace/search snapshots differ; totals are not reconciled or promoted to available stock."},
+  "candidateVehiclesNotApprovedForApps": [
+    {"sourceId": "11788863173361582", "sourceUrl": "https://kris_car.mobile.bg/obiava-11788863173361582-toyota-camry-comfort-2-5-dual-vvti-hybrid-b-garantsiya-do-2032g", "evidenceSource": "https://kris_car.mobile.bg/", "evidenceLevel": "current catalogue text; individual page unavailable", "name": "Toyota Camry COMFORT 2.5 DUAL VVTI HYBRID", "manufactured": "2022-08", "mileageKm": 87358, "fuel": "hybrid", "powerHp": 218, "engineCc": 2500, "euroStandard": 6, "transmission": "automatic", "body": "sedan", "colour": "white", "price": 29460, "currency": "EUR", "taxText": "Цената е с включено ДДС", "availability": "advertised, not independently confirmed", "sellerWarrantyClaim": "Until August 2032 or 200000 km; certificate/country qualifications in seller text", "manufacturerWarrantyVerified": false, "batteryHealthVerified": false, "localImages": [], "approvedForApp": false},
+    {"sourceUrl": "https://kris_car.mobile.bg/", "evidenceLevel": "current catalogue text only", "name": "Seat Ateca 4x4 190 hp", "manufactured": "2020-08", "mileageKm": 77257, "fuel": "diesel", "powerHp": 190, "engineCc": 2000, "transmission": "automatic", "price": 21960, "currency": "EUR", "taxText": "Цената е с включено ДДС", "availability": "advertised, not independently confirmed", "localImages": [], "approvedForApp": false},
+    {"sourceUrl": "https://kris_car.mobile.bg/", "evidenceLevel": "current catalogue text only", "name": "VW Tiguan Elegance 4x4 2.0 TDI automatic", "manufactured": "2021-02", "mileageKm": 128422, "fuel": "diesel", "engineCc": 2000, "transmission": "automatic", "price": 32560, "currency": "EUR", "taxText": "Цената е с включено ДДС", "availability": "advertised, not independently confirmed", "localImages": [], "approvedForApp": false}
+  ],
+  "branding": {"coverUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h11114917241076917.pic", "coverResult": "Unsupported content-type application/octet-stream", "visuallyInspected": false, "noLogoClaim": false, "creationMethod": "none", "generatedAssets": []},
+  "detailAccessAttempts": [
+    {"url": "https://kris_car.mobile.bg/obiava-11788863173361582-toyota-camry-comfort-2-5-dual-vvti-hybrid-b-garantsiya-do-2032g", "result": "Cache miss"},
+    {"url": "https://www.mobile.bg/obiava-11788863173361582-toyota-camry-comfort-2-5-dual-vvti-hybrid-b-garantsiya-do-2032g", "result": "Cache miss"},
+    {"url": "https://www.mobile.bg/obiava-11772727989657846-dacia-dokker-n-1-1-5-dci", "result": "Cache miss"},
+    {"url": "https://www.auto.bg/obiava/30092274/dacia-dokker-n-1-1-5-dci", "result": "Cache miss"}
+  ],
+  "mediaReuseCleared": false,
+  "mediaBasisFinding": "No permission-backed dealer photo set established in the inspected supplied/repository records; public listing visibility is not recorded as authorization.",
+  "applicationsCreated": [],
+  "ownerManualReviewComplete": false
+}
