@@ -1,8 +1,4 @@
-import { routeSeo } from '$lib/server/daynight-seo';
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-
 export const prerender = true;
-
-export const load: PageServerLoad = async () => ({
-	seo: routeSeo('about/daynight-auto-plovdiv')
-});
+export const load: PageServerLoad = () => { redirect(308, '/about/showroom'); };
