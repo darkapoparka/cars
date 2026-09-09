@@ -5,11 +5,40 @@
   "baseline": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
   "status": "implementation-in-progress",
   "dealers": [
-    {"slug":"tesi-car","status":"in-progress","applications":["clients/tesi-car/auto-best","clients/tesi-car/modern","clients/tesi-car/carwow"],"sourceVehicles":8,"modernProviderAssertions":17,"carwowProviderAssertions":10,"localStockPhotosComplete":false,"applicationBuildsPassed":false,"browserChecksPassed":false,"handoff":"clients/tesi-car/CLIENT.md"},
-    {"slug":"central-autosalon","status":"not-started"},
-    {"slug":"autofest","status":"not-started"},
-    {"slug":"express-auto-varna","status":"not-started"},
-    {"slug":"perfekt-auto","status":"not-started"}
+    {
+      "slug": "tesi-car",
+      "status": "in-progress",
+      "applications": [
+        "clients/tesi-car/auto-best",
+        "clients/tesi-car/modern",
+        "clients/tesi-car/carwow"
+      ],
+      "sourceVehicles": 8,
+      "modernProviderAssertions": 17,
+      "carwowProviderAssertions": 10,
+      "localStockPhotosComplete": false,
+      "applicationBuildsPassed": false,
+      "browserChecksPassed": false,
+      "handoff": "clients/tesi-car/CLIENT.md",
+      "localStockPhotoCount": 12,
+      "mediaReuseCleared": false
+    },
+    {
+      "slug": "central-autosalon",
+      "status": "not-started"
+    },
+    {
+      "slug": "autofest",
+      "status": "not-started"
+    },
+    {
+      "slug": "express-auto-varna",
+      "status": "not-started"
+    },
+    {
+      "slug": "perfekt-auto",
+      "status": "not-started"
+    }
   ],
   "deployment": false,
   "mainOrAstraUpdated": false,
