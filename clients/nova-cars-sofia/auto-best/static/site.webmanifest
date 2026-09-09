@@ -1,0 +1,15 @@
+{
+  "name": "NOVA CARS Luxury Sales",
+  "short_name": "NOVA CARS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c6a35c",
+  "icons": [
+    {
+      "src": "/dealer/brand/logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

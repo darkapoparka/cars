@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "nova-cars-sofia",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "publicUrl": null,
+  "deliveryBranch": "codex/astra-bg-09",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "path": "templates/auto-best",
+    "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+  },
+  "implementation": {
+    "fastSkin": true,
+    "inventoryRecords": 8,
+    "localStockPhotos": 16,
+    "sourceLogo": true,
+    "formsDeliverExternally": false,
+    "sharedOriginFab": false
+  },
+  "qa": {
+    "install": false,
+    "frameworkCheck": false,
+    "build": false,
+    "desktop": false,
+    "mobile": false,
+    "header320": false,
+    "identity": true,
+    "contactPath": false,
+    "filters": false,
+    "gallery": false,
+    "console": false,
+    "overflow": false
+  },
+  "reviewEntries": [
+    "/",
+    "/listing-grid",
+    "/listing-detail-v1/1",
+    "/contact"
+  ],
+  "ownerManualReview": "pending"
+}
