@@ -1,0 +1,1330 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "business": {
+    "slug": "icars-plovdiv",
+    "name": "icars",
+    "shortName": "icars",
+    "upperName": "ICARS",
+    "city": "Пловдив",
+    "district": "Индустриална зона — Север",
+    "address": "ул. Напредък 1, Индустриална зона — Север",
+    "phone": "0885 595 555",
+    "phoneDigits": "0885595555",
+    "phoneE164": "+359885595555",
+    "otherPhones": [],
+    "email": "",
+    "hours": "Оглед с предварителна уговорка. Работно време: потвърдете по телефона.",
+    "sourceUrl": "https://icars.mobile.bg/",
+    "logoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14248568281048656.pic",
+    "accent": "#079b75",
+    "tagline": "Автомобилни обяви в Пловдив. Сравнете детайлите и уговорете оглед.",
+    "identitySources": [
+      "https://icars.mobile.bg/",
+      "https://icars.mobile.bg/contacts",
+      "https://www.auto.bg/dealer/icars"
+    ],
+    "cautions": [
+      "Distinct from icarsauto.mobile.bg in Pernik and icars.pt in Portugal; no assets or contact data borrowed.",
+      "BMW X5 21782906706076255 carries a reserved/sold indication and is excluded.",
+      "Germany-located BMW iX3 with price on enquiry and other phone is excluded from local Plovdiv sample.",
+      "E220 warranty statement ended May 2025 despite its title and is excluded.",
+      "Current primary BMW 740d price EUR 71,999 and mileage 85,000 differ from stale search excerpts. Current individual record used.",
+      "No one-hour credit approval or dealer-wide warranty guarantee is represented."
+    ],
+    "websiteFinding": "Small i-cars.bg plate text is a tentative source clue, not established domain control or a published demo destination. No corroborated public Facebook/Instagram channel established.",
+    "availabilityAudit": {
+      "advertisedEntries": 40,
+      "physicalAvailableCount": null,
+      "selectedLocations": [
+        {
+          "id": "11760378435449508",
+          "asPublished": "Намира се в гр. Пловдив 71 999 € Цената е без ДДС 0885595555"
+        },
+        {
+          "id": "21769205380054749",
+          "asPublished": "Намира се в гр. Пловдив 22 500 € Не се начислява ДДС 0885595555"
+        },
+        {
+          "id": "21782908599914903",
+          "asPublished": "Намира се в гр. Пловдив 34 999 € <div class="
+        },
+        {
+          "id": "11782907735294061",
+          "asPublished": "Намира се в гр. Пловдив 8 999 € <div class=\"p"
+        },
+        {
+          "id": "11752078175497458",
+          "asPublished": "Намира се в гр. Пловдив 123 000 € Цената е без ДДС 0885595555"
+        },
+        {
+          "id": "11780753459695554",
+          "asPublished": "Намира се в гр. Пловдив 30 999 € Не се начислява ДДС 0885595555"
+        },
+        {
+          "id": "21751722135031902",
+          "asPublished": "Намира се в гр. Пловдив 49 500 € Не се начислява ДДС 0885595555"
+        },
+        {
+          "id": "11695297184317225",
+          "asPublished": "Намира се в гр. Пловдив 37 999 € Не се начислява ДДС 0885595555"
+        },
+        {
+          "id": "21725449678653350",
+          "asPublished": "Намира се в гр. Пловдив 32 500 € Цената е с включено ДДС 0885595555 <a href=\"#show_contact_form\" class=\"scrolltoform"
+        },
+        {
+          "id": "11711117396768513",
+          "asPublished": "Намира се в гр. Пловдив 50 999 € Цената е без ДДС 0885595555"
+        }
+      ]
+    },
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=icars%20%D1%83%D0%BB.%20%D0%9D%D0%B0%D0%BF%D1%80%D0%B5%D0%B4%D1%8A%D0%BA%201%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2",
+    "mapsEmbedUrl": "https://www.google.com/maps?q=%D1%83%D0%BB.%20%D0%9D%D0%B0%D0%BF%D1%80%D0%B5%D0%B4%D1%8A%D0%BA%201%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2&output=embed",
+    "logo": {
+      "publishedBranding": true,
+      "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14248568281048656.pic",
+      "creationMethod": "source bitmap cropped only for outer matte; spelling and artwork unchanged",
+      "workingLogoPath": "/dealer/logo-light.png",
+      "approvalStatus": "owner-directed private review concept; no dealer endorsement or third-party licence asserted",
+      "nativeArtworkSize": {
+        "width": 89,
+        "height": 32
+      },
+      "imageGeneration": false,
+      "sourceSha256": "2d6ea60630935f79c309ec54980ec687cc799f8564b49828caec2beb9049d4e3",
+      "visualInspection": {
+        "observedOn": "2026-09-09",
+        "appearance": "Published green angular i symbol and grey italic cars wordmark on white; inspected original 100x40 pixels, not another same-name dealer.",
+        "source": "https://cdn2.focus.bg/mobile/images/houseslogos/h14248568281048656.pic",
+        "icon": "Original green i cropped at 0,0,36,40; no redraw or vector claim."
+      }
+    },
+    "duplicateCheck": {
+      "main": {
+        "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+        "entries": [],
+        "absent": true
+      },
+      "astra": {
+        "head": "bcff94eabfba2b3c604bb61d6ea916584e61e4d5",
+        "entries": [],
+        "absent": true
+      },
+      "codex/astra-bg-05": {
+        "head": "b49719701286db1bd2e5c4ec2ac8b6769d355ec7",
+        "entries": [
+          "CLIENT.md",
+          "SOURCE-CHECK-2026-09-09.json"
+        ]
+      }
+    }
+  },
+  "stock": [
+    {
+      "sourceId": "11760378435449508",
+      "sourceUrl": "https://icars.mobile.bg/obiava-11760378435449508-bmw-740-d-xdrive-garantsiya-04-2028",
+      "observedAt": "2026-09-09T03:38:01.402Z",
+      "title": "BMW 740d xDrive",
+      "advertisedTitle": "BMW 740 d xDrive , Гаранция 04.2028",
+      "make": "BMW",
+      "model": "740d xDrive",
+      "slug": "bmw-740d-xdrive-449508",
+      "year": 2023,
+      "manufactureDateText": "април 2023",
+      "mileageKm": 85000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Стреч лимузина",
+      "color": "Сив",
+      "powerHp": 300,
+      "engineCc": 2993,
+      "batteryKwh": null,
+      "priceEur": 71999,
+      "currency": "EUR",
+      "taxLabel": "Цената е без ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "април 2023",
+        "Двигател": "Дизелов",
+        "Мощност": "300 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "2993 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Стреч лимузина",
+        "Пробег [км]": "85000 км",
+        "Цвят": "Сив",
+        "VIN номер": "WBA21EJ070CN21228"
+      },
+      "sourceDetailSha256": "1ceff93aa0fcb36349da2cc4a3b7eb200659fb1c1d5e60c6e93fe45d583ddafb",
+      "sourceGalleryCount": 16,
+      "photos": [
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_cL.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11760378435449508-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "29036ceee02852871ec12e4d0f97d45a984c4374a2644aa84206eabc844ef0d0",
+          "gitBlob": "288bbd0e908390cb804975be88e9d94bf33a2c60"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_Ax.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11760378435449508-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4f4cc81ed4c46fbd4ca3c0d9d4a637c39e28e58821dc88b867b346c09ecfb720",
+          "gitBlob": "1601d13bb4c9b6475fca3e2405311c6b0302d3fd"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_bC.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11760378435449508-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d59b0ad881531cc54362e5ddcd0cb934675277658f9e97f37967847d33602bb7",
+          "gitBlob": "3453afd1b298c42075cb19bf25d7a831c42901cf"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_G4.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11760378435449508-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "34896cd3c8dc2df8795945bc9ce63e8257c8b550f2f415148e140876eadb7741",
+          "gitBlob": "90cb8d6b117ecb273122e51d46d8069744981d05"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_x0.webp",
+          "sourceIndex": 11,
+          "localPath": "/dealer/stock/11760378435449508-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "fc2a79de24f7ff5fceec32b3b059b45d2e2740a03c07d7861ff8e44fd83d9928",
+          "gitBlob": "a7cc04c94b4fe30de626e77a55e7c4debcd83afa"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_Pv.webp",
+          "sourceIndex": 16,
+          "localPath": "/dealer/stock/11760378435449508-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "a24f4890c11ce03d8293da82ced364e30a4fb728976d66e7c555eeb90c09759d",
+          "gitBlob": "44898d30bead79017eeb882df54f1005ef24d7f2"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21769205380054749",
+      "sourceUrl": "https://icars.mobile.bg/obiava-21769205380054749-bmw-x6-m-package",
+      "observedAt": "2026-09-09T03:38:01.402Z",
+      "title": "BMW X6 M Package",
+      "advertisedTitle": "BMW X6 M Package",
+      "make": "BMW",
+      "model": "X6 M Package",
+      "slug": "bmw-x6-m-package-054749",
+      "year": 2017,
+      "manufactureDateText": "януари 2017",
+      "mileageKm": 230000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Бял",
+      "powerHp": 306,
+      "engineCc": 2979,
+      "batteryKwh": null,
+      "priceEur": 22500,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "януари 2017",
+        "Двигател": "Бензинов",
+        "Мощност": "306 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "2979 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "230000 км",
+        "Цвят": "Бял",
+        "VIN номер": "5UXKU2C5XH0N84496"
+      },
+      "sourceDetailSha256": "30541ae449bf8a2bc3039729c4949c205b6e97426459710de502894669dc8db7",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/749/2/big1/21769205380054749_OF.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21769205380054749-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "608c7ad28c10705998d7ad62183255fb58c4e12285763440192c968483c6d69c",
+          "gitBlob": "aa22f781c8c117ba1f17843b8c01e82c984c1033"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/749/2/big1/21769205380054749_XT.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21769205380054749-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "20208db4b539ab9b05b0d8cecae71cf4a1b2ea051567bb8875303ec0e9b310c6",
+          "gitBlob": "51066fa88d5951511c80fe86c7c0e82262d40d25"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/749/2/big1/21769205380054749_z1.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21769205380054749-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f2a0877012f97edf5257f17a5048bba838dc8e968a243ead1144540009808608",
+          "gitBlob": "21a3cd0179e19b8ad1a22072fe22cf5619a2dfa3"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/749/2/big1/21769205380054749_j8.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21769205380054749-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "5df4ea3bb2a6bea723dffdc2f350b7018d58f9f54bfa62e36f68b71cb5ee402f",
+          "gitBlob": "59d3293c8fd5aa88e431eb3c0503d2465d56275a"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/749/2/big1/21769205380054749_VH.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21769205380054749-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ec6f71a3ad7df9d64ee03cb442a533044fdb685ab2226f52453af62e2e26d2cb",
+          "gitBlob": "851d99a5303cdabba14a5a1427acc8e7d0ea5d81"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/749/2/big1/21769205380054749_DF.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/21769205380054749-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "a6b390c8a2fcdfa561de29fd36e7e27a1dddb0fd6c97cbd34388db01af7f7877",
+          "gitBlob": "ebf71450368c801d8c0f2c6fdad91da97d7adb61"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21782908599914903",
+      "sourceUrl": "https://icars.mobile.bg/obiava-21782908599914903-hyundai-tucson-ix35",
+      "observedAt": "2026-09-09T03:38:01.403Z",
+      "title": "Hyundai Tucson ix35",
+      "advertisedTitle": "Hyundai Tucson ix35",
+      "make": "Hyundai",
+      "model": "Tucson ix35",
+      "slug": "hyundai-tucson-ix35-914903",
+      "year": 2025,
+      "manufactureDateText": "октомври 2025",
+      "mileageKm": 8000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Сив",
+      "powerHp": 180,
+      "engineCc": 1600,
+      "batteryKwh": null,
+      "priceEur": 34999,
+      "currency": "EUR",
+      "taxLabel": "Цената е без ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2025",
+        "Двигател": "Бензинов",
+        "Мощност": "180 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1600 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "8000 км",
+        "Цвят": "Сив",
+        "VIN номер": "TMAJB81BFTJ585121"
+      },
+      "sourceDetailSha256": "282022ae4fa381a46b6ce524477dca3c8fd56a4f6c3a66548f96799c93eb81f6",
+      "sourceGalleryCount": 15,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/903/2/big1/21782908599914903_YR.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21782908599914903-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "2705c40a1d6c9d174a583e1b206339c23669bdc4a69ec7a7859161e8593b9018",
+          "gitBlob": "118a49af7f2b5e031a81e4b3f9dd8b9cc62e8f86"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/903/2/big1/21782908599914903_Tl.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21782908599914903-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d47ea108befbaa60f2634d3f6e620095bf10ebdc3e6f5671983662f25eac0c38",
+          "gitBlob": "e5568540d61055e833220174e9ce35ac627d8ff1"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/903/2/big1/21782908599914903_HG.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21782908599914903-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "41bf02d871798d641132dabfe4c07bf8ce143df96dde1538d1700fc3aee833ea",
+          "gitBlob": "b38b72262ee478dccd7d79ef38f22c0cc8c54ae3"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/903/2/big1/21782908599914903_i7.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/21782908599914903-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "9834f19df108d0987c8f83cfb6bba8b946548bd9eb98c91b9b62ff4a82a711a1",
+          "gitBlob": "3bc23c1b2f44015d509bd67c38aaf30fcd7464f3"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/903/2/big1/21782908599914903_AH.webp",
+          "sourceIndex": 11,
+          "localPath": "/dealer/stock/21782908599914903-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "005b15eb28d5826c6d1eb2fba90956ddd5955b461b87b1eefa8faa21bf3d1bf8",
+          "gitBlob": "712ebc7cd2cec12097dec384fd8c9f8f8ec0acde"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/903/2/big1/21782908599914903_Z0.webp",
+          "sourceIndex": 15,
+          "localPath": "/dealer/stock/21782908599914903-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4b247ff44957ae55d034ab61379e024ad8dddd38089b70535d8061e3e20d9606",
+          "gitBlob": "00602d3f962129cb3462d57a93cacaf95e9566a6"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11782907735294061",
+      "sourceUrl": "https://icars.mobile.bg/obiava-11782907735294061-opel-corsa-e",
+      "observedAt": "2026-09-09T03:38:01.403Z",
+      "title": "Opel Corsa E",
+      "advertisedTitle": "Opel Corsa E",
+      "make": "Opel",
+      "model": "Corsa E",
+      "slug": "opel-corsa-e-294061",
+      "year": 2018,
+      "manufactureDateText": "май 2018",
+      "mileageKm": 36644,
+      "fuel": "Бензинов",
+      "transmission": "Ръчна",
+      "body": "Хечбек",
+      "color": "Сив",
+      "powerHp": 111,
+      "engineCc": 1400,
+      "batteryKwh": null,
+      "priceEur": 8999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "май 2018",
+        "Двигател": "Бензинов",
+        "Мощност": "111 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1400 см 3",
+        "Скоростна кутия": "Ръчна",
+        "Категория": "Хечбек",
+        "Пробег [км]": "36644 км",
+        "Цвят": "Сив",
+        "VIN номер": "W0V0XEP68J4182966"
+      },
+      "sourceDetailSha256": "5289cd93fbdbf396fb400786833d3d82db18996c1e143cb752ad997a32650f46",
+      "sourceGalleryCount": 14,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/061/1/big1/11782907735294061_eY.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11782907735294061-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "be915a4fcec6f81995039223c18ac997db45c6ae7829c3c6170c63d4e271aeac",
+          "gitBlob": "817b93b0321170ef034685ff647b452c8983ee95"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/061/1/big1/11782907735294061_dN.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11782907735294061-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "87a9660937eec3a4951bc3d61bb0e974e1bfa5de334e4495e6662765016d98c1",
+          "gitBlob": "685905df9a2aaee5f03a20092f48f47347ba0808"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/061/1/big1/11782907735294061_r6.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/11782907735294061-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "eec8f118dce3867a8c49fba5dc3534952f88928c2f4252177babdee707d25200",
+          "gitBlob": "4c1eb7fad61a0bc73471a515b1ff5d67d13c25cb"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/061/1/big1/11782907735294061_Jp.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/11782907735294061-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "c8c01b435b5fe14e01b4ac8de770f5c16976c227328d96d10052ecc7c480aa69",
+          "gitBlob": "f8dab3b33f8e78f65396fd94c3d186d720dbdfba"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/061/1/big1/11782907735294061_8J.webp",
+          "sourceIndex": 10,
+          "localPath": "/dealer/stock/11782907735294061-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "8f02d2e4c33b972260bba0c105c434614aa5e7cdf9ef104840f4dca760c1bb21",
+          "gitBlob": "a7b91bd6e278977316e13fa9bc01c2c2b5695308"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/061/1/big1/11782907735294061_Vp.webp",
+          "sourceIndex": 14,
+          "localPath": "/dealer/stock/11782907735294061-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d9e38c2c87e357d72560bb4a1f164e16b5990c8aef9c23e3b5a4368bcda054ff",
+          "gitBlob": "4d70a14ff9384e06299535296edf79cd41570829"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11752078175497458",
+      "sourceUrl": "https://icars.mobile.bg/obiava-11752078175497458-audi-rs6-avant-performance",
+      "observedAt": "2026-09-09T03:38:01.403Z",
+      "title": "Audi RS6 Avant Performance",
+      "advertisedTitle": "Audi Rs6 Avant performance",
+      "make": "Audi",
+      "model": "RS6 Avant Performance",
+      "slug": "audi-rs6-avant-performance-497458",
+      "year": 2025,
+      "manufactureDateText": "юни 2025",
+      "mileageKm": 20000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "color": "Сив",
+      "powerHp": 630,
+      "engineCc": 3996,
+      "batteryKwh": null,
+      "priceEur": 123000,
+      "currency": "EUR",
+      "taxLabel": "Цената е без ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "юни 2025",
+        "Двигател": "Бензинов",
+        "Мощност": "630 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "3996 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Комби",
+        "Пробег [км]": "20000 км",
+        "Цвят": "Сив",
+        "VIN номер": "WUAZZZF24SN907918"
+      },
+      "sourceDetailSha256": "b58e9b9df8a952623257a0529bde1d6eff03a194474c74eba1bfaf9908a8622f",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/458/1/big1/11752078175497458_sS.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11752078175497458-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "1f78714b7bd9922be1209e7f31532e9ee44311bea5a797a5de7f9160074c61c1",
+          "gitBlob": "5a0a1da32208c44d177b708bf6b2629003fe16e2"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/458/1/big1/11752078175497458_FR.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11752078175497458-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "9924d6d36b019b5a6af3f2fda4bba1643cc558d3e136918e50c7c92062023102",
+          "gitBlob": "8211d818c653d4b882a2ba0411458e627865b00e"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/458/1/big1/11752078175497458_s0.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11752078175497458-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d2d7307b3954c4ff53d6ec1e3364aeb0ca373ebe86173379533e6ae4975e8c4e",
+          "gitBlob": "bc2683cbef3285e198fd60309d77e71cea9cac52"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/458/1/big1/11752078175497458_X9.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11752078175497458-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "9b7989affc60de0160c788162d4e9d3c93eafd6ce1cabb4d61ef38580d9b2722",
+          "gitBlob": "c77f95896701fc922de6d6fe94cb9e7b113981ce"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/458/1/big1/11752078175497458_EI.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11752078175497458-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f69c4611ae601dd0af8997cc89e15547daa50a6c490bd408917f11a1cd7fd4ed",
+          "gitBlob": "ccc4e63fd6c62d877045e6d4beaeb11a8b501647"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/458/1/big1/11752078175497458_xi.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11752078175497458-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "37606b3cb25c460027aa24acba049edc177188dc27be764c05a266bf76e6a46d",
+          "gitBlob": "5ccb85137c260fc7b135cb7a73ac4237be96374b"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11780753459695554",
+      "sourceUrl": "https://icars.mobile.bg/obiava-11780753459695554-mercedes-benz-cls-400",
+      "observedAt": "2026-09-09T03:38:01.404Z",
+      "title": "Mercedes-Benz CLS 400",
+      "advertisedTitle": "Mercedes-Benz CLS 400",
+      "make": "Mercedes-Benz",
+      "model": "CLS 400",
+      "slug": "mercedes-benz-cls-400-695554",
+      "year": 2018,
+      "manufactureDateText": "април 2018",
+      "mileageKm": 145000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Купе",
+      "color": "Черен",
+      "powerHp": 340,
+      "engineCc": 2925,
+      "batteryKwh": null,
+      "priceEur": 30999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "април 2018",
+        "Двигател": "Дизелов",
+        "Мощност": "340 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "2925 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Купе",
+        "Пробег [км]": "145000 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "38da487c3aad51e111289fc6cb292bb8ccfe5c0658052c7256dd63373d0fe267",
+      "sourceGalleryCount": 14,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/554/1/big1/11780753459695554_io.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11780753459695554-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "130669ff99eba399c01a15e45a1056955b55ecd8f3d05f17353e9af46f84d887",
+          "gitBlob": "1eb21681fe9ed7d3d180de375d8a2956378f6d06"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/554/1/big1/11780753459695554_Ea.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11780753459695554-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "e5ca23073a920dc9f0ee48213f88007c0a98ce515bd84d4e3ab9137eb2fb6fa1",
+          "gitBlob": "e17b37a6b5a367f3422e48068e84f09f4e64619e"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/554/1/big1/11780753459695554_pX.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/11780753459695554-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "28859c736f72ebeb48d8e72fdc9a866cfb15c69e5c2eb862acea3b963ea4a69e",
+          "gitBlob": "965ae9ea4e556c5152895c4d1f7ef4481296296f"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/554/1/big1/11780753459695554_D2.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/11780753459695554-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "3ede8ac83f49160510681b9e49447abcc81311d73cb2571f43fc60f9466b53af",
+          "gitBlob": "45000d3f04d7c82c887262a71e600df09ed82b92"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/554/1/big1/11780753459695554_N1.webp",
+          "sourceIndex": 10,
+          "localPath": "/dealer/stock/11780753459695554-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6cebd2aed983a774a0e3f603b3eb6168242084f58e53ae02815793ad5840d202",
+          "gitBlob": "e287bf00c4eb4bea9acd322160941a77d799fc95"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/554/1/big1/11780753459695554_pu.webp",
+          "sourceIndex": 14,
+          "localPath": "/dealer/stock/11780753459695554-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f8c21f80e081fb1a55e89135960738060eb611f90b94db8cd1413beab9c69448",
+          "gitBlob": "da36e9032a09bf60c80cd3c677bbdc36ec0c75e9"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21751722135031902",
+      "sourceUrl": "https://icars.mobile.bg/obiava-21751722135031902-porsche-cayenne-turbo-4-0-v8-550-ks",
+      "observedAt": "2026-09-09T03:38:01.404Z",
+      "title": "Porsche Cayenne Turbo 4.0 V8",
+      "advertisedTitle": "Porsche Cayenne Turbo 4.0 V8 (550 кс)",
+      "make": "Porsche",
+      "model": "Cayenne Turbo 4.0 V8",
+      "slug": "porsche-cayenne-turbo-4-0-v8-031902",
+      "year": 2018,
+      "manufactureDateText": "май 2018",
+      "mileageKm": 192000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Бял",
+      "powerHp": 550,
+      "engineCc": 3996,
+      "batteryKwh": null,
+      "priceEur": 49500,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [],
+      "sourceTechnicalFields": {
+        "Дата на производство": "май 2018",
+        "Двигател": "Бензинов",
+        "Мощност": "550 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "3996 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "192000 км",
+        "Цвят": "Бял",
+        "VIN номер": "WP1ZZZ9YZKDA90569"
+      },
+      "sourceDetailSha256": "123c843dac608698cfc766a0f38491b988d75695a8096f915486d5ca09e909c2",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/902/2/big1/21751722135031902_vt.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21751722135031902-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "0e871697ef082f0a3499d94091c6d6cdfe76d441328c7d27a530de39554dbc22",
+          "gitBlob": "012e743ce0bafc20263a34cb7b8fcabeb8a7d724"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/902/2/big1/21751722135031902_tY.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21751722135031902-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "80b2230973f31a95589d19ec9fb49f72bf69048dbf99b4e14e9e8840ba3f6992",
+          "gitBlob": "91709643bd660f35839033a62da83ea7b3b98378"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/902/2/big1/21751722135031902_ps.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21751722135031902-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "384004e2fa35cce80e1dd46113b3aee06b9da1233da5144ab1e2b48f7116895f",
+          "gitBlob": "73faf0366560bb6540166e4f0907a72e362447c5"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/902/2/big1/21751722135031902_RE.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21751722135031902-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ca08b766980b35d821ed839bd8c67187b3de683d50dd03e49a0ead213eb562f2",
+          "gitBlob": "6a6663f41703cb9a7c8db6506d0752516e795cd0"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/902/2/big1/21751722135031902_iu.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21751722135031902-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "1a93703be7e0892e1bfaac06d4f2531f7c66a3e8a0426aab9013426599f1f8f7",
+          "gitBlob": "06da2767fdb8af4e947821cc8216d8254a2a0288"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/902/2/big1/21751722135031902_aw.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/21751722135031902-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "5eff7094f0980162d6187e6010bcb14da320d0ef0b2cb3ddc2f935dea25b81f9",
+          "gitBlob": "efdbbf0e4f252726df686a3fde46954c9777f7c4"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11695297184317225",
+      "sourceUrl": "https://icars.mobile.bg/obiava-11695297184317225-audi-a8-50-tdi-s-line-sportpacket-b-o-massage",
+      "observedAt": "2026-09-09T03:38:01.405Z",
+      "title": "Audi A8 50 TDI S line",
+      "advertisedTitle": "Audi A8 50 TDI S-Line , Sportpacket , B&O , Massage",
+      "make": "Audi",
+      "model": "A8 50 TDI S line",
+      "slug": "audi-a8-50-tdi-s-line-317225",
+      "year": 2019,
+      "manufactureDateText": "март 2019",
+      "mileageKm": 235000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "color": "Черен",
+      "powerHp": 286,
+      "engineCc": 2967,
+      "batteryKwh": null,
+      "priceEur": 37999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Каско",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "март 2019",
+        "Двигател": "Дизелов",
+        "Мощност": "286 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "2967 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Седан",
+        "Пробег [км]": "235000 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "2264f00e2d678d3b961f87cef8a727358777721f9de1265cb2f403b5466f7b69",
+      "sourceGalleryCount": 16,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/225/1/big1/11695297184317225_2V.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11695297184317225-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "7c3ead71acc7ebcba88704ff2598b5d02cc8123eabf5e4034cc7e6204700b571",
+          "gitBlob": "d669803ada3346fbfb7ed2ad77cb26f77e97fd29"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/225/1/big1/11695297184317225_rQ.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11695297184317225-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "8654df686690b37c56b0fb0fd96025384359f994b6e1a61cee246ab8c2ed35ea",
+          "gitBlob": "1864ddcdaf54906b259898ce236cdb1c3a4be2c2"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/225/1/big1/11695297184317225_Wh.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11695297184317225-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6f28742d6947a57893f00c3374b004e06305dcd2e8f2396496b1c34a4ee4480a",
+          "gitBlob": "fb4b57871dfee154f4508a81ba7a0de1c21c9ac1"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/225/1/big1/11695297184317225_Xt.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11695297184317225-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "8ae86740561fd8c183b39d420e7bacbd9cf6be83d40fecb95aa5919c34f346f2",
+          "gitBlob": "dd0a640f507b8afac699e75df43a842827f76471"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/225/1/big1/11695297184317225_TO.webp",
+          "sourceIndex": 11,
+          "localPath": "/dealer/stock/11695297184317225-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ad0f682162ec54eb370c4f385acc6c82f28252a05cd2080a23de8c7f18a3a480",
+          "gitBlob": "e9621ef59aa302e63d849c116fdd33662277723f"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/225/1/big1/11695297184317225_X9.webp",
+          "sourceIndex": 16,
+          "localPath": "/dealer/stock/11695297184317225-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "883aba3001191462149b42e942d7c91fd8b2d2933d8294d27c43290a18432648",
+          "gitBlob": "4660562041d27ce3d378857c403035ef46751c36"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21725449678653350",
+      "sourceUrl": "https://icars.mobile.bg/obiava-21725449678653350-bmw-x5-30d-xdrive",
+      "observedAt": "2026-09-09T03:38:01.405Z",
+      "title": "BMW X5 30d xDrive",
+      "advertisedTitle": "BMW X5 30d xDrive",
+      "make": "BMW",
+      "model": "X5 30d xDrive",
+      "slug": "bmw-x5-30d-xdrive-653350",
+      "year": 2019,
+      "manufactureDateText": "май 2019",
+      "mileageKm": 192000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Бял",
+      "powerHp": 265,
+      "engineCc": 2993,
+      "batteryKwh": null,
+      "priceEur": 32500,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4(5) Врати",
+        "Лети джанти",
+        "Металик",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "Безключово палене",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "май 2019",
+        "Двигател": "Дизелов",
+        "Мощност": "265 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "2993 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "192000 км",
+        "Цвят": "Бял"
+      },
+      "sourceDetailSha256": "d90cec23304a59a19ea08a611c5b0b31a8baf5311fc109955b8201b9e5858518",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/350/2/big1/21725449678653350_PZ.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21725449678653350-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f63016a40090a1f64db11a2b0766ba5dcc4c7be4b3aa54f03a21da3dae73d291",
+          "gitBlob": "15d6c6a679f0f3a5d0e702c2f2c6c05e6eb6ca6b"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/350/2/big1/21725449678653350_3B.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21725449678653350-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4f6e8449a4eb33bbaa235798a757b6c8a1dd65d3b1cb3165b43735f1ae5ff38f",
+          "gitBlob": "122ab01203dc91d1578173cc88cfdea10d3fc010"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/350/2/big1/21725449678653350_Za.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21725449678653350-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 720
+          },
+          "sha256": "159c065379d2fbe1aa8be44671a16a1dd6272e8e0343641e1784eb4d521a2c0b",
+          "gitBlob": "637e14ef6409d3d1823c920a42fc6fe6f211e49a"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/350/2/big1/21725449678653350_v.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21725449678653350-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 720
+          },
+          "sha256": "720e7cb96e7ee0582cac9559ba7dd8b2e366267c5b12c2bf90a9cce90bd7cc96",
+          "gitBlob": "f33c2fb891f7f4d4cbc9d69b63847a138302ec9b"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/350/2/big1/21725449678653350_i8.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21725449678653350-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "59eb3f810eb024dc6c006587ec7d9b25f14b1ddb8746c3dd8ae378b236ffa4ac",
+          "gitBlob": "e7758b794d251299c308f20613d9f2ed9c428237"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/350/2/big1/21725449678653350_IY.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/21725449678653350-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "8eeef012b13e72e7eef46cf30ced29482e37e22db55751de9e3d00eefbee8cfc",
+          "gitBlob": "d8867c176d8daa5fc33e2c91fed153ab18583b35"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11711117396768513",
+      "sourceUrl": "https://icars.mobile.bg/obiava-11711117396768513-mercedes-benz-v-300-4matic-amg-line-long",
+      "observedAt": "2026-09-09T03:38:01.406Z",
+      "title": "Mercedes-Benz V 300 4Matic AMG Line Long",
+      "advertisedTitle": "Mercedes-Benz V 300 4Matic AMG Line Long",
+      "make": "Mercedes-Benz",
+      "model": "V 300 4Matic AMG Line Long",
+      "slug": "mercedes-benz-v-300-4matic-amg-line-long-768513",
+      "year": 2020,
+      "manufactureDateText": "септември 2020",
+      "mileageKm": 149000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Ван",
+      "color": "Черен",
+      "powerHp": 239,
+      "engineCc": 1950,
+      "batteryKwh": null,
+      "priceEur": 50999,
+      "currency": "EUR",
+      "taxLabel": "Цената е без ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "7 места",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Панорамен люк",
+        "Каско",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Печка",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "септември 2020",
+        "Двигател": "Дизелов",
+        "Мощност": "239 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1950 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Ван",
+        "Пробег [км]": "149000 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "9c284f2fcb23866bd3f71217bee068f979aed360b6eaf16b021cbd5071c5a6b2",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/513/1/big1/11711117396768513_Zy.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11711117396768513-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "e8645c00277ca0fe4399313b41192660e5de436d721b41c27a6e148af67d16a7",
+          "gitBlob": "3c586d81c4010a82dae2fa336e58e94f46f952f6"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/513/1/big1/11711117396768513_UR.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11711117396768513-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "1b1f428f9afcaa0f68a267e94e1fe980fbff98638f199cb2cb19359960e79281",
+          "gitBlob": "af433600a57b92bcfec03ddb056583506aafbb40"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/513/1/big1/11711117396768513_Ya.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11711117396768513-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "5ca154e430c36b36f79d7e0fdc6a6685bcaace4be147f78d8d0b179dbc1257d9",
+          "gitBlob": "8a8aaa12a60490128d0e9ea9a1f560a8d13d0d4f"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/513/1/big1/11711117396768513_Wo.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11711117396768513-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f7aa3c02b433c76f36db865d873b287df1d5ff80ca88a1463acf2f21afcb8f47",
+          "gitBlob": "6e3e66a68afefb1a41c6cf0a379b41f7074aa1d6"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/513/1/big1/11711117396768513_Vo.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11711117396768513-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "58de452fce94d77bbb83807083cbb0e7ef406590e868bafae3b3474a9aefaeba",
+          "gitBlob": "87eab1799d5e622b4562e353353de326288b2b08"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/513/1/big1/11711117396768513_M4.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11711117396768513-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4d3367d9c7559f2b4220552512b33a391155fcbe6094295438fb6f03e99e2aa0",
+          "gitBlob": "45b29b9d1bf9540ebd08e865223a9e60011bc4d1"
+        }
+      ],
+      "detailObserved": true
+    }
+  ],
+  "interpretation": "Dated public advertisements, not independently inspected or guaranteed available stock. Native EUR and km; no currency conversion.",
+  "mediaScope": "Owner-directed private technical review. Public sources and original watermarks retained. No dealership endorsement or third-party licence grant is asserted.",
+  "publicationApproved": false,
+  "outreachPerformed": false
+}

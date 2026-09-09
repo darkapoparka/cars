@@ -1,0 +1,1186 @@
+{
+  "schemaVersion": 1,
+  "key": "auto-best",
+  "source": "https://github.com/darkapoparka/cars/tree/faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca/templates/auto-best",
+  "destination": "clients/icars-plovdiv/auto-best",
+  "copiedAt": "2026-09-09T03:38:11.608Z",
+  "method": "independent Git tree reconstruction; retained blobs reused by exact Git object ID",
+  "git": {
+    "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "gitBlob": "f8ff2b5de18419593b5a1b49c877160bf34c5408",
+      "bytes": 42
+    },
+    {
+      "path": ".gitignore",
+      "gitBlob": "2e0ab7c234a91d518655ca02d522c63f70e28bd4",
+      "bytes": 562
+    },
+    {
+      "path": ".vercelignore",
+      "gitBlob": "60e136c9beceb1976d95b97a9e89d4e058ccc58c",
+      "bytes": 749
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "gitBlob": "ce98b7b910b4e5ad11af3dac68281dd6c325f2ef",
+      "bytes": 4699
+    },
+    {
+      "path": "ASSET_PROVENANCE.md",
+      "gitBlob": "1cc6ab999c97a977924393898fc21d4ad5c85c50",
+      "bytes": 24444
+    },
+    {
+      "path": "PRODUCT.md",
+      "gitBlob": "9f37713f9412fb1974d004d64bc3e5a8b7ccd10e",
+      "bytes": 2128
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "046c20a904d69ab54bc12293b5e35d8992aff130",
+      "bytes": 568
+    },
+    {
+      "path": "REUSE_GUIDE.md",
+      "gitBlob": "d410d186d505da80848b07f3bdc47b6715def1fb",
+      "bytes": 2294
+    },
+    {
+      "path": "SOURCE_LICENSE.md",
+      "gitBlob": "31cce6d6277bf27276f049430e4c63c8d4b1867a",
+      "bytes": 2263
+    },
+    {
+      "path": "TEMPLATE.md",
+      "gitBlob": "524836fcd665b121c7887602ac10b904546bdb1c",
+      "bytes": 3570
+    },
+    {
+      "path": "docs/architecture/.migration-marker",
+      "gitBlob": "546edae6c1c6aa3044963987bc53a2256968aacf",
+      "bytes": 193
+    },
+    {
+      "path": "docs/architecture/README.md",
+      "gitBlob": "a38f3560b0d632d3a41e95c52d665a89b3e52695",
+      "bytes": 7199
+    },
+    {
+      "path": "package-lock.json",
+      "gitBlob": "b90ebe2da515b0620a8c436a1bc401de351ae764",
+      "bytes": 78666
+    },
+    {
+      "path": "package.json",
+      "gitBlob": "fb12508abf186720f54530eb3a55d02f3f4d75de",
+      "bytes": 1300
+    },
+    {
+      "path": "provenance/README.md",
+      "gitBlob": "834949f6b9ccb57db2269c06ab0441c7b478d3a4",
+      "bytes": 1026
+    },
+    {
+      "path": "provenance/browse-campaign-pair-2026-09-06.md",
+      "gitBlob": "7332154cb23789f260a2afbb0c0094d6fe72e5ef",
+      "bytes": 2938
+    },
+    {
+      "path": "provenance/collection-lineup-2026-09-06.md",
+      "gitBlob": "88c4cca2df1d0f6e873d6012fb76640f41823478",
+      "bytes": 2761
+    },
+    {
+      "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
+      "gitBlob": "7c9037b0f6b2c39c2aabc3f3ace7c614202ba20e",
+      "bytes": 3314
+    },
+    {
+      "path": "provenance/hugeicons-LICENSE.txt",
+      "gitBlob": "df8bd19ce770b4fcf36aa581fa2a665ecad240ad",
+      "bytes": 1338
+    },
+    {
+      "path": "provenance/mirror-manifest.json",
+      "gitBlob": "83d7dbf80c880335796a379e4077a4494db2dc82",
+      "bytes": 67581
+    },
+    {
+      "path": "provenance/phosphor-icons-LICENSE.txt",
+      "gitBlob": "cd036c93efaa44a5073e2321217899892facbc15",
+      "bytes": 1092
+    },
+    {
+      "path": "provenance/simple-icons-LICENSE.md",
+      "gitBlob": "70d4a7b6740c5d9b594ff2fc27d3ea7e89413185",
+      "bytes": 6569
+    },
+    {
+      "path": "provenance/superseded-collection-lineup/day-night-collection-lineup-v1.webp",
+      "gitBlob": "6da96a0da65c320cdf67202ce1e2d6cf6f0667ad",
+      "bytes": 104868
+    },
+    {
+      "path": "provenance/superseded-hero-art/day-night-about-detail-v1.webp",
+      "gitBlob": "8eade0d7d9d3bc127e08dc4fbd2347597b2b65c7",
+      "bytes": 90850
+    },
+    {
+      "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
+      "gitBlob": "64143ca06ec063abaec93a4998573646fedf7722",
+      "bytes": 57966
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
+      "gitBlob": "c03b3dec0d6cb4916b051b122a9ce14a11d2f778",
+      "bytes": 118220
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-graphite-v1.webp",
+      "gitBlob": "abe5aad7174392018a97c34d010ddf1b31875a8b",
+      "bytes": 103672
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-silver-v1.webp",
+      "gitBlob": "a5fa85a86591e85777d0382712f7362ee8d6730f",
+      "bytes": 103038
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-urus-v1.webp",
+      "gitBlob": "4d3cd0a91280a0313a7a38db6794acf5d34860a2",
+      "bytes": 98126
+    },
+    {
+      "path": "provenance/vehicle-cutouts-2026-09-06.md",
+      "gitBlob": "5a7ec7f1997424287342d13f4f20489b8ff200a2",
+      "bytes": 4927
+    },
+    {
+      "path": "provenance/vehicle-side-profile-prompts-2026-09-06.json",
+      "gitBlob": "ba1b1bc937638115d857ce6fe857e12a251f29f7",
+      "bytes": 5476
+    },
+    {
+      "path": "provenance/vehicle-side-profiles-2026-09-06.md",
+      "gitBlob": "28999349f83f651beb3058f804b90b9db0ee76fa",
+      "bytes": 2087
+    },
+    {
+      "path": "scripts/browser.mjs",
+      "gitBlob": "7aaad808581d7123c204770913f97bb76c9cd8a5",
+      "bytes": 508
+    },
+    {
+      "path": "scripts/check-architecture.mjs",
+      "gitBlob": "1081678f19db64205a9c7e2e42dcc8b21e07c016",
+      "bytes": 5438
+    },
+    {
+      "path": "scripts/check-assets.mjs",
+      "gitBlob": "47af241fe534888bcc2eb5dc44b3b81c26847f0e",
+      "bytes": 4043
+    },
+    {
+      "path": "scripts/check-domain.mjs",
+      "gitBlob": "08dd03dcec8224d46954f0b4ff7ac305c1a522d0",
+      "bytes": 4037
+    },
+    {
+      "path": "scripts/desktop-discovery-smoke.mjs",
+      "gitBlob": "edd04059ef35cf638e4d8b8a6b9f84ca826051da",
+      "bytes": 6705
+    },
+    {
+      "path": "scripts/enquiry-smoke.mjs",
+      "gitBlob": "f973f63eddb458cd320b7e730225718147a00066",
+      "bytes": 8854
+    },
+    {
+      "path": "scripts/journey-smoke.mjs",
+      "gitBlob": "d2f0e7c421a635346d88e3762db933ef45f32494",
+      "bytes": 7206
+    },
+    {
+      "path": "scripts/mobile-filter-smoke.mjs",
+      "gitBlob": "9df2ec075577ec33b63611bd3366e3c417ab0f74",
+      "bytes": 6607
+    },
+    {
+      "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
+      "gitBlob": "3088e6e6c17fdf819eeb2712ce23846195efb705",
+      "bytes": 5474
+    },
+    {
+      "path": "scripts/provenance/legacy-mirror-snapshot-check.mjs",
+      "gitBlob": "1a21735fc9b5a0fb241dde44bd276d7274c78948",
+      "bytes": 1935
+    },
+    {
+      "path": "scripts/route-smoke.mjs",
+      "gitBlob": "c1ea1924cdd32505de2a38e320cfad278eec034b",
+      "bytes": 4190
+    },
+    {
+      "path": "scripts/smoke-report.mjs",
+      "gitBlob": "77716e7a887b81740c67274e9aa87f6bfc2c7652",
+      "bytes": 1050
+    },
+    {
+      "path": "scripts/sveltekit-smoke.mjs",
+      "gitBlob": "94101cac043e71364ac593617ccbe50c113632d1",
+      "bytes": 74
+    },
+    {
+      "path": "src/app.css",
+      "gitBlob": "dfd18779235181939862fd9b80a7bbaae4a220d3",
+      "bytes": 253
+    },
+    {
+      "path": "src/app.html",
+      "gitBlob": "3629dcf9aae71922f3a7b073ae60432b78bf80a1",
+      "bytes": 404
+    },
+    {
+      "path": "src/hooks.server.ts",
+      "gitBlob": "75306634ebed41cd58543e4fa3cf40c1d466fa10",
+      "bytes": 2453
+    },
+    {
+      "path": "src/lib/components/company/AboutHero.svelte",
+      "gitBlob": "33fe6ae6c76b30d6c2b67cfa122906a9677b34bd",
+      "bytes": 2917
+    },
+    {
+      "path": "src/lib/components/company/AboutPartners.svelte",
+      "gitBlob": "6d3e0f6ed46cb455cf322b6c1ec6afef98801b2e",
+      "bytes": 3050
+    },
+    {
+      "path": "src/lib/components/company/AboutProcess.svelte",
+      "gitBlob": "e6a8cef78bbcc8ec379d5531cd966ba06d4ebfdf",
+      "bytes": 1583
+    },
+    {
+      "path": "src/lib/components/company/AboutServiceIcon.svelte",
+      "gitBlob": "d224636387247c2d9509302b9d8400ad24422c3c",
+      "bytes": 16297
+    },
+    {
+      "path": "src/lib/components/company/AboutTeam.svelte",
+      "gitBlob": "cfb4d2feacdc65b6d68294ce6803e07313e57a42",
+      "bytes": 5356
+    },
+    {
+      "path": "src/lib/components/company/ContactHero.svelte",
+      "gitBlob": "ed2c12155e57bf64d0fe92d50ff7466a3425d74c",
+      "bytes": 3712
+    },
+    {
+      "path": "src/lib/components/company/ContactIntent.svelte",
+      "gitBlob": "875771077164c30f03be6d0b8adec34a891ccfa2",
+      "bytes": 10939
+    },
+    {
+      "path": "src/lib/components/company/ContactVehicle.svelte",
+      "gitBlob": "ab7235ac89805b951e1fc49b9671d700464a878a",
+      "bytes": 1513
+    },
+    {
+      "path": "src/lib/components/company/ShowroomMap.svelte",
+      "gitBlob": "eb494aad176bef89fb6b9d854f443c549a192e0b",
+      "bytes": 2072
+    },
+    {
+      "path": "src/lib/components/company/SocialBrandIcon.svelte",
+      "gitBlob": "7d99388c5290403f21f93a60976ea5057a1eb690",
+      "bytes": 3443
+    },
+    {
+      "path": "src/lib/components/company/TeamSocialIcon.svelte",
+      "gitBlob": "74c7fc7e37d4c6d40d8b7339f493c6893ace04ed",
+      "bytes": 3142
+    },
+    {
+      "path": "src/lib/components/company/VehicleEnquiry.svelte",
+      "gitBlob": "300d70f3e795b2d1f8b60e8e279122b2496d300a",
+      "bytes": 23816
+    },
+    {
+      "path": "src/lib/components/editorial/ArticleSupport.svelte",
+      "gitBlob": "ffcf3c25d5024b7f868385542bb63a57c13aa41e",
+      "bytes": 1530
+    },
+    {
+      "path": "src/lib/components/editorial/BlogCard.svelte",
+      "gitBlob": "934606e9a679c7146e8422e73c708698aae99d2a",
+      "bytes": 4229
+    },
+    {
+      "path": "src/lib/components/editorial/BlogHero.svelte",
+      "gitBlob": "26ec78fda142002fab41f3a7f3101d8567feffa7",
+      "bytes": 2317
+    },
+    {
+      "path": "src/lib/components/home/BodyTypes.svelte",
+      "gitBlob": "bee351554b686cefa02877eb58e55d7812da48e7",
+      "bytes": 7055
+    },
+    {
+      "path": "src/lib/components/home/BrandSection.svelte",
+      "gitBlob": "6c119af9150e960dbe181aca836248f4e5ad7cec",
+      "bytes": 10029
+    },
+    {
+      "path": "src/lib/components/home/BrowseAllCard.svelte",
+      "gitBlob": "ddaa671c70d55af1d80b3f07389ba629d35c4b2a",
+      "bytes": 2263
+    },
+    {
+      "path": "src/lib/components/home/Editorial.svelte",
+      "gitBlob": "59c8eb9e1f1e8f6f044ff0d5c9d39a352422a739",
+      "bytes": 12103
+    },
+    {
+      "path": "src/lib/components/home/Hero.svelte",
+      "gitBlob": "f32441a5e00a711f5c476e3e358ebf3cef6ffa56",
+      "bytes": 1994
+    },
+    {
+      "path": "src/lib/components/home/InventorySection.svelte",
+      "gitBlob": "35a4eb57ce1cad02f135eaa46e36fd301e67f5f6",
+      "bytes": 6346
+    },
+    {
+      "path": "src/lib/components/home/MobileBudget.svelte",
+      "gitBlob": "f2fa4737532e6663bd0ba8a8762b82ad3f464759",
+      "bytes": 3955
+    },
+    {
+      "path": "src/lib/components/home/SearchBox.svelte",
+      "gitBlob": "6919717d762b38245619ac1ea7dd24ababbc2920",
+      "bytes": 10497
+    },
+    {
+      "path": "src/lib/components/home/TrustActions.svelte",
+      "gitBlob": "57139037e66fe13473b8fd6abccbbeac2c025723",
+      "bytes": 13637
+    },
+    {
+      "path": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "gitBlob": "82b52a17668e473ff9ef3e0e286edc5f39e458da",
+      "bytes": 24194
+    },
+    {
+      "path": "src/lib/components/home/VideoSection.svelte",
+      "gitBlob": "b9feee95778f886ed131e81088ce301209699d7b",
+      "bytes": 9591
+    },
+    {
+      "path": "src/lib/components/layout/Footer.svelte",
+      "gitBlob": "44ede260d668b3c9c593b7160e265c6e98e0e145",
+      "bytes": 3723
+    },
+    {
+      "path": "src/lib/components/layout/Header.svelte",
+      "gitBlob": "46b573348f5a31afcdfa91f9aa35142cd7494c56",
+      "bytes": 25061
+    },
+    {
+      "path": "src/lib/components/layout/MobileMenu.svelte",
+      "gitBlob": "78d8969299efe04df069e6d44af54c1c466e6ca9",
+      "bytes": 5760
+    },
+    {
+      "path": "src/lib/components/layout/MobileNavIcon.svelte",
+      "gitBlob": "c6c439c6129c25abb4b5834f94b9ba9a8ec46ae9",
+      "bytes": 9542
+    },
+    {
+      "path": "src/lib/components/layout/SiteShell.svelte",
+      "gitBlob": "050a1c25ab6d6f5cd90facd5c5d8caa180f17d81",
+      "bytes": 591
+    },
+    {
+      "path": "src/lib/components/listing/ListingFilters.svelte",
+      "gitBlob": "ad407ef13ce984bd97c5e0c35454c64db62010ad",
+      "bytes": 9891
+    },
+    {
+      "path": "src/lib/components/listing/ListingHero.svelte",
+      "gitBlob": "2ab4c7f95d70575d966c878753877b79f634ae64",
+      "bytes": 772
+    },
+    {
+      "path": "src/lib/components/listing/ListingResults.svelte",
+      "gitBlob": "f7f731945e15b6f974927aaf86d368d4e0c6078e",
+      "bytes": 9451
+    },
+    {
+      "path": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "gitBlob": "d61964f846ae1f9b38bf7b71e49af91bccf8d917",
+      "bytes": 13740
+    },
+    {
+      "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "gitBlob": "2b9081d4ae769a6319f0646b96da0a5c461ffb2d",
+      "bytes": 12192
+    },
+    {
+      "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "gitBlob": "989c1f66e0fc863279564742381f551a4b232d4c",
+      "bytes": 28225
+    },
+    {
+      "path": "src/lib/components/ui/HeroVehicles.svelte",
+      "gitBlob": "1a5892346b8676e4a430efb23a9c6d45a7ea4bf7",
+      "bytes": 3289
+    },
+    {
+      "path": "src/lib/components/ui/Icon.svelte",
+      "gitBlob": "f66d52c3daba65599c9364d47b48527589b35bed",
+      "bytes": 3839
+    },
+    {
+      "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
+      "gitBlob": "713946e3076f1784ff4583efd482b02566997145",
+      "bytes": 4264
+    },
+    {
+      "path": "src/lib/components/ui/VehicleCutout.svelte",
+      "gitBlob": "6c80331690c9c9c1046ac8d043875186751c2940",
+      "bytes": 1312
+    },
+    {
+      "path": "src/lib/components/ui/icons/OriginalActionIcon.svelte",
+      "gitBlob": "0eb1f8446973df85ab649f3da583e360d21f6592",
+      "bytes": 17068
+    },
+    {
+      "path": "src/lib/components/vehicles/VehicleCard.svelte",
+      "gitBlob": "65d800110b105bba79973334613f23fd4714ce4a",
+      "bytes": 9792
+    },
+    {
+      "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "gitBlob": "041dabca45885c613cfaa948349af50fc51ed1e8",
+      "bytes": 5323
+    },
+    {
+      "path": "src/lib/config/brand.ts",
+      "gitBlob": "e261761bbfaf63a6d8df5b5103d5c280db85597d",
+      "bytes": 1053
+    },
+    {
+      "path": "src/lib/config/template.ts",
+      "gitBlob": "78b0d9a0b6a1f2a6cab4e2ba36fed9744d1aeb83",
+      "bytes": 1396
+    },
+    {
+      "path": "src/lib/data/company.ts",
+      "gitBlob": "97474a06dbc853ee7c31fd054c801e26235e70da",
+      "bytes": 5138
+    },
+    {
+      "path": "src/lib/data/demo-content.ts",
+      "gitBlob": "43268609a57341913558a78377540819fd985064",
+      "bytes": 1856
+    },
+    {
+      "path": "src/lib/data/editorial.ts",
+      "gitBlob": "49293c2d0dbe66da9fe64a25aa468dd8cdfffe4c",
+      "bytes": 13543
+    },
+    {
+      "path": "src/lib/data/home.ts",
+      "gitBlob": "f67e87caa3faca8ab56bc12f95a5a24e09893aa4",
+      "bytes": 4199
+    },
+    {
+      "path": "src/lib/data/inventory.ts",
+      "gitBlob": "d976cae5c2a2b596ed8e046e4a6fdb34f31e1713",
+      "bytes": 5644
+    },
+    {
+      "path": "src/lib/data/journeys.ts",
+      "gitBlob": "204aa6532454a8d93ec26aa0fdd924f5ef9595f8",
+      "bytes": 1172
+    },
+    {
+      "path": "src/lib/data/listing.ts",
+      "gitBlob": "e53794d1624a84751bbae82775f15a32429d90da",
+      "bytes": 7678
+    },
+    {
+      "path": "src/lib/data/navigation.ts",
+      "gitBlob": "73b900bdedec9f8362d4009f90fd49a5cc776b17",
+      "bytes": 7357
+    },
+    {
+      "path": "src/lib/data/vehicle-artwork.ts",
+      "gitBlob": "7e335c39ba9614209c311cbdccefafad878b78ad",
+      "bytes": 2170
+    },
+    {
+      "path": "src/lib/data/videos.ts",
+      "gitBlob": "0363bd9167554d7bcf621fd65a7b4575d4334fb7",
+      "bytes": 908
+    },
+    {
+      "path": "src/lib/styles/base.css",
+      "gitBlob": "7907df5ccabb98bb1ddc16883ec5354b67db8904",
+      "bytes": 1633
+    },
+    {
+      "path": "src/lib/styles/composition.css",
+      "gitBlob": "8b83dff7a71deebbc482850073abd0e08825bd7a",
+      "bytes": 20567
+    },
+    {
+      "path": "src/lib/styles/navigation.css",
+      "gitBlob": "8cfcdaca34d2ecd8d61a8e0adf44aaf6aac6b8f4",
+      "bytes": 5233
+    },
+    {
+      "path": "src/lib/styles/tokens.css",
+      "gitBlob": "41cb37d457bbca9a946039f324fe34b54141aa79",
+      "bytes": 1495
+    },
+    {
+      "path": "src/lib/ui/overlay.ts",
+      "gitBlob": "079d2deb65f5c1b06010bc006c19d6d0d6b65468",
+      "bytes": 1606
+    },
+    {
+      "path": "src/routes/+error.svelte",
+      "gitBlob": "61cd970edbd9580abf0533396f5e0165c9f8cf4a",
+      "bytes": 2945
+    },
+    {
+      "path": "src/routes/+layout.svelte",
+      "gitBlob": "8b57a31e21ab2159aec340fa7228961711aeab1c",
+      "bytes": 945
+    },
+    {
+      "path": "src/routes/+page.svelte",
+      "gitBlob": "9d8a7cf86d90e72e81a8e7814e780a8c988c47a1",
+      "bytes": 3793
+    },
+    {
+      "path": "src/routes/about-us/+page.svelte",
+      "gitBlob": "2ff829dd0780081ef03d7cd646b8bce04f6b3f0d",
+      "bytes": 1307
+    },
+    {
+      "path": "src/routes/about-us/about.css",
+      "gitBlob": "23d1052c817eeea061a26deef83d762ac2dd83e1",
+      "bytes": 7544
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/+page.svelte",
+      "gitBlob": "da68a0fce84dae25daaec6cba10fe3096ab3f447",
+      "bytes": 2654
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/+page.ts",
+      "gitBlob": "1ed3a30997fa12922dc8fc89b675fb40aafa19db",
+      "bytes": 1151
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/detail.css",
+      "gitBlob": "baee5afb6024c92e61aa636b7cb550946230a763",
+      "bytes": 9353
+    },
+    {
+      "path": "src/routes/blog/+page.svelte",
+      "gitBlob": "4a1b608e4623a3b80fa4dbfaf58dd8356432c207",
+      "bytes": 1594
+    },
+    {
+      "path": "src/routes/blog/+page.ts",
+      "gitBlob": "95828311e2498a17937fc52a300f5ca472e231d6",
+      "bytes": 311
+    },
+    {
+      "path": "src/routes/blog/blog.css",
+      "gitBlob": "9fa065780f3f496e49256e5c8822385aa9d4894b",
+      "bytes": 4349
+    },
+    {
+      "path": "src/routes/contact/+page.svelte",
+      "gitBlob": "3df1313889da0884140ddeba2edd993ce3f52360",
+      "bytes": 1493
+    },
+    {
+      "path": "src/routes/contact/+page.ts",
+      "gitBlob": "cf27297f96effa8c0eeadb68b946cbd14230ea2f",
+      "bytes": 545
+    },
+    {
+      "path": "src/routes/contact/contact.css",
+      "gitBlob": "45bd004552c8a7def50490a3407145a312596042",
+      "bytes": 19505
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
+      "gitBlob": "f32fe7176519e0bd58fc6e3636a1a15dc27012ca",
+      "bytes": 10607
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/+page.ts",
+      "gitBlob": "eaa0df2e86f00c51df6c9ef9f191108127cbbf91",
+      "bytes": 1193
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/detail.css",
+      "gitBlob": "ce8dbffcfeebae6d7a5f6fd5595c6b6a5eb841cc",
+      "bytes": 15492
+    },
+    {
+      "path": "src/routes/listing-grid/+page.svelte",
+      "gitBlob": "4df8ed0c617c463af1b63fb3b0a20557dc50d424",
+      "bytes": 1259
+    },
+    {
+      "path": "src/routes/listing-grid/+page.ts",
+      "gitBlob": "4c389d7e3f569f023153b659ca7737868f6b78e8",
+      "bytes": 344
+    },
+    {
+      "path": "src/routes/listing-grid/listing.css",
+      "gitBlob": "45705f53dae91b30ed02f5adcca126a653922513",
+      "bytes": 13059
+    },
+    {
+      "path": "src/routes/robots.txt/+server.ts",
+      "gitBlob": "55501b57656c8a772389e6264de83c5cc474cbf5",
+      "bytes": 506
+    },
+    {
+      "path": "src/routes/sitemap.xml/+server.ts",
+      "gitBlob": "72cdd2d29fd57db4b89308332ff31e6efbab4711",
+      "bytes": 1269
+    },
+    {
+      "path": "static/assets/images/blog/blog-1.jpg",
+      "gitBlob": "e3b162d314cc32d54ad3f60d5445b5d826ed3f6e",
+      "bytes": 93721
+    },
+    {
+      "path": "static/assets/images/blog/blog-2.jpg",
+      "gitBlob": "1e7f7b934adbc5a9f4bd3dcc77c1e88eba81b089",
+      "bytes": 34864
+    },
+    {
+      "path": "static/assets/images/blog/blog-3.jpg",
+      "gitBlob": "444ca12c47e2ff237786d6e3bbb0d780712345fd",
+      "bytes": 94447
+    },
+    {
+      "path": "static/assets/images/blog/blog-4.jpg",
+      "gitBlob": "559f7cfa6f0d304d9be1c17bf7c751b7dcb144be",
+      "bytes": 165710
+    },
+    {
+      "path": "static/assets/images/blog/blog-5.jpg",
+      "gitBlob": "7f57dad95517ace4c409a4a34feca58390b79418",
+      "bytes": 52086
+    },
+    {
+      "path": "static/assets/images/blog/blog-6.jpg",
+      "gitBlob": "8f442b5e78846220940f3191f3bfdeba7113d4bb",
+      "bytes": 86362
+    },
+    {
+      "path": "static/assets/images/blog/blog-7.jpg",
+      "gitBlob": "9ea1426ce1ded2b2067a4b9ce838e5867b3f2757",
+      "bytes": 48660
+    },
+    {
+      "path": "static/assets/images/blog/blog-8.jpg",
+      "gitBlob": "776c69f86c28911216dcb293cb264b2ab088af10",
+      "bytes": 38400
+    },
+    {
+      "path": "static/assets/images/blog/blog-9.jpg",
+      "gitBlob": "7d49fa58babd5a0008c8e8f52e9f983e6bbb6893",
+      "bytes": 92539
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list1.png",
+      "gitBlob": "a6edfadb4fdf4d64fd3c240913ff76d0f3800a03",
+      "bytes": 17569
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list2.png",
+      "gitBlob": "9df09b5492780ca312240fbffa42b4962d94d597",
+      "bytes": 17766
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list3.png",
+      "gitBlob": "ce7f5727e1bd12209173deea07bdf85b10512886",
+      "bytes": 17222
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list4.png",
+      "gitBlob": "429a04ee90c63502a00e3f873a141dfdbf61c025",
+      "bytes": 18028
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list5.png",
+      "gitBlob": "7c73900bc038862083eaf8ff177597cd76acbe94",
+      "bytes": 18159
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list6.png",
+      "gitBlob": "c9511f1966c19d02f045a5711ca88e02ce6749f7",
+      "bytes": 15335
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list7.png",
+      "gitBlob": "f88295a722856e29d1fa0710a83fbab2cbb732ad",
+      "bytes": 14609
+    },
+    {
+      "path": "static/assets/images/icon-box/car-list8.png",
+      "gitBlob": "ae4f46a212df089a7e46d1175654f99ced862b04",
+      "bytes": 13861
+    },
+    {
+      "path": "static/assets/images/img-box/team1.jpg",
+      "gitBlob": "4b2085a7acde63e83ddf124a1ebd23954f39bb2a",
+      "bytes": 13209
+    },
+    {
+      "path": "static/assets/images/img-box/team2.jpg",
+      "gitBlob": "12337fd444fefd72e9e48d619650272422231e13",
+      "bytes": 20556
+    },
+    {
+      "path": "static/assets/images/img-box/team3.jpg",
+      "gitBlob": "d3bfcb0288fc4f3b3dadaca7d7831e6c9e015f8c",
+      "bytes": 18029
+    },
+    {
+      "path": "static/assets/images/img-box/team4.jpg",
+      "gitBlob": "6c3706a394d9e055e8d730c1a79bddf296bda6ae",
+      "bytes": 21356
+    },
+    {
+      "path": "static/assets/images/lead/day-night-about-kristian-v1-light.webp",
+      "gitBlob": "ca71bacf3080dc51273655eb46bea828d6faf753",
+      "bytes": 64114
+    },
+    {
+      "path": "static/assets/images/lead/day-night-about-showroom-v1-light.webp",
+      "gitBlob": "400c41bae683c2c27cef2c2725f9697123bea150",
+      "bytes": 68726
+    },
+    {
+      "path": "static/assets/images/lead/day-night-blog-hero-v2.webp",
+      "gitBlob": "9e6296300a9b865791db59dac9ee5f5c1a5e5f46",
+      "bytes": 325078
+    },
+    {
+      "path": "static/assets/images/lead/day-night-collection-banner-v2.webp",
+      "gitBlob": "9d55cb0edfd796f3db596c00af4551aab7870770",
+      "bytes": 113046
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-email-red-v1.webp",
+      "gitBlob": "5adc214edeadf1da24625c88e414cfca00c31033",
+      "bytes": 35466
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-email-v1-light.webp",
+      "gitBlob": "1e415a5df4c26701291101d60907fab8d22563e8",
+      "bytes": 25264
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-hero-v2.webp",
+      "gitBlob": "68dfad749df96beaeacdbed97a32a1848c4f58a8",
+      "bytes": 254674
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp",
+      "gitBlob": "c1d684dd6a38c5e1091210c8630ef63454d9d993",
+      "bytes": 72532
+    },
+    {
+      "path": "static/assets/images/lead/day-night-contact-phone-red-v1.webp",
+      "gitBlob": "53425aeb83ef6cabfc9803c993e0425b3e439cf8",
+      "bytes": 105392
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-a45-v1.webp",
+      "gitBlob": "d4fe6764ed573d8ce880b67a1afbf7ac366692ab",
+      "bytes": 83132
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-amggt-v1.webp",
+      "gitBlob": "d2e72839271df23dd2ad16049817c4babc00514f",
+      "bytes": 76252
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-e63-v1.webp",
+      "gitBlob": "943a2d40f45cc641d9fcbecffa43bc19d09b7de1",
+      "bytes": 69448
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-gclass-v1.webp",
+      "gitBlob": "1f8bcbd765428b3317eefa1d565a2e3bddfbca0e",
+      "bytes": 84112
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-golf-v1.webp",
+      "gitBlob": "0c712d0c3a39a03a40b9b7d01fdeb57538060477",
+      "bytes": 80380
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-graphite-v1.webp",
+      "gitBlob": "96f0a9a2fe022cb15f7fba745f543d3c5e1de99a",
+      "bytes": 71336
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-m4-v1.webp",
+      "gitBlob": "2ffeda196b5731e33dab40298fa4fb3a360d582e",
+      "bytes": 79178
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-m5-v1.webp",
+      "gitBlob": "c85faf784840cd75f1bbe721690896f4b7600f23",
+      "bytes": 75030
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-porsche-v1.webp",
+      "gitBlob": "ebc3911d399ab5c80996f867825a9df9ec2dcb01",
+      "bytes": 74932
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-rs5-v1.webp",
+      "gitBlob": "aa79db37da750e4a3c8d723247f28887a5d041c9",
+      "bytes": 76144
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-silver-v1.webp",
+      "gitBlob": "9ff885ea52399d4027e4783413b2ed6445de56fd",
+      "bytes": 79120
+    },
+    {
+      "path": "static/assets/images/lead/day-night-cutout-urus-v1.webp",
+      "gitBlob": "e58c82e88bc8549e12a325b36cfbc54f85672b40",
+      "bytes": 65210
+    },
+    {
+      "path": "static/assets/images/lead/day-night-editorial-banner-v2.webp",
+      "gitBlob": "4fec00d68e40177134dbc81ab3c8f758f0750724",
+      "bytes": 112542
+    },
+    {
+      "path": "static/assets/images/lead/day-night-graphite-color-v1.webp",
+      "gitBlob": "68461dddee1ed6275de89b5c6f3b17d3d2f04987",
+      "bytes": 106190
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-import.webp",
+      "gitBlob": "0e7fd3865ce7dd5ddbe4a9e15d68890342bc850c",
+      "bytes": 64648
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-inspection.webp",
+      "gitBlob": "ff9f614c01614502c57f9e74b0da5e1b001416c1",
+      "bytes": 66926
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-leasing.webp",
+      "gitBlob": "a86e64db561113e377097ec6c26e24597dec982f",
+      "bytes": 53020
+    },
+    {
+      "path": "static/assets/images/lead/day-night-guide-yellow-v1.webp",
+      "gitBlob": "cb7b03c55c4285bc25fc7771d2fe71513945cf47",
+      "bytes": 100924
+    },
+    {
+      "path": "static/assets/images/lead/day-night-hero-graphite-v1.webp",
+      "gitBlob": "3a69ecf7d9011ea3f574def0dd55964838d5dc48",
+      "bytes": 91314
+    },
+    {
+      "path": "static/assets/images/lead/day-night-hero-silver-v1.webp",
+      "gitBlob": "a95abe9fdc7f26414e168b2340043291d3295c81",
+      "bytes": 101826
+    },
+    {
+      "path": "static/assets/images/lead/day-night-home-black-v1.webp",
+      "gitBlob": "0010f33b62793d5114d67b9470b8d80b73022573",
+      "bytes": 41178
+    },
+    {
+      "path": "static/assets/images/lead/day-night-home-hero-v3.webp",
+      "gitBlob": "fb2ff3e188bf1c666773beacab2143e639c459d2",
+      "bytes": 114870
+    },
+    {
+      "path": "static/assets/images/lead/day-night-import-banner-v1.webp",
+      "gitBlob": "ca28caf70ada2c7edd565ebb99b39f452e605405",
+      "bytes": 78680
+    },
+    {
+      "path": "static/assets/images/lead/day-night-keys-yellow-v1.webp",
+      "gitBlob": "9c1c96d1fade69bdffbf8c23dfae465178f47383",
+      "bytes": 76000
+    },
+    {
+      "path": "static/assets/images/lead/day-night-logo.png",
+      "gitBlob": "79c6b4eb937b90c5e0ec3ffd97cd5918084d8172",
+      "bytes": 736865
+    },
+    {
+      "path": "static/assets/images/lead/day-night-portrait-color-v1.webp",
+      "gitBlob": "f5b199f43812836cd12117c1f0d4517f69786ae8",
+      "bytes": 98582
+    },
+    {
+      "path": "static/assets/images/lead/day-night-sell-banner-v1.webp",
+      "gitBlob": "5264555a42cb9fccdbb82580694630d24bc3b435",
+      "bytes": 94492
+    },
+    {
+      "path": "static/assets/images/lead/day-night-sell-banner-v2.webp",
+      "gitBlob": "cd8b7cf49e0d078b7828703dd14d6c33c26f768e",
+      "bytes": 149664
+    },
+    {
+      "path": "static/assets/images/lead/day-night-showroom-color-v1.webp",
+      "gitBlob": "6813991a3762c1a9ac269dbda9631bc3a2f90e16",
+      "bytes": 164760
+    },
+    {
+      "path": "static/assets/images/lead/day-night-silver-color-v1.webp",
+      "gitBlob": "f26f427af950562cd2189e23e6f1c5f3f82344eb",
+      "bytes": 118976
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-01.webp",
+      "gitBlob": "6be96162cbd13cf4d28c8964fd1d4643b983a0a5",
+      "bytes": 278312
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-02.webp",
+      "gitBlob": "27b081781754820e9a09144188064a565cca2edc",
+      "bytes": 248390
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-03.webp",
+      "gitBlob": "912eb1214ca162697b7fb06f65e2ad18ce55f074",
+      "bytes": 181070
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-04.webp",
+      "gitBlob": "1c6c6013a571a0b298326abc567c38b6cca295d9",
+      "bytes": 182452
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-05.webp",
+      "gitBlob": "cdf1102f98a2ee5a4e00dfc30bb85544e932f43a",
+      "bytes": 280428
+    },
+    {
+      "path": "static/assets/images/lead/day-night-stock-06.webp",
+      "gitBlob": "72b9b750b5ea060afba8a0154a5d073a65a26d60",
+      "bytes": 207938
+    },
+    {
+      "path": "static/assets/images/lead/day-night-studio-cars-v1.webp",
+      "gitBlob": "e6cbc8af81859f3268bf2128d68f64f625e2b19c",
+      "bytes": 49310
+    },
+    {
+      "path": "static/assets/images/lead/day-night-studio-guide-v1.webp",
+      "gitBlob": "c7f74babae7afa25164be4dec18073038ae7e71e",
+      "bytes": 57486
+    },
+    {
+      "path": "static/assets/images/lead/day-night-studio-keys-v1.webp",
+      "gitBlob": "481559f8e48c3eac30a1729493119bb005c4a490",
+      "bytes": 38104
+    },
+    {
+      "path": "static/assets/images/lead/day-night-urus-front-v1.webp",
+      "gitBlob": "24c8ea3e0f5f4d03087d0ff95314cfd8c5167b5a",
+      "bytes": 61626
+    },
+    {
+      "path": "static/assets/images/lead/day-night-video-g-class.jpg",
+      "gitBlob": "b2e21a7552b3f35bfe7c756852e47456839d7f2b",
+      "bytes": 72876
+    },
+    {
+      "path": "static/assets/images/lead/day-night-video-panamera.jpg",
+      "gitBlob": "4bfecba451a95c22fec44abe701b5a3123203f26",
+      "bytes": 63050
+    },
+    {
+      "path": "static/assets/images/lead/day-night-video-urus.jpg",
+      "gitBlob": "984c09c383047d9ff5b2019f86ac949c40aa7bd9",
+      "bytes": 70812
+    },
+    {
+      "path": "static/assets/images/partner/par1.png",
+      "gitBlob": "9c67d644bc3476d1eb503a499252f87ca7d738a3",
+      "bytes": 2164
+    },
+    {
+      "path": "static/assets/images/partner/par2.png",
+      "gitBlob": "e9744f4cb9d7d2156a6a04b2eec2031ca6dba315",
+      "bytes": 1946
+    },
+    {
+      "path": "static/assets/images/partner/par3.png",
+      "gitBlob": "3a07f5ace3fec51c01513b60c2739eddb8a09d23",
+      "bytes": 2217
+    },
+    {
+      "path": "static/assets/images/partner/par4.png",
+      "gitBlob": "cfc834d8b3a5c14c84e50116de44be9cee086f9b",
+      "bytes": 1421
+    },
+    {
+      "path": "static/assets/images/partner/par5.png",
+      "gitBlob": "7b877ba0571d4e92bd44fa55900d8eb728aa88b3",
+      "bytes": 1739
+    },
+    {
+      "path": "static/assets/images/partner/par6.png",
+      "gitBlob": "b33a9a173a19264472b2e0a2292dde0faf78dc5a",
+      "bytes": 1505
+    },
+    {
+      "path": "static/assets/images/partner/parner10.png",
+      "gitBlob": "a74cca36d57736ea2200dd56caf1eedf0babad5d",
+      "bytes": 981
+    },
+    {
+      "path": "static/assets/images/partner/parner11.png",
+      "gitBlob": "80eda23a5b8f339891bce3be80364faf20280737",
+      "bytes": 1241
+    },
+    {
+      "path": "static/assets/images/partner/parner12.png",
+      "gitBlob": "434604da20e41a853e693382322fea51a9459bff",
+      "bytes": 1261
+    },
+    {
+      "path": "static/assets/images/partner/parner7.png",
+      "gitBlob": "e918e362ad6912473092bf269567a9cc91f09082",
+      "bytes": 785
+    },
+    {
+      "path": "static/assets/images/partner/parner8.png",
+      "gitBlob": "5899d49105e46588483662390c65df69f01724a1",
+      "bytes": 908
+    },
+    {
+      "path": "static/assets/images/partner/parner9.png",
+      "gitBlob": "8acd160c54c61ddcb7adff4e0ffff56dce272df2",
+      "bytes": 1409
+    },
+    {
+      "path": "static/assets/images/partner/partner1.png",
+      "gitBlob": "2f552466deb3c22e4c71ef3dd1994e8d8a4040ae",
+      "bytes": 7939
+    },
+    {
+      "path": "static/assets/images/partner/partner2.png",
+      "gitBlob": "7a3efda8814d7a173cddb76a8e1c0d33fc25319a",
+      "bytes": 855
+    },
+    {
+      "path": "static/assets/images/partner/partner3.png",
+      "gitBlob": "d3e817a51065a2e87690ace503f2846e8c07e649",
+      "bytes": 4398
+    },
+    {
+      "path": "static/assets/images/partner/partner4.png",
+      "gitBlob": "a4ed49230332e0a94023461f7a26803eb05c6179",
+      "bytes": 1162
+    },
+    {
+      "path": "static/assets/images/partner/partner5.png",
+      "gitBlob": "cbdab25cef3740a9cfe602e2f4226be3c3d42a5f",
+      "bytes": 1980
+    },
+    {
+      "path": "static/assets/images/partner/partner6.png",
+      "gitBlob": "7efd8a94f7fc27de32bfa4d07a91a179da436882",
+      "bytes": 2475
+    },
+    {
+      "path": "static/assets/images/section/bg-12.jpg",
+      "gitBlob": "58fd08a21f306a39816eb36303278c6f521c868b",
+      "bytes": 181376
+    },
+    {
+      "path": "static/assets/images/section/bg-4.jpg",
+      "gitBlob": "6e03400fc674d05c09138037986f603659ac1b9c",
+      "bytes": 447246
+    },
+    {
+      "path": "static/assets/images/section/bg-6.jpg",
+      "gitBlob": "959b54e94521e3cb30af9f1cb78ac2bf52b2cfc1",
+      "bytes": 199583
+    },
+    {
+      "path": "static/assets/images/section/car-slide1.png",
+      "gitBlob": "0b91ea602a4aee1a823f126ea7cb28ffbe0d5d29",
+      "bytes": 41257
+    },
+    {
+      "path": "static/assets/images/section/car-slide2.png",
+      "gitBlob": "61d0c03fc1b032251e5e1830d798ce6d6c1cbadf",
+      "bytes": 32424
+    },
+    {
+      "path": "static/assets/images/section/car-slide3.png",
+      "gitBlob": "2b5b28d535ddddec4cb19cc4d994cd23ec4be54d",
+      "bytes": 27720
+    },
+    {
+      "path": "static/favicon.ico",
+      "gitBlob": "e79747921cb7c25f2e36715cc872336f31d6722f",
+      "bytes": 520
+    },
+    {
+      "path": "svelte.config.js",
+      "gitBlob": "03798886c68f195510e047af003df087a9a3d1a5",
+      "bytes": 404
+    },
+    {
+      "path": "tsconfig.json",
+      "gitBlob": "575d5d90c086771b56a259371f6130ee40115140",
+      "bytes": 340
+    },
+    {
+      "path": "vercel.json",
+      "gitBlob": "e83a346dae5e86853caee8b53a4b52696dcba706",
+      "bytes": 150
+    },
+    {
+      "path": "vite.config.ts",
+      "gitBlob": "5260d9b3a56eb664a12ee959887dd0072b780c43",
+      "bytes": 270
+    }
+  ],
+  "excluded": [
+    ".template/source-manifest.json",
+    ".template/source-readme.md",
+    ".template/template.json",
+    "AGENTS.md"
+  ],
+  "links": []
+}
