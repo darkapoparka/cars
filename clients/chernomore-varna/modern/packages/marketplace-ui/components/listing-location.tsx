@@ -24,19 +24,20 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
               {leadSite.city}
             </h2>
             <p className="mt-1 font-medium text-sm">
-              {isBg ? "бул. Цар Освободител 289, пресечка с бул. Константин и Фружин" : "Studentski grad"}
+              {isBg ? "Публикуван адрес" : "Published address"}
             </p>
             <p className="mt-0.5 text-muted-foreground text-sm">
-              {leadSite.address}, {leadSite.country}
+              {leadSite.address}
+            </p>
+            <p className="mt-0.5 text-muted-foreground text-xs">
+              {isBg
+                ? "Потвърдете местоположението на конкретния автомобил преди оглед."
+                : "Confirm the specific vehicle location before travelling to view it."}
             </p>
           </div>
 
           <Button
-            aria-label={
-              isBg
-                ? "Отвори адреса в Google Maps"
-                : "Open address in Google Maps"
-            }
+            aria-label={isBg ? "Отвори адреса в Google Maps" : "Open address in Google Maps"}
             asChild
             className="size-9 shrink-0 rounded-lg"
             size="icon"
@@ -54,7 +55,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             src={mapEmbedUrl}
-            title={isBg ? "Карта на шоурума" : "Showroom map"}
+            title={isBg ? "Карта на публикувания адрес" : "Published address map"}
           />
         </div>
       </div>
