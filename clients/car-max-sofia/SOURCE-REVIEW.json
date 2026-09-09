@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "session": "09",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "clientSlug": "car-max-sofia",
+  "publishedName": "CAR MAX",
+  "city": "София",
+  "country": "BG",
+  "crmAccountId": null,
+  "crmState": "not-read-or-created",
+  "officialWebsite": "https://carmax.bg/",
+  "assignedMarketplace": "https://carmax.mobile.bg/",
+  "businessPhone": {"display": "0898 602002", "e164": "+359898602002", "source": "https://carmax.bg/za-kontakti/"},
+  "businessEmail": {"value": "carmaxsf@gmail.com", "source": "https://carmax.bg/za-kontakti/"},
+  "address": {
+    "preferredPublishedSource": "https://carmax.bg/za-kontakti/",
+    "publishedValue": "София, ул. Самоковско шосе №133",
+    "corroboratingSource": "https://www.cars.bg/company/carmax",
+    "conflictingValue": "Самоковско шосе №135",
+    "conflictingSource": "https://carmax.mobile.bg/obiava-11769357363509853-vw-caddy-maxi-1-4tgi-ecofuel-6-1-lizing",
+    "conflictLocation": "The same marketplace result has 133 in its description and 135 in its seller panel.",
+    "resolution": "same business corroborated by phone/domain; street-number discrepancy remains unresolved"
+  },
+  "hours": {"publishedValue": "09:00–18:00, без почивен ден", "source": "https://carmax.bg/za-kontakti/", "independentlyVerified": false},
+  "social": {"url": "https://www.facebook.com/www.carmax.bg/", "matchBasis": "linked from official website", "retrieval": "temporarily-blocked page", "recentPostDate": null, "recentPostPermalink": null, "activityVerified": false},
+  "branding": {
+    "publishedBranding": "Teal Carmax.bg wordmark on a transparent image",
+    "sourceLogoUrl": "https://carmax.bg/wp-content/uploads/2015/11/carmax-logo.png",
+    "visualInspectionMethod": "Remote Desktop Commander read_file(isUrl=true) returned the actual image; inspected visually",
+    "workingLogoPath": null,
+    "creationMethod": "none; published original inspected only",
+    "approvalStatus": "media-reuse-not-established",
+    "generatedAsset": false
+  },
+  "media": {
+    "inspectedStockImage": "https://carmax.bg/wp-content/uploads/2026/09/20260907_130504-227x148.jpg",
+    "inspectedImageListing": "https://carmax.bg/inventory/vw-id-3-62kwh-pro-performance/",
+    "visualObservation": "Actual gray VW ID.3 front exterior photograph",
+    "permissionStatus": "unresolved",
+    "repositoryEvidence": "docs/lead-research/bulgaria/screening-sofia.json: unassessedDefaults.mediaReuseCleared=false",
+    "publicSiteNotice": "All rights reserved footer; no covering reuse authorization found in inspected material",
+    "bundledAssets": []
+  },
+  "catalogueReview": {
+    "method": "public parsed pages plus official raw HTML; not rendered browser QA",
+    "marketplaceRootFetch": "404 via both web open and URL reader; indexed individual listing was accessible",
+    "historicalAdvertisedCategoryCount": 61,
+    "historicalCountDate": "2026-09-08",
+    "independentlyVerifiedAvailableCount": null,
+    "sourceCurrency": "EUR",
+    "sourceMileageUnit": "km",
+    "sampleComplete": false,
+    "observations": [
+      {"source": "https://carmax.bg/", "record": "BMW X5 3.0d X DRIVE 100хил.км!", "detailUrl": "https://carmax.bg/inventory/67006/", "htmlStatusClass": "Sold", "action": "exclude from available-stock sample"},
+      {"source": "https://carmax.bg/", "record": "address notice under an old Skoda Octavia URL", "detailUrl": "https://carmax.bg/inventory/skoda-octavia-2-0tdidsg%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3/", "htmlPlacement": "desktop slider and mobile featured markup", "renderedVisibilityVerified": false, "price": null, "action": "exclude; not a whole-car listing and not a zero-price vehicle"},
+      {"source": "https://carmax.bg/", "record": "Audi A5 45TFSi/quattro", "issue": "homepage mileage field repeats the vehicle title", "action": "do not infer mileage from malformed text"},
+      {"source": "https://carmax.bg/", "record": "Kymco and Benelli entries", "action": "exclude motorcycles from passenger-car sample"},
+      {"source": "https://carmax.bg/", "record": "Toyota C-HR", "advertisedPriceEUR": 17678, "alternativeSource": "https://www.cars.bg/company/carmax", "alternativePriceEUR": 17789, "action": "retain source-specific amounts; reconcile before choosing final record"}
+    ],
+    "detailCheckedCandidate": {"title": "VW ID.3 62KWh/Pro Performance", "sourceUrl": "https://carmax.bg/inventory/vw-id-3-62kwh-pro-performance/", "year": 2021, "mileageKm": 120000, "advertisedPrice": 21800, "currency": "EUR", "transmissionPublished": "Автоматик", "bodyPublished": "Хечбег", "fuelPublished": "Електрически", "taxQualification": null, "sourceHomepageStatusClass": "Used", "availability": "advertised; not independently verified", "photosApprovedForReuse": false},
+    "financeScope": "dealer advertises leasing/credit and service assistance; provider terms, approval promises and actual integrations are not verified"
+  },
+  "requestedVariants": ["auto-best", "modern", "carwow"],
+  "implementedVariants": [],
+  "runtimeChecks": {"install": "not-run", "build": "not-run", "typecheck": "not-run", "browser390": "not-run", "browser1440": "not-run", "header320": "not-run", "renderedMasterComparison": "not-run"},
+  "blockers": ["Covering permission for real listing photos and published branding has not been established."],
+  "remainingResearch": ["Resolve 133/135 address discrepancy without inventing a branch", "Complete 8–12 listing-level records, galleries and status/price reconciliation", "Inspect rendered catalogue at required widths"],
+  "ownerManualReview": "pending"
+}
