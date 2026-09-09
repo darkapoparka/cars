@@ -35,62 +35,60 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Финансиране от ЕКСТРА КАР-СМ",
-    description:
-      "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
-    faqTitle: "Често задавани въпроси",
+    badge: "Лизинг / финансиране — запитване",
+    description: `Публикуваните обяви на ${leadSite.name} посочват възможности за лизинг или финансиране за определени автомобили. Изберете автомобил и се свържете директно за актуалните условия. Демото не е кредитна оферта и не подава заявление.`,
+    faqTitle: "Преди запитване за финансиране",
     faqs: [
       {
         answer:
-          "Изберете автомобил от наличностите и изпратете заявка с предпочитания срок и първоначална вноска. Екипът ще се свърже с вас, за да уточни възможността за финансиране и конкретните условия.",
+          "Изберете конкретна обява, проверете актуалния ѝ статус и се свържете с продавача. Посочете автомобила и попитайте кой предоставя финансирането и какви са текущите условия.",
         question: "Как да започна?",
       },
       {
         answer:
-          "Първоначалната вноска и срокът се определят индивидуално спрямо избрания автомобил и условията по офертата.",
+          "Първоначалната вноска и срокът зависят от конкретната обява, доставчика на финансиране и профила на клиента. Не приемайте примерна сметка в демото за индивидуална оферта.",
         question: "Каква първоначална вноска е необходима?",
       },
       {
         answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на ЕКСТРА КАР-СМ ще ви даде точен списък още при първия разговор.",
+          "Поискайте актуален списък от продавача или финансовия доставчик за конкретната сделка. Не изпращайте лични документи, ЕГН или банкови данни през демонстрацията.",
         question: "Какви документи ще са ми нужни?",
       },
       {
         answer:
-          "Възможността за финансиране се потвърждава за конкретния автомобил. Свържете се с нас, за да проверим избраната от вас кола.",
+          "Не. Наличието на секция за финансиране не означава, че всеки показан автомобил е допустим. Потвърдете възможността и условията за конкретната обява.",
         question: "Всеки автомобил ли може да бъде финансиран?",
       },
     ],
-    title: "Финансиране за следващия ви автомобил",
+    title: "Лизинг и финансиране за конкретен автомобил",
   },
   en: {
-    badge: "Financing from ЕКСТРА КАР-СМ",
-    description:
-      "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
-    faqTitle: "Frequently asked questions",
+    badge: "Leasing / finance — enquiry",
+    description: `Published ${leadSite.name} advertisements mention leasing or finance options for selected vehicles. Choose a vehicle and contact the seller directly for current terms. This demo is not a credit offer and does not submit an application.`,
+    faqTitle: "Before a finance enquiry",
     faqs: [
       {
         answer:
-          "Choose a vehicle from the inventory and send a request with your preferred term and initial payment. The team will contact you to confirm financing availability and the specific terms.",
+          "Choose a specific listing, check its current status, and contact the seller. Identify the vehicle and ask who provides the finance and what current terms apply.",
         question: "How do I get started?",
       },
       {
         answer:
-          "The initial payment and term are determined individually according to the selected vehicle and the offer conditions.",
+          "The initial payment and term depend on the specific listing, finance provider, and customer profile. Do not treat a demo calculation as an individual offer.",
         question: "What initial payment is required?",
       },
       {
         answer:
-          "Required documents depend on the individual case. The ЕКСТРА КАР-СМ team will give you an exact list during the first conversation.",
+          "Ask the seller or finance provider for the current document list for the specific transaction. Do not send identity documents or banking data through the demo.",
         question: "Which documents will I need?",
       },
       {
         answer:
-          "Financing availability is confirmed for each vehicle. Contact us to check the car you have selected.",
+          "No. A finance section does not mean every displayed vehicle is eligible. Confirm availability and terms for the specific listing.",
         question: "Can every vehicle be financed?",
       },
     ],
-    title: "Financing for your next vehicle",
+    title: "Leasing and finance for a specific vehicle",
   },
 } as const;
 
@@ -103,11 +101,11 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от ЕКСТРА КАР-СМ."
-      : "A tailored vehicle financing offer from ЕКСТРА КАР-СМ.",
+      ? `Обявите на ${leadSite.name} могат да посочват лизинг или финансиране. Потвърдете условията директно за конкретния автомобил.`
+      : `${leadSite.name} listings may mention leasing or finance. Confirm current terms directly for the specific vehicle.`,
     locale,
     path: "/lease",
-    title: isBg ? "Финансиране на автомобил" : "Vehicle financing",
+    title: isBg ? "Лизинг и финансиране — запитване" : "Leasing and finance enquiry",
   });
 };
 
@@ -139,14 +137,6 @@ export default async function LeasePage({
     imageAlt: listing.images[0]?.alt || listing.title,
     imageUrl: listing.images[0]?.url || "/dealer/media-pending.svg",
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
-    ...(listing.monthlyEstimate
-      ? {
-          monthlyLabel: `${formatMoney(
-            listing.monthlyEstimate,
-            normalizedLocale
-          )}/${normalizedLocale === "bg" ? "мес." : "mo."}`,
-        }
-      : {}),
     priceLabel: formatMoney(listing.price, normalizedLocale),
     priceAmount: listing.price.amount,
     fuelType: listing.spec.fuelType,
