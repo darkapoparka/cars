@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "session": "03",
+  "observedAt": "2026-09-09",
+  "repository": "darkapoparka/cars",
+  "branch": "codex/astra-bg-03",
+  "taskType": "client-fast-skin-branch-handoff",
+  "instructionSha256": "87bf36c4eb3dc8969301b9fc96940ef0c6cead44a9d336161de33b89a2db3ba7",
+  "instructionBytes": 15431,
+  "baseCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "baseRootTree": "d674ef10a5d21d492e46c264640920944542b32a",
+  "branchCreatedFromObservedMain": true,
+  "templatesCopied": false,
+  "inspectedTemplates": {
+    "auto-best": {"version": "2026.09.08-polish-1", "tree": "97833980ab127f6de8f675ac1a188e4b7f717976", "entry": "/"},
+    "modern": {"version": "2026.09.06-refresh-1", "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b", "entry": "/cars"},
+    "carwow": {"version": "2026.09.08-repair-1", "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd", "entry": "/"}
+  },
+  "readBeforeGate": ["AGENTS.md", "catalog.json", "docs/WORKFLOW.md", "docs/LEAD-BUILD-GUARDRAILS.md", "docs/LEAD-PUBLISHING.md", "docs/PROJECTS.md", "templates/auto-best/TEMPLATE.md", "templates/modern/TEMPLATE.md", "templates/carwow/TEMPLATE.md", "clients/index.json", "docs/lead-research/bulgaria/profiles-varna.json", "docs/lead-research/bulgaria/screening-varna.json", "docs/lead-research/bulgaria/account-links.json"],
+  "duplicateReview": {
+    "mainClientsTree": "bc33b5fd3f57f89d7922ae5530c434c810c79071",
+    "oldAstraCommit": "bcff94eabfba2b3c604bb61d6ea916584e61e4d5",
+    "oldAstraClientsTree": "42eab9a0c2222ed95df3f6e98a7b1a38d625ced6",
+    "docsOperationsCommit": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "internationalShortlistCommit": "25b5dc4acefc29dc7df968edfde371ff9240835b",
+    "bothResearchBranchesClientsTree": "b7a453e6658d8e6778bad90075491efae6427fd3",
+    "matchingAssignedFoldersOrAccountLinksFound": false,
+    "otherBgSessionHeadsAtInitialObservation": "codex/astra-bg-01 through 09 were at the same base commit; no published collision observed",
+    "limits": "Directory/index/account-link inspection, not exhaustive full-text inspection of every existing app or unpublished concurrent work. GitHub code search for sunny returned no results despite known research text, so the empty search was not treated as proof. No private correspondence or CRM was accessed."
+  },
+  "writeAllowlist": ["clients/sunny-varna/", "clients/rqs-auto-team/", "clients/evrocar-varna-09/", "clients/sprint-auto-varna/", "clients/europa-varna/", "docs/lead-build/bulgaria-2026-09-09/reports/session-03/"],
+  "capabilities": {
+    "githubBranchCreation": "executed-successfully-and-read-back",
+    "githubTreeCommitAndNonForceRefActions": "discovered; checkpoint results recorded separately",
+    "cloudNode": "v22.16.0",
+    "cloudGit": "2.47.3",
+    "cloudRawGithubRequest": "URLError: [Errno -3] Temporary failure in name resolution",
+    "sunnyCoverDownload": "container.download failed; no local file created",
+    "externalCloudRuntimeDiscovery": "Plugin search found no connected independent cloud browser/runner; no plugin was installed",
+    "windowsConnectorUsed": false,
+    "repositoryCloned": false,
+    "serversStarted": false,
+    "backgroundJobsStarted": false
+  },
+  "reviewState": "pending",
+  "privateContactHistory": "not_checked"
+}
