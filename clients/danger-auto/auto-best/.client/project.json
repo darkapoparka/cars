@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "client": "danger-auto",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{ "id": "main", "route": "/" }],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": { "desktop": false, "mobile": false, "identity": false, "contactPath": false },
+  "crm": { "leadId": null, "demoProjectId": null, "registered": false },
+  "delivery": { "mode": "branch-handoff", "branch": "codex/astra-bg-08", "deployed": false },
+  "remaining": ["Complete personalization of identity, inventory and all reachable content", "Integrate permitted dealer branding and stock media", "Run application validation and mobile/desktop browser review"]
+}
