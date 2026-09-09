@@ -1,6 +1,7 @@
 import type { MarketplaceSearchParams } from '../search';
 import type { Money, VehicleListing } from '../types';
 import facts from './dealer-facts.json';
+import media from './media-manifest.json';
 
 const featureTranslations: Record<string, string> = {
   'Климатроник': 'Climate control', 'Климатик': 'Air conditioning',
@@ -10,53 +11,56 @@ const featureTranslations: Record<string, string> = {
   'Бордкомпютър': 'Trip computer', 'Ел. стъкла': 'Electric windows',
   'Кожен салон': 'Leather interior', '4x4': '4x4'
 };
+const localPhotos = new Set(media.records.map(record => record.path));
 
-// Publication status is not a claim of current vehicle availability. The
-// snapshot date is used only as a deterministic sort key, not an ad-posted date.
-export const mockListings: VehicleListing[] = facts.vehicles.map((record) => ({
-  id: `${facts.slug}-${record.sourceId}`,
-  slug: record.slug,
-  category: 'car',
-  dealerOrgId: `dealer-${facts.slug}`,
-  status: 'active',
-  title: record.title,
-  description: `${record.title}. ${facts.availabilityNotice} Източник: обява ${record.sourceId}.`,
-  price: { amount: record.price, currency: record.currency },
-  priceType: 'fixed',
-  // Exact source images are temporary during the local-asset transfer.
-  images: record.photos.map((photo, index) => ({
-    url: photo.sourceUrl,
-    alt: `${record.title} — снимка ${index + 1} от публикуваната обява`
-  })),
-  badges: ['used'],
-  location: { city: facts.city, country: facts.country },
-  features: record.features.map((feature) => ({
-    bg: feature, en: featureTranslations[feature] ?? feature
-  })),
-  spec: {
-    make: record.make,
-    model: record.model,
-    trim: record.trim,
-    year: record.year,
-    bodyType: record.body as VehicleListing['spec']['bodyType'],
-    fuelType: record.fuel as VehicleListing['spec']['fuelType'],
-    transmission: record.transmission as VehicleListing['spec']['transmission'],
-    mileageValue: record.mileageKm,
-    mileageUnit: 'km',
-    enginePowerHp: record.powerHp,
-    colorExterior: record.color
-  },
-  seller: {
-    id: `dealer-${facts.slug}`,
-    type: 'dealer',
-    displayName: facts.name,
-    logoUrl: facts.logoPath,
-    verificationStatus: 'unverified',
-    city: facts.city
-  },
-  publishedAt: `${facts.observedAt}T00:00:00.000Z`,
-  promoted: false
-}));
+// Active means published in this dated snapshot, not verified available.
+// Only cars with complete, locally committed photo selections are rendered.
+export const mockListings: VehicleListing[] = facts.vehicles
+  .filter(record => record.photos.length > 0 && record.photos.every(photo => localPhotos.has(photo.path)))
+  .map((record) => ({
+    id: `${facts.slug}-${record.sourceId}`,
+    slug: record.slug,
+    category: 'car',
+    dealerOrgId: `dealer-${facts.slug}`,
+    status: 'active',
+    title: record.title,
+    description: `${record.title}. ${facts.availabilityNotice} Източник: обява ${record.sourceId}. ${record.taxQualification === 'VAT included' ? 'Цената е с ДДС според обявата.' : 'ДДС не се начислява според обявата.'}`,
+    price: { amount: record.price, currency: record.currency },
+    priceType: 'fixed',
+    images: record.photos.map((photo, index) => ({
+      url: photo.path,
+      alt: `${record.title} — снимка ${index + 1} от публикуваната обява`
+    })),
+    badges: ['used'],
+    location: { city: facts.city, country: facts.country },
+    features: record.features.map((feature) => ({
+      bg: feature, en: featureTranslations[feature] ?? feature
+    })),
+    spec: {
+      make: record.make,
+      model: record.model,
+      trim: record.trim,
+      year: record.year,
+      bodyType: record.body as VehicleListing['spec']['bodyType'],
+      fuelType: record.fuel as VehicleListing['spec']['fuelType'],
+      transmission: record.transmission as VehicleListing['spec']['transmission'],
+      mileageValue: record.mileageKm,
+      mileageUnit: 'km',
+      enginePowerHp: record.powerHp,
+      colorExterior: record.color
+    },
+    seller: {
+      id: `dealer-${facts.slug}`,
+      type: 'dealer',
+      displayName: facts.name,
+      logoUrl: facts.logoPath,
+      verificationStatus: 'unverified',
+      city: facts.city
+    },
+    // Deterministic ordering only; this is not the original ad publication date.
+    publishedAt: `${facts.observedAt}T00:00:00.000Z`,
+    promoted: false
+  }));
 
 export const getSourceRecordByListingId = (id: string) =>
   facts.vehicles.find((record) => `${facts.slug}-${record.sourceId}` === id);
@@ -109,8 +113,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) => {
     .sort((a, b) => score(b) - score(a)).slice(0, Math.max(0, limit));
 };
 
-// Retain the workspace's public API without fabricating saved searches,
-// customer leads, reviews, moderation cases, transactions or CRM activity.
+// Preserve the workspace API without fabricated private/commercial activity.
 export const mockSavedListingIds: string[] = [];
 export const getMockSavedListings = () => mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
 export interface MockSavedSearch {
