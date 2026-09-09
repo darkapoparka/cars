@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "dealer": "VALENTINO AUTO HOUSE",
+  "observedAt": "2026-09-09",
+  "publishedBranding": "Published red/silver/black shield with VALENTINO AUTO HOUSE lettering, visually inspected.",
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h14344459689942477.pic",
+  "workingLogoPath": "/brand/logo.png",
+  "creationMethod": "Original publisher artwork. Lossless nameplate crop and surface-padding/icon exports; no generated artwork is used.",
+  "crop": {
+    "left": 100,
+    "top": 340,
+    "width": 780,
+    "height": 220
+  },
+  "approvalStatus": "Dealer approval not established; review mockup only, not an approved official website.",
+  "reuseLicense": null,
+  "rightsNote": "Public availability is not a reuse license. Source attribution and bytes are preserved; clearance for release remains a recorded limitation.",
+  "files": [
+    {
+      "path": "brand/source-crest.jpg",
+      "bytes": 259677,
+      "gitBlob": "3d5710a95f8ec633203f2460d9136f1f80a0a735",
+      "sha256": "1beaacd4c6784bcbf1c14f8de8b88a90037c148447779b58e18190f2f65f3373"
+    },
+    {
+      "path": "brand/logo.png",
+      "bytes": 358777,
+      "gitBlob": "0109238f9224476b0b8e1d454e5ea9c570fa561a",
+      "sha256": "6882ba8edbd55373502e2aca43c9ec04edfe367a20a29a534abc64f7f99710fd"
+    },
+    {
+      "path": "brand/logo-light.png",
+      "bytes": 360170,
+      "gitBlob": "7c2047a88fdbdcd2058f16b5398a12a6a3b80976",
+      "sha256": "0ffce6d861dfa37b783c51a4ab20745923681a6291a5196e2312d8e5edbfa907"
+    },
+    {
+      "path": "brand/logo-dark.png",
+      "bytes": 360286,
+      "gitBlob": "68b28fbcab60e052acf6eabda659e9ce3ad37826",
+      "sha256": "2fd48d0eafccc012f57e302d8eed0fd0eda85c6579600b4219daa61e2e9d0ded"
+    },
+    {
+      "path": "favicon.png",
+      "bytes": 1892,
+      "gitBlob": "d0d0b2fe1f5df478ff83ca624e0c3d527ee64bd7",
+      "sha256": "36b6f483309bfa511aac5387a484fcb662ecab2aea7de3be8b369339cf1e57a4"
+    },
+    {
+      "path": "favicon.ico",
+      "bytes": 6003,
+      "gitBlob": "31a983a193b1771b9cee2a6127e21a71590936c2",
+      "sha256": "0176caad58049d9ff09c01f514f3b496ea8252d632c3847b1cde0068f804faaa"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "bytes": 46578,
+      "gitBlob": "f5fe25d68335e9c4e5ca2850c8f69d1026e30669",
+      "sha256": "d5a09f0bf1eb51bb29681517464db921f418b9386105a5e1a411a89cf61a922e"
+    },
+    {
+      "path": "icon-192.png",
+      "bytes": 52995,
+      "gitBlob": "581548ea9d88f1c5589328d09fd2c9115da2fc9e",
+      "sha256": "b5360a746eeb3f0e88efcbbf805239eefc5828f866e9832dd6a79d882cd55ebb"
+    },
+    {
+      "path": "icon-512.png",
+      "bytes": 345524,
+      "gitBlob": "daba01c31e540c45d7cf9f021da392858f2f8c5e",
+      "sha256": "49b056c5b4186df98c335350bfb25971f23282ec5529768d23cfdc5994fd44ea"
+    }
+  ]
+}
