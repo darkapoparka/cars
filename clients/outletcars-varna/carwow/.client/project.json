@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "client": "outletcars-varna",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09T19:15:41.916Z",
+  "state": "personalized-awaiting-browser-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localPreview": {
+    "port": 6765,
+    "command": "npm run dev",
+    "running": false
+  },
+  "content": {
+    "facts": "../business-facts.json",
+    "stock": "../stock.json",
+    "inventorySnapshot": true,
+    "dealerApproval": false
+  }
+}

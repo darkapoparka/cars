@@ -1,0 +1,203 @@
+{
+  "slug": "promosale-varna",
+  "template": "carwow",
+  "port": 6762,
+  "startedAt": "2026-09-09T20:03:18.446Z",
+  "routes": [
+    {
+      "width": 390,
+      "label": "home",
+      "route": "/",
+      "status": 200,
+      "title": "Promosale Varna Варна - проверени автомобили и бърз контакт",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "390-home.png"
+    },
+    {
+      "width": 390,
+      "label": "inventory",
+      "route": "/inventory",
+      "status": 200,
+      "title": "Автомобили в наличност | Promosale Varna Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-inventory.png"
+    },
+    {
+      "width": 390,
+      "label": "detail",
+      "route": "/inventory/audi-a1-050885",
+      "status": 200,
+      "title": "Audi A1 2017 г., Бензин, 150 300 км, Обявен | Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-detail.png"
+    },
+    {
+      "width": 390,
+      "label": "contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "Контакти | Promosale Varna Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-contact.png"
+    },
+    {
+      "width": 390,
+      "label": "about",
+      "route": "/about",
+      "status": 200,
+      "title": "За нас | Promosale Varna Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-about.png"
+    },
+    {
+      "width": 390,
+      "label": "service",
+      "route": "/financing",
+      "status": 200,
+      "title": "Финансиране | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "390-service.png"
+    },
+    {
+      "width": 390,
+      "label": "sell",
+      "route": "/sell-your-car",
+      "status": 200,
+      "title": "Продай автомобила си | Promosale Varna Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-sell.png"
+    },
+    {
+      "width": 390,
+      "label": "blog",
+      "route": "/blog",
+      "status": 200,
+      "title": "Блог | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "390-blog.png"
+    },
+    {
+      "width": 390,
+      "label": "vehicle-navigation",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "label": "home",
+      "route": "/",
+      "status": 200,
+      "title": "Promosale Varna Варна - проверени автомобили и бърз контакт",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains",
+        "No sourced inventory image"
+      ],
+      "screenshot": "1440-home.png"
+    },
+    {
+      "width": 1440,
+      "label": "inventory",
+      "route": "/inventory",
+      "status": 200,
+      "title": "Автомобили в наличност | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-inventory.png"
+    },
+    {
+      "width": 1440,
+      "label": "detail",
+      "route": "/inventory/mercedes-benz-eqe-552939",
+      "status": 200,
+      "title": "Mercedes-Benz EQE 2022 г., Електрически, 294 900 км, Обявен | Promosale Varna",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-detail.png"
+    },
+    {
+      "width": 1440,
+      "label": "contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "Контакти | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-contact.png"
+    },
+    {
+      "width": 1440,
+      "label": "about",
+      "route": "/about",
+      "status": 200,
+      "title": "За нас | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-about.png"
+    },
+    {
+      "width": 1440,
+      "label": "service",
+      "route": "/financing",
+      "status": 200,
+      "title": "Финансиране | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-service.png"
+    },
+    {
+      "width": 1440,
+      "label": "sell",
+      "route": "/sell-your-car",
+      "status": 200,
+      "title": "Продай автомобила си | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-sell.png"
+    },
+    {
+      "width": 1440,
+      "label": "blog",
+      "route": "/blog",
+      "status": 200,
+      "title": "Блог | Promosale Varna Варна",
+      "passed": false,
+      "failures": [
+        "Source dealer content remains"
+      ],
+      "screenshot": "1440-blog.png"
+    },
+    {
+      "width": 1440,
+      "label": "vehicle-navigation",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "finishedAt": "2026-09-09T20:03:49.542Z"
+}

@@ -1,0 +1,439 @@
+:root {
+	--bc-page-width: 1440px;
+	--bc-route-pill-height: 48px;
+	--bc-route-pill-font: 18px;
+	--bc-route-pill-border: #b4bcc6;
+	color-scheme: light;
+
+	--bc-font-body:
+		'Sofia Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		sans-serif;
+	--bc-font-heading:
+		'Sofia Sans SemiCondensed', 'Sofia Sans', ui-sans-serif, system-ui, -apple-system,
+		BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--bc-font-dashboard: var(--bc-font-body);
+
+	--bc-text-display: clamp(3rem, 4.4vw, 4.5rem);
+	--bc-leading-display: 1.04;
+	--bc-text-h1: clamp(2.5rem, 3.8vw, 4.25rem);
+	--bc-leading-h1: 1.08;
+	--bc-text-h2: clamp(2rem, 3vw, 3rem);
+	--bc-leading-h2: 1.12;
+	--bc-text-h3: clamp(1.75rem, 2.2vw, 2.375rem);
+	--bc-leading-h3: 1.16;
+	--bc-text-h4: 1.5rem;
+	--bc-leading-h4: 1.3;
+	--bc-text-h5: 1.25rem;
+	--bc-leading-h5: 1.35;
+	--bc-text-h6: 1.125rem;
+	--bc-leading-h6: 1.4;
+	--bc-text-h7: 1rem;
+	--bc-leading-h7: 1.5;
+	--bc-text-body: 16px;
+	--bc-leading-body: 1.625;
+	--bc-text-body-lg: 18px;
+	--bc-leading-body-lg: 1.55;
+	--bc-text-cta: 18px;
+	--bc-leading-cta: 1.2;
+	--bc-text-meta: 13px;
+	--bc-leading-meta: 1.4;
+	--bc-text-label: 14px;
+	--bc-leading-label: 1.35;
+	--bc-text-price: clamp(1.75rem, 2.2vw, 2rem);
+	--bc-leading-price: 1.05;
+	--bc-tracking-tight: -0.025em;
+	--bc-tracking-display: -0.035em;
+
+	--bc-bg: #fbfbfa;
+	--bc-bg-strong: #f3f3f1;
+	--bc-ink: #1c1c1c;
+	--bc-ink-soft: #1c1c1c;
+	--bc-copy: #4b4b4b;
+	--bc-muted: #696665;
+	--bc-muted-light: #9fa1a4;
+	--bc-subtle: #697078;
+	--bc-white: #ffffff;
+
+	--bc-surface: #f1f2f3;
+	--bc-surface-soft: #f7f7f6;
+	--bc-surface-hover: #eceff2;
+	--bc-surface-raised: #ffffff;
+	--bc-border: #dde0e4;
+	--bc-border-strong: #c8cdd3;
+	--bc-hero-control-border: rgba(28, 28, 28, 0.42);
+	--bc-hero-action-surface: rgba(255, 255, 255, 0.85);
+	--bc-hero-action-border: rgba(255, 255, 255, 0.62);
+
+	--bc-control: #f3f4f5;
+	--bc-control-hover: #eef0f2;
+	--bc-control-active: #e5e7eb;
+	--bc-hover-surface: #f4f4f4;
+	--bc-hover-surface-strong: #eceeef;
+	--bc-hover-border: #b9161c;
+	--bc-hover-accent: #8f1016;
+	--bc-hover-accent-strong: #8f1016;
+	--bc-hover-accent-soft: #f3f4f6;
+	--bc-hover-accent-ink: #ffffff;
+	--bc-hover-quiet-ink: #1c1c1c;
+
+	--bc-accent: #b9161c;
+	--bc-accent-hover: #8f1016;
+	--bc-accent-soft: #f3f4f6;
+	--bc-accent-contrast: #ffffff;
+	--bc-accent-alt: #8f1016;
+	--bc-accent-bright: #ee1d24;
+	--bc-accent-bright-soft: #f3f4f6;
+	--bc-accent-olive: #b9161c;
+	--bc-focus: #b9161c;
+	--bc-focus-contrast: #ffffff;
+	--bc-sun: #e5b21a;
+	--bc-night: #42474c;
+	--bc-stone: #d8d5cf;
+
+	--bc-success: #0f9f7a;
+	--bc-warning: #f4bd0e;
+	--bc-danger: #e85347;
+
+	--bc-card-bg: #f1f2f3;
+	--bc-card-hover: #f4f4f4;
+	--bc-card-ink: #1c1c1c;
+	--bc-card-muted: #666b72;
+	--bc-card-media: #f4f5f6;
+	--bc-card-chip: #ffffff;
+	--bc-card-chip-border: #dfe2e5;
+	--bc-card-pill: rgb(28 28 28 / 0.78);
+	--bc-card-pill-hover: rgb(28 28 28 / 0.88);
+
+	--bc-popover-bg: #ffffff;
+	--bc-popover-border: #ececec;
+	--bc-popover-border-hover: #b9161c;
+	--bc-popover-accent: #b9161c;
+	--bc-popover-accent-soft: #f3f4f6;
+	--bc-popover-accent-ring: rgb(227 6 47 / 0.18);
+	--bc-popover-focus: #8f1016;
+	--bc-popover-muted: #5f5f5f;
+	--bc-popover-muted-strong: #7c7c7c;
+	--bc-popover-icon: #8f969e;
+	--bc-popover-icon-active: #8f1016;
+	--bc-popover-surface: #f5f6f7;
+	--bc-popover-chip-bg: #f3f4f6;
+	--bc-popover-chip-hover: #ffffff;
+	--bc-popover-chip-border-hover: #b9161c;
+	--bc-popover-chip-ink: #1c1c1c;
+	--bc-popover-subtle: #737b84;
+	--bc-popover-hint: #69717a;
+	--bc-popover-footer-line: #eceff1;
+	--bc-popover-clear-bg: #f1f2f4;
+	--bc-popover-clear-ink: #1c1c1c;
+	--bc-popover-mono-bg: #1c1c1c;
+	--bc-popover-shadow: 0 26px 54px rgb(12 18 24 / 0.22);
+
+	--bc-filter-field-border: #e1e4e7;
+	--bc-filter-field-hover-border: #b9161c;
+	--bc-filter-field-hover-bg: #ffffff;
+	--bc-filter-ring: rgb(227 6 47 / 0.16);
+	--bc-filter-label: #69717a;
+	--bc-filter-backdrop: rgb(13 19 26 / 0.58);
+	--bc-filter-panel-border: #dfe3e7;
+	--bc-filter-panel-shadow: 0 18px 38px rgb(12 18 24 / 0.16);
+	--bc-filter-modal-border: #e7e9ec;
+	--bc-filter-modal-shadow: 0 28px 70px rgb(10 15 20 / 0.35);
+	--bc-filter-heading: #111111;
+	--bc-filter-close-border: #e5e7eb;
+	--bc-filter-close-bg: #f3f4f6;
+	--bc-filter-close-ink: #69717a;
+	--bc-filter-close-hover-bg: #8f1016;
+	--bc-filter-modal-row-ink: #151515;
+	--bc-filter-modal-row-hover: #ffffff;
+	--bc-filter-modal-row-selected: #f3f4f6;
+	--bc-filter-control-border: #c8cdd3;
+	--bc-filter-chip-count-active: #8f1016;
+	--bc-filter-done-hover: #2e2e2e;
+	--bc-filter-clear-hover: #eceff2;
+
+	--bc-dashboard-bg: #f2f3f5;
+	--bc-dashboard-surface: #ffffff;
+	--bc-dashboard-sidebar: #ffffff;
+	--bc-dashboard-border: #e0e3e7;
+	--bc-dashboard-border-strong: #c8cdd3;
+	--bc-dashboard-text: #1c1c1c;
+	--bc-dashboard-heading: #1c1c1c;
+	--bc-dashboard-muted: #69717a;
+	--bc-dashboard-card-hover: #f4f4f4;
+	--bc-dashboard-card-radius: 14px;
+	--bc-dashboard-action-bg: #f3f4f5;
+	--bc-dashboard-action-hover: #e9ecef;
+	--bc-dashboard-icon-bg: #f3f4f6;
+	--bc-dashboard-status-bg: #f3f4f6;
+	--bc-dashboard-status-text: #8f1016;
+
+	--bc-showcase-bg: #f5f5f4;
+	--bc-showcase-dark: #101010;
+	--bc-showcase-dark-soft: #1c1c1c;
+	--bc-showcase-dark-panel: #050505;
+	--bc-showcase-ink: #1c1c1c;
+	--bc-showcase-muted: #6b7076;
+	--bc-showcase-line: #dfe2e5;
+	--bc-showcase-icon-bg: #f3f4f6;
+	--bc-showcase-card-hover: #f7f7f6;
+
+	--bc-container-narrow: 760px;
+	--bc-container-page: 1440px;
+	--bc-container-wide: 1920px;
+	--bc-page-x: 15px;
+	--bc-page-y: 32px;
+	--bc-section-sm: clamp(32px, 4vw, 54px);
+	--bc-section-md: clamp(48px, 6vw, 76px);
+	--bc-section-lg: clamp(64px, 8vw, 104px);
+	--bc-card-padding: 20px;
+	--bc-control-x: 16px;
+	--bc-control-y: 11px;
+	/* Interaction hierarchy: compact utilities stay compact while primary actions
+	   receive progressively more visual and physical weight. */
+	--bc-control-height-compact: 36px;
+	--bc-control-height-secondary: 40px;
+	--bc-control-height-chip: 42px;
+	--bc-control-height-standard: 44px;
+	--bc-control-height-primary: 48px;
+	--bc-control-height-hero: 56px;
+
+	--bc-radius-xs: 4px;
+	--bc-radius-sm: 6px;
+	--bc-radius-md: 8px;
+	--bc-radius-lg: 12px;
+	--bc-radius-control: var(--bc-radius-lg);
+	--bc-radius-card: 16px;
+	--bc-radius-panel: 24px;
+	--bc-radius-section: 28px;
+	--bc-radius-modal: 40px;
+	--bc-radius-pill: 999px;
+
+	--bc-shadow-subtle: 0 1px 3px rgb(28 28 28 / 0.08);
+	--bc-shadow-card: 0 4px 12px rgb(28 28 28 / 0.08);
+	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
+	--bc-shadow-modal: 0 24px 80px rgb(28 28 28 / 0.16);
+
+	--bc-motion-fast: 150ms ease;
+	--bc-motion-hover: 140ms ease;
+	--bc-motion-standard: 220ms ease;
+	--bc-motion-drawer: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+	margin: 0;
+	border: 0;
+	font-family: var(--bc-font-body);
+	font-synthesis: none;
+	font-optical-sizing: auto;
+	scrollbar-gutter: stable;
+}
+
+html,
+body {
+	scrollbar-color: var(--bc-brand) var(--bc-surface);
+}
+
+/*
+ * Keep the document gutter identical across the legacy desktop template and
+ * the clean app routes. The legacy stylesheet otherwise changes the root
+ * scrollbar from the browser default to 5px, which shifts centered layouts
+ * when navigating between route families.
+ */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+	background: var(--bc-surface);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+	border-radius: var(--bc-radius-pill);
+	background: var(--bc-brand);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+	background: var(--bc-brand-hover);
+}
+
+body {
+	margin: 0;
+	border: 0;
+	color: var(--bc-ink);
+	font-family: var(--bc-font-body);
+	font-size: var(--bc-text-body);
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: var(--bc-leading-body);
+	text-rendering: optimizeLegibility;
+}
+
+:where(button, input, optgroup, select, textarea) {
+	font: inherit;
+	letter-spacing: inherit;
+}
+
+:where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .h7) {
+	font-family: var(--bc-font-heading);
+	font-synthesis: none;
+	letter-spacing: var(--bc-tracking-tight);
+	text-wrap: balance;
+}
+
+:where(h1, .h1) {
+	font-size: var(--bc-text-h1);
+	font-weight: 700;
+	line-height: var(--bc-leading-h1);
+}
+
+:where(h2, .h2) {
+	font-size: var(--bc-text-h2);
+	font-weight: 700;
+	line-height: var(--bc-leading-h2);
+}
+
+:where(h3, .h3) {
+	font-size: var(--bc-text-h3);
+	font-weight: 600;
+	line-height: var(--bc-leading-h3);
+}
+
+:where(.text-secondary, .text-muted, .text-subtitle) {
+	font-size: var(--bc-text-body);
+	line-height: 1.55;
+}
+
+:where(.text-xs, .text-xxs) {
+	font-size: var(--bc-text-meta);
+	line-height: var(--bc-leading-meta);
+}
+
+:where(p, li) {
+	text-wrap: pretty;
+}
+
+:where(svg, svg *) {
+	color: inherit;
+}
+
+:where(
+	a[href],
+	button,
+	input,
+	select,
+	textarea,
+	summary,
+	[tabindex]:not([tabindex='-1'])
+):focus-visible {
+	outline: 3px solid var(--bc-focus) !important;
+	outline-offset: 3px !important;
+	box-shadow: 0 0 0 2px var(--bc-focus-contrast) !important;
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+}
+
+body[class*='auxero-template-'] .font-main-2,
+body.daynight-inventory-template .font-main-2 {
+	font-family: var(--bc-font-heading) !important;
+}
+
+/* Normalize the legacy theme utility classes that are still emitted by the
+   imported templates. They now resolve through the project tokens instead of
+   reviving the source theme's bright red. */
+body[class*='auxero-template-'] .text-highlight {
+	color: var(--bc-accent) !important;
+	text-decoration-color: currentcolor !important;
+}
+
+body[class*='auxero-template-'] .btn.effect-line-primary {
+	border-color: var(--bc-accent) !important;
+}
+
+body[class*='auxero-template-'] .rating-box__bar {
+	background: var(--bc-accent) !important;
+}
+
+.bc-container {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-page));
+	margin-inline: auto;
+}
+
+.bc-container--narrow {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-narrow));
+}
+
+.bc-container--wide {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-wide));
+}
+
+.bc-card {
+	border: 1px solid var(--bc-border);
+	border-radius: var(--bc-radius-md);
+	background: var(--bc-surface-raised);
+	box-shadow: none;
+	color: var(--bc-ink);
+}
+
+.bc-card--soft {
+	background: var(--bc-surface);
+}
+
+.bc-calm-hover {
+	transition:
+		background-color var(--bc-motion-hover),
+		border-color var(--bc-motion-hover),
+		color var(--bc-motion-hover),
+		filter var(--bc-motion-hover),
+		opacity var(--bc-motion-hover);
+}
+
+.bc-calm-hover:hover,
+.bc-calm-hover:focus-visible {
+	border-color: var(--bc-hover-border);
+	background: var(--bc-hover-surface);
+	color: var(--bc-hover-quiet-ink);
+}
+
+/* Instant tactile press for push-to-navigate surfaces (cards, CTAs, links).
+   Pointer devices only — on touch the nudge reads as unwanted "everything moves
+   when I tap it", so it's gated to mice/trackpads via the hover/pointer query. */
+@media (hover: hover) and (pointer: fine) {
+	.bc-press:active {
+		transform: translateY(1px);
+	}
+}
+
+.bc-focus-ring {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.bc-focus-ring:focus-visible {
+	outline-color: var(--bc-focus);
+	box-shadow: 0 0 0 4px rgb(185 22 28 / 0.24);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
