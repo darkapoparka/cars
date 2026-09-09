@@ -1,0 +1,58 @@
+export const daynightTeamDisclosure = "Контактни теми за подготовка на разговор, а не именувани служители или снимки на екип.";
+
+export type DayNightTeamMember = {
+	slug: string;
+	name: string;
+	role: string;
+	phone: string;
+	email: string;
+	image: string;
+	bio: string;
+	detail: string;
+};
+
+export const daynightTeam: DayNightTeamMember[] = [
+  {
+    "slug": "prodazhbi-showroom",
+    "name": "Оглед на автомобил",
+    "role": "Контактна тема",
+    "phone": "0888417282",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "bio": "Посочете автомобила и попитайте за наличността, мястото и часа за оглед.",
+    "detail": "Посочете автомобила и попитайте за наличността, мястото и часа за оглед. Контакт: 0888 417 282."
+  },
+  {
+    "slug": "barter-i-ocenka",
+    "name": "Друг въпрос",
+    "role": "Контактна тема",
+    "phone": "0888417282",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "bio": "Попитайте дали автосалонът разглежда конкретното ви предложение. Приемане на бартер или изкупуване не се обещава.",
+    "detail": "Попитайте дали автосалонът разглежда конкретното ви предложение. Приемане на бартер или изкупуване не се обещава. Контакт: 0888 417 282."
+  },
+  {
+    "slug": "dokumenti-finansirane",
+    "name": "Документи и цена",
+    "role": "Контактна тема",
+    "phone": "0888417282",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "bio": "Поискайте конкретни документи и пълни условия за плащане. Този сайт не одобрява кредит.",
+    "detail": "Поискайте конкретни документи и пълни условия за плащане. Този сайт не одобрява кредит. Контакт: 0888 417 282."
+  },
+  {
+    "slug": "klientski-zapitvania",
+    "name": "Подготовка за контакт",
+    "role": "Контактна тема",
+    "phone": "0888417282",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "bio": "Подгответе въпросите си и използвайте публикувания телефон. Демо формите не изпращат съобщение.",
+    "detail": "Подгответе въпросите си и използвайте публикувания телефон. Демо формите не изпращат съобщение. Контакт: 0888 417 282."
+  }
+];
+
+export const getDayNightTeamMemberBySlug = (slug: string) =>
+	daynightTeam.find((member) => member.slug === slug);
