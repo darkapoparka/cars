@@ -1,0 +1,1 @@
+Temporary development media states, not approved branding or vehicle photographs. No Image Gen result exists. Replace only with an approved local asset; photo source URLs are in dealer-stock.json. Do not publish this in-progress demo.

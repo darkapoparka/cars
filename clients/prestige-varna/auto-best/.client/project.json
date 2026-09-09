@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "client": "prestige-varna",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    "main"
+  ],
+  "publicUrl": null,
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "deliveryBranch": "codex/astra-bg-02",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "Runtime and browser checks not executed.",
+    "Real-photo reuse basis remains unresolved; explicit development media states are used instead of inherited stock photos.",
+    "Final logo and favicon integration is unfinished. Image Gen was attempted but did not start.",
+    "Supporting-page content sweep remains in progress."
+  ],
+  "implemented": [
+    "Independent retained master source, not a wrapper.",
+    "Same source-backed eight-record stock snapshot consumed by primary catalogue/detail adapters.",
+    "Dealer identity, phone/address, source-status distinctions, EUR and km.",
+    "Noindex; unsupported public reviews/team/video selection removed from data."
+  ]
+}
