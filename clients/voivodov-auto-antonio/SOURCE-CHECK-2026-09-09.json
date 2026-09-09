@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "clientSlug": "voivodov-auto-antonio",
+  "leadId": "bg-plovdiv-voivodov-auto-antonio",
+  "status": "blocked",
+  "purpose": "Source and unresolved-asset checkpoint; not complete application data or an available-stock audit.",
+  "identity": {
+    "name": "VOIVODOV AUTO & ANTONIO",
+    "city": "Пловдив",
+    "districtAsPublished": "Въстанически",
+    "streetAddress": null,
+    "rawLocationField": "-",
+    "phones": ["+359899813628", "+359897094361"],
+    "email": null,
+    "openingHours": null,
+    "hoursNote": "Primary contact page explicitly says hours have not been entered.",
+    "mobileBgMemberSince": 2013,
+    "foundingYear": null,
+    "sources": ["https://voivodovauto.mobile.bg/", "https://voivodovauto.mobile.bg/contacts", "https://www.auto.bg/dealer/voivodovauto"],
+    "aboutAttempt": {"url":"https://voivodovauto.mobile.bg/about","outcome":"Internal Error"},
+    "independentWebsite": null,
+    "websiteFinding": "No confidently matched independent domain in bounded name/profile/phone searches; absence not proven.",
+    "matchedFacebook": null,
+    "matchedInstagram": null,
+    "recentSocialPostVerified": false,
+    "relatedProfileCaution": {"name":"ИНФО АУТО ПЛЮС","sourceUrl":"https://infoauto.mobile.bg/contacts","sharedPhone":"+359899813628","relationship":"unresolved","action":"Do not merge identity, copy its address, import its stock or edit its projects."},
+    "secondaryLocationCaution": {"sourceUrl":"https://www.oink.bg/biz/voivodov_auto","domainLinkMatches":true,"addressAsPublished":"ж.к. Христо Ботев - ЮгЮжен, бул. Александър Стамболийски 7, 4004 Пловдив","directoryStatus":"unconfirmed","acceptedAsDealerStreetAddress":false},
+    "legalEntity": null,
+    "crmWrites": false
+  },
+  "inventory": {
+    "primaryProfileBodyAdvertisedEntries": 60,
+    "primarySearchExcerptEntries": 64,
+    "autoBgBodyAdvertisedEntries": 65,
+    "autoBgOlderSearchExcerptEntries": 68,
+    "verifiedAvailableCount": null,
+    "countNote": "Body and search/cache surfaces differ. Counts are not silently reconciled, summed or promoted to available cars.",
+    "scope": "Read representative profile entries; no full 60-ad availability audit or completed detail-gallery pack.",
+    "profileSamples": [
+      {"sourceId":"21787584817368418","sourceUrl":"https://voivodovauto.mobile.bg/obiava-21787584817368418-hyundai-ix35-nov-vnos-ot-italiya","title":"Hyundai IX35","manufactureMonth":"2012-08","mileageKm":175679,"fuel":"Дизелов","transmission":"Ръчна","powerHp":115,"engineCc":1700,"advertisedCashPrice":5800,"currency":"EUR","taxQualification":"Не се начислява ДДС","availability":"advertised-unconfirmed","detailAttempt":"Cache miss","galleryCountAsAdvertised":9},
+      {"sourceId":"21778688064239119","sourceUrl":"https://voivodovauto.mobile.bg/obiava-21778688064239119-toyota-rav4-hibrid-nov-vnos-ot-italiya","title":"Toyota RAV4 Hybrid","manufactureMonth":"2017-09","mileageKm":175447,"fuel":"Хибриден","transmission":"Автоматична","powerHp":197,"engineCc":2500,"advertisedCashPrice":14800,"currency":"EUR","taxQualification":"Не се начислява ДДС","availability":"advertised-unconfirmed","detailAttempt":"Cache miss","galleryCountAsAdvertised":10}
+    ],
+    "otherDetailAttempt": {"sourceId":"11763055407543737","sourceUrl":"https://voivodovauto.mobile.bg/obiava-11763055407543737-renault-clio-nov-vnos-ot-italiya","outcome":"Internal Error; search excerpt not accepted as a complete fresh detail record"},
+    "conflictsAndExclusions": ["Tesla Model 3 battery field reads 202 kWh; it is unresolved, not silently changed to a guessed capacity.", "Nissan X-Trail profile fields and description differ on manufacture month and mileage; exclude until reconciled from evidence.", "Seller condition/mileage/import assertions are not independent inspection, warranty or finance guarantees.", "INFO AUTO PLUS listings are not pooled into Voivodov stock."]
+  },
+  "brandingAndMedia": {
+    "visualInspectionCompleted": false,
+    "noLogoClaim": false,
+    "sourceGalleryPage": "https://www.oink.bg/biz/voivodov_auto",
+    "imageAttempts": [
+      {"url":"https://www.oink.bg/_next/image?q=75&url=https%3A%2F%2Fcdn.oink.bg%2Fgallery%2F161304%2F5d041148-afe9-44c5-a97c-8937a8f26f21_large.webp&w=1920","outcome":"Cache miss"},
+      {"url":"https://www.oink.bg/_next/image?q=75&url=https%3A%2F%2Fcdn.oink.bg%2Fgallery%2F161304%2Ff75f6096-c6a4-45ba-af34-0714a1f21e63_medium.webp&w=1920","outcome":"Cache miss"}
+    ],
+    "reuseBasis": "No permission covering a current correctly matched real-stock photo set was established in the inspected records.",
+    "localAssetPaths": [],
+    "imageGenerationCalled": false,
+    "permissionInvented": false
+  },
+  "repositoryCheck": {"baseCommit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","existingRequestedTrioFoundInPriorMainAstraTreeInspection":false,"researchSource":"docs/lead-build/source/bulgaria.json","unpublishedWorkerStateKnown":false},
+  "applicationsCreated": [],
+  "checks": {"applicationCommands":[],"browser320":"not-run","browser390":"not-run","browser1440":"not-run","ownerManualReview":"pending"},
+  "resumeRequirement": "Resolve usable visual identity and a permitted local real-photo set, retain the shared-phone/address caveats, then complete individually sourced vehicles before copying the masters."
+}
