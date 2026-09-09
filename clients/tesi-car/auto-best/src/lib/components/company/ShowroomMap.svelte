@@ -1,16 +1,16 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
 
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+  // This is a labelled place search, not an invented street number or exact pin.
+  const mapEmbedUrl = brand.mapsEmbedUrl;
+  const directionsUrl = brand.mapsUrl;
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={`Търсене на ${brand.name} във ${brand.city}; потвърдете точния вход по телефона`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>

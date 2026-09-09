@@ -1,4 +1,5 @@
 import facts from './dealer-facts.json';
+import media from './media-manifest.json';
 
 export type VehicleCondition = 'new' | 'used';
 export type VehicleEquipment = string;
@@ -28,42 +29,48 @@ export type Vehicle = {
   engineCc: number;
   doors: string;
   color: string;
+  taxQualification: string;
   availability: 'advertised-unverified';
 };
 
-const bodies: Record<string, string> = { suv: 'SUV', hatchback: 'Хечбек', van: 'Миниван', sedan: 'Седан', wagon: 'Комби', coupe: 'Купе' };
+const bodies: Record<string, string> = { suv: 'SUV', hatchback: 'Hatchback', van: 'Minivan', sedan: 'Sedan', wagon: 'Wagon', coupe: 'Coupe' };
+const labels: Record<string, string> = { suv: 'SUV', hatchback: 'Хечбек', van: 'Миниван', sedan: 'Седан', wagon: 'Комби', coupe: 'Купе' };
 const fuels: Record<string, string> = { diesel: 'Дизел', gasoline: 'Бензин', hybrid: 'Хибрид', electric: 'Електрически' };
 const number = new Intl.NumberFormat('bg-BG');
+const localPhotos = new Set(media.records.map(record => record.path));
 
-// Source checkpoint: original public photo URLs are temporary until the local
-// asset transfer is committed. They are never replaced by another dealer's stock.
-export const featuredVehicles: Vehicle[] = facts.vehicles.map(record => ({
-  id: record.id,
-  verification: 'source-snapshot',
-  evidenceUrl: record.sourceUrl,
-  image: record.photos[0].sourceUrl,
-  gallery: record.photos.map(photo => photo.sourceUrl),
-  category: bodies[record.body] ?? record.body,
-  body: bodies[record.body] ?? record.body,
-  make: record.make,
-  model: record.model,
-  title: record.title,
-  year: String(record.year),
-  yearNumber: record.year,
-  mileage: `${number.format(record.mileageKm)} км`,
-  mileageKm: record.mileageKm,
-  fuel: fuels[record.fuel] ?? record.fuel,
-  transmission: record.transmission === 'automatic' ? 'Автоматик' : 'Ръчна',
-  equipment: record.features,
-  condition: 'used',
-  priceEur: record.price,
-  href: `/listing-detail-v1/${record.id}`,
-  sourceId: record.sourceId,
-  powerHp: record.powerHp,
-  engineCc: record.engineCc,
-  doors: record.doors,
-  color: record.color,
-  availability: 'advertised-unverified'
-}));
+// Only complete, locally committed photo selections are rendered. The full
+// research snapshot is retained in dealer-facts.json, including deferred cars.
+export const featuredVehicles: Vehicle[] = facts.vehicles
+  .filter(record => record.photos.length > 0 && record.photos.every(photo => localPhotos.has(photo.path)))
+  .map(record => ({
+    id: record.id,
+    verification: 'source-snapshot',
+    evidenceUrl: record.sourceUrl,
+    image: record.photos[0].path,
+    gallery: record.photos.map(photo => photo.path),
+    category: labels[record.body] ?? record.body,
+    body: bodies[record.body] ?? record.body,
+    make: record.make,
+    model: record.model,
+    title: record.title,
+    year: String(record.year),
+    yearNumber: record.year,
+    mileage: `${number.format(record.mileageKm)} км`,
+    mileageKm: record.mileageKm,
+    fuel: fuels[record.fuel] ?? record.fuel,
+    transmission: record.transmission === 'automatic' ? 'Автоматик' : 'Ръчна',
+    equipment: record.features,
+    condition: 'used',
+    priceEur: record.price,
+    href: `/listing-detail-v1/${record.id}`,
+    sourceId: record.sourceId,
+    powerHp: record.powerHp,
+    engineCc: record.engineCc,
+    doors: record.doors,
+    color: record.color,
+    taxQualification: record.taxQualification === 'VAT included' ? 'Цената е с ДДС според обявата' : 'ДДС не се начислява според обявата',
+    availability: 'advertised-unverified'
+  }));
 
 export const formatVehiclePrice = (priceEur: number) => `${number.format(priceEur)} €`;
