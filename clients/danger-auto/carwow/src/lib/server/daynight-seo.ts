@@ -1,4 +1,5 @@
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
+import { daynightSite } from '$lib/data/daynight-site';
 import { DEFAULT_DESCRIPTION, DAY_SITE_TITLE, getPublicStaticRoute } from './public-routes';
 
 export type PageSeo = { title: string; description: string };
@@ -16,8 +17,8 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 		.filter(Boolean);
 
 	return {
-		title: `${vehicle.title} | Day Night Auto`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от Day Night Auto с опция за финансиране.`
+		title: `${vehicle.title} | ${daynightSite.name}`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Данни от обява на ${daynightSite.name} към ${vehicle.observedAt}; не са независимо проверени. Потвърдете наличността и цената с дилъра.`
 	};
 }
 

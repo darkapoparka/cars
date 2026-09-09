@@ -1,4 +1,6 @@
-export const daynightTeamDisclosure = 'Демо профили и портрети: примерни роли, а не потвърдени членове на екипа.';
+import { daynightSite } from './daynight-site';
+
+export const daynightTeamDisclosure = 'Показан е публикуваният бизнес контакт на DANGER AUTO, а не профил или портрет на конкретен служител. Имена и роли на служители не са потвърдени.';
 
 export type DayNightTeamMember = {
 	slug: string;
@@ -11,52 +13,29 @@ export type DayNightTeamMember = {
 	detail: string;
 };
 
+// Retain the card/detail contract without inventing staff or reusing their portraits.
 export const daynightTeam: DayNightTeamMember[] = [
 	{
-		slug: 'prodazhbi-showroom',
-		name: "Екип продажби Day Night Auto",
-		role: 'Консултант продажби',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-sales-v1.webp',
-		bio: 'Екипът съдейства при избор на автомобил, първи оглед, сравнение на наличните предложения и подреден процес до сделката.',
-		detail:
-			"Консултантите на Day Night Auto помагат с избор според бюджет, пробег, оборудване и реална наличност. При нужда подготвят оглед, запазване на автомобил и координация на следващите стъпки."
-	},
-	{
-		slug: 'barter-i-ocenka',
-		name: 'Екип бартер и оценка',
-		role: 'Оценка, покупка и бартер',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-evaluation-v1.webp',
-		bio: 'Екипът приема запитвания за продажба или замяна на автомобил и подготвя реалистична оценка според пазара и състоянието.',
-		detail:
-			'При бартер или директно изкупуване екипът разглежда автомобила, документите и сервизната история, след което дава ясен вариант за следващите стъпки.'
-	},
-	{
-		slug: 'dokumenti-finansirane',
-		name: 'Екип документи и финансиране',
-		role: 'Документи и финансиране',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-documents-v1.webp',
-		bio: 'Екипът координира документи, регистрация, разсрочено плащане и подготовка за предаване на автомобила.',
-		detail:
-			'След избор на автомобил екипът подрежда документите, комуникацията по финансирането и практичните стъпки до предаването.'
-	},
-	{
-		slug: 'klientski-zapitvania',
-		name: 'Екип клиентски заявки',
-		role: 'Огледи и следващи стъпки',
-		phone: "0877733110",
-		email: '',
-		image: '/assets/images/pages/daynight-team-customer-v1.webp',
-		bio: 'Екипът подготвя запитванията, уточнява часове за оглед и държи комуникацията подредена преди посещение на място.',
-		detail:
-			'Клиентските заявки минават през ясен контакт за телефон, имейл и оглед, така че всеки интерес да получи отговор с реална наличност и конкретно действие.'
+		slug: 'showroom-contact',
+		name: daynightSite.name,
+		role: 'Публикуван контакт на автокъщата',
+		phone: daynightSite.phone,
+		email: daynightSite.email,
+		image: daynightSite.logoLight,
+		bio: 'Контакт за въпроси по конкретна обява. Текущата наличност, мястото на автомобила и часът за оглед се уточняват директно с дилъра.',
+		detail: 'Това е бизнес контактът от публичния профил на DANGER AUTO. Не са предоставени потвърдени имена, индивидуални контакти или портрети на служители. Демо формите не резервират автомобил и не потвърждават изпращане на съобщение.'
 	}
 ];
 
+// Existing route addresses remain compatible; all resolve to the same business
+// contact, not five separate people or departments.
+export const legacyDaynightTeamSlugs: readonly string[] = [
+	'prodazhbi-showroom',
+	'barter-i-ocenka',
+	'dokumenti-finansirane',
+	'klientski-zapitvania',
+	'prodazhbi-daynight-auto'
+];
 export const getDayNightTeamMemberBySlug = (slug: string) =>
-	daynightTeam.find((member) => member.slug === slug);
+	daynightTeam.find((member) => member.slug === slug) ??
+	(legacyDaynightTeamSlugs.includes(slug) ? daynightTeam[0] : undefined);

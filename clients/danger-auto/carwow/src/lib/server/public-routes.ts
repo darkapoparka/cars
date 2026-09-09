@@ -1,3 +1,5 @@
+import { daynightSite } from '$lib/data/daynight-site';
+
 export type PublicStaticRoute = {
 	path: string;
 	title: string;
@@ -5,136 +7,142 @@ export type PublicStaticRoute = {
 	sitemap: boolean;
 };
 
-export const DAY_SITE_TITLE = "Day Night Auto София";
+export const DAY_SITE_TITLE = `${daynightSite.name} · София`;
+export const DEFAULT_DESCRIPTION = `${daynightSite.name}: демо каталог с датирани обяви за употребявани автомобили в Горубляне. Наличността, цената и огледът се потвърждават с дилъра.`;
 
-export const DEFAULT_DESCRIPTION =
-	"Day Night Auto предлага налични автомобили, огледи и съдействие при покупка в София.";
-
+// Preserve the master's public routes and lookup contract. Compatibility paths
+// remain addressable, but do not assert the source dealer's identity or services.
 export const PUBLIC_STATIC_ROUTES: PublicStaticRoute[] = [
 	{
 		path: '',
-		title: `${DAY_SITE_TITLE} - проверени автомобили и бърз контакт`,
+		title: `${DAY_SITE_TITLE} — обяви и контакт`,
 		description: DEFAULT_DESCRIPTION,
 		sitemap: true
 	},
 	{
 		path: 'inventory',
-		title: `Автомобили в наличност | ${DAY_SITE_TITLE}`,
-		description: "Разгледайте наличните автомобили на Day Night Auto с филтри по марка, цена, гориво и пробег.",
+		title: `Обявени автомобили | ${DAY_SITE_TITLE}`,
+		description: 'Датирана извадка от обявите на DANGER AUTO с филтри по марка, цена, гориво и пробег. Не е потвърдена текуща складова наличност.',
 		sitemap: true
 	},
 	{
 		path: 'inventory/map',
-		title: `Карта на автомобилите | ${DAY_SITE_TITLE}`,
-		description: "Вижте карта и списък с наличните автомобили на Day Night Auto.",
+		title: `Карта и обяви | ${DAY_SITE_TITLE}`,
+		description: 'Местоположение на автокъщата и датирани автомобилни обяви. Потвърдете къде се намира конкретният автомобил преди посещение.',
 		sitemap: true
 	},
 	{
 		path: 'services',
-		title: `Услуги | ${DAY_SITE_TITLE}`,
-		description: "Услуги на Day Night Auto: финансиране, изкупуване, оценка и съдействие при покупка на автомобил.",
+		title: `Информация и услуги | ${DAY_SITE_TITLE}`,
+		description: 'Информация за контакт с DANGER AUTO и въпроси по конкретна обява. Допълнителните услуги и условия се уточняват директно с дилъра.',
 		sitemap: true
 	},
 	{
 		path: 'sell-your-car',
-		title: `Продай автомобила си | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за продажба, бартер или оценка към Day Night Auto.",
+		title: `Въпроси за продажба или замяна | ${DAY_SITE_TITLE}`,
+		description: 'Подгответе въпроси за евентуална продажба или замяна. Демото не е оферта за изкупуване и не потвърждава приемане на бартер.',
 		sitemap: true
 	},
 	{
 		path: 'sell-your-car/request',
-		title: `Заявка за изкупуване | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за оценка и изкупуване към Day Night Auto.",
+		title: `Подготовка на информация | ${DAY_SITE_TITLE}`,
+		description: 'Демонстрационна форма за подготовка на информация за автомобил. Няма свързана услуга за доставка на заявка или автоматична оценка.',
 		sitemap: true
 	},
 	{
 		path: 'sell-car',
-		title: `Продай автомобила си | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за продажба, бартер или оценка към Day Night Auto.",
+		title: `Въпроси за продажба или замяна | ${DAY_SITE_TITLE}`,
+		description: 'Подгответе въпроси за евентуална продажба или замяна. Демото не е оферта за изкупуване и не потвърждава приемане на бартер.',
 		sitemap: false
 	},
 	{
 		path: 'sell-car/request',
-		title: `Заявка за изкупуване | ${DAY_SITE_TITLE}`,
-		description: "Изпратете заявка за оценка и изкупуване към Day Night Auto.",
+		title: `Подготовка на информация | ${DAY_SITE_TITLE}`,
+		description: 'Демонстрационна форма за подготовка на информация за автомобил. Няма свързана услуга за доставка на заявка или автоматична оценка.',
 		sitemap: false
 	},
 	{
 		path: 'about',
-		title: `За нас | ${DAY_SITE_TITLE}`,
-		description: "Day Night Auto - автокъща с подреден каталог, прозрачни сделки и съдействие при финансиране.",
+		title: `За автокъщата | ${DAY_SITE_TITLE}`,
+		description: 'DANGER AUTO в Горубляне, София: публикуван бизнес контакт и обяви от публичния дилърски профил. Демо проект, без потвърждение от дилъра.',
 		sitemap: true
 	},
 	{
 		path: 'about/daynight-auto-plovdiv',
 		title: `Профил на автокъщата | ${DAY_SITE_TITLE}`,
-		description: "Научете повече за подхода на Day Night Auto при покупка, продажба и финансиране на автомобили.",
+		description: 'Публикуван контакт и местоположение на DANGER AUTO в София. Запазен адрес на страница от шаблона, без връзка със стария дилър.',
 		sitemap: true
 	},
 	{
 		path: 'contact',
 		title: `Контакти | ${DAY_SITE_TITLE}`,
-		description: "Свържете се с Day Night Auto - телефон, адрес и локация на автокъщата.",
+		description: `Публикувани телефони ${daynightSite.phoneLabel} и ${daynightSite.secondaryPhoneLabel}. ${daynightSite.location}. Уговорете оглед директно с дилъра.`,
 		sitemap: true
 	},
 	{
 		path: 'financing',
-		title: `Финансиране | ${DAY_SITE_TITLE}`,
-		description: "Възможности за автомобилно финансиране и съдействие при покупка чрез Day Night Auto.",
+		title: `Банково финансиране | ${DAY_SITE_TITLE}`,
+		description: 'Продавачът посочва финансиране чрез банка, не собствен лизинг. Условията и одобрението са на кредитора; демото не предлага кредит.',
 		sitemap: true
 	},
 	{
 		path: 'reviews',
-		title: `Клиентски отзиви | ${DAY_SITE_TITLE}`,
-		description: "Отзиви от клиенти за покупка, продажба и съдействие при автомобили от Day Night Auto.",
+		title: `Информация за отзивите | ${DAY_SITE_TITLE}`,
+		description: 'Няма предоставени потвърдени клиентски отзиви за DANGER AUTO. В този демо проект не се публикуват измислени клиентски оценки.',
 		sitemap: true
 	},
 	{
 		path: 'calculator',
-		title: `Калкулатор за финансиране | ${DAY_SITE_TITLE}`,
-		description: "Ориентировъчен калкулатор за автомобилно финансиране и месечна вноска от Day Night Auto.",
+		title: `Примерен финансов калкулатор | ${DAY_SITE_TITLE}`,
+		description: 'Ориентировъчна математическа сметка по въведени стойности. Не е оферта от дилъра или банка и не е одобрение за финансиране.',
 		sitemap: false
 	},
 	{
 		path: 'compare',
-		title: `Сравнение на автомобили | ${DAY_SITE_TITLE}`,
-		description: "Сравнете избрани автомобили от Day Night Auto по цена, характеристики и оборудване.",
+		title: `Сравнение на обяви | ${DAY_SITE_TITLE}`,
+		description: 'Сравнете показаните обяви по публикувани цени и характеристики. Данните за състояние и оборудване са твърдения на продавача.',
 		sitemap: false
 	},
 	{
 		path: 'team',
-		title: `Екип | ${DAY_SITE_TITLE}`,
-		description: "Запознайте се с екипа зад продажбите и клиентското обслужване на Day Night Auto.",
+		title: `Бизнес контакт | ${DAY_SITE_TITLE}`,
+		description: 'Публикуваният контакт на DANGER AUTO, без измислени профили, имена или портрети на служители.',
 		sitemap: true
 	},
 	{
 		path: 'team/prodazhbi-daynight-auto',
-		title: `Продажби | ${DAY_SITE_TITLE}`,
-		description: "Контакт с търговския екип на Day Night Auto за налични автомобили и оферти.",
+		title: `Контакт с автокъщата | ${DAY_SITE_TITLE}`,
+		description: 'Публикуван бизнес контакт на DANGER AUTO за въпроси по конкретна обява. Не е профил на отделен служител.',
+		sitemap: false
+	},
+	{
+		path: 'team/showroom-contact',
+		title: `Контакт с автокъщата | ${DAY_SITE_TITLE}`,
+		description: 'Публикуван бизнес контакт на DANGER AUTO за въпроси по конкретна обява. Не е профил на отделен служител.',
 		sitemap: true
 	},
 	{
 		path: 'blog',
-		title: `Блог | ${DAY_SITE_TITLE}`,
-		description: "Практични съвети от Day Night Auto за покупка, продажба, финансиране и поддръжка на автомобили.",
+		title: `Насоки за разглеждане | ${DAY_SITE_TITLE}`,
+		description: 'Информационна секция на демо проекта. Показаното съдържание не е доказателство за авторство, услуги или одобрение от DANGER AUTO.',
 		sitemap: true
 	},
 	{
 		path: 'blog/kak-da-kupim-upotrebyavan-avtomobil',
-		title: `Как да купим употребяван автомобил | ${DAY_SITE_TITLE}`,
-		description: "Кратък наръчник от Day Night Auto за проверка, избор и покупка на употребяван автомобил.",
+		title: `Въпроси при избор на употребяван автомобил | ${DAY_SITE_TITLE}`,
+		description: 'Общи въпроси за преглед на обява и документи. Демо съдържание, не техническа експертиза или обещание за състоянието на конкретен автомобил.',
 		sitemap: false
 	},
 	{
 		path: 'faq',
 		title: `Често задавани въпроси | ${DAY_SITE_TITLE}`,
-		description: "Отговори на чести въпроси за покупка, продажба, финансиране и контакт с Day Night Auto.",
+		description: 'Обявени цени, уговорка за оглед, банково финансиране и ограничения на демо формите. Не се правят онлайн резервации или доставки на заявки.',
 		sitemap: true
 	},
 	{
 		path: 'terms',
-		title: `Условия | ${DAY_SITE_TITLE}`,
-		description: "Условия за ползване и информация за публичния сайт на Day Night Auto.",
+		title: `Информация за демо прегледа | ${DAY_SITE_TITLE}`,
+		description: 'Информация за ограниченията на този непотвърден демо проект. Не представлява официални договорни условия на DANGER AUTO.',
 		sitemap: true
 	}
 ];

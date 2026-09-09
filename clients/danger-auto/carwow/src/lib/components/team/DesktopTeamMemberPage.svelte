@@ -41,7 +41,7 @@
 			<ul class="breadcrumb">
 				<li><a href={resolve('/')}>Начало</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/team')}>Екип</a></li>
+				<li><a href={resolve('/team')}>Бизнес контакт</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><span>{member.name}</span></li>
 			</ul>
@@ -55,7 +55,7 @@
 					<img src={member.image} alt={member.name} loading="eager" decoding="async" />
 				</div>
 				<div class="team-member-profile__content">
-					<p class="eyebrow">Примерен профил</p>
+					<p class="eyebrow">Контакт на автокъщата</p>
 					<h1>{member.name}</h1>
 					<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 					<p class="h5 text-highlight mb-18">{member.role}</p>
@@ -136,16 +136,16 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">Day Night Auto София</p>
-					<h2>Запази час за оглед</h2>
+					<p class="eyebrow">{daynightSite.name} · {daynightSite.locationShort}</p>
+					<h2>Уговори оглед по телефона</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
+						Уточнете актуалната наличност, мястото на автомобила и удобен час директно с дилъра. Демо сайтът не прави резервация.
 					</p>
 					<a {...phoneLinkProps} class="sa-cta sa-cta-primary">
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="320" />
+				<LazyMapEmbed src={mapEmbedSrc} title={daynightSite.mapLabel} height="320" />
 			</div>
 		</div>
 	</section>
@@ -433,7 +433,7 @@
 		aspect-ratio: 4 / 5;
 		border-radius: 18px;
 		height: auto;
-		object-fit: cover;
+		object-fit: contain;
 		width: 100%;
 	}
 
