@@ -12,8 +12,9 @@ export function routeSeo(routePath: string): PageSeo {
 }
 
 export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
-	const price = typeof vehicle.priceEur === 'number' && Number.isFinite(vehicle.priceEur) && vehicle.priceEur > 0
-		? new Intl.NumberFormat('bg-BG', { style: 'currency', currency: 'EUR' }).format(vehicle.priceEur)
+	// Car.price is the numeric EUR amount; Car.priceEur is already-formatted text.
+	const price = typeof vehicle.price === 'number' && Number.isFinite(vehicle.price) && vehicle.price > 0
+		? new Intl.NumberFormat('bg-BG', { style: 'currency', currency: 'EUR' }).format(vehicle.price)
 		: 'Цена при запитване';
 	const facts = [price, vehicle.mileage, vehicle.fuel, vehicle.transmission]
 		.map((value) => (value ?? '').toString().trim())

@@ -1,0 +1,74 @@
+{
+  "scope": "isolated transpiled-module tests with explicit fixtures; NOT application build/typecheck/browser QA",
+  "node": "v22.16.0",
+  "typescript": "5.8.3",
+  "sourceGitBlobShas": {
+    "src/lib/data/daynight-site.ts": "712061d4cdc98e1491f48485aea6be31e9919cde",
+    "src/lib/server/public-routes.ts": "fe9bb90f7f22a2eaa55ea97dbe0ca745827b1cfe",
+    "src/lib/server/daynight-seo.ts": "bea2d2f351a06336cba5e97e95fa48e335dbddf9"
+  },
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "id": "sunny-varna: phone and imported identity",
+      "passed": true
+    },
+    {
+      "id": "sunny-varna: 21 routes, aliases and metadata",
+      "passed": true
+    },
+    {
+      "id": "sunny-varna: numeric EUR price and unavailable-price handling",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: phone and imported identity",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: 21 routes, aliases and metadata",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: numeric EUR price and unavailable-price handling",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: phone and imported identity",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: 21 routes, aliases and metadata",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: numeric EUR price and unavailable-price handling",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: phone and imported identity",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: 21 routes, aliases and metadata",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: numeric EUR price and unavailable-price handling",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: phone and imported identity",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: 21 routes, aliases and metadata",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: numeric EUR price and unavailable-price handling",
+      "passed": true
+    }
+  ]
+}
