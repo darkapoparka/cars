@@ -1,5 +1,3 @@
-# Спринт ауто — demo artwork
+# Branding provenance — Спринт Ауто
 
-Custom outlined-vector proposal created 2026-09-09, not an official/dealer-approved logo or an asserted recreation of source artwork. ImageGen was attempted but generation did not start. The programmatic concept combines a custom speed-band emblem and outlined Cyrillic wordmark. No font file is embedded or supplied. The main mark is centred on a white badge for both header surfaces. PNG is the matching emblem; returned upload hash matched local Git blob 6a2333647f4350551725c2fdb9cc6fd19c4ead95.
-
-The abstract graphic is not a stock/premises photograph. Missing-photo tiles explicitly represent absent media. Real galleries have not been acquired or bundled. Original branding/source access limits remain in RESEARCH-2026-09-09.md. Asset inspection is not application/browser verification.
+Active `logo.svg`, `logo-dark.svg` and `favicon.svg` are ImageGen-assisted demo artwork integrated 2026-09-09. Image generation reference: `12460a23-3c7a-495b-83e1-7a4b023455d6`. The generation used the published Спринт visual reference as identity guidance; the integrated SVG is a web-safe refinement of that generated direction. It is a proposal, not dealer-approved artwork. No vehicle, premises, employee or customer imagery is fabricated by these logo assets.
