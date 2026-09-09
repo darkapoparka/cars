@@ -48,7 +48,7 @@
 				<div>
 					<Card.Description class="text-sidebar-foreground/60">Workspace settings</Card.Description>
 					<Card.Title class="text-2xl font-semibold">
-						{dealer?.brand_name ?? 'Day Night Auto'} CMS configuration
+						{dealer?.brand_name ?? 'CAR MAX'} CMS configuration
 					</Card.Title>
 				</div>
 				<Card.Action>

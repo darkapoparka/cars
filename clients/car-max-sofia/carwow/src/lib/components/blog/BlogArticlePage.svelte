@@ -149,10 +149,10 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 			<div class="listing-details--contact-dealer mb-20">
-					<img src="/brand/daynight-logo-generated.png" alt={daynightSite.shortName} />
+					<img src="/assets/dealer/brand/logo.jpg" alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
-							Day Night Auto
+							CAR MAX
 						</a>
 						<p class="text-secondary mb-18">Автокъща в София</p>
 						{#if daynightSite.email}

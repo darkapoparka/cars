@@ -29,7 +29,7 @@
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
       <h1 id="about-title">За нас</h1>
-      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Собствен лизинг</p>
+      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Лизинг и финансиране</p>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={resolve('/listing-grid')}>
       <span>Вижте автомобилите</span>

@@ -44,7 +44,7 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title="За CAR MAX"
 		panel="light"
 		compact
 	>
@@ -58,13 +58,13 @@
 				>
 				<div class="about-hero-socials">
 					<a
-						href="https://www.facebook.com/61566304063141/"
+						href="https://www.facebook.com/www.carmax.bg/"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
 					>
 					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						href="https://carmax.bg/"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
@@ -127,7 +127,7 @@
 			<img
 				class="about-story__image"
 				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				alt="Илюстративна визия на CAR MAX: Mercedes-Benz и Lamborghini с ключове за бартер"
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -135,11 +135,11 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
+					CAR MAX е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
 					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети в ул. Самоковско шосе 133. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -192,11 +192,11 @@
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title="Карта до CAR MAX София" height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, София</strong>
+						<strong>София</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

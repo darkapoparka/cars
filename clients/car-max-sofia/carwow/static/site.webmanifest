@@ -1,18 +1,15 @@
 {
-	"name": "Ден и Нощ Ауто Груп",
-	"short_name": "Day Night Auto",
-	"description": "Day Night Auto: налични автомобили, огледи и контакт в София.",
-	"lang": "bg",
-	"start_url": "/",
-	"scope": "/",
-	"display": "standalone",
-	"background_color": "#ffffff",
-	"theme_color": "#d71920",
-	"icons": [
-		{
-			"src": "/brand/daynight-favicon.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
+  "name": "CAR MAX",
+  "short_name": "CAR MAX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1ca6a6",
+  "icons": [
+    {
+      "src": "/assets/dealer/brand/logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
 }

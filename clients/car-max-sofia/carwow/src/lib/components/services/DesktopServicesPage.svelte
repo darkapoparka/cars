@@ -145,7 +145,7 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Day Night Auto">
+<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги CAR MAX">
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
 		title="Услуги за твоя автомобил"
@@ -172,7 +172,7 @@
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Day Night Auto</h2>
+			<h2 class="desktop-services-sr-only">Конкретни услуги от CAR MAX</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}

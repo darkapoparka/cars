@@ -61,7 +61,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Обява за автомобил от ${brand.name} в ${brand.city}. Потвърдете наличността директно с дилъра.`}
   />
 </svelte:head>
 
@@ -80,17 +80,10 @@
 
             <div class="dn-detail-card dn-detail-media-card">
               <figure class="dn-detail-gallery">
-                <a class="dn-detail-mobile-back" href={data.returnTo} aria-label="Назад към автомобилите">
-                  <Icon name="arrow-left" size={20} strokeWidth={2} />
-                </a>
-                <img
-                  src={data.vehicle.image}
-                  alt={data.vehicle.title}
-                  width="1245"
-                  height="988"
-                  fetchpriority="high"
-                  decoding="async"
-                />
+                <a class="dn-detail-mobile-back" href={data.returnTo} aria-label="Назад към автомобилите"><Icon name="arrow-left" size={20} strokeWidth={2} /></a>
+                {#each data.vehicle.gallery as image, index (image)}
+                  <img src={image} alt={`${data.vehicle.title} — снимка ${index + 1}`} width="1245" height="988" fetchpriority={index === 0 ? 'high' : 'auto'} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+                {/each}
               </figure>
             </div>
 
@@ -162,6 +155,7 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
+              <p class="dn-detail-summary__availability">{data.vehicle.taxLabel}</p>
               <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>

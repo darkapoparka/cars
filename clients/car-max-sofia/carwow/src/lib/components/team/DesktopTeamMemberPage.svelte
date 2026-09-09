@@ -136,7 +136,7 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">Day Night Auto София</p>
+					<p class="eyebrow">CAR MAX София</p>
 					<h2>Запази час за оглед</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
@@ -145,7 +145,7 @@
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="320" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Карта до CAR MAX София" height="320" />
 			</div>
 		</div>
 	</section>

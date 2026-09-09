@@ -1,92 +1,10 @@
 <script lang="ts">
-  import { tick } from 'svelte';
-  import { brand } from '$config/brand';
-  import { featuredVideos } from '$data/videos';
+  import { resolve } from '$app/paths';
+  import { featuredVehicles } from '$data/inventory';
   import Icon from '$components/ui/Icon.svelte';
-  import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
-
-  let activeVideo = $state<string | null>(null);
-  let playTrigger: HTMLButtonElement | undefined;
-
-  function play(id: string, event: MouseEvent) {
-    playTrigger = event.currentTarget as HTMLButtonElement;
-    activeVideo = id;
-  }
-
-  async function stop() {
-    const trigger = playTrigger;
-    activeVideo = null;
-    await tick();
-    trigger?.focus();
-  }
+  const highlights=featuredVehicles.slice(0,3);
 </script>
-
-<section class="dn-videos" aria-labelledby="videos-title">
-  <div class="container">
-    <div class="dn-videos__panel">
-      <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледайте ни в</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Избрани автомобилни видеа с Кристиан Кирилов.</p>
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span>Всички видеа</span>
-          <Icon name="arrow-right" size={16} />
-          <span class="dn-sr-only"> в YouTube (нов раздел)</span>
-        </a>
-      </div>
-
-      <div class="dn-videos__grid">
-        {#each featuredVideos as video (video.id)}
-          <article class="dn-video-card">
-            <div class="dn-video-card__media">
-              <button
-                class="dn-video-card__play"
-                type="button"
-                hidden={activeVideo === video.id}
-                aria-label={`Пуснете видеото: ${video.title}`}
-                onclick={(event) => play(video.id, event)}
-              >
-                <img src={video.thumbnail} alt="" width="720" height="404" loading="lazy" decoding="async" />
-                <span class="dn-video-card__play-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
-                </span>
-                <span class="dn-video-card__duration">{video.duration}</span>
-              </button>
-              {#if activeVideo === video.id}
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1`}
-                  title={video.title}
-                  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-                  allowfullscreen
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  {@attach (element) => { element.focus(); }}
-                ></iframe>
-              {/if}
-            </div>
-            <div class="dn-video-card__content">
-              <h3>{video.title}</h3>
-              <div class="dn-video-card__actions">
-                <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" aria-label={`${video.title} — гледайте в YouTube (нов раздел)`}>
-                  Гледайте в YouTube <Icon name="arrow-right" size={16} />
-                </a>
-                {#if activeVideo === video.id}
-                  <button type="button" onclick={stop} aria-label={`Затворете видеото: ${video.title}`}><Icon name="x" size={20} /></button>
-                {/if}
-              </div>
-            </div>
-          </article>
-        {/each}
-        <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
-          <strong>Всички видеа</strong>
-          <span>Гледайте в YouTube</span>
-          <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
-          <span class="dn-sr-only">Отваря се в нов раздел</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="dn-videos" aria-labelledby="videos-title"><div class="container"><div class="dn-videos__panel"><div class="dn-videos__heading dn-home-section-heading"><h2 id="videos-title" class="dn-home-section-title">Акценти от наличността</h2><p>Реални снимки от избрани публикувани обяви. Потвърдете наличността директно с дилъра.</p><a class="dn-videos__channel dn-home-section-action" href={resolve('/listing-grid')}>Всички автомобили <Icon name="arrow-right" size={16}/></a></div><div class="dn-videos__grid">{#each highlights as vehicle (vehicle.id)}<article class="dn-video-card"><a class="dn-video-card__media" href={resolve(vehicle.href)}><img src={vehicle.gallery[1] ?? vehicle.image} alt={vehicle.title} width="720" height="404" loading="lazy" decoding="async" /></a><div class="dn-video-card__content"><h3>{vehicle.title}</h3><div class="dn-video-card__actions"><a href={resolve(vehicle.href)}>Виж обявата <Icon name="arrow-right" size={16}/></a></div></div></article>{/each}</div></div></div></section>
 <style>
   .dn-videos { padding: 32px 0; background: #fff; }
   .dn-videos__all-card { display: none; }

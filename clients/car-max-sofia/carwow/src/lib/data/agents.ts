@@ -16,7 +16,7 @@ export interface Agent {
 export const agents: Agent[] = [
 	{
 		slug: 'prodazhbi-daynight-auto',
-		name: daynightTeam[0]?.name ?? 'Day Night Auto Sales Team',
+		name: daynightTeam[0]?.name ?? 'CAR MAX Sales Team',
 		title: daynightTeam[0]?.role ?? 'Консултанти продажби',
 		phone: daynightSite.phoneLabel,
 		email: daynightSite.email,
@@ -29,7 +29,7 @@ export const agents: Agent[] = [
 	},
 	{
 		slug: 'barter-i-ocenka',
-		name: daynightTeam[1]?.name ?? 'Day Night Auto Trade-In Team',
+		name: daynightTeam[1]?.name ?? 'CAR MAX Trade-In Team',
 		title: daynightTeam[1]?.role ?? 'Оценка, покупка и бартер',
 		phone: daynightSite.phoneLabel,
 		email: daynightSite.email,

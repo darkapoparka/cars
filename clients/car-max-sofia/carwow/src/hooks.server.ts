@@ -18,7 +18,7 @@ function warnMissingProductionDatabaseUrl() {
 	warnedMissingProductionDatabase = true;
 	console.error(
 		[
-			'DAY NIGHT AUTO GROUP PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
+			'CAR MAX GROUP PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
 			'The storefront will use demo-only static inventory fallback and admin/write endpoints will fail closed.',
 			'Set DATABASE_URL before promoting this Vercel deployment.'
 		].join(' ')

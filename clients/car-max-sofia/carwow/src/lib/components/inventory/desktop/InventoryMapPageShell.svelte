@@ -206,7 +206,7 @@
 					id="map"
 					class="daynight-inventory-map-panel"
 					iframeClass="daynight-inventory-map-panel__iframe"
-					title="Карта до Day Night Auto София"
+					title="Карта до CAR MAX София"
 					src={mapEmbedSrc}
 					width="100%"
 					height="100%"
@@ -225,7 +225,7 @@
 						></span>
 						<span class="daynight-inventory-map-panel__pin"></span>
 						<div class="daynight-inventory-map-panel__card">
-							<strong>Day Night Auto София</strong>
+							<strong>CAR MAX София</strong>
 							<span>{daynightSite.location}</span>
 						</div>
 					</div>

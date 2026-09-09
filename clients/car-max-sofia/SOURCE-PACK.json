@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "dealer": {
+    "slug": "car-max-sofia",
+    "name": "CAR MAX",
+    "city": "София",
+    "address": "ул. Самоковско шосе 133, София",
+    "phone": "+359898602002",
+    "email": "carmaxsf@gmail.com",
+    "hours": "09:00–18:00, без почивен ден",
+    "source": "https://carmax.mobile.bg/",
+    "website": "https://carmax.bg/",
+    "logoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h12828120800529462.pic"
+  },
+  "availabilityNotice": "These are dealer-advertised listings observed on the source profile; current availability is not independently verified.",
+  "listings": [
+    {
+      "id": "21776406793706557",
+      "title": "VW Touareg 3.0TDi-v6/4x-motion/Авт./Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-21776406793706557-vw-touareg-3-0tdi-v6-4x-motion-avt-lizing",
+      "priceEur": 13500,
+      "advertisedPrice": "13 500 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "март 2013 г.",
+        "193 000 км",
+        "Черен",
+        "Дизелов",
+        "245 к.с.",
+        "Евро 5",
+        "3000 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2013,
+      "mileageKm": 193000,
+      "color": "Черен",
+      "fuel": "Дизелов",
+      "power": "245 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/557/2/big1/21776406793706557_Y4.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/557/2/big1/21776406793706557_DV.webp"
+      ]
+    },
+    {
+      "id": "11773910246496681",
+      "title": "VW Passat 2.0TDi/4х4/Камера/Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-11773910246496681-vw-passat-2-0tdi-4h4-kamera-lizing",
+      "priceEur": 15500,
+      "advertisedPrice": "15 500 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "август 2017 г.",
+        "167 000 км",
+        "Черен",
+        "Дизелов",
+        "150 к.с.",
+        "Евро 6",
+        "2000 куб.см",
+        "Ръчна",
+        "Комби"
+      ],
+      "year": 2017,
+      "mileageKm": 167000,
+      "color": "Черен",
+      "fuel": "Дизелов",
+      "power": "150 к.с.",
+      "transmission": "Ръчна",
+      "body": "Комби",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/681/1/big1/11773910246496681_Yl.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/681/1/big1/11773910246496681_Oy.webp"
+      ]
+    },
+    {
+      "id": "11755422705847994",
+      "title": "VW Golf 1.4TGi VII/Ecofuel/Авт./Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-11755422705847994-vw-golf-1-4tgi-vii-ecofuel-avt-lizing",
+      "priceEur": 10800,
+      "advertisedPrice": "10 800 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "юли 2015 г.",
+        "145 000 км",
+        "Син",
+        "Бензинов",
+        "110 к.с.",
+        "Евро 6",
+        "1400 куб.см",
+        "Автоматична",
+        "Комби"
+      ],
+      "year": 2015,
+      "mileageKm": 145000,
+      "color": "Син",
+      "fuel": "Бензинов",
+      "power": "110 к.с.",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/994/1/big1/11755422705847994_Fd.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/994/1/big1/11755422705847994_3X.webp"
+      ]
+    },
+    {
+      "id": "11749119289646478",
+      "title": "VW Golf VII 1.4 TGI/ЕcoFuel/6-ск./Лизинг/Италия",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-11749119289646478-vw-golf-vii-1-4-tgi-ecofuel-6-sk-lizing-italiya",
+      "priceEur": 8500,
+      "advertisedPrice": "8 500 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "януари 2016 г.",
+        "180 000 км",
+        "Черен",
+        "Бензинов",
+        "110 к.с.",
+        "Евро 6",
+        "110 куб.см",
+        "Ръчна",
+        "Хечбек"
+      ],
+      "year": 2016,
+      "mileageKm": 180000,
+      "color": "Черен",
+      "fuel": "Бензинов",
+      "power": "110 к.с.",
+      "transmission": "Ръчна",
+      "body": "Хечбек",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/478/1/big1/11749119289646478_zR.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/478/1/big1/11749119289646478_un.webp"
+      ]
+    },
+    {
+      "id": "21785243532763738",
+      "title": "Toyota Rav4 2.2D-CAT/4x4/Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-21785243532763738-toyota-rav4-2-2d-cat-4x4-lizing",
+      "priceEur": 7500,
+      "advertisedPrice": "7 500 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "юли 2007 г.",
+        "245 000 км",
+        "Сив",
+        "Дизелов",
+        "177 к.с.",
+        "Евро 4",
+        "2200 куб.см",
+        "Ръчна",
+        "Джип"
+      ],
+      "year": 2007,
+      "mileageKm": 245000,
+      "color": "Сив",
+      "fuel": "Дизелов",
+      "power": "177 к.с.",
+      "transmission": "Ръчна",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/738/2/big1/21785243532763738_af.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/738/2/big1/21785243532763738_N3.webp"
+      ]
+    },
+    {
+      "id": "21784971020870439",
+      "title": "Toyota 4runner 4.0i/4x4/Автоматик/Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-21784971020870439-toyota-4runner-4-0i-4x4-avtomatik-lizing",
+      "priceEur": 35600,
+      "advertisedPrice": "35 600 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "юли 2023 г.",
+        "98 000 км",
+        "Бордо",
+        "Бензинов",
+        "275 к.с.",
+        "Евро 6",
+        "4000 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2023,
+      "mileageKm": 98000,
+      "color": "Бордо",
+      "fuel": "Бензинов",
+      "power": "275 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/439/2/big1/21784971020870439_jg.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/439/2/big1/21784971020870439_bv.webp"
+      ]
+    },
+    {
+      "id": "11750858399905133",
+      "title": "Subaru Outback 2.5i/AWD/Авт./Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-11750858399905133-subaru-outback-2-5i-awd-avt-lizing",
+      "priceEur": 12900,
+      "advertisedPrice": "12 900 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "юли 2015 г.",
+        "151 000 км",
+        "Сив",
+        "Бензинов",
+        "175 к.с.",
+        "Евро 5",
+        "2500 куб.см",
+        "Автоматична",
+        "Хечбек"
+      ],
+      "year": 2015,
+      "mileageKm": 151000,
+      "color": "Сив",
+      "fuel": "Бензинов",
+      "power": "175 к.с.",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/133/1/big1/11750858399905133_P1.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/133/1/big1/11750858399905133_Nx.webp"
+      ]
+    },
+    {
+      "id": "21770443658532216",
+      "title": "Porsche Cayenne S/3.6i/Лизинг",
+      "sourceUrl": "https://carmax.mobile.bg/obiava-21770443658532216-porsche-cayenne-s-3-6i-lizing",
+      "priceEur": 23950,
+      "advertisedPrice": "23 950 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "август 2015 г.",
+        "162 000 км",
+        "Черен",
+        "Бензинов",
+        "420 к.с.",
+        "Евро 6",
+        "3600 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2015,
+      "mileageKm": 162000,
+      "color": "Черен",
+      "fuel": "Бензинов",
+      "power": "420 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/216/2/big1/21770443658532216_YP.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/216/2/big1/21770443658532216_1w.webp"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "brand/logo.jpg",
+      "kind": "logo",
+      "listingId": null,
+      "sourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12828120800529462.pic",
+      "sha256": "bef6a6454fb71ce7375a1fbc2e3546c838114b2ae22658da715cabfe99277011",
+      "gitBlob": "01f4a0cb4999bdf64a289d91a87faff07f2de7fd",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21776406793706557-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21776406793706557",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/557/2/big1/21776406793706557_DV.webp",
+      "sha256": "c46696c5ec8f56d1f54884fe9a0316b4fb24fc95616848e176926db2bf109511",
+      "gitBlob": "8cad6ccff16b10d8276d6f0fda442789ebf149d4",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21776406793706557-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21776406793706557",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/557/2/big1/21776406793706557_Y4.webp",
+      "sha256": "b44542f4ebff195e0de191134ab47932000751536e86ea4fd083ee854da597eb",
+      "gitBlob": "c78232a0a32a3549876b69e79190adbbd63e038c",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11749119289646478-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11749119289646478",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/478/1/big1/11749119289646478_zR.webp",
+      "sha256": "dd0218b5edf63929960f31e15393457dd2bb062bb160432b3e9de103657568d0",
+      "gitBlob": "b2ee34f6717298850aa244889813ac4ae18a3abc",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11773910246496681-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11773910246496681",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/681/1/big1/11773910246496681_Oy.webp",
+      "sha256": "671ee68a97a32aabcb95f80ba4751fbfaf0e836eb88460b578f76d30709fb60d",
+      "gitBlob": "6a64264cb99b124a88e326edcc7881341546255d",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11773910246496681-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11773910246496681",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/681/1/big1/11773910246496681_Yl.webp",
+      "sha256": "90e949c0c2c59feddbdd859e572d1bd449fd287eb86c0c31a42232ac01f89013",
+      "gitBlob": "244cbb5c2e5b242231f9b7ae922dd5138c03c83c",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11755422705847994-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11755422705847994",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/994/1/big1/11755422705847994_Fd.webp",
+      "sha256": "f20b27aa064445d29b1f5e7295e4019901aacd18a5ba37d4fb1a47357298da32",
+      "gitBlob": "38349deddd2bb07a134efc5ad6201d68f9f9adc5",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11755422705847994-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11755422705847994",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/994/1/big1/11755422705847994_3X.webp",
+      "sha256": "db19ce98441c24957f74899bbb6e0ccc59043fb92cff73ac212a850251ef0107",
+      "gitBlob": "172d37e35d3eb616c0b103df20a9336254051327",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11749119289646478-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11749119289646478",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/478/1/big1/11749119289646478_un.webp",
+      "sha256": "b1d857b5241938b45bd73ed7b0e6b6618f2974c26369c73272e08462ea76f62a",
+      "gitBlob": "b8265f1100bc222e14a066cdef855da6d79c765c",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21785243532763738-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21785243532763738",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/738/2/big1/21785243532763738_N3.webp",
+      "sha256": "7afa6a3027f44379a0d8b21de2edcc308d12ee96e9e95a1f86589c44246bdafa",
+      "gitBlob": "fd1ecd88afd36039d8ae53358157253ca545c773",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21785243532763738-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21785243532763738",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/738/2/big1/21785243532763738_af.webp",
+      "sha256": "0a11599ad6279ccb233d08f80c1f890ea6880179ee77e6c001c0a64a2373b62a",
+      "gitBlob": "769fb1eb8f8f22cc3e3bb3e4a0d963a8f62ae15a",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21784971020870439-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21784971020870439",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/439/2/big1/21784971020870439_jg.webp",
+      "sha256": "1145e2b5c30c1d5f39416db26692503520f58dcb9713d56c68b5203096db9b71",
+      "gitBlob": "14391839d8ac5c45e684f9276dd668f679a11624",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21784971020870439-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21784971020870439",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/439/2/big1/21784971020870439_bv.webp",
+      "sha256": "9d92c00ca83f4f94b75e23e87e26a45f4e7f14503332b7b01db9fc38971756c2",
+      "gitBlob": "7e952bbbad5e05c7a5fc7242fc19c6c2aa5e3d98",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11750858399905133-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11750858399905133",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/133/1/big1/11750858399905133_Nx.webp",
+      "sha256": "76224b408e547e0f8ad3210bc2deed4e982dc81ce3bef69c889066eb770877ad",
+      "gitBlob": "6d7b4a937759f43a87ae2844845fa81d116eeaa8",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11750858399905133-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11750858399905133",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/133/1/big1/11750858399905133_P1.webp",
+      "sha256": "192db1913235a7526327c0d467e7d4fd4d34b409d09dee887928ed4d0290153e",
+      "gitBlob": "809c756c84996f444a72ac270936864511169d9e",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21770443658532216-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21770443658532216",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/216/2/big1/21770443658532216_YP.webp",
+      "sha256": "eeb3c7f5f2c6a5a5c2e5bbdb4953fdc2c1d5f484e2d2637344525e3f919a271f",
+      "gitBlob": "c8ee62daa2b586d177128c495ba3bb4f5122612d",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21770443658532216-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21770443658532216",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/216/2/big1/21770443658532216_1w.webp",
+      "sha256": "816b77165bfd8b2f1de6cdd8e1a8731f58680a161e0adc9dcfb58b133639242d",
+      "gitBlob": "8c26bda2209390275068cd0c7e8d000a61260be0",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    }
+  ]
+}

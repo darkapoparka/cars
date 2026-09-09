@@ -46,12 +46,9 @@
 				'@type': 'Offer',
 				price: vehicle.price,
 				priceCurrency: 'EUR',
-				availability:
-					getDayNightVehicleAvailability(vehicle) === 'incoming'
-						? 'https://schema.org/PreOrder'
-						: 'https://schema.org/InStock',
+				availability: 'https://schema.org/LimitedAvailability',
 				url: appState.url ? appState.url.origin + appState.url.pathname : '',
-				seller: { '@type': 'AutoDealer', name: 'Day Night Auto София' }
+				seller: { '@type': 'AutoDealer', name: 'CAR MAX София' }
 			}
 		}).replaceAll('<', '\\u003c')
 	);

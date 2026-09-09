@@ -25,8 +25,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Практични материали от Day & Night за избор на автомобил, внос, оглед и финансиране."
-      : "Practical Day & Night guidance on choosing, importing, inspecting, and financing a vehicle.",
+      ? "Практични материали от CAR MAX за избор на автомобил, внос, оглед и финансиране."
+      : "Practical CAR MAX guidance on choosing, importing, inspecting, and financing a vehicle.",
     locale,
     path: "/blog",
     title: isBg ? "Новини и анализи" : "News and insights",
@@ -42,8 +42,8 @@ const BlogIndex = async ({ params }: BlogProps) => {
     "@context": "https://schema.org",
     "@type": "Blog",
     description: isBg
-      ? "Практични материали от Day & Night за вноса и избора на автомобил."
-      : "Practical Day & Night guidance on importing and choosing a vehicle.",
+      ? "Практични материали от CAR MAX за вноса и избора на автомобил."
+      : "Practical CAR MAX guidance on importing and choosing a vehicle.",
     inLanguage: isBg ? "bg-BG" : "en",
     name: isBg ? "Новини и анализи" : "News and insights",
     publisher: {

@@ -1,11 +1,12 @@
-# CAR MAX — Sofia
+# CAR MAX
 
-Status: **in-progress**, not a completed dealer demo. Three independent actual master application trees now exist in `auto-best/`, `modern/` (full workspace) and `carwow/`. These initial copies still contain source content pending personalization. Do not deploy, send, or treat source-template screenshots and historical passes as CAR MAX QA.
+Status: **implemented-unverified** on `codex/astra-bg-09`.
 
-Source identity and conflicts remain recorded in `SOURCE-REVIEW.json`. Official Bulgarian contacts publish Самоковско шосе 133 and +359898602002; a marketplace seller panel also shows 135. A complete current gallery pack and covering image authorization have not been established. No permission is inferred from public visibility. No dealer was contacted.
+Three complete retained-master copies are present: `auto-best/`, full-workspace `modern/`, and `carwow/`. They consume the same eight dealer-advertised vehicles and local two-photo galleries from `SOURCE-PACK.json`. Branding uses the published dealer-profile logo.
 
-The previous research-only handoff describes the earlier checkpoint. It is superseded for source-presence status by `IMPLEMENTATION.md`; it remains accurate that no finished or runtime-tested dealer has been delivered.
+Business source: https://carmax.mobile.bg/
+Website: https://carmax.bg/
+Phone: 0898 602 002
+Address: ул. Самоковско шосе 133, София
 
-Source base: `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`. Branch: `codex/astra-bg-09`. Per-variant lineage and false QA flags are in `.client/project.json`.
-
-Owner review: pending. Deployment, public-origin mounting/FAB, outreach, CRM and live provider integrations: not performed.
+The source-level syntax/compile gate for changed Svelte/TypeScript files passed before publication. Full retained-lockfile installs, framework builds and browser comparisons are still pending, so this is not marked verified-local. Owner review remains pending. No deployment, outreach, CRM write or live provider integration was performed.

@@ -50,7 +50,7 @@
 		{
 			id: 'buy-confidently',
 			modifier: 'inventory',
-			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
+			image: '/assets/dealer/inventory/11773910246496681-1.webp',
 			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
 			title: 'Купи автомобил уверено',
 			balancedTitle: 'Купи автомобил',
@@ -71,14 +71,14 @@
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
-			image: '/assets/images/home-promos/urus-rear-v4.webp',
+			image: '/assets/dealer/inventory/11773910246496681-1.webp',
 			alt: 'Продай или замени автомобил',
 			title: 'Продай или замени лесно',
 			balancedTitle: 'Продай или замени',
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на Day Night Auto.',
+				'Получете обратна връзка от екипа на CAR MAX.',
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [

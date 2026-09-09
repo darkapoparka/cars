@@ -13,14 +13,14 @@ export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | '
 export const footerSocialLinks: FooterSocialLink[] = [
 	{
 		label: 'Facebook',
-		href: 'https://www.facebook.com/61566304063141/',
+		href: 'https://www.facebook.com/www.carmax.bg/',
 		title: 'Facebook',
 		icon: 'facebook',
 		external: true
 	},
 	{
 		label: 'Instagram',
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
+		href: 'https://carmax.bg/',
 		title: 'Instagram',
 		icon: 'instagram',
 		external: true

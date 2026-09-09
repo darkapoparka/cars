@@ -23,7 +23,7 @@ export const financingRequestCopy = {
     sending: "Изпращане…",
     success: "Заявката е изпратена",
     successBody:
-      "Екипът на Day & Night ще се свърже с вас за конкретните условия.",
+      "Екипът на CAR MAX ще се свърже с вас за конкретните условия.",
     term: "Срок",
     title: "Заявка за финансиране",
     vehicle: "Избран автомобил",
@@ -45,7 +45,7 @@ export const financingRequestCopy = {
     send: "Send request",
     sending: "Sending…",
     success: "Request sent",
-    successBody: "The Day & Night team will contact you to confirm the terms.",
+    successBody: "The CAR MAX team will contact you to confirm the terms.",
     term: "Term",
     title: "Financing request",
     vehicle: "Selected vehicle",

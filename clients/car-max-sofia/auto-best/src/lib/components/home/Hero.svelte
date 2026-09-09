@@ -11,7 +11,7 @@
         <span class="dn-hero__title-desktop">Изберете своя автомобил</span>
         <span class="dn-hero__title-mobile">Намери автомобил</span>
       </h1>
-      <p class="dn-hero__location">{brand.city} · Студентски град · Оглед по уговорка</p>
+      <p class="dn-hero__location">{brand.city} · ул. Самоковско шосе 133 · Оглед по уговорка</p>
     </div>
   </div>
 </section>

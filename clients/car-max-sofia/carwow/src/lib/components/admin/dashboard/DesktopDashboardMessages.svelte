@@ -63,8 +63,8 @@
 		{
 			id: 'daynight-auto',
 			avatar: '/assets/images/avatar/avatar-9.png',
-			alt: 'Day Night Auto',
-			name: 'Day Night Auto',
+			alt: 'CAR MAX',
+			name: 'CAR MAX',
 			preview: "Hey! there I'm available",
 			time: 'Yesterday'
 		},

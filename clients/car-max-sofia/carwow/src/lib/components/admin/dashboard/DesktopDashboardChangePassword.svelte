@@ -24,7 +24,7 @@
 			name: 'OldPassword',
 			label: 'Old Password:*',
 			type: 'password',
-			value: 'daynightauto@2026',
+			value: 'demo-disabled',
 			placeholder: 'Password',
 			className: 'input-large password-input is-hidden'
 		},
@@ -33,7 +33,7 @@
 			name: 'NewPassword',
 			label: 'New password:*',
 			type: 'password',
-			value: 'daynightauto@2026',
+			value: 'demo-disabled',
 			placeholder: 'Password',
 			className: 'input-large password-input is-hidden'
 		},
@@ -42,7 +42,7 @@
 			name: 'RetypeNewPassword',
 			label: 'Retype new password:*',
 			type: 'password',
-			value: 'daynightauto@2026',
+			value: 'demo-disabled',
 			placeholder: 'Password',
 			className: 'input-large password-input is-hidden'
 		}

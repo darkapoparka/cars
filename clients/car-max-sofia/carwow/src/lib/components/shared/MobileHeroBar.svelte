@@ -5,9 +5,9 @@
 </script>
 
 <div class="mobile-hero-bar">
-	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
+	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="CAR MAX начало">
 		<img
-			src={resolve('/brand/daynight-logo-generated.png')}
+			src={resolve('/assets/dealer/brand/logo.jpg')}
 			alt={daynightSite.shortName}
 			width="170"
 			height="44"

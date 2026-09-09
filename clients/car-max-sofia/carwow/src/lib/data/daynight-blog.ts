@@ -38,13 +38,13 @@ function article(input: DayNightArticleInput): DayNightArticle {
 export const daynightArticles: DayNightArticle[] = [
 	article({
 		slug: 'dnevni-novini-daynight-auto-obnovena-nalichnost',
-		title: 'Как да следите наличността на Day Night Auto',
+		title: 'Как да следите наличността на CAR MAX',
 		description:
 			'Как да проверите актуалната наличност и да подготвите запитване за автомобил или оглед.',
 		category: 'Съвети',
 		kind: 'guide',
 		date: '2026-05-28',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-44.jpg',
 		readMinutes: 3,
 		summary: [
@@ -77,7 +77,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Съвети',
 		kind: 'guide',
 		date: '2026-05-27',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-20.jpg',
 		readMinutes: 3,
 		summary: [
@@ -111,7 +111,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Съвети',
 		kind: 'guide',
 		date: '2026-05-26',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-18.jpg',
 		readMinutes: 5,
 		summary: [
@@ -138,7 +138,7 @@ export const daynightArticles: DayNightArticle[] = [
 				heading: '3. Направете оглед спокойно',
 				paragraphs: [
 					'При оглед поискайте тестово шофиране и възможност за проверка в доверен сервиз.',
-					'Day Night Auto съдейства с документи, регистрация, финансиране и оглед на място в София.'
+					'CAR MAX съдейства с документи, регистрация, финансиране и оглед на място в София.'
 				]
 			}
 		],
@@ -152,7 +152,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Финансиране',
 		kind: 'guide',
 		date: '2026-05-25',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-21.jpg',
 		readMinutes: 4,
 		summary: [
@@ -171,7 +171,7 @@ export const daynightArticles: DayNightArticle[] = [
 			{
 				heading: 'Как помага екипът',
 				paragraphs: [
-					'Екипът на Day Night Auto може да насочи клиента към подходящи варианти за финансиране според автомобила, бюджета и желания срок.',
+					'Екипът на CAR MAX може да насочи клиента към подходящи варианти за финансиране според автомобила, бюджета и желания срок.',
 					'При конкретен автомобил е най-добре параметрите да се обсъдят преди финално решение.'
 				]
 			}
@@ -186,7 +186,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Документи',
 		kind: 'guide',
 		date: '2026-05-24',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-24.jpg',
 		readMinutes: 4,
 		summary: [
@@ -206,7 +206,7 @@ export const daynightArticles: DayNightArticle[] = [
 				heading: 'Какво следва след избор',
 				paragraphs: [
 					'След покупка обикновено следват превод, регистрация, застраховки и обслужване според конкретния автомобил.',
-					'Day Night Auto предлага съдействие с документи и регистрация, за да не се губи време между огледа и предаването.'
+					'CAR MAX предлага съдействие с документи и регистрация, за да не се губи време между огледа и предаването.'
 				]
 			}
 		],
@@ -220,7 +220,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Марки',
 		kind: 'guide',
 		date: '2026-05-23',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-30.jpg',
 		readMinutes: 5,
 		summary: [
@@ -240,7 +240,7 @@ export const daynightArticles: DayNightArticle[] = [
 				heading: 'Какво да гледате при оглед',
 				paragraphs: [
 					'Проверете скоростна кутия, окачване, електроника, обслужване и реално състояние на салона.',
-					'В наличността на Day Night Auto често има BMW, Mercedes-Benz и Audi, подходящи за оглед и сравнение на място.'
+					'В наличността на CAR MAX често има BMW, Mercedes-Benz и Audi, подходящи за оглед и сравнение на място.'
 				]
 			}
 		],
@@ -253,7 +253,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Съвети',
 		kind: 'guide',
 		date: '2026-05-22',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-32.jpg',
 		readMinutes: 5,
 		summary: [
@@ -283,11 +283,11 @@ export const daynightArticles: DayNightArticle[] = [
 		slug: 'kak-da-podgotvim-avtomobil-za-prodazhba',
 		title: 'Как да подготвите автомобил за продажба или бартер',
 		description:
-			'Какво да подготвите, ако искате оценка, продажба или замяна на автомобил чрез Day Night Auto.',
+			'Какво да подготвите, ако искате оценка, продажба или замяна на автомобил чрез CAR MAX.',
 		category: 'Съвети',
 		kind: 'guide',
 		date: '2026-05-21',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-31.jpg',
 		readMinutes: 4,
 		summary: [
@@ -321,7 +321,7 @@ export const daynightArticles: DayNightArticle[] = [
 		category: 'Съвети',
 		kind: 'guide',
 		date: '2026-05-20',
-		author: 'Day Night Auto',
+		author: 'CAR MAX',
 		image: '/assets/images/blog/post-23.jpg',
 		readMinutes: 4,
 		summary: [
@@ -341,7 +341,7 @@ export const daynightArticles: DayNightArticle[] = [
 				heading: 'Как се взема решение',
 				paragraphs: [
 					'Добрата покупка не е само най-ниската цена, а баланс между състояние, история, бъдещи разходи и удобен процес.',
-					'Day Night Auto помага на клиента да сравни тези фактори преди финализиране.'
+					'CAR MAX помага на клиента да сравни тези фактори преди финализиране.'
 				]
 			}
 		],

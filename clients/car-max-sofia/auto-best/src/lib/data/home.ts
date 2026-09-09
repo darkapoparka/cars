@@ -11,8 +11,8 @@ const bodyArtwork = [
   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
   { label: 'Комби', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
   { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
-  { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
-  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
+  { label: 'Купе', query: 'Coupe', image: '/dealer/inventory/21784971020870439-1.webp', width: 1000, height: 667 },
+  { label: 'Спортбек', query: 'Sportback', image: '/dealer/inventory/21784971020870439-1.webp', width: 1000, height: 667 }
 ] as const;
 
 const brandArtwork = [

@@ -286,14 +286,14 @@
 					title="Как работи"
 					description="Три ясни стъпки до конкретна оценка."
 					label="Виж стъпките"
-					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
+					image="/assets/dealer/inventory/11773910246496681-1.webp"
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
 					title="Защо Day Night"
 					description="Кристиян и екипът Ви дават ясен следващ вариант."
 					label="Виж предимствата"
-					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
+					image="/assets/dealer/inventory/11773910246496681-1.webp"
 					tone="yellow"
 					portrait
 					onclick={() => openInfo('benefits')}

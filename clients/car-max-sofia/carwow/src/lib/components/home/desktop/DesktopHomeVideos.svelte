@@ -2,12 +2,14 @@
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import { homeVideos, youtubeChannelUrl } from '$lib/data/daynight-videos';
 </script>
+{#if homeVideos.length}
 
-<section class="home-videos" aria-label="Day Night Auto в YouTube">
+
+<section class="home-videos" aria-label="CAR MAX в YouTube">
 	<div class="daynight-home-container">
-		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="Всички видеа">
+		<DesktopSectionHeading title="CAR MAX в YouTube" href={youtubeChannelUrl} label="Всички видеа">
 			{#snippet titleContent()}
-				<span class="home-videos__title">Day Night Auto в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
+				<span class="home-videos__title">CAR MAX в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
 			{/snippet}
 		</DesktopSectionHeading>
 		<div class="home-videos__grid">
@@ -31,6 +33,8 @@
 	</div>
 </section>
 
+
+{/if}
 <style>
 	.home-videos { background: #f5f6f7; padding: 40px 0; }
 	.home-videos__title { display: inline-flex; align-items: center; gap: 12px; font: inherit !important; color: inherit !important; }

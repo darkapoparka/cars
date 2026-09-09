@@ -28,7 +28,7 @@ export const dealers: Dealer[] = [
 	},
 	{
 		slug: "day-night-auto-group-documents",
-		name: "Day Night Auto Документи и съдействие",
+		name: "CAR MAX Документи и съдействие",
 		location: "София",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
@@ -40,12 +40,12 @@ export const dealers: Dealer[] = [
 	},
 	{
 		slug: "day-night-auto-group-sourcing",
-		name: "Day Night Auto Подбор на автомобил",
+		name: "CAR MAX Подбор на автомобил",
 		location: "София",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
-		logo: '/brand/daynight-logo-generated.png',
-		cover: '/brand/daynight-logo-generated.png',
+		logo: '/assets/dealer/brand/logo.jpg',
+		cover: '/assets/dealer/brand/logo.jpg',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.7,
 		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
