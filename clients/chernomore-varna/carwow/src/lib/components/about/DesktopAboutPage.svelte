@@ -53,7 +53,7 @@
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				<a href={`tel:${daynightSite.phone}`}
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
 				<div class="about-hero-socials">

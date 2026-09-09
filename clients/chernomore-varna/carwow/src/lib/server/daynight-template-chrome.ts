@@ -447,7 +447,7 @@ function renderLink(item: PublicNavLink, className = 'menu-item') {
 }
 
 export function renderHeaderContact() {
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const viberHref = `tel:${daynightSite.phone}`;
 
 	return `<ul class="header-contact">
 <li class="daynight-header-contact daynight-header-contact--phone">
@@ -461,7 +461,7 @@ export function renderHeaderContact() {
 <span>Изберете обаждане или Viber чат.</span>
 <div class="daynight-contact-popover__actions">
 <a href="tel:${daynightSite.phone}">Обади се</a>
-<a href="${viberHref}">Viber</a>
+<a href="${viberHref}">Телефон</a>
 </div>
 </div>
 </li>

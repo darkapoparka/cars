@@ -163,7 +163,7 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				Не знаеш коя услуга ти трябва? <a href={`tel:${daynightSite.phone}`}
 					>Обади ни се</a
 				>
 			</p>

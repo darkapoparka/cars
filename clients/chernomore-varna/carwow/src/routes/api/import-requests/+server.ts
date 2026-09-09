@@ -1,3 +1,4 @@
+import { dealerPreview } from '$lib/config/dealer-preview';
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { getDefaultDealerSlug } from '$lib/server/app-config';
@@ -11,6 +12,7 @@ import {
 } from '$lib/server/staff-notifications';
 
 export const POST: RequestHandler = async ({ locals, request, getClientAddress }) => {
+	if (dealerPreview.enabled) return json({ message: 'Демонстрационна форма. Нищо не е изпратено или записано.' }, { status: 503 });
 	let db;
 
 	try {

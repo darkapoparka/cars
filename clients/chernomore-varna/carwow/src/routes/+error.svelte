@@ -23,7 +23,7 @@
 <main id="main-content" class="daynight-error" aria-labelledby="daynight-error-title">
 	<div class="daynight-error__card">
 		<a class="daynight-error__brand" href={resolve('/')}>
-			<img src={resolve('/dealer/logo-pending.svg')} alt="Черно море" />
+			<img src={resolve('/dealer/logo-dark.svg')} alt="Черно море" />
 		</a>
 		<span class="daynight-error__code">{page.status}</span>
 		<h1 id="daynight-error-title">{heading}</h1>

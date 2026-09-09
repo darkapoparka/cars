@@ -25,7 +25,7 @@
 	const inventoryHref = resolve('/inventory');
 	const importHref = resolve('/contact?intent=import');
 	const sellHref = resolve('/sell-your-car');
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapHref = daynightSite.mapUrl;
 	const currentPath = $derived(appPage.url.pathname);
 	const garage = getOptionalGarageContext();
@@ -243,7 +243,7 @@
 			<div class="mobile-menu-sheet__brand">
 				<img
 					class="mobile-menu-sheet__logo"
-					src={resolve('/dealer/logo-pending.svg')}
+					src={resolve('/dealer/logo-dark.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</div>

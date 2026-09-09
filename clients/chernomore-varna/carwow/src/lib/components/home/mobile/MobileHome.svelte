@@ -54,7 +54,7 @@
 	const inventoryPath = '/inventory' as const;
 	const importRequestPath = '/contact' as const;
 	const inventoryHref = resolve(inventoryPath);
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapHref = daynightSite.mapUrl;
 
 	type InventoryHref = typeof inventoryPath | `${typeof inventoryPath}?${string}`;
@@ -437,7 +437,7 @@
 			<a class="mh-hero__brand" href={resolve('/')} aria-label="Черно море home">
 				<img
 					class="mh-hero__logo"
-					src={resolve('/dealer/logo-pending.svg')}
+					src={resolve('/dealer/logo-dark.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -698,7 +698,7 @@
 		<div class="mh-footer__brand">
 			<img
 				class="mh-footer__logo"
-				src={resolve('/dealer/logo-pending.svg')}
+				src={resolve('/dealer/logo-dark.svg')}
 				alt={daynightSite.name}
 			/>
 			<p>

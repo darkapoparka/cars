@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { daynightSite } from '$lib/data/daynight-site';
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import DesktopHomeTrailingChrome from '$lib/components/home/desktop/DesktopHomeTrailingChrome.svelte';
@@ -55,3 +56,5 @@
 {#if showMobileShell}
 	<MobileBottomDock />
 {/if}
+
+{#if daynightSite.secondaryPhone}<p class="container" style="padding:16px;text-align:center"><a href={`tel:${daynightSite.secondaryPhone}`}>Допълнителен публикуван телефон: {daynightSite.secondaryPhone}</a></p>{/if}
