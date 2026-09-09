@@ -1,11 +1,12 @@
-# СТЕНЛИ КАР — Sofia
+# СТЕНЛИ КАР
 
-Session 09 · observed 2026-09-09 · **blocked** · applications implemented: **0/3**.
+Status: **implemented-unverified** on `codex/astra-bg-09`.
 
-`stenlicar.mobile.bg` and `stenlicar.com` are corroborated as the same public dealership: the sources refer to each other and share landline 02 929 0213. This does not resolve their different published addresses, mobile numbers or opening hours. Do not invent separate branches or a relocation. No final map/contact destination has been personalized.
+Three complete retained-master copies are present: `auto-best/`, full-workspace `modern/`, and `carwow/`. They consume the same eight dealer-advertised vehicles and local two-photo galleries from `SOURCE-PACK.json`. Branding uses the published dealer-profile logo.
 
-The assigned marketplace advertises whole cars, but its category also contains an X5 whose seller description explicitly identifies a scrapped total-loss vehicle. That entry must not be used as normal available road-car stock. Some structured listing years differ from description years.
+Business source: https://stenlicar.mobile.bg/
+Website: https://stenlicar.com/
+Phone: 0888 702 002
+Address: ул. Кирил Христов 78, Суходол, София
 
-No permitted real listing-photo pack or covering reuse authorization was established in the inspected material. Logo/cover URLs were found, but the image tools failed to display their .pic bytes correctly; no visual inspection or absence-of-branding conclusion is claimed. These unresolved media and current-location gaps remain before a complete skin can be delivered.
-
-See [SOURCE-REVIEW.json](SOURCE-REVIEW.json) and [checkpoint](../../docs/lead-build/bulgaria-2026-09-09/reports/session-09/stenli-car.md). This folder contains evidence only, not apps. Existing projects and masters were not modified. Owner review is pending; no deployment, dealer contact or CRM operation occurred.
+The source-level syntax/compile gate for changed Svelte/TypeScript files passed before publication. Full retained-lockfile installs, framework builds and browser comparisons are still pending, so this is not marked verified-local. Owner review remains pending. No deployment, outreach, CRM write or live provider integration was performed.
