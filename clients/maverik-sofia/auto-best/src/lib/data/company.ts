@@ -1,133 +1,15 @@
 import { brand } from '$config/brand';
-
-export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
-
-type CompanyService = {
-  index: string;
-  icon: CompanyServiceIcon;
-  title: string;
-  description: string;
-  href: string;
-  cta: string;
-};
-
-type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
-
-export type ContactTopic = {
-  id: ContactTopicId;
-  label: string;
-  title: string;
-  description: string;
-  mobileDescription?: string;
-};
-
-/** Conversation prompts, not a promise of service or a submitted enquiry. */
-export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
-  'trade-in': {
-    title: 'Подгответе за разговора',
-    items: ['Марка, модел и година', 'Пробег и състояние', 'Снимки или линк към обява']
-  },
-  import: {
-    title: 'Какъв автомобил търсите?',
-    items: ['Марка, модел и предпочитания', 'Бюджет за покупката и вноса', 'Линк към обява, ако вече сте избрали']
-  },
-  leasing: {
-    title: 'Обсъдете с екипа',
-    items: ['Автомобилът, който сте избрали', 'Първоначална вноска и срок', 'Актуални условия за конкретната сделка']
-  },
-  inspection: {
-    title: 'Уговорете посещението',
-    items: ['Автомобилът, който искате да видите', 'Удобен ден и час', 'Потвърждение от екипа по телефона']
-  }
-};
-
-/** Validate a user-provided listing link without fetching or inspecting its destination. */
-export function resolveImportUrl(value: string | null): string | null {
-  const candidate = value?.trim();
-  if (!candidate || candidate.length > 2048) return null;
-  try {
-    const url = new URL(candidate);
-    if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) return null;
-    return url.href;
-  } catch {
-    return null;
-  }
-}
-
-export const companyServices: CompanyService[] = [
-  {
-    index: '01',
-    icon: 'inspection',
-    title: `Оглед в ${brand.city}`,
-    description: `Посещение в ${brand.city} с предварителна уговорка.`,
-    href: '/contact?topic=inspection',
-    cta: 'Запазете оглед'
-  },
-  {
-    index: '02',
-    icon: 'import',
-    title: 'Внос по заявка',
-    description: 'Обсъдете автомобил, бюджет и внос с екипа.',
-    href: '/contact?topic=import',
-    cta: 'Попитайте за внос'
-  },
-  {
-    index: '03',
-    icon: 'leasing',
-    title: 'Собствен лизинг',
-    description: 'Условия според избрания автомобил.',
-    href: '/contact?topic=leasing',
-    cta: 'Обсъдете лизинг'
-  },
-  {
-    index: '04',
-    icon: 'trade-in',
-    title: 'Оценка за бартер',
-    description: 'Предложете своя автомобил за индивидуална оценка.',
-    href: '/contact?topic=trade-in',
-    cta: 'Поискайте оценка'
-  }
-];
-
-export const contactTopics: ContactTopic[] = [
-  {
-    id: 'general',
-    label: 'Общ въпрос',
-    title: 'Разговор с екипа',
-    description: `За наличност, следващи стъпки или друг въпрос за ${brand.name}.`
-  },
-  {
-    id: 'inspection',
-    label: 'Оглед',
-    title: `Оглед в ${brand.city}`,
-    description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
-  },
-  {
-    id: 'import',
-    label: 'Внос',
-    title: 'Внос по заявка',
-    description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
-    mobileDescription: 'Добавете обява или опишете какво търсите.'
-  },
-  {
-    id: 'leasing',
-    label: 'Лизинг',
-    title: 'Собствен лизинг',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
-  },
-  {
-    id: 'trade-in',
-    label: 'Бартер',
-    title: 'Бартер и оценка',
-    description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
-    mobileDescription: 'Поискайте оценка за продажба или бартер.'
-  }
-];
-
-export const resolveContactTopic = (value: string | null) =>
-  contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
-
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+export type CompanyServiceIcon='inspection'|'import'|'leasing'|'trade-in';
+type CompanyService={index:string;icon:CompanyServiceIcon;title:string;description:string;href:string;cta:string};
+type ContactTopicId='general'|'inspection'|'import'|'leasing'|'trade-in';
+export type ContactTopic={id:ContactTopicId;label:string;title:string;description:string;mobileDescription?:string};
+export const contactPreparation:Partial<Record<ContactTopicId,{title:string;items:string[]}>>={inspection:{title:'За огледа',items:['Избраният автомобил','Проверка на актуалната му локация','Потвърждение по телефона']},leasing:{title:'За финансирането',items:['Конкретната обява','Желаните условия','Актуална оферта от дилъра']},import:{title:'За автомобила',items:['Номер или линк към обявата','Къде се намира автомобилът','Какво искате да уточните']},'trade-in':{title:'За вашия автомобил',items:['Марка, модел и година','Пробег и състояние','Първо потвърдете дали е възможен бартер']}};
+export function resolveImportUrl(value:string|null):string|null{const candidate=value?.trim();if(!candidate||candidate.length>2048)return null;try{const url=new URL(candidate);if(!['http:','https:'].includes(url.protocol)||url.username||url.password)return null;return url.href}catch{return null}}
+export const companyServices:CompanyService[]=[
+{index:'01',icon:'inspection',title:`Оглед в ${brand.city}`,description:'Потвърдете къде се намира конкретният автомобил и уговорете посещение.',href:'/contact?topic=inspection',cta:'Уговорете оглед'},
+{index:'02',icon:'import',title:'Информация по обявата',description:'Някои публикувани предложения са с различна локация; проверете произход, транспорт и документи.',href:'/contact?topic=import',cta:'Задайте въпрос'},
+{index:'03',icon:'leasing',title:'Финансиране по запитване',description:'Публикувани проценти и срокове по отделни обяви не са универсални условия; поискайте актуална оферта.',href:'/contact?topic=leasing',cta:'Обсъдете условията'},
+{index:'04',icon:'trade-in',title:'Въпрос за ваш автомобил',description:'За бартер или изкупуване първо потвърдете възможността с дилъра.',href:'/contact?topic=trade-in',cta:'Свържете се'}];
+export const contactTopics:ContactTopic[]=[{id:'general',label:'Общ въпрос',title:`Разговор с ${brand.shortName}`,description:'За наличност, цена, локация или документи по публикуваните автомобили.'},{id:'inspection',label:'Оглед',title:'Оглед на автомобил',description:'Потвърдете локацията и наличността преди посещение.'},{id:'import',label:'Обява',title:'Въпрос по обявата',description:'Уточнете местонахождение, произход, транспорт или документи.'},{id:'leasing',label:'Финансиране',title:'Финансиране по запитване',description:'Условията се потвърждават индивидуално за конкретния автомобил.'},{id:'trade-in',label:'Ваш автомобил',title:'Въпрос за продажба или бартер',description:'Възможността се потвърждава директно с дилъра.'}];
+export const resolveContactTopic=(value:string|null)=>contactTopics.find((topic)=>topic.id===value)??contactTopics[0];
+export const showroomCoordinates=null;
