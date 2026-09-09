@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "clientSlug": "icars-plovdiv",
+  "leadId": "bg-plovdiv-icars",
+  "status": "blocked",
+  "purpose": "Representative current-source and media evidence, not a complete implementation pack or availability audit.",
+  "identity": {
+    "name": "icars",
+    "city": "Пловдив",
+    "district": "Индустриална зона - Север",
+    "addressAsPublished": "ул.'Напредък' 1",
+    "phoneE164": "+359885595555",
+    "email": null,
+    "openingHours": null,
+    "hoursNote": "The contact profile says hours have not been entered.",
+    "mobileBgMemberSince": 2015,
+    "foundingYear": null,
+    "sources": ["https://icars.mobile.bg/", "https://icars.mobile.bg/contacts", "https://www.auto.bg/dealer/icars"],
+    "aboutAttempt": {"url":"https://icars.mobile.bg/about","outcome":"Internal Error"},
+    "viewingPolicy": "By prior arrangement, as stated in the seller's BMW 740d description.",
+    "confirmedIndependentWebsite": null,
+    "candidateWebsite": {"url":"https://www.i-cars.bg/","basis":"Small domain text visually read on the plate insert in a matched source BMW photograph; tentative, not proof of control.","openOutcome":"Internal Error","boundedSearchOutcome":"No confidently matched result joining the domain to the current phone/address."},
+    "matchedFacebook": null,
+    "matchedInstagram": null,
+    "recentSocialPostVerified": false,
+    "excludedNameMatches": [
+      {"url":"https://icarsauto.mobile.bg/contacts","name":"ICARS Auto","city":"Перник","phone":"+359898667626","reason":"Different city and phone; not the assigned Plovdiv account."},
+      {"url":"https://icars.pt/","city":"Aveiro, Portugal","phone":"+351925415225","reason":"Different country and phone; do not borrow its artwork, services or inventory."}
+    ],
+    "newCrmIdentityCreated": false
+  },
+  "inventory": {
+    "primaryAdvertisedEntries": 44,
+    "autoBgAdvertisedEntries": 44,
+    "car24StaleBodyEntries": 39,
+    "car24Note": "The opened body was reported crawled seven months ago; its search excerpt said 44. Not a current-stock authority.",
+    "verifiedAvailableCount": null,
+    "detailSample": {
+      "sourceId":"11760378435449508",
+      "sourceUrl":"https://icars.mobile.bg/obiava-11760378435449508-bmw-740-d-xdrive-garantsiya-04-2028",
+      "title":"BMW 740 d xDrive",
+      "manufactureMonth":"2023-04",
+      "mileageKm":85000,
+      "fuel":"Дизелов",
+      "transmission":"Автоматична",
+      "powerHp":300,
+      "engineCc":2993,
+      "emissionClass":"Euro 6",
+      "bodyAsPublished":"Стреч лимузина",
+      "color":"Сив",
+      "advertisedCashPrice":71999,
+      "currency":"EUR",
+      "taxQualification":"Цената е без ДДС",
+      "sellerEditedOn":"2026-07-21",
+      "availability":"advertised-unconfirmed",
+      "galleryImageLinks":16,
+      "searchSnapshotConflict":"Older search excerpt: EUR 75,999 and 75,000 km; current opened detail: EUR 71,999 and 85,000 km.",
+      "warrantyTitleClaim":"04.2028; seller claim only, not independently established or generalized."
+    },
+    "exclusionsAndCautions": [
+      {"sourceUrl":"https://icars.mobile.bg/obiava-11712140689564415-mercedes-benz-e-220-d-coupe-v-garantsiya","detailRead":true,"finding":"The description's warranty end date is 2025-05 although the title still says under warranty. Do not present it as current cover."},
+      {"sourceUrl":"https://www.mobile.bg/obiava-11775721122562055-bmw-ix3","detailRead":true,"finding":"Located in Germany; price on enquiry and vehicle-specific contact 0878838818. Exclude from local available Plovdiv stock and do not invent a cash price."},
+      {"finding":"Lease-without-income-proof / approval-within-one-hour text is seller marketing, not an approved financial integration or guaranteed outcome."}
+    ]
+  },
+  "brandingAndMedia": {
+    "inspectedPhotoUrl":"https://cdn2.focus.bg/mobile/photosorg/508/1/big1/11760378435449508_cL.webp",
+    "photoVisuallyInspected":true,
+    "photoDescription":"Grey BMW sedan outside a building, with a branded plate insert. Image rendered at 1000 by 750 in the web tool.",
+    "plateBrandingDescription":"Green stylized i and grey cars lettering; small apparent www.i-cars.bg text. Not a standalone source logo.",
+    "standaloneLogoVisuallyAccepted":false,
+    "car24LogoAttempt":{"page":"https://www.car24.bg/avtokashta/icars","imageLink":44,"outcome":"Internal Error"},
+    "reuseBasis":"No grant covering a correctly matched current real-photo gallery set established in the inspected records. Successful public image access is not recorded as permission.",
+    "localRuntimeAssetPaths":[],
+    "imageGenerationCalled":false,
+    "noLogoClaim":false
+  },
+  "repositoryCheck": {"baseCommit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","existingRequestedTrioFoundInPriorMainAstraTreeInspection":false,"researchSource":"docs/lead-build/source/bulgaria.json","unpublishedWorkerStateKnown":false},
+  "applicationsCreated": [],
+  "checks": {"applicationCommands":[],"build":"not-run","typecheck":"not-run","browser320":"not-run","browser390":"not-run","browser1440":"not-run","ownerManualReview":"pending"},
+  "resumeRequirement": "Establish reuse for matched real-stock photos and a usable source/proposed identity, then complete the factual gallery pack before copying and personalizing the retained masters."
+}
