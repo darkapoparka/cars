@@ -1,0 +1,24 @@
+{
+  "scope": "TypeScript syntax stripping and two data-module runtime contracts only; not whole-app typecheck, Svelte build, or browser QA",
+  "runtime": "v22.16.0",
+  "inputGitBlobs": {
+    "carwow/src/lib/data/daynight-faq.ts": "95a66cc4a37831ad5ebb9bef2502072af0d843e5",
+    "carwow/src/lib/data/daynight-reviews.ts": "6dbea802b0eedaf7ccff62e74cadc4c1596f8c3a"
+  },
+  "passed": 12,
+  "failed": 0,
+  "results": [
+    {"name":"three existing accordion groups and IDs retained","outcome":"passed"},
+    {"name":"all twelve existing question IDs retained","outcome":"passed"},
+    {"name":"all accordion IDs unique","outcome":"passed"},
+    {"name":"container and heading class boundaries retained","outcome":"passed"},
+    {"name":"toggle classes and paragraph typography retained","outcome":"passed"},
+    {"name":"answers are question-specific and nonempty","outcome":"passed"},
+    {"name":"old dealer identity removed from public FAQ/review text","outcome":"passed"},
+    {"name":"bank finance distinguished from own leasing","outcome":"passed"},
+    {"name":"online reservation is explicitly not delivered","outcome":"passed"},
+    {"name":"no invented reviews or customer count","outcome":"passed"},
+    {"name":"empty labels do not claim a dealer rating","outcome":"passed"},
+    {"name":"empty distribution has no ratings or invalid percentages","outcome":"passed"}
+  ]
+}
