@@ -5,6 +5,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
 
+  const hasVideos = featuredVideos.length > 0;
   let activeVideo = $state<string | null>(null);
   let playTrigger: HTMLButtonElement | undefined;
 
@@ -25,15 +26,18 @@
   <div class="container">
     <div class="dn-videos__panel">
       <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледайте ни в</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Избрани автомобилни видеа с Кристиан Кирилов.</p>
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span>Всички видеа</span>
-          <Icon name="arrow-right" size={16} />
-          <span class="dn-sr-only"> в YouTube (нов раздел)</span>
-        </a>
+        <h2 id="videos-title" class="dn-home-section-title">{#if hasVideos}<span class="dn-videos__intro">Видео за автомобилите</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>{:else}Видео за автомобилите{/if}</h2>
+        <p>{hasVideos ? `Избрани видеа от ${brand.name}.` : 'Дилърски видеа не са добавени в тази демо версия.'}</p>
+        {#if brand.youtubeUrl}
+          <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+            <span>Всички видеа</span>
+            <Icon name="arrow-right" size={16} />
+            <span class="dn-sr-only"> в YouTube (нов раздел)</span>
+          </a>
+        {/if}
       </div>
 
+      {#if hasVideos}
       <div class="dn-videos__grid">
         {#each featuredVideos as video (video.id)}
           <article class="dn-video-card">
@@ -75,6 +79,7 @@
             </div>
           </article>
         {/each}
+        {#if brand.youtubeUrl}
         <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
           <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
           <strong>Всички видеа</strong>
@@ -82,7 +87,11 @@
           <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
           <span class="dn-sr-only">Отваря се в нов раздел</span>
         </a>
+        {/if}
       </div>
+      {:else}
+        <p class="dn-videos__empty">За снимки, видео или допълнителна информация за конкретен автомобил <a href={brand.phoneHref}>попитайте дилъра по телефона</a>. Тази страница не изпраща запитване.</p>
+      {/if}
     </div>
   </div>
 </section>
@@ -142,4 +151,6 @@
     .dn-videos__all-card:hover { border-color: #aab0b8; background: #fafafa; }
   }
   .dn-videos__intro { font-size: .8em; font-weight: 600; letter-spacing: -.02em; }
+  .dn-videos__empty { margin: 0; color: #626a75; line-height: 1.6; }
+  .dn-videos__empty a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 </style>

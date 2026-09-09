@@ -9,8 +9,8 @@
 
   const actions = [
     {
-      title: 'Подбрани автомобили',
-      description: 'Разгледайте актуалната селекция',
+      title: 'Обявени автомобили',
+      description: 'Потвърдете наличността с дилъра',
       href: '/listing-grid',
       icon: 'car'
     },
@@ -21,14 +21,14 @@
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
-      description: 'Попитайте за актуалните условия',
+      title: 'Банково финансиране',
+      description: 'Уточнете индивидуалните условия',
       href: '/contact?topic=leasing',
       icon: 'finance'
     },
     {
-      title: 'Внос по заявка',
-      description: 'Уточнете критериите с екипа',
+      title: 'Въпрос за внос',
+      description: 'Обсъдете конкретното търсене',
       href: '/contact?topic=import',
       icon: 'value'
     }
@@ -57,7 +57,7 @@
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+      <p>Употребявани автомобили в Горубляне. Обсъдете наличност, оглед и банково финансиране директно с дилъра.</p>
     </div>
     <nav aria-label="Автомобили">
       <strong>Автомобили</strong>
@@ -85,5 +85,5 @@
       <p class="dn-footer__appointment">{brand.appointment}</p>
     </div>
   </div>
-  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
+  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Оглед · Банково финансиране</span></div>
 </footer>

@@ -1,0 +1,34 @@
+{
+  "observedAt": "2026-09-09",
+  "scope": "Source/data contract only; not Svelte check, build, browser, or full-app QA",
+  "commandExecuted": "NODE_PATH=\"$(npm root -g)\" node /mnt/data/session08-resume/content-contract.cjs /mnt/data/session08-resume/files",
+  "reproduceAfterAutoBestInstall": "node clients/danger-auto/checks/content-contract.cjs",
+  "runtime": "v22.16.0",
+  "typescript": "5.8.3 (preinstalled runner compiler, not the application's lockfile install)",
+  "exitCode": 0,
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    "video data TypeScript syntax",
+    "video script TypeScript syntax (not Svelte markup)",
+    "footer script TypeScript syntax (not Svelte markup)",
+    "no inherited dealer videos are offered",
+    "source personality and retired video IDs removed from video consumers",
+    "both channel links have explicit configuration guards",
+    "video playback, focus return, and existing grid retained in source",
+    "unavailable video state preserves section and offers a real call, not delivery success",
+    "four footer action routes and original icon choices retained",
+    "footer says bank financing without inherited in-house or premium claims"
+  ],
+  "inputGitBlobs": {
+    "src/lib/data/videos.ts": "a3cfe66131b018b2db5c8dae25715d97efa561da",
+    "src/lib/components/home/VideoSection.svelte": "c6209e75139176e4e809fb9a24c45c0e572b1c60",
+    "src/lib/components/layout/Footer.svelte": "81757faa9e7df3e5a9dfaa37625629235d01bbe5"
+  },
+  "sourcePreservation": {
+    "method": "Reversed only the explicit text/empty-state changes and reproduced the original CRLF blob hashes. This is byte/source evidence, not rendered visual QA.",
+    "videoOriginalMatched": "b9feee95778f886ed131e81088ce301209699d7b",
+    "footerOriginalMatched": "44ede260d668b3c9c593b7160e265c6e98e0e145"
+  },
+  "notRun": ["retained-lockfile install", "Svelte semantic typecheck and markup compilation", "production build", "browser checks at 320/390/1440", "Modern or Carwow runtime checks"]
+}

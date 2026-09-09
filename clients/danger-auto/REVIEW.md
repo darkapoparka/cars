@@ -1,38 +1,54 @@
 # DANGER AUTO — branch checkpoint review
 
-**State: in-progress. No finished dealer trio or public preview.** All three application folders now contain retained application source, not wrappers or config-only folders. Work is owned by session 08 on `codex/astra-bg-08`.
+**State: in-progress. No finished dealer trio or public preview.** All three application folders contain retained source, not wrappers or config-only folders. Session 08 owns this work on `codex/astra-bg-08`.
 
-## Independent applications and proposed entries
+## Independent applications and review entries
 
-| Application | Folder | Local entry | Catalogue |
+| Application | Folder | Source-derived local entry | Catalogue |
 | --- | --- | --- | --- |
 | Auto Best | auto-best | / | /listing-grid |
-| Modern | modern (full monorepo; app in apps/web) | /cars | /cars |
+| Modern | modern; full workspace, public app in apps/web | /cars | /cars |
 | Carwow | carwow | / | /inventory |
 
-Entries are source-derived, not browser-verified. No coordinator public-origin mounting or design switcher is implemented or tested.
+These routes are not browser-verified. There is no public-origin mounting or design switcher implementation/verification in this branch handoff.
 
 ## Retained source
 
-Repository base: faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Existing Auto Best copy is resumed; not replaced. Modern source tree: 66bfb8196bbce18832ada6b34b02dda97baba25b. Carwow source tree read at the pinned commit: d4a08817e87cf84d08c4db1c08a515937245f2dd. Per-app `.client/source.json` records the copy method. The complete Modern apps/packages and the lockfiles are retained; no master symlinks are used.
+Base: `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`. Auto Best source tree: `97833980ab127f6de8f675ac1a188e4b7f717976`; Modern: `66bfb8196bbce18832ada6b34b02dda97baba25b`; Carwow: `d4a08817e87cf84d08c4db1c08a515937245f2dd`. These are the per-app `.client/source.json` records. Existing copies were resumed, not re-cloned over. Source QA is not client QA.
+
+## Current implementation checkpoint
+
+The Auto Best inventory module and Carwow `daynight-vehicles.ts` / `daynight-current-inventory.ts` consume the dated eight-record dealer snapshot. Modern retains the full workspace and dealer configuration; its complete adapter typing and rendered consumers still need review. These are advertised records, not a verified live-stock feed. Final local stock photos and professional identity assets are still missing.
+
+The latest resumed Auto Best work fixes legitimate zero finance amounts (`32cc2e90b07ec0db5d8ec6c7677320e94d2f4506`), personalizes homepage guidance (`939562d7be8886fb3baf024c98cb28d58d937425`), removes the source dealer's videos, guards unconfigured video-channel links, preserves playback/grid/focus code, and corrects footer financing copy. The unavailable video state keeps the section and offers an actual phone link without claiming delivery. No official DANGER AUTO video channel is asserted.
+
+The current contacts page confirms 0878 842 409 and 0888 000 055 at бул. Самоковско шосе 1, автоборса Джани до комплекс Боила, Горубляне. The contacts page has no entered hours while advert prose has separate hours. The current central configurations already match; do not restore the earlier inconsistent phone/address/hours values. Source: https://dangerauto.mobile.bg/contacts, re-read 2026-09-09.
 
 ## Local coordinator commands
 
-Use each retained package.json and runtime-version file as authority. From auto-best: `npm ci`, `npm run validate`, then `npm run dev -- --host 127.0.0.1 --port 5181`. From modern: use its pinned pnpm, `pnpm install --frozen-lockfile`; inspect workspace package names before running the database-package generation/build and web typecheck/build in static demo mode. Do not configure a live database. From carwow: `npm ci`, `npm run check`, `npm run build`, then `npm run dev -- --host 127.0.0.1 --port 5183`. Ports are suggestions, not verified free; coordinate them locally or use scripts/start-client.ps1.
+Use current package manifests/runtime files as authority. No suggested port has been checked for availability on the coordinator's computer.
+
+Auto Best: `cd clients/danger-auto/auto-best`, `npm ci`, `npm run validate`; start with `npm run dev -- --host 127.0.0.1 --port <free-port>`. Review `/`, `/listing-grid`, `/listing-detail-v1/1` and `/contact?vehicle=1&topic=inspection`.
+
+Modern: retain the entire workspace. Its template documents Node >=22.22.0 <23 and pnpm 11.4.0. Run `pnpm install --frozen-lockfile`, `pnpm --filter @repo/database build`, and web typecheck/build in the existing static demo configuration. Prisma generation here is local code generation, not a live DB connection or migration. Use distinct public/API/private-app origins and the documented local-demo environment; start the public app from `apps/web`. Review `/cars` and `/bg/contact`, then inspect the actual current detail route.
+
+Carwow: use its package's supported runtime (the assignment baseline is Node 24), `npm ci`, `npm run check`, `npm run build`; bypass the inherited fixed-port dev wrapper using the coordinator launcher. Review `/`, `/inventory`, `/inventory/chevrolet-cruze-1-6i-11788853280325556` and `/contact`.
 
 ## Checks actually run
 
-Earlier checkpoint 392b6fab9786640346a0beca23a7078a462d60b1 records **22 passed data-module checks** in checks/RESULTS.json. That evidence belongs to its recorded input blobs, not these new Modern/Carwow adapters. No dependency install, framework typecheck, build, HTTP route test or browser comparison has run for these new copies.
+The earlier stock checkpoint records 22 data-module checks in `checks/RESULTS.json`. They were not rerun in this resume and are not Modern/Carwow QA.
 
-Public contacts and the Chevrolet listing were re-read. The listing's first photo was visually inspected through the web tool. Its local download failed. Image generation was called, but the service reported generation had not started; no resulting logo exists.
+This resume ran **10 source/data checks, exit 0**, using Node v22.16.0 and the runner's preinstalled TypeScript 5.8.3. The actual script and input blob hashes are in `checks/content-contract.cjs` and `checks/CONTENT-RESULTS.json`. After Auto Best dependencies are installed, reproduce from repository root with `node clients/danger-auto/checks/content-contract.cjs`. This only checks TypeScript script syntax, evaluated data, and narrow source contracts; it does not compile Svelte markup, semantically typecheck the full app, build, or render a browser. A separate inverse-patch hash comparison reproduced the original video/footer source blobs after undoing the explicit copy/empty-state changes.
 
-## Exact remaining work
+No retained-lockfile install, full framework check/build, HTTP route test, or browser comparison ran for these copies. The independent runner's GitHub clone attempt failed with DNS resolution exit 128; connector writes worked. No Windows checkout was used. Image generation was attempted but did not start, so no generated logo or asset bytes are claimed.
 
-1. Replace the explicitly temporary identity/stock states with final professional branding and permitted local photos/galleries. No media rights or generated output is claimed.
-2. Complete all supporting-page consumers: finance copy, about/team/reviews/videos, metadata/favicon, stale alternate demo records, and empty social-link handling. Keep master layout and interactions.
-3. Reconcile Modern wrapper typing with the retained domain enums and check all export consumers. Check Carwow unknown-door handling and its legacy availability filter bucket; the visible stock text is qualified.
-4. Finish recursive copy-exclusion audit; no secrets are deliberately introduced. Root task runbooks, known env examples and npmrc were excluded, but this checkpoint is not a completed recursive audit.
-5. Repair the existing Auto Best asset-count/JSON domain checker assumptions and zero-principal finance display.
-6. Install retained lockfiles and run the actual per-app checks. Compare master and client at 390/1440 px and check header at 320 px, plus real detail, filters/reset, navigation/focus, back state and non-sending contact behavior. Save compact evidence before calling this implemented or verified.
+## Precise remaining work
 
-No other dealer is started while this DANGER AUTO skin is unfinished. AUTOHOF's existing legacy variants are untouched. No deployment, dealer contact, main/astra update or Windows filesystem write occurred.
+1. Final professional identity/favicon and permitted local vehicle photos/galleries; temporary states are not finished assets.
+2. Finish all other reachable content consumers: navigation, about, team/reviews, metadata, social-link handling and alternate demo records. Preserve the masters' layouts and interactions. The source video/footer changes do not constitute a whole-app stale-identity pass.
+3. Review Modern wrapper/domain enum typing and exports; check Carwow unknown doors and its inherited availability filter bucket. Visible availability is qualified, but its `available` filter bucket is not independent stock verification.
+4. Finish the recursive copy-exclusion audit. Existing clone provenance is not a new credential/license clearance or complete audit.
+5. Adapt Auto Best's fixed asset-count and JSON-unaware domain checker assumptions. The zero-principal formatting fix is now committed; it is no longer an unapplied draft.
+6. Run full app checks and compare retained master/client at 390/1440 pixels, plus header controls at 320. Exercise detail/gallery, filter/reset, menu/focus, detail-to-list state and non-sending enquiries. Save screenshots and route evidence before claiming implemented/verified status.
+
+No deployment, outreach, main/astra update, private CRM write, Windows edit or background job was performed. AUTOHOF's legacy variants remain untouched. Fetch this branch for source review and continuation; there is no finished dealer trio to approve yet.

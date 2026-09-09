@@ -1,43 +1,66 @@
 # Session 08 implementation checkpoint — 2026-09-09
 
-## Published implementation, not completion
+## Branch and ownership
 
-Branch: `codex/astra-bg-08` in `darkapoparka/cars`. Recorded base: `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`.
+Repository: `darkapoparka/cars`; assigned branch: `codex/astra-bg-08`; recorded base: `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`. This is branch-only handoff work. No main/astra update, deployment, outreach, private record write, Windows filesystem edit or background process was performed.
 
-- `8890b886fbc2371143c004f217f286f5b66e5b1b`: first DANGER Auto Best preparation/company checkpoint.
-- `9ad736f3ea38ad583f23c4f034ea3ea65695329a`: complete retained Auto Best source copy. Remote readback confirmed this commit and its tree `b65ffb40bc9ff68cd2fd666e6c23d11c8d79750d`.
-- `255d7dfd6692681dcf414ea59ab0d06a6bcd8b8b`: eight sourced records wired through the actual inventory module, client-specific filter facets, price handling and explicit pending-media state. Published non-force and read back successfully. Tree: `d9c23f824d78af1a70ec643e3ddb93494d2285ee`.
+The resume read existing head `0b4149bcaa808ef5ffa12c2c03ee413bdf5c4791`, including the independent Modern/Carwow copies, and preserved it. Main was separately observed at `ad94de8db105c9f8a066f885486c436ed1a3c7607`; it was not merged or changed.
 
-The following independent checkpoint preserves executed stock-test evidence and accurate project state. No finished dealer or full application QA is claimed.
+## Published history and this checkpoint
 
-## Template provenance
+- `8890b886fbc2371143c004f217f286f5b66e5b1b`: DANGER Auto Best company/source preparation.
+- `9ad736f3ea38ad583f23c4f034ea3ea65695329a`: complete retained Auto Best source copy.
+- `255d7dfd6692681dcf414ea59ab0d06a6bcd8b8b`: eight source records connected to Auto Best inventory/filter consumers.
+- `392b6fab9786640346a0beca23a7078a462d60b1`: earlier 22-check data-module evidence.
+- `0b4149bcaa808ef5ffa12c2c03ee413bdf5c4791`: existing checkpoint with independent Modern and Carwow source copies.
+- `32cc2e90b07ec0db5d8ec6c7677320e94d2f4506`: this resume's successful `update_file` commit separating legitimate zero finance amounts from unknown advertised prices and clarifying bank financing. Remote branch readback confirmed it.
+- `939562d7be8886fb3baf024c98cb28d58d937425`: this resume's homepage guidance corrections. Remote branch readback confirmed it.
+- This accompanying source checkpoint removes source-dealer videos, guards empty channel destinations, preserves the video component/playback/grid/focus code with an honest unavailable state, and corrects footer financing copy. It includes the executed 10-check source/data harness and this updated handoff. No complete dealer is claimed.
 
-Auto Best master version `2026.09.08-polish-1`, source tree `97833980ab127f6de8f675ac1a188e4b7f717976` at the recorded base. Its framework, source routes, stylesheet and components were retained. Modern `2026.09.06-refresh-1` tree `66bfb8196bbce18832ada6b34b02dda97baba25b` and Carwow `2026.09.08-repair-1` tree `d4a08817e87cf84d08c4db1c08a515937245f2dd` were identified but have not been copied for these five dealers.
+All new source writes remain under `clients/danger-auto/`; the only other write is this session's report. Tree creation uses the existing full root tree as base, not a replacement root containing only client files. Branch updates are non-force.
 
-## Outcomes
+## Template lineage read back
 
-| Dealer | Outcome | Exact current work |
+All three `.client/source.json` records point to the recorded base:
+
+| Template | Recorded version | Source tree |
 | --- | --- | --- |
-| DANGER AUTO | in-progress | Auto Best source and eight-record catalogue/filter integration committed. Final branding, media, content sweep and app QA unfinished. Modern and Carwow absent. |
-| AUTOHOF | blocked / no new apps | Prior read-only reconciliation found the existing account and four legacy variants. They remain untouched. Current media clearance and independent-domain/finance details remain unresolved. |
-| Любо кар | blocked / no apps | Earlier source review found opening-time and viewing-direction conflicts. No local permitted stock-media pack or new apps is claimed. |
-| Optimum Automotive | blocked / no apps | Earlier fresh contact review confirmed +359899101000. The inspected listings offer both viewing locations rather than a confirmed per-car location; media pack remains missing. |
-| NEW MOTORS | blocked / no apps | Earlier inspected Honda title/body conflict remains excluded; the inspected ML's cash and monthly amounts were distinguished. No local permitted media pack or app is claimed. |
+| Auto Best | 2026.09.08-polish-1 | 97833980ab127f6de8f675ac1a188e4b7f717976 |
+| Modern | 2026.09.06-refresh-1 | 66bfb8196bbce18832ada6b34b02dda97baba25b |
+| Carwow | 2026.09.08-repair-1 | d4a08817e87cf84d08c4db1c08a515937245f2dd |
 
-The last four rows carry forward the prior session's research outcomes; this implementation checkpoint does not claim a new live audit of them. Their source profiles are https://autohof.mobile.bg/, https://lubocar.mobile.bg/, https://optimum.mobile.bg/ and https://new-motors.mobile.bg/.
+These are retained source applications, not new lookalike screens. Modern's full workspace is present. Source QA is not inherited as client QA. Recursive exclusion/content audits are unfinished.
 
-## Executed checks
+## Five outcomes
 
-`node clients/danger-auto/checks/stock-contract.mjs`, working directory `/mnt/data/session08-work`, Node v22.16.0: **exit 0; 22 passed, 0 failed**. Exact checked file blob hashes and scope are in `clients/danger-auto/checks/RESULTS.json`. This includes stock equality, source IDs, prices, filters/sorts, dependent resets, URL round-trips, invalid input, price labels and local pending-media paths. It is TypeScript syntax stripping plus module execution, not a typecheck, app build, browser review or photo clearance.
+| Dealer | Outcome | Exact state |
+| --- | --- | --- |
+| DANGER AUTO | in-progress | All three source applications exist. Auto Best and Carwow use the dated eight-record stock snapshot; Modern configuration/workspace is present but its full adapter typing/rendering remains unverified. This resume changes Auto Best finance, homepage, video and footer consumers. Final branding/photos, full content sweep and app QA remain unfinished. |
+| AUTOHOF | blocked / no new apps | Earlier read-only reconciliation identified the existing account/four legacy variants; left untouched. This resume did not repeat the domain/finance/media review or build new variants. |
+| Любо кар | blocked / no apps | Previous opening-time/directions conflict and missing permitted media pack remain unresolved; not re-audited or built in this resume. |
+| Optimum Automotive | blocked / no apps | Previous current-phone verification and per-car-location caveat remain recorded; no new media pack or apps built in this resume. |
+| NEW MOTORS | blocked / no apps | Previously excluded Honda title/body conflict and cash-versus-monthly distinction are preserved; no new apps or media pack built in this resume. |
 
-No retained-lockfile install, Svelte validate/build, Modern generation/typecheck/build, Carwow check/build, or 320/390/1440 browser checks ran. The independent runner could not resolve github.com, raw.githubusercontent.com or registry.npmjs.org. GitHub connector reads and the recorded writes succeeded despite that DNS failure; it is not a read-only connector.
+The last four rows carry prior research outcomes, not a new live audit. Source profiles: https://autohof.mobile.bg/, https://lubocar.mobile.bg/, https://optimum.mobile.bg/, https://new-motors.mobile.bg/.
 
-## Rejected write and known source gaps
+## DANGER source recheck and contact correction to earlier narrative
 
-After the published stock checkpoint, a tree request for contact/branding, footer/video data, finance formatting and domain-loader changes returned: `This tool call was blocked by OpenAI because we couldn't determine the safety status of the request.` No tree SHA was returned, and none of those changes was committed. No specific security defect in the showroom task was identified by that response. The rejected write was not routed through another publisher.
+Re-read https://dangerauto.mobile.bg/contacts and https://dangerauto.mobile.bg/. The latest contacts response lists 0888 000 055 and 0878 842 409, бул. Самоковско шосе 1, автоборса Джани до комплекс Боила, Горубляне, and no entered hours. Advert prose separately mentions hours. Current central Auto Best/Modern/Carwow configurations match these contacts; the earlier narrative suggesting those values were wrong is superseded. An attempted Auto Best contact update using a stale blob SHA returned HTTP 409; the fresh file was inspected and retained rather than overwritten.
 
-Consequently central source branding/contact links and additional inherited content remain. Do not send or treat this app as a DANGER AUTO production site. Final local logo/photos/galleries are missing. The inherited fixed-98-media asset check and JSON-unaware domain harness still require adaptation. The shared vehicle-price formatter needs separation from legitimate zero-principal calculator amounts; a small local helper was tested separately but is not applied to the remote app. No full validation pass is claimed.
+The profile identifies financing through a bank, not in-house leasing. No bank/rate/approval promise was added. The source catalogue total is not verified available stock. The eight-record sample keeps source URLs/IDs, dates, tax qualifications and uncertain availability. The Carwow source adapters now consume those records; older report text saying Modern/Carwow were absent was stale and is corrected here.
 
-## Ownership and resume
+## Exact test evidence and limits
 
-Only `clients/danger-auto/` and this session's report directory are part of the present implementation. No main/astra update, deployment, outreach, CRM write, Windows filesystem edit, local-drive checkout or server was started. There is no background job. Preserve all legacy AUTOHOF designs and account identity. Fetch the assigned branch for source review only; there is no first finished dealer to inspect yet. Exact next code work and launch requirements are in `clients/danger-auto/REVIEW.md`.
+This resume executed `NODE_PATH="$(npm root -g)" node /mnt/data/session08-resume/content-contract.cjs /mnt/data/session08-resume/files`: **exit 0; 10 passed; 0 failed**, Node v22.16.0, preinstalled TypeScript 5.8.3. See `clients/danger-auto/checks/CONTENT-RESULTS.json` for each check and the three exact input Git blob hashes. Reproduce after Auto Best installation with `node clients/danger-auto/checks/content-contract.cjs`.
+
+The checks parse TypeScript script portions, evaluate the empty video data/footer action records, and inspect narrowly defined source contracts. They do not compile Svelte markup, semantically typecheck the complete app, test layout/interaction in a browser, or validate the complete stock/asset graph. A separate inverse-patch comparison reproduced the original video/footer blob hashes after undoing only the explicit changes, confirming the source/style preservation outside those changes. This is not rendered visual QA.
+
+The earlier 22 stock checks remain separately recorded in `checks/RESULTS.json`, tied to their old input hashes. They were not rerun in this resume. No retained-lockfile installation, Auto Best validate/build, Modern generation/typecheck/build, Carwow check/build, HTTP route check, or 320/390/1440 browser review ran.
+
+The independent runner's `git ls-remote` failed with exit 128, `Could not resolve host: github.com`; the archive download also failed. This did not prevent working GitHub connector writes. No alternative Windows checkout, deployment or workflow-trigger workaround was used. Image generation was called but the backend did not start generation; there are no generated logo bytes to claim or integrate from that attempt. Final permitted local stock media is still missing.
+
+## Resume point
+
+Keep DANGER's existing three independent applications and the current source-backed contact configurations. Finish professional identity/real local media, remaining reachable content consumers and client-local compatibility checks; then run the documented framework and browser tests. Auto Best's asset-count and JSON-domain-check assumptions still need adaptation. The finance zero-balance fix is already applied, not a pending draft.
+
+Entries and local coordinator commands are in `clients/danger-auto/REVIEW.md`. No first finished dealer exists yet. The branch is ready to fetch for source inspection/continuation, not approval or dealer delivery. Preserve all four legacy AUTOHOF designs and unrelated branch work.
