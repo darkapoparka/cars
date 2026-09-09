@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "clientSlug": "slavi-cars",
+  "status": "blocked",
+  "canonicalSource": "https://slavicars.mobile.bg/",
+  "identity": {
+    "name": "Slavi Cars",
+    "city": "Дупница",
+    "publishedAddress": "път E79 на влизане в Дупница от София, след отбивката за Блатино вляво",
+    "phone": "+359895714484",
+    "contactSource": "https://slavicars.mobile.bg/contacts",
+    "independentWebsite": "https://slavicars.bg/",
+    "websiteMatchBasis": "Same public phone, dealer name and E79/Dupnitsa location; additional website phone 0893606411 also appears in seller listings",
+    "websiteEmail": "slavicars@abv.bg",
+    "officialFacebook": null
+  },
+  "sourceSpecificHours": {
+    "https://slavicars.mobile.bg/contacts": {"monday": "08:30-18:30", "tuesday": "09:00-18:30", "wednesdayToSaturday": "08:30-18:30", "sunday": "closed"},
+    "https://slavicars.bg/services": {"mondayToSaturday": "09:00-18:00", "sunday": "by arrangement"},
+    "resolvedSchedule": null
+  },
+  "stockTotals": {"mobileOpenedCatalogue": 107, "mobileSearchSnapshot": 108, "independentCatalogueEntries": 26, "verifiedAvailableStockCount": null},
+  "candidateVehiclesNotApprovedForApps": [
+    {"name": "Chevrolet Trax 1.6 i FWD", "mobileSourceId": "21784972577846700", "mobileDetailUrl": "https://slavicars.mobile.bg/obiava-21784972577846700-chevrolet-trax-1-6-i-fwd", "independentDetailUrl": "https://slavicars.bg/car/chevrolet-trax-2014", "evidenceSources": ["https://slavicars.mobile.bg/", "https://slavicars.bg/cars"], "evidenceLevel": "both current catalogue texts; individual detail pages unavailable", "manufactured": "2014-02", "mileageKm": 260000, "fuel": "petrol", "powerHp": 116, "engineCc": 1598, "transmission": "manual", "drive": "FWD", "price": 5800, "currency": "EUR", "taxText": "Не се начислява ДДС", "availability": "advertised; not independently verified", "approvedForApp": false},
+    {"name": "Porsche 911 997.1 Carrera S", "sourceUrl": "https://slavicars.bg/car/porsche-911-2005", "evidenceSource": "https://slavicars.bg/cars", "evidenceLevel": "independent catalogue text; detail unavailable", "manufactured": "2005-03", "mileageKm": 101000, "fuel": "petrol", "powerHp": 355, "transmission": "automatic", "drive": "RWD", "price": 59999, "currency": "EUR", "taxQualification": null, "availability": "advertised; not independently verified", "approvedForApp": false}
+  ],
+  "mediaReferences": [
+    {"role": "marketplace cover", "url": "https://cdn2.focus.bg/mobile/images/housespicts/h12591436137482133.pic", "result": "Unsupported content-type application/octet-stream"},
+    {"role": "marketplace showroom gallery", "url": "https://cdn2.focus.bg/mobile/images/housesgallery/h12591436137482133_Yd.pic", "result": "Cache miss"},
+    {"role": "Chevrolet Trax gallery reference", "url": "https://obkpbrfhugilanjpghst.supabase.co/storage/v1/object/public/slavi-cars/auto/temp/1784973002399-7dzv9pmhb7m.jpeg", "sourceUrl": "https://slavicars.bg/cars", "result": "Cache miss"},
+    {"role": "Porsche 911 gallery reference", "url": "https://obkpbrfhugilanjpghst.supabase.co/storage/v1/object/public/slavi-cars/auto/temp/1788508305218-2stzvb2zrkx.jpeg", "sourceUrl": "https://slavicars.bg/cars", "result": "Cache miss"}
+  ],
+  "aboutPagePublicLink": {"source": "https://slavicars.mobile.bg/about", "url": "https://drive.google.com/file/d/1rQigeBCY5EkS7HnyIxwaJfm9zK9GsTye/view", "result": "Research browser rejected open; contents not read"},
+  "importantQualifications": ["Hours conflict between source channels", "Illustrative monthly payments are not cash prices or guaranteed offers", "Independent services page states no direct leasing", "Condition/history and marketing experience claims remain seller statements", "Website exists; no assessment that it is poor or absent"],
+  "brandingVisuallyInspected": false,
+  "mediaReuseCleared": false,
+  "mediaBasisFinding": "No dealer-specific reuse grant established in inspected supplied/repository records or opened public pages",
+  "localAssets": [],
+  "generatedAssets": [],
+  "applicationsCreated": [],
+  "ownerManualReviewComplete": false
+}
