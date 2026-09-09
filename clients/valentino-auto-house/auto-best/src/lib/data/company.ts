@@ -21,23 +21,38 @@ export type ContactTopic = {
   mobileDescription?: string;
 };
 
-/** Conversation prompts, not a promise of service or a submitted enquiry. */
 export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
-  'trade-in': {
-    title: 'Подгответе за разговора',
-    items: ['Марка, модел и година', 'Пробег и състояние', 'Снимки или линк към обява']
+  "inspection": {
+    "title": "За огледа",
+    "items": [
+      "Избраният автомобил и номерът на обявата",
+      "Удобен ден и час",
+      "Потвърждение по телефона"
+    ]
   },
-  import: {
-    title: 'Какъв автомобил търсите?',
-    items: ['Марка, модел и предпочитания', 'Бюджет за покупката и вноса', 'Линк към обява, ако вече сте избрали']
+  "import": {
+    "title": "За документите",
+    "items": [
+      "Линк или номер на обявата",
+      "Какви документи са налични",
+      "Какво съдействие и какви разходи се предвиждат"
+    ]
   },
-  leasing: {
-    title: 'Обсъдете с екипа',
-    items: ['Автомобилът, който сте избрали', 'Първоначална вноска и срок', 'Актуални условия за конкретната сделка']
+  "leasing": {
+    "title": "Преди индивидуална оферта",
+    "items": [
+      "Избраният автомобил и обявената цена",
+      "Желана първоначална вноска и срок",
+      "Кой е доставчикът и какви са всички условия"
+    ]
   },
-  inspection: {
-    title: 'Уговорете посещението',
-    items: ['Автомобилът, който искате да видите', 'Удобен ден и час', 'Потвърждение от екипа по телефона']
+  "trade-in": {
+    "title": "За личната чернова",
+    "items": [
+      "Марка, модел и година",
+      "Вашият въпрос и известните факти",
+      "Първо потвърдете дали дилърът предлага такава услуга"
+    ]
   }
 };
 
@@ -56,78 +71,75 @@ export function resolveImportUrl(value: string | null): string | null {
 
 export const companyServices: CompanyService[] = [
   {
-    index: '01',
-    icon: 'inspection',
-    title: `Оглед в ${brand.city}`,
-    description: `Посещение в ${brand.city} с предварителна уговорка.`,
-    href: '/contact?topic=inspection',
-    cta: 'Запазете оглед'
+    "index": "01",
+    "icon": "inspection",
+    "title": "Оглед в София",
+    "description": "Потвърдете наличността и уговорете оглед в Горубляне.",
+    "href": "/contact?topic=inspection",
+    "cta": "Уговорете оглед"
   },
   {
-    index: '02',
-    icon: 'import',
-    title: 'Внос по заявка',
-    description: 'Обсъдете автомобил, бюджет и внос с екипа.',
-    href: '/contact?topic=import',
-    cta: 'Попитайте за внос'
+    "index": "02",
+    "icon": "import",
+    "title": "Документи и регистрация",
+    "description": "В обявите е посочено съдействие за регистрация. Уточнете обхвата и цената.",
+    "href": "/contact?topic=import",
+    "cta": "Попитайте за документите"
   },
   {
-    index: '03',
-    icon: 'leasing',
-    title: 'Собствен лизинг',
-    description: 'Условия според избрания автомобил.',
-    href: '/contact?topic=leasing',
-    cta: 'Обсъдете лизинг'
+    "index": "03",
+    "icon": "leasing",
+    "title": "Финансиране по запитване",
+    "description": "Публикувано е външно финансиране. Условията и одобрението се уточняват индивидуално.",
+    "href": "/contact?topic=leasing",
+    "cta": "Обсъдете условията"
   },
   {
-    index: '04',
-    icon: 'trade-in',
-    title: 'Оценка за бартер',
-    description: 'Предложете своя автомобил за индивидуална оценка.',
-    href: '/contact?topic=trade-in',
-    cta: 'Поискайте оценка'
+    "index": "04",
+    "icon": "trade-in",
+    "title": "Наличност и покупка",
+    "description": "Уточнете цената, оборудването и документите за конкретната обява.",
+    "href": "/contact?topic=general",
+    "cta": "Задайте въпрос"
   }
 ];
 
 export const contactTopics: ContactTopic[] = [
   {
-    id: 'general',
-    label: 'Общ въпрос',
-    title: 'Разговор с екипа',
-    description: `За наличност, следващи стъпки или друг въпрос за ${brand.name}.`
+    "id": "general",
+    "label": "Общ въпрос",
+    "title": "Разговор с Valentino",
+    "description": "За наличност, цена, документи или друг въпрос по публикуваните обяви."
   },
   {
-    id: 'inspection',
-    label: 'Оглед',
-    title: `Оглед в ${brand.city}`,
-    description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
+    "id": "inspection",
+    "label": "Оглед",
+    "title": "Оглед в София",
+    "description": "Обадете се за конкретния автомобил и потвърдете удобен ден и час. Този сайт не запазва посещение онлайн."
   },
   {
-    id: 'import',
-    label: 'Внос',
-    title: 'Внос по заявка',
-    description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
-    mobileDescription: 'Добавете обява или опишете какво търсите.'
+    "id": "import",
+    "label": "Документи",
+    "title": "Документи и регистрация",
+    "description": "Уточнете наличните документи и публикуваното съдействие за регистрация. Внос по индивидуална поръчка не е потвърдена услуга.",
+    "mobileDescription": "Подгответе въпрос по конкретна обява. Нищо не се изпраща автоматично."
   },
   {
-    id: 'leasing',
-    label: 'Лизинг',
-    title: 'Собствен лизинг',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
+    "id": "leasing",
+    "label": "Финансиране",
+    "title": "Финансиране по запитване",
+    "description": "Попитайте за индивидуална оферта от външен доставчик. Няма обявена универсална лихва, собствен лизинг или гарантирано одобрение."
   },
   {
-    id: 'trade-in',
-    label: 'Бартер',
-    title: 'Бартер и оценка',
-    description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
-    mobileDescription: 'Поискайте оценка за продажба или бартер.'
+    "id": "trade-in",
+    "label": "Вашият автомобил",
+    "title": "Въпрос за вашия автомобил",
+    "description": "Изкупуване и бартер не са потвърдени услуги. Формата подготвя лична чернова за разговор; не приема автомобил и не изпраща запитване.",
+    "mobileDescription": "Само чернова за разговор. Бартер и изкупуване не са потвърдени."
   }
 ];
 
-export const resolveContactTopic = (value: string | null) =>
-  contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
+export const resolveContactTopic = (value: string | null) => contactTopics.find(topic => topic.id === value) ?? contactTopics[0];
 
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+// Exact coordinates were not established; the map consumer searches the published address.
+export const showroomCoordinates = null;

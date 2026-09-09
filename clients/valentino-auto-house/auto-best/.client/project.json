@@ -6,16 +6,39 @@
   "createdAt": "2026-09-09",
   "state": "in-progress",
   "selectedHome": "main",
-  "availableHomes": [{"id":"main","route":"/"}],
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
   "offeredHomes": [],
   "publicUrl": null,
-  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
-  "crm": {"leadId":"bg-sofia-valentino-auto-house","demoProjectId":null,"registered":false},
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-sofia-valentino-auto-house",
+    "demoProjectId": null,
+    "registered": false
+  },
   "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
   "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
   "branch": "codex/astra-bg-07",
   "copyMethod": "independent Git tree/blob replication",
   "personalizationComplete": false,
   "runtimeVerified": false,
-  "ownerReview": "pending"
+  "ownerReview": "pending",
+  "sourceContentIntegrated": true,
+  "dataPack": "src/lib/data/dealer-pack.json",
+  "galleryPhotoCount": 24,
+  "inventorySampleCount": 8,
+  "notes": [
+    "Actual master composition retained; source facts, data consumers and local assets integrated.",
+    "Source media clearance and dealer approval remain unconfirmed.",
+    "Full app checks/build/browser review have not run; no pass inherited."
+  ]
 }

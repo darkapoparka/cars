@@ -10,14 +10,13 @@
 </script>
 
 <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
-  {#if mobile}<picture><source media="(max-width: 767px)" srcset="/assets/images/lead/day-night-urus-front-v1.webp" /><img class="dn-hero-vehicles__front" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="600" height="600" decoding="async" /></picture>{/if}
+  {#if mobile}<picture><source media="(max-width: 767px)" srcset="/media/stock/11768394188936705-card.webp" /><img class="dn-hero-vehicles__front" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="600" height="600" decoding="async" /></picture>{/if}
   {#each sides as side (side)}
     {@const vehicle = vehicles[side === 'left' ? 0 : 1]}
     {@const artwork = vehicleArtwork[vehicle]}
     {@const bodyHeight = artwork.bounds[3] - artwork.bounds[1]}
     {@const mobileVehicle = side === 'left' ? mobileLeft : mobileRight}
     <div class="dn-hero-vehicles__car dn-hero-vehicles__car--{side}"
-      class:dn-hero-vehicles__car--reverse={side === 'left' && mobileLeft === 'gclass'}
       data-vehicle={vehicle} data-mobile-vehicle={mobileVehicle}
       style:--art-width-ratio={artwork.width / bodyHeight}
       style:--art-height-ratio={artwork.height / bodyHeight}
@@ -64,7 +63,7 @@
       width: calc(var(--car-height) * var(--art-width-ratio));
       height: calc(var(--car-height) * var(--art-height-ratio));
     }
-    .dn-hero-vehicles__car--left { left: var(--car-edge); transform: scaleX(-1); }
+    .dn-hero-vehicles__car--left { left: var(--car-edge); transform: none; }
     .dn-hero-vehicles__car--right { right: var(--car-edge); }
   }
 </style>

@@ -28,7 +28,7 @@
         {#each brands as brand (brand.label)}
           <a class="dn-brand-card" href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
             <span class="dn-brand-card__image">
-              <img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width="180" height="80" />
+              <img src={brand.image} alt={`${brand.label} — автомобил от селекцията`} loading="lazy" decoding="async" width="180" height="80" />
             </span>
             <span class="dn-brand-card__content">
               <strong>{brand.label}</strong>
@@ -54,7 +54,7 @@
     margin: 0 12px;
     overflow: hidden;
     border-radius: 24px;
-    background: url('/assets/images/section/bg-6.jpg') center / cover no-repeat;
+    background: url('/media/stock/21724767264834325-card.webp') center / cover no-repeat;
     isolation: isolate;
   }
 

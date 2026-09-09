@@ -5,7 +5,6 @@
   import { trapDialogTab } from '$lib/ui/overlay';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
-  import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
   let { closeMobile, attachMobileMenu, attachMobileCloseButton, listingHeader }: {
     closeMobile: (restoreFocus?: boolean) => Promise<void>;
@@ -48,10 +47,10 @@
           <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
           <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
         </nav>
-        <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
-          <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
-          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
-          <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
+        <div class="dn-mobile-menu__social" aria-label="Публикувани профили">
+          {#each brand.profiles as profile (profile.url)}
+            <a href={profile.url} target="_blank" rel="noopener noreferrer"><Icon name="globe" size={20} /><span>{profile.label}</span></a>
+          {/each}
         </div>
         <p class="dn-mobile-menu__address">{brand.addressLine}</p>
       </dialog>

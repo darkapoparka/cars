@@ -1,27 +1,139 @@
-// Alpha bounds measured at opacity > 128; preserve natural proportions when aligning artwork.
+// Actual local seller photographs, not cutouts or invented stock. Full-frame bounds preserve all source marks.
 export const vehicleArtwork = {
-  silver: { src: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 154, 989, 516] },
-  graphite: { src: '/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [17, 162, 984, 476] },
-  gclass: { src: '/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 112, 995, 542] },
-  urus: { src: '/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [18, 156, 983, 495] },
-  golf: { src: '/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [15, 150, 984, 507] },
-  a45: { src: '/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [13, 146, 987, 511] },
-  porsche: { src: '/assets/images/lead/day-night-cutout-porsche-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 169, 987, 480] },
-  amggt: { src: '/assets/images/lead/day-night-cutout-amggt-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [14, 169, 980, 473] },
-  m5: { src: '/assets/images/lead/day-night-cutout-m5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 165, 990, 482] },
-  e63: { src: '/assets/images/lead/day-night-cutout-e63-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 168, 990, 482] },
-  m4: { src: '/assets/images/lead/day-night-cutout-m4-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [16, 161, 983, 484] },
-  rs5: { src: '/assets/images/lead/day-night-cutout-rs5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 166, 994, 488] },
+  "silver": {
+    "src": "/media/stock/11785220779595617-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "graphite": {
+    "src": "/media/stock/11777318867210441-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "gclass": {
+    "src": "/media/stock/21724767264834325-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "urus": {
+    "src": "/media/stock/11768394188936705-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "golf": {
+    "src": "/media/stock/11732307740792726-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "a45": {
+    "src": "/media/stock/11780736224961272-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "porsche": {
+    "src": "/media/stock/11785220779595617-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "amggt": {
+    "src": "/media/stock/11777318867210441-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "m5": {
+    "src": "/media/stock/11709149044159957-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "e63": {
+    "src": "/media/stock/11713813771194540-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "m4": {
+    "src": "/media/stock/11780736224961272-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  },
+  "rs5": {
+    "src": "/media/stock/11732307740792726-card.webp",
+    "width": 640,
+    "height": 295,
+    "bounds": [
+      0,
+      0,
+      640,
+      295
+    ]
+  }
 } as const;
 
 export type Vehicle = keyof typeof vehicleArtwork;
-
-export const heroVehiclePairs = {
-  home: ['gclass', 'urus'],
-  inventory: ['golf', 'a45'],
-  about: ['porsche', 'amggt'],
-  blog: ['m5', 'e63'],
-  contact: ['m4', 'rs5']
-} as const satisfies Record<string, readonly [Vehicle, Vehicle]>;
-
+export const heroVehiclePairs = { home: ['gclass','urus'], inventory: ['golf','a45'], about: ['porsche','amggt'], blog: ['m5','e63'], contact: ['m4','rs5'] } as const satisfies Record<string, readonly [Vehicle, Vehicle]>;
 export type HeroVehiclePair = keyof typeof heroVehiclePairs;

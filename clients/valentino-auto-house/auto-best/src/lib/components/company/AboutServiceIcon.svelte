@@ -33,7 +33,7 @@
 
 <svg
   class="dn-about-service-icon"
-  data-icon-family="day-night-services"
+  data-icon-family="dealer-services"
   data-icon-name={name}
   width={size}
   height={size}

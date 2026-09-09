@@ -13,8 +13,8 @@
 </script>
 
 <svelte:head>
-  <title>{brand.name} — Премиум автомобили в {brand.city}</title>
-  <meta name="description" content={`Премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
+  <title>{brand.name} — Употребявани автомобили в {brand.city}</title>
+  <meta name="description" content={`${brand.name}: датирани обяви за употребявани автомобили в София, Горубляне. Данни, снимки и директен телефон за оглед.`} />
 </svelte:head>
 
 <div class="dn-home-page">

@@ -13,7 +13,7 @@
 <picture>
   {#if media}<source {media} srcset={vehicleArtwork[vehicle].src} />{/if}
   {#if mobileVehicle && !media}<source media="(max-width: 767px)" srcset={vehicleArtwork[mobileVehicle].src} />{/if}
-  <img class="dn-vehicle-cutout" class:dn-vehicle-cutout--banner-gclass={framing === 'banner' && vehicle === 'gclass'} data-view="side-profile" src={media ? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' : vehicleArtwork[vehicle].src} alt="" width="1000" height="667" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  <img class="dn-vehicle-cutout" class:dn-vehicle-cutout--banner-gclass={framing === 'banner' && vehicle === 'gclass'} data-view="source-photo" src={media ? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' : vehicleArtwork[vehicle].src} alt="" width={vehicleArtwork[vehicle].width} height={vehicleArtwork[vehicle].height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
 </picture>
 
 <style>
