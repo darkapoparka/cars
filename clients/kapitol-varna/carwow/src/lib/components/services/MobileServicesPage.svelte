@@ -15,7 +15,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
@@ -145,7 +145,7 @@
 		<div class="mobile-services-hero__bar">
 			<a href={resolve('/')} aria-label="Капитол начало">
 				<img
-					src={resolve('/dealer/logo-pending.svg')}
+					src={resolve('/dealer/logo-dark.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</a>

@@ -32,7 +32,7 @@ export interface LeadSiteConfig {
 export const leadSite: LeadSiteConfig = {
   accent: dealer.accent, address: `${dealer.address}, ${dealer.city}`, city: dealer.city,
   contactUrl: `tel:${dealer.phoneE164}`, country: 'България', countryCode: 'BG', currency: 'EUR',
-  email: dealer.email, heroPath: '/dealer/media-pending.svg', locale: 'bg-BG', logoPath: '/dealer/logo-pending.svg',
+  email: dealer.email, heroPath: '/dealer/media-pending.svg', locale: 'bg-BG', logoPath: '/dealer/logo-dark.svg',
   mapsEmbedUrl: `https://maps.google.com/maps?q=${encodeURIComponent(`${dealer.address}, ${dealer.city}`)}&z=15&hl=bg&output=embed`,
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${dealer.address}, ${dealer.city}`)}`,
   name: dealer.name, phoneDisplay: dealer.phone, phoneHref: `tel:${dealer.phoneE164}`,

@@ -31,15 +31,27 @@
     "registered": false
   },
   "limitations": [
-    "Runtime and browser checks not executed.",
-    "Real-photo reuse basis remains unresolved; explicit development media states are used instead of inherited stock photos.",
-    "Final logo and favicon integration is unfinished. Image Gen was attempted but did not start.",
-    "Supporting-page content sweep remains in progress."
+    "Real matched stock photos not integrated: authorization/provenance remains unresolved.",
+    "Complete supporting-page acceptance sweep remains in progress, including FAQ/article service wording.",
+    "Manual outlined logo proposals need owner/dealer approval; Image Gen never started.",
+    "Runtime/build/browser tests were not executed; see VERIFICATION.json."
   ],
   "implemented": [
     "Independent retained master source, not a wrapper.",
     "Same source-backed eight-record stock snapshot consumed by primary catalogue/detail adapters.",
     "Dealer identity, phone/address, source-status distinctions, EUR and km.",
-    "Noindex; unsupported public reviews/team/video selection removed from data."
-  ]
+    "Noindex; unsupported public reviews/team/video selection removed from data.",
+    "Outlined proposal logos and PNG/icon/OG exports integrated locally.",
+    "Known Modern directory fixture and Carwow E164 telephone-link defects corrected.",
+    "Explicit static-preview form guards prevent message delivery and record creation."
+  ],
+  "branding": {
+    "method": "manual-outlined-vector-demo-proposal",
+    "approvalStatus": "pending",
+    "logo": "/dealer/logo-dark.svg",
+    "logoLight": "/dealer/logo-light.svg",
+    "favicon": "/dealer/favicon.svg",
+    "imageGeneration": "attempted-not-started"
+  },
+  "verificationEvidence": "../VERIFICATION.json"
 }

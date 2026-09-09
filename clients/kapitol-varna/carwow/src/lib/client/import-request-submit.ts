@@ -1,3 +1,4 @@
+import { dealerPreview } from '$lib/config/dealer-preview';
 import { resolve } from '$app/paths';
 
 export type ImportRequestSubmitPayload = {
@@ -50,6 +51,7 @@ function readResponseMessage(body: unknown, fallback: string) {
 export async function submitImportRequest(
 	payload: ImportRequestSubmitPayload
 ): Promise<ImportRequestSubmitResult> {
+	if (dealerPreview.enabled) return { ok: false, status: 503, error: 'Това е демо. Запитването не е изпратено и данните не са записани. Използвайте публикувания телефон на продавача.' };
 	try {
 		const response = await fetch(resolve('/api/import-requests'), {
 			method: 'POST',
@@ -67,7 +69,7 @@ export async function submitImportRequest(
 				status: response.status,
 				error: readResponseMessage(
 					body,
-					'Заявката не беше изпратена. Моля, обадете се или пишете във Viber.'
+					'Заявката не беше изпратена. Моля, обадете се по публикувания телефон.'
 				),
 				details: isJsonObject(body) ? body.details : undefined
 			};
@@ -82,7 +84,7 @@ export async function submitImportRequest(
 			return {
 				ok: false,
 				status: response.status,
-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
+				error: 'Получихме неочакван отговор. Моля, обадете се по публикувания телефон.'
 			};
 		}
 
@@ -100,7 +102,7 @@ export async function submitImportRequest(
 			error:
 				error instanceof Error
 					? error.message
-					: 'Заявката не може да бъде изпратена. Моля, обадете се или пишете във Viber.'
+					: 'Заявката не може да бъде изпратена. Моля, обадете се по публикувания телефон.'
 		};
 	}
 }

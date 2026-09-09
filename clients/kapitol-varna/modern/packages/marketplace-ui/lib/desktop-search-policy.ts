@@ -89,8 +89,8 @@ const defaultVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Електрически SUV",
   },
   {
-    descriptionBg: `Налични автомобили в ${leadSite.city}`,
-    descriptionEn: `Vehicles available in ${leadSite.city}`,
+    descriptionBg: `Обяви за автомобили от ${leadSite.city}`,
+    descriptionEn: `Vehicle advertisements from ${leadSite.city}`,
     id: `${leadSite.slug}-vehicles`,
     keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
     kind: "location",
@@ -100,12 +100,7 @@ const defaultVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
   },
 ];
 
-const leadPopularVehicleIds = [
-  "am-1001",
-  "am-1010",
-  "am-1008",
-  "am-1011",
-] as const;
+const leadPopularVehicleIds = mockListings.slice(0,4).map(listing => listing.id);
 const leadingListingYearPattern = /^\d{4}\s+/;
 
 const leadVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
@@ -145,8 +140,8 @@ const leadVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
       value: listing.title,
     })),
   {
-    descriptionBg: `Автомобили в наличност в ${leadSite.city}`,
-    descriptionEn: `Vehicles available in ${leadSite.city}`,
+    descriptionBg: `Обяви за автомобили от ${leadSite.city}`,
+    descriptionEn: `Vehicle advertisements from ${leadSite.city}`,
     id: `${leadSite.slug}-vehicles`,
     keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
     kind: "location",
@@ -160,67 +155,13 @@ const vehicleSuggestions = leadSite.staticDemoMode
   ? leadVehicleSuggestions
   : defaultVehicleSuggestions;
 
-const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
-  {
-    descriptionBg: "Проверен дилър · Варна",
-    descriptionEn: "Verified dealer · Варна",
-    id: "sofia-premium-cars",
-    keywords: "sofia premium cars dealer дилър софия bmw audi",
-    kind: "dealer",
-    label: "Варна Premium Cars",
-    popular: true,
-    value: "Варна Premium Cars",
-  },
-  {
-    descriptionBg: "Вносител от Китай · Варна",
-    descriptionEn: "Importer from China · Варна",
-    id: "china-ev-import",
-    keywords: "china ev import importer китай вносител софия byd geely",
-    kind: "dealer",
-    label: "China EV Import Demo",
-    popular: true,
-    value: "China EV Import Demo",
-  },
-  {
-    descriptionBg: `Дилър · ${leadSite.city}`,
-    descriptionEn: `Dealer · ${leadSite.city}`,
-    id: leadSite.slug,
-    keywords: `${leadSite.name} ${leadSite.city} ${leadSite.country} dealer дилър`,
-    kind: "dealer",
-    label: leadSite.name,
-    popular: true,
-    value: leadSite.name,
-  },
-  {
-    descriptionBg: "Проверен EV дилър · Варна",
-    descriptionEn: "Verified EV dealer · Varna",
-    id: "black-sea-ev",
-    keywords: "black sea ev dealer дилър варна electric",
-    kind: "dealer",
-    label: "Black Sea EV",
-    value: "Black Sea EV",
-  },
-  {
-    descriptionBg: "Дилъри и вносители в Варна",
-    descriptionEn: "Dealers and importers in Варна",
-    id: "sofia-organizations",
-    keywords: "sofia city софия дилъри вносители",
-    kind: "location",
-    label: "Варна",
-    popular: true,
-    value: "Варна",
-  },
-  {
-    descriptionBg: "Дилъри и вносители във Варна",
-    descriptionEn: "Dealers and importers in Varna",
-    id: "varna-organizations",
-    keywords: "varna city варна дилъри вносители",
-    kind: "location",
-    label: "Варна",
-    popular: true,
-    value: "Варна",
-  },
-];
+const organizationSuggestions: readonly SearchSuggestionDefinition[] = [{
+      descriptionBg: `Демонстрационен профил · ${leadSite.city}`, descriptionEn: `Demonstration profile · ${leadSite.city}`,
+      id:leadSite.slug,keywords:`${leadSite.name} ${leadSite.city}`,kind:'dealer',label:leadSite.name,popular:true,value:leadSite.name
+    },{
+      descriptionBg:`Обяви за автомобили · ${leadSite.city}`,descriptionEn:`Vehicle advertisements · ${leadSite.city}`,
+      id:`${leadSite.slug}-location`,keywords:leadSite.city,kind:'location',label:leadSite.city,popular:true,value:leadSite.city
+    }];
 
 const recentSearchStorageKey = (scope: DesktopSearchScope) =>
   `automarket:desktop-search:${scope}:recent`;
@@ -347,10 +288,10 @@ const getQuerySuggestionGroups = (
 
 const getPopularHeading = (isBg: boolean, scope: DesktopSearchScope) => {
   if (scope === "organizations") {
-    return isBg ? "Популярни дилъри и места" : "Popular dealers and places";
+    return isBg ? "Дилър и местоположение" : "Dealer and location";
   }
   if (leadSite.staticDemoMode) {
-    return isBg ? "Популярни предложения" : "Popular listings";
+    return isBg ? "Избрани обяви" : "Selected advertisements";
   }
   return isBg ? "Популярни търсения" : "Popular searches";
 };

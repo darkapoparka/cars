@@ -27,8 +27,8 @@
 		detailDrawerOpen = true;
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
+	const viberHref = `tel:${daynightSite.phone}`;
 	let activePhoto = $state(0);
 	const photos = $derived(vehicle.gallery.length > 0 ? vehicle.gallery : [vehicle.image]);
 	const activePhotoSrc = $derived(photos[activePhoto] ?? photos[0] ?? vehicle.image);

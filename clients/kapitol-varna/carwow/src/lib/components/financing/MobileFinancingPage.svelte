@@ -11,7 +11,7 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 
 	const benefits = [
 		{
@@ -71,7 +71,7 @@
 		/>
 		<div class="mobile-financing-hero__bar">
 			<a href={resolve('/')} aria-label="Капитол начало">
-				<img src={resolve('/dealer/logo-pending.svg')} alt={daynightSite.shortName} />
+				<img src={resolve('/dealer/logo-dark.svg')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />

@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     text: 'История, документи и техническо състояние се потвърждават директно с екипа.',
     category: 'Оглед',
     tag: 'Оглед',
-    image: '/assets/images/blog/blog-1.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Започнете с историята и документите',
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Обсъдете търсене, транспорт и подготовката за регистрация в България.',
     category: 'Внос',
     tag: 'Документи',
-    image: '/assets/images/blog/blog-2.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Определете точни критерии за търсенето',
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Попитайте за актуалните условия според избрания автомобил.',
     category: 'Лизинг',
     tag: 'Лизинг',
-    image: '/assets/images/blog/blog-3.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Сравнявайте цялата оферта',
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
     category: 'Насоки',
     tag: 'Избор',
-    image: '/assets/images/blog/blog-4.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Започнете от ежедневната употреба',
@@ -115,12 +115,12 @@ export const blogPosts: BlogPost[] = [
     text: `Уговорете посещение на ${brand.addressLine}.`,
     category: 'Оглед',
     tag: brand.city,
-    image: '/assets/images/blog/blog-5.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Запазете удобно време предварително',
         paragraphs: [
-          'Посещенията в шоурума са с предварителна уговорка. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.'
+          'Потвърдете удобния час и наличността с продавача преди посещение. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.'
         ]
       },
       {
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
     category: 'Бартер',
     tag: 'Бартер',
-    image: '/assets/images/blog/blog-6.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Подгответе точна информация за автомобила',
@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Екипът ориентира за следващите стъпки след пристигане на автомобила.',
     category: 'Внос',
     tag: 'Документи',
-    image: '/assets/images/blog/blog-7.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Подредете наличните документи',
@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
     category: 'Оглед',
     tag: 'Оглед',
-    image: '/assets/images/blog/blog-8.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Попитайте за историята и текущото състояние',
@@ -203,7 +203,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
     category: 'Насоки',
     tag: 'Сервиз',
-    image: '/assets/images/blog/blog-9.jpg',
+    image: '/dealer/media-pending.svg',
     sections: [
       {
         title: 'Съхранете документите и планирайте сроковете',

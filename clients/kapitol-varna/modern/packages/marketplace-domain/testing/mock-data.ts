@@ -4,7 +4,7 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = dealer.inventory.map((record) => {
   if (!Number.isFinite(record.price) || record.price <= 0) throw new Error(`Missing advertised price: ${record.id}`);
-  const fuel: VehicleListing['spec']['fuelType'] = record.fuel === 'Бензин' ? 'gasoline' : record.fuel === 'Дизел' ? 'diesel' : record.fuel === 'Електрически' ? 'electric' : record.fuel === 'Plug-in хибрид' ? 'plug_in_hybrid' : 'hybrid';
+  const fuel: VehicleListing['spec']['fuelType'] = record.fuel === 'Бензин' ? 'gasoline' : record.fuel === 'Дизел' ? 'diesel' : record.fuel === 'Електрически' ? 'electric' : record.fuel === 'Plug-in хибрид' ? 'plug_in_hybrid' : record.fuel === 'Газ' ? 'lpg' : record.fuel === 'Хибрид' ? 'hybrid' : 'other';
   const bodies: Record<string, VehicleListing['spec']['bodyType']> = {SUV:'suv',Sedan:'sedan',Wagon:'wagon',Hatchback:'hatchback',Coupe:'coupe',Minivan:'minibus',Convertible:'convertible'};
   const state: Record<string,string> = { incoming:'Очакван внос', consignment:'Клиентски автомобил', advertised:'Обявен автомобил', 'status-unconfirmed':'Статус за потвърждение', appointment:'Оглед с уговорка' };
   return {
@@ -16,7 +16,7 @@ export const mockListings: VehicleListing[] = dealer.inventory.map((record) => {
     badges: ['used'], location: {city:dealer.city,country:'България'},
     features: record.features.map((label)=>({bg:label,en:label})),
     spec: {make:record.make,model:record.model,year:record.year,bodyType:bodies[record.body] ?? 'other',fuelType:fuel,transmission:record.transmission === 'Ръчна' ? 'manual' : 'automatic',mileageValue:record.mileage,mileageUnit:'km',enginePowerHp:record.powerHp,colorExterior:record.color},
-    seller: {id: "dealer-kapitol-varna",type:'dealer',displayName:dealer.name,verificationStatus:'unverified',city:dealer.city,logoUrl:'/dealer/logo-pending.svg'},
+    seller: {id: "dealer-kapitol-varna",type:'dealer',displayName:dealer.name,verificationStatus:'unverified',city:dealer.city,logoUrl:'/dealer/logo-dark.svg'},
     publishedAt: `${record.observedAt}T00:00:00.000Z`, promoted:false
   };
 });

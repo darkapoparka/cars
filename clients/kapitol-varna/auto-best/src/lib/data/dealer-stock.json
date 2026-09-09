@@ -251,5 +251,23 @@
       "gallery": [],
       "observedAt": "2026-09-09"
     }
-  ]
+  ],
+  "secondaryPhone": "",
+  "branding": {
+    "publishedBranding": "published-signage-observed; working refresh pending",
+    "sourceLogoUrl": null,
+    "workingLogoPath": "/dealer/logo-dark.svg",
+    "creationMethod": "manually authored outlined vector demo proposal, informed by observed source identity; not Image Gen",
+    "approvalStatus": "unapproved-demo-proposal",
+    "assetHashes": {
+      "logo-dark.svg": "9494bbcb481cb048cc083c39742053318a9d276273943f9b0cf28478a459426d",
+      "logo-light.svg": "09847c60a8d81537628c672a384694f9ebe997e5381f6fc72a9c84f2356d4a2f",
+      "favicon.svg": "e934706b77f54bca3909e4b212d6ce076bfc808f22d58b309b41d55513a98e41",
+      "logo.png": "ef91e33c93d49b6a56c2efaeabeaae9f2b72f33ec08d139385443ce748fca729",
+      "apple-touch-icon.png": "40eeee60adffc50cdb86091f8540c6dd43740221cbe0a326786e31e0ab699dd6",
+      "favicon-32x32.png": "7dfb92141868a351feee6b5dbc33d56ed746cec2cdb6f1f25792363d38dc4793",
+      "favicon-16x16.png": "d7714d42ef9115c5c2e19a20c6e977e4ef15e3bdee43a29e9247d1a18c3139d9",
+      "opengraph.png": "faf203e92c80256551077df6d4b6d97854bc8af73cf0419d8d8e5fafcb0716cb"
+    }
+  }
 }
