@@ -12,7 +12,7 @@
       <div>
         <span class="kicker">CARS WORKSPACE</span>
         <h1>Lead Control Dashboard</h1>
-        <p>Every dealer lead, all three concepts, assets, QA and local review controls.</p>
+        <p>GitHub build truth, local launch state, QA evidence and lead pipeline in one place.</p>
       </div>
       <div id="repo" class="repo">Loading repository...</div>
     </header>
@@ -20,24 +20,25 @@
     <section class="toolbar">
       <input id="q" type="search" placeholder="Search dealer, city, lead id...">
       <select id="market"><option value="">All markets</option></select>
-      <select id="stage"><option value="">All stages</option></select>
-      <select id="build"><option value="">All project states</option><option value="full">3 designs</option><option value="partial">Partial</option><option value="none">No project</option></select>
+      <select id="gitState"><option value="">All GitHub states</option><option value="main">On main</option><option value="branch-only">Branch only</option><option value="none">No GitHub build</option></select>
+      <select id="qaState"><option value="">All QA states</option><option value="passed">QA passed</option><option value="pending">QA pending</option><option value="missing">QA evidence missing</option></select>
+      <select id="stage"><option value="">All pipeline stages</option></select>
       <button id="fav">Favorites</button>
-      <button id="refresh">Refresh</button>
+      <button id="refresh">Refresh GitHub</button>
     </section>
     <div class="card">
       <div class="scroll">
         <table>
-          <thead><tr><th>#</th><th>Dealer / Lead</th><th>Brand</th><th>Auto Best</th><th>Modern</th><th>Carwow</th><th>Assets & Content</th><th>Pipeline</th><th>Status</th></tr></thead>
+          <thead><tr><th>#</th><th>Dealer / Lead</th><th>Brand</th><th>Auto Best</th><th>Modern</th><th>Carwow</th><th>Assets & Content</th><th>GitHub</th><th>QA</th><th>Pipeline</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>
       <div id="empty" class="empty" hidden>No leads match the filters.</div>
     </div>
     <footer>
-      <div><b>Live workspace data</b><span>Reads lead research, client metadata and actual local project folders.</span></div>
-      <div><b>Private pipeline state</b><span>Notes and stages stay in ignored runtime/lead-dashboard/state.json.</span></div>
-      <div><b>Safe local controls</b><span>Prepare/start use the existing launcher. Nothing here deploys or sends outreach.</span></div>
+      <div><b>GitHub is authoritative</b><span>Build state comes from remote project refs, not stale index metadata.</span></div>
+      <div><b>QA is separate from build</b><span>A complete three-design project can still need QA evidence.</span></div>
+      <div><b>Local controls stay local</b><span>Project controls only work when files are present in J:/cars.</span></div>
     </footer>
   </div>
   <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
