@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "client": "tesi-car",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09",
+  "state": "needs-personalization",
+  "implementationStatus": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "sourceFactsBlob": "7ffd8bb023ad68350a263978763bc808aec39d94",
+  "sourceChecks": {"providerTranspilation":true,"providerAssertions":10,"svelteCheck":false,"build":false,"browser":false},
+  "branding": {"kind":"published-source-logo-background-derivative","source":"https://g1-bg.cars.bg/users_logos/184.jpg","asset":"/dealer/brand/logo.png","dealerApproved":false},
+  "remaining": ["local stock-photo assets","remaining visible content consumers and availability filters","runtime and browser checks"]
+}

@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "slug": "tesi-car",
+  "name": "Теси Кар",
+  "latinName": "TESI CAR",
+  "shortName": "Теси Кар",
+  "city": "Варна",
+  "country": "България",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "observedAt": "2026-09-09",
+  "primaryPhone": "+359886965047",
+  "primaryPhoneDisplay": "0886 965 047",
+  "secondaryPhone": "+359898694330",
+  "secondaryPhoneDisplay": "0898 694 330",
+  "email": null,
+  "addressLine": "бул. „Цар Освободител“, след Метро в посока Аксаково, последен вляво",
+  "streetNumber": null,
+  "coordinates": null,
+  "mapQuery": "Теси Кар, Варна",
+  "contactUrl": "https://tesicar.mobile.bg/contacts",
+  "inventoryUrl": "https://tesicar.mobile.bg/",
+  "aboutUrl": "https://tesicar.mobile.bg/about",
+  "matchingProfiles": ["https://www.cars.bg/company/tesicar/"],
+  "website": null,
+  "socialLinks": {},
+  "websiteFinding": "No independently matched website in the bounded name/phone search; not proof of absence.",
+  "hours": {
+    "label": "Пн–Сб 09:00–18:00; неделя — обадете се",
+    "basis": "Current listing prose, not hours entered on the contact page. Confirm before travel.",
+    "contactPageHoursEntered": false
+  },
+  "appointment": "Потвърдете наличността и часа за оглед по телефона",
+  "accent": "#c62026",
+  "logoPath": "/dealer/brand/logo.png",
+  "logoDarkPath": "/dealer/brand/logo-dark.png",
+  "heroPath": "/dealer/vehicles/21781003069917784-1.avif",
+  "headline": "От градски хечбек до 4×4.",
+  "tagline": "Употребявани автомобили във Варна. Изберете модел и уговорете оглед.",
+  "about": "Теси Кар представя употребявани автомобили във Варна. Публикуваните обяви включват градски модели, семейни автомобили и 4×4. За актуална наличност, състояние и точния вход на автокъщата се свържете по телефона.",
+  "availabilityNotice": "Данните са снимка на публикувани обяви към 09.09.2026 г., а не потвърждение за текуща наличност. Проверете цената и възможността за оглед директно с автокъщата.",
+  "demoNotice": "Демонстрационен проект, не официален сайт. Формите не изпращат данни и не резервират автомобил или час.",
+  "advertisedCategoryCount": 52,
+  "advertisedCategoryCountMeaning": "Dated advertised category entries; not unique verified available vehicles.",
+  "services": {
+    "viewing": true,
+    "registrationAssistance": true,
+    "financeMentioned": true,
+    "financeTermsVerified": false,
+    "ownFinanceVerified": false,
+    "tradeInVerified": false,
+    "orderImportVerified": false,
+    "warrantyVerified": false
+  },
+  "mediaReuse": {
+    "clearance": "not-evidenced",
+    "basis": "Owner-requested branch-only concept using specifically attributed public dealer references; no dealer/platform licence or endorsement is asserted. Public deployment requires review of reuse rights."
+  },
+  "vehicles": [
+    {
+      "id": 1, "sourceId": "21781003069917784", "slug": "mitsubishi-asx-2015-917784",
+      "make": "Mitsubishi", "model": "ASX", "trim": "2.2DiD 4WD Automatic", "title": "Mitsubishi ASX 2.2DiD 4WD Automatic",
+      "productionDate": "2015-02", "year": 2015, "price": 9499, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 110000, "fuel": "diesel", "transmission": "automatic", "powerHp": 150, "engineCc": 2268, "body": "suv", "color": "Кафяв", "doors": "4/5",
+      "features": ["4x4", "Климатроник", "Парктроник", "Подгряване на седалките", "Сервизна книжка"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 14,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-21781003069917784-mitsubishi-asx-2-2did-4wd-automatic",
+      "photos": [
+        {"path": "/dealer/vehicles/21781003069917784-1.avif", "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/784/2/big1/21781003069917784_IG.webp"},
+        {"path": "/dealer/vehicles/21781003069917784-2.avif", "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/784/2/big1/21781003069917784_Qx.webp"}
+      ]
+    },
+    {
+      "id": 2, "sourceId": "21782292613523387", "slug": "nissan-juke-2015-523387",
+      "make": "Nissan", "model": "Juke", "trim": "1.6i", "title": "Nissan Juke 1.6i",
+      "productionDate": "2015-08", "year": 2015, "price": 7499, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 184200, "fuel": "gasoline", "transmission": "manual", "powerHp": 94, "engineCc": 1598, "body": "suv", "color": "Черен", "doors": "4/5",
+      "features": ["Климатик", "Навигация", "Парктроник", "Ксенонови фарове", "Сервизна книжка"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 16,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-21782292613523387-nissan-juke-1-6i-shveytsariya",
+      "photos": [
+        {"path": "/dealer/vehicles/21782292613523387-1.avif", "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_3f.webp"},
+        {"path": "/dealer/vehicles/21782292613523387-2.avif", "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_GO.webp"}
+      ]
+    },
+    {
+      "id": 3, "sourceId": "11779452412819500", "slug": "mitsubishi-colt-2005-819500",
+      "make": "Mitsubishi", "model": "Colt", "trim": "1.3i 95 к.с.", "title": "Mitsubishi Colt 1.3i 95 к.с.",
+      "productionDate": "2005-10", "year": 2005, "price": 2000, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 223000, "fuel": "gasoline", "transmission": "manual", "powerHp": 95, "engineCc": 1332, "body": "hatchback", "color": "Бордо", "doors": "4/5",
+      "features": ["Климатик", "Лети джанти", "Бордкомпютър", "Ел. стъкла"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 13,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-11779452412819500-mitsubishi-colt-1-3i-95k-c",
+      "photos": [
+        {"path": "/dealer/vehicles/11779452412819500-1.avif", "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/500/1/big1/11779452412819500_ws.webp"},
+        {"path": "/dealer/vehicles/11779452412819500-2.avif", "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/500/1/big1/11779452412819500_xi.webp"}
+      ]
+    },
+    {
+      "id": 4, "sourceId": "21783600164931772", "slug": "toyota-rav4-2006-931772",
+      "make": "Toyota", "model": "RAV4", "trim": "2.2 D-4D 177 PS", "title": "Toyota RAV4 2.2 D-4D 177 PS",
+      "productionDate": "2006-07", "year": 2006, "price": 4490, "currency": "EUR", "taxQualification": "VAT not charged",
+      "mileageKm": 203000, "fuel": "diesel", "transmission": "manual", "powerHp": 177, "engineCc": 2231, "body": "suv", "color": "Черен", "doors": "4/5",
+      "features": ["4x4", "Климатроник", "Навигация", "Кожен салон", "Подгряване на седалките"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 14,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-21783600164931772-toyota-rav4-2-2d-4-d-177-ps",
+      "photos": [
+        {"path": "/dealer/vehicles/21783600164931772-1.avif", "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/772/2/big1/21783600164931772_jA.webp"},
+        {"path": "/dealer/vehicles/21783600164931772-2.avif", "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/772/2/big1/21783600164931772_IS.webp"}
+      ]
+    },
+    {
+      "id": 5, "sourceId": "21783510512805707", "slug": "suzuki-grand-vitara-2014-805707",
+      "make": "Suzuki", "model": "Grand Vitara", "trim": "2.4i 4x4", "title": "Suzuki Grand Vitara 2.4i 4x4",
+      "productionDate": "2014-09", "year": 2014, "price": 8899, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 221000, "fuel": "gasoline", "transmission": "manual", "powerHp": 169, "engineCc": 2393, "body": "suv", "color": "Черен", "doors": "4/5",
+      "features": ["4x4", "Климатроник", "Навигация", "Кожен салон", "Подгряване на седалките"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 16,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-21783510512805707-suzuki-grand-vitara-2-4i-4x4",
+      "photos": [
+        {"path": "/dealer/vehicles/21783510512805707-1.avif", "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/707/2/big1/21783510512805707_ad.webp"},
+        {"path": "/dealer/vehicles/21783510512805707-2.avif", "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/707/2/big1/21783510512805707_t.webp"}
+      ]
+    },
+    {
+      "id": 6, "sourceId": "11766203342784314", "slug": "citroen-ds3-2010-784314",
+      "make": "Citroen", "model": "DS3", "trim": "1.4 VTi Chic", "title": "Citroen DS3 1.4 VTi Chic",
+      "productionDate": "2010-04", "year": 2010, "price": 2950, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 165000, "fuel": "gasoline", "transmission": "manual", "powerHp": 95, "engineCc": 1400, "body": "hatchback", "color": "Светло сив", "doors": "2/3",
+      "features": ["Климатик", "Парктроник", "Лети джанти", "Сервизна книжка"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 15,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-11766203342784314-citroen-ds3-1-4-vti-chic",
+      "photos": [
+        {"path": "/dealer/vehicles/11766203342784314-1.avif", "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_cG.webp"},
+        {"path": "/dealer/vehicles/11766203342784314-2.avif", "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_5.webp"}
+      ]
+    },
+    {
+      "id": 7, "sourceId": "21761142961888357", "slug": "infiniti-q30-2017-888357",
+      "make": "Infiniti", "model": "Q30", "trim": "1.5d Premium FWD", "title": "Infiniti Q30 1.5d Premium FWD",
+      "productionDate": "2017-02", "year": 2017, "price": 9799, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 238000, "fuel": "diesel", "transmission": "manual", "powerHp": 109, "engineCc": 1461, "body": "hatchback", "color": "Сив", "doors": "4/5",
+      "features": ["Климатроник", "Навигация", "Парктроник", "Подгряване на седалките", "Ксенонови фарове"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 17,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-21761142961888357-infiniti-q30-1-5d-premium-fwd",
+      "photos": [
+        {"path": "/dealer/vehicles/21761142961888357-1.avif", "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/357/2/big1/21761142961888357_kX.webp"},
+        {"path": "/dealer/vehicles/21761142961888357-2.avif", "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/357/2/big1/21761142961888357_Sz.webp"}
+      ]
+    },
+    {
+      "id": 8, "sourceId": "11764843007900094", "slug": "volkswagen-touran-2008-900094",
+      "make": "Volkswagen", "model": "Touran", "trim": "2.0 TDI 170 к.с.", "title": "Volkswagen Touran 2.0 TDI 170 к.с.",
+      "productionDate": "2008-03", "year": 2008, "price": 3600, "currency": "EUR", "taxQualification": "VAT included",
+      "mileageKm": 230000, "fuel": "diesel", "transmission": "manual", "powerHp": 170, "engineCc": 1968, "body": "van", "color": "Сив", "doors": "4/5",
+      "features": ["Климатроник", "Навигация", "Парктроник", "Подгряване на седалките", "Лети джанти"],
+      "condition": "used", "availability": "advertised-unverified", "sourceGalleryCount": 16,
+      "sourceUrl": "https://tesicar.mobile.bg/obiava-11764843007900094-vw-touran-2-0tdi-170k-c",
+      "photos": [
+        {"path": "/dealer/vehicles/11764843007900094-1.avif", "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/094/1/big1/11764843007900094_u9.webp"},
+        {"path": "/dealer/vehicles/11764843007900094-2.avif", "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/094/1/big1/11764843007900094_vY.webp"}
+      ]
+    }
+  ],
+  "exclusions": [
+    {"vehicle": "Toyota Yaris 1.33, 208000 km, EUR 6190", "reason": "Catalogue date 2009-09 conflicts with description 2012-09."},
+    {"vehicle": "Nissan Pulsar 1.2 DIG-T, 93000 km, EUR 7980", "reason": "Description says viewing in Sofia, not the Varna lot."},
+    {"vehicle": "Mercedes-Benz C 350 / C 320, 240000 km, EUR 5000", "reason": "Conflicting model designation."}
+  ]
+}
