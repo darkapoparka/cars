@@ -1,0 +1,8 @@
+/* Order is intentional: tokens, native defaults, navigation, then shared responsive composition. */
+@import "./lib/styles/tokens.css";
+@import "./lib/styles/base.css";
+@import "./lib/styles/navigation.css";
+@import "./lib/styles/composition.css";
+
+/* Original published dealer artwork: do not apply inherited monochrome masks. */
+img[src*="/dealer/logo-"], img[srcset*="/dealer/logo-"], img[src*="dealer%2Flogo-"] { filter:none !important; clip-path:none !important; object-fit:contain !important; }
