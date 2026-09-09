@@ -24,10 +24,15 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
               {leadSite.city}
             </h2>
             <p className="mt-1 font-medium text-sm">
-              {isBg ? "бул. Цар Освободител 236" : "Studentski grad"}
+              {isBg ? "Публикуван адрес" : "Published address"}
             </p>
             <p className="mt-0.5 text-muted-foreground text-sm">
-              {leadSite.address}, {leadSite.country}
+              {leadSite.address}
+            </p>
+            <p className="mt-0.5 text-muted-foreground text-xs">
+              {isBg
+                ? "Потвърдете местоположението на конкретния автомобил преди оглед."
+                : "Confirm the specific vehicle location before travelling to view it."}
             </p>
           </div>
 
@@ -54,7 +59,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             src={mapEmbedUrl}
-            title={isBg ? "Карта на шоурума" : "Showroom map"}
+            title={isBg ? "Карта на публикувания адрес" : "Published address map"}
           />
         </div>
       </div>
