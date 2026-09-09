@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "client": "danger-auto",
   "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
   "state": "in-progress",
   "selectedHome": "main",
   "availableHomes": [{ "id": "main", "route": "/" }],
@@ -10,5 +11,28 @@
   "qa": { "desktop": false, "mobile": false, "identity": false, "contactPath": false },
   "crm": { "leadId": null, "demoProjectId": null, "registered": false },
   "delivery": { "mode": "branch-handoff", "branch": "codex/astra-bg-08", "deployed": false },
-  "remaining": ["Finish real logo and permitted local stock media", "Complete supporting-page, reviews, team, services and metadata sweep", "Audit copied exclusions recursively", "Check nullable unknown door counts at every consumer", "Run install, check, build and browser comparison"]
+  "contentCheckpoints": {
+    "faqAndReviews": "6b35e33e68acae5de46fb664d355d19f850b370d",
+    "businessContactAndMetadata": "43a6ba1db28b38f9cded3ea287b66ccd216be548"
+  },
+  "checks": {
+    "observedAt": "2026-09-09",
+    "runner": "independent Linux scoped working files; no Windows checkout",
+    "node": "v22.16.0",
+    "typescript": "5.8.3",
+    "faqReviewAssertions": { "passed": 12, "failed": 0, "evidence": "../checks/FAQ-REVIEW-RESULTS.json" },
+    "teamMetadataSourceAssertions": { "passed": 28, "failed": 0, "evidence": "../checks/TEAM-SEO-RESULTS.json" },
+    "strictTypeScriptSubset": { "exitCode": 0, "moduleCount": 7, "configuration": "../checks/tsconfig.content.json", "wholeApplication": false },
+    "fullFrameworkCheck": "not-run",
+    "productionBuild": "not-run",
+    "browser": "not-run",
+    "notes": "../checks/TEAM-SEO-VERIFICATION.md"
+  },
+  "remaining": [
+    "Finish real logo, favicons and permitted local stock media",
+    "Complete remaining supporting-page, service, rating-consumer and whole-app identity sweep; targeted FAQ, review-data, team and shared metadata changes are committed",
+    "Audit copied exclusions recursively",
+    "Check nullable unknown door counts and qualified availability at every rendered consumer",
+    "Run retained-lockfile install, full check/build and browser comparison at 320, 390 and 1440 pixels"
+  ]
 }
