@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "clientSlug": "golden-dreams-auto",
+  "status": "blocked",
+  "canonicalSource": "https://www.facebook.com/people/GoldenDreams-AUTO/61592803643776/",
+  "legacySource": "https://www.facebook.com/profile.php?id=61592803643776",
+  "legacyManifest": "M:/codex/agency/projects/leads/automotive/golden-dreams-auto/autodeal/mirror/manifest.json",
+  "tradingName": "GoldenDreams AUTO",
+  "legacyName": "Golden Dreams AutoGroup",
+  "showroom": null,
+  "verifiedAvailableStockCount": null,
+  "sourceAccess": {"canonicalFacebook": "DisabledError", "legacyFacebookUrl": "DisabledError", "instagramReel": "Online fetch throttled"},
+  "candidatePublicPhones": ["+359878979712", "+359895735255"],
+  "phoneEvidence": ["https://www.instagram.com/goldendreamsauto/", "https://www.instagram.com/reel/DcMcKzmMVXJ/"],
+  "phoneEvidenceLevel": "indexed business-result excerpts; current canonical contact panel unavailable",
+  "rejectedInheritedPhone": "8085550111",
+  "stockLeadsNotApprovedInventory": [
+    {"sourceUrl": "https://www.facebook.com/61592803643776/posts/122109581115426788/", "title": "BMW 335i E93 CABRIO", "year": 2009, "powerHp": 306, "transmission": "automatic", "advertisedPrice": 12500, "currency": "EUR", "mileageKm": 96000, "status": "availability and post date unverified", "evidenceLevel": "indexed excerpt", "approvedForApp": false},
+    {"sourceUrl": "https://www.facebook.com/61592803643776/posts/122108333079426788/", "title": "Mercedes CLA 180", "year": 2013, "advertisedPrice": 12500, "currency": "EUR", "status": "availability and post date unverified", "evidenceLevel": "indexed excerpt", "approvedForApp": false},
+    {"sourceUrl": "https://www.facebook.com/61592803643776/posts/afcf49e0/122109235695426788/", "title": "Kia sale announcement", "status": "sold according to indexed seller post", "approvedForApp": false},
+    {"sourceUrl": "https://www.facebook.com/61592803643776/posts/122105193261426788/", "title": "Two expected imports", "status": "incoming according to indexed seller post; not available stock", "approvedForApp": false}
+  ],
+  "branding": {
+    "publishedBranding": "current canonical profile artwork not accessible; legacy artwork inspected",
+    "sourceLogoUrl": null,
+    "workingLogoPath": null,
+    "creationMethod": "no asset created; read-only inspection of two existing v2 PNGs",
+    "approvalStatus": "unresolved",
+    "legacyFiles": ["mirror/public/assets/images/lead/golden-dreams-logo-on-dark-v2.png", "mirror/public/assets/images/lead/golden-dreams-logo-on-light-v2.png"],
+    "visualNotes": "Gold five-star arch and car silhouette; GOLDEN DREAMS AUTOGROUP lettering. The on-light filename does not imply a light/transparent surface; the displayed image has a dark background."
+  },
+  "mediaReuseCleared": false,
+  "applicationsCreated": [],
+  "ownerManualReviewComplete": false
+}
