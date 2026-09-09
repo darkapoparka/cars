@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "client": "car-max-sofia",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "source": {"repository":"darkapoparka/cars","commit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","path":"templates/carwow","tree":"d4a08817e87cf84d08c4db1c08a515937245f2dd"},
+  "deliveryBranch": "codex/astra-bg-09",
+  "implementationNote": "Independent retained SvelteKit application. Personalization/media work unfinished; historical source QA and template-reference snapshots are not inherited client results.",
+  "ownerManualReview": "pending"
+}
