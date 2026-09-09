@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sprint-auto-varna",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "ownerReview": "pending",
+  "primaryPhone": "+359888006224",
+  "exactProfile": "https://sprint.mobile.bg/",
+  "corroboratingProfile": "https://www.auto.bg/dealer/sprint",
+  "qualificationSources": ["https://sprint.mobile.bg/obiava-21766075081643432-toyota-rav4-2-0-executive-distronic-face-lift-keyless", "https://www.auto.bg/obiava/84641185/suzuki-ignis-1-2-hybrid-black-red-camera-navi-full-history"],
+  "openedCatalogueAdCount": 21,
+  "confirmedAvailableStock": null,
+  "brandingVisuallyInspected": false,
+  "imageRequestsSucceeded": false,
+  "permittedLocalMediaPackEstablished": false,
+  "applicationsImplemented": [],
+  "testsExecuted": [],
+  "renderedJourneyCompared": false,
+  "privateCorrespondenceAccessed": false,
+  "dealerContacted": false,
+  "deploymentCreated": false,
+  "checkpointKind": "qualification-only-not-application-delivery"
+}
