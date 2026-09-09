@@ -29,3 +29,11 @@ Complete authorized local real-photo galleries and review the integrated outline
 ## Executed source-only verification
 
 Source parsing, isolated catalogue execution and targeted data/config type checks pass. `VERIFICATION.json` records exact file sets, runtime/compiler versions and zero diagnostics. None is a full Svelte/Next build or browser test. All runtime and owner-review flags remain false.
+
+## Supporting-content and favicon repair — 2026-09-09
+
+This continuation replaces inherited editorial/service assertions through the actual Auto Best, Modern and Carwow data consumers, preserves article routes, connects contact addresses in both Modern languages, and replaces the root favicon ICO in each app with the existing dealer mark. Article illustrations use the already-local proposed-brand Open Graph image; they are not stock or premises photographs.
+
+`CONTENT-VERIFICATION.json` records the exact input hashes and executed source checks. From this client folder, after the retained dependencies are installed, run `node scripts/check-editorial.mjs` to repeat the isolated checks. The recorded run used Node 24.18.0 and TypeScript 5.9.3 through an in-memory payload, not a Windows client checkout. The marketplace barrel was narrowed to the exact editorial export module for this isolated test; full package/React integration remains unverified.
+
+No source prices, inventory records, template layouts, master files or shared launchers were changed. Real stock-photo/gallery integration, the rest of the supporting-page review, dependency installs, full framework builds and 320/390/1440 browser checks are still incomplete. Owner review remains pending. The earlier research-only state does not describe the existing application trees.
