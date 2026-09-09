@@ -1,41 +1,26 @@
 # СЪНИ — Varna
 
-Status: **blocked** at the required branding/media gate. Qualification checkpoint only; zero applications implemented. Owner review remains pending.
+Status: **in-progress**. Three actual independent master-based applications now exist, with integrated local proposed logos, icons, business identity and an eight-listing public-source snapshot. This supersedes the earlier documentation-only / zero-application status, preserved verbatim in RESEARCH-2026-09-09.md.
 
-Assigned scope: `auto-best`, full-workspace `modern`, `carwow`, exclusively on `codex/astra-bg-03`. Observation date: 2026-09-09. No deployment, outreach, CRM writes, or local Windows changes.
+Branch-only handoff on `codex/astra-bg-03`. The owner explicitly elected to run application tests locally. No installs, framework builds or app browser checks are claimed here; owner review remains pending. No deployment, new dealer repository, outreach, Windows checkout or background process.
 
-## Identity and duplicate review
+## Sources and identity
 
-The assigned profile is https://sunny.mobile.bg/ and its about page https://sunny.mobile.bg/about. The profile publishes СЪНИ; its prose also uses СЪНИ КАРС. Primary public phone: 0898644464 (`+359898644464`). The inspected listing identifies Varna, Kaysieva Gradina, бул. Цар Освободител 256. https://sunny.cars.bg/ matches the primary phone and describes the Tsar Osvoboditel / Asen Raztsvetnikov intersection near Дом на камиона. https://www.auto.bg/dealer/sunny also matches the primary phone and street number.
+Published account: https://sunny.mobile.bg/ . Primary phone: 0898 644 464, `tel:+359898644464`. Address: бул. „Цар Освободител“ 256, Кайсиева градина, Варна. Hours are the published about-page schedule, qualified by a request to confirm before visiting. Conflicting secondary contact and tenure claims remain documented in the original research. Unknown socials and email are not replaced with another business's accounts.
 
-The Mobile.bg about page publishes secondary phone 0893430054 and daily 08:00–19:00 hours. Cars.bg publishes a different secondary phone, 0896788688; do not silently merge these. About-page and listing tenure claims differ (23 versus 26 years); neither was adopted as a verified business fact. These are published statements, not an independent business-registration or premises audit.
+The application data snapshot was observed on 2026-09-09. Two individual details (Beetle and Smart) were read; the remaining six records use the opened catalogue cards, with that limitation retained per record. Source IDs, URLs, advertised EUR prices, kilometres, tax wording and source conflicts are preserved in the actual imported data modules. Eight demo records are not a claim that the business has only eight cars, that all cars remain available, or that mileage/condition was independently verified.
 
-No assigned folder or matching account link appeared in the inspected current-main/old-astra/research-branch client directories, current clients/index.json, or Bulgaria account-links.json. See the session BASELINE.json for exact refs and limits. No private CRM/contact history was read; do not infer never contacted.
+## Actual implementation boundaries
 
-An independent dealer domain was not matched in bounded exact-name/phone searches. This is not proof that no website exists. The Facebook candidate https://www.facebook.com/Автокъща-СЪНИ-308473560031/ could not be inspected or corroborated by phone/location; no official match, active-page claim, recent post date, or permalink is established. Same-name businesses in Haskovo, Pleven and Sofia were not merged into this account.
+- Auto Best: original full SvelteKit application; `brand.ts`, `inventory.ts`, the retained footer, showroom map, palette tokens and app icon tags now consume this dealer's identity/content.
+- Modern: original **full workspace**, including all apps and required packages. `packages/marketplace/lead-site.ts` and the actual `marketplace-domain/testing/mock-data.ts` source used by the public demo read the dealer snapshot. Old inventory, fake buyer leads and sample trust/transaction records were not relabelled as real dealer facts.
+- Carwow: original full SvelteKit application; site/navigation data, current inventory and vehicle detail/filter data now use the same source snapshot. Inherited customer reviews are empty rather than fabricated.
+- Every app includes local `brand/` SVG logo variants, matching favicon, PNG/touch export, abstract decorative illustration and explicit missing-photo artwork. These files are present in the app trees, not download-later scripts or external hotlinks.
 
-## Existing journey and concept scope
+## Remaining work at this checkpoint
 
-The parsed Mobile.bg catalogue offers make/model, engine, gearbox, year and price controls plus vehicle details, galleries and contact paths. A consistent dated stock-to-enquiry presentation is only a proposed alternative concept, not evidence that the existing website is poor. A rendered mobile/desktop journey comparison was not executed. The observed category total is 25 advertisements, not independently verified available whole cars; the separate header count is not a reliable stock total.
+The route-by-route supporting-content and legacy hardcoded-identity sweep is still in progress. Do not treat this checkpoint as complete personalization. The original vehicle-photo access/reuse gap is **still open**: dated real vehicle records render explicit missing-photo tiles, never another dealer's cars. No real galleries have been bundled. Runtime tests are deferred to the owner, independently of that content/asset limitation.
 
-## Qualification sample — not the required finished 8–12-car pack
+The logos are custom outlined-vector **demo proposals**, not dealer-approved originals and not ImageGen output. ImageGen returned that generation had not started. SVG/PNG export and contact-sheet inspection are asset preparation only, not full app verification. See each app's `brand/PROVENANCE.md`.
 
-1. VW Beetle Газ/Бензин — ID `11785246205747169`, https://sunny.mobile.bg/obiava-11785246205747169-vw-beetle-gaz-benzin. Advertised EUR 1,699, VAT not charged. April 2004, 102 hp, 1,600 cc, manual, hatchback, black, structured mileage 230,000 km. The structured fuel field is petrol while title/prose mention LPG/petrol; retain that distinction. Whole-car advertisement, not independently confirmed available. Source shows edit date 14 August 2026. First image visually inspected: https://mobistatic1.focus.bg/mobile/photosorg/169/1/big1/11785246205747169_N2.webp. A black whole Beetle is visible. No dealership identity was inferred from the background. Gallery references exist but the complete gallery was not acquired.
-2. Smart Fortwo EQ EXECUTIVE — ID `11753359500914380`, https://sunny.mobile.bg/obiava-11753359500914380-smart-fortwo-eq-executive. Advertised EUR 12,500, VAT not charged. July 2021, electric, 82 hp, automatic, hatchback, bordeaux, 105,000 km. Published battery/range values of 18 kWh / 150 km are advertisement claims, not independently verified specifications. The seller describes it as in stock and registered; independent availability remains unknown. Source shows edit date 14 August 2026. First image visually inspected: https://cdn2.focus.bg/mobile/photosorg/380/1/big1/11753359500914380_UW.webp. Its plate frame contains another automotive business's text; it was not treated as СЪНИ branding or proof of current vehicle location.
-
-Prices are source-advertised cash amounts in EUR, not converted values or monthly payments. No finance guarantees, reviews, stock feeds, warranties or sales totals were inferred. These two records are qualification evidence only, not rendered application inventory.
-
-## Branding and media provenance
-
-- Published cover reference: https://cdn2.focus.bg/mobile/images/housespicts/h11690476830498886.pic.
-- `publishedBranding`: cover reference found; complete visual inspection unresolved. Do not label the dealer unbranded or assert that no logo exists.
-- `sourceLogoUrl`: not independently established; the cover is a candidate reference, not a verified logo extraction.
-- `workingLogoPath`: none. `creationMethod`: none. `approvalStatus`: unresolved. No Image Gen call or generated artwork exists.
-- The cover failed to render in the web tool with unsupported `application/octet-stream`; a cloud-container download also failed and saved no file. Two individual vehicle images rendered for research, but no local stock/branding bytes were acquired or bundled.
-- The inspected research explicitly defaults `mediaReuseCleared` to false. No affirmative authorization or applicable reuse license for these dealer photos was found in the task or inspected repository/public source material. This is an unresolved permission requirement, not a legal determination that permission could never be obtained. Public visibility, marketplace membership and owner approval of a demo concept were not treated as image licenses.
-
-## Exact blocker and resume point
-
-The required permitted local stock pack and fully inspected/integrated branding cannot currently be supplied. Under the session instruction, the account is blocked before cloning; no inherited-stock template copies, placeholder logos, hotlinked galleries or empty app wrappers were created.
-
-Resume with an authorized, downloadable dealer stock/branding pack and an inspectable cover/logo reference. Then finish the dated representative inventory and actual-master Fast Skins. There are currently no reviewable `/`, `/cars`, or `/` application entries and no per-variant project metadata because the variants do not exist. All installs, builds, typechecks, source-consumer integration, 320/390/1440px comparisons, route/interactions and owner review remain unexecuted. Shared-origin/FAB integration is not implemented.
+See REVIEW.md for retained install/check/start commands and expected localhost entries. All `.client/project.json` QA flags remain false. Shared public-origin/FAB integration is intentionally not implemented in this branch-only phase.
