@@ -10,7 +10,7 @@
 		return 'Нещо се обърка';
 	});
 	const detail = $derived.by(() => {
-		if (isVehicleMissing) return 'Обявата е свалена или продадена. Разгледай наличните автомобили.';
+		if (isVehicleMissing) return 'Обявата е свалена или продадена. Разгледай автомобилите от селекцията.';
 		if (page.status === 404) return 'Адресът е грешен или страницата е преместена.';
 		return 'Опитай отново или се върни към началната страница.';
 	});
@@ -23,7 +23,7 @@
 <main id="main-content" class="daynight-error" aria-labelledby="daynight-error-title">
 	<div class="daynight-error__card">
 		<a class="daynight-error__brand" href={resolve('/')}>
-			<img src={resolve('/brand/daynight-logo-generated.png')} alt="G Auto" />
+			<img src={resolve('/dealer/brand/logo-light.png')} alt="G Auto" />
 		</a>
 		<span class="daynight-error__code">{page.status}</span>
 		<h1 id="daynight-error-title">{heading}</h1>

@@ -25,16 +25,17 @@
   <div class="container">
     <div class="dn-videos__panel">
       <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледайте ни в</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Избрани автомобилни видеа с Кристиан Кирилов.</p>
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+        <h2 id="videos-title" class="dn-home-section-title">Видео и представяне</h2>
+        <p>Потвърден видео канал не е включен в демонстрацията. Разгледайте реалните снимки към обявите.</p>
+        {#if brand.youtubeUrl}<a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
           <span>Всички видеа</span>
           <Icon name="arrow-right" size={16} />
           <span class="dn-sr-only"> в YouTube (нов раздел)</span>
-        </a>
+        </a>{/if}
       </div>
 
       <div class="dn-videos__grid">
+        {#if featuredVideos.length === 0}<article class="dn-video-card"><div class="dn-video-card__content"><h3>Снимки на автомобилите</h3><p>Всяко предложение съдържа галерия от обявата на G Auto.</p><a href="/listing-grid">Разгледайте автомобилите</a></div></article>{/if}
         {#each featuredVideos as video (video.id)}
           <article class="dn-video-card">
             <div class="dn-video-card__media">
@@ -75,13 +76,13 @@
             </div>
           </article>
         {/each}
-        <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+        {#if brand.youtubeUrl}<a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
           <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
           <strong>Всички видеа</strong>
           <span>Гледайте в YouTube</span>
           <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
           <span class="dn-sr-only">Отваря се в нов раздел</span>
-        </a>
+        </a>{/if}
       </div>
     </div>
   </div>

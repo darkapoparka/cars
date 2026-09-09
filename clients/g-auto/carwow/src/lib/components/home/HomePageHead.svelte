@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 
 	const DEFAULT_DESCRIPTION =
-		'G Auto предлага проверени автомобили, финансиране и съдействие при покупка в Благоевград.';
+		'G Auto предлага подбрани обяви, финансиране и съдействие при покупка в Благоевград.';
 	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
 
 	let {

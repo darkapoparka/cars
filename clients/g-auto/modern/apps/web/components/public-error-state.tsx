@@ -35,7 +35,7 @@ export const PublicErrorState = ({ error, reset }: PublicErrorStateProps) => {
             className="flex min-h-11 min-w-0 items-center gap-2.5 rounded-lg font-semibold text-base tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-xl"
             href={copy.homeHref}
           >
-            <LeadSiteMark className="size-9 rounded-lg" />
+            <LeadSiteMark surface="light" className="size-9 rounded-lg" />
             {leadSite.name}
           </Link>
         </div>

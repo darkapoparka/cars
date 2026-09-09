@@ -7,6 +7,7 @@ import {
 const location = 'Струмско, Благоевград, България';
 
 export const daynightSite = {
+	previewMode: true,
 	name: 'G AUTO',
 	shortName: 'G Auto',
 	phone: '0896645757',
@@ -20,8 +21,8 @@ export const daynightSite = {
 	mapLabel: 'G Auto, Благоевград, България',
 	sourceInventory: 'https://g-auto.mobile.bg/',
 	inventoryCount: 8,
-	logoLight: '/dealer/brand/logo-light.png',
-	logoDark: '/dealer/brand/logo-dark.png',
+	logoLight: '/dealer/brand/logo-dark.png',
+	logoDark: '/dealer/brand/logo-light.png',
 	primaryCta: 'Разгледай автомобилите',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
@@ -77,7 +78,7 @@ export const publicNavGroups = [
 		href: '/about',
 		children: [
 			{ label: 'За G Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: 'Профил на автокъщата', href: '/about/g-auto' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },
@@ -88,7 +89,7 @@ export const publicNavGroups = [
 ] as const;
 
 export const footerNavItems = [
-	{ label: 'Налични автомобили', href: '/inventory' },
+	{ label: 'Автомобили по обяви', href: '/inventory' },
 	{ label: 'Карта на автомобили', href: '/inventory/map' },
 	{ label: 'Финансиране', href: '/financing' },
 	{ label: 'Калкулатор', href: '/calculator' },

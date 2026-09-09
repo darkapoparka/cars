@@ -1,5 +1,7 @@
 "use server";
 
+import { leadSite } from "@repo/marketplace";
+
 import { getReliableEmailDelivery } from "@repo/email";
 import { ContactTemplate } from "@repo/email/templates/contact";
 import { log } from "@repo/observability/log";
@@ -143,6 +145,7 @@ export const submitContactRequest = async (
   const isBg = formData.get("locale") === "bg";
   const isImportRequest = formData.get("context") === "import-request";
   const copy = getCopy(isBg, isImportRequest);
+  if (leadSite.staticDemoMode) return {message: copy.notConfigured, status: "error"};
   const requestHeaders = await headers();
   const requestContext = getPublicRequestContext(requestHeaders);
   const result = await submitPublicSupportRequest(formData, requestContext, {

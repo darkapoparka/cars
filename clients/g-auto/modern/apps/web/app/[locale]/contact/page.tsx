@@ -57,13 +57,13 @@ const pageCopy = {
     sellLocationLabel: "Шоурум · Струмско",
     services: [
       {
-        title: "Автомобили в наличност",
+        title: "Селекция от обяви",
         description: "Разгледайте предложенията и планирайте оглед.",
         href: "/cars",
         icon: CarFront,
       },
       {
-        title: "Внос по заявка",
+        title: "Въпрос за внос",
         description: "Кажете какво търсите и започнете разговор.",
         href: "/imports",
         icon: Ship,
@@ -184,8 +184,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "G Auto в Благоевград — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "G Auto in Blagoevgrad — vehicles in stock, import on request, and in-house leasing.",
+      ? "G Auto, Струмско — подбрани обяви, снимки и контакт за оглед."
+      : "G Auto, Strumsko — selected advertisements, photos and viewing contact.",
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),

@@ -71,12 +71,12 @@
 	const guideCards = [
 		{
 			title: 'How to buy a used car with confidence',
-			image: '/assets/images/pages/daynight-services-inspection-v1.webp',
+			image: '/dealer/stock/11788689271506791-1.webp',
 			href: '/blog'
 		},
 		{
 			title: 'Finance, registration and paperwork',
-			image: '/assets/images/pages/daynight-services-consultation-v1.webp',
+			image: '/dealer/stock/11788689271506791-1.webp',
 			href: '/financing'
 		},
 		{
@@ -115,7 +115,7 @@
 
 		<header class="home2-nav" aria-label="Home2 navigation">
 			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="G Auto Home2">
-				<img src="/brand/daynight-logo-generated.png" alt="G Auto" />
+				<img src="/dealer/brand/logo-light.png" alt="G Auto" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">
@@ -289,7 +289,7 @@
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/brand/daynight-team-placeholder.svg" alt="G Auto consultant" />
+			<img src="/dealer/stock/11788689271506791-1.webp" alt="G Auto consultant" />
 			<div>
 				<h2 id="easy-title">We make car changing easy</h2>
 				<p>

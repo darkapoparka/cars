@@ -4,7 +4,7 @@
   "templateKey": "modern",
   "templateVersion": "2026.09.06-refresh-1",
   "createdAt": "2026-09-09T01:57:41.235Z",
-  "state": "in-progress",
+  "state": "implemented-unverified",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -28,8 +28,20 @@
     "registered": false
   },
   "limitations": [
-    "Content/consumer sweep in progress.",
-    "No dependency install, application build or viewport review run.",
-    "No deployment or dealer approval is implied."
-  ]
+    "Full framework checks/build, lockfile installation and browser review not executed.",
+    "Dated seller advertisement sample, not a live inventory feed.",
+    "Generic template illustrations are not dealer premises or employees.",
+    "Not a deployed or owner-approved dealer website."
+  ],
+  "updatedAt": "2026-09-09T02:41:56.355Z",
+  "evidence": {
+    "sourceCheck": "../../checks/source-verification.json",
+    "svelteServerCompile": null,
+    "typescriptTranspile": {
+      "passed": true,
+      "files": 877
+    },
+    "runtimeBuild": false,
+    "browser": false
+  }
 }

@@ -130,8 +130,8 @@ const selectedTemplateFileToRoute: Record<string, string> = {
 	'listing-sidebar-right.html': '/inventory',
 	'listing-grid2-columns.html': '/inventory',
 	'listing-grid3-columns.html': '/inventory',
-	'dealers-listing.html': '/about/daynight-auto-plovdiv',
-	'dealer-details.html': '/about/daynight-auto-plovdiv',
+	'dealers-listing.html': '/about/g-auto',
+	'dealer-details.html': '/about/g-auto',
 	'about-us.html': '/about',
 	'contact-us.html': '/contact',
 	'financing.html': '/financing',
@@ -140,7 +140,7 @@ const selectedTemplateFileToRoute: Record<string, string> = {
 	'services-center.html': '/services',
 	'clients-reviews.html': '/reviews',
 	'sale-agents.html': '/team',
-	'sale-agents-details.html': '/team/prodazhbi-daynight-auto',
+	'sale-agents-details.html': '/team/prodazhbi-showroom',
 	'dashboard.html': '/admin',
 	'my-profile.html': '/admin/settings',
 	'my-listings.html': '/admin/listings',
@@ -168,12 +168,12 @@ function escapeRegExp(value: string) {
 }
 
 const daynightPageAssets = {
-	aboutExterior: '/assets/images/pages/daynight-about-lot-v1.webp',
-	aboutConsultation: '/assets/images/pages/daynight-about-consultation-v1.webp',
-	aboutShowroomVehicle: '/assets/images/pages/daynight-about-showroom-suv-v1.webp',
-	servicesInspection: '/assets/images/pages/daynight-services-inspection-v1.webp',
-	servicesConsultation: '/assets/images/pages/daynight-services-consultation-v1.webp',
-	dealerProfileMark: '/brand/daynight-logo-generated.png'
+	aboutExterior: '/dealer/stock/11788689271506791-1.webp',
+	aboutConsultation: '/dealer/stock/11788689271506791-1.webp',
+	aboutShowroomVehicle: '/dealer/stock/11788689271506791-1.webp',
+	servicesInspection: '/dealer/stock/11788689271506791-1.webp',
+	servicesConsultation: '/dealer/stock/11788689271506791-1.webp',
+	dealerProfileMark: '/dealer/brand/logo-light.png'
 } as const;
 
 const daynightMapEmbedQuery = `${daynightSite.mapLabel}, ${daynightSite.location}`;
@@ -202,7 +202,7 @@ const supportHeroByTemplateFile: Record<
 		modifier: 'about',
 		title: 'За G Auto',
 		description:
-			'Проверени автомобили, ясна история и съдействие от избора до документите в Благоевград.',
+			'Подбрани обяви, ясна история и съдействие от избора до документите в Благоевград.',
 		image: daynightPageAssets.aboutExterior,
 		primaryHref: '/inventory',
 		primaryLabel: 'Виж автомобили',
@@ -369,20 +369,10 @@ function renderTeamHoverActions(member: (typeof daynightTeam)[number], route: st
 function renderContactPageSocialLinks() {
 	return `<ul class="contact-page-info-social flex gap-8">
 							<li>
-								<a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" class="hover-fill-white" title="Facebook" aria-label="Facebook">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<path d="M11.5541 20V10.8777H14.6148L15.074 7.32156H11.5541V5.05147C11.5541 4.0222 11.8387 3.32076 13.3164 3.32076L15.1979 3.31999V0.13923C14.8725 0.0969453 13.7556 0 12.4556 0C9.74098 0 7.88252 1.65697 7.88252 4.69927V7.32156H4.8125V10.8777H7.88252V20H11.5541Z" fill="#1C1C1C"/>
-									</svg>
-								</a>
+								
 							</li>
 							<li>
-								<a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" class="hover-stroke-white" title="Instagram" aria-label="Instagram">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<rect x="2.5" y="2.5" width="15" height="15" rx="4.5" stroke="#1C1C1C" stroke-width="1.5"/>
-										<circle cx="10" cy="10" r="3.15" stroke="#1C1C1C" stroke-width="1.5"/>
-										<circle cx="14.05" cy="5.95" r="0.9" fill="#1C1C1C"/>
-									</svg>
-								</a>
+								
 							</li>
 							<li>
 								<a href="tel:${daynightSite.phone}" class="hover-stroke-white" title="Свържете се с G Auto по телефон или Viber." aria-label="Свържете се с G Auto по телефон или Viber.">
@@ -394,7 +384,7 @@ function renderContactPageSocialLinks() {
 								</a>
 							</li>
 							<li>
-								<a href="${daynightSite.sourceInventory}" target="_blank" rel="noopener" class="hover-stroke-white" title="Виж наличните автомобили в mobile.bg" aria-label="Виж наличните автомобили в mobile.bg">
+								<a href="${daynightSite.sourceInventory}" target="_blank" rel="noopener" class="hover-stroke-white" title="Виж автомобилите от селекцията в mobile.bg" aria-label="Виж автомобилите от селекцията в mobile.bg">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 										<path d="M3 12.5L4.6 8.8C4.95 7.98 5.76 7.44 6.65 7.44H13.35C14.24 7.44 15.05 7.98 15.4 8.8L17 12.5" stroke="#1C1C1C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
 										<path d="M4 12.5H16.1C16.87 12.5 17.5 13.13 17.5 13.9V14.7C17.5 15.47 16.87 16.1 16.1 16.1H3.9C3.13 16.1 2.5 15.47 2.5 14.7V13.9C2.5 13.13 3.13 12.5 3.9 12.5H4Z" stroke="#1C1C1C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -565,7 +555,7 @@ function renderDashboardAccountHeader(templateFile: string) {
 								<strong>${title}</strong>
 							</div>
 							<div class="daynight-dashboard-header__actions">
-								<a class="daynight-dashboard-header__ghost" href="/inventory">Налични автомобили</a>
+								<a class="daynight-dashboard-header__ghost" href="/inventory">Автомобили по обяви</a>
 								<a class="daynight-dashboard-header__user" href="/admin/settings">
 									<img class="avatar" src="/assets/images/dashboard/dashbroard_avatar.png" alt="">
 									<span>Клиентски профил</span>
@@ -711,7 +701,7 @@ function replaceSharedCounterMetrics(html: string) {
 		)
 		.replace(
 			/(<span class="count-number[^"]*"[^>]*data-to=")8("[^>]*>)8(<\/span>)k\+/,
-			(_match, before, after, close) => `${before}2019${after}2019${close}`
+			(_match, before, after, close) => `${before}32${after}32${close}`
 		)
 		.replace(
 			/(<span class="count-number[^"]*"[^>]*data-to=")4\.5("[^>]*>)4,5(<\/span>)k\+/,
@@ -720,10 +710,10 @@ function replaceSharedCounterMetrics(html: string) {
 		)
 		.replace(
 			/(<span class="count-number[^"]*"[^>]*data-to=")3\.5("[^>]*>)3,5(<\/span>)k\+/,
-			(_match, before, after, close) => `${before}100${after}100${close}%`
+			(_match, before, after, close) => `${before}1${after}1${close}`
 		)
 		.replace(
-			/<p class="font-weight-500 text-muted h7 text-center">Проверени автомобили<\/p>/,
+			/<p class="font-weight-500 text-muted h7 text-center">Подбрани обяви<\/p>/,
 			'<p class="font-weight-500 text-muted h7 text-center">съдействие по документи</p>'
 		);
 }
@@ -857,7 +847,7 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Autopilot', 'Асистенти за шофиране')
 		.replaceAll('Android Auto', 'Android Auto')
 		.replaceAll('Moonroof', 'Панорамен покрив')
-		.replaceAll('Show 1,029 Matches', 'Виж наличните автомобили')
+		.replaceAll('Show 1,029 Matches', 'Виж автомобилите от селекцията')
 		.replaceAll('Mileage:', 'Пробег:')
 		.replaceAll('Years:', 'Година:')
 		.replaceAll('Fuel:', 'Гориво:')
@@ -868,13 +858,13 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('VIN:', 'Реф. номер:')
 		.replaceAll('Stock Number:', 'Вътрешен номер:')
 		.replaceAll('Tampa, FL', 'Благоевград')
-		.replaceAll('Listing GridStyle Half Map', 'Карта на наличните автомобили')
-		.replaceAll('Listing GridStyle HalfMap', 'Карта на наличните автомобили')
-		.replaceAll('Grid Style Half Map', 'Карта на наличните автомобили')
-		.replaceAll('Автомобили GridStyle Half Map', 'Карта на наличните автомобили')
-		.replaceAll('Автомобили GridStyle HalfMap', 'Карта на наличните автомобили')
-		.replaceAll('Listing Grid 4 Columns', 'Автомобили в наличност')
-		.replaceAll('Автомобили Grid 4 Columns', 'Налични автомобили')
+		.replaceAll('Listing GridStyle Half Map', 'Карта на автомобилите от селекцията')
+		.replaceAll('Listing GridStyle HalfMap', 'Карта на автомобилите от селекцията')
+		.replaceAll('Grid Style Half Map', 'Карта на автомобилите от селекцията')
+		.replaceAll('Автомобили GridStyle Half Map', 'Карта на автомобилите от селекцията')
+		.replaceAll('Автомобили GridStyle HalfMap', 'Карта на автомобилите от селекцията')
+		.replaceAll('Listing Grid 4 Columns', 'Селекция от обяви')
+		.replaceAll('Автомобили Grid 4 Columns', 'Автомобили по обяви')
 		.replaceAll('Showing 1 – 30 of 118 Listings', `Показани ${daynightVehicles.length} автомобила`)
 		.replaceAll(
 			'Showing 1 – 30 of 118 Автомобилиs',
@@ -884,7 +874,7 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 	return templateFile === 'listing-gridstyle-halfmap.html'
 		? output.replace(
 				`<p class="md-hidden">Показани ${daynightVehicles.length} автомобила</p>`,
-				`<p class="md-hidden">Карта на наличните автомобили · ${daynightVehicles.length} автомобила</p>`
+				`<p class="md-hidden">Карта на автомобилите от селекцията · ${daynightVehicles.length} автомобила</p>`
 			)
 		: output;
 }
@@ -949,23 +939,7 @@ function replaceSectionByMarker(html: string, marker: string, replacement: strin
 	return html.slice(0, section.start) + replacement + html.slice(section.end);
 }
 
-const supportReviews = [
-	{
-		name: 'Клиент от Благоевград',
-		label: 'Покупка и документи',
-		text: 'Получих ясна информация за автомобила, документите и следващите стъпки. Огледът беше организиран спокойно, без натиск.'
-	},
-	{
-		name: 'Клиент на G Auto',
-		label: 'Финансиране',
-		text: 'Екипът ми помогна да сравня няколко автомобила и да планирам бюджета с вариант за разсрочено плащане.'
-	},
-	{
-		name: 'Клиент от региона',
-		label: 'Оглед и бартер',
-		text: 'Автомобилът беше представен коректно, а условията за бартер и регистрация бяха казани предварително.'
-	}
-] as const;
+const supportReviews = [] as {name:string;label:string;text:string}[];
 
 function getCompareVehicles(limit = 3) {
 	const selected: typeof daynightVehicles = [];
@@ -1689,7 +1663,7 @@ function renderBlogDetailIcon(type: 'author' | 'date' | 'category') {
 
 function renderBlogDetailMetaList(article: DayNightArticle) {
 	const items = [
-		{ type: 'author' as const, label: article.author, href: '/about/daynight-auto-plovdiv' },
+		{ type: 'author' as const, label: article.author, href: '/about/g-auto' },
 		{ type: 'date' as const, label: formatArticleDate(article.date), href: '/blog' },
 		{
 			type: 'category' as const,
@@ -1789,11 +1763,11 @@ function renderBlogDetailAuthorBox() {
 	<div class="listing-details--contact-dealer mb-20">
 		<img src="${daynightPageAssets.dealerProfileMark}" alt="${daynightSite.shortName}">
 		<div class="content">
-			<a href="/about/daynight-auto-plovdiv" class="h4 mb-4 font-weight-600">G Auto</a>
+			<a href="/about/g-auto" class="h4 mb-4 font-weight-600">G Auto</a>
 			<p class="text-secondary mb-18">Автокъща в Благоевград</p>
 			<ul class="blog-detail-social flex gap-12">
-				<li><a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" aria-label="Facebook канал">${renderBlogSocialIcon('facebook')}</a></li>
-				<li><a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" aria-label="Instagram канал">${renderBlogSocialIcon('instagram')}</a></li>
+				<li></li>
+				<li></li>
 				<li><a href="mailto:${daynightSite.email}" aria-label="Имейл към G Auto">${renderBlogSocialIcon('mail')}</a></li>
 			</ul>
 		</div>
@@ -2177,11 +2151,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Chief Financial Officer', 'Консултант клиентски услуги')
 			.replace(
 				/<p class="text-secondary h7 line-height-28 mb-32">[\s\S]*?<\/p>/,
-				'<p class="text-secondary h7 line-height-28 mb-32">G Auto предлага внимателно подбрани и проверени автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.</p>'
+				'<p class="text-secondary h7 line-height-28 mb-32">G Auto предлага внимателно подбрани и подбрани обяви с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.</p>'
 			)
 			.replace(
 				/At G Auto, we make car ownership simple and accessible[\s\S]*?hassle-free experience\./,
-				'G Auto предлага внимателно подбрани и проверени автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.'
+				'G Auto предлага внимателно подбрани и подбрани обяви с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.'
 			)
 			.replaceAll('/assets/images/pages/about-1.jpg', daynightPageAssets.aboutExterior)
 			.replaceAll('/assets/images/pages/about-2.jpg', daynightPageAssets.aboutConsultation)
@@ -2585,7 +2559,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replaceAll(
 				'Bought new in 2012, and it’s still running strong at over 180,000 miles. I’ve only had to replace the battery and brakes once. The ride is smooth, the interior still feels solid, and the fuel economy hasn’t dropped much.',
-				'Получих ясна информация за наличните автомобили, условията за оглед и следващите стъпки. Комуникацията беше точна и навременна.'
+				'Получих ясна информация за автомобилите от селекцията, условията за оглед и следващите стъпки. Комуникацията беше точна и навременна.'
 			)
 			.replaceAll(
 				'Picked this car up used about five years ago with 90k miles. It’s now at 160k and still starts every morning without hesitation. Maintenance is simple, parts are cheap, and it’s surprisingly comfortable on long drives.',
@@ -2619,7 +2593,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Euro Workshop', 'G Auto Благоевград')
 			.replaceAll('537 Orchard St, NY', daynightSite.location)
 			.replaceAll('Verified Dealer', 'Проверена автокъща')
-			.replaceAll('Dealer Inventory', 'Налични автомобили')
+			.replaceAll('Dealer Inventory', 'Автомобили по обяви')
 			.replaceAll('About Dealer', 'За автокъщата')
 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
 			.replaceAll('Write A Review', 'Добавете отзив')
@@ -2634,7 +2608,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			)
 			.replaceAll(
 				'His passion for automobiles began at a young age, driving him to excel in understanding every aspect of car sales, from customer service to financing solutions. Darrell is committed to building lasting relationships with his clients, always prioritizing trust and transparency.',
-				'На място клиентите могат да сравнят налични автомобили, да обсъдят бартер или разсрочено плащане и да подготвят документите без излишно забавяне.'
+				'На място клиентите могат да сравнят автомобили по обяви, да обсъдят бартер или разсрочено плащане и да подготвят документите без излишно забавяне.'
 			)
 			.replaceAll(
 				'Darrell Steward is a dedicated automotive professional with over 15 years of experience in the car dealership industry. Known for his customer-first approach and in-depth knowledge of the market, Darrell has helped countless clients find their perfect vehicle while ensuring a seamless and enjoyable buying experience. His passion for automobiles began at a young age, driving him to excel in understanding every aspect of car sales, from customer service to financing solutions. Darrell is committed to building lasting relationships with clients, offering honest advice, transparent deals, and personalized support every step of the way.',
@@ -3099,7 +3073,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Browse By Type', 'Автомобили по тип')
 		.replaceAll('Check All Car Type', 'Виж всички типове')
 		.replaceAll('Check Всички Type', 'Виж всички типове')
-		.replaceAll('New Vehicles', 'Налични автомобили')
+		.replaceAll('New Vehicles', 'Автомобили по обяви')
 		.replaceAll('Explore Our Brands', 'Марки в наличност')
 		.replaceAll('Clients Reviews', 'Отзиви от клиенти')
 		.replace(/\bView All\b/g, 'Виж всички')
@@ -3112,7 +3086,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replaceAll(
 			'Wide Selection – A variety of cars to fit every need.',
-			'Налични автомобили за различен бюджет и нужди.'
+			'Автомобили по обяви за различен бюджет и нужди.'
 		)
 		.replaceAll(
 			'Competitive Prices: Great deals and flexible financing.',
@@ -3126,18 +3100,18 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 			'Excellent Support: Always here to assist you.',
 			'Помощ при документи, регистрация и следващи стъпки.'
 		)
-		.replaceAll('Find Your Car Now!', 'Виж наличните автомобили')
+		.replaceAll('Find Your Car Now!', 'Виж автомобилите от селекцията')
 		.replaceAll('18K+', `${daynightVehicles.length}+`)
 		.replaceAll('Car For Sale', 'Налични автомобила')
-		.replaceAll('8k+', '2019')
+		.replaceAll('8k+', '32')
 		.replaceAll('Visitors per day', 'присъствие в mobile.bg')
 		.replaceAll('4,5k+', `${daynightBrandsInStock}`)
 		.replaceAll('Dealer Reviews', 'марки в наличност')
-		.replaceAll('3,5k+', '100%')
-		.replaceAll('Verified Dealers', 'Проверени автомобили')
+		.replaceAll('3,5k+', '1')
+		.replaceAll('Verified Dealers', 'Подбрани обяви')
 		.replace(
-			/<a href="\/sell-your-car" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">\s*Виж наличните автомобили\s*<\/a>/g,
-			'<a href="/inventory" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">Виж наличните автомобили</a>'
+			/<a href="\/sell-your-car" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">\s*Виж автомобилите от селекцията\s*<\/a>/g,
+			'<a href="/inventory" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">Виж автомобилите от селекцията</a>'
 		)
 		.replaceAll('Want to sell your car?', 'Искате да продадете или замените автомобил?')
 		.replaceAll('Want To Sell Your Car?', 'Искате да продадете или замените автомобил?')
@@ -3335,8 +3309,8 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 			'Prior to Leaf Group, Oliver was Director of Finance at Ogin, Inc., a private equity backed clean technology company.',
 			'Екипът работи с реална информация за наличност, цена, пробег и състояние на автомобила.'
 		)
-		.replaceAll('How the adventure ended will...', 'Проверен автомобил от G Auto.')
-		.replaceAll('How the adventure ended will be seen soon.', 'Проверен автомобил от G Auto.')
+		.replaceAll('How the adventure ended will...', 'Автомобил по обява от G Auto.')
+		.replaceAll('How the adventure ended will be seen soon.', 'Автомобил по обява от G Auto.')
 		.replaceAll('Vehicle Information', 'Данни за автомобила')
 		.replaceAll('Car Details', 'Данни за автомобила')
 		.replace(
@@ -3495,7 +3469,7 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 			)
 			.replace(
 				/<a href="#" class="h4 mb-8 font-weight-600">G Auto<\/a>/g,
-				'<a href="/about/daynight-auto-plovdiv" class="h4 mb-8 font-weight-600">G Auto</a>'
+				'<a href="/about/g-auto" class="h4 mb-8 font-weight-600">G Auto</a>'
 			)
 			.replace(
 				/<a href="#">\s*гр\. Благоевград, Благоевград, Струмско, Благоевград, България\s*<\/a>/g,
@@ -3770,11 +3744,11 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 			)
 			.replace(
 				/<a href="#" class="h4 mb-8 font-weight-600">G Auto<\/a>/g,
-				'<a href="/about/daynight-auto-plovdiv" class="h4 mb-8 font-weight-600">G Auto</a>'
+				'<a href="/about/g-auto" class="h4 mb-8 font-weight-600">G Auto</a>'
 			)
 			.replace(
 				/<a class="text-white" href="#">G Auto<\/a>/g,
-				'<a class="text-white" href="/about/daynight-auto-plovdiv">G Auto</a>'
+				'<a class="text-white" href="/about/g-auto">G Auto</a>'
 			)
 			.replace(
 				/<a class="text-white" href="#">Aug\. 8, 2025<\/a>/g,

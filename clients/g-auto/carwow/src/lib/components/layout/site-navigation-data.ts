@@ -1,7 +1,7 @@
 export type StaticNavHref =
 	| '/'
 	| '/about'
-	| '/about/daynight-auto-plovdiv'
+	| '/about/g-auto'
 	| '/blog'
 	| '/calculator'
 	| '/compare'

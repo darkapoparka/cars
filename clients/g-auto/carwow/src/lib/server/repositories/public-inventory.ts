@@ -1,3 +1,4 @@
+import { daynightSite } from '$lib/data/daynight-site';
 import { and, desc, eq, inArray } from 'drizzle-orm';
 import { daynightVehicles, type Car } from '$lib/data/daynight-vehicles';
 import { getDefaultDealerSlug } from '$lib/server/app-config';
@@ -46,7 +47,7 @@ export function mapPublishedVehicleToCar(vehicle: VehicleRow, photos: VehiclePho
 		fuel: vehicle.fuel,
 		transmission: vehicle.transmission,
 		body: vehicle.body,
-		doors: vehicle.doors ?? 5,
+		doors: vehicle.doors ?? null,
 		engine: vehicle.engine,
 		power: vehicle.power,
 		drive: vehicle.drive,
@@ -74,6 +75,7 @@ export async function getPublishedPublicInventory(
 		staticFallback?: Car[];
 	} = {}
 ): Promise<Car[]> {
+	if (daynightSite.previewMode) return options.staticFallback ?? daynightVehicles;
 	if (!options.db && !hasDatabaseUrl()) {
 		return options.staticFallback ?? daynightVehicles;
 	}

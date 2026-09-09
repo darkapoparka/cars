@@ -8,12 +8,12 @@
 	const phoneHref = `tel:${daynightSite.phone}`;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: 'https://www.facebook.com/61566304063141/',
+		href: '',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
+		href: '',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
@@ -141,24 +141,24 @@
 							</p>
 							<ul class="m-0 mb-3 flex list-none flex-wrap gap-2 p-0">
 								<li>
-									<a
+									{#if facebookLinkProps.href}<a
 										{...facebookLinkProps}
 										title="Facebook"
 										aria-label="Facebook"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="facebook" />
-									</a>
+									</a>{/if}
 								</li>
 								<li>
-									<a
+									{#if instagramLinkProps.href}<a
 										{...instagramLinkProps}
 										title="Instagram"
 										aria-label="Instagram"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="instagram" />
-									</a>
+									</a>{/if}
 								</li>
 								<li>
 									<a
@@ -173,8 +173,8 @@
 								<li>
 									<a
 										{...sourceInventoryLinkProps}
-										title="Виж наличните автомобили в mobile.bg"
-										aria-label="Виж наличните автомобили в mobile.bg"
+										title="Виж автомобилите от селекцията в mobile.bg"
+										aria-label="Виж автомобилите от селекцията в mobile.bg"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="car-lot" />

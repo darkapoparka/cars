@@ -41,7 +41,7 @@
 			</div>
 			<div class="desktop-favorites__hero-actions" aria-label="Действия">
 				<a class="desktop-favorites__cta sa-cta sa-cta-primary" href={resolve('/inventory')}>
-					Виж наличните автомобили
+					Виж автомобилите от селекцията
 				</a>
 				<a class="desktop-favorites__cta sa-cta sa-cta-on-dark" href={resolve('/compare')}>
 					Сравни автомобили

@@ -34,7 +34,7 @@ export type Car = {
 
 const parseLocalizedNumber = (value: string) => {
 	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
-	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
+	return match ? Number(match[0].replace(/\s+/g, '').replace(',', '.')) : 0;
 };
 
 const normalizeFuel = (fuel: string) =>
@@ -99,7 +99,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
 	const conditionLine = isIncoming
 		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Обява от 09.09.2026 г. — потвърдете наличността и огледа с G Auto.';
+		: 'Селекция към 09.09.2026 г. — потвърдете наличността и огледа с G Auto.';
 
 	return {
 		slug: listing.canonicalSlug,

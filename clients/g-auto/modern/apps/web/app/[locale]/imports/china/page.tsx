@@ -19,8 +19,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Започнете заявка за автомобил от Китай с доставка до България от G Auto."
-      : "Start a request for a vehicle from China with delivery to Bulgaria from G Auto.",
+      ? "Илюстративна страница за въпроси относно автомобил от Китай. Услуга за внос не е потвърдена."
+      : "Illustrative page for questions about a vehicle from China. An import service has not been confirmed.",
     locale,
     path,
     title: isBg

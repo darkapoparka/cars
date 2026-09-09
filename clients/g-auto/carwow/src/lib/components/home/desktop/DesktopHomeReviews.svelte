@@ -113,7 +113,8 @@
 		>
 			<div class="daynight-home-review-grid">
 				<div class="daynight-home-review-grid__items">
-					{#each reviews as review (review.id)}
+					{#if reviews.length === 0}<div class="daynight-home-review-grid__item"><div class="daynight-home-review-card"><p class="daynight-home-review-card__description">Потвърдени клиентски отзиви не са предоставени. Без примерни звезди и измислени препоръки.</p><a href="/reviews">Информация за отзивите</a></div></div>{/if}
+                    {#each reviews as review (review.id)}
 						<div class="daynight-home-review-grid__item">
 							<a href={resolve('/reviews')} class="daynight-home-review-card">
 								<div class="daynight-home-review-card__rating">

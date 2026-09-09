@@ -8607,7 +8607,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading::before {
-		background: url('/brand/daynight-logo-generated.png') center / contain no-repeat !important;
+		background: url('/dealer/brand/logo-light.png') center / contain no-repeat !important;
 		content: '' !important;
 		height: 104px !important;
 		opacity: 0.96 !important;
@@ -8773,7 +8773,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading::before {
-		background: url('/brand/daynight-logo-generated.png') center / contain no-repeat !important;
+		background: url('/dealer/brand/logo-light.png') center / contain no-repeat !important;
 		content: '' !important;
 		height: 72px !important;
 		opacity: 0.94 !important;

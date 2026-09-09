@@ -492,7 +492,7 @@ export function renderInventoryQuickFilters() {
 		})
 	);
 	return `<div class="col-md-12 daynight-inventory-controls">
-<h1 class="daynight-inventory-heading">Налични автомобили</h1>
+<h1 class="daynight-inventory-heading">Автомобили по обяви</h1>
 <form class="daynight-inventory-quick-form" data-daynight-inventory-filter aria-label="Бързи филтри">
 <div class="daynight-inventory-searchbar">
 <div class="daynight-inventory-search">

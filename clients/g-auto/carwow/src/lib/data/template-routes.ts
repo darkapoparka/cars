@@ -1,6 +1,6 @@
 const prettyRouteToFile: Record<string, string> = {
 	about: 'about-us.html',
-	'about/daynight-auto-plovdiv': 'dealer-details.html',
+	'about/g-auto': 'dealer-details.html',
 	contact: 'contact-us.html',
 	financing: 'financing.html',
 	'sell-car': 'sell-your-car.html',
@@ -10,7 +10,7 @@ const prettyRouteToFile: Record<string, string> = {
 	services: 'services-center.html',
 	reviews: 'clients-reviews.html',
 	team: 'sale-agents.html',
-	'team/prodazhbi-daynight-auto': 'sale-agents-details.html',
+	'team/prodazhbi-showroom': 'sale-agents-details.html',
 	calculator: 'calculator.html',
 	compare: 'compare.html',
 	faq: 'faqs.html',
@@ -67,7 +67,7 @@ const templateBodyClassesByFile: Record<string, string[]> = {
 
 const nativeBodyClasslessRoutePaths = new Set([
 	'about',
-	'about/daynight-auto-plovdiv',
+	'about/g-auto',
 	'blog',
 	'blog/kak-da-kupim-upotrebyavan-avtomobil',
 	'calculator',
@@ -82,7 +82,7 @@ const nativeBodyClasslessRoutePaths = new Set([
 	'sell-your-car/request',
 	'services',
 	'team',
-	'team/prodazhbi-daynight-auto',
+	'team/prodazhbi-showroom',
 	'terms'
 ]);
 

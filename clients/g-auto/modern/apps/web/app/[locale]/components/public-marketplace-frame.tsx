@@ -190,7 +190,7 @@ export const PublicMarketplaceFrame = ({
               className="flex items-center gap-2"
               data-slot="marketplace-home-brand"
             >
-              <LeadSiteMark className="size-9 rounded-lg" />
+              <LeadSiteMark surface="light" className="size-9 rounded-lg" />
               <span className="hidden min-[360px]:inline">
                 {leadSite.shortName}
               </span>

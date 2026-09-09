@@ -5,11 +5,11 @@
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
 
-  const socialProfiles = [
+  const socialProfiles = ([
     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
     { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
     { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
-  ] as const;
+  ] as const).filter(profile => Boolean(profile.href));
 </script>
 
 <section class="dn-about-hero dn-route-hero dn-route-hero--studio dn-route-hero--charcoal" aria-labelledby="about-title">

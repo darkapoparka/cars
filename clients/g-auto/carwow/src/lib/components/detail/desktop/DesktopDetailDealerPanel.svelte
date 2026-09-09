@@ -23,7 +23,7 @@
 			/>
 
 			<div class="content">
-				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
+				<a href={resolve('/about/g-auto')} class="h4 font-weight-600 mb-8">
 					G Auto
 				</a>
 

@@ -52,7 +52,8 @@
 			<div class="tf-spacing-style3"></div>
 
 			<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">
-				{#each daynightReviews as review (review.id)}
+				{#if daynightReviews.length === 0}<div class="testimonior-box"><p class="testimonior-box--desc">Тук няма публикувани клиентски мнения. За въпроси относно автомобил се свържете директно с G Auto.</p><a href="/contact">Контакти</a></div>{/if}
+                {#each daynightReviews as review (review.id)}
 					<div class="testimonior-box">
 						<div
 							class="mb-16 flex items-center gap-4"

@@ -47,7 +47,7 @@ export const DealerDesktopHeader = ({
               fill
               priority
               sizes="220px"
-              src={leadSite.logoPath}
+              src="/dealer/brand/logo-dark.png"
             />
           </Link>
           <nav

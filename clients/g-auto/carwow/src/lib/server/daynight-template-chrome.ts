@@ -31,8 +31,8 @@ type PresentationIconLink = {
 	kind: 'direct' | 'external';
 };
 
-const daynightFacebookUrl = 'https://www.facebook.com/61566304063141/';
-const daynightInstagramUrl = 'https://www.instagram.com/daynight.auto.plovdiv/';
+const daynightFacebookUrl = '';
+const daynightInstagramUrl = '';
 
 const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
 	{
@@ -105,7 +105,7 @@ const footerLinkGroups: readonly FooterLinkGroup[] = [
 		title: 'G AUTO',
 		links: [
 			{ label: 'За G Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: 'Профил на автокъщата', href: '/about/g-auto' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Полезно', href: '/blog' },
@@ -115,7 +115,7 @@ const footerLinkGroups: readonly FooterLinkGroup[] = [
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ label: 'Налични автомобили', href: '/inventory' },
+			{ label: 'Автомобили по обяви', href: '/inventory' },
 			{ label: 'Финансиране', href: '/financing' },
 			{ label: 'Калкулатор', href: '/calculator' },
 			{ label: 'Продай или замени', href: '/sell-your-car' },
@@ -284,7 +284,7 @@ function renderHeaderTopBarSocialLinks() {
 	];
 
 	return `<ul class="header-top-bar--socical pl-40">${links
-		.map((link) => renderIconLink(link))
+		.filter(link => Boolean(link.href)).map((link) => renderIconLink(link))
 		.join('')}</ul>`;
 }
 
@@ -346,16 +346,16 @@ function renderFooterSocialLinks() {
 			kind: 'external'
 		},
 		{
-			label: 'Viber / Телефон',
+			label: 'Телефон',
 			href: `tel:${daynightSite.phone}`,
-			title: `Свържете се с ${daynightSite.shortName} по телефон или Viber.`,
+			title: `Свържете се с ${daynightSite.shortName} по публикувания телефон.`,
 			kind: 'direct',
 			icon: whitePhoneIcon
 		},
 		{
 			label: 'Mobile.bg',
 			href: daynightSite.sourceInventory,
-			title: 'Виж наличните автомобили в mobile.bg',
+			title: 'Виж автомобилите от селекцията в mobile.bg',
 			kind: 'external',
 			icon: carLotIcon('#FFFFFF')
 		},

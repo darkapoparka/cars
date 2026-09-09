@@ -17,7 +17,7 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 
 	return {
 		title: `${vehicle.title} | G Auto`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от G Auto с опция за финансиране.`
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Автомобил по обява от G Auto с опция за финансиране.`
 	};
 }
 

@@ -32,7 +32,7 @@ function buildBodyTiles(vehicles: Car[]) {
 	}
 	return order
 		.map((body) => ({ body, count: count.get(body) ?? 0 }))
-		.filter((t) => t.count >= 3)
+		.filter((t) => t.count > 0)
 		.sort((a, b) => b.count - a.count)
 		.slice(0, 6);
 }
@@ -78,14 +78,7 @@ function buildModelOptions(vehicles: Car[]) {
 		.sort((left, right) => right.count - left.count || left.model.localeCompare(right.model, 'bg'));
 }
 
-const featuredCarSlugs = [
-	'mercedes-benz-gle-coupe-400d-2021-68018',
-	'mercedes-benz-amg-gt-53-2020-00956',
-	'bmw-i7-2023-full-maxx',
-	'mercedes-benz-gls-63-amg-2019-61453',
-	'mercedes-benz-eqe-300-2023-14248',
-	'audi-q8-5-0tdi-2020-95331'
-];
+const featuredCarSlugs = cars.slice(0,6).map(car=>car.slug);
 
 function buildFeaturedCars(vehicles: Car[]) {
 	const bySlug = new Map(vehicles.map((car) => [car.slug, car]));

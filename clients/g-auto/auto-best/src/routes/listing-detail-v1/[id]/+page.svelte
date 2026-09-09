@@ -12,6 +12,9 @@
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
+  let selectedPhotos = $state<Record<number, number>>({});
+  const gallery = $derived(data.vehicle.gallery?.length ? data.vehicle.gallery : [data.vehicle.image]);
+  const selectedPhoto = $derived(selectedPhotos[data.vehicle.id] ?? 0);
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const detailTabs = [
@@ -61,7 +64,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Публикувана обява от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -84,7 +87,7 @@
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
                 <img
-                  src={data.vehicle.image}
+                  src={gallery[selectedPhoto] ?? data.vehicle.image}
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
@@ -92,6 +95,9 @@
                   decoding="async"
                 />
               </figure>
+              <div class="dn-gallery-thumbs" aria-label="Снимки на автомобила">
+                {#each gallery as photo, index (photo)}<button type="button" aria-label={`Снимка ${index + 1} от ${gallery.length}`} aria-pressed={selectedPhoto === index} onclick={() => selectedPhotos[data.vehicle.id] = index}><img src={photo} alt="" width="140" height="100" loading="lazy" /></button>{/each}
+              </div>
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label="Информация за автомобила">
@@ -133,6 +139,9 @@
                     {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
                     екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
                   </p>
+                  <p>{data.vehicle.disclosure}</p>
+                  <p>Селекция към 09.09.2026 г.; не е жив каталог.</p>
+                  {#if data.vehicle.evidenceUrl}<a href={data.vehicle.evidenceUrl} target="_blank" rel="noreferrer">Оригинална обява</a>{/if}
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
                     <Icon name="message" size={22} strokeWidth={1.7} />
                     Поискайте информация
@@ -162,6 +171,7 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
+              {#if data.vehicle.taxText}<p>{data.vehicle.taxText}</p>{/if}
               <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
@@ -217,3 +227,11 @@
       </div>
     </section>
 </div>
+
+<style>
+.dn-gallery-thumbs { display:flex; gap:8px; padding:12px; overflow-x:auto; }
+.dn-gallery-thumbs button { flex:0 0 80px; padding:2px; border:2px solid transparent; border-radius:8px; background:transparent; cursor:pointer; }
+.dn-gallery-thumbs button[aria-pressed="true"] { border-color:var(--dn-red); }
+.dn-gallery-thumbs button:focus-visible { outline:3px solid var(--dn-red); outline-offset:2px; }
+.dn-gallery-thumbs img { display:block; width:100%; height:56px; object-fit:cover; border-radius:4px; }
+</style>

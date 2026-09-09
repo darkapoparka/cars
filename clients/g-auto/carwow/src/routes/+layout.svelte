@@ -57,10 +57,10 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/brand/daynight-logo-generated.png`,
-			logo: `${origin}/brand/daynight-logo-generated.png`,
+			image: `${origin}/dealer/brand/logo-light.png`,
+			logo: `${origin}/dealer/brand/logo-light.png`,
 			url: `${origin}/`,
-			telephone: daynightSite.phone,
+			telephone: '+359896645757',
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',

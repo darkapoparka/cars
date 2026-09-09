@@ -33,10 +33,10 @@
       icon: 'value'
     },
     {
-      title: 'Внос по заявка',
+      title: 'Въпрос за внос',
       vehicle: 'gclass',
       tone: 'red',
-      mobileTitle: 'Внос по заявка',
+      mobileTitle: 'Въпрос за внос',
       mobileCta: 'Заяви внос',
       description: 'Споделете модел и бюджет за внос по заявка.',
       bannerDescription: ['Споделете своя бюджет', 'и модел за внос.'],

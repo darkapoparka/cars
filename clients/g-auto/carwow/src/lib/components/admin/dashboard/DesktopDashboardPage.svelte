@@ -198,7 +198,7 @@
 					</div>
 					<div class="daynight-dashboard-header__actions">
 						<a class="daynight-dashboard-header__ghost" href={resolve('/inventory')}
-							>Налични автомобили</a
+							>Автомобили по обяви</a
 						>
 						<a class="daynight-dashboard-header__user" href={resolve('/dashboard/profile')}>
 							<img

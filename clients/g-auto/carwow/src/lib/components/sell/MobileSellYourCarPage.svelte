@@ -60,7 +60,7 @@
 	});
 
 	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 	const quickContext = $derived(
 		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
 	);

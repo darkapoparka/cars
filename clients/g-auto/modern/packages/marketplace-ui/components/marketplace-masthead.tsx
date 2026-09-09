@@ -111,9 +111,11 @@ const getMastheadContentFrameClassName = (
 export const LeadSiteMark = ({
   className,
   sizes = "236px",
+  surface = "dark",
 }: {
   className?: string;
   sizes?: string;
+  surface?: "dark" | "light";
 }) => {
   if (leadSite.staticDemoMode) {
     return (
@@ -130,7 +132,7 @@ export const LeadSiteMark = ({
           fill
           priority
           sizes={sizes}
-          src={leadSite.logoPath}
+          src={surface === "dark" ? "/dealer/brand/logo-dark.png" : "/dealer/brand/logo-light.png"}
         />
       </span>
     );
@@ -149,7 +151,7 @@ export const LeadSiteMark = ({
         aria-hidden="true"
         className="size-full object-contain"
         height={40}
-        src={leadSite.logoPath}
+        src={surface === "dark" ? "/dealer/brand/logo-dark.png" : "/dealer/brand/logo-light.png"}
         width={40}
       />
     </span>

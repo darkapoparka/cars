@@ -91,7 +91,7 @@ const importFaqs = {
     },
     {
       answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на G Auto ще се свърже с вас, за да уточни следващата стъпка.",
+        "Демонстрационна форма без изпращане. Обадете се, за да уточните дали G Auto разглежда заявка за внос.",
       question: "Трябва ли да се регистрирам?",
     },
   ],
@@ -113,7 +113,7 @@ const importFaqs = {
     },
     {
       answer:
-        "No account is required. Leave a phone number and the G Auto team will contact you about the next step.",
+        "Demonstration form with no message delivery. Call to discuss whether G Auto can consider an import request.",
       question: "Do I need to register?",
     },
   ],
@@ -186,8 +186,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. G Auto ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. G Auto will discuss the import request and delivery to Bulgaria.",
+      ? "Подгответе линк или данни за разговор. Възможността за внос се уточнява с G Auto, не през тази форма."
+      : "Prepare a listing link or details for a conversation. Discuss import possibilities with G Auto; this form does not send requests.",
     locale,
     path,
     title: isBg

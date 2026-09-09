@@ -89,7 +89,7 @@ const defaultVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Електрически SUV",
   },
   {
-    descriptionBg: `Налични автомобили в ${leadSite.city}`,
+    descriptionBg: `Автомобили по обяви в ${leadSite.city}`,
     descriptionEn: `Vehicles available in ${leadSite.city}`,
     id: `${leadSite.slug}-vehicles`,
     keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
@@ -145,7 +145,7 @@ const leadVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
       value: listing.title,
     })),
   {
-    descriptionBg: `Автомобили в наличност в ${leadSite.city}`,
+    descriptionBg: `Селекция от обяви в ${leadSite.city}`,
     descriptionEn: `Vehicles available in ${leadSite.city}`,
     id: `${leadSite.slug}-vehicles`,
     keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,

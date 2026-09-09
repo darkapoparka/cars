@@ -11,7 +11,7 @@
 <header class="mobile-home-header">
 	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="G Auto home">
 		<img
-			src={resolve('/brand/daynight-logo-generated.png')}
+			src={resolve('/dealer/brand/logo-light.png')}
 			alt={daynightSite.shortName}
 		/>
 	</a>

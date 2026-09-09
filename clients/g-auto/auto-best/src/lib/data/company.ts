@@ -66,7 +66,7 @@ export const companyServices: CompanyService[] = [
   {
     index: '02',
     icon: 'import',
-    title: 'Внос по заявка',
+    title: 'Въпрос за внос',
     description: 'Обсъдете автомобил, бюджет и внос с екипа.',
     href: '/contact?topic=import',
     cta: 'Попитайте за внос'
@@ -82,7 +82,7 @@ export const companyServices: CompanyService[] = [
   {
     index: '04',
     icon: 'trade-in',
-    title: 'Оценка за бартер',
+    title: 'Въпрос за бартер',
     description: 'Предложете своя автомобил за индивидуална оценка.',
     href: '/contact?topic=trade-in',
     cta: 'Поискайте оценка'
@@ -105,7 +105,7 @@ export const contactTopics: ContactTopic[] = [
   {
     id: 'import',
     label: 'Внос',
-    title: 'Внос по заявка',
+    title: 'Въпрос за внос',
     description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
     mobileDescription: 'Добавете обява или опишете какво търсите.'
   },
@@ -120,7 +120,7 @@ export const contactTopics: ContactTopic[] = [
     label: 'Бартер',
     title: 'Бартер и оценка',
     description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
-    mobileDescription: 'Поискайте оценка за продажба или бартер.'
+    mobileDescription: 'Попитайте дали се разглеждат предложения за продажба или бартер.'
   }
 ];
 

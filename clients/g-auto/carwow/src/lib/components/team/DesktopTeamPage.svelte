@@ -15,7 +15,7 @@
 		type DayNightTeamMember
 	} from '$lib/data/daynight-team';
 
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/${string}`;
 
 	const teamMembers = daynightTeam.slice(0, 4);
 
@@ -132,7 +132,7 @@
 			</li>
 		{/if}
 		<li>
-			<a href={resolve(teamHref(member.slug))} title="Виж профила" aria-label="Виж профила">
+			<a href={resolve(teamHref(member.slug))} title="Виж темата" aria-label="Виж темата">
 				{@render profileIcon()}
 			</a>
 		</li>
@@ -166,7 +166,7 @@
 			<a
 				class="flex w-full"
 				href={resolve(teamHref(member.slug))}
-				aria-label={`Виж профила на ${member.name}`}
+				aria-label={`Виж темата ${member.name}`}
 			>
 				<img class="w-full" src={asset(member.image as AssetHref)} alt={member.name} />
 			</a>
@@ -201,7 +201,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на G Auto</span>
+					<span>Контакт с G Auto</span>
 				</li>
 			</ul>
 		</div>
@@ -209,7 +209,7 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на G Auto</h1>
+			<h1>Контакт с G Auto</h1>
 			<p class="team-disclosure">{daynightTeamDisclosure}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>

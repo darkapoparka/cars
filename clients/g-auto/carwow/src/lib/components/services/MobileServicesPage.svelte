@@ -145,7 +145,7 @@
 		<div class="mobile-services-hero__bar">
 			<a href={resolve('/')} aria-label="G Auto начало">
 				<img
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/dealer/brand/logo-light.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>

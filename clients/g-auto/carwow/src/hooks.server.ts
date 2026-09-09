@@ -1,3 +1,4 @@
+import { daynightSite } from '$lib/data/daynight-site';
 import crypto from 'node:crypto';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
@@ -55,13 +56,13 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 }
 
 export const handle: Handle = async ({ event, resolve }) => {
-	const hasDb = hasDatabaseUrl();
-	if (!hasDb) warnMissingProductionDatabaseUrl();
+	const hasDb = !daynightSite.previewMode && hasDatabaseUrl();
+	if (!hasDb && !daynightSite.previewMode) warnMissingProductionDatabaseUrl();
 
 	event.locals.db = hasDb ? createDb() : null;
 	event.locals.staffProfile = null;
 
-	const { session, user } = await getAuthSession(event);
+	const { session, user } = daynightSite.previewMode ? {session:null,user:null} : await getAuthSession(event);
 	event.locals.session = session;
 	event.locals.user = user;
 
@@ -74,7 +75,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const resolveWithBodyClasses = (eventToResolve: RequestEvent) =>
 		resolve(eventToResolve, resolveOptions);
 
-	if (hasAuthRuntimeConfig()) {
+	if (!daynightSite.previewMode && hasAuthRuntimeConfig()) {
 		return svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,

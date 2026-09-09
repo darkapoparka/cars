@@ -94,7 +94,7 @@ export const navigation: NavigationItem[] = [
       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
       features: [
         { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
+        { id: 'about-import', title: 'Въпрос за внос', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
         { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
       ],
       groups: [

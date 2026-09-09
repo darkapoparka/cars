@@ -1,7 +1,7 @@
 export type DayNightFooterRoute =
 	| '/'
 	| '/about'
-	| '/about/daynight-auto-plovdiv'
+	| '/about/g-auto'
 	| '/team'
 	| '/reviews'
 	| '/blog'
@@ -32,7 +32,7 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 		title: 'G AUTO',
 		links: [
 			{ href: '/about', label: 'За G Auto' },
-			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
+			{ href: '/about/g-auto', label: 'Профил на автокъщата' },
 			{ href: '/team', label: 'Екип' },
 			{ href: '/reviews', label: 'Отзиви' },
 			{ href: '/blog', label: 'Блог' },
@@ -42,7 +42,7 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ href: '/inventory', label: 'Налични автомобили' },
+			{ href: '/inventory', label: 'Автомобили по обяви' },
 			{ href: '/financing', label: 'Финансиране' },
 			{ href: '/calculator', label: 'Калкулатор' },
 			{ href: '/sell-your-car', label: 'Продай или замени' },

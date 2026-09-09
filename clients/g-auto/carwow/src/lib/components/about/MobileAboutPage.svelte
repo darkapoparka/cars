@@ -60,13 +60,13 @@
 	<header class="mobile-about-hero">
 		<img
 			class="mobile-about-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-lot-v1.webp')}
+			src={resolve('/dealer/stock/11788689271506791-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-about-hero__bar">
 			<a href={resolve('/')} aria-label="G Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<img src={resolve('/dealer/brand/logo-light.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -75,7 +75,7 @@
 
 		<div class="mobile-about-hero__copy">
 			<span>За нас</span>
-			<h1>Проверени автомобили и ясен процес</h1>
+			<h1>Подбрани обяви и ясен процес</h1>
 			<p>G Auto в Благоевград помага с избор, оглед, документи, финансиране и бартер.</p>
 		</div>
 
@@ -118,7 +118,7 @@
 
 		<section class="mobile-about-location" aria-labelledby="mobile-about-location-title">
 			<img
-				src={resolve('/assets/images/pages/daynight-about-consultation-v1.webp')}
+				src={resolve('/dealer/stock/11788689271506791-1.webp')}
 				alt="Консултация със G Auto"
 				loading="lazy"
 				decoding="async"

@@ -82,7 +82,7 @@
 	let sellSubmitState = $state<SellSubmitState>('idle');
 	let sellSubmitMessage = $state('');
 
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 
 	const leadPath = $derived.by((): SellRequestHref => {
 		const params = new SvelteURLSearchParams();

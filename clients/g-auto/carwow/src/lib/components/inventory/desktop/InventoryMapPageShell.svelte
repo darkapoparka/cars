@@ -59,7 +59,7 @@
 	<SiteChrome />
 
 	<main id="main-content" tabindex="-1" aria-labelledby="inventory-map-title">
-		<h1 id="inventory-map-title" class="sr-only">Карта на наличните автомобили</h1>
+		<h1 id="inventory-map-title" class="sr-only">Карта на автомобилите от селекцията</h1>
 
 		<section class="inventory-map-section">
 			<div class="inventory-map-grid">
@@ -84,7 +84,7 @@
 										Филтри</button
 									>
 									<p class="md-hidden">
-										Карта на наличните автомобили · {filters.resultCount} автомобила
+										Карта на автомобилите от селекцията · {filters.resultCount} автомобила
 									</p>
 								</div>
 							</div>

@@ -1,3 +1,4 @@
+import { daynightSite } from '$lib/data/daynight-site';
 import { resolve } from '$app/paths';
 
 export type ImportRequestSubmitPayload = {
@@ -50,6 +51,7 @@ function readResponseMessage(body: unknown, fallback: string) {
 export async function submitImportRequest(
 	payload: ImportRequestSubmitPayload
 ): Promise<ImportRequestSubmitResult> {
+	if (daynightSite.previewMode) return {ok:false,status:503,error:'Демонстрационна форма: съобщението не е изпратено. Свържете се с G Auto на 0896 645 757.'};
 	try {
 		const response = await fetch(resolve('/api/import-requests'), {
 			method: 'POST',

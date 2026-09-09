@@ -25,8 +25,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Практични материали от G Auto за избор на автомобил, внос, оглед и финансиране."
-      : "Practical G Auto guidance on choosing, importing, inspecting, and financing a vehicle.",
+      ? "Демонстрационни материали за избор на автомобил, внос, оглед и финансиране."
+      : "Preview guidance on choosing, importing, inspecting, and financing a vehicle.",
     locale,
     path: "/blog",
     title: isBg ? "Новини и анализи" : "News and insights",
@@ -42,8 +42,8 @@ const BlogIndex = async ({ params }: BlogProps) => {
     "@context": "https://schema.org",
     "@type": "Blog",
     description: isBg
-      ? "Практични материали от G Auto за вноса и избора на автомобил."
-      : "Practical G Auto guidance on importing and choosing a vehicle.",
+      ? "Демонстрационни материали за вноса и избора на автомобил."
+      : "Preview guidance on importing and choosing a vehicle.",
     inLanguage: isBg ? "bg-BG" : "en",
     name: isBg ? "Новини и анализи" : "News and insights",
     publisher: {

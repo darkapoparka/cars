@@ -249,7 +249,7 @@ export default async function SellPage({
             ) : (
               <p className="py-6 text-center text-sm text-zinc-600">
                 {normalizedLocale === "bg"
-                  ? "В момента няма налични автомобили."
+                  ? "В момента няма автомобили по обяви."
                   : "No cars are currently available."}
               </p>
             )

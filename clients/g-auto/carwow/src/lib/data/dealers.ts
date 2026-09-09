@@ -9,49 +9,29 @@ export interface Dealer {
 	logo: string;
 	cover: string;
 	inventory: number;
-	rating: number;
+	rating: number | null;
 	specialties: string[];
 }
 
 export const dealers: Dealer[] = [
-	{
-		slug: "day-night-auto-group",
-		name: daynightSite.name,
-		location: "Благоевград",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/brand/daynight-hero-search-composed.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.8,
-		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Финансиране']
-	},
-	{
-		slug: "day-night-auto-group-documents",
-		name: "G Auto Документи и съдействие",
-		location: "Благоевград",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/brand/daynight-hero-mobile-search-composed.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Документи', 'Регистрация', 'Съдействие']
-	},
-	{
-		slug: "day-night-auto-group-sourcing",
-		name: "G Auto Подбор на автомобил",
-		location: "Благоевград",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: '/brand/daynight-logo-generated.png',
-		cover: '/brand/daynight-logo-generated.png',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
-	}
+  {
+    "slug": "g-auto",
+    "name": "G Auto",
+    "location": "Благоевград",
+    "address": "Струмско, Благоевград, България",
+    "phone": "0896 645 757",
+    "logo": "/dealer/brand/logo-light.png",
+    "cover": "/dealer/stock/11788689271506791-1.webp",
+    "inventory": 8,
+    "rating": null,
+    "specialties": [
+      "Обяви за автомобили",
+      "Оглед след уточнение",
+      "Лизинг по индивидуални условия"
+    ]
+  }
 ];
 
 export function getDealerBySlug(slug: string) {
-	return dealers.find((dealer) => dealer.slug === slug);
+	return dealers.find((dealer) => dealer.slug === slug || ['daynight-auto-plovdiv','day-night-auto-group','daynight-auto-sourcing'].includes(slug));
 }

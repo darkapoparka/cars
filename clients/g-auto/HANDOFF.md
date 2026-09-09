@@ -1,4 +1,4 @@
-# G Auto — three-design source review
+# G Auto handoff
 
 Status: implemented-unverified. Owner review: pending. Independent sources live in auto-best/, modern/ and carwow/. This is branch-only delivery, not a public preview.
 
@@ -43,3 +43,16 @@ The inventory is a dated seller-advertisement sample, not verified live stock. U
 Native reviews show an honest unavailable state; contact topics are not employee identities. G Auto has no verified social/video link in the supplied sources. Demo form delivery is disabled. Legacy raw HTML reference templates are retained as provenance but remain unrouted under the original empty raw-route allowlist; do not enable them as dealer pages. Unlinked inherited proposal/concept HTML exports were excluded.
 
 Retained generic vehicle/service illustrations are illustrative, not dealer stock, staff or premises. Dealer media and prior-demo logos retain source provenance; no new dealer permission or official approval is asserted. Public publication requires the coordinator's rights and business review.
+
+
+## Source lineage and active consumers
+
+Published main base: faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Initial application checkpoint: 5311c5e37a4fe324b57a01c22645cf023a709ffe. This follow-up extends the same branch non-force; no main/astra or shared files changed.
+
+- auto-best 2026.09.08-polish-1, source tree 97833980ab127f6de8f675ac1a188e4b7f717976
+- modern 2026.09.06-refresh-1, source tree 66bfb8196bbce18832ada6b34b02dda97baba25b
+- carwow 2026.09.08-repair-1, source tree d4a08817e87cf84d08c4db1c08a515937245f2dd
+
+Auto Best: src/lib/config/brand.ts, data/inventory.ts and listing.ts, native detail/gallery, home video state and layout/company consumers. Modern: packages/marketplace/lead-site.ts, packages/marketplace-domain/testing/mock-data.ts, marketplace-ui whole-logo consumers, native contact/supporting/metadata/legal pages. Carwow: src/lib/data/daynight-current-inventory.ts and daynight-vehicles.ts, actual/fallback inventory and home selectors, reviews/contact-topic data, native media/head/navigation, form clients and preview repository guard. All use the bundled dealer/ directory in each public/static root.
+
+No Windows source checkout was written or used as a working tree. Read-only published-template bytes were locally SHA-verified; every change was made in memory and published through GitHub blob/tree/commit/ref APIs. No hidden job or website server was started.

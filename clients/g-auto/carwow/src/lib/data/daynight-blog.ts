@@ -315,7 +315,7 @@ export const daynightArticles: DayNightArticle[] = [
 	}),
 	article({
 		slug: 'kakvo-oznachava-proveren-avtomobil',
-		title: 'Какво означава проверен автомобил при покупка',
+		title: 'Какво означава автомобил по обява при покупка',
 		description:
 			'Кратко обяснение какво да разбирате под проверка на автомобил и защо тя не трябва да се пропуска.',
 		category: 'Съвети',

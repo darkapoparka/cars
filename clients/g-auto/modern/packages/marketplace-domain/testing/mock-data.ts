@@ -263,7 +263,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:46:09.378Z",
+    "publishedAt": "2026-09-06T13:07:00+03:00",
     "promoted": false
   },
   {
@@ -491,7 +491,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:46:09.623Z",
+    "publishedAt": "2026-09-04T12:42:00+03:00",
     "promoted": false
   },
   {
@@ -715,7 +715,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:46:09.729Z",
+    "publishedAt": "2026-09-04T12:24:00+03:00",
     "promoted": false
   },
   {
@@ -991,7 +991,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:46:09.839Z",
+    "publishedAt": "2026-09-02T12:39:00+03:00",
     "promoted": false
   },
   {
@@ -1199,7 +1199,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:46:09.945Z",
+    "publishedAt": "2026-09-07T20:53:00+03:00",
     "promoted": false
   },
   {
@@ -1422,7 +1422,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:46:10.054Z",
+    "publishedAt": "2026-09-02T12:17:00+03:00",
     "promoted": false
   },
   {
@@ -1698,7 +1698,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:52:00.093Z",
+    "publishedAt": "2026-08-25T10:23:00+03:00",
     "promoted": false
   },
   {
@@ -1893,7 +1893,7 @@ export const mockListings: VehicleListing[] = [
       "city": "Благоевград",
       "logoUrl": "/dealer/brand/logo-light.png"
     },
-    "publishedAt": "2026-09-09T01:52:00.280Z",
+    "publishedAt": "2026-08-25T10:08:00+03:00",
     "promoted": false
   }
 ];

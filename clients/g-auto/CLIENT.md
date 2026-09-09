@@ -1,9 +1,11 @@
-# G Auto — implementation in progress
+# G Auto — Blagoevgrad / Strumsko
 
-Three independent template application sources are implemented at auto-best/, modern/ and carwow/. Core inventory and identity are personalized; the full content/media consumer sweep and QA are still in progress. Eight advertised vehicles and 32 matched gallery photographs are bundled per application, with cropped prior-demo logos and favicons.
+Status: **implemented-unverified**. Three real independent personalized application sources: Auto Best, full-workspace Modern and Carwow. Owner review remains pending.
 
-Business: G Auto, Strumsko, Blagoevgrad. Public source: https://g-auto.mobile.bg/ . Phone: +359896645757. No matched social account is asserted. Advertisement totals are not available-stock counts. Sold/reserved and contradictory records are excluded.
+Public identity: G Auto; Strumsko, Blagoevgrad; +359896645757; https://g-auto.mobile.bg/ ; map https://maps.app.goo.gl/gBXD96zNkDfLdaTi7 . No verified hours, social page or email is invented.
 
-No available-stock guarantee, completed enquiry delivery, dealership approval or public deployment is claimed. See stock-source.json for record and image provenance. Public release rights remain for coordinator review; no new permission is invented.
+Eight seller-advertised whole cars and 32 matched locally bundled gallery photos drive the actual consumers in all three apps. Source dates, cash prices, specifications, exclusions and per-image provenance are in stock-source.json. Not a live stock feed or independently verified condition.
 
-No dependency installation, full application build or 320/390/1440 px browser review has been executed. Existing layouts, runtime source, routes, lockfiles and the full Modern workspace are retained.
+Layout, routes, typography, packages and lockfiles are retained from the exact master trees. Client-local changes fix gallery integration, logo cropping/surface variants, unknown-value rendering, dated inventory numbers, honest unavailable reviews/video, contact topics, demo policies and non-delivery. No framework migration, backend provisioning, deployment or outreach.
+
+See REVIEW.md for actual routes, commands and checks. See HANDOFF.md for lineage and precise limitations. Earlier blocked qualification notes are historical; GitHub writes are not a limitation and actual app trees now exist.

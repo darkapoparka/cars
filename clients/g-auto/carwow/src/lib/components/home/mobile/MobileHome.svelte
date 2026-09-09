@@ -230,7 +230,7 @@
 	const budgetCardHref = (budget: string) =>
 		budget === 'all' ? inventoryPath : budgetHref(budget);
 	const brandCountLabel = (count: number) =>
-		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Внос по заявка';
+		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Въпрос за внос';
 	function appendParams(params: URLSearchParams, name: string, values: string[]) {
 		for (const value of values) {
 			if (value) params.append(name, value);
@@ -437,7 +437,7 @@
 			<a class="mh-hero__brand" href={resolve('/')} aria-label="G Auto home">
 				<img
 					class="mh-hero__logo"
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/dealer/brand/logo-light.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -698,7 +698,7 @@
 		<div class="mh-footer__brand">
 			<img
 				class="mh-footer__logo"
-				src={resolve('/brand/daynight-logo-generated.png')}
+				src={resolve('/dealer/brand/logo-light.png')}
 				alt={daynightSite.name}
 			/>
 			<p>

@@ -52,12 +52,12 @@
  * aliasing are deferred to Phase 6 (deliberate colour decisions, not 1:1).
  */
 :root {
-	/* Brand — G Auto uses black/graphite for structure and red for action.
+	/* Brand — G Auto uses black/graphite for structure and blue for action.
 	 * The legacy --sa-blue aliases remain for compatibility, but resolve to ink. */
-	--sa-red: #d71920;
-	--sa-red-strong: #a50f15;
-	--sa-red-soft: #fee2e2;
-	--sa-red-tint: #fff5f5;
+	--sa-red: #1557ed;
+	--sa-red-strong: #0c3fb9;
+	--sa-red-soft: #dce8ff;
+	--sa-red-tint: #f5f8ff;
 	--sa-yellow: #f5c542;
 	--sa-blue: #050505;
 	--sa-blue-strong: #000000;

@@ -8,7 +8,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
-	type AssetHref = `/assets/${string}`;
+	type AssetHref = `/${string}`;
 	const brands = [
 		{ brand: 'Audi', image: 'audi' },
 		{ brand: 'BMW', image: 'bmw' },
@@ -28,9 +28,9 @@
 		{ brand: 'Volvo', image: 'volvo' }
 	] as const;
 	const support = [
-		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
+		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай автомобилите от селекцията. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
 		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
-		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
+		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Попитайте за документите и индивидуалните условия за избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
 	] as const;
 
 	const teamMembers = daynightTeam.slice(0, 4);
@@ -57,21 +57,7 @@
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
 				<div class="about-hero-socials">
-					<a
-						href="https://www.facebook.com/61566304063141/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
-					>
-					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
-					>
-					<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-						<img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
-					</a>
+					
 				</div>
 			</nav>
 		{/snippet}
@@ -83,8 +69,8 @@
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-team-title">Екипът зад твоя избор</h2>
-				<DesktopBrowseLink href={resolve('/team')} label="Виж екипа" />
+				<h2 id="about-team-title">Преди да се свържете</h2>
+				<DesktopBrowseLink href={resolve('/team')} label="Теми за разговор" />
 			</div>
 			<p class="about-demo-label">{daynightTeamDisclosure}</p>
 			<div class="about-team-grid">
@@ -93,7 +79,7 @@
 						<a class="about-team-card__image" href={resolve(teamHref(member.slug))}
 							><img
 								src={resolve(member.image as AssetHref)}
-								alt={`Демо портрет: ${member.name}`}
+								alt={`Снимка от обява: ${member.name}`}
 								width="500"
 								height="500"
 								loading="lazy"
@@ -135,7 +121,7 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					G Auto е автокъща в Благоевград. При нас можеш да разгледаш наличните автомобили, да
+					G Auto е автокъща в Благоевград. При нас можеш да разгледаш автомобилите от селекцията, да
 					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
 				</p>
 				<p>

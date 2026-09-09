@@ -10,7 +10,7 @@
 	const groups = [
 		{ title: 'Бързи връзки', links: [
 			{ href: '/about', label: 'За нас' },
-			{ href: '/team', label: 'Нашият екип' },
+			{ href: '/team', label: 'Теми за контакт' },
 			{ href: '/services', label: 'Услуги' },
 			{ href: '/faq', label: 'Често задавани въпроси' },
 			{ href: '/blog', label: 'Блог' },
@@ -60,14 +60,14 @@
 					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
 				</a>
 				<div class="dealer-footer__socials" aria-label="Социални мрежи">
-					<a href="https://www.facebook.com/61566304063141/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a>
-					<a {...youtubeLink} aria-label="YouTube"><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a>
-					<a href="https://www.instagram.com/daynight.auto.plovdiv/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a>
+					
+					{#if youtubeChannelUrl}<a {...youtubeLink} aria-label="YouTube"><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a>{/if}
+					
 				</div>
 			</div>
 		</div>
 		<div class="dealer-footer__bottom">
-			<p>©2026 G Auto. Всички права запазени.</p>
+			<p>G Auto · Демонстрационен проект, 2026.</p>
 			<nav aria-label="Правна информация">
 				{#each daynightFooterBottomLinks as link (link.label)}
 					<a href={resolve(link.href)}>{link.label}</a>

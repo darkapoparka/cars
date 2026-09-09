@@ -8,44 +8,44 @@ export type PublicStaticRoute = {
 export const DAY_SITE_TITLE = "G Auto Благоевград";
 
 export const DEFAULT_DESCRIPTION =
-	"G Auto предлага налични автомобили, огледи и съдействие при покупка в Благоевград.";
+	"G Auto предлага автомобили по обяви, огледи и съдействие при покупка в Благоевград.";
 
 export const PUBLIC_STATIC_ROUTES: PublicStaticRoute[] = [
 	{
 		path: '',
-		title: `${DAY_SITE_TITLE} - проверени автомобили и бърз контакт`,
+		title: `${DAY_SITE_TITLE} - подбрани обяви и бърз контакт`,
 		description: DEFAULT_DESCRIPTION,
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'inventory',
-		title: `Автомобили в наличност | ${DAY_SITE_TITLE}`,
-		description: "Разгледайте наличните автомобили на G Auto с филтри по марка, цена, гориво и пробег.",
-		sitemap: true
+		title: `Селекция от обяви | ${DAY_SITE_TITLE}`,
+		description: "Разгледайте автомобилите от селекцията на G Auto с филтри по марка, цена, гориво и пробег.",
+		sitemap: false
 	},
 	{
 		path: 'inventory/map',
 		title: `Карта на автомобилите | ${DAY_SITE_TITLE}`,
-		description: "Вижте карта и списък с наличните автомобили на G Auto.",
-		sitemap: true
+		description: "Вижте карта и списък с автомобилите от селекцията на G Auto.",
+		sitemap: false
 	},
 	{
 		path: 'services',
 		title: `Услуги | ${DAY_SITE_TITLE}`,
-		description: "Услуги на G Auto: финансиране, изкупуване, оценка и съдействие при покупка на автомобил.",
-		sitemap: true
+		description: "Информация за оглед, обяви и въпроси по индивидуалните условия на G Auto. Непотвърдени услуги не се заявяват чрез демото.",
+		sitemap: false
 	},
 	{
 		path: 'sell-your-car',
 		title: `Продай автомобила си | ${DAY_SITE_TITLE}`,
 		description: "Изпратете заявка за продажба, бартер или оценка към G Auto.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'sell-your-car/request',
 		title: `Заявка за изкупуване | ${DAY_SITE_TITLE}`,
 		description: "Изпратете заявка за оценка и изкупуване към G Auto.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'sell-car',
@@ -62,32 +62,32 @@ export const PUBLIC_STATIC_ROUTES: PublicStaticRoute[] = [
 	{
 		path: 'about',
 		title: `За нас | ${DAY_SITE_TITLE}`,
-		description: "G Auto - автокъща с подреден каталог, прозрачни сделки и съдействие при финансиране.",
-		sitemap: true
+		description: "G Auto - автокъща с подреден каталог, индивидуални условия и съдействие при финансиране.",
+		sitemap: false
 	},
 	{
-		path: 'about/daynight-auto-plovdiv',
+		path: 'about/g-auto',
 		title: `Профил на автокъщата | ${DAY_SITE_TITLE}`,
 		description: "Научете повече за подхода на G Auto при покупка, продажба и финансиране на автомобили.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'contact',
 		title: `Контакти | ${DAY_SITE_TITLE}`,
 		description: "Свържете се с G Auto - телефон, адрес и локация на автокъщата.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'financing',
 		title: `Финансиране | ${DAY_SITE_TITLE}`,
 		description: "Възможности за автомобилно финансиране и съдействие при покупка чрез G Auto.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'reviews',
 		title: `Клиентски отзиви | ${DAY_SITE_TITLE}`,
-		description: "Отзиви от клиенти за покупка, продажба и съдействие при автомобили от G Auto.",
-		sitemap: true
+		description: "Потвърдени клиентски отзиви не са предоставени за този демонстрационен проект.",
+		sitemap: false
 	},
 	{
 		path: 'calculator',
@@ -104,20 +104,20 @@ export const PUBLIC_STATIC_ROUTES: PublicStaticRoute[] = [
 	{
 		path: 'team',
 		title: `Екип | ${DAY_SITE_TITLE}`,
-		description: "Запознайте се с екипа зад продажбите и клиентското обслужване на G Auto.",
-		sitemap: true
+		description: "Четири теми за разговор на общия публикуван телефон на G Auto.",
+		sitemap: false
 	},
 	{
-		path: 'team/prodazhbi-daynight-auto',
+		path: 'team/prodazhbi-showroom',
 		title: `Продажби | ${DAY_SITE_TITLE}`,
-		description: "Контакт с търговския екип на G Auto за налични автомобили и оферти.",
-		sitemap: true
+		description: "Контакт с търговския екип на G Auto за автомобили по обяви и оферти.",
+		sitemap: false
 	},
 	{
 		path: 'blog',
 		title: `Блог | ${DAY_SITE_TITLE}`,
 		description: "Практични съвети от G Auto за покупка, продажба, финансиране и поддръжка на автомобили.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'blog/kak-da-kupim-upotrebyavan-avtomobil',
@@ -129,13 +129,13 @@ export const PUBLIC_STATIC_ROUTES: PublicStaticRoute[] = [
 		path: 'faq',
 		title: `Често задавани въпроси | ${DAY_SITE_TITLE}`,
 		description: "Отговори на чести въпроси за покупка, продажба, финансиране и контакт с G Auto.",
-		sitemap: true
+		sitemap: false
 	},
 	{
 		path: 'terms',
 		title: `Условия | ${DAY_SITE_TITLE}`,
 		description: "Условия за ползване и информация за публичния сайт на G Auto.",
-		sitemap: true
+		sitemap: false
 	}
 ];
 

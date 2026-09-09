@@ -75,15 +75,15 @@
 	const importSteps = [
 		{
 			title: 'Изпращате обявата',
-			copy: 'Проверяваме автомобила, продавача и условията в обявата.'
+			copy: 'Уточнете с G Auto дали може да съдейства по избраната обява.'
 		},
 		{
 			title: 'Получавате конкретен разчет',
 			copy: 'Уточняваме цена, транспорт, срок и необходимите документи.'
 		},
 		{
-			title: 'Организираме вноса',
-			copy: 'Координираме покупката, доставката и предаването в България.'
+			title: 'Уточнете възможността за внос',
+			copy: 'Не се заявява услуга за внос чрез тази демонстрация; условията се обсъждат отделно.'
 		}
 	] as const;
 
@@ -132,8 +132,8 @@
 	let importInfoDialog: HTMLDialogElement | undefined = $state();
 	let activeImportInfo = $state<ImportInfo | null>(null);
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
 
 	async function revealImportForm() {
 		importExpanded = true;
@@ -247,13 +247,13 @@
 	<header class:mobile-contact-hero--import={isImportMode} class="mobile-contact-hero">
 		<img
 			class="mobile-contact-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-showroom-suv-v1.webp')}
+			src={resolve('/dealer/stock/11788689271506791-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
 				<a href={resolve('/')} aria-label="G Auto начало">
-					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+					<img src={resolve('/dealer/brand/logo-light.png')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -268,7 +268,7 @@
 			<p>
 				{isImportMode
 					? 'Поставете линк — ние поемаме оттам.'
-					: 'Огледи, въпроси за налични автомобили, бартер, документи и посещение на място.'}
+					: 'Огледи, въпроси за автомобили по обяви, бартер, документи и посещение на място.'}
 			</p>
 		</div>
 
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/brand/daynight-logo-generated.png')}
+						src={resolve('/dealer/brand/logo-light.png')}
 						alt=""
 						aria-hidden="true"
 					/>

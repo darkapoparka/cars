@@ -85,7 +85,7 @@
 									>
 										<img
 											class="h-7 w-auto object-contain"
-											src={resolve('/brand/daynight-logo-generated.png')}
+											src={resolve('/dealer/brand/logo-light.png')}
 											alt=""
 										/>
 									</span>

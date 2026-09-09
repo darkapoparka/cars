@@ -19,9 +19,9 @@
 	<div class="rating-box__content">
 		<div class="rating-box__overview">
 			<div class="rating-box__average">
-				<span class="rating-box__score">{daynightReviewAverage.toFixed(1)}</span>
+				<span class="rating-box__score">{daynightSite.reviewCount ? daynightReviewAverage.toFixed(1) : '—'}</span>
 				<div class="rating-box__stars">
-					{#each desktopDetailStarIndexes as starIndex (starIndex)}
+					{#each (daynightSite.reviewCount ? desktopDetailStarIndexes : []) as starIndex (starIndex)}
 						<img
 							src="/assets/icons/star-2.svg"
 							alt=""
@@ -113,13 +113,13 @@
 
 <div id="reviewForm">
 	<h2 class="h4 mb-8 capitalize">Добавете отзив</h2>
-	<p class="mb-20">Изпратете мнение през формата за контакт. Публикуването се уточнява с екипа.</p>
+	<p class="mb-20">Демонстрацията не изпраща и не публикува отзиви. Каналът за реално мнение се уточнява с G Auto.</p>
 
 	<a
 		href={resolve('/contact?intent=review')}
 		class="sa-cta sa-cta-primary sa-cta-compact"
 		title="Отзивите се потвърждават от екипа преди публикуване."
 	>
-		Изпратете отзив
+		Обсъдете отзив
 	</a>
 </div>

@@ -1,3 +1,4 @@
+import { daynightSite } from '$lib/data/daynight-site';
 import { resolve } from '$app/paths';
 
 export type LeadSubmitPayload = {
@@ -40,6 +41,7 @@ function readResponseMessage(body: unknown, fallback: string) {
 }
 
 export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmitResult> {
+	if (daynightSite.previewMode) return {ok:false,status:503,error:'Демонстрационна форма: съобщението не е изпратено. Свържете се с G Auto на 0896 645 757.'};
 	try {
 		const response = await fetch(resolve('/api/leads'), {
 			method: 'POST',

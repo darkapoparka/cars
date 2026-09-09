@@ -1,5 +1,5 @@
 <script lang="ts">
-	// Native /about/daynight-auto-plovdiv (dealer profile). Self-contained: no
+	// Native /about/g-auto (dealer profile). Self-contained: no
 	// StorefrontTemplateContent wrapper, scoped styles reproduce the shared blend
 	// (container/headings/breadcrumb/cards) using --sa-* tokens; dealer-specific
 	// layout kept below. Breadcrumb chevrons -> @lucide ChevronRight. Runes only.
@@ -13,7 +13,7 @@
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
 	const highlights = [
-		'Проверени автомобили с реална наличност',
+		'Подбрани обяви с реална наличност',
 		'Съдействие за документи, регистрация и финансиране',
 		'Бартер, оценка и оглед в доверен сервиз'
 	] as const;
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img class="dealer-profile-card__logo" src="/brand/daynight-logo-generated.png" alt="" />
+					<img class="dealer-profile-card__logo" src="/dealer/brand/logo-light.png" alt="" />
 					<p class="dealer-profile-card__title mb-6">G Auto</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
 					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
@@ -82,7 +82,7 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Налични автомобили</h2>
+				<h2>Автомобили по обяви</h2>
 				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">

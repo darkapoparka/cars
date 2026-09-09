@@ -65,13 +65,13 @@
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
-			src={resolve('/assets/images/pages/daynight-services-consultation-v1.webp')}
+			src={resolve('/dealer/stock/11788689271506791-1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-financing-hero__bar">
 			<a href={resolve('/')} aria-label="G Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<img src={resolve('/dealer/brand/logo-light.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />

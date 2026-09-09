@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Налични автомобили — {brand.name}</title>
+  <title>Автомобили по обяви — {brand.name}</title>
   <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
 </svelte:head>
 
