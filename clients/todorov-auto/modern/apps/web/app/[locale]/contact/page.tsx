@@ -69,7 +69,7 @@ const pageCopy = {
         icon: Ship,
       },
       {
-        title: "Собствен лизинг",
+        title: "Условия за плащане",
         description: "Обсъдете вариант според автомобила и бюджета ви.",
         href: "/lease",
         icon: Landmark,
@@ -184,7 +184,7 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Автосалон Тодоров в Бургас — автомобили в наличност, внос по заявка и собствен лизинг."
+      ? "Автосалон Тодоров в Бургас — автомобили в наличност, внос по заявка и условия за плащане."
       : "Автосалон Тодоров in Бургас — vehicles in stock, import on request, and in-house leasing.",
     locale,
     path: "/contact",

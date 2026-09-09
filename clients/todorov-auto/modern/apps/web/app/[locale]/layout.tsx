@@ -32,6 +32,8 @@ const publicSans = Inter({
 
 export const metadata: Metadata = {
   applicationName: leadSite.name,
+  manifest: "/site.webmanifest",
+  robots: { index: false, follow: false },
   icons: {
     icon: [{ type: "image/png", url: "/dealer/favicon.png" }],
     apple: [{ url: "/dealer/apple-touch-icon.png" }],

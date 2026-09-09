@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class="dealer-footer__bottom">
-			<p>©2026 Автосалон Тодоров. Всички права запазени.</p>
+			<p>©2026 Автосалон Тодоров. Демонстрационна концепция. Не е официалният сайт.</p>
 			<nav aria-label="Правна информация">
 				{#each daynightFooterBottomLinks as link (link.label)}
 					<a href={resolve(link.href)}>{link.label}</a>

@@ -236,7 +236,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.697Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11704208021161812",
@@ -456,7 +457,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.699Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11735041255980884",
@@ -688,7 +690,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.700Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11757098776259646",
@@ -856,7 +859,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.700Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11649235957114307",
@@ -1076,7 +1080,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.701Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11784299299170761",
@@ -1332,7 +1337,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.701Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "21782384979656784",
@@ -1568,7 +1574,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.702Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11701427910651766",
@@ -1796,7 +1803,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.702Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "21784126666986144",
@@ -2108,7 +2116,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.704Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
     "id": "11776511305281815",
@@ -2260,7 +2269,8 @@ export const mockListings: VehicleListing[] = [
       "logoUrl": "/dealer/logo-light.png"
     },
     "publishedAt": "2026-09-09T01:47:15.705Z",
-    "promoted": false
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   }
 ];
 

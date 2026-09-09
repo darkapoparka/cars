@@ -430,7 +430,7 @@ ${renderFooterSocialLinks()}
 <div class="footer-bottom">
 <div class="container">
 <div class="flex justify-between md-flex-col">
-<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Автосалон Тодоров</a>. Всички права запазени.</p>
+<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Автосалон Тодоров</a>. Демонстрационна концепция. Не е официалният сайт.</p>
 <ul class="footer-bottom-links">
 <li><a href="/terms">Условия за ползване</a></li>
 <li><a href="/terms">Поверителност</a></li>

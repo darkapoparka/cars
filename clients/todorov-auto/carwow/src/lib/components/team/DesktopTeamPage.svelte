@@ -201,7 +201,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на Автосалон Тодоров</span>
+					<span>Контакт с Автосалон Тодоров</span>
 				</li>
 			</ul>
 		</div>
@@ -209,7 +209,7 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на Автосалон Тодоров</h1>
+			<h1>Контакт с Автосалон Тодоров</h1>
 			<p class="team-disclosure">{daynightTeamDisclosure}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>

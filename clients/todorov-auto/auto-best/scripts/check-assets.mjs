@@ -1,15 +1,17 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import process from 'node:process';
 
 const root = process.cwd();
 const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
-const guardedMediaCount = 98;
-const retainedSourceAssets = new Set(['/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp']);
-const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
+const manifest = JSON.parse(await readFile(path.join(root, '.client/asset-manifest.json'), 'utf8'));
+const guardedMediaCount = manifest.files.length;
+const retainedSourceAssets = new Set(manifest.files.map(file => file.path));
+const sourceExtension = /\.(?:css|html|js|json|svelte|ts)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
-const publicAssetReference = /\/(?:assets\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico)/gi;
+const publicAssetReference = /\/(?:(?:assets|dealer)\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico)/gi;
 const legacyRuntimeNames = [
   'best-home.css',
   'best-home.js',
@@ -35,6 +37,7 @@ const walk = async (directory, predicate) => {
 
 const toPublicPath = (absolute) => `/${path.relative(staticRoot, absolute).split(path.sep).join('/')}`;
 const sourceFiles = await walk(sourceRoot, (name) => sourceExtension.test(name));
+sourceFiles.push(path.join(staticRoot, 'site.webmanifest'));
 const allStaticFiles = await walk(staticRoot, () => true);
 const guardedMediaFiles = allStaticFiles.filter((file) => mediaExtension.test(file));
 const referencedAssets = new Set();
@@ -64,7 +67,7 @@ for (const publicPath of allStaticAssets) {
 
   if (legacyName) errors.push(`Retired runtime asset exists in static/: ${publicPath}`);
   if (legacyDirectory) errors.push(`Retired runtime directory exists in static/: ${publicPath}`);
-  if (!mediaExtension.test(publicPath)) {
+  if (!mediaExtension.test(publicPath) && publicPath !== '/site.webmanifest') {
     errors.push(`Unexpected unguarded static file: ${publicPath}`);
   }
 }
@@ -85,6 +88,15 @@ for (const publicPath of guardedStaticAssets) {
   if (publicPath !== '/favicon.ico' && !referencedAssets.has(publicPath) && !retainedSourceAssets.has(publicPath)) {
     errors.push(`Unreferenced static media: ${publicPath}`);
   }
+}
+
+
+for (const expected of manifest.files) {
+  try {
+    const bytes = await readFile(path.join(staticRoot, expected.path.slice(1)));
+    const hash = createHash('sha1').update(Buffer.from('blob ' + bytes.length + '\0')).update(bytes).digest('hex');
+    if (hash !== expected.gitBlob) errors.push('Asset bytes differ from source manifest: ' + expected.path);
+  } catch { errors.push('Missing manifest asset: ' + expected.path); }
 }
 
 if (errors.length) {

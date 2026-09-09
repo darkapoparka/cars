@@ -28,7 +28,7 @@
 		{
 			id: 'financing',
 			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+			summary: 'Подгответе въпросите си за плащане. Калкулаторът е илюстрация, а не финансова оферта.',
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},

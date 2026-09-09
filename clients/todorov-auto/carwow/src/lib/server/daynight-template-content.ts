@@ -202,7 +202,7 @@ const supportHeroByTemplateFile: Record<
 		modifier: 'about',
 		title: 'За Автосалон Тодоров',
 		description:
-			'Проверени автомобили, ясна история и съдействие от избора до документите в Бургас.',
+			'Публикувани обяви, ясна история и съдействие от избора до документите в Бургас.',
 		image: daynightPageAssets.aboutExterior,
 		primaryHref: '/inventory',
 		primaryLabel: 'Виж автомобили',
@@ -723,7 +723,7 @@ function replaceSharedCounterMetrics(html: string) {
 			(_match, before, after, close) => `${before}100${after}100${close}%`
 		)
 		.replace(
-			/<p class="font-weight-500 text-muted h7 text-center">Проверени автомобили<\/p>/,
+			/<p class="font-weight-500 text-muted h7 text-center">Публикувани обяви<\/p>/,
 			'<p class="font-weight-500 text-muted h7 text-center">съдействие по документи</p>'
 		);
 }
@@ -1126,7 +1126,7 @@ function renderAboutShowroomSection() {
 				<p class="text-secondary h7 line-height-28">Автосалон Тодоров предлага внимателно подбрани автомобили с реална наличност, съдействие при оглед, документи, регистрация, финансиране и бартер.</p>
 				<ul class="daynight-about-location__list">
 					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Огледи на място и в доверен сервиз</li>
-					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Съдействие за документи, регистрация и финансиране</li>
+					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Въпроси за документи, регистрация и условия</li>
 					<li><img src="/assets/icons/check.svg" alt="" aria-hidden="true">Бартер, оценка и търсене по задание</li>
 				</ul>
 				<div class="daynight-about-location__actions">
@@ -1222,7 +1222,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('1G1ZD5ST0PF', vehicle.lot)
 		.replaceAll('165921', vehicle.lot)
 		.replaceAll('Mike Hanley', salesTeam?.name ?? 'Автосалон Тодоров')
-		.replaceAll('Verified Dealer', 'Проверена автокъща')
+		.replaceAll('Verified Dealer', 'Профил на автосалона')
 		.replaceAll('/assets/images/pages/sale-agent-9.jpg', salesTeam?.image ?? daynightSite.logoDark)
 		.replaceAll('Get Directions', 'Виж локация')
 		.replaceAll('Call To Dealer', daynightSite.phoneCta)
@@ -2618,7 +2618,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Aurexo Atlanta', 'Автосалон Тодоров Бургас')
 			.replaceAll('Euro Workshop', 'Автосалон Тодоров Бургас')
 			.replaceAll('537 Orchard St, NY', daynightSite.location)
-			.replaceAll('Verified Dealer', 'Проверена автокъща')
+			.replaceAll('Verified Dealer', 'Профил на автосалона')
 			.replaceAll('Dealer Inventory', 'Налични автомобили')
 			.replaceAll('About Dealer', 'За автокъщата')
 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
@@ -3128,13 +3128,13 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replaceAll('Find Your Car Now!', 'Виж наличните автомобили')
 		.replaceAll('18K+', `${daynightVehicles.length}+`)
-		.replaceAll('Car For Sale', 'Налични автомобила')
+		.replaceAll('Car For Sale', 'Обяви в този преглед')
 		.replaceAll('8k+', '2019')
 		.replaceAll('Visitors per day', 'присъствие в mobile.bg')
 		.replaceAll('4,5k+', `${daynightBrandsInStock}`)
-		.replaceAll('Dealer Reviews', 'марки в наличност')
+		.replaceAll('Dealer Reviews', 'марки в извадката')
 		.replaceAll('3,5k+', '100%')
-		.replaceAll('Verified Dealers', 'Проверени автомобили')
+		.replaceAll('Verified Dealers', 'Публикувани обяви')
 		.replace(
 			/<a href="\/sell-your-car" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">\s*Виж наличните автомобили\s*<\/a>/g,
 			'<a href="/inventory" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">Виж наличните автомобили</a>'
@@ -3306,7 +3306,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Sale Agents', 'Екипът на Автосалон Тодоров')
 		.replaceAll('Senior Sales Agent', salesTeam?.role ?? 'Консултанти продажби')
 		.replaceAll('Senior Dealer Partner', salesTeam?.role ?? 'Консултанти продажби')
-		.replaceAll('Verified Dealer', 'Проверена автокъща')
+		.replaceAll('Verified Dealer', 'Профил на автосалона')
 		.replaceAll('Emily Johnson', 'Клиент на Автосалон Тодоров')
 		.replaceAll('CEO Avitex', 'Клиент на Автосалон Тодоров')
 		.replaceAll('Benjamin Parker', 'Клиент от Бургас')

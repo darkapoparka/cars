@@ -13,9 +13,9 @@
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
 	const highlights = [
-		'Проверени автомобили с реална наличност',
-		'Съдействие за документи, регистрация и финансиране',
-		'Бартер, оценка и оглед в доверен сервиз'
+		'Публични обяви с наличност по потвърждение',
+		'Въпроси за документи, регистрация и условия',
+		'Въпроси за оценка и независим оглед'
 	] as const;
 	const vehicles = featuredDayNightVehicles.slice(0, 3);
 	const reviews = daynightReviews.slice(0, 3);
@@ -48,7 +48,7 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Проверена автокъща</p>
+					<p class="eyebrow">Профил на автосалона</p>
 					<h1>Автосалон Тодоров Бургас</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Автокъща в Бургас с подбрани употребявани автомобили, ясна информация за състояние,
@@ -113,8 +113,7 @@
 					<p class="eyebrow">За автокъщата</p>
 					<h2>Подреден процес от избора до документите</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Екипът помага с сравнение на автомобили, запазване на оглед, проверка на документи,
-						регистрация, финансиране и бартер. Фокусът е клиентът да има реална информация преди
+						Разгледайте характеристиките и снимките от обявите. Свържете се за потвърждение на наличност, място за оглед и документи преди
 						решение, без излишни обещания.
 					</p>
 					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>

@@ -209,7 +209,7 @@
 					©2026 <a
 						class="text-sa-sm leading-[22px] text-sa-surface no-underline"
 						href={resolve('/')}>Автосалон Тодоров</a
-					>. Всички права запазени.
+					>. Демонстрационна концепция. Не е официалният сайт.
 				</p>
 				<ul
 					class="m-0 flex list-none flex-wrap items-center p-0 max-[767px]:w-full max-[767px]:justify-start"

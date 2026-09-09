@@ -45,10 +45,10 @@
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
+      title: 'Условия за плащане',
       vehicle: 'urus',
       tone: 'black',
-      mobileTitle: 'Собствен лизинг',
+      mobileTitle: 'Условия за плащане',
       mobileCta: 'Виж условия',
       description: 'Попитайте за първоначална вноска, срок и условия.',
       bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],

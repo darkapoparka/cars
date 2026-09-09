@@ -147,7 +147,7 @@ export default async function LeasePage({
           )}/${normalizedLocale === "bg" ? "мес." : "mo."}`,
         }
       : {}),
-    priceLabel: formatMoney(listing.price, normalizedLocale),
+    priceLabel: [formatMoney(listing.price, normalizedLocale), listing.priceTaxLabel].filter(Boolean).join(" · "),
     priceAmount: listing.price.amount,
     fuelType: listing.spec.fuelType,
     year: listing.spec.year,

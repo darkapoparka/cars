@@ -162,7 +162,7 @@ const vehicleSuggestions = leadSite.staticDemoMode
 
 const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
   {
-    descriptionBg: "Проверен дилър · Бургас",
+    descriptionBg: "Директен контакт · Бургас",
     descriptionEn: "Verified dealer · Бургас",
     id: "sofia-premium-cars",
     keywords: "sofia premium cars dealer дилър софия bmw audi",

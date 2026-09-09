@@ -92,7 +92,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const availability = isIncoming ? 'Очакван внос' : 'Наличност по потвърждение';
 	const drive = listing.features.some((feature) => /4x4|xdrive|quattro|4matic/i.test(feature))
 		? '4x4'
-		: '—';
+		: 'Не е посочено';
 	const slugBase = identity.shortTitle
 		.toLocaleLowerCase('en-US')
 		.replace(/[^a-z0-9]+/g, '-')

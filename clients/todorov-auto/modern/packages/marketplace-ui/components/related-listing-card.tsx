@@ -60,7 +60,7 @@ export const RelatedListingCard = ({
         <div className="p-3">
           <p className="font-semibold text-lg">
             {formatMoney(primaryPrice, locale)}
-          </p>
+          {listing.priceTaxLabel ? <span className="block whitespace-normal font-normal text-xs text-muted-foreground leading-4">{listing.priceTaxLabel}</span> : null}</p>
           {approximatePrice ? (
             <p className="text-muted-foreground text-xs">
               ≈ {formatMoney(approximatePrice, locale)}

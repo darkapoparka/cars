@@ -30,7 +30,7 @@
 	const support = [
 		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
 		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
-		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
+		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Поискайте документите и пълните условия за избрания автомобил. Конкретната услуга се уточнява по телефона.', href: '/services', action: 'Разгледай услугите' }
 	] as const;
 
 	const teamMembers = daynightTeam.slice(0, 4);

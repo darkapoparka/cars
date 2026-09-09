@@ -1,3 +1,4 @@
+import { leadSite } from "@repo/marketplace";
 import {
   getPublicDataMode,
   type PublicDataModePreference,
@@ -31,6 +32,7 @@ export const isPublicListingLeadSubmissionAvailable = (
     skipEnvValidation: process.env.SKIP_ENV_VALIDATION,
   }
 ) => {
+  if (leadSite.staticDemoMode) return false;
   const dataMode = getPublicDataMode({
     databaseUrl: environment.databaseUrl,
     nodeEnv: environment.nodeEnv,

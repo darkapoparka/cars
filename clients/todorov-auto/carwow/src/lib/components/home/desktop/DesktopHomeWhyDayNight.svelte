@@ -55,13 +55,13 @@
 		{
 			id: 'stock',
 			value: String(daynightVehicles.length),
-			label: 'Налични автомобила',
+			label: 'Обяви в този преглед',
 			hasDivider: true
 		},
 		{
 			id: 'brands',
 			value: String(new Set(daynightVehicles.map((vehicle) => vehicle.brand)).size),
-			label: 'марки в наличност',
+			label: 'марки в извадката',
 			hasDivider: true
 		},
 		{
@@ -72,7 +72,7 @@
 		},
 		{
 			id: 'contact',
-			value: '4',
+			value: '3',
 			label: 'директни канала за контакт'
 		}
 	] as const;

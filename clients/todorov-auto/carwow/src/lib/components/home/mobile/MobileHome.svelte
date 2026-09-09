@@ -798,7 +798,7 @@
 				{daynightSite.location}
 			</a>
 		</div>
-		<span class="mh-footer__copy">© 2026 Автосалон Тодоров Бургас. Всички права запазени.</span>
+		<span class="mh-footer__copy">© 2026 Автосалон Тодоров Бургас. Демонстрационна концепция. Не е официалният сайт.</span>
 	</footer>
 
 	<MobileBottomDock />

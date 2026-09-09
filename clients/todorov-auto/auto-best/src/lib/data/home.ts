@@ -34,32 +34,31 @@ export const bodyTypes = [...new Set(featuredVehicles.map(vehicle => vehicle.bod
   const artwork = bodyArtwork.find(item => item.query === query) ?? bodyArtwork[0];
   return { ...artwork, query, label: bodyLabel(query), count: featuredVehicles.filter(vehicle => vehicle.body === query).length };
 });
-export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle => vehicle.make === item.label))
-  .map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
+export const brands = [...new Set(featuredVehicles.map(vehicle => vehicle.make))].map(label => ({ ...(brandArtwork.find(item => item.label === label) ?? { label, image: '/assets/images/icon-box/car-list1.png' }), count: featuredVehicles.filter(vehicle => vehicle.make === label).length }));
 
 export const editorial = [
   {
-    title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
-    image: '/assets/images/lead/day-night-guide-inspection.webp',
-    href: '/contact',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    "title": "Къде да уговорите оглед?",
+    "text": "Автосалон Тодоров е в Бургас. Изгрев, ул. Транспортна, 5-ти километър. Потвърдете автомобила и часа по телефона.",
+    "image": "/assets/images/lead/day-night-guide-inspection.webp",
+    "href": "/contact",
+    "meta": "Полезно",
+    "category": "Ръководство"
   },
   {
-    title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
-    image: '/assets/images/lead/day-night-guide-import.webp',
-    href: '/blog-detail/1',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    "title": "Какво да проверите преди покупка?",
+    "text": "Сравнете снимки, характеристики и документи. Публичната обява не заменя независимия технически оглед.",
+    "image": "/assets/images/lead/day-night-guide-import.webp",
+    "href": "/blog-detail/1",
+    "meta": "Полезно",
+    "category": "Ръководство"
   },
   {
-    title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
-    image: '/assets/images/lead/day-night-guide-leasing.webp',
-    href: '/blog-detail/2',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    "title": "Как да сравните цената и условията?",
+    "text": "Вижте публикуваната цена в евро и уточнението за ДДС. Допълнителните разходи и начинът на плащане се потвърждават отделно.",
+    "image": "/assets/images/lead/day-night-guide-leasing.webp",
+    "href": "/blog-detail/2",
+    "meta": "Полезно",
+    "category": "Ръководство"
   }
-] as const;
+];

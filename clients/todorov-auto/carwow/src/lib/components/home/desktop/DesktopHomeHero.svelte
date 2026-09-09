@@ -131,8 +131,8 @@
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Проверени автомобили.</span>
-						<strong>Ясни условия.</strong>
+						<span>Публикувани обяви.</span>
+						<strong>Директен контакт.</strong>
 					</span>
 				</h1>
 				<p class="daynight-home-hero__subtitle">

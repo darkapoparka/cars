@@ -149,7 +149,7 @@ export const MobileListingSummary = ({
       <div className="flex min-w-0 flex-col items-start gap-1 min-[360px]:flex-row min-[360px]:items-end min-[360px]:justify-between min-[360px]:gap-4">
         <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
           {formatMoney(primaryPrice, locale)}
-        </p>
+        {listing.priceTaxLabel ? <span className="block whitespace-normal font-normal text-xs text-muted-foreground leading-4">{listing.priceTaxLabel}</span> : null}</p>
         {listing.monthlyEstimate ? (
           <p className="text-meta text-muted-foreground tabular-nums min-[360px]:shrink-0">
             ~{formatMoney(listing.monthlyEstimate, locale)}/{copy.month}

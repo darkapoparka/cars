@@ -35,7 +35,7 @@
 						decoding="async"
 						loading="lazy"
 					/>
-					<p class="text-highlight text-sm">Проверена автокъща</p>
+					<p class="text-highlight text-sm">Профил на автосалона</p>
 				</div>
 			</div>
 		</div>

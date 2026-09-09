@@ -10,7 +10,7 @@
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
+      <p>Разгледайте публикуваните обяви, сравнете характеристиките и се свържете с автосалона за наличност, документи и оглед.</p>
       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
         Вижте автомобилите <Icon name="arrow-right" size={18} />
       </a>
