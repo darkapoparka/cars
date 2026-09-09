@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "client": "tesi-car",
   "taskDate": "2026-09-09",
-  "localPhotoCount": 12,
+  "localPhotoCount": 16,
   "expectedPhotoCount": 16,
   "curation": "Two selected published views per advertised vehicle; not the whole original advert gallery.",
   "mediaReuseClearance": "not-evidenced",
-  "aliasNote": "A platform-public mobistatic2 URL with the identical published image key is recorded separately where its cdn2 URL refuses retrieval. No reuse licence is inferred.",
+  "aliasNote": "All committed photos were retrieved from their published URLs. Earlier failed mobistatic2 substitutions for four cdn2 images are historical, not current blockers. No reuse licence is inferred.",
   "records": [
     {
       "sourceId": "21781003069917784",
@@ -37,6 +37,58 @@
       "derivativeSha256": "c9c3b9a3b6e9009a3c078fa6599c12375daecafd2eaa307b17bba2192f24fb14",
       "blobSha": "fa73c996c12a0ee63365c7ec0d2da72b20807759",
       "method": "Full-frame orientation-correct resize and AVIF encoding; no crop, watermark removal or generative alteration."
+    },
+    {
+      "sourceId": "21782292613523387",
+      "ordinal": 1,
+      "path": "/dealer/vehicles/21782292613523387-1.avif",
+      "publishedSourceUrl": "https://cdn2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_3f.webp",
+      "retrievedFrom": "https://cdn2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_3f.webp",
+      "retrievedAt": "2026-09-09",
+      "sourceBytes": 355164,
+      "sourceWidth": 1600,
+      "sourceHeight": 1204,
+      "width": 957,
+      "height": 720,
+      "format": "AVIF",
+      "bytes": 27890,
+      "retrievedSourceSha256": "898168498d412745d31227f6f3b391b2323a809717cea73ab096a8055033e6b6",
+      "derivativeSha256": "fe00a7fea9d067740d3a7cf911caba7d773e52cff8c5d69d94a60032270b4d5e",
+      "blobSha": "18e13ad9a5a2983cf149a1e639bfd1e86b7b955f",
+      "method": "Full-frame orientation-correct resize and AVIF encoding in memory; no crop, watermark removal or generative alteration.",
+      "encoder": {
+        "library": "Pillow 12.1.1",
+        "quality": 38,
+        "speed": 7,
+        "maxThreads": 2
+      },
+      "decodeCheck": "passed"
+    },
+    {
+      "sourceId": "21782292613523387",
+      "ordinal": 2,
+      "path": "/dealer/vehicles/21782292613523387-2.avif",
+      "publishedSourceUrl": "https://cdn2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_GO.webp",
+      "retrievedFrom": "https://cdn2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_GO.webp",
+      "retrievedAt": "2026-09-09",
+      "sourceBytes": 359612,
+      "sourceWidth": 1600,
+      "sourceHeight": 1204,
+      "width": 957,
+      "height": 720,
+      "format": "AVIF",
+      "bytes": 29591,
+      "retrievedSourceSha256": "f916bc465079d84744bad00446d197638cee951923b479343d86242d2b99e595",
+      "derivativeSha256": "b3dab04c4d733b55067637050aee858316f4866fb99c3786429ffb497ee64dec",
+      "blobSha": "26cddc862911a2769b63ebe194eeb3f88c14a319",
+      "method": "Full-frame orientation-correct resize and AVIF encoding in memory; no crop, watermark removal or generative alteration.",
+      "encoder": {
+        "library": "Pillow 12.1.1",
+        "quality": 38,
+        "speed": 7,
+        "maxThreads": 2
+      },
+      "decodeCheck": "passed"
     },
     {
       "sourceId": "11779452412819500",
@@ -129,6 +181,58 @@
       "method": "Full-frame orientation-correct resize and AVIF encoding; no crop, watermark removal or generative alteration."
     },
     {
+      "sourceId": "11766203342784314",
+      "ordinal": 1,
+      "path": "/dealer/vehicles/11766203342784314-1.avif",
+      "publishedSourceUrl": "https://cdn2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_cG.webp",
+      "retrievedFrom": "https://cdn2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_cG.webp",
+      "retrievedAt": "2026-09-09",
+      "sourceBytes": 331936,
+      "sourceWidth": 1600,
+      "sourceHeight": 1204,
+      "width": 957,
+      "height": 720,
+      "format": "AVIF",
+      "bytes": 28161,
+      "retrievedSourceSha256": "7cfd6eae782f9d248477717de65692a70193d34b6426d25ccdc8e5a625a73bb9",
+      "derivativeSha256": "07556716823a11dd8ac789a5dcf1c01b16647c7c6064e8564b661b636a8d9d1b",
+      "blobSha": "522b08bab1b298235fcbc7ea003a1dcfe1dff76a",
+      "method": "Full-frame orientation-correct resize and AVIF encoding in memory; no crop, watermark removal or generative alteration.",
+      "encoder": {
+        "library": "Pillow 12.1.1",
+        "quality": 38,
+        "speed": 7,
+        "maxThreads": 2
+      },
+      "decodeCheck": "passed"
+    },
+    {
+      "sourceId": "11766203342784314",
+      "ordinal": 2,
+      "path": "/dealer/vehicles/11766203342784314-2.avif",
+      "publishedSourceUrl": "https://cdn2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_5.webp",
+      "retrievedFrom": "https://cdn2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_5.webp",
+      "retrievedAt": "2026-09-09",
+      "sourceBytes": 316562,
+      "sourceWidth": 1600,
+      "sourceHeight": 1204,
+      "width": 957,
+      "height": 720,
+      "format": "AVIF",
+      "bytes": 25370,
+      "retrievedSourceSha256": "197129d684eca2d8ec57abc5c359b243e484fbf4c493095a399fb49590117be2",
+      "derivativeSha256": "835af29f5920cc6befa9c217c9f596959e9dc06f9c3617bdc6fccf945d90dfaa",
+      "blobSha": "4f58e09611491b58443baeb1f321f8e616caa2b4",
+      "method": "Full-frame orientation-correct resize and AVIF encoding in memory; no crop, watermark removal or generative alteration.",
+      "encoder": {
+        "library": "Pillow 12.1.1",
+        "quality": 38,
+        "speed": 7,
+        "maxThreads": 2
+      },
+      "decodeCheck": "passed"
+    },
+    {
       "sourceId": "21761142961888357",
       "ordinal": 1,
       "path": "/dealer/vehicles/21761142961888357-1.avif",
@@ -189,26 +293,35 @@
       "method": "Full-frame orientation-correct resize and AVIF encoding; no crop, watermark removal or generative alteration."
     }
   ],
-  "errors": [
+  "errors": [],
+  "retrievalHistory": [
     {
       "path": "/dealer/vehicles/21782292613523387-1.avif",
       "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_3f.webp",
-      "error": "HTTP Error 404: Not Found"
+      "error": "HTTP Error 404: Not Found",
+      "status": "resolved",
+      "resolution": "Original published cdn2 URL retrieved on 2026-09-09; failed host substitution retained only as history."
     },
     {
       "path": "/dealer/vehicles/21782292613523387-2.avif",
       "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_GO.webp",
-      "error": "HTTP Error 404: Not Found"
+      "error": "HTTP Error 404: Not Found",
+      "status": "resolved",
+      "resolution": "Original published cdn2 URL retrieved on 2026-09-09; failed host substitution retained only as history."
     },
     {
       "path": "/dealer/vehicles/11766203342784314-1.avif",
       "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_cG.webp",
-      "error": "HTTP Error 404: Not Found"
+      "error": "HTTP Error 404: Not Found",
+      "status": "resolved",
+      "resolution": "Original published cdn2 URL retrieved on 2026-09-09; failed host substitution retained only as history."
     },
     {
       "path": "/dealer/vehicles/11766203342784314-2.avif",
       "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_5.webp",
-      "error": "HTTP Error 404: Not Found"
+      "error": "HTTP Error 404: Not Found",
+      "status": "resolved",
+      "resolution": "Original published cdn2 URL retrieved on 2026-09-09; failed host substitution retained only as history."
     }
   ]
 }
