@@ -3,7 +3,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 
 	const phoneHref = `tel:${daynightSite.phone}`;
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const viberHref = `tel:${daynightSite.phone}`;
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
 		target: '_blank',

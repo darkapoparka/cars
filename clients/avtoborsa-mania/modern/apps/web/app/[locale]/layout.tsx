@@ -34,8 +34,10 @@ export const metadata: Metadata = {
   applicationName: leadSite.name,
   robots: { index: false, follow: false },
   icons: {
-    icon: [{ type: "image/svg+xml", url: leadSite.logoPath }],
+    icon: [{ type: "image/svg+xml", url: "/dealer/favicon.svg" }],
+    apple: "/dealer/apple-touch-icon.png",
   },
+  openGraph: { images: [{ url: "/dealer/opengraph.png", width: 1200, height: 630, alt: leadSite.name }] },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
 
@@ -82,7 +84,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
         )}
       </head>
       <body>
-        <p role="note" style={{margin:0,padding:"10px 16px",textAlign:"center",fontSize:13,background:"#f3f4f6",color:"#374151"}}>Неофициално демо. Обяви към 09.09.2026. Снимките и финалната марка очакват одобрение. Запитванията не се изпращат.</p>
+        <p role="note" style={{margin:0,padding:"10px 16px",textAlign:"center",fontSize:13,background:"#f3f4f6",color:"#374151"}}>Неофициално демо. Обяви към 09.09.2026. Снимките очакват разрешение. Логото е неофициално предложение. Запитванията не се изпращат.</p>
         <MobileVisibleViewport />
         <ThemeProvider>
           {leadSite.staticDemoMode ? (

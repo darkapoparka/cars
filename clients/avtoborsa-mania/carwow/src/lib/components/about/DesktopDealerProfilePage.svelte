@@ -70,7 +70,7 @@
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img class="dealer-profile-card__logo" src="/dealer/logo-pending.svg" alt="" />
+					<img class="dealer-profile-card__logo" src="/dealer/logo-dark.svg" alt="" />
 					<p class="dealer-profile-card__title mb-6">Мания</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
 					<a {...mapLinkProps} class="text-highlight">Виж локация</a>

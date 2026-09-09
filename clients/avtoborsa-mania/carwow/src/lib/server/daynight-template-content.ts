@@ -173,7 +173,7 @@ const daynightPageAssets = {
 	aboutShowroomVehicle: '/dealer/media-pending.svg',
 	servicesInspection: '/dealer/media-pending.svg',
 	servicesConsultation: '/dealer/media-pending.svg',
-	dealerProfileMark: '/dealer/logo-pending.svg'
+	dealerProfileMark: '/dealer/logo-dark.svg'
 } as const;
 
 const daynightMapEmbedQuery = `${daynightSite.mapLabel}, ${daynightSite.location}`;
@@ -3411,7 +3411,7 @@ function buildPresentationWhatsAppUrl() {
 		? `359${daynightSite.phone.slice(1)}`
 		: daynightSite.phone;
 
-	return `https://wa.me/${normalizedPhone}`;
+	return `tel:${daynightSite.phone}`;
 }
 
 function buildPaginationHref(routePath: string, page: number) {
