@@ -31,7 +31,7 @@
   "contactTopicsRetained": true,
   "contactAddressFields": "source driven in bg/en",
   "stockRecordsUnchanged": 8,
-  "checkedAt": "2026-09-09T03:39:55.046574+00:00",
+  "checkedAt": "2026-09-09T03:46:21.847780+00:00",
   "sourceBase": "ce9102792d7ab518a796a9398d381df1c8c44ed0",
   "checkerSha256": "32bf56960ff886b7a1941858f40d355fbddfe0697ce08b7faaa201a86409c1a7",
   "inputFileSha256": {
@@ -51,7 +51,7 @@
     "carwow/src/lib/data/dealer-stock.json": "557e835a1419e7097af5dd02fa792eb88cee779c795163a15f9b1c120689c38d",
     "carwow/src/lib/data/dealer-editorial.ts": "621f23d2ba654789b5f0494c34cd8e0df901025e0e7763b231a68ad749c0cf1c",
     "carwow/src/lib/data/daynight-blog.ts": "8e08c70a473117bca866e6466dff18fca82fa717d77cb135c59b380a1eacdb4e",
-    "carwow/src/lib/data/daynight-faq.ts": "a5e251cb7fd8bcf7a74b564e62d50d4f16c779993eda9956f14238ebc72156fc"
+    "carwow/src/lib/data/daynight-faq.ts": "911aff9c3952ee1711822869b8ab44b6a904d5526815b9207b36d5d14d70d46b"
   },
   "iconChecks": [
     {
@@ -80,5 +80,6 @@
     "framework builds",
     "browser/viewport comparisons"
   ],
-  "photoGalleryIntegration": "unchanged; real stock photos not integrated"
+  "photoGalleryIntegration": "unchanged; real stock photos not integrated",
+  "faqCompatibility": "Retained the corrected ce91027 FAQ and its JSON-only dependency so the existing standalone FAQ checker remains applicable. The standalone checker was not rerun here."
 }
