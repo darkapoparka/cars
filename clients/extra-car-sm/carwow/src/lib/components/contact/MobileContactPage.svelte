@@ -32,7 +32,7 @@
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 	type ImportInfo = 'process' | 'coverage';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const initialSearchParams = appPage.url.searchParams;
 	const contactContext = readContactIntent(initialSearchParams);
@@ -132,8 +132,8 @@
 	let importInfoDialog: HTMLDialogElement | undefined = $state();
 	let activeImportInfo = $state<ImportInfo | null>(null);
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефона на ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефона на ${daynightSite.phoneLabel}.`;
 
 	async function revealImportForm() {
 		importExpanded = true;
@@ -253,7 +253,7 @@
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
 				<a href={resolve('/')} aria-label="ЕКСТРА КАР-СМ начало">
-					<img src={resolve('/dealer/logo-pending.svg')} alt={daynightSite.shortName} />
+					<img src={resolve('/dealer/logo-dark.svg')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/dealer/logo-pending.svg')}
+						src={resolve('/dealer/logo-dark.svg')}
 						alt=""
 						aria-hidden="true"
 					/>

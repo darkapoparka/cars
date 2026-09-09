@@ -11,7 +11,7 @@
 <header class="mobile-home-header">
 	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="ЕКСТРА КАР-СМ home">
 		<img
-			src={resolve('/dealer/logo-pending.svg')}
+			src={resolve('/dealer/logo-dark.svg')}
 			alt={daynightSite.shortName}
 		/>
 	</a>

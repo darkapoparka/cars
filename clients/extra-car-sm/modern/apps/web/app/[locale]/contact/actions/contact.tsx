@@ -1,4 +1,5 @@
 "use server";
+import { leadSite } from "@repo/marketplace/lead-site";
 
 import { getReliableEmailDelivery } from "@repo/email";
 import { ContactTemplate } from "@repo/email/templates/contact";
@@ -143,6 +144,7 @@ export const submitContactRequest = async (
   const isBg = formData.get("locale") === "bg";
   const isImportRequest = formData.get("context") === "import-request";
   const copy = getCopy(isBg, isImportRequest);
+  if (leadSite.staticDemoMode) return { status: "error", message: isBg ? "Това е демо. Запитването не е изпратено и данните не са записани." : "This is a demonstration. Nothing was sent or stored." };
   const requestHeaders = await headers();
   const requestContext = getPublicRequestContext(requestHeaders);
   const result = await submitPublicSupportRequest(formData, requestContext, {

@@ -149,7 +149,7 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 			<div class="listing-details--contact-dealer mb-20">
-					<img src="/dealer/logo-pending.svg" alt={daynightSite.shortName} />
+					<img src="/dealer/logo-dark.svg" alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
 							ЕКСТРА КАР-СМ

@@ -1,4 +1,5 @@
 "use server";
+import { leadSite } from "@repo/marketplace/lead-site";
 
 import { createPublicLead } from "@repo/database/leads";
 import { log } from "@repo/observability/log";
@@ -15,6 +16,7 @@ export const createListingLeadAction = async (formData: FormData) => {
   const locale = normalizeSeoLocale(String(formData.get("locale") ?? "en"));
   const slug = String(formData.get("slug") ?? "").trim();
 
+  if (leadSite.staticDemoMode) redirect(`${getLocalizedPath(locale, `/listing/${encodeURIComponent(slug)}/contact`)}?error=unavailable`);
   const requestHeaders = await headers();
   const requestContext = getPublicRequestContext(requestHeaders);
   const result = await submitPublicListingLead(formData, requestContext, {

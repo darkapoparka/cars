@@ -16,7 +16,7 @@ export const mockListings: VehicleListing[] = dealer.inventory.map((record) => {
     badges: ['used'], location: {city:dealer.city,country:'България'},
     features: record.features.map((label)=>({bg:label,en:label})),
     spec: {make:record.make,model:record.model,year:record.year,bodyType:bodies[record.body] ?? 'other',fuelType:fuel,transmission:record.transmission === 'Ръчна' ? 'manual' : 'automatic',mileageValue:record.mileage,mileageUnit:'km',enginePowerHp:record.powerHp,colorExterior:record.color},
-    seller: {id: "dealer-extra-car-sm",type:'dealer',displayName:dealer.name,verificationStatus:'unverified',city:dealer.city,logoUrl:'/dealer/logo-pending.svg'},
+    seller: {id: "dealer-extra-car-sm",type:'dealer',displayName:dealer.name,verificationStatus:'unverified',city:dealer.city,logoUrl:'/dealer/logo-dark.svg'},
     publishedAt: `${record.observedAt}T00:00:00.000Z`, promoted:false
   };
 });

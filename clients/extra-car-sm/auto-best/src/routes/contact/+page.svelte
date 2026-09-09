@@ -27,6 +27,8 @@
       <div class="dn-contact-location__heading">
         <h2 id="contact-location-title">Посетете ни в {brand.city}</h2>
         <p>{brand.address} · {brand.appointment}</p>
+        <p>{brand.hours}</p>
+        {#if brand.secondaryPhone}<a href={`tel:${brand.secondaryPhone}`}>Допълнителен телефон: {brand.secondaryPhone}</a>{/if}
       </div>
       <ShowroomMap />
     </div>

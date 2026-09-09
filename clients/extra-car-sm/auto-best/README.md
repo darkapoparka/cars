@@ -1,5 +1,7 @@
 # ЕКСТРА КАР-СМ / auto-best
 
-State: **in-progress**, not a finished or tested demo. Full independent master source is retained. See `../REVIEW.md` for coordinator commands and `../CLIENT.md` for source facts and remaining work.
+Actual independent master source, state **in-progress; runtime-unverified**. Use the retained lockfile/runtime and commands in `../REVIEW.md`. Primary inventory imports this dealer’s eight-record source snapshot; EUR, kilometres, source-status notes and original ad links are preserved.
 
-The catalogue uses `dealer-stock.json` through the actual framework data adapters. Vehicle imagery and final branding remain incomplete; temporary local media states do not represent real photographs or an approved logo. No deployment or live delivery has been configured.
+Source-informed outlined logo proposals and local icon/OG exports are integrated. They are not approved dealer originals. Real vehicle photos are not integrated because source-specific reuse remains unresolved. Supporting-page acceptance and full runtime/browser QA remain outstanding.
+
+See `../VERIFICATION.json`, `../ASSET-CHECKS.json`, `../CLIENT.md` and `.client/project.json`. No public deployment or working message-delivery service is claimed.

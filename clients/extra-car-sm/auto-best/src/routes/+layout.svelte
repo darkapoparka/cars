@@ -19,6 +19,6 @@
 </svelte:head>
 
 <SiteShell {showFooterActions} {showMobileFooter}>
-  <p role="note" style="margin:0;padding:10px 16px;text-align:center;font-size:13px;background:#f3f4f6;color:#374151">Неофициално демо. Обяви към 09.09.2026. Снимките и финалната марка очакват одобрение. Запитванията не се изпращат.</p>
+  <p role="note" style="margin:0;padding:10px 16px;text-align:center;font-size:13px;background:#f3f4f6;color:#374151">Неофициално демо. Обяви към 09.09.2026. Снимките очакват разрешение. Логото е неофициално предложение. Запитванията не се изпращат.</p>
   {@render children()}
 </SiteShell>

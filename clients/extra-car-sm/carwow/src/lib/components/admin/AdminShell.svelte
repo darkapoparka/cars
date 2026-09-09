@@ -85,7 +85,7 @@
 									>
 										<img
 											class="h-7 w-auto object-contain"
-											src={resolve('/dealer/logo-pending.svg')}
+											src={resolve('/dealer/logo-dark.svg')}
 											alt=""
 										/>
 									</span>

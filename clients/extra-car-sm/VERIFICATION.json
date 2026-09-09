@@ -1,0 +1,1130 @@
+{
+  "checkedAt": "2026-09-09",
+  "sourceBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceParsing": {
+    "node": "v24.18.0",
+    "typescript": "5.9.3",
+    "svelte": {
+      "auto-best": "5.57.0",
+      "carwow": "5.55.9"
+    },
+    "method": "In-memory source parsing only. No bundler, app execution, framework output, files or servers.",
+    "exitCode": 0,
+    "checkedAt": "2026-09-09",
+    "files": [
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/home.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/config/brand.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/inventory.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/company.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/vehicle-artwork.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/videos.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/navigation.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/home/Hero.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/layout/Footer.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/company/AboutHero.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/company/AboutProcess.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/company/ContactHero.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/editorial/BlogHero.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/home/Editorial.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/home/TrustActions.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/ui/HeroVehicles.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/routes/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/routes/about-us/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/routes/listing-grid/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/components/company/ShowroomMap.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/listing.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/routes/+layout.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/demo-content.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/lib/data/editorial.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "path": "src/routes/contact/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace/lead-site.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-domain/testing/mock-data.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/blog/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/collections/chinese-ev-hybrids/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/components/mobile-financing-policy.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/contact/actions/contact.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/contact/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/guides/[slug]/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/imports/china/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/imports/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/lease/lease-mobile-selection.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/lease/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/legal/[slug]/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/sell/page.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/desktop-lead-services.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/listing-location.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/marketplace-masthead.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/vehicle-category-artwork.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/lib/desktop-search-policy.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/lib/listing-truth.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/lib/marketplace-filter-config.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace/mock-directory.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-domain/types.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/seller-identity-card.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/layout.tsx",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/lib/public-contact-readiness.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/lib/public-listing-contact.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "path": "apps/web/app/[locale]/listing/[slug]/contact/actions.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-site.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-current-inventory.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-vehicles.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-reviews.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-team.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-blog.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-videos.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-faq.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/dealers.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/agents.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/+layout.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/hooks.server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/about/DesktopAboutPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/about/DesktopDealerProfilePage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/about/MobileAboutPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/AdminShell.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/PostForm.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/dashboard/DesktopDashboardHomeOverview.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/dashboard/DesktopDashboardMessages.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/dashboard/DesktopDashboardNewListing.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/dashboard/DesktopDashboardPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/dashboard/DesktopDashboardProfile.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/admin/dashboard/template-dashboard-export.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/blog/BlogArticlePage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/calculator/CalculatorContent.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/chat/ChatThread.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/contact/DesktopContactPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/contact/MobileContactPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/desktop/DesktopDetailLocationMap.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/desktop/DesktopDetailOverviewPanel.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/desktop/DetailPageShell.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/mobile/MobileDetailPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/financing/DesktopFinancingPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/financing/MobileFinancingPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/HomePageHead.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeHero.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/mobile/MobileBottomDock.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/mobile/MobileHeader.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/home/mobile/MobileHome.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/inventory/desktop/InventoryMapPageShell.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/inventory/mobile/MobileInventoryPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/DayNightFooter.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/DesktopDealerFooter.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/DesktopYellowRouteHero.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/RouteImageBehavior.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/SiteChromeTopBar.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/SiteFooter.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/SiteHeader.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/layout/daynight-footer-data.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/sell/DesktopSellYourCarPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/sell/MobileSellYourCarPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/seo/RouteSeo.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/services/DesktopServicesPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/services/MobileServicesPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/shared/MobileHeroBar.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/team/DesktopTeamMemberPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/team/DesktopTeamPage.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/terms/TermsContent.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/daynight-account.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/auth/auth.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/cms/schemas.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/daynight-seo.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/daynight-template-chrome.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/daynight-template-content.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/db/schema.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/home-page-data.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/public-routes.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/rendered-template-page.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/repositories/admin-assistant.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/repositories/posts.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/server/seed/daynight-catalog-seed.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/+error.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/admin/assistant/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/admin/assistant/chat/+server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/admin/listings/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/admin/posts/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/admin/settings/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/blog/[slug]/+page.server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/contact/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/favorites/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/home1/+page.server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/presentation/home2/+page.server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/presentation/home2/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/presentation/home3/+page.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/team/[slug]/+page.server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/data/vehicles.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/desktop/DesktopDetailReviews.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/client/import-request-submit.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/client/lead-submit.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/components/inventory/mobile/MobileInventoryTop.svelte",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/lib/config/dealer-preview.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/api/leads/+server.ts",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "path": "src/routes/api/import-requests/+server.ts",
+        "passed": true
+      }
+    ],
+    "errors": []
+  },
+  "isolatedAdapterExecution": {
+    "method": "Executed isolated catalogue adapters in memory against their exact application JSON; no app server, bundler, browser, network or output files.",
+    "node": "v24.18.0",
+    "typescript": "5.9.3",
+    "exitCode": 0,
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "records": 8,
+        "originalAdLinks": 8,
+        "notesPreserved": 8,
+        "checks": "cardinality, IDs, source URLs, actual prices/EUR/km, dealer identity, source status, no false verification, no monthly estimates",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "records": 8,
+        "originalAdLinks": 8,
+        "notesPreserved": 8,
+        "checks": "cardinality, IDs, source URLs, actual prices/EUR/km, dealer identity, source status, no false verification, no monthly estimates",
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "records": 8,
+        "originalAdLinks": 8,
+        "notesPreserved": 8,
+        "checks": "cardinality, IDs, source URLs, actual prices/EUR/km, dealer identity, source status, no false verification, no monthly estimates",
+        "passed": true
+      }
+    ],
+    "errors": []
+  },
+  "targetedDataTypecheck": {
+    "method": "Targeted data/config TypeScript no-emit check against immutable source in an in-memory compiler host; shared source files were not read as implementation or modified. Not a full application typecheck/build.",
+    "typescript": "5.9.3",
+    "node": "v24.18.0",
+    "exitCode": 0,
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "slug": "extra-car-sm",
+        "key": "auto-best",
+        "rootFiles": [
+          "src/lib/data/inventory.ts",
+          "src/lib/config/brand.ts",
+          "src/lib/data/company.ts",
+          "src/lib/data/listing.ts"
+        ],
+        "diagnostics": [],
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "modern",
+        "rootFiles": [
+          "packages/marketplace-domain/testing/mock-data.ts",
+          "packages/marketplace/lead-site.ts",
+          "packages/marketplace/mock-directory.ts"
+        ],
+        "diagnostics": [],
+        "passed": true
+      },
+      {
+        "slug": "extra-car-sm",
+        "key": "carwow",
+        "rootFiles": [
+          "src/lib/data/daynight-vehicles.ts",
+          "src/lib/data/daynight-current-inventory.ts",
+          "src/lib/data/daynight-site.ts",
+          "src/lib/data/daynight-reviews.ts",
+          "src/lib/data/daynight-team.ts"
+        ],
+        "diagnostics": [],
+        "passed": true
+      }
+    ]
+  },
+  "artwork": {
+    "method": "Manual geometric vector proposal with outlined lettering; no font dependencies or embedded raster content. Not Image Gen and not dealer-approved artwork.",
+    "sourceReview": "Published visual references documented in the dealer research report; no source photograph copied into this proposal.",
+    "lightDarkSameGeometry": true,
+    "wordmarkSvgNoTextOrImage": true,
+    "visualReview": "Actual independently rasterized contact sheet visually reviewed; isolated asset review, not app browser QA.",
+    "hashes": {
+      "logo-dark.svg": "28e19800bfe699ccb42a9dbdf3098d014811e0a5e277cb0903230b6cc66e0b96",
+      "logo-light.svg": "f4b72bda4095a873cd00bc1c3c4f651d69bd2f7130bbe05401143c871f85066a",
+      "favicon.svg": "125db71fdc25b9e56f447ee54660e988f2fe01f2c28b51f3ce0a6b41d8900137",
+      "logo.png": "22edb590f5bd81f10a5d0713e0e65d1a24021836ea604eb463e25c8d24e558a6",
+      "apple-touch-icon.png": "54bfa966d6e53d22261770b5ef3529a666e4ddb48a33ce96c79cbd11bdb44a11",
+      "favicon-32x32.png": "c807f59f4d255ef86a034fd76e35506f5e6b5ded28804512c72ff6074e69b011",
+      "favicon-16x16.png": "8b9f2b269e1093287c85bb6e3443f87676d22555580f1edec60ec070317e3b22",
+      "opengraph.png": "0f6384365b68cb04e50c085123a706cecfea3cc8a316d1f4fcd39217f198b184"
+    },
+    "rasterExports": {
+      "logo.png": {
+        "width": 1024,
+        "height": 279,
+        "format": "png",
+        "hasAlpha": true,
+        "bytes": 18752
+      },
+      "apple-touch-icon.png": {
+        "width": 180,
+        "height": 180,
+        "format": "png",
+        "hasAlpha": true,
+        "bytes": 2985
+      },
+      "favicon-32x32.png": {
+        "width": 32,
+        "height": 32,
+        "format": "png",
+        "hasAlpha": true,
+        "bytes": 667
+      },
+      "favicon-16x16.png": {
+        "width": 16,
+        "height": 16,
+        "format": "png",
+        "hasAlpha": true,
+        "bytes": 418
+      },
+      "opengraph.png": {
+        "width": 1200,
+        "height": 630,
+        "format": "png",
+        "hasAlpha": true,
+        "bytes": 32070
+      }
+    }
+  },
+  "notExecuted": [
+    "retained-lockfile install",
+    "Prisma generation",
+    "full application framework validation/typecheck/build",
+    "app server",
+    "home/inventory/detail/contact browser tests",
+    "gallery and filter/reset/back-state browser tests",
+    "320/390/1440 viewport comparisons",
+    "owner review"
+  ],
+  "remaining": [
+    "Real matched stock photos not integrated: authorization/provenance remains unresolved.",
+    "Complete supporting-page acceptance sweep remains in progress, including FAQ/article service wording.",
+    "Manual outlined logo proposals need owner/dealer approval; Image Gen never started."
+  ],
+  "writeScope": "Assigned branch only. No local source files, app runtimes, deployments or outreach."
+}
