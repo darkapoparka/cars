@@ -1,0 +1,13 @@
+{
+  "name": "FRESH MOTORS — demo",
+  "short_name": "FRESH MOTORS",
+  "start_url": "/cars",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/dealer/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
