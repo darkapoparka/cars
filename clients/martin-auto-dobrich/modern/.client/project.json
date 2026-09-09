@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "client": "martin-auto-dobrich",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [{"id":"main","route":"/"}],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "branch": "codex/astra-bg-04",
+  "implementation": {"independentApplicationSource":true,"fullModernWorkspace":true,"catalogueConnected":false,"localMediaPack":false},
+  "note": "Fresh full Modern workspace copy created for MARTIN AUTO, Dobrich. Personalization/runtime verification remains in progress."
+}
