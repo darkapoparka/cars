@@ -1,36 +1,26 @@
 <script lang="ts">
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { ArrowRight, Phone, MapPin, CarFront, ArrowLeftRight, FileCheck2, Clock3 } from '@lucide/svelte';
-	import SiteChromeIcon from '$lib/components/layout/SiteChromeIcon.svelte';
 	import { resolve } from '$app/paths';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
-	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
-	type AssetHref = `/assets/${string}`;
-	const brands = [
-		{ brand: 'Audi', image: 'audi' },
-		{ brand: 'BMW', image: 'bmw' },
-		{ brand: 'Chevrolet', image: 'chevrolet' },
-		{ brand: 'Chrysler', image: 'chrysler' },
-		{ brand: 'Citroen', image: 'citroen' },
-		{ brand: 'Ford', image: 'ford' },
-		{ brand: 'Honda', image: 'honda' },
-		{ brand: 'Jaguar', image: 'jaguar' },
-		{ brand: 'Land Rover', image: 'land-rover' },
-		{ brand: 'Mazda', image: 'mazda' },
-		{ brand: 'Opel', image: 'opel' },
-		{ brand: 'Peugeot', image: 'peugeot' },
-		{ brand: 'Porsche', image: 'porsche' },
-		{ brand: 'Skoda', image: 'skoda' },
-		{ brand: 'VW', image: 'volkswagen' },
-		{ brand: 'Volvo', image: 'volvo' }
-	] as const;
+	import { dealer, stock } from '$lib/data/dealer';
+	type AssetHref = `/${string}`;
+	const brandAssets: Record<string, string> = {
+		Audi: 'audi', BMW: 'bmw', Chevrolet: 'chevrolet', Chrysler: 'chrysler',
+		Citroen: 'citroen', Ford: 'ford', Honda: 'honda', Jaguar: 'jaguar',
+		'Land Rover': 'land-rover', Mazda: 'mazda', Opel: 'opel', Peugeot: 'peugeot',
+		Porsche: 'porsche', Skoda: 'skoda', VW: 'volkswagen', Volvo: 'volvo'
+	};
+	const brands = [...new Set(stock.map((vehicle) => vehicle.make))].map((brand) => ({
+		brand, image: brandAssets[brand] ?? null
+	}));
 	const support = [
-		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
-		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
-		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
+		{ title: 'Обява и оглед', icon: CarFront, description: 'Избери обява и попитай за актуалната наличност, състоянието и удобен час за посещение.', href: '/inventory', action: 'Виж обявите' },
+		{ title: 'Твоят автомобил', icon: ArrowLeftRight, description: 'Подготви данни и попитай дали автокъщата разглежда предложения за покупка или замяна. Не се обещава оценка или изкупуване.', href: '/sell-your-car', action: 'Подготви въпросите' },
+		{ title: 'Документи и условия', icon: FileCheck2, description: 'Уточни произхода, регистрацията и начините на плащане. Поискай писмени условия; демонстрацията не съдържа кредитна оферта.', href: '/services', action: 'Полезна информация' }
 	] as const;
 
 	const teamMembers = daynightTeam.slice(0, 4);
@@ -44,47 +34,35 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title={`За ${daynightSite.name}`}
 		panel="light"
 		compact
 	>
 		{#snippet afterPanel()}
-			<nav class="about-hero-contact" aria-label="Контакти и социални мрежи">
+			<nav class="about-hero-contact" aria-label="Контакти и публичен профил">
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				<a href={daynightSite.phoneHref}
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
 				<div class="about-hero-socials">
-					<a
-						href="https://www.facebook.com/61566304063141/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
-					>
-					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
-					>
-					<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-						<img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
+					<a href={dealer.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`${dealer.name} в Mobile.bg — отваря се в нов раздел`}>
+						<ArrowRight size={22} />
 					</a>
 				</div>
 			</nav>
 		{/snippet}
 		<div class="about-hero-strip">
-			<span>Намери следващия си автомобил</span><DesktopBrowseLink href={resolve('/inventory')} label="Виж автомобилите" tone="dark" />
+			<span>Разгледай обявите и попитай за оглед</span><DesktopBrowseLink href={resolve('/inventory')} label="Виж обявите" tone="dark" />
 		</div>
 	</DesktopYellowRouteHero>
 
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-team-title">Екипът зад твоя избор</h2>
-				<DesktopBrowseLink href={resolve('/team')} label="Виж екипа" />
+				<h2 id="about-team-title">Теми за разговор</h2>
+				<DesktopBrowseLink href={resolve('/team')} label="Всички контакти" />
 			</div>
 			<p class="about-demo-label">{daynightTeamDisclosure}</p>
 			<div class="about-team-grid">
@@ -93,10 +71,11 @@
 						<a class="about-team-card__image" href={resolve(teamHref(member.slug))}
 							><img
 								src={resolve(member.image as AssetHref)}
-								alt={`Демо портрет: ${member.name}`}
+								alt={`${dealer.name} — контакт по тема`}
 								width="500"
 								height="500"
 								loading="lazy"
+								style="object-fit: contain; object-position: center; padding: 24px; box-sizing: border-box; background: #fff;"
 							/></a
 						>
 						<div class="about-team-card__body">
@@ -106,7 +85,7 @@
 								<a
 									class="about-seller-contact"
 									href={`tel:${member.phone}`}
-									aria-label={`Свържи се с екипа: ${member.role}`}
+									aria-label={`Общ телефон: ${member.role}`}
 									><Phone size={18} /></a
 								>
 							</div>
@@ -116,7 +95,7 @@
 			</div>
 			<div class="about-social-row">
 				<a class="about-reviews-link about-text-link" href={resolve('/reviews')}
-					>Отзиви от клиенти <ArrowRight size={18} /></a
+					>Информация за отзивите <ArrowRight size={18} /></a
 				>
 			</div>
 		</div>
@@ -126,23 +105,20 @@
 		<div class="about-container about-story">
 			<img
 				class="about-story__image"
-				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				src={resolve(dealer.hero)}
+				alt="Абстрактна илюстрация за демонстрацията, не снимка на автокъщата"
 				width="1200"
 				height="800"
 				loading="lazy"
 			/>
 			<div>
-				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
+				<h2 id="about-story-title">От обявата<br />до огледа.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
-					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
+					Публичният профил на {dealer.name} посочва адрес във {dealer.city}.
+					Избери конкретна обява и уточни наличността и удобния час директно с продавача.
 				</p>
-				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
-					наличността, подробностите по автомобила и удобен час за оглед.
-				</p>
-				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
+				<p>{dealer.stockNotice}</p>
+				<DesktopBrowseLink href={resolve('/contact')} label="Телефон и адрес" />
 			</div>
 		</div>
 	</section>
@@ -150,13 +126,17 @@
 	<section class="about-section" aria-labelledby="about-brands-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-brands-title">Разгледай по марка</h2>
-				<DesktopBrowseLink href={resolve('/inventory')} label="Всички автомобили" />
+				<h2 id="about-brands-title">Марки в извадката</h2>
+				<DesktopBrowseLink href={resolve('/inventory')} label="Всички обяви" />
 			</div>
 			<div class="about-brands">
 				{#each brands as brand (brand.brand)}
 					<a href={resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`)}>
-						<img src={resolve(`/assets/images/brand/mobile/${brand.image}.svg`)} alt="" width="36" height="28" loading="lazy" />
+						{#if brand.image}
+							<img src={resolve(`/assets/images/brand/mobile/${brand.image}.svg`)} alt="" width="36" height="28" loading="lazy" />
+						{:else}
+							<CarFront size={28} aria-hidden="true" />
+						{/if}
 						<span>{brand.brand}</span>
 					</a>
 				{/each}
@@ -166,7 +146,7 @@
 
 	<section class="about-section about-support" aria-labelledby="about-support-title">
 		<div class="about-container">
-			<div class="about-section-heading"><h2 id="about-support-title">С какво можем да помогнем</h2></div>
+			<div class="about-section-heading"><h2 id="about-support-title">Какво да уточниш</h2></div>
 			<div class="about-support-grid">
 				{#each support as item (item.href)}
 					<a class="about-support-card" href={resolve(item.href)}>
@@ -183,20 +163,20 @@
 	<section class="about-visit" aria-labelledby="about-visit-title">
 		<div class="about-container about-visit__banner">
 			<div class="about-visit__copy">
-				<h2 id="about-visit-title">Ела да го видиш<br />на живо.</h2>
+				<h2 id="about-visit-title">Попитай за оглед<br />на място.</h2>
 				<address class="about-visit-address"><MapPin size={20} aria-hidden="true" /><span>{daynightSite.location}</span></address>
 				<div class="about-visit-hours"><Clock3 size={20} aria-hidden="true" /><div><strong>{daynightSite.hoursLabel}</strong></div></div>
 				<a class="sa-cta sa-cta-primary" href={resolve('/contact')}
-					>Уговори оглед <ArrowRight size={18} /></a
+					>Контакти <ArrowRight size={18} /></a
 				>
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title={`Карта до ${dealer.name}, ${dealer.city}`} height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, София</strong>
+						<strong>{daynightSite.locationShort}</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

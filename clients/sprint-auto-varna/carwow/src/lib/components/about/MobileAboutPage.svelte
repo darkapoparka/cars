@@ -12,40 +12,37 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
+	import { dealer } from '$lib/data/dealer';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = daynightSite.phoneHref;
 	const teamMembers = daynightTeam.slice(0, 3);
 
 	const trustPoints = [
 		{
 			id: 'history',
-			title: 'Ясна история',
-			copy: 'Проверка на документи, състояние и реална наличност.',
+			title: 'История и състояние',
+			copy: 'Поискай документи и уточни състоянието и наличността с продавача.',
 			icon: ShieldCheck
 		},
 		{
 			id: 'documents',
 			title: 'Документи',
-			copy: 'Съдействие при договор, регистрация и предаване.',
+			copy: 'Попитай за произхода, регистрацията и документите при покупка.',
 			icon: ClipboardCheck
 		},
 		{
 			id: 'trade',
-			title: 'Бартер',
-			copy: 'Оценка, замяна или директно изкупуване на автомобил.',
+			title: 'Твоят автомобил',
+			copy: 'Попитай дали се разглеждат предложения за покупка или замяна.',
 			icon: Repeat
 		}
 	] as const;
 
 	const steps = [
-		'Избирате автомобил според бюджет и нужди.',
-		'Организираме оглед, въпроси и проверка.',
-		'Подреждаме документите и следващите стъпки.'
+		'Разгледай обявите според своя бюджет и нужди.',
+		'Потвърди наличността и уговори удобен час с продавача.',
+		'Уточни документите, състоянието и условията преди решение.'
 	] as const;
-
-	function teamThumb(path: string): `/assets/${string}` {
-		return path.replace('-v1.webp', '-v1-thumb.webp') as `/assets/${string}`;
-	}
 
 	function teamHref(slug: string): `/team/${string}` {
 		return `/team/${slug}`;
@@ -56,17 +53,17 @@
 	}
 </script>
 
-<div class="mobile-about-app" aria-label="За Day Night Auto">
+<div class="mobile-about-app" aria-label={`За ${daynightSite.name}`}>
 	<header class="mobile-about-hero">
 		<img
 			class="mobile-about-hero__bg"
-			src={resolve('/assets/images/pages/daynight-about-lot-v1.webp')}
+			src={resolve(dealer.hero)}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-about-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+			<a href={resolve('/')} aria-label={`${daynightSite.name} — начало`}>
+				<img src={resolve(daynightSite.logoDark)} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -74,15 +71,15 @@
 		</div>
 
 		<div class="mobile-about-hero__copy">
-			<span>За нас</span>
-			<h1>Проверени автомобили и ясен процес</h1>
-			<p>Day Night Auto в София помага с избор, оглед, документи, финансиране и бартер.</p>
+			<span>За {daynightSite.name}</span>
+			<h1>Обяви и огледи във {dealer.city}</h1>
+			<p>Демонстрационна извадка от обяви. Попитай продавача за наличността, документите и часа за посещение.</p>
 		</div>
 
 		<div class="mobile-about-actions">
 			<a class="mobile-about-action mobile-about-action--primary" href={resolve('/inventory')}>
 				<CarFront size={19} strokeWidth={2.5} />
-				<span>Виж автомобили</span>
+				<span>Виж обявите</span>
 			</a>
 			<button
 				class="mobile-about-action mobile-about-action--secondary"
@@ -98,8 +95,8 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-about-section" aria-labelledby="mobile-about-trust-title">
 			<div class="mobile-about-heading">
-				<span>Day Night Auto</span>
-				<h2 id="mobile-about-trust-title">Защо при нас</h2>
+				<span>{daynightSite.name}</span>
+				<h2 id="mobile-about-trust-title">Преди посещението</h2>
 			</div>
 
 			<div class="mobile-about-cards">
@@ -118,14 +115,14 @@
 
 		<section class="mobile-about-location" aria-labelledby="mobile-about-location-title">
 			<img
-				src={resolve('/assets/images/pages/daynight-about-consultation-v1.webp')}
-				alt="Консултация със Day Night Auto"
+				src={resolve(dealer.hero)}
+				alt="Абстрактна илюстрация за демонстрацията, не снимка на автокъщата"
 				loading="lazy"
 				decoding="async"
 			/>
 			<div>
-				<span>Шоурум в София</span>
-				<h2 id="mobile-about-location-title">Огледи и съдействие на място</h2>
+				<span>Публикуван адрес · {dealer.city}</span>
+				<h2 id="mobile-about-location-title">Потвърди преди посещение</h2>
 				<p>{daynightSite.location}</p>
 				<button type="button" onclick={openMap}>
 					<MapPin size={18} strokeWidth={2.45} />
@@ -136,8 +133,8 @@
 
 		<section class="mobile-about-section" aria-labelledby="mobile-about-process-title">
 			<div class="mobile-about-heading">
-				<span>Процес</span>
-				<h2 id="mobile-about-process-title">Как работи</h2>
+				<span>Подготовка</span>
+				<h2 id="mobile-about-process-title">Следващи стъпки</h2>
 			</div>
 
 			<ol class="mobile-about-steps">
@@ -154,8 +151,8 @@
 		<section class="mobile-about-section" aria-labelledby="mobile-about-team-title">
 			<div class="mobile-about-heading mobile-about-heading--row">
 				<div>
-					<span>Екип</span>
-					<h2 id="mobile-about-team-title">Кой помага</h2>
+					<span>Теми за разговор</span>
+					<h2 id="mobile-about-team-title">Контакт с автокъщата</h2>
 				</div>
 				<a href={resolve('/team')}>
 					<span>Всички</span>
@@ -168,8 +165,8 @@
 				{#each teamMembers as member (member.slug)}
 					<a class="mobile-about-team-card" href={resolve(teamHref(member.slug))}>
 						<img
-							src={resolve(teamThumb(member.image))}
-							alt={member.name}
+							src={resolve('/brand/apple-touch-icon.png')}
+							alt=""
 							loading="lazy"
 							decoding="async"
 						/>
