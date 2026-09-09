@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "key": "auto-best",
+  "source": "templates/auto-best",
+  "destination": "clients/valentino-auto-house/auto-best",
+  "copiedAt": "2026-09-09",
+  "method": "Git tree/blob replication; regular independent files on checkout, no submodule or symlink",
+  "git": {"remote":"https://github.com/darkapoparka/cars","head":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","sourceTree":"97833980ab127f6de8f675ac1a188e4b7f717976"},
+  "excluded": [".template", "AGENTS.md"],
+  "freshMetadata": [".template/source-manifest.json", ".client/project.json", "AGENTS.md", "README.md"],
+  "sourceTreeInspection": {"recursiveEntries":281,"truncated":false,"symlinks":0,"gitlinks":0,"secretFilesFound":0},
+  "inheritedQa": false,
+  "note": "Source tree identity is content-addressed. No executable copy helper, dependency install or application check is claimed at this checkpoint. Source licensing/provenance files are retained without expanding their rights claims."
+}

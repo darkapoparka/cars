@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "key": "carwow",
+  "source": "templates/carwow",
+  "destination": "clients/valentino-auto-house/carwow",
+  "copiedAt": "2026-09-09",
+  "method": "Git tree/blob replication; regular independent files, no submodules or symlinks",
+  "git": {"remote":"https://github.com/darkapoparka/cars","head":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","sourceTree":"d4a08817e87cf84d08c4db1c08a515937245f2dd"},
+  "excluded": [".template", "AGENTS.md", "design-qa.md"],
+  "freshMetadata": [".template/source-manifest.json", ".client/project.json", "AGENTS.md", "README.md"],
+  "sourceTreeInspection": {"recursiveEntries":1528,"truncated":false,"symlinks":0,"gitlinks":0,"secretFilesFound":0},
+  "inheritedQa": false,
+  "note": "The non-secret .env.example and required .template-ref assets are retained. Source tree identity is content-addressed. No install, check, build or browser test is claimed at this checkpoint. Retained source tests and reference documents do not carry pass flags into this client."
+}

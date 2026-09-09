@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "key": "modern",
+  "source": "templates/modern",
+  "destination": "clients/valentino-auto-house/modern",
+  "copiedAt": "2026-09-09",
+  "method": "Git tree/blob replication; full workspace; regular independent files, no submodules or symlinks",
+  "git": {"remote":"https://github.com/darkapoparka/cars","head":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","sourceTree":"66bfb8196bbce18832ada6b34b02dda97baba25b"},
+  "excluded": [".template","AGENTS.md",".cursorrules.example","AUTHENTICATED-PREVIEW-RELEASE-RUNBOOK.md","DATABASE-PRODUCTION-CUTOVER.md","FINAL-DEALER-DISCOVERY-SCALE.md","FINAL-LISTING-CONVERSION.md","LEAD-SUPPORT-DELIVERY-RUNBOOK.md","PREVIEW-PRODUCTION-ENVIRONMENT-RUNBOOK.md"],
+  "freshMetadata": [".template/source-manifest.json", ".client/project.json", "AGENTS.md", "README.md"],
+  "sourceTreeInspection": {"recursiveEntries":1552,"truncated":false,"symlinks":0,"gitlinks":0,"secretFilesFound":0},
+  "inheritedQa": false,
+  "note": "All apps, packages and lockfiles are retained. Source tree identity is content-addressed. No install, Prisma generation, typecheck or runtime check is claimed. Source documentation is historical evidence, not client acceptance."
+}
