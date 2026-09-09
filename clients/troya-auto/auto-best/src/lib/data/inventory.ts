@@ -1,56 +1,16 @@
-export type VehicleCondition = 'new' | 'used';
-export type VehicleEquipment =
-  | '4x4'
-  | '360° камера'
-  | 'Панорамен покрив'
-  | 'Подгряване на седалки'
-  | 'Навигация'
-  | 'Парктроник'
-  | 'Безключов достъп'
-  | 'Адаптивен круиз контрол';
-
-export type Vehicle = {
-  id: number;
-  verification: 'sample' | 'verified';
-  evidenceUrl?: string;
-  image: string;
-  category: string;
-  body: string;
-  make: string;
-  title: string;
-  year: string;
-  yearNumber: number;
-  mileage: string;
-  mileageKm: number;
-  fuel: string;
-  transmission: string;
-  equipment: readonly VehicleEquipment[];
-  condition: VehicleCondition;
-  priceEur: number;
-  href: `/listing-detail-v1/${number}`;
-};
-
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
-  { id: 1, image: '/assets/images/lead/day-night-stock-04.webp', category: 'Комби', body: 'Wagon', make: 'Audi', title: 'Audi RS 6 Avant', yearNumber: 2024, mileageKm: 99701, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 68804 },
-  { id: 2, image: '/assets/images/lead/day-night-stock-01.webp', category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
-  { id: 3, image: '/assets/images/lead/day-night-stock-06.webp', category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
-  { id: 4, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
-  { id: 5, image: '/assets/images/lead/day-night-stock-05.webp', category: 'SUV', body: 'SUV', make: 'Land Rover', title: 'Range Rover Sport', yearNumber: 2019, mileageKm: 84426, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 68313 },
-  { id: 6, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
-  { id: 7, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
-  { id: 8, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
+export type VehicleCondition='new'|'used';
+export type VehicleEquipment='4x4'|'360° камера'|'Панорамен покрив'|'Подгряване на седалки'|'Навигация'|'Парктроник'|'Безключов достъп'|'Адаптивен круиз контрол';
+export type Vehicle={id:number;verification:'sample'|'verified';evidenceUrl?:string;image:string;category:string;body:string;make:string;title:string;year:string;yearNumber:number;mileage:string;mileageKm:number;fuel:string;transmission:string;equipment:readonly VehicleEquipment[];condition:VehicleCondition;priceEur:number;href:`/listing-detail-v1/${number}`};
+const source='https://troya-auto.mobile.bg/';
+const inventoryRecords:Omit<Vehicle,'year'|'mileage'|'href'|'verification'>[]=[
+{id:1,evidenceUrl:'https://troya-auto.mobile.bg/obiava-21787312379026351-mitsubishi-outlander-2-4-shveytsariya-4h4-avtomatik',image:'/assets/images/lead/day-night-stock-01.webp',category:'Джип',body:'SUV',make:'Mitsubishi',title:'Mitsubishi Outlander 2.4 4x4',yearNumber:2009,mileageKm:204245,fuel:'Бензин',transmission:'Автоматик',equipment:['4x4','Парктроник','Безключов достъп'],condition:'used',priceEur:6990},
+{id:2,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-02.webp',category:'Комби',body:'Wagon',make:'Volvo',title:'Volvo V70 2.5T AWD',yearNumber:2007,mileageKm:277458,fuel:'Бензин',transmission:'Автоматик',equipment:['4x4','Парктроник','Подгряване на седалки'],condition:'used',priceEur:4390},
+{id:3,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-03.webp',category:'Комби',body:'Wagon',make:'Ford',title:'Ford Focus 1.6',yearNumber:2010,mileageKm:214765,fuel:'Бензин',transmission:'Ръчна',equipment:['Адаптивен круиз контрол'],condition:'used',priceEur:4290},
+{id:4,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-04.webp',category:'Хечбек',body:'Hatchback',make:'Fiat',title:'Fiat 500 1.2',yearNumber:2010,mileageKm:149725,fuel:'Бензин',transmission:'Ръчна',equipment:[],condition:'used',priceEur:4490},
+{id:5,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-05.webp',category:'Ван',body:'Van',make:'Ford',title:'Ford S-Max 2.0i — 7 места',yearNumber:2008,mileageKm:189312,fuel:'Бензин',transmission:'Ръчна',equipment:['Парктроник'],condition:'used',priceEur:4590},
+{id:6,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-06.webp',category:'Хечбек',body:'Hatchback',make:'Hyundai',title:'Hyundai i30 1.6 GDI',yearNumber:2014,mileageKm:210311,fuel:'Бензин',transmission:'Автоматик',equipment:['Парктроник'],condition:'used',priceEur:9390},
+{id:7,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-02.webp',category:'Хечбек',body:'Hatchback',make:'Mazda',title:'Mazda 6 2.0',yearNumber:2008,mileageKm:246637,fuel:'Бензин',transmission:'Ръчна',equipment:['Навигация','Парктроник'],condition:'used',priceEur:5590},
+{id:8,evidenceUrl:source,image:'/assets/images/lead/day-night-stock-03.webp',category:'Ван',body:'Van',make:'Peugeot',title:'Peugeot 5008 2.0 HDI',yearNumber:2011,mileageKm:183715,fuel:'Дизел',transmission:'Ръчна',equipment:[],condition:'used',priceEur:3990}
 ];
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
-export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
-  ...record,
-  verification: 'sample',
-  year: String(record.yearNumber),
-  mileage: `${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,
-  href: `/listing-detail-v1/${record.id}`
-}));
-
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+export const featuredVehicles:Vehicle[]=inventoryRecords.map(record=>({...record,verification:'sample',year:String(record.yearNumber),mileage:`${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,href:`/listing-detail-v1/${record.id}`}));
+export const formatVehiclePrice=(priceEur:number)=>`${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
