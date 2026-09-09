@@ -17,7 +17,7 @@ export const dealer = {
   logo:'/brand/logo.svg', logoDark:'/brand/logo-dark.svg', hero:'/brand/brand-scene.svg',
   stockNotice:'Демонстрационна извадка от публични обяви към 09.09.2026 г. Цените, пробегът и оборудването са по данни на продавача. Наличността се потвърждава по телефона.',
   mediaNotice:'Снимките на автомобилите не са включени в този преглед. Вижте оригиналната обява.',
-  logoStatus:'custom-vector-demo-concept-not-dealer-approved'
+  logoStatus:'imagegen-assisted-demo-refresh-not-dealer-approved'
 } as const;
 const catalogueNote = 'Данни от каталожната карта; индивидуалната страница не бе достъпна.';
 type SourceRecord = Omit<StockRecord,'sourceUrl'|'observedAt'|'taxLabel'|'availability'|'image'|'gallery'>;
