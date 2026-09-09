@@ -1,18 +1,1 @@
-{
-	"name": "Ден и Нощ Ауто Груп",
-	"short_name": "Day Night Auto",
-	"description": "Day Night Auto: налични автомобили, огледи и контакт в София.",
-	"lang": "bg",
-	"start_url": "/",
-	"scope": "/",
-	"display": "standalone",
-	"background_color": "#ffffff",
-	"theme_color": "#d71920",
-	"icons": [
-		{
-			"src": "/brand/daynight-favicon.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
-}
+{"name":"The Dealers Point","short_name":"Dealers Point","description":"Unpublished The Dealers Point showroom concept for owner review.","lang":"en-AE","start_url":"/","scope":"/","display":"standalone","background_color":"#ffffff","theme_color":"#bd1e2d","icons":[{"src":"/dealer/logo-light.svg","sizes":"any","type":"image/svg+xml"}]}
