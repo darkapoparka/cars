@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "client": "lux-auto-bg",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-09",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "publicUrl": null,
+  "deliveryBranch": "codex/astra-bg-09",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "path": "templates/modern",
+    "tree": "66bfb8196bbce18832ada6b34b02dda97baba25b"
+  },
+  "implementation": {
+    "fastSkin": true,
+    "inventoryRecords": 8,
+    "localStockPhotos": 16,
+    "sourceLogo": true,
+    "formsDeliverExternally": false,
+    "sharedOriginFab": false
+  },
+  "qa": {
+    "install": false,
+    "frameworkCheck": false,
+    "build": false,
+    "desktop": false,
+    "mobile": false,
+    "header320": false,
+    "identity": true,
+    "contactPath": false,
+    "filters": false,
+    "gallery": false,
+    "console": false,
+    "overflow": false
+  },
+  "reviewEntries": [
+    "/cars",
+    "/bg/cars",
+    "/bg/contact"
+  ],
+  "ownerManualReview": "pending"
+}
