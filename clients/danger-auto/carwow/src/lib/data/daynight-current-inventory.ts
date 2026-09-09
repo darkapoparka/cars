@@ -1,4 +1,5 @@
 import stock from './dealer-stock.json';
+import { stockGallery } from './dealer-stock-media';
 
 export type CurrentDayNightListing = {
   id: string; title: string; sourceUrl: string; priceEur: string; priceBgn: string;
@@ -22,5 +23,5 @@ export const currentDayNightListings: CurrentDayNightListing[] = stock.listings.
   transmission: record.transmission,
   body: record.category,
   features: [...record.equipment],
-  image: '/assets/images/lead/stock-photo-pending.svg',
+  image: stockGallery(record.localImages)[0],
 }));
