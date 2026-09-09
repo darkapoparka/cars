@@ -15,10 +15,7 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  createPublicLocalizedMetadata,
-  getPublicSearchRobots,
-} from "@/lib/public-metadata";
+import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileAboutContact } from "../components/mobile-about-contact";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
@@ -30,107 +27,106 @@ interface ContactPageProps {
 
 const pageCopy = {
   bg: {
-    heroImageAlt: "Нощен автомобилен шоурум",
-    title: "Премиум автомобили. Внос. Лизинг.",
+    heroImageAlt: "Абстрактна илюстрация за демонстрацията, не снимка на автокъщата",
+    title: `${leadSite.name} · Автомобили във Варна.`,
     description:
-      "Вижте автомобилите в наличност или говорете директно с Day & Night за следващия си автомобил.",
-    inventoryAction: "Вижте наличностите",
+      `Разгледайте извадката от обяви на ${leadSite.name} и потвърдете наличността директно с продавача. Данните са от публични обяви към 09.09.2026 г., не от действащ инвентарен канал.`,
+    inventoryAction: "Разгледайте обявите",
     phoneAction: "Обадете се",
-    contactTitle: "Говорете директно с нас.",
+    contactTitle: "Попитайте директно автокъщата.",
     contactDescription:
-      "Един телефон за автомобил, внос или финансиране. Шоурум в Студентски град.",
-    locationLabel: "Шоурум · Студентски град",
+      "Уточнете автомобила, документите и удобния час за посещение. Наличността и условията се потвърждават от продавача.",
+    locationLabel: `Адрес · ${leadSite.city}`,
     mapAction: "Отворете картата",
-    servicesTitle: "Изберете правилната посока.",
+    servicesTitle: "Подгответе въпросите си.",
     servicesDescription:
-      "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
-    sellHandoffAction: "Обадете се за оферта",
+      "Тези теми са отправна точка за разговор, не потвърждение за предлагани услуги или одобрено финансиране.",
+    sellHandoffAction: "Попитайте по телефона",
     sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Day & Night, за да уточним оглед и конкретна оферта.",
+      `Данните са подготвени само в този преглед и не са изпратени. Попитайте ${leadSite.name} дали разглежда предложения за вашия автомобил.`,
     sellHandoffEditAction: "Редактирайте данните",
-    sellHandoffTitle: "Заявете оценка за автомобила",
+    sellHandoffTitle: "Подготвени данни за разговор",
     sellCategoryLabel: "Категория",
     sellDetailsLabel: "Екстри и бележки",
     sellMileageLabel: "Пробег",
     sellVehicleLabel: "Автомобил",
     sellYearLabel: "Година",
-    sellLocationLabel: "Шоурум · Студентски град",
+    sellLocationLabel: `Адрес · ${leadSite.city}`,
     services: [
       {
-        title: "Автомобили в наличност",
-        description: "Разгледайте предложенията и планирайте оглед.",
+        title: "Обяви за автомобили",
+        description: "Разгледайте примерните записи и потвърдете наличността.",
         href: "/cars",
         icon: CarFront,
       },
       {
-        title: "Внос по заявка",
-        description: "Кажете какво търсите и започнете разговор.",
+        title: "Произход и документи",
+        description: "Подгответе въпросите си за произхода и регистрацията.",
         href: "/imports",
         icon: Ship,
       },
       {
-        title: "Собствен лизинг",
-        description: "Обсъдете вариант според автомобила и бюджета ви.",
+        title: "Начини на плащане",
+        description: "Попитайте какви възможности има и поискайте писмени условия.",
         href: "/lease",
         icon: Landmark,
       },
       {
-        title: "Продайте автомобила си",
-        description: "Изпратете данни за автомобила и заявете оценка.",
+        title: "Вашият автомобил",
+        description: "Подгответе данни за разговор. Не се изпраща автоматично запитване.",
         href: "/sell",
         icon: Tag,
       },
     ],
   },
   en: {
-    heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
+    heroImageAlt: "Abstract demo illustration, not a photograph of the dealership",
+    title: `${leadSite.name} · Vehicles in Varna.`,
     description:
-      "Browse the vehicles in stock or speak directly with Day & Night about your next vehicle.",
-    inventoryAction: "View available vehicles",
-    phoneAction: "Call us",
-    contactTitle: "Speak directly with us.",
+      `Browse the advertisement sample for ${leadSite.name} and confirm availability directly with the seller. This is a public-listing snapshot dated 9 September 2026, not a live inventory feed.`,
+    inventoryAction: "Browse the listings",
+    phoneAction: "Call the dealership",
+    contactTitle: "Ask the dealership directly.",
     contactDescription:
-      "One phone number for vehicles, imports, or finance. Showroom in Studentski grad.",
-    locationLabel: "Showroom · Studentski grad",
+      "Ask about the vehicle, its documents and a suitable visiting time. The seller must confirm availability and terms.",
+    locationLabel: `Address · ${leadSite.city}`,
     mapAction: "Open the map",
-    servicesTitle: "Choose the right direction.",
+    servicesTitle: "Prepare your questions.",
     servicesDescription:
-      "From a vehicle in stock to an import on request, our team is one call away.",
-    sellHandoffAction: "Call for an offer",
+      "These are topics to discuss, not confirmation of available services or approved financing.",
+    sellHandoffAction: "Ask by phone",
     sellHandoffDescription:
-      "Your vehicle details are ready. Call Day & Night to arrange an inspection and a concrete offer.",
+      `Your details are prepared in this preview only and have not been sent. Ask ${leadSite.name} whether it considers offers for your vehicle.`,
     sellHandoffEditAction: "Edit vehicle details",
-    sellHandoffTitle: "Request a vehicle appraisal",
+    sellHandoffTitle: "Vehicle details for your conversation",
     sellCategoryLabel: "Category",
     sellDetailsLabel: "Extras and notes",
     sellMileageLabel: "Mileage",
     sellVehicleLabel: "Vehicle",
     sellYearLabel: "Year",
-    sellLocationLabel: "Showroom · Studentski grad",
+    sellLocationLabel: `Address · ${leadSite.city}`,
     services: [
       {
-        title: "Vehicles in stock",
-        description: "Browse the offers and plan an inspection.",
+        title: "Vehicle advertisements",
+        description: "Browse the sample listings and confirm availability.",
         href: "/cars",
         icon: CarFront,
       },
       {
-        title: "Import on request",
-        description:
-          "Tell us what you are looking for and start a conversation.",
+        title: "Origin and documents",
+        description: "Prepare your questions about origin and registration.",
         href: "/imports",
         icon: Ship,
       },
       {
-        title: "In-house leasing",
-        description: "Discuss an option for the vehicle and your budget.",
+        title: "Payment options",
+        description: "Ask which options are available and request written terms.",
         href: "/lease",
         icon: Landmark,
       },
       {
-        title: "Sell your car",
-        description: "Share your vehicle details and request an appraisal.",
+        title: "Your vehicle",
+        description: "Prepare details for a conversation. No enquiry is sent automatically.",
         href: "/sell",
         icon: Tag,
       },
@@ -153,11 +149,12 @@ const sellCategoryLabels = {
   },
 } as const;
 
+// Decorative identity artwork, never a purported photograph of the entered vehicle.
 const sellCategoryAssets = {
-  car: "/lead-sell-car-v1.png",
-  motorbike: "/lead-sell-motorcycle-v1.png",
-  truck: "/lead-sell-truck-v1.png",
-  van: "/lead-sell-van-v1.png",
+  car: leadSite.heroPath,
+  motorbike: leadSite.heroPath,
+  truck: leadSite.heroPath,
+  van: leadSite.heroPath,
 } as const;
 
 const getQueryValue = (
@@ -176,22 +173,21 @@ const getSellCategoryLabel = (locale: "bg" | "en", category: string) =>
 
 export const generateMetadata = async ({
   params,
-  searchParams,
 }: ContactPageProps): Promise<Metadata> => {
-  const [{ locale }, query] = await Promise.all([params, searchParams]);
+  const { locale } = await params;
   const isBg = normalizeSeoLocale(locale) === "bg";
 
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? `${leadSite.name} — телефон и публикуван адрес във Варна. Демонстрационен преглед на обяви; потвърдете наличността с продавача.`
+      : `${leadSite.name} — published phone and address in Varna. Advertisement demo; confirm availability with the seller.`,
     locale,
     path: "/contact",
-    robots: getPublicSearchRobots(query),
+    robots: { index: false, follow: false },
     title: isBg
-      ? "За нас и контакти | Day & Night"
-      : "About and contact | Day & Night",
+      ? `За нас и контакти | ${leadSite.name}`
+      : `About and contact | ${leadSite.name}`,
   });
 };
 
@@ -251,7 +247,7 @@ export default async function ContactPage({
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/images/sell/day-night-sell-centered-hero-v2.webp"
+                src={leadSite.heroPath}
               />
               <div
                 aria-hidden="true"
@@ -298,7 +294,7 @@ export default async function ContactPage({
                           )}{" "}
                           · {sellContext.year || "—"} ·{" "}
                           {sellContext.mileage
-                            ? `${sellContext.mileage} км`
+                            ? `${sellContext.mileage} ${normalizedLocale === "bg" ? "км" : "km"}`
                             : "—"}
                         </span>
                       </span>
@@ -370,7 +366,7 @@ export default async function ContactPage({
               fill
               priority
               sizes="100vw"
-              src="/day-night-contact-hero-v1.png"
+              src={leadSite.heroPath}
             />
           </div>
           <div
@@ -419,7 +415,7 @@ export default async function ContactPage({
                 >
                   <span>
                     <span className="block text-meta text-white/65">
-                      Телефон
+                      {normalizedLocale === "bg" ? "Телефон" : "Phone"}
                     </span>
                     <span className="mt-1 block font-semibold text-base">
                       {leadSite.phoneDisplay}
@@ -431,7 +427,7 @@ export default async function ContactPage({
                   />
                 </a>
                 <a
-                  aria-label={`${copy.mapAction}: ${leadSite.address}, ${leadSite.city}`}
+                  aria-label={`${copy.mapAction}: ${leadSite.address}`}
                   className="group flex min-h-14 w-full items-center justify-between border-white/20 border-b py-3 transition-colors hover:border-white/50 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-3"
                   href={leadSite.mapsUrl}
                   rel="noreferrer"
@@ -442,7 +438,7 @@ export default async function ContactPage({
                       {copy.locationLabel}
                     </span>
                     <span className="mt-1 block font-semibold text-body">
-                      {leadSite.address}, {leadSite.city}
+                      {leadSite.address}
                     </span>
                   </span>
                   <MapPin
