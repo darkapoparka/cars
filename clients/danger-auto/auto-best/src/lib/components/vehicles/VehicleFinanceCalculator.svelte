@@ -1,9 +1,13 @@
 <script lang="ts">
   import { vehicleContactHref } from '$data/journeys';
   import { resolve } from '$app/paths';
-  import { formatVehiclePrice } from '$data/inventory';
 
   let { priceEur, vehicleId }: { priceEur: number; vehicleId: number } = $props();
+
+  // A zero balance is valid here, unlike a missing advertised vehicle price.
+  const amountFormatter = new Intl.NumberFormat('bg-BG', { maximumFractionDigits: 0 });
+  const formatFinanceAmount = (amount: number) =>
+    Number.isFinite(amount) && amount >= 0 ? `${amountFormatter.format(amount)} €` : 'Не може да се изчисли';
 
   const financeTerms = [12, 24, 36, 48, 60] as const;
   let downPaymentEur = $state(0);
@@ -54,16 +58,18 @@
   <dl class="dn-finance-calculator__result" aria-live="polite">
     <div>
       <dt>Оставаща главница</dt>
-      <dd>{formatVehiclePrice(financedPrincipal)}</dd>
+      <dd>{formatFinanceAmount(financedPrincipal)}</dd>
     </div>
     <div>
       <dt>Главница / месец</dt>
-      <dd>{formatVehiclePrice(principalPerMonth)}</dd>
+      <dd>{formatFinanceAmount(principalPerMonth)}</dd>
     </div>
   </dl>
 
   <p id="finance-disclaimer" class="dn-finance-calculator__disclaimer">
     Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
+    DANGER AUTO посочва банково финансиране, а не собствен лизинг.
+    Показаните срокове са примерни; действителните условия се потвърждават от банката.
   </p>
 
   <a href={resolve(vehicleContactHref(vehicleId, 'leasing'))}>
