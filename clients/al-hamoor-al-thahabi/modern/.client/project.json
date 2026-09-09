@@ -1,28 +1,3 @@
 {
-  "schemaVersion": 1,
-  "client": "al-hamoor-al-thahabi",
-  "templateKey": "modern",
-  "templateVersion": "2026.09.06-refresh-1",
-  "createdAt": "2026-09-08T21:51:00.390Z",
-  "state": "needs-personalization",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/cars"
-    }
-  ],
-  "offeredHomes": [],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  }
+  "schemaVersion":1,"client":"al-hamoor-al-thahabi","templateKey":"modern","templateVersion":"2026.09.06-refresh-1","state":"implemented-needs-local-qa","selectedHome":"main","availableHomes":[{"id":"main","route":"/cars"}],"offeredHomes":[{"id":"main","route":"/cars"}],"publicUrl":null,"qa":{"desktop":false,"mobile":false,"identity":false,"contactPath":false},"crm":{"leadId":null,"demoProjectId":null,"registered":false},"personalization":{"businessFacts":"../business-facts.json","sourcePack":"../SOURCE-PACK.json","stock":"../stock.json","stockCount":8,"qaOwner":"local-review"}
 }

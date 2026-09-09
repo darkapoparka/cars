@@ -4,9 +4,6 @@
   "observedAt": "2026-09-09",
   "name": "Al Hamoor Al Thahabi Used Cars",
   "shortName": "Al Hamoor Al Thahabi",
-  "legalName": null,
-  "aliases": ["AL HAMOOR AL THAHABI", "AL Hamoor AL Thahabi Used Car TR"],
-  "slug": "al-hamoor-al-thahabi",
   "city": "Sharjah",
   "country": "United Arab Emirates",
   "countryCode": "AE",
@@ -15,11 +12,15 @@
   "phoneDisplay": "+971 54 555 5204",
   "phoneHref": "tel:+971545555204",
   "email": "",
-  "hours": "Please confirm opening hours and arrange your visit with the dealership.",
   "currency": "AED",
   "distanceUnit": "km",
   "locale": "en-AE",
-  "sources": ["https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414", "https://auto.ae/alhamooralthahabi/", "https://uae.yallamotor.com/auto-companies/red-line-used-cars-tr-9099"],
-  "locationNote": "The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.",
-  "previewNotice": "Independent design preview. Dated listing samples, not a live stock feed. Confirm availability, price, vehicle condition and location directly. No dealership approval or form delivery is implied."
+  "sourceProfile": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
+  "sources": [
+    "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
+    "https://auto.ae/alhamooralthahabi/",
+    "https://uae.yallamotor.com/auto-companies/red-line-used-cars-tr-9099"
+  ],
+  "locationNote": "The business is published in Sharjah; individual marketplace adverts can carry Dubai location labels. Confirm the selected vehicle viewing location before travelling.",
+  "previewNotice": "Private design preview using dated listing samples, not a live stock feed. Confirm availability, price, condition and viewing location directly with the dealership."
 }

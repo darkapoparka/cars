@@ -1,19 +1,17 @@
-> Consolidated on 9 September 2026: active source is now `J:/cars/clients/al-hamoor-al-thahabi` in the main Cars repository on `main`. Old session paths and publish-to-astra instructions below are historical. Do not recreate those workspaces. Application completion and owner visual review remain pending; see [the current project inventory](../../docs/PROJECTS.md).
+# Al Hamoor Al Thahabi Used Cars
 
-# al-hamoor-al-thahabi
+Status: all three requested application source projects are implemented in GitHub; local QA pending.
 
-Status: prospect; no sale or outreach is implied.
+- Market: Sharjah, United Arab Emirates
+- Phone: +971 54 555 5204
+- Currency / distance: AED / km
+- Dated representative stock: 8 vehicles
+- Source pack: `SOURCE-PACK.json`
 
-## Verified facts
+## Applications
 
-Collect business name, logo, colors, contact details, services, sample inventory and public source URLs before personalizing.
+- `auto-best/` — personalized source committed; QA flags false pending local review
+- `modern/` — full workspace personalized source committed; QA flags false pending local review
+- `carwow/` — personalized source committed; QA flags false pending local review
 
-## Projects
-
-- auto-best: needs personalization; selected homepage and QA in auto-best/.client/project.json
-- modern: needs personalization; selected homepage and QA in modern/.client/project.json
-- carwow: needs personalization; selected homepage and QA in carwow/.client/project.json
-
-## Agency OS
-
-Check the existing lead and demo records before registering this copy. No CRM record was created by the clone helper.
+No public deployment, dealer contact, CRM write or successful external form delivery is claimed.

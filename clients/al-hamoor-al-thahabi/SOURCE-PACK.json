@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "Al Hamoor Al Thahabi Used Cars",
+  "observedAt": "2026-09-09",
+  "facts": "business-facts.json",
+  "stock": "stock.json",
+  "stockCount": 8,
+  "currency": "AED",
+  "distanceUnit": "km",
+  "sourceBacked": true,
+  "privatePreview": true,
+  "notes": [
+    "All three application source trees are committed for local QA.",
+    "Stock is a dated sample, not a live availability feed.",
+    "The committed neutral vehicle artwork is an explicit preview fallback; the recovered local workspace contains source-photo evidence for local review.",
+    "No deployment, outreach, CRM update or external form delivery is implied."
+  ]
+}

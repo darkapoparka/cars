@@ -1,13 +1,5 @@
 export type VehicleCondition = 'new' | 'used';
-export type VehicleEquipment =
-  | '4x4'
-  | '360° камера'
-  | 'Панорамен покрив'
-  | 'Подгряване на седалки'
-  | 'Навигация'
-  | 'Парктроник'
-  | 'Безключов достъп'
-  | 'Адаптивен круиз контрол';
+export type VehicleEquipment = string;
 
 export type Vehicle = {
   id: number;
@@ -30,27 +22,23 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
-  { id: 1, image: '/assets/images/lead/day-night-stock-04.webp', category: 'Комби', body: 'Wagon', make: 'Audi', title: 'Audi RS 6 Avant', yearNumber: 2024, mileageKm: 99701, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 68804 },
-  { id: 2, image: '/assets/images/lead/day-night-stock-01.webp', category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
-  { id: 3, image: '/assets/images/lead/day-night-stock-06.webp', category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
-  { id: 4, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
-  { id: 5, image: '/assets/images/lead/day-night-stock-05.webp', category: 'SUV', body: 'SUV', make: 'Land Rover', title: 'Range Rover Sport', yearNumber: 2019, mileageKm: 84426, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 68313 },
-  { id: 6, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
-  { id: 7, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
-  { id: 8, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
-];
+const rows = [
+  [1,'Mercedes-Benz','CLA250 Premium + 2.0L',2025,22000,'Sedan',95000,'https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html'],
+  [2,'Nissan','Rogue Platinum',2023,56000,'SUV',45000,'https://www.dubicars.com/2023-nissan-rogue-1005647.html'],
+  [3,'Toyota','Prado TX-L',2011,212000,'SUV',56000,'https://www.dubicars.com/2011-toyota-prado-1010924.html'],
+  [4,'Chevrolet','Malibu LT',2022,95000,'Sedan',32000,'https://www.dubicars.com/2022-chevrolet-malibu-1018774.html'],
+  [5,'Toyota','Rush EX 1.5L',2023,121000,'SUV',43000,'https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html'],
+  [6,'Chevrolet','Trax LT 1.8L AWD',2020,106000,'SUV',14500,'https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html'],
+  [7,'Ford','Figo Ambiente',2019,185000,'Sedan',13500,'https://www.dubicars.com/2019-ford-figo-1017078.html'],
+  [8,'Nissan','Sentra SV 1.6L',2021,116000,'Sedan',23000,'https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html']
+] as const;
 
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
-export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
-  ...record,
-  verification: 'sample',
-  year: String(record.yearNumber),
-  mileage: `${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,
-  href: `/listing-detail-v1/${record.id}`
+export const featuredVehicles: Vehicle[] = rows.map(([id,make,model,year,mileage,body,price,evidenceUrl]) => ({
+  id, make, title: `${make} ${model}`, year: String(year), yearNumber: year,
+  mileage: `${new Intl.NumberFormat('en-AE').format(mileage)} km`, mileageKm: mileage,
+  category: body, body, fuel: 'Petrol', transmission: 'Automatic', equipment: [], condition: 'used',
+  priceEur: price, verification: 'sample', evidenceUrl, image: '/dealer/vehicle-preview.svg',
+  href: `/listing-detail-v1/${id}`
 }));
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+export const formatVehiclePrice = (price: number) => new Intl.NumberFormat('en-AE', { style: 'currency', currency: 'AED', maximumFractionDigits: 0 }).format(price);
