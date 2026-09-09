@@ -59,7 +59,7 @@ export const navigation: NavigationItem[] = [
       description: 'Разгледайте наличностите по състояние, тип купе или марка.',
       features: [
         { id: 'vehicles-suv', title: 'SUV', detail: 'Простор и комфорт', image: '/assets/images/section/car-slide1.png', href: '/listing-grid?body=SUV' },
-        { id: 'vehicles-crossover', title: 'Комби', detail: 'Място за всеки ден', image: '/assets/images/section/car-slide2.png', href: '/listing-grid?body=Wagon' },
+        { id: 'vehicles-crossover', title: 'Седан', detail: 'Автомобили от извадката', image: '/assets/images/section/car-slide2.png', href: '/listing-grid?body=Sedan' },
         { id: 'vehicles-premium-suv', title: 'Премиум SUV', detail: 'Премиум изпълнение', image: '/assets/images/section/car-slide3.png', href: '/listing-grid?body=SUV' }
       ],
       groups: [
@@ -77,8 +77,8 @@ export const navigation: NavigationItem[] = [
           title: 'По тип купе',
           links: [
             { id: 'vehicles-body-suv', label: 'SUV', href: '/listing-grid?body=SUV' },
-            { id: 'vehicles-body-sedan', label: 'Комби', href: '/listing-grid?body=Wagon' },
-            { id: 'vehicles-body-coupe', label: 'Купе', href: '/listing-grid?body=Coupe' }
+            { id: 'vehicles-body-sedan', label: 'Седан', href: '/listing-grid?body=Sedan' },
+            { id: 'vehicles-body-coupe', label: 'Хечбек', href: '/listing-grid?body=Hatchback' }
           ]
         }
       ],
@@ -93,9 +93,9 @@ export const navigation: NavigationItem[] = [
       title: brand.name,
       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
       features: [
-        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
-        { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
+        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/inventory/11755373421680634-1.webp', href: '/about-us' },
+        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/inventory/21778616329882244-1.webp', href: '/contact?topic=import' },
+        { id: 'about-leasing', title: 'Лизинг по запитване', detail: 'Обсъдете условията директно с екипа.', image: '/inventory/21761039729616703-1.webp', href: '/contact?topic=leasing' }
       ],
       groups: [
         {
@@ -117,7 +117,7 @@ export const navigation: NavigationItem[] = [
           ]
         }
       ],
-      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
+      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и лизинг по запитване.' }
     }
   },
   {

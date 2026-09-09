@@ -3,6 +3,7 @@
 import { getReliableEmailDelivery } from "@repo/email";
 import { ContactTemplate } from "@repo/email/templates/contact";
 import { log } from "@repo/observability/log";
+import { leadSite } from "@repo/marketplace";
 import { headers } from "next/headers";
 import { env } from "@/env";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
@@ -42,12 +43,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "The form is ready, but message delivery is not configured yet. Call Day & Night directly."
+          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Exclusive Auto.",
+          "The form is ready, but message delivery is not configured yet. Call Exclusive Auto directly."
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "Message delivery is not configured yet. Call Day & Night directly."
+          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Exclusive Auto.",
+          "Message delivery is not configured yet. Call Exclusive Auto directly."
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +60,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на Day & Night."
-        : "Запитването е изпратено до екипа на Day & Night.",
-      "Your request has been sent to the Day & Night team."
+        ? "Заявката е изпратена до екипа на Exclusive Auto."
+        : "Запитването е изпратено до екипа на Exclusive Auto.",
+      "Your request has been sent to the Exclusive Auto team."
     ),
   };
 };
@@ -140,6 +141,12 @@ export const submitContactRequest = async (
   _previousState: ContactActionState,
   formData: FormData
 ): Promise<ContactActionState> => {
+  if (leadSite.staticDemoMode) {
+    return {
+      status: "error",
+      message: "Това е демонстрация. Нищо не е изпратено. За реално запитване използвайте публикувания телефон на продавача."
+    };
+  }
   const isBg = formData.get("locale") === "bg";
   const isImportRequest = formData.get("context") === "import-request";
   const copy = getCopy(isBg, isImportRequest);
@@ -168,7 +175,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Day & Night: ${topic.en}`,
+          subject: `Exclusive Auto: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

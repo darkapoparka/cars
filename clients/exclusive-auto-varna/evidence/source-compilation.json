@@ -1,0 +1,316 @@
+{
+  "node": "v24.18.0",
+  "typescript": "5.9.3",
+  "svelte": "5.57.0",
+  "results": [
+    {
+      "file": "auto-best/src/lib/data/dealer-stock.json",
+      "kind": "JSON parse",
+      "ok": true
+    },
+    {
+      "file": "modern/packages/marketplace-domain/testing/dealer-stock.json",
+      "kind": "JSON parse",
+      "ok": true
+    },
+    {
+      "file": "carwow/src/lib/data/dealer-stock.json",
+      "kind": "JSON parse",
+      "ok": true
+    },
+    {
+      "file": "auto-best/src/lib/data/inventory.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/config/brand.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace/lead-site.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-domain/testing/mock-data.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/components/company/ShowroomMap.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/data/company.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/data/listing.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/components/company/AboutHero.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/components/company/ContactIntent.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/components/layout/MobileMenu.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/layout.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/routes/listing-detail-v1/[id]/+page.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/contact/actions/contact.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/data/videos.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": [
+        {
+          "code": "css_unused_selector",
+          "message": "Unused CSS selector \".dn-videos__brand-mark\"\nhttps://svelte.dev/e/css_unused_selector"
+        },
+        {
+          "code": "css_unused_selector",
+          "message": "Unused CSS selector \".dn-videos__intro\"\nhttps://svelte.dev/e/css_unused_selector"
+        }
+      ]
+    },
+    {
+      "file": "auto-best/src/lib/components/ui/RouteHeroArtwork.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/components/company/AboutProcess.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/components/home/Hero.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/components/home/TrustActions.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/components/layout/Footer.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/lib/data/navigation.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/routes/about-us/+page.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/routes/+page.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "auto-best/src/routes/listing-grid/+page.svelte",
+      "kind": "Svelte compile only",
+      "ok": true,
+      "warnings": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/blog/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/collections/chinese-ev-hybrids/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/components/mobile-financing-policy.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/guides/[slug]/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/imports/china/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/contact/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/imports/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/lease/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/legal/[slug]/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/apps/web/app/[locale]/sell/page.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/components/listing-location.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/components/marketplace-masthead.tsx",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/lib/desktop-search-policy.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/lib/listing-truth.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/lib/marketplace-filter-config.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/lib/marketplace-control-copy.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/marketplace/mock-directory.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/seo/urls.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "modern/packages/seo/metadata.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    },
+    {
+      "file": "auto-best/src/lib/data/home.ts",
+      "kind": "TypeScript transpile only",
+      "ok": true,
+      "errors": []
+    }
+  ],
+  "scope": "In-memory source compilation and parsing only. No application dependency install, module-resolution typecheck, framework build, or browser/viewport test. The compilers were read from existing dependencies; no shared checkout files were written.",
+  "command": "node -e <in-memory Svelte compile / TypeScript transpile harness>; source passed through stdin",
+  "exitCode": 0
+}

@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
+  import { featuredVehicles } from '$data/inventory';
+  import { vehicleContactHref } from '$data/journeys';
   import { tick } from 'svelte';
   import { brand } from '$config/brand';
   import { featuredVideos } from '$data/videos';
@@ -25,12 +28,12 @@
   <div class="container">
     <div class="dn-videos__panel">
       <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледайте ни в</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Избрани автомобилни видеа с Кристиан Кирилов.</p>
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span>Всички видеа</span>
+        <h2 id="videos-title" class="dn-home-section-title">Попитайте за допълнителни снимки и видео</h2>
+        <p>Няма добавени потвърдени видеа на Exclusive Auto. Показаните снимки са от обявите; допълнителни материали се уточняват с продавача.</p>
+        <a class="dn-videos__channel dn-home-section-action" href={brand.sourceUrl} target="_blank" rel="noopener noreferrer">
+          <span>Публикувани обяви</span>
           <Icon name="arrow-right" size={16} />
-          <span class="dn-sr-only"> в YouTube (нов раздел)</span>
+          <span class="dn-sr-only"> в профила на продавача (нов раздел)</span>
         </a>
       </div>
 
@@ -65,7 +68,7 @@
             <div class="dn-video-card__content">
               <h3>{video.title}</h3>
               <div class="dn-video-card__actions">
-                <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" aria-label={`${video.title} — гледайте в YouTube (нов раздел)`}>
+                <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" aria-label={`${video.title} — гледайте в профила на продавача (нов раздел)`}>
                   Гледайте в YouTube <Icon name="arrow-right" size={16} />
                 </a>
                 {#if activeVideo === video.id}
@@ -74,12 +77,29 @@
               </div>
             </div>
           </article>
+        {:else}
+          {#each featuredVehicles.slice(0, 3) as vehicle (vehicle.id)}
+            <article class="dn-video-card">
+              <div class="dn-video-card__media">
+                <a class="dn-video-card__play" href={resolve(vehicleContactHref(vehicle.id))} aria-label={`Попитайте за ${vehicle.title}`}>
+                  <img src={vehicle.image} alt={vehicle.title} width="1440" height="1080" loading="lazy" decoding="async" />
+                  <span class="dn-video-card__duration">Снимка от обявата</span>
+                </a>
+              </div>
+              <div class="dn-video-card__content">
+                <h3>{vehicle.title}</h3>
+                <div class="dn-video-card__actions">
+                  <a href={resolve(vehicleContactHref(vehicle.id))}>Попитайте продавача <Icon name="arrow-right" size={16} /></a>
+                </div>
+              </div>
+            </article>
+          {/each}
         {/each}
-        <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
-          <strong>Всички видеа</strong>
-          <span>Гледайте в YouTube</span>
-          <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
+        <a class="dn-videos__all-card" href={brand.sourceUrl} target="_blank" rel="noopener noreferrer">
+          <span class="dn-videos__all-icon"><Icon name="message" size={40} /></span>
+          <strong>Източник на обявите</strong>
+          <span>Профилът на Exclusive Auto</span>
+          <span class="dn-videos__all-arrow">Към профила<Icon name="arrow-right" size={18} /></span>
           <span class="dn-sr-only">Отваря се в нов раздел</span>
         </a>
       </div>

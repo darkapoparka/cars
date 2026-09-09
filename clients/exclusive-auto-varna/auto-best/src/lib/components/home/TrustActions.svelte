@@ -45,10 +45,10 @@
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
+      title: 'Лизинг по запитване',
       vehicle: 'urus',
       tone: 'black',
-      mobileTitle: 'Собствен лизинг',
+      mobileTitle: 'Лизинг по запитване',
       mobileCta: 'Виж условия',
       description: 'Попитайте за първоначална вноска, срок и условия.',
       bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],

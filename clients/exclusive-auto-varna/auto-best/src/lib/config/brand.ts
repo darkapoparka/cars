@@ -8,27 +8,28 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  logoLight: `/${string}`;
+  logoDark: `/${string}`;
+  sourceUrl: `https://${string}`;
+  youtubeUrl: `https://${string}` | null;
+  instagramUrl: `https://${string}` | null;
+  facebookUrl: `https://${string}` | null;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  "name": "Exclusive Auto",
+  "shortName": "Exclusive Auto",
+  "city": "Варна",
+  "addressLine": "бул. „Цар Освободител“ 176, Възраждане 1",
+  "address": "бул. „Цар Освободител“ 176, Възраждане 1, Варна",
+  "phone": "0895 303 009",
+  "phoneHref": "tel:+359895303009",
+  "appointment": "Работното време не е публикувано. Уточнете посещението по телефона.",
+  "logo": "/brand/logo.png",
+  "logoLight": "/brand/logo-light.png",
+  "logoDark": "/brand/logo-dark.png",
+  "youtubeUrl": null,
+  "instagramUrl": null,
+  "facebookUrl": null,
+  "sourceUrl": "https://exclusiveauto.mobile.bg/"
 } as const satisfies BrandConfig;

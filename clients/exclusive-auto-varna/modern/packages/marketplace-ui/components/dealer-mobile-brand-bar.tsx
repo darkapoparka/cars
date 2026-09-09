@@ -11,7 +11,6 @@ export const DealerMobileBrandBar = ({
   isBg,
   locale,
   tone = "dark",
-  wordmarkTone = "original",
   onNavigate,
 }: {
   readonly isBg: boolean;
@@ -61,33 +60,12 @@ export const DealerMobileBrandBar = ({
           <Image
             alt={leadSite.name}
             className="h-full w-full object-contain"
-            height={512}
+            height={124}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
             src={leadSite.logoPath}
-            style={
-              wordmarkTone === "original"
-                ? undefined
-                : { clipPath: "inset(0 68% 0 0)" }
-            }
-            width={1780}
+            width={336}
           />
-          {wordmarkTone === "original" ? null : (
-            <Image
-              alt=""
-              aria-hidden="true"
-              className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-                wordmarkTone === "light"
-                  ? "brightness-0 invert"
-                  : "brightness-0"
-              )}
-              fill
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={leadSite.logoPath}
-            />
-          )}
         </span>
       </Link>
 

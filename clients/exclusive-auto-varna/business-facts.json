@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "Exclusive Auto",
+  "slug": "exclusive-auto-varna",
+  "city": "Варна",
+  "country": "България",
+  "countryCode": "BG",
+  "addressLine": "бул. „Цар Освободител“ 176, Възраждане 1",
+  "address": "бул. „Цар Освободител“ 176, Възраждане 1, Варна",
+  "phone": "0895 303 009",
+  "phoneRaw": "0895303009",
+  "phoneHref": "tel:+359895303009",
+  "hours": "Работното време не е публикувано. Уточнете посещението по телефона.",
+  "email": null,
+  "currency": "EUR",
+  "locale": "bg-BG",
+  "observedAt": "2026-09-09",
+  "sourceUrl": "https://exclusiveauto.mobile.bg/",
+  "contactSourceUrl": "https://exclusiveauto.mobile.bg/contacts",
+  "matchedSellerUrl": "https://www.cars.bg/company/exclusiv",
+  "publishedSellerName": "Ексклузив Ауто Варна ООД",
+  "sampleCount": 8,
+  "inventoryMeaning": "Подбрани публикувани обяви, не жив поток или независимо проверени наличности.",
+  "socialLinks": {},
+  "excluded": "Обявите за части, Jaguar/Maserati с отбелязано увреждане и класики с неясна реставрация не са използвани. Не се събират бройките от двата портала.",
+  "services": [
+    "Продажба на автомобили",
+    "Запитване за внос по поръчка",
+    "Обсъждане на лизинг и бартер според конкретната обява"
+  ],
+  "approvalStatus": "owner-requested proposal; dealership approval not evidenced"
+}

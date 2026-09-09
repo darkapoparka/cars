@@ -6,11 +6,38 @@
   "createdAt": "2026-09-09",
   "state": "in-progress",
   "selectedHome": "main",
-  "availableHomes": [{"id":"main","route":"/cars"}],
-  "offeredHomes": [{"id":"main","route":"/cars"}],
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
   "publicUrl": null,
-  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
-  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
   "branch": "codex/astra-bg-04",
-  "note": "Actual complete Modern workspace copied. Personalization in progress. No inherited QA and no deployed preview."
+  "implementation": {
+    "independentApplicationSource": true,
+    "fullModernWorkspace": true,
+    "datedStockRecords": 8,
+    "catalogueConnected": true,
+    "localMediaPack": true,
+    "generatedLogo": false
+  },
+  "note": "In progress; not a finished or runtime-verified demo. Auto Best and Modern catalogue adapters use the common source pack. Carwow retains its source adapter; its data connection is still outstanding. Asset-validator adaptation and full runtime/content review remain outstanding."
 }

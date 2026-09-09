@@ -225,7 +225,7 @@ export const DealerBottomNav = ({
               >
                 <DealerUiIcon className="size-5 shrink-0" name="location" />
                 <span className="min-w-0 text-center font-semibold text-[14px] leading-5">
-                  {isBg ? leadSite.city : "Sofia"}
+                  {isBg ? leadSite.city : "Varna"}
                 </span>
               </a>
             </div>

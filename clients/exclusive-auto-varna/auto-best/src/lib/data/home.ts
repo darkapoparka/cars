@@ -40,7 +40,7 @@ export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle 
 export const editorial = [
   {
     title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
+    text: `Публикуваният адрес е в ${brand.city}. Преди посещение уточнете наличността и часа с продавача.`,
     image: '/assets/images/lead/day-night-guide-inspection.webp',
     href: '/contact',
     meta: 'Полезно',
@@ -48,7 +48,7 @@ export const editorial = [
   },
   {
     title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
+    text: 'Поискайте документи и сервизна история и обсъдете независим технически преглед преди решение.',
     image: '/assets/images/lead/day-night-guide-import.webp',
     href: '/blog-detail/1',
     meta: 'Полезно',
@@ -56,7 +56,7 @@ export const editorial = [
   },
   {
     title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
+    text: 'Продавачът публикува възможност за внос по поръчка. Конкретните срокове и условия се уточняват индивидуално.',
     image: '/assets/images/lead/day-night-guide-leasing.webp',
     href: '/blog-detail/2',
     meta: 'Полезно',

@@ -12,6 +12,12 @@
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
+  let activeImages = $state<Record<number, number>>({});
+  const gallery = $derived(data.vehicle.gallery.length ? data.vehicle.gallery : [data.vehicle.image]);
+  const imageIndex = $derived(activeImages[data.vehicle.id] ?? 0);
+  const moveImage = (step: number) => {
+    activeImages[data.vehicle.id] = (imageIndex + step + gallery.length) % gallery.length;
+  };
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const detailTabs = [
@@ -61,7 +67,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Публикувана обява от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -84,13 +90,20 @@
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
                 <img
-                  src={data.vehicle.image}
-                  alt={data.vehicle.title}
+                  src={gallery[imageIndex]}
+                  alt={`${data.vehicle.title} — снимка ${imageIndex + 1}`}
                   width="1245"
                   height="988"
                   fetchpriority="high"
                   decoding="async"
                 />
+                {#if gallery.length > 1}
+                  <div class="exclusive-gallery-controls" aria-label="Снимки на избрания автомобил">
+                    <button type="button" onclick={() => moveImage(-1)} aria-label="Предишна снимка">←</button>
+                    <span aria-live="polite">{imageIndex + 1} / {gallery.length}</span>
+                    <button type="button" onclick={() => moveImage(1)} aria-label="Следваща снимка">→</button>
+                  </div>
+                {/if}
               </figure>
             </div>
 
@@ -130,9 +143,9 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
-                    екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
+                    {data.vehicle.description}
                   </p>
+                  <a href={data.vehicle.evidenceUrl} target="_blank" rel="noopener noreferrer">Източник на обявата · извадка 09.09.2026</a>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
                     <Icon name="message" size={22} strokeWidth={1.7} />
                     Поискайте информация
@@ -162,7 +175,7 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
-              <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
+              <p class="dn-detail-summary__availability">{data.vehicle.priceNote} Наличността се потвърждава от продавача.</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
                 <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
@@ -217,3 +230,9 @@
       </div>
     </section>
 </div>
+
+<style>
+  .exclusive-gallery-controls { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 8px; background: var(--dn-surface, #fff); }
+  .exclusive-gallery-controls button { min-height: 44px; min-width: 44px; border: 1px solid currentColor; border-radius: 8px; background: transparent; cursor: pointer; }
+  .exclusive-gallery-controls button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+</style>

@@ -14,7 +14,7 @@
 
 <svelte:head>
   <title>{brand.name} — Премиум автомобили в {brand.city}</title>
-  <meta name="description" content={`Премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
+  <meta name="description" content={`Премиум автомобили, внос и лизинг по запитване в ${brand.city}.`} />
 </svelte:head>
 
 <div class="dn-home-page">
