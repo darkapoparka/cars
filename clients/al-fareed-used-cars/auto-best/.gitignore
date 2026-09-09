@@ -1,0 +1,32 @@
+node_modules/
+.svelte-kit/
+build/
+.vercel/
+vite.config.*.timestamp-*
+static/generated/
+
+# Local secrets and machine-specific environment overrides
+.env
+.env.*
+!.env.example
+
+# Generated verification and coverage evidence
+/artifacts/
+/playwright-report/
+/test-results/
+/coverage/
+/.impeccable/
+*.tsbuildinfo
+
+# Agency OS identity is source; local QA captures are not
+.agency-os/*
+!.agency-os/project.json
+
+# Local runtime and malformed browser-probe output
+*.log
+/document.documentElement.clientWidth*
+/innerWidth
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
