@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "clientSlug": "five-auto",
+  "clientName": "FIVE AUTO",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "status": "in-progress",
+  "entry": "/cars",
+  "personalized": false,
+  "implementation": {
+    "masterCopied": true,
+    "localMediaFiles": 32,
+    "catalogueConnected": false,
+    "brandConsumersConnected": false
+  },
+  "verification": {
+    "install": false,
+    "typecheck": false,
+    "build": false,
+    "browser": false,
+    "ownerReview": "pending"
+  },
+  "note": "Independent actual master copy with locally bundled original dealer logo and 24 matched listing photographs. Source data personalization is unfinished; not a completed dealer demo."
+}

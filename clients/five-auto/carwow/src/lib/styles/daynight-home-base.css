@@ -1,0 +1,90 @@
+/* Home baseline: preserve the original home typography while limiting these defaults to the active home route. The shared SiteChrome header owns its own typography and is excluded. Route styles stay loaded after client navigation, so this reset must never target other pages. */
+:where(body.daynight-home-page) *:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--sa-font, ui-sans-serif, system-ui, sans-serif);
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
+	color: #1c1c1c;
+	font-style: normal;
+	font-optical-sizing: auto;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Heading + image element defaults from the legacy app.css baseline. Several home
+   headings (e.g. the reviews "Отзиви от клиенти" h2) set only `color` in the
+   component stylesheet and inherited their size/line-height/weight from app.css's
+   element rules — without these they collapse to the `*` 16px/26px/400 baseline.
+   Component class rules (higher specificity) still win where they set their own
+   values, exactly as with app.css. */
+:where(body.daynight-home-page) img:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	max-width: 100%;
+	height: auto;
+}
+
+:where(body.daynight-home-page) .h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h7:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-weight: 600;
+}
+
+:where(body.daynight-home-page) h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 68px;
+	line-height: 76px;
+}
+
+:where(body.daynight-home-page) h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 40px;
+	line-height: 48px;
+}
+
+:where(body.daynight-home-page) h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 32px;
+	line-height: 1.25;
+}
+
+:where(body.daynight-home-page) h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 24px;
+	line-height: 1.333;
+}
+
+:where(body.daynight-home-page) h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+:where(body.daynight-home-page) h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page) .h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 20px;
+	line-height: 1.6;
+}
+
+:where(body.daynight-home-page) .h7:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: 18px;
+	line-height: 1.44;
+}
+
+/* #wrapper is the desktop home shell's inner container (DesktopHome.svelte) — it
+   only exists on >=992px, so this is a no-op on phones. app.css gave it
+   overflow:hidden to contain the absolutely-positioned hero cutouts and stop
+   horizontal scroll. */
+:where(body.daynight-home-page) #wrapper:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	overflow: hidden !important;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
