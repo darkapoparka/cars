@@ -1,159 +1,32 @@
-// Typed FAQ data for the native /faq route. The questions and answers are the
-// exact localized strings the template pipeline produced from faqs.html (verified
-// 2026-06-14 against the rendered /faq DOM), grouped into the same three sections
-// the baseline renders. FaqContent.svelte renders these keyed so the native
-// accordion is 1:1 with the committed visual baseline.
+import { dealer } from './dealer';
 
-export type FaqAnswerParagraph = {
-	/** Verbatim class string from the baseline DOM (first paragraph carries mb-8). */
-	readonly class: string;
-	readonly text: string;
-};
-
-export type FaqItem = {
-	readonly id: string;
-	readonly question: string;
-	/**
-	 * Verbatim base class string of the `.flat-toggle` wrapper in the baseline
-	 * (some items carry `bg-white`, some don't). The open/active state is layered
-	 * on top of this by the native accordion — never baked into this string.
-	 */
-	readonly toggleClass: string;
-	readonly answer: readonly FaqAnswerParagraph[];
-};
-
-export type FaqGroup = {
-	readonly id: string;
-	/** Verbatim class string of the group's `.container` wrapper. */
-	readonly containerClass: string;
-	/** Verbatim class string of the group heading `<p class="h3 ...">`. */
-	readonly headingClass: string;
-	readonly heading: string;
-	readonly items: readonly FaqItem[];
-};
-
-const stepsAnswer: readonly FaqAnswerParagraph[] = [
-	{
-		class: 'mb-8 h7 text-secondary line-height-28',
-		text: 'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
-	},
-	{
-		class: 'h7 text-secondary line-height-28',
-		text: 'Подгответе лична карта и нужните документи. След като се договорим за условията, оформяме документите, правите оглед на автомобила и финализираме сделката.'
-	}
+export type FaqAnswerParagraph={readonly class:string;readonly text:string};
+export type FaqItem={readonly id:string;readonly question:string;readonly toggleClass:string;readonly answer:readonly FaqAnswerParagraph[]};
+export type FaqGroup={readonly id:string;readonly containerClass:string;readonly headingClass:string;readonly heading:string;readonly items:readonly FaqItem[]};
+const paragraph=(text:string):readonly FaqAnswerParagraph[]=>[{class:'h7 text-secondary line-height-28',text}];
+const stepsAnswer:readonly FaqAnswerParagraph[]=[
+  {class:'mb-8 h7 text-secondary line-height-28',text:`Изберете обява и се свържете с ${dealer.name} на ${dealer.phone}. Потвърдете наличността, цената и удобния час за оглед.`},
+  {class:'h7 text-secondary line-height-28',text:'Прегледайте автомобила и документите и уточнете условията с продавача. Каталогът не е договор, резервация или доказателство за извършена проверка.'}
 ];
-
-const exploreAnswer: readonly FaqAnswerParagraph[] = [
-	{
-		class: 'h7 text-secondary line-height-28',
-		text: 'Изберете автомобил от наличността онлайн или на място в София, запишете оглед и тест драйв, след което уточняваме финансиране, бартер или лизинг с екипа на Day Night Auto.'
-	}
-];
-
-const termsAnswer: readonly FaqAnswerParagraph[] = [
-	{
-		class: 'h7 text-secondary line-height-28',
-		text: 'Условията зависят от конкретния автомобил и избраната схема. Свържете се с екипа на Day Night Auto за актуална информация, оценка на замяна и съдействие по документите.'
-	}
-];
-
-export const daynightFaqGroups: readonly FaqGroup[] = [
-	{
-		id: 'how-to-buy',
-		containerClass: 'container mb-60',
-		headingClass: 'h3 mb-20 text-center capitalize',
-		heading: 'Как протича покупката?',
-		items: [
-			{
-				// Base classes only — the initial open `active` state is applied by the
-				// native accordion (openId defaults to this item), never baked in here.
-				id: 'steps',
-				question: 'Какви са стъпките за покупка?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: stepsAnswer
-			},
-			{
-				id: 'financing-documents',
-				question: 'Какви документи трябват за финансиране?',
-				toggleClass: 'flat-toggle',
-				answer: exploreAnswer
-			},
-			{
-				id: 'reserve',
-				question: 'Може ли автомобил да бъде запазен?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			},
-			{
-				id: 'payment-methods',
-				question: 'Какви варианти за плащане има?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			},
-			{
-				id: 'test-drive',
-				question: 'Как се организира оглед или тест?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			}
-		]
-	},
-	{
-		id: 'exchanges',
-		containerClass: 'container mb-60',
-		headingClass: 'h3 mb-20 text-center capitalize',
-		heading: 'Бартер и замяна',
-		items: [
-			{
-				id: 'trade-in-accepted',
-				question: 'Приемате ли стария ми автомобил като бартер?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: stepsAnswer
-			},
-			{
-				id: 'trade-in-valuation',
-				question: 'Как се оценява автомобил за замяна?',
-				toggleClass: 'flat-toggle',
-				answer: exploreAnswer
-			},
-			{
-				id: 'trade-in-topup',
-				question: 'Мога ли да доплатя разликата при замяна?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			},
-			{
-				id: 'trade-in-documents',
-				question: 'Какви документи са нужни за бартер?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			}
-		]
-	},
-	{
-		id: 'refund',
-		containerClass: 'container',
-		headingClass: 'h3 mb-18 text-center capitalize',
-		heading: 'Гаранция и доставка',
-		items: [
-			{
-				id: 'warranty',
-				question: 'Има ли гаранция за автомобилите?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: stepsAnswer
-			},
-			{
-				id: 'history-check',
-				question: 'Проверявате ли историята на автомобила?',
-				toggleClass: 'flat-toggle',
-				answer: exploreAnswer
-			},
-			{
-				id: 'delivery',
-				question: 'Предлагате ли доставка до друг град?',
-				toggleClass: 'flat-toggle bg-white',
-				answer: termsAnswer
-			}
-		]
-	}
+const termsAnswer=paragraph('Конкретната възможност и всички условия трябва да бъдат потвърдени от продавача. Демонстрацията не обещава финансиране, бартер, доставка, гаранция или запазване на автомобил.');
+const item=(id:string,question:string,answer:readonly FaqAnswerParagraph[]=termsAnswer,toggleClass='flat-toggle bg-white'):FaqItem=>({id,question,toggleClass,answer});
+export const daynightFaqGroups:readonly FaqGroup[]=[
+  {id:'how-to-buy',containerClass:'container mb-60',headingClass:'h3 mb-20 text-center capitalize',heading:'Покупка и оглед',items:[
+    item('steps','Какви са стъпките за покупка?',stepsAnswer),
+    item('financing-documents','Къде да попитам за начините на плащане?',paragraph('Обсъдете плащането с продавача. Няма потвърдени лизингови условия, лихви или доставчик в тази демонстрация.'),'flat-toggle'),
+    item('reserve','Може ли автомобил да бъде запазен?'),
+    item('payment-methods','Какви варианти за плащане има?'),
+    item('test-drive','Как се организира оглед или тест?',paragraph(`Обадете се на ${dealer.phone} за конкретния автомобил. Уточнете адреса, часа и условията за оглед или пробно шофиране.`))
+  ]},
+  {id:'exchanges',containerClass:'container mb-60',headingClass:'h3 mb-20 text-center capitalize',heading:'Вашият автомобил',items:[
+    item('trade-in-accepted','Разглеждате ли предложения за бартер?'),
+    item('trade-in-valuation','Какво да подготвя при въпрос за оценка?',paragraph('Подгответе марка, модел, година, обявен пробег, състояние и снимки. Попитайте дали автокъщата предлага оценка.'),'flat-toggle'),
+    item('trade-in-topup','Мога ли да доплатя разликата при замяна?'),
+    item('trade-in-documents','Къде да уточня документите за замяна?')
+  ]},
+  {id:'refund',containerClass:'container',headingClass:'h3 mb-18 text-center capitalize',heading:'Проверка и условия',items:[
+    item('warranty','Има ли гаранция за конкретния автомобил?'),
+    item('history-check','Потвърдена ли е историята на автомобила?',paragraph('Историята и състоянието не са независимо проверени от този демо каталог. Уточнете наличните документи и възможността за независим преглед.'),'flat-toggle'),
+    item('delivery','Предлага ли се доставка до друг град?')
+  ]}
 ];

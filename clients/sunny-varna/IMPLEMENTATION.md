@@ -1,0 +1,7 @@
+# СЪНИ implementation checkpoint
+
+2026-09-09. Three complete independent application source trees are committed, not a generator or disconnected fact sheet. Template source commit: faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Core identity, eight-record catalogue, contact/map data and local custom concept branding are integrated. Modern's original split-logo mask was removed in its actual mobile brand component, retaining its navigation layout; demo metadata is noindex.
+
+Further client-local content work replaces Auto Best's hero location, navigation/service topics and discovery/editorial data; Carwow's FAQ, team-topic data, legacy dealer/agent data and video source list no longer reuse Day & Night's company/staff/service claims. Empty numerical review/sales fields are unknown-state sentinels, not measured ratings or transactions; presentation still requires local review.
+
+Status remains **in-progress**, not verified or fully personalized. Important remaining gaps: permitted real vehicle photos/galleries are not bundled; generic source routes and supporting copy have not received a complete stale-identity sweep. Source video UI may require its missing-content presentation, and some legacy details may still render sample values. Do not call this a finished dealer skin. The owner will run runtime/build/browser tests locally; those checks have not run here. No deployment, outreach or Windows changes.
