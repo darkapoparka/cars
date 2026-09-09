@@ -162,18 +162,18 @@ const vehicleSuggestions = leadSite.staticDemoMode
 
 const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
   {
-    descriptionBg: "Проверен дилър · София",
-    descriptionEn: "Verified dealer · Sofia",
+    descriptionBg: "Проверен дилър · Варна",
+    descriptionEn: "Verified dealer · Varna",
     id: "sofia-premium-cars",
     keywords: "sofia premium cars dealer дилър софия bmw audi",
     kind: "dealer",
-    label: "Sofia Premium Cars",
+    label: "Varna Premium Cars",
     popular: true,
-    value: "Sofia Premium Cars",
+    value: "Varna Premium Cars",
   },
   {
-    descriptionBg: "Вносител от Китай · София",
-    descriptionEn: "Importer from China · Sofia",
+    descriptionBg: "Вносител от Китай · Варна",
+    descriptionEn: "Importer from China · Varna",
     id: "china-ev-import",
     keywords: "china ev import importer китай вносител софия byd geely",
     kind: "dealer",
@@ -201,14 +201,14 @@ const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Black Sea EV",
   },
   {
-    descriptionBg: "Дилъри и вносители в София",
-    descriptionEn: "Dealers and importers in Sofia",
+    descriptionBg: "Дилъри и вносители в Варна",
+    descriptionEn: "Dealers and importers in Varna",
     id: "sofia-organizations",
     keywords: "sofia city софия дилъри вносители",
     kind: "location",
-    label: "София",
+    label: "Варна",
     popular: true,
-    value: "София",
+    value: "Варна",
   },
   {
     descriptionBg: "Дилъри и вносители във Варна",

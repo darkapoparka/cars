@@ -19,39 +19,34 @@ export interface LeadSiteConfig {
   readonly phoneHref: string;
   readonly shortName: string;
   readonly slug: string;
-  readonly socialLinks?: Partial<
-    Record<"youtube" | "instagram" | "facebook" | "tiktok", string>
-  >;
+  readonly socialLinks?: Partial<Record<"youtube" | "instagram" | "facebook" | "tiktok", string>>;
   readonly staticDemoMode: boolean;
   readonly tagline: string;
 }
 
-// LEAD_SITE_CONFIG_START
+const address = "ул. „Сребърна“ 6, Промишлена зона Север, Бургас";
+const mapQuery = encodeURIComponent(address);
+
 export const leadSite: LeadSiteConfig = {
-  accent: "#c40101",
-  address: "ул. „Атанас Манчев“ 18, Студентски град",
-  city: "София",
-  contactUrl: "tel:+359877733110",
+  accent: "#2d2d2d",
+  address,
+  city: "Бургас",
+  contactUrl: "tel:+359887555255",
   country: "България",
   countryCode: "BG",
-  currency: "BGN",
+  currency: "EUR",
   email: "",
-  heroPath: "/lead-hero.jpg",
+  heroPath: "/inventory/11788534934699972-1.webp",
   locale: "bg-BG",
-  logoPath: '/brand/logo.png',
-  mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7302.453092836291!2d23.3443286!3d42.649331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1627293157601!5m2!1sen!2s",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-  name: "Day & Night Auto Group",
-  phoneDisplay: "0877 733 110",
-  phoneHref: "tel:+359877733110",
-  shortName: "Day & Night",
-  slug: "day-night-auto-group",
-  socialLinks: {
-    instagram: "https://www.instagram.com/dayandnight_autogroup/",
-  },
+  logoPath: "/brand/logo.png",
+  mapsEmbedUrl: `https://www.google.com/maps?q=${mapQuery}&z=16&output=embed`,
+  mapsUrl: `https://www.google.com/maps/search/?api=1&query=${mapQuery}`,
+  name: "FIVE AUTO",
+  phoneDisplay: "0887 555 255",
+  phoneHref: "tel:+359887555255",
+  shortName: "FIVE AUTO",
+  slug: "five-auto",
+  socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в София.",
+  tagline: "Подбрани публикувани автомобили в Бургас. Потвърдете наличност, цена и условия преди оглед."
 };
-// LEAD_SITE_CONFIG_END

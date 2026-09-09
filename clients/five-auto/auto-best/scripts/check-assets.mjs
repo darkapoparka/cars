@@ -5,11 +5,11 @@ import process from 'node:process';
 const root = process.cwd();
 const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
-const guardedMediaCount = 98;
-const retainedSourceAssets = new Set(['/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp']);
-const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
+const guardedMediaCount = 108;
+const retainedSourceAssets = new Set(["/brand/logo-dark.svg", "/brand/logo-light.svg", "/brand/logo.png", "/brand/logo.svg", "/brand/social-card.png"]); // Intentional brand/metadata exports; no inherited dealer media.
+const sourceExtension = /\.(?:css|html|js|svelte|ts|json)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
-const publicAssetReference = /\/(?:assets\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico)/gi;
+const publicAssetReference = /\/(?:assets|brand|inventory)\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|\/(?:favicon\.ico|apple-touch-icon\.png|icon-(?:192|512)\.png)/gi;
 const legacyRuntimeNames = [
   'best-home.css',
   'best-home.js',
@@ -34,7 +34,8 @@ const walk = async (directory, predicate) => {
 };
 
 const toPublicPath = (absolute) => `/${path.relative(staticRoot, absolute).split(path.sep).join('/')}`;
-const sourceFiles = await walk(sourceRoot, (name) => sourceExtension.test(name));
+const sourceFiles = [...await walk(sourceRoot, (name) => sourceExtension.test(name)), path.join(staticRoot, 'site.webmanifest')];
+JSON.parse(await readFile(path.join(staticRoot, 'site.webmanifest'), 'utf8'));
 const allStaticFiles = await walk(staticRoot, () => true);
 const guardedMediaFiles = allStaticFiles.filter((file) => mediaExtension.test(file));
 const referencedAssets = new Set();
@@ -64,7 +65,7 @@ for (const publicPath of allStaticAssets) {
 
   if (legacyName) errors.push(`Retired runtime asset exists in static/: ${publicPath}`);
   if (legacyDirectory) errors.push(`Retired runtime directory exists in static/: ${publicPath}`);
-  if (!mediaExtension.test(publicPath)) {
+  if (!mediaExtension.test(publicPath) && publicPath !== '/site.webmanifest') {
     errors.push(`Unexpected unguarded static file: ${publicPath}`);
   }
 }

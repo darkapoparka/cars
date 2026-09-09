@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'Варна, Варна, бул. Цар Освободител 176, Възраждане 1, Варна';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="Exclusive Auto map"
 					></iframe>
 				</div>
 			</div>

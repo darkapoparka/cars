@@ -78,7 +78,7 @@
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на Day Night Auto.',
+				'Получете обратна връзка от екипа на Exclusive Auto.',
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -113,6 +113,11 @@
 		>
 			<div class="daynight-home-review-grid">
 				<div class="daynight-home-review-grid__items">
+ {#if !reviews.length}
+  <div class="daynight-home-review-grid__item"><a href={resolve('/reviews')} class="daynight-home-review-card"><p class="daynight-home-review-card__description">Клиентски мнения не са предоставени за тази демонстрация.</p><p class="daynight-home-review-card__name">Без измислени оценки</p></a></div>
+  <div class="daynight-home-review-grid__item"><a href={resolve('/inventory')} class="daynight-home-review-card"><p class="daynight-home-review-card__description">Автомобилите са представени с източник, цена и снимки от съответната обява.</p><p class="daynight-home-review-card__name">Проверете обявата</p></a></div>
+  <div class="daynight-home-review-grid__item"><a href={resolve('/contact')} class="daynight-home-review-card"><p class="daynight-home-review-card__description">Потвърдете наличността, състоянието и условията преди посещение.</p><p class="daynight-home-review-card__name">Попитайте продавача</p></a></div>
+ {/if}
 					{#each reviews as review (review.id)}
 						<div class="daynight-home-review-grid__item">
 							<a href={resolve('/reviews')} class="daynight-home-review-card">

@@ -63,13 +63,14 @@
 
     {#if topic.id !== 'trade-in' && topic.id !== 'import'}
     <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
-      <span>Социални мрежи</span>
+      <span>Профил на продавача</span>
       <div>
-        {#each socialPlatforms as platform (platform.name)}
+        {#each socialPlatforms.filter(item => item.href) as platform (platform.name)}
           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
             <SocialBrandIcon name={platform.name} />
           </a>
         {/each}
+        <a href={brand.sourceUrl} target="_blank" rel="noopener noreferrer">Mobile.bg</a>
       </div>
     </div>
     {/if}
@@ -91,7 +92,7 @@
     {#if topic.id === 'general'}
       <div class="dn-contact-visit">
         <p><Icon name="map-pin" size={24} /><span>{brand.address}</span></p>
-        <p><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
+        <p><Icon name="clock" size={24} /><span>{brand.appointment}</span></p>
         <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Маршрут<Icon name="arrow-right" size={20} /></a>
       </div>
     {/if}

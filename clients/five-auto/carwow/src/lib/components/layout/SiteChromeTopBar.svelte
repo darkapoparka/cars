@@ -11,7 +11,7 @@
 		onLanguageToggle: () => void;
 	} = $props();
 
-	const locationShort = 'Студентски град, София';
+	const locationShort = 'Възраждане 1, Варна';
 
 	const socialLinkBase =
 		'site-chrome-topbar__social-link inline-grid size-9 place-items-center text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-sa-surface/70 [&_img]:size-[22px] [&_svg]:size-[22px]';
@@ -51,30 +51,7 @@
 			</a>
 		</div>
 		<div class="flex shrink-0 items-center gap-2.5">
-			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
-				<li>
-					<a
-						href="https://www.facebook.com/61566304063141/"
-						aria-label="Facebook"
-						target="_blank"
-						rel="noopener"
-						class={`${socialLinkBase} site-chrome-topbar__social-link--facebook`}
-					>
-						<SiteChromeIcon name="facebook" />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
-						aria-label="Instagram"
-						target="_blank"
-						rel="noopener"
-						class={`${socialLinkBase} site-chrome-topbar__social-link--instagram`}
-					>
-						<SiteChromeIcon name="instagram" />
-					</a>
-				</li>
-			</ul>
+			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Публичен профил"><li><a href={daynightSite.sourceInventory} title="Обяви в Mobile.bg" aria-label="Обяви в Mobile.bg" target="_blank" rel="noopener noreferrer" class={socialLinkBase}><SiteChromeIcon name="search" /></a></li></ul>
 			<div class="relative border-l border-sa-surface/25 pl-3" id="language-select">
 				<button
 					class="site-chrome-topbar__language inline-flex h-8 min-w-0 cursor-pointer items-center justify-center gap-1 border-0 bg-transparent px-1 leading-none text-sa-surface transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_span]:text-white [&_svg]:size-3.5 [&_svg_path]:stroke-current"

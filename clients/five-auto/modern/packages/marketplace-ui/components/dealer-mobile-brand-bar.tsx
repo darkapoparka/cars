@@ -23,6 +23,8 @@ export const DealerMobileBrandBar = ({
   const light = tone === "light";
   const clean = tone === "clean";
   const logoWidthClassName = "w-[144px] max-w-[48vw]";
+  const useLightWordmark =
+    wordmarkTone === "light" || (wordmarkTone === "original" && tone === "dark");
 
   return (
     <div
@@ -50,44 +52,21 @@ export const DealerMobileBrandBar = ({
         aria-label={isBg ? "Начало" : "Home"}
         className={cn(
           "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2",
-          light && "h-10 bg-black px-2.5"
+          light && "h-10 px-2.5"
         )}
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
       >
-        <span
-          className={cn("relative block aspect-[1780/512]", logoWidthClassName)}
-        >
+        <span className={cn("relative block aspect-[960/280]", logoWidthClassName)}>
           <Image
             alt={leadSite.name}
             className="h-full w-full object-contain"
-            height={512}
+            height={280}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            style={
-              wordmarkTone === "original"
-                ? undefined
-                : { clipPath: "inset(0 68% 0 0)" }
-            }
-            width={1780}
+            src={useLightWordmark ? "/brand/logo-light.png" : "/brand/logo-dark.png"}
+            width={960}
           />
-          {wordmarkTone === "original" ? null : (
-            <Image
-              alt=""
-              aria-hidden="true"
-              className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-                wordmarkTone === "light"
-                  ? "brightness-0 invert"
-                  : "brightness-0"
-              )}
-              fill
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={leadSite.logoPath}
-            />
-          )}
         </span>
       </Link>
 

@@ -30,7 +30,7 @@
 			copy: 'Изберете автомобил и уговорете удобно посещение.',
 			cta: 'Запазете оглед',
 			href: '/contact',
-			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
+			image: '/assets/images/home-promos/finance-documents-cutout-v5.webp'
 		},
 		{
 			id: 'financing',
@@ -55,25 +55,25 @@
 		{
 			id: 'stock',
 			value: String(daynightVehicles.length),
-			label: 'Налични автомобила',
+			label: 'автомобила в извадката',
 			hasDivider: true
 		},
 		{
 			id: 'brands',
 			value: String(new Set(daynightVehicles.map((vehicle) => vehicle.brand)).size),
-			label: 'марки в наличност',
+			label: 'марки в извадката',
 			hasDivider: true
 		},
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в София',
+			label: 'локация в Варна',
 			hasDivider: true
 		},
 		{
 			id: 'contact',
-			value: '4',
-			label: 'директни канала за контакт'
+			value: '1',
+			label: 'публикуван телефон за контакт'
 		}
 	] as const;
 </script>
@@ -117,7 +117,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
+							'/assets/images/home-promos/finance-documents-cutout-v5.webp',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}

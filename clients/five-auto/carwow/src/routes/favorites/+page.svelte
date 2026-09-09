@@ -14,8 +14,8 @@
 </script>
 
 <RouteSeo
-	title="Запазени автомобили · Day Night Auto"
-	description="Запазени автомобили от наличността на Day Night Auto София."
+	title="Запазени автомобили · Exclusive Auto"
+	description="Запазени автомобили от наличността на Exclusive Auto Варна."
 />
 
 {#if showDesktopShell}

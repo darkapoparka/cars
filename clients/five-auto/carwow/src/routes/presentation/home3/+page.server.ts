@@ -88,7 +88,7 @@ function pickFeaturedCars() {
 		image: fallbackFeatureImages[index] ?? car.image,
 		cash: index === 0 ? '£41,990' : index === 1 ? '£53,990' : '£69,990',
 		lease: index === 0 ? '£499 / month' : index === 1 ? '£599 / month' : '£779 / month',
-		badge: 'DayNight inspected'
+		badge: 'Listing sample'
 	}));
 }
 

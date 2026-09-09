@@ -16,7 +16,7 @@ export const load: PageServerLoad = async ({ params, locals }) => {
 		article,
 		articles,
 		seo: {
-			title: `${article.title} | Day Night Auto`,
+			title: `${article.title} | Exclusive Auto`,
 			description: article.description
 		}
 	};

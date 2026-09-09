@@ -11,7 +11,7 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 
 	const benefits = [
 		{
@@ -37,7 +37,7 @@
 	const steps = [
 		'Изпращаш запитване с автомобил и месечен бюджет.',
 		'Получаваш ориентировъчна вноска и условия.',
-		'Оглед в София и финализиране с екипа.'
+		'Оглед в Варна и финализиране с екипа.'
 	] as const;
 
 	const faqs = [
@@ -61,17 +61,17 @@
 	] as const;
 </script>
 
-<div class="mobile-financing-app" aria-label="Финансиране от Day Night Auto">
+<div class="mobile-financing-app" aria-label="Финансиране от Exclusive Auto">
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
-			src={resolve('/assets/images/pages/daynight-services-consultation-v1.webp')}
+			src={resolve('/assets/images/home-promos/finance-documents-cutout-v5.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<div class="mobile-financing-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+			<a href={resolve('/')} aria-label="Exclusive Auto начало">
+				<img src={resolve('/brand/logo.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -81,7 +81,7 @@
 		<div class="mobile-financing-hero__copy">
 			<span>Финансиране</span>
 			<h1>Финансиране и разсрочено плащане</h1>
-			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в София.</p>
+			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в Варна.</p>
 		</div>
 
 		<div class="mobile-financing-actions">

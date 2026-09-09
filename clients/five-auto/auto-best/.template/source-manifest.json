@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "key": "auto-best",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "sourcePath": "templates/auto-best",
+  "destination": "clients/exclusive-auto-varna/auto-best",
+  "copiedAt": "2026-09-09",
+  "method": "Independent retained Git blobs; source tree reused with explicit exclusions and fresh client metadata, not a symlink.",
+  "retainedSourceFiles": 233,
+  "exclusions": [".template", "AGENTS.md"],
+  "sourceQaInherited": false
+}

@@ -193,7 +193,7 @@ async function buildPostWrite(
 		cover_url: input.coverUrl || null,
 		category: input.category || null,
 		tags: splitTags(input.tags),
-		author: input.author || 'Day Night Auto',
+		author: input.author || 'Exclusive Auto',
 		read_minutes: input.readMinutes,
 		status: input.status,
 		published_at: publishedAt
@@ -238,7 +238,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		category,
 		kind: postKind(post.type),
 		date: (post.published_at ?? post.updated_at ?? post.created_at).slice(0, 10),
-		author: post.author || 'Day Night Auto',
+		author: post.author || 'Exclusive Auto',
 		image: post.cover_url || fallbackPostImage,
 		readMinutes:
 			post.read_minutes ||

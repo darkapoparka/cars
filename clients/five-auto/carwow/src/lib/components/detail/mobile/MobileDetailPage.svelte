@@ -27,7 +27,7 @@
 		detailDrawerOpen = true;
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
 	let activePhoto = $state(0);
 	const photos = $derived(vehicle.gallery.length > 0 ? vehicle.gallery : [vehicle.image]);
@@ -405,12 +405,12 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Day Night Auto предлага</strong>
+					<strong>Exclusive Auto предлага</strong>
 					<ul class="mobile-detail-sheet__offer-list">
 						<li>Финансиране и лизинг</li>
 						<li>Бартер и замяна</li>
 						<li>Съдействие с документите</li>
-						<li>Оглед в София</li>
+						<li>Оглед в Варна</li>
 					</ul>
 				</div>
 

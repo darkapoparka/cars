@@ -6,23 +6,10 @@
   "templateVersion": "2026.09.08-repair-1",
   "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
   "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
-  "status": "in-progress",
+  "status": "implemented-unverified",
   "entry": "/",
-  "personalized": false,
-  "implementation": {
-    "masterCopied": true,
-    "localMediaFiles": 32,
-    "catalogueConnected": false,
-    "brandConsumersConnected": false,
-    "logoConfigConnected": true
-  },
-  "verification": {
-    "install": false,
-    "typecheck": false,
-    "build": false,
-    "browser": false,
-    "ownerReview": "pending",
-    "logoConfigSyntaxErrors": 0
-  },
-  "note": "Independent full master copy with 32 local brand/photo files and its central logo config connected to the original FIVE AUTO wordmark. The business and catalogue content sweep is unfinished, as are consumer-level visual inspection and all application runtime checks. Not a completed demo."
+  "personalized": true,
+  "implementation": {"masterCopied":true,"localMediaFiles":32,"catalogueConnected":true,"brandConsumersConnected":true,"logoConfigConnected":true,"commonDealerPack":true},
+  "verification": {"install":false,"typecheck":false,"build":false,"browser":false,"ownerReview":"pending","sourceDataChecks":"pending"},
+  "note": "Dealer facts, eight-record sourced catalogue, local FIVE AUTO logo and 24 matched stock photographs are connected. Runtime/browser QA is still pending; no financing approval or customer delivery is simulated."
 }

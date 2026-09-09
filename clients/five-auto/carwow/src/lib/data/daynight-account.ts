@@ -1,7 +1,7 @@
 export const daynightAccount = {
 	title: 'Моят профил',
 	subtitle:
-		'Управлявайте запитвания, запазени автомобили и заявки за продажба или бартер към Day Night Auto.',
+		'Управлявайте запитвания, запазени автомобили и заявки за продажба или бартер към Exclusive Auto.',
 	listingsTitle: 'Моите автомобили',
 	newListingCta: 'Нова заявка за продажба',
 	messagesTitle: 'Запитвания',

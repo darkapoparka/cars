@@ -11,7 +11,7 @@
 
 <svelte:head>
   <title>За нас — {brand.name}</title>
-  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, собствен лизинг, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
+  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, лизинг по запитване, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
 </svelte:head>
 
 <AboutHero />

@@ -59,7 +59,7 @@
 			.filter((field) => field.value);
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
 	const quickContext = $derived(
 		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
@@ -293,7 +293,7 @@
 					title="Защо Day Night"
 					description="Кристиян и екипът Ви дават ясен следващ вариант."
 					label="Виж предимствата"
-					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
+					image="/assets/images/home-promos/finance-documents-cutout-v5.webp"
 					tone="yellow"
 					portrait
 					onclick={() => openInfo('benefits')}
@@ -470,7 +470,7 @@
 						src={resolve(
 							activeInfo === 'process'
 								? '/assets/images/sell/process-disclosure-list-v1.webp'
-								: '/assets/images/sell/kristian-trust-disclosure-list-v1.webp'
+								: '/assets/images/home-promos/finance-documents-cutout-v5.webp'
 						)}
 						alt=""
 						aria-hidden="true"

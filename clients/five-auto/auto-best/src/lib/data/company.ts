@@ -74,7 +74,7 @@ export const companyServices: CompanyService[] = [
   {
     index: '03',
     icon: 'leasing',
-    title: 'Собствен лизинг',
+    title: 'Лизинг по запитване',
     description: 'Условия според избрания автомобил.',
     href: '/contact?topic=leasing',
     cta: 'Обсъдете лизинг'
@@ -112,7 +112,7 @@ export const contactTopics: ContactTopic[] = [
   {
     id: 'leasing',
     label: 'Лизинг',
-    title: 'Собствен лизинг',
+    title: 'Лизинг по запитване',
     description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
   },
   {
@@ -126,8 +126,3 @@ export const contactTopics: ContactTopic[] = [
 
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
-
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
