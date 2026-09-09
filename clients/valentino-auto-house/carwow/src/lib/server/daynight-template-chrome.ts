@@ -90,7 +90,7 @@ const footerLinkGroups: readonly FooterLinkGroup[] = [
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ label: 'Налични автомобили', href: '/inventory' },
+			{ label: 'Обяви за автомобили', href: '/inventory' },
 			{ label: 'Финансиране', href: '/financing' },
 			{ label: 'Калкулатор', href: '/calculator' },
 			{ label: 'Продай или замени', href: '/sell-your-car' },

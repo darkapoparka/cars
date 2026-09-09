@@ -1,3 +1,11 @@
+# VALENTINO AUTO HOUSE — implemented source handoff
+
+Current status (2026-09-09): **implemented-unverified**, three independent template applications. This current section supersedes the historical pre-copy checkpoint below. Source content and local assets are integrated, including the full Modern workspace. Owner review, media clearance, framework builds and browser QA remain pending.
+
+Entries: Auto Best `/`; Modern `/cars`; Carwow `/`. See `REVIEW.md`. Eight dated representative advertisements drive all three variants. Physical availability is unconfirmed. No live dealership delivery, deployment or CRM integration.
+
+## Historical research record retained verbatim
+
 # VALENTINO AUTO HOUSE — session 07 checkpoint
 
 Status: **blocked**. Observed: **2026-09-09**. This is a sourced research checkpoint, **not an implemented application or a completed demo**. No Auto Best, Modern or Carwow application was created. Owner review remains pending.

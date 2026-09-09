@@ -89,7 +89,7 @@ const defaultVehicleSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Електрически SUV",
   },
   {
-    descriptionBg: `Налични автомобили в ${leadSite.city}`,
+    descriptionBg: `Обяви за автомобили в ${leadSite.city}`,
     descriptionEn: `Vehicles available in ${leadSite.city}`,
     id: `${leadSite.slug}-vehicles`,
     keywords: `${leadSite.city} ${leadSite.country} vehicles автомобили`,
