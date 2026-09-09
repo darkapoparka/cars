@@ -251,7 +251,7 @@ export const vehicleDetailFromVehicle = (
 ): AuxeroVehicleDetailData => {
 	const consultant =
 		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ??
-		daynightConsultants[0] ?? { image: '/dealer/logo.png', name: daynightBrand.name, slug: 'showroom-contact' };
+		daynightConsultants[0] ?? { image: '/dealer/logo-on-light-v2.svg', name: daynightBrand.name, slug: 'showroom-contact' };
 	const copy = getMessages(locale).detail;
 	const fallbackImage = vehicleImageFallback(vehicle);
 	const primaryImage = vehicleImageOverrides[vehicle.slug] ?? vehicle.image;

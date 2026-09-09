@@ -243,7 +243,7 @@
 			<div class="mobile-menu-sheet__brand">
 				<img
 					class="mobile-menu-sheet__logo"
-					src={resolve('/dealer/logo.png')}
+					src={resolve('/dealer/logo-on-light-v2.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</div>

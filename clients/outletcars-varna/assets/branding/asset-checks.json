@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "variant": "auto-best",
+      "surface": "light",
+      "transparent": true,
+      "outlined": true,
+      "size": [
+        1392,
+        876
+      ]
+    },
+    {
+      "variant": "auto-best",
+      "surface": "dark",
+      "transparent": true,
+      "outlined": true,
+      "size": [
+        1392,
+        876
+      ]
+    },
+    {
+      "variant": "carwow",
+      "surface": "light",
+      "transparent": true,
+      "outlined": true,
+      "size": [
+        1392,
+        876
+      ]
+    },
+    {
+      "variant": "carwow",
+      "surface": "dark",
+      "transparent": true,
+      "outlined": true,
+      "size": [
+        1392,
+        876
+      ]
+    },
+    {
+      "variant": "import",
+      "surface": "light",
+      "transparent": true,
+      "outlined": true,
+      "size": [
+        1392,
+        876
+      ]
+    },
+    {
+      "variant": "import",
+      "surface": "dark",
+      "transparent": true,
+      "outlined": true,
+      "size": [
+        1392,
+        876
+      ]
+    }
+  ],
+  "passed": true
+}

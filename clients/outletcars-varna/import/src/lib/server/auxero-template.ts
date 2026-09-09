@@ -325,8 +325,8 @@ function applyDayNightBranding(html: string) {
 			/6205 Peachtree Dunwoody Rd,\s*Atlanta,\s*(?:GA 30328)?/g,
 			daynightContact.addressLabel
 		)
-		.replaceAll('/assets/images/logo-white.png', daynightAssets.logoDark)
-		.replaceAll('/assets/images/logo.png', daynightAssets.logoLight)
+		.replaceAll('/assets/images/logo-white.png', daynightAssets.logoLight)
+		.replaceAll('/assets/images/logo.png', daynightAssets.logoDark)
 		.replaceAll(
 			'/assets/images/brand/app-store-dark.png',
 			'/assets/images/brand/app-store-dark.webp'

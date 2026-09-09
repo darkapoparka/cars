@@ -437,7 +437,7 @@
 			<a class="mh-hero__brand" href={resolve('/')} aria-label="OUTLETCARS.BG — Варна home">
 				<img
 					class="mh-hero__logo"
-					src={resolve('/dealer/logo.png')}
+					src={resolve('/dealer/logo-on-dark-v2.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -698,7 +698,7 @@
 		<div class="mh-footer__brand">
 			<img
 				class="mh-footer__logo"
-				src={resolve('/dealer/logo.png')}
+				src={resolve('/dealer/logo-on-dark-v2.svg')}
 				alt={daynightSite.name}
 			/>
 			<p>
@@ -3102,4 +3102,7 @@
 			gap: 6px;
 		}
 	}
+
+.mh-hero__logo { width: auto !important; height: 44px !important; max-width: 144px !important; object-fit: contain; object-position: left center; }
+.mh-footer__logo { width: auto !important; height: 56px !important; max-width: 142px !important; object-fit: contain; }
 </style>

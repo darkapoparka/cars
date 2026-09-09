@@ -73,9 +73,9 @@
 <svelte:head>
 <meta name="robots" content="noindex,nofollow" />
 	<link rel="stylesheet" href="/fonts/sofia-sans/fonts.css" data-daynight-fonts />
-	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="/dealer/logo.png" />
+	<link rel="icon" href="/dealer/favicon-v2.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/dealer/favicon-v2.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/dealer/icon-180-v2.png" />
 	{#each auxeroStableStylesheetHrefs as href (href)}
 		<link
 			rel="stylesheet"

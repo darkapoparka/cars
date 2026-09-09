@@ -59,7 +59,7 @@
 			<CenteredRouteHero
 				supportText="Огледи и посещения с предварителна уговорка."
 				image={contactHeroImage}
-				leftImage="/dealer/logo.png"
+				leftImage="/dealer/logo-on-light-v2.svg"
 				rightImage="/assets/daynight/banners/contact-email-v1.png"
 				portraitSide="left"
 				labelledby="contact-page-title"

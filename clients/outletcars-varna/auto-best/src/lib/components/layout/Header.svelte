@@ -236,7 +236,10 @@
         <div class="dn-header__inner">
           <div class="dn-logo-box">
             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+              <picture>
+                <source media="(max-width: 991px)" srcset={homeOverlayHeader || page.url.pathname === '/contact' ? brand.logoOnDark : brand.logo} />
+                <img src={brand.logo} alt={brand.name} width="696" height="438" fetchpriority="high" />
+              </picture>
             </a>
           </div>
 
@@ -730,4 +733,7 @@
       display: none;
     }
   }
+
+.dn-logo picture { display: block; }
+.dn-logo img { object-fit: contain; object-position: left center; }
 </style>

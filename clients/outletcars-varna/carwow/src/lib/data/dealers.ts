@@ -44,8 +44,8 @@ export const dealers: Dealer[] = [
 		location: "Варна",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
-		logo: '/dealer/logo.png',
-		cover: '/dealer/logo.png',
+		logo: '/dealer/logo-on-light-v2.svg',
+		cover: '/dealer/logo-on-light-v2.svg',
 		inventory: daynightSite.inventoryCount,
 		rating: 0,
 		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']

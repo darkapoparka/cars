@@ -7,7 +7,7 @@
 <div class="mobile-hero-bar">
 	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="OUTLETCARS.BG — Варна начало">
 		<img
-			src={resolve('/dealer/logo.png')}
+			src={resolve('/dealer/logo-on-dark-v2.svg')}
 			alt={daynightSite.shortName}
 			width="170"
 			height="44"

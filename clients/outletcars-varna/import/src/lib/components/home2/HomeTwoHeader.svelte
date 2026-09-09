@@ -27,7 +27,7 @@
 		<div class="home2-header__inner">
 			<a class="home2-header__logo" href={resolve('/home2')} aria-label="OUTLETCARS.BG — Варна Home2">
 				<img
-					src="/dealer/logo.png"
+					src="/dealer/logo-on-light-v2.svg"
 					alt={header.logo.alt}
 				/>
 			</a>

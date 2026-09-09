@@ -85,7 +85,7 @@
 									>
 										<img
 											class="h-7 w-auto object-contain"
-											src={resolve('/dealer/logo.png')}
+											src={resolve('/dealer/logo-on-light-v2.svg')}
 											alt=""
 										/>
 									</span>

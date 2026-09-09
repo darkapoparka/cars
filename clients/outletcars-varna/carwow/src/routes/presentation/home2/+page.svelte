@@ -115,7 +115,7 @@
 
 		<header class="home2-nav" aria-label="Home2 navigation">
 			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="OUTLETCARS.BG — Варна Home2">
-				<img src="/dealer/logo.png" alt="OUTLETCARS.BG — Варна" />
+				<img src="/dealer/logo-on-light-v2.svg" alt="OUTLETCARS.BG — Варна" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">
@@ -289,7 +289,7 @@
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/dealer/logo.png" alt="OUTLETCARS.BG — Варна consultant" />
+			<img src="/dealer/logo-on-light-v2.svg" alt="OUTLETCARS.BG — Варна consultant" />
 			<div>
 				<h2 id="easy-title">We make car changing easy</h2>
 				<p>

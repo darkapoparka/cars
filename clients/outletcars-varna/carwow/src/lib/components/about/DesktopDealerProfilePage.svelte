@@ -70,7 +70,7 @@
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img class="dealer-profile-card__logo" src="/dealer/logo.png" alt="" />
+					<img class="dealer-profile-card__logo" src="/dealer/logo-on-light-v2.svg" alt="" />
 					<p class="dealer-profile-card__title mb-6">OUTLETCARS.BG — Варна</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
 					<a {...mapLinkProps} class="text-highlight">Виж локация</a>

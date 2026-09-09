@@ -137,7 +137,7 @@ for (const vehicle of vehicles) {
 const inventoryBrandPills = brands
 	.map((brand) => ({
 		count: brandCounts.get(brand) ?? 0,
-		image: brandLogos[brand] ?? '/dealer/logo.png',
+		image: brandLogos[brand] ?? '/dealer/logo-on-light-v2.svg',
 		label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 		value: brand
 	}))
@@ -1856,7 +1856,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 	const vehicle = getVehicleDetailOrFallback(options.slug);
 	const monthly = `${vehicle.monthly.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} EUR/mo`;
 	const consultant =
-		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0] ?? { image: '/dealer/logo.png', name: daynightBrand.name, slug: 'showroom-contact', title: 'Контакт с автокъщата' };
+		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0] ?? { image: '/dealer/logo-on-light-v2.svg', name: daynightBrand.name, slug: 'showroom-contact', title: 'Контакт с автокъщата' };
 	let next = html
 		// Lead with the actual price, not the financing estimate: make the Cash tab
 		// active by default so the headline shows the car price; Finance is one tab away.

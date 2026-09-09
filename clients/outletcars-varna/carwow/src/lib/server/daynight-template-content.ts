@@ -173,7 +173,7 @@ const daynightPageAssets = {
 	aboutShowroomVehicle: '/dealer/showroom.webp',
 	servicesInspection: '/assets/images/pages/daynight-services-inspection-v1.webp',
 	servicesConsultation: '/assets/images/pages/daynight-services-consultation-v1.webp',
-	dealerProfileMark: '/dealer/logo.png'
+	dealerProfileMark: '/dealer/logo-on-light-v2.svg'
 } as const;
 
 const daynightMapEmbedQuery = `${daynightSite.mapLabel}, ${daynightSite.location}`;

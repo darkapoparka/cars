@@ -18,7 +18,7 @@
 		supportText="Подбор, проверка и съдействие до предаването на автомобила."
 		image="/assets/daynight/banners/route-about-studio-v6.png"
 		leftImage="/dealer/showroom.webp"
-		rightImage="/dealer/logo.png"
+		rightImage="/dealer/logo-on-light-v2.svg"
 		labelledby="about-page-title"
 		title="За OUTLETCARS.BG — Варна"
 		mobileTitle={about.hero.title}

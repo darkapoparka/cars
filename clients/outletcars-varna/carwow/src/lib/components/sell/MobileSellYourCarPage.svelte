@@ -293,7 +293,7 @@
 					title="Защо OUTLETCARS.BG"
 					description="Обсъдете възможностите директно с автокъщата."
 					label="Виж предимствата"
-					image="/dealer/logo.png"
+					image="/dealer/logo-on-light-v2.svg"
 					tone="yellow"
 					portrait
 					onclick={() => openInfo('benefits')}

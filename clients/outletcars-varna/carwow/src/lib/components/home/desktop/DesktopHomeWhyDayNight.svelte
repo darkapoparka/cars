@@ -117,7 +117,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/dealer/logo.png',
+							'/dealer/logo-on-light-v2.svg',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}

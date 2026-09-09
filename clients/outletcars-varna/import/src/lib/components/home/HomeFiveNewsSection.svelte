@@ -30,7 +30,7 @@
 					{#if brandedNewsTitle}
 						{#if brandFirstNewsTitle}
 							<picture class="daynight-news-banner__brand">
-								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
+								<source media="(max-width: 767px)" srcset={daynightAssets.logoDark} />
 								<img
 									src={daynightAssets.logoDark}
 									alt="OUTLETCARS.BG — Варна"
@@ -48,7 +48,7 @@
 								<span>{newsTitleWithoutBrand}</span>
 							{/if}
 							<picture class="daynight-news-banner__brand">
-								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
+								<source media="(max-width: 767px)" srcset={daynightAssets.logoDark} />
 								<img
 									src={daynightAssets.logoDark}
 									alt="OUTLETCARS.BG — Варна"
@@ -98,7 +98,7 @@
 					<span class="daynight-news-all-card__topline">
 						<img
 							class="daynight-news-all-card__brand"
-							src={daynightAssets.logoLight}
+							src={daynightAssets.logoDark}
 							alt="OUTLETCARS.BG — Варна"
 							width="220"
 							height="58"

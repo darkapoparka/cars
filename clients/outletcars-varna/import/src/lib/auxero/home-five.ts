@@ -766,7 +766,7 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	logo: {
 		alt: daynightBrand.name,
 		href: '/',
-		src: daynightAssets.logoDark
+		src: daynightAssets.logoLight
 	},
 	quickLinks: [
 		{ href: '/about', label: 'About Us' },

@@ -190,4 +190,6 @@
 			width: 128px;
 		}
 	}
+
+.bc-mobile-appbar .bc-mobile-appbar__brand img { width: auto !important; height: 44px !important; max-height: 44px !important; max-width: 144px !important; object-fit: contain; object-position: left center; }
 </style>

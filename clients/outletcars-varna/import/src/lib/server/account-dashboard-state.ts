@@ -33,9 +33,9 @@ type RecentDashboardItem = {
 };
 
 export const accountAvatarByRole: Record<DayNightRole, string> = {
-	admin: '/dealer/logo.png',
-	agent: agents[1]?.image ?? '/dealer/logo.png',
-	customer: '/dealer/logo.png'
+	admin: '/dealer/logo-on-light-v2.svg',
+	agent: agents[1]?.image ?? '/dealer/logo-on-light-v2.svg',
+	customer: '/dealer/logo-on-light-v2.svg'
 };
 
 export const formatDashboardDate = (value: string, fallback = 'Днес') => {

@@ -39,7 +39,7 @@ const articleParagraphs = (post: BlogPost): AuxeroBlogDetailParagraph[] =>
 		text
 	}));
 
-const blogSidebarConsultantImage = agents[1]?.image ?? daynightConsultants[1]?.image ?? '/dealer/logo.png';
+const blogSidebarConsultantImage = agents[1]?.image ?? daynightConsultants[1]?.image ?? '/dealer/logo-on-light-v2.svg';
 
 export const auxeroBlogDetailFromState = ({
 	post,

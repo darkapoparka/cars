@@ -11,7 +11,7 @@
 <header class="mobile-home-header">
 	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="OUTLETCARS.BG — Варна home">
 		<img
-			src={resolve('/dealer/logo.png')}
+			src={resolve('/dealer/logo-on-dark-v2.svg')}
 			alt={daynightSite.shortName}
 		/>
 	</a>

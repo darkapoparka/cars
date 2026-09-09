@@ -145,7 +145,7 @@
 		<div class="mobile-services-hero__bar">
 			<a href={resolve('/')} aria-label="OUTLETCARS.BG — Варна начало">
 				<img
-					src={resolve('/dealer/logo.png')}
+					src={resolve('/dealer/logo-on-light-v2.svg')}
 					alt={daynightSite.shortName}
 				/>
 			</a>

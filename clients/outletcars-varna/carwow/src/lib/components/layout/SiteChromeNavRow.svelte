@@ -23,7 +23,7 @@
 	} = $props();
 
 	const phoneHref = `tel:${daynightSite.phone}`;
-	const logoSrcset = desktopOnlySrcset(daynightSite.logoLight, 570);
+	const logoSrcset = desktopOnlySrcset(daynightSite.logoDark, 570);
 	const logoSizes = desktopOnlySizes('190px');
 	const navToolClasses =
 		'relative inline-grid size-10 place-items-center rounded-sa-pill text-sa-surface no-underline transition duration-150 ease-sa hover:bg-sa-surface/10 focus-visible:bg-sa-surface/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-[22px]';

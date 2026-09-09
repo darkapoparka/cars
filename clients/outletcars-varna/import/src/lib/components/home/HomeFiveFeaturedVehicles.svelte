@@ -119,7 +119,7 @@
 					>
 						<span class="daynight-mobile-view-all-card__logo" aria-hidden="true">
 							<img
-								src="/dealer/logo.png"
+								src="/dealer/logo-on-light-v2.svg"
 								loading="lazy"
 								decoding="async"
 								width="220"

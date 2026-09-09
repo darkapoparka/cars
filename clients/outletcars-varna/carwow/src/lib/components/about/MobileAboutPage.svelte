@@ -66,7 +66,7 @@
 		/>
 		<div class="mobile-about-hero__bar">
 			<a href={resolve('/')} aria-label="OUTLETCARS.BG — Варна начало">
-				<img src={resolve('/dealer/logo.png')} alt={daynightSite.shortName} />
+				<img src={resolve('/dealer/logo-on-light-v2.svg')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />

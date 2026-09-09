@@ -253,7 +253,7 @@
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
 				<a href={resolve('/')} aria-label="OUTLETCARS.BG — Варна начало">
-					<img src={resolve('/dealer/logo.png')} alt={daynightSite.shortName} />
+					<img src={resolve('/dealer/logo-on-dark-v2.svg')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/dealer/logo.png')}
+						src={resolve('/dealer/logo-on-light-v2.svg')}
 						alt=""
 						aria-hidden="true"
 					/>
@@ -1521,4 +1521,5 @@
 			display: block;
 		}
 	}
+.mobile-contact-hero__bar > a:first-child img { width: auto !important; height: 44px !important; object-fit: contain; }
 </style>

@@ -6,8 +6,8 @@
     guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
     silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
     graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
-    portrait: '/dealer/logo.png',
-    phone: '/dealer/logo.png',
+    portrait: '/dealer/logo-on-light-v2.svg',
+    phone: '/dealer/logo-on-light-v2.svg',
     showroom: '/dealer/showroom.webp',
     email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
   };
@@ -23,7 +23,7 @@
     silver: '/assets/images/lead/day-night-silver-color-v1.webp',
     graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
     showroom: '/dealer/showroom.webp',
-    portrait: '/dealer/logo.png',
+    portrait: '/dealer/logo-on-light-v2.svg',
     guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
     keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
     phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',

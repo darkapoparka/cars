@@ -149,7 +149,7 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 			<div class="listing-details--contact-dealer mb-20">
-					<img src="/dealer/logo.png" alt={daynightSite.shortName} />
+					<img src="/dealer/logo-on-light-v2.svg" alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/dealer')} class="h4 font-weight-600 mb-4">
 							OUTLETCARS.BG — Варна

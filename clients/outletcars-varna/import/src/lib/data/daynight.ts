@@ -201,8 +201,8 @@ export const daynightBrand = {
 } as const;
 
 export const daynightAssets = {
-  "logoDark": "/dealer/logo.png",
-  "logoLight": "/dealer/logo.png",
+  "logoDark": "/dealer/logo-on-light-v2.svg",
+  "logoLight": "/dealer/logo-on-dark-v2.svg",
   "hero": "/dealer/showroom.webp",
   "homeHeroSlides": [],
   "footerImage": "/dealer/showroom.webp"

@@ -32,7 +32,7 @@
 	<div class="site-header__inner">
 		<a class="site-header__logo" href={resolve('/')} aria-label="OUTLETCARS.BG — Варна начало">
 			<img
-				src={variant === 'home' ? daynightAssets.logoDark : daynightAssets.logoLight}
+				src={variant === 'home' ? daynightAssets.logoLight : daynightAssets.logoDark}
 				alt="OUTLETCARS.BG — Варна"
 			/>
 		</a>

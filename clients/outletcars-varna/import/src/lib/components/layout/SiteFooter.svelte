@@ -19,7 +19,7 @@
 <footer class="site-footer">
 	<div class="site-footer__top container">
 		<div class="site-footer__brand">
-			<img src={daynightAssets.logoDark} alt="OUTLETCARS.BG — Варна" />
+			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG — Варна" />
 			<p>
 				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили
 				и огледи с уговорка.

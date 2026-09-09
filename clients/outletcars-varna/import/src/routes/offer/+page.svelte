@@ -22,7 +22,7 @@
 	} from '@lucide/svelte';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
-	const logo = '/dealer/logo.png';
+	const logo = '/dealer/logo-on-light-v2.svg';
 
 	const stats = [
 		{ value: '42', label: 'реални автомобила в каталога' },

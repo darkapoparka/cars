@@ -1,0 +1,177 @@
+{
+  "capturedAt": "2026-09-09T21:19:29.483209+00:00",
+  "scope": "Logo and icon integration on home, inventory and contact at 390 and 1440 pixels; footer captures. Not a full functional re-certification.",
+  "build": {
+    "variant": "carwow",
+    "node": "v24.18.0",
+    "build": 0,
+    "check": 0
+  },
+  "browser": [
+    {
+      "variant": "carwow",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-dark-v2.svg",
+          "w": 69.90625,
+          "h": 44,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "mh-hero__logo svelte-lqo9i2"
+        },
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-dark-v2.svg",
+          "w": 88.984375,
+          "h": 56,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "mh-footer__logo svelte-lqo9i2"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6765/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6765/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "carwow",
+      "width": 390,
+      "route": "/inventory",
+      "status": 200,
+      "images": [],
+      "icons": [
+        "http://127.0.0.1:6765/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6765/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "carwow",
+      "width": 390,
+      "route": "/contact",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-dark-v2.svg",
+          "w": 69.90625,
+          "h": 44,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-1hmsaaa"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6765/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6765/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "carwow",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-light-v2.svg",
+          "w": 73.09375,
+          "h": 46,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "block h-auto max-w-none object-contain w-[212px]"
+        },
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-dark-v2.svg",
+          "w": 220,
+          "h": 68,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-ecr2il"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6765/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6765/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "carwow",
+      "width": 1440,
+      "route": "/inventory",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-light-v2.svg",
+          "w": 73.09375,
+          "h": 46,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "block h-auto max-w-none object-contain w-[212px]"
+        },
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-dark-v2.svg",
+          "w": 220,
+          "h": 68,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-ecr2il"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6765/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6765/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "carwow",
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-light-v2.svg",
+          "w": 73.09375,
+          "h": 46,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "block h-auto max-w-none object-contain w-[212px]"
+        },
+        {
+          "src": "http://127.0.0.1:6765/dealer/logo-on-dark-v2.svg",
+          "w": 220,
+          "h": 68,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-ecr2il"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6765/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6765/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "passed": true
+}

@@ -41,7 +41,7 @@
 					{#if brandedNewsTitle}
 						{#if brandFirstNewsTitle}
 							<picture class="inline-flex w-[clamp(198px,18vw,286px)] leading-none">
-								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
+								<source media="(max-width: 767px)" srcset={daynightAssets.logoDark} />
 								<img
 									class="block h-auto w-full"
 									src={daynightAssets.logoDark}
@@ -60,7 +60,7 @@
 								<span>{newsTitleWithoutBrand}</span>
 							{/if}
 							<picture class="inline-flex w-[clamp(198px,18vw,286px)] leading-none">
-								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
+								<source media="(max-width: 767px)" srcset={daynightAssets.logoDark} />
 								<img
 									class="block h-auto w-full"
 									src={daynightAssets.logoDark}
