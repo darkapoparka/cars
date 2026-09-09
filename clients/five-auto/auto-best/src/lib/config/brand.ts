@@ -30,5 +30,5 @@ export const brand = {
   addressLine,
   address: `${addressLine}, ${city}`,
   appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  logo: '/brand/logo.png'
 } as const satisfies BrandConfig;
