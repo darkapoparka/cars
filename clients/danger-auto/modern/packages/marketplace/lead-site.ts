@@ -27,7 +27,8 @@ export interface LeadSiteConfig {
 // Published contacts and listing checked 2026-09-09:
 // https://dangerauto.mobile.bg/contacts
 // https://dangerauto.mobile.bg/obiava-11788853280325556-chevrolet-cruze-1-6i-95000km-gaz-inzhektsion
-// No email or matching social account is asserted. Media is still pending.
+// Local outlined wordmark: proposed demo refresh; see brand/PROVENANCE.json.
+// Real vehicle media remains pending; the logo does not stand in for stock photos.
 const address = 'бул. Самоковско шосе 1, автоборса Джани до комплекс Боила, Горубляне';
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
@@ -41,7 +42,7 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/assets/images/lead/stock-photo-pending.svg",
   locale: "bg-BG",
-  logoPath: "/brand/identity-pending.svg",
+  logoPath: "/brand/danger-auto-ink.svg",
   mapsEmbedUrl: "https://maps.google.com/maps?q=42.6425458,23.4007179&z=16&output=embed",
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`DANGER AUTO, ${address}, София`)}`,
   name: "DANGER AUTO",

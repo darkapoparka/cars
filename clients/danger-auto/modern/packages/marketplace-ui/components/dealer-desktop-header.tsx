@@ -42,12 +42,12 @@ export const DealerDesktopHeader = ({
             href={homeHref ?? getLocalizedPublicPath(locale, "/")}
           >
             <Image
-              alt=""
+              alt={leadSite.name}
               className="object-contain object-left"
               fill
               priority
               sizes="220px"
-              src={leadSite.logoPath}
+              src="/brand/danger-auto-white.svg"
             />
           </Link>
           <nav

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "DANGER AUTO",
+  "createdAt": "2026-09-09",
+  "status": "proposed-vector-concept",
+  "officialDealerAsset": false,
+  "method": "Original geometric vector lettering and DA monogram drawn in code after visual inspection of the dealer nameplate. No font file is embedded or redistributed.",
+  "referencePage": "https://dangerauto.mobile.bg/obiava-11788853280325556-chevrolet-cruze-1-6i-95000km-gaz-inzhektsion",
+  "referenceImage": "https://mobistatic3.focus.bg/mobile/photosorg/556/1/big1/11788853280325556_NU.webp",
+  "observedReference": "Dealer plate shows DANGERAUTO lettering within a monochrome rectangular nameplate. Used only as visual identity reference; the vehicle photograph was not copied into these logo files.",
+  "imageGenerationAttempt": "The Image Gen tool returned that generation had not started. These assets are not Image Gen output.",
+  "artwork": {
+    "danger-auto-ink.svg": { "dimensions": [840, 152], "gitBlob": "f19f076c7a46d0edc205f10ad15ee72f28c729b7" },
+    "danger-auto-white.svg": { "dimensions": [840, 152], "gitBlob": "a27ae9d79c7a99f36f49cd77c03e78de91f8c5e6" },
+    "favicon.svg": { "dimensions": [64, 64], "gitBlob": "510cb9d87d66fe646849a03546a3424c502a2bbe" },
+    "apple-touch-icon.png": { "dimensions": [180, 180], "gitBlob": "bceb1f0ea237d1d2a0ef81cbdefd9444b0080746" },
+    "favicon.ico": { "dimensions": [32, 32], "gitBlob": "ae572b3e95a08a08e6f1d6745b9c40c805f3e345" }
+  },
+  "copies": ["auto-best/static/brand", "modern/apps/web/public/brand", "carwow/static/brand"],
+  "lightDarkUse": "Ink artwork has a transparent background. White artwork uses a black nameplate backing with transparent outer margins so it also remains legible in a light business-contact card.",
+  "assetVisualInspection": "Rendered SVG artwork inspected at native size, 240px wordmark width, and 16/32/48px icon sizes on light/dark backgrounds. This is an asset inspection, not application/browser QA.",
+  "ownerReview": "pending",
+  "vehicleMediaReuseCleared": false,
+  "vehicleMediaStatus": "No new stock photo bytes or permissions were obtained in this branding pass. Existing pending-photo states remain."
+}

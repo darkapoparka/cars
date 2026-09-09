@@ -23,6 +23,11 @@ export const DealerMobileBrandBar = ({
   const light = tone === "light";
   const clean = tone === "clean";
   const logoWidthClassName = "w-[144px] max-w-[48vw]";
+  // The source's 32%/68% two-image clipping assumed a different logo.
+  // Keep the same bar, controls and width, but render one complete wordmark.
+  const whiteWordmark = wordmarkTone === "light" ||
+    (wordmarkTone === "original" && !clean);
+  const logoSrc = whiteWordmark ? "/brand/danger-auto-white.svg" : leadSite.logoPath;
 
   return (
     <div
@@ -61,33 +66,12 @@ export const DealerMobileBrandBar = ({
           <Image
             alt={leadSite.name}
             className="h-full w-full object-contain"
-            height={512}
+            height={152}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            style={
-              wordmarkTone === "original"
-                ? undefined
-                : { clipPath: "inset(0 68% 0 0)" }
-            }
-            width={1780}
+            src={logoSrc}
+            width={840}
           />
-          {wordmarkTone === "original" ? null : (
-            <Image
-              alt=""
-              aria-hidden="true"
-              className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-                wordmarkTone === "light"
-                  ? "brightness-0 invert"
-                  : "brightness-0"
-              )}
-              fill
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={leadSite.logoPath}
-            />
-          )}
         </span>
       </Link>
 
