@@ -1,27 +1,26 @@
 # GoldenDreams AUTO
 
-Status: **blocked**. Owner manual review: pending. No Auto Best, Modern or Carwow application has been created for this account.
+Status: **implemented-unverified**. Three GitHub project folders now exist: `auto-best/`, `modern/`, and `carwow/`.
 
-Session: bulgaria-2026-09-09 / 06. Branch: `codex/astra-bg-06`. Published base: `faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca`.
+This is the requested fast skin: the retained template compositions were cloned from the already-preserved template copies, then the dealer name, contact identity, gold/black branding, favicon, hero asset and primary public stock consumer were changed without rebuilding the UI.
 
-## Identity and retained work
+## Current public facts used
 
-Owner-nominated existing account, legacy name Golden Dreams AutoGroup. The read-only legacy manifest at `M:/codex/agency/projects/leads/automotive/golden-dreams-auto/autodeal/mirror/manifest.json` contains `https://www.facebook.com/profile.php?id=61592803643776` and acquisition date 2026-08-13. This matches the owner's nominated Facebook ID. No legacy files were edited, moved or copied as application source. No private CRM or correspondence was read.
+- Trading name: **GoldenDreams AUTO**
+- Current public listing location: **Пловдив**
+- Phones shown in the current GoldenDreams listing: **0878 979 712**, **0895 735 255**
+- Facebook: https://www.facebook.com/people/GoldenDreams-AUTO/61592803643776/
+- Instagram result: https://www.instagram.com/goldendreamsauto/
+- Current indexed listing used for the fast skin: Mercedes-Benz CLA 180, 2013, 96 000 km, 121 hp, petrol/manual, 12 500 EUR; Bazar.bg listing 55965789, observed/updated 2026-09-09.
 
-Published main's client index and the current astra client tree contain no folder for this account. The assigned branch was newly created from published main; no owned prior commits were reset. No alternative Mobile.bg identity has been assigned.
+Exact showroom address is still not established. The demos say to confirm the address and appointment by phone rather than inventing a street address.
 
-## Current public-source findings — 2026-09-09
+## Branding
 
-The canonical Facebook people URL and profile.php URL return DisabledError to the research browser. Public search does index posts on the same numeric page ID, including BMW 335i E93 Cabrio and Mercedes CLA 180 descriptions. These establish leads to recheck, not current available stock. An indexed Kia post explicitly says the car was sold; an import post says two vehicles were expected within 30 days. Neither may become available inventory.
+The legacy project contains two v2 Golden Dreams logo PNGs with the known five-star arch/car-silhouette identity, but the authorized desktop connector holding those bytes was unavailable during this pass. Instead of reusing the inherited fake phone or another dealer logo, the GitHub projects contain a restrained client-local **concept refresh** using the same gold five-star/car silhouette language and the current `GoldenDreams AUTO` name. It is not represented as an official dealer-approved asset.
 
-The Instagram result `goldendreamsauto` and associated business posts publish 0878979712 and 0895735255. These are candidate corroborating public channels, not a verified current showroom contact pack. Plovdiv occurs in associated post tags/location text; that does not establish a physical showroom address. No current showroom address, reliable recent canonical post dates, or usable permission-backed stock gallery was established.
+When the legacy source bytes are available again, the coordinator can swap the files under each app's `dealer/brand/` folder without changing the application composition.
 
-## Branding inspection
+## Scope
 
-Both nominated legacy v2 PNGs were actually opened through the read-only connector. They depict a gold five-star/arch/sportscar emblem above GOLDEN DREAMS AUTOGROUP, with wide horizontal proportions. The on-light-named file visibly has a dark background; filenames alone must not determine surface treatment. Their present-day approval, source-art ownership and correspondence to the changed trading name remain unresolved. They remain intact in the legacy project. No replacement was generated automatically and no image-generation claim is made.
-
-## Blocking gates and exact resume point
-
-Resolve a current physical showroom location and canonical business contacts; open dated current whole-car posts with seller/availability context; establish a reusable local photo set and the provenance/approval of the existing logo treatment. Resume at identity/asset qualification, before cloning the three published masters. Do not use inherited `tel:8085550111`, template stock, generated vehicle photos, or a guessed Mobile.bg profile.
-
-All runtime/build/browser/viewport checks are not run because no applications exist. No public preview, deployment, dealer contact or shared-origin design switcher exists for this account.
+No deployment, outreach, CRM write, database migration, full dependency install, production build or browser acceptance was run. The folders are committed for local coordinator inspection.

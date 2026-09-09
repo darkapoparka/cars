@@ -1,0 +1,13 @@
+{
+  "name": "G Auto — demo",
+  "short_name": "G Auto",
+  "start_url": "/",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/dealer/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

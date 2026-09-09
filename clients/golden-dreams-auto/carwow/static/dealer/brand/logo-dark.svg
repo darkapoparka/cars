@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 400" role="img" aria-label="GoldenDreams AUTO">
+<rect width="1400" height="400" fill="none"/>
+<g fill="none" stroke="#D4AF37" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M110 235 C180 225 205 180 255 155 C325 120 420 138 505 195 C535 215 555 222 585 230" stroke-width="12"/>
+  <path d="M120 238 H172 L207 205 H474 L520 238 H570" stroke-width="8"/>
+  <circle cx="215" cy="242" r="26" stroke-width="8"/><circle cx="478" cy="242" r="26" stroke-width="8"/>
+  <path d="M110 84 C185 24 372 22 505 95" stroke-width="8"/>
+</g>
+<g fill="#D4AF37">
+  <text x="160" y="88" font-size="34" font-family="Arial, sans-serif">★</text>
+  <text x="230" y="62" font-size="42" font-family="Arial, sans-serif">★</text>
+  <text x="305" y="48" font-size="50" font-family="Arial, sans-serif">★</text>
+  <text x="390" y="62" font-size="42" font-family="Arial, sans-serif">★</text>
+  <text x="460" y="88" font-size="34" font-family="Arial, sans-serif">★</text>
+</g>
+<text x="625" y="195" fill="#D4AF37" font-size="86" font-family="Arial, Helvetica, sans-serif" font-weight="800" letter-spacing="2">GOLDEN DREAMS</text>
+<rect x="625" y="222" width="650" height="6" rx="3" fill="#D4AF37"/>
+<text x="625" y="300" fill="#D4AF37" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="12">AUTO</text>
+<text x="820" y="298" fill="#9CA3AF" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">PLOVDIV</text>
+</svg>
