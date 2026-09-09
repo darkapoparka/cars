@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "client": "sunny-varna",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/cars"}],
+  "offeredHomes": ["main"],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "runtimeChecks": "Deferred to owner local coordinator by explicit follow-up instruction.",
+  "copyMethod": "Independent full Modern workspace from exact master, including every apps/ and packages/ tree and retained pnpm lockfile. No symlink. Removed inherited agent instructions and source metadata."
+}
