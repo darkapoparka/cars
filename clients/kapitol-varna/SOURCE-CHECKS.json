@@ -1,0 +1,17 @@
+{
+  "runAt": "2026-09-09",
+  "method": "in-memory validation of exact prepared GitHub payload; not a framework build",
+  "checks": {
+    "sourceIdsUnique": true,
+    "pricedEurKmSourceRecords": true,
+    "identicalAppConsumedFactPacks": true,
+    "safeRelativePaths": true,
+    "noReplacementCharacters": true,
+    "noInheritedQaPasses": true,
+    "copyExclusionsApplied": true
+  },
+  "records": 8,
+  "factSha256": "18a5f4d789a689438e0fb9f23724d9ccd686ed345ba70f447d53b7dd59b5dfdf",
+  "frameworkChecksExecuted": false,
+  "browserChecksExecuted": false
+}
