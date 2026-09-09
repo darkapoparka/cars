@@ -1,3 +1,4 @@
+import { dealerServiceCopy } from './dealer-editorial';
 import { brand } from '$config/brand';
 
 export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
@@ -58,7 +59,7 @@ export const companyServices: CompanyService[] = [
   {
     "index": "01",
     "icon": "inspection",
-    "title": "Оглед в Варна",
+    "title": "Оглед във Варна",
     "description": "Потвърдете автомобила, местоположението и удобния час по телефона.",
     "href": "/contact?topic=inspection",
     "cta": "Попитайте за оглед"
@@ -75,7 +76,7 @@ export const companyServices: CompanyService[] = [
     "index": "03",
     "icon": "leasing",
     "title": "Въпроси за финансиране",
-    "description": "Условията се уточняват с продавача; демото не е кредитна оферта.",
+    "description": dealerServiceCopy.finance,
     "href": "/contact?topic=leasing",
     "cta": "Попитайте за условия"
   },
@@ -83,7 +84,7 @@ export const companyServices: CompanyService[] = [
     "index": "04",
     "icon": "trade-in",
     "title": "Вашият автомобил",
-    "description": "Попитайте дали продавачът разглежда предложения за замяна. Няма автоматична оценка.",
+    "description": dealerServiceCopy.tradeIn,
     "href": "/contact?topic=trade-in",
     "cta": "Обсъдете възможностите"
   }
@@ -99,27 +100,27 @@ export const contactTopics: ContactTopic[] = [
   {
     id: 'inspection',
     label: 'Оглед',
-    title: `Оглед в ${brand.city}`,
+    title: `Оглед във ${brand.city}`,
     description: 'Потвърдете наличността, местоположението и подходящия час с продавача.'
   },
   {
     id: 'import',
     label: 'Внос',
-    title: 'Внос по заявка',
-    description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
+    title: 'Въпрос за внос',
+    description: 'Уточнете статуса на обявата и попитайте дали е възможно търсене по Ваши критерии.',
     mobileDescription: 'Добавете обява или опишете какво търсите.'
   },
   {
     id: 'leasing',
     label: 'Лизинг',
     title: 'Запитване за финансиране',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
+    description: dealerServiceCopy.finance
   },
   {
     id: 'trade-in',
     label: 'Бартер',
     title: 'Бартер и оценка',
-    description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
+    description: dealerServiceCopy.tradeIn,
     mobileDescription: 'Поискайте оценка за продажба или бартер.'
   }
 ];
