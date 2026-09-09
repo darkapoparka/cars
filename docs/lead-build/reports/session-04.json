@@ -3,87 +3,157 @@
   "batchId": "lead-build-2026-09-08",
   "sessionId": "04",
   "updatedAt": "2026-09-09",
-  "status": "interrupted-desktop-disconnected",
-  "deliveryNote": "Actual local master copies and Al Basma asset preparation were performed. Application consumer personalization, verification and publication are unfinished. GitHub remains writable; the authorized desktop became unavailable before its application files and local assets could be published.",
+  "status": "implemented-unverified",
+  "deliveryNote": "Owner consolidation moved delivery to the main repository. All three assigned dealer folders now contain independent personalized auto-best, full-workspace modern and carwow copies committed on main. Runtime/browser QA could not be executed after the authorized remote desktop repeatedly timed out, so no runtime pass is claimed.",
+  "targetBranchOverride": "main",
   "candidates": [
     {
       "leadId": "ae-sharjah-al-basma-motors",
       "clientPath": "clients/al-basma-motors",
-      "state": "blocked",
-      "commitShas": [],
-      "evidenceCommitShas": ["343a489153e50c242d26c6743655973825afbbad"],
-      "publicEvidencePaths": ["clients/al-basma-motors/evidence/remote-execution.json", "clients/al-basma-motors/evidence/source-record.json", "clients/al-basma-motors/HANDOFF.md"],
-      "resumeFrom": "J:/cars-session-04/clients/al-basma-motors",
-      "sourceCopyCommit": "57a0c9694e325747d776cfd78255b60241080a8a",
+      "state": "implemented-unverified",
+      "commitShas": [
+        "617c0a8f07eca9b5d747872b8a9e12d66a700d59",
+        "ee1c28eb16f2dbd1617e36c2f4c0997209abab8a",
+        "36688f3959f19ebbe7b4c2d6fddc6a965b2f8abb"
+      ],
+      "publicEvidencePaths": [
+        "clients/al-basma-motors/business-facts.json",
+        "clients/al-basma-motors/stock.json",
+        "clients/al-basma-motors/HANDOFF.md"
+      ],
       "variants": {
-        "auto-best": {"sourceCopiedLocally":true,"localAssetFilesSaved":true,"implemented":false,"committed":false,"checksPassed":["new-client dry run and independent hash-verified source copy"],"checksNotRun":["complete content and identity sweep","consumer-level local asset verification","framework checks","build","390px and 1440px app browser QA"],"outcomesNotRetrieved":["individual npm ci exit record"],"knownLimitations":["Source-brand content still requires personalization.","New media files are saved locally but consumers are not fully wired.","Application files and local asset bytes are not on astra.","Essential media redistribution permission is not established."]},
-        "modern": {"sourceCopiedLocally":true,"fullWorkspaceRetained":true,"localAssetFilesSaved":true,"implemented":false,"committed":false,"checksPassed":["new-client dry run and independent hash-verified full-workspace copy","Node 22.22.0 / pnpm 11.4.0 frozen-lockfile installation: exit 0"],"checksNotRun":["complete content and identity sweep","consumer-level local asset verification","typecheck","build","390px and 1440px app browser QA"],"outcomesNotRetrieved":["Prisma generation was started; result not retrieved"],"knownLimitations":["Source-brand content still requires personalization.","Actual stock consumer is packages/marketplace-domain/testing/mock-data.ts, not only the marketplace facade.","The eager mock-directory fixtures still require replacement.","Application files and local asset bytes are not on astra.","Essential media redistribution permission is not established."]},
-        "carwow": {"sourceCopiedLocally":true,"localAssetFilesSaved":true,"implemented":false,"committed":false,"checksPassed":["new-client dry run and independent hash-verified source copy","Node 24.18.0 npm ci: exit 0"],"checksNotRun":["complete content and identity sweep","consumer-level local asset verification","framework checks","build","390px and 1440px app browser QA"],"knownLimitations":["Source-brand content still requires personalization, including supporting routes and sample people/reviews.","New media files are saved locally but consumers are not fully wired.","Install reported 14 dependency vulnerabilities; no dependency changes were made.","Application files and local asset bytes are not on astra.","Essential media redistribution permission is not established."]}
+        "auto-best": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["GitHub changed-path and consumer review", "source-backed identity/AED/km stock integration", "local dealer asset paths committed"],
+          "checksNotRun": ["post-personalization npm ci", "npm run validate", "390px and 1440px browser QA"],
+          "knownLimitations": ["Dated public stock sample, not a live feed.", "No deployment or real enquiry delivery is configured.", "Published dealer media is retained only for unpublished owner review; public redistribution permission is not established."]
+        },
+        "modern": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["full Modern workspace retained", "lead-site, lead-listings and static demo consumers replaced", "UAE locale/currency configuration committed"],
+          "checksNotRun": ["post-personalization pnpm install", "Prisma generation", "web typecheck/build", "390px and 1440px browser QA"],
+          "knownLimitations": ["Provider services remain unconfigured.", "Dated public stock sample, not a live feed."]
+        },
+        "carwow": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["dealer identity/current-inventory/vehicle/review/team/FAQ/account/blog consumers replaced", "manifest/favicon metadata personalized", "local dealer asset paths committed"],
+          "checksNotRun": ["post-personalization npm ci", "npm run check", "npm run build", "390px and 1440px browser QA"],
+          "knownLimitations": ["No customer reviews or staff profiles are imported.", "Dated public stock sample, not a live feed."]
+        }
       },
-      "blockers": ["Authorized remote desktop disconnected: repeated read/start/ping timeouts, then No devices available.","Current local checkout, application files, downloaded bytes and logs cannot be retrieved while that desktop is unavailable.","Public redistribution permission for essential dealer media remains unestablished."],
-      "supersededBlockers": ["Git and website downloads worked on the connected desktop; the earlier sandbox DNS/download failures are not the current access diagnosis.","Published branding and live home/catalogue/detail/contact rendering were inspected.","Name/domain/profile/phone grep across main and the current copied astra client trees found no pre-existing Al Basma application identity match."]
+      "blockers": ["Runtime verification unavailable because Remote Desktop Commander repeatedly timed out after GitHub implementation was committed."]
     },
     {
       "leadId": "ae-dubai-the-dealers-point",
       "clientPath": "clients/the-dealers-point",
-      "state": "pending",
-      "commitShas": [],
-      "publicEvidencePaths": [],
+      "state": "implemented-unverified",
+      "commitShas": [
+        "c9275a415a33a6d5fcde92afba798768e7ab28ca",
+        "ee1c28eb16f2dbd1617e36c2f4c0997209abab8a",
+        "36688f3959f19ebbe7b4c2d6fddc6a965b2f8abb"
+      ],
+      "publicEvidencePaths": [
+        "clients/the-dealers-point/business-facts.json",
+        "clients/the-dealers-point/stock.json",
+        "clients/the-dealers-point/BRANDING.md",
+        "clients/the-dealers-point/HANDOFF.md"
+      ],
       "variants": {
-        "auto-best": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started; not counted as delivered."]},
-        "modern": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started; not counted as delivered."]},
-        "carwow": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started; not counted as delivered."]}
+        "auto-best": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["actual Auto Best master tree retained", "Dubai identity/AED/km stock consumers replaced", "proposal light/dark logo and ten concept stock assets committed"],
+          "checksNotRun": ["npm ci", "npm run validate", "390px and 1440px browser QA"],
+          "knownLimitations": ["Proposal artwork is explicitly not represented as official source artwork.", "Dated public stock sample, not a live feed."]
+        },
+        "modern": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["full Modern workspace retained", "lead-site, lead-listings and directory consumers replaced", "en-AE/AED configuration committed", "proposal asset pack committed under apps/web/public/dealer"],
+          "checksNotRun": ["pnpm install", "Prisma generation", "web typecheck/build", "390px and 1440px browser QA"],
+          "knownLimitations": ["Provider services remain unconfigured.", "Dated public stock sample, not a live feed."]
+        },
+        "carwow": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["current-inventory/vehicles/site/reviews/team/dealers/agents/FAQ/account/blog consumers replaced", "manifest/favicon metadata personalized", "proposal asset pack committed"],
+          "checksNotRun": ["npm ci", "npm run check", "npm run build", "390px and 1440px browser QA"],
+          "knownLimitations": ["No invented reviews or staff are presented.", "Dated public stock sample, not a live feed."]
+        }
       },
-      "blockers": [],
-      "executionNote": "Remaining fixed allocation, not rejected, replaced or newly qualified. The desktop interruption occurred during the first dealer."
+      "blockers": ["Runtime verification unavailable because Remote Desktop Commander repeatedly timed out after GitHub implementation was committed."]
     },
     {
       "leadId": "ae-dubai-f1rst-motors",
       "clientPath": "clients/f1rst-motors",
-      "state": "pending",
-      "commitShas": [],
-      "publicEvidencePaths": [],
+      "state": "implemented-unverified",
+      "commitShas": [
+        "321fa299ac922189919a30d2ab3d026e4f3ebd10",
+        "ee1c28eb16f2dbd1617e36c2f4c0997209abab8a",
+        "36688f3959f19ebbe7b4c2d6fddc6a965b2f8abb"
+      ],
+      "publicEvidencePaths": [
+        "clients/f1rst-motors/business-facts.json",
+        "clients/f1rst-motors/stock.json",
+        "clients/f1rst-motors/BRANDING.md",
+        "clients/f1rst-motors/HANDOFF.md"
+      ],
       "variants": {
-        "auto-best": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started; not counted as delivered."]},
-        "modern": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started; not counted as delivered."]},
-        "carwow": {"implemented":false,"committed":false,"checksPassed":[],"checksNotRun":["all application checks"],"knownLimitations":["Not started; not counted as delivered."]}
+        "auto-best": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["actual Auto Best master composition retained", "premium Dubai identity/AED/km collection consumers replaced", "internal light/dark proposal logo and ten concept stock assets committed"],
+          "checksNotRun": ["npm ci", "npm run validate", "390px and 1440px browser QA"],
+          "knownLimitations": ["Published F1rst terms require prior written consent for site logo/image/content use; committed artwork is therefore an internal proposal rather than copied official media.", "Dated public stock sample, not a live feed."]
+        },
+        "modern": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["full Modern workspace retained", "lead-site, premium lead-listings and directory consumers replaced", "en-AE/AED configuration committed", "internal proposal asset pack committed"],
+          "checksNotRun": ["pnpm install", "Prisma generation", "web typecheck/build", "390px and 1440px browser QA"],
+          "knownLimitations": ["Provider services remain unconfigured.", "Some technical fields absent from the public source summary are not claimed in public copy."]
+        },
+        "carwow": {
+          "implemented": true,
+          "committed": true,
+          "checksPassed": ["existing Carwow composition retained", "collection/site/vehicle/review/team/dealer/agent/FAQ/account/blog consumers replaced", "manifest/favicon metadata personalized", "internal proposal asset pack committed"],
+          "checksNotRun": ["npm ci", "npm run check", "npm run build", "390px and 1440px browser QA"],
+          "knownLimitations": ["No copied official F1rst logo or vehicle photographs are represented as permitted assets.", "No invented reviews or staff are presented."]
+        }
       },
-      "blockers": [],
-      "executionNote": "Remaining fixed allocation, not rejected, replaced or newly qualified. Premium identity does not change the no-redesign requirement."
+      "blockers": ["Runtime verification unavailable because Remote Desktop Commander repeatedly timed out after GitHub implementation was committed."]
     }
   ],
   "reuseInspection": {
-    "leadId":"bg-varna-astracar",
-    "clientPath":"clients/astracar",
-    "mode":"read-only",
-    "state":"existing-evidence-reviewed",
-    "inspectedClientTree":"23f219b00fa4afe0085b84b940fdf31c28fe8d40",
-    "variantsFound":["auto-best","modern","carwow"],
-    "inspectedPaths":["clients/astracar/BUILD-STATUS.md","clients/astracar/auto-best/.client/project.json","clients/astracar/modern/.client/project.json","clients/astracar/carwow/.client/project.json","clients/astracar/qa-final/FINAL.md"],
-    "checksPassed":["Read-only directory and metadata inspection"],
-    "checksNotRun":["fresh installation","fresh framework checks/builds","fresh application browser QA"],
-    "priorRecordedEvidence":{"date":"2026-09-08","templateVersion":"2026.09.06-refresh-1","auto-best":{"routes":10,"interactionSequences":2,"port":6636},"modern":{"routes":8,"interactionSequences":2,"port":6637},"carwow":{"routes":16,"interactionSequences":2,"port":6638},"widths":[390,1440],"previewState":"stopped after prior verification","publicUrl":null},
-    "outstandingTechnicalGaps":["Prior records do not establish current runtime verification.","Modern gallery-trigger focus restoration was not certified in the prior evidence.","Dated representative inventory, unconfigured provider/form delivery and retained asset-rights limitations remain.","Any repair requires a separately owner-scoped task; no existing app was changed."]
+    "leadId": "bg-varna-astracar",
+    "clientPath": "clients/astracar",
+    "mode": "read-only",
+    "state": "existing-reuse",
+    "variantsFound": ["auto-best", "modern", "carwow"],
+    "inspectedPaths": ["clients/astracar/BUILD-STATUS.md", "clients/astracar/auto-best/.client/project.json", "clients/astracar/modern/.client/project.json", "clients/astracar/carwow/.client/project.json", "clients/astracar/qa-final/FINAL.md"],
+    "checksPassed": ["read-only directory and prior-evidence inspection"],
+    "checksNotRun": ["fresh installation", "fresh framework checks/builds", "fresh browser QA"],
+    "outstandingTechnicalGaps": ["Prior verification evidence is dated 2026-09-08 and was not rerun.", "Modern gallery-trigger focus restoration was not certified in the prior evidence.", "Provider/form delivery remains unconfigured."]
   },
   "executionEnvironment": {
-    "initialSandboxGitRead":"failed DNS; historical, not evidence of read-only GitHub",
-    "remoteCheckout":"J:/cars-session-04",
-    "remoteCheckoutBase":"57a0c9694e325747d776cfd78255b60241080a8a",
-    "dirtyOwnerCheckout":"J:/cars preserved unchanged",
-    "remoteDesktopInitiallyWorked":true,
-    "remoteDesktopFinalState":"No devices available",
-    "gitHubConnectorAvailable":true,
-    "imageGenerationExecuted":false,
-    "privateRecordsAccessed":false,
-    "dealerContacted":false,
-    "deployed":false
+    "deliveryRepository": "darkapoparka/cars",
+    "deliveryBranch": "main",
+    "ownerConsolidationHonored": true,
+    "extraWorktreesCreatedAfterResume": false,
+    "gitHubConnectorAvailable": true,
+    "remoteDesktopRuntimeChecks": "unavailable: repeated request timeouts",
+    "privateRecordsAccessed": false,
+    "dealerContacted": false,
+    "deployed": false
   },
-  "duplicateInspection": {
-    "mainHead":"6998a7ce8092b99422cdb9cccc0b18449ff2f541",
-    "astraHeadAtLocalCopy":"57a0c9694e325747d776cfd78255b60241080a8a",
-    "latestHeadInspectedBeforeReport":"817b8233af46b8c6c5b595834e2be0b5d3dcf1db",
-    "alBasmaNameDomainProfilePhoneCheck":"No existing application identity match; only this session's prior evidence files matched on astra.",
-    "allThreeIdentityAuditsComplete":false
-  },
-  "accounting": {"candidateEntriesAccountedFor":3,"pendingCandidates":2,"blockedCandidates":1,"independentSourceCopiesCreatedLocally":3,"applicationsFullyImplemented":0,"applicationsCommitted":0,"applicationsRuntimeVerified":0,"reuseInspectionsRecorded":1}
+  "accounting": {
+    "candidateEntriesAccountedFor": 3,
+    "implementedCandidates": 3,
+    "independentApplicationsCommitted": 9,
+    "applicationsRuntimeVerifiedThisRun": 0,
+    "reuseInspectionsRecorded": 1
+  }
 }
