@@ -47,13 +47,19 @@ export function removeListingFilter(filters: ListingFilters, key: string, value:
   return params;
 }
 
+/** Match trim tokens, not substrings such as the letters "rs" in "Corsa". */
+const matchesVersion = (title: string, version: string) => {
+  const escaped = version.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`\\b${escaped}(?=\\b|\\d)`, 'i').test(title);
+};
+
 export const listingFilterOptions = {
   makes: availableValues('make'),
   bodies: availableValues('body'),
   fuels: availableValues('fuel'),
   transmissions: availableValues('transmission'),
-  versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
-  equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
+  versions: ['', ...['RS', 'AMG', 'M Sport', 'xDrive'].filter(version => featuredVehicles.some(vehicle => matchesVersion(vehicle.title, version)))],
+  equipment: [...new Set(featuredVehicles.flatMap(vehicle => vehicle.equipment))] satisfies readonly VehicleEquipment[],
   years: ['', ...new Set(featuredVehicles.map(v => String(v.yearNumber)))].sort(),
   prices: ['', '5000', '10000', '15000', '20000', '30000', '50000', '75000', '100000'],
   mileages: ['', '50000', '100000', '150000', '200000', '300000'],
@@ -142,7 +148,7 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;
     if (fuel && normalize(vehicle.fuel) !== fuel) return false;
     if (transmission && normalize(vehicle.transmission) !== transmission) return false;
-    if (version && !normalize(vehicle.title).includes(version)) return false;
+    if (version && !matchesVersion(vehicle.title, version)) return false;
     if (filters.equipment.length > 0 && !filters.equipment.every((item) => vehicle.equipment.includes(item))) return false;
     if (filters.condition && vehicle.condition !== filters.condition) return false;
     if (filters.yearMin !== null && vehicle.yearNumber < filters.yearMin) return false;
