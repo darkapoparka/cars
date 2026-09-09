@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "branch": "codex/astra-bg-09",
+  "sourceBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "applicationHead": "e2ff40f24a760b8ce88cbd07f81a962d652f0988",
+  "dealers": [
+    {
+      "slug": "car-max-sofia",
+      "implementationCommit": "b9381dfffd5c1bcd36b6cc953ee6893babfd8f16",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "3bb96b7bb9a8d6be109bc4c6c59c7a2a9aaea46d",
+          "fileCount": 253,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "04793d5e51e6d91fe8c45d4887c749f411a096e1",
+          "fileCount": 1313,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "6e7371f5442ecfc0443fa5406ffe8f83d4bc0359",
+          "fileCount": 1318,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "nova-cars-sofia",
+      "implementationCommit": "ceb8ef6e10391abf7486398aa8f1887797fc928e",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "cf05290f26be86c20f47bbe6f788f3b133a4c5b6",
+          "fileCount": 253,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "3726a778034d102213d2757473667822026d93af",
+          "fileCount": 1313,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "d58c74592bde4e94d33dbb69755793d62bd99ae6",
+          "fileCount": 1318,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "stenli-car",
+      "implementationCommit": "51cdc308f87246b11af01a3c056c996a1d6ab688",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "38320f5bffe50944c9748dc7260abe5eb1748aec",
+          "fileCount": 253,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "4962dc76b77441da6c679a97a4a1607d870b5fa5",
+          "fileCount": 1313,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "a43c96bc06285f8aa15f453eaecec5fdf3c98720",
+          "fileCount": 1318,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "lux-auto-bg",
+      "implementationCommit": "5bd1e4547e85d6b375235617c93fc92e82538b47",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "5a37f5c3b6eecaead1250370bf76b024ffb3a824",
+          "fileCount": 253,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "40c858c921c43bbd4da4c7fef6c9fb9482c68ec8",
+          "fileCount": 1313,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "45b83620c197345758a87fa899e39573ebc35e31",
+          "fileCount": 1318,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        }
+      ]
+    },
+    {
+      "slug": "next-auto-pernik",
+      "implementationCommit": "5c027719e6463f78b53d383ba1f0c6628f845bcc",
+      "apps": [
+        {
+          "variant": "auto-best",
+          "tree": "2e1cb4d4dff6931c1ad66e727ec3752738443187",
+          "fileCount": 253,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "modern",
+          "tree": "9d2a20dfced141faf37094ed6365957590fc3b68",
+          "fileCount": 1313,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        },
+        {
+          "variant": "carwow",
+          "tree": "4504cd80b2c1b74a0a164fbdb1a28532e94757b8",
+          "fileCount": 1318,
+          "dealerAssets": 17,
+          "state": "implemented-unverified"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "dealers": 5,
+    "applications": 15,
+    "selectedListings": 40,
+    "uniqueDealerAssets": 85,
+    "stockPhotos": 80,
+    "trackedApplicationFiles": 14420
+  },
+  "scope": {
+    "verified": true,
+    "allowedRoots": [
+      "clients/car-max-sofia",
+      "clients/lux-auto-bg",
+      "clients/next-auto-pernik",
+      "clients/nova-cars-sofia",
+      "clients/stenli-car",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-09"
+    ]
+  },
+  "fullRuntimeVerified": false,
+  "ownerReviewed": false,
+  "deployed": false
+}
