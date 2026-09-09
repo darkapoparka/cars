@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dealer": "evrocar-varna-09",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "ownerReview": "pending",
+  "primaryPhone": "+359897002225",
+  "exactProfile": "https://evrocarvarna09.mobile.bg/",
+  "corroboratingProfiles": ["https://www.auto.bg/dealer/evrocarvarna09", "https://www.cars.bg/company/evrocarvarna09"],
+  "qualificationSampleIds": ["11764956071799029", "11751724444140717"],
+  "catalogueCountsObserved": {"openedPage": 23, "indexedResult": 24, "confirmedAvailableStock": null},
+  "brandingVisuallyInspected": false,
+  "imageRequestsSucceeded": false,
+  "permittedLocalMediaPackEstablished": false,
+  "applicationsImplemented": [],
+  "testsExecuted": [],
+  "renderedJourneyCompared": false,
+  "privateCorrespondenceAccessed": false,
+  "dealerContacted": false,
+  "deploymentCreated": false,
+  "checkpointKind": "qualification-only-not-application-delivery"
+}
