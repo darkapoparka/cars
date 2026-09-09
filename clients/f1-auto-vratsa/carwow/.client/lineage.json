@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "templateVersion": "2026.09.08-repair-1",
+  "method": "Independent retained master blobs plus client-specific source and asset edits; no symlinks or copied deployment bindings",
+  "excluded": [
+    ".template/source-manifest.json",
+    ".template/source-readme.md",
+    ".template/template.json",
+    "AGENTS.md",
+    "MIGRATION.md",
+    "design-qa.md",
+    "docs/final-polish/AUDIT.md",
+    "docs/final-polish/PLAN.md",
+    "docs/final-polish/QA_AND_EXECUTION.md"
+  ],
+  "sourceQaIsNotDealerQa": true,
+  "templateRefRuntimeRetained": true
+}

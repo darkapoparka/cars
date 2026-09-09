@@ -65,20 +65,44 @@
         "localBytes": true,
         "uniqueIds": true
       }
+    },
+    {
+      "slug": "fresh-auto-ruse",
+      "name": "Фреш Ауто",
+      "commit": "10d860e92a37e0e8cf89eaad766ecb1c62402640",
+      "state": "implemented-unverified",
+      "vehicles": 8,
+      "localMediaAssets": 33,
+      "appTrees": {
+        "auto-best": "387e3911d29ec475a57714be33c4d21866edc090",
+        "modern": "37baa7dcee585e6b0ed48c7248c91ff0fc38fd9a",
+        "carwow": "96ae4b97cfe4a0d8fe6db107c892f68a4ffd5fb3"
+      },
+      "dataChecks": {
+        "counts": [
+          8,
+          8,
+          8
+        ],
+        "samePrices": true,
+        "sameMileages": true,
+        "sameGallery": true,
+        "localBytes": true,
+        "uniqueIds": true
+      }
     }
   ],
   "currentDealer": {
-    "slug": "fresh-auto-ruse",
+    "slug": "f1-auto-vratsa",
     "state": "implemented-unverified",
     "sourceCount": 8,
     "appTrees": {
-      "auto-best": "387e3911d29ec475a57714be33c4d21866edc090",
-      "modern": "37baa7dcee585e6b0ed48c7248c91ff0fc38fd9a",
-      "carwow": "96ae4b97cfe4a0d8fe6db107c892f68a4ffd5fb3"
+      "auto-best": "9a96ebfa81e9409ac6416dab8047c169dd50a94b",
+      "modern": "db5fd60267ecf45a096ae2802101bada7674d9ff",
+      "carwow": "4702bf6ff93e9185aebab32a73dd19c91e0957af"
     }
   },
   "pending": [
-    "f1-auto-vratsa",
     "kunchev-auto",
     "haskovo-cars-bg"
   ],
