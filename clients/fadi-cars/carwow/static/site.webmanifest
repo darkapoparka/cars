@@ -1,18 +1,1 @@
-{
-	"name": "Ден и Нощ Ауто Груп",
-	"short_name": "Day Night Auto",
-	"description": "Day Night Auto: налични автомобили, огледи и контакт в София.",
-	"lang": "bg",
-	"start_url": "/",
-	"scope": "/",
-	"display": "standalone",
-	"background_color": "#ffffff",
-	"theme_color": "#d71920",
-	"icons": [
-		{
-			"src": "/brand/daynight-favicon.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
-}
+{"name":"ФАДИ КАРС","short_name":"Фади Карс","description":"ФАДИ КАРС — автомобилни обяви и контакт в София.","lang":"bg","start_url":"/","scope":"/","display":"standalone","background_color":"#ffffff","theme_color":"#0f7a68","icons":[]}
