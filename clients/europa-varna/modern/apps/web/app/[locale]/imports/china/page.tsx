@@ -1,39 +1,6 @@
-import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import type { Metadata } from "next";
-import { redirect } from "next/navigation";
-import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
-import { getPublicWebBaseUrl } from "@/lib/public-url";
+import { UnverifiedServicePage } from "../../components/unverified-service-page";
 
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
-
-const path = "/imports/china";
-
-export const generateMetadata = async ({
-  params,
-}: PageProps): Promise<Metadata> => {
+export default async function ChinaImportsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const isBg = normalizeSeoLocale(locale) === "bg";
-
-  return createPublicLocalizedMetadata({
-    baseUrl: getPublicWebBaseUrl(),
-    description: isBg
-      ? "Започнете заявка за автомобил от Китай с доставка до България от Day & Night."
-      : "Start a request for a vehicle from China with delivery to Bulgaria from Day & Night.",
-    locale,
-    path,
-    title: isBg
-      ? "Внос от Китай | Day & Night"
-      : "Import from China | Day & Night",
-  });
-};
-
-export default async function ChinaImportPage({ params }: PageProps) {
-  const { locale } = await params;
-  const normalizedLocale = normalizeSeoLocale(locale);
-
-  redirect(
-    `${getLocalizedPath(normalizedLocale, "/imports")}?origin=CN&start=1#import-request`
-  );
+  return <UnverifiedServicePage locale={locale} titleBg="Автомобил от Китай" titleEn="Vehicle from China" descriptionBg="Публичните източници не потвърждават специализирана услуга за внос от Китай. Уточнете произхода, документите и възможната доставка директно с автокъщата." descriptionEn="Public sources do not confirm a specialist China import service. Ask the dealership directly about origin, documents, and any delivery options." />;
 }

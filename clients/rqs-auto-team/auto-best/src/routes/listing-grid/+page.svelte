@@ -12,8 +12,8 @@
 </script>
 
 <svelte:head>
-  <title>Налични автомобили — {brand.name}</title>
-  <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
+  <title>Автомобили — {brand.name}</title>
+  <meta name="description" content={`Демонстрационна извадка от публикувани автомобилни обяви на ${brand.name} в ${brand.city}. Наличността се потвърждава директно.`} />
 </svelte:head>
 
 <VehicleSearchDialog filters={draftFilters}>
