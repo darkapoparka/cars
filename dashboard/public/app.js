@@ -27,12 +27,13 @@ function toast(text, bad = false) {
 function variantCell(row, design) {
   const p = row.project;
   const built = p?.variants?.includes(design);
-  const running = p?.runtime?.find((x) => x.template === design && x.alive);
+  const localBuilt = p?.local?.variants?.includes(design);
+  const running = p?.local?.runtime?.find((x) => x.template === design && x.alive);
   const hero = p?.heroPath ? `style="--hero:url('${asset(p.heroPath)}')"` : '';
   return `<td><button class="design ${built ? 'built' : 'missing'}" data-open="${esc(row.id)}" data-tab="designs" ${hero}>
     <span class="shade"></span><span class="design-copy"><b>${designName(design)}</b>
-    <span>${running ? 'Running' : built ? 'Built' : 'Not built'}</span>
-    ${running?.url ? `<em>Preview available</em>` : ''}</span></button></td>`;
+    <span>${running ? 'Running locally' : built ? (localBuilt ? 'Built / local' : 'Built on GitHub') : 'Not built'}</span>
+    ${running?.url ? '<em>Preview available</em>' : ''}</span></button></td>`;
 }
 function checks(row) {
   const p = row.project;
@@ -42,10 +43,9 @@ function checks(row) {
   const list = [
     [inventoryLabel, !!row.inventoryCount],
     [`${p?.mediaCount ?? 0} local media`, !!p?.mediaCount],
-    ['Brand asset', !!p?.logoPath],
-    ['Client folder', !!p?.exists],
-    [`${p?.variantCount ?? 0}/3 designs`, p?.variantCount === 3],
-    ['Index synced', !!p?.indexSynced]
+    ['Local brand asset', !!p?.logoPath],
+    ['Local client folder', !!p?.local?.exists],
+    [`${p?.local?.variantCount ?? 0}/3 local designs`, p?.local?.variantCount === 3]
   ];
   return `<ul class="checks">${list.map(([t, ok]) =>
     `<li class="${ok ? 'ok' : 'no'}"><span>${ok ? '&#10003;' : '&#8212;'}</span>${esc(t)}</li>`).join('')}</ul>`;
@@ -55,29 +55,40 @@ function logo(row, cls = 'logo') {
   const letters = row.name.split(/\s+/).slice(0, 2).map((x) => x[0]).join('').toUpperCase();
   return `<div class="initials">${esc(letters)}</div>`;
 }
-function row(row, i) {
+function buildCell(row) {
   const p = row.project;
+  if (!p?.github) return `<span class="status muted">No GitHub build</span><small>Research / local only</small>`;
+  return `<span class="status ${row.build.tone}">${esc(row.build.label)}</span><small>${esc(p.github.branch)} / ${esc((p.github.sha || '').slice(0, 10))}</small>`;
+}
+function qaCell(row) {
+  const p = row.project;
+  const count = p ? `${p.qaPassed}/${p.qaChecked} flags` : '';
+  return `<span class="status ${row.qa.tone}">${esc(row.qa.label)}</span><small>${esc(count)}</small>`;
+}
+function rowHtml(row, i) {
   return `<tr class="lead-row">
     <td class="num"><button class="star" data-fav="${esc(row.id)}" aria-label="Favorite">${row.local.favorite ? '&#9733;' : '&#9734;'}</button><span>${i + 1}</span></td>
     <td><button class="dealer" data-open="${esc(row.id)}" data-tab="overview"><b>${esc(row.name)}</b><span>${esc([row.city, row.market].filter(Boolean).join(' / '))}</span><small>${esc(row.id)}</small></button></td>
     <td class="brand">${logo(row)}</td>
     ${['auto-best', 'modern', 'carwow'].map((d) => variantCell(row, d)).join('')}
     <td>${checks(row)}</td>
+    <td>${buildCell(row)}</td>
+    <td>${qaCell(row)}</td>
     <td><select data-stage="${esc(row.id)}">${data.stages.map((s) => `<option value="${s}" ${s === row.local.stage ? 'selected' : ''}>${s.replaceAll('-', ' ')}</option>`).join('')}</select><small>${esc(row.priority || '')}</small></td>
-    <td><span class="status ${row.status.tone}">${esc(row.status.label)}</span><small>${p?.exists ? `${p.variantCount}/3 designs` : 'No project yet'}</small></td>
   </tr>`;
 }
 function filtered() {
-  const q = $('#q').value.trim().toLowerCase(), market = $('#market').value;
-  const stage = $('#stage').value, build = $('#build').value;
+  const q = $('#q').value.trim().toLowerCase();
+  const market = $('#market').value, gitState = $('#gitState').value;
+  const qaState = $('#qaState').value, stage = $('#stage').value;
   return data.rows.filter((r) => {
     if (favoritesOnly && !r.local.favorite) return false;
     if (market && r.market !== market) return false;
+    if (gitState === 'none' && r.project?.github) return false;
+    if (gitState && gitState !== 'none' && r.project?.github?.location !== gitState) return false;
+    if (qaState && (r.project?.qaState || 'missing') !== qaState) return false;
     if (stage && r.local.stage !== stage) return false;
-    if (build === 'full' && r.project?.variantCount !== 3) return false;
-    if (build === 'partial' && !(r.project?.exists && r.project.variantCount < 3)) return false;
-    if (build === 'none' && r.project?.exists) return false;
-    return !q || `${r.name} ${r.city} ${r.market} ${r.id}`.toLowerCase().includes(q);
+    return !q || `${r.name} ${r.city} ${r.market} ${r.id} ${r.project?.github?.branch || ''}`.toLowerCase().includes(q);
   });
 }
 function drawerOverview(r) {
@@ -85,14 +96,18 @@ function drawerOverview(r) {
   const inventoryText = r.inventoryOrigin === 'project'
     ? `${r.inventoryCount ?? 0} source-backed demo listings`
     : `${r.inventoryCount ?? 0} research advertisements`;
+  const github = p?.github
+    ? `${p.github.location === 'main' ? 'On main' : 'Branch only'} / ${p.github.branch}`
+    : 'No GitHub trio found';
+  const local = p?.local?.exists ? `${p.local.variantCount}/3 designs present locally` : 'Not present in local checkout';
   return `<div class="drawer-grid">
     <section class="panel"><h3>Lead context</h3><p>${esc(r.opportunity || 'No opportunity note recorded.')}</p>
       <dl><div><dt>Market</dt><dd>${esc(r.market || '-')}</dd></div><div><dt>Priority</dt><dd>${esc(r.priority || '-')}</dd></div><div><dt>Inventory</dt><dd>${esc(inventoryText)}</dd></div><div><dt>Lead ID</dt><dd>${esc(r.id)}</dd></div></dl>
       <div class="link-row">${r.sourceUrl ? `<a href="${esc(r.sourceUrl)}" target="_blank">Open source</a>` : ''}${r.website?.url ? `<a href="${esc(r.website.url)}" target="_blank">Open website</a>` : ''}</div>
     </section>
-    <section class="panel"><h3>Project state</h3><p><code>${esc(p?.path || 'No local client project yet')}</code></p>
-      <div class="metric-grid"><div><b>${p?.variantCount ?? 0}/3</b><span>designs</span></div><div><b>${p?.mediaCount ?? 0}</b><span>local media</span></div><div><b>${p?.qaPassed ?? 0}/${p?.qaChecked ?? 0}</b><span>QA flags</span></div></div>
-      <p class="muted">${p?.indexSynced ? 'Project index matches discovered designs.' : 'Project index does not match discovered designs.'}</p>
+    <section class="panel"><h3>Build truth</h3><p><b>${esc(github)}</b></p><p>${esc(local)}</p>
+      <div class="metric-grid"><div><b>${p?.variantCount ?? 0}/3</b><span>GitHub designs</span></div><div><b>${p?.qaPassed ?? 0}/${p?.qaChecked ?? 0}</b><span>QA flags</span></div><div><b>${p?.local?.variantCount ?? 0}/3</b><span>local designs</span></div></div>
+      <div class="link-row">${p?.github?.url ? `<a href="${esc(p.github.url)}" target="_blank">Open GitHub project</a>` : ''}</div>
     </section>
     <section class="panel wide"><h3>Next action</h3><p>${esc(r.local.nextAction || r.nextAction || 'No next action recorded.')}</p></section>
   </div>`;
@@ -100,11 +115,17 @@ function drawerOverview(r) {
 function drawerDesigns(r) {
   const p = r.project;
   return `<div class="drawer-designs">${['auto-best','modern','carwow'].map((d) => {
-    const built = p?.variants?.includes(d), running = p?.runtime?.find((x) => x.template === d && x.alive);
+    const built = p?.variants?.includes(d);
+    const localBuilt = p?.local?.variants?.includes(d);
+    const running = p?.local?.runtime?.find((x) => x.template === d && x.alive);
     const meta = p?.variantMeta?.[d] || {};
-    return `<article class="drawer-design ${built ? 'built' : 'missing'}"><div class="drawer-design-media" ${p?.heroPath ? `style="--hero:url('${asset(p.heroPath)}')"` : ''}></div>
-      <div><span class="eyebrow">${designName(d)}</span><h3>${built ? 'Application present' : 'Not built locally'}</h3><p>${meta.state ? `State: ${esc(meta.state)}` : 'No project metadata found.'}</p>
-      <p>${meta.templateVersion ? `Template: ${esc(meta.templateVersion)}` : ''}</p>${running?.url ? `<a href="${esc(running.url)}" target="_blank">Open running preview</a>` : ''}</div></article>`;
+    const state = meta.state || (built ? 'No project metadata' : 'Not built');
+    return `<article class="drawer-design ${built ? 'built' : 'missing'}">
+      <div class="drawer-design-media" ${p?.heroPath ? `style="--hero:url('${asset(p.heroPath)}')"` : ''}></div>
+      <div><span class="eyebrow">${designName(d)}</span><h3>${built ? 'Built on GitHub' : 'Not built'}</h3>
+      <p>Source state: ${esc(state)}</p><p>${localBuilt ? 'Present in local checkout.' : built ? 'GitHub build is not present locally.' : 'No application source found.'}</p>
+      <div class="link-row">${p?.github?.designUrls?.[d] ? `<a href="${esc(p.github.designUrls[d])}" target="_blank">Open on GitHub</a>` : ''}${running?.url ? `<a href="${esc(running.url)}" target="_blank">Open local preview</a>` : ''}</div></div>
+    </article>`;
   }).join('')}</div>`;
 }
 function drawerNotes(r) {
@@ -117,19 +138,25 @@ function drawerNotes(r) {
 }
 function drawerControls(r) {
   const p = r.project;
-  if (!p?.exists) return `<section class="panel"><h3>Project controls</h3><p>No local client folder exists for this lead yet.</p></section>`;
-  const disabled = p.indexSynced ? '' : 'disabled';
-  return `<div class="drawer-grid"><section class="panel wide"><h3>Local project controls</h3><p class="muted">These actions operate only on your local Cars workspace. They do not deploy or contact the dealer.</p>
-    <div class="control-grid"><button data-act="open" data-slug="${p.slug}">Open client folder</button><button data-act="prepare" data-slug="${p.slug}" ${disabled}>Prepare dependencies</button><button class="primary" data-act="start" data-slug="${p.slug}" ${disabled}>Start 3 designs</button><button class="danger" data-act="stop" data-slug="${p.slug}">Stop recorded previews</button></div>
-    ${!p.indexSynced ? '<p class="warning">Start/prepare are disabled until clients/index.json matches the discovered design folders.</p>' : ''}
+  if (!p?.github && !p?.local?.exists) return `<section class="panel"><h3>Project controls</h3><p>No GitHub or local project exists for this lead.</p></section>`;
+  const launchable = p?.local?.exists && p.local.variantCount === 3 && p.local.indexSynced;
+  const disabled = launchable ? '' : 'disabled';
+  return `<div class="drawer-grid"><section class="panel wide"><h3>Local project controls</h3>
+    <p class="muted">GitHub build state is informational. Controls only operate on the local J:/cars checkout.</p>
+    <div class="control-grid"><button data-act="open" data-slug="${esc(p.slug)}" ${p?.local?.exists ? '' : 'disabled'}>Open client folder</button><button data-act="prepare" data-slug="${esc(p.slug)}" ${disabled}>Prepare dependencies</button><button class="primary" data-act="start" data-slug="${esc(p.slug)}" ${disabled}>Start 3 designs</button><button class="danger" data-act="stop" data-slug="${esc(p.slug)}" ${p?.local?.runtime?.some((x) => x.alive) ? '' : 'disabled'}>Stop recorded previews</button></div>
+    ${p?.github?.url ? `<div class="link-row"><a href="${esc(p.github.url)}" target="_blank">Open GitHub source</a></div>` : ''}
+    ${launchable ? '' : `<p class="warning">${p?.local?.exists ? 'Local design folders or clients/index.json are not ready for the launcher.' : 'This build exists on GitHub but is not present in the local checkout yet.'}</p>`}
   </section></div>`;
 }
 function renderDrawer() {
   if (!selectedId || !data) return closeDrawer();
   const r = data.rows.find((x) => x.id === selectedId);
   if (!r) return closeDrawer();
-  const body = activeDrawerTab === 'designs' ? drawerDesigns(r) : activeDrawerTab === 'notes' ? drawerNotes(r) : activeDrawerTab === 'controls' ? drawerControls(r) : drawerOverview(r);
-  $('#drawerContent').innerHTML = `<header class="drawer-head"><div class="drawer-brand">${logo(r, 'drawer-logo')}<div><span class="eyebrow">${esc([r.city, r.market].filter(Boolean).join(' / '))}</span><h2>${esc(r.name)}</h2><div><span class="status ${r.status.tone}">${esc(r.status.label)}</span></div></div></div><button id="drawerClose" class="close-btn" aria-label="Close">&times;</button></header>
+  const body = activeDrawerTab === 'designs' ? drawerDesigns(r)
+    : activeDrawerTab === 'notes' ? drawerNotes(r)
+    : activeDrawerTab === 'controls' ? drawerControls(r)
+    : drawerOverview(r);
+  $('#drawerContent').innerHTML = `<header class="drawer-head"><div class="drawer-brand">${logo(r, 'drawer-logo')}<div><span class="eyebrow">${esc([r.city, r.market].filter(Boolean).join(' / '))}</span><h2>${esc(r.name)}</h2><div><span class="status ${r.build.tone}">${esc(r.build.label)}</span> <span class="status ${r.qa.tone}">${esc(r.qa.label)}</span></div></div></div><button id="drawerClose" class="close-btn" aria-label="Close">&times;</button></header>
     <nav class="drawer-tabs"><button data-drawer-tab="overview" class="${activeDrawerTab === 'overview' ? 'active' : ''}">Overview</button><button data-drawer-tab="designs" class="${activeDrawerTab === 'designs' ? 'active' : ''}">Designs</button><button data-drawer-tab="notes" class="${activeDrawerTab === 'notes' ? 'active' : ''}">Lead & Notes</button><button data-drawer-tab="controls" class="${activeDrawerTab === 'controls' ? 'active' : ''}">Controls</button></nav><div class="drawer-body">${body}</div>`;
   bindDrawer(r);
 }
@@ -163,7 +190,7 @@ function bindDrawer(r) {
 }
 function render() {
   const rows = filtered();
-  $('#rows').innerHTML = rows.map(row).join('');
+  $('#rows').innerHTML = rows.map(rowHtml).join('');
   $('#empty').hidden = rows.length > 0;
   bindRows();
 }
@@ -188,26 +215,46 @@ async function act(slug, kind) {
     setTimeout(() => load(true), 1000);
   } catch (e) { toast(e.message, true); }
 }
+async function refreshGithub() {
+  try {
+    $('#refresh').disabled = true;
+    $('#refresh').textContent = 'Refreshing...';
+    await api('/api/github-refresh', { method: 'POST', body: '{}' });
+    await load(true);
+    toast('GitHub refs refreshed');
+  } catch (e) { toast(e.message, true); }
+  finally { $('#refresh').disabled = false; $('#refresh').textContent = 'Refresh GitHub'; }
+}
 async function load(quiet = false) {
   try {
     data = await api('/api/overview');
     const dirty = data.repo.dirtyFiles ? 'Local checkout has uncommitted changes' : 'Local checkout clean';
-    $('#repo').innerHTML = `<b>${esc(data.repo.branch)} / ${esc(data.repo.sha)}</b><span>${dirty} / darkapoparka/cars</span>`;
-    const cards = [['Leads',data.summary.total],['3-design projects',data.summary.full],['Research only',data.summary.research],['Needs QA',data.summary.qa],['Ready',data.summary.ready],['Running previews',data.summary.running]];
-    $('#stats').innerHTML = cards.map(([a,b]) => `<div><b>${b}</b><span>${a}</span></div>`).join('');
+    $('#repo').innerHTML = `<b>GitHub main ${esc(data.repo.remoteMainSha)}</b><span>Local ${esc(data.repo.localBranch)} / ${esc(data.repo.localSha)} / ${dirty}</span>`;
+    const cards = [
+      ['GitHub trios', data.summary.githubTrios],
+      ['On main', data.summary.mainTrios],
+      ['Branch only', data.summary.branchTrios],
+      ['QA passed', data.summary.qaPassed],
+      ['Need QA evidence', data.summary.qaPending],
+      ['Running previews', data.summary.running]
+    ];
+    $('#stats').innerHTML = cards.map(([a, b]) => `<div><b>${b}</b><span>${a}</span></div>`).join('');
     const market = $('#market').value, stage = $('#stage').value;
     $('#market').innerHTML = '<option value="">All markets</option>' + data.summary.markets.map((x) => `<option>${esc(x)}</option>`).join('');
     $('#market').value = market;
-    $('#stage').innerHTML = '<option value="">All stages</option>' + data.stages.map((x) => `<option>${x}</option>`).join('');
+    $('#stage').innerHTML = '<option value="">All pipeline stages</option>' + data.stages.map((x) => `<option>${x}</option>`).join('');
     $('#stage').value = stage;
     render();
     if (selectedId) renderDrawer();
     if (!quiet) toast('Dashboard refreshed');
   } catch (e) { toast(e.message, true); }
 }
-['q','market','stage','build'].forEach((id) => $('#'+id).addEventListener(id === 'q' ? 'input' : 'change', () => data && render()));
+
+['q','market','gitState','qaState','stage'].forEach((id) =>
+  $('#'+id).addEventListener(id === 'q' ? 'input' : 'change', () => data && render())
+);
 $('#fav').onclick = (e) => { favoritesOnly = !favoritesOnly; e.currentTarget.classList.toggle('active', favoritesOnly); render(); };
-$('#refresh').onclick = () => load();
+$('#refresh').onclick = refreshGithub;
 $('#drawerBackdrop').onclick = closeDrawer;
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && selectedId) closeDrawer(); });
 load(true);
