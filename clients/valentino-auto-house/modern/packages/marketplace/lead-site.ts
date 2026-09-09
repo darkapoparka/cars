@@ -14,6 +14,10 @@ export interface LeadSiteConfig {
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
+  readonly logoLightPath: string;
+  readonly logoDarkPath: string;
+  readonly hoursLabel: string;
+  readonly stockNotice: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly name: string;
@@ -43,6 +47,10 @@ export const leadSite: LeadSiteConfig = {
   heroPath: "/media/stock/11785220779595617-1.webp",
   locale: dealer.locale,
   logoPath: dealer.logo,
+  logoLightPath: dealer.logoLight,
+  logoDarkPath: dealer.logoDark,
+  hoursLabel: "Пон–Пет 07:00–19:00 · Съб 07:00–17:00 · Неделя: почивен ден",
+  stockNotice: dealer.stockNotice,
   // Address search, not a claim of verified geographic coordinates.
   mapsEmbedUrl: `https://maps.google.com/maps?q=${addressQuery}&output=embed`,
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${addressQuery}`,

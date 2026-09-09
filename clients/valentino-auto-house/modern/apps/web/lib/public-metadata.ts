@@ -58,6 +58,7 @@ export const createPublicLocalizedMetadata = (
 
   return {
     ...metadata,
+    robots: { index: false, follow: false },
     twitter: {
       ...(metadata.twitter ?? {}),
       images:

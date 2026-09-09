@@ -80,6 +80,7 @@ export function MobileAboutContact({
               </span>
               <span className="mt-1 block text-[14px] text-zinc-600 leading-5">
                 {leadSite.address}, {leadSite.city}
+                <span className="mt-1 block text-xs">{leadSite.hoursLabel}</span>
               </span>
             </span>
             <DealerUiIcon
