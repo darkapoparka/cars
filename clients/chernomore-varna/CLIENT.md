@@ -1,17 +1,27 @@
 # Автосалон Черно море
 
-State: **in-progress**. All three application sources are implemented as independent master copies, but the media/branding and complete supporting-page acceptance gates remain open. No runtime/browser QA has been executed.
+State: **in-progress; runtime-unverified**. Three actual independent applications are committed: `auto-best/`, full-workspace `modern/`, and `carwow/`.
 
-Published business source: https://chernomore.mobile.bg/
+## Published identity and stock
 
-Address: бул. Цар Освободител 289, пресечка с бул. Константин и Фружин, Варна. Phone: 0888 596 963. Hours: Понеделник–петък 09:00–18:00; събота 09:00–16:00; неделя — почивен ден.
+Source: https://chernomore.mobile.bg/
 
-Observed: 2026-09-09. The eight selected records are advertisements, not independently verified available stock. Source dates, incoming/consignment notes, tax wording, EUR amounts and kilometres are stored in the application-consumed `dealer-stock.json`.
+Address: бул. Цар Освободител 289, пресечка с бул. Константин и Фружин, Варна. Primary phone: 0888 596 963. Additional phone: +35952560733.
 
-No inherited Day & Night stock is used by the primary inventory adapters. Real-photo permission is unresolved, so vehicle slots explicitly show a local development notice and link to the original advertisement. The logo is a temporary development label, not an accepted generated asset. Image Gen did not start.
+Hours: Понеделник–петък 09:00–18:00; събота 09:00–16:00; неделя — почивен ден.
 
-No dealer approval, private CRM history, outreach, live stock feed, delivery service or public preview is claimed. Existing unrelated projects remain untouched.
+Eight representative advertisements observed on 2026-09-09 drive all three apps through their imported `dealer-stock.json`. IDs, original URLs, actual EUR/km, tax notes, source-status distinctions and caveats are preserved. These are dated advertisements, not an independently verified live available-stock feed. Full facts and evidence levels: `business-facts.json`.
 
-## Latest implementation checkpoint
+## Implementation and artwork
 
-The three real application trees now include proposed outlined logos, light/dark treatments, favicons/touch/OG exports, source-aware catalogue adapters and original-advertisement links. Isolated adapter execution and targeted data/config no-emit type checks pass for each design; edited source parsing also passes. See VERIFICATION.json for exact file-level evidence and runtime versions. This remains an **in-progress, runtime-unverified source handoff**, not a sendable finished demo. Real photos and the full supporting-page/browser acceptance sweep remain open. Earlier temporary-logo descriptions above record the initial source checkpoint, not the latest artwork state.
+The published master layouts, source runtimes and lockfiles are retained. Identity/contact/catalogue/detail consumers are personalized. Local outlined light/dark logo proposals and PNG/favicon/touch/OG exports are integrated. The manually authored source-informed proposals are not official dealer originals or approved artwork; Image Gen did not start. Details and exact hashes: `ASSETS.md`, `ASSET-CHECKS.json`.
+
+Real vehicle photos are not integrated: an asset-specific reuse basis remains unresolved. Explicit local unavailable-image states and original advertisement links are used, never inherited stock or generated fake dealer vehicles.
+
+## Checks and open acceptance
+
+All three isolated catalogue-adapter execution checks and targeted data/config no-emit type checks pass. Edited source parsing passes. All 15 application trees across this session were remotely verified against their exact retained/changed blob hashes. These checks do not establish application runtime or visual acceptance. Exact per-client results: `VERIFICATION.json`, `SOURCE-CHECKS.json`.
+
+Still open: real photos, complete supporting-page content acceptance including FAQ/article service wording, full installs/framework checks/builds and browser/viewport route-interaction review. No public preview, real delivery service, dealer approval or owner review is claimed.
+
+Use `REVIEW.md` for coordinator commands. The shared client index is intentionally unchanged; it must be synchronized by the coordinator during integration before the index-based `start-client.ps1` launcher recognizes this new slug. No deployment or outreach occurred.

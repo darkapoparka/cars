@@ -1,0 +1,211 @@
+{
+  "verifiedSourceHead": "d22cf4dcc579d0d5e4d53bd6f8d3862c0476ae0a",
+  "sourceBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "branch": "codex/astra-bg-02",
+  "changedAllowlistedRoots": [
+    "clients/avtoborsa-mania",
+    "clients/chernomore-varna",
+    "clients/extra-car-sm",
+    "clients/kapitol-varna",
+    "clients/prestige-varna",
+    "docs/lead-build/bulgaria-2026-09-09/reports/session-02"
+  ],
+  "outsideAllowlist": [],
+  "applications": [
+    {
+      "slug": "kapitol-varna",
+      "design": "auto-best",
+      "files": 246,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "kapitol-varna",
+      "design": "modern",
+      "files": 1301,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "kapitol-varna",
+      "design": "carwow",
+      "files": 1340,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "chernomore-varna",
+      "design": "auto-best",
+      "files": 246,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "chernomore-varna",
+      "design": "modern",
+      "files": 1301,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "chernomore-varna",
+      "design": "carwow",
+      "files": 1340,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "design": "auto-best",
+      "files": 246,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "design": "modern",
+      "files": 1301,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "design": "carwow",
+      "files": 1340,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "prestige-varna",
+      "design": "auto-best",
+      "files": 246,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "prestige-varna",
+      "design": "modern",
+      "files": 1301,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "prestige-varna",
+      "design": "carwow",
+      "files": 1340,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "extra-car-sm",
+      "design": "auto-best",
+      "files": 246,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "extra-car-sm",
+      "design": "modern",
+      "files": 1301,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    },
+    {
+      "slug": "extra-car-sm",
+      "design": "carwow",
+      "files": 1340,
+      "allRetainedAndChangedBlobHashesMatch": true,
+      "symlinks": 0
+    }
+  ],
+  "assetByteReadbacks": [
+    {
+      "slug": "kapitol-varna",
+      "asset": "logo-dark.svg",
+      "bytes": 9871,
+      "sha256": "9494bbcb481cb048cc083c39742053318a9d276273943f9b0cf28478a459426d",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "kapitol-varna",
+      "asset": "apple-touch-icon.png",
+      "bytes": 2941,
+      "sha256": "40eeee60adffc50cdb86091f8540c6dd43740221cbe0a326786e31e0ab699dd6",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "chernomore-varna",
+      "asset": "logo-dark.svg",
+      "bytes": 6932,
+      "sha256": "d25f0515ad847f090e1da55a019ea7176bcd9626156a2e27980279331c54a8ac",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "chernomore-varna",
+      "asset": "apple-touch-icon.png",
+      "bytes": 4288,
+      "sha256": "9c0fe6ba329f411edbc279c0d30e529b3163434baea43c7fc9b927c04781966e",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "asset": "logo-dark.svg",
+      "bytes": 5624,
+      "sha256": "622e469eb9358539cb553294adbc03f427d0ee4464a79e3b8c53e5651d261ed0",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "asset": "apple-touch-icon.png",
+      "bytes": 3549,
+      "sha256": "549eadcd99301f18564482339616703fc1674371ae89e80893e3bfcc19650ba4",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "prestige-varna",
+      "asset": "logo-dark.svg",
+      "bytes": 6572,
+      "sha256": "1000e8e59cc5192abe781e813d9a20197159f112d1a44c95f28f5353a80cd4a7",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "prestige-varna",
+      "asset": "apple-touch-icon.png",
+      "bytes": 2848,
+      "sha256": "c417cf0bedaf151f021de65a5db384ef87793924fed73242373cb395626b57f0",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "extra-car-sm",
+      "asset": "logo-dark.svg",
+      "bytes": 7488,
+      "sha256": "28e19800bfe699ccb42a9dbdf3098d014811e0a5e277cb0903230b6cc66e0b96",
+      "remoteBytesMatch": true
+    },
+    {
+      "slug": "extra-car-sm",
+      "asset": "apple-touch-icon.png",
+      "bytes": 2985,
+      "sha256": "54bfa966d6e53d22261770b5ef3529a666e4ddb48a33ce96c79cbd11bdb44a11",
+      "remoteBytesMatch": true
+    }
+  ],
+  "checks": {
+    "parsedEditedFiles": 800,
+    "parseErrors": 0,
+    "isolatedAdapterExecutions": 15,
+    "adapterFailures": 0,
+    "targetedDataTypecheckSets": 15,
+    "targetedTypeDiagnostics": 0
+  },
+  "sourceCheckRuntime": {
+    "node": "v24.18.0",
+    "typescript": "5.9.3",
+    "svelte": {
+      "auto-best": "5.57.0",
+      "carwow": "5.55.9"
+    }
+  },
+  "fullAppBuildOrBrowserChecksExecuted": false,
+  "note": "The final handoff commit only updates client documentation and this session report; all verified application trees remain identical."
+}
