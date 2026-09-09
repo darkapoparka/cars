@@ -4,7 +4,7 @@
   "observedAt": "2026-09-09",
   "publishedBranding": "Published red/silver/black shield with VALENTINO AUTO HOUSE lettering, visually inspected.",
   "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h14344459689942477.pic",
-  "workingLogoPath": "/brand/logo.png",
+  "workingLogoPath": "/brand/logo.webp",
   "creationMethod": "Original publisher artwork. Lossless nameplate crop and surface-padding/icon exports; no generated artwork is used.",
   "crop": {
     "left": 100,
@@ -69,6 +69,24 @@
       "bytes": 345524,
       "gitBlob": "daba01c31e540c45d7cf9f021da392858f2f8c5e",
       "sha256": "49b056c5b4186df98c335350bfb25971f23282ec5529768d23cfdc5994fd44ea"
+    },
+    {
+      "path": "/brand/logo.webp",
+      "bytes": 54190,
+      "gitBlob": "0cc1a168c2f37b4c201ba8b14800f578523babd6",
+      "sha256": "806a85b9b67d2d37545ade5f3cf13f8fdf3b173f6898882234dc03635c19db4e"
+    },
+    {
+      "path": "/brand/logo-light.webp",
+      "bytes": 54052,
+      "gitBlob": "de6a8f28e1c94c0a526e83962c5736775f95007b",
+      "sha256": "becde3c031fda1870e1a4e35f157c223204c8326a2c4efc24db03684ac3b0395"
+    },
+    {
+      "path": "/brand/logo-dark.webp",
+      "bytes": 54378,
+      "gitBlob": "d350978f9420c549b3835bb4b5b7d8e024e875aa",
+      "sha256": "02cb2648dc52c3107bbd62073b6b0df0dd86b9f3454ba890531ef48e7fb0ccb3"
     }
   ]
 }

@@ -47,9 +47,9 @@
     },
     "websiteStatus": "No independent domain matched in a bounded search; not proof that none exists.",
     "accent": "#b80024",
-    "logo": "/brand/logo.png",
-    "logoLight": "/brand/logo-light.png",
-    "logoDark": "/brand/logo-dark.png",
+    "logo": "/brand/logo.webp",
+    "logoLight": "/brand/logo-light.webp",
+    "logoDark": "/brand/logo-dark.webp",
     "stockNotice": "Демо селекция по публикувани обяви, записани на 09.09.2026 г. Цените, оборудването и наличността се потвърждават с продавача.",
     "services": [
       {
@@ -124,7 +124,8 @@
         "https://mobistatic3.focus.bg/mobile/photosorg/617/1/big1/11785220779595617_OI.webp",
         "https://mobistatic3.focus.bg/mobile/photosorg/617/1/big1/11785220779595617_cN.webp",
         "https://mobistatic3.focus.bg/mobile/photosorg/617/1/big1/11785220779595617_rb.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11785220779595617-card.webp"
     },
     {
       "id": 2,
@@ -173,7 +174,8 @@
         "https://cdn2.focus.bg/mobile/photosorg/726/1/big1/11732307740792726_Pd.webp",
         "https://cdn2.focus.bg/mobile/photosorg/726/1/big1/11732307740792726_dx.webp",
         "https://cdn2.focus.bg/mobile/photosorg/726/1/big1/11732307740792726_gY.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11732307740792726-card.webp"
     },
     {
       "id": 3,
@@ -223,7 +225,8 @@
         "https://mobistatic2.focus.bg/mobile/photosorg/325/2/big1/21724767264834325_Zh.webp",
         "https://mobistatic2.focus.bg/mobile/photosorg/325/2/big1/21724767264834325_4I.webp",
         "https://mobistatic2.focus.bg/mobile/photosorg/325/2/big1/21724767264834325_kj.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/21724767264834325-card.webp"
     },
     {
       "id": 4,
@@ -270,7 +273,8 @@
         "https://cdn2.focus.bg/mobile/photosorg/441/1/big1/11777318867210441_k0.webp",
         "https://cdn2.focus.bg/mobile/photosorg/441/1/big1/11777318867210441_S5.webp",
         "https://cdn2.focus.bg/mobile/photosorg/441/1/big1/11777318867210441_cf.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11777318867210441-card.webp"
     },
     {
       "id": 5,
@@ -319,7 +323,8 @@
         "https://mobistatic4.focus.bg/mobile/photosorg/272/1/big1/11780736224961272_Ya.webp",
         "https://mobistatic4.focus.bg/mobile/photosorg/272/1/big1/11780736224961272_hr.webp",
         "https://mobistatic4.focus.bg/mobile/photosorg/272/1/big1/11780736224961272_Zm.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11780736224961272-card.webp"
     },
     {
       "id": 6,
@@ -369,7 +374,8 @@
         "https://cdn2.focus.bg/mobile/photosorg/705/1/big1/11768394188936705_K.webp",
         "https://cdn2.focus.bg/mobile/photosorg/705/1/big1/11768394188936705_Qm.webp",
         "https://cdn2.focus.bg/mobile/photosorg/705/1/big1/11768394188936705_EN.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11768394188936705-card.webp"
     },
     {
       "id": 7,
@@ -414,7 +420,8 @@
         "https://mobistatic1.focus.bg/mobile/photosorg/957/1/big1/11709149044159957_Fb.webp",
         "https://mobistatic1.focus.bg/mobile/photosorg/957/1/big1/11709149044159957_mo.webp",
         "https://mobistatic1.focus.bg/mobile/photosorg/957/1/big1/11709149044159957_UB.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11709149044159957-card.webp"
     },
     {
       "id": 8,
@@ -463,7 +470,8 @@
         "https://mobistatic2.focus.bg/mobile/photosorg/540/1/big1/11713813771194540_MO.webp",
         "https://mobistatic2.focus.bg/mobile/photosorg/540/1/big1/11713813771194540_I6.webp",
         "https://mobistatic2.focus.bg/mobile/photosorg/540/1/big1/11713813771194540_AC.webp"
-      ]
+      ],
+      "thumbnail": "/media/stock/11713813771194540-card.webp"
     }
   ],
   "availableStockCount": null,
@@ -784,6 +792,88 @@
         "gitBlob": "942eeff12e1e561af2130c20d563eeec11b40d78",
         "sha256": "59f10644a0c75763af7928dbe20e6e9f16c6bde2ed5dbbaeeabfbec533f3920e",
         "transformation": "none; exact original WebP bytes, including all source marks"
+      }
+    ],
+    "derivatives": [
+      {
+        "path": "/media/stock/11785220779595617-card.webp",
+        "bytes": 36606,
+        "gitBlob": "20010a17eea60ebeef2763f78cb29a4c591f7f8d",
+        "sha256": "4e5be8f134761ce9e49f1ba4f74bbc0e9f20064ea2735fdb07a7e3c07616aa53",
+        "vehicleId": "11785220779595617",
+        "sourcePath": "/media/stock/11785220779595617-1.webp",
+        "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/617/1/big1/11785220779595617_OI.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/11732307740792726-card.webp",
+        "bytes": 34154,
+        "gitBlob": "bc339d04cc156dd17c1e52162825dbaef21493db",
+        "sha256": "f5a272ffae71992c17738eca51c34c3e759a0ee378d87ceec7fd375a71c000c0",
+        "vehicleId": "11732307740792726",
+        "sourcePath": "/media/stock/11732307740792726-1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/726/1/big1/11732307740792726_Pd.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/21724767264834325-card.webp",
+        "bytes": 42940,
+        "gitBlob": "68aa5ae32b035ef90920bfd1050439ec4093a3d3",
+        "sha256": "f86dd29b3c2da361a795037cd41b2d8773507d8b9606944fd9820d7004e489b5",
+        "vehicleId": "21724767264834325",
+        "sourcePath": "/media/stock/21724767264834325-1.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/325/2/big1/21724767264834325_Zh.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/11777318867210441-card.webp",
+        "bytes": 39470,
+        "gitBlob": "d70c9aeba32c98f4d9985f4ef1608d77c5a460af",
+        "sha256": "634fec133f56f9b6bf972ee75779650255b61326d775a90d6e5ecad402ec027b",
+        "vehicleId": "11777318867210441",
+        "sourcePath": "/media/stock/11777318867210441-1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/441/1/big1/11777318867210441_k0.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/11780736224961272-card.webp",
+        "bytes": 40394,
+        "gitBlob": "b3864876438bc50cae608ed6d027a4a7636acacc",
+        "sha256": "a00926c9cc46ebbf503be35ddae92e09fdf2c8e9cd8dafcffe6ff11fcc1cd0df",
+        "vehicleId": "11780736224961272",
+        "sourcePath": "/media/stock/11780736224961272-1.webp",
+        "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/272/1/big1/11780736224961272_Ya.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/11768394188936705-card.webp",
+        "bytes": 33908,
+        "gitBlob": "188f6a8ea843dc87d2c93c94f9f98aa0163432e9",
+        "sha256": "82e5d7727a385d64a99788fe8a46782b79805eb878140be11bc78a93788636e9",
+        "vehicleId": "11768394188936705",
+        "sourcePath": "/media/stock/11768394188936705-1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/705/1/big1/11768394188936705_K.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/11709149044159957-card.webp",
+        "bytes": 44836,
+        "gitBlob": "d66dd0c64841db871953d024f79a9504957f2c1c",
+        "sha256": "9c0b94ca1b91bf24b2bef6addc8d417bc4bc10095ca6274021ff873da58906db",
+        "vehicleId": "11709149044159957",
+        "sourcePath": "/media/stock/11709149044159957-1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/957/1/big1/11709149044159957_Fb.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
+      },
+      {
+        "path": "/media/stock/11713813771194540-card.webp",
+        "bytes": 41776,
+        "gitBlob": "8cf2792c0ab878eda899a9244bc6ebb74e0e2588",
+        "sha256": "5a83aa88da59466fdef57aaa03f1bd1b72603979b3cecc0b25b6536fdf02830b",
+        "vehicleId": "11713813771194540",
+        "sourcePath": "/media/stock/11713813771194540-1.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/540/1/big1/11713813771194540_MO.webp",
+        "transformation": "Proportional resize to 640px width; WebP quality 82; no crop, removed mark or compositing"
       }
     ]
   }
