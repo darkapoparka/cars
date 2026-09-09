@@ -1,5 +1,5 @@
 import { cn } from "@repo/design-system/lib/utils";
-import { leadSite } from "@repo/marketplace";
+import { leadSite, dealerServiceCopy } from "@repo/marketplace";
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import {
@@ -30,107 +30,107 @@ interface ContactPageProps {
 
 const pageCopy = {
   bg: {
-    heroImageAlt: "Нощен автомобилен шоурум",
-    title: "Премиум автомобили. Внос. Лизинг.",
+    heroImageAlt: "Информация за контакт с автокъщата",
+    title: `${leadSite.name} · ${leadSite.city}`,
     description:
-      "Вижте автомобилите в наличност или говорете директно с Черно море за следващия си автомобил.",
-    inventoryAction: "Вижте наличностите",
+      `Разгледайте обявите и уточнете конкретния автомобил с ${leadSite.shortName}.`,
+    inventoryAction: "Разгледайте автомобилите",
     phoneAction: "Обадете се",
-    contactTitle: "Говорете директно с нас.",
+    contactTitle: "Свържете се с продавача",
     contactDescription:
-      "Един телефон за автомобил, внос или финансиране. Шоурум в бул. Цар Освободител 289, пресечка с бул. Константин и Фружин.",
-    locationLabel: "Шоурум · бул. Цар Освободител 289, пресечка с бул. Константин и Фружин",
+      `Телефон ${leadSite.phoneDisplay}. Потвърдете автомобила, часа и мястото преди посещение.`,
+    locationLabel: leadSite.address,
     mapAction: "Отворете картата",
     servicesTitle: "Изберете правилната посока.",
     servicesDescription:
-      "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
-    sellHandoffAction: "Обадете се за оферта",
+      "Изберете тема за разговор. Услугите и условията се уточняват за конкретната сделка.",
+    sellHandoffAction: "Обадете се за разговор",
     sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Черно море, за да уточним оглед и конкретна оферта.",
+      `Данните са подготвени само в демото и не са изпратени. Обадете се на ${leadSite.phoneDisplay}, за да попитате дали предложението може да бъде разгледано.`,
     sellHandoffEditAction: "Редактирайте данните",
-    sellHandoffTitle: "Заявете оценка за автомобила",
+    sellHandoffTitle: "Подгответе предложение за автомобил",
     sellCategoryLabel: "Категория",
     sellDetailsLabel: "Екстри и бележки",
     sellMileageLabel: "Пробег",
     sellVehicleLabel: "Автомобил",
     sellYearLabel: "Година",
-    sellLocationLabel: "Шоурум · бул. Цар Освободител 289, пресечка с бул. Константин и Фружин",
+    sellLocationLabel: leadSite.address,
     services: [
       {
-        title: "Автомобили в наличност",
+        title: "Автомобилни обяви",
         description: "Разгледайте предложенията и планирайте оглед.",
         href: "/cars",
         icon: CarFront,
       },
       {
-        title: "Внос по заявка",
+        title: "Въпрос за внос",
         description: "Кажете какво търсите и започнете разговор.",
         href: "/imports",
         icon: Ship,
       },
       {
         title: "Запитване за финансиране",
-        description: "Обсъдете вариант според автомобила и бюджета ви.",
+        description: dealerServiceCopy.finance,
         href: "/lease",
         icon: Landmark,
       },
       {
-        title: "Продайте автомобила си",
-        description: "Изпратете данни за автомобила и заявете оценка.",
+        title: "Предложение за автомобил",
+        description: "Подгответе данни и попитайте дали продавачът разглежда предложението.",
         href: "/sell",
         icon: Tag,
       },
     ],
   },
   en: {
-    heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
+    heroImageAlt: "Dealership contact information",
+    title: `${leadSite.name} · ${leadSite.city}`,
     description:
-      "Browse the vehicles in stock or speak directly with Черно море about your next vehicle.",
-    inventoryAction: "View available vehicles",
+      `Browse the advertisements and discuss a specific vehicle with ${leadSite.shortName}.`,
+    inventoryAction: "Browse vehicles",
     phoneAction: "Call us",
-    contactTitle: "Speak directly with us.",
+    contactTitle: "Contact the seller",
     contactDescription:
-      "One phone number for vehicles, imports, or finance. Showroom in Studentski grad.",
-    locationLabel: "Showroom · Studentski grad",
+      `Call ${leadSite.phoneDisplay}. Confirm the vehicle, viewing time and location before visiting.`,
+    locationLabel: leadSite.address,
     mapAction: "Open the map",
     servicesTitle: "Choose the right direction.",
     servicesDescription:
-      "From a vehicle in stock to an import on request, our team is one call away.",
-    sellHandoffAction: "Call for an offer",
+      "Choose a topic for your conversation. Services and terms must be agreed for the specific transaction.",
+    sellHandoffAction: "Call to discuss",
     sellHandoffDescription:
-      "Your vehicle details are ready. Call Черно море to arrange an inspection and a concrete offer.",
+      `The details have only been prepared in this demo; nothing has been sent. Call ${leadSite.phoneDisplay} to ask whether the seller will consider the proposal.`,
     sellHandoffEditAction: "Edit vehicle details",
-    sellHandoffTitle: "Request a vehicle appraisal",
+    sellHandoffTitle: "Prepare a vehicle proposal",
     sellCategoryLabel: "Category",
     sellDetailsLabel: "Extras and notes",
     sellMileageLabel: "Mileage",
     sellVehicleLabel: "Vehicle",
     sellYearLabel: "Year",
-    sellLocationLabel: "Showroom · Studentski grad",
+    sellLocationLabel: leadSite.address,
     services: [
       {
-        title: "Vehicles in stock",
+        title: "Vehicle advertisements",
         description: "Browse the offers and plan an inspection.",
         href: "/cars",
         icon: CarFront,
       },
       {
-        title: "Import on request",
+        title: "Import questions",
         description:
           "Tell us what you are looking for and start a conversation.",
         href: "/imports",
         icon: Ship,
       },
       {
-        title: "In-house leasing",
+        title: "Finance questions",
         description: "Discuss an option for the vehicle and your budget.",
         href: "/lease",
         icon: Landmark,
       },
       {
-        title: "Sell your car",
-        description: "Share your vehicle details and request an appraisal.",
+        title: "Vehicle proposal",
+        description: "Prepare your vehicle details and ask whether the seller will consider them.",
         href: "/sell",
         icon: Tag,
       },
@@ -184,8 +184,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Автосалон Черно море в Варна — автомобили в наличност, внос по заявка и възможности за финансиране след потвърждение."
-      : "Автосалон Черно море in Варна — vehicles in stock, import on request, and in-house leasing.",
+      ? `Контакти за ${leadSite.name}, ${leadSite.city}. Потвърдете автомобила, часа и мястото на оглед.`
+      : `Contact ${leadSite.name}, ${leadSite.city}. Confirm the vehicle, viewing time and location.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
