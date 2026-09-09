@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "client": "exclusive-auto-varna",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [{"id":"main","route":"/"}],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "branch": "codex/astra-bg-04",
+  "note": "Actual independent source copied. Personalization in progress. No inherited QA and no deployed preview."
+}
