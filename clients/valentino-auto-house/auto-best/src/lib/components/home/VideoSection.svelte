@@ -43,20 +43,17 @@
   .dn-video-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border-radius: 16px; background: #fff; }
   .dn-video-card__media { position: relative; aspect-ratio: 16 / 9; background: #171a20; }
   .dn-video-card__play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer; background: #171a20; color: #fff; }
-  .dn-video-card__play img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .dn-video-card__play img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .dn-video-card__play-icon { position: absolute; left: calc(50% - 28px); top: calc(50% - 22px); display: grid; place-items: center; width: 56px; height: 44px; border-radius: 12px; background: var(--dn-red); }
   .dn-video-card__play:hover .dn-video-card__play-icon { background: #24272c; }
   .dn-video-card__duration { position: absolute; bottom: 10px; right: 10px; padding: 3px 6px; border-radius: 4px; background: #171a20; color: #fff; font-size: 12px; font-weight: 600; line-height: 1.4; }
-  .dn-video-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .dn-video-card__content { display: flex; flex: 1; flex-direction: column; padding: 18px 20px 12px; }
   .dn-video-card h3 { min-height: 2.6em; margin: 0 0 8px; color: #24272c; font-size: 20px; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
   .dn-video-card__actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
   .dn-video-card__actions a { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; color: #626a75; font-size: 14px; font-weight: 500; }
-  .dn-video-card__actions button { display: grid; flex-shrink: 0; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: #f1f3f5; color: #24272c; cursor: pointer; }
   .dn-video-card__actions a:hover { color: var(--dn-red); }
   .dn-videos__channel:hover { color: var(--dn-red); text-decoration: underline; text-underline-offset: 4px; }
-  .dn-video-card__actions button:hover { background: #e9edf1; }
-  a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid var(--dn-red); outline-offset: -3px; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--dn-red); outline-offset: -3px; }
 
   @media (min-width: 768px) and (max-width: 991px) {
     .dn-videos__panel { padding: 24px; }

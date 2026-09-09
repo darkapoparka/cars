@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "app": "clients/valentino-auto-house/auto-best",
+  "checkedSourceCommit": "34f96bdc6f6315c20f958705a436695f3842e56e",
+  "environment": "Connected device memory-only compiler/virtual-filesystem checks; no Cars project checkout or source files written on Windows.",
+  "node": "24.18.0",
+  "requiredApplicationNode": "^22.12.0 in Node 22; full application runtime was not run",
+  "tooling": {
+    "svelte": "5.57.0",
+    "typescript": "5.9.3",
+    "source": "Exact retained lockfile packages fetched into memory; npm tarball SHA-512 integrity matched."
+  },
+  "results": {
+    "svelteComponentCompile": {
+      "components": 53,
+      "targets": [
+        "client",
+        "server"
+      ],
+      "errors": 0,
+      "warnings": 4,
+      "note": "Four unused selectors in the converted gallery section; removed by this follow-up commit, pending final rerun."
+    },
+    "pureDomainTypecheck": {
+      "files": 12,
+      "errors": 0
+    },
+    "domainAssertions": {
+      "passed": true,
+      "groups": 12,
+      "coverage": [
+        "8 source-linked records",
+        "24 unique gallery photos",
+        "exact EUR cents",
+        "unknown-price label",
+        "make/budget/body/transmission filters",
+        "price sorting",
+        "filter URL roundtrip",
+        "equipment deduplication",
+        "dependent model reset",
+        "vehicle context",
+        "safe return destinations"
+      ]
+    },
+    "virtualAssetScript": {
+      "passed": true,
+      "publicFiles": 54,
+      "localReferences": 45,
+      "galleries": 8,
+      "originalAndDerivativeHashesMatched": true
+    },
+    "virtualArchitectureScript": {
+      "passed": true,
+      "nativeFiles": 87
+    }
+  },
+  "notRun": [
+    "npm ci",
+    "svelte-kit sync",
+    "full svelte-check",
+    "Vite production build",
+    "browser route/interaction checks",
+    "320/390/1440 viewport screenshots"
+  ],
+  "falseStarts": [
+    {
+      "operation": "Read application contents tree through gh",
+      "result": "HTTP 404 from a trailing slash in the contents endpoint; fixed before the successful read-only checks."
+    }
+  ],
+  "limits": [
+    "Compiler and domain checks are not a full framework build, full component semantic typecheck or browser acceptance.",
+    "The compiler checks ran on Node 24; the Auto Best application still requires the retained Node 22 runtime.",
+    "Dealer approval and media release clearance are unconfirmed."
+  ]
+}

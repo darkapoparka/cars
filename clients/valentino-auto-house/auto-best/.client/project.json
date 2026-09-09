@@ -21,7 +21,7 @@
     "contactPath": false
   },
   "crm": {
-    "leadId": "bg-sofia-valentino-auto-house",
+    "leadId": null,
     "demoProjectId": null,
     "registered": false
   },
@@ -40,5 +40,7 @@
     "Actual master composition retained; source facts, data consumers and local assets integrated.",
     "Source media clearance and dealer approval remain unconfirmed.",
     "Full app checks/build/browser review have not run; no pass inherited."
-  ]
+  ],
+  "researchLeadId": "bg-sofia-valentino-auto-house",
+  "contactHistory": "not_checked"
 }
