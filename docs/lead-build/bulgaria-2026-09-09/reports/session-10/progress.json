@@ -16,19 +16,43 @@
       ]
     }
   ],
-  "completedCheckpoints": [],
+  "completedCheckpoints": [
+    {
+      "slug": "plus-auto-ruse",
+      "name": "Plus Auto",
+      "commit": "52b6495cac62bea42c930bbb0f35ef8c475385c1",
+      "state": "implemented-unverified",
+      "vehicles": 8,
+      "localMediaAssets": 32,
+      "appTrees": {
+        "auto-best": "25a8023ee493850336143dfd5176f371a0fda27e",
+        "modern": "f0a9d54103bc68f9499f9acbf46b231d5df7c6d1",
+        "carwow": "e47e2586bbf9056d3ea835573822d9c8ece45ef2"
+      },
+      "dataChecks": {
+        "counts": [
+          8,
+          8,
+          8
+        ],
+        "samePrices": true,
+        "sameGallery": true,
+        "localBytes": true,
+        "uniqueIds": true
+      }
+    }
+  ],
   "currentDealer": {
-    "slug": "plus-auto-ruse",
+    "slug": "fresh-auto-ruse",
     "state": "implemented-unverified",
     "sourceCount": 8,
     "appTrees": {
-      "auto-best": "25a8023ee493850336143dfd5176f371a0fda27e",
-      "modern": "f0a9d54103bc68f9499f9acbf46b231d5df7c6d1",
-      "carwow": "e47e2586bbf9056d3ea835573822d9c8ece45ef2"
+      "auto-best": "40a48d167b45c93df2cf7000ab43d89ec2ce143b",
+      "modern": "9d82cba63a275da48b2623d55e98781400d5e2bd",
+      "carwow": "1fc6a7494cb75f3a33b078b2dc83dff6bb6279df"
     }
   },
   "pending": [
-    "fresh-auto-ruse",
     "f1-auto-vratsa",
     "kunchev-auto",
     "haskovo-cars-bg"

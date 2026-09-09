@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "templateVersion": "2026.09.06-refresh-1",
+  "method": "Independent retained master blobs plus client-specific source and asset edits; no symlinks or copied deployment bindings",
+  "excluded": [
+    ".cursorrules.example",
+    ".template/source-manifest.json",
+    ".template/source-next-env.d.ts",
+    ".template/source-readme.md",
+    ".template/template.json",
+    "AGENTS.md",
+    "AUTHENTICATED-PREVIEW-RELEASE-RUNBOOK.md",
+    "DATABASE-PRODUCTION-CUTOVER.md",
+    "LEAD-SUPPORT-DELIVERY-RUNBOOK.md",
+    "PREVIEW-PRODUCTION-ENVIRONMENT-RUNBOOK.md",
+    "SOURCE_SNAPSHOT.json"
+  ],
+  "sourceQaIsNotDealerQa": true,
+  "templateRefRuntimeRetained": false
+}

@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-09-09T02:57:21.893Z",
+  "runtime": "v24.18.0",
+  "sourceOnly": true,
+  "counts": {
+    "svelte": 81,
+    "typescript": 74,
+    "json": 3
+  },
+  "checks": {
+    "svelteParsers": {
+      "autoBest": "5.57.0",
+      "carwow": "5.55.9"
+    },
+    "typescriptParser": "5.9.3",
+    "changedSourceSyntaxErrors": [],
+    "executedDataModels": {
+      "counts": [
+        8,
+        8,
+        8
+      ],
+      "samePrices": true,
+      "sameMileages": true,
+      "sameGallery": true,
+      "localBytes": true,
+      "uniqueIds": true
+    }
+  },
+  "notRun": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review"
+  ],
+  "limits": [
+    "Application runtime/browser checks need the coordinator isolated review environment. The Windows source checkout was not modified.",
+    "Commercial media reuse permission and dealer approval are not established; no deployment or outreach was performed."
+  ]
+}
