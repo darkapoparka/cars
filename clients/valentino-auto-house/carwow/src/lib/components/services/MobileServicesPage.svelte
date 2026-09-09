@@ -134,7 +134,7 @@
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Услуги Day Night Auto">
+<div class="mobile-services-app" aria-label="Услуги Valentino">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -143,9 +143,9 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="Valentino начало">
 				<img
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/brand/logo.webp')}
 					alt={daynightSite.shortName}
 				/>
 			</a>

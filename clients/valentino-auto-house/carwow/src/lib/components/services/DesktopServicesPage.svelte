@@ -21,7 +21,7 @@
 		{
 			id: 'documents',
 			title: 'Документи и регистрация',
-			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
+			summary: 'Попитайте за документите и регистрацията по конкретната сделка. Допълнителните услуги се потвърждават индивидуално.',
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
@@ -145,7 +145,7 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Day Night Auto">
+<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Valentino">
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
 		title="Услуги за твоя автомобил"
@@ -172,7 +172,7 @@
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Day Night Auto</h2>
+			<h2 class="desktop-services-sr-only">Конкретни услуги от Valentino</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}

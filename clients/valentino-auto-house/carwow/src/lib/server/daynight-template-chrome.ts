@@ -31,35 +31,10 @@ type PresentationIconLink = {
 	kind: 'direct' | 'external';
 };
 
-const daynightFacebookUrl = 'https://www.facebook.com/61566304063141/';
-const daynightInstagramUrl = 'https://www.instagram.com/daynight.auto.plovdiv/';
+const daynightFacebookUrl = 'https://valentinoauto.mobile.bg/';
+const daynightInstagramUrl = 'https://valentinoauto.mobile.bg/';
 
-const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
-	{
-		label: 'Chrysler 300C',
-		href: '/inventory/chrysler-300c-2018-gaz',
-		image: '/assets/images/megamenu/chrysler-300c.webp',
-		meta: '17 000 EUR · Газ/Бензин'
-	},
-	{
-		label: 'BMW i7',
-		href: '/inventory/bmw-i7-2023-full-maxx',
-		image: '/assets/images/megamenu/bmw-i7.webp',
-		meta: '81 000 EUR · Електрически'
-	},
-	{
-		label: 'BMW 520i',
-		href: '/inventory/bmw-520i-2006-avtomatik',
-		image: '/assets/images/megamenu/bmw-520i.webp',
-		meta: '4 500 EUR · Бензин'
-	},
-	{
-		label: 'Mercedes E 350 D',
-		href: '/inventory/mercedes-benz-e-350-d-2015-64594',
-		image: '/assets/images/megamenu/mercedes-e220d.webp',
-		meta: '11 500 EUR · Дизел'
-	}
-] as const;
+const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = daynightVehicles.slice(0, 4).map((car) => ({ label: car.shortTitle, href: '/inventory/' + car.slug, image: car.image, meta: car.priceEur + ' · ' + car.fuel }));
 
 const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 	{
@@ -102,9 +77,9 @@ const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 
 const footerLinkGroups: readonly FooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'VALENTINO AUTO HOUSE',
 		links: [
-			{ label: 'За Day Night Auto', href: '/about' },
+			{ label: 'За Valentino', href: '/about' },
 			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
@@ -362,7 +337,7 @@ function renderFooterSocialLinks() {
 		{
 			label: 'Google Maps',
 			href: daynightSite.mapUrl,
-			title: 'Отвори локацията на Day Night Auto в Google Maps',
+			title: 'Отвори локацията на Valentino в Google Maps',
 			kind: 'external',
 			icon: whiteLocationIcon
 		}
@@ -410,13 +385,13 @@ ${footerColumns}
 <a href="tel:${daynightSite.phone}" class="flex items-start h7">${daynightSite.phoneLabel}</a>
 </p>
 <a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="block font-weight-500 text-white mb-20 h7">${daynightSite.location}</a>
-<p class="text-sm text-muted mb-16">Day Night Auto предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
+<p class="text-sm text-muted mb-16">Valentino предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
 ${renderFooterSocialLinks()}
 </div>
 <div>
 <p class="text-sm text-white font-weight-600 mb-8">Имате въпрос?</p>
 <div class="flex items-center gap-12">
-<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Day Night Auto">Свържете се</a>
+<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Valentino">Свържете се</a>
 </div>
 </div>
 </div>
@@ -428,7 +403,7 @@ ${renderFooterSocialLinks()}
 <div class="footer-bottom">
 <div class="container">
 <div class="flex justify-between md-flex-col">
-<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Day Night Auto</a>. Всички права запазени.</p>
+<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Valentino</a>. Всички права запазени.</p>
 <ul class="footer-bottom-links">
 <li><a href="/terms">Условия за ползване</a></li>
 <li><a href="/terms">Поверителност</a></li>
@@ -451,7 +426,7 @@ export function renderHeaderContact() {
 
 	return `<ul class="header-contact">
 <li class="daynight-header-contact daynight-header-contact--phone">
-<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на Day Night Auto">${phoneIcon()}</a>
+<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на Valentino">${phoneIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="tel:${daynightSite.phone}">${daynightSite.phoneLabel}</a>
 <a class="text-xs font-weight-500" href="${viberHref}">Обаждане / Viber</a>
@@ -466,17 +441,17 @@ export function renderHeaderContact() {
 </div>
 </li>
 <li class="daynight-header-contact daynight-header-contact--location">
-<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до Day Night Auto">${locationIcon()}</a>
+<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до Valentino">${locationIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.mapLabel}</a>
 <a class="text-xs font-weight-500 uppercase" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">ВИЖ КАРТА</a>
 </div>
-<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до Day Night Auto">
+<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до Valentino">
 <span class="daynight-map-preview__thumb">
 <span class="daynight-map-preview__pin"></span>
 </span>
 <span class="daynight-map-preview__body">
-<strong>Day Night Auto София</strong>
+<strong>Valentino София</strong>
 <span>${daynightSite.mapLabel}</span>
 <em>Отвори в Google Maps</em>
 </span>
