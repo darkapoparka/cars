@@ -1,34 +1,17 @@
 export type BrandConfig = {
-  name: string;
-  shortName: string;
-  city: string;
-  addressLine: string;
-  address: string;
-  phone: string;
-  phoneHref: `tel:${string}`;
-  appointment: string;
-  logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  name: string; shortName: string; city: string; addressLine: string; address: string;
+  phone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`;
+  youtubeUrl: string | null; instagramUrl: string | null; facebookUrl: string | null;
 };
-
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
+const name = 'В.В.Ц – АУТО';
+const shortName = 'В.В.Ц – АУТО';
 const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
+const addressLine = 'Орландовци, ул. „Железопътна“ 24Б';
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  name, shortName, city,
+  youtubeUrl: null, instagramUrl: null, facebookUrl: null,
+  phone: '0888 629 959', phoneHref: 'tel:+359888629959',
+  addressLine, address: `${addressLine}, ${city}`,
+  appointment: 'Работно време не е потвърдено; обадете се преди посещение',
+  logo: '/brand/logo.svg'
 } as const satisfies BrandConfig;
