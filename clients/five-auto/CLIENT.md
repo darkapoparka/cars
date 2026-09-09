@@ -1,13 +1,16 @@
-# FIVE AUTO — source and media checkpoint
+# FIVE AUTO — Burgas
 
-Status: **in-progress, not a completed dealer demo**. All three independent actual masters are present; Modern retains its full workspace. Their central logo settings now reference the locally bundled original FIVE AUTO wordmark. The Svelte entry icons point to the local icon exports.
+Status: **implemented-unverified**
 
-Each application includes 24 matched stock photographs (three photos for each of eight current listing records) and eight branding/icon files. The 32 unique uploaded blobs were checked against their computed Git blob hashes. The committed original logo was visually inspected and matches the published façade lettering. See asset-provenance.json for the individual listing/image URLs and hashes. This is not a claim of dealer approval or publication clearance.
+Source profile: https://fiveauto.mobile.bg/
 
-The source catalogue was checked on 2026-09-09. The CLS 400 listing 11786689238802976 carried a reserved/sold marker and was excluded from the photo sample. The selected BMW X5 warranty wording is a seller claim, not an independently verified guarantee. Advertised monthly instalments were not used as cash prices.
+Observed 2026-09-09: FIVE AUTO, Burgas, ul. „Сребърна“ 6, Промишлена зона Север; public phone 0887 555 255. The sample in this branch contains eight published whole-car listings observed on 09.09.2026. It is a dated representative catalogue, not a live stock feed or independently verified availability.
 
-## Remaining implementation
+All three retained-master applications consume the same `dealer-stock.json` record set. Each app contains the published FIVE AUTO wordmark and 24 matched local vehicle photographs (three per selected listing). Full advertised cash prices remain distinct from any seller-mentioned deposit/monthly examples; tax qualifications are listing-specific. The BMW X5 warranty phrase is retained only as a seller claim that must be confirmed.
 
-The terminal call preparing the common dealer dataset was refused before execution. The three apps therefore still require their business/content/inventory data sweep and photo-consumer connections. No finished stock catalogue is claimed. A later source-inspection call for Modern logo presentation was also refused, so consumer cropping and metadata presentation have not been accepted.
+Applications:
+- `auto-best/` — personalized Auto Best composition
+- `modern/` — personalized full Modern workspace, default review entry `/cars`
+- `carwow/` — personalized Carwow composition
 
-Three edited logo configuration modules passed TypeScript syntax transpilation only. No dependency install, full typecheck, framework build, browser route review or 320/390/1440 screenshot was executed. Owner review remains pending. No public preview, shared-origin mounting or FAB exists. No local working checkout was created or changed.
+The forms remain static-demo/no-delivery behavior inherited from the cleaned proposal base. Customer reviews, named employees and finance approvals are not fabricated. Runtime install/build/browser checks are still pending, so none of the three is marked verified-local or owner-approved.
