@@ -1,34 +1,22 @@
+import { dealerProfile } from '$lib/data/dealer-profile';
+
 export type BrandConfig = {
-  name: string;
-  shortName: string;
-  city: string;
-  addressLine: string;
-  address: string;
-  phone: string;
-  phoneHref: `tel:${string}`;
-  appointment: string;
-  logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  name: string; shortName: string; city: string; addressLine: string; address: string;
+  phone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`;
+  youtubeUrl: string; instagramUrl: string; facebookUrl: string;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  name: dealerProfile.name,
+  shortName: dealerProfile.shortName,
+  city: dealerProfile.city,
+  youtubeUrl: dealerProfile.socialLinks.youtube ?? '',
+  instagramUrl: dealerProfile.socialLinks.instagram ?? '',
+  facebookUrl: dealerProfile.socialLinks.facebook ?? '',
+  phone: dealerProfile.phoneDisplay,
+  phoneHref: dealerProfile.phoneHref,
+  addressLine: dealerProfile.address,
+  address: `${dealerProfile.address}, ${dealerProfile.city}`,
+  appointment: dealerProfile.hoursLabel,
+  logo: dealerProfile.logo,
 } as const satisfies BrandConfig;

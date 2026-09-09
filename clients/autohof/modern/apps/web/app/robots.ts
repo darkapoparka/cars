@@ -1,15 +1,6 @@
-import { getCanonicalUrl } from "@repo/seo/metadata";
 import type { MetadataRoute } from "next";
-import { getPublicWebBaseUrl } from "@/lib/public-url";
 
+// This entire independent client copy is a review demo, not a public dealer site.
 export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      allow: "/",
-      userAgent: "*",
-    },
-    sitemap: getCanonicalUrl("/sitemap.xml", {
-      baseUrl: getPublicWebBaseUrl(),
-    }),
-  };
+  return { rules: { userAgent: "*", disallow: "/" } };
 }
