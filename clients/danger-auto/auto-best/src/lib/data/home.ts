@@ -37,29 +37,32 @@ export const bodyTypes = [...new Set(featuredVehicles.map(vehicle => vehicle.bod
 export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle => vehicle.make === item.label))
   .map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
 
+// Copy only: preserve the master's three-card composition and illustration slots.
+// Source: https://dangerauto.mobile.bg/contacts and the dated dealer advertisements.
+// Illustrations retained from the master are not photographs of this dealership.
 export const editorial = [
   {
-    title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
+    title: `Как да уговорите оглед в ${brand.city}?`,
+    text: `${brand.name} е в Горубляне. Потвърдете наличността, адреса и часа за посещение по телефона преди пътуване.`,
     image: '/assets/images/lead/day-night-guide-inspection.webp',
-    href: '/contact',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    href: '/contact?topic=inspection',
+    meta: 'Посещение',
+    category: 'Полезно'
   },
   {
-    title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
+    title: 'Какво да уточните преди покупка?',
+    text: 'Поискайте документи за историята и състоянието на избрания автомобил и обсъдете възможност за независим оглед.',
     image: '/assets/images/lead/day-night-guide-import.webp',
     href: '/blog-detail/1',
-    meta: 'Полезно',
+    meta: 'Преди оглед',
     category: 'Ръководство'
   },
   {
-    title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
+    title: 'Предлага ли се собствен лизинг?',
+    text: 'Дилърът посочва финансиране през банка, а не собствен лизинг. Поискайте индивидуална писмена оферта с всички разходи и условия.',
     image: '/assets/images/lead/day-night-guide-leasing.webp',
-    href: '/blog-detail/2',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    href: '/contact?topic=leasing',
+    meta: 'Банково финансиране',
+    category: 'Полезно'
   }
 ] as const;
