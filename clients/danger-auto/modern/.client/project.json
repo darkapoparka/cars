@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "client": "danger-auto",
+  "templateKey": "modern",
+  "state": "in-progress",
+  "selectedHome": "cars",
+  "availableHomes": [{ "id": "cars", "route": "/cars" }],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": { "desktop": false, "mobile": false, "identity": false, "contactPath": false },
+  "crm": { "leadId": null, "demoProjectId": null, "registered": false },
+  "delivery": { "mode": "branch-handoff", "branch": "codex/astra-bg-08", "deployed": false },
+  "remaining": ["Finish real logo and permitted local stock media", "Complete supporting-page and metadata sweep", "Audit copied exclusions recursively", "Run frozen install, package generation, typecheck, build and browser comparison"]
+}

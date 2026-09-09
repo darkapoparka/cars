@@ -1,34 +1,25 @@
 export type BrandConfig = {
-  name: string;
-  shortName: string;
-  city: string;
-  addressLine: string;
-  address: string;
-  phone: string;
-  phoneHref: `tel:${string}`;
-  appointment: string;
-  logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  name: string; shortName: string; city: string; addressLine: string; address: string;
+  phone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`;
+  youtubeUrl: string; instagramUrl: string; facebookUrl: string;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
+// Public dealer contacts checked 2026-09-09 at https://dangerauto.mobile.bg/contacts
+// and the Chevrolet Cruze listing 11788853280325556. No social account is asserted.
+const name = 'DANGER AUTO';
+const shortName = 'DANGER AUTO';
 const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
+const addressLine = 'бул. Самоковско шосе 1, автоборса Джани до комплекс Боила, Горубляне';
 
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
+  name, shortName, city,
+  youtubeUrl: '', instagramUrl: '', facebookUrl: '',
+  phone: '0878 842 409',
+  phoneHref: 'tel:+359878842409',
+  secondaryPhone: '0888 000 055',
+  secondaryPhoneHref: 'tel:+359888000055',
   addressLine,
   address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
-} as const satisfies BrandConfig;
+  appointment: 'Потвърдете работното време и часа за оглед по телефона',
+  logo: '/assets/images/lead/identity-pending.svg',
+} as const satisfies BrandConfig & { secondaryPhone: string; secondaryPhoneHref: `tel:${string}` };

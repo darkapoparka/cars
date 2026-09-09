@@ -1,24 +1,23 @@
-# DANGER AUTO — in-progress branch handoff
+# DANGER AUTO — Sofia
 
-This is a prospect demo, not a commissioned site or an outreach event. No deployment or dealer contact has been performed.
+Status: **in-progress**. Branch-only handoff on `codex/astra-bg-08`; not dealer-ready and not deployed.
 
-## Source and identity
+## Account and current sources
 
-Public sources observed 2026-09-09: https://dangerauto.mobile.bg/ and https://dangerauto.mobile.bg/contacts. Published contacts: 0888 000 055 and 0878 842 409; Sofia, Gorublyane, Samokovsko shose 1, DJANI lot beside BOILA. The contacts page does not supply hours, while advertisement prose contains hours; confirm before visiting. The seller expressly distinguishes bank financing from in-house leasing. No universal rate, bank partner, approval time or loan terms have been adopted.
+This continues this session's existing DANGER AUTO project; it does not create another account or CRM record. The retained earlier stock integration and tests remain intact. Source: https://dangerauto.mobile.bg/. Current contacts: https://dangerauto.mobile.bg/contacts, corroborated against the Chevrolet Cruze listing 11788853280325556 on 2026-09-09.
 
-## Actual implementation
+Current returned contacts are **0878 842 409** and **0888 000 055**, at **бул. Самоковско шосе 1, автоборса Джани до комплекс Боила, Горубляне, София**. These replace the different contact details recorded earlier in this work session. The map coordinates returned by the contacts page are 42.6425458, 23.4007179. No opening hours are entered on that contacts page; listing prose says 08:30–19:00, so client copy asks for confirmation before a visit.
 
-- `auto-best/` is an independent retained master copy, not a replacement lookalike. Its company module has source-backed service/contact-topic and map data.
-- `STOCK.json` and `auto-best/src/lib/data/dealer-stock.json` are byte-identical eight-record snapshots. The app's imported inventory module now uses this data for catalogue cards, filters, detail lookup and recommendations.
-- Source EUR cash prices, kilometres, seller URLs/IDs, observation date and unverified availability remain explicit. Unknown Mercedes power remains null.
-- `checks/stock-contract.mjs` ran on Node v22.16.0: 22 passed, 0 failed. This is data-module execution, not Svelte typechecking or browser testing.
+The dealer explicitly describes bank financing, not in-house leasing. No APR, named finance partner or approval promise is reproduced. No email or matching social profile has been confirmed for use.
 
-## Not finished
+## Applications
 
-The attempted next contact/branding write was rejected by the tool and did not reach the branch. Central branding and additional source-dealer content therefore remain unfinished. Do not present the current app as a completed DANGER AUTO website or use its contact links for outreach.
+- `auto-best/`: retained independent application; sourced stock/filter integration, corrected central dealer identity and contacts. Supporting content and final assets unfinished.
+- `modern/`: actual full retained monorepo, including apps/web and packages, now copied independently. Lead-site configuration and public mock inventory exports use DANGER AUTO facts and the same eight source records. Supporting content and final assets unfinished.
+- `carwow/`: actual full retained application copied independently. Site/navigation configuration, current-inventory adapter and vehicle adapter use the same source snapshot. Supporting content and final assets unfinished.
 
-There is no final integrated logo or permitted local stock-photo pack. The new stock uses an explicit temporary missing-photo illustration rather than another dealer's vehicles; it is not accepted final media. Additional inherited hero/editorial media still needs its content sweep.
+## Assets and truthfulness
 
-Modern and Carwow have not been created. Application install/build/browser QA has not run. The fixed-count asset checker, JSON loader in the domain checker and zero-principal finance display need follow-up fixes; they are not claimed passed.
+The public Chevrolet photograph was visually inspected: its vehicle plate bears a plain DANGERAUTO wordmark. The local image download failed. Image generation was attempted but the service reported that generation did not start; there is no generated logo output. Current identity and stock placeholders are visibly marked development material and **are not final logos or vehicle photos**. Rights and permitted local media remain unresolved. No source stock photo has been claimed as licensed.
 
-See `REVIEW.md` and `checks/RESULTS.json`. All full-app QA flags remain false. The existing template source/provenance remains applicable; no new media-rights determination is asserted.
+See FACTS.json, STOCK.json and REVIEW.md. The earlier 22 data checks do not establish the correctness of the newly copied apps. No new installation, framework build or browser QA is claimed.

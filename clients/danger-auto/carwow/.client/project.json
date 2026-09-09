@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "client": "danger-auto",
+  "templateKey": "carwow",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [{ "id": "main", "route": "/" }],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": { "desktop": false, "mobile": false, "identity": false, "contactPath": false },
+  "crm": { "leadId": null, "demoProjectId": null, "registered": false },
+  "delivery": { "mode": "branch-handoff", "branch": "codex/astra-bg-08", "deployed": false },
+  "remaining": ["Finish real logo and permitted local stock media", "Complete supporting-page, reviews, team, services and metadata sweep", "Audit copied exclusions recursively", "Check nullable unknown door counts at every consumer", "Run install, check, build and browser comparison"]
+}
