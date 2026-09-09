@@ -103,7 +103,7 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>ул. Благой Гебрев 78, кв. Изток · ул. Атанас Манчев 18</span>
+						<span>ул. Благой Гебрев 78, кв. Изток, Перник</span>
 					</button>
 					<button
 						type="button"

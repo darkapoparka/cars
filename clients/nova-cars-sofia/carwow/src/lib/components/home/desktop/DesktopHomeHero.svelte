@@ -103,7 +103,7 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>ул. Амстердам 5 · ул. Атанас Манчев 18</span>
+						<span>ул. Амстердам 5, София</span>
 					</button>
 					<button
 						type="button"
