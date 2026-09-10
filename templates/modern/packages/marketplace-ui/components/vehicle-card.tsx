@@ -7,6 +7,7 @@ import { Heart, Images } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { mobileVehicleCardMediaClassName } from "../lib/mobile-vehicle-card-layout";
 import { rememberInventoryReturn } from "../lib/inventory-return";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
 import type { VehicleCardProps } from "../lib/vehicle-card-types";
@@ -72,7 +73,8 @@ export const VehicleCard = ({
     >
       <div
         className={cn(
-          "relative min-h-28 w-[34%] max-w-36 shrink-0 self-stretch overflow-hidden bg-secondary lg:min-h-0 lg:w-full lg:max-w-none",
+          mobileVehicleCardMediaClassName,
+          "lg:min-h-0 lg:w-full lg:max-w-none",
           getVehicleCardMediaClassName(isCompact, isGrid, isDesktopComparison)
         )}
         data-slot="vehicle-card-media"

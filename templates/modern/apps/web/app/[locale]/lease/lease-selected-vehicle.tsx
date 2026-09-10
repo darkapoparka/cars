@@ -2,6 +2,7 @@
 
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
+import { mobileVehicleCardContentClassName, mobileVehicleCardMediaClassName } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import Image from "next/image";
 import { useState } from "react";
 import {
@@ -35,12 +36,12 @@ export function LeaseSelectedVehicle({
 
   return (
     <article
-      className={`relative grid min-h-[8.75rem] grid-cols-[7.5rem_minmax(0,1fr)] overflow-hidden rounded-xl bg-white ${onSelect ? "" : "mt-4"}`}
+      className={`relative flex overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
       data-slot={
         onSelect ? "lease-vehicle-option" : "lease-selected-vehicle-card"
       }
     >
-      <div className="relative min-h-[8.75rem] overflow-hidden bg-zinc-100">
+      <div className={mobileVehicleCardMediaClassName}>
         {failedImageUrl === vehicle.imageUrl ? (
           <div className="absolute inset-0 grid place-items-center text-zinc-400">
             <DealerUiIcon className="size-9" name="car" />
@@ -56,7 +57,7 @@ export function LeaseSelectedVehicle({
           />
         )}
       </div>
-      <div className="flex min-w-0 flex-col justify-center gap-2 px-3 py-2.5">
+      <div className={mobileVehicleCardContentClassName}>
         <div className="min-w-0 space-y-0.5">
           <h2
             className="line-clamp-2 font-medium text-[16px] text-zinc-950 leading-5 tracking-tight"
@@ -65,6 +66,7 @@ export function LeaseSelectedVehicle({
           >
             {vehicle.title}
           </h2>
+          <div className="min-w-0">
           <p
             className="font-bold text-[18px] text-zinc-950 tabular-nums leading-5 tracking-tight"
             data-slot="lease-selected-vehicle-price"
@@ -84,6 +86,7 @@ export function LeaseSelectedVehicle({
               {vehicle.monthlyLabel}
             </p>
           ) : null}
+          </div>
         </div>
         <DealerVehicleFacts
           facts={facts.map(([id, value]) => ({ id, value }))}
