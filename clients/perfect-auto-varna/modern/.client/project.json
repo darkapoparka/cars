@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "client": "perfect-auto-varna",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-09T21:56:08.901Z",
+  "state": "ready-for-local-review",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/cars"}],
+  "offeredHomes": [{"id":"main","route":"/cars"}],
+  "publicUrl": null,
+  "qa": {"desktop":true,"mobile":true,"identity":true,"contactPath":true},
+  "verification": {
+    "node": "v22.22.0",
+    "check": {"command":"pnpm --filter web typecheck","exitCode":0},
+    "build": {"command":"pnpm --filter web build","exitCode":0},
+    "browser": {"checks":6,"widths":[390,1440],"routes":["/","/cars","/contact"]},
+    "notVerified": ["all secondary interactions","real form delivery","public deployment","dealer approval"]
+  },
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "content": {"facts":"../business-facts.json","stock":"../stock.json","inventorySnapshot":true,"dealerApproval":false,"mediaRightsIndependentlyEstablished":false}
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Перфект Ауто",
+  "shortName": "Перфект Ауто",
+  "latinName": "PERFECT AUTO",
+  "city": "Варна",
+  "country": "България",
+  "phoneDisplay": "0888 802 226",
+  "phoneE164": "+359888802226",
+  "phoneHref": "tel:+359888802226",
+  "email": "",
+  "address": "бул. Цар Освободител 110, кв. Победа",
+  "hours": ["За работно време и оглед се обадете предварително."],
+  "sourceUrl": "https://perfektauto.mobile.bg/",
+  "stockUrl": "https://perfektauto.mobile.bg/",
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11260924040037663.pic",
+  "website": null,
+  "socialLinks": {},
+  "accent": "#a50f15",
+  "accentDark": "#7e0b10",
+  "logo": "/assets/perfect-auto/cover.png",
+  "showroom": null,
+  "stockCount": 6,
+  "stockSnapshotDate": "2026-09-10",
+  "stockNote": "Представителни обяви към 10.09.2026 г. Потвърдете наличността и условията по телефона.",  "services": [
+    "Продажба на автомобили",
+    "Бартер",
+    "Запитване за лизинг",
+    "Оглед и тест драйв след предварителен контакт"
+  ],
+  "sources": [
+    "https://perfektauto.mobile.bg/",
+    "https://perfektauto.mobile.bg/contacts",
+    "https://perfektauto.mobile.bg/about"
+  ],
+  "limitations": [
+    "Работно време и имейл не са потвърдени от използваните текущи източници.",
+    "Публикуваният профилен знак е с ограничена резолюция.",
+    "Проектът използва представителна извадка от текущи обяви, не live inventory feed."
+  ],
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed"
+}
