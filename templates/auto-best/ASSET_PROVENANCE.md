@@ -1,10 +1,18 @@
 # Runtime asset provenance
 
-The native SvelteKit application ships **64 local media files / 5,352,525 bytes**. `npm run check:assets` enforces a one-to-one relationship between source references and files under `static/`; missing assets, unused media, or retired mirror-runtime names fail the build gate.
+The native SvelteKit application currently inventories **107 media files: 100 referenced and 7 explicitly retained for provenance**. `npm run check:assets` checks the asset inventory, missing references, unexpected unused media and retired runtime files.
 
 The cleared source and reuse boundary is recorded in `SOURCE_LICENSE.md`. The previous 229 MB mirror asset root and all unused ImageGen iterations were removed from the application tree. Their historical metadata remains in `provenance/mirror-manifest.json` and their content remains recoverable from Git history.
 
 ## Asset classes
+
+### Borderless editorial derivatives — 2026-09-08
+
+The three `template/menu-editorial-*-v1.png` assets are owner-requested built-in ImageGen edits of the Pexels photographs below. The menu uses these photographic composites with card-colored backgrounds and feathered edges; the blog listing retains the unmodified photographs. These derivatives are AI-edited stock imagery, not dealer photography. Saved paths, original output paths and prompts: [generation notes](provenance/borderless-editorial-2026-09-08.md).
+
+### Editorial menu photography — 2026-09-08
+
+`blog/blog-1.jpg`, `blog/blog-2.jpg` and `blog/blog-3.jpg` now contain distinct Pexels photographs of an inspection, vehicle transport and a contract discussion. The former promotional photos are archived outside runtime in `provenance/superseded-blog-photos/`. The media count is unchanged. Photographer credits, source URLs, license and contextual limits are recorded in [editorial photo provenance](provenance/editorial-photos-2026-09-08.md). These photos appear in the “Полезно” menu and the corresponding blog listing cards; the “За нас” service illustrations remain independent.
 
 ### Owner-requested mobile service banners — 2026-09-05
 
@@ -204,3 +212,33 @@ Owner requested more complete cars and a distinct front-facing composition for t
 ## Larger coordinated collection/sell artwork — 2026-09-06
 
 Owner rejected the small lineup and repeated sell G-Class. Replace the first banner pair with a larger two-car front composition and a different silver-blue coupe at a front three-quarter angle. True alpha cutouts normalized to equal visible height and wheel baseline. Prompts, originals, encoding and archived prior lineup: [browse-campaign-pair-2026-09-06.md](provenance/browse-campaign-pair-2026-09-06.md). Strict inventory98; all guard checks retained.
+# Auto Best refresh assets — 2026-09-08
+
+The master now uses an original, code-authored Auto Best SVG wordmark and favicon at `static/assets/images/template/auto-best-logo.svg` and `static/auto-best-icon.svg`. These identify the reusable template, not a verified dealership. The old Day & Night logo and icon remain as retained source assets, with no runtime logo reference.
+
+The mobile sell/import decorative WebPs were copied byte-for-byte from the current source snapshot. Their original generation and crop notes are preserved in [mobile-service-artwork-2026-09-06.md](provenance/mobile-service-artwork-2026-09-06.md). `ArtworkRegion.svelte` crops those existing assets and the existing collection banner through CSS; no raster edits or new stock imagery were introduced. Mobile artwork uses responsive picture sources to avoid downloading hidden mobile-only media on desktop. This import does not constitute a new rights or business-fact verification.
+# Menu inspection artwork — 8 September 2026
+
+`static/assets/images/template/inspection-cutout-v1.png` is an AI-assisted transparent extraction of the retained `day-night-studio-guide-v1.webp` illustration, made for the reusable template's buying-advice menu. Existing source illustration provenance still applies; this is illustrative artwork, not actual stock. Import/finance/selection menu artwork reuses the retained transparent assets through CSS framing. See Cars `audits/2026-09-08/auto-best-header-artwork/REPORT.md`.
+
+## Existing artwork correction — 8 September 2026
+
+The owner rejected new menu artwork generation. Both generated inspection/showroom variants have been removed from the application static tree; earlier generation notes above are historical. Menus now reuse the original showroom, studio inspection, vehicle cutouts and complete mobile import/finance compositions. The files themselves are unchanged; framing is owned by the menu component. See Cars `audits/2026-09-08/auto-best-menu-family/REPORT.md`.
+
+## Explicit showroom palette request — 8 September 2026
+
+The owner subsequently explicitly requested ImageGen to adapt the showroom to the gray/red/black palette. `static/assets/images/template/showroom-charcoal-red-v1.png` is the resulting decorative concept, based on the existing `day-night-showroom-color-v1.webp` building illustration. The edit preserves the architectural composition while replacing warm wood/gold with charcoal cladding, gray flooring, cool-white lighting and restrained red details on an opaque charcoal background. It does not depict verified Day & Night premises. No suitable wide premises photo was verified on the inspected dealer About/Contacts pages.
+
+Generated original: `C:/Users/radev/.codex/generated_images/01a081af-ffdf-73b0-a758-891be43192df/exec-86ccaf5f-2c7f-44a6-b7cd-26d66994fabe.png`. Runtime PNG is copied unchanged. This is a narrow owner-authorized exception to the preceding generation rejection. The compact text-button iteration was subsequently rejected; service/guide destinations again use the previous illustrated cards, and car categories retain original cutouts. Earlier rejected variants remain outside the runtime tree. Strict inventory: 102 total, 95 referenced, 7 retained.
+
+
+## Owner-requested service asset replacements — 8 September 2026
+
+The owner rejected the miniature showroom and repeated import/leasing collages, retaining the repair image as the style reference. The menu now uses `menu-showroom-v2.png` (reception and glass entrance), `menu-import-v2.png` (one estate car leaving an open shipping container) and `menu-leasing-v2.png` (lease folder, keys and pen), all in `static/assets/images/template/`. These are decorative generated concepts, not actual business premises, inventory or financial documents. The older `showroom-charcoal-red-v1.png` is preserved outside the runtime in `provenance/superseded-menu-art/`. Original mobile artwork still serves its other surfaces.
+
+Built-in ImageGen created each subject using the original repair image as a style reference, followed by a background edit to opaque red/charcoal. The final PNGs are copied unchanged; initial checkerboard outputs are not shipped. CSS framing uses a shared landscape ratio and preserves each source aspect ratio. The original repair image pixels are unchanged, with a wider CSS frame to balance its visible scale. Prompt set and generated originals: [menu-service-assets-2026-09-08.md](provenance/menu-service-assets-2026-09-08.md). Strict inventory: 104 total, 97 referenced, 7 retained.
+
+## 2026-09-09 category artwork
+
+- `static/assets/images/template/body-wagon-v1.png`: ImageGen-created station wagon category illustration, based on the retained side-profile category style; white background. It is illustrative artwork, not actual inventory photography. Generated source: `C:/Users/radev/.codex/generated_images/01a0829a-372b-7951-bafb-260fd32eb9b6/exec-24388e38-6490-4d5e-943f-572588666f6d.png`.
+- The older sedan-as-wagon icon and three lead guide images remain retained source assets. Homepage guides now consume the matching canonical blog images and copy.

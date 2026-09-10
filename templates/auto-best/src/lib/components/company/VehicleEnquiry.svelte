@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import { onDestroy, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
@@ -151,15 +152,15 @@
     <button class="dn-enquiry-primary" type="button" onclick={open} aria-haspopup="dialog">
       Предложи автомобил <Icon name="arrow-right" size={20} />
     </button>
-    <p>Данни, снимки и преглед.</p>
+    <a class="dn-enquiry-contact" href={resolve('/contact')}>Свържете се с нас</a>
   {:else}
     <label class="dn-sr-only" for="enquiry-listing-link">Линк към обявата</label>
     <div class="dn-enquiry-link-row">
-      <input id="enquiry-listing-link" bind:this={linkInput} value={link} oninput={(event) => { linkDraft = event.currentTarget.value; linkError = ''; }} type="url" inputmode="url" maxlength={2048} placeholder="Поставете линк към обявата" autocomplete="off" autocapitalize="none" spellcheck={false} aria-invalid={linkError ? true : undefined} aria-describedby={linkError ? 'enquiry-link-error' : undefined} />
+      <input id="enquiry-listing-link" bind:this={linkInput} value={link} oninput={(event) => { linkDraft = event.currentTarget.value; linkError = ''; }} type="url" inputmode="url" maxlength={2048} placeholder="Линк към обявата" autocomplete="off" autocapitalize="none" spellcheck={false} aria-invalid={linkError ? true : undefined} aria-describedby={linkError ? 'enquiry-link-error' : undefined} />
       <button type="button" class="dn-enquiry-link-go" onclick={open} aria-label="Продължи с обявата" aria-haspopup="dialog"><Icon name="arrow-right" size={22} /></button>
     </div>
     {#if linkError}<p class="dn-enquiry-error" id="enquiry-link-error" role="alert">{linkError}</p>{/if}
-    <button class="dn-enquiry-alternative dn-action--dark" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">Нямам обява — опиши търсенето <Icon name="arrow-right" size={17} /></button>
+    <button class="dn-enquiry-alternative dn-action--enquiry" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">Нямам обява — опиши</button>
   {/if}
 </div>
 
@@ -232,6 +233,7 @@
   .dn-enquiry-primary:disabled { opacity: .6; cursor: wait; }
   .dn-enquiry-entry > p { margin: 10px 0 0; color: #5d626b; font-size: 14px; }
   .dn-enquiry-alternative { display: flex; width: fit-content; max-width: 100%; min-height: 44px; align-items: center; justify-content: center; gap: 8px; margin: 12px auto 0; padding: 8px 16px; border: 0; border-radius: var(--dn-radius-button); font-size: 14px; font-weight: 600; text-align: center; }
+  .dn-enquiry-contact { display: flex; width: fit-content; min-height: 44px; align-items: center; justify-content: center; margin: 8px auto 0; padding: 8px 18px; border-radius: var(--dn-radius-button); background: #f2f3f5; color: #24272c; font-size: 14px; font-weight: 600; }
   .dn-enquiry-link-row { display: flex; gap: 8px; padding: 6px; background: #f2f3f5; border-radius: 16px; }
   .dn-enquiry-link-row > input { min-width: 0; flex: 1; padding: 8px 10px; border: 0; border-radius: 10px; background: transparent; color: #202329; font-size: 16px; }
   .dn-enquiry-link-go { display: grid; width: 48px; height: 48px; flex: 0 0 48px; place-items: center; border: 0; border-radius: 12px; background: var(--dn-red); color: #fff; }
@@ -304,6 +306,12 @@
   @media (prefers-reduced-motion: no-preference) and (max-width: 767px) {
     .dn-enquiry[open] { animation: enquiry-enter 220ms cubic-bezier(.16,1,.3,1); }
     @keyframes enquiry-enter { from { transform: translateY(32px); } to { transform: translateY(0); } }
+  }
+  @media (max-width: 767px) {
+    .dn-enquiry-link-row { height: 52px; padding: 4px; gap: 4px; border-radius: var(--dn-radius-button); }
+    .dn-enquiry-link-row > input { height: 44px; padding: 0 12px; border-radius: var(--dn-radius-button); }
+    .dn-enquiry-link-row:focus-within { outline: 2px solid var(--dn-red); outline-offset: 2px; }
+    .dn-enquiry-link-go { width: 44px; height: 44px; flex-basis: 44px; border-radius: 50%; }
   }
   @media (max-width: 359px) {
     .dn-enquiry-steps { gap: 10px; }

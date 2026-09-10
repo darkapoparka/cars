@@ -8,7 +8,7 @@
     "6511"
   ],
   "path": "templates/auto-best",
-  "version": "2026.09.08-polish-1",
+  "version": "2026.09.08-refresh-2",
   "family": "autodeal",
   "stack": "sveltekit",
   "sourcePort": 5173,
@@ -34,18 +34,19 @@
     "static",
     "src/lib/styles/tokens.css"
   ],
-  "note": "Audit-backed mobile/desktop polish and domain/component refactor. Source identity and sample stock retained; preview only.",
+  "note": "Desktop/mobile source refresh with neutral Auto Best logo. Source contact/video content and sample stock retained; personalization still required.",
   "sourceSnapshot": {
     "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
     "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
     "branch": "main",
     "includesDirtyFiles": true,
-    "files": 186,
-    "bytes": 7822988
+    "files": 220,
+    "bytes": 9883181,
+    "snapshotEvidence": "J:/cars/audits/2026-09-08/auto-best-source-refresh/source-snapshot-manifest.json"
   },
   "personalizationRequired": true,
   "crmRegistration": "not-performed",
-  "refreshedAt": "2026-09-06T20:48:34.551Z",
-  "refreshEvidence": "J:/cars/audits/2026-09-06/asko96-build/refresh-complete.json",
+  "refreshedAt": "2026-09-08T16:23:28.934461+00:00",
+  "refreshEvidence": "J:/cars/audits/2026-09-08/auto-best-source-refresh/REPORT.md",
   "improvementEvidence": "J:/cars/audits/2026-09-08/auto-best-improvements/REPORT.md"
 }

@@ -56,6 +56,9 @@
   background: var(--dn-red-hover);
 }
 
+.dn-contact-button--call { background: var(--dn-ink); color: var(--dn-white); }
+.dn-contact-button--call:is(:hover, :focus-visible) { background: var(--dn-ink-hover); }
+
 .dn-contact-hero__action {
   min-width: 286px;
   min-height: 58px;
@@ -150,13 +153,13 @@
   min-height: 52px;
   margin-top: 24px;
   padding-inline: 26px;
-  background: #202329;
+  background: var(--dn-ink);
   font-size: 17px;
 }
 
 .dn-contact-intent__main > .dn-contact-button:hover,
 .dn-contact-intent__main > .dn-contact-button:focus-visible {
-  background: var(--dn-red);
+  background: var(--dn-ink-hover);
 }
 
 .dn-contact-social {
@@ -339,8 +342,8 @@
 }
 
 .dn-contact-card__actions .dn-contact-card__call {
-  border-color: var(--dn-red);
-  background: var(--dn-red);
+  border-color: var(--dn-ink);
+  background: var(--dn-ink);
   color: #fff;
 }
 
@@ -352,8 +355,8 @@
 
 .dn-contact-card__actions .dn-contact-card__call:hover,
 .dn-contact-card__actions .dn-contact-card__call:focus-visible {
-  border-color: var(--dn-red-hover);
-  background: var(--dn-red-hover);
+  border-color: var(--dn-ink-hover);
+  background: var(--dn-ink-hover);
   color: #fff;
 }
 
@@ -517,7 +520,7 @@
     width: 100%;
     margin-top: 24px;
     padding-inline: 12px;
-    background: var(--dn-red);
+    background: var(--dn-ink);
     font-size: 16px;
   }
 
@@ -573,7 +576,7 @@
     box-shadow: 0 18px 42px rgba(13, 18, 26, .2);
   }
 
-  .dn-contact-workflow-title {
+  .dn-contact-workflow-title { text-align: center;
     display: block;
     margin: 0 0 8px;
     color: #202329;
@@ -583,14 +586,14 @@
     letter-spacing: -.025em;
   }
 
-  .dn-contact-intent--workflow .dn-contact-selected { text-align: left; }
-  .dn-contact-intent--workflow .dn-contact-selected p { font-size: 15px; line-height: 1.5; }
-  .dn-contact-section--workflow .dn-contact-intent--workflow .dn-enquiry-entry { margin-top: 20px; text-align: left; }
-  .dn-contact-intent--workflow .dn-enquiry-entry > .dn-enquiry-primary { min-height: 48px; font-size: 15px; }
-  .dn-contact-intent--workflow .dn-enquiry-entry > p { font-size: 13px; text-align: center; }
+  .dn-contact-intent--workflow .dn-contact-selected { text-align: center; }
+  .dn-contact-intent--workflow .dn-contact-selected p { min-height: 45px; font-size: 15px; line-height: 1.5; }
+  .dn-contact-section--workflow .dn-contact-intent--workflow .dn-enquiry-entry { margin-top: 12px; text-align: left; }
+  .dn-contact-intent--workflow .dn-enquiry-entry > .dn-enquiry-primary { min-height: 52px; font-size: 15px; }
+  .dn-contact-intent--workflow .dn-enquiry-entry > p { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 8px; font-size: 14px; text-align: center; }
   .dn-contact-section--workflow .dn-contact-intent--workflow .dn-enquiry-link-go { border-radius: var(--dn-radius-button); }
   .dn-contact-intent--workflow .dn-enquiry-alternative {
-    font-size: 13px;
+    width: fit-content; margin: 8px auto 0; min-height: 44px; padding: 8px 18px; background: var(--dn-red); color: #fff; border-radius: var(--dn-radius-button); font-size: 14px;
   }
   .dn-contact-section--workflow .dn-contact-intent--workflow .dn-contact-intent__main > .dn-contact-button { margin-top: 8px; }
 

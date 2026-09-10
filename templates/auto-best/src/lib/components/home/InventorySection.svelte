@@ -7,7 +7,7 @@
 
 <section class="dn-section dn-inventory" aria-labelledby="featured-title">
   <div class="container dn-inventory-panel">
-    <div class="dn-inventory__heading dn-home-section-heading">
+    <div class="dn-inventory__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
       <h2 id="featured-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">Избрани автомобили</span>
         <span class="dn-heading-mobile">Избрани</span>
@@ -28,6 +28,8 @@
 </section>
 
 <style>
+  
+
   .dn-inventory {
     background: #fff;
   }
@@ -206,14 +208,17 @@
   }
 
   @media (min-width: 992px) {
+    
+
     .dn-inventory {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: var(--dn-home-section-space);
+      padding-bottom: var(--dn-home-section-space);
       background: #fff;
     }
 
     .dn-inventory-panel {
-      padding: 32px;
+      padding: 0;
+      background: transparent;
     }
 
     .dn-inventory__heading {
@@ -247,6 +252,11 @@
     .dn-inventory__grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
+      position: relative;
+      margin-top: -24px;
+      padding: 24px;
+      border-radius: 16px;
+      background: var(--dn-home-panel);
     }
   }
 

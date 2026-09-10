@@ -739,6 +739,7 @@
     }
 
     .dn-quick-search__mobile-footer {
+      margin-top: auto;
       flex: 0 0 auto;
       padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
       background: #fff;

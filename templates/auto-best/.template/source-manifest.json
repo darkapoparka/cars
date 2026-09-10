@@ -10,7 +10,7 @@
     "branch": "main",
     "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
     "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
-    "status": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp",
+    "status": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog-detail/[id]/detail.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-detail-v1/[id]/+page.svelte\n M src/routes/listing-detail-v1/[id]/detail.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/mobile-service-artwork-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/ArtworkRegion.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-mobile-import-v1.webp\n?? static/assets/images/lead/day-night-mobile-sell-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp",
     "headAfterCopy": "ab92ce9671fb1b56afa38f693755b41aee9c28b0"
   },
   "files": [
@@ -31,8 +31,8 @@
     },
     {
       "path": "ASSET_PROVENANCE.md",
-      "bytes": 24444,
-      "sha256": "27f8a80bbde149c9374e1657a8a2c67d998ca948d2d364280cb6bfe8cbfa7b06"
+      "bytes": 25889,
+      "sha256": "5a227453036a7af889a857cf1b8cd2d377fe1b43d9712e19261f4512f2e1f1c6"
     },
     {
       "path": "docs/architecture/.migration-marker",
@@ -206,8 +206,8 @@
     },
     {
       "path": "src/app.css",
-      "bytes": 28611,
-      "sha256": "b2a86ca5f010df5e0aa385c02ab7d4fc79c9db9712bfd67b714734afe88e872d"
+      "bytes": 29029,
+      "sha256": "15bed6db2631fac8e1b96e28ecd20ebf948c242f30f5eef4dcbe168de00b6ef4"
     },
     {
       "path": "src/app.html",
@@ -246,13 +246,13 @@
     },
     {
       "path": "src/lib/components/company/ContactHero.svelte",
-      "bytes": 2961,
-      "sha256": "4e32c31b9b023438bd15c9a078a04b573117c69957c00d12f0f39365d6bb7765"
+      "bytes": 3050,
+      "sha256": "32dba182d7e2cf5aa7bb3f62ee3ad01fc9cbeb043c3d1be8c7783d2554e56a53"
     },
     {
       "path": "src/lib/components/company/ContactIntent.svelte",
-      "bytes": 10452,
-      "sha256": "476b552987e88b74cd4e2a4311064da42ef9adac96382462b7abd1ddf5c8870b"
+      "bytes": 10449,
+      "sha256": "832426d0155c23e8c3cb9a8e95ca3416aa161e49b9dc6f43ab16c6a683b72763"
     },
     {
       "path": "src/lib/components/company/ShowroomMap.svelte",
@@ -271,8 +271,8 @@
     },
     {
       "path": "src/lib/components/company/VehicleEnquiry.svelte",
-      "bytes": 23816,
-      "sha256": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a"
+      "bytes": 23819,
+      "sha256": "550f852c61d9ae52eac78017ea183b647bee66f8ebf2664474614fda89f6273b"
     },
     {
       "path": "src/lib/components/editorial/BlogCard.svelte",
@@ -286,13 +286,13 @@
     },
     {
       "path": "src/lib/components/home/BodyTypes.svelte",
-      "bytes": 7096,
-      "sha256": "b8602d394120d5f3a6dc4fd19380cf9ec3c31f6c485f301f8c4f31c15da2b248"
+      "bytes": 7370,
+      "sha256": "294d12b37cbdbee571da5cae413a5567869cb25a24c328d13ecb77ecc056e25a"
     },
     {
       "path": "src/lib/components/home/BrandSection.svelte",
-      "bytes": 10070,
-      "sha256": "f4593770ed49690ffdda7d506ac866f78ae9d9a65f9bbd1141ad899e499e7d6b"
+      "bytes": 4515,
+      "sha256": "4cd1ad78a3feb82ad0d51dfd5aaa8eeb63c0c9e79ef189007c714a50b3b1612c"
     },
     {
       "path": "src/lib/components/home/BrowseAllCard.svelte",
@@ -301,8 +301,8 @@
     },
     {
       "path": "src/lib/components/home/Editorial.svelte",
-      "bytes": 12103,
-      "sha256": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b"
+      "bytes": 11520,
+      "sha256": "26b3214781b68b998af5efd56ecfa3bb44b2c38f9fe4de3cf59a4e030e4a1e39"
     },
     {
       "path": "src/lib/components/home/Hero.svelte",
@@ -311,8 +311,8 @@
     },
     {
       "path": "src/lib/components/home/InventorySection.svelte",
-      "bytes": 6346,
-      "sha256": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18"
+      "bytes": 6837,
+      "sha256": "3bbe15507c571d8261df812705b020dacfcfb2b0e827bd591022ec2f0034be75"
     },
     {
       "path": "src/lib/components/home/MobileBudget.svelte",
@@ -326,8 +326,8 @@
     },
     {
       "path": "src/lib/components/home/TrustActions.svelte",
-      "bytes": 13637,
-      "sha256": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc"
+      "bytes": 14399,
+      "sha256": "c4f440a63933e215181384770d0f6ad109bd7d259326bd02939847587c52ba35"
     },
     {
       "path": "src/lib/components/home/VehicleQuickSearch.svelte",
@@ -336,8 +336,8 @@
     },
     {
       "path": "src/lib/components/home/VideoSection.svelte",
-      "bytes": 9591,
-      "sha256": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972"
+      "bytes": 9470,
+      "sha256": "c5a8be28b072fb41fdbbf4f818132923ea14dff54bf96a21fc5eeb8b8dfaf0cd"
     },
     {
       "path": "src/lib/components/layout/Footer.svelte",
@@ -346,8 +346,8 @@
     },
     {
       "path": "src/lib/components/layout/Header.svelte",
-      "bytes": 29984,
-      "sha256": "bc3b46d1c24f5af9eeda806bf10624e8ead7823649efa6f359a14ecc8bed7d3d"
+      "bytes": 29976,
+      "sha256": "2dc2b53b5bc38b8abe242943825c5f2012ccf0484e915832a7c4578700b4bc0f"
     },
     {
       "path": "src/lib/components/layout/MobileNavIcon.svelte",
@@ -391,8 +391,8 @@
     },
     {
       "path": "src/lib/components/ui/HeroVehicles.svelte",
-      "bytes": 3133,
-      "sha256": "49ace952ea6c3e1b42f78eb8aed3c131575712080259a82a634d3170d7758842"
+      "bytes": 4525,
+      "sha256": "2516efc6bf9610370515099001e72166ea1a806671b52d4e94da1d217d5d4db6"
     },
     {
       "path": "src/lib/components/ui/Icon.svelte",
@@ -466,8 +466,8 @@
     },
     {
       "path": "src/lib/data/vehicle-artwork.ts",
-      "bytes": 2170,
-      "sha256": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db"
+      "bytes": 3161,
+      "sha256": "1d3c4c48c428f6d42be82f7cb3f7e24cd198aa9d343990fafc15733652285e5f"
     },
     {
       "path": "src/lib/data/videos.ts",
@@ -486,8 +486,8 @@
     },
     {
       "path": "src/routes/+page.svelte",
-      "bytes": 3793,
-      "sha256": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660"
+      "bytes": 4944,
+      "sha256": "0e592030126d59edaf3bbf7994e984312926f1f77a9cb9f204e07694840134ae"
     },
     {
       "path": "src/routes/about-us/+page.svelte",
@@ -527,7 +527,7 @@
     {
       "path": "src/routes/blog-detail/[id]/detail.css",
       "bytes": 9353,
-      "sha256": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305"
+      "sha256": "1e3f89ae9f50938c73d90d0708bd0b14a5d482e683ae13c3a8a93acbc30d6ed0"
     },
     {
       "path": "src/routes/contact/+page.svelte",
@@ -541,13 +541,13 @@
     },
     {
       "path": "src/routes/contact/contact.css",
-      "bytes": 19232,
-      "sha256": "4aca418e7c39f6cb4d50ee3ecf5326bd73b02486825abfec0a399cbb93ce8088"
+      "bytes": 19414,
+      "sha256": "2527d54e16073bad4668655257bb909509473c8b2d62afe0f2724d35a554906a"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
-      "bytes": 10436,
-      "sha256": "5254c56c4feac37563bacb3de2ba4661804816dd1f90ae91d541445e2829a6f7"
+      "bytes": 10439,
+      "sha256": "4d12074e33971b1c41768db3c235152a7d2a7f4142874a07499091287a9631dc"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.ts",
@@ -556,8 +556,8 @@
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/detail.css",
-      "bytes": 15492,
-      "sha256": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b"
+      "bytes": 15510,
+      "sha256": "c539a9cd6fe09ea9974268fb9925b53b5fd0e8d238827f847d794f938e926c71"
     },
     {
       "path": "src/routes/listing-grid/+page.svelte",
@@ -1050,11 +1050,6 @@
       "sha256": "442c996e79c246489c92f48a1483f31dcf63a02fcee27237a86ce845540369da"
     },
     {
-      "path": "static/assets/images/section/bg-6.jpg",
-      "bytes": 199583,
-      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
-    },
-    {
       "path": "static/assets/images/section/car-slide1.png",
       "bytes": 41257,
       "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72"
@@ -1093,6 +1088,31 @@
       "path": "vite.config.ts",
       "bytes": 270,
       "sha256": "986e839ded781587bab66ca8793d66da71ca99a1b3c455dd08b9d3e435f0db93"
+    },
+    {
+      "path": "provenance/mobile-service-artwork-2026-09-06.md",
+      "bytes": 2682,
+      "sha256": "c27560abf0a5c225a3960400db401fe842d3a49f04e0454688d8260973170490"
+    },
+    {
+      "path": "src/lib/components/ui/ArtworkRegion.svelte",
+      "bytes": 732,
+      "sha256": "a8f0170323821d2b88b958ceb42663a6bb72af16bf429a8164d8aecc2e2e9cc4"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-mobile-import-v1.webp",
+      "bytes": 115430,
+      "sha256": "e6484f58df263c72973f2eff88bcad923dc53c6c9d75e46205a48baa4d76cd2b"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-mobile-sell-v1.webp",
+      "bytes": 121030,
+      "sha256": "bfb59bc91685cb9108afed45500a933bc6c719a6262877f310c396ec06cfe9c1"
+    },
+    {
+      "path": "provenance/superseded-brand-banner/bg-6.jpg",
+      "bytes": 199583,
+      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
     }
   ],
   "excluded": [
@@ -1116,6 +1136,6 @@
       ".vercelignore"
     ]
   },
-  "refreshedAt": "2026-09-06T20:48:34.194Z",
-  "refreshEvidence": "../../audits/2026-09-06/asko96-build"
+  "refreshedAt": "2026-09-08T16:23:28.934461+00:00",
+  "refreshEvidence": "J:/cars/audits/2026-09-08/auto-best-source-refresh/REPORT.md"
 }

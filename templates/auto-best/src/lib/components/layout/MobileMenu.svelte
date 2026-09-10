@@ -65,7 +65,7 @@
     .dn-mobile-menu__contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
     .dn-mobile-menu__contact a { display: grid; grid-template-columns: 20px 1fr; align-items: center; gap: 6px 8px; padding: 16px 12px; border-radius: 14px; background: #f3f4f6; color: #202329; font-size: 14px; }
     .dn-mobile-menu__contact span { grid-column: 1 / -1; font-size: 14px; }
-    .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-red); color: #fff; }
+    .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-ink); color: #fff; }
     .dn-mobile-menu nav { margin-top: 16px; }
     .dn-mobile-menu nav a { min-height: 52px; gap: 12px; font-size: 15px; font-weight: 600; }
     .dn-mobile-menu nav a span { flex: 1; }

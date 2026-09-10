@@ -20,7 +20,7 @@
 <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
-      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</h1>
+      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продай или бартер' : topic.title}</h1>
     {/if}
     <div class="dn-contact-intent__heading">
       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
@@ -57,7 +57,7 @@
       </div>
     {/if}
 
-    <a class="dn-contact-button dn-contact-button--primary" href={brand.phoneHref}>
+    <a class="dn-contact-button dn-contact-button--call" href={brand.phoneHref}>
       <span class="dn-contact-call-label">Обадете се · </span>{brand.phone}
     </a>
 

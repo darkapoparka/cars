@@ -164,8 +164,8 @@
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
               <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
               <div class="dn-detail-summary__actions">
-                <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
-                <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
+                <a class="dn-detail-button dn-detail-button--call" {...phoneLinkAttributes}>Обадете се</a>
+                <a class="dn-detail-button dn-detail-button--enquiry" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
               </div>
             </section>
 
@@ -187,7 +187,7 @@
               </div>
 
               <div class="dn-detail-dealer__actions">
-                <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Обсъдете автомобила</a>
+                <a class="dn-detail-button dn-detail-button--enquiry" href={resolve(vehicleContactHref(data.vehicle.id))}>Обсъдете автомобила</a>
               </div>
             </section>
 

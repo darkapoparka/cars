@@ -272,11 +272,11 @@
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
-.dn-detail-button--primary { background: var(--dn-red); color: #fff; }
-.dn-detail-button--primary:hover { background: var(--dn-red-hover); }
+.dn-detail-button--call { background: var(--dn-ink); color: #fff; }
+.dn-detail-button--call:hover { background: var(--dn-ink-hover); }
 
-.dn-detail-button--dark { background: #1f2329; color: #fff; }
-.dn-detail-button--dark:hover { background: #0f1115; }
+.dn-detail-button--enquiry { background: var(--dn-red); color: #fff; }
+.dn-detail-button--enquiry:hover { background: var(--dn-red-hover); }
 
 .dn-detail-location-card__header {
   display: flex;

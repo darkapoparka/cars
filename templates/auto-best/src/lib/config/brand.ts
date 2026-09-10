@@ -13,8 +13,8 @@ export type BrandConfig = {
   facebookUrl: `https://${string}`;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
+const name = 'Auto Best';
+const shortName = 'Auto Best';
 const city = 'София';
 const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
 
@@ -30,5 +30,5 @@ export const brand = {
   addressLine,
   address: `${addressLine}, ${city}`,
   appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  logo: '/assets/images/template/auto-best-logo.svg'
 } as const satisfies BrandConfig;

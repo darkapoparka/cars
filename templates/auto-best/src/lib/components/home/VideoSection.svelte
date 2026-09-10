@@ -23,17 +23,17 @@
 
 <section class="dn-videos" aria-labelledby="videos-title">
   <div class="container">
-    <div class="dn-videos__panel">
-      <div class="dn-videos__heading dn-home-section-heading">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледайте ни в</span><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={32} /></span>YouTube</h2>
-        <p>Избрани автомобилни видеа с Кристиан Кирилов.</p>
+      <div class="dn-videos__heading dn-home-section-heading dn-home-section-heading--banner dn-home-banner-frame dn-home-banner-copy">
+        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледай ни в</span><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>YouTube</span></h2>
+        
         <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span>Всички видеа</span>
+          <span class="dn-videos__channel-label">Към канала</span>
           <Icon name="arrow-right" size={16} />
           <span class="dn-sr-only"> в YouTube (нов раздел)</span>
         </a>
       </div>
 
+    <div class="dn-videos__panel">
       <div class="dn-videos__grid">
         {#each featuredVideos as video (video.id)}
           <article class="dn-video-card">
@@ -46,6 +46,7 @@
                 onclick={(event) => play(video.id, event)}
               >
                 <img src={video.thumbnail} alt="" width="720" height="404" loading="lazy" decoding="async" />
+                <span class="dn-video-card__title" aria-hidden="true"><span>{video.title}</span></span>
                 <span class="dn-video-card__play-icon" aria-hidden="true">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
                 </span>
@@ -60,25 +61,15 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   {@attach (element) => { element.focus(); }}
                 ></iframe>
+                <button class="dn-video-card__close" type="button" onclick={stop} aria-label={`Затворете видеото: ${video.title}`}><Icon name="x" size={20} /></button>
               {/if}
             </div>
-            <div class="dn-video-card__content">
-              <h3>{video.title}</h3>
-              <div class="dn-video-card__actions">
-                <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" aria-label={`${video.title} — гледайте в YouTube (нов раздел)`}>
-                  Гледайте в YouTube <Icon name="arrow-right" size={16} />
-                </a>
-                {#if activeVideo === video.id}
-                  <button type="button" onclick={stop} aria-label={`Затворете видеото: ${video.title}`}><Icon name="x" size={20} /></button>
-                {/if}
-              </div>
-            </div>
+            <h3 class="dn-sr-only">{video.title}</h3>
           </article>
         {/each}
         <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
+          <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={32} /></span>
           <strong>Всички видеа</strong>
-          <span>Гледайте в YouTube</span>
           <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
           <span class="dn-sr-only">Отваря се в нов раздел</span>
         </a>
@@ -90,14 +81,17 @@
 <style>
   .dn-videos { padding: 32px 0; background: #fff; }
   .dn-videos__all-card { display: none; }
-  .dn-videos__panel { padding: 32px; border-radius: 20px; background: #f1f3f5; }
-  .dn-videos__heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 32px; align-items: center; margin-bottom: 24px; }
-  .dn-videos__heading h2 { display: flex; align-items: center; gap: 8px; margin: 0; color: #171a20; font-size: 32px; font-weight: 650; line-height: 1.2; letter-spacing: -0.03em; }
+  .dn-videos__panel { position: relative; margin-top: -24px; padding: 24px; border-radius: 16px; background: #fff; }
+  .dn-videos__heading { display: grid; min-height: 234px; grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: center; align-items: center; padding: 32px 32px 56px; border-radius: 20px; background: #101114; }
+  .dn-videos__heading h2 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0; color: #fff; font-size: 32px; font-weight: 650; line-height: 1.2; letter-spacing: -0.03em; }
+  .dn-videos__wordmark { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-weight: 750; }
   .dn-videos__brand-mark { display: flex; flex-shrink: 0; color: #ff0033; }
-  .dn-videos__heading p { grid-column: 1; margin: 0; color: #626a75; font-size: 16px; line-height: 1.5; }
-  .dn-videos__channel { display: inline-flex; grid-column: 2; grid-row: 1; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0; border-radius: 4px; color: #525a66; font-size: 16px; font-weight: 600; }
+  
+  .dn-videos__channel { display: inline-flex; grid-column: 1; justify-self: start; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 20px; border-radius: var(--dn-radius-button); background: #fff; color: #24272c; font-size: 16px; font-weight: 600; }
   .dn-videos__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .dn-video-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border-radius: 16px; background: #fff; }
+  .dn-video-card__title { position: absolute; top: 0; left: 0; right: 0; padding: 12px 12px 26px; background: linear-gradient(#000c, #0008 65%, transparent); color: #fff; font-size: 16px; font-weight: 500; line-height: 1.3; text-align: left; text-shadow: 0 1px 2px #000; }
+  .dn-video-card__title > span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
   .dn-video-card__media { position: relative; aspect-ratio: 16 / 9; background: #171a20; }
   .dn-video-card__play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer; background: #171a20; color: #fff; }
   .dn-video-card__play img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -105,41 +99,43 @@
   .dn-video-card__play:hover .dn-video-card__play-icon { background: #24272c; }
   .dn-video-card__duration { position: absolute; bottom: 10px; right: 10px; padding: 3px 6px; border-radius: 4px; background: #171a20; color: #fff; font-size: 12px; font-weight: 600; line-height: 1.4; }
   .dn-video-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .dn-video-card__content { display: flex; flex: 1; flex-direction: column; padding: 18px 20px 12px; }
-  .dn-video-card h3 { min-height: 2.6em; margin: 0 0 8px; color: #24272c; font-size: 20px; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
-  .dn-video-card__actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
-  .dn-video-card__actions a { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; color: #626a75; font-size: 14px; font-weight: 500; }
-  .dn-video-card__actions button { display: grid; flex-shrink: 0; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: #f1f3f5; color: #24272c; cursor: pointer; }
-  .dn-video-card__actions a:hover { color: var(--dn-red); }
-  .dn-videos__channel:hover { color: var(--dn-red); text-decoration: underline; text-underline-offset: 4px; }
-  .dn-video-card__actions button:hover { background: #e9edf1; }
+  .dn-video-card__close { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #525a66; border-radius: 50%; background: #171a20; color: #fff; cursor: pointer; }
+  .dn-videos__channel:hover { background: #e9edf1; color: #171a20; }
+  .dn-video-card__close:hover { background: #343941; }
   a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid var(--dn-red); outline-offset: -3px; }
 
+  @media (min-width: 992px) {
+    .dn-videos .dn-videos__heading.dn-home-section-heading { min-height: var(--dn-home-heading-banner-height); }
+    .dn-videos__heading h2 { justify-content: center; }
+    .dn-videos__channel :global(svg) { width: 18px; height: 18px; stroke-width: 2; }
+    .dn-videos__panel { background: var(--dn-home-panel); }
+  }
+
   @media (min-width: 768px) and (max-width: 991px) {
-    .dn-videos__panel { padding: 24px; }
+    .dn-videos__heading { grid-template-columns: 1fr; }
+    .dn-videos__channel { grid-column: 1; grid-row: auto; justify-self: start; }
     .dn-videos__grid { gap: 16px; }
-    .dn-video-card__content { padding-inline: 14px; }
-    .dn-video-card h3 { font-size: 18px; }
   }
 
   @media (max-width: 767px) {
     .dn-videos { padding: 20px 0 12px; background: var(--dn-mobile-canvas); }
-    .dn-videos__panel { padding: 0; border-radius: 0; background: transparent; }
-    .dn-videos__heading { gap: 4px 8px; margin-bottom: 12px; }
-    .dn-videos__heading h2 { font-size: 20px; font-weight: 700; }
-    .dn-videos__heading p { grid-column: 1 / -1; font-size: 14px; }
-    .dn-videos__channel { display: none; }
-    .dn-videos__channel :global(.dn-icon) { display: none; }
-    .dn-videos__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(82vw, 320px); gap: 10px; overflow-x: auto; margin-inline: -12px; padding: 0 12px 4px; scroll-padding-inline: 12px; scroll-snap-type: x proximity; }
+    .dn-videos__panel { margin-top: 12px; padding: 0; border-radius: 0; background: transparent; }
+    .dn-videos__heading { min-height: 0; grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; padding: 18px; border-radius: 14px; }
+    .dn-videos__heading h2 { gap: 6px 8px; font-size: 24px; font-weight: 700; }
+    .dn-videos__brand-mark :global(svg) { width: 32px; height: 32px; }
+    
+    .dn-videos__channel { grid-column: 2; grid-row: 1; justify-self: end; align-self: start; width: 44px; padding: 0; margin: 0; border: 1px solid #55565a; border-radius: 50%; background: transparent; color: #fff; }
+    .dn-videos__intro { flex-basis: 100%; }
+    .dn-videos__channel-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .dn-videos__channel :global(svg) { width: 22px; height: 22px; }
+    .dn-videos__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(82vw, 320px); gap: 10px; overflow-x: auto; margin-inline: -12px; padding: 0 12px 4px; scroll-padding-inline: 12px; scroll-snap-type: x proximity; scrollbar-width: none; }
+    .dn-videos__grid::-webkit-scrollbar { display: none; }
     .dn-video-card { border-radius: 14px; scroll-snap-align: start; }
-    .dn-video-card__content { padding: 14px 14px 8px; }
-    .dn-video-card h3 { font-size: 17px; }
-    .dn-videos__all-card { position: relative; display: flex; min-height: 280px; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; border: 1px solid #dce0e5; border-radius: 14px; background: #fff; color: #202329; text-align: center; scroll-snap-align: start; }
+    .dn-videos__all-card { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px; border: 1px solid #dce0e5; border-radius: 14px; background: #fff; color: #202329; text-align: center; scroll-snap-align: start; }
     .dn-videos__all-icon { color: #ff0033; }
-    .dn-videos__all-card strong { font-size: 20px; line-height: 1.3; }
-    .dn-videos__all-card > span:not([class]) { color: #626a75; font-size: 14px; }
+    .dn-videos__all-card strong { font-size: 18px; line-height: 1.3; }
     .dn-videos__all-arrow { display: flex; min-height: 44px; align-items: center; gap: 8px; padding: 8px 18px; margin-top: 4px; border-radius: var(--dn-pill); background: var(--dn-red); color: #fff; font-size: 14px; font-weight: 600; }
     .dn-videos__all-card:hover { border-color: #aab0b8; background: #fafafa; }
   }
-  .dn-videos__intro { font-size: .8em; font-weight: 600; letter-spacing: -.02em; }
+  .dn-videos__intro { font-size: .85em; font-weight: 600; letter-spacing: -.02em; }
 </style>

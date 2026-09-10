@@ -382,13 +382,13 @@
 
 .dn-blog-widget__primary {
   margin-top: 22px;
-  background: var(--dn-red);
+  background: var(--dn-ink);
   color: #fff;
 }
 
 .dn-blog-widget__primary:hover,
 .dn-blog-widget__primary:focus-visible {
-  background: var(--dn-red-hover);
+  background: var(--dn-ink-hover);
 }
 
 .dn-blog-widget__secondary {
