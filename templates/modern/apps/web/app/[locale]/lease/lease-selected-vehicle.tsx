@@ -48,7 +48,7 @@ export function LeaseSelectedVehicle({
         ) : (
           <Image
             alt={vehicle.imageAlt}
-            className="object-cover"
+            className="object-cover object-[center_85%] lg:object-[center_80%]"
             fill
             onError={() => setFailedImageUrl(vehicle.imageUrl)}
             sizes="240px"

@@ -1,5 +1,7 @@
 import "server-only";
 
+import { leadSite } from "@repo/marketplace";
+
 import {
   type ExternalInventoryDiscoveryResponse,
   externalInventoryDiscoveryResponseSchema,
@@ -33,6 +35,14 @@ export const getPublicExternalInventory = async (
   originCountryCode: string
 ): Promise<ExternalInventoryDiscoveryResponse> => {
   const normalizedOrigin = originCountryCode.trim().toUpperCase();
+  if (leadSite.staticDemoMode) {
+    return {
+      listings: [],
+      originCountryCode: normalizedOrigin,
+      reason: "not_configured",
+      status: "disabled",
+    };
+  }
   const apiBaseUrl = getPublicApiBaseUrl();
   if (!apiBaseUrl) {
     return {

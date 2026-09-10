@@ -35,9 +35,11 @@ interface MobileMarketplaceOverlayShellProps {
   readonly onOpenAutoFocus?: (event: Event) => void;
   readonly onOpenChange: (open: boolean) => void;
   readonly open: boolean;
+  readonly presentation?: "fullscreen" | "sheet";
 }
 
 export const MobileMarketplaceOverlayShell = ({
+  presentation = "fullscreen",
   children,
   className,
   contentDataSlot = "mobile-marketplace-overlay",
@@ -51,9 +53,11 @@ export const MobileMarketplaceOverlayShell = ({
       <DialogContent
         className={cn(
           "data-[state=closed]:zoom-out-100 data-[state=open]:zoom-in-100 top-0 left-0 z-[70] flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 bg-white p-0 shadow-none sm:max-w-none sm:rounded-none",
+          presentation === "sheet" &&
+            "top-auto bottom-[var(--mobile-keyboard-inset,0px)] h-auto max-h-[min(85dvh,var(--mobile-visible-height,100dvh))] rounded-t-3xl sm:rounded-t-3xl",
           className
         )}
-        data-mobile-overlay="fullscreen"
+        data-mobile-overlay={presentation}
         data-slot={contentDataSlot}
         onCloseAutoFocus={onCloseAutoFocus}
         onOpenAutoFocus={onOpenAutoFocus}
@@ -92,6 +96,7 @@ export const MobileMarketplaceOverlayHeader = ({
 );
 
 export const MobileMarketplaceOverlay = ({
+  presentation,
   bodyClassName,
   children,
   contentClassName,
@@ -106,6 +111,7 @@ export const MobileMarketplaceOverlay = ({
   rightAction,
   title,
 }: {
+  readonly presentation?: "fullscreen" | "sheet";
   readonly bodyClassName?: string;
   readonly children: ReactNode;
   readonly contentClassName?: string;
@@ -127,6 +133,7 @@ export const MobileMarketplaceOverlay = ({
     onOpenAutoFocus={onOpenAutoFocus}
     onOpenChange={onOpenChange}
     open={open}
+    presentation={presentation}
   >
     <MobileMarketplaceOverlayHeader
       description={description}
@@ -143,15 +150,15 @@ export const MobileMarketplaceOverlay = ({
       data-slot="mobile-marketplace-overlay-scroll-body"
     >
       {children}
-      {footer ? (
-        <div
-          className="px-4 pt-3 pb-[calc(1rem+env(safe-area-inset-bottom))]"
-          data-slot="mobile-marketplace-overlay-footer"
-        >
-          {footer}
-        </div>
-      ) : null}
     </div>
+    {footer ? (
+      <div
+        className="shrink-0 border-border border-t bg-white px-4 pt-3 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+        data-slot="mobile-marketplace-overlay-footer"
+      >
+        {footer}
+      </div>
+    ) : null}
   </MobileMarketplaceOverlayShell>
 );
 

@@ -18,7 +18,10 @@ import {
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { getVehicleCardSpecFacts } from "../lib/vehicle-card-policy";
+import { DealerVehicleFacts } from "./dealer-vehicle-facts";
 import { ListingActions } from "./listing-actions";
+import { ListingBackLink } from "./listing-back-link";
 
 export const DesktopListingSummaryHeader = ({
   backHref,
@@ -46,10 +49,10 @@ export const DesktopListingSummaryHeader = ({
         className="h-10 shrink-0 gap-1.5 rounded-lg px-3 text-foreground shadow-none"
         variant="secondary"
       >
-        <Link href={backHref}>
+        <ListingBackLink href={backHref}>
           <ArrowLeft aria-hidden="true" className="size-4" />
           {copy.backToSearch}
-        </Link>
+        </ListingBackLink>
       </Button>
       <div className="min-w-0 flex-1 basis-72">
         <h1 className="text-pretty break-words font-semibold text-page-title tracking-tight">
@@ -97,9 +100,9 @@ export const MobileListingGalleryActions = ({
         size="icon"
         variant="secondary"
       >
-        <Link href={backHref}>
+        <ListingBackLink href={backHref}>
           <ArrowLeft aria-hidden="true" className="size-5" />
-        </Link>
+        </ListingBackLink>
       </Button>
       <ListingActions
         floating
@@ -167,6 +170,16 @@ export const MobileListingSummary = ({
       <h1 className="mt-3 text-pretty break-words font-semibold text-section-title">
         {listing.title}
       </h1>
+      <div className="mt-3">
+        <DealerVehicleFacts
+          facts={getVehicleCardSpecFacts(listing, locale)}
+          label={
+            locale?.startsWith("bg")
+              ? "Основни характеристики"
+              : "Key specifications"
+          }
+        />
+      </div>
       {listing.category === "car" ? (
         <Link
           className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-xl bg-zinc-100 px-4 font-medium text-[14px] text-zinc-900 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"

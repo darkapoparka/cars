@@ -36,7 +36,7 @@ export function DealerMobileHeaderIcon({
       width={24}
     >
       {hugeiconsHeader[name].map(([tag, attributes]) =>
-        createElement(tag, attributes)
+        createElement(tag, { ...attributes, strokeWidth: 1.75 })
       )}
     </svg>
   );

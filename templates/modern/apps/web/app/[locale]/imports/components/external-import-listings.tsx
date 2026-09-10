@@ -15,6 +15,7 @@ import {
   Ship,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { BlankImportRequestLink } from "./blank-import-request-link";
 
 interface ExternalImportListingsProps {
@@ -42,8 +43,8 @@ const getUnavailableCopy = (
   }
   if (data?.status === "disabled") {
     return isBg
-      ? "Все още няма свързан каталог с обяви."
-      : "A listings catalogue has not been connected yet.";
+      ? "Внос по ваша заявка"
+      : "Import a vehicle of your choice";
   }
   return isBg
     ? "Обявите временно не се зареждат."
@@ -268,15 +269,19 @@ export const ExternalImportListings = ({
         > => feed.status !== "ok"
       ) ?? null;
 
+    const StateIcon = unavailableFeed?.status === "disabled" ? Ship : ShieldAlert;
+
     return (
       <div
-        className="flex min-h-36 flex-col items-center justify-center rounded-xl bg-white px-5 py-6 text-center lg:min-h-44 lg:border lg:border-border lg:bg-card"
+        className="flex min-h-36 flex-col items-center justify-center overflow-hidden rounded-xl bg-card px-5 pb-6 text-center lg:min-h-44"
         data-provider-state={unavailableFeed?.status ?? "unavailable"}
       >
-        <ShieldAlert
+        {unavailableFeed?.status === "disabled" ? (
+          <Image alt="" src="/images/services/import-banner-v2.png" width={1536} height={1024} sizes="(max-width: 1023px) 100vw, 640px" className="mb-4 h-44 w-[calc(100%+2.5rem)] max-w-none object-cover lg:h-64" />
+        ) : <StateIcon
           aria-hidden="true"
-          className="size-5 text-muted-foreground"
-        />
+          className="mt-6 size-5 text-muted-foreground"
+        />}
         <h2 className="mt-2 font-semibold text-sm" id={headingId}>
           {getUnavailableCopy(unavailableFeed, isBg)}
         </h2>

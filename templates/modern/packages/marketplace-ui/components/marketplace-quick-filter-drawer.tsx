@@ -72,6 +72,7 @@ export const MarketplaceQuickFilterDrawer = ({
 
   return (
     <MobileMarketplaceOverlay
+      bodyClassName="flex-initial"
       description={copy.quickFilterDescription}
       footer={
         <Button
@@ -117,6 +118,7 @@ export const MarketplaceQuickFilterDrawer = ({
         }
       }}
       open={Boolean(activeFilter)}
+      presentation="sheet"
       rightAction={
         <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
       }

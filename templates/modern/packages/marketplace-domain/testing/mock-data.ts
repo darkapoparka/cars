@@ -10,7 +10,7 @@ export const mockListings: VehicleListing[] = [
     status: "active",
     title: "2020 BMW X5 M50d",
     description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
+      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
     price: { amount: 89_379, currency: "BGN" },
     priceType: "fixed",
     monthlyEstimate: { amount: 1360, currency: "BGN" },
@@ -39,7 +39,6 @@ export const mockListings: VehicleListing[] = [
       mileageValue: 167_000,
       mileageUnit: "km",
       enginePowerHp: 400,
-      colorExterior: "Черен металик",
     },
     seller: {
       id: "dealer-day-night-auto-group",
