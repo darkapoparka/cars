@@ -225,7 +225,7 @@ export const NumericRangeFilter = ({
             {quickSelectLabel}
           </p>
           <div
-            className="no-scrollbar flex gap-2 overflow-x-auto overscroll-x-contain lg:grid lg:grid-cols-4"
+            className="grid grid-cols-2 gap-2 lg:grid-cols-4"
             data-slot="numeric-range-presets"
           >
             {presets.map((preset) => (

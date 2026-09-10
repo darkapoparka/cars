@@ -50,6 +50,8 @@ export const leadSite: LeadSiteConfig = {
   slug: "day-night-auto-group",
   socialLinks: {
     instagram: "https://www.instagram.com/dayandnight_autogroup/",
+    youtube: "https://www.youtube.com/@kristiankirilov1355/",
+    facebook: "https://www.facebook.com/deninoshtautogroup/",
   },
   staticDemoMode: true,
   tagline: "Премиум автомобили, внос и собствен лизинг в София.",

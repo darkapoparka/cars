@@ -75,16 +75,7 @@ interface MobileDealerQuickFiltersProps {
   readonly items: readonly MobileQuickFilterItem[];
 }
 
-const getMobileSearchText = (
-  discoverySummary: string,
-  filterCount: number,
-  isBg: boolean,
-  totalListings: number
-) => {
-  if (filterCount > 0) {
-    return discoverySummary;
-  }
-
+const getMobileSearchText = (isBg: boolean, totalListings: number) => {
   if (isBg) {
     return `Търси ${totalListings} ${totalListings === 1 ? "автомобил" : "автомобила"}`;
   }
@@ -305,7 +296,6 @@ export const MobileDealerQuickFilters = ({
 export const MobileCompactSearchHeader = ({
   category,
   categoryLabel,
-  discoverySummary,
   filterCount,
   isBg,
   makeModelLabel,
@@ -331,12 +321,7 @@ export const MobileCompactSearchHeader = ({
           onOpenCategory={onOpenCategory}
           onOpenFilters={onOpenFilters}
           onOpenSearch={onOpenSearch}
-          searchLabel={getMobileSearchText(
-            discoverySummary,
-            filterCount,
-            isBg,
-            totalListings
-          )}
+          searchLabel={getMobileSearchText(isBg, totalListings)}
         />
       </div>
     </div>
@@ -346,7 +331,6 @@ export const MobileCompactSearchHeader = ({
 export const MobileDealerDiscoveryHeader = ({
   category,
   categoryLabel,
-  discoverySummary,
   filterCount,
   isBg,
   locale,
@@ -359,12 +343,7 @@ export const MobileDealerDiscoveryHeader = ({
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
-  const searchLabel = getMobileSearchText(
-    discoverySummary,
-    filterCount,
-    isBg,
-    totalListings
-  );
+  const searchLabel = getMobileSearchText(isBg, totalListings);
 
   return (
     <div className="bg-zinc-950 text-white">

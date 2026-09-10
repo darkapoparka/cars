@@ -58,10 +58,7 @@ export function DealerSocialLinks({
   isBg: boolean;
 }) {
   const configured = socialPlatforms.filter(
-    (platform) =>
-      links?.[platform.key] ||
-      platform.key === "youtube" ||
-      platform.key === "facebook"
+    (platform) => links?.[platform.key]
   );
   if (!configured.length) {
     return null;

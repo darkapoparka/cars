@@ -9,7 +9,7 @@ import Link from "next/link";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 
 const cardClassName =
-  "flex items-center gap-3 rounded-2xl bg-zinc-100 p-4 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:bg-zinc-200";
+  "flex items-center gap-3 rounded-2xl bg-card p-4 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:bg-zinc-200";
 
 export function MobileAboutContact({
   locale,
@@ -21,7 +21,7 @@ export function MobileAboutContact({
   const isBg = locale === "bg";
   return (
     <div
-      className="min-h-[calc(100dvh-4rem)] bg-white lg:hidden"
+      className="min-h-[calc(100dvh-4rem)] bg-background lg:hidden"
       data-slot="mobile-about-contact"
     >
       <MobileDealerServiceHero
@@ -44,7 +44,7 @@ export function MobileAboutContact({
           {isBg ? "За нас и контакти" : "About and contact"}
         </h1>
       </MobileDealerServiceHero>
-      <div className="relative -mt-3 rounded-t-2xl bg-white px-4 pt-4 pb-6">
+      <div className="relative -mt-3 rounded-t-2xl bg-background px-4 pt-4 pb-6">
         <div className="grid gap-2">
           <a className={cardClassName} href={leadSite.phoneHref}>
             <DealerUiIcon

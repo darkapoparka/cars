@@ -31,7 +31,7 @@ import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace
 
 const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
-    "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]",
+    "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-1 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]",
     active
       ? "font-semibold text-[var(--lead-site-accent)]"
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
@@ -117,7 +117,7 @@ export const DealerBottomNav = ({
                 href={item.href}
                 key={item.label}
               >
-                <span className="grid h-7 w-10 place-items-center">
+                <span className="grid h-8 w-10 place-items-center">
                   <DealerBottomNavIcon
                     active={visuallyActive}
                     name={item.icon}
@@ -138,7 +138,7 @@ export const DealerBottomNav = ({
             ref={menuTriggerRef}
             type="button"
           >
-            <span className="grid h-7 w-10 place-items-center">
+            <span className="grid h-8 w-10 place-items-center">
               <DealerBottomNavIcon
                 active={menuOpen || !activeMode}
                 name="menu"
@@ -151,7 +151,7 @@ export const DealerBottomNav = ({
 
       <Drawer modal onOpenChange={setMenuOpen} open={menuOpen}>
         <DrawerContent
-          className="!bg-white mx-auto h-[calc(100dvh-max(0.75rem,env(safe-area-inset-top))-7rem)] max-w-lg overflow-hidden border-0 data-[vaul-drawer-direction=bottom]:mt-0 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-max(0.75rem,env(safe-area-inset-top)))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
+          className="!bg-white mx-auto h-auto max-w-lg overflow-hidden border-0 data-[vaul-drawer-direction=bottom]:mt-0 data-[vaul-drawer-direction=bottom]:max-h-[calc(100dvh-max(0.75rem,env(safe-area-inset-top)))] data-[vaul-drawer-direction=bottom]:rounded-t-3xl"
           data-slot="dealer-mobile-menu"
           id="dealer-mobile-menu"
           onCloseAutoFocus={(event) => {
@@ -202,13 +202,13 @@ export const DealerBottomNav = ({
             >
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-                className="flex min-h-14 min-w-0 items-center justify-center gap-2 rounded-xl bg-[var(--lead-site-accent)] px-2.5 py-3 text-white transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-[var(--lead-site-accent-hover)]"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
                 href={leadSite.phoneHref}
                 onClick={() => setMenuOpen(false)}
               >
                 <DealerUiIcon className="size-5 shrink-0" name="phone" />
                 <span className="whitespace-nowrap font-semibold text-[14px] tabular-nums leading-5">
-                  {leadSite.phoneDisplay}
+                  {isBg ? "Обади се" : "Call us"}
                 </span>
               </a>
               <a
@@ -217,7 +217,7 @@ export const DealerBottomNav = ({
                     ? `Отворете картата: ${leadSite.address}`
                     : "Open showroom map"
                 }
-                className="flex min-h-14 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
                 href={leadSite.mapsUrl}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
@@ -225,7 +225,7 @@ export const DealerBottomNav = ({
               >
                 <DealerUiIcon className="size-5 shrink-0" name="location" />
                 <span className="min-w-0 text-center font-semibold text-[14px] leading-5">
-                  {isBg ? leadSite.city : "Sofia"}
+                  {isBg ? "Посети ни" : "Visit us"}
                 </span>
               </a>
             </div>

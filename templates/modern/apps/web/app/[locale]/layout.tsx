@@ -58,6 +58,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       lang={normalizedLocale}
       style={
         {
+          "--canvas": "oklch(0.97 0 0)",
           "--lead-site-accent": leadSite.accent,
           "--lead-site-accent-active":
             "color-mix(in srgb, var(--lead-site-accent) 68%, black)",

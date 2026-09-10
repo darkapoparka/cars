@@ -52,6 +52,7 @@ import {
   getVehicleCardSecondaryPriceLabel,
   vehicleCardToneClassNames,
 } from "../lib/vehicle-card-view-policy";
+import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
 import { DealerVehicleFacts } from "./dealer-vehicle-facts";
 
 const sellerRoleIcons = {
@@ -468,7 +469,7 @@ const MobileDealerVehicleCardContent = ({
   locale?: string;
 }) => (
   <Link
-    className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+    className={cn(mobileVehicleCardContentClassName, "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden")}
     href={listingHref}
   >
     <div className="min-w-0 space-y-0.5">
