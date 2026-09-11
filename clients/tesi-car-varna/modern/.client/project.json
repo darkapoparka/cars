@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "client": "tesi-car-varna",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-10T15:43:19.706Z",
+  "state": "local-review-ready",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": true,
+    "contactPath": true,
+    "framework": {
+      "build": 0,
+      "checked": true
+    }
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "businessFacts": "../business-facts.json",
+  "stock": "../stock.json",
+  "stockCount": 8,
+  "knownGaps": [
+    "Dated 2026-09-10 sample of 8 listings from 51 published adverts; confirm live availability and price with Tesi Car.",
+    "Published source logo is a small 100x39 asset; no independent official website/social profile was verified.",
+    "Hours are sourced from current adverts; Sunday is call-first."
+  ]
+}

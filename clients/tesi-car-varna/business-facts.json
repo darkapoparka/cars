@@ -1,0 +1,50 @@
+{
+  "name": "Теси Кар",
+  "shortName": "Теси Кар",
+  "latinName": "TESI CAR",
+  "city": "Варна",
+  "country": "България",
+  "region": "Владислав Варненчик",
+  "phoneDisplay": "0898 694 330",
+  "phoneE164": "+359898694330",
+  "phoneHref": "tel:+359898694330",
+  "secondaryPhoneDisplay": "0886 965 047",
+  "secondaryPhoneE164": "+359886965047",
+  "secondaryPhoneHref": "tel:+359886965047",
+  "email": "",
+  "address": "бул. „Цар Освободител“, посока Аксаково, последен вляво",
+  "hours": [
+    "Понеделник–събота: 09:00–18:00 (по текущите обяви)",
+    "Неделя: позвънете; контактната страница не публикува часове"
+  ],
+  "sourceUrl": "https://tesicar.mobile.bg/",
+  "stockUrl": "https://tesicar.mobile.bg/",
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11316407313562318.pic",
+  "website": null,
+  "socialLinks": {},
+  "accent": "#bd272c",
+  "accentDark": "#481415",
+  "logo": "/dealer/logo.png",
+  "showroom": null,
+  "stockCount": 8,
+  "publishedAdCount": 51,
+  "stockSnapshotDate": "2026-09-10",
+  "stockNote": "Осем представителни текущи обяви от 51 публикувани автомобила и джипа към 10.09.2026 г.; не е live feed.",
+  "services": [
+    "Продажба на автомобили",
+    "Внос от Швейцария",
+    "Лизинг (по публикуваните обяви)",
+    "Съдействие при регистрация или транзитни номера в КАТ Варна"
+  ],
+  "sources": [
+    "https://tesicar.mobile.bg/",
+    "https://tesicar.mobile.bg/contacts"
+  ],
+  "limitations": [
+    "Контактната страница не е въвела работно време; часовете са от текущи обяви.",
+    "Публикуваното лого е малък 100×39 JPEG асет; запазен е като източниково брандиране.",
+    "Няма потвърден независим сайт в ограниченото проучване."
+  ],
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tesi%20Car%20Varna%20Tsar%20Osvoboditel%20Aksakovo",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Tesi%20Car%20Varna%20Tsar%20Osvoboditel%20Aksakovo&output=embed"
+}
