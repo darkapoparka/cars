@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "dealer": {
+    "slug": "nova-cars-sofia",
+    "name": "NOVA CARS Luxury Sales",
+    "city": "София",
+    "address": "ул. Амстердам 5, София",
+    "phone": "+359898880599",
+    "email": "",
+    "hours": "09:00–18:00 всеки ден",
+    "source": "https://novacars.mobile.bg/",
+    "website": "https://novacars.bg/",
+    "logoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h13729357047274174.pic"
+  },
+  "availabilityNotice": "These are dealer-advertised listings observed on the source profile; current availability is not independently verified.",
+  "listings": [
+    {
+      "id": "21788867190181219",
+      "title": "Porsche Cayenne Coupe E-Hybrid Crayon Лизинг Гаранция",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-21788867190181219-porsche-cayenne-coupe-e-hybrid-crayon-lizing-garantsiya",
+      "priceEur": 89999,
+      "advertisedPrice": "89 999 €",
+      "taxLabel": "Цената е без ДДС",
+      "parameters": [
+        "юни 2024 г.",
+        "29 500 км",
+        "Сив",
+        "Plug-in хибрид",
+        "470 к.с.",
+        "25.9 kWh",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2024,
+      "mileageKm": 29500,
+      "color": "Сив",
+      "fuel": "Plug-in хибрид",
+      "power": "470 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic4.focus.bg/mobile/photosorg/219/2/big1/21788867190181219_CE.webp",
+        "https://mobistatic4.focus.bg/mobile/photosorg/219/2/big1/21788867190181219_oB.webp"
+      ]
+    },
+    {
+      "id": "21788528450494675",
+      "title": "Land Rover Range rover L Autobiography",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-21788528450494675-land-rover-range-rover-l-autobiography",
+      "priceEur": 33999,
+      "advertisedPrice": "33 999 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "април 2017 г.",
+        "188 000 км",
+        "Сив",
+        "Дизелов",
+        "340 к.с.",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2017,
+      "mileageKm": 188000,
+      "color": "Сив",
+      "fuel": "Дизелов",
+      "power": "340 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/675/2/big1/21788528450494675_dA.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/675/2/big1/21788528450494675_5i.webp"
+      ]
+    },
+    {
+      "id": "21740760121746079",
+      "title": "Land Rover Range rover P530 Autobiography",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-21740760121746079-land-rover-range-rover-p530-autobiography",
+      "priceEur": 99998,
+      "advertisedPrice": "99 998 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "март 2023 г.",
+        "39 000 км",
+        "Сив",
+        "Бензинов",
+        "530 к.с.",
+        "Евро 6",
+        "4400 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2023,
+      "mileageKm": 39000,
+      "color": "Сив",
+      "fuel": "Бензинов",
+      "power": "530 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic4.focus.bg/mobile/photosorg/079/2/big1/21740760121746079_dD.webp",
+        "https://mobistatic4.focus.bg/mobile/photosorg/079/2/big1/21740760121746079_be.webp"
+      ]
+    },
+    {
+      "id": "11785909682010785",
+      "title": "BMW iX xDrive60 M pro",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-11785909682010785-bmw-ix-xdrive60-m-pro",
+      "priceEur": 74999,
+      "advertisedPrice": "74 999 €",
+      "taxLabel": "Цената е без ДДС",
+      "parameters": [
+        "април 2025 г.",
+        "6 000 км",
+        "Черен",
+        "Електрически",
+        "544 к.с.",
+        "109.1 kWh",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2025,
+      "mileageKm": 6000,
+      "color": "Черен",
+      "fuel": "Електрически",
+      "power": "544 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/785/1/big1/11785909682010785_en.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/785/1/big1/11785909682010785_Us.webp"
+      ]
+    },
+    {
+      "id": "11780554741784429",
+      "title": "Mercedes-Benz S 560 4M L AMG S63 пакет",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-11780554741784429-mercedes-benz-s-560-4m-l-amg-s63-paket",
+      "priceEur": 38999,
+      "advertisedPrice": "38 999 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "ноември 2018 г.",
+        "208 000 км",
+        "Черен",
+        "Бензинов",
+        "469 к.с.",
+        "Автоматична",
+        "Седан"
+      ],
+      "year": 2018,
+      "mileageKm": 208000,
+      "color": "Черен",
+      "fuel": "Бензинов",
+      "power": "469 к.с.",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/429/1/big1/11780554741784429_IW.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/429/1/big1/11780554741784429_Rn.webp"
+      ]
+    },
+    {
+      "id": "11779188982224291",
+      "title": "Mercedes-Benz AMG GT S",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-11779188982224291-mercedes-benz-amg-gt-s",
+      "priceEur": 64999,
+      "advertisedPrice": "64 999 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "март 2016 г.",
+        "94 000 км",
+        "Червен",
+        "Бензинов",
+        "510 к.с.",
+        "Автоматична",
+        "Купе"
+      ],
+      "year": 2016,
+      "mileageKm": 94000,
+      "color": "Червен",
+      "fuel": "Бензинов",
+      "power": "510 к.с.",
+      "transmission": "Автоматична",
+      "body": "Купе",
+      "doors": 3,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/291/1/big1/11779188982224291_Np.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/291/1/big1/11779188982224291_hd.webp"
+      ]
+    },
+    {
+      "id": "11778577413022240",
+      "title": "Audi A7 55 TFSI Quattro* S-line",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-11778577413022240-audi-a7-55-tfsi-quattro-s-line",
+      "priceEur": 29999,
+      "advertisedPrice": "29 999 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "август 2018 г.",
+        "146 000 км",
+        "Черен",
+        "Бензинов",
+        "340 к.с.",
+        "Евро 6",
+        "2996 куб.см",
+        "Автоматична",
+        "Купе"
+      ],
+      "year": 2018,
+      "mileageKm": 146000,
+      "color": "Черен",
+      "fuel": "Бензинов",
+      "power": "340 к.с.",
+      "transmission": "Автоматична",
+      "body": "Купе",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/240/1/big1/11778577413022240_Nt.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/240/1/big1/11778577413022240_uA.webp"
+      ]
+    },
+    {
+      "id": "11785417448094521",
+      "title": "Porsche Panamera Turbo S",
+      "sourceUrl": "https://novacars.mobile.bg/obiava-11785417448094521-porsche-panamera-turbo-s",
+      "priceEur": 55499,
+      "advertisedPrice": "55 499 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "февруари 2018 г.",
+        "183 000 км",
+        "Черен",
+        "Plug-in хибрид",
+        "680 к.с.",
+        "14.1 kWh",
+        "Автоматична",
+        "Седан"
+      ],
+      "year": 2018,
+      "mileageKm": 183000,
+      "color": "Черен",
+      "fuel": "Plug-in хибрид",
+      "power": "680 к.с.",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/521/1/big1/11785417448094521_xe.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/521/1/big1/11785417448094521_Tb.webp"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "inventory/21740760121746079-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21740760121746079",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/079/2/big1/21740760121746079_dD.webp",
+      "sha256": "b0b5cd7062db242eb1102919ad305a695466f6326ba9e9d4bf1005989faa2818",
+      "gitBlob": "5cb1dccd80f2fd02a34f2751089ccb880dfa1533",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21788867190181219-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21788867190181219",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/219/2/big1/21788867190181219_oB.webp",
+      "sha256": "24fe39bb30add055f15aaa068aa81c201b4d13a8ac84ee241bdc930a06665209",
+      "gitBlob": "7092f6251df1ec13a07da71bc2c86656d019bb8e",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21740760121746079-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21740760121746079",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/079/2/big1/21740760121746079_be.webp",
+      "sha256": "81a6b9fb968dd97a8bb725bb5175ad558f7f0fa5dc34fac84806b01d367b7e25",
+      "gitBlob": "bcc66ffaea72cdc641456a1e0d02ef0327e7665f",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21788867190181219-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21788867190181219",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/219/2/big1/21788867190181219_CE.webp",
+      "sha256": "59c5b8205337ffe16e3b2fb8766418e045f8b79cfc777d6808fe3bea29b2151e",
+      "gitBlob": "7b7ff0f539e36cd1cbc01c1c572b14eef2deef9a",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "brand/logo.jpg",
+      "kind": "logo",
+      "listingId": null,
+      "sourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13729357047274174.pic",
+      "sha256": "2ab89832d19d41d352243e28cc6fc7850e521776119b661622c2f69853093a50",
+      "gitBlob": "15fe6be3fbae0c1dbf5ea8738fabdb0c1986cb13",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21788528450494675-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21788528450494675",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/675/2/big1/21788528450494675_5i.webp",
+      "sha256": "30d26c2942fa51d6d4dff71444e94a3b2897cbeb2fa16d5a7a0b0c049df014f9",
+      "gitBlob": "9442c2d5e5ae75d0ce987a34080ba26936f5e39b",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21788528450494675-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21788528450494675",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/675/2/big1/21788528450494675_dA.webp",
+      "sha256": "b3d8823f821f9dd3225a03fdfeeb784e5f6d140a20f254b951f7d126543eed1e",
+      "gitBlob": "405940e4d7c6fda16de2e701b89a4084a277cd11",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11785909682010785-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11785909682010785",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/785/1/big1/11785909682010785_en.webp",
+      "sha256": "b7cf66a85fc610ef9672ce64992be32c70c2398979c73bb45da31cf335a9c64a",
+      "gitBlob": "724cecb1ef792b6afc349f175e9dfca17f3480f9",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11779188982224291-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11779188982224291",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/291/1/big1/11779188982224291_hd.webp",
+      "sha256": "51b2f585ccca6387369f501e6865eb60c52b65ae07ce83c2ccb5d3c76e38aca9",
+      "gitBlob": "1974ba67123779bd774c67923b6955815ae6df58",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11779188982224291-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11779188982224291",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/291/1/big1/11779188982224291_Np.webp",
+      "sha256": "85a699e09321901825b89a9e89b7edd7d173fc6850779b925a8dbd52f423249a",
+      "gitBlob": "69a5694d15ad98e92bd2828a3ba7e7c9dcca9099",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11785909682010785-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11785909682010785",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/785/1/big1/11785909682010785_Us.webp",
+      "sha256": "eaf7e87bbb80cad7baddcbb2ec2eff557f1e6cd61e9bcd467ce0282568447ca5",
+      "gitBlob": "1411bee90f594aadb01a6eae77a5b8876ebf58c5",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11778577413022240-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11778577413022240",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/240/1/big1/11778577413022240_uA.webp",
+      "sha256": "e401b772b3189a07a8379b0e5efca18a63293bd43c7fd6f99056aecc88baba2c",
+      "gitBlob": "8e7b895ca26dc149ca1cb9bd7008998796f47b0d",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11785417448094521-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11785417448094521",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/521/1/big1/11785417448094521_xe.webp",
+      "sha256": "e32b75748bb23058d174d1c1c3b977268b4044a8bed3e1cb14545a224acfd705",
+      "gitBlob": "57e992a80ff1985bda508c5942987dd668d22650",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11778577413022240-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11778577413022240",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/240/1/big1/11778577413022240_Nt.webp",
+      "sha256": "06b08939254202a999ce627a07599a73ea58e8ddf7ea03b83cc85f1074456bb8",
+      "gitBlob": "ff46d36782e54e220c2aec68d04b31bc85854fda",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11780554741784429-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11780554741784429",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/429/1/big1/11780554741784429_Rn.webp",
+      "sha256": "2a2441211ba84d1d917ef9a9863ed7b0c8aa4995f9bb9a437f5c57403365b96b",
+      "gitBlob": "153301daf8d7ccf80c3f1bcb24b1999c624a8e48",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11780554741784429-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11780554741784429",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/429/1/big1/11780554741784429_IW.webp",
+      "sha256": "30f84e14ebefe305655a0f699583bd18f7c437a4e2a11a7753fd4e8ffa68c482",
+      "gitBlob": "9a63552ebf56d7ecc899ca6685782fe9fe30eb79",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11785417448094521-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11785417448094521",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/521/1/big1/11785417448094521_Tb.webp",
+      "sha256": "2c5cc6dd89321a7724a8aaa57d626bc0124434fbcf6fce5c2674fb3a3ac14935",
+      "gitBlob": "f88db0636324609c7bb9739b2a51603427b6d94c",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    }
+  ]
+}

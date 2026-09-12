@@ -1,0 +1,15 @@
+{
+  "name": "NEXT AUTO",
+  "short_name": "NEXT AUTO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/assets/dealer/brand/logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

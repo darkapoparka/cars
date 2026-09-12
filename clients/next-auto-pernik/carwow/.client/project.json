@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "client": "next-auto-pernik",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "publicUrl": null,
+  "deliveryBranch": "codex/astra-bg-09",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "path": "templates/carwow",
+    "tree": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+  },
+  "implementation": {
+    "fastSkin": true,
+    "inventoryRecords": 8,
+    "localStockPhotos": 16,
+    "sourceLogo": true,
+    "formsDeliverExternally": false,
+    "sharedOriginFab": false
+  },
+  "qa": {
+    "install": false,
+    "frameworkCheck": false,
+    "build": false,
+    "desktop": false,
+    "mobile": false,
+    "header320": false,
+    "identity": true,
+    "contactPath": false,
+    "filters": false,
+    "gallery": false,
+    "console": false,
+    "overflow": false
+  },
+  "reviewEntries": [
+    "/",
+    "/inventory",
+    "/contact"
+  ],
+  "ownerManualReview": "pending"
+}

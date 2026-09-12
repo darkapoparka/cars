@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "session": "09",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "clientSlug": "next-auto-pernik",
+  "publishedName": "NEXT AUTO",
+  "city": "Перник",
+  "assignedMarketplace": "https://nextautobg.mobile.bg/",
+  "publicContacts": {
+    "source": "https://nextautobg.mobile.bg/contacts",
+    "phone": "+359878515015",
+    "address": "Перник, Изток, ул. Благой Гебрев 78, до ресторант Казабланка",
+    "hours": null,
+    "hoursSourceMeaning": "Contact page explicitly says no hours have been entered",
+    "email": null,
+    "corroboratingSources": ["https://www.auto.bg/dealer/nextautobg", "https://www.car24.bg/avtokashta/nextautobg", "https://www.mobile.bg/dealers/location-grad-pernik"],
+    "identityQualification": "Matched public phone/location/profile, not NEXTCAR Banovo; no new CRM identity created"
+  },
+  "history": {
+    "source": "https://nextautobg.mobile.bg/about",
+    "marketplaceMemberSince": 2019,
+    "foundingYear": null,
+    "qualification": "Marketplace membership is not a verified business founding date"
+  },
+  "social": {
+    "facebookUrl": "https://www.facebook.com/nextautobg",
+    "matchBasis": "Exact URL repeatedly published in assigned dealer's listing descriptions",
+    "retrieval": "Internal Error from web reader",
+    "recentPostDate": null,
+    "recentPostPermalink": null,
+    "activityVerified": false,
+    "instagramMatched": false,
+    "selfOwnedWebsiteVerified": false,
+    "qualification": "No website-absence or social-inactivity claim"
+  },
+  "brandingAndMedia": {
+    "coverReferenceFoundOn": "https://nextautobg.mobile.bg/contacts",
+    "coverFetch": "Internal Error when following the actual cover image link",
+    "listingDetailAttempts": "Toyota RAV4, Audi A6 and BMW 525 detail links returned Internal Error",
+    "visualBrandInspection": "not-completed",
+    "photoGalleryInspection": "not-completed",
+    "coveringReuseAuthorization": "not-established in inspected public/repository material",
+    "repositoryEvidence": "docs/lead-research/bulgaria/screening-other.json leaves mediaReuseCleared false; no approved same-dealer asset pack was established by the bounded existing-project review",
+    "generatedAssets": [],
+    "copiedAssets": [],
+    "qualification": "Failed image reads do not establish that branding or photographs are absent, and public availability does not establish permission"
+  },
+  "catalogueReview": {
+    "source": "https://nextautobg.mobile.bg/",
+    "retrievedCategoryEntries": 236,
+    "category": "cars and SUVs",
+    "scope": "First 40-entry page and relevant indexed results, not all 236 records",
+    "independentlyVerifiedAvailableCount": null,
+    "currency": "EUR",
+    "mileageUnit": "km",
+    "completeFactAndGalleryPack": false,
+    "observations": [
+      {"title": "Toyota RAV4 2.0i 158HP KEYLESS AUTOMAT", "source": "https://nextautobg.mobile.bg/", "yearMonth": "2011-09", "mileageKm": 157506, "advertisedPriceEUR": 11500, "tax": "VAT not charged", "fuel": "petrol", "transmission": "automatic", "body": "SUV", "availability": "advertised; not independently verified", "detailAndGallery": "not retrieved"},
+      {"title": "Audi A6 3.0TDI 245HP MATRIX CAMERA", "source": "https://nextautobg.mobile.bg/", "yearMonth": "2013-02", "mileageKm": 196758, "advertisedPriceEUR": 11990, "tax": "VAT not charged", "statusLabel": "Капариран\\Продаден", "action": "Exclude from available stock; source does not distinguish reserved from sold"},
+      {"title": "BMW 525 2.5D 177HP КОЖА EURO 4", "source": "https://nextautobg.mobile.bg/", "yearMonth": "2005-01", "mileageKm": 372058, "advertisedPriceEUR": 4490, "tax": "VAT not charged", "statusLabel": "Капариран\\Продаден", "action": "Exclude from available stock; source does not distinguish reserved from sold"}
+    ],
+    "crossSourceCaution": "Auto.bg returned different cache ages, category totals and an old BGN snapshot. Do not merge those with current EUR source records or claim their totals are live available inventory.",
+    "services": {
+      "advertised": ["own leasing", "test drives", "insurance assistance", "registration assistance", "maintenance in dealer workshop"],
+      "source": "https://nextautobg.mobile.bg/",
+      "independentlyVerified": false,
+      "notEstablished": ["lender/provider agreement", "universal approval", "discount percentage", "workshop certification", "warranty scope", "working integration"]
+    }
+  },
+  "duplicateCheck": {
+    "requestedTrioFound": false,
+    "scope": "Inspected main index, old-astra client directory, public account-link/screening references and legacy automotive top-level listing; no exhaustive concurrent-branch or private CRM audit",
+    "codeSearch": "GitHub search for nextautobg returned no results, including no known screening match; search alone is not proof of absence"
+  },
+  "blockers": ["No established covering permission or approved matching real-stock photo pack; visual brand and gallery reads also remain incomplete"],
+  "requestedVariants": ["auto-best", "modern", "carwow"],
+  "implementedVariants": [],
+  "runtimeChecks": "No install, validate, typecheck, build, browser, route, viewport or screenshot checks run",
+  "crmOperations": "none",
+  "ownerManualReview": "pending"
+}

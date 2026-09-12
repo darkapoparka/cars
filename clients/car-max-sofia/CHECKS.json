@@ -1,0 +1,18 @@
+{
+  "state": "implemented-unverified",
+  "sourceCompile": {
+    "result": "passed",
+    "svelte": 63,
+    "ts": 55,
+    "json": 0,
+    "errors": []
+  },
+  "notRun": [
+    "retained-lockfile installs",
+    "full framework checks/builds",
+    "browser 320/390/1440 comparisons",
+    "route/menu/filter/form acceptance"
+  ],
+  "ownerReview": "pending",
+  "deployed": false
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "session": "09",
+  "observedAt": "2026-09-09",
+  "status": "blocked",
+  "clientSlug": "lux-auto-bg",
+  "publishedName": "ЛУКС АВТО",
+  "city": "Стара Загора",
+  "assignedMarketplace": "https://luxauto.mobile.bg/",
+  "identity": {
+    "existingIdentity": "lux-auto-bg",
+    "legacyPath": "M:/codex/agency-os-projects/leads/automotive/lux-auto-bg/autodeal",
+    "matchEvidence": "The existing mirror/manifest.json explicitly names the exact assigned marketplace as source. Current marketplace contact identifies Stara Zagora, not another same-name dealer.",
+    "crmOperations": "none"
+  },
+  "publicContacts": {
+    "source": "https://luxauto.mobile.bg/contacts",
+    "phone": "+359883338833",
+    "email": "luxauto@abv.bg",
+    "address": "Стара Загора, кв. Кольо Ганчев, ул. Христина Морфова 4",
+    "hours": "Понеделник–събота 09:00–18:00; неделя 10:00–17:00",
+    "corroboratingSource": "https://www.auto.bg/dealer/luxauto",
+    "verificationScope": "Published contact facts, not independently verified opening or physical premises"
+  },
+  "legacyReview": {
+    "readOnly": true,
+    "filesRead": ["mirror/manifest.json (selected head, asset and tail ranges)", "ASSET_PROVENANCE.md", "SOURCE_LICENSE.md", "README.md", "PRODUCT.md"],
+    "manifestSyncDate": "2026-07-08T16:30:00.000Z",
+    "manifestPageCount": 42,
+    "manifestAssetCount": 198,
+    "countMeaning": "Legacy mirror pages/assets, not vehicles or a live-stock count",
+    "assetProvenanceScope": "Lists ten runtime template assets; says media-clearance approved but still describes Priselci Auto identity and pending original dealership photography.",
+    "sourceLicenseScope": "AutoDeal/renderhex template as an approved internal design reference; does not explicitly approve current LUX vehicle photographs.",
+    "stockFilesPresent": ["mirror/public/assets/images/lead/lux-auto-stock-01.webp", "mirror/public/assets/images/lead/lux-auto-stock-02.webp", "mirror/public/assets/images/lead/lux-auto-stock-03.webp"],
+    "stockManifestEvidence": "Inspected entries use local paths as originalUrl; no dealer listing ID, VIN, observation date or asset-specific approval is supplied in those entries.",
+    "stock01VisualInspection": "Actual local image opened: gray Porsche Taycan at a LUX AUTO-branded forecourt. This does not independently establish current listing identity, ownership, location or permission.",
+    "stock02And03VisualInspection": "not-run"
+  },
+  "branding": {
+    "existingLocalLogo": "mirror/public/assets/images/lead/lux-auto-logo-on-light-v2.png",
+    "visualInspection": "Actual local image opened: outlined LUX AUTO lettering, small gold emblem and ESTABLISHED IN 2008 tagline.",
+    "officialStatus": "not-established",
+    "creationMethod": "unknown; not generated in this session",
+    "foundingYearVerified": false,
+    "publicCoverUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h12887187349852190.pic",
+    "publicLogoUrl": "https://cdn3.auto.bg/bazar/6c8c3bd6e6a6bb804d7f0c60364bd1a1.jpg",
+    "publicVisualAttempts": "Web image reads failed; .pic URL reader returned binary as text; Auto.bg JPEG URL reader failed DNS. No current public-brand visual pass claimed.",
+    "generatedAssets": [],
+    "copiedAssets": []
+  },
+  "websiteAndSocial": {
+    "matchingSelfOwnedWebsiteVerified": false,
+    "unverifiedWebsiteCandidate": "https://luxauto.bg/",
+    "websiteFetch": "Cache miss",
+    "matchingSocialProfileVerified": false,
+    "recentPostDate": null,
+    "recentPostPermalink": null,
+    "qualification": "Bounded search finding, not a claim that no website or social presence exists"
+  },
+  "catalogueReview": {
+    "source": "https://luxauto.mobile.bg/",
+    "retrievedCategoryEntries": 131,
+    "independentlyVerifiedAvailableCount": null,
+    "currency": "EUR",
+    "mileageUnit": "km",
+    "completeFactAndGalleryPack": false,
+    "observations": [
+      {"title": "Audi Q7 S-LINE 2027г 600км", "source": "https://www.mobile.bg/obiava-11748481192606685-audi-q7-s-line-2027g-600km", "structuredProduction": "2026-03", "titleYear": 2027, "mileageKm": 600, "advertisedPriceEUR": 85000, "tax": "excluding VAT", "action": "Retain title/structured year distinction; do not invent production year 2027"},
+      {"title": "Audi RSQ8 MHEV", "source": "https://luxauto.mobile.bg/obiava-11753869882599813-audi-rsq8-mhev-2090km-alcantara-matrix", "structuredProduction": "2024-01", "mileageKm": 2090, "advertisedPriceEUR": 126900, "tax": "including VAT"},
+      {"title": "Mercedes-Benz AMG GLE 53 Full Luxury", "source": "https://www.mobile.bg/obiava-21734536313982120-mercedes-benz-amg-gle-53-gle-53-amg-full-luxury", "price": null, "priceDisplay": "Цена при запитване", "tax": "excluding VAT"},
+      {"title": "Mercedes-Benz E 450 AMG SOLD", "source": "https://luxauto.mobile.bg/", "action": "Exclude advertised SOLD entry from available-stock sample"}
+    ],
+    "financialScope": "Dealer advertises own leasing and various deposits/approval claims. Deposits are not full prices; no universal approval, provider integration or independent finance/performance guarantee is verified.",
+    "availabilityQualification": "Advertised source observations, not independent availability confirmation"
+  },
+  "duplicateCheck": {
+    "requestedTrioFound": false,
+    "scope": "Inspected main index, old-astra client directory, public account-link/screening references and matched legacy AutoDeal folder; not a private CRM audit or exhaustive concurrent-branch scan"
+  },
+  "blockers": ["Correctly matched, permitted real-stock image pack has not been established: existing local files are present but their current vehicle identity and covering approval remain unresolved"],
+  "requestedVariants": ["auto-best", "modern", "carwow"],
+  "implementedVariants": [],
+  "runtimeChecks": "No install, validate, typecheck, build, route, viewport, console or screenshot checks run",
+  "ownerManualReview": "pending"
+}

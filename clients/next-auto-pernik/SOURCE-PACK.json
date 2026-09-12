@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "dealer": {
+    "slug": "next-auto-pernik",
+    "name": "NEXT AUTO",
+    "city": "Перник",
+    "address": "ул. Благой Гебрев 78, кв. Изток, Перник",
+    "phone": "+359878515015",
+    "email": "",
+    "hours": "Работно време не е публикувано в профила",
+    "source": "https://nextautobg.mobile.bg/",
+    "website": null,
+    "logoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h15585946500498057.pic"
+  },
+  "availabilityNotice": "These are dealer-advertised listings observed on the source profile; current availability is not independently verified.",
+  "listings": [
+    {
+      "id": "11787752937990488",
+      "title": "Toyota Auris 1.2i 116HP CAMERA ПОДГРЕВ EURO6B",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-11787752937990488-toyota-auris-1-2i-116hp-camera-podgrev-euro6b",
+      "priceEur": 10990,
+      "advertisedPrice": "10 990 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "май 2016 г.",
+        "89 917 км",
+        "Тъмно сив",
+        "Бензинов",
+        "116 к.с.",
+        "Евро 6",
+        "1197 куб.см",
+        "Ръчна",
+        "Хечбек"
+      ],
+      "year": 2016,
+      "mileageKm": 89917,
+      "color": "Тъмно сив",
+      "fuel": "Бензинов",
+      "power": "116 к.с.",
+      "transmission": "Ръчна",
+      "body": "Хечбек",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic3.focus.bg/mobile/photosorg/488/1/big1/11787752937990488_rF.webp",
+        "https://mobistatic3.focus.bg/mobile/photosorg/488/1/big1/11787752937990488_99.webp"
+      ]
+    },
+    {
+      "id": "11788950238166164",
+      "title": "Mercedes-Benz C 220 2.2D 170HP AUTOMAT NAVI",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-11788950238166164-mercedes-benz-c-220-2-2d-170hp-automat-navi",
+      "priceEur": 5990,
+      "advertisedPrice": "5 990 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "октомври 2009 г.",
+        "202 823 км",
+        "Светло сив",
+        "Дизелов",
+        "170 к.с.",
+        "Евро 4",
+        "2143 куб.см",
+        "Автоматична",
+        "Комби"
+      ],
+      "year": 2009,
+      "mileageKm": 202823,
+      "color": "Светло сив",
+      "fuel": "Дизелов",
+      "power": "170 к.с.",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/164/1/big1/11788950238166164_UL.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/164/1/big1/11788950238166164_Tj.webp"
+      ]
+    },
+    {
+      "id": "21769068381599366",
+      "title": "Land Rover Range Rover Evoque SPORT 2.0i 241HP PANO CAMERA SWISS",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-21769068381599366-land-rover-range-rover-evoque-sport-2-0i-241hp-pano-camera-swiss",
+      "priceEur": 12500,
+      "advertisedPrice": "12 500 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "март 2013 г.",
+        "223 623 км",
+        "Черен",
+        "Бензинов",
+        "241 к.с.",
+        "Евро 5",
+        "1999 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2013,
+      "mileageKm": 223623,
+      "color": "Черен",
+      "fuel": "Бензинов",
+      "power": "241 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic4.focus.bg/mobile/photosorg/366/2/big1/21769068381599366_3p.webp",
+        "https://mobistatic4.focus.bg/mobile/photosorg/366/2/big1/21769068381599366_cR.webp"
+      ]
+    },
+    {
+      "id": "11768899611936491",
+      "title": "BMW 520 D 190HP XDRIVE M PACK 360'3D CAM PANO ОБДУХВАН",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-11768899611936491-bmw-520-d-190hp-xdrive-m-pack-360-39-3d-cam-pano-obduhvan",
+      "priceEur": 25000,
+      "advertisedPrice": "25 000 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "юли 2020 г.",
+        "134 627 км",
+        "Черен",
+        "Дизелов",
+        "190 к.с.",
+        "Евро 6",
+        "1995 куб.см",
+        "Автоматична",
+        "Комби"
+      ],
+      "year": 2020,
+      "mileageKm": 134627,
+      "color": "Черен",
+      "fuel": "Дизелов",
+      "power": "190 к.с.",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/491/1/big1/11768899611936491_Bf.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/491/1/big1/11768899611936491_hz.webp"
+      ]
+    },
+    {
+      "id": "21787665633476009",
+      "title": "Mercedes-Benz GLE 350 D 258HP ПАНО ОБДУХВАНЕ LED INTELLIGENT EU6B",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-21787665633476009-mercedes-benz-gle-350-d-258hp-pano-obduhvane-led-intelligent-eu6b",
+      "priceEur": 18990,
+      "advertisedPrice": "18 990 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "юли 2016 г.",
+        "271 144 км",
+        "Светло сив",
+        "Дизелов",
+        "258 к.с.",
+        "Евро 6",
+        "2987 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2016,
+      "mileageKm": 271144,
+      "color": "Светло сив",
+      "fuel": "Дизелов",
+      "power": "258 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic4.focus.bg/mobile/photosorg/009/2/big1/21787665633476009_SZ.webp",
+        "https://mobistatic4.focus.bg/mobile/photosorg/009/2/big1/21787665633476009_jk.webp"
+      ]
+    },
+    {
+      "id": "21784724054336566",
+      "title": "Toyota Rav4 2.0i 158HP KEYLESS AUTOMAT КОЖА НАВИ",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-21784724054336566-toyota-rav4-2-0i-158hp-keyless-automat-kozha-navi",
+      "priceEur": 11500,
+      "advertisedPrice": "11 500 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "септември 2011 г.",
+        "157 506 км",
+        "Тъмно сив",
+        "Бензинов",
+        "158 к.с.",
+        "Евро 5",
+        "1987 куб.см",
+        "Автоматична",
+        "Джип"
+      ],
+      "year": 2011,
+      "mileageKm": 157506,
+      "color": "Тъмно сив",
+      "fuel": "Бензинов",
+      "power": "158 к.с.",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/566/2/big1/21784724054336566_K9.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/566/2/big1/21784724054336566_IA.webp"
+      ]
+    },
+    {
+      "id": "11778859949237318",
+      "title": "Mercedes-Benz S 350 3.0CDI 286HP LONG MULTIBEAM CARPLAY EU6C",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-11778859949237318-mercedes-benz-s-350-3-0cdi-286hp-long-multibeam-carplay-eu6c",
+      "priceEur": 29990,
+      "advertisedPrice": "29 990 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "май 2018 г.",
+        "183 276 км",
+        "Черен",
+        "Дизелов",
+        "286 к.с.",
+        "Евро 6",
+        "2925 куб.см",
+        "Автоматична",
+        "Стреч лимузина"
+      ],
+      "year": 2018,
+      "mileageKm": 183276,
+      "color": "Черен",
+      "fuel": "Дизелов",
+      "power": "286 к.с.",
+      "transmission": "Автоматична",
+      "body": "Стреч лимузина",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/318/1/big1/11778859949237318_U8.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/318/1/big1/11778859949237318_26.webp"
+      ]
+    },
+    {
+      "id": "11775038681554863",
+      "title": "Mercedes-Benz S 350 3.0CDI 235HP H/K DISTRONIC NIGHT VISION MASSAGE",
+      "sourceUrl": "https://nextautobg.mobile.bg/obiava-11775038681554863-mercedes-benz-s-350-3-0cdi-235hp-h-k-distronic-night-vision-massage",
+      "priceEur": 11800,
+      "advertisedPrice": "11 800 €",
+      "taxLabel": "Не се начислява ДДС",
+      "parameters": [
+        "февруари 2010 г.",
+        "228 382 км",
+        "Черен",
+        "Дизелов",
+        "235 к.с.",
+        "Евро 4",
+        "2987 куб.см",
+        "Автоматична",
+        "Седан"
+      ],
+      "year": 2010,
+      "mileageKm": 228382,
+      "color": "Черен",
+      "fuel": "Дизелов",
+      "power": "235 к.с.",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "doors": 5,
+      "availability": "advertised-confirm-with-dealer",
+      "gallerySourceUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/863/1/big1/11775038681554863_Ae.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/863/1/big1/11775038681554863_9b.webp"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "inventory/21769068381599366-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21769068381599366",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/366/2/big1/21769068381599366_cR.webp",
+      "sha256": "d39308f5b36313a6979042d9dce611d2dd263cb4c4fa019408d0010449a72e7b",
+      "gitBlob": "b293916a59b544f53a626ea62b90c4d4ffce304a",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11787752937990488-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11787752937990488",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/488/1/big1/11787752937990488_rF.webp",
+      "sha256": "33a4e583648727cc0a3e224213f97742c9d3d934d4e8b28e69b15aa2e1e32454",
+      "gitBlob": "4cab47682c37aa0f519298644d1d684ce52d3ebf",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "brand/logo.jpg",
+      "kind": "logo",
+      "listingId": null,
+      "sourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15585946500498057.pic",
+      "sha256": "20f51030b8e51c69cb7bb04400d2f1d1ee3ce398373da69fac6dcf284670b472",
+      "gitBlob": "2c0d1de5cfcda3e62df2a26da9166344f591ed01",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21769068381599366-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21769068381599366",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/366/2/big1/21769068381599366_3p.webp",
+      "sha256": "d71f6b29f6a1a246f4eac23995fddcee7b1fdb092c99f5a958e0af7fac4fa83c",
+      "gitBlob": "cb4d2aa3863cb80b2808fb6b18540516b823add5",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11787752937990488-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11787752937990488",
+      "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/488/1/big1/11787752937990488_99.webp",
+      "sha256": "5d6ccab9a7e8650c50e2ecf75f492f6f5a3e427092ea3fc177ad61f743d2cf3c",
+      "gitBlob": "d51295023194252329dd5927a1a091ec8a0b9865",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11768899611936491-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11768899611936491",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/491/1/big1/11768899611936491_Bf.webp",
+      "sha256": "698ed3274f66a8979d671e533d20b48ef95a817b2114437b8ab0ed265ada1d1b",
+      "gitBlob": "760b15e9d9a4368f82648721778264fb267466e9",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11788950238166164-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11788950238166164",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/164/1/big1/11788950238166164_UL.webp",
+      "sha256": "e31bdccb7856db25db8b47c0f9132841bf83016124467dab5e80133364c375fd",
+      "gitBlob": "385b4cd2223b3b7abe59d29c0de42bb2e7dce5f8",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11788950238166164-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11788950238166164",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/164/1/big1/11788950238166164_Tj.webp",
+      "sha256": "87d1356f622c65a391b2ca10f007a25207ef1b80ae2a205cdf506964dd3d3543",
+      "gitBlob": "886a803c20bdc8759352ecbd3705f7c71eb6b4f0",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21787665633476009-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21787665633476009",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/009/2/big1/21787665633476009_SZ.webp",
+      "sha256": "dcd08bf26000b71ec8040b21a039702ff45c944f4fa5f179036e4190103327f1",
+      "gitBlob": "27ea13d4a75cd5c4d7bed121f75d89571ba3c4ee",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21787665633476009-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21787665633476009",
+      "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/009/2/big1/21787665633476009_jk.webp",
+      "sha256": "7da4b3d17a9d17121fbb0726fc24cba278cdae1b4ba3c12fc29e63aac42c5198",
+      "gitBlob": "e3e9e0f557d71b1f38970487fae13369305e7684",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11768899611936491-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11768899611936491",
+      "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/491/1/big1/11768899611936491_hz.webp",
+      "sha256": "fd059d333464b98973fb6f44f07fb39c1b9d5173f62bf578efe1c9774b5809bb",
+      "gitBlob": "27cbeebd4ab275fb725f6c096ecd7510aab9e5f3",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21784724054336566-2.webp",
+      "kind": "listing-photo",
+      "listingId": "21784724054336566",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/566/2/big1/21784724054336566_IA.webp",
+      "sha256": "f6bcc3e748fef48b777c649bae602057061ceb90d2eb3862c3f6298572058e1c",
+      "gitBlob": "00457042f93118b2a6260613b919a57e5fc905c5",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/21784724054336566-1.webp",
+      "kind": "listing-photo",
+      "listingId": "21784724054336566",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/566/2/big1/21784724054336566_K9.webp",
+      "sha256": "60adb499a33188f273ac215639eb7d394ee4197f1a5946ffa350d3a049a12915",
+      "gitBlob": "d76913d81b54f8603761b524f598df8982b06e51",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11775038681554863-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11775038681554863",
+      "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/863/1/big1/11775038681554863_Ae.webp",
+      "sha256": "534dd76b66672ad9df1f755378fff086ac5a03a5b64cf6323276223206213e81",
+      "gitBlob": "89a7450febd6e13780026ac9aca42bfe918406a6",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11778859949237318-1.webp",
+      "kind": "listing-photo",
+      "listingId": "11778859949237318",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/318/1/big1/11778859949237318_U8.webp",
+      "sha256": "f60ea20d68fe4f30d27e1e28e338bc387a5bd0e2d27e2d033ad44b4fad522828",
+      "gitBlob": "493a5b18dcc7cdbddbb52b08fcc6171057d66d2d",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11778859949237318-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11778859949237318",
+      "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/318/1/big1/11778859949237318_26.webp",
+      "sha256": "190e4e8aca18ec3a3e6f2c0877e08d2a36551a97eb462bd0163e0f1a336af985",
+      "gitBlob": "3872b67b72fc1f275650f08f308bfa69e6047d72",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    },
+    {
+      "path": "inventory/11775038681554863-2.webp",
+      "kind": "listing-photo",
+      "listingId": "11775038681554863",
+      "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/863/1/big1/11775038681554863_9b.webp",
+      "sha256": "fbf6e034dcaf355380de11c1b7209d86493eff0cc8e679a329acdcf9f040ba11",
+      "gitBlob": "857f14f2caf6bb05a566b2c2bf8787c80f5ce88a",
+      "rightsStatus": "Public source observed; publication/reuse permission not independently established. Preserved for branch-only demo review; no watermark removal."
+    }
+  ]
+}
