@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "client": "f1rst-motors",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-refresh-2",
+  "createdAt": "2026-09-09T12:18:56.180Z",
+  "state": "needs-personalization",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  }
+}

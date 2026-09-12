@@ -234,7 +234,7 @@
 					<div class="contact-page-info">
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
-								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Day Night Auto'}
+								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Al Basma'}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
 								{isImportMode
@@ -436,7 +436,7 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title="Карта до Day Night Auto София"
+						title="Карта до Al Basma София"
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -444,8 +444,8 @@
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
-					<div class="daynight-contact-map__overlay" aria-label="Локация Day Night Auto">
-						<p class="daynight-contact-map__eyebrow">Day Night Auto</p>
+					<div class="daynight-contact-map__overlay" aria-label="Локация Al Basma">
+						<p class="daynight-contact-map__eyebrow">Al Basma</p>
 						<p class="daynight-contact-map__address">{daynightSite.location}</p>
 						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
 					</div>

@@ -1,0 +1,588 @@
+[
+  {
+    "source": "/assets/images/blog/blog-1.jpg",
+    "sha256": "29ec6a2981cec738233476cb87bcd78b91068861bb399a03e89ddbb9791808e3",
+    "originalBytes": 120060,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-1-29ec6a29-320.webp",
+        "width": 320,
+        "bytes": 16574
+      },
+      {
+        "src": "/assets/images/responsive/blog-1-29ec6a29-640.webp",
+        "width": 640,
+        "bytes": 39680
+      },
+      {
+        "src": "/assets/images/responsive/blog-1-29ec6a29-960.webp",
+        "width": 960,
+        "bytes": 65220
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-2.jpg",
+    "sha256": "b9a5e2b334bc31ce8c618e55302a1573be632c8ae327a4738a4b4a68edb83824",
+    "originalBytes": 251224,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-2-b9a5e2b3-320.webp",
+        "width": 320,
+        "bytes": 24032
+      },
+      {
+        "src": "/assets/images/responsive/blog-2-b9a5e2b3-640.webp",
+        "width": 640,
+        "bytes": 86386
+      },
+      {
+        "src": "/assets/images/responsive/blog-2-b9a5e2b3-960.webp",
+        "width": 960,
+        "bytes": 178898
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-3.jpg",
+    "sha256": "c038c1b2f777617ea2003e76a8a1412b9099e483d30e236317a44294879a2765",
+    "originalBytes": 109943,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-3-c038c1b2-320.webp",
+        "width": 320,
+        "bytes": 13916
+      },
+      {
+        "src": "/assets/images/responsive/blog-3-c038c1b2-640.webp",
+        "width": 640,
+        "bytes": 33522
+      },
+      {
+        "src": "/assets/images/responsive/blog-3-c038c1b2-960.webp",
+        "width": 960,
+        "bytes": 56452
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-4.jpg",
+    "sha256": "d3c61f0a21b785e81cbc2ee4113c659a2ad456d1a2e7347248ae64b364eb5d8b",
+    "originalBytes": 165710,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-4-d3c61f0a-320.webp",
+        "width": 320,
+        "bytes": 12534
+      },
+      {
+        "src": "/assets/images/responsive/blog-4-d3c61f0a-640.webp",
+        "width": 640,
+        "bytes": 42296
+      },
+      {
+        "src": "/assets/images/responsive/blog-4-d3c61f0a-960.webp",
+        "width": 960,
+        "bytes": 85114
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-5.jpg",
+    "sha256": "e60f20403837bd1c48a9efd90c9fb8ca118e3fece2bd1f33b7607c85a09792dc",
+    "originalBytes": 52086,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-5-e60f2040-320.webp",
+        "width": 320,
+        "bytes": 14858
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-6.jpg",
+    "sha256": "ad6b82d92f73b87ffd9e8d047e901152d84e43655d950260189cf9e104b414d0",
+    "originalBytes": 86362,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-6-ad6b82d9-320.webp",
+        "width": 320,
+        "bytes": 15152
+      },
+      {
+        "src": "/assets/images/responsive/blog-6-ad6b82d9-640.webp",
+        "width": 640,
+        "bytes": 45506
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-7.jpg",
+    "sha256": "48609ff46522e8f355d37e18d291ff20d989208f8ffb4e6812d4cc396a4f6b32",
+    "originalBytes": 48660,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-7-48609ff4-320.webp",
+        "width": 320,
+        "bytes": 7922
+      },
+      {
+        "src": "/assets/images/responsive/blog-7-48609ff4-640.webp",
+        "width": 640,
+        "bytes": 19562
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-8.jpg",
+    "sha256": "47d04954266de4ba3c9113fd07580847adf05789393f0d1ef7038eed22e87f8b",
+    "originalBytes": 38400,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-8-47d04954-320.webp",
+        "width": 320,
+        "bytes": 6876
+      },
+      {
+        "src": "/assets/images/responsive/blog-8-47d04954-640.webp",
+        "width": 640,
+        "bytes": 16316
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/blog/blog-9.jpg",
+    "sha256": "5d999d7e8820fdbe68f01ddf262951579cb931e5ddfcc8af4cd99ff8a0e29a8b",
+    "originalBytes": 92539,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/blog-9-5d999d7e-320.webp",
+        "width": 320,
+        "bytes": 11418
+      },
+      {
+        "src": "/assets/images/responsive/blog-9-5d999d7e-640.webp",
+        "width": 640,
+        "bytes": 43894
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-collection-banner-v2.webp",
+    "sha256": "d9f896f744abf519acbd28897c7eabd6e9082bddfa0174ff52506d01fdb09e75",
+    "originalBytes": 113046,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-collection-banner-v2-d9f896f7-320.webp",
+        "width": 320,
+        "bytes": 14028
+      },
+      {
+        "src": "/assets/images/responsive/day-night-collection-banner-v2-d9f896f7-640.webp",
+        "width": 640,
+        "bytes": 36436
+      },
+      {
+        "src": "/assets/images/responsive/day-night-collection-banner-v2-d9f896f7-960.webp",
+        "width": 960,
+        "bytes": 66808
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-stock-01.webp",
+    "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333",
+    "originalBytes": 278312,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-stock-01-17689ab8-320.webp",
+        "width": 320,
+        "bytes": 13776
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-01-17689ab8-640.webp",
+        "width": 640,
+        "bytes": 44998
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-01-17689ab8-960.webp",
+        "width": 960,
+        "bytes": 89926
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-stock-02.webp",
+    "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f",
+    "originalBytes": 248390,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-stock-02-40d22530-320.webp",
+        "width": 320,
+        "bytes": 15120
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-02-40d22530-640.webp",
+        "width": 640,
+        "bytes": 45244
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-02-40d22530-960.webp",
+        "width": 960,
+        "bytes": 84528
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-stock-03.webp",
+    "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930",
+    "originalBytes": 181070,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-stock-03-a63e64bb-320.webp",
+        "width": 320,
+        "bytes": 14060
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-03-a63e64bb-640.webp",
+        "width": 640,
+        "bytes": 40180
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-03-a63e64bb-960.webp",
+        "width": 960,
+        "bytes": 70212
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-stock-04.webp",
+    "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c",
+    "originalBytes": 182452,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-stock-04-945e6864-320.webp",
+        "width": 320,
+        "bytes": 10814
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-04-945e6864-640.webp",
+        "width": 640,
+        "bytes": 32096
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-04-945e6864-960.webp",
+        "width": 960,
+        "bytes": 61168
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-stock-05.webp",
+    "sha256": "d3a53c20bd0b5f59ebd5a053b5174ba75d2ec4429df9e45d2b61071ca99f981a",
+    "originalBytes": 280428,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-stock-05-d3a53c20-320.webp",
+        "width": 320,
+        "bytes": 21250
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-05-d3a53c20-640.webp",
+        "width": 640,
+        "bytes": 63742
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-05-d3a53c20-960.webp",
+        "width": 960,
+        "bytes": 114188
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/lead/day-night-stock-06.webp",
+    "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f",
+    "originalBytes": 207938,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/day-night-stock-06-d644dec8-320.webp",
+        "width": 320,
+        "bytes": 13726
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-06-d644dec8-640.webp",
+        "width": 640,
+        "bytes": 40164
+      },
+      {
+        "src": "/assets/images/responsive/day-night-stock-06-d644dec8-960.webp",
+        "width": 960,
+        "bytes": 72706
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/body-wagon-v1.png",
+    "sha256": "5d70b2a70636d8700570c199589c6a7d714a7dab6021a6aefd0f8123c6da259b",
+    "originalBytes": 1151143,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/body-wagon-v1-5d70b2a7-320.webp",
+        "width": 320,
+        "bytes": 6020
+      },
+      {
+        "src": "/assets/images/responsive/body-wagon-v1-5d70b2a7-640.webp",
+        "width": 640,
+        "bytes": 15874
+      },
+      {
+        "src": "/assets/images/responsive/body-wagon-v1-5d70b2a7-960.webp",
+        "width": 960,
+        "bytes": 28530
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/menu-editorial-import-v1.png",
+    "sha256": "682c268ab0ef50cb04dbb6dd67f02d80579ddd302d12e406f0ff184486b7924e",
+    "originalBytes": 2010193,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/menu-editorial-import-v1-682c268a-320.webp",
+        "width": 320,
+        "bytes": 14566
+      },
+      {
+        "src": "/assets/images/responsive/menu-editorial-import-v1-682c268a-640.webp",
+        "width": 640,
+        "bytes": 43416
+      },
+      {
+        "src": "/assets/images/responsive/menu-editorial-import-v1-682c268a-960.webp",
+        "width": 960,
+        "bytes": 83760
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/menu-editorial-inspection-v1.png",
+    "sha256": "e819987d2940213f6c6ce8fa593d794532cd3d5c4e6c8d1ca82db8c0315a8a53",
+    "originalBytes": 1812369,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/menu-editorial-inspection-v1-e819987d-320.webp",
+        "width": 320,
+        "bytes": 10330
+      },
+      {
+        "src": "/assets/images/responsive/menu-editorial-inspection-v1-e819987d-640.webp",
+        "width": 640,
+        "bytes": 28798
+      },
+      {
+        "src": "/assets/images/responsive/menu-editorial-inspection-v1-e819987d-960.webp",
+        "width": 960,
+        "bytes": 51416
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/menu-editorial-leasing-v1.png",
+    "sha256": "650e3eb800052a848ee24b60c2e38e0b893c389e628e48104b66fcf81de507c5",
+    "originalBytes": 1742501,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/menu-editorial-leasing-v1-650e3eb8-320.webp",
+        "width": 320,
+        "bytes": 9126
+      },
+      {
+        "src": "/assets/images/responsive/menu-editorial-leasing-v1-650e3eb8-640.webp",
+        "width": 640,
+        "bytes": 23160
+      },
+      {
+        "src": "/assets/images/responsive/menu-editorial-leasing-v1-650e3eb8-960.webp",
+        "width": 960,
+        "bytes": 39238
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/menu-import-v2.png",
+    "sha256": "e9df6afa601a73b9529a85e87a0854afe7250ac4f6a6bc571deca084726985c6",
+    "originalBytes": 1615820,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/menu-import-v2-e9df6afa-320.webp",
+        "width": 320,
+        "bytes": 8480
+      },
+      {
+        "src": "/assets/images/responsive/menu-import-v2-e9df6afa-640.webp",
+        "width": 640,
+        "bytes": 23562
+      },
+      {
+        "src": "/assets/images/responsive/menu-import-v2-e9df6afa-960.webp",
+        "width": 960,
+        "bytes": 43052
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/menu-leasing-v2.png",
+    "sha256": "038f1db5f13dfd50ad890f9cd39af2b50cf94f043f372a31650cec6b070af1bd",
+    "originalBytes": 1618698,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/menu-leasing-v2-038f1db5-320.webp",
+        "width": 320,
+        "bytes": 6416
+      },
+      {
+        "src": "/assets/images/responsive/menu-leasing-v2-038f1db5-640.webp",
+        "width": 640,
+        "bytes": 18446
+      },
+      {
+        "src": "/assets/images/responsive/menu-leasing-v2-038f1db5-960.webp",
+        "width": 960,
+        "bytes": 36884
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/menu-showroom-v2.png",
+    "sha256": "bc20ecd0e0f113acfda46197c8798386b53ac09b71c634233a00a430e35e1ec3",
+    "originalBytes": 1421548,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/menu-showroom-v2-bc20ecd0-320.webp",
+        "width": 320,
+        "bytes": 5812
+      },
+      {
+        "src": "/assets/images/responsive/menu-showroom-v2-bc20ecd0-640.webp",
+        "width": 640,
+        "bytes": 14292
+      },
+      {
+        "src": "/assets/images/responsive/menu-showroom-v2-bc20ecd0-960.webp",
+        "width": 960,
+        "bytes": 23522
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/service-car-v1.png",
+    "sha256": "4803c703463382e22fbd99235b8824a8175b6ce31d8b0234cfcf92b5f3f71cf2",
+    "originalBytes": 1545591,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/service-car-v1-4803c703-320.webp",
+        "width": 320,
+        "bytes": 13392
+      },
+      {
+        "src": "/assets/images/responsive/service-car-v1-4803c703-640.webp",
+        "width": 640,
+        "bytes": 35478
+      },
+      {
+        "src": "/assets/images/responsive/service-car-v1-4803c703-960.webp",
+        "width": 960,
+        "bytes": 65056
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/service-import-v1.png",
+    "sha256": "11060e6fe5f9b8baae36b5ff44128644a8c5ab111e53f1af46ea5e7b68ffd5da",
+    "originalBytes": 1872728,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/service-import-v1-11060e6f-320.webp",
+        "width": 320,
+        "bytes": 16438
+      },
+      {
+        "src": "/assets/images/responsive/service-import-v1-11060e6f-640.webp",
+        "width": 640,
+        "bytes": 43886
+      },
+      {
+        "src": "/assets/images/responsive/service-import-v1-11060e6f-960.webp",
+        "width": 960,
+        "bytes": 84414
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/service-leasing-v1.png",
+    "sha256": "1b12eae41b022db585b4f15ef20d9d0bcb0c358a33b451f0349f50d6f77d6de7",
+    "originalBytes": 2017929,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/service-leasing-v1-1b12eae4-320.webp",
+        "width": 320,
+        "bytes": 11024
+      },
+      {
+        "src": "/assets/images/responsive/service-leasing-v1-1b12eae4-640.webp",
+        "width": 640,
+        "bytes": 34022
+      },
+      {
+        "src": "/assets/images/responsive/service-leasing-v1-1b12eae4-960.webp",
+        "width": 960,
+        "bytes": 74206
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/service-sell-euros-v1.png",
+    "sha256": "d34fed66c483db27056ecfe268b5a53ad16872f7c488b35b24464cfc3bc50593",
+    "originalBytes": 2249227,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/service-sell-euros-v1-d34fed66-320.webp",
+        "width": 320,
+        "bytes": 16032
+      },
+      {
+        "src": "/assets/images/responsive/service-sell-euros-v1-d34fed66-640.webp",
+        "width": 640,
+        "bytes": 44272
+      },
+      {
+        "src": "/assets/images/responsive/service-sell-euros-v1-d34fed66-960.webp",
+        "width": 960,
+        "bytes": 89942
+      }
+    ]
+  },
+  {
+    "source": "/assets/images/template/service-sell-key-v1.png",
+    "sha256": "bfe86fb2f41f000da35e04e3d67f03336657ec9b9a3a311b7981912d7c4eed3e",
+    "originalBytes": 1599155,
+    "exports": [
+      {
+        "src": "/assets/images/responsive/service-sell-key-v1-bfe86fb2-320.webp",
+        "width": 320,
+        "bytes": 9034
+      },
+      {
+        "src": "/assets/images/responsive/service-sell-key-v1-bfe86fb2-640.webp",
+        "width": 640,
+        "bytes": 22426
+      },
+      {
+        "src": "/assets/images/responsive/service-sell-key-v1-bfe86fb2-960.webp",
+        "width": 960,
+        "bytes": 43508
+      }
+    ]
+  }
+]

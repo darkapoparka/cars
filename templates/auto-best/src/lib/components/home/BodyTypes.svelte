@@ -2,12 +2,13 @@
   import { resolve } from '$app/paths';
   import { bodyTypes } from '$data/home';
 
-  const mobileBodyTypes = new Set<string>(bodyTypes.map(item => item.query));
+  const mobileBodyTypes = new Set<string>(bodyTypes.filter(item => item.count > 0).slice(0, 3).map(item => item.query));
+  let expanded = $state(false);
 </script>
 
 <section class="dn-section dn-body-types" aria-labelledby="body-types-title">
-  <div class="container">
-    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading">
+  <div class="container dn-body-types__panel">
+    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
       <h2 id="body-types-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">Изберете по тип купе</span>
         <span class="dn-heading-mobile">По тип купе</span>
@@ -19,10 +20,15 @@
     </div>
 
     <div class="dn-body-types__viewport">
-      <div class="dn-body-types__rail" aria-label="Автомобили по тип купе">
+      <div class="dn-body-types__rail" id="body-types-grid" aria-label="Автомобили по тип купе">
         {#each bodyTypes as item (item.query)}
-          <a class="dn-body-type" class:dn-body-type--secondary={!mobileBodyTypes.has(item.query)} href={resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`)}>
+          <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`)}>
             <span class="dn-body-type__image">
+              <span class="dn-body-type__frame"
+                style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}
+                style:--body-image-width={`${item.width / (item.bounds[2] - item.bounds[0]) * 100}%`}
+                style:--body-image-left={`${-item.bounds[0] / (item.bounds[2] - item.bounds[0]) * 100}%`}
+                style:--body-image-top={`${-item.bounds[1] / (item.bounds[3] - item.bounds[1]) * 100}%`}>
               <img
                 src={item.image}
                 alt=""
@@ -31,6 +37,7 @@
                 loading="lazy"
                 decoding="async"
               />
+              </span>
             </span>
             <span class="dn-body-type__content">
               <strong class="dn-body-type__title">{item.label}</strong>
@@ -38,12 +45,34 @@
             </span>
           </a>
         {/each}
+        <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
+          <span class="dn-body-all-glyph" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <strong>{expanded ? 'Покажи по-малко' : 'Всички типове'}</strong>
+        </button>
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  .dn-body-type__frame { display: contents; }
+  .dn-discovery-toggle { display: none; }
+  @media (max-width: 767px) {
+    .dn-body-type--additional { order: 2; }
+    .dn-discovery-toggle {
+      order: 1; display: block; min-height: 126px; margin: 0; padding: 8px 12px 12px;
+      border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink);
+      font: inherit; font-size: 15px; text-align: center; cursor: pointer;
+    }
+    .dn-body-all-glyph { display: grid; width: 58px; height: 58px; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto 8px; padding: 9px; border-radius: 16px; background: #f1f3f5; }
+    .dn-body-all-glyph span { border-radius: 50%; background: #cdd2d8; }
+    .dn-body-all-glyph span:first-child { background: var(--dn-red); }
+    .dn-discovery-toggle strong { display: block; line-height: 1.2; font-weight: 700; }
+    .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
+  }
+
   .dn-body-types__heading {
     justify-content: center;
     margin-bottom: 32px;
@@ -159,15 +188,24 @@
   }
 
   @media (min-width: 992px) {
+    .dn-body-types__panel {
+      padding: 0;
+      border-radius: 20px;
+      background: var(--dn-home-panel);
+    }
+
+    .dn-body-type {
+      background: #fff;
+    }
+
     .dn-body-types {
-      padding-top: 144px;
-      padding-bottom: 32px;
+      padding-block: var(--dn-home-section-space);
     }
 
     .dn-body-types__heading {
-      justify-content: space-between;
+      justify-content: center;
       margin-bottom: 24px;
-      text-align: left;
+      text-align: center;
     }
 
     .dn-body-types__heading h2 {
@@ -175,30 +213,42 @@
     }
 
     .dn-body-types__viewport {
-      margin: -8px 0;
-      padding: 8px 0;
+      position: relative;
+      margin: calc(-1 * var(--dn-home-banner-overlap)) 0 0;
+      padding: 24px;
+      border-radius: var(--dn-radius);
+      background: var(--dn-home-panel);
     }
 
     .dn-body-types__rail {
-      grid-auto-columns: calc((100% - 120px) / 6);
-      gap: 24px;
+      grid-auto-flow: row;
+      grid-auto-columns: auto;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .dn-body-type__image,
     .dn-body-type__image img {
-      height: 72px;
+      height: 120px;
     }
 
     .dn-body-type__image {
       margin-bottom: 8px;
     }
 
+    .dn-body-type__image img {
+      width: min(100%, 224px);
+      padding: 0;
+    }
+
+    .dn-body-type__title { font-size: 18px; line-height: 24px; }
+
     .dn-body-type__subtitle {
       display: none;
     }
   }
 
-  @media (max-width: 1199px) {
+  @media (min-width: 768px) and (max-width: 991px) {
     .dn-body-types__rail {
       grid-auto-columns: calc((100% - 60px) / 4);
       gap: 20px;
@@ -207,7 +257,7 @@
 
   @media (max-width: 767px) {
     .dn-body-types {
-      padding: 24px 0 12px;
+      padding: 24px 0 6px;
       background: var(--dn-mobile-canvas);
     }
 
@@ -239,6 +289,9 @@
       display: inline-flex;
       min-height: 44px;
       align-items: center;
+      color: var(--dn-muted);
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .dn-body-types__viewport {
@@ -265,33 +318,47 @@
       text-align: left;
     }
 
-    .dn-body-type__image,
-    .dn-body-type__image img {
-      height: 78px;
-    }
-
     .dn-body-type__image {
+      position: relative;
+      height: 78px;
+      width: 100%;
       margin: 0;
-      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .dn-body-type__frame {
+      display: block;
+      position: absolute;
+      width: 100%;
+      aspect-ratio: var(--body-aspect);
+      left: 0;
+      bottom: 12px;
     }
 
     .dn-body-type__image img {
-      width: min(176px, 92%);
-      padding: 4px 0;
-      object-position: left center;
+      position: absolute;
+      width: var(--body-image-width);
+      max-width: none;
+      height: auto;
+      left: var(--body-image-left);
+      top: var(--body-image-top);
+      padding: 0;
     }
 
     .dn-body-type__content {
       display: flex;
       align-items: end;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0;
+      text-align: center;
     }
 
     .dn-body-type__title {
       margin: 0;
+      width: 100%;
       font-size: 15px;
       font-weight: 700;
+      text-align: center;
     }
 
     .dn-body-type__subtitle {
@@ -301,3 +368,4 @@
     .dn-body-type--secondary { display: none; }
   }
 </style>
+

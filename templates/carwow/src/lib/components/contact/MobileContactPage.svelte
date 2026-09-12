@@ -39,9 +39,7 @@
 	const initialImportFields = readImportIntent(initialSearchParams);
 	const initialContactValue =
 		initialImportFields.phone || (initialSearchParams.get('email')?.trim() ?? '');
-	const importFields = $derived(
-		readImportIntent(appPage.url.searchParams)
-	);
+	const importFields = $derived(readImportIntent(appPage.url.searchParams));
 	const isImportMode = $derived(importFields.isImport);
 
 	const contactCards = [
@@ -349,12 +347,17 @@
 				<div class="mobile-contact-heading">
 					<span>{isImportMode ? 'Стъпка 2' : 'Запитване'}</span>
 					<h2 id="mobile-contact-form-title">
-						{isImportMode ? 'Уточнете търсенето' : contactContext.subject || 'Пишете ни за автомобил'}
+						{isImportMode
+							? 'Уточнете търсенето'
+							: contactContext.subject || 'Пишете ни за автомобил'}
 					</h2>
 				</div>
 
 				{#if !isImportMode && contactContext.vehicle}
-					<p>Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
+					<p>
+						Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext
+							.vehicle.year} · {contactContext.vehicle.lot}
+					</p>
 				{/if}
 
 				{#if leadSubmitState === 'success'}
@@ -401,10 +404,22 @@
 							</label>{/if}
 						{#if isImportMode}
 							<label>
+								<span>Линк към обява (по желание)</span>
+								<input
+									bind:value={sourceUrl}
+									type="url"
+									inputmode="url"
+									name="sourceUrl"
+									placeholder="https://..."
+									autocomplete="off"
+								/>
+							</label>
+							<label>
 								<span>Какъв автомобил търсите</span>
 								<input
 									bind:value={importQuery}
 									name="query"
+									required={!sourceUrl.trim()}
 									type="text"
 									placeholder="BMW X5, дизел, след 2019..."
 									autocomplete="off"
@@ -422,13 +437,13 @@
 									/>
 								</label>
 								<label>
-									<span>Бюджет</span>
+									<span>Бюджет (€)</span>
 									<input
 										bind:value={importBudget}
 										name="budget"
 										type="text"
 										inputmode="numeric"
-										placeholder="30 000 EUR"
+										placeholder="30 000"
 									/>
 								</label>
 							</div>
@@ -439,9 +454,9 @@
 								bind:value={contact}
 								name="contact"
 								type="text"
-								inputmode="tel"
-								placeholder={daynightSite.phoneLabel}
-								autocomplete="tel"
+								inputmode="text"
+								placeholder="Вашият телефон или имейл"
+								autocomplete="off"
 								required
 							/>
 						</label>
@@ -480,16 +495,16 @@
 		{#if isImportMode}
 			<nav class="mobile-import-disclosures" aria-label="Повече за вноса">
 				<MobilePromoCard
-					title="Как работи вносът"
-					description="От обявата до конкретна оферта и срок."
+					title="Как работи"
+					description={"От обявата до оферта\nс конкретен срок."}
 					label="Виж стъпките"
 					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
 					tone="red"
 					onclick={() => openImportInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Какво поемаме ние"
-					description="Проверка, транспорт, документи и предаване."
+					title="Какво поемаме"
+					description={"Проверка и транспорт,\nдокументи и предаване."}
 					label="Виж услугата"
 					image="/assets/images/home-promos/gclass-urus-pair-v4.webp"
 					cars
@@ -653,7 +668,7 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background: rgba(20, 100, 218, 0.88);
+		background: rgba(5, 7, 10, 0.9);
 		content: '';
 	}
 
@@ -739,17 +754,17 @@
 	.mobile-contact-map__head span {
 		color: rgba(255, 255, 255, 0.76);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
+		font-weight: var(--sa-weight-semibold);
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	.mobile-contact-hero__label {
 		color: rgba(255, 255, 255, 0.76);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
+		font-weight: var(--sa-weight-semibold);
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	.mobile-contact-hero h1 {
@@ -900,7 +915,7 @@
 	}
 
 	.mobile-contact-action--map {
-		background: #0b63d8;
+		background: rgba(255, 255, 255, 0.14);
 	}
 
 	.mobile-contact-app main {
@@ -1038,9 +1053,9 @@
 	.mobile-contact-form label span {
 		color: #56616e;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
+		font-weight: var(--sa-weight-semibold);
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	.mobile-contact-form input,
@@ -1055,7 +1070,7 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: var(--sa-ink) !important;
-		font: 700 var(--sa-text-base) / 1.18 var(--sa-font) !important;
+		font: 400 var(--sa-text-base) / 1.4 var(--sa-font) !important;
 		outline: 0 !important;
 		padding: 0 !important;
 		resize: vertical;
@@ -1492,8 +1507,8 @@
 		}
 
 		.mobile-contact-form {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 4px;
+			grid-template-columns: minmax(0, 1fr);
+			gap: 8px;
 		}
 
 		.mobile-contact-form > label:nth-of-type(3),

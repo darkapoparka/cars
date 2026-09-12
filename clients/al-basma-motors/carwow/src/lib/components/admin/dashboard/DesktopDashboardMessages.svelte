@@ -63,8 +63,8 @@
 		{
 			id: 'daynight-auto',
 			avatar: '/assets/images/avatar/avatar-9.png',
-			alt: 'Day Night Auto',
-			name: 'Day Night Auto',
+			alt: 'Al Basma',
+			name: 'Al Basma',
 			preview: "Hey! there I'm available",
 			time: 'Yesterday'
 		},

@@ -1,0 +1,26 @@
+p = 'src/lib/components/home/VehicleQuickSearch.svelte'
+s = (root/p).read_text(encoding='utf8').replace('<script lang="ts">', '<script lang="ts">\n  import { onDestroy } from \'svelte\';\n  import { lockPageScroll, trapDialogTab } from \'$lib/ui/overlay\';\n  let releaseScroll: ((restoreScroll?: boolean) => void) | undefined;\n  onDestroy(() => releaseScroll?.(false));')
+s = s.replace("  const openSearch = () => {\n", "  const openSearch = () => {\n    if (dialog?.open) return;\n    releaseScroll = lockPageScroll();\n")
+s = s.replace('    trigger?.focus();', '    releaseScroll?.();\n    releaseScroll = undefined;\n    trigger?.focus({ preventScroll: true });').replace('  onclose={restoreTriggerFocus}', '  onclose={restoreTriggerFocus}\n  onkeydown={trapDialogTab}')
+put(p, s)
+for p in ['src/lib/components/listing/VehicleSearchDialog.svelte', 'src/lib/components/listing/QuickFilterSheet.svelte']:
+    s = (root/p).read_text(encoding='utf8').replace('import { preserveScrollOffset }', 'import { lockPageScroll, trapDialogTab }').replace('releaseOffset', 'releaseScroll')
+    s = re.sub(r"preserveScrollOffset\('--[\w-]+'\)", 'lockPageScroll()', s)
+    s = s.replace('if (!onApply) releaseScroll = lockPageScroll();', 'releaseScroll = lockPageScroll();')
+    s = s.replace('if (!onApply) {\n      releaseScroll?.();\n    }', 'releaseScroll?.();')
+    s = s.replace('returnFocus.focus();', 'returnFocus.focus({ preventScroll: true });').replace('trigger.focus();', 'trigger.focus({ preventScroll: true });')
+    s = s.replace('onclose={restorePage}', 'onclose={restorePage}\n  onkeydown={trapDialogTab}').replace('onclose={restore}', 'onclose={restore} onkeydown={trapDialogTab}')
+    s = re.sub(r':global\((?:html|body):has\(\.dn-listing-filter__dialog\[open\]\)\)\s*\{[^}]*\}', '', s)
+    s = re.sub(r':global\(body:has\(\.dn-quick-sheet.standalone\[open\]\)\)\s*\{[^}]*\}', '', s)
+    put(p, s)
+p = 'src/lib/components/company/VehicleEnquiry.svelte'
+s = (root/p).read_text(encoding='utf8').replace("  import { resolve }", "  import { lockPageScroll, trapDialogTab } from '$lib/ui/overlay';\n  import { resolve }")
+s = s.replace('  let scrollY = 0;', '  let releaseScroll: ((restoreScroll?: boolean) => void) | undefined;')
+s = s.replace('if (opened) restore();', 'if (opened) restore(false);').replace("    scrollY = window.scrollY;\n    document.body.style.setProperty('--dn-enquiry-scroll', `-${scrollY}px`);", '    releaseScroll = lockPageScroll();')
+s = s.replace('  function restore() {', '  function restore(restoreFocus = true) {').replace("    document.body.style.removeProperty('--dn-enquiry-scroll');\n    window.scrollTo(0, scrollY);\n    returnFocus?.isConnected && returnFocus.focus();", '    releaseScroll?.(restoreFocus);\n    releaseScroll = undefined;\n    if (restoreFocus && returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });')
+s = s.replace('onclose={restore}', 'onclose={() => restore()} onkeydown={trapDialogTab}')
+s = re.sub(r':global\(body:has\(\.dn-enquiry\[open\]\)\)\s*\{[^}]*\}', '', s)
+put(p, s)
+p = 'src/lib/components/layout/Header.svelte'
+s = (root/p).read_text(encoding='utf8').replace('let releaseScroll: (() => void)', 'let releaseScroll: ((restoreScroll?: boolean) => void)').replace('    releaseScroll?.();\n  });', '    releaseScroll?.(false);\n  });').replace('mobileReturnFocus?.focus();', 'mobileReturnFocus?.focus({ preventScroll: true });')
+put(p, s)

@@ -252,7 +252,7 @@
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
+				<a href={resolve('/')} aria-label="Al Basma начало">
 					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
@@ -263,7 +263,7 @@
 		<div class="mobile-contact-hero__copy">
 			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Al Basma'}
 			</h1>
 			<p>
 				{isImportMode
@@ -522,7 +522,7 @@
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Карта до Al Basma София"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"

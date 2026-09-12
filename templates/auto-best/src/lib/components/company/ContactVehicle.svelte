@@ -1,12 +1,13 @@
 <script lang="ts">
+  import { financeParams, type FinanceSelection } from '$data/finance';
   import { resolve } from '$app/paths';
   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
   import Icon from '$components/ui/Icon.svelte';
 
-  let { vehicle, hero = false }: { vehicle: Vehicle; hero?: boolean } = $props();
+  let { vehicle, hero = false, financeSelection = null }: { vehicle: Vehicle; hero?: boolean; financeSelection?: FinanceSelection | null } = $props();
 </script>
 
-<a class="dn-contact-vehicle" class:dn-contact-vehicle--hero={hero} href={resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) })} aria-label={`Към ${vehicle.title}`}>
+<a class="dn-contact-vehicle" class:dn-contact-vehicle--hero={hero} href={`${resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) })}${financeSelection ? `?${financeParams(financeSelection)}` : ''}`} aria-label={`Към ${vehicle.title}`}>
   <img src={vehicle.image} alt="" width="120" height="90" />
   <span><small>Избран автомобил</small><strong>{vehicle.title}</strong><span>{vehicle.year} · {formatVehiclePrice(vehicle.priceEur)}</span></span>
   <Icon name="arrow-right" size={18} />

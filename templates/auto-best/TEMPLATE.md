@@ -1,68 +1,36 @@
-# Auto Best
+# Template reference
 
-Key: `auto-best` · version: `2026.09.08-polish-1` · family: `autodeal`.
+| Property | Value |
+| --- | --- |
+| Name / key | Auto Best / `auto-best` |
+| Project repository | `darkapoparka/cars-template-auto-best` |
+| Application | One Svelte 5 / SvelteKit application |
+| Main entry | `/` |
+| Homepage variants | One retained homepage; legacy home URLs redirect to it |
+| Default presentation | Bulgarian, euro prices, kilometres |
+| Default identity | Auto Best wordmark with source/sample contact and content data |
+| Runtime content | Typed local modules; no database required |
+| Build target | Vercel adapter |
+| Suggested development URL | `http://127.0.0.1:6461/` |
 
-Polished native SvelteKit derivative. One retained composition; retired variants redirect. Current working files include local polish beyond HEAD.
+## Main configuration
 
-## Status
+`src/lib/config/brand.ts` contains names, logo, phone, address and social destinations. `src/lib/config/template.ts` contains preview/published mode, canonical origin, identity/inventory verification flags and optional team/partner sections. Design tokens live in `src/lib/styles/tokens.css`.
 
-source-branded-candidate. Source branding/demo content is retained as a visual baseline. This is a candidate for personalization, not a finished generic config-driven template or a sendable lead demo.
+These are code-level configuration modules. There is no admin panel, universal theme JSON or one-switch localization system. Headlines, service artwork and some campaign copy live with their components or feature data; [Reuse](REUSE_GUIDE.md) and [Components](docs/COMPONENTS.md) identify them.
 
-## Provenance
+## Defaults that matter when copying
 
-M:\codex\agency-os-projects\leads\automotive\day-night-auto-group\autodeal-best-day-night; ab92ce9671fb1b56afa38f693755b41aee9c28b0 plus current uncommitted files
+The template starts in preview/noindex mode. Sample team and partner sections are disabled. Vehicle records are sample data unless explicitly verified by the implementation. The brand name does not make the existing phone, map, social accounts, video selection or inventory generic.
 
-Existing license/asset notes remain with the source. No new multi-client rights determination was made. Source instructions and old project task ledgers are historical; J:/cars/AGENTS.md governs this copy.
+A client copy retains the application structure and changes its content and relevant imagery. A template version should be identified by its actual source commit, not an old date embedded in an inherited manifest. Historical `.template` records describe acquisition/copy operations rather than an application release service.
 
-## Run
+## Source and current working preview
 
-Use Node 22.12+ in the Node 22 line. Run `npm ci`.
+The standalone repository was established on 10 September 2026 from the Cars workspace. The owner currently reviews a development copy at `J:/cars/templates/auto-best` on port 6461. That physical directory and the standalone GitHub repository are distinct; local application changes are not automatically present in a fresh GitHub clone.
 
-From J:/cars, on a free port:
+This local reference describes the working source behind port 6461, including dedicated import/trade-in components, shared enquiry helpers and finance URL context. It does not imply that these local application changes have been published to the standalone repository.
 
-```powershell
-./scripts/start-preview.ps1 -Template auto-best -Port 6461
-```
+## Reference
 
-Suggested library URL: http://127.0.0.1:6461/. The suggestion is not proof that a listener is running; see the audit runtime record. Original inspected source port: 5173.
-
-`npm run validate` (architecture, assets, Svelte check, production build).
-
-## Real homepage choices
-
-- `main`: `/`
-
-Copy the whole project to retain all variants. Select a primary entry after copying; retain alternate-home choice links when requested.
-
-## Personalization boundaries
-
-- `src/lib/config/brand.ts`
-- `src/lib/data/company.ts`
-- `src/lib/data/inventory.ts`
-- `src/app.css`
-- `static`
-
-These are current code/data ownership locations, not a promise that one config edits the whole app. Scan every retained route, metadata, contact value and identity-bearing asset after changes.
-
-The 8 September improvement release adds vehicle-aware contact context, retained list state, stock-driven discovery, optional sample sections and modular data/style ownership. Inventory and hero data still belong to the source dealer and must be replaced per client. See the release evidence below for current validation counts.
-
-## Representative QA routes
-
-- `/`
-- `/listing-grid`
-- `/listing-detail-v1/1`
-- `/about-us`
-- `/contact`
-- `/blog`
-
-Use 390 and 1440 px, plus every offered home. Exercise navigation, filters, detail return, overlay dismissal and the main contact path. Existing source data and frontend feedback do not prove real form delivery or a working provider integration.
-
-## Source refresh 2026.09.06-refresh-1
-
-Refreshed from the owner-approved current source including uncommitted polish. See J:/cars/audits/2026-09-06/asko96-build/refresh-plan.json and baseline backups. Existing J: README and local runtime configuration are preserved.
-
-## Improvement release 2026.09.08-polish-1
-
-See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and the [implementation report](J:/cars/audits/2026-09-08/auto-best-improvements/REPORT.md) for findings disposition and current tests. Matched screenshots are in [comparison.html](J:/cars/audits/2026-09-08/auto-best-improvements/comparison.html).
-
-Before browser checks set `$env:BASE_URL='http://127.0.0.1:6461'` after confirming listener ownership. Run `npm run smoke`; `npm run quality` includes browser qualification as well as validation. `template.ts` defaults to preview/noindex, with sample team and partner sections off. Stock is explicitly unverified sample data; publication requires identity and record-level verification. Existing client copies are unchanged.
+[Setup](README.md) · [Product](PRODUCT.md) · [Architecture](ARCHITECTURE.md) · [Styling](docs/STYLING.md) · [Reuse](REUSE_GUIDE.md) · [Source lineage](SOURCE_LICENSE.md)

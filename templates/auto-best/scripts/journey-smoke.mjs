@@ -37,7 +37,9 @@ try {
       for (let id = 1; id <= 8; id++) {
         await page.goto(`${base}/listing-detail-v1/${id}`, { waitUntil: 'networkidle' });
         const title = await page.locator('h1').innerText();
-        const finance = page.locator('.dn-finance-calculator');
+        const trigger = page.locator('.dn-detail-finance-trigger');
+        if (await trigger.isVisible()) { await trigger.click(); await page.locator('.dn-detail-finance-dialog:modal').waitFor(); }
+        const finance = page.locator('.dn-finance-calculator:visible');
         const amountBefore = await finance.locator('dd').first().innerText();
         await finance.locator('input').fill('10000');
         await finance.locator('select').selectOption('24');
@@ -50,18 +52,24 @@ try {
         await finance.locator('a').click();
         await page.waitForURL(url => url.pathname === '/contact');
         assert.equal(new URL(page.url()).searchParams.get('vehicle'), String(id));
+        assert.equal(new URL(page.url()).searchParams.get('down_payment'), '10000');
+        assert.equal(new URL(page.url()).searchParams.get('term'), '24');
+        const returnHref = new URL(await page.locator('.dn-contact-vehicle').getAttribute('href'), base);
+        assert.equal(returnHref.searchParams.get('down_payment'), '10000');
+        assert.equal(returnHref.searchParams.get('term'), '24');
         assert.equal(await page.locator('.dn-contact-vehicle strong').innerText(), title);
-        assert.equal(await page.locator('.dn-contact-vehicle').getAttribute('href'), `/listing-detail-v1/${id}`);
+        assert.equal(returnHref.pathname, `/listing-detail-v1/${id}`);
       }
       await page.goto(`${base}/contact?topic=leasing&vehicle=999`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-contact-vehicle').count(), 0);
     });
     await suite.check(`stock discovery ${width}`, async () => {
       await page.goto(base, { waitUntil: 'networkidle' });
-      const shortcuts = await page.locator('.dn-body-type, .dn-brand-card').evaluateAll(links => links.map(link => link.getAttribute('href')));
-      for (const route of shortcuts) {
+      const shortcuts = await page.locator('.dn-body-type, .dn-brand-card').evaluateAll(links => links.map(link => ({ route: link.getAttribute('href'), count: Number(link.dataset.stockCount) })));
+      for (const { route, count } of shortcuts) {
         await page.goto(base + route, { waitUntil: 'networkidle' });
-        assert(await page.locator('.dn-listing-results .dn-vehicle-card').count() > 0, `${route} must have stock`);
+        assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), count, `${route} must reflect actual stock`);
+        if (!count) assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
       }
       await page.goto(`${base}/listing-grid?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 0);
@@ -85,6 +93,7 @@ try {
       for (let i = 0; i < 18; i++) { await page.keyboard.press('Tab'); assert(await dialog.evaluate(el => el.contains(document.activeElement))); }
       await page.screenshot({ path: `${output}/mobile-menu.png` });
       await page.keyboard.press('Escape');
+      await page.waitForFunction(() => document.activeElement?.matches('.dn-mobile-bottom-nav button'));
       assert(await trigger.evaluate(el => el === document.activeElement));
       assert.equal(await page.evaluate(() => document.body.style.overflow), '');
       await trigger.click(); await page.setViewportSize({ width: 992, height: 900 });
@@ -101,10 +110,18 @@ try {
       try {
         await page.goto(base, { waitUntil: 'networkidle' });
         assert(!media.some(url => /home-hero-v3|home-black-v1/.test(url)));
-        assert.equal(media.some(url => url.includes('urus-front-v1')), width < 768);
+        assert(!media.some(url => url.includes('urus-front-v1')), 'Home uses the refreshed two-car artwork');
+        const homeArtwork = await page.locator('.dn-hero-vehicles__pair img').evaluate(image => image.currentSrc);
+        assert(width < 768 ? homeArtwork.includes('collection-banner-v2') : homeArtwork.startsWith('data:'));
         const sources = await page.locator('.dn-hero-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
         assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
-        evidence.push({ width, heroSources: sources });
+        evidence.push({ width, heroSources: sources, homeArtwork });
+        for (const [topic, scene] of [['trade-in', 'sell'], ['import', 'import']]) {
+          await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });
+          const support = await page.locator('.dn-hero-vehicles__support img').evaluateAll(images => images.map(image => image.currentSrc));
+          assert.equal(support.length, 2);
+          assert(support.every(src => width < 768 ? src.includes(`mobile-${scene}-v1`) : src.startsWith('data:')));
+        }
       } finally { await page.close(); }
     }
     return evidence;

@@ -109,7 +109,7 @@
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Day Night Auto"
+						aria-label="Отвори Google Maps до Al Basma"
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,10 +120,10 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">DAY NIGHT AUTO GROUP</span>
+							<span class="daynight-home-hero__location-map-label">AL BASMA MOTORS</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Day Night Auto София</strong>
+							<strong>Al Basma София</strong>
 							<span>гр. София, Студентски град, ул. Атанас Манчев 18</span>
 							<em>Отвори Google Maps</em>
 						</span>

@@ -1,0 +1,11 @@
+import { routeSeo } from '$lib/server/daynight-seo';
+import type { PageServerLoad } from './$types';
+
+// Fully native (de-templated) storefront route. StorefrontTemplateContent owns
+// the remaining template-era content utilities, so this route no longer asks the
+// layout for /variant-3/assets/app.css or the template head stylesheet.
+export const prerender = true;
+
+export const load: PageServerLoad = () => ({
+	seo: routeSeo('terms')
+});

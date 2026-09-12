@@ -1,17 +1,14 @@
 {
-  "schemaVersion": 1,
-  "updated": "2026-09-09",
-  "root": "J:/cars",
-  "branch": "main",
-  "note": "Source inventory only. Installed dependencies, working routes, personalization and public delivery require separate verification.",
+  "schemaVersion": 2,
+  "source": "docs/DEPLOYMENT-INVENTORY.json",
   "projects": [
     {
       "slug": "al-aayan-used-cars",
       "name": "Al Aayan Used Cars",
       "path": "clients/al-aayan-used-cars",
       "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "ae-sharjah-al-aayan-used-cars"
     },
     {
@@ -23,8 +20,8 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "recovered-unfinished",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "ae-sharjah-al-basma-motors"
     },
     {
@@ -32,8 +29,8 @@
       "name": "Al Fareed Used Cars",
       "path": "clients/al-fareed-used-cars",
       "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "ae-sharjah-al-fareed-used-cars"
     },
     {
@@ -45,99 +42,150 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "recovered-unfinished",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "ae-sharjah-al-hamoor-al-thahabi"
     },
     {
       "slug": "asko-96",
-      "name": "asko-96",
+      "name": "АСКО 96",
       "path": "clients/asko-96",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
-    },
-    {
-      "slug": "asko96",
-      "name": "asko96",
-      "path": "clients/asko96",
-      "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
-      "aliasOf": "asko-96"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "astracar",
-      "name": "astracar",
+      "name": "Астракар",
       "path": "clients/astracar",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "autohof",
+      "name": "autohof",
+      "path": "clients/autohof",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     },
     {
       "slug": "autolife",
-      "name": "autolife",
+      "name": "Аутолайф",
       "path": "clients/autolife",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "automarket-varna",
-      "name": "automarket-varna",
+      "name": "Аутомаркет Варна",
       "path": "clients/automarket-varna",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "avangard-auto",
-      "name": "avangard-auto",
+      "name": "AVANGARD AUTO",
       "path": "clients/avangard-auto",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "name": "avtoborsa-mania",
+      "path": "clients/avtoborsa-mania",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "car-max-sofia",
+      "name": "car-max-sofia",
+      "path": "clients/car-max-sofia",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     },
     {
       "slug": "cfo-auto-group",
       "name": "CFO Auto Group",
       "path": "clients/cfo-auto-group",
       "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "us-fl-orlando-cfo-auto-group"
     },
     {
       "slug": "champion-auto-pro",
-      "name": "champion-auto-pro",
+      "name": "Champion Auto Pro",
       "path": "clients/champion-auto-pro",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "chernomore-varna",
+      "name": "chernomore-varna",
+      "path": "clients/chernomore-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "danger-auto",
+      "name": "danger-auto",
+      "path": "clients/danger-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     },
     {
       "slug": "dayandnight",
@@ -146,8 +194,8 @@
       "variants": [
         "rencar"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "eliqauto",
@@ -158,52 +206,236 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "recovered-unfinished",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "elit-auto-import",
-      "name": "elit-auto-import",
+      "name": "ELIT AUTO IMPORT EXPORT",
       "path": "clients/elit-auto-import",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "europa-varna",
+      "name": "europa-varna",
+      "path": "clients/europa-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "evrocar-varna-09",
+      "name": "evrocar-varna-09",
+      "path": "clients/evrocar-varna-09",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     },
     {
       "slug": "excellent-cars",
-      "name": "excellent-cars",
+      "name": "Excellent Cars",
       "path": "clients/excellent-cars",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "exclusive-auto-varna",
+      "name": "exclusive-auto-varna",
+      "path": "clients/exclusive-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "extra-car-sm",
+      "name": "extra-car-sm",
+      "path": "clients/extra-car-sm",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "f1-auto-vratsa",
+      "name": "f1-auto-vratsa",
+      "path": "clients/f1-auto-vratsa",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "f1rst-motors",
+      "name": "F1rst Motors",
+      "path": "clients/f1rst-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "fadi-cars",
+      "name": "fadi-cars",
+      "path": "clients/fadi-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "five-auto",
+      "name": "five-auto",
+      "path": "clients/five-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "fresh-auto-ruse",
+      "name": "fresh-auto-ruse",
+      "path": "clients/fresh-auto-ruse",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "fresh-motors-sheremetya",
+      "name": "fresh-motors-sheremetya",
+      "path": "clients/fresh-motors-sheremetya",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "g-auto",
+      "name": "g-auto",
+      "path": "clients/g-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "golden-dreams-auto",
+      "name": "golden-dreams-auto",
+      "path": "clients/golden-dreams-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "haskovo-cars-bg",
+      "name": "haskovo-cars-bg",
+      "path": "clients/haskovo-cars-bg",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "icars-plovdiv",
+      "name": "icars-plovdiv",
+      "path": "clients/icars-plovdiv",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "ivo-auto",
-      "name": "ivo-auto",
+      "name": "Иво Ауто",
       "path": "clients/ivo-auto",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "kapitol-varna",
+      "name": "kapitol-varna",
+      "path": "clients/kapitol-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     },
     {
       "slug": "keen-auto-mall",
       "name": "Keen Auto Mall",
       "path": "clients/keen-auto-mall",
-      "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "us-fl-pompano-beach-keen-auto-mall"
     },
     {
@@ -215,72 +447,340 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "recovered-unfinished",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "bg-plovdiv-kg-team-auto"
     },
     {
+      "slug": "kris-car-plovdiv",
+      "name": "kris-car-plovdiv",
+      "path": "clients/kris-car-plovdiv",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "kunchev-auto",
+      "name": "kunchev-auto",
+      "path": "clients/kunchev-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
       "slug": "legend-auto",
-      "name": "legend-auto",
+      "name": "LEGEND AUTO",
       "path": "clients/legend-auto",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "lux-auto-bg",
+      "name": "lux-auto-bg",
+      "path": "clients/lux-auto-bg",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "lyubo-car",
+      "name": "lyubo-car",
+      "path": "clients/lyubo-car",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "martin-auto-dobrich",
+      "name": "martin-auto-dobrich",
+      "path": "clients/martin-auto-dobrich",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "maverik-sofia",
+      "name": "maverik-sofia",
+      "path": "clients/maverik-sofia",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     },
     {
       "slug": "mg7-group",
       "name": "MG7 Group",
       "path": "clients/mg7-group",
       "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "bg-burgas-mg7-group"
     },
     {
       "slug": "midlands-trade-centre",
       "name": "Midlands Trade Centre Limited",
       "path": "clients/midlands-trade-centre",
-      "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "gb-birmingham-midlands-trade-centre"
     },
     {
       "slug": "navara-car",
-      "name": "navara-car",
+      "name": "Навара кар",
       "path": "clients/navara-car",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "recovered-unfinished",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "neuhoff-auto-sales",
       "name": "Neuhoff Auto Sales",
       "path": "clients/neuhoff-auto-sales",
       "variants": [],
-      "sourceState": "research-or-brief-only",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "us-in-evansville-neuhoff-auto-sales"
     },
     {
+      "slug": "next-auto-pernik",
+      "name": "next-auto-pernik",
+      "path": "clients/next-auto-pernik",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "next-car-banovo",
+      "name": "next-car-banovo",
+      "path": "clients/next-car-banovo",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "nova-cars-sofia",
+      "name": "nova-cars-sofia",
+      "path": "clients/nova-cars-sofia",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "outletcars-varna",
+      "name": "OUTLETCARS.BG — Варна",
+      "path": "clients/outletcars-varna",
+      "variants": [
+        "auto-best",
+        "import",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "name": "Перфект Ауто",
+      "path": "clients/perfect-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "plus-auto-ruse",
+      "name": "plus-auto-ruse",
+      "path": "clients/plus-auto-ruse",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "prestige-varna",
+      "name": "prestige-varna",
+      "path": "clients/prestige-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
       "slug": "priselci",
-      "name": "priselci",
+      "name": "Автокъща Приселци",
       "path": "clients/priselci",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "existing-apps",
-      "reviewState": "pending-owner-review"
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "promosale-varna",
+      "name": "Promosale Varna",
+      "path": "clients/promosale-varna",
+      "variants": [
+        "auto-best",
+        "import",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "rqs-auto-team",
+      "name": "rqs-auto-team",
+      "path": "clients/rqs-auto-team",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "slavi-cars",
+      "name": "slavi-cars",
+      "path": "clients/slavi-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "sprint-auto-varna",
+      "name": "sprint-auto-varna",
+      "path": "clients/sprint-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "stenli-car",
+      "name": "stenli-car",
+      "path": "clients/stenli-car",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "success-automobile",
+      "name": "success-automobile",
+      "path": "clients/success-automobile",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "sunny-varna",
+      "name": "sunny-varna",
+      "path": "clients/sunny-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "swiss-auto-43",
+      "name": "swiss-auto-43",
+      "path": "clients/swiss-auto-43",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "tesi-car-varna",
+      "name": "Теси Кар",
+      "path": "clients/tesi-car-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
     },
     {
       "slug": "texas-drive-auto",
@@ -291,9 +791,81 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "recovered-unfinished",
-      "reviewState": "pending-owner-review",
+      "sourceState": "source-present",
+      "reviewState": "unknown",
       "leadId": "us-tx-dallas-texas-drive-auto"
+    },
+    {
+      "slug": "the-dealers-point",
+      "name": "The Dealers Point",
+      "path": "clients/the-dealers-point",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "todorov-auto",
+      "name": "todorov-auto",
+      "path": "clients/todorov-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "troya-auto",
+      "name": "troya-auto",
+      "path": "clients/troya-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "valentino-auto-house",
+      "name": "valentino-auto-house",
+      "path": "clients/valentino-auto-house",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "voivodov-auto-antonio",
+      "name": "voivodov-auto-antonio",
+      "path": "clients/voivodov-auto-antonio",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "vvc-auto",
+      "name": "vvc-auto",
+      "path": "clients/vvc-auto",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-not-local",
+      "reviewState": "unknown"
     }
   ],
   "campaignCandidatesWithoutFolders": [

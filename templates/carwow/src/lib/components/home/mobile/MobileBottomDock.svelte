@@ -1,8 +1,8 @@
 <script lang="ts">
+	import MobileDockIcon from './MobileDockIcon.svelte';
 	import {
 		CarFront as NavCarIcon,
 		CirclePlus as NavSellIcon,
-		Globe2 as NavImportIcon,
 		Heart as NavSavedIcon,
 		House as NavHomeIcon,
 		Info as NavInfoIcon,
@@ -39,6 +39,7 @@
 	);
 	const isSell = $derived(currentPath.startsWith('/sell-your-car'));
 	const isMenuSection = $derived(
+		currentPath.startsWith('/favorites') ||
 		currentPath.startsWith('/services') ||
 			currentPath.startsWith('/about') ||
 			(currentPath.startsWith('/contact') && !isImport) ||
@@ -185,7 +186,7 @@
 		aria-current={isHome ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
-			<NavHomeIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
+			<MobileDockIcon name="home" active={isHome} />
 		</span>
 		<span class="mobile-bottom-dock__label">Начало</span>
 	</a>
@@ -195,7 +196,7 @@
 		aria-current={isInventory ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
-			<NavCarIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
+			<MobileDockIcon name="car" active={isInventory} />
 		</span>
 		<span class="mobile-bottom-dock__label">Коли</span>
 	</a>
@@ -205,7 +206,7 @@
 		aria-current={isSell ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
-			<NavSellIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
+			<MobileDockIcon name="sell" active={isSell} />
 		</span>
 		<span class="mobile-bottom-dock__label">Продай</span>
 	</a>
@@ -215,7 +216,7 @@
 		aria-current={isImport ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
-			<NavImportIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
+			<MobileDockIcon name="import" active={isImport} />
 		</span>
 		<span class="mobile-bottom-dock__label">Внос</span>
 	</a>
@@ -230,7 +231,7 @@
 		onclick={openMenu}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
-			<NavMenuIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
+			<MobileDockIcon name="menu" active={menuOpen || isMenuSection} />
 		</span>
 		<span class="mobile-bottom-dock__label">Меню</span>
 	</button>
@@ -370,23 +371,22 @@
 		position: relative;
 		z-index: 1;
 		display: grid;
-		width: 23px;
-		height: 23px;
+		width: 24px;
+		height: 24px;
 		place-items: center;
 		color: inherit;
 	}
 
 	.mobile-bottom-dock__icon :global(svg) {
 		display: block;
-		width: 23px;
-		height: 23px;
+		width: 24px;
+		height: 24px;
 		color: currentColor !important;
 	}
 
 	.mobile-bottom-dock__icon :global(svg *) {
 		color: currentColor !important;
 		stroke: currentColor !important;
-		stroke-width: 2.15px !important;
 		fill: none !important;
 	}
 
@@ -427,7 +427,7 @@
 	.mobile-bottom-dock__item.is-active :global(svg),
 	.mobile-bottom-dock__item.is-active :global(svg *) {
 		color: var(--sa-red) !important;
-		stroke: var(--sa-red) !important;
+		stroke: currentColor !important;
 		fill: none !important;
 	}
 

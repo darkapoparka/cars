@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-09-12T02:34:01.327Z",
+  "results": [
+    {
+      "base": "http://127.0.0.1:6461",
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Auto Best — Премиум автомобили в София"
+    },
+    {
+      "base": "http://127.0.0.1:6461",
+      "route": "/listing-detail-v1/1",
+      "status": 200,
+      "errors": [],
+      "title": "Audi RS 6 Avant — Auto Best"
+    },
+    {
+      "base": "http://127.0.0.1:6462",
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Auto Best — Премиум автомобили в София"
+    },
+    {
+      "base": "http://127.0.0.1:6462",
+      "route": "/listing-detail-v1/1",
+      "status": 200,
+      "errors": [],
+      "title": "Audi RS 6 Avant — Auto Best"
+    }
+  ]
+}

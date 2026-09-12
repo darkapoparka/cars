@@ -15,6 +15,7 @@ export type ListingFilters = {
   yearMin: number | null;
   yearMax: number | null;
   priceMin: number | null;
+  priceMinExclusive: boolean;
   priceMax: number | null;
   mileageMax: number | null;
   sort: ListingSort;
@@ -30,7 +31,7 @@ export const listingParams = (filters: ListingFilters): URLSearchParams => {
   for (const [key, value] of Object.entries(filters)) {
     const name = key.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
     if (Array.isArray(value)) [...new Set(value)].forEach(item => params.append(name, item));
-    else if (value !== null && value !== '' && !(key === 'sort' && value === 'default')) params.set(name, String(value));
+    else if (value !== null && value !== '' && value !== false && !(key === 'sort' && value === 'default')) params.set(name, value === true ? '1' : String(value));
   }
   return params;
 };
@@ -38,14 +39,19 @@ export const listingParams = (filters: ListingFilters): URLSearchParams => {
 export const listingHiddenFields = (filters: ListingFilters, exclude: readonly string[] = []) =>
   [...listingParams(filters)].filter(([key]) => !exclude.includes(key));
 
-export const activeFilterCount = (filters: ListingFilters) => listingHiddenFields(filters, ['q', 'sort']).length;
+export const activeFilterCount = (filters: ListingFilters) => listingHiddenFields(filters, ['q', 'sort', 'price_min_exclusive']).length;
 
 export function removeListingFilter(filters: ListingFilters, key: string, value: string) {
   const params = listingParams(filters);
   params.delete(key, value);
   if (key === 'make') params.delete('model');
+  if (key === 'price_min') params.delete('price_min_exclusive');
   return params;
 }
+
+const stockYears = featuredVehicles.map(vehicle => vehicle.yearNumber);
+const minimumStockYear = stockYears.length ? Math.min(...stockYears) : 0;
+const maximumStockYear = stockYears.length ? Math.max(...stockYears) : -1;
 
 export const listingFilterOptions = {
   makes: availableValues('make'),
@@ -54,7 +60,7 @@ export const listingFilterOptions = {
   transmissions: availableValues('transmission'),
   versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
   equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
-  years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
+  years: ['', ...Array.from({ length: Math.max(0, maximumStockYear - minimumStockYear + 1) }, (_, index) => String(minimumStockYear + index))],
   prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
   mileages: ['', '50000', '75000', '100000'],
   sorts: [
@@ -92,6 +98,7 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
     yearMin: integerParam(params, 'year_min'),
     yearMax: integerParam(params, 'year_max'),
     priceMin: integerParam(params, 'price_min'),
+    priceMinExclusive: integerParam(params, 'price_min') !== null && params.get('price_min_exclusive') === '1',
     priceMax: integerParam(params, 'price_max'),
     mileageMax: integerParam(params, 'mileage_max'),
     sort: requestedSort && sortValues.has(requestedSort) ? requestedSort : 'default'
@@ -104,7 +111,7 @@ export const listingModelsForMake = (make: string) => {
   const normalizedMake = normalize(make);
   const models = featuredVehicles
     .filter((vehicle) => !normalizedMake || normalize(vehicle.make) === normalizedMake)
-    .map((vehicle) => vehicle.title.replace(`${vehicle.make} `, ''));
+    .map((vehicle) => vehicle.model);
 
   return ['', ...new Set(models)];
 };
@@ -138,16 +145,16 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
   const filtered = vehicles.filter((vehicle) => {
     if (query && !vehicleMatchesQuery(vehicle, query)) return false;
     if (make && normalize(vehicle.make) !== make) return false;
-    if (model && !normalize(vehicle.title).includes(model)) return false;
+    if (model && !normalize(vehicle.model).includes(model)) return false;
     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;
     if (fuel && normalize(vehicle.fuel) !== fuel) return false;
     if (transmission && normalize(vehicle.transmission) !== transmission) return false;
-    if (version && !normalize(vehicle.title).includes(version)) return false;
+    if (version && !normalize(vehicle.version).includes(version)) return false;
     if (filters.equipment.length > 0 && !filters.equipment.every((item) => vehicle.equipment.includes(item))) return false;
     if (filters.condition && vehicle.condition !== filters.condition) return false;
     if (filters.yearMin !== null && vehicle.yearNumber < filters.yearMin) return false;
     if (filters.yearMax !== null && vehicle.yearNumber > filters.yearMax) return false;
-    if (filters.priceMin !== null && vehicle.priceEur < filters.priceMin) return false;
+    if (filters.priceMin !== null && (filters.priceMinExclusive ? vehicle.priceEur <= filters.priceMin : vehicle.priceEur < filters.priceMin)) return false;
     if (filters.priceMax !== null && vehicle.priceEur > filters.priceMax) return false;
     if (filters.mileageMax !== null && vehicle.mileageKm > filters.mileageMax) return false;
     return true;

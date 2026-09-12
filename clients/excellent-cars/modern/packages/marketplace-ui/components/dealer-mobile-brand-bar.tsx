@@ -22,7 +22,7 @@ export const DealerMobileBrandBar = ({
 }) => {
   const light = tone === "light";
   const clean = tone === "clean";
-  const logoWidthClassName = "w-[144px] max-w-[48vw]";
+  const logoWidthClassName = "w-[128px] max-w-[48vw]";
 
   return (
     <div
@@ -56,20 +56,20 @@ export const DealerMobileBrandBar = ({
         onClick={onNavigate}
       >
         <span
-          className={cn("relative block aspect-[1780/512]", logoWidthClassName)}
+          className={cn("relative block aspect-[1706/650] overflow-hidden", logoWidthClassName)}
         >
           <Image
             alt={leadSite.name}
             className={cn(
-              "h-full w-full object-contain",
+              "block h-auto w-full -translate-y-[7.3%]",
               wordmarkTone === "light" && "brightness-0 invert",
               wordmarkTone === "dark" && "brightness-0"
             )}
-            height={512}
+            height={960}
             priority
-            sizes="(max-width: 1023px) 144px, 0px"
+            sizes="(max-width: 1023px) 128px, 0px"
             src={leadSite.logoPath}
-            width={1780}
+            width={1706}
           />
         </span>
       </Link>

@@ -39,9 +39,9 @@ export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle 
 
 export const editorial = [
   {
-    title: `Is there an office in ${brand.city} and how can I visit?`,
-    text: `Ask whether an office is available in ${brand.city}. Contact us in advance to confirm a convenient visiting time.`,
-    image: '/assets/images/lead/day-night-guide-inspection.webp',
+    title: `Visit Texas Drive Auto in ${brand.city}`,
+    text: `${brand.address}. ${brand.appointment}. Call to confirm the vehicle and your visit.`,
+    image: '/office.webp',
     href: '/contact',
     meta: 'Resources',
     category: 'Guide'
@@ -49,7 +49,7 @@ export const editorial = [
   {
     title: 'What can we check before buying?',
     text: 'Ask which vehicle history records and documents are available, and whether an independent inspection can be arranged before you decide.',
-    image: '/assets/images/lead/day-night-guide-import.webp',
+    image: '/stock/127361925-1.webp',
     href: '/blog-detail/1',
     meta: 'Resources',
     category: 'Guide'
@@ -57,7 +57,7 @@ export const editorial = [
   {
     title: 'Can a vehicle be imported to order?',
     text: 'Custom import services are not confirmed in this preview. Ask whether any options are available for your model, budget and feature preferences.',
-    image: '/assets/images/lead/day-night-guide-leasing.webp',
+    image: '/stock/127361904-1.webp',
     href: '/blog-detail/2',
     meta: 'Resources',
     category: 'Guide'

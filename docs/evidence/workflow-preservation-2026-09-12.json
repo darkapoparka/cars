@@ -1,0 +1,63 @@
+{
+  "verifiedAt": "2026-09-12T18:27:09.845Z",
+  "repositories": [
+    {
+      "repository": "https://github.com/darkapoparka/cars.git",
+      "branch": "main",
+      "head": "adc16cc3e3ae430c1f53e64dd7086ce632e29e38",
+      "indexTree": "3c7c20cc3e7708490ed8505b03fecde7790948fe",
+      "indexPreserved": true,
+      "headPreserved": true,
+      "originalMarkdownFiles": 3114
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-auto-best.git",
+      "branch": "main",
+      "head": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
+      "indexTree": "1cd412e3d2cfc4ae054217edada715f0e3bb53fa",
+      "indexPreserved": true,
+      "headPreserved": true,
+      "originalMarkdownFiles": 34
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-modern.git",
+      "branch": "astra",
+      "head": "ecaf6324c21805df0054011063473f9fce978788",
+      "indexTree": "8b55573f9366410016978196a0544ac4d194d64c",
+      "indexPreserved": true,
+      "headPreserved": true,
+      "originalMarkdownFiles": 134
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-carwow.git",
+      "branch": "main",
+      "head": "d769bb0558ad0228b92440fc3fd9ff81548bc890",
+      "indexTree": "7b5915a00e80eb857381a28fb489090fd339db80",
+      "indexPreserved": true,
+      "headPreserved": true,
+      "originalMarkdownFiles": 54
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-import.git",
+      "branch": "main",
+      "head": "3c24db073b0b1a3bf26c64ed5336921117658e29",
+      "indexTree": "f20c43f209087f27234d76188a6874dbccc9038b",
+      "indexPreserved": true,
+      "headPreserved": true,
+      "originalMarkdownFiles": 15
+    }
+  ],
+  "localMainIntegration": {
+    "base": "adc16cc3e3ae430c1f53e64dd7086ce632e29e38",
+    "reviewedRemoteBase": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
+    "alreadyUpstream": 7670,
+    "overlappingDifferentPaths": 1113,
+    "uniqueStagedPaths": 610,
+    "disposition": "Local branch and normal index retained. Scoped main-based commits published through separate indexes. Resolve unique owner work by dealer/template before advancing the checkout; do not blanket merge or overwrite.",
+    "detailsLocal": "runtime/workflow-overhaul-20260912/main-integration-plan.json"
+  },
+  "temporaryStorage": {
+    "reason": "J drive ENOSPC during final build; cache deletion rejected by automatic approval review (blocked by policy).",
+    "action": "Stopped only this pilot previews and relocated its three generated node_modules directories to C:/Users/radev/AppData/Local/Temp/cars-workflow-20260912-*-dependencies. Original source, owner indexes and old branch histories were preserved."
+  }
+}

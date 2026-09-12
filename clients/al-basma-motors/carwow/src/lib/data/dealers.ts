@@ -28,7 +28,7 @@ export const dealers: Dealer[] = [
 	},
 	{
 		slug: "day-night-auto-group-documents",
-		name: "Day Night Auto Документи и съдействие",
+		name: "Al Basma Документи и съдействие",
 		location: "София",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
@@ -40,7 +40,7 @@ export const dealers: Dealer[] = [
 	},
 	{
 		slug: "day-night-auto-group-sourcing",
-		name: "Day Night Auto Подбор на автомобил",
+		name: "Al Basma Подбор на автомобил",
 		location: "София",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,

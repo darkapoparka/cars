@@ -193,8 +193,8 @@
 			copy: 'Рег. номер или марка, модел, година и километри.'
 		},
 		{
-			title: 'Изпращате снимки',
-			copy: 'Проверяваме състояние, история и реални пазарни цени.'
+			title: 'Уточняваме състоянието',
+			copy: 'Уговаряме снимки или оглед и обсъждаме историята на автомобила.'
 		},
 		{
 			title: 'Получавате вариант',
@@ -284,15 +284,15 @@
 			<nav class="ms-disclosures" aria-label="Повече за услугата">
 				<MobilePromoCard
 					title="Как работи"
-					description="Три ясни стъпки до конкретна оценка."
+					description={"Три ясни стъпки до\nоценка на автомобила."}
 					label="Виж стъпките"
 					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
 					title="Защо Day Night"
-					description="Кристиян и екипът Ви дават ясен следващ вариант."
-					label="Виж предимствата"
+					description={"Личен контакт с\nКристиян и екипа."}
+					label="Виж предимства"
 					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
 					tone="yellow"
 					portrait
@@ -388,7 +388,7 @@
 							<div class="ms-wizard-step__intro">
 								<span>Контакт</span>
 								<h3 id="ms-contact-step-title">Къде да изпратим оценката?</h3>
-								<p>Ще се свържем до един работен ден. Без нежелани съобщения.</p>
+								<p>Ще се свържем с Вас, за да уточним състоянието и следващите стъпки.</p>
 							</div>
 							<div
 								class="ms-vehicle-summary"
@@ -411,7 +411,7 @@
 									data-contact-autofocus
 									type="tel"
 									bind:value={phone}
-									placeholder={daynightSite.phoneLabel}
+									placeholder="Вашият телефон"
 									autocomplete="tel"
 									required
 								/>
@@ -425,7 +425,9 @@
 					</label>
 
 					{#if sellSubmitMessage}
-						<p class="ms-form-message" data-state={sellSubmitState}>{sellSubmitMessage}</p>
+						<p class="ms-form-message" role="alert" data-state={sellSubmitState}>
+							{sellSubmitMessage}
+						</p>
 					{/if}
 				</div>
 
@@ -656,9 +658,9 @@
 	.ms-quick-start label span {
 		color: #65707e;
 		font-size: 10px;
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
+		font-weight: var(--sa-weight-semibold);
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	.ms-quick-start input {
@@ -784,9 +786,9 @@
 	.ms-section-head span {
 		color: var(--ms-blue);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
+		font-weight: var(--sa-weight-semibold);
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	.ms-section-head h2 {
@@ -905,6 +907,10 @@
 		padding: 7px 10px 6px;
 	}
 
+	.ms-field:focus-within {
+		border-color: var(--sa-red);
+	}
+
 	.ms-field--wide {
 		grid-column: 1 / -1;
 	}
@@ -922,9 +928,9 @@
 	.ms-field span {
 		color: #56616e;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
+		font-weight: var(--sa-weight-semibold);
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	.ms-field input {
@@ -938,7 +944,7 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: var(--sa-ink) !important;
-		font: 700 var(--sa-text-base) / 1.18 var(--sa-font) !important;
+		font: 400 var(--sa-text-base) / 1.4 var(--sa-font) !important;
 		outline: 0 !important;
 		padding: 0 !important;
 	}

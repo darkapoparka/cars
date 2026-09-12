@@ -39,7 +39,7 @@
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><a href={resolve('/about')}>За нас</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>Профил на Day Night Auto</span></li>
+				<li><span>Профил на Al Basma</span></li>
 			</ul>
 		</div>
 	</section>
@@ -49,7 +49,7 @@
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
 					<p class="eyebrow">Проверена автокъща</p>
-					<h1>Day Night Auto София</h1>
+					<h1>Al Basma София</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Автокъща в София с подбрани употребявани автомобили, ясна информация за състояние,
 						съдействие при документи и практични следващи стъпки след оглед.
@@ -71,7 +71,7 @@
 				</div>
 				<div class="dealer-profile-card">
 					<img class="dealer-profile-card__logo" src="/brand/daynight-logo-generated.png" alt="" />
-					<p class="dealer-profile-card__title mb-6">Day Night Auto</p>
+					<p class="dealer-profile-card__title mb-6">Al Basma</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
 					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
 				</div>
@@ -119,7 +119,7 @@
 					</p>
 					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="330" />
+				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Al Basma София" height="330" />
 			</div>
 		</div>
 	</section>

@@ -8,6 +8,10 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly dealerFinance?: boolean;
+  readonly mileageUnit?: "km" | "mi";
+  readonly stockAsOf?: string;
+  readonly hours?: string;
   readonly email: string;
   readonly heroPath: string;
   readonly locale: string;

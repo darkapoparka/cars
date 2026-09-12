@@ -3,11 +3,11 @@
 	import { homeVideos, youtubeChannelUrl } from '$lib/data/daynight-videos';
 </script>
 
-<section class="home-videos" aria-label="Day Night Auto в YouTube">
+<section class="home-videos" aria-label="Al Basma в YouTube">
 	<div class="daynight-home-container">
-		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="Всички видеа">
+		<DesktopSectionHeading title="Al Basma в YouTube" href={youtubeChannelUrl} label="Всички видеа">
 			{#snippet titleContent()}
-				<span class="home-videos__title">Day Night Auto в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
+				<span class="home-videos__title">Al Basma в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
 			{/snippet}
 		</DesktopSectionHeading>
 		<div class="home-videos__grid">

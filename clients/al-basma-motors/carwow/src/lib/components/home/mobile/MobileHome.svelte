@@ -431,10 +431,10 @@
 	</svg>
 {/snippet}
 
-<div class="mobile-home" aria-label="Day Night Auto — начало">
+<div class="mobile-home" aria-label="Al Basma — начало">
 	<header class="mh-hero">
 		<div class="mh-hero__bar">
-			<a class="mh-hero__brand" href={resolve('/')} aria-label="Day Night Auto home">
+			<a class="mh-hero__brand" href={resolve('/')} aria-label="Al Basma home">
 				<img
 					class="mh-hero__logo"
 					src={resolve('/brand/daynight-logo-generated.png')}
@@ -453,14 +453,14 @@
 				<a
 					class="mh-hero__bar-action mh-hero__bar-action--call"
 					href={phoneHref}
-					aria-label="Обади се на Day Night Auto"
+					aria-label="Обади се на Al Basma"
 				>
 					<Phone size={19} strokeWidth={2.35} aria-hidden="true" />
 				</a>
 			</div>
 		</div>
 
-		<h1 class="mh-hero__title">Day Night Auto</h1>
+		<h1 class="mh-hero__title">Al Basma</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
@@ -798,7 +798,7 @@
 				{daynightSite.location}
 			</a>
 		</div>
-		<span class="mh-footer__copy">© 2026 Day Night Auto София. Всички права запазени.</span>
+		<span class="mh-footer__copy">© 2026 Al Basma София. Всички права запазени.</span>
 	</footer>
 
 	<MobileBottomDock />

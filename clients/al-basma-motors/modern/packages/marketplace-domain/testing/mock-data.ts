@@ -10,7 +10,7 @@ export const mockListings: VehicleListing[] = [
     status: "active",
     title: "2020 BMW X5 M50d",
     description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
+      "Очакван внос от Al Basma Motors. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
     price: { amount: 89_379, currency: "BGN" },
     priceType: "fixed",
     monthlyEstimate: { amount: 1360, currency: "BGN" },
@@ -44,7 +44,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -87,7 +87,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -130,7 +130,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -145,7 +145,7 @@ export const mockListings: VehicleListing[] = [
     status: "active",
     title: "2021 Mercedes-Benz E 63 S AMG",
     description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
+      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Al Basma Motors.",
     price: { amount: 165_657, currency: "BGN" },
     priceType: "fixed",
     monthlyEstimate: { amount: 2530, currency: "BGN" },
@@ -173,7 +173,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -216,7 +216,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -259,7 +259,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -274,7 +274,7 @@ export const mockListings: VehicleListing[] = [
     status: "active",
     title: "2021 Mercedes-Benz GLE 400d Coupe",
     description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
+      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Al Basma Motors - София.",
     price: { amount: 124_584, currency: "BGN" },
     priceType: "fixed",
     monthlyEstimate: { amount: 1900, currency: "BGN" },
@@ -302,7 +302,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -345,7 +345,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -388,7 +388,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -403,7 +403,7 @@ export const mockListings: VehicleListing[] = [
     status: "active",
     title: "2018 Mercedes-Benz V 250d VIP Business",
     description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
+      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Al Basma Motors.",
     price: { amount: 106_982, currency: "BGN" },
     priceType: "fixed",
     monthlyEstimate: { amount: 1635, currency: "BGN" },
@@ -431,7 +431,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -474,7 +474,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -517,7 +517,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },
@@ -532,7 +532,7 @@ export const mockListings: VehicleListing[] = [
     status: "active",
     title: "2021 BMW M4 Competition",
     description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
+      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Al Basma Motors.",
     price: { amount: 128_496, currency: "BGN" },
     priceType: "fixed",
     monthlyEstimate: { amount: 1960, currency: "BGN" },
@@ -560,7 +560,7 @@ export const mockListings: VehicleListing[] = [
     seller: {
       id: "dealer-day-night-auto-group",
       type: "dealer",
-      displayName: "Day & Night Auto Group",
+      displayName: "Al Basma Motors",
       verificationStatus: "verified",
       city: "София",
     },

@@ -1,0 +1,955 @@
+
+## src/lib/components/home/BodyTypes.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { bodyTypes } from '$data/home';
+4: 
+5:   const mobileBodyTypes = new Set<string>(bodyTypes.filter(item => item.count > 0).slice(0, 3).map(item => item.query));
+6:   const mobileTypeArt: Record<string, string> = {
+7:     SUV: '/assets/images/generated/suv-card-small.webp',
+8:     Wagon: '/assets/images/generated/wagon-card-small.webp',
+9:     Coupe: '/assets/images/generated/coupe-card-small.webp'
+10:   };
+11:   let expanded = $state(false);
+12: </script>
+13: 
+14: <section class="dn-section dn-body-types" aria-labelledby="body-types-title">
+15:   <div class="container dn-body-types__panel">
+16:     <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+17:       <h2 id="body-types-title" class="dn-home-section-title">
+18:         <span class="dn-heading-desktop">Изберете по тип купе</span>
+19:         <span class="dn-heading-mobile">По тип купе</span>
+20:       </h2>
+21:       <a class="dn-body-types__all dn-home-section-action" href={resolve('/listing-grid')}>
+22:         <span class="dn-heading-desktop">Вижте всички автомобили</span>
+23:         <span class="dn-heading-mobile">Всички</span>
+24:       </a>
+25:     </div>
+26: 
+27:     <div class="dn-body-types__viewport">
+28:       <div class="dn-body-types__rail" id="body-types-grid" aria-label="Автомобили по тип купе">
+29:         {#each bodyTypes as item (item.query)}
+30:           <a class="dn-body-type" class:dn-body-type--baked={Boolean(mobileTypeArt[item.query])} class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`)}>
+31:             {#if mobileTypeArt[item.query]}
+32:               <img class="dn-body-type__baked-art" src={mobileTypeArt[item.query]} alt={item.label} loading="eager" decoding="async" />
+33:             {/if}
+34:             <span class="dn-body-type__image">
+35:               <span class="dn-body-type__frame"
+36:                 style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}
+37:                 style:--body-image-width={`${item.width / (item.bounds[2] - item.bounds[0]) * 100}%`}
+38:                 style:--body-image-left={`${-item.bounds[0] / (item.bounds[2] - item.bounds[0]) * 100}%`}
+39:                 style:--body-image-top={`${-item.bounds[1] / (item.bounds[3] - item.bounds[1]) * 100}%`}>
+40:               <img
+41:                 src={item.image}
+42:                 alt=""
+43:                 width={item.width}
+44:                 height={item.height}
+45:                 loading="lazy"
+46:                 decoding="async"
+47:               />
+48:               </span>
+49:             </span>
+50:             <span class="dn-body-type__content">
+51:               <strong class="dn-body-type__title">{item.label}</strong>
+52:               <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? 'автомобил' : 'автомобила'}</small>
+53:             </span>
+54:           </a>
+55:         {/each}
+56:         <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
+57:           <img class="dn-discovery-toggle__baked-art" src="/assets/images/generated/all-card-centered-v2.webp" alt="Всички типове" loading="eager" decoding="async" />
+58:           <strong class="sr-only">{expanded ? 'Покажи по-малко' : 'Всички типове'}</strong>
+59:         </button>
+60:       </div>
+61:     </div>
+62:   </div>
+63: </section>
+64: 
+
+## src/lib/components/home/BrandSection.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { brands } from '$data/home';
+4:   const mobileBrands = new Set(brands.filter(brand => brand.count > 0).slice(0, 3).map(brand => brand.label));
+5:   let expanded = $state(false);
+6: </script>
+7: 
+8: <section class="dn-brand-section" aria-labelledby="brand-title">
+9:   <div class="container dn-brand-shell">
+10:     <div class="dn-brand-hero">
+11:       <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+12:         <h2 id="brand-title" class="dn-home-section-title">
+13:           <span class="dn-heading-desktop">Изберете по марка</span>
+14:           <span class="dn-heading-mobile">По марка</span>
+15:         </h2>
+16:         <a class="dn-brand-hero__cta dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили"><span class="dn-heading-desktop">Вижте всички автомобили</span><span class="dn-heading-mobile" aria-hidden="true">Всички</span></a>
+17:       </div>
+18:     </div>
+19:     <div class="dn-brand-panel">
+20:       <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(brands.length, 6))} aria-label="Автомобили по марка">
+21:         {#each brands as brand (brand.label)}
+22:           <a class="dn-brand-card" class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
+23:             <span class="dn-brand-card__image">
+24:               <span class="dn-brand-card__frame" style:--logo-width={`${Math.min(84, 44 * (brand.bounds[2] - brand.bounds[0]) / (brand.bounds[3] - brand.bounds[1]))}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
+25:             </span>
+26:             <strong>{brand.label}</strong>
+27:           </a>
+28:         {/each}
+29:       <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}><span class="dn-brand-card__image" aria-hidden="true"><svg class:expanded width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span><strong>{expanded ? 'Покажи по-малко' : 'Всички марки'}</strong></button>
+30:       </div>
+31: 
+32:     </div>
+33:   </div>
+34: </section>
+35: 
+
+## src/lib/components/home/BrowseAllCard.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import Icon from '$components/ui/Icon.svelte';
+4:   let { href = '/listing-grid', label = 'Виж всички', detail = '', action = 'Виж всички', compact = false, image }: {
+5:     href?: '/listing-grid' | '/blog'; label?: string; detail?: string; action?: string; compact?: boolean; image?: string;
+6:   } = $props();
+7: </script>
+8: 
+9: <a class="dn-browse-all" class:compact href={resolve(href)}>
+10:   {#if image}<img src={image} alt="" width="180" height="90" loading="lazy" />
+11:   {:else}<span class="mark"><Icon name="arrow-right" size={compact ? 24 : 28} /></span>{/if}
+12:   <strong>{label}</strong>
+13:   {#if detail}<span class="detail">{detail}</span>{/if}
+14:   {#if !compact}<span class="action">{action}<Icon name="arrow-right" size={18} /></span>{/if}
+15: </a>
+16: 
+
+## src/lib/components/home/Editorial.svelte
+1: <script lang="ts">
+2:   import BrowseAllCard from './BrowseAllCard.svelte';
+3:   import { resolve } from '$app/paths';
+4:   import { editorial } from '$data/home';
+5: </script>
+6: 
+7: <section class="dn-editorial" aria-labelledby="editorial-title">
+8:   <div class="dn-editorial__banner">
+9:     <div class="container">
+10:       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
+11:         <h2 id="editorial-title" class="dn-home-section-title">
+12:           <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
+13:           <span class="dn-heading-mobile">Полезно</span>
+14:         </h2>
+15:         
+16:         <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
+17:       </div>
+18:     </div>
+19:   </div>
+20: 
+21:   <div class="container">
+22:     <div class="dn-editorial__cards">
+23:       <div class="dn-editorial__layout">
+24:         {#each editorial as item (item.title)}
+25:           <article class="dn-editorial-item">
+26:             <a class="dn-editorial-item__link" href={resolve(item.href as '/blog')} aria-label={item.title}>
+27:               <span class="dn-editorial-item__media">
+28:                 <img
+29:                   src={item.image}
+30:                   alt=""
+31:                   loading="lazy"
+32:                   decoding="async"
+33:                   width="720"
+34:                   height="440"
+35:                 />
+36:                 <span class="dn-editorial-item__badge">{item.meta}</span>
+37:               </span>
+38: 
+39:               <span class="dn-editorial-item__content">
+40:                 <span class="dn-editorial-item__meta" aria-label="Категория">
+41:                   <span>{item.category}</span>
+42:                 </span>
+43:                 <h3>{item.title}</h3>
+44:                 <span class="dn-editorial-item__summary">{item.text}</span>
+45:               </span>
+46:             </a>
+47:           </article>
+48:         {/each}
+49:         <BrowseAllCard href="/blog" label="Още полезно" detail="Съвети за избор, оглед и внос" action="Прочети всички" />
+50:       </div>
+51:     </div>
+52:   </div>
+53: </section>
+54: 
+
+## src/lib/components/home/Hero.svelte
+1: <script lang="ts">
+2:   import { brand } from '$config/brand';
+3:   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+4: </script>
+5: 
+6: <section class="dn-hero dn-route-hero" aria-labelledby="home-hero-title">
+7:   <HeroVehicles pair="home" mobile mobileLeft="gclass" mobileRight="urus" />
+8:   <div class="container dn-hero__inner dn-route-hero__layout">
+9:     <div class="dn-hero__copy dn-route-hero__copy">
+10:       <h1 id="home-hero-title">
+11:         <span class="dn-hero__title-desktop">Изберете своя автомобил</span>
+12:         <span class="dn-hero__title-mobile">Намери автомобил</span>
+13:       </h1>
+14:       <p class="dn-hero__location">{brand.city} · Студентски град · Оглед по уговорка</p>
+15:     </div>
+16:   </div>
+17: </section>
+18: 
+
+## src/lib/components/home/InventorySection.svelte
+1: <script lang="ts">
+2:   import BrowseAllCard from './BrowseAllCard.svelte';
+3:   import { resolve } from '$app/paths';
+4:   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
+5:   import { featuredVehicles } from '$data/inventory';
+6: </script>
+7: 
+8: <section class="dn-section dn-inventory" aria-labelledby="featured-title">
+9:   <div class="container dn-inventory-panel">
+10:     <div class="dn-inventory__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
+11:       <h2 id="featured-title" class="dn-home-section-title">
+12:         <span class="dn-heading-desktop">Избрани автомобили</span>
+13:         <span class="dn-heading-mobile">Избрани</span>
+14:       </h2>
+15:       <a class="dn-inventory__all dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
+16:         <span class="dn-heading-desktop">Вижте всички автомобили</span>
+17:         <span class="dn-heading-mobile" aria-hidden="true">Всички</span>
+18:       </a>
+19:     </div>
+20: 
+21:     <div class="dn-inventory__grid">
+22:       {#each featuredVehicles.slice(0, 4) as vehicle, index (vehicle.id)}
+23:         <VehicleCard {vehicle} showPrice priority={index < 4} />
+24:       {/each}
+25:       <BrowseAllCard label="Всички автомобили" detail="Разгледайте цялата колекция" />
+26:     </div>
+27:   </div>
+28: </section>
+29: 
+
+## src/lib/components/home/MobileBudget.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
+4:   import Icon from '$components/ui/Icon.svelte';
+5:   import { vehicleArtwork } from '$data/vehicle-artwork';
+6:   import { featuredVehicles } from '$data/inventory';
+7: 
+8:   const vehicleCount = (count: number) => `${count} ${count === 1 ? 'автомобил' : 'автомобила'}`;
+9: 
+10:   const budgetTiles = [
+11:     {
+12:       label: 'До 60 000 €',
+13:       detail: vehicleCount(featuredVehicles.filter((vehicle) => vehicle.priceEur <= 60000).length),
+14:       href: '/listing-grid?price_max=60000',
+15:       artwork: vehicleArtwork.graphite
+16:     },
+17:     {
+18:       label: '60–70 000 €',
+19:       detail: vehicleCount(featuredVehicles.filter((vehicle) => vehicle.priceEur > 60000 && vehicle.priceEur <= 70000).length),
+20:       href: '/listing-grid?price_min=60000&price_max=70000',
+21:       artwork: vehicleArtwork.silver
+22:     },
+23:     {
+24:       label: 'Над 70 000 €',
+25:       detail: vehicleCount(featuredVehicles.filter((vehicle) => vehicle.priceEur > 70000).length),
+26:       href: '/listing-grid?price_min=70000',
+27:       artwork: vehicleArtwork.urus
+28:     }
+29:   ] as const;
+30: </script>
+31: 
+32: <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">
+33:   <div class="dn-mobile-section-heading">
+34:     <h2 id="mobile-budget-title">По бюджет</h2>
+35:     <a href={resolve('/listing-grid')}>Виж всички</a>
+36: 
+37:   </div>
+38: 
+39:   <div class="dn-mobile-budget__grid">
+40:     {#each budgetTiles as tile (tile.href)}
+41:       <a class="dn-mobile-budget-card" href={resolve(tile.href)}>
+42:         <span class="dn-mobile-budget-card__media">
+43:           <ArtworkRegion artwork={{ ...tile.artwork, crop: [0, 100, 1000, 460] }} />
+44:         </span>
+45:         <span class="dn-mobile-budget-card__copy">
+46:           <strong>{tile.label}</strong>
+47:           <small>{tile.detail}</small>
+48:           <Icon name="arrow-right" size={18} />
+49:         </span>
+50:       </a>
+51:     {/each}
+52:   </div>
+53: </section>
+54: 
+
+## src/lib/components/home/SearchBox.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import Icon from '$components/ui/Icon.svelte';
+4:   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
+5:   import { parseListingFilters } from '$data/listing';
+6:   import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
+7:   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
+8:   import { resolveImportUrl } from '$data/company';
+9: 
+10:   let desktopFilters = $state(parseListingFilters(new URLSearchParams()));
+11:   let mode = $state<'buy' | 'import'>('buy');
+12:   let importUrl = $state('');
+13:   let importError = $state('');
+14:   let buyTab: HTMLButtonElement;
+15:   let importTab: HTMLButtonElement;
+16:   let importInput: HTMLInputElement;
+17: 
+18:   function handleModeKey(event: KeyboardEvent) {
+19:     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+20:     event.preventDefault();
+21:     mode = event.key === 'Home' ? 'buy' : event.key === 'End' ? 'import' : mode === 'buy' ? 'import' : 'buy';
+22:     (mode === 'buy' ? buyTab : importTab).focus();
+23:   }
+24: 
+25:   function validateImport(event: SubmitEvent) {
+26:     if (resolveImportUrl(importUrl)) return;
+27:     event.preventDefault();
+28:     importError = importUrl.trim() ? 'Поставете валиден линк с https:// или http://.' : 'Поставете линк към обявата, която сте избрали.';
+29:     importInput.focus();
+30:   }
+31: </script>
+32: 
+33: <section class="dn-search-wrap" aria-label="Търсене на автомобил">
+34:   <div class="container">
+35:     <div class="dn-search">
+36:       <div class="dn-search__mobile-modes" role="tablist" aria-label="Основна цел">
+37:         <button
+38:           bind:this={buyTab}
+39:           id="home-buy-tab"
+40:           type="button"
+41:           role="tab"
+42:           aria-selected={mode === 'buy'}
+43:           aria-controls="home-buy-search"
+44:           tabindex={mode === 'buy' ? 0 : -1}
+45:           onclick={() => mode = 'buy'}
+46:           onkeydown={handleModeKey}
+47:         >Купи</button>
+48:         <button
+49:           bind:this={importTab}
+50:           id="home-import-tab"
+51:           type="button"
+52:           role="tab"
+53:           aria-selected={mode === 'import'}
+54:           aria-controls="home-import-search"
+55:           tabindex={mode === 'import' ? 0 : -1}
+56:           onclick={() => mode = 'import'}
+57:           onkeydown={handleModeKey}
+58:         >Внос</button>
+59:       </div>
+60:       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
+61:         <VehicleQuickSearch />
+62:         <a class="dn-search__mobile-all" href={resolve('/listing-grid')}>
+63:           <span>Виж всички</span>
+64:           <Icon name="arrow-right" size={17} strokeWidth={2} />
+65:         </a>
+66:       </div>
+67:       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
+68:         <form class="dn-search__import-form" method="GET" action={resolve('/contact#contact-intent')} novalidate onsubmit={validateImport}>
+69:           <input type="hidden" name="topic" value="import" />
+70:           <label class="dn-search__import-field">
+71:             <Icon name="globe" size={20} strokeWidth={1.8} />
+72:             <span class="dn-sr-only">Линк към обява за внос</span>
+73:             <input
+74:               bind:this={importInput}
+75:               bind:value={importUrl}
+76:               type="url"
+77:               inputmode="url"
+78:               name="vehicle_url"
+79:               placeholder="Поставете линк към обява"
+80:               maxlength={2048}
+81:               required
+82:               autocomplete="off"
+83:               autocapitalize="none"
+84:               spellcheck={false}
+85:               aria-describedby={importError ? 'home-import-error' : undefined}
+86:               aria-invalid={importError ? true : undefined}
+87:               oninput={() => importError = ''}
+88:             />
+89:           </label>
+90:           {#if importError}
+91:             <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
+92:           {/if}
+93:           <button class="dn-search__mobile-all" type="submit">Продължи към контакт <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
+94:         </form>
+95:       </div>
+96:       <div class="dn-search__desktop-form">
+97:         <VehicleSearchDialog filters={desktopFilters}>
+98:           {#snippet children(openFilters, filtersOpen)}
+99:             <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} />
+100:           {/snippet}
+101:         </VehicleSearchDialog>
+102:       </div>
+103:     </div>
+104: 
+105:   </div>
+106:   <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
+107:     <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
+108:     <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
+109:     <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
+110:     <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
+111:     <a href={resolve('/listing-grid?make=BMW')}>BMW</a>
+112:   </nav>
+113: </section>
+114: 
+
+## src/lib/components/home/TrustActions.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import Icon from '$components/ui/Icon.svelte';
+4:   import VehicleCutout from '$components/ui/VehicleCutout.svelte';
+5:   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
+6:   import { serviceArtwork } from '$data/service-artwork';
+7:   import { featureArtwork } from '$data/feature-artwork';
+8:   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
+9:   let { group, variant = 'banners' }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards' } = $props();
+10: 
+11:   const actions = [
+12:     {
+13:       title: 'Вижте колекцията',
+14:       artwork: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
+15:       vehicle: 'urus',
+16:       tone: 'black',
+17:       mobileTitle: 'Автомобили',
+18:       mobileCta: 'Разгледай',
+19:       description: 'Разгледайте автомобилите с удобни филтри.',
+20:       bannerDescription: ['Изберете автомобил', 'с удобни филтри.'],
+21:       cta: 'Към автомобилите',
+22:       href: '/listing-grid',
+23:       icon: 'car'
+24:     },
+25:     {
+26:       title: 'Продажба или бартер',
+27:       artwork: { src: '/assets/images/lead/day-night-sell-banner-v2.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
+28:       vehicle: 'gclass',
+29:       tone: 'red',
+30:       mobileTitle: 'Продай/Бартер',
+31:       mobileCta: 'Заяви оценка',
+32:       description: 'Получете оценка за продажба или бартер.',
+33:       bannerDescription: ['Получете оценка', 'за продажба или бартер.'],
+34:       cta: 'Поискайте оценка',
+35:       href: '/contact?topic=trade-in',
+36:       icon: 'value'
+37:     },
+38:     {
+39:       title: 'Внос по заявка',
+40:       vehicle: 'gclass',
+41:       tone: 'red',
+42:       mobileTitle: 'Внос по заявка',
+43:       mobileCta: 'Заяви внос',
+44:       description: 'Споделете модел и бюджет за внос по заявка.',
+45:       bannerDescription: ['Споделете своя бюджет', 'и модел за внос.'],
+46:       cta: 'Заявете внос',
+47:       href: '/contact?topic=import',
+48:       icon: 'contact'
+49:     },
+50:     {
+51:       title: 'Собствен лизинг',
+52:       vehicle: 'urus',
+53:       tone: 'black',
+54:       mobileTitle: 'Лизинг',
+55:       mobileCta: 'Виж условия',
+56:       description: 'Попитайте за първоначална вноска, срок и условия.',
+57:       bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],
+58:       cta: 'Поискайте условия',
+59:       href: '/contact?topic=leasing',
+60:       icon: 'finance'
+61:     }
+62:   ] as const;
+63:   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
+64: </script>
+65: 
+66: <section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}>
+67:   <div class="container">
+68:     <div class="dn-trust-actions__panel">
+69:       {#if variant === 'cards'}
+70:         <div class="dn-services-heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
+71:           <h2 class="dn-home-section-title">Как можем да помогнем</h2>
+72:           
+73:           <a class="dn-home-section-action" href={resolve('/contact')}>Свържете се с нас</a>
+74:         </div>
+75:       {/if}
+76:       <div class="dn-trust-actions__grid" aria-label="Следващи стъпки">
+77:         {#each visibleActions as action (action.href)}
+78:           <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--ownership={variant === 'banners' && group === 'ownership'} class:dn-trust-card--illustrated={variant === 'banners' && group === 'browse'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners' && 'artwork' in action}>
+79:             {#if variant === 'banners'}
+80:               {#if 'artwork' in action}
+81:                 {@const art = action.artwork}
+82:                 {@const bodyHeight = art.bounds[3] - art.bounds[1]}
+83:                 <div class="dn-trust-card__vehicle dn-trust-card__vehicle--campaign"
+84:                   style:--art-width={art.width / bodyHeight}
+85:                   style:--art-height={art.height / bodyHeight}
+86:                   style:--art-bottom={art.bounds[3] / bodyHeight}
+87:                   style:--art-right={(art.width - art.bounds[2]) / bodyHeight}>
+88:                   <img class="dn-trust-card__lineup" data-view={art.view} src={art.src} alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
+89:                 </div>
+90:               {:else}
+91:                 <div class="dn-trust-card__vehicle"><VehicleCutout vehicle={action.vehicle} framing="banner" /></div>
+92:               {/if}
+93:             {/if}
+94:             {#if variant === 'banners' && group === 'browse'}
+95:               <div class="dn-trust-card__mobile-art" aria-hidden="true">
+96:                 <ArtworkRegion artwork={serviceArtwork[action.icon]} />
+97:               </div>
+98:             {/if}
+99:             {#if variant === 'banners' && group === 'ownership'}
+100:               <div class="dn-trust-card__ownership-art" aria-hidden="true"><ArtworkRegion artwork={action.icon === 'contact' ? featureArtwork.import : featureArtwork.finance} /></div>
+101:             {/if}
+102:             {#if variant === 'cards'}
+103:               {@const art = serviceArtwork[action.icon]}
+104:               <div class="dn-service-card__art" aria-hidden="true" style:--service-art-width={`${art.crop[2] / art.crop[3] * 88}px`}><ArtworkRegion artwork={art} /></div>
+105:             {/if}
+106:             <div class="dn-trust-card__icon" aria-hidden="true">
+107:               <OriginalActionIcon name={action.icon} />
+108:             </div>
+109: 
+110:             <div class="dn-trust-card__content">
+111:               <h3 id={`trust-${variant}-${action.icon}`}>
+112:                 {#if variant === 'banners'}
+113:                   <a class="desktop-copy" href={resolve(action.href)}>{action.title}</a><span class="mobile-copy">{action.mobileTitle}</span>
+114:                 {:else}
+115:                   <a href={resolve(action.href)}><span class="desktop-copy">{action.title}</span><span class="mobile-copy">{action.icon === 'finance' ? 'Лизинг' : action.icon === 'contact' ? 'Внос' : action.icon === 'value' ? 'Продай кола' : action.mobileTitle}</span></a>
+116:                 {/if}
+117:               </h3>
+118:               <p>{#if variant === 'banners'}{#each action.bannerDescription as line (line)}<span class="dn-trust-card__description-line">{`${line} `}</span>{/each}{:else}{action.description}{/if}</p>
+119:               <a class="dn-trust-card__action" href={resolve(action.href)} aria-labelledby={`trust-${variant}-${action.icon} trust-action-${variant}-${action.icon}`}>
+120:                 <span id={`trust-action-${variant}-${action.icon}`}><span class="desktop-copy">{action.cta}</span><span class="mobile-copy">{variant === 'cards' && action.icon === 'value' ? 'Оценка' : variant === 'cards' && action.icon === 'finance' ? 'Условия' : action.mobileCta}</span></span>
+121:                 <Icon name="arrow-right" size={16} strokeWidth={1.8} />
+122:               </a>
+123:             </div>
+124:           </article>
+125:         {/each}
+126:       </div>
+127:     </div>
+128:   </div>
+129: </section>
+130: 
+
+## src/lib/components/home/VehicleQuickSearch.svelte
+1: <script lang="ts">
+2:   import Icon from '$components/ui/Icon.svelte';
+3:   import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
+4:   import { resolve } from '$app/paths';
+5:   import { featuredVehicles } from '$data/inventory';
+6:   import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake } from '$data/listing';
+7:   import type { Attachment } from 'svelte/attachments';
+8: 
+9: 
+10:   type MobileFilterView = 'main' | 'make' | 'model' | 'body' | 'price' | 'fuel' | 'mileage' | 'year';
+11:   type MobileFilterOption = { value: string; label: string };
+12: 
+13:   let dialog = $state<HTMLDialogElement>();
+14:   let trigger = $state<HTMLButtonElement>();
+15:   let searchInput = $state<HTMLInputElement>();
+16:   let query = $state('');
+17:   let make = $state('');
+18:   let model = $state('');
+19:   let body = $state('');
+20:   let priceMax = $state('');
+21:   let fuel = $state('');
+22:   let mileageMax = $state('');
+23:   let yearMin = $state('');
+24:   let searchOpen = $state(false);
+25:   let mobileView = $state<MobileFilterView>('main');
+26:   let modelOptions = $derived(listingModelsForMake(make));
+27:   let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, {
+28:     q: query,
+29:     make,
+30:     model,
+31:     body,
+32:     fuel,
+33:     transmission: '',
+34:     version: '',
+35:     equipment: [],
+36:     condition: '',
+37:     yearMin: yearMin ? Number(yearMin) : null,
+38:     yearMax: null,
+39:     priceMin: null,
+40:     priceMax: priceMax ? Number(priceMax) : null,
+41:     mileageMax: mileageMax ? Number(mileageMax) : null,
+42:     sort: 'default'
+43:   }));
+44:   let hasFilters = $derived(Boolean(query || make || model || body || priceMax || fuel || mileageMax || yearMin));
+45:   const formatNumber = (value: string) => new Intl.NumberFormat('bg-BG').format(Number(value));
+46:   let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
+47:   let mobileMenuTitle = $derived.by(() => {
+48:     if (mobileView === 'make') return 'Марка';
+49:     if (mobileView === 'model') return make || 'Модел';
+50:     if (mobileView === 'body') return 'Купе';
+51:     if (mobileView === 'price') return 'Бюджет';
+52:     if (mobileView === 'fuel') return 'Гориво';
+53:     if (mobileView === 'mileage') return 'Пробег';
+54:     if (mobileView === 'year') return 'Година';
+55:     return 'Филтри';
+56:   });
+57:   let mobileMenuValue = $derived.by(() => {
+58:     if (mobileView === 'make') return make;
+59:     if (mobileView === 'model') return model;
+60:     if (mobileView === 'body') return body;
+61:     if (mobileView === 'price') return priceMax;
+62:     if (mobileView === 'fuel') return fuel;
+63:     if (mobileView === 'mileage') return mileageMax;
+64:     if (mobileView === 'year') return yearMin;
+65:     return '';
+66:   });
+67:   let mobileMenuOptions = $derived.by<MobileFilterOption[]>(() => {
+68:     if (mobileView === 'make') return listingFilterOptions.makes.map((value) => ({ value, label: value || 'Всички марки' }));
+69:     if (mobileView === 'model') return modelOptions.map((value) => ({ value, label: value || 'Всички модели' }));
+70:     if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: bodyLabel(value) || 'Всички купета' }));
+71:     if (mobileView === 'price') return listingFilterOptions.prices.map((value) => ({ value, label: value ? `До ${formatNumber(value)} €` : 'Всеки бюджет' }));
+72:     if (mobileView === 'fuel') return listingFilterOptions.fuels.map((value) => ({ value, label: value || 'Всяко гориво' }));
+73:     if (mobileView === 'mileage') return listingFilterOptions.mileages.map((value) => ({ value, label: value ? `До ${formatNumber(value)} км` : 'Всеки пробег' }));
+74:     if (mobileView === 'year') return listingFilterOptions.years.map((value) => ({ value, label: value ? `От ${value}` : 'Всяка година' }));
+75:     return [];
+76:   });
+77:   const attachDialog: Attachment<HTMLDialogElement> = (node) => {
+78:     dialog = node;
+79:     return () => {
+80:       if (dialog === node) dialog = undefined;
+81:     };
+82:   };
+83: 
+84:   const attachTrigger: Attachment<HTMLButtonElement> = (node) => {
+85:     trigger = node;
+86:     return () => {
+87:       if (trigger === node) trigger = undefined;
+88:     };
+89:   };
+90: 
+91:   const attachSearchInput: Attachment<HTMLInputElement> = (node) => {
+92:     searchInput = node;
+93:     return () => {
+94:       if (searchInput === node) searchInput = undefined;
+95:     };
+96:   };
+97: 
+98:   const openSearch = () => {
+99:     searchOpen = true;
+100:     mobileView = 'main';
+101:     dialog?.showModal();
+102:     if (window.matchMedia('(min-width: 768px)').matches) requestAnimationFrame(() => searchInput?.focus());
+103:   };
+104: 
+105:   const closeSearch = () => {
+106:     if (dialog?.open) dialog.close();
+107:   };
+108: 
+109:   const resetSearch = () => {
+110:     query = '';
+111:     make = '';
+112:     model = '';
+113:     body = '';
+114:     priceMax = '';
+115:     fuel = '';
+116:     mileageMax = '';
+117:     yearMin = '';
+118:     mobileView = 'main';
+119:   };
+120: 
+121:   const openMobileMenu = (view: Exclude<MobileFilterView, 'main'>) => {
+122:     mobileView = view;
+123:   };
+124: 
+125:   const returnToMobileOverview = () => {
+126:     mobileView = mobileView === 'model' ? 'make' : 'main';
+127:   };
+128: 
+129:   const selectMobileOption = (value: string) => {
+130:     if (mobileView === 'make') {
+131:       make = value;
+132:       model = '';
+133:       mobileView = value ? 'model' : 'main';
+134:       return;
+135:     }
+136:     if (mobileView === 'model') model = value;
+137:     if (mobileView === 'body') body = value;
+138:     if (mobileView === 'price') priceMax = value;
+139:     if (mobileView === 'fuel') fuel = value;
+140:     if (mobileView === 'mileage') mileageMax = value;
+141:     if (mobileView === 'year') yearMin = value;
+142:     mobileView = 'main';
+143:   };
+144: 
+145:   const handleDialogClick = (event: MouseEvent) => {
+146:     if (event.target === event.currentTarget) closeSearch();
+147:   };
+148: 
+149:   const handleCancel = (event: Event) => {
+150:     event.preventDefault();
+151:     if (mobileView === 'main') closeSearch();
+152:     else returnToMobileOverview();
+153:   };
+154: 
+155:   const handleKeydown = (event: KeyboardEvent) => {
+156:     if (event.key === 'Escape') {
+157:       event.preventDefault();
+158:       if (mobileView === 'main') closeSearch();
+159:       else returnToMobileOverview();
+160:     }
+161:   };
+162: 
+163:   const restoreTriggerFocus = () => {
+164:     searchOpen = false;
+165:     mobileView = 'main';
+166:     trigger?.focus();
+167:   };
+168: 
+169:   const cleanFormData = (event: FormDataEvent) => {
+170:     for (const key of new Set(event.formData.keys())) {
+171:       const values = event.formData.getAll(key);
+172:       if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
+173:     }
+174:   };
+175: </script>
+176: 
+177: <button
+178:   class="dn-quick-search__trigger"
+179:   type="button"
+180:   {@attach attachTrigger}
+181:   aria-haspopup="dialog"
+182:   aria-controls="dn-quick-search-dialog"
+183:   aria-expanded={searchOpen}
+184:   aria-label="Търсете марка, модел или ключова дума"
+185:   onclick={openSearch}
+186: >
+187:   <MobileNavIcon name="search" size={20} />
+188:   <span class="dn-quick-search__label-full">Търсете марка, модел или ключова дума</span>
+189:   <span class="dn-quick-search__label-mobile" aria-hidden="true">Марка или модел</span>
+190:   <span class="dn-quick-search__hint" aria-hidden="true">Бързо търсене</span>
+191:   <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileNavIcon name="filters" size={20} /></span>
+192: </button>
+193: 
+194: <dialog
+195:   class="dn-quick-search__dialog"
+196:   id="dn-quick-search-dialog"
+197:   {@attach attachDialog}
+198:   aria-labelledby="quick-search-title"
+199:   onclick={handleDialogClick}
+200:   oncancel={handleCancel}
+201:   onclose={restoreTriggerFocus}
+202: >
+203:   <div class="dn-quick-search__panel">
+204:     <header class="dn-quick-search__header">
+205:       {#if mobileView === 'main'}
+206:         <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>Нулирай</button>
+207:       {:else}
+208:         <button
+209:           class="dn-quick-search__back"
+210:           type="button"
+211:           aria-label={mobileView === 'model' ? 'Назад към марките' : 'Назад към филтрите'}
+212:           onclick={returnToMobileOverview}
+213:         >
+214:           <Icon name="arrow-left" size={21} strokeWidth={1.8} />
+215:         </button>
+216:       {/if}
+217:       <h2 id="quick-search-title">
+218:         <span class="dn-quick-search__title-desktop">Търсене на автомобил</span>
+219:         <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
+220:       </h2>
+221:       <button class="dn-quick-search__close" type="button" aria-label="Затворете търсенето" onclick={closeSearch}>
+222:         <Icon name="x" size={22} strokeWidth={1.8} />
+223:       </button>
+224:     </header>
+225: 
+226:     <form
+227:       class={['dn-quick-search__form', { 'dn-quick-search__form--mobile-hidden': mobileView !== 'main' }]}
+228:       method="GET"
+229:       action={resolve('/listing-grid')}
+230:       onsubmit={closeSearch}
+231:       onformdata={cleanFormData}
+232:     >
+233:       <label class="dn-sr-only" for="quick-search-input">Марка, модел или ключова дума</label>
+234:       <div class="dn-quick-search__input-wrap">
+235:         <Icon name="search" size={21} strokeWidth={1.8} />
+236:         <input
+237:           id="quick-search-input"
+238:           {@attach attachSearchInput}
+239:           bind:value={query}
+240:           type="search"
+241:           name="q"
+242:           placeholder="Например Audi, BMW или SUV"
+243:           autocomplete="off"
+244:           aria-describedby="quick-search-status"
+245:           onkeydown={handleKeydown}
+246:         />
+247:       </div>
+248:       {#if make}<input type="hidden" name="make" value={make} />{/if}
+249:       {#if model}<input type="hidden" name="model" value={model} />{/if}
+250:       {#if body}<input type="hidden" name="body" value={body} />{/if}
+251:       {#if priceMax}<input type="hidden" name="price_max" value={priceMax} />{/if}
+252:       {#if fuel}<input type="hidden" name="fuel" value={fuel} />{/if}
+253:       {#if mileageMax}<input type="hidden" name="mileage_max" value={mileageMax} />{/if}
+254:       {#if yearMin}<input type="hidden" name="year_min" value={yearMin} />{/if}
+255:     </form>
+256: 
+257:     <form class="dn-quick-search__mobile-filters" method="GET" action={resolve('/listing-grid')} onsubmit={closeSearch} onformdata={cleanFormData}>
+258:       {#if query.trim()}<input type="hidden" name="q" value={query.trim()} />{/if}
+259:       {#if make}<input type="hidden" name="make" value={make} />{/if}
+260:       {#if model}<input type="hidden" name="model" value={model} />{/if}
+261:       {#if body}<input type="hidden" name="body" value={body} />{/if}
+262:       {#if priceMax}<input type="hidden" name="price_max" value={priceMax} />{/if}
+263:       {#if fuel}<input type="hidden" name="fuel" value={fuel} />{/if}
+264:       {#if mileageMax}<input type="hidden" name="mileage_max" value={mileageMax} />{/if}
+265:       {#if yearMin}<input type="hidden" name="year_min" value={yearMin} />{/if}
+266: 
+267:       {#if mobileView === 'main'}
+268:         <div class="dn-quick-search__filter-rows">
+269:           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('make')}>
+270:             <strong>Марка и модел</strong>
+271:             <span>{makeModelSummary}</span>
+272:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+273:           </button>
+274: 
+275:           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
+276:             <strong>Купе</strong>
+277:             <span>{bodyLabel(body) || 'Всички купета'}</span>
+278:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+279:           </button>
+280: 
+281:           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
+282:             <strong>Бюджет</strong>
+283:             <span>{priceMax ? `До ${formatNumber(priceMax)} €` : 'Всеки бюджет'}</span>
+284:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+285:           </button>
+286: 
+287:           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('fuel')}>
+288:             <strong>Гориво</strong>
+289:             <span>{fuel || 'Всяко гориво'}</span>
+290:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+291:           </button>
+292: 
+293:           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
+294:             <strong>Пробег</strong>
+295:             <span>{mileageMax ? `До ${formatNumber(mileageMax)} км` : 'Всеки пробег'}</span>
+296:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+297:           </button>
+298: 
+299:           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('year')}>
+300:             <strong>Година</strong>
+301:             <span>{yearMin ? `От ${yearMin}` : 'Всяка година'}</span>
+302:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+303:           </button>
+304:         </div>
+305:       {:else}
+306:         <div class="dn-quick-search__option-menu" aria-label={mobileMenuTitle}>
+307:           <div class="dn-quick-search__option-grid">
+308:             {#each mobileMenuOptions as option (option.value)}
+309:               <button
+310:                 class={['dn-quick-search__option', { 'dn-quick-search__option--selected': mobileMenuValue === option.value }]}
+311:                 type="button"
+312:                 aria-pressed={mobileMenuValue === option.value}
+313:                 onclick={() => selectMobileOption(option.value)}
+314:               >
+315:                 {option.label}
+316:               </button>
+317:             {/each}
+318:           </div>
+319:         </div>
+320:       {/if}
+321: 
+322:       <footer class="dn-quick-search__mobile-footer">
+323:         <button type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
+324:           {filteredVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${filteredVehicles.length} автомобила`}
+325:         </button>
+326:       </footer>
+327:     </form>
+328: 
+329:     <span class="dn-sr-only" id="quick-search-status" role="status" aria-live="polite">
+330:       {query.trim()
+331:         ? filteredVehicles.length === 1
+332:           ? '1 съвпадение'
+333:           : `${filteredVehicles.length} съвпадения`
+334:         : 'Въведете марка, модел или ключова дума.'}
+335:     </span>
+336: 
+337:   </div>
+338: </dialog>
+339: 
+
+## src/lib/components/home/VideoSection.svelte
+1: <script lang="ts">
+2:   import { tick } from 'svelte';
+3:   import { brand } from '$config/brand';
+4:   import { featuredVideos } from '$data/videos';
+5:   import Icon from '$components/ui/Icon.svelte';
+6:   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
+7: 
+8:   let activeVideo = $state<string | null>(null);
+9:   let playTrigger: HTMLButtonElement | undefined;
+10: 
+11:   function play(id: string, event: MouseEvent) {
+12:     playTrigger = event.currentTarget as HTMLButtonElement;
+13:     activeVideo = id;
+14:   }
+15: 
+16:   async function stop() {
+17:     const trigger = playTrigger;
+18:     activeVideo = null;
+19:     await tick();
+20:     trigger?.focus();
+21:   }
+22: </script>
+23: 
+24: <section class="dn-videos" aria-labelledby="videos-title">
+25:   <div class="container">
+26:       <div class="dn-videos__heading dn-home-section-heading dn-home-section-heading--banner dn-home-banner-frame dn-home-banner-copy">
+27:         <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледай ни в</span><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>YouTube</span></h2>
+28:         
+29:         <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+30:           <span class="dn-videos__channel-label">Към канала</span>
+31:           <Icon name="arrow-right" size={16} />
+32:           <span class="dn-sr-only"> в YouTube (нов раздел)</span>
+33:         </a>
+34:       </div>
+35: 
+36:     <div class="dn-videos__panel">
+37:       <div class="dn-videos__grid">
+38:         {#each featuredVideos as video (video.id)}
+39:           <article class="dn-video-card">
+40:             <div class="dn-video-card__media">
+41:               <button
+42:                 class="dn-video-card__play"
+43:                 type="button"
+44:                 hidden={activeVideo === video.id}
+45:                 aria-label={`Пуснете видеото: ${video.title}`}
+46:                 onclick={(event) => play(video.id, event)}
+47:               >
+48:                 <img src={video.thumbnail} alt="" width="720" height="404" loading="lazy" decoding="async" />
+49:                 <span class="dn-video-card__title" aria-hidden="true"><span>{video.title}</span></span>
+50:                 <span class="dn-video-card__play-icon" aria-hidden="true">
+51:                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+52:                 </span>
+53:                 <span class="dn-video-card__duration">{video.duration}</span>
+54:               </button>
+55:               {#if activeVideo === video.id}
+56:                 <iframe
+57:                   src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1`}
+58:                   title={video.title}
+59:                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+60:                   allowfullscreen
+61:                   referrerpolicy="strict-origin-when-cross-origin"
+62:                   {@attach (element) => { element.focus(); }}
+63:                 ></iframe>
+64:                 <button class="dn-video-card__close" type="button" onclick={stop} aria-label={`Затворете видеото: ${video.title}`}><Icon name="x" size={20} /></button>
+65:               {/if}
+66:             </div>
+67:             <h3 class="dn-sr-only">{video.title}</h3>
+68:           </article>
+69:         {/each}
+70:         <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+71:           <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={32} /></span>
+72:           <strong>Всички видеа</strong>
+73:           <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
+74:           <span class="dn-sr-only">Отваря се в нов раздел</span>
+75:         </a>
+76:       </div>
+77:     </div>
+78:   </div>
+79: </section>
+80: 

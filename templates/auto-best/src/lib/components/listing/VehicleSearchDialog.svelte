@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { preserveScrollOffset } from '$lib/ui/overlay';
+  import { cleanFilterFormData as cleanFormData } from '$lib/ui/forms';
+  import { filtersFromDraft, invalidRange } from '$data/filter-fields';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
   import { onDestroy } from 'svelte';
   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
   onDestroy(() => releaseOffset?.(false));
@@ -24,13 +26,14 @@
   let draftYearMin = $state('');
   let draftYearMax = $state('');
   let draftPriceMin = $state('');
+  let exclusiveMinimum = $state<string | null>(null);
   let draftPriceMax = $state('');
   let draftMileageMax = $state('');
   let draftModelOptions = $derived(listingModelsForMake(draftMake));
-  let hasInvalidPriceRange = $derived(Boolean(draftPriceMin && draftPriceMax && Number(draftPriceMin) > Number(draftPriceMax)));
-  let hasInvalidYearRange = $derived(Boolean(draftYearMin && draftYearMax && Number(draftYearMin) > Number(draftYearMax)));
+  let hasInvalidPriceRange = $derived(invalidRange(draftPriceMin, draftPriceMax));
+  let hasInvalidYearRange = $derived(invalidRange(draftYearMin, draftYearMax));
   let hasInvalidRange = $derived(hasInvalidPriceRange || hasInvalidYearRange);
-  let draftFilters = $derived<ListingFilters>({
+  let draftFilters = $derived(filtersFromDraft({
     q: draftQuery,
     make: draftMake,
     model: draftModel,
@@ -40,13 +43,14 @@
     transmission: draftTransmission,
     version: draftVersion,
     equipment: draftEquipment,
-    yearMin: draftYearMin ? Number(draftYearMin) : null,
-    yearMax: draftYearMax ? Number(draftYearMax) : null,
-    priceMin: draftPriceMin ? Number(draftPriceMin) : null,
-    priceMax: draftPriceMax ? Number(draftPriceMax) : null,
-    mileageMax: draftMileageMax ? Number(draftMileageMax) : null,
+    yearMin: draftYearMin,
+    yearMax: draftYearMax,
+    priceMin: draftPriceMin,
+    priceMax: draftPriceMax,
+    mileageMax: draftMileageMax,
+    priceMinExclusive: exclusiveMinimum !== null && exclusiveMinimum === draftPriceMin,
     sort: filters.sort
-  });
+  }));
   let matchingVehicles = $derived(filterListingVehicles(listingVehicles, draftFilters));
   let hasLiveFilters = $derived(Boolean(
     draftQuery || draftMake || draftModel || draftBody || draftCondition || draftFuel || draftTransmission ||
@@ -84,6 +88,7 @@
     draftYearMin = current.yearMin !== null ? String(current.yearMin) : '';
     draftYearMax = current.yearMax !== null ? String(current.yearMax) : '';
     draftPriceMin = current.priceMin !== null ? String(current.priceMin) : '';
+    exclusiveMinimum = current.priceMinExclusive ? draftPriceMin : null;
     draftPriceMax = current.priceMax !== null ? String(current.priceMax) : '';
     draftMileageMax = current.mileageMax !== null ? String(current.mileageMax) : '';
   };
@@ -116,6 +121,7 @@
     draftYearMin = '';
     draftYearMax = '';
     draftPriceMin = '';
+    exclusiveMinimum = null;
     draftPriceMax = '';
     draftMileageMax = '';
   };
@@ -167,12 +173,7 @@
     if (returnFocus?.isConnected) returnFocus.focus();
   };
 
-  const cleanFormData = (event: FormDataEvent) => {
-    for (const key of new Set(event.formData.keys())) {
-      const values = event.formData.getAll(key);
-      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
-    }
-  };
+
 </script>
 
 {@render children(openFilters, filtersOpen)}
@@ -187,6 +188,7 @@
   onclick={handleDialogClick}
   oncancel={handleCancel}
   onclose={restorePage}
+  onkeydown={trapDialogTab}
 >
   <form
     class="dn-listing-filter__dialog-panel"
@@ -353,6 +355,7 @@
         <span>{matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}</span>
         <Icon name="search" size={18} />
       </button>
+      {#if draftFilters.priceMinExclusive}<input type="hidden" name="price_min_exclusive" value="1" />{/if}
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
     </footer>
   </form>

@@ -74,7 +74,8 @@
 	}
 	.mobile-promo__copy {
 		display: grid;
-		justify-items: start;
+		justify-items: center;
+		text-align: center;
 		gap: 8px;
 		width: 68%;
 		position: relative;
@@ -82,16 +83,18 @@
 	}
 	.mobile-promo strong {
 		color: var(--promo-ink);
-		font-size: 20px;
+		font-size: 22px;
 		font-weight: 700;
-		line-height: 1.15;
+		line-height: 1.2;
+		white-space: pre-line;
 		letter-spacing: -0.02em;
 	}
 	.mobile-promo__description {
 		color: var(--promo-ink);
-		font-size: 13px;
-		font-weight: 500;
-		line-height: 1.45;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.5;
+		white-space: pre-line;
 	}
 	.mobile-promo__cta {
 		display: inline-flex;
@@ -105,7 +108,7 @@
 		border-radius: 8px;
 		background: var(--promo-action);
 		color: var(--promo-action-ink);
-		font-size: 13px;
+		font-size: 14px;
 		font-weight: 600;
 		line-height: 1.3;
 	}

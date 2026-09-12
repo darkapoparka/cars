@@ -1,0 +1,2189 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-12T18:15:35.455Z",
+  "repository": "darkapoparka/cars-promosalevarna",
+  "remoteCommit": "61552221b9f791fc57a40602643ae3d3915d3da1",
+  "candidateDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7",
+  "sourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+  "counts": {
+    "normalizedOnly": 270,
+    "removedFromPayload": 105,
+    "semantic": 59
+  },
+  "preservedPublishingFixes": [
+    "61552221b9f791fc57a40602643ae3d3915d3da1",
+    "1af26e4bce746e84b17608bd01290a7d67f10484"
+  ],
+  "changes": [
+    {
+      "path": ".cars-package.json",
+      "resolution": "packaging-layer",
+      "reason": "Deterministic source commit, manifest, packaging version and SHA256 payload receipt."
+    },
+    {
+      "path": ".gitignore",
+      "resolution": "packaging-layer",
+      "reason": "Preserve credential/deployment exclusions and include nested generated build/cache exclusions; sanitized env examples remain source."
+    },
+    {
+      "path": "AGENTS.md",
+      "resolution": "canonical-source",
+      "reason": "Portable canonical-dealer ownership and all variant commands, linked to the implemented immutable Cars workflow."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-about.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-about.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-blog.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-blog.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-contact.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-contact.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-detail.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-detail.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-home.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-home.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-inventory.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-inventory.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-sell.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-sell.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-service.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/1440-service.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-about.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-about.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-blog.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-blog.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-contact.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-contact.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-detail.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-detail.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-home.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-home.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-inventory.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-inventory.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-sell.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-sell.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-service.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/390-service.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.client/evidence/browser/results.json",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/.template/source-manifest.json",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "auto-best/AGENTS.md",
+      "resolution": "canonical-source",
+      "reason": "Replace the old three-line master wrapper with the portable package-root dealer instructions covering all variants and exact Cars workflow revision."
+    },
+    {
+      "path": "auto-best/ASSET_PROVENANCE.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/docs/architecture/.migration-marker",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/package-lock.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/package.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/provenance/mirror-manifest.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/provenance/phosphor-icons-LICENSE.txt",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/check-architecture.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/check-assets.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/desktop-discovery-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/enquiry-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/home-hierarchy-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/journey-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/mobile-filter-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/provenance/legacy-mirror-snapshot-check.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/scripts/sveltekit-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/app.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/app.html",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/hooks.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/AboutHero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/AboutPartners.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/AboutProcess.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/AboutServiceIcon.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/AboutTeam.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/ContactHero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/ContactIntent.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/ContactVehicle.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/ShowroomMap.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/SocialBrandIcon.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/TeamSocialIcon.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/company/VehicleEnquiry.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/editorial/ArticleSupport.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/editorial/BlogCard.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/editorial/BlogHero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/BodyTypes.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/BrandSection.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/BrowseAllCard.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/Editorial.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/Hero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/InventorySection.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/MobileBudget.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/SearchBox.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/TrustActions.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/VehicleQuickSearch.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/home/VideoSection.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/layout/Footer.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/layout/Header.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/layout/MobileMenu.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/layout/MobileNavIcon.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/layout/NavigationFeatureCard.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/layout/SiteShell.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/listing/ListingFilters.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/listing/ListingHero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/listing/ListingResults.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/listing/QuickFilterSheet.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/listing/VehicleSearchDialog.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/ActionLink.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/ArtworkRegion.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/FeatureArtwork.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/HeroVehicles.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/Icon.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/icons/OriginalActionIcon.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/RouteHeroArtwork.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/ui/VehicleCutout.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/vehicles/VehicleCard.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/config/brand.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/config/template.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/company.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/dealer-stock.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/dealer.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/demo-content.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/editorial.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/feature-artwork.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/home.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/inventory.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/journeys.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/listing.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/navigation.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/vehicle-artwork.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/data/videos.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/styles/base.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/styles/composition.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/styles/navigation.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/styles/tokens.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/lib/ui/overlay.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/+error.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/+layout.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/about-us/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/blog-detail/[id]/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/blog-detail/[id]/+page.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/blog/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/blog/+page.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/contact/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/contact/+page.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/contact/contact.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/listing-detail-v1/[id]/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/listing-detail-v1/[id]/+page.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/listing-detail-v1/[id]/detail.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/listing-grid/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/listing-grid/+page.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/listing-grid/listing.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/robots.txt/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/src/routes/sitemap.xml/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/static/preview-switcher.js",
+      "resolution": "packaging-layer",
+      "reason": "Versioned manifest-driven switcher preserves three-design navigation and adds portable labels/accent, safe text rendering, keyboard dismissal and focus return."
+    },
+    {
+      "path": "auto-best/svelte.config.js",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/TEMPLATE.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/tsconfig.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "auto-best/vite.config.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "business-facts.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-about.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-about.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-blog.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-blog.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-contact.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-contact.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-detail.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-detail.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-home.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-home.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-inventory.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-inventory.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-sell.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-sell.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-service.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/1440-service.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-about.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-about.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-blog.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-blog.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-contact.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-contact.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-detail.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-detail.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-home.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-home.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-inventory.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-inventory.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-sell.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-sell.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-service.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/390-service.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.client/evidence/browser/results.json",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/.gitignore",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/.template-ref/clients-reviews.html",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/.template-ref/sale-agents.html",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/.template/source-manifest.json",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "carwow/AGENTS.md",
+      "resolution": "canonical-source",
+      "reason": "Replace the old three-line master wrapper with the portable package-root dealer instructions covering all variants and exact Cars workflow revision."
+    },
+    {
+      "path": "carwow/DESIGN.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/docs/final-polish/AUDIT.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/docs/final-polish/PLAN.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/docs/final-polish/QA_AND_EXECUTION.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/docs/final-polish/README.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/docs/final-polish/UI_UX_PLAYBOOK.md",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/package-lock.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/package.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/scripts/desktop-audit-capture.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/scripts/desktop-prod-weight.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/scripts/home-runtime-smoke.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/scripts/mobile-prod-weight-all.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/scripts/visual-parity.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/app.html",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/hooks.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/about/DesktopAboutPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/about/DesktopDealerProfilePage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/about/MobileAboutPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/AdminShell.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/dashboard/DesktopDashboardHomeOverview.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/dashboard/DesktopDashboardMessages.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/dashboard/DesktopDashboardNewListing.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/dashboard/DesktopDashboardPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/dashboard/DesktopDashboardProfile.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/dashboard/template-dashboard-export.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/admin/PostForm.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/blog/BlogArticlePage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/calculator/CalculatorContent.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/chat/ChatThread.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/contact/DesktopContactPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/contact/MobileContactPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/desktop-detail-reviews-data.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailFeatureTabs.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailGallery.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailLocationMap.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailOverviewPanel.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailPaymentPanel.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailPrimarySection.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailRelatedVehicles.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailReviews.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailSidebar.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailTitleBar.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DetailPageShell.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/detail/mobile/MobileDetailPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/favorites/mobile/MobileFavoritesPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/financing/DesktopFinancingPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/financing/MobileFinancingPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeFooter.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeHero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeTrailingChrome.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/HomePageHead.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/mobile/mobile-home-data.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/mobile/MobileBottomDock.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/mobile/MobileHeader.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/home/mobile/MobileHome.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/desktop/InventoryEmptyState.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/desktop/InventoryMapPageShell.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/desktop/SortDropdown.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/desktop/VehicleGrid.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/mobile/MobileInventoryPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/mobile/MobileInventoryTop.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/Breadcrumbs.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/daynight-footer-data.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/DayNightFooter.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/DesktopDealerFooter.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/DesktopYellowRouteHero.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/RouteImageBehavior.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/RouteTemplateHeaderBehavior.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/site-navigation-data.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/SiteChromeContactList.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/SiteChromePrimaryRow.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/SiteChromeTopBar.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/SiteFooter.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/layout/SiteHeader.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/sell/MobileSellYourCarPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/seo/RouteSeo.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/services/DesktopServicesPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/services/MobileServicesPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/shared/CompareTray.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/shared/MobileHeroBar.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/components/team/DesktopTeamMemberPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/components/team/DesktopTeamPage.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/components/terms/TermsContent.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/agents.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-account.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-blog.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-faq.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-reviews.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-site.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-team.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-videos.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/dealer-stock.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/dealer.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/data/dealers.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/auth/auth.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/auth/guards.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/server/daynight-inventory-template.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/server/daynight-seo.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/daynight-template-chrome.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/server/daynight-template-content.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/server/daynight-template-renderer.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/lib/server/home-page-data.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/public-routes.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/rendered-template-page.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/repositories/admin-assistant.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/repositories/posts.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/server/seed/daynight-catalog-seed.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/state/garage.svelte.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/state/garage.test.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/styles/daynight-detail-desktop.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/styles/daynight-home-base.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/styles/daynight-home-desktop.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/styles/daynight-mobile.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/styles/storefront.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/styles/tokens.css",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/lib/utils/preview-paths.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/+error.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/+layout.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/about/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/about/dealer/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/admin/+layout.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/assistant/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/admin/assistant/chat/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/admin/conversations/[id]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/conversations/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/imports/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/leads/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/listings/[id]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/listings/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/listings/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/admin/listings/new/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/logout/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/posts/[id]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/posts/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/posts/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/admin/posts/new/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/admin/settings/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/blog/[slug]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/blog/[slug]/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/blog/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/calculator/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/compare/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/compare/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/contact/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/faq/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/faq/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/favorites/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/financing/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/home1/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/home2/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/home3/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/inventory/[slug]/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/inventory/map/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/presentation/home2/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/presentation/home2/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/presentation/home3/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/reviews/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/reviews/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/robots.txt/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/sell-your-car/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/sell-your-car/request/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/sell-your-car/request/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/services/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/team/[slug]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/team/[slug]/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/team/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/team/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/src/routes/terms/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "carwow/src/routes/terms/+page.svelte",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/icons/chevron-down-white.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/icons/eye-dark.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/icons/eye.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/images/brand/mobile/jaguar.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/images/brand/mobile/land-rover.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/images/brand/oem/citroen.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/static/assets/images/brand/oem/land-rover.svg",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/tests/final-polish.e2e.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "carwow/tests/visual/final-polish.visual.ts",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    },
+    {
+      "path": "CLIENT.md",
+      "resolution": "canonical-source",
+      "reason": "Retain historical QA, correct its obsolete local-only publication statement, and identify the bounded preview pilot."
+    },
+    {
+      "path": "dealer.json",
+      "resolution": "canonical-source",
+      "reason": "Record the existing repository and ordered Auto Best / Import / Carwow mounts plus committed shared assets/helper; no identity or production route change."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-about.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-about.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-blog.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-blog.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-contact.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-contact.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-detail.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-detail.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-home.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-home.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-inventory.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-inventory.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-sell.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-sell.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-service.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/1440-service.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-about.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-about.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-blog.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-blog.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-contact.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-contact.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-detail.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-detail.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-home.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-home.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-inventory.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-inventory.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-sell.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-sell.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-service.png",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/390-service.txt",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.client/evidence/browser/results.json",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/.template/source-manifest.json",
+      "resolution": "obsolete-generated-metadata",
+      "reason": "Historical evidence/provenance stays in canonical Cars and the preserved publishing parent. It is excluded from deployable application payloads by the source policy."
+    },
+    {
+      "path": "import/AGENTS.md",
+      "resolution": "canonical-source",
+      "reason": "Replace the old three-line master wrapper with the portable package-root dealer instructions covering all variants and exact Cars workflow revision."
+    },
+    {
+      "path": "import/src/app.html",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/lib/server/auxero-template.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/lib/utils/preview-paths.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/account/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/agents/[slug]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/agents/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/imports/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/inquiries/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/inventory/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/inventory/edit/[id]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/inventory/new/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/leads/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/listings/[id]/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/listings/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/messages/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/admin/users/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/cars/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/compare-clean/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/home2/+page.server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/src/routes/imports/+server.ts",
+      "resolution": "packaging-layer",
+      "reason": "Reviewed generated mounting delta: preserve static asset fixes; mount raw links/actions/redirects and renderer output, avoid duplicate framework asset bases, use idempotent path helpers, and retain original non-URL comments. Dealer data/content is unchanged."
+    },
+    {
+      "path": "import/static/assets/app.css",
+      "resolution": "packaging-layer",
+      "reason": "Mount the ship-icon CSS URL under /variant-2; no layout/style change."
+    },
+    {
+      "path": "scripts/fix-svelte-service-output.mjs",
+      "resolution": "packaging-layer",
+      "reason": "Retain the root function/prerendered Services corrections with idempotence and path validation; covered by fixture tests and the actual preview deployment."
+    },
+    {
+      "path": "stock.json",
+      "resolution": "packaging-layer",
+      "reason": "Only CRLF-to-LF normalization; normalized bytes equal the reviewed remote blob."
+    }
+  ]
+}

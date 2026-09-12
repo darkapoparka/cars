@@ -5,10 +5,10 @@
 
 	type SearchHref = '/' | '/inventory' | '/contact';
 
-	let { searchHref = '/inventory' }: { searchHref?: SearchHref } = $props();
+	let { searchHref = '/inventory', banner = false }: { searchHref?: SearchHref; banner?: boolean } = $props();
 </script>
 
-<header class="mobile-home-header">
+<header class="mobile-home-header" class:mobile-home-header--banner={banner}>
 	<a class="mobile-home-header__brand" href={resolve('/')} aria-label="Day Night Auto home">
 		<img
 			src={resolve('/brand/daynight-logo-generated.png')}
@@ -41,6 +41,12 @@
 		backdrop-filter: blur(18px);
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
+	}
+
+	.mobile-home-header--banner {
+		background: #08090b;
+		border-bottom: 0;
+		backdrop-filter: none;
 	}
 
 	.mobile-home-header__brand {

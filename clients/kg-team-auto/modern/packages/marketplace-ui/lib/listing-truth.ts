@@ -36,7 +36,6 @@ const locationLabelsBg: Record<string, string> = {
   Germany: "Германия",
   Italy: "Италия",
   Netherlands: "Нидерландия",
-  Plovdiv: "Пловдив",
   Romania: "Румъния",
   Ruse: "Русе",
   Plovdiv: "Пловдив",

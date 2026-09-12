@@ -10,7 +10,7 @@
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Ask about vehicles that match your criteria and viewing availability in {brand.city} and whether imports or trade-ins are available. No dealer financing or payment plans; buyer-arranged funding is separate.</p>
+      <p>Ask about the dated vehicle samples and viewing availability in {brand.city}. Import, trade-in and appraisal services are not verified in this preview. No dealer financing or payment plans; buyer-arranged funding is separate.</p>
       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
         Browse vehicles <Icon name="arrow-right" size={18} />
       </a>

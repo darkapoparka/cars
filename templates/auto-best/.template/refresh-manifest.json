@@ -1,0 +1,186 @@
+{
+  "version": "2026.09.08-refresh-2",
+  "refreshedAt": "2026-09-08T16:23:28.934461+00:00",
+  "source": {
+    "path": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
+    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
+    "branch": "main",
+    "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
+    "dirty": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog-detail/[id]/detail.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-detail-v1/[id]/+page.svelte\n M src/routes/listing-detail-v1/[id]/detail.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/mobile-service-artwork-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/ArtworkRegion.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-mobile-import-v1.webp\n?? static/assets/images/lead/day-night-mobile-sell-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp"
+  },
+  "masterBefore": {
+    "path": "J:\\cars\\templates\\auto-best",
+    "head": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+    "branch": "main",
+    "remote": "https://github.com/darkapoparka/cars.git",
+    "dirty": "M ../../AGENTS.md\n M ../../clients/excellent-cars/CLIENT.md\n M ../../clients/excellent-cars/auto-best/src/lib/components/layout/Header.svelte\n M ../../clients/excellent-cars/carwow/src/lib/components/home/mobile/MobileHome.svelte\n M ../../clients/excellent-cars/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx\n M ../../docs/WORKFLOW.md\n?? ../../audits/2026-09-08/auto-best-source-refresh/\n?? ../../docs/LEAD-PUBLISHING.md\n?? ../../docs/MANUAL-REVIEW.md"
+  },
+  "initialSourceChanges": [
+    {
+      "path": "src/app.css",
+      "status": "merged",
+      "source": "15bed6db2631fac8e1b96e28ecd20ebf948c242f30f5eef4dcbe168de00b6ef4",
+      "before": "3efac10b0820a44cca2a4c604b1fce60f09a498ea010f55a1f5df39a23f64181"
+    },
+    {
+      "path": "src/routes/+page.svelte",
+      "status": "merged",
+      "source": "1fe8ef4a6efd1bc5523ea8c0f9fd24431ea3e5d6f4fdd5f8347bf7a70eef5cbc",
+      "before": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660"
+    },
+    {
+      "path": "src/routes/contact/contact.css",
+      "status": "merged",
+      "source": "2527d54e16073bad4668655257bb909509473c8b2d62afe0f2724d35a554906a",
+      "before": "937d4ebc726f22d260795b394f10ed0c4025f9dee34c2915cc512fe3c18be11f"
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
+      "status": "conflict",
+      "source": "4d12074e33971b1c41768db3c235152a7d2a7f4142874a07499091287a9631dc",
+      "before": "802692ba24ecf2ea7c9df536c7d71ee17560add04376bb1fae59b73008f63b0d"
+    },
+    {
+      "path": "src/routes/listing-detail-v1/[id]/detail.css",
+      "status": "merged",
+      "source": "c539a9cd6fe09ea9974268fb9925b53b5fd0e8d238827f847d794f938e926c71",
+      "before": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b"
+    },
+    {
+      "path": "src/routes/blog-detail/[id]/detail.css",
+      "status": "merged",
+      "source": "1e3f89ae9f50938c73d90d0708bd0b14a5d482e683ae13c3a8a93acbc30d6ed0",
+      "before": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305"
+    },
+    {
+      "path": "src/lib/data/vehicle-artwork.ts",
+      "status": "merged",
+      "source": "1d3c4c48c428f6d42be82f7cb3f7e24cd198aa9d343990fafc15733652285e5f",
+      "before": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db"
+    },
+    {
+      "path": "src/lib/components/company/ContactHero.svelte",
+      "status": "conflict",
+      "source": "32dba182d7e2cf5aa7bb3f62ee3ad01fc9cbeb043c3d1be8c7783d2554e56a53",
+      "before": "05ade920af4fb7404e991949e18a0c5234cbf8a68189d96ebc2959f38d29dd23"
+    },
+    {
+      "path": "src/lib/components/company/ContactIntent.svelte",
+      "status": "merged",
+      "source": "832426d0155c23e8c3cb9a8e95ca3416aa161e49b9dc6f43ab16c6a683b72763",
+      "before": "8d38c3be5ebe06b5d509459511f03a5cc4bec7ccad3e1dacbac6c52b489ec11b"
+    },
+    {
+      "path": "src/lib/components/company/VehicleEnquiry.svelte",
+      "status": "merged",
+      "source": "550f852c61d9ae52eac78017ea183b647bee66f8ebf2664474614fda89f6273b",
+      "before": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a"
+    },
+    {
+      "path": "src/lib/components/home/BodyTypes.svelte",
+      "status": "merged",
+      "source": "294d12b37cbdbee571da5cae413a5567869cb25a24c328d13ecb77ecc056e25a",
+      "before": "b2049d7d76d2dea6536758f94126a69e4d372303066c00a7617c6926a3e1ccce"
+    },
+    {
+      "path": "src/lib/components/home/BrandSection.svelte",
+      "status": "merged",
+      "source": "7b2c95b94ef8fb05e4a9f74b72bd1118fd051c180cc3d9eadbf9472d8f9457a9",
+      "before": "61edb2aaca23dedeec95cf97325ab017b9b2ff0b0e6b8aa19a4062abfde8975f"
+    },
+    {
+      "path": "src/lib/components/home/Editorial.svelte",
+      "status": "merged",
+      "source": "26b3214781b68b998af5efd56ecfa3bb44b2c38f9fe4de3cf59a4e030e4a1e39",
+      "before": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b"
+    },
+    {
+      "path": "src/lib/components/home/InventorySection.svelte",
+      "status": "merged",
+      "source": "3bbe15507c571d8261df812705b020dacfcfb2b0e827bd591022ec2f0034be75",
+      "before": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18"
+    },
+    {
+      "path": "src/lib/components/home/TrustActions.svelte",
+      "status": "merged",
+      "source": "c4f440a63933e215181384770d0f6ad109bd7d259326bd02939847587c52ba35",
+      "before": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc"
+    },
+    {
+      "path": "src/lib/components/home/VideoSection.svelte",
+      "status": "merged",
+      "source": "c5a8be28b072fb41fdbbf4f818132923ea14dff54bf96a21fc5eeb8b8dfaf0cd",
+      "before": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972"
+    },
+    {
+      "path": "src/lib/components/layout/Header.svelte",
+      "status": "conflict",
+      "source": "2dc2b53b5bc38b8abe242943825c5f2012ccf0484e915832a7c4578700b4bc0f",
+      "before": "ab2a19888dbb6d7b6681c8b7e9e1d4864af6f7992228746663c89e1d0e75da29"
+    },
+    {
+      "path": "src/lib/components/ui/ArtworkRegion.svelte",
+      "status": "added",
+      "source": "a8f0170323821d2b88b958ceb42663a6bb72af16bf429a8164d8aecc2e2e9cc4",
+      "before": null
+    },
+    {
+      "path": "src/lib/components/ui/HeroVehicles.svelte",
+      "status": "conflict",
+      "source": "2516efc6bf9610370515099001e72166ea1a806671b52d4e94da1d217d5d4db6",
+      "before": "8bd0e4a71ff7c4080a390836ddd71336c7b84babd7ad9aae0cab91646d5c13eb"
+    }
+  ],
+  "lateSourceChanges": [
+    "src/routes/+page.svelte",
+    "src/lib/components/home/BrandSection.svelte",
+    "provenance/superseded-brand-banner/bg-6.jpg"
+  ],
+  "preserved": [
+    "stock-driven categories/brands",
+    "numeric inventory records and sample verification flags",
+    "vehicle enquiry and financing context",
+    "safe list and article return destinations",
+    "native mobile dialog focus and scroll ownership",
+    "noindex/content publication guards",
+    "optional sample sections disabled",
+    "responsive media request boundaries",
+    "lockfile and framework/runtime configuration"
+  ],
+  "customized": [
+    "neutral Auto Best name/logo/favicon",
+    "all available brand cards remain visible; mobile two-column stock grid",
+    "mobile-only picture sources for imported artwork",
+    "standard line-clamp compatibility"
+  ],
+  "evidence": "J:/cars/audits/2026-09-08/auto-best-source-refresh/REPORT.md",
+  "checks": [
+    {
+      "suite": "route-smoke",
+      "passed": 72
+    },
+    {
+      "suite": "journey-smoke",
+      "passed": 8
+    },
+    {
+      "suite": "enquiry-smoke",
+      "passed": 4
+    },
+    {
+      "suite": "mobile-filter-smoke",
+      "passed": 4
+    },
+    {
+      "suite": "desktop-discovery-smoke",
+      "passed": 6
+    },
+    {
+      "suite": "final home refresh",
+      "passed": 6
+    }
+  ],
+  "clientCopiesChanged": false,
+  "sourceProjectChanged": false,
+  "published": false
+}

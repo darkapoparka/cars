@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { imageStatus } from '$lib/ui/image';
+  let failedImage = $state('');
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
@@ -26,6 +28,8 @@
       <div class="dn-vehicle-card__image">
       <img
         src={vehicle.image}
+        {@attach imageStatus(failed => failedImage = failed ? vehicle.image : '')}
+        style:visibility={failedImage === vehicle.image ? 'hidden' : undefined}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -34,6 +38,7 @@
         height="300"
       />
       </div>
+      {#if failedImage === vehicle.image}<span class="dn-vehicle-image-fallback" role="img" aria-label={`Снимката на ${vehicle.title} не е налична`}>Снимката не е налична</span>{/if}
     </div>
 
     <div class="dn-vehicle-card__content">
@@ -65,6 +70,7 @@
 </article>
 
 <style>
+  .dn-vehicle-image-fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; color: #626974; background: #eceff2; text-align: center; }
   .dn-vehicle-card__mobile-meta { display: none; }
   .dn-vehicle-card {
     display: flex;
@@ -76,12 +82,6 @@
     background: #fff;
     box-shadow: var(--dn-vehicle-card-shadow, none);
     transition: background-color 160ms ease-out, box-shadow 180ms ease-out;
-  }
-
-  .dn-vehicle-card:hover,
-  .dn-vehicle-card:focus-within {
-    background: #fff;
-    box-shadow: var(--dn-vehicle-card-shadow, var(--dn-card-hover-shadow));
   }
 
   .dn-vehicle-card__link {
@@ -189,9 +189,19 @@
     -webkit-line-clamp: 2;
   }
 
-  .dn-vehicle-card__link:hover .dn-vehicle-card__name,
   .dn-vehicle-card__link:focus-visible .dn-vehicle-card__name {
     color: #c40101;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dn-vehicle-card:hover {
+      background: #fff;
+      box-shadow: var(--dn-vehicle-card-shadow, var(--dn-card-hover-shadow));
+    }
+
+    .dn-vehicle-card__link:hover .dn-vehicle-card__name {
+      color: #c40101;
+    }
   }
 
   .dn-vehicle-card__specs {
@@ -219,11 +229,6 @@
     font-weight: 500;
     line-height: 1.3;
     white-space: nowrap;
-  }
-
-  .dn-vehicle-card:hover .dn-vehicle-card__spec,
-  .dn-vehicle-card:focus-within .dn-vehicle-card__spec {
-    background: #f0f2f4;
   }
 
   .dn-vehicle-card__spec { font-variant-numeric: tabular-nums; }
@@ -257,7 +262,7 @@
 
     .dn-vehicle-card--listing {
       min-height: 132px;
-      border-radius: 12px;
+      border-radius: 16px;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__link {
@@ -301,14 +306,14 @@
     }
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span {
       display: inline-flex;
-      align-items: center;
       min-height: 24px;
+      align-items: center;
       padding: 2px 6px;
       border: 1px solid #dce0e5;
       border-radius: 6px;
       background: #f5f6f7;
       color: #454d59;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.4;
       white-space: nowrap;
     }
@@ -337,11 +342,9 @@
       border-radius: 6px;
       background: #f5f6f7;
       color: #454d59;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.4;
     }
-    .dn-vehicle-card--listing:hover .dn-vehicle-card__spec,
-    .dn-vehicle-card--listing:focus-within .dn-vehicle-card__spec { background: #f5f6f7; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__spec :global(.dn-icon) {
       display: block;
@@ -350,10 +353,11 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__amount {
-      margin-top: 10px;
+      margin-top: 8px;
       padding-top: 0;
       color: #11151c;
-      font-size: 19px;
+      font-size: 20px;
+      font-weight: 650;
       line-height: 1.1;
     }
   }

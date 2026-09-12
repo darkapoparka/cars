@@ -31,8 +31,8 @@
 	<div class="dealer-footer__container">
 		<div class="dealer-footer__grid">
 			<div class="dealer-footer__brand">
-				<a href={resolve('/')} aria-label="Day Night Auto — начална страница">
-					<img src={daynightSite.logoLight} width="220" height="68" alt="Day Night Auto Group" loading="lazy" />
+				<a href={resolve('/')} aria-label="Al Basma — начална страница">
+					<img src={daynightSite.logoLight} width="220" height="68" alt="Al Basma Motors" loading="lazy" />
 				</a>
 				<div class="dealer-footer__hours">
 					<p>Работно време:</p>
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class="dealer-footer__bottom">
-			<p>©2026 Day Night Auto Group. Всички права запазени.</p>
+			<p>©2026 Al Basma Motors. Всички права запазени.</p>
 			<nav aria-label="Правна информация">
 				{#each daynightFooterBottomLinks as link (link.label)}
 					<a href={resolve(link.href)}>{link.label}</a>

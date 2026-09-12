@@ -56,7 +56,7 @@
 	}
 </script>
 
-<div class="mobile-about-app" aria-label="За Day Night Auto">
+<div class="mobile-about-app" aria-label="За Al Basma">
 	<header class="mobile-about-hero">
 		<img
 			class="mobile-about-hero__bg"
@@ -65,7 +65,7 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-about-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
+			<a href={resolve('/')} aria-label="Al Basma начало">
 				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
@@ -76,7 +76,7 @@
 		<div class="mobile-about-hero__copy">
 			<span>За нас</span>
 			<h1>Проверени автомобили и ясен процес</h1>
-			<p>Day Night Auto в София помага с избор, оглед, документи, финансиране и бартер.</p>
+			<p>Al Basma в София помага с избор, оглед, документи, финансиране и бартер.</p>
 		</div>
 
 		<div class="mobile-about-actions">
@@ -98,7 +98,7 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-about-section" aria-labelledby="mobile-about-trust-title">
 			<div class="mobile-about-heading">
-				<span>Day Night Auto</span>
+				<span>Al Basma</span>
 				<h2 id="mobile-about-trust-title">Защо при нас</h2>
 			</div>
 
@@ -119,7 +119,7 @@
 		<section class="mobile-about-location" aria-labelledby="mobile-about-location-title">
 			<img
 				src={resolve('/assets/images/pages/daynight-about-consultation-v1.webp')}
-				alt="Консултация със Day Night Auto"
+				alt="Консултация със Al Basma"
 				loading="lazy"
 				decoding="async"
 			/>

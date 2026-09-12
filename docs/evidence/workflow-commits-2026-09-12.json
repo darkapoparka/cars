@@ -1,0 +1,89 @@
+{
+  "cars": [
+    {
+      "commit": "b64a840989716fff0584794e3209a037c324bc72",
+      "purpose": "Workflow/docs/registry/tools and approved Import snapshot"
+    },
+    {
+      "commit": "42ca8b1c93d950c841f358305c7ecde44e857da7",
+      "purpose": "Portable existing-dealer instructions"
+    },
+    {
+      "commit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+      "purpose": "Harden deterministic source packaging from the mirror comparison"
+    }
+  ],
+  "standaloneTemplates": [
+    {
+      "repository": "darkapoparka/cars-template-auto-best",
+      "base": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
+      "commit": "45fd0de4fcc6d5f43959746db771866d9a7db055",
+      "paths": [
+        "AGENTS.md",
+        "README.md",
+        "TEMPLATE.md",
+        "REUSE_GUIDE.md",
+        "docs/TESTING.md",
+        "docs/CARS-INTEGRATION.md"
+      ]
+    },
+    {
+      "repository": "darkapoparka/cars-template-modern",
+      "base": "f64006130523375e440d48e4c4be6ec1b830d46a",
+      "commit": "1fcddde3a1669d6ac7fc0997f71dad668fb8d99c",
+      "paths": [
+        "AGENTS.md",
+        "README.md",
+        "TEMPLATE.md",
+        "REUSE_GUIDE.md",
+        "docs/LEAD-BUILD.md",
+        "docs/QA.md",
+        "docs/CARS-INTEGRATION.md",
+        "docs/legacy/from-cars-2026-09-10/INSTRUCTIONS-HISTORY.md",
+        "docs/legacy/from-cars-2026-09-10/AGENTS.md"
+      ]
+    },
+    {
+      "repository": "darkapoparka/cars-template-carwow",
+      "base": "d769bb0558ad0228b92440fc3fd9ff81548bc890",
+      "commit": "134fcc7ef3dec3b22a62f568f16a5d9d4f6c9499",
+      "paths": [
+        "AGENTS.md",
+        "README.md",
+        "TEMPLATE.md",
+        "REUSE_GUIDE.md",
+        "docs/LEAD-BUILD.md",
+        "docs/QA.md",
+        "docs/CARS-INTEGRATION.md",
+        "docs/legacy/from-cars-2026-09-10/INSTRUCTIONS-HISTORY.md",
+        "docs/legacy/from-cars-2026-09-10/AGENTS.md"
+      ]
+    },
+    {
+      "repository": "darkapoparka/cars-template-import",
+      "base": "3c24db073b0b1a3bf26c64ed5336921117658e29",
+      "commit": "b13436590d8128231f396a46e8dfe6ba0f2c755b",
+      "paths": [
+        "AGENTS.md",
+        "README.md",
+        "TEMPLATE.md",
+        "REUSE_GUIDE.md",
+        "docs/LEAD-BUILD.md",
+        "docs/QA.md",
+        "docs/CARS-INTEGRATION.md",
+        "docs/legacy/from-cars-2026-09-10/INSTRUCTIONS-HISTORY.md",
+        "docs/legacy/from-cars-2026-09-10/AGENTS.md",
+        "src/lib/data/vehicles.ts"
+      ]
+    }
+  ],
+  "dealer": {
+    "repository": "darkapoparka/cars-promosalevarna",
+    "branch": "codex/workflow-pilot-20260912",
+    "base": "61552221b9f791fc57a40602643ae3d3915d3da1",
+    "commit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+    "sourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+    "reviewedChangedPaths": 434,
+    "payloadDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7"
+  }
+}

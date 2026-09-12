@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "client": "perfect-auto-varna",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09T21:56:28.808Z",
+  "state": "ready-for-local-review",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [{"id":"main","route":"/"}],
+  "publicUrl": null,
+  "qa": {"desktop":true,"mobile":true,"identity":true,"contactPath":true},
+  "verification": {
+    "node": "v24.18.0",
+    "check": {"command":"npm run check","exitCode":0},
+    "build": {"command":"npm run build","exitCode":0},
+    "browser": {"checks":6,"widths":[390,1440],"routes":["/","/inventory","/contact"]},
+    "notVerified": ["all secondary interactions","real form delivery","public deployment","dealer approval"]
+  },
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "content": {"facts":"../business-facts.json","stock":"../stock.json","inventorySnapshot":true,"dealerApproval":false,"mediaRightsIndependentlyEstablished":false}
+}

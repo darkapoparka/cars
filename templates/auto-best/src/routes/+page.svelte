@@ -1,7 +1,7 @@
 <script lang="ts">
   import Hero from '$components/home/Hero.svelte';
   import SearchBox from '$components/home/SearchBox.svelte';
-  import MobileBudget from '$components/home/MobileBudget.svelte';
+  import MobileCoreActions from '$components/home/MobileCoreActions.svelte';
   import BodyTypes from '$components/home/BodyTypes.svelte';
   import InventorySection from '$components/home/InventorySection.svelte';
   import BrandSection from '$components/home/BrandSection.svelte';
@@ -20,18 +20,18 @@
 <div class="dn-home-page">
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
+  <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
   <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" /></div>
-  <div class="dn-home-slot dn-home-slot--budget"><MobileBudget /></div>
-  <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--inventory"><InventorySection /></div>
+  <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands"><BrandSection /></div>
-  <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" /></div>
+  <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
-  <div class="dn-home-slot dn-home-slot--services"><TrustActions group="all" variant="cards" /></div>
 </div>
 
 <style>
+  @media (min-width: 992px) { :global(.dn-home-section-heading--compact) { --dn-home-heading-banner-height: 176px; } }
   .dn-home-page,
   .dn-home-slot {
     display: contents;
@@ -39,33 +39,38 @@
 
   @media (min-width: 992px) {
     .dn-home-page :global(.dn-home-section-heading) {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      column-gap: 32px;
-      row-gap: 8px;
+      justify-content: center;
+      gap: var(--dn-home-copy-gap);
       min-height: 44px;
+      text-align: center;
     }
 
     .dn-home-page :global(.dn-home-section-title) {
       margin: 0;
-      font-size: 32px;
+      font-size: var(--dn-home-heading-size);
       font-weight: 650;
       line-height: 1.2;
       letter-spacing: -0.03em;
-      text-align: left;
+      text-align: center;
+      text-wrap: balance;
     }
 
     .dn-home-page :global(.dn-home-section-heading > p) {
       margin: 0;
       font-size: 16px;
       line-height: 1.5;
+      max-width: 60ch;
+      text-align: center;
     }
 
     .dn-home-page :global(.dn-home-section-action) {
       display: inline-flex;
       flex-shrink: 0;
       min-height: 44px;
-      grid-row: 1;
-      align-self: start;
+      align-self: center;
       align-items: center;
       justify-content: center;
       padding: 0 20px;
@@ -73,19 +78,49 @@
       border-radius: var(--dn-radius-button);
       background: #fff;
       color: #24272c;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.3;
+      font: var(--dn-cta-font);
+      letter-spacing: var(--dn-cta-tracking);
       white-space: nowrap;
+      margin-top: var(--dn-home-copy-gap);
       transition: background-color 160ms ease, color 160ms ease;
     }
 
-    .dn-home-page :global(.dn-body-types__all) {
+    .dn-home-page :global(.dn-body-types__all),
+    .dn-home-page :global(.dn-brand-hero__cta) {
       border-color: #e1e4e8;
     }
 
     .dn-home-page :global(.dn-home-section-heading--banner > .dn-home-section-action) {
       grid-row: 3;
+    }
+
+    .dn-home-page :global(.dn-home-section-heading--branded) {
+      margin-bottom: 0;
+      border-radius: 20px;
+      background: #101114;
+      text-align: center;
+    }
+
+    .dn-home-page :global(.dn-home-section-heading--branded > h2) { color: #fff; }
+    .dn-home-page :global(.dn-home-section-heading--branded > p) { color: #f0f1f3; }
+    .dn-home-page :global(.dn-home-section-heading--red) { background: var(--dn-red); }
+
+    .dn-home-page :global(.dn-home-banner-frame) {
+      min-height: var(--dn-home-heading-banner-height);
+      padding: var(--dn-home-banner-padding);
+      padding-top: calc(28px - var(--dn-home-banner-overlap) / 2);
+      padding-bottom: calc(28px + var(--dn-home-banner-overlap) / 2);
+    }
+    .dn-home-page :global(.dn-home-banner-copy) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--dn-home-copy-gap);
+    }
+    .dn-home-page :global(.dn-home-banner-copy > .dn-home-section-action) {
+      margin-top: calc(var(--dn-home-cta-gap) - var(--dn-home-copy-gap));
+      align-self: center;
     }
 
     .dn-home-page :global(.dn-home-section-action:hover) {
@@ -116,6 +151,11 @@
 
     .dn-home-slot {
       display: contents;
+    }
+
+    .dn-home-slot--browse-actions,
+    .dn-home-slot--ownership-actions {
+      display: none;
     }
   }
 </style>

@@ -1,0 +1,3 @@
+export type BrandConfig={name:string;shortName:string;city:string;addressLine:string;address:string;phone:string;phoneHref:`tel:${string}`;appointment:string;logo:`/${string}`;youtubeUrl:`https://${string}`;instagramUrl:`https://${string}`;facebookUrl:`https://${string}`};
+const addressLine='Sheikh Zayed Road';
+export const brand={name:'F1rst Motors',shortName:'F1rst Motors',city:'Dubai',addressLine,address:`${addressLine}, Dubai, UAE`,phone:'800 FIRST',phoneHref:'tel:+97180034778',appointment:'Contact the showroom before travelling',logo:'/dealer/logo-light.png',youtubeUrl:'https://www.youtube.com/F1RSTMOTORS',instagramUrl:'https://www.instagram.com/f1rstmotors/',facebookUrl:'https://www.facebook.com/F1RSTMOTORS'} as const satisfies BrandConfig;

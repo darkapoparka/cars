@@ -387,6 +387,16 @@
 </div>
 
 <style>
+	@media (max-width: 991px) {
+		.breadcrumb { padding-top: 12px; padding-bottom: 12px; font-size: 12px; }
+		.tf-spacing-style3 { height: 20px; padding: 0; }
+		h1 { font-size: 26px !important; line-height: 1.15 !important; text-align: left !important; margin-bottom: 12px !important; }
+		.h7 { font-size: 15px !important; line-height: 1.5 !important; text-align: left !important; margin-bottom: 20px !important; }
+		.pb-100 { padding-bottom: 32px !important; }
+	}
+
+	@media (max-width: 991px) { h2.h3 { font-size: 18px !important; line-height: 1.3 !important; margin-bottom: 18px !important; } .border-box { padding: 16px; } }
+
 	/* Self-contained scoped styles for /calculator. Reproduce the legacy app.css +
 	   StorefrontTemplateContent :global rules for the verbatim class strings used
 	   above. Brand colours route through tokens (--sa-*); template neutrals stay

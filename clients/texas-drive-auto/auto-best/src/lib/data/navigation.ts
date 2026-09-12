@@ -93,9 +93,9 @@ export const navigation: NavigationItem[] = [
       title: brand.name,
       description: 'Learn about the dealership, the buying process and payment options. No dealer financing or payment plans are offered.',
       features: [
-        { id: 'about-showroom', title: 'Showroom and selection', detail: `Selected vehicles in ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Import questions', detail: 'Ask whether delivery is available for your needs.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
-        { id: 'about-leasing', title: 'Buyer-arranged funding', detail: 'Discuss the details directly with the team.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
+        { id: 'about-showroom', title: 'Showroom and selection', detail: `Selected vehicles in ${brand.city}.`, image: '/office.webp', href: '/about-us' },
+        { id: 'about-import', title: 'Import questions', detail: 'Import services are not verified in this preview.', image: '/stock/127361925-1.webp', href: '/contact?topic=import' },
+        { id: 'about-leasing', title: 'Buyer-arranged funding', detail: 'No dealer financing or payment plans.', image: '/stock/127361904-1.webp', href: '/contact?topic=leasing' }
       ],
       groups: [
         {

@@ -37,6 +37,18 @@
 
 <DesktopDealerFooter />
 
+<footer class="compact-mobile-footer">
+	<img src={daynightSite.logoLight} alt={daynightSite.name} />
+	<a class="compact-mobile-footer__phone" href={phoneHref}>{daynightSite.phoneLabel}</a>
+	<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer">{daynightSite.location}</a>
+	<nav aria-label="Връзки в долната част">
+		<a href={resolve('/inventory')}>Автомобили</a>
+		<a href={resolve('/contact')}>Контакти</a>
+		<a href={resolve('/terms')}>Условия</a>
+	</nav>
+	<small>© {new Date().getFullYear()} {daynightSite.shortName}</small>
+</footer>
+
 <footer
 	class="daynight-legacy-footer relative bg-sa-dark font-sa leading-[26px] tracking-normal text-sa-surface"
 	data-daynight-footer
@@ -247,6 +259,19 @@
 </footer>
 
 <style>
+	.compact-mobile-footer { display: none; }
+	@media (max-width: 991px) {
+		:global(#wrapper:has(> .compact-mobile-footer)) { padding-bottom: 0 !important; }
+		.daynight-legacy-footer { display: none; }
+		.compact-mobile-footer { display: grid; gap: 12px; background: var(--sa-dark); color: #fff; padding: 24px 16px calc(84px + env(safe-area-inset-bottom)); }
+		.compact-mobile-footer img { width: 160px; height: auto; }
+		.compact-mobile-footer a { color: inherit; font-size: 14px; line-height: 1.5; }
+		.compact-mobile-footer__phone { font-size: 20px !important; font-weight: 600; }
+		.compact-mobile-footer nav { display: flex; flex-wrap: wrap; gap: 20px; }
+		.compact-mobile-footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
+		.compact-mobile-footer small { color: #b5bbc3; font-size: 12px; }
+	}
+
 	.footer-link-group summary {
 		min-height: 44px;
 		cursor: pointer;

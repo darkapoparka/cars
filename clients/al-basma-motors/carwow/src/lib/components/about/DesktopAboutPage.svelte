@@ -44,7 +44,7 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Day Night Auto"
+		title="За Al Basma"
 		panel="light"
 		compact
 	>
@@ -127,7 +127,7 @@
 			<img
 				class="about-story__image"
 				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Day Night Auto: Mercedes-Benz и Lamborghini с ключове за бартер"
+				alt="Илюстративна визия на Al Basma: Mercedes-Benz и Lamborghini с ключове за бартер"
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -135,7 +135,7 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Day Night Auto е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
+					Al Basma е автокъща в София. При нас можеш да разгледаш наличните автомобили, да
 					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
 				</p>
 				<p>
@@ -192,7 +192,7 @@
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="280" />
+					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Al Basma София" height="280" />
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />

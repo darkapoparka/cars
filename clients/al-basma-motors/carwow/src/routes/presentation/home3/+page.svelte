@@ -57,17 +57,17 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Marketplace | Home3</title>
+	<title>Al Basma Marketplace | Home3</title>
 	<meta
 		name="description"
-		content="A carwow-inspired Day Night Auto marketplace homepage for buying, selling and comparing cars."
+		content="A carwow-inspired Al Basma marketplace homepage for buying, selling and comparing cars."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>
 
 <main class="home3-shell">
 	<header class="home3-header" aria-label="Home3 navigation">
-		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Day Night Auto Home3">
+		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Al Basma Home3">
 			<span>DAY</span>
 			<strong>AUTO</strong>
 		</a>
@@ -108,7 +108,7 @@
 		<div class="home3-hero__center">
 			<h1 id="home3-title">
 				<span>Changing your car?</span>
-				<span>Day Night Auto can help</span>
+				<span>Al Basma can help</span>
 			</h1>
 			<i aria-hidden="true"></i>
 

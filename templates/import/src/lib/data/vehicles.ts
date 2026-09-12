@@ -21,6 +21,9 @@ const conditionForStatus = (status: string, isClientVehicle: boolean): VehicleCo
 };
 
 const knownBrokenImageFallbacks: Record<string, string> = {
+	// The source photo returns 404. This existing A7 cutout is an illustrative template asset;
+	// dealer personalization must replace sample media with verified stock photographs.
+	'11774283016080050': '/assets/daynight/megamenu/inventory-audi-a7-cutout.webp',
 	'21764342419542174': '/assets/images/card/card-48.jpg',
 	'21778067767337633': '/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp',
 	'21778068579001193': '/assets/images/card/card-55.jpg',

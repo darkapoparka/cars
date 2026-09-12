@@ -12,7 +12,7 @@
     general: `${brand.city} · Ask about viewing appointments`,
     inspection: 'Choose a vehicle and ask about appointment times',
     import: 'Ask about a vehicle, your budget, or import availability',
-    leasing: 'Ask about terms for your selected vehicle',
+    leasing: 'No dealer financing or payment plans; buyer-arranged funding is separate',
     'trade-in': 'Ask whether vehicle appraisals are available'
   };
 </script>
@@ -21,13 +21,13 @@
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} />
   <picture>
     {#if topic.id === 'trade-in'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/office.webp" />
     {:else if topic.id === 'import'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/office.webp" />
     {/if}
   <img
     class="dn-contact-hero__media"
-    src="/assets/images/lead/day-night-contact-hero-v2.webp"
+    src="/office.webp"
     alt=""
     width="1920"
     height="1080"

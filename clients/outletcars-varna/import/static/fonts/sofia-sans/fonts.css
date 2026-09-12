@@ -1,0 +1,52 @@
+/*
+ * Sofia Sans is self-hosted from the official Lettersoup repository.
+ * Source: https://github.com/lettersoup/Sofia-Sans
+ * License: SIL Open Font License 1.1 (see ./OFL.txt)
+ */
+@font-face {
+	font-family: 'Sofia Sans';
+	src: url('./SofiaSans-Regular.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sofia Sans';
+	src: url('./SofiaSans-SemiBold.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sofia Sans';
+	src: url('./SofiaSans-Bold.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sofia Sans SemiCondensed';
+	src: url('./SofiaSansSemiCondensed-Regular.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sofia Sans SemiCondensed';
+	src: url('./SofiaSansSemiCondensed-SemiBold.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sofia Sans SemiCondensed';
+	src: url('./SofiaSansSemiCondensed-Bold.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}

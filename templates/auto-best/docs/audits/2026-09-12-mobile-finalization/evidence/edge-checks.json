@@ -1,0 +1,674 @@
+[
+  {
+    "name": "body-brands-320",
+    "width": 320,
+    "height": 844,
+    "evidence": [
+      {
+        "selector": ".dn-body-types",
+        "before": 3,
+        "after": 8,
+        "imageGeometry": [
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/suv-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 180,
+              "h": 126
+            }
+          },
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/wagon-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 180,
+              "h": 126
+            }
+          },
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/coupe-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 180,
+              "h": 126
+            }
+          },
+          {
+            "tag": "STRONG",
+            "text": "Всички типове",
+            "src": null,
+            "display": "inline",
+            "box": {
+              "w": 109.515625,
+              "h": 20
+            }
+          }
+        ]
+      },
+      {
+        "selector": ".dn-brand-section",
+        "before": 3,
+        "after": 12,
+        "imageGeometry": []
+      }
+    ]
+  },
+  {
+    "name": "body-brands-390",
+    "width": 390,
+    "height": 844,
+    "evidence": [
+      {
+        "selector": ".dn-body-types",
+        "before": 3,
+        "after": 8,
+        "imageGeometry": [
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/suv-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 180,
+              "h": 126
+            }
+          },
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/wagon-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 180,
+              "h": 126
+            }
+          },
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/coupe-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 180,
+              "h": 126
+            }
+          },
+          {
+            "tag": "STRONG",
+            "text": "Всички типове",
+            "src": null,
+            "display": "inline",
+            "box": {
+              "w": 109.515625,
+              "h": 20
+            }
+          }
+        ]
+      },
+      {
+        "selector": ".dn-brand-section",
+        "before": 3,
+        "after": 12,
+        "imageGeometry": []
+      }
+    ]
+  },
+  {
+    "name": "body-brands-1440",
+    "width": 1440,
+    "height": 844,
+    "evidence": [
+      {
+        "selector": ".dn-body-types",
+        "before": 8,
+        "after": null,
+        "imageGeometry": [
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/suv-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 291.984375,
+              "h": 204.390625
+            }
+          },
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/wagon-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 291.984375,
+              "h": 204.390625
+            }
+          },
+          {
+            "tag": "IMG",
+            "text": "",
+            "src": "/assets/images/generated/coupe-card-small.webp",
+            "display": "block",
+            "box": {
+              "w": 291.984375,
+              "h": 204.390625
+            }
+          },
+          {
+            "tag": "STRONG",
+            "text": "Всички типове",
+            "src": null,
+            "display": "inline",
+            "box": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      },
+      {
+        "selector": ".dn-brand-section",
+        "before": 12,
+        "after": null,
+        "imageGeometry": []
+      }
+    ]
+  },
+  {
+    "name": "quick-search-background-scroll",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "before": {
+        "y": 0,
+        "bodyPosition": "static",
+        "htmlOverflow": "visible"
+      },
+      "after": {
+        "y": 1200,
+        "bodyPosition": "static"
+      },
+      "afterClose": {
+        "y": 1200,
+        "focus": "Търсете марка, модел или ключова дума"
+      }
+    }
+  },
+  {
+    "name": "sell-whitespace-required",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "nativeRequiredValid": true,
+      "dialogText": "Още няколко детайла\n1\nАвтомобил\n2\nДетайли\n3\nПреглед\nСнимки на автомобила\n0/6\n\nЕкстериор, интериор и важни детайли.\n\nДобави снимки\nJPG, PNG, WebP · до 10 MB всяка\n\nСнимките са само за преглед на устройството. Не са качени или изпратени.\n\nСъстояние и допълнителна информация\nИме по желание\nТелефон по желание\nНазад\nПрегледай запитването",
+      "stepTwoPhotosVisible": true
+    }
+  },
+  {
+    "name": "finance-context-transfer",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "before": "Калкулатор за финансиране\n\nПроменете първоначалната вноска и срока, за да видите оставащата главница.\n\nПървоначална вноска\n€\nСрок\n12 месеца\n24 месеца\n36 месеца\n48 месеца\n60 месеца\nОставаща главница\n58 804 €\nГлавница / месец\n2450 €\n\nОриентир без лихва, такси и застраховки. Не представлява кредитна оферта.\n\nОбсъдете финансиране",
+      "href": "/contact?topic=leasing&vehicle=1",
+      "contactVehicle": "Избран автомобил\nAudi RS 6 Avant\n2024 · 68 804 €",
+      "contactText": "Собствен лизинг\nИзбран автомобил\nAudi RS 6 Avant\n2024 · 68 804 €\n\nПолучете актуални условия според избрания автомобил и конкретната сделка.\n\nОбсъдете с екипа\nАвтомобилът, който сте избрали\nПървоначална вноска и срок\nАктуални условия за конкретната сделка\nОбадете се ·\n087 982 4625\nСоциални мрежи\nКонтакти\nАдрес\nул. „Атанас Манчев“ 18, Студентски град, София\nПосещения\nПосещения с предварителна уговорка\nТелефон\n087 982 4625\nПосетете ни в София\n\nул. „Атанас Манчев“ 18, Студентски град, София · Посещения с предварителна уговорка\n\nОтворете в Google Maps"
+    }
+  },
+  {
+    "name": "cold-home-media",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "initialAssetsBytes": 12203050,
+      "fullScrollAssetsBytes": 12894356,
+      "initial": [
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/auto-best-logo.svg",
+          "bytes": 702,
+          "decoded": 402
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-04.webp",
+          "bytes": 182752,
+          "decoded": 182452
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-01.webp",
+          "bytes": 278612,
+          "decoded": 278312
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-06.webp",
+          "bytes": 208238,
+          "decoded": 207938
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-02.webp",
+          "bytes": 248690,
+          "decoded": 248390
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/suv-card-small.webp",
+          "bytes": 4794,
+          "decoded": 4494
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/wagon-card-small.webp",
+          "bytes": 5148,
+          "decoded": 4848
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/coupe-card-small.webp",
+          "bytes": 5002,
+          "decoded": 4702
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/all-card-centered-v2.webp",
+          "bytes": 7960,
+          "decoded": 7660
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2.webp",
+          "bytes": 113346,
+          "decoded": 113046
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-car-v1.png",
+          "bytes": 1545891,
+          "decoded": 1545591
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1",
+          "bytes": 79420,
+          "decoded": 79120
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1",
+          "bytes": 71636,
+          "decoded": 71336
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-sell-euros-v1.png",
+          "bytes": 2249527,
+          "decoded": 2249227
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "bytes": 65510,
+          "decoded": 65210
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/menu-import-v2.png",
+          "bytes": 1616120,
+          "decoded": 1615820
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/menu-leasing-v2.png",
+          "bytes": 1618998,
+          "decoded": 1618698
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-import-v1.png",
+          "bytes": 1873028,
+          "decoded": 1872728
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-leasing-v1.png",
+          "bytes": 2018229,
+          "decoded": 2017929
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/partner/partner1.png",
+          "bytes": 8239,
+          "decoded": 7939
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/partner/parner8.png",
+          "bytes": 1208,
+          "decoded": 908
+        }
+      ],
+      "full": [
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/auto-best-logo.svg",
+          "bytes": 702,
+          "decoded": 402
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-04.webp",
+          "bytes": 182752,
+          "decoded": 182452
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-01.webp",
+          "bytes": 278612,
+          "decoded": 278312
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-06.webp",
+          "bytes": 208238,
+          "decoded": 207938
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-stock-02.webp",
+          "bytes": 248690,
+          "decoded": 248390
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/suv-card-small.webp",
+          "bytes": 4794,
+          "decoded": 4494
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/wagon-card-small.webp",
+          "bytes": 5148,
+          "decoded": 4848
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/coupe-card-small.webp",
+          "bytes": 5002,
+          "decoded": 4702
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/generated/all-card-centered-v2.webp",
+          "bytes": 7960,
+          "decoded": 7660
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2.webp",
+          "bytes": 113346,
+          "decoded": 113046
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-car-v1.png",
+          "bytes": 1545891,
+          "decoded": 1545591
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1",
+          "bytes": 79420,
+          "decoded": 79120
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1",
+          "bytes": 71636,
+          "decoded": 71336
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-sell-euros-v1.png",
+          "bytes": 2249527,
+          "decoded": 2249227
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "bytes": 65510,
+          "decoded": 65210
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/menu-import-v2.png",
+          "bytes": 1616120,
+          "decoded": 1615820
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/menu-leasing-v2.png",
+          "bytes": 1618998,
+          "decoded": 1618698
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-import-v1.png",
+          "bytes": 1873028,
+          "decoded": 1872728
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/template/service-leasing-v1.png",
+          "bytes": 2018229,
+          "decoded": 2017929
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/partner/partner1.png",
+          "bytes": 8239,
+          "decoded": 7939
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/partner/parner8.png",
+          "bytes": 1208,
+          "decoded": 908
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/partner/parner11.png",
+          "bytes": 1541,
+          "decoded": 1241
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/blog/blog-1.jpg",
+          "bytes": 120360,
+          "decoded": 120060
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/blog/blog-3.jpg",
+          "bytes": 110243,
+          "decoded": 109943
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/blog/blog-2.jpg",
+          "bytes": 251524,
+          "decoded": 251224
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-video-urus.jpg",
+          "bytes": 71112,
+          "decoded": 70812
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-video-panamera.jpg",
+          "bytes": 63350,
+          "decoded": 63050
+        },
+        {
+          "url": "http://127.0.0.1:6461/assets/images/lead/day-night-video-g-class.jpg",
+          "bytes": 73176,
+          "decoded": 72876
+        }
+      ]
+    }
+  },
+  {
+    "name": "map-settled-/contact",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "frames": [
+        "http://127.0.0.1:6461/contact",
+        "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg",
+        "about:blank",
+        "about:blank"
+      ],
+      "fallback": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%E2%80%9C%2018%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+    }
+  },
+  {
+    "name": "map-settled-/about-us",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "frames": [
+        "http://127.0.0.1:6461/about-us",
+        "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg",
+        "about:blank",
+        "about:blank"
+      ],
+      "fallback": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%E2%80%9C%2018%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+    }
+  },
+  {
+    "name": "map-settled-/listing-detail-v1/1",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "frames": [
+        "http://127.0.0.1:6461/listing-detail-v1/1",
+        "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s42.648551,23.341905!6i17!3m1!1sbg!5m1!1sbg",
+        "about:blank",
+        "about:blank"
+      ],
+      "fallback": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%E2%80%9E%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%E2%80%9C%2018%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F"
+    }
+  },
+  {
+    "name": "short-home-search-320-568",
+    "width": 320,
+    "height": 568,
+    "evidence": {
+      "width": 320,
+      "height": 568,
+      "overflow": 0,
+      "viewport": 568,
+      "button": [
+        {
+          "text": "Покажи 8 автомобила",
+          "bottom": 554
+        }
+      ]
+    }
+  },
+  {
+    "name": "short-home-search-390-400",
+    "width": 390,
+    "height": 400,
+    "evidence": {
+      "width": 390,
+      "height": 400,
+      "overflow": 0,
+      "viewport": 400,
+      "button": [
+        {
+          "text": "Покажи 8 автомобила",
+          "bottom": 386
+        }
+      ]
+    }
+  },
+  {
+    "name": "short-home-search-700-390",
+    "width": 700,
+    "height": 390,
+    "evidence": {
+      "width": 700,
+      "height": 390,
+      "overflow": 0,
+      "viewport": 390,
+      "button": [
+        {
+          "text": "Покажи 8 автомобила",
+          "bottom": 376
+        }
+      ]
+    }
+  },
+  {
+    "name": "video-local-controls",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "before": 0,
+      "during": 1,
+      "after": 0,
+      "focusReturned": true,
+      "note": "External playback stubbed. UI lifecycle only."
+    }
+  },
+  {
+    "name": "no-javascript-get-route",
+    "width": 390,
+    "height": 844,
+    "evidence": {
+      "title": "Налични автомобили — Auto Best",
+      "cards": 2,
+      "h1": [
+        "Намерете своя автомобил"
+      ]
+    }
+  },
+  {
+    "name": "http-contract",
+    "route": "/",
+    "status": 200,
+    "location": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; base-uri 'self'; connect-src 'self' ws: wss:; font-src 'self'; form-action 'self'; frame-ancestors 'self'; frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "name": "http-contract",
+    "route": "/robots.txt",
+    "status": 200,
+    "location": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; base-uri 'self'; connect-src 'self' ws: wss:; font-src 'self'; form-action 'self'; frame-ancestors 'self'; frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff"
+    },
+    "text": "User-agent: *\nDisallow: /\n"
+  },
+  {
+    "name": "http-contract",
+    "route": "/sitemap.xml",
+    "status": 200,
+    "location": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; base-uri 'self'; connect-src 'self' ws: wss:; font-src 'self'; form-action 'self'; frame-ancestors 'self'; frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "name": "http-contract",
+    "route": "/listing-detail-v2/1?make=BMW",
+    "status": 308,
+    "location": "/listing-detail-v1/1?make=BMW",
+    "headers": {
+      "content-security-policy": "default-src 'self'; base-uri 'self'; connect-src 'self' ws: wss:; font-src 'self'; form-action 'self'; frame-ancestors 'self'; frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "name": "http-contract",
+    "route": "/listing-detail-v1/01",
+    "status": 404,
+    "location": null,
+    "headers": {
+      "content-security-policy": "default-src 'self'; base-uri 'self'; connect-src 'self' ws: wss:; font-src 'self'; form-action 'self'; frame-ancestors 'self'; frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "name": "budget-boundary-fixture",
+    "evidence": [
+      {
+        "price": 60000,
+        "middleCardCount": false,
+        "middleRouteIncludes": true,
+        "upperCardCount": false,
+        "upperRouteIncludes": false
+      },
+      {
+        "price": 70000,
+        "middleCardCount": true,
+        "middleRouteIncludes": true,
+        "upperCardCount": false,
+        "upperRouteIncludes": true
+      }
+    ],
+    "note": "Synthetic price fixture; source predicates reproduced without changing inventory."
+  }
+]

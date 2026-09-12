@@ -1,34 +1,85 @@
-# Reuse guide
+# Adapting Auto Best for a dealer
 
-This codebase is deliberately easy to reskin, but the checked-in project is a **lead-specific Day & Night demo**. It is not the shared `autodeal-best` master and must not be cloned as an untracked template.
+The normal workflow is to clone the template, replace its business content and media, and keep the established page layouts and interactions. The result is an independent client project.
 
-## Reskin surface
+## Create the project
 
-Keep lead identity and content changes inside these owned modules:
+For a standalone client repository:
 
-- `src/lib/config/brand.ts` — business name, phone, address, logo, and verified contact details.
-- `src/lib/data/navigation.ts` — route labels and menu content; contact values derive from the brand configuration.
-- `src/lib/data/inventory.ts` — illustrative vehicle records and their local media.
-- `src/lib/data/company.ts` — services, visit information, and explicitly disclosed demo-only team/partner data.
-- `src/lib/data/editorial.ts` — article summaries and detail content.
-- `src/lib/data/home.ts` — homepage discovery and conversion content.
-- `src/app.css` — stable design tokens and global visual primitives.
-- `static/assets/images/lead` — lead-owned or lead-approved identity/campaign media.
+```sh
+git clone https://github.com/darkapoparka/cars-template-auto-best.git dealer-site
+cd dealer-site
+npm ci
+```
 
-Routes, components, filters, and interaction behavior should remain generic. Never add a new lead by duplicating route markup, reviving the legacy mirror, or applying post-load DOM mutation.
+Give the client project its own Git remote before publishing changes. To retain template history while making the destination clear:
 
-## Proper Agency OS reuse
+```sh
+git remote rename origin template
+git remote add origin <client-repository-url>
+```
 
-For another lead:
+Replace the placeholder with the actual client repository. For a multi-design dealer project, put the complete app in its `auto-best/` subdirectory; the parent project owns Git and deployment composition. This template itself does not supply a multi-design router.
 
-1. Use the canonical Agency OS demo factory and a `ready` template record.
-2. Create a new tracked project under `M:\codex\agency\projects\leads\<vertical>\<lead-slug>\<project-key>`.
-3. Keep this project's exact qualified commit as implementation evidence, not as an unregistered master.
-4. Replace identity, contacts, metadata, inventory, claims, and lead-specific media.
-5. Search for `Day & Night`, `day-night`, the current phone/address, and every old social/domain value.
-6. Run the full quality, asset, route, browser, and license gates before deployment.
-7. Record QA and the exact deployment URL against the new demo project in Neon.
+In the existing Cars workspace, `scripts/new-client.mjs` is an alternative copy helper run from that workspace. It is not a script shipped by this standalone package. A manual copy needs the source, static assets, package/lock/config files, useful documentation and relevant notices—not `node_modules`, build caches, `.git`, `.vercel` bindings, local secrets or generated test output.
 
-## Template promotion
+## Personalization map
 
-If this native architecture should replace the current reusable template, open a separate **Template Promotion** task. Work in a generic candidate under the Agency OS template root, remove all lead identity, declare every runtime asset, pass the structured reuse preflight, and update the template registry only after the filesystem and Neon evidence agree.
+| Change | Main files |
+| --- | --- |
+| Business names, phone, address, appointment text, socials, logo | `src/lib/config/brand.ts` |
+| Favicon and document language | `src/app.html` |
+| Brand colors and common typography/geometry | `src/lib/styles/tokens.css` |
+| Stock, prices, photographs, evidence | `src/lib/data/inventory.ts` |
+| Services, contact topic text and map coordinates | `src/lib/data/company.ts` |
+| Navigation titles, groups and destinations | `src/lib/data/navigation.ts` |
+| Body types, brands and featured editorial selection | `src/lib/data/home.ts` |
+| Articles and their images | `src/lib/data/editorial.ts` |
+| Featured videos | `src/lib/data/videos.ts` |
+| Hero, menu and service artwork | `vehicle-artwork.ts`, `feature-artwork.ts`, `service-artwork.ts` under data |
+| Page titles/descriptions and route-specific copy | Relevant `src/routes` page and feature components |
+| Preview/indexing and sample sections | `src/lib/config/template.ts` |
+
+This is a set of practical edit locations, not a claim that all text lives in one config file. Hero headlines, footer copy, call-to-action labels and some service-card copy remain in Svelte components. [Components](docs/COMPONENTS.md) provides the map.
+
+## Identity and contacts
+
+Start with verified business name, usable logo, phone, location and destinations. Set `name` and `shortName` deliberately. Keep `phone` readable and `phoneHref` in international `tel:` format. Update the selected logo path and the independent favicon reference.
+
+Update both textual address and `showroomCoordinates`; changing only the address will not move the map pin. Set the actual social profiles and review all displayed video records. A new YouTube channel URL does not replace the inherited thumbnail/video selection.
+
+## Inventory
+
+Replace sample records with the client inventory. Keep stable positive numeric IDs, correct title/make/body, numeric year/mileage/price and appropriate photos. The application derives formatted values and detail URLs. Use only equipment supported by the record; the source template equipment array is not a specification for every client vehicle.
+
+Review `listingFilterOptions` after changing inventory: some versions derive choices while the standalone baseline has explicit arrays for several facets. Body and brand artwork coverage is separate from current stock. Keep an intentional zero-results state for categories without matches.
+
+The local refactored records include explicit `model` and `version` fields and accept a record-level `verification` value. Supply `evidenceUrl` for a verified vehicle. Those fields also feed model/version discovery and published-mode validation.
+
+## Images and generated banners
+
+Store runtime images under `static/` and use public `/assets/...` paths. Update the source dimensions and any crop/bounds metadata when replacing artwork. Photography and cutouts use different framing; substituting one for the other can change the composition even when the CSS is untouched.
+
+Some approved banners contain image-generated text and dealer identity inside their pixels. Replacing the brand config or image alt text does not personalize those pixels. Replace the actual image where the client identity requires it, keeping the same intended composition and interactive destination.
+
+Inspect stock watermarks, portraits, logos, premises imagery, thumbnails and campaign copy. Decorative generated facilities/cars are illustrations, not photographs proving the new dealer owns them. Credits and notices are covered in [Assets](ASSET_PROVENANCE.md).
+
+## Copy and localization
+
+The interface defaults to Bulgarian, euros and kilometres. Localization touches `src/app.html`, copy in routes/components, navigation, contact topics, editorial categories, filter labels, number formatting, price labels, phone presentation and image-baked text. There is no installed translation framework to configure.
+
+Review the actual services before retaining import, trade-in or leasing claims. Optional team/partner sections remain off until their records are suitable for the client. Keep the existing calculator explanation: it displays principal division without interest, fees or insurance.
+
+## Contact delivery
+
+The existing enquiry UI prepares a local draft for copying or sharing. It does not send email, upload stock photos to a server or create a CRM lead. Keeping that behavior is valid for a visual demo; a client needing automatic delivery requires a separately implemented server action/endpoint and provider integration.
+
+A real integration needs server-side validation, recipient configuration, request limits and meaningful success/failure states. Secrets belong on the server, not in `brand.ts`, client modules or `static/`. The integration should use the existing form journey rather than replacing the frontend merely to send its data.
+
+## Review the client site
+
+Run the documented checks, then inspect home, inventory, a vehicle detail, About, Contact, an article and the offered sell/import/finance journeys at 390px and 1440px. Exercise a filter and return path, mobile menu dismissal, form review/copy behavior and actual contact destinations. [Testing](docs/TESTING.md) gives the commands.
+
+Search the retained source for `Auto Best`, `Day & Night`, `day-night`, the old phone/address, social handles and video IDs. Review rather than blindly replacing filenames: historical provenance may retain names, while active content must match the client. Visual inspection is necessary for image-baked identity.
+
+Keep the site in preview mode during preparation. Build and indexing configuration are in [Deployment](docs/DEPLOYMENT.md). Record the actual template commit used for the copy so later shared fixes can be selectively ported without overwriting client changes.

@@ -107,7 +107,7 @@ export const marketplaceSortLabelsBg: Record<MarketplaceSearchParams["sort"], st
 export const marketplaceCurrency = leadSite.staticDemoMode ? leadSite.currency : "BGN";
 
 export const marketplaceSearchCurrency: MarketplaceSearchParams["currency"] =
-  (["BGN", "EUR", "USD"] as readonly string[]).includes(leadSite.currency)
+  leadSite.currency === "BGN" || leadSite.currency === "EUR" || leadSite.currency === "USD"
     ? leadSite.currency
     : undefined;
 

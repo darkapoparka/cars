@@ -1,0 +1,180 @@
+{
+  "slug": "outletcars-varna",
+  "template": "import",
+  "port": 6766,
+  "startedAt": "2026-09-09T20:35:38.781Z",
+  "routes": [
+    {
+      "width": 390,
+      "label": "home",
+      "route": "/",
+      "status": 200,
+      "title": "OUTLETCARS.BG — Варна — автомобили и подбор на автомобили",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-home.png"
+    },
+    {
+      "width": 390,
+      "label": "inventory",
+      "route": "/inventory",
+      "status": 200,
+      "title": "Автомобили — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-inventory.png"
+    },
+    {
+      "width": 390,
+      "label": "detail",
+      "route": "/inventory/21780566866553359",
+      "status": 200,
+      "title": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-detail.png"
+    },
+    {
+      "width": 390,
+      "label": "contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "Контакти — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-contact.png"
+    },
+    {
+      "width": 390,
+      "label": "about",
+      "route": "/about",
+      "status": 200,
+      "title": "За нас — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-about.png"
+    },
+    {
+      "width": 390,
+      "label": "service",
+      "route": "/import",
+      "status": 200,
+      "title": "Подбрани автомобили — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-service.png"
+    },
+    {
+      "width": 390,
+      "label": "sell",
+      "route": "/sell-your-car",
+      "status": 200,
+      "title": "Продай автомобила си — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-sell.png"
+    },
+    {
+      "width": 390,
+      "label": "blog",
+      "route": "/blog",
+      "status": 200,
+      "title": "Новини — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-blog.png"
+    },
+    {
+      "width": 390,
+      "label": "vehicle-navigation",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "label": "home",
+      "route": "/",
+      "status": 200,
+      "title": "OUTLETCARS.BG — Варна — автомобили и подбор на автомобили",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-home.png"
+    },
+    {
+      "width": 1440,
+      "label": "inventory",
+      "route": "/inventory",
+      "status": 200,
+      "title": "Автомобили — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-inventory.png"
+    },
+    {
+      "width": 1440,
+      "label": "detail",
+      "route": "/inventory/21780566866553359",
+      "status": 200,
+      "title": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-detail.png"
+    },
+    {
+      "width": 1440,
+      "label": "contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "Контакти — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-contact.png"
+    },
+    {
+      "width": 1440,
+      "label": "about",
+      "route": "/about",
+      "status": 200,
+      "title": "За нас — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-about.png"
+    },
+    {
+      "width": 1440,
+      "label": "service",
+      "route": "/import",
+      "status": 200,
+      "title": "Подбрани автомобили — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-service.png"
+    },
+    {
+      "width": 1440,
+      "label": "sell",
+      "route": "/sell-your-car",
+      "status": 200,
+      "title": "Продай автомобила си — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-sell.png"
+    },
+    {
+      "width": 1440,
+      "label": "blog",
+      "route": "/blog",
+      "status": 200,
+      "title": "Новини — OUTLETCARS.BG — Варна",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-blog.png"
+    },
+    {
+      "width": 1440,
+      "label": "vehicle-navigation",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "finishedAt": "2026-09-09T20:36:07.915Z"
+}

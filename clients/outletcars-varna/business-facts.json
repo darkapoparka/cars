@@ -1,0 +1,31 @@
+{
+  "name": "OUTLETCARS.BG — Варна",
+  "shortName": "OUTLETCARS.BG",
+  "phone": "0898921010",
+  "phoneDisplay": "0898 921 010",
+  "phoneE164": "+359898921010",
+  "addressLine": "бул. Янош Хуняди 518, срещу КАТ Варна",
+  "hours": "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни",
+  "slug": "outletcars-varna",
+  "city": "Варна",
+  "country": "BG",
+  "sourceUrl": "https://outletcarsvarna.mobile.bg/",
+  "contactSourceUrl": "https://outletcarsvarna.mobile.bg/contacts",
+  "observedAt": "2026-09-09T19:17:27.878450+00:00",
+  "address": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
+  "publishedBranding": true,
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16152065363167441.pic",
+  "workingLogoPath": "assets/branding/logo-on-light-v2.svg",
+  "creationMethod": "ImageGen-assisted refresh; generated letter contours traced into flat outlined SVG with transparent light/dark exports",
+  "approvalStatus": "proposal; not approved by dealership",
+  "mediaPermission": "not independently established; no public deployment authorized by this record",
+  "coverSourceUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h16152065363167441.pic",
+  "branding": {
+    "version": "transparent-v2",
+    "logoOnLight": "/dealer/logo-on-light-v2.svg",
+    "logoOnDark": "/dealer/logo-on-dark-v2.svg",
+    "favicon": "/dealer/favicon-v2.ico",
+    "generationId": "3ff25e57-faec-42ca-8bc6-565a4e4115f8",
+    "dealerApproval": false
+  }
+}

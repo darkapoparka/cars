@@ -177,6 +177,14 @@
 </div>
 
 <style>
+	@media (max-width: 991px) {
+		.breadcrumb { padding-top: 12px; padding-bottom: 12px; font-size: 12px; }
+		.tf-spacing-style3 { height: 20px; padding: 0; }
+		h1 { font-size: 26px !important; line-height: 1.15 !important; text-align: left !important; margin-bottom: 12px !important; }
+		.h7 { font-size: 15px !important; line-height: 1.5 !important; text-align: left !important; margin-bottom: 20px !important; }
+		.pb-100 { padding-bottom: 32px !important; }
+	}
+
 	/* Self-contained scoped styles for /compare. These reproduce the exact rules the
 	   legacy app.css + StorefrontTemplateContent :global stylesheet provided for the
 	   verbatim class strings used above, confirmed against getComputedStyle at 1440px.

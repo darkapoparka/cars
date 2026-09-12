@@ -103,8 +103,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от Day & Night Auto Group."
-      : "A tailored vehicle financing offer from Day & Night Auto Group.",
+      ? "Индивидуална оферта за финансиране на автомобил от Al Basma Motors."
+      : "A tailored vehicle financing offer from Al Basma Motors.",
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",

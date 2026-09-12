@@ -1,0 +1,1016 @@
+{
+  "schemaVersion": 1,
+  "batchId": "bg-2026-09-09",
+  "preparedAt": "2026-09-09",
+  "repository": "darkapoparka/cars",
+  "observedMain": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "scope": "Prompt packet for branch-only current-master demo builds; sessions not dispatched by packet creation; no deployment/outreach.",
+  "sourceScope": "49 marketplace-linked accounts and one owner-nominated Facebook account. Discovery/content screening is not full qualification. Historical 8 September counts are retained as dated evidence; page identity was rechecked 9 September, except carmax marketplace fetch failed and official site was available. No social posting-frequency claim.",
+  "templates": [
+    "auto-best",
+    "modern",
+    "carwow"
+  ],
+  "sessions": [
+    {
+      "id": "01",
+      "title": "Varna: first group",
+      "branch": "codex/astra-bg-01",
+      "candidates": [
+        {
+          "profile": "tesicar",
+          "slug": "tesi-car",
+          "name": "Теси Кар",
+          "city": "Varna",
+          "sourceUrl": "https://tesicar.mobile.bg/",
+          "clientPath": "clients/tesi-car",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 52,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Reconcile published opening-hour differences. Financing and registration assistance are dealer statements, not verified terms. The separate contacts-page retrieval failed here; use the source listings and recheck."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "centralauto",
+          "slug": "central-autosalon",
+          "name": "ЦЕНТРАЛ – АВТОСАЛОН",
+          "city": "Varna",
+          "sourceUrl": "https://centralauto.mobile.bg/",
+          "clientPath": "clients/central-autosalon",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 45,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Investigate any connection to Central Automorga at the same address. Never turn request prices into zero."
+          },
+          "specificNote": "Resolve relationship to Central Automorga at the same address before treating this as an independent account. Exclude parts listings. Price on request must remain unknown, never zero."
+        },
+        {
+          "profile": "autofest",
+          "slug": "autofest",
+          "name": "Аутофест",
+          "city": "Varna",
+          "sourceUrl": "https://autofest.mobile.bg/",
+          "clientPath": "clients/autofest",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 36,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Verify any independent domain and the precise lot entrance. A distance after Metro must not become a street number."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "express_auto",
+          "slug": "express-auto-varna",
+          "name": "ЕКСПРЕС АУТО",
+          "city": "Varna",
+          "sourceUrl": "https://express_auto.mobile.bg/",
+          "clientPath": "clients/express-auto-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 31,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Distinct from Varna Car Express and Mazda Express Car. Auto.bg shows an older 32-ad snapshot; do not add it to the 31 Mobile.bg ads."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "perfektauto",
+          "slug": "perfekt-auto",
+          "name": "Перфект Ауто",
+          "city": "Varna",
+          "sourceUrl": "https://perfektauto.mobile.bg/",
+          "clientPath": "clients/perfekt-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 75,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search",
+              "unmatchedCandidate": "perfektauto.com"
+            },
+            "nextVerification": "Confirm the Lexus title/model and Mustang card/prose price discrepancies with source listings; do not infer deception. The similarly named perfektauto.com was not matched to this phone."
+          },
+          "specificNote": "UPDATE to older research: https://perfektauto.com/kontakti/ publishes +359 888 802 226, matching the profile's 0888802226. An independent website is present; this is a comparison concept, not a no-website lead. Location descriptions differ across sources; verify current showroom directions. Possible matching older Agency OS folder: perfekt-auto; compare exact identity."
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Varna: second group",
+      "branch": "codex/astra-bg-02",
+      "candidates": [
+        {
+          "profile": "kapitol",
+          "slug": "kapitol-varna",
+          "name": "КАПИТОЛ",
+          "city": "Varna",
+          "sourceUrl": "https://kapitol.mobile.bg/",
+          "clientPath": "clients/kapitol-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 43,
+            "lane": "audit-first",
+            "website": {
+              "url": "https://kapitol.bg/",
+              "status": "candidate-domain-retrieval-failed"
+            },
+            "nextVerification": "kapitol.bg is linked by a same-phone directory but could not be retrieved here. This is not proof the website is broken. Reconcile address 236 versus older 231/181 references; arriving vehicles are not immediately available."
+          },
+          "specificNote": "An independent domain is referenced at https://kapitol.bg/; failed retrieval is not a website outage. Verify the current domain and address. Preserve incoming/consignment status per vehicle."
+        },
+        {
+          "profile": "chernomore",
+          "slug": "chernomore-varna",
+          "name": "Черно море",
+          "city": "Varna",
+          "sourceUrl": "https://chernomore.mobile.bg/",
+          "clientPath": "clients/chernomore-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 30,
+            "lane": "audit-first",
+            "website": {
+              "url": "https://www.chernomoreauto.com/",
+              "status": "dealer-linked-domain-retrieval-failed"
+            },
+            "nextVerification": "Dealer explicitly publishes chernomoreauto.com. Retrieval failed in this environment, not evidence of a public outage or website absence."
+          },
+          "specificNote": "Dealer-linked https://www.chernomoreauto.com/ must be audited, not assumed missing because a tool cannot fetch it. Potential matching legacy folder chernomore-varna contains older import variants."
+        },
+        {
+          "profile": "mania",
+          "slug": "avtoborsa-mania",
+          "name": "АВТОБОРСА МАНИЯ",
+          "city": "Varna",
+          "sourceUrl": "https://mania.mobile.bg/",
+          "clientPath": "clients/avtoborsa-mania",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 28,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm exact business identity, independent website, suitable available vehicles and image-use basis; compare with the existing mobile journey before assignment."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "prestige",
+          "slug": "prestige-varna",
+          "name": "ПРЕСТИЖ",
+          "city": "Varna",
+          "sourceUrl": "https://prestige.mobile.bg/",
+          "clientPath": "clients/prestige-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 26,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Use the dealer source for viewing arrangements and identity; no sourced social URL or finance terms were collected."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "extracar-sm",
+          "slug": "extra-car-sm",
+          "name": "ЕКСТРА КАР-СМ",
+          "city": "Varna",
+          "sourceUrl": "https://extracar-sm.mobile.bg/",
+          "clientPath": "clients/extra-car-sm",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 25,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm exact business identity, independent website, suitable available vehicles and image-use basis; compare with the existing mobile journey before assignment."
+          },
+          "specificNote": null
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Varna: third group",
+      "branch": "codex/astra-bg-03",
+      "candidates": [
+        {
+          "profile": "sunny",
+          "slug": "sunny-varna",
+          "name": "СЪНИ",
+          "city": "Varna",
+          "sourceUrl": "https://sunny.mobile.bg/",
+          "clientPath": "clients/sunny-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 25,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm exact business identity, independent website, suitable available vehicles and image-use basis; compare with the existing mobile journey before assignment."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "rqsautoteam",
+          "slug": "rqs-auto-team",
+          "name": "R.Q.S. Auto – Team",
+          "city": "Varna",
+          "sourceUrl": "https://rqsautoteam.mobile.bg/",
+          "clientPath": "clients/rqs-auto-team",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 24,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Normalize mileage only against the individual listing; do not silently turn prose/card differences into independently verified mileage."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "evrocarvarna09",
+          "slug": "evrocar-varna-09",
+          "name": "ЕВРОКАР ВАРНА 09",
+          "city": "Varna",
+          "sourceUrl": "https://evrocarvarna09.mobile.bg/",
+          "clientPath": "clients/evrocar-varna-09",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 24,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Distinguish the exact profile and phone from the many Eurocar names elsewhere."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "sprint",
+          "slug": "sprint-auto-varna",
+          "name": "Спринт ауто",
+          "city": "Varna",
+          "sourceUrl": "https://sprint.mobile.bg/",
+          "clientPath": "clients/sprint-auto-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 23,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm exact business identity, independent website, suitable available vehicles and image-use basis; compare with the existing mobile journey before assignment."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "evropavarna",
+          "slug": "europa-varna",
+          "name": "Европа",
+          "city": "Varna",
+          "sourceUrl": "https://evropavarna.mobile.bg/",
+          "clientPath": "clients/europa-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 23,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Generic name: match phone/profile and location before domain or account matching."
+          },
+          "specificNote": null
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Varna area, Dobrich and Burgas",
+      "branch": "codex/astra-bg-04",
+      "candidates": [
+        {
+          "profile": "exclusiveauto",
+          "slug": "exclusive-auto-varna",
+          "name": "Exclusive Auto",
+          "city": "Varna",
+          "sourceUrl": "https://exclusiveauto.mobile.bg/",
+          "clientPath": "clients/exclusive-auto-varna",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 17,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm exact business identity, independent website, suitable available vehicles and image-use basis; compare with the existing mobile journey before assignment."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "next_car",
+          "slug": "next-car-banovo",
+          "name": "NEXT CAR",
+          "city": "Banovo / Varna province",
+          "sourceUrl": "https://next_car.mobile.bg/",
+          "clientPath": "clients/next-car-banovo",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 20,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Verify the Banovo location and independent-domain status."
+          },
+          "specificNote": "The assigned NEXT CAR is in Banovo, Varna province; distinct from NEXT AUTO Pernik. Current page returned 19 ads on 9 September. Verify viewing arrangements and label location accurately."
+        },
+        {
+          "profile": "martin-auto",
+          "slug": "martin-auto-dobrich",
+          "name": "MARTIN AUTO",
+          "city": "Dobrich",
+          "sourceUrl": "https://martin-auto.mobile.bg/",
+          "clientPath": "clients/martin-auto-dobrich",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 33,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm business identity, exact lot and any independent domain; negotiated prices require listing-specific treatment."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "fiveauto",
+          "slug": "five-auto",
+          "name": "FIVE AUTO",
+          "city": "Burgas",
+          "sourceUrl": "https://fiveauto.mobile.bg/",
+          "clientPath": "clients/five-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": "No current trio in main at audit time; existing Agency OS five-auto has older designs. Reconcile identity and existing branding before current-master copies. Prior batch allocation is historical and superseded only for this account by this prompt; do not run alongside the old worker."
+        },
+        {
+          "profile": "swissauto43",
+          "slug": "swiss-auto-43",
+          "name": "Swiss Auto43",
+          "city": "Burgas",
+          "sourceUrl": "https://swissauto43.mobile.bg/",
+          "clientPath": "clients/swiss-auto-43",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 50,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Distinct from Swiss Car Center–Burgas; verify domain and media before assignment."
+          },
+          "specificNote": "Potential matching older Agency OS swiss-auto-43 has older showroom designs. Distinct from Swiss Car Center Burgas. Check current identity and existing assets."
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Burgas and Plovdiv",
+      "branch": "codex/astra-bg-05",
+      "candidates": [
+        {
+          "profile": "todorovauto",
+          "slug": "todorov-auto",
+          "name": "Автосалон Тодоров",
+          "city": "Burgas",
+          "sourceUrl": "https://todorovauto.mobile.bg/",
+          "clientPath": "clients/todorov-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 36,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Confirm exact business identity, independent website, suitable available vehicles and image-use basis; compare with the existing mobile journey before assignment."
+          },
+          "specificNote": "Potential matching older Agency OS todorov-auto has older showroom designs. Preserve account identity if matched."
+        },
+        {
+          "profile": "mg7group",
+          "slug": "mg7-group",
+          "name": "MG7 Group",
+          "city": "Burgas",
+          "sourceUrl": "https://mg7group.mobile.bg/",
+          "clientPath": "clients/mg7-group",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": "clients/mg7-group already contains research/brief material in main; preserve it. Older Agency OS mg7-group has import/showroom variants. This is continuation of an existing account, with the requested current template trio, not a new CRM identity."
+        },
+        {
+          "profile": "success",
+          "slug": "success-automobile",
+          "name": "Success Automobile",
+          "city": "Plovdiv",
+          "sourceUrl": "https://success.mobile.bg/",
+          "clientPath": "clients/success-automobile",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": null
+        },
+        {
+          "profile": "voivodovauto",
+          "slug": "voivodov-auto-antonio",
+          "name": "VOIVODOV AUTO & ANTONIO",
+          "city": "Plovdiv",
+          "sourceUrl": "https://voivodovauto.mobile.bg/",
+          "clientPath": "clients/voivodov-auto-antonio",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": null
+        },
+        {
+          "profile": "icars",
+          "slug": "icars-plovdiv",
+          "name": "icars",
+          "city": "Plovdiv",
+          "sourceUrl": "https://icars.mobile.bg/",
+          "clientPath": "clients/icars-plovdiv",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": null
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Golden Dreams, G Auto and regional dealers",
+      "branch": "codex/astra-bg-06",
+      "candidates": [
+        {
+          "profile": "golden-dreams-auto",
+          "slug": "golden-dreams-auto",
+          "name": "GoldenDreams AUTO (legacy: Golden Dreams AutoGroup)",
+          "city": "Bulgaria; current showroom location to verify",
+          "sourceUrl": "https://www.facebook.com/people/GoldenDreams-AUTO/61592803643776/",
+          "clientPath": "clients/golden-dreams-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": "OWNER-NOMINATED EXISTING ACCOUNT. Recovered legacy project: M:/codex/agency/projects/leads/automotive/golden-dreams-auto/autodeal. Its manifest names the Facebook source below; the current logged-out browser resolves it to GoldenDreams AUTO. Existing light/dark v2 logo PNGs are in mirror/public/assets/images/lead/. Inspect and reuse them only after provenance/identity review; do not generate a replacement automatically. The old contact HTML contains tel:8085550111, an inherited sample number: DO NOT reuse old contact data. Current city, contact, stock and recent Facebook activity remain unverified; no invented Mobile.bg identity. If public sources cannot establish those facts, preserve a precise blocked outcome and continue the other assigned dealers."
+        },
+        {
+          "profile": "g-auto",
+          "slug": "g-auto",
+          "name": "G Auto",
+          "city": "Blagoevgrad",
+          "sourceUrl": "https://g-auto.mobile.bg/",
+          "clientPath": "clients/g-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": "OWNER-NOMINATED EXISTING ACCOUNT. Exact source was recovered from M:/codex/agency/projects/leads/automotive/g-auto/autodeal/mirror/manifest.json and freshly matched to G Auto, Blagoevgrad. Distinct from G-Auto Group Sliven and G&G Auto Sofia. 111 retrieved Mobile.bg ads on 9 September are a screening total including sold/reserved entries, not verified available stock. Inspect existing branding and match the official Facebook page before using any social link. Do not repeat unconditional finance approval claims."
+        },
+        {
+          "profile": "kris_car",
+          "slug": "kris-car-plovdiv",
+          "name": "Крис Кар",
+          "city": "Plovdiv",
+          "sourceUrl": "https://kris_car.mobile.bg/",
+          "clientPath": "clients/kris-car-plovdiv",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 109,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Distinct from Varna KRIS AUTO and Kichevo KRASI CAR. Verify battery/warranty statements per listing."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "slavicars",
+          "slug": "slavi-cars",
+          "name": "Slavi Cars",
+          "city": "Dupnitsa",
+          "sourceUrl": "https://slavicars.mobile.bg/",
+          "clientPath": "clients/slavi-cars",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 107,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Verify independent website, current relevant stock and media basis. Seller condition/history guarantees remain seller claims."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "fresh-motors",
+          "slug": "fresh-motors-sheremetya",
+          "name": "FRESH MOTORS",
+          "city": "Sheremetya / Veliko Tarnovo area",
+          "sourceUrl": "https://fresh-motors.mobile.bg/",
+          "clientPath": "clients/fresh-motors-sheremetya",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 60,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Showroom is in Sheremetya although listed under Veliko Tarnovo. Never move it into the city based on the directory category."
+          },
+          "specificNote": "Showroom location is Sheremetya, near Veliko Tarnovo. Distinct from Fresh Auto Ruse. Directory city labels do not establish physical vehicle location."
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Sofia: first group",
+      "branch": "codex/astra-bg-07",
+      "candidates": [
+        {
+          "profile": "valentinoauto",
+          "slug": "valentino-auto-house",
+          "name": "VALENTINO AUTO HOUSE",
+          "city": "Sofia",
+          "sourceUrl": "https://valentinoauto.mobile.bg/",
+          "clientPath": "clients/valentino-auto-house",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": null,
+          "specificNote": null
+        },
+        {
+          "profile": "troya-auto",
+          "slug": "troya-auto",
+          "name": "TROYA AUTO",
+          "city": "Sofia",
+          "sourceUrl": "https://troya-auto.mobile.bg/",
+          "clientPath": "clients/troya-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 108,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Auto.bg and Car24 totals are older alternative snapshots, not extra cars. Confirm hours and domain; similarly named registry businesses must not be matched by name alone."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "fadicars",
+          "slug": "fadi-cars",
+          "name": "ФАДИ КАРС",
+          "city": "Sofia",
+          "sourceUrl": "https://fadicars.mobile.bg/",
+          "clientPath": "clients/fadi-cars",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 84,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Do not carry individual own-leasing or time-limited insurance statements into generic service guarantees."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "vvc-auto",
+          "slug": "vvc-auto",
+          "name": "В.В.Ц – АУТО",
+          "city": "Sofia",
+          "sourceUrl": "https://vvc-auto.mobile.bg/",
+          "clientPath": "clients/vvc-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 80,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Match exact phone and address; source request-price listings are not zero-price cars."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "maverik",
+          "slug": "maverik-sofia",
+          "name": "МАВЕРИК",
+          "city": "Sofia",
+          "sourceUrl": "https://maverik.mobile.bg/",
+          "clientPath": "clients/maverik-sofia",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 71,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Check actual car location when syndicated results differ; do not import finance percentages as universal terms."
+          },
+          "specificNote": null
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Sofia: second group",
+      "branch": "codex/astra-bg-08",
+      "candidates": [
+        {
+          "profile": "dangerauto",
+          "slug": "danger-auto",
+          "name": "DANGER AUTO",
+          "city": "Sofia",
+          "sourceUrl": "https://dangerauto.mobile.bg/",
+          "clientPath": "clients/danger-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 79,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Source explicitly says financing is through a bank, not in-house leasing. Validate any future finance copy and do not invent APR/approval promises."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "autohof",
+          "slug": "autohof",
+          "name": "AUTOHOF",
+          "city": "Sofia",
+          "sourceUrl": "https://autohof.mobile.bg/",
+          "clientPath": "clients/autohof",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 100,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Resolve the independent-domain question, current ex-lease stock and advertised finance partners before assignment. Large catalogue size alone is not a website defect."
+          },
+          "specificNote": "Potential matching older Agency OS autohof account has several designs. Reconcile before any new account identity. This prompt requests the current Auto Best/Modern/Carwow trio; it does not authorize overwriting legacy variants."
+        },
+        {
+          "profile": "lubocar",
+          "slug": "lyubo-car",
+          "name": "Любо кар",
+          "city": "Sofia",
+          "sourceUrl": "https://lubocar.mobile.bg/",
+          "clientPath": "clients/lyubo-car",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 42,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Reconcile 08:00 versus 09:00 opening times and viewing directions across source pages. Do not reproduce association roles, discounts or financing terms without fresh verification."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "optimum",
+          "slug": "optimum-automotive",
+          "name": "Optimum Automotive",
+          "city": "Sofia",
+          "sourceUrl": "https://optimum.mobile.bg/",
+          "clientPath": "clients/optimum-automotive",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 37,
+            "lane": "priority-research",
+            "website": {
+              "url": null,
+              "status": "not-matched-in-bounded-search"
+            },
+            "nextVerification": "Verify which car is at Prof. Kiril Popov 53G versus Moreni Club 4. Individual battery/guarantee statements are seller claims. Recorded phone comes from a 2025-dated listing; current contacts-page retrieval failed. Reverify phone before any use."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "new-motors",
+          "slug": "new-motors-sofia",
+          "name": "NEW MOTORS",
+          "city": "Sofia",
+          "sourceUrl": "https://new-motors.mobile.bg/",
+          "clientPath": "clients/new-motors-sofia",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 74,
+            "lane": "second-wave-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "First Honda title/body specifications require checking against the source listing. Monthly finance headlines must not replace the cash price."
+          },
+          "specificNote": null
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Existing-site comparisons and regional dealers",
+      "branch": "codex/astra-bg-09",
+      "candidates": [
+        {
+          "profile": "carmax",
+          "slug": "car-max-sofia",
+          "name": "CAR MAX",
+          "city": "Sofia",
+          "sourceUrl": "https://carmax.mobile.bg/",
+          "clientPath": "clients/car-max-sofia",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 61,
+            "lane": "audit-first",
+            "website": {
+              "url": "https://carmax.bg/",
+              "status": "same-phone-site-retrieved"
+            },
+            "nextVerification": "Same-phone carmax.bg is an existing site. It exposes an address-like entry among vehicles; verify rendered behavior. Reconcile Samokovsko 133 versus 135. Unrelated to US CarMax."
+          },
+          "specificNote": "Existing site https://carmax.bg/ links the assigned Mobile.bg profile and phone. Marketplace fetch failed during this refresh; official site succeeded. Compare the rendered catalogue; an address-like entry appears in extracted stock content but requires visual confirmation. Unrelated to US CarMax."
+        },
+        {
+          "profile": "novacars",
+          "slug": "nova-cars-sofia",
+          "name": "NOVA CARS",
+          "city": "Sofia",
+          "sourceUrl": "https://novacars.mobile.bg/",
+          "clientPath": "clients/nova-cars-sofia",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 66,
+            "lane": "audit-first",
+            "website": {
+              "url": "https://novacars.bg/",
+              "status": "same-phone-and-address-site-retrieved"
+            },
+            "nextVerification": "The website matches phone 0898880599 and Amsterdam 5 and already has a trade-in flow. Screen sold/reserved entries separately and audit the actual mobile journey before claiming a deficiency."
+          },
+          "specificNote": "Existing https://novacars.bg/ was identified by prior same-phone/address research. Possible older Agency OS account nova-cars-luxury-sales; establish whether it is the same business. Do not create a second account or describe it as lacking a website."
+        },
+        {
+          "profile": "stenlicar",
+          "slug": "stenli-car",
+          "name": "СТЕНЛИ КАР",
+          "city": "Sofia",
+          "sourceUrl": "https://stenlicar.mobile.bg/",
+          "clientPath": "clients/stenli-car",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 76,
+            "lane": "audit-first",
+            "website": {
+              "url": "https://stenlicar.com/",
+              "status": "dealer-linked-site-retrieved"
+            },
+            "nextVerification": "Dealer about page names stenlicar.com, but retrieved site lists Kiril Hristov 78 and different phones versus directory. Resolve current/branch contact identity before using either."
+          },
+          "specificNote": "Dealer-linked https://stenlicar.com/ has contact differences versus marketplace research; resolve branch/current identity before personalizing contact destinations."
+        },
+        {
+          "profile": "luxauto",
+          "slug": "lux-auto-bg",
+          "name": "ЛУКС АВТО",
+          "city": "Stara Zagora",
+          "sourceUrl": "https://luxauto.mobile.bg/",
+          "clientPath": "clients/lux-auto-bg",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 131,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Exact-name duplicates exist elsewhere; match phone and Stara Zagora site. Dealer tuning/performance claims are not independently verified."
+          },
+          "specificNote": "Exact Mobile.bg source is recorded in legacy lux-auto-bg/autodeal/mirror/manifest.json. Reuse account identity. Do not assume a similarly named dealer elsewhere is the same business."
+        },
+        {
+          "profile": "nextautobg",
+          "slug": "next-auto-pernik",
+          "name": "NEXT AUTO",
+          "city": "Pernik",
+          "sourceUrl": "https://nextautobg.mobile.bg/",
+          "clientPath": "clients/next-auto-pernik",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 236,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Distinct from NEXTCAR in Banovo. Verify actual finance/service scope and media before a demo; no independently verified 236-car stock claim."
+          },
+          "specificNote": null
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Ruse, Vratsa, Pleven and Haskovo",
+      "branch": "codex/astra-bg-10",
+      "candidates": [
+        {
+          "profile": "plusauto",
+          "slug": "plus-auto-ruse",
+          "name": "Plus Auto",
+          "city": "Ruse",
+          "sourceUrl": "https://plusauto.mobile.bg/",
+          "clientPath": "clients/plus-auto-ruse",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 110,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Count relevant available cars, verify identity/domain, and do not infer poor website quality from inventory scale."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "freshauto",
+          "slug": "fresh-auto-ruse",
+          "name": "Фреш Ауто",
+          "city": "Ruse",
+          "sourceUrl": "https://freshauto.mobile.bg/",
+          "clientPath": "clients/fresh-auto-ruse",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 59,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Distinct from FRESH MOTORS in Sheremetya and similar names."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "f1auto",
+          "slug": "f1-auto-vratsa",
+          "name": "F1 - AUTO",
+          "city": "Vratsa",
+          "sourceUrl": "https://f1auto.mobile.bg/",
+          "clientPath": "clients/f1-auto-vratsa",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 190,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "Distinct from F1rst Motors Dubai. Verify current finance providers and stock; do not inherit source credit promises."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "kunchev-auto",
+          "slug": "kunchev-auto",
+          "name": "КЪНЧЕВ",
+          "city": "Pleven",
+          "sourceUrl": "https://kunchev-auto.mobile.bg/",
+          "clientPath": "clients/kunchev-auto",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 189,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "First inspected listing declines trade-in; do not advertise a generic trade-in service. Confirm whether this is a listing-specific policy."
+          },
+          "specificNote": null
+        },
+        {
+          "profile": "haskovocarsbg",
+          "slug": "haskovo-cars-bg",
+          "name": "ХАСКОВО КАРС БГ",
+          "city": "Haskovo",
+          "sourceUrl": "https://haskovocarsbg.mobile.bg/",
+          "clientPath": "clients/haskovo-cars-bg",
+          "disposition": "refresh-and-build-if-identity-stock-media-established",
+          "historicalScreening": {
+            "date": "2026-09-08",
+            "advertisedCount": 134,
+            "lane": "regional-research",
+            "website": {
+              "url": null,
+              "status": "not-assessed"
+            },
+            "nextVerification": "VAT/customs statements are listing-specific seller claims. Confirm business, available whole cars and domain; do not infer website quality from count."
+          },
+          "specificNote": null
+        }
+      ]
+    }
+  ]
+}
+

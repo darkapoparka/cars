@@ -1,0 +1,4661 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-12T18:27:08.850Z",
+  "githubOwner": "darkapoparka",
+  "vercelTeam": "tyj5",
+  "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
+  "aliases": {
+    "asko96": "asko-96",
+    "tesi-car": "tesi-car-varna"
+  },
+  "dealers": [
+    {
+      "slug": "al-aayan-used-cars",
+      "name": "Al Aayan Used Cars",
+      "localPath": "clients/al-aayan-used-cars",
+      "localPresent": true,
+      "variants": [],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "research-only",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "ae-sharjah-al-aayan-used-cars",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "research-only",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "al-aayan-used-cars",
+        "name": "Al Aayan Used Cars",
+        "path": "clients/al-aayan-used-cars",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "ae-sharjah-al-aayan-used-cars"
+      }
+    },
+    {
+      "slug": "al-basma-motors",
+      "name": "Al Basma Motors",
+      "localPath": "clients/al-basma-motors",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "ae-sharjah-al-basma-motors",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "al-basma-motors",
+        "name": "Al Basma Motors",
+        "path": "clients/al-basma-motors",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "recovered-unfinished",
+        "reviewState": "pending-owner-review",
+        "leadId": "ae-sharjah-al-basma-motors"
+      }
+    },
+    {
+      "slug": "al-fareed-used-cars",
+      "name": "Al Fareed Used Cars",
+      "localPath": "clients/al-fareed-used-cars",
+      "localPresent": true,
+      "variants": [],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "research-only",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "ae-sharjah-al-fareed-used-cars",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "research-only",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "al-fareed-used-cars",
+        "name": "Al Fareed Used Cars",
+        "path": "clients/al-fareed-used-cars",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "ae-sharjah-al-fareed-used-cars"
+      }
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "name": "Al Hamoor Al Thahabi Used Cars",
+      "localPath": "clients/al-hamoor-al-thahabi",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "ae-sharjah-al-hamoor-al-thahabi",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "al-hamoor-al-thahabi",
+        "name": "Al Hamoor Al Thahabi Used Cars",
+        "path": "clients/al-hamoor-al-thahabi",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "recovered-unfinished",
+        "reviewState": "pending-owner-review",
+        "leadId": "ae-sharjah-al-hamoor-al-thahabi"
+      }
+    },
+    {
+      "slug": "asko-96",
+      "name": "АСКО 96",
+      "localPath": "clients/asko-96",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "asko-96",
+        "name": "asko-96",
+        "path": "clients/asko-96",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "astracar",
+      "name": "Астракар",
+      "localPath": "clients/astracar",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "astracar",
+        "name": "astracar",
+        "path": "clients/astracar",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "autohof",
+      "name": "autohof",
+      "localPath": "clients/autohof",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-08",
+          "commit": "3756e01ee1781508720b81a98b8b3810bd929704",
+          "slug": "autohof",
+          "path": "clients/autohof",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "autolife",
+      "name": "Аутолайф",
+      "localPath": "clients/autolife",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "autolife",
+        "name": "autolife",
+        "path": "clients/autolife",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "automarket-varna",
+      "name": "Аутомаркет Варна",
+      "localPath": "clients/automarket-varna",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "automarket-varna",
+        "name": "automarket-varna",
+        "path": "clients/automarket-varna",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "avangard-auto",
+      "name": "AVANGARD AUTO",
+      "localPath": "clients/avangard-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "avangard-auto",
+        "name": "avangard-auto",
+        "path": "clients/avangard-auto",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "avtoborsa-mania",
+      "name": "avtoborsa-mania",
+      "localPath": "clients/avtoborsa-mania",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-02",
+          "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
+          "slug": "avtoborsa-mania",
+          "path": "clients/avtoborsa-mania",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "car-max-sofia",
+      "name": "car-max-sofia",
+      "localPath": "clients/car-max-sofia",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-09",
+          "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
+          "slug": "car-max-sofia",
+          "path": "clients/car-max-sofia",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "cfo-auto-group",
+      "name": "CFO Auto Group",
+      "localPath": "clients/cfo-auto-group",
+      "localPresent": true,
+      "variants": [],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "research-only",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "us-fl-orlando-cfo-auto-group",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "research-only",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "cfo-auto-group",
+        "name": "CFO Auto Group",
+        "path": "clients/cfo-auto-group",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "us-fl-orlando-cfo-auto-group"
+      }
+    },
+    {
+      "slug": "champion-auto-pro",
+      "name": "Champion Auto Pro",
+      "localPath": "clients/champion-auto-pro",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "personalized-local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "champion-auto-pro",
+        "name": "champion-auto-pro",
+        "path": "clients/champion-auto-pro",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "chernomore-varna",
+      "name": "chernomore-varna",
+      "localPath": "clients/chernomore-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-02",
+          "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
+          "slug": "chernomore-varna",
+          "path": "clients/chernomore-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "danger-auto",
+      "name": "danger-auto",
+      "localPath": "clients/danger-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-08",
+          "commit": "3756e01ee1781508720b81a98b8b3810bd929704",
+          "slug": "danger-auto",
+          "path": "clients/danger-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "dayandnight",
+      "name": "dayandnight",
+      "localPath": "clients/dayandnight",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "rencar",
+          "state": "visual-reskin-draft",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "existing-separate-designs",
+        "repositories": [
+          "https://github.com/darkapoparka/day-and-night-autodeal",
+          "https://github.com/darkapoparka/day-and-night-modern",
+          "https://github.com/darkapoparka/day-and-night-spartak"
+        ],
+        "projects": [
+          "day-and-night-a",
+          "day-and-night-modern"
+        ],
+        "note": "Original Auto Best, Modern and Carwow sources remain on M:. Canonical combined three-design delivery is pending. Rencar is a separate incomplete visual trial."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "dayandnight",
+        "name": "dayandnight",
+        "path": "clients/dayandnight",
+        "variants": [
+          "rencar"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "eliqauto",
+      "name": "eliqauto",
+      "localPath": "clients/eliqauto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "personalized-qa-pending",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "personalized-qa-pending",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "personalized-qa-pending",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "eliqauto",
+        "name": "eliqauto",
+        "path": "clients/eliqauto",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "recovered-unfinished",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "elit-auto-import",
+      "name": "ELIT AUTO IMPORT EXPORT",
+      "localPath": "clients/elit-auto-import",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "elit-auto-import",
+        "name": "elit-auto-import",
+        "path": "clients/elit-auto-import",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "europa-varna",
+      "name": "europa-varna",
+      "localPath": "clients/europa-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-03",
+          "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
+          "slug": "europa-varna",
+          "path": "clients/europa-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "evrocar-varna-09",
+      "name": "evrocar-varna-09",
+      "localPath": "clients/evrocar-varna-09",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-03",
+          "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
+          "slug": "evrocar-varna-09",
+          "path": "clients/evrocar-varna-09",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "excellent-cars",
+      "name": "Excellent Cars",
+      "localPath": "clients/excellent-cars",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-demo-verified",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-demo-verified",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-demo-verified",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "existing-public-preview",
+        "repository": "https://github.com/darkapoparka/excellent-cars",
+        "project": "excellent-cars",
+        "url": "https://excellent-cars.vercel.app",
+        "verifiedAt": "2026-09-10",
+        "source": "J:/excellent-cars",
+        "note": "Existing deployment source is separate from the Cars working copy."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "excellent-cars",
+        "name": "excellent-cars",
+        "path": "clients/excellent-cars",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "exclusive-auto-varna",
+      "name": "exclusive-auto-varna",
+      "localPath": "clients/exclusive-auto-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-04",
+          "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
+          "slug": "exclusive-auto-varna",
+          "path": "clients/exclusive-auto-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "extra-car-sm",
+      "name": "extra-car-sm",
+      "localPath": "clients/extra-car-sm",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-02",
+          "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
+          "slug": "extra-car-sm",
+          "path": "clients/extra-car-sm",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "f1-auto-vratsa",
+      "name": "f1-auto-vratsa",
+      "localPath": "clients/f1-auto-vratsa",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-10",
+          "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
+          "slug": "f1-auto-vratsa",
+          "path": "clients/f1-auto-vratsa",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "f1rst-motors",
+      "name": "F1rst Motors",
+      "localPath": "clients/f1rst-motors",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "fadi-cars",
+      "name": "fadi-cars",
+      "localPath": "clients/fadi-cars",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-07",
+          "commit": "4e98d7639bdbf4b357510248563cae886263f422",
+          "slug": "fadi-cars",
+          "path": "clients/fadi-cars",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "five-auto",
+      "name": "five-auto",
+      "localPath": "clients/five-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "unrecorded",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "unrecorded",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "unrecorded",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-04",
+          "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
+          "slug": "five-auto",
+          "path": "clients/five-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "fresh-auto-ruse",
+      "name": "fresh-auto-ruse",
+      "localPath": "clients/fresh-auto-ruse",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-10",
+          "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
+          "slug": "fresh-auto-ruse",
+          "path": "clients/fresh-auto-ruse",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "fresh-motors-sheremetya",
+      "name": "fresh-motors-sheremetya",
+      "localPath": "clients/fresh-motors-sheremetya",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-06",
+          "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
+          "slug": "fresh-motors-sheremetya",
+          "path": "clients/fresh-motors-sheremetya",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "g-auto",
+      "name": "g-auto",
+      "localPath": "clients/g-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-06",
+          "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
+          "slug": "g-auto",
+          "path": "clients/g-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "golden-dreams-auto",
+      "name": "golden-dreams-auto",
+      "localPath": "clients/golden-dreams-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-06",
+          "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
+          "slug": "golden-dreams-auto",
+          "path": "clients/golden-dreams-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "haskovo-cars-bg",
+      "name": "haskovo-cars-bg",
+      "localPath": "clients/haskovo-cars-bg",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-10",
+          "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
+          "slug": "haskovo-cars-bg",
+          "path": "clients/haskovo-cars-bg",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "icars-plovdiv",
+      "name": "icars-plovdiv",
+      "localPath": "clients/icars-plovdiv",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "unrecorded",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "unrecorded",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "unrecorded",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-05",
+          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
+          "slug": "icars-plovdiv",
+          "path": "clients/icars-plovdiv",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "ivo-auto",
+      "name": "Иво Ауто",
+      "localPath": "clients/ivo-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "ivo-auto",
+        "name": "ivo-auto",
+        "path": "clients/ivo-auto",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "kapitol-varna",
+      "name": "kapitol-varna",
+      "localPath": "clients/kapitol-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-02",
+          "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
+          "slug": "kapitol-varna",
+          "path": "clients/kapitol-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "keen-auto-mall",
+      "name": "Keen Auto Mall",
+      "localPath": "clients/keen-auto-mall",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "us-fl-pompano-beach-keen-auto-mall",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "keen-auto-mall",
+        "name": "Keen Auto Mall",
+        "path": "clients/keen-auto-mall",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "us-fl-pompano-beach-keen-auto-mall"
+      }
+    },
+    {
+      "slug": "kg-team-auto",
+      "name": "K-G Team Auto",
+      "localPath": "clients/kg-team-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "bg-plovdiv-kg-team-auto",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "kg-team-auto",
+        "name": "K-G Team Auto",
+        "path": "clients/kg-team-auto",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "recovered-unfinished",
+        "reviewState": "pending-owner-review",
+        "leadId": "bg-plovdiv-kg-team-auto"
+      }
+    },
+    {
+      "slug": "kris-car-plovdiv",
+      "name": "kris-car-plovdiv",
+      "localPath": "clients/kris-car-plovdiv",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-06",
+          "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
+          "slug": "kris-car-plovdiv",
+          "path": "clients/kris-car-plovdiv",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "kunchev-auto",
+      "name": "kunchev-auto",
+      "localPath": "clients/kunchev-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-10",
+          "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
+          "slug": "kunchev-auto",
+          "path": "clients/kunchev-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "legend-auto",
+      "name": "LEGEND AUTO",
+      "localPath": "clients/legend-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-qa-passed",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "legend-auto",
+        "name": "legend-auto",
+        "path": "clients/legend-auto",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "lux-auto-bg",
+      "name": "lux-auto-bg",
+      "localPath": "clients/lux-auto-bg",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-09",
+          "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
+          "slug": "lux-auto-bg",
+          "path": "clients/lux-auto-bg",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "lyubo-car",
+      "name": "lyubo-car",
+      "localPath": "clients/lyubo-car",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-08",
+          "commit": "3756e01ee1781508720b81a98b8b3810bd929704",
+          "slug": "lyubo-car",
+          "path": "clients/lyubo-car",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "martin-auto-dobrich",
+      "name": "martin-auto-dobrich",
+      "localPath": "clients/martin-auto-dobrich",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-04",
+          "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
+          "slug": "martin-auto-dobrich",
+          "path": "clients/martin-auto-dobrich",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "maverik-sofia",
+      "name": "maverik-sofia",
+      "localPath": "clients/maverik-sofia",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-07",
+          "commit": "4e98d7639bdbf4b357510248563cae886263f422",
+          "slug": "maverik-sofia",
+          "path": "clients/maverik-sofia",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "mg7-group",
+      "name": "MG7 Group",
+      "localPath": "clients/mg7-group",
+      "localPresent": true,
+      "variants": [],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-05",
+          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
+          "slug": "mg7-group",
+          "path": "clients/mg7-group",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "research-only",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": "bg-burgas-mg7-group",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "research-only",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "mg7-group",
+        "name": "MG7 Group",
+        "path": "clients/mg7-group",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "bg-burgas-mg7-group"
+      }
+    },
+    {
+      "slug": "midlands-trade-centre",
+      "name": "Midlands Trade Centre Limited",
+      "localPath": "clients/midlands-trade-centre",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-needs-local-qa",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "gb-birmingham-midlands-trade-centre",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "midlands-trade-centre",
+        "name": "Midlands Trade Centre Limited",
+        "path": "clients/midlands-trade-centre",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "gb-birmingham-midlands-trade-centre"
+      }
+    },
+    {
+      "slug": "navara-car",
+      "name": "Навара кар",
+      "localPath": "clients/navara-car",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "navara-car",
+        "name": "navara-car",
+        "path": "clients/navara-car",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "recovered-unfinished",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "neuhoff-auto-sales",
+      "name": "Neuhoff Auto Sales",
+      "localPath": "clients/neuhoff-auto-sales",
+      "localPresent": true,
+      "variants": [],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "research-only",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "us-in-evansville-neuhoff-auto-sales",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "research-only",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "neuhoff-auto-sales",
+        "name": "Neuhoff Auto Sales",
+        "path": "clients/neuhoff-auto-sales",
+        "variants": [],
+        "sourceState": "research-or-brief-only",
+        "reviewState": "pending-owner-review",
+        "leadId": "us-in-evansville-neuhoff-auto-sales"
+      }
+    },
+    {
+      "slug": "next-auto-pernik",
+      "name": "next-auto-pernik",
+      "localPath": "clients/next-auto-pernik",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-09",
+          "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
+          "slug": "next-auto-pernik",
+          "path": "clients/next-auto-pernik",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "next-car-banovo",
+      "name": "next-car-banovo",
+      "localPath": "clients/next-car-banovo",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-04",
+          "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
+          "slug": "next-car-banovo",
+          "path": "clients/next-car-banovo",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "nova-cars-sofia",
+      "name": "nova-cars-sofia",
+      "localPath": "clients/nova-cars-sofia",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-09",
+          "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
+          "slug": "nova-cars-sofia",
+          "path": "clients/nova-cars-sofia",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "outletcars-varna",
+      "name": "OUTLETCARS.BG — Варна",
+      "localPath": "clients/outletcars-varna",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "import",
+          "state": "ready-for-local-review",
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null,
+          "qaRecorded": true,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "name": "Перфект Ауто",
+      "localPath": "clients/perfect-auto-varna",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "plus-auto-ruse",
+      "name": "plus-auto-ruse",
+      "localPath": "clients/plus-auto-ruse",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-10",
+          "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
+          "slug": "plus-auto-ruse",
+          "path": "clients/plus-auto-ruse",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "prestige-varna",
+      "name": "prestige-varna",
+      "localPath": "clients/prestige-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-02",
+          "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
+          "slug": "prestige-varna",
+          "path": "clients/prestige-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "priselci",
+      "name": "Автокъща Приселци",
+      "localPath": "clients/priselci",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-review-ready",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "priselci",
+        "name": "priselci",
+        "path": "clients/priselci",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      }
+    },
+    {
+      "slug": "promosale-varna",
+      "name": "Promosale Varna",
+      "localPath": "clients/promosale-varna",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": "/",
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "import",
+          "state": "ready-for-local-review",
+          "entry": "/variant-2/",
+          "publicUrl": null,
+          "templateSource": null,
+          "qaRecorded": true,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": "/variant-3/",
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "preview-verified-with-temporary-share",
+        "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+        "deploymentId": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+        "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+        "branch": "codex/workflow-pilot-20260912",
+        "access": {
+          "mode": "temporary-share-link",
+          "publicWithoutShareLink": false,
+          "expiresAt": "2026-09-13T17:20:37Z",
+          "note": "Direct deployment URL redirects to Vercel login. Temporary sharing was verified in new browser contexts without account login. Protection settings and production were not changed; the token stays in ignored runtime only."
+        },
+        "verifiedAt": "2026-09-12T18:22:31.486Z"
+      },
+      "id": null,
+      "aliases": [],
+      "repository": "darkapoparka/cars-promosalevarna",
+      "packagingVersion": "1",
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+          "canonicalPath": "clients/promosale-varna",
+          "payloadDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7"
+        },
+        "personalization": {
+          "state": "checked",
+          "scope": "Existing source pack preserved; six listings and 54 image checks passed; inventory was not requalified live."
+        },
+        "build": {
+          "state": "passed",
+          "sourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+          "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+          "variants": [
+            {
+              "key": "auto-best",
+              "node": "22.23.2",
+              "check": "0 errors / 0 warnings",
+              "build": "passed; final package app inputs equal tested candidate after LF normalization"
+            },
+            {
+              "key": "import",
+              "node": "24.21.0",
+              "check": "0 errors / 0 warnings",
+              "build": "passed; final package app inputs equal tested candidate after LF normalization"
+            },
+            {
+              "key": "carwow",
+              "node": "24.21.0",
+              "check": "0 errors / 4 existing CSS warnings",
+              "build": "final package build passed"
+            }
+          ],
+          "providerBuild": "READY for the exact exported commit"
+        },
+        "deployment": {
+          "state": "ready",
+          "id": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+          "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+          "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+          "target": "preview"
+        },
+        "browser": {
+          "state": "passed",
+          "accessMode": "temporary-share-link",
+          "publicWithoutShareLink": false,
+          "verifiedAt": "2026-09-12T18:22:31.486Z",
+          "evidence": "docs/evidence/promosale-browser-2026-09-12.json",
+          "routes": 24,
+          "widths": [
+            390,
+            1440
+          ],
+          "switcherWidth": 320
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-10T20:13:32.045Z",
+          "state": "unknown",
+          "legacyState": "not-deployed",
+          "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        }
+      ],
+      "canonicalSourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+      "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+      "vercel": {
+        "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+        "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+        "teamSlug": "tyj5",
+        "primaryDomain": "cars-promosalevarna.vercel.app"
+      },
+      "production": {
+        "deploymentId": "dpl_6rsHE8wbWoWnP8Q2W42hcC6W89ex",
+        "gitCommit": "61552221b9f791fc57a40602643ae3d3915d3da1",
+        "url": "https://cars-promosalevarna.vercel.app",
+        "state": "READY",
+        "browserState": "not-rechecked-by-this-pilot",
+        "unchangedByPilot": true
+      }
+    },
+    {
+      "slug": "rqs-auto-team",
+      "name": "rqs-auto-team",
+      "localPath": "clients/rqs-auto-team",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-03",
+          "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
+          "slug": "rqs-auto-team",
+          "path": "clients/rqs-auto-team",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "slavi-cars",
+      "name": "slavi-cars",
+      "localPath": "clients/slavi-cars",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-06",
+          "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
+          "slug": "slavi-cars",
+          "path": "clients/slavi-cars",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "sprint-auto-varna",
+      "name": "sprint-auto-varna",
+      "localPath": "clients/sprint-auto-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-03",
+          "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
+          "slug": "sprint-auto-varna",
+          "path": "clients/sprint-auto-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "stenli-car",
+      "name": "stenli-car",
+      "localPath": "clients/stenli-car",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-09",
+          "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
+          "slug": "stenli-car",
+          "path": "clients/stenli-car",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "success-automobile",
+      "name": "success-automobile",
+      "localPath": "clients/success-automobile",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-05",
+          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
+          "slug": "success-automobile",
+          "path": "clients/success-automobile",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "sunny-varna",
+      "name": "sunny-varna",
+      "localPath": "clients/sunny-varna",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-03",
+          "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
+          "slug": "sunny-varna",
+          "path": "clients/sunny-varna",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "swiss-auto-43",
+      "name": "swiss-auto-43",
+      "localPath": "clients/swiss-auto-43",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-04",
+          "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
+          "slug": "swiss-auto-43",
+          "path": "clients/swiss-auto-43",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "in-progress",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "in-progress",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "tesi-car-varna",
+      "name": "Теси Кар",
+      "localPath": "clients/tesi-car-varna",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "local-review-ready",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "local-review-ready",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "local-review-ready",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-01",
+          "commit": "14ac68d2db91ea0ae6749f204e95de0915d36925",
+          "slug": "tesi-car",
+          "path": "clients/tesi-car",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "needs-personalization",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "needs-personalization",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "needs-personalization",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "texas-drive-auto",
+      "name": "Texas Drive Auto",
+      "localPath": "clients/texas-drive-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "in-progress",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "in-progress",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "in-progress",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": "us-tx-dallas-texas-drive-auto",
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "texas-drive-auto",
+        "name": "Texas Drive Auto",
+        "path": "clients/texas-drive-auto",
+        "variants": [
+          "auto-best",
+          "modern",
+          "carwow"
+        ],
+        "sourceState": "recovered-unfinished",
+        "reviewState": "pending-owner-review",
+        "leadId": "us-tx-dallas-texas-drive-auto"
+      }
+    },
+    {
+      "slug": "the-dealers-point",
+      "name": "The Dealers Point",
+      "localPath": "clients/the-dealers-point",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "present",
+          "commit": null
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "slug": "todorov-auto",
+      "name": "todorov-auto",
+      "localPath": "clients/todorov-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-05",
+          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
+          "slug": "todorov-auto",
+          "path": "clients/todorov-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "troya-auto",
+      "name": "troya-auto",
+      "localPath": "clients/troya-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-07",
+          "commit": "4e98d7639bdbf4b357510248563cae886263f422",
+          "slug": "troya-auto",
+          "path": "clients/troya-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "valentino-auto-house",
+      "name": "valentino-auto-house",
+      "localPath": "clients/valentino-auto-house",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-07",
+          "commit": "4e98d7639bdbf4b357510248563cae886263f422",
+          "slug": "valentino-auto-house",
+          "path": "clients/valentino-auto-house",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "voivodov-auto-antonio",
+      "name": "voivodov-auto-antonio",
+      "localPath": "clients/voivodov-auto-antonio",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-05",
+          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
+          "slug": "voivodov-auto-antonio",
+          "path": "clients/voivodov-auto-antonio",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    },
+    {
+      "slug": "vvc-auto",
+      "name": "vvc-auto",
+      "localPath": "clients/vvc-auto",
+      "localPresent": false,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "qaRecorded": false
+        }
+      ],
+      "branchSources": [
+        {
+          "ref": "origin/codex/astra-bg-07",
+          "commit": "4e98d7639bdbf4b357510248563cae886263f422",
+          "slug": "vvc-auto",
+          "path": "clients/vvc-auto",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ]
+        }
+      ],
+      "delivery": {
+        "state": "source-review-required"
+      }
+    }
+  ],
+  "campaignCandidatesWithoutFolders": [
+    {
+      "leadId": "bg-sofia-valentino-auto-house",
+      "name": "VALENTINO AUTO HOUSE",
+      "proposedClientPath": "clients/valentino-auto-house",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-plovdiv-success-automobile",
+      "name": "Success Automobile",
+      "proposedClientPath": "clients/success-automobile",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-plovdiv-voivodov-auto-antonio",
+      "name": "VOIVODOV AUTO & ANTONIO",
+      "proposedClientPath": "clients/voivodov-auto-antonio",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-plovdiv-icars",
+      "name": "icars",
+      "proposedClientPath": "clients/icars-plovdiv",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "bg-burgas-five-auto",
+      "name": "FIVE AUTO",
+      "proposedClientPath": "clients/five-auto",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "ae-dubai-the-dealers-point",
+      "name": "The Dealers Point",
+      "proposedClientPath": "clients/the-dealers-point",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "ae-dubai-f1rst-motors",
+      "name": "F1rst Motors",
+      "proposedClientPath": "clients/f1rst-motors",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-tx-houston-amt-auto-sales",
+      "name": "AMT AUTO SALES LLC",
+      "proposedClientPath": "clients/amt-auto-sales",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-mi-paw-paw-depue-auto-sales",
+      "name": "Depue Auto Sales Inc",
+      "proposedClientPath": "clients/depue-auto-sales",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-va-mount-crawford-my-car-outlet",
+      "name": "MY CAR OUTLET",
+      "proposedClientPath": "clients/my-car-outlet",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-ga-cornelia-good-wheels-auto-sales",
+      "name": "Good Wheels Auto Sales, Inc",
+      "proposedClientPath": "clients/good-wheels-auto-sales",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-tn-sevierville-import-truck-center",
+      "name": "Sevierville Import & Truck Center",
+      "proposedClientPath": "clients/sevierville-import-truck-center",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "us-ma-easthampton-nicky-ds",
+      "name": "Nicky D's",
+      "proposedClientPath": "clients/nicky-ds",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "gb-birmingham-amh-cars",
+      "name": "AMH Cars Bhm Ltd",
+      "proposedClientPath": "clients/amh-cars-bhm",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "gb-birmingham-heartlands-motor-group",
+      "name": "Heartlands Motor Group",
+      "proposedClientPath": "clients/heartlands-motor-group",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "de-gross-oesingen-autohandel-winter",
+      "name": "Autohandel Winter",
+      "proposedClientPath": "clients/autohandel-winter",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "nl-elst-autobedrijf-spinder",
+      "name": "Autobedrijf Spinder",
+      "proposedClientPath": "clients/autobedrijf-spinder",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "nl-autobedrijf-wester",
+      "name": "Autobedrijf Wester",
+      "proposedClientPath": "clients/autobedrijf-wester",
+      "sourceState": "not-created"
+    },
+    {
+      "leadId": "ae-dubai-car-finder-360",
+      "name": "Car Finder 360",
+      "proposedClientPath": "clients/car-finder-360",
+      "sourceState": "not-created"
+    }
+  ],
+  "migration": {
+    "date": "2026-09-12",
+    "priorIndexTree": "3c7c20cc3e7708490ed8505b03fecde7790948fe",
+    "note": "Prior stable lead IDs, aliases, candidate descriptions and recovery states preserved; historical allocation is not an active task order."
+  }
+}

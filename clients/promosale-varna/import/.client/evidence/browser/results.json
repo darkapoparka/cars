@@ -1,0 +1,180 @@
+{
+  "slug": "promosale-varna",
+  "template": "import",
+  "port": 6763,
+  "startedAt": "2026-09-09T20:35:08.786Z",
+  "routes": [
+    {
+      "width": 390,
+      "label": "home",
+      "route": "/",
+      "status": 200,
+      "title": "Promosale Varna — автомобили и подбор на автомобили",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-home.png"
+    },
+    {
+      "width": 390,
+      "label": "inventory",
+      "route": "/inventory",
+      "status": 200,
+      "title": "Автомобили — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-inventory.png"
+    },
+    {
+      "width": 390,
+      "label": "detail",
+      "route": "/inventory/21788787563552939",
+      "status": 200,
+      "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-detail.png"
+    },
+    {
+      "width": 390,
+      "label": "contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "Контакти — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-contact.png"
+    },
+    {
+      "width": 390,
+      "label": "about",
+      "route": "/about",
+      "status": 200,
+      "title": "За нас — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-about.png"
+    },
+    {
+      "width": 390,
+      "label": "service",
+      "route": "/import",
+      "status": 200,
+      "title": "Подбрани автомобили — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-service.png"
+    },
+    {
+      "width": 390,
+      "label": "sell",
+      "route": "/sell-your-car",
+      "status": 200,
+      "title": "Продай автомобила си — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-sell.png"
+    },
+    {
+      "width": 390,
+      "label": "blog",
+      "route": "/blog",
+      "status": 200,
+      "title": "Новини — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "390-blog.png"
+    },
+    {
+      "width": 390,
+      "label": "vehicle-navigation",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "label": "home",
+      "route": "/",
+      "status": 200,
+      "title": "Promosale Varna — автомобили и подбор на автомобили",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-home.png"
+    },
+    {
+      "width": 1440,
+      "label": "inventory",
+      "route": "/inventory",
+      "status": 200,
+      "title": "Автомобили — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-inventory.png"
+    },
+    {
+      "width": 1440,
+      "label": "detail",
+      "route": "/inventory/21788787563552939",
+      "status": 200,
+      "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-detail.png"
+    },
+    {
+      "width": 1440,
+      "label": "contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "Контакти — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-contact.png"
+    },
+    {
+      "width": 1440,
+      "label": "about",
+      "route": "/about",
+      "status": 200,
+      "title": "За нас — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-about.png"
+    },
+    {
+      "width": 1440,
+      "label": "service",
+      "route": "/import",
+      "status": 200,
+      "title": "Подбрани автомобили — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-service.png"
+    },
+    {
+      "width": 1440,
+      "label": "sell",
+      "route": "/sell-your-car",
+      "status": 200,
+      "title": "Продай автомобила си — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-sell.png"
+    },
+    {
+      "width": 1440,
+      "label": "blog",
+      "route": "/blog",
+      "status": 200,
+      "title": "Новини — Promosale Varna",
+      "passed": true,
+      "failures": [],
+      "screenshot": "1440-blog.png"
+    },
+    {
+      "width": 1440,
+      "label": "vehicle-navigation",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "finishedAt": "2026-09-09T20:35:38.763Z"
+}

@@ -8,14 +8,14 @@ This extends the [existing build workflow](WORKFLOW.md); it does not replace the
 
 Use one stable business/account identity and one opportunity for the three-design offer. Check current business facts, relevant available stock, actual website opportunity, existing project copies and private outreach/suppression history. Research-only records are not a mass-build instruction. Select a bounded batch of qualified accounts; do not create 120 projects merely because the research index has forty names.
 
-For this campaign, a build approved for a dealer means three requested variants unless the owner narrows it: `auto-best`, `modern`, `carwow`. The record's recommended entry is just the first design to show. Use one fact sheet, one verified stock sample and one approved asset set across all three, so the dealer is choosing design rather than contradictory inventory.
+For a new standard dealer the three designs are `auto-best`, `modern`, `carwow`; an intentional Import trio uses `auto-best`, `import`, `carwow`. Preserve existing dealer manifests. The record's recommended entry is just the first design to show. Use one fact sheet, one verified stock sample and one approved asset set across all three, so the dealer is choosing design rather than contradictory inventory.
 
 Reuse existing variants. The ten Varna accounts already have client folders; read each variant's latest `.client/project.json`, build notes and QA evidence. Do not recreate completed work from an older handoff, overwrite an existing folder or silently replace an earlier template version.
 
 For a genuinely new, approved account, resolve a unique slug and use the existing helper from the actual repository root. First inspect the plan:
 
 ```powershell
-node scripts/new-client.mjs --client <verified-unique-slug> --templates auto-best,modern,carwow --dry-run
+node scripts/new-client.mjs --client <verified-unique-slug> --repository <owner/repo> --preset standard --dry-run
 ```
 
 The angle-bracket text is a placeholder, not a literal slug. Remove `--dry-run` only for an authorized build after checking existing destinations. This command exists already; it copies source and lineage, not CRM status, personalization, hosting or outreach. Follow the current template instructions for runtime, lockfiles and setup.
@@ -32,7 +32,7 @@ Localize deliberately: business language, currency, km/miles, price/tax presenta
 
 ## 3. Package the offer
 
-Use one short concept overview with **Design A / Design B / Design C**, the recommended starting choice, a few factual differences, and the three tested preview URLs. Do not expose internal template inspiration names as an affiliation with another automotive brand. A comparison page is optional future implementation; this document does not claim one exists.
+Use one short concept overview with **Design A / Design B / Design C**, the recommended starting choice, factual differences, and the single tested public origin with its design switcher. Do not expose internal template inspiration names as an affiliation with another automotive brand. A comparison page is optional future implementation; this document does not claim one exists.
 
 Before any approved deployment, verify rights to commercially reuse the template and proposed media. Public vehicle photos are not automatically licensed for an unsolicited commercial demo. Use authorized assets or clearly illustrative permitted placeholders; never invent stock as if it belongs to the dealer.
 

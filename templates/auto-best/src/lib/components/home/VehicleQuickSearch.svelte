@@ -1,4 +1,11 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
+  let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
+  let heading: HTMLHeadingElement;
+  onDestroy(() => releaseOffset?.(false));
+  import { cleanFilterFormData as cleanFormData } from '$lib/ui/forms';
+  import { filtersFromDraft } from '$data/filter-fields';
   import Icon from '$components/ui/Icon.svelte';
   import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
   import { resolve } from '$app/paths';
@@ -24,23 +31,9 @@
   let searchOpen = $state(false);
   let mobileView = $state<MobileFilterView>('main');
   let modelOptions = $derived(listingModelsForMake(make));
-  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, {
-    q: query,
-    make,
-    model,
-    body,
-    fuel,
-    transmission: '',
-    version: '',
-    equipment: [],
-    condition: '',
-    yearMin: yearMin ? Number(yearMin) : null,
-    yearMax: null,
-    priceMin: null,
-    priceMax: priceMax ? Number(priceMax) : null,
-    mileageMax: mileageMax ? Number(mileageMax) : null,
-    sort: 'default'
-  }));
+  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, filtersFromDraft({
+    q: query, make, model, body, fuel, priceMax, mileageMax, yearMin
+  })));
   let hasFilters = $derived(Boolean(query || make || model || body || priceMax || fuel || mileageMax || yearMin));
   const formatNumber = (value: string) => new Intl.NumberFormat('bg-BG').format(Number(value));
   let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
@@ -96,10 +89,13 @@
   };
 
   const openSearch = () => {
+    if (!dialog || dialog.open) return;
+    releaseOffset = preserveScrollOffset('--dn-home-search-scroll');
     searchOpen = true;
     mobileView = 'main';
     dialog?.showModal();
-    if (window.matchMedia('(min-width: 768px)').matches) requestAnimationFrame(() => searchInput?.focus());
+    if (window.matchMedia('(min-width: 768px)').matches) searchInput?.focus();
+    else heading?.focus();
   };
 
   const closeSearch = () => {
@@ -163,15 +159,11 @@
   const restoreTriggerFocus = () => {
     searchOpen = false;
     mobileView = 'main';
-    trigger?.focus();
+    releaseOffset?.();
+    if (trigger?.isConnected) trigger.focus();
   };
 
-  const cleanFormData = (event: FormDataEvent) => {
-    for (const key of new Set(event.formData.keys())) {
-      const values = event.formData.getAll(key);
-      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
-    }
-  };
+
 </script>
 
 <button
@@ -199,6 +191,7 @@
   onclick={handleDialogClick}
   oncancel={handleCancel}
   onclose={restoreTriggerFocus}
+  onkeydown={trapDialogTab}
 >
   <div class="dn-quick-search__panel">
     <header class="dn-quick-search__header">
@@ -214,7 +207,7 @@
           <Icon name="arrow-left" size={21} strokeWidth={1.8} />
         </button>
       {/if}
-      <h2 id="quick-search-title">
+      <h2 id="quick-search-title" bind:this={heading} tabindex="-1">
         <span class="dn-quick-search__title-desktop">Търсене на автомобил</span>
         <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
       </h2>
@@ -338,6 +331,8 @@
 </dialog>
 
 <style>
+  :global(body:has(.dn-quick-search__dialog:modal)) { position: fixed; top: var(--dn-home-search-scroll, 0); width: 100%; overflow: hidden; }
+  #quick-search-title:focus { outline: none; }
   .dn-quick-search__trigger {
     display: grid;
     width: 100%;
@@ -739,6 +734,7 @@
     }
 
     .dn-quick-search__mobile-footer {
+      margin-top: auto;
       flex: 0 0 auto;
       padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
       background: #fff;

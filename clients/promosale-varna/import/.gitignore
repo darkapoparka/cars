@@ -1,0 +1,66 @@
+node_modules
+.codex-logs
+outputs
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+# Playwright
+test-results
+playwright-report
+
+# Local audit artifacts
+*.log
+*.tmp
+*.temp
+*.audit.png
+.audit/
+.audit-ba/
+.audit-desktop/
+.codex-audit/
+.codex-artifacts/
+.codex-*.log
+.codex-*.out.log
+.codex-*.err.log
+codex-*.log
+codex-*.err.log
+codex-vite*.log
+codex-screenshots/
+.codex-review-screens/
+.codex-screenshots/
+.playwright-mcp/
+.bohemcars-cms/
+.getrich-dev-*/
+static/uploads/cms/
+.tmp/
+tmp/
+tmp-vite*.log
+.tmp-*.log
+.tmp-*.png
+.tmp-dev-*.log
+/*.png
+/*.jpg
+/*.jpeg
+dev*.log
+.claude/
+
+# Local preview/demo render artifacts (not used by the app)
+static/_previews/

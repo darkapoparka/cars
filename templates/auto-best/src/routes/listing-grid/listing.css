@@ -169,10 +169,16 @@
   color: #fff;
 }
 
-.dn-listing-filter__toggle:hover,
 .dn-listing-filter__toggle:focus-visible {
   border-color: #111318;
   background: #111318;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dn-listing-filter__toggle:hover {
+    border-color: #111318;
+    background: #111318;
+  }
 }
 
 .dn-listing-filter__count {
@@ -273,8 +279,10 @@
   box-shadow: var(--dn-vehicle-card-shadow, 0 1px 2px rgba(18, 25, 38, 0.06));
 }
 
-.dn-listing-results .dn-vehicle-card:hover {
-  box-shadow: var(--dn-vehicle-card-shadow, 0 10px 26px rgba(18, 25, 38, 0.09));
+@media (hover: hover) and (pointer: fine) {
+  .dn-listing-results .dn-vehicle-card:hover {
+    box-shadow: var(--dn-vehicle-card-shadow, 0 10px 26px rgba(18, 25, 38, 0.09));
+  }
 }
 
 .dn-listing-empty {
@@ -389,13 +397,13 @@
   .dn-listing-filter__quick a,
   .dn-listing-filter__quick button {
     display: inline-flex;
-    min-height: 44px;
+    min-height: 42px;
     flex: 0 0 auto;
     align-items: center;
     gap: 8px;
     padding: 0 15px;
     border: 0;
-    border-radius: var(--dn-radius-button);
+    border-radius: var(--dn-pill);
     background: #fff;
     color: #3f4650;
     font-family: inherit;
@@ -433,55 +441,68 @@
     padding-inline: 15px 12px;
     border: 0;
     border-radius: var(--dn-pill);
-    background: #fff;
+    background: transparent;
     font-size: 16px;
     box-shadow: none;
+    isolation: isolate;
+  }
+
+  .dn-listing-filter__keyword::before {
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: #fff;
+    content: '';
   }
 
   .dn-listing-filter__keyword-hint {
     display: none;
   }
 
-  .dn-listing-filter__toggle {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    font-size: 14px;
-  }
-
-  .dn-listing-filter__toggle-label {
-    display: none;
-  }
-
+  .dn-listing-filter__toggle,
   .dn-listing-filter .dn-listing-filter__mobile-sort {
     position: relative;
     display: grid;
     width: 44px;
     height: 44px;
     place-items: center;
+    padding: 0;
+    border: 0;
     border-radius: 50%;
-    background: #fff;
-    color: #202329;
+    background: transparent;
+    isolation: isolate;
   }
-  .dn-listing-filter__mobile-sort { border: 0; padding: 0; cursor: pointer; }
-  .dn-listing-filter__mobile-sort:focus-visible { outline: 2px solid #202329; outline-offset: 3px; }
-  .dn-listing-filter__mobile-sort:hover { background: #e8eaed; }
-  .dn-listing-filter__mobile-sort:has(.dn-listing-filter__sort-active) { color: var(--dn-red); background: #fff; }
-  .dn-listing-filter__sort-active { position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; border-radius: 50%; background: var(--dn-red); pointer-events: none; }
+
+  .dn-listing-filter__toggle::before,
+  .dn-listing-filter__mobile-sort::before {
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    border-radius: 50%;
+    content: '';
+  }
+
+  .dn-listing-filter__toggle::before { background: #202329; }
+  .dn-listing-filter__mobile-sort::before { background: #fff; }
+
+  .dn-listing-filter__toggle:focus-visible::before { background: #111318; }
+  .dn-listing-filter__mobile-sort:focus-visible { outline: 2px solid #202329; outline-offset: 2px; }
+
+  .dn-listing-filter__toggle-label { display: none; }
+  .dn-listing-filter__mobile-sort { color: #202329; cursor: pointer; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dn-listing-filter__toggle:hover::before { background: #111318; }
+    .dn-listing-filter__mobile-sort:hover::before { background: #e8eaed; }
+  }
+
+  .dn-listing-filter__mobile-sort:has(.dn-listing-filter__sort-active) { color: var(--dn-red); }
+  .dn-listing-filter__sort-active { display: none; }
   .dn-listing-filter__quick-row { display: flex; min-width: 0; align-items: center; gap: 12px; padding-bottom: 8px; }
   .dn-listing-filter__quick-row .dn-listing-filter__quick { min-width: 0; flex: 1; padding-block: 0; }
 
-  .dn-listing-filter__count {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    min-width: 20px;
-    height: 20px;
-    padding: 0 5px;
-    background: var(--dn-red);
-    color: #fff;
-  }
+  .dn-listing-filter__count { display: none; }
 
   .dn-listing-filter__submit {
     display: none;

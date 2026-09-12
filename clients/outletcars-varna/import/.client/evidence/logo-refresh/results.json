@@ -1,0 +1,195 @@
+{
+  "capturedAt": "2026-09-09T21:19:29.511139+00:00",
+  "scope": "Logo and icon integration on home, inventory and contact at 390 and 1440 pixels; footer captures. Not a full functional re-certification.",
+  "build": {
+    "variant": "import",
+    "node": "v24.18.0",
+    "build": 0,
+    "check": 0
+  },
+  "browser": [
+    {
+      "variant": "import",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 69.90625,
+          "h": 44,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-10iaw5t"
+        },
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-light-v2.svg",
+          "w": 134,
+          "h": 85,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(255, 255, 255, 0.86)",
+          "classes": "daynight-news-all-card__brand svelte-1l61ds9"
+        },
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 76.265625,
+          "h": 48,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "logo svelte-9362jc"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6766/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6766/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "import",
+      "width": 390,
+      "route": "/inventory",
+      "status": 200,
+      "images": [],
+      "icons": [
+        "http://127.0.0.1:6766/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6766/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "import",
+      "width": 390,
+      "route": "/contact",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 69.90625,
+          "h": 44,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-10iaw5t"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6766/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6766/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "import",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 88.984375,
+          "h": 55.984375,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-3vap42"
+        },
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 220,
+          "h": 64,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-9362jc"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6766/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6766/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "import",
+      "width": 1440,
+      "route": "/inventory",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 88.984375,
+          "h": 55.984375,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-3vap42"
+        },
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 220,
+          "h": 64,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-9362jc"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6766/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6766/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "import",
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "images": [
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 88.984375,
+          "h": 55.984375,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-3vap42"
+        },
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-light-v2.svg",
+          "w": 300,
+          "h": 220,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-1pvu3t9"
+        },
+        {
+          "src": "http://127.0.0.1:6766/dealer/logo-on-dark-v2.svg",
+          "w": 220,
+          "h": 64,
+          "complete": true,
+          "filter": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "classes": "svelte-9362jc"
+        }
+      ],
+      "icons": [
+        "http://127.0.0.1:6766/dealer/favicon-v2.ico",
+        "http://127.0.0.1:6766/dealer/icon-180-v2.png"
+      ],
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "passed": true
+}

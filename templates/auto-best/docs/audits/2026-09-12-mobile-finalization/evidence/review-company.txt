@@ -1,0 +1,798 @@
+
+## src/lib/components/company/AboutHero.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { brand } from '$config/brand';
+4:   import Icon from '$components/ui/Icon.svelte';
+5:   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+6:   import SocialBrandIcon from './SocialBrandIcon.svelte';
+7: 
+8:   const socialProfiles = [
+9:     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
+10:     { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
+11:     { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
+12:   ] as const;
+13: </script>
+14: 
+15: <section class="dn-about-hero dn-route-hero dn-route-hero--studio dn-route-hero--charcoal" aria-labelledby="about-title">
+16:   <HeroVehicles pair="about" />
+17:   <picture>
+18:   <img
+19:     class="dn-about-hero__media"
+20:     src="/assets/images/section/bg-12.jpg"
+21:     alt=""
+22:     width="1920"
+23:     height="880"
+24:     fetchpriority="high"
+25:     decoding="async"
+26:   />
+27:   </picture>
+28:   <div class="dn-about-hero__overlay" aria-hidden="true"></div>
+29:   <div class="container dn-about-hero__content dn-route-hero__layout">
+30:     <div class="dn-about-hero__copy dn-route-hero__copy">
+31:       <h1 id="about-title">За нас</h1>
+32:       <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Собствен лизинг</p>
+33:     </div>
+34:     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={resolve('/listing-grid')}>
+35:       <span>Вижте автомобилите</span>
+36:       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+37:     </a>
+38:     <nav class="dn-about-socials" aria-label="Последвайте ни в социалните мрежи">
+39:       <span>Последвайте ни</span>
+40:       <div class="dn-about-socials__links">
+41:         {#each socialProfiles as profile (profile.name)}
+42:           <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={`${profile.label} — отваря се в нов раздел`}>
+43:             <SocialBrandIcon name={profile.name} size={28} />
+44:           </a>
+45:         {/each}
+46:       </div>
+47:     </nav>
+48:   </div>
+49: </section>
+50: 
+
+## src/lib/components/company/AboutPartners.svelte
+1: <script lang="ts">
+2:   import { demoContentLabel, demoPartnerIntro, demoPartners } from '$data/demo-content';
+3: </script>
+4: 
+5: <section class="dn-about-partners" aria-labelledby="about-partners-title" data-demo-content="true">
+6:   <div class="container">
+7:     <header class="dn-about-partners__heading">
+8:       <h2 id="about-partners-title">Партньори</h2>
+9:       <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoPartnerIntro}</p>
+10:     </header>
+11: 
+12:     <ul class="dn-about-partners__grid" aria-label="Демо партньорски лога">
+13:       {#each demoPartners as partner (partner.id)}
+14:         <li>
+15:           <img
+16:             src={partner.image}
+17:             alt={`Демо лого: ${partner.name}`}
+18:             width="180"
+19:             height="80"
+20:             loading="lazy"
+21:             decoding="async"
+22:           />
+23:         </li>
+24:       {/each}
+25:     </ul>
+26:   </div>
+27: </section>
+28: 
+
+## src/lib/components/company/AboutProcess.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import Icon from '$components/ui/Icon.svelte';
+4:   import AboutServiceIcon from './AboutServiceIcon.svelte';
+5:   import { brand } from '$config/brand';
+6:   import { companyServices } from '$data/company';
+7: </script>
+8: 
+9: <section class="dn-about-process dn-section" id="process" aria-labelledby="about-process-title">
+10:   <div class="container">
+11:     <div class="dn-about-section-heading">
+12:       <h2 id="about-process-title">{brand.name}</h2>
+13:       <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
+14:       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
+15:         Вижте автомобилите <Icon name="arrow-right" size={18} />
+16:       </a>
+17:     </div>
+18: 
+19:     <div class="dn-about-services">
+20:       {#each companyServices as service (service.index)}
+21:         <article class="dn-about-service-card">
+22:           <div class="dn-about-service-card__icon" aria-hidden="true">
+23:             <AboutServiceIcon name={service.icon} />
+24:           </div>
+25:           <div>
+26:             <h3>{service.title}</h3>
+27:             <p>{service.description}</p>
+28:           </div>
+29:           <a href={resolve(service.href as '/contact')}>
+30:             <span>{service.cta}</span>
+31:             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
+32:           </a>
+33:         </article>
+34:       {/each}
+35:     </div>
+36: 
+37:   </div>
+38: </section>
+
+## src/lib/components/company/AboutServiceIcon.svelte
+1: <script lang="ts">
+2:   import type { CompanyServiceIcon } from '$data/company';
+3: 
+4:   interface Props {
+5:     name: CompanyServiceIcon;
+6:     size?: number;
+7:   }
+8: 
+9:   let { name, size = 50 }: Props = $props();
+10: 
+11:   const iconPaths: Record<CompanyServiceIcon, readonly string[]> = {
+12:   'inspection': [
+13:     "M50 28.2812C50 27.5 49.5312 26.875 48.9062 26.5625C47.8125 26.0938 46.7969 25.4688 45.8594 24.7656C42.7344 22.3438 38.9844 20.7031 35.1562 19.9219C35.625 18.9844 35.8594 17.8906 35.8594 16.7969C35.8594 12.7344 32.5 9.375 28.4375 9.375C24.375 9.375 21.0156 12.7344 21.0156 16.7969C21.0156 18.125 21.3281 19.2969 21.9531 20.3906C20.2344 21.0156 18.9844 21.875 17.6562 22.6562C16.4062 23.4375 15.0781 24.2969 13.4375 24.9219C6.17188 25.3125 2.1875 26.7969 0.46875 29.6094C0.15625 30 0 30.625 0 31.1719V33.5156C0 34.8438 0.9375 35.9375 2.26562 36.1719L5.54688 36.6406C5.85938 38.9063 7.8125 40.7031 10.1562 40.7031C12.5 40.7031 14.375 38.9844 14.7656 36.7969L36.6406 36.7188C37.0312 38.9062 38.9062  [long line truncated: inspect original when needed]
+14:     "M26.3281 29.8438H23.3594C22.9688 29.8438 22.5781 30.1563 22.5781 30.625C22.5781 31.0938 22.8906 31.4062 23.3594 31.4062H26.3281C26.7188 31.4062 27.1094 31.0938 27.1094 30.625C27.1094 30.1563 26.7188 29.8438 26.3281 29.8438ZM26.7188 20.2344C27.0313 20.5469 27.5 20.5469 27.8125 20.2344L31.875 16.1719C32.1875 15.8594 32.1875 15.3906 31.875 15.0781C31.5625 14.7656 31.0938 14.7656 30.7813 15.0781L27.2656 18.5938L25.9375 17.2656C25.625 16.9531 25.1562 16.9531 24.8437 17.2656C24.5312 17.5781 24.5312 18.0469 24.8437 18.3594L26.7188 20.2344Z"
+15:   ],
+16:   'import': [
+17:     "M8.51562 9.45312L9.14062 9.53125C8.82812 9.92188 8.67188 10.4688 8.75 11.0156L9.21875 18.5938C9.29688 19.2969 9.6875 19.9219 10.2344 20.2344V21.4844C10.2344 22.5781 11.0938 23.4375 12.1875 23.4375H15.4688C16.5625 23.4375 17.4219 22.5781 17.4219 21.4844V20.5469H30.5469V21.4844C30.5469 22.5781 31.4062 23.4375 32.5 23.4375H35.7812C36.875 23.4375 37.7344 22.5781 37.7344 21.4844V20.0781C38.2031 19.6875 38.5156 19.2188 38.5156 18.5938L38.9844 11.0156C39.0625 10.4688 38.8281 10 38.5938 9.53125L39.2969 9.45312C40.5469 9.29688 41.5625 8.20312 41.4844 6.79688C41.3281 5.625 40.3125 4.76562 39.1406 4.6875H37.1875C36.5625 4.6875 35.9375 4.92188 35.4688 5.39062C34.9219 4.14062 34.2188 2.96875 33.5938 [long line truncated: inspect original when needed]
+18:     "M48.9062 22.0311C47.4219 19.9218 44.375 19.9999 42.9688 21.8749L32.5 32.9686C31.7969 31.4843 30.3125 30.4686 28.6719 30.4686H19.375C18.5156 30.4686 17.7344 30.3124 16.9531 29.9218C13.0469 28.0468 8.35938 28.5936 5 31.4061L0.703125 34.9999C0.390625 35.2343 0.3125 35.7811 0.625 36.0936C0.859375 36.4061 1.40625 36.4843 1.71875 36.1718L6.01562 32.578C8.90625 30.1561 12.9688 29.6874 16.3281 31.328C17.2656 31.7968 18.3594 32.0311 19.4531 32.0311H28.75C30.1562 32.0311 31.4844 33.1249 31.4844 34.7655C31.4844 36.2499 30.3906 37.4218 28.9062 37.4218H18.8281C18.4375 37.4218 18.0469 37.7343 18.0469 38.203C18.0469 38.6718 18.3594 38.9843 18.8281 38.9843H28.75C30.9375 38.9843 32.8125 37.2655 32.8125  [long line truncated: inspect original when needed]
+19:   ],
+20:   'leasing': [
+21:     "M12.4219 23.75L8.4375 22.8906C7.34375 22.6562 6.32812 23.5156 6.32812 24.6094V26.25C6.32812 27.5781 7.34375 27.8906 8.59375 27.8906H12.9688C13.8281 27.8906 14.6875 27.7344 14.6875 26.7969V26.5625C14.6875 25.1562 13.75 23.9844 12.4219 23.75ZM7.8125 26.25V24.5312C7.8125 24.375 7.96875 24.2187 8.125 24.2969L12.1094 25.1562C12.6562 25.3125 13.0469 25.7812 13.125 26.3281C10.3906 26.3281 8.04687 26.3281 7.8125 26.25Z",
+22:     "M47.8906 15.3906L42.2656 12.7344C40.3906 11.875 38.3594 11.5625 36.4062 11.9531L35.5469 10.2344C34.9219 8.67188 33.4375 7.57812 31.7187 7.57812H13.4375C11.7188 7.57812 10.2344 8.59375 9.60938 10.1563L6.5625 16.4844C5.85937 15.4688 4.6875 14.8438 3.4375 14.8438H2.10938C0.9375 14.8438 0 15.7813 0 16.9531V17.8125C0 18.9844 0.9375 19.9219 2.10938 19.9219H4.14062C3.28125 21.0156 2.89062 22.4219 2.89062 23.8281V28.5156C2.89062 30.3125 3.51562 32.0312 4.76562 33.5156V37.0312C4.76562 38.5938 6.01562 39.8438 7.57812 39.8438H10.4688C12.0312 39.8438 13.2812 38.5938 13.2812 37.0312V35.625H28.9062C32.3438 40.3125 37.7344 42.3438 37.8125 42.3438C37.9688 42.4219 38.125 42.4219 38.3594 42.3438C38.4375  [long line truncated: inspect original when needed]
+23:     "M45.7812 18.5937L40.625 16.1719C39.0625 15.3906 37.1094 15.3906 35.5469 16.1719L30.4687 18.5937C30.2344 18.75 30 18.9844 30 19.2969V27.5C30 33.6719 35.3906 37.0312 37.7344 38.2031C37.9687 38.2812 38.2031 38.2812 38.4375 38.2031C40.7812 37.0312 46.1719 33.6719 46.1719 27.5V19.2969C46.1719 18.9844 46.0156 18.75 45.7812 18.5937ZM44.6875 27.5C44.6875 32.5 40.3125 35.4688 38.125 36.6406C35.5469 35.2344 31.5625 32.4219 31.5625 27.5V19.7656L36.25 17.5C37.4219 16.9531 38.8281 16.9531 40 17.5L44.6875 19.7656V27.5Z",
+24:     "M35.0785 27.2657C34.766 27.0313 34.2973 27.1094 33.9848 27.4219C33.6723 27.7344 33.8285 28.2032 34.141 28.5157L37.1098 30.7813C37.4223 31.0157 37.891 30.9375 38.2035 30.625L42.5785 24.9219C42.8129 24.6094 42.7348 24.1407 42.4223 23.8282C42.1098 23.5938 41.641 23.6719 41.3285 23.9844L37.4223 29.0625L35.0785 27.2657Z"
+25:   ],
+26:   'trade-in': [
+27:     "M14.1406 32.9687L9.92188 32.0312C8.75 31.7969 7.73438 32.6562 7.73438 33.8281V35.625C7.73438 37.0312 8.82813 37.2656 10.1563 37.3437H15C15.8594 37.3437 16.5625 37.0312 16.5625 36.1719V35.9375C16.4844 34.4531 15.5469 33.2812 14.1406 32.9687ZM9.21875 35.7031V33.75C9.21875 33.5156 9.375 33.3594 9.60938 33.4375L13.9062 34.375C14.5312 34.5312 15 35.0781 15.0781 35.7031C14.9219 35.7812 9.29688 35.7812 9.21875 35.7031ZM40.0781 32.0312L35.7813 32.9687C34.375 33.2812 33.4375 34.4531 33.4375 35.8594C33.4375 35.9375 33.2812 36.9531 34.375 37.1875C34.9219 37.3437 38.4375 37.2656 39.9219 37.2656C41.25 37.2656 42.2656 36.9531 42.2656 35.5469V33.75C42.3438 32.6562 41.25 31.7969 40.0781 32.0312ZM40.781 [long line truncated: inspect original when needed]
+28:     "M46.875 23.5938H45.4688C44.1406 23.5938 42.8906 24.2188 42.1875 25.3906L40.7812 22.5781C44.8438 20.7031 47.6562 16.6406 47.6562 11.875C47.5781 5.3125 42.2656 0 35.7812 0C29.2969 0 23.9844 5.3125 23.9844 11.7969C23.9844 13.2031 24.2188 14.5313 24.6875 15.7813H15.2344C13.4375 15.7813 11.7969 16.875 11.1719 18.5156L7.89063 25.3125C7.1875 24.2188 5.9375 23.5156 4.60937 23.5156H3.125C1.95312 23.5156 0.9375 24.5313 0.9375 25.7031V26.6406C0.9375 27.8125 1.875 28.8281 3.125 28.8281H5.39062C4.45312 30 3.98438 31.4844 3.98438 33.0469V38.0469C3.98438 39.9219 4.6875 41.7969 6.01562 43.3594V47.1094C6.01562 48.75 7.34375 50 8.90625 50H12.0312C13.6719 50 14.9219 48.6719 14.9219 47.1094V45.625H35V47.10 [long line truncated: inspect original when needed]
+29:     "M33.4375 14.9219C33.4375 14.5312 33.125 14.1406 32.6562 14.1406C32.1875 14.1406 31.875 14.4531 31.875 14.9219C31.875 16.7969 33.2031 18.3594 35 18.6719V19.6875C35 20.0781 35.3125 20.4688 35.7812 20.4688C36.25 20.4688 36.5625 20.1562 36.5625 19.6875V18.6719C38.3594 18.2812 39.6875 16.7969 39.6875 14.9219C39.6875 13.0469 38.3594 11.4844 36.5625 11.1719V6.48438C37.5 6.79688 38.125 7.65625 38.125 8.67188C38.125 9.0625 38.4375 9.45313 38.9062 9.45313C39.375 9.45313 39.6875 9.14063 39.6875 8.67188C39.6875 6.79688 38.3594 5.23438 36.5625 4.92188V3.90625C36.5625 3.51562 36.25 3.125 35.7812 3.125C35.3125 3.125 35 3.4375 35 3.90625V4.92188C33.2031 5.3125 31.875 6.79688 31.875 8.67188C31.875 10.54 [long line truncated: inspect original when needed]
+30:   ]
+31:   };
+32: </script>
+33: 
+34: <svg
+35:   class="dn-about-service-icon"
+36:   data-icon-family="day-night-services"
+37:   data-icon-name={name}
+38:   width={size}
+39:   height={size}
+40:   viewBox="0 0 50 50"
+41:   fill="none"
+42:   xmlns="http://www.w3.org/2000/svg"
+43:   aria-hidden="true"
+44: >
+45:   {#each iconPaths[name] as path (path)}
+46:     <path d={path} fill="currentColor" />
+47:   {/each}
+48: </svg>
+49: 
+
+## src/lib/components/company/AboutTeam.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { brand } from '$config/brand';
+4:   import { demoContentLabel, demoTeamIntro, demoTeamMembers } from '$data/demo-content';
+5:   import Icon from '$components/ui/Icon.svelte';
+6: 
+7:   const phoneLinkAttributes = { href: brand.phoneHref } as const;
+8: </script>
+9: 
+10: <section class="dn-about-team" aria-labelledby="about-team-title" data-demo-content="true">
+11:   <div class="container">
+12:     <header class="dn-about-team__heading">
+13:       <h2 id="about-team-title">Екипът</h2>
+14:       <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoTeamIntro}</p>
+15:     </header>
+16: 
+17:     <div class="dn-about-team__grid">
+18:       {#each demoTeamMembers as member (member.id)}
+19:         <article class="dn-about-team-card">
+20:           <div class="dn-about-team-card__media">
+21:             <img
+22:               src={member.image}
+23:               alt={`Демо профил: ${member.name}`}
+24:               width="450"
+25:               height="450"
+26:               loading="lazy"
+27:               decoding="async"
+28:             />
+29:           </div>
+30:           <div class="dn-about-team-card__details">
+31:             <div>
+32:               <h3>{member.name}</h3>
+33:               <p>{member.role}</p>
+34:             </div>
+35:             <div class="dn-about-team-card__actions">
+36:               <a {...phoneLinkAttributes} aria-label={`Обадете се на ${brand.name}`}>
+37:                 <Icon name="phone" size={16} strokeWidth={1.8} />
+38:               </a>
+39:               <a href={resolve('/contact')} aria-label={`Изпратете запитване до ${brand.name}`}>
+40:                 <Icon name="mail" size={16} strokeWidth={1.8} />
+41:               </a>
+42:             </div>
+43:           </div>
+44:         </article>
+45:       {/each}
+46:     </div>
+47:   </div>
+48: </section>
+49: 
+
+## src/lib/components/company/ContactHero.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import type { Vehicle } from '$data/inventory';
+4:   import ContactVehicle from './ContactVehicle.svelte';
+5:   import Icon from '$components/ui/Icon.svelte';
+6:   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+7:   import { brand } from '$config/brand';
+8:   import type { ContactTopic } from '$data/company';
+9: 
+10:   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
+11:   const heroDescriptions = {
+12:     general: `${brand.city} · Оглед с предварителна уговорка`,
+13:     inspection: 'Изберете автомобил и уговорете удобен час',
+14:     import: 'Обсъдете автомобил, бюджет и внос с екипа',
+15:     leasing: 'Условия според избрания автомобил',
+16:     'trade-in': 'Получете оценка за своя автомобил'
+17:   };
+18: </script>
+19: 
+20: <section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} aria-labelledby="contact-title">
+21:   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
+22:   <picture>
+23:     {#if topic.id === 'trade-in'}
+24:       <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
+25:     {:else if topic.id === 'import'}
+26:       <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
+27:     {/if}
+28:   <img
+29:     class="dn-contact-hero__media"
+30:     src="/assets/images/lead/day-night-contact-hero-v2.webp"
+31:     alt=""
+32:     width="1920"
+33:     height="1080"
+34:     fetchpriority="high"
+35:     decoding="async"
+36:   />
+37:   </picture>
+38:   <div class="dn-contact-hero__overlay" aria-hidden="true"></div>
+39:   <div class="container dn-contact-hero__content dn-route-hero__layout">
+40:     <div class="dn-contact-hero__copy dn-route-hero__copy">
+41:       <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? 'Свържете се с нас' : topic.id === 'trade-in' ? 'Продажба и бартер' : topic.title}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? 'Контакти' : topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</span></h1>
+42:       <p class="dn-contact-hero__lead">{heroDescriptions[topic.id]}</p>
+43:     </div>
+44:     {#if topic.id === 'leasing'}
+45:       {#if vehicle}
+46:         <div class="dn-contact-hero__vehicle dn-route-hero__control">
+47:           <ContactVehicle {vehicle} hero />
+48:         </div>
+49:       {:else}
+50:         <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href={resolve('/listing-grid')}>
+51:           Изберете автомобил
+52:           <Icon name="arrow-right" size={24} strokeWidth={1.8} />
+53:         </a>
+54:       {/if}
+55:     {:else}
+56:     <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href="#contact-intent">
+57:       <span class="dn-contact-hero__desktop-title">{topic.id === 'trade-in' ? 'Започнете с автомобила' : topic.id === 'import' ? 'Опишете какво търсите' : topic.id === 'general' ? 'Телефон и маршрут' : 'Контакти и следващи стъпки'}</span><span class="dn-contact-hero__mobile-title">Контакти и адрес</span>
+58:       <Icon name="arrow-right" size={24} strokeWidth={1.8} />
+59:     </a>
+60:     {/if}
+61:   </div>
+62: </section>
+
+## src/lib/components/company/ContactIntent.svelte
+1: <script lang="ts">
+2:   import type { Vehicle } from '$data/inventory';
+3:   import ContactVehicle from './ContactVehicle.svelte';
+4:   import Icon from '$components/ui/Icon.svelte';
+5:   import { brand } from '$config/brand';
+6:   import { contactPreparation, type ContactTopic } from '$data/company';
+7:   import SocialBrandIcon from './SocialBrandIcon.svelte';
+8:   import VehicleEnquiry from './VehicleEnquiry.svelte';
+9: 
+10:   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
+11:   const preparation = $derived(contactPreparation[topic.id]);
+12:   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+13:   const socialPlatforms = [
+14:     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
+15:     { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
+16:     { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
+17:   ] as const;
+18: </script>
+19: 
+20: <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>
+21:   <div class="dn-contact-intent__main">
+22:     {#if topic.id === 'trade-in' || topic.id === 'import'}
+23:       <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продай или бартер' : topic.title}</h1>
+24:     {/if}
+25:     <div class="dn-contact-intent__heading">
+26:       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
+27:     </div>
+28: 
+29:     {#if vehicle && topic.id !== 'leasing'}
+30:       <ContactVehicle {vehicle} />
+31:     {/if}
+32:     <div class="dn-contact-selected">
+33:       {#if topic.id !== 'general'}
+34:         <h3>{topic.title}</h3>
+35:       {/if}
+36:       <p>{#if topic.mobileDescription}<span class="dn-contact-description--wide">{topic.description}</span><span class="dn-contact-description--mobile">{topic.mobileDescription}</span>{:else}{topic.description}{/if}</p>
+37:     </div>
+38: 
+39:     {#if topic.id === 'trade-in' || topic.id === 'import'}
+40:       {#key topic.id}<VehicleEnquiry kind={topic.id} {importUrl} />{/key}
+41:     {:else if preparation}
+42:       <div class="dn-contact-preparation">
+43:         <h2>{preparation.title}</h2>
+44:         <ul>
+45:           {#each preparation.items as item (item)}
+46:             <li>{item}</li>
+47:           {/each}
+48:         </ul>
+49:       </div>
+50:     {/if}
+51: 
+52:     {#if topic.id === 'import' && importUrl}
+53:       <div class="dn-contact-import" aria-label="Избрана обява за внос">
+54:         <strong>Обява за внос</strong>
+55:         <a href={importUrl} target="_blank" rel="noopener noreferrer">{importUrl}<Icon name="arrow-right" size={18} /></a>
+56:         <p>Линкът не е изпратен. Свържете се с нас, за да обсъдим обявата и възможностите за внос.</p>
+57:       </div>
+58:     {/if}
+59: 
+60:     <a class="dn-contact-button dn-contact-button--call" href={brand.phoneHref}>
+61:       <span class="dn-contact-call-label">Обадете се · </span>{brand.phone}
+62:     </a>
+63: 
+64:     {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+65:     <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
+66:       <span>Социални мрежи</span>
+67:       <div>
+68:         {#each socialPlatforms as platform (platform.name)}
+69:           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
+70:             <SocialBrandIcon name={platform.name} />
+71:           </a>
+72:         {/each}
+73:       </div>
+74:     </div>
+75:     {/if}
+76:   </div>
+77: 
+78:   {#if topic.id === 'trade-in' || topic.id === 'import'}
+79:     <a class="dn-contact-workflow-call dn-action--dark" href={brand.phoneHref}>
+80:       <Icon name="phone" size={18} strokeWidth={1.8} />
+81:       Обадете се · {brand.phone}
+82:     </a>
+83:   {/if}
+84: 
+85:   <aside class="dn-contact-card" aria-label="Контакти на шоурума">
+86:     <div class="dn-contact-card__heading">
+87:       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Контакти</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Посетете шоурума</span>{/if}</h2>
+88:       <p class:dn-contact-mobile-copy={topic.id === 'general'}>Изберете адрес, посещение или директно обаждане.</p>
+89:     </div>
+90: 
+91:     {#if topic.id === 'general'}
+92:       <div class="dn-contact-visit">
+93:         <p><Icon name="map-pin" size={24} /><span>{brand.address}</span></p>
+94:         <p><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
+95:         <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Маршрут<Icon name="arrow-right" size={20} /></a>
+96:       </div>
+97:     {/if}
+98: 
+99:     <nav class="dn-contact-card__links" aria-label="Бързи действия за контакт">
+100:       <a
+101:         class="dn-contact-card__link"
+102:         href={directionsUrl}
+103:         target="_blank"
+104:         rel="noreferrer"
+105:         aria-label={`Отворете адреса в Google Maps: ${brand.address}`}
+106:       >
+107:         <span class="dn-contact-card__icon"><Icon name="map-pin" size={24} strokeWidth={1.8} /></span>
+108:         <span class="dn-contact-card__copy">
+109:           <strong>Адрес</strong>
+110:           <span>{brand.address}</span>
+111:         </span>
+112:         <span class="dn-contact-card__cue" aria-hidden="true">
+113:           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
+114:           <span role="tooltip">Отвори карта</span>
+115:         </span>
+116:       </a>
+117: 
+118:       <a
+119:         class="dn-contact-card__link"
+120:         href={brand.phoneHref}
+121:         aria-label={`Обадете се, за да уговорите посещение. ${brand.appointment}`}
+122:       >
+123:         <span class="dn-contact-card__icon"><Icon name="clock" size={24} strokeWidth={1.8} /></span>
+124:         <span class="dn-contact-card__copy">
+125:           <strong>Посещения</strong>
+126:           <span>{brand.appointment}</span>
+127:         </span>
+128:         <span class="dn-contact-card__cue" aria-hidden="true">
+129:           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
+130:           <span role="tooltip">Уговори посещение</span>
+131:         </span>
+132:       </a>
+133: 
+134:       <a
+135:         class="dn-contact-card__link dn-contact-card__link--phone"
+136:         href={brand.phoneHref}
+137:         aria-label={`Обадете се на ${brand.phone}`}
+138:       >
+139:         <span class="dn-contact-card__icon"><Icon name="phone" size={24} strokeWidth={1.8} /></span>
+140:         <span class="dn-contact-card__copy">
+141:           <strong>Телефон</strong>
+142:           <span>{brand.phone}</span>
+143:         </span>
+144:         <span class="dn-contact-card__cue" aria-hidden="true">
+145:           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
+146:           <span role="tooltip">Позвъни сега</span>
+147:         </span>
+148:       </a>
+149:     </nav>
+150: 
+151:     <div class="dn-contact-card__actions">
+152:       <a class="dn-contact-card__call" href={brand.phoneHref}>
+153:         <Icon name="phone" size={19} strokeWidth={1.8} />
+154:         Обадете се
+155:       </a>
+156:       <a class="dn-contact-card__route" href={directionsUrl} target="_blank" rel="noreferrer">
+157:         <Icon name="map-pin" size={19} strokeWidth={1.8} />
+158:         Маршрут
+159:       </a>
+160:     </div>
+161:   </aside>
+162: </div>
+163: 
+
+## src/lib/components/company/ContactVehicle.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+4:   import Icon from '$components/ui/Icon.svelte';
+5: 
+6:   let { vehicle, hero = false }: { vehicle: Vehicle; hero?: boolean } = $props();
+7: </script>
+8: 
+9: <a class="dn-contact-vehicle" class:dn-contact-vehicle--hero={hero} href={resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) })} aria-label={`Към ${vehicle.title}`}>
+10:   <img src={vehicle.image} alt="" width="120" height="90" />
+11:   <span><small>Избран автомобил</small><strong>{vehicle.title}</strong><span>{vehicle.year} · {formatVehiclePrice(vehicle.priceEur)}</span></span>
+12:   <Icon name="arrow-right" size={18} />
+13: </a>
+14: 
+
+## src/lib/components/company/ShowroomMap.svelte
+1: <script lang="ts">
+2:   import { brand } from '$config/brand';
+3:   import { showroomCoordinates } from '$data/company';
+4: 
+5:   const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
+6:   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+7: </script>
+8: 
+9: <div class="dn-showroom-map">
+10:   <iframe
+11:     class="dn-showroom-map__frame"
+12:     src={mapEmbedUrl}
+13:     title={`Карта до ${brand.name}`}
+14:     loading="lazy"
+15:     referrerpolicy="strict-origin-when-cross-origin"
+16:   ></iframe>
+17:   <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+18: </div>
+19: 
+
+## src/lib/components/company/SocialBrandIcon.svelte
+1: <script lang="ts">
+2:   type SocialBrandIconName = 'facebook' | 'instagram' | 'youtube';
+3: 
+4:   interface Props {
+5:     name: SocialBrandIconName;
+6:     size?: number;
+7:   }
+8: 
+9:   let { name, size = 22 }: Props = $props();
+10: 
+11:   const icons = {
+12:     facebook:
+13:       'M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z',
+14:     instagram:
+15:       'M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-. [long line truncated: inspect original when needed]
+16:     youtube:
+17:       'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'
+18:   } as const;
+19: 
+20:   let path = $derived(icons[name]);
+21: </script>
+22: 
+23: <svg
+24:   class="dn-social-brand-icon"
+25:   data-social-brand-icon={name}
+26:   width={size}
+27:   height={size}
+28:   viewBox="0 0 24 24"
+29:   aria-hidden="true"
+30: >
+31:   <path d={path} fill="currentColor" />
+32: </svg>
+33: 
+
+## src/lib/components/company/TeamSocialIcon.svelte
+1: <script lang="ts">
+2:   type TeamSocialIconName = 'facebook' | 'twitter' | 'linkedin' | 'instagram';
+3: 
+4:   interface Props {
+5:     name: TeamSocialIconName;
+6:     size?: number;
+7:   }
+8: 
+9:   let { name, size = 18 }: Props = $props();
+10: 
+11:   const icons = {
+12:     facebook: {
+13:       width: 542,
+14:       path: 'M458.118 426.271l24.091 174.419h-150.624v113.186c0 47.717 21.041 94.23 88.501 94.23h68.476v148.499c0 0-62.14 11.784-121.552 11.784-124.044 0-205.124-83.539-205.124-234.767v-132.932h-137.884v-174.419h137.884v-421.645h169.7v421.645h126.534z'
+15:     },
+16:     twitter: {
+17:       width: 956,
+18:       path: 'M566.828 563.112l348.144 404.688h-82.5l-302.292-351.385-241.44 351.385h-278.473l365.104-531.356-365.104-424.374h82.504l319.229 371.072 254.978-371.072h278.475l-378.625 551.042zM453.828 431.763l-331.331 473.93h126.721l583.294-834.341h-126.723l-251.961 360.41z'
+19:     },
+20:     linkedin: {
+21:       width: 964,
+22:       path: 'M215.733 4.626h-199.814v643.454h199.814v-643.454zM115.719 735.853c-63.894 0-115.719 52.923-115.719 116.816 0 30.69 12.192 60.124 33.893 81.826s51.135 33.893 81.825 33.893c30.691 0 60.124-12.192 81.826-33.893s33.893-51.135 33.893-81.826c0-63.893-51.847-116.816-115.719-116.816zM963.572 4.626h-199.385v313.23c0 74.649-1.506 170.382-103.888 170.382-103.885 0-119.804-81.104-119.804-165.003v-318.609h-199.599v643.454h191.639v-87.774h2.797c26.676 50.556 91.838 103.908 189.058 103.908 202.222 0 239.399-133.166 239.399-306.134v-353.455h-0.217z'
+23:     },
+24:     instagram: {
+25:       width: 956,
+26:       path: 'M477.738 649.29c-87.747 0-159.354-71.609-159.354-159.357s71.608-159.357 159.354-159.357c87.746 0 159.354 71.609 159.354 159.357s-71.608 159.357-159.354 159.357zM955.679 489.933c0 65.99 0.601 131.383-3.106 197.253-3.707 76.511-21.163 144.413-77.107 200.361-56.067 56.068-123.849 73.402-200.358 77.108-65.989 3.706-131.381 3.108-197.25 3.108-65.989 0-131.38 0.598-197.25-3.108-76.509-3.706-144.411-21.16-200.358-77.108-56.067-56.067-73.401-123.851-77.106-200.361-3.706-65.99-3.108-131.383-3.108-197.253s-0.598-131.383 3.108-197.253c3.706-76.514 21.159-144.412 77.106-200.363 56.067-56.067 123.849-73.4 200.358-77.107 65.989-3.707 131.381-3.106 197.25-3.106 65.989 0 131.38-0.601 197.25 3.1 [long line truncated: inspect original when needed]
+27:     }
+28:   } as const;
+29: 
+30:   let icon = $derived(icons[name]);
+31: </script>
+32: 
+33: <svg
+34:   class="dn-team-social-icon"
+35:   data-team-social-icon={name}
+36:   width={size}
+37:   height={size}
+38:   viewBox={`0 0 ${icon.width} 968`}
+39:   aria-hidden="true"
+40: >
+41:   <g transform="translate(0 968) scale(1 -1)">
+42:     <path d={icon.path} fill="currentColor" />
+43:   </g>
+44: </svg>
+45: 
+
+## src/lib/components/company/VehicleEnquiry.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { onDestroy, tick } from 'svelte';
+4:   import type { Attachment } from 'svelte/attachments';
+5:   import Icon from '$components/ui/Icon.svelte';
+6:   import { brand } from '$config/brand';
+7:   import { resolveImportUrl } from '$data/company';
+8: 
+9:   let { kind, importUrl = null }: { kind: 'trade-in' | 'import'; importUrl?: string | null } = $props();
+10:   const selling = $derived(kind === 'trade-in');
+11:   const title = $derived(selling ? 'Предложи автомобил' : 'Запитване за внос');
+12:   let dialog: HTMLDialogElement;
+13:   let form: HTMLFormElement;
+14:   let heading: HTMLHeadingElement;
+15:   let linkInput = $state<HTMLInputElement>();
+16:   let returnFocus: HTMLElement | undefined;
+17:   let scrollY = 0;
+18:   let step = $state(0);
+19:   let opened = false;
+20:   let linkDraft = $state<string | null>(null);
+21:   let link = $derived(linkDraft ?? importUrl ?? '');
+22:   let linkError = $state('');
+23:   let selectedLink = $state('');
+24:   let make = $state('');
+25:   let model = $state('');
+26:   let year = $state('');
+27:   let mileage = $state('');
+28:   let budget = $state('');
+29:   let purpose = $state('Продажба');
+30:   let name = $state('');
+31:   let phone = $state('');
+32:   let notes = $state('');
+33:   let photos = $state<{ file: File; url: string }[]>([]);
+34:   let photoError = $state('');
+35:   let feedback = $state('');
+36:   let sharing = $state(false);
+37:   const steps = ['Автомобил', 'Детайли', 'Преглед'];
+38:   const summary = $derived([
+39:     selling ? `Автомобил за ${purpose.toLowerCase()}` : 'Запитване за внос',
+40:     selectedLink ? `Обява: ${selectedLink}` : '',
+41:     `Автомобил: ${[make.trim(), model.trim()].filter(Boolean).join(' ') || 'По избраната обява'}`,
+42:     year ? `${selling ? 'Година' : 'Година от'}: ${year}` : '',
+43:     mileage ? `Пробег: ${mileage} км` : '',
+44:     budget ? `${selling ? 'Желана цена' : 'Бюджет'}: ${budget} EUR` : '',
+45:     notes.trim() ? `Допълнително: ${notes.trim()}` : '',
+46:     name.trim() ? `Име: ${name.trim()}` : '',
+47:     phone.trim() ? `Телефон: ${phone.trim()}` : '',
+48:     photos.length ? `Избрани снимки: ${photos.length}` : ''
+49:   ].filter(Boolean).join('\n'));
+50: 
+51:   const attachDialog: Attachment<HTMLDialogElement> = (node) => {
+52:     dialog = node;
+53:     return () => {
+54:       if (opened) restore();
+55:     };
+56:   };
+57: 
+58:   async function open(event: MouseEvent, withoutLink = false) {
+59:     if (!selling && !withoutLink && !resolveImportUrl(link)) {
+60:       linkError = link.trim() ? 'Въведете валиден линк с https:// или http://.' : 'Поставете линк или изберете „Нямам обява“.';
+61:       linkInput?.focus();
+62:       return;
+63:     }
+64:     const nextLink = selling || withoutLink ? '' : resolveImportUrl(link) || '';
+65:     if (nextLink !== selectedLink) step = 0;
+66:     selectedLink = nextLink;
+67:     returnFocus = event.currentTarget as HTMLElement;
+68:     scrollY = window.scrollY;
+69:     document.body.style.setProperty('--dn-enquiry-scroll', `-${scrollY}px`);
+70:     opened = true;
+71:     feedback = '';
+72:     dialog.showModal();
+73:     await tick();
+74:     heading.focus();
+75:   }
+76: 
+77:   function restore() {
+78:     opened = false;
+79:     document.body.style.removeProperty('--dn-enquiry-scroll');
+80:     window.scrollTo(0, scrollY);
+81:     returnFocus?.isConnected && returnFocus.focus();
+82:   }
+83: 
+84:   async function move(next: number) {
+85:     if (next > step && !form.reportValidity()) return;
+86:     step = next;
+87:     feedback = '';
+88:     await tick();
+89:     heading.focus();
+90:     form.scrollTop = 0;
+91:   }
+92: 
+93:   function addPhotos(event: Event) {
+94:     const input = event.currentTarget as HTMLInputElement;
+95:     photoError = '';
+96:     for (const file of Array.from(input.files || [])) {
+97:       if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+98:         photoError = 'Изберете JPG, PNG или WebP снимки.';
+99:         continue;
+100:       }
+101:       if (file.size > 10 * 1024 * 1024) {
+102:         photoError = 'Всяка снимка трябва да е до 10 MB.';
+103:         continue;
+104:       }
+105:       if (photos.some((photo) => photo.file.name === file.name && photo.file.size === file.size && photo.file.lastModified === file.lastModified)) continue;
+106:       if (photos.length >= 6) { photoError = 'Можете да добавите до 6 снимки.'; break; }
+107:       photos = [...photos, { file, url: URL.createObjectURL(file) }];
+108:     }
+109:     input.value = '';
+110:   }
+111: 
+112:   function removePhoto(url: string) {
+113:     URL.revokeObjectURL(url);
+114:     photos = photos.filter((photo) => photo.url !== url);
+115:     photoError = '';
+116:   }
+117: 
+118:   async function copy() {
+119:     try {
+120:       await navigator.clipboard.writeText(summary);
+121:       feedback = 'Текстът е копиран. Снимките не са включени.';
+122:     } catch {
+123:       feedback = 'Копирането не е достъпно. Маркирайте текста от прегледа.';
+124:     }
+125:   }
+126: 
+127:   async function share() {
+128:     sharing = true;
+129:     feedback = '';
+130:     try {
+131:       const files = photos.map((photo) => photo.file);
+132:       if (files.length && !navigator.canShare?.({ files })) {
+133:         feedback = 'Този браузър не може да споделя снимки. Копирайте текста и добавете снимките в избраното приложение.';
+134:         return;
+135:       }
+136:       if (!navigator.share) {
+137:         await copy();
+138:         return;
+139:       }
+140:       await navigator.share({ title, text: summary, ...(files.length ? { files } : {}) });
+141:       feedback = 'Споделянето е приключено. Потвърдете получаването с екипа.';
+142:     } catch (error) {
+143:       if (!(error instanceof Error && error.name === 'AbortError')) feedback = 'Споделянето не успя. Можете да копирате текста и да опитате отново.';
+144:     } finally { sharing = false; }
+145:   }
+146: 
+147:   onDestroy(() => photos.forEach((photo) => URL.revokeObjectURL(photo.url)));
+148: </script>
+149: 
+150: <div class="dn-enquiry-entry">
+151:   {#if selling}
+152:     <button class="dn-enquiry-primary" type="button" onclick={open} aria-haspopup="dialog">
+153:       Предложи автомобил <Icon name="arrow-right" size={20} />
+154:     </button>
+155:     <a class="dn-enquiry-contact" href={resolve('/contact')}>Свържете се с нас</a>
+156:   {:else}
+157:     <label class="dn-sr-only" for="enquiry-listing-link">Линк към обявата</label>
+158:     <div class="dn-enquiry-link-row">
+159:       <input id="enquiry-listing-link" bind:this={linkInput} value={link} oninput={(event) => { linkDraft = event.currentTarget.value; linkError = ''; }} type="url" inputmode="url" maxlength={2048} placeholder="Линк към обявата" autocomplete="off" autocapitalize="none" spellcheck={false} aria-invalid={linkError ? true : undefined} aria-describedby={linkError ? 'enquiry-link-error' : undefined} />
+160:       <button type="button" class="dn-enquiry-link-go" onclick={open} aria-label="Продължи с обявата" aria-haspopup="dialog"><Icon name="arrow-right" size={22} /></button>
+161:     </div>
+162:     {#if linkError}<p class="dn-enquiry-error" id="enquiry-link-error" role="alert">{linkError}</p>{/if}
+163:     <button class="dn-enquiry-alternative dn-action--enquiry" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">Нямам обява — опиши</button>
+164:   {/if}
+165: </div>
+166: 
+167: <dialog class="dn-enquiry" aria-labelledby="enquiry-title" {@attach attachDialog} onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
+168:   <div class="dn-enquiry-panel">
+169:     <header class="dn-enquiry-header">
+170:       <div><h2 id="enquiry-title" tabindex="-1" bind:this={heading}>{step === 0 ? title : step === 1 ? 'Още няколко детайла' : 'Преглед на запитването'}</h2></div>
+171:       <button class="dn-enquiry-close" type="button" aria-label="Затвори запитването" onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
+172:     </header>
+173:     <ol class="dn-enquiry-steps" aria-label="Стъпки на запитването">
+174:       {#each steps as label, index (label)}<li class:current={step === index} class:complete={step > index} aria-current={step === index ? 'step' : undefined}><span>{index + 1}</span>{label}</li>{/each}
+175:     </ol>
+176: 
+177:     <form class="dn-enquiry-body" bind:this={form} onsubmit={(event) => { event.preventDefault(); if (step < 2) void move(step + 1); }}>
+178:       {#if step === 0}
+179:         {#if selectedLink}<div class="dn-enquiry-selected-link"><Icon name="globe" size={20} /><span>{selectedLink}</span></div>{/if}
+180:         {#if selling}
+181:           <fieldset class="dn-enquiry-purpose"><legend>Какво предпочитате?</legend>{#each ['Продажба', 'Бартер'] as option (option)}<label><input type="radio" bind:group={purpose} value={option} />{option}</label>{/each}</fieldset>
+182:         {/if}
+183:         <div class="dn-enquiry-fields">
+184:           <label>Марка{#if !selectedLink}<span aria-hidden="true"> *</span>{/if}<input bind:value={make} name="make" required={!selectedLink} maxlength={60} placeholder="Напр. Audi" autocomplete="off" /></label>
+185:           <label>Модел{#if !selectedLink}<span aria-hidden="true"> *</span>{/if}<input bind:value={model} name="model" required={!selectedLink} maxlength={80} placeholder="Напр. A6 Avant" autocomplete="off" /></label>
+186:           <label>{selling ? 'Година' : 'Година от'}<input bind:value={year} name="year" type="text" inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="Напр. 2020" /></label>
+187:           {#if selling}<label>Пробег, км<input bind:value={mileage} name="mileage" inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="Напр. 85000" /></label>{/if}
+188:           <label class:wide={!selling}>{selling ? 'Желана цена, €' : 'Бюджет, €'} <span class="dn-enquiry-optional">по желание</span><input bind:value={budget} name="budget" inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder="Напр. 35000" /></label>
+189:         </div>
+190:         <p class="dn-enquiry-note">{selectedLink ? 'Добавете предпочитания, ако се различават от обявата.' : '* Задължителни полета.'} Данните остават в тази страница до споделяне.</p>
+191:       {:else if step === 1}
+192:         {#if selling}
+193:           <div class="dn-enquiry-photos">
+194:             <div class="dn-enquiry-photo-heading"><h3>Снимки на автомобила</h3><span>{photos.length}/6</span></div>
+195:             <p>Екстериор, интериор и важни детайли.</p>
+196:             <label class="dn-enquiry-upload"><Icon name="car" size={24} /><span>Добави снимки<small>JPG, PNG, WebP · до 10 MB всяка</small></span><input type="file" accept="image/jpeg,image/png,image/webp" multiple onchange={addPhotos} aria-label="Добави снимки на автомобила" /></label>
+197:             {#if photoError}<p class="dn-enquiry-error" role="alert">{photoError}</p>{/if}
+198:             {#if photos.length}<ul class="dn-enquiry-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} onerror={() => { removePhoto(photo.url); photoError = 'Снимката не може да се отвори. Изберете друг файл.'; }} /><button type="button" aria-label={`Премахни ${photo.file.name}`} onclick={() => removePhoto(photo.url)}><Icon name="x" size={16} /></button></li>{/each}</ul>{/if}
+199:             <p class="dn-enquiry-note">Снимките са само за преглед на устройството. Не са качени или изпратени.</p>
+200:           </div>
+201:         {/if}
+202:         <label class="dn-enquiry-notes">{selling ? 'Състояние и допълнителна информация' : 'Предпочитания и допълнителна информация'}<textarea bind:value={notes} maxlength={1500} rows="3" placeholder={selling ? 'Обслужване, оборудване, забележки…' : 'Двигател, оборудване, държава, срок…'}></textarea></label>
+203:         <div class="dn-enquiry-fields dn-enquiry-contact-fields">
+204:           <label>Име <span class="dn-enquiry-optional">по желание</span><input bind:value={name} maxlength={80} autocomplete="name" /></label>
+205:           <label>Телефон <span class="dn-enquiry-optional">по желание</span><input bind:value={phone} type="tel" maxlength={25} autocomplete="tel" /></label>
+206:         </div>
+207:       {:else}
+208:         <div class="dn-enquiry-review-heading"><h3>Всичко на едно място</h3><button class="dn-enquiry-text-button" type="button" onclick={() => move(0)}>Редактирай</button></div>
+209:         <pre class="dn-enquiry-summary">{summary}</pre>
+210:         {#if photos.length}<div class="dn-enquiry-review-photos">{#each photos as photo (photo.url)}<img src={photo.url} alt={photo.file.name} />{/each}</div>{/if}
+211:         <div class="dn-enquiry-review-notice"><strong>Запитването още не е изпратено.</strong><p>Споделете го през приложение на устройството или копирайте текста. За директен разговор: <a href={brand.phoneHref}>{brand.phone}</a>.</p></div>
+212:         <button class="dn-enquiry-copy" type="button" onclick={copy}>Копирай текста</button>
+213:       {/if}
+214:       {#if feedback}<p class="dn-enquiry-feedback" role="status">{feedback}</p>{/if}
+215:     </form>
+216: 
+217:     <footer class="dn-enquiry-footer">
+218:       {#if step > 0}<button class="dn-enquiry-back" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={18} />Назад</button>{/if}
+219:       {#if step < 2}<button class="dn-enquiry-primary" type="button" onclick={() => move(step + 1)}>{step === 0 ? 'Продължи' : 'Прегледай запитването'}<Icon name="arrow-right" size={18} /></button>
+220:       {:else}<button class="dn-enquiry-primary" type="button" disabled={sharing} onclick={share}>{sharing ? 'Отваряне…' : 'Сподели запитването'}<Icon name="arrow-right" size={18} /></button>{/if}
+221:     </footer>
+222:   </div>
+223: </dialog>
+224: 

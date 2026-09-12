@@ -1,11 +1,14 @@
 <script lang="ts">
+  import { cleanFilterFormData as clean } from '$lib/ui/forms';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import type { Attachment } from 'svelte/attachments';
   import { activeFilterCount, listingHiddenFields, bodyLabel, listingFilterOptions, listingModelsForMake, parseListingFilters, type ListingFilters } from '$data/listing';
 
-  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true }: {
+  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума' }: {
     showFilterAction?: boolean;
+    enableSticky?: boolean;
+    keywordPlaceholder?: string;
     filters: ListingFilters;
     openFilters: (event: MouseEvent, field?: string) => void;
     filtersOpen: boolean;
@@ -17,6 +20,10 @@
   let stickyBar = $state<HTMLDivElement>();
   const attachSticky: Attachment<HTMLDivElement> = node => { stickyBar = node; return () => { stickyBar = undefined; }; };
   const observePanel: Attachment<HTMLFormElement> = node => {
+    if (!enableSticky) {
+      pinned = false;
+      return;
+    }
     const desktop = window.matchMedia('(min-width: 992px)');
     const update = () => {
       if (filtersOpen) return;
@@ -36,7 +43,7 @@
   let model = $derived(filters.model);
   let models = $derived(listingModelsForMake(make));
   let activeCount = $derived(activeFilterCount(pending));
-  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || 'Марка, модел или ключова дума');
+  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || keywordPlaceholder);
   const number = (value: string) => Number(value).toLocaleString('bg-BG');
   const withCurrent = (options: readonly string[], current: number | null) => {
     const value = current?.toString();
@@ -48,6 +55,7 @@
   let hiddenFields = $derived([
     ['q', filters.q], ['fuel', filters.fuel], ['transmission', filters.transmission],
     ['version', filters.version], ['condition', filters.condition],
+    ['price_min_exclusive', filters.priceMinExclusive ? '1' : ''],
     ['price_min', filters.priceMin?.toString() ?? ''], ['year_max', filters.yearMax?.toString() ?? ''],
     ['sort', filters.sort === 'default' ? '' : filters.sort]
   ].filter(([, value]) => value));
@@ -60,23 +68,24 @@
     pending = parseListingFilters(params);
     onDraftChange(pending);
   }
-  function clean(event: FormDataEvent) {
-    for (const key of new Set(event.formData.keys())) {
-      if (event.formData.getAll(key).every(value => value === '')) event.formData.delete(key);
-    }
-  }
+
 </script>
 
 <form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={resolve('/listing-grid')} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
-      <button class="dn-discovery__keyword" type="button" aria-label="Търсете марка, модел или ключова дума" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+      <button class="dn-discovery__keyword" type="button" aria-label={keywordPlaceholder} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
         <Icon name="search" size={20} />
-        <span>{filters.q || 'Марка, модел или ключова дума'}</span>
+        <span>{filters.q || keywordPlaceholder}</span>
       </button>
+      {#if showFilterAction}
+        <button class="dn-discovery__filters" type="button" title="Всички филтри" aria-label={activeCount ? `Всички филтри: ${activeCount} активни` : 'Всички филтри'} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+          <Icon name="adjustments" size={18} strokeWidth={1.8} /><span>Филтри</span>
+          {#if activeCount}<span class="dn-discovery__count" aria-hidden="true">{activeCount}</span>{/if}
+        </button>
+      {/if}
       <button class="dn-discovery__submit" type="submit" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
     </div>
-
   </div>
   <div class="dn-discovery__facets">
     <label><span>Марка</span><select name="make" bind:value={make} onchange={() => model = ''}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
@@ -86,12 +95,7 @@
     <label><span>Година от</span><select name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
     <label><span>Пробег до</span><select name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? `${number(value)} км` : 'Без лимит'}</option>{/each}</select></label>
   </div>
-  {#if showFilterAction}<div class="dn-discovery__actions">
-    <button class="dn-discovery__filters" type="button" title="Всички филтри" aria-label={activeCount ? `Всички филтри: ${activeCount} активни` : 'Всички филтри'} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
-      <Icon name="adjustments" size={20} strokeWidth={1.8} /><span>Всички филтри</span>
-      {#if activeCount}<span class="dn-discovery__count" aria-hidden="true">{activeCount}</span>{/if}
-    </button>
-  </div>{/if}
+
   {#each hiddenFields as [name, value] (name)}<input type="hidden" {name} {value} />{/each}
   {#each filters.equipment as value (value)}<input type="hidden" name="equipment" {value} />{/each}
 </form>
@@ -119,8 +123,7 @@
   .dn-discovery__facets label { display: grid; min-width: 0; }
   .dn-discovery__facets label > span { margin: 0 0 6px 2px; color: var(--dn-muted); font-size: 12px; font-weight: 600; line-height: 18px; }
   .dn-discovery__facets select { width: 100%; min-width: 0; height: 52px; padding: 0 36px 0 14px; border: 1px solid #dfe2e6; border-radius: var(--dn-radius-control); background-color: #f5f6f7; color: var(--dn-ink); font: 500 16px/24px var(--dn-font); }
-  .dn-discovery__actions { display: flex; justify-content: flex-end; }
-  .dn-discovery__filters { position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; height: 46px; padding: 0 16px; border: 1px solid #202329; border-radius: var(--dn-radius-control); background: #202329; color: #fff; font: 600 14px var(--dn-font); cursor: pointer; }
+  .dn-discovery__filters { position: relative; display: flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 16px; border: 1px solid #202329; border-radius: var(--dn-pill); background: #202329; color: #fff; font: 600 14px var(--dn-font); cursor: pointer; }
   .dn-discovery__filters:hover { background: #3a3e46; }
   .dn-discovery__count { position: absolute; top: -6px; right: -6px; display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 4px; border: 2px solid white; border-radius: var(--dn-pill); background: var(--dn-red); color: white; font-size: 11px; }
   button:focus-visible, select:focus-visible { outline: 3px solid #0b57d0; outline-offset: 3px; }

@@ -6,6 +6,8 @@
   import { onDestroy, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
+  import NavigationFeatureCard from './NavigationFeatureCard.svelte';
+  import ActionLink from '$components/ui/ActionLink.svelte';
   import MobileMenu from './MobileMenu.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
   import { vehicleContactHref, selectedVehicle } from '$data/journeys';
@@ -22,6 +24,7 @@
   let megaPanel: HTMLDivElement | undefined;
   let megaTrigger: HTMLAnchorElement | undefined;
   let releaseScroll: (() => void) | undefined;
+  let { mobileFooterVisible = false }: { mobileFooterVisible?: boolean } = $props();
   const compactDetailHeader = $derived(
     page.url.pathname.startsWith('/blog-detail/') || page.url.pathname.startsWith('/listing-detail-v1/')
   );
@@ -74,8 +77,8 @@
         if (node.isConnected && !node.contains(document.activeElement)) closeMega();
       });
     };
-    const handlePointerLeave = () => {
-      if (!node.contains(document.activeElement)) queueDismiss();
+    const handlePointerLeave = (event: PointerEvent) => {
+      if (event.pointerType === 'mouse') closeMega();
     };
     const handleFocusOut = (event: FocusEvent) => {
       if (!(event.relatedTarget instanceof Node) || !node.contains(event.relatedTarget)) queueDismiss();
@@ -189,6 +192,8 @@
   };
 
 
+
+
   onDestroy(() => {
     releaseScroll?.();
   });
@@ -199,16 +204,20 @@
   });
 </script>
 
-<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); }} />
+<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); if (window.innerWidth < 992) closeMega(); }} />
+
+{#if mega}
+  <button class="dn-mega-backdrop" tabindex="-1" aria-label="Затворете навигацията" onclick={closeMega}></button>
+{/if}
 
 <div
   class="dn-header-fixed"
   class:dn-header-fixed--compact={compactDetailHeader}
+  class:dn-header-fixed--vehicle-detail={vehicleDetailHeader}
   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
   class:dn-header-fixed--contact-overlay={page.url.pathname === '/contact'}
   class:dn-header-fixed--listing={listingHeader}
-  {@attach attachMegaDismissBoundary}
 >
   <header
     class:dn-header--mega-open={Boolean(mega)}
@@ -226,7 +235,7 @@
       </div>
     </div>
 
-    <div class="dn-header__lower">
+    <div class="dn-header__lower" {@attach attachMegaDismissBoundary}>
       <div class="container">
         <div class="dn-header__inner">
           <div class="dn-logo-box">
@@ -263,10 +272,7 @@
                       <div class="dn-mega__feature-panel">
                         <div class="dn-mega__features">
                           {#each mega.features as feature (feature.id)}
-                            <a class="dn-mega__feature" href={resolve(feature.href)}>
-                              <img src={feature.image} alt="" width="800" height="450" loading="eager" />
-                              <span><strong>{feature.title}</strong><small>{feature.detail}</small></span>
-                            </a>
+                            <NavigationFeatureCard {feature} />
                           {/each}
                         </div>
                       </div>
@@ -286,8 +292,7 @@
                           {/each}
                         </nav>
                         <div class="dn-mega__side-action">
-                          <a href={resolve(mega.cta.href)}>{mega.cta.label}</a>
-                          <p>{mega.cta.detail}</p>
+                          <ActionLink href={mega.cta.href}>{mega.cta.label}</ActionLink>
                         </div>
                       </div>
                     </div>
@@ -298,14 +303,14 @@
           </nav>
 
           <div class="dn-header-actions">
-            <a class="dn-header-action dn-header-action--secondary" href={resolve('/contact')}>
+            <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
               <Icon name="mail" size={17} strokeWidth={1.8} />
               <span>Запитване</span>
-            </a>
-            <a class="dn-header-action dn-header-action--primary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>
+            </ActionLink>
+            <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
               <span>Запазете оглед</span>
-            </a>
+            </ActionLink>
           </div>
 
           <div class="dn-mobile-controls">
@@ -352,7 +357,7 @@
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label="Основни действия">
         <a
           class:active={page.url.pathname === '/'}
           href={resolve('/')}
@@ -493,7 +498,7 @@
     .dn-header-fixed--contact-overlay .dn-header__lower { background: transparent; border: 0; }
     .dn-header-fixed--contact-overlay .dn-mobile-control,
     .dn-header-fixed--contact-overlay .dn-mobile-toggle { background: rgba(15,17,20,.7); color: #fff; border: 1px solid rgba(255,255,255,.3); }
-    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-red); background: var(--dn-red); }
+    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-ink); background: var(--dn-ink); }
 
     .dn-header-fixed--compact .dn-header__inner {
       min-height: 68px;
@@ -516,7 +521,7 @@
     }
 
     .dn-mobile-control--call {
-      background: var(--dn-red);
+      background: var(--dn-ink);
       color: #fff;
     }
 
@@ -538,6 +543,13 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
       padding-top: 3px;
+      transition: transform 180ms ease, opacity 150ms ease;
+    }
+
+    .dn-mobile-bottom-nav--footer-visible {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(100%);
     }
 
     .dn-mobile-bottom-nav a,
@@ -613,12 +625,12 @@
     }
 
     .dn-mobile-detail-bar__secondary {
-      background: #1f2329;
+      background: var(--dn-red);
       color: #fff;
     }
 
     .dn-mobile-detail-bar__primary {
-      background: var(--dn-red);
+      background: var(--dn-ink);
       color: #fff;
     }
   }
@@ -637,6 +649,16 @@
 
     .dn-header-fixed--listing .dn-topbar,
     .dn-header-fixed--listing .dn-header__lower {
+      display: none;
+    }
+
+    .dn-header-fixed--vehicle-detail {
+      height: 0;
+      min-height: 0;
+      background: transparent;
+    }
+
+    .dn-header-fixed--vehicle-detail .dn-header {
       display: none;
     }
 
@@ -668,8 +690,8 @@
     }
 
     .dn-header--mobile-surface .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
 
 
@@ -694,8 +716,8 @@
     }
 
     .dn-header-fixed--home-overlay .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
   }
 

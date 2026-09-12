@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "leadId": "ae-dubai-f1rst-motors",
+  "name": "F1rst Motors",
+  "shortName": "F1rst Motors",
+  "slug": "f1rst-motors",
+  "country": "United Arab Emirates",
+  "countryCode": "AE",
+  "city": "Dubai",
+  "addressLine": "Sheikh Zayed Road",
+  "address": "Sheikh Zayed Road, Dubai, UAE",
+  "phone": "+97180034778",
+  "phoneDisplay": "800 FIRST",
+  "altPhone": null,
+  "email": "info@f1rstmotors.com",
+  "website": "https://f1rstmotors.com/",
+  "locale": "en-AE",
+  "currency": "AED",
+  "distanceUnit": "km",
+  "hours": null,
+  "appointment": "Contact the showroom before travelling",
+  "accent": "#111111",
+  "services": [
+    "Luxury vehicle sales",
+    "Vehicle sourcing enquiries",
+    "Sell-my-car enquiries"
+  ],
+  "sourceUrls": [
+    "https://f1rstmotors.com/"
+  ],
+  "observedAt": "2026-09-09",
+  "disclosure": "Independent unpublished design concept. Dated listing samples, not a live feed. Confirm price, specifications and availability directly with the showroom. Demo forms do not send messages.",
+  "rights": {
+    "dealerApproval": false,
+    "publicRedistributionPermission": "not-established",
+    "use": "Unpublished internal design concept; no deployment or outreach."
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sheikh%20Zayed%20Road%2C%20Dubai%2C%20UAE",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Sheikh%20Zayed%20Road%2C%20Dubai%2C%20UAE&z=16&hl=en&output=embed"
+}

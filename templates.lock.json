@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "exportPolicy": "cars-source-v1",
+  "templates": {
+    "auto-best": {
+      "repository": "darkapoparka/cars-template-auto-best",
+      "status": "reconciliation-required",
+      "commit": null,
+      "release": null,
+      "snapshotPath": "templates/auto-best",
+      "digest": "28b493f039e21b22923d6431264a933d79f0e53e1a70903ba5506f32928e73b4",
+      "exportPolicy": "cars-source-v1",
+      "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
+      "runtime": null,
+      "modes": {
+        "standalone": "unverified-for-release",
+        "mounted": "requires-dealer-QA"
+      },
+      "qa": null,
+      "reason": "Preserved existing snapshot. Compare unique local/upstream work and approve exact release before new leads.",
+      "observedWorkingDigest": "ab83f2cef085900a3cadec24df13d2455a0a4bf0fb2ebef8a26711789219f439",
+      "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
+      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars-template-modern",
+      "status": "reconciliation-required",
+      "commit": null,
+      "release": null,
+      "snapshotPath": "templates/modern",
+      "digest": "5f4bd0808c12341f619bbf290ebda080fb46d9629c3887e2917d64e5de885dad",
+      "exportPolicy": "cars-source-v1",
+      "observedUpstreamCommit": "f64006130523375e440d48e4c4be6ec1b830d46a",
+      "runtime": null,
+      "modes": {
+        "standalone": "unverified-for-release",
+        "mounted": "requires-dealer-QA"
+      },
+      "qa": null,
+      "reason": "Preserved existing snapshot. Compare unique local/upstream work and approve exact release before new leads.",
+      "observedWorkingDigest": "146abad20859356a4058659ed0c2451d7f51181b08ef598136b058f7bbed305f",
+      "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
+      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars-template-carwow",
+      "status": "reconciliation-required",
+      "commit": null,
+      "release": null,
+      "snapshotPath": "templates/carwow",
+      "digest": "9419dcfd6fffb0b3018303c9a84bf28cb7346da87f41eefdce300d0f7d8d4eb6",
+      "exportPolicy": "cars-source-v1",
+      "observedUpstreamCommit": "d769bb0558ad0228b92440fc3fd9ff81548bc890",
+      "runtime": null,
+      "modes": {
+        "standalone": "unverified-for-release",
+        "mounted": "requires-dealer-QA"
+      },
+      "qa": null,
+      "reason": "Preserved existing snapshot. Compare unique local/upstream work and approve exact release before new leads.",
+      "observedWorkingDigest": "1843f29b24815119fcb1d360379988fdac1b637068045eb7aa2f30cd775f2641",
+      "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
+      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
+    },
+    "import": {
+      "repository": "darkapoparka/cars-template-import",
+      "status": "approved",
+      "commit": "b13436590d8128231f396a46e8dfe6ba0f2c755b",
+      "release": "workflow-pilot-2026-09-12",
+      "snapshotPath": "templates/import",
+      "digest": "37c5171ef25513c27094ce3c2e53f8fd61b11825c83b43a1cd9ed5801fa872db",
+      "exportPolicy": "cars-source-v1",
+      "observedUpstreamCommit": "3c24db073b0b1a3bf26c64ed5336921117658e29",
+      "runtime": {
+        "node": "24.21.0",
+        "npm": "11.19.0",
+        "lockfile": "package-lock.json"
+      },
+      "modes": {
+        "standalone": "verified bounded route matrix",
+        "mounted": "requires-dealer-QA"
+      },
+      "qa": {
+        "evidence": "docs/evidence/import-release-2026-09-12.json",
+        "verifiedAt": "2026-09-12T17:44:37.232Z",
+        "checks": [
+          {
+            "command": "npm ci",
+            "status": "passed"
+          },
+          {
+            "command": "npm run check",
+            "status": "passed",
+            "errors": 0,
+            "warnings": 0
+          },
+          {
+            "command": "npm run build",
+            "status": "passed"
+          },
+          {
+            "command": "retained candidate tree equals committed upstream tree",
+            "status": "passed"
+          },
+          {
+            "command": "14 route/viewport checks",
+            "status": "passed"
+          }
+        ],
+        "standalone": {
+          "mobile": true,
+          "desktop": true,
+          "widths": [
+            390,
+            1440
+          ],
+          "routes": [
+            {
+              "width": 390,
+              "routes": [
+                {
+                  "route": "/",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/inventory",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/inventory/21764342419542174",
+                  "status": 200,
+                  "overflow": 0,
+                  "broken": []
+                },
+                {
+                  "route": "/contact",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/import",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/sell-your-car",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/financing",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                }
+              ],
+              "pageAndConsoleErrors": []
+            },
+            {
+              "width": 1440,
+              "routes": [
+                {
+                  "route": "/",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/inventory",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/inventory/21764342419542174",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/contact",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/import",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/sell-your-car",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                },
+                {
+                  "route": "/financing",
+                  "status": 200,
+                  "overflow": -8,
+                  "broken": []
+                }
+              ],
+              "pageAndConsoleErrors": []
+            }
+          ],
+          "interactions": [
+            "Mobile menu opens and dismisses",
+            "BMW brand drawer selection applies /inventory?brand=BMW",
+            "Inventory-to-detail navigation",
+            "Contact telephone destination inspected without calling"
+          ]
+        }
+      },
+      "reason": "Reviewed release selected by the recorded technical QA."
+    }
+  }
+}

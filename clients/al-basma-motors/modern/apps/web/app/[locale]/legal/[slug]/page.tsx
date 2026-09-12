@@ -29,8 +29,8 @@ const fallbackLegalSlugs = ["privacy", "terms"] as const;
 const getPrivacyFallback = (isBg: boolean): FallbackLegalPage => ({
   title: isBg ? "Политика за поверителност" : "Privacy policy",
   description: isBg
-    ? "Как Day & Night Auto Group използва и защитава данните, които предоставяте при запитване за автомобил, внос, лизинг или продажба."
-    : "How Day & Night Auto Group uses and protects information you provide when asking about a vehicle, import, leasing, or selling your car.",
+    ? "Как Al Basma Motors използва и защитава данните, които предоставяте при запитване за автомобил, внос, лизинг или продажба."
+    : "How Al Basma Motors uses and protects information you provide when asking about a vehicle, import, leasing, or selling your car.",
   sections: isBg
     ? [
         {
@@ -73,13 +73,13 @@ const getPrivacyFallback = (isBg: boolean): FallbackLegalPage => ({
 const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
   title: isBg ? "Условия за ползване" : "Terms of use",
   description: isBg
-    ? "Основните правила за използване на сайта на Day & Night Auto Group и информацията за автомобили, внос и лизинг."
-    : "The core rules for using the Day & Night Auto Group website and its vehicle, import, and leasing information.",
+    ? "Основните правила за използване на сайта на Al Basma Motors и информацията за автомобили, внос и лизинг."
+    : "The core rules for using the Al Basma Motors website and its vehicle, import, and leasing information.",
   sections: isBg
     ? [
         {
           heading: "Роля на Day & Night",
-          body: "Day & Night Auto Group представя собствени наличности и услуги за внос, лизинг и изкупуване на автомобили. Сайтът служи за информация и контакт; конкретните търговски условия се потвърждават в индивидуална писмена оферта или договор.",
+          body: "Al Basma Motors представя собствени наличности и услуги за внос, лизинг и изкупуване на автомобили. Сайтът служи за информация и контакт; конкретните търговски условия се потвърждават в индивидуална писмена оферта или договор.",
         },
         {
           heading: "Информация за автомобилите",
@@ -101,7 +101,7 @@ const getTermsFallback = (isBg: boolean): FallbackLegalPage => ({
     : [
         {
           heading: "Day & Night's role",
-          body: "Day & Night Auto Group presents its vehicle stock and services for imports, leasing, and purchasing vehicles. The website provides information and contact options; specific commercial terms are confirmed in an individual written quotation or agreement.",
+          body: "Al Basma Motors presents its vehicle stock and services for imports, leasing, and purchasing vehicles. The website provides information and contact options; specific commercial terms are confirmed in an individual written quotation or agreement.",
         },
         {
           heading: "Vehicle information",

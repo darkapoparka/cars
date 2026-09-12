@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$Client,
-    [ValidateSet('auto-best','modern','carwow','rencar')][string]$Template,
+    [ValidateSet('auto-best','modern','import','carwow','rencar')][string]$Template,
     [ValidateRange(1024,65531)][int]$BasePort=6631,
     [switch]$List,
     [switch]$Plan,
@@ -18,7 +18,7 @@ $carKeys=@($carEntry[0].variants)
 if($Template){if($Template -notin $carKeys){throw "No $Template app exists for $Client"};$carKeys=@($Template)}
 if(-not $carKeys.Count){throw "$Client has research/brief files only; there are no apps to launch."}
 $carPlans=foreach($carKey in $carKeys){
-    $carOffset=switch($carKey){'auto-best'{0};'modern'{1};'carwow'{2};'rencar'{0}}
+    $carOffset=switch($carKey){'auto-best'{0};'modern'{1};'import'{1};'carwow'{2};'rencar'{0}}
     $carProject=Join-Path $carRoot "clients/$Client/$carKey"
     if(-not(Test-Path -LiteralPath (Join-Path $carProject 'package.json'))){throw "Missing app: $carProject"}
     $carRuntime=if($carKey -eq 'modern'){'apps/web/node_modules/next/dist/bin/next'}else{'node_modules/vite/bin/vite.js'}

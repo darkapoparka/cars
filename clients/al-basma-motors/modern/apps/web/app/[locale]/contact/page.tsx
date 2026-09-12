@@ -184,8 +184,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? "Al Basma Motors в София — автомобили в наличност, внос по заявка и собствен лизинг."
+      : "Al Basma Motors in Sofia — vehicles in stock, import on request, and in-house leasing.",
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),

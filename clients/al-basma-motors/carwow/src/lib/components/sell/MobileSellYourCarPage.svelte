@@ -290,7 +290,7 @@
 					onclick={() => openInfo('process')}
 				/>
 				<MobilePromoCard
-					title="Защо Day Night"
+					title="Защо Al Basma"
 					description="Кристиян и екипът Ви дават ясен следващ вариант."
 					label="Виж предимствата"
 					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
@@ -478,7 +478,7 @@
 					<div class="ms-info-hero__handle" aria-hidden="true"></div>
 					<div class="ms-info-hero__title">
 						<h2 id="ms-info-title">
-							{activeInfo === 'process' ? 'Как работи' : 'Защо Day Night'}
+							{activeInfo === 'process' ? 'Как работи' : 'Защо Al Basma'}
 						</h2>
 						<p>
 							{activeInfo === 'process'

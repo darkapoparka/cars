@@ -40,7 +40,7 @@
     `Vehicle: ${[make.trim(), model.trim()].filter(Boolean).join(' ') || 'Based on the selected listing'}`,
     year ? `${selling ? 'Year' : 'Year from'}: ${year}` : '',
     mileage ? `Mileage: ${mileage} miles` : '',
-    budget ? `${selling ? 'Asking price' : 'Budget'}: ${budget} EUR` : '',
+    budget ? `${selling ? 'Asking price' : 'Budget'}: ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Number(budget))}` : '',
     notes.trim() ? `Additional details: ${notes.trim()}` : '',
     name.trim() ? `Name: ${name.trim()}` : '',
     phone.trim() ? `Phone: ${phone.trim()}` : '',
@@ -149,9 +149,9 @@
 <div class="dn-enquiry-entry">
   {#if selling}
     <button class="dn-enquiry-primary" type="button" onclick={open} aria-haspopup="dialog">
-      Offer a vehicle <Icon name="arrow-right" size={20} />
+      Draft a vehicle question <Icon name="arrow-right" size={20} />
     </button>
-    <p>Details, photos, and review.</p>
+    <p>Draft only. Sale, trade-in and appraisal services are not verified in this preview.</p>
   {:else}
     <label class="dn-sr-only" for="enquiry-listing-link">Listing link</label>
     <div class="dn-enquiry-link-row">

@@ -17,13 +17,13 @@
 </script>
 
 <svelte:head>
-	<title>{page.status} · Day Night Auto</title>
+	<title>{page.status} · Al Basma</title>
 </svelte:head>
 
 <main id="main-content" class="daynight-error" aria-labelledby="daynight-error-title">
 	<div class="daynight-error__card">
 		<a class="daynight-error__brand" href={resolve('/')}>
-			<img src={resolve('/brand/daynight-logo-generated.png')} alt="Day Night Auto" />
+			<img src={resolve('/brand/daynight-logo-generated.png')} alt="Al Basma" />
 		</a>
 		<span class="daynight-error__code">{page.status}</span>
 		<h1 id="daynight-error-title">{heading}</h1>

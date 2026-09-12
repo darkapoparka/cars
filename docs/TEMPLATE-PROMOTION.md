@@ -1,27 +1,36 @@
-# Promoting a client trial into a reusable template
+# Template releases and Cars snapshots
 
-The owner may develop a shared improvement inside a client trial first. Once that direction is finalized, it can become a reusable master. Do this once per version, not during every future lead build.
+The authoritative reusable sources are the four `darkapoparka/cars-template-*` repositories. Their `main` branches are development heads. [templates.lock.json](../templates.lock.json) is the sole approval/version lock for Cars snapshots; [catalog.json](../catalog.json) owns keys, aliases, preview ports and discovery information, not a second approval list.
 
-## Recommended Rencar destination
+## Release flow
 
-Preserve `templates/rencar` as the original baseline. Create `templates/rencar-polished` from the finalized trial's implementation, with a new version and provenance. The current Day & Night client remains an independent copy. The name describes the design family; Day & Night identity does not become the master identity.
+Polish in the standalone template project. Read its technical instructions, preserve concurrent work, review the changed UI, run suitable checks and commit only the approved change. Cars-only refinements must be compared and ported upstream selectively before replacement. Never promote an arbitrary newest commit or commit unfinished local UI to satisfy a release command.
 
-This is the documented future procedure. No `rencar-polished` folder, catalog entry or preview has been created by the style-guide task.
+```powershell
+node scripts/template-release.mjs discover
+node scripts/template-release.mjs status
+node scripts/template-release.mjs promote --key import --source-repo J:/template-repos/cars-template-import --commit <40-character-sha>
+```
 
-## Promotion procedure
+The proposal fetches upstream refs, confirms repository/commit identity, exports immutable Git blobs using `cars-source-v1`, computes SHA-256 content digests and lists changes under `runtime/template-releases/`. It reports uncommitted upstream work separately and does not include it. A changed Cars snapshot is refused. Initial reconciliation requires a recorded baseline digest, not a bypass for unexplained drift.
 
-1. Identify the finalized source folder/version and exact changes. Read its AGENTS, style guide, metadata and QA. Confirm physical paths and dirty state. Never replace an existing destination; use an explicit new version/variant if necessary.
-2. Copy the reusable source while excluding `.git`, credentials, `.env*`, deployment bindings, `.vercel`, `.agency-os`, `.client`, dependencies, build caches, runtime logs and rejected experiments. Preserve lockfiles, source licenses and relevant asset provenance.
-3. Separate reusable code, layout, motion and style tokens from client identity. In the promoted master, rename the client-named presentation files to a neutral family location and update references. Keep branding in one documented boundary. Do not blindly copy the trial and call it generic.
-4. Replace Day & Night names, logo, phone, addresses, social/video links, stock, business claims and client-specific images with explicitly documented demo defaults or a neutral required configuration. Scan every retained route and metadata entry. Do not invent a replacement dealership's facts.
-5. Preserve the real five-home codebase. Record which homes have received the polish/dealer adaptation; retaining five pages is not proof all five are ready. Choose one default entry and list exact URLs for supported alternatives.
-6. Finish the rental-to-dealer conversion in this shared template task before advertising branding-only dealer builds. Document routes and behaviors for inventory, detail, search and enquiry; remove rental-specific booking/payment assumptions intentionally.
-7. Run framework checks/build and browser-check all offered homes and the key journey at 390 and 1440px. Verify images, overflow, menu/search behavior and content defaults. Record any local-only forms honestly.
-8. Add a distinct catalog entry with exact path, family, version, readiness, aliases and an explicitly free preview port if started. Write TEMPLATE.md with personalization files and a promotion manifest recording source, date, files and QA. Carry the Rencar style guide forward.
-9. Future lead demos use `scripts/new-client.mjs` against the promoted key. Change logo, colours, media, facts and copy. Existing client copies receive no automatic update; later changes are intentional and separately reviewed.
+Verify the exact candidate with its retained runtime/lockfile, relevant checks, and standalone browser evidence at mobile and desktop. QA JSON records `repository`, `commit`, `approved: true`, `verifiedAt`, `runtime`, passed `checks`, `standalone.mobile` and `standalone.desktop`. Record mounted support separately in `modes`; template checks do not prove a dealer mount.
 
-## Updating the original master instead
+```powershell
+node scripts/template-release.mjs promote --key import --source-repo J:/template-repos/cars-template-import --commit <same-sha> --evidence docs/releases/<evidence>.json --write
+node scripts/template-release.mjs verify --key import
+```
 
-If the owner chooses to make the polished design the default `rencar`, apply only the reusable delta to that master and version it. Do not overwrite it with the entire client folder. Keep a recoverable original baseline and provenance. Independent client copies still stay independent.
+The write rechecks drift and replaces only reviewed retained source paths, preserves excluded dependency/runtime/local metadata and keeps a recoverable previous copy in runtime. It updates snapshot and lock as one operation with rollback on errors. Review and commit the snapshot, evidence and lock together. Existing `clients/` copies are unchanged.
 
-Promotion, Svelte migration, public deployment and outreach are separate actions. A style guide is not evidence any of those has happened.
+## Lock contract
+
+Each entry has repository, immutable commit, optional release label, snapshot path, normalized content digest, export policy, runtime, supported modes and commit-bound QA evidence. Unreconciled holdings use `status: reconciliation-required` and `commit: null`; observed upstream heads are evidence, not approved releases. New-client refuses such entries.
+
+Normalization preserves binary bytes and changes text CRLF to LF for consistent Windows/Git comparison. The export excludes credentials, dependencies, caches, deployment/CRM bindings and executable inherited agent instructions, retaining source, lockfiles, licenses and provenance. Snapshot AGENTS identifies managed ownership. See `scripts/lib/workflow.mjs` for the versioned policy.
+
+The lead workflow discovers available updates automatically and verifies the selected lock before copying. Discovery can prompt release review; it never silently changes the selected version. No owner reminder to manually copy files is required.
+
+## Client trial improvements
+
+Extract the reusable change into the authoritative standalone template while preserving the dealer copy. Remove dealer identity from the reusable change, verify it, then follow this release flow. Do not copy an entire dealer over a template or sync templates over existing dealers. The [Rencar reference](reference/RENCAR-PROMOTION.md) preserves its older, separate trial procedure.

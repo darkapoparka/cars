@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ChevronLeft, GitCompare, Heart, MapPin, PhoneCall, Share } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import DayNightSpecIcon, {
 		type DayNightSpecIconName
 	} from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
@@ -17,6 +18,7 @@
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
 
+	const returnToInventory = $derived(page.state.inventoryReturn);
 	const garage = getGarageContext();
 	const isSaved = $derived(garage.isFavorite(vehicle.slug));
 	const isCompared = $derived(garage.isCompared(vehicle.slug));
@@ -194,7 +196,19 @@
 		<div class="mobile-detail__topbar">
 			<a
 				class="mobile-detail__nav-button mobile-detail__nav-button--back"
-				href={resolve('/inventory')}
+				href={resolve((returnToInventory ?? '/inventory') as '/inventory' | `/inventory?${string}`)}
+				onclick={(event) => {
+					if (
+						!returnToInventory ||
+						event.ctrlKey ||
+						event.metaKey ||
+						event.shiftKey ||
+						event.altKey
+					)
+						return;
+					event.preventDefault();
+					window.history.back();
+				}}
 				aria-label="Назад към автомобили"
 			>
 				<ChevronLeft size={22} strokeWidth={2.35} />
@@ -367,7 +381,7 @@
 					<section class="mobile-detail__section">
 						<h2>Описание</h2>
 						<p class="mobile-detail__section-lead">{vehicle.conditionLine}</p>
-						<p>{vehicle.description}</p>
+						<p>{vehicle.description.replace(vehicle.conditionLine, '').trim()}</p>
 					</section>
 				{:else if activeTab === 'data'}
 					<div class="mobile-detail__spec-grid" aria-label="Основни данни">
@@ -819,10 +833,9 @@
 	}
 
 	.mobile-detail-sheet__actions a.is-viber {
-		/* Viber purple, nudged from #7360f2 (4.48:1 white text — just under AA)
-		   to #6e5ce8 (4.82:1) so the label clears WCAG-AA while staying on-brand. */
-		background: #6e5ce8;
-		color: #fff !important;
+		/* Secondary contact channel shares the neutral mobile action treatment. */
+		background: var(--sa-fill);
+		color: var(--sa-ink) !important;
 		font-weight: 800;
 	}
 
@@ -836,7 +849,7 @@
 	.mobile-detail-sheet__actions a.is-viber .mobile-detail-sheet__viber-mark * {
 		width: 18px;
 		height: 19px;
-		color: #fff !important;
+		color: inherit !important;
 		fill: currentColor !important;
 		stroke: currentColor !important;
 	}
@@ -1056,10 +1069,11 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		border: 1px solid #e2e8ef;
-		border-radius: 9px;
-		background: #f7f9fb;
-		padding: 0 10px;
+		border: 0;
+		border-bottom: 1px solid var(--sa-line);
+		border-radius: 0;
+		background: transparent;
+		padding: 0;
 	}
 
 	.mobile-detail__section dt {

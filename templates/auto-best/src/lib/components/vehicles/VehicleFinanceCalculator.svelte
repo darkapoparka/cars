@@ -1,17 +1,19 @@
 <script lang="ts">
+  const id = $props.id();
+  const disclaimerId = `${id}-finance-disclaimer`;
+  import { financeTerms, calculateFinance, type FinanceSelection, type FinanceTerm } from '$data/finance';
   import { vehicleContactHref } from '$data/journeys';
   import { resolve } from '$app/paths';
   import { formatVehiclePrice } from '$data/inventory';
 
-  let { priceEur, vehicleId }: { priceEur: number; vehicleId: number } = $props();
+  let { priceEur, vehicleId, initialSelection = null }: { priceEur: number; vehicleId: number; initialSelection?: FinanceSelection | null } = $props();
 
-  const financeTerms = [12, 24, 36, 48, 60] as const;
-  let downPaymentEur = $state(0);
-  let termMonths = $state<(typeof financeTerms)[number]>(60);
-
-  let normalizedDownPayment = $derived(Math.min(Math.max(Number(downPaymentEur) || 0, 0), priceEur));
-  let financedPrincipal = $derived(Math.max(priceEur - normalizedDownPayment, 0));
-  let principalPerMonth = $derived(Math.round(financedPrincipal / termMonths));
+  let downPaymentEur = $derived(initialSelection?.downPaymentEur ?? 0);
+  let termMonths = $derived<FinanceTerm>(initialSelection?.termMonths ?? 60);
+  const calculation = $derived(calculateFinance(priceEur, { downPaymentEur, termMonths }));
+  const normalizedDownPayment = $derived(calculation.normalizedDownPayment);
+  const financedPrincipal = $derived(calculation.financedPrincipal);
+  const principalPerMonth = $derived(calculation.principalPerMonth);
 
   function normalizeDownPayment() {
     downPaymentEur = normalizedDownPayment;
@@ -35,7 +37,7 @@
           step="500"
           bind:value={downPaymentEur}
           onblur={normalizeDownPayment}
-          aria-describedby="finance-disclaimer"
+          aria-describedby={disclaimerId}
         />
         <b>€</b>
       </span>
@@ -43,7 +45,7 @@
 
     <label>
       <span>Срок</span>
-      <select bind:value={termMonths} aria-describedby="finance-disclaimer">
+      <select bind:value={termMonths} aria-describedby={disclaimerId}>
         {#each financeTerms as term (term)}
           <option value={term}>{term} месеца</option>
         {/each}
@@ -62,11 +64,11 @@
     </div>
   </dl>
 
-  <p id="finance-disclaimer" class="dn-finance-calculator__disclaimer">
+  <p id={disclaimerId} class="dn-finance-calculator__disclaimer">
     Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
   </p>
 
-  <a href={resolve(vehicleContactHref(vehicleId, 'leasing'))}>
+  <a href={resolve(vehicleContactHref(vehicleId, 'leasing', { downPaymentEur: normalizedDownPayment, termMonths }))}>
     Обсъдете финансиране
   </a>
 </div>

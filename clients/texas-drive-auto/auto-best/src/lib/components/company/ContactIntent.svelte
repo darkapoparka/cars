@@ -65,7 +65,7 @@
     <div class="dn-contact-social" role="group" aria-label="Social media">
       <span>Social media</span>
       <div>
-        {#each socialPlatforms as platform (platform.name)}
+        {#each socialPlatforms.filter((platform) => platform.href) as platform (platform.name)}
           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
             <SocialBrandIcon name={platform.name} />
           </a>

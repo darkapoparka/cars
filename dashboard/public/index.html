@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cars Lead Control</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <div>
+        <span class="kicker">CARS WORKSPACE</span>
+        <h1>Lead Control Dashboard</h1>
+        <p>Recorded source, local previews, deployment evidence and private lead notes.</p>
+      </div>
+      <div id="repo" class="repo">Loading repository...</div>
+    </header>
+    <section id="stats" class="stats"></section>
+    <section class="toolbar">
+      <input id="q" type="search" placeholder="Search dealer, city, lead id...">
+      <select id="market"><option value="">All markets</option></select>
+      <select id="gitState"><option value="">All source states</option><option value="recorded-commit">Commit recorded</option><option value="local">Local source</option><option value="branch-only">Branch only</option><option value="none">No app source</option></select>
+      <select id="qaState"><option value="">All QA states</option><option value="passed">QA passed</option><option value="pending">QA pending</option><option value="missing">QA evidence missing</option></select>
+      <select id="stage"><option value="">All pipeline stages</option></select>
+      <button id="fav">Favorites</button>
+      <button id="refresh">Refresh registry</button>
+    </section>
+    <div class="card">
+      <div class="scroll">
+        <table>
+          <thead><tr><th>#</th><th>Dealer / Lead</th><th>Brand</th><th>Auto Best</th><th>Modern / Import</th><th>Carwow</th><th>Assets & Content</th><th>GitHub</th><th>QA</th><th>Pipeline</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div id="empty" class="empty" hidden>No leads match the filters.</div>
+    </div>
+    <footer>
+      <div><b>One technical registry</b><span>Source, builds, hosting, browser checks and owner review stay separate.</span></div>
+      <div><b>QA is separate from build</b><span>A complete three-design project can still need QA evidence.</span></div>
+      <div><b>Local controls stay local</b><span>Project controls only work when files are present in J:/cars.</span></div>
+    </footer>
+  </div>
+  <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+  <aside id="projectDrawer" class="drawer" aria-hidden="true" aria-label="Project details">
+    <div id="drawerContent"></div>
+  </aside>
+  <div id="toasts" class="toasts"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

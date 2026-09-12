@@ -11,8 +11,8 @@ describe("Day & Night localized metadata", () => {
       title: "Автомобили",
     });
 
-    expect(metadata.title).toBe("Автомобили | Day & Night Auto Group");
-    expect(metadata.applicationName).toBe("Day & Night Auto Group");
+    expect(metadata.title).toBe("Автомобили | Al Basma Motors");
+    expect(metadata.applicationName).toBe("Al Basma Motors");
     expect(metadata.alternates?.canonical).toBe(
       "https://day-night.example/bg/cars"
     );

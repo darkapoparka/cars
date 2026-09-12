@@ -1,0 +1,57 @@
+import { daynightSite } from './daynight-site';
+
+export interface Dealer {
+	slug: string;
+	name: string;
+	location: string;
+	address: string;
+	phone: string;
+	logo: string;
+	cover: string;
+	inventory: number;
+	rating: number;
+	specialties: string[];
+}
+
+export const dealers: Dealer[] = [
+	{
+		slug: "day-night-auto-group",
+		name: daynightSite.name,
+		location: "Варна",
+		address: daynightSite.location,
+		phone: daynightSite.phoneLabel,
+		logo: daynightSite.logoDark,
+		cover: '/brand/daynight-hero-search-composed.webp',
+		inventory: daynightSite.inventoryCount,
+		rating: 0,
+		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Финансиране']
+	},
+	{
+		slug: "day-night-auto-group-documents",
+		name: "Promosale Varna Документи и съдействие",
+		location: "Варна",
+		address: daynightSite.location,
+		phone: daynightSite.phoneLabel,
+		logo: daynightSite.logoDark,
+		cover: '/brand/daynight-hero-mobile-search-composed.webp',
+		inventory: daynightSite.inventoryCount,
+		rating: 0,
+		specialties: ['Документи', 'Регистрация', 'Съдействие']
+	},
+	{
+		slug: "day-night-auto-group-sourcing",
+		name: "Promosale Varna Подбор на автомобил",
+		location: "Варна",
+		address: daynightSite.location,
+		phone: daynightSite.phoneLabel,
+		logo: '/dealer/logo.png',
+		cover: '/dealer/logo.png',
+		inventory: daynightSite.inventoryCount,
+		rating: 0,
+		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
+	}
+];
+
+export function getDealerBySlug(slug: string) {
+	return dealers.find((dealer) => dealer.slug === slug);
+}

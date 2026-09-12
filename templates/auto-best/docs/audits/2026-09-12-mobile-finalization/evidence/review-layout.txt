@@ -1,0 +1,655 @@
+
+## src/lib/components/layout/Footer.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
+4:   import Icon from '$components/ui/Icon.svelte';
+5:   import { brand } from '$config/brand';
+6: 
+7:   let { showActions = true, showMobileFooter = false }: { showActions?: boolean; showMobileFooter?: boolean } = $props();
+8:   const phoneLinkAttributes = { href: brand.phoneHref } as const;
+9: 
+10:   const actions = [
+11:     {
+12:       title: 'Подбрани автомобили',
+13:       description: 'Разгледайте актуалната селекция',
+14:       href: '/listing-grid',
+15:       icon: 'car'
+16:     },
+17:     {
+18:       title: `Оглед в ${brand.city}`,
+19:       description: 'С предварителна уговорка',
+20:       href: '/contact?topic=inspection',
+21:       icon: 'contact'
+22:     },
+23:     {
+24:       title: 'Собствен лизинг',
+25:       description: 'Попитайте за актуалните условия',
+26:       href: '/contact?topic=leasing',
+27:       icon: 'finance'
+28:     },
+29:     {
+30:       title: 'Внос по заявка',
+31:       description: 'Уточнете критериите с екипа',
+32:       href: '/contact?topic=import',
+33:       icon: 'value'
+34:     }
+35:   ] as const;
+36: </script>
+37: 
+38: {#if showActions}
+39:   <section class="dn-footer-actions" aria-label="Следващи стъпки">
+40:     <div class="container dn-footer-actions__grid">
+41:       {#each actions as action (action.href)}
+42:         <a href={resolve(action.href)}>
+43:           <span class="dn-footer-actions__icon" aria-hidden="true">
+44:             <OriginalActionIcon name={action.icon} />
+45:           </span>
+46:           <span>
+47:             <strong>{action.title}</strong>
+48:             <small>{action.description}</small>
+49:           </span>
+50:         </a>
+51:       {/each}
+52:     </div>
+53:   </section>
+54: {/if}
+55: 
+56: <footer class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
+57:   <div class="container dn-footer__grid">
+58:     <div class="dn-footer__intro">
+59:       <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
+60:       <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+61:     </div>
+62:     <nav aria-label="Автомобили">
+63:       <strong>Автомобили</strong>
+64:       <a href={resolve('/listing-grid')}>Всички автомобили</a>
+65:       <a href={resolve('/listing-grid?condition=used')}>Употребявани</a>
+66:       <a href={resolve('/listing-grid?sort=newest')}>Най-нови предложения</a>
+67:     </nav>
+68:     <nav aria-label="Компания">
+69:       <strong>Компания</strong>
+70:       <a href={resolve('/about-us')}>За нас</a>
+71:       <a href={resolve('/blog')}>Полезно</a>
+72:       <a href={resolve('/contact')}>Контакти</a>
+73:     </nav>
+74:     <div class="dn-footer__contact" aria-label="Контакт с екипа">
+75:       <a {...phoneLinkAttributes} class="dn-footer__contact-link">
+76:         <Icon name="phone" size={18} />
+77:         <span class="dn-footer__phone">{brand.phone}</span>
+78:         <Icon name="arrow-right" size={16} />
+79:       </a>
+80:       <a href={resolve('/contact')} class="dn-footer__contact-link">
+81:         <Icon name="map-pin" size={18} />
+82:         <span>{brand.address}</span>
+83:         <Icon name="arrow-right" size={16} />
+84:       </a>
+85:       <p class="dn-footer__appointment">{brand.appointment}</p>
+86:     </div>
+87:   </div>
+88:   <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
+89: </footer>
+
+## src/lib/components/layout/Header.svelte
+1: <script lang="ts">
+2:   import { lockPageScroll } from '$lib/ui/overlay';
+3:   import { afterNavigate } from '$app/navigation';
+4:   import { resolve } from '$app/paths';
+5:   import { page } from '$app/state';
+6:   import { onDestroy, tick } from 'svelte';
+7:   import type { Attachment } from 'svelte/attachments';
+8:   import Icon from '$components/ui/Icon.svelte';
+9:   import NavigationFeatureCard from './NavigationFeatureCard.svelte';
+10:   import ActionLink from '$components/ui/ActionLink.svelte';
+11:   import MobileMenu from './MobileMenu.svelte';
+12:   import MobileNavIcon from './MobileNavIcon.svelte';
+13:   import { vehicleContactHref, selectedVehicle } from '$data/journeys';
+14:   import { brand } from '$config/brand';
+15:   import { navigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
+16: 
+17:   let mega = $state<MegaMenu | null>(null);
+18:   let megaItemId = $state('');
+19:   let mobileOpen = $state(false);
+20:   let mobileMenu = $state<HTMLDialogElement>();
+21:   let mobileToggle = $state<HTMLButtonElement>();
+22:   let mobileCloseButton = $state<HTMLButtonElement>();
+23:   let mobileReturnFocus = $state<HTMLButtonElement>();
+24:   let megaPanel: HTMLDivElement | undefined;
+25:   let megaTrigger: HTMLAnchorElement | undefined;
+26:   let releaseScroll: (() => void) | undefined;
+27:   const compactDetailHeader = $derived(
+28:     page.url.pathname.startsWith('/blog-detail/') || page.url.pathname.startsWith('/listing-detail-v1/')
+29:   );
+30:   const detailVehicle = $derived(page.status === 200 && page.url.pathname.startsWith('/listing-detail-v1/') ? selectedVehicle(page.params.id ?? null) : null);
+31:   const vehicleDetailHeader = $derived(Boolean(detailVehicle));
+32:   const mobileSurfaceHeader = $derived(page.url.pathname === '/');
+33:   const listingHeader = $derived(page.url.pathname === '/listing-grid');
+34:   const homeOverlayHeader = $derived(page.url.pathname === '/');
+35:   const mobileTopic = $derived(page.url.searchParams.get('topic'));
+36:   const mobileMenuSection = $derived(
+37:     page.url.pathname.startsWith('/about-us') ||
+38:     page.url.pathname.startsWith('/blog') ||
+39:     (page.url.pathname.startsWith('/contact') && mobileTopic !== 'trade-in' && mobileTopic !== 'import')
+40:   );
+41: 
+42:   const isInternalHref = (href: NavigationHref): href is InternalNavigationHref => href.startsWith('/');
+43:   const phoneLinkAttributes = { href: brand.phoneHref } as const;
+44: 
+45:   const attachMobileMenu: Attachment<HTMLDialogElement> = (node) => {
+46:     mobileMenu = node;
+47:     return () => {
+48:       if (mobileMenu === node) mobileMenu = undefined;
+49:     };
+50:   };
+51: 
+52:   const attachMobileToggle: Attachment<HTMLButtonElement> = (node) => {
+53:     mobileToggle = node;
+54:     return () => {
+55:       if (mobileToggle === node) mobileToggle = undefined;
+56:     };
+57:   };
+58: 
+59:   const attachMobileCloseButton: Attachment<HTMLButtonElement> = (node) => {
+60:     mobileCloseButton = node;
+61:     return () => {
+62:       if (mobileCloseButton === node) mobileCloseButton = undefined;
+63:     };
+64:   };
+65: 
+66:   const attachMegaPanel: Attachment<HTMLDivElement> = (node) => {
+67:     megaPanel = node;
+68:     return () => {
+69:       if (megaPanel === node) megaPanel = undefined;
+70:     };
+71:   };
+72: 
+73:   const attachMegaDismissBoundary: Attachment<HTMLDivElement> = (node) => {
+74:     const queueDismiss = () => {
+75:       queueMicrotask(() => {
+76:         if (node.isConnected && !node.contains(document.activeElement)) closeMega();
+77:       });
+78:     };
+79:     const handlePointerLeave = (event: PointerEvent) => {
+80:       if (event.pointerType === 'mouse') closeMega();
+81:     };
+82:     const handleFocusOut = (event: FocusEvent) => {
+83:       if (!(event.relatedTarget instanceof Node) || !node.contains(event.relatedTarget)) queueDismiss();
+84:     };
+85: 
+86:     node.addEventListener('pointerleave', handlePointerLeave);
+87:     node.addEventListener('focusout', handleFocusOut);
+88:     return () => {
+89:       node.removeEventListener('pointerleave', handlePointerLeave);
+90:       node.removeEventListener('focusout', handleFocusOut);
+91:     };
+92:   };
+93: 
+94:   const isActive = (item: NavigationItem) => {
+95:     const path = page.url.pathname;
+96:     if (item.href === '/') return path === '/';
+97:     if (item.href === '/listing-grid') return path.startsWith('/listing');
+98:     if (item.href === '/blog') return path.startsWith('/blog');
+99:     return path === item.href || path.startsWith(`${item.href}/`);
+100:   };
+101: 
+102:   const isExactDestination = (item: NavigationItem) => {
+103:     const destination = new URL(resolve(item.href), page.url);
+104:     return (
+105:       destination.pathname === page.url.pathname &&
+106:       destination.search === page.url.search &&
+107:       destination.hash === page.url.hash
+108:     );
+109:   };
+110: 
+111:   const openMega = (item: NavigationItem, trigger?: HTMLAnchorElement) => {
+112:     mega = item.menu ?? null;
+113:     megaItemId = item.menu ? item.id : '';
+114:     megaTrigger = item.menu ? trigger : undefined;
+115:   };
+116: 
+117:   const closeMega = () => {
+118:     mega = null;
+119:     megaItemId = '';
+120:     megaTrigger = undefined;
+121:   };
+122: 
+123:   const handleMegaTriggerFocus = (item: NavigationItem) => {
+124:     if (megaItemId && megaItemId !== item.id) closeMega();
+125:   };
+126: 
+127:   const handleMegaTriggerClick = (event: MouseEvent, item: NavigationItem) => {
+128:     if (!item.menu) {
+129:       closeMega();
+130:       return;
+131:     }
+132: 
+133:     if (megaItemId !== item.id) {
+134:       event.preventDefault();
+135:       openMega(item, event.currentTarget as HTMLAnchorElement);
+136:     }
+137:   };
+138: 
+139:   const handleMegaTriggerKeydown = async (event: KeyboardEvent, item: NavigationItem) => {
+140:     if (!item.menu) return;
+141: 
+142:     if (event.key === 'ArrowDown') {
+143:       event.preventDefault();
+144:       openMega(item, event.currentTarget as HTMLAnchorElement);
+145:       await tick();
+146:       megaPanel?.querySelector<HTMLAnchorElement>('a[href]')?.focus();
+147:       return;
+148:     }
+149: 
+150:     if (event.key === ' ') {
+151:       event.preventDefault();
+152:       if (megaItemId === item.id) closeMega();
+153:       else openMega(item, event.currentTarget as HTMLAnchorElement);
+154:     }
+155:   };
+156: 
+157:   const openMobile = async (event?: MouseEvent) => {
+158:     if (mobileOpen) return;
+159:     releaseScroll = lockPageScroll();
+160:     mobileReturnFocus = event?.currentTarget instanceof HTMLButtonElement ? event.currentTarget : mobileToggle;
+161:     mobileOpen = true;
+162:     await tick();
+163:     mobileMenu?.showModal();
+164:     mobileCloseButton?.focus();
+165:   };
+166: 
+167:   const closeMobile = async (restoreFocus = true) => {
+168:     if (!mobileOpen) return;
+169:     mobileMenu?.close();
+170:     mobileOpen = false;
+171:     releaseScroll?.();
+172:     if (restoreFocus) {
+173:       await tick();
+174:       mobileReturnFocus?.focus();
+175:     }
+176:   };
+177: 
+178:   const handleWindowKeydown = (event: KeyboardEvent) => {
+179:     if (event.key !== 'Escape') return;
+180:     if (mobileOpen) {
+181:       event.preventDefault();
+182:       void closeMobile();
+183:       return;
+184:     }
+185:     if (mega) {
+186:       event.preventDefault();
+187:       const returnFocus = megaPanel?.contains(document.activeElement) ? megaTrigger : undefined;
+188:       closeMega();
+189:       returnFocus?.focus();
+190:     }
+191:   };
+192: 
+193: 
+194:   onDestroy(() => {
+195:     releaseScroll?.();
+196:   });
+197: 
+198:   afterNavigate(() => {
+199:     closeMega();
+200:     if (mobileOpen) void closeMobile(false);
+201:   });
+202: </script>
+203: 
+204: <svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); if (window.innerWidth < 992) closeMega(); }} />
+205: 
+206: {#if mega}
+207:   <button class="dn-mega-backdrop" tabindex="-1" aria-label="Затворете навигацията" onclick={closeMega}></button>
+208: {/if}
+209: 
+210: <div
+211:   class="dn-header-fixed"
+212:   class:dn-header-fixed--compact={compactDetailHeader}
+213:   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
+214:   class:dn-header-fixed--home-overlay={homeOverlayHeader}
+215:   class:dn-header-fixed--contact-overlay={page.url.pathname === '/contact'}
+216:   class:dn-header-fixed--listing={listingHeader}
+217: >
+218:   <header
+219:     class:dn-header--mega-open={Boolean(mega)}
+220:     class:dn-header--compact={compactDetailHeader}
+221:     class:dn-header--mobile-surface={mobileSurfaceHeader}
+222:     class="dn-header"
+223:   >
+224:     <div class="dn-topbar">
+225:       <div class="container dn-topbar__inner">
+226:         <ul class="dn-topbar__list">
+227:           <li><Icon name="map-pin" size={18} strokeWidth={1.75} /><span>{brand.address}</span></li>
+228:           <li><Icon name="phone" size={18} strokeWidth={1.75} /><a {...phoneLinkAttributes}>{brand.phone}</a></li>
+229:           <li><Icon name="clock" size={18} strokeWidth={1.75} /><span>{brand.appointment}</span></li>
+230:         </ul>
+231:       </div>
+232:     </div>
+233: 
+234:     <div class="dn-header__lower" {@attach attachMegaDismissBoundary}>
+235:       <div class="container">
+236:         <div class="dn-header__inner">
+237:           <div class="dn-logo-box">
+238:             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
+239:               <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+240:             </a>
+241:           </div>
+242: 
+243:           <nav class="dn-nav" aria-label="Основна навигация">
+244:             <ul class="dn-nav__list">
+245:               {#each navigation as item (item.id)}
+246:                 <li class:dn-nav__item--current={isActive(item)}>
+247:                   <a
+248:                     class:dn-nav__link--disclosure={Boolean(item.menu)}
+249:                     id={item.menu ? `dn-nav-trigger-${item.id}` : undefined}
+250:                     href={resolve(item.href)}
+251:                     aria-current={isExactDestination(item) ? 'page' : undefined}
+252:                     aria-expanded={item.menu ? megaItemId === item.id : undefined}
+253:                     aria-controls={item.menu ? `dn-mega-${item.id}` : undefined}
+254:                     onmouseenter={(event) => openMega(item, event.currentTarget)}
+255:                     onfocus={() => handleMegaTriggerFocus(item)}
+256:                     onclick={(event) => handleMegaTriggerClick(event, item)}
+257:                     onkeydown={(event) => handleMegaTriggerKeydown(event, item)}
+258:                   >{item.label}</a>
+259: 
+260:                   {#if item.menu && megaItemId === item.id && mega}
+261:                     <div
+262:                       class="dn-mega"
+263:                       id={`dn-mega-${item.id}`}
+264:                       role="region"
+265:                       aria-labelledby={`dn-nav-trigger-${item.id}`}
+266:                       {@attach attachMegaPanel}
+267:                     >
+268:                       <div class="dn-mega__feature-panel">
+269:                         <div class="dn-mega__features">
+270:                           {#each mega.features as feature (feature.id)}
+271:                             <NavigationFeatureCard {feature} />
+272:                           {/each}
+273:                         </div>
+274:                       </div>
+275:                       <div class="dn-mega__side">
+276:                         <nav class="dn-mega__groups" aria-label={mega.title}>
+277:                           {#each mega.groups as group (group.id)}
+278:                             <div class="dn-mega__group">
+279:                               <strong>{group.title}</strong>
+280:                               {#each group.links as link (link.id)}
+281:                                 {#if isInternalHref(link.href)}
+282:                                   <a href={resolve(link.href)}>{link.label}</a>
+283:                                 {:else}
+284:                                   <a {...{ href: link.href }}>{link.label}</a>
+285:                                 {/if}
+286:                               {/each}
+287:                             </div>
+288:                           {/each}
+289:                         </nav>
+290:                         <div class="dn-mega__side-action">
+291:                           <ActionLink href={mega.cta.href}>{mega.cta.label}</ActionLink>
+292:                         </div>
+293:                       </div>
+294:                     </div>
+295:                   {/if}
+296:                 </li>
+297:               {/each}
+298:             </ul>
+299:           </nav>
+300: 
+301:           <div class="dn-header-actions">
+302:             <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
+303:               <Icon name="mail" size={17} strokeWidth={1.8} />
+304:               <span>Запитване</span>
+305:             </ActionLink>
+306:             <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
+307:               <Icon name="calendar" size={17} strokeWidth={1.8} />
+308:               <span>Запазете оглед</span>
+309:             </ActionLink>
+310:           </div>
+311: 
+312:           <div class="dn-mobile-controls">
+313:             <a class="dn-mobile-control" href={resolve('/contact')} aria-label="Локация и контакти">
+314:               <MobileNavIcon name="location" size={20} />
+315:             </a>
+316:             <a
+317:               class="dn-mobile-control dn-mobile-control--call"
+318:               {...phoneLinkAttributes}
+319:               aria-label={`Обадете се на ${brand.phone}`}
+320:             >
+321:               <MobileNavIcon name="phone" size={20} />
+322:             </a>
+323:             {#if vehicleDetailHeader}
+324:             <button
+325:               class="dn-mobile-toggle"
+326:               type="button"
+327:               {@attach attachMobileToggle}
+328:               aria-expanded={mobileOpen}
+329:               aria-controls="dn-mobile-menu"
+330:               aria-label={mobileOpen ? 'Затворете менюто' : 'Отворете менюто'}
+331:               onclick={openMobile}
+332:             >
+333:               <MobileNavIcon name="menu" size={20} />
+334:             </button>
+335:             {/if}
+336:           </div>
+337:         </div>
+338:       </div>
+339:     </div>
+340: 
+341:     {#if mobileOpen}
+342:       <MobileMenu {closeMobile} {attachMobileMenu} {attachMobileCloseButton} {listingHeader} />
+343:     {/if}
+344:   </header>
+345: 
+346:   <div hidden={mobileOpen}>
+347:     {#if vehicleDetailHeader}
+348:       <nav class="dn-mobile-detail-bar" aria-label="Действия за автомобила">
+349:         <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Заявете оглед</a>
+350:         <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes}>
+351:           <MobileNavIcon name="phone" size={20} />
+352:           Обадете се
+353:         </a>
+354:       </nav>
+355:     {:else}
+356:       <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+357:         <a
+358:           class:active={page.url.pathname === '/'}
+359:           href={resolve('/')}
+360:           aria-current={page.url.pathname === '/' ? 'page' : undefined}
+361:         >
+362:           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
+363:           <span>Начало</span>
+364:         </a>
+365:         <a
+366:           class:active={page.url.pathname.startsWith('/listing')}
+367:           href={resolve('/listing-grid')}
+368:           aria-current={page.url.pathname.startsWith('/listing') ? 'page' : undefined}
+369:         >
+370:           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
+371:           <span>Коли</span>
+372:         </a>
+373:         <a
+374:           class:active={page.url.pathname === '/contact' && mobileTopic === 'trade-in'}
+375:           href={resolve('/contact?topic=trade-in')}
+376:           aria-current={page.url.pathname === '/contact' && mobileTopic === 'trade-in' ? 'page' : undefined}
+377:         >
+378:           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
+379:           <span>Продай</span>
+380:         </a>
+381:         <a
+382:           class:active={page.url.pathname === '/contact' && mobileTopic === 'import'}
+383:           href={resolve('/contact?topic=import')}
+384:           aria-current={page.url.pathname === '/contact' && mobileTopic === 'import' ? 'page' : undefined}
+385:         >
+386:           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
+387:           <span>Внос</span>
+388:         </a>
+389:         <button
+390:           class:active={mobileMenuSection}
+391:           type="button"
+392:           aria-controls="dn-mobile-menu"
+393:           aria-expanded={mobileOpen}
+394:           onclick={openMobile}
+395:         >
+396:           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="menu" /></span>
+397:           <span>Меню</span>
+398:         </button>
+399:       </nav>
+400:     {/if}
+401:   </div>
+402: </div>
+403: 
+
+## src/lib/components/layout/MobileMenu.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { page } from '$app/state';
+4:   import type { Attachment } from 'svelte/attachments';
+5:   import { trapDialogTab } from '$lib/ui/overlay';
+6:   import { brand } from '$config/brand';
+7:   import Icon from '$components/ui/Icon.svelte';
+8:   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
+9:   import MobileNavIcon from './MobileNavIcon.svelte';
+10:   let { closeMobile, attachMobileMenu, attachMobileCloseButton, listingHeader }: {
+11:     closeMobile: (restoreFocus?: boolean) => Promise<void>;
+12:     attachMobileMenu: Attachment<HTMLDialogElement>;
+13:     attachMobileCloseButton: Attachment<HTMLButtonElement>;
+14:     listingHeader: boolean;
+15:   } = $props();
+16:   const phoneLinkAttributes = { href: brand.phoneHref } as const;
+17: </script>
+18:       <dialog
+19:         class="dn-mobile-menu"
+20:         id="dn-mobile-menu"
+21:         aria-labelledby="dn-mobile-menu-title"
+22:         tabindex="-1"
+23:         {@attach attachMobileMenu}
+24:         onkeydown={trapDialogTab}
+25:         oncancel={(event) => { event.preventDefault(); void closeMobile(); }}
+26:         onclick={(event) => { if (event.target === event.currentTarget) void closeMobile(); }}
+27:       >
+28:         <h2 class="dn-sr-only" id="dn-mobile-menu-title">Основна навигация</h2>
+29:         <div class="dn-mobile-menu__header">
+30:           <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — начало`} onclick={() => void closeMobile(false)}>
+31:             <img src={brand.logo} alt={brand.name} width="160" height="44" />
+32:           </a>
+33:         <button
+34:           class="dn-mobile-menu__close"
+35:           type="button"
+36:           {@attach attachMobileCloseButton}
+37:           aria-label="Затворете менюто"
+38:           onclick={() => closeMobile()}
+39:         ><MobileNavIcon name="close" size={20} /></button>
+40:         </div>
+41:         <div class="dn-mobile-menu__contact">
+42:           <a class="dn-mobile-menu__call" {...phoneLinkAttributes}><MobileNavIcon name="phone" size={20} /><strong>Обадете се</strong><span>{brand.phone}</span></a>
+43:           <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><strong>Локация</strong><span>{brand.city}</span></a>
+44:         </div>
+45:         <nav aria-label="Мобилна навигация">
+46:           <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
+47:           <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
+48:           <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
+49:           <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
+50:         </nav>
+51:         <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
+52:           <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
+53:           <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
+54:           <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
+55:         </div>
+56:         <p class="dn-mobile-menu__address">{brand.addressLine}</p>
+57:       </dialog>
+
+## src/lib/components/layout/MobileNavIcon.svelte
+1: <script lang="ts">
+2:   // Hugeicons Stroke Rounded 4.3.0, MIT. See provenance/hugeicons-LICENSE.txt.
+3:   let { name, size = 22 }: { name: 'home' | 'cars' | 'sell' | 'import' | 'menu' | 'location' | 'phone' | 'search' | 'filters' | 'sort' | 'close'; size?: number } = $props();
+4: </script>
+5: 
+6: <svg class="dn-icon" width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" data-icon-family="hugeicons-stroke-rounded">
+7:   {#if name === 'home'}
+8:     <path d="M3 11.9896V14.5C3 17.7998 3 19.4497 4.02513 20.4749C5.05025 21.5 6.70017 21.5 10 21.5H14C17.2998 21.5 18.9497 21.5 19.9749 20.4749C21 19.4497 21 17.7998 21 14.5V11.9896C21 10.3083 21 9.46773 20.6441 8.74005C20.2882 8.01237 19.6247 7.49628 18.2976 6.46411L16.2976 4.90855C14.2331 3.30285 13.2009 2.5 12 2.5C10.7991 2.5 9.76689 3.30285 7.70242 4.90855L5.70241 6.46411C4.37533 7.49628 3.71179 8.01237 3.3559 8.74005C3 9.46773 3 10.3083 3 11.9896Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+9:     <path d="M15 21.5V16.5C15 15.0858 15 14.3787 14.5607 13.9393C14.1213 13.5 13.4142 13.5 12 13.5C10.5858 13.5 9.87868 13.5 9.43934 13.9393C9 14.3787 9 15.0858 9 16.5V21.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+10:   {:else if name === 'cars'}
+11:     <path d="M2.5 12L4.5 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+12:     <path d="M21.5 12.5L19.5 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+13:     <path d="M8 17.5L8.24567 16.8858C8.61101 15.9725 8.79368 15.5158 9.17461 15.2579C9.55553 15 10.0474 15 11.0311 15H12.9689C13.9526 15 14.4445 15 14.8254 15.2579C15.2063 15.5158 15.389 15.9725 15.7543 16.8858L16 17.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+14:     <path d="M2 17V19.882C2 20.2607 2.24075 20.607 2.62188 20.7764C2.86918 20.8863 3.10538 21 3.39058 21H5.10942C5.39462 21 5.63082 20.8863 5.87812 20.7764C6.25925 20.607 6.5 20.2607 6.5 19.882V18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+15:     <path d="M17.5 18V19.882C17.5 20.2607 17.7408 20.607 18.1219 20.7764C18.3692 20.8863 18.6054 21 18.8906 21H20.6094C20.8946 21 21.1308 20.8863 21.3781 20.7764C21.7592 20.607 22 20.2607 22 19.882V17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+16:     <path d="M20 8.5L21 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+17:     <path d="M4 8.5L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+18:     <path d="M4.5 9L5.5883 5.73509C6.02832 4.41505 6.24832 3.75503 6.7721 3.37752C7.29587 3 7.99159 3 9.38304 3H14.617C16.0084 3 16.7041 3 17.2279 3.37752C17.7517 3.75503 17.9717 4.41505 18.4117 5.73509L19.5 9" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+19:     <path d="M4.5 9H19.5C20.4572 10.0135 22 11.4249 22 12.9996V16.4702C22 17.0407 21.6205 17.5208 21.1168 17.5875L18 18H6L2.88316 17.5875C2.37955 17.5208 2 17.0407 2 16.4702V12.9996C2 11.4249 3.54279 10.0135 4.5 9Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+20:   {:else if name === 'sell'}
+21:     <circle cx="1.5" cy="1.5" r="1.5" transform="matrix(1 0 0 -1 16 8.00024)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+22:     <path d="M2.77423 11.1439C1.77108 12.2643 1.7495 13.9546 2.67016 15.1437C4.49711 17.5033 6.49674 19.5029 8.85633 21.3298C10.0454 22.2505 11.7357 22.2289 12.8561 21.2258C15.8979 18.5022 18.6835 15.6559 21.3719 12.5279C21.6377 12.2187 21.8039 11.8397 21.8412 11.4336C22.0062 9.63798 22.3452 4.46467 20.9403 3.05974C19.5353 1.65481 14.362 1.99377 12.5664 2.15876C12.1603 2.19608 11.7813 2.36233 11.472 2.62811C8.34412 5.31646 5.49781 8.10211 2.77423 11.1439Z" stroke="currentColor" stroke-width="1.5" />
+23:     <path d="M7.00002 14.0002L10 17.0002" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+24:   {:else if name === 'import'}
+25:     <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+26:     <path d="M8 12C8 18 12 22 12 22C12 22 16 18 16 12C16 6 12 2 12 2C12 2 8 6 8 12Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" />
+27:     <path d="M21 15H3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+28:     <path d="M21 9H3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+29:   {:else if name === 'menu'}
+30:     <path d="M4 5L20 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+31:     <path d="M4 12L20 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+32:     <path d="M4 19L20 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+33:   {:else if name === 'location'}
+34:     <path d="M13.6177 21.367C13.1841 21.773 12.6044 22 12.0011 22C11.3978 22 10.8182 21.773 10.3845 21.367C6.41302 17.626 1.09076 13.4469 3.68627 7.37966C5.08963 4.09916 8.45834 2 12.0011 2C15.5439 2 18.9126 4.09916 20.316 7.37966C22.9082 13.4393 17.599 17.6389 13.6177 21.367Z" stroke="currentColor" stroke-width="1.5" />
+35:     <path d="M15.5 11C15.5 12.933 13.933 14.5 12 14.5C10.067 14.5 8.5 12.933 8.5 11C8.5 9.067 10.067 7.5 12 7.5C13.933 7.5 15.5 9.067 15.5 11Z" stroke="currentColor" stroke-width="1.5" />
+36:   {:else if name === 'phone'}
+37:     <path d="M9.1585 5.71217L8.75584 4.80619C8.49256 4.21382 8.36092 3.91762 8.16405 3.69095C7.91732 3.40688 7.59571 3.19788 7.23592 3.08779C6.94883 2.99994 6.6247 2.99994 5.97645 2.99994C5.02815 2.99994 4.554 2.99994 4.15597 3.18223C3.68711 3.39696 3.26368 3.86322 3.09497 4.35054C2.95175 4.76423 2.99278 5.18937 3.07482 6.03964C3.94815 15.0901 8.91006 20.052 17.9605 20.9254C18.8108 21.0074 19.236 21.0484 19.6496 20.9052C20.137 20.7365 20.6032 20.3131 20.818 19.8442C21.0002 19.4462 21.0002 18.972 21.0002 18.0237C21.0002 17.3755 21.0002 17.0514 20.9124 16.7643C20.8023 16.4045 20.5933 16.0829 20.3092 15.8361C20.0826 15.6393 19.7864 15.5076 19.194 15.2443L18.288 14.8417C17.6465 14.5566 17.3257 1 [long line truncated: inspect original when needed]
+38:   {:else if name === 'search'}
+39:     <path d="M17 17L21 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+40:     <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+41:   {:else if name === 'filters'}
+42:     <path d="M3 7H6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+43:     <path d="M3 17H9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+44:     <path d="M18 17L21 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+45:     <path d="M15 7L21 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+46:     <path d="M6 7C6 6.06812 6 5.60218 6.15224 5.23463C6.35523 4.74458 6.74458 4.35523 7.23463 4.15224C7.60218 4 8.06812 4 9 4C9.93188 4 10.3978 4 10.7654 4.15224C11.2554 4.35523 11.6448 4.74458 11.8478 5.23463C12 5.60218 12 6.06812 12 7C12 7.93188 12 8.39782 11.8478 8.76537C11.6448 9.25542 11.2554 9.64477 10.7654 9.84776C10.3978 10 9.93188 10 9 10C8.06812 10 7.60218 10 7.23463 9.84776C6.74458 9.64477 6.35523 9.25542 6.15224 8.76537C6 8.39782 6 7.93188 6 7Z" stroke="currentColor" stroke-width="1.5" />
+47:     <path d="M12 17C12 16.0681 12 15.6022 12.1522 15.2346C12.3552 14.7446 12.7446 14.3552 13.2346 14.1522C13.6022 14 14.0681 14 15 14C15.9319 14 16.3978 14 16.7654 14.1522C17.2554 14.3552 17.6448 14.7446 17.8478 15.2346C18 15.6022 18 16.0681 18 17C18 17.9319 18 18.3978 17.8478 18.7654C17.6448 19.2554 17.2554 19.6448 16.7654 19.8478C16.3978 20 15.9319 20 15 20C14.0681 20 13.6022 20 13.2346 19.8478C12.7446 19.6448 12.3552 19.2554 12.1522 18.7654C12 18.3978 12 17.9319 12 17Z" stroke="currentColor" stroke-width="1.5" />
+48:   {:else if name === 'sort'}
+49:     <path d="M7 4V20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+50:     <path d="M17 19L17 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+51:     <path d="M10 6.99998C10 6.99998 7.79053 4.00001 6.99998 4C6.20942 3.99999 4 7 4 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+52:     <path d="M20 17C20 17 17.7905 20 17 20C16.2094 20 14 17 14 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+53:   {:else if name === 'close'}
+54:     <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+55:   {/if}
+56: </svg>
+
+## src/lib/components/layout/NavigationFeatureCard.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import type { NavigationFeature } from '$data/navigation';
+4:   import { vehicleArtwork } from '$data/vehicle-artwork';
+5:   import FeatureArtwork from '$components/ui/FeatureArtwork.svelte';
+6:   import Icon from '$components/ui/Icon.svelte';
+7:   let { feature }: { feature: NavigationFeature } = $props();
+8:   // Frame the visible object, not the transparent padding in the source canvas.
+9:   const artwork = $derived.by(() => {
+10:     if (!feature.vehicle) return feature.artwork;
+11:     const source = vehicleArtwork[feature.vehicle];
+12:     const [left, top, right, bottom] = source.bounds;
+13:     return { ...source, crop: [left, top, right - left, bottom - top] as const };
+14:   });
+15: </script>
+16: 
+17: <a class="dn-mega__feature" class:dn-mega__feature--red={feature.tone === 'red'} class:dn-mega__feature--ink={feature.tone === 'ink'} href={resolve(feature.href)}>
+18:   <span class="copy"><strong>{feature.title}</strong></span>
+19:   <span class="artwork" class:artwork--photo={feature.media === 'photo'}>
+20:     <FeatureArtwork {artwork} />
+21:   </span>
+22:   <span class="arrow" aria-hidden="true"><Icon name="arrow-right" size={20} /></span>
+23: </a>
+24: 
+
+## src/lib/components/layout/SiteShell.svelte
+1: <script lang="ts">
+2:   import type { Snippet } from 'svelte';
+3:   import Header from './Header.svelte';
+4:   import Footer from './Footer.svelte';
+5: 
+6:   let { children, showFooterActions = true, showMobileFooter = false }: { children: Snippet; showFooterActions?: boolean; showMobileFooter?: boolean } = $props();
+7: </script>
+8: 
+9: <div class="dn-app-shell">
+10:   <a class="dn-skip-link" href="#main-content">Към съдържанието</a>
+11:   <Header />
+12:   <main id="main-content" tabindex="-1">{@render children()}</main>
+13:   <Footer showActions={showFooterActions} {showMobileFooter} />
+14: </div>

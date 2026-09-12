@@ -1,0 +1,13 @@
+**/node_modules/
+**/.next*/
+**/.svelte-kit/
+**/.vercel/
+**/.turbo/
+**/build/
+**/dist/
+**/.env*
+**/*.log
+**/*.tsbuildinfo
+**/test-results/
+**/playwright-report/
+runtime/

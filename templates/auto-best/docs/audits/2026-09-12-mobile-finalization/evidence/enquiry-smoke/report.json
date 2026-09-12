@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-09-11T22:27:05.881Z",
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "width": 320,
+      "passed": true,
+      "geometry": {
+        "overflow": 0,
+        "height": 876,
+        "viewport": 900
+      },
+      "pageErrors": 0,
+      "serverSubmissions": 0
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "geometry": {
+        "overflow": 0,
+        "height": 876,
+        "viewport": 900
+      },
+      "pageErrors": 0,
+      "serverSubmissions": 0
+    },
+    {
+      "width": 844,
+      "passed": true,
+      "geometry": {
+        "overflow": 0,
+        "height": 342,
+        "viewport": 390
+      },
+      "pageErrors": 0,
+      "serverSubmissions": 0
+    },
+    {
+      "width": 1440,
+      "passed": true,
+      "geometry": {
+        "overflow": 0,
+        "height": 552.671875,
+        "viewport": 900
+      },
+      "pageErrors": 0,
+      "serverSubmissions": 0
+    }
+  ]
+}

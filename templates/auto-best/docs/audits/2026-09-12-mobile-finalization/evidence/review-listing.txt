@@ -1,0 +1,913 @@
+
+## src/lib/components/listing/ListingFilters.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { page } from '$app/state';
+4:   import { activeFilterCount as countFilters, bodyLabel, listingParams, listingHiddenFields, removeListingFilter, listingFilterOptions, listingModelsForMake, parseListingFilters, type ListingFilters } from '$data/listing';
+5:   import Icon from '$components/ui/Icon.svelte';
+6:   import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
+7:   import QuickFilterSheet from './QuickFilterSheet.svelte';
+8:   import VehicleDiscoveryForm from './VehicleDiscoveryForm.svelte';
+9: 
+10:   interface Props {
+11:     filters: ListingFilters;
+12:     openFilters: (event: MouseEvent, field?: string) => void;
+13:     filtersOpen: boolean;
+14:     onDraftChange: (filters: ListingFilters) => void;
+15:   }
+16: 
+17:   let { filters, openFilters, filtersOpen, onDraftChange }: Props = $props();
+18: 
+19:   let activeFilterCount = $derived(countFilters(filters));
+20:   let query = $derived(filters.q);
+21:   let make = $derived(filters.make);
+22:   let model = $derived(filters.model);
+23:   let body = $derived(filters.body);
+24:   let fuel = $derived(filters.fuel);
+25:   let modelOptions = $derived(listingModelsForMake(make));
+26:   const quickFilters = [
+27:     { label: 'Марка', field: 'make' },
+28:     { label: 'Модел', field: 'model' },
+29:     { label: 'Цена', field: 'price' },
+30:     { label: 'Година', field: 'year' },
+31:     { label: 'Купе', field: 'body' },
+32:     { label: 'Гориво', field: 'fuel' },
+33:     { label: 'Скорости', field: 'transmission' },
+34:     { label: 'Пробег', field: 'mileage_max' },
+35:     { label: 'Версия', field: 'version' },
+36:     { label: 'Състояние', field: 'condition' },
+37:     { label: 'Екстри', field: 'equipment' }
+38:   ] as const;
+39:   const activeChips = $derived.by(() => {
+40:     const labels: Record<string, string> = {
+41:       body: bodyLabel(filters.body),
+42:       condition: filters.condition === 'new' ? 'Нови' : 'Употребявани',
+43:       price_min: `От ${filters.priceMin?.toLocaleString('bg-BG')} €`,
+44:       price_max: `До ${filters.priceMax?.toLocaleString('bg-BG')} €`,
+45:       year_min: `От ${filters.yearMin} г.`,
+46:       year_max: `До ${filters.yearMax} г.`,
+47:       mileage_max: `До ${filters.mileageMax?.toLocaleString('bg-BG')} км`
+48:     };
+49:     return [...listingParams(filters).entries()]
+50:       .filter(([key, value]) => value && key !== 'sort' && ['q', 'make', 'model', 'body', 'fuel', 'transmission', 'version', 'condition', 'price_min', 'price_max', 'year_min', 'year_max', 'mileage_max', 'equipment'].includes(key))
+51:       .map(([key, value]) => {
+52:         const params = removeListingFilter(filters, key, value);
+53:         const search = params.toString();
+54:         const href: '/listing-grid' | `/listing-grid?${string}` = search ? `/listing-grid?${search}` : '/listing-grid';
+55:         return { key: `${key}-${value}`, label: labels[key] ?? value, href };
+56:       });
+57:   });
+58: 
+59:   const primaryHiddenFields = (current: ListingFilters) => listingHiddenFields(current, ['q', 'make', 'model', 'body', 'fuel', 'sort']);
+60: 
+61:   function updateDraft(event: Event) {
+62:     const form = event.currentTarget as HTMLFormElement;
+63:     const params = new URLSearchParams();
+64:     for (const [key, value] of new FormData(form)) if (typeof value === 'string') params.append(key, value);
+65:     onDraftChange(parseListingFilters(params));
+66:   }
+67: 
+68:   const cleanFormData = (event: FormDataEvent) => {
+69:     for (const key of new Set(event.formData.keys())) {
+70:       const values = event.formData.getAll(key);
+71:       if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
+72:     }
+73:   };
+74: </script>
+75: 
+76: <section class="dn-listing-filter-wrap" aria-label="Филтри за автомобили">
+77:   <div class="container">
+78:     <div class="dn-listing-filter">
+79:       <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
+80:       <QuickFilterSheet id="dn-listing-sort-sheet">
+81:       {#snippet children(openSort, sortOpen)}
+82:       <form class="dn-listing-mobile-form" method="GET" action={resolve('/listing-grid')} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
+83:         <div class="dn-listing-filter__primary">
+84:         <div class="dn-listing-filter__search-field">
+85:           <MobileNavIcon name="search" size={20} />
+86:           <input class="dn-listing-filter__keyword" type="search" name="q" bind:value={query} aria-label="Търсене на автомобили" placeholder="Марка, модел или ключова дума" />
+87:           <button class="dn-listing-filter__submit" type="submit"><Icon name="search" size={18} /><span>Търсене</span></button>
+88:         </div>
+89:         <button
+90:           class="dn-listing-filter__keyword dn-listing-filter__mobile-keyword"
+91:           type="button"
+92:           aria-haspopup="dialog"
+93:           aria-controls="dn-listing-filter-dialog"
+94:           aria-expanded={filtersOpen}
+95:           aria-label={query ? `Търсене: ${query}. Отворете търсенето на автомобили` : 'Отворете търсенето на автомобили'}
+96:           onclick={(event) => openFilters(event)}
+97:         >
+98:           <MobileNavIcon name="search" size={20} />
+99:           <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || 'Марка или модел'}</span>
+100:           <span class="dn-listing-filter__keyword-hint">Търсене по ключова дума <Icon name="arrow-right" size={16} /></span>
+101:         </button>
+102:         <button
+103:           class="dn-listing-filter__toggle"
+104:           type="button"
+105:           aria-haspopup="dialog"
+106:           aria-controls="dn-listing-filter-dialog"
+107:           aria-expanded={filtersOpen}
+108:           aria-label={activeFilterCount ? `Филтри: ${activeFilterCount} ${activeFilterCount === 1 ? 'активен' : 'активни'}` : 'Филтри'}
+109:           title="Филтри"
+110:           onclick={(event) => openFilters(event)}
+111:         >
+112:           <MobileNavIcon name="filters" size={20} />
+113:           <span class="dn-listing-filter__toggle-label">Филтри</span>
+114:           {#if activeFilterCount > 0}<span class="dn-listing-filter__count" aria-hidden="true">{activeFilterCount}</span>{/if}
+115:         </button>
+116:         <button class="dn-listing-filter__mobile-sort" type="button" title="Сортиране"
+117:           aria-label={`Сортиране: ${listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1]}`}
+118:           aria-haspopup="dialog" aria-controls="dn-listing-sort-sheet" aria-expanded={sortOpen}
+119:           onclick={(event) => openSort(event, 'sort', 'Сортиране')}>
+120:           <MobileNavIcon name="sort" size={20} />
+121:           {#if filters.sort !== 'default'}<span class="dn-listing-filter__sort-active" aria-hidden="true"></span>{/if}
+122:         </button>
+123:         <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
+124:         </div>
+125: 
+126:         <div class="dn-listing-filter__facets" aria-label="Основни филтри">
+127:         <label>
+128:           <span class="dn-listing-filter__label">Марка</span>
+129:           <select name="make" aria-label="Марка" bind:value={make} onchange={() => { model = ''; }}>
+130:             {#each listingFilterOptions.makes as option (option)}
+131:               <option value={option}>{option || 'Всички'}</option>
+132:             {/each}
+133:           </select>
+134:         </label>
+135:         <label>
+136:           <span class="dn-listing-filter__label">Модел</span>
+137:           <select name="model" aria-label="Модел" bind:value={model}>
+138:             {#each modelOptions as option (option)}
+139:               <option value={option}>{option || 'Всички'}</option>
+140:             {/each}
+141:           </select>
+142:         </label>
+143:         <label>
+144:           <span class="dn-listing-filter__label">Купе</span>
+145:           <select name="body" aria-label="Купе" bind:value={body}>
+146:             {#each listingFilterOptions.bodies as option (option)}
+147:               <option value={option}>{bodyLabel(option) || 'Всички'}</option>
+148:             {/each}
+149:           </select>
+150:         </label>
+151:         <label>
+152:           <span class="dn-listing-filter__label">Гориво</span>
+153:           <select name="fuel" aria-label="Гориво" bind:value={fuel}>
+154:             {#each listingFilterOptions.fuels as option (option)}
+155:               <option value={option}>{option || 'Всички'}</option>
+156:             {/each}
+157:           </select>
+158:         </label>
+159:         </div>
+160:         {#each primaryHiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
+161:           <input type="hidden" {name} {value} />
+162:         {/each}
+163:       </form>
+164:       {/snippet}
+165:       </QuickFilterSheet>
+166: 
+167:       <div class="dn-listing-filter__quick-row">
+168:       <QuickFilterSheet>
+169:       {#snippet children(openQuick, quickOpen)}
+170:       <nav class={['dn-listing-filter__quick', { 'dn-listing-filter__quick--active': activeChips.length > 0 }]} aria-label="Бързи филтри">
+171:         {#each activeChips as chip (chip.key)}
+172:           <a class="active" href={resolve(chip.href)} aria-label={`Премахни ${chip.label}`}>
+173:             {chip.label}<Icon name="x" size={14} />
+174:           </a>
+175:         {/each}
+176:         {#each quickFilters as item (item.field)}
+177:           <button type="button" aria-haspopup="dialog" aria-controls="dn-quick-filter" aria-expanded={quickOpen} onclick={(event) => openQuick(event, item.field, item.label)}>
+178:             {item.label}<Icon name="chevron-down" size={14} />
+179:           </button>
+180:         {/each}
+181:       </nav>
+182:       {/snippet}
+183:       </QuickFilterSheet>
+184:       </div>
+185: 
+186:     </div>
+187:   </div>
+188: </section>
+
+## src/lib/components/listing/ListingHero.svelte
+1: <script lang="ts">
+2:   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+3:   let { count }: { count: number } = $props();
+4: </script>
+5: 
+6: <section class="dn-listing-hero dn-route-hero dn-route-hero--studio" aria-labelledby="listing-title">
+7:   <HeroVehicles pair="inventory" />
+8:   <div class="dn-listing-hero__media" aria-hidden="true"></div>
+9:   <div class="dn-listing-hero__overlay" aria-hidden="true"></div>
+10:   <div class="container dn-listing-hero__content dn-route-hero__layout">
+11:     <div class="dn-listing-hero__copy dn-route-hero__copy">
+12:       <h1 id="listing-title">Намерете своя автомобил</h1>
+13:       <p>{count} {count === 1 ? 'автомобил' : 'автомобила'} в каталога</p>
+14:     </div>
+15:   </div>
+16: </section>
+
+## src/lib/components/listing/ListingResults.svelte
+1: <script lang="ts">
+2:   import { page } from '$app/state';
+3:   import { resolve } from '$app/paths';
+4:   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
+5:   import Icon from '$components/ui/Icon.svelte';
+6:   import { activeFilterCount, listingHiddenFields, listingFilterOptions, type ListingFilters } from '$data/listing';
+7:   import type { Vehicle } from '$data/inventory';
+8: 
+9:   let { filters, vehicles, draftFilters, openFilters, filtersOpen }: {
+10:     filters: ListingFilters;
+11:     vehicles: Vehicle[];
+12:     draftFilters: ListingFilters;
+13:     openFilters: (event: MouseEvent, field?: string) => void;
+14:     filtersOpen: boolean;
+15:   } = $props();
+16:   let activeCount = $derived(activeFilterCount(draftFilters));
+17:   const mobileSortLabels = {
+18:     default: 'Препоръчани',
+19:     newest: 'Най-нови',
+20:     'price-asc': 'Най-ниска цена',
+21:     'price-desc': 'Най-висока цена',
+22:     'mileage-asc': 'Най-нисък пробег'
+23:   } as const;
+24: 
+25:   const hiddenFields = (filters: ListingFilters) => listingHiddenFields(filters, ['sort']);
+26: 
+27:   const submitSort = (event: Event) => {
+28:     const select = event.currentTarget as HTMLSelectElement;
+29:     select.form?.requestSubmit();
+30:   };
+31: </script>
+32: 
+33: <section class="dn-listing-results" aria-labelledby="listing-results-title">
+34:   <div class="container">
+35:     <div class="dn-listing-results__heading">
+36:       <h2 id="listing-results-title">
+37:         <span class="dn-listing-results__title-full">Налични автомобили</span>
+38:         <span class="dn-listing-results__title-mobile" aria-live="polite">{vehicles.length} {vehicles.length === 1 ? 'кола' : 'коли'}</span>
+39:         <span class="dn-listing-results__count" aria-live="polite">{vehicles.length}</span>
+40:       </h2>
+41: 
+42:       <div class="dn-listing-results__tools">
+43:       <button class="dn-listing-results__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+44:         <Icon name="adjustments" size={18} /><span>Филтри</span>
+45:         {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
+46:       </button>
+47:       <form class="dn-listing-sort" method="GET" action={resolve('/listing-grid')}>
+48:         {#each hiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
+49:           <input type="hidden" {name} {value} />
+50:         {/each}
+51:         <label class="dn-sr-only" for="listing-sort">Сортиране</label>
+52:         <span class="dn-listing-sort__icon" aria-hidden="true"></span>
+53:         <select id="listing-sort" name="sort" onchange={submitSort} aria-label="Сортиране на автомобилите">
+54:           {#each listingFilterOptions.sorts as [value, label] (value)}
+55:             <option value={value === 'default' ? '' : value} selected={filters.sort === value}>{label}</option>
+56:           {/each}
+57:         </select>
+58:         <span class="dn-listing-sort__mobile-value" aria-hidden="true">{mobileSortLabels[filters.sort]}</span>
+59:         <button class="dn-sr-only" type="submit">Приложи сортирането</button>
+60:       </form>
+61:       </div>
+62:     </div>
+63: 
+64:     {#if vehicles.length}
+65:       <div class="dn-listing-results__grid">
+66:         {#each vehicles as vehicle, index (vehicle.id)}
+67:           <VehicleCard {vehicle} returnTo={`${page.url.pathname}${page.url.search}#vehicle-${vehicle.id}`} showPrice priority={index < 4} layout="listing" />
+68:         {/each}
+69:       </div>
+70:     {:else}
+71:       <div class="dn-listing-empty">
+72:         <h3>Няма съвпадения</h3>
+73:         <p>Променете някой от филтрите или разгледайте цялата селекция.</p>
+74:         <a class="dn-button dn-button--dark" href={resolve('/listing-grid')}>Изчистете филтрите</a>
+75:       </div>
+76:     {/if}
+77:   </div>
+78: </section>
+79: 
+
+## src/lib/components/listing/QuickFilterSheet.svelte
+1: <script lang="ts">
+2:   import { preserveScrollOffset } from '$lib/ui/overlay';
+3:   import { onDestroy } from 'svelte';
+4:   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
+5:   onDestroy(() => releaseOffset?.(false));
+6:   import { page } from '$app/state';
+7:   import { resolve } from '$app/paths';
+8:   import { tick, type Snippet } from 'svelte';
+9:   import type { Attachment } from 'svelte/attachments';
+10:   import { bodyLabel, listingParams, listingFilterOptions as options, listingModelsForMake, parseListingFilters, type ListingFilters } from '$data/listing';
+11:   import Icon from '$components/ui/Icon.svelte';
+12: 
+13:   let { children, filters, onApply, fullScreen = false, id = 'dn-quick-filter' }: { children: Snippet<[(event: MouseEvent, field: string, title: string) => void, boolean]>; filters?: ListingFilters; onApply?: (filters: ListingFilters) => void; fullScreen?: boolean; id?: string } = $props();
+14:   const params = $derived(filters ? listingParams(filters) : page.url.searchParams);
+15:   let dialog: HTMLDialogElement;
+16:   let heading: HTMLHeadingElement;
+17:   let searchInput: HTMLInputElement;
+18:   let trigger: HTMLElement;
+19: 
+20:   let opened = $state(false);
+21:   let field = $state('make');
+22:   let title = $state('Марка');
+23:   let selected = $state('');
+24:   let minimum = $state('');
+25:   let maximum = $state('');
+26:   let equipment = $state<string[]>([]);
+27:   let search = $state('');
+28:   const attachDialog: Attachment<HTMLDialogElement> = node => { dialog = node; };
+29:   const attachHeading: Attachment<HTMLHeadingElement> = node => { heading = node; };
+30:   const attachSearch: Attachment<HTMLInputElement> = node => { searchInput = node; };
+31:   const range = $derived(field === 'price' || field === 'year');
+32:   const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort');
+33:   const searchLabel = $derived(field === 'make' ? 'Търси марка' : field === 'model' ? 'Търси модел' : `Търси в ${title.toLocaleLowerCase('bg-BG')}`);
+34:   const optionLabel = (option: string) => field === 'body' ? bodyLabel(option) || 'Всички' : field === 'sort' ? options.sorts.find(([value]) => value === (option || 'default'))?.[1] ?? option : option === 'new' ? 'Нови' : option === 'used' ? 'Употребявани' : option || 'Всички';
+35:   const matchesSearch = (option: string) => search.trim().toLocaleLowerCase('bg-BG').split(/\s+/).every(term => optionLabel(option).toLocaleLowerCase('bg-BG').includes(term));
+36:   const invalid = $derived(range && minimum !== '' && maximum !== '' && Number(minimum) > Number(maximum));
+37:   const choices = $derived.by((): readonly string[] => {
+38:     switch (field) {
+39:       case 'sort': return options.sorts.map(([value]) => value === 'default' ? '' : value);
+40:       case 'make': return options.makes;
+41:       case 'model': return listingModelsForMake(params.get('make') ?? '');
+42:       case 'body': return options.bodies;
+43:       case 'fuel': return options.fuels;
+44:       case 'transmission': return options.transmissions;
+45:       case 'version': return options.versions;
+46:       case 'condition': return ['', 'used', 'new'];
+47:       case 'equipment': return options.equipment;
+48:       default: return [];
+49:     }
+50:   });
+51:   const visibleChoices = $derived(choices.filter(matchesSearch));
+52:   const preserved = $derived([...params.entries()].filter(([key]) => {
+53:     if (range) return key !== `${field}_min` && key !== `${field}_max`;
+54:     if (field === 'make' && key === 'model' && selected !== params.get('make')) return false;
+55:     return key !== field;
+56:   }));
+57: 
+58:   async function open(event: MouseEvent, nextField: string, nextTitle: string) {
+59:     trigger = event.currentTarget as HTMLElement;
+60:     field = nextField;
+61:     title = nextTitle;
+62:     search = '';
+63:     selected = params.get(field) ?? '';
+64:     minimum = params.get(`${field}_min`) ?? '';
+65:     maximum = params.get(`${field}_max`) ?? '';
+66:     equipment = params.getAll('equipment');
+67:     if (!onApply) releaseOffset = preserveScrollOffset('--dn-quick-scroll');
+68:     opened = true;
+69:     await tick();
+70:     dialog.showModal();
+71:     heading.focus();
+72:   }
+73:   function restore() {
+74:     opened = false;
+75:     if (!onApply) {
+76:       releaseOffset?.();
+77:     }
+78:     if (trigger?.isConnected) trigger.focus();
+79:   }
+80:   function clear() { selected = ''; minimum = ''; maximum = ''; equipment = []; search = ''; }
+81:   function submit(event: SubmitEvent) {
+82:     if (onApply) {
+83:       event.preventDefault();
+84:       const values = new URLSearchParams();
+85:       for (const [key, value] of new FormData(event.currentTarget as HTMLFormElement)) if (typeof value === 'string') values.append(key, value);
+86:       onApply(parseListingFilters(values));
+87:     }
+88:     dialog.close();
+89:   }
+90:   function clean(event: FormDataEvent) {
+91:     for (const key of new Set(event.formData.keys())) {
+92:       if (event.formData.getAll(key).every(value => value === '')) event.formData.delete(key);
+93:     }
+94:   }
+95: </script>
+96: 
+97: {@render children(open, opened)}
+98: 
+99: <dialog {id} class={['dn-quick-sheet', { searchable, 'full-screen': fullScreen, standalone: !onApply }]} aria-labelledby={`${id}-title`} {@attach attachDialog} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
+100:   <form method="GET" action={resolve('/listing-grid')} onformdata={clean} onsubmit={submit}>
+101:     <header>
+102:       <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
+103:       <button type="button" class="close" aria-label="Затвори избора" onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
+104:     </header>
+105:     {#if searchable}
+106:       <div class="search-wrap">
+107:         <div class="search-field">
+108:           <Icon name="search" size={20} />
+109:           <input type="search" {@attach attachSearch} bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); if (event.key === 'Escape') { event.preventDefault(); dialog.close(); } }} />
+110:           {#if search}<button type="button" class="clear-search" aria-label="Изчисти търсенето" onclick={() => { search = ''; searchInput.focus(); }}><Icon name="x" size={18} /></button>{/if}
+111:         </div>
+112:       </div>
+113:     {/if}
+114:     <div class="content">
+115:       {#if range}
+116:         <div class="range">
+117:           <label>От{field === 'price' ? ' (€)' : ''}<input type="number" inputmode="numeric" name={`${field}_min`} bind:value={minimum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder="Без минимум" /></label>
+118:           <label>До{field === 'price' ? ' (€)' : ''}<input type="number" inputmode="numeric" name={`${field}_max`} bind:value={maximum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder="Без максимум" /></label>
+119:         </div>
+120:         {#if invalid}<p role="alert">Началната стойност трябва да е по-ниска от крайната.</p>{/if}
+121:       {:else if field === 'mileage_max'}
+122:         <label class="mileage">Максимален пробег (км)<input type="number" inputmode="numeric" name={field} bind:value={selected} min="0" step="1" placeholder="Без ограничение" /></label>
+123:       {:else}
+124:         {#key field}
+125:         <fieldset>
+126:           <legend class="dn-sr-only">{title}</legend>
+127:           {#each choices as option (option)}
+128:             <label class="choice" hidden={!matchesSearch(option)}>
+129:               <span>{optionLabel(option)}</span>
+130:               {#if field === 'equipment'}<input type="checkbox" name="equipment" value={option} bind:group={equipment} />
+131:               {:else}<input type="radio" name={field} value={option} checked={selected === option} onchange={() => selected = option} />{/if}
+132:             </label>
+133:           {/each}
+134:         </fieldset>
+135:         {/key}
+136:         {#if visibleChoices.length === 0}
+137:           <div class="empty" role="status"><strong>Няма съвпадения</strong><p>Опитайте с друго име или изчистете търсенето.</p></div>
+138:         {/if}
+139:       {/if}
+140:     </div>
+141:     {#each preserved as [name, value], index (`${name}-${index}`)}<input type="hidden" {name} {value} />{/each}
+142:     <footer>
+143:       <button class="clear" type="button" onclick={clear}>Изчисти</button>
+144:       <button class="apply" type="submit" disabled={invalid}>Приложи<Icon name="arrow-right" size={18} /></button>
+145:     </footer>
+146:   </form>
+147: </dialog>
+148: 
+
+## src/lib/components/listing/VehicleDiscoveryForm.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import Icon from '$components/ui/Icon.svelte';
+4:   import type { Attachment } from 'svelte/attachments';
+5:   import { activeFilterCount, listingHiddenFields, bodyLabel, listingFilterOptions, listingModelsForMake, parseListingFilters, type ListingFilters } from '$data/listing';
+6: 
+7:   let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true }: {
+8:     showFilterAction?: boolean;
+9:     filters: ListingFilters;
+10:     openFilters: (event: MouseEvent, field?: string) => void;
+11:     filtersOpen: boolean;
+12:     onDraftChange: (filters: ListingFilters) => void;
+13:   } = $props();
+14:   let make = $derived(filters.make);
+15:   let pending = $derived(filters);
+16:   let pinned = $state(false);
+17:   let stickyBar = $state<HTMLDivElement>();
+18:   const attachSticky: Attachment<HTMLDivElement> = node => { stickyBar = node; return () => { stickyBar = undefined; }; };
+19:   const observePanel: Attachment<HTMLFormElement> = node => {
+20:     const desktop = window.matchMedia('(min-width: 992px)');
+21:     const update = () => {
+22:       if (filtersOpen) return;
+23:       pinned = desktop.matches && node.getBoundingClientRect().bottom < 12;
+24:     };
+25:     const observer = new IntersectionObserver(update, { rootMargin: '-12px 0px 0px', threshold: 0 });
+26:     observer.observe(node);
+27:     desktop.addEventListener('change', update);
+28:     update();
+29:     return () => { observer.disconnect(); desktop.removeEventListener('change', update); };
+30:   };
+31:   $effect(() => {
+32:     if (!stickyBar) return;
+33:     if (pinned) stickyBar.showPopover();
+34:     else stickyBar.hidePopover();
+35:   });
+36:   let model = $derived(filters.model);
+37:   let models = $derived(listingModelsForMake(make));
+38:   let activeCount = $derived(activeFilterCount(pending));
+39:   let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || 'Марка, модел или ключова дума');
+40:   const number = (value: string) => Number(value).toLocaleString('bg-BG');
+41:   const withCurrent = (options: readonly string[], current: number | null) => {
+42:     const value = current?.toString();
+43:     return value && !options.includes(value) ? [...options, value] : options;
+44:   };
+45:   let prices = $derived(withCurrent(listingFilterOptions.prices, filters.priceMax));
+46:   let years = $derived(withCurrent(listingFilterOptions.years, filters.yearMin));
+47:   let mileages = $derived(withCurrent(listingFilterOptions.mileages, filters.mileageMax));
+48:   let hiddenFields = $derived([
+49:     ['q', filters.q], ['fuel', filters.fuel], ['transmission', filters.transmission],
+50:     ['version', filters.version], ['condition', filters.condition],
+51:     ['price_min', filters.priceMin?.toString() ?? ''], ['year_max', filters.yearMax?.toString() ?? ''],
+52:     ['sort', filters.sort === 'default' ? '' : filters.sort]
+53:   ].filter(([, value]) => value));
+54: 
+55:   function updateDraft(event: Event) {
+56:     const params = new URLSearchParams();
+57:     for (const [key, value] of new FormData(event.currentTarget as HTMLFormElement)) {
+58:       if (typeof value === 'string') params.append(key, value);
+59:     }
+60:     pending = parseListingFilters(params);
+61:     onDraftChange(pending);
+62:   }
+63:   function clean(event: FormDataEvent) {
+64:     for (const key of new Set(event.formData.keys())) {
+65:       if (event.formData.getAll(key).every(value => value === '')) event.formData.delete(key);
+66:     }
+67:   }
+68: </script>
+69: 
+70: <form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={resolve('/listing-grid')} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
+71:   <div class="dn-discovery__toolbar">
+72:     <div class="dn-discovery__search">
+73:       <button class="dn-discovery__keyword" type="button" aria-label="Търсете марка, модел или ключова дума" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+74:         <Icon name="search" size={20} />
+75:         <span>{filters.q || 'Марка, модел или ключова дума'}</span>
+76:       </button>
+77:       <button class="dn-discovery__submit" type="submit" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
+78:     </div>
+79: 
+80:   </div>
+81:   <div class="dn-discovery__facets">
+82:     <label><span>Марка</span><select name="make" bind:value={make} onchange={() => model = ''}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
+83:     <label><span>Модел</span><select name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
+84:     <label><span>Купе</span><select name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{bodyLabel(value) || 'Всички'}</option>{/each}</select></label>
+85:     <label><span>Цена до</span><select name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? `${number(value)} €` : 'Без лимит'}</option>{/each}</select></label>
+86:     <label><span>Година от</span><select name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
+87:     <label><span>Пробег до</span><select name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? `${number(value)} км` : 'Без лимит'}</option>{/each}</select></label>
+88:   </div>
+89:   {#if showFilterAction}<div class="dn-discovery__actions">
+90:     <button class="dn-discovery__filters" type="button" title="Всички филтри" aria-label={activeCount ? `Всички филтри: ${activeCount} активни` : 'Всички филтри'} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+91:       <Icon name="adjustments" size={20} strokeWidth={1.8} /><span>Всички филтри</span>
+92:       {#if activeCount}<span class="dn-discovery__count" aria-hidden="true">{activeCount}</span>{/if}
+93:     </button>
+94:   </div>{/if}
+95:   {#each hiddenFields as [name, value] (name)}<input type="hidden" {name} {value} />{/each}
+96:   {#each filters.equipment as value (value)}<input type="hidden" name="equipment" {value} />{/each}
+97: </form>
+98: 
+99: <div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label="Бързо търсене на автомобили">
+100:   <button class="dn-discovery-sticky__keyword" type="button" aria-label="Отвори търсенето на автомобили" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+101:     <Icon name="search" size={20} /><span>{summary}</span>
+102:   </button>
+103:   <button class="dn-discovery-sticky__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+104:     <Icon name="adjustments" size={20} /><span>Филтри</span>{#if activeCount}<span class="dn-discovery-sticky__count">{activeCount}</span>{/if}
+105:   </button>
+106:   <button class="dn-discovery-sticky__submit" type="submit" form="dn-desktop-discovery" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
+107: </div>
+108: 
+
+## src/lib/components/listing/VehicleSearchDialog.svelte
+1: <script lang="ts">
+2:   import { preserveScrollOffset } from '$lib/ui/overlay';
+3:   import { onDestroy } from 'svelte';
+4:   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
+5:   onDestroy(() => releaseOffset?.(false));
+6:   import { resolve } from '$app/paths';
+7:   import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake, listingVehicles, type ListingFilters } from '$data/listing';
+8:   import type { VehicleEquipment } from '$data/inventory';
+9:   import Icon from '$components/ui/Icon.svelte';
+10:   import QuickFilterSheet from './QuickFilterSheet.svelte';
+11:   import type { Attachment } from 'svelte/attachments';
+12:   import type { Snippet } from 'svelte';
+13: 
+14:   let { filters, children }: { filters: ListingFilters; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
+15:   let draftQuery = $state('');
+16:   let draftMake = $state('');
+17:   let draftModel = $state('');
+18:   let draftBody = $state('');
+19:   let draftCondition = $state<ListingFilters['condition']>('');
+20:   let draftFuel = $state('');
+21:   let draftTransmission = $state('');
+22:   let draftVersion = $state('');
+23:   let draftEquipment = $state<VehicleEquipment[]>([]);
+24:   let draftYearMin = $state('');
+25:   let draftYearMax = $state('');
+26:   let draftPriceMin = $state('');
+27:   let draftPriceMax = $state('');
+28:   let draftMileageMax = $state('');
+29:   let draftModelOptions = $derived(listingModelsForMake(draftMake));
+30:   let hasInvalidPriceRange = $derived(Boolean(draftPriceMin && draftPriceMax && Number(draftPriceMin) > Number(draftPriceMax)));
+31:   let hasInvalidYearRange = $derived(Boolean(draftYearMin && draftYearMax && Number(draftYearMin) > Number(draftYearMax)));
+32:   let hasInvalidRange = $derived(hasInvalidPriceRange || hasInvalidYearRange);
+33:   let draftFilters = $derived<ListingFilters>({
+34:     q: draftQuery,
+35:     make: draftMake,
+36:     model: draftModel,
+37:     body: draftBody,
+38:     condition: draftCondition,
+39:     fuel: draftFuel,
+40:     transmission: draftTransmission,
+41:     version: draftVersion,
+42:     equipment: draftEquipment,
+43:     yearMin: draftYearMin ? Number(draftYearMin) : null,
+44:     yearMax: draftYearMax ? Number(draftYearMax) : null,
+45:     priceMin: draftPriceMin ? Number(draftPriceMin) : null,
+46:     priceMax: draftPriceMax ? Number(draftPriceMax) : null,
+47:     mileageMax: draftMileageMax ? Number(draftMileageMax) : null,
+48:     sort: filters.sort
+49:   });
+50:   let matchingVehicles = $derived(filterListingVehicles(listingVehicles, draftFilters));
+51:   let hasLiveFilters = $derived(Boolean(
+52:     draftQuery || draftMake || draftModel || draftBody || draftCondition || draftFuel || draftTransmission ||
+53:     draftVersion || draftEquipment.length || draftYearMin || draftYearMax || draftPriceMin || draftPriceMax || draftMileageMax
+54:   ));
+55:   let filterDialog = $state<HTMLDialogElement>();
+56:   let dialogSearch = $state<HTMLInputElement>();
+57:   let filtersOpen = $state(false);
+58: 
+59:   let returnFocus: HTMLButtonElement | undefined;
+60:   const attachFilterDialog: Attachment<HTMLDialogElement> = (node) => {
+61:     filterDialog = node;
+62:     return () => {
+63:       if (filterDialog === node) filterDialog = undefined;
+64:     };
+65:   };
+66: 
+67:   const attachDialogSearch: Attachment<HTMLInputElement> = (node) => {
+68:     dialogSearch = node;
+69:     return () => {
+70:       if (dialogSearch === node) dialogSearch = undefined;
+71:     };
+72:   };
+73: 
+74:   const initializeDraft = (current: ListingFilters = filters) => {
+75:     draftQuery = current.q;
+76:     draftMake = current.make;
+77:     draftModel = current.model;
+78:     draftBody = current.body;
+79:     draftCondition = current.condition;
+80:     draftFuel = current.fuel;
+81:     draftTransmission = current.transmission;
+82:     draftVersion = current.version;
+83:     draftEquipment = [...current.equipment];
+84:     draftYearMin = current.yearMin !== null ? String(current.yearMin) : '';
+85:     draftYearMax = current.yearMax !== null ? String(current.yearMax) : '';
+86:     draftPriceMin = current.priceMin !== null ? String(current.priceMin) : '';
+87:     draftPriceMax = current.priceMax !== null ? String(current.priceMax) : '';
+88:     draftMileageMax = current.mileageMax !== null ? String(current.mileageMax) : '';
+89:   };
+90: 
+91:   const rangeSummary = (min: string, max: string, suffix: string) => min || max ? `${min || '—'} – ${max || '—'}${suffix}` : 'Без ограничение';
+92:   const mobileFields = $derived([
+93:     { field: 'make', label: 'Марка', value: draftMake || 'Всички марки' },
+94:     { field: 'model', label: 'Модел', value: draftModel || 'Всички модели' },
+95:     { field: 'body', label: 'Купе', value: bodyLabel(draftBody) || 'Всички купета' },
+96:     { field: 'price', label: 'Бюджет', value: rangeSummary(draftPriceMin, draftPriceMax, ' €') },
+97:     { field: 'year', label: 'Година', value: rangeSummary(draftYearMin, draftYearMax, '') },
+98:     { field: 'fuel', label: 'Гориво', value: draftFuel || 'Всяко гориво' },
+99:     { field: 'mileage_max', label: 'Пробег', value: draftMileageMax ? `До ${draftMileageMax} км` : 'Без ограничение' },
+100:     { field: 'transmission', label: 'Скорости', value: draftTransmission || 'Всички' },
+101:     { field: 'version', label: 'Версия', value: draftVersion || 'Всички' },
+102:     { field: 'condition', label: 'Състояние', value: draftCondition === 'new' ? 'Нови' : draftCondition === 'used' ? 'Употребявани' : 'Всички' },
+103:     { field: 'equipment', label: 'Екстри', value: draftEquipment.length ? `${draftEquipment.length} избрани` : 'Без предпочитания' }
+104:   ]);
+105: 
+106:   const resetDraft = () => {
+107:     draftQuery = '';
+108:     draftMake = '';
+109:     draftModel = '';
+110:     draftBody = '';
+111:     draftCondition = '';
+112:     draftFuel = '';
+113:     draftTransmission = '';
+114:     draftVersion = '';
+115:     draftEquipment = [];
+116:     draftYearMin = '';
+117:     draftYearMax = '';
+118:     draftPriceMin = '';
+119:     draftPriceMax = '';
+120:     draftMileageMax = '';
+121:   };
+122: 
+123:   const openFilters = (event: MouseEvent, field?: string) => {
+124:     returnFocus = event.currentTarget as HTMLButtonElement;
+125:     initializeDraft();
+126:     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
+127:     filtersOpen = true;
+128:     filterDialog?.showModal();
+129:     requestAnimationFrame(() => {
+130:       const target = field ? filterDialog?.querySelector<HTMLSelectElement>(`select[name="${field}"]`) : dialogSearch;
+131:       target?.focus();
+132:     });
+133:   };
+134: 
+135:   const closeFilters = () => {
+136:     if (filterDialog?.open) filterDialog.close();
+137:   };
+138: 
+139:   const handleDialogClick = (event: MouseEvent) => {
+140:     if (event.target === event.currentTarget) closeFilters();
+141:   };
+142: 
+143:   const handleCancel = (event: Event) => {
+144:     event.preventDefault();
+145:     closeFilters();
+146:   };
+147: 
+148:   const handleSearchKeydown = (event: KeyboardEvent) => {
+149:     if (event.key === 'Escape') {
+150:       event.preventDefault();
+151:       closeFilters();
+152:     }
+153:   };
+154: 
+155:   const handleDialogSubmit = () => {
+156:     closeFilters();
+157:   };
+158: 
+159:   const handleClear = () => {
+160:     resetDraft();
+161:     closeFilters();
+162:   };
+163: 
+164:   const restorePage = () => {
+165:     filtersOpen = false;
+166:     releaseOffset?.();
+167:     if (returnFocus?.isConnected) returnFocus.focus();
+168:   };
+169: 
+170:   const cleanFormData = (event: FormDataEvent) => {
+171:     for (const key of new Set(event.formData.keys())) {
+172:       const values = event.formData.getAll(key);
+173:       if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
+174:     }
+175:   };
+176: </script>
+177: 
+178: {@render children(openFilters, filtersOpen)}
+179: 
+180: <QuickFilterSheet id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft} fullScreen>
+181: {#snippet children(openChoice, choiceOpen)}
+182: <dialog
+183:   class="dn-listing-filter__dialog"
+184:   id="dn-listing-filter-dialog"
+185:   aria-labelledby="dn-listing-filter-title"
+186:   {@attach attachFilterDialog}
+187:   onclick={handleDialogClick}
+188:   oncancel={handleCancel}
+189:   onclose={restorePage}
+190: >
+191:   <form
+192:     class="dn-listing-filter__dialog-panel"
+193:     method="GET"
+194:     action={resolve('/listing-grid')}
+195:     onsubmit={handleDialogSubmit}
+196:     onformdata={cleanFormData}
+197:   >
+198:     <header class="dn-listing-filter__dialog-header">
+199:       <h2 id="dn-listing-filter-title">Търсене на автомобили</h2>
+200:       <button class="dn-listing-filter__close" type="button" aria-label="Затвори филтрите" onclick={closeFilters}>
+201:         <Icon name="x" size={22} />
+202:       </button>
+203:     </header>
+204: 
+205:     <div class="dn-listing-filter__dialog-content">
+206:       <div class="dn-listing-filter__dialog-search" role="search">
+207:         <label class="dn-sr-only" for="dn-listing-dialog-query">Търсене на автомобил</label>
+208:         <Icon name="search" size={20} />
+209:         <input id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draftQuery} onkeydown={handleSearchKeydown} type="search" name="q" placeholder="Марка или модел" autocomplete="off" />
+210:         <button
+211:           class="dn-listing-filter__inline-submit"
+212:           type="submit"
+213:           disabled={matchingVehicles.length === 0 || hasInvalidRange}
+214:           aria-label={matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}
+215:         >
+216:           Покажи {matchingVehicles.length}
+217:           <Icon name="arrow-right" size={17} strokeWidth={2} />
+218:         </button>
+219:       </div>
+220: 
+221:       <div class="dn-mobile-filter-fields">
+222:         {#each mobileFields as item (item.field)}
+223:           <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen} onclick={event => openChoice(event, item.field, item.label)}><strong>{item.label}</strong><span>{item.value}</span><Icon name="arrow-right" size={17} /></button>
+224:         {/each}
+225:       </div>
+226:       <div class="dn-listing-filter__filter-groups">
+227:         <div class="dn-listing-filter__core-grid">
+228:           <label>
+229:             <span class="dn-listing-filter__field-label">Марка</span>
+230:             <select name="make" aria-label="Марка" bind:value={draftMake} onchange={() => { draftModel = ''; }}>
+231:               {#each listingFilterOptions.makes as option (option)}
+232:                 <option value={option}>{option || 'Марка'}</option>
+233:               {/each}
+234:             </select>
+235:           </label>
+236:           <label>
+237:             <span class="dn-listing-filter__field-label">Модел</span>
+238:             <select name="model" aria-label="Модел" bind:value={draftModel}>
+239:               {#each draftModelOptions as option (option)}
+240:                 <option value={option}>{option || 'Модел'}</option>
+241:               {/each}
+242:             </select>
+243:           </label>
+244:           <label>
+245:             <span class="dn-listing-filter__field-label">Купе</span>
+246:             <select name="body" aria-label="Купе" bind:value={draftBody}>
+247:               {#each listingFilterOptions.bodies as option (option)}
+248:                 <option value={option}>{bodyLabel(option) || 'Купе'}</option>
+249:               {/each}
+250:             </select>
+251:           </label>
+252:           <label>
+253:             <span class="dn-listing-filter__field-label">Състояние</span>
+254:             <select name="condition" aria-label="Състояние" bind:value={draftCondition}>
+255:               <option value="">Състояние</option>
+256:               <option value="new">Нови</option>
+257:               <option value="used">Употребявани</option>
+258:             </select>
+259:           </label>
+260:           <label>
+261:             <span class="dn-listing-filter__field-label">Цена от</span>
+262:             <select name="price_min" aria-label="Цена от" bind:value={draftPriceMin}>
+263:               {#if draftPriceMin && !listingFilterOptions.prices.some(value => value === draftPriceMin)}<option value={draftPriceMin}>{draftPriceMin}</option>{/if}
+264:               {#each listingFilterOptions.prices as option (option)}
+265:                 <option value={option}>{option ? `От ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена от'}</option>
+266:               {/each}
+267:             </select>
+268:           </label>
+269:           <label>
+270:             <span class="dn-listing-filter__field-label">Цена до</span>
+271:             <select name="price_max" aria-label="Цена до" bind:value={draftPriceMax}>
+272:               {#if draftPriceMax && !listingFilterOptions.prices.some(value => value === draftPriceMax)}<option value={draftPriceMax}>{draftPriceMax}</option>{/if}
+273:               {#each listingFilterOptions.prices as option (option)}
+274:                 <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена до'}</option>
+275:               {/each}
+276:             </select>
+277:           </label>
+278:           <label>
+279:             <span class="dn-listing-filter__field-label">Година от</span>
+280:             <select name="year_min" aria-label="Година от" bind:value={draftYearMin}>
+281:               {#if draftYearMin && !listingFilterOptions.years.some(value => value === draftYearMin)}<option value={draftYearMin}>{draftYearMin}</option>{/if}
+282:               {#each listingFilterOptions.years as option (option)}
+283:                 <option value={option}>{option || 'Година от'}</option>
+284:               {/each}
+285:             </select>
+286:           </label>
+287:           <label>
+288:             <span class="dn-listing-filter__field-label">Година до</span>
+289:             <select name="year_max" aria-label="Година до" bind:value={draftYearMax}>
+290:               {#if draftYearMax && !listingFilterOptions.years.some(value => value === draftYearMax)}<option value={draftYearMax}>{draftYearMax}</option>{/if}
+291:               {#each listingFilterOptions.years as option (option)}
+292:                 <option value={option}>{option || 'Година до'}</option>
+293:               {/each}
+294:             </select>
+295:           </label>
+296:           <label>
+297:             <span class="dn-listing-filter__field-label">Пробег до</span>
+298:             <select name="mileage_max" aria-label="Пробег до" bind:value={draftMileageMax}>
+299:               {#if draftMileageMax && !listingFilterOptions.mileages.some(value => value === draftMileageMax)}<option value={draftMileageMax}>{draftMileageMax}</option>{/if}
+300:               {#each listingFilterOptions.mileages as option (option)}
+301:                 <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} км` : 'Пробег до'}</option>
+302:               {/each}
+303:             </select>
+304:           </label>
+305:           <label>
+306:             <span class="dn-listing-filter__field-label">Гориво</span>
+307:             <select name="fuel" aria-label="Гориво" bind:value={draftFuel}>
+308:               {#each listingFilterOptions.fuels as option (option)}
+309:                 <option value={option}>{option || 'Гориво'}</option>
+310:               {/each}
+311:             </select>
+312:           </label>
+313:           <label>
+314:             <span class="dn-listing-filter__field-label">Скоростна кутия</span>
+315:             <select name="transmission" aria-label="Скоростна кутия" bind:value={draftTransmission}>
+316:               {#each listingFilterOptions.transmissions as option (option)}
+317:                 <option value={option}>{option || 'Скорости'}</option>
+318:               {/each}
+319:             </select>
+320:           </label>
+321:           <label>
+322:             <span class="dn-listing-filter__field-label">Пакет или версия</span>
+323:             <select name="version" aria-label="Пакет или версия" bind:value={draftVersion}>
+324:               {#each listingFilterOptions.versions as option (option)}
+325:                 <option value={option}>{option || 'Версия'}</option>
+326:               {/each}
+327:             </select>
+328:           </label>
+329:         </div>
+330: 
+331:         <section class="dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment" aria-labelledby="dn-listing-filter-equipment-title">
+332:           <h3 id="dn-listing-filter-equipment-title">Екстри</h3>
+333:           <div class="dn-listing-filter__equipment-grid">
+334:             {#each listingFilterOptions.equipment as option (option)}
+335:               <label class="dn-listing-filter__equipment-option">
+336:                 <input type="checkbox" name="equipment" value={option} bind:group={draftEquipment} />
+337:                 <span>{option}</span>
+338:               </label>
+339:             {/each}
+340:           </div>
+341:         </section>
+342:       </div>
+343:     </div>
+344: 
+345:     <footer class="dn-listing-filter__dialog-footer">
+346:       {#if hasInvalidRange}
+347:         <p class="dn-listing-filter__range-error" role="alert">
+348:           {hasInvalidPriceRange ? 'Минималната цена трябва да е по-ниска от максималната.' : 'Началната година трябва да е преди крайната.'}
+349:         </p>
+350:       {/if}
+351:       {#if hasLiveFilters}<a class="dn-listing-filter__clear" href={resolve('/listing-grid')} onclick={handleClear}>Изчисти</a>{/if}
+352:       <button class="dn-listing-filter__dialog-submit" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite">
+353:         <span>{matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}</span>
+354:         <Icon name="search" size={18} />
+355:       </button>
+356:       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
+357:     </footer>
+358:   </form>
+359: </dialog>
+360: {/snippet}
+361: </QuickFilterSheet>
+362: 

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "leadId": "ae-dubai-the-dealers-point",
+  "name": "The Dealers Point",
+  "shortName": "Dealers Point",
+  "slug": "the-dealers-point",
+  "country": "United Arab Emirates",
+  "countryCode": "AE",
+  "city": "Dubai",
+  "addressLine": "Plot No. 364-0442, Al Quoz Industrial Area 1",
+  "address": "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",
+  "phone": "+971551875094",
+  "phoneDisplay": "+971 55 187 5094",
+  "altPhone": "+971 52 449 1019",
+  "email": "sales@tdp.ae",
+  "website": "https://www.tdp.ae/",
+  "locale": "en-AE",
+  "currency": "AED",
+  "distanceUnit": "km",
+  "hours": null,
+  "appointment": "Contact the showroom before travelling",
+  "accent": "#111111",
+  "services": [
+    "Vehicle sales",
+    "Japan auction access",
+    "Stock enquiries"
+  ],
+  "sourceUrls": [
+    "https://www.tdp.ae/"
+  ],
+  "observedAt": "2026-09-09",
+  "disclosure": "Independent unpublished design concept. Dated listing samples, not a live feed. Confirm price, specifications and availability directly with the showroom. Demo forms do not send messages.",
+  "rights": {
+    "dealerApproval": false,
+    "publicRedistributionPermission": "not-established",
+    "use": "Unpublished internal design concept; no deployment or outreach."
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE&z=16&hl=en&output=embed"
+}

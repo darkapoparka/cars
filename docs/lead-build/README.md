@@ -1,3 +1,5 @@
+> CLOSED HISTORICAL CAMPAIGN. These assignments and branch-specific instructions are not active. Use Cars AGENTS.md and docs/WORKFLOW.md for current work. Preserved below as original evidence.
+
 > This multi-session campaign is closed. All recovered applications now live in `J:/cars/clients` on `main`. The prompts and reports below are retained as history; use [Cars projects](../PROJECTS.md) for current work. Do not create session worktrees or publish new work to astra.
 
 # Ten-session lead implementation batch

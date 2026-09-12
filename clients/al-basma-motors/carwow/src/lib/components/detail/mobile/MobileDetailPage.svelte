@@ -405,7 +405,7 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Day Night Auto предлага</strong>
+					<strong>Al Basma предлага</strong>
 					<ul class="mobile-detail-sheet__offer-list">
 						<li>Финансиране и лизинг</li>
 						<li>Бартер и замяна</li>

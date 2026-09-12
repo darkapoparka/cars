@@ -169,7 +169,7 @@
               </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-finance-card" aria-label="Buyer-arranged funding calculator">
+            <section class="dn-detail-card dn-detail-finance-card" aria-label="Payment policy">
               {#key data.vehicle.id}
                 <VehicleFinanceCalculator priceUsd={data.vehicle.priceUsd} vehicleId={data.vehicle.id} />
               {/key}

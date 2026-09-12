@@ -1,99 +1,33 @@
-# Repeatable dealer demos
+# Dealer workflow
 
-The aim is a convincing, inexpensive sales sample: choose an existing composition, apply the lead's identity, verify it, and prepare the offer. Shared UI improvements belong in a separate template pass.
+## Ownership and completion
 
-## Folder model
+Cars owns canonical dealer source at `clients/<slug>/`. The four standalone template repositories own reusable improvements; Cars snapshots are approved releases selected by [templates.lock.json](../templates.lock.json). [Root instructions](../AGENTS.md) own task scope and publication authorization.
 
-```text
-J:/cars/
-  AGENTS.md
-  catalog.json
-  templates/
-    auto-best/        # polished 5173 derivative
-    modern/           # compact 6212 storefront
-    carwow/           # yellow desktop / compact mobile 6517
-    import/           # dark 6518
-    showroom/         # red/white 6404 source
-    autodeal/         # all ten homes
-    rencar/           # all five homes
-    boxcar/
-    motoria/          # actually Motors source
-    nusavo/
-  clients/
-    dayandnight/
-      CLIENT.md
-      rencar/         # original Rencar with Day & Night branding
-      auto-best/      # created only when requested
-    eliqauto/
-      CLIENT.md
-    asko96/
-      CLIENT.md
-  scripts/
-  audits/
-  runtime/
-```
+A new dealer request includes personalization, suitable QA, a scoped source commit, packaging, its private publishing repository, one Vercel project and verification of the public preview. Explicit audit-only, local-only or pause instructions narrow that scope. Outreach requires a separately authorized exact recipient/channel/message.
 
-The three client folders began with briefs. The owner subsequently requested the Day & Night Rencar prototype in clients/dayandnight/rencar, using the current 5173 identity and media. The owner rejected a rewritten dealer implementation; the active copy now retains the original Rencar pages and only changes branding, image references and text. Its five original home links and source-placeholder limitations are recorded in the client README. The shared Rencar master remains unchanged. Existing M: lead projects remain separate; they were not moved or overwritten.
+## New dealer
 
-## 1. Choose
+1. Resolve the business against existing client folders, registry aliases, regional research and accessible private CRM identity. Preserve stable IDs. A missing CRM connection means unknown history. Reuse existing work; do not invent a new spelling to bypass a duplicate.
+2. Select three distinct designs. Standard: `auto-best,modern,carwow`. Import-based: `auto-best,import,carwow`, when requested or justified by the real offer. Preserve an existing `dealer.json` and recorded remote/domain. Additional or legacy designs require an explicit scope and compatible packaging; the automated publisher supports these two trios.
+3. Run `node scripts/template-release.mjs discover` to report development heads, then `status`. The clone helper verifies every selected approved snapshot. Discovery does not approve a development head. Resolve release holds through [promotion](TEMPLATE-PROMOTION.md), without overwriting working template refinements.
+4. Prepare one sourced and dated dealer fact/inventory/asset pack. [Guardrails](LEAD-BUILD-GUARDRAILS.md) govern logo inspection, local assets, claims, current/historical stock and complete identity sweeps. The pack is shared input for all three apps; edit their actual typed data/configuration boundaries.
+5. Dry-run `node scripts/new-client.mjs --client <slug> --repository <owner/repo> --preset standard --dry-run` (or `--preset import`). On the authorized build, repeat without `--dry-run`. It preserves real source/lockfiles, checks copy integrity, excludes inherited secrets/instructions and writes portable guidance plus exact source pins. It does not invent business facts or connect providers.
+6. Apply identity, approved media, services, stock, prices and contact destinations through each template's existing boundaries. Preserve layout, typography, spacing, cards, routes and interactions. Complete the identity scan across retained routes and offered homepages. A styling defect that needs shared work goes to the upstream template unless fixing it is necessary for this authorized demo.
+7. Install from the retained lockfile and documented runtime. Use `start-preview.ps1` or `start-client.ps1` with free ports. Run focused framework checks/build and [QA](QA.md). Record actual results in variant metadata and the client brief.
+8. Commit only this dealer's canonical source. Follow [publishing](LEAD-PUBLISHING.md) for deterministic packaging, mirror reconciliation, a non-force push, exact deployment identity and public browser checks.
+9. Update the technical registry and generated views. Retain provider, browser and owner-review limits independently; a successful local build cannot mark a deployment verified.
 
-Start with `auto-best` for a conventional dealer pitch. Choose `modern` for direct stock browsing and `carwow` for a visually different, fuller showroom. Use the audit to choose by the lead's business, not by the number of available themes.
+## Existing dealer correction
 
-For a request such as “build ASKO96 using Rencar, AutoDeal and Modern,” use three independent folders inside `clients/asko96/`. Keep all five Rencar and ten AutoDeal homes inside their respective codebases. Record which home is the recommended entrance; offer alternate-home links when requested.
+Read its manifest, brief, variant metadata and registry before editing. Confirm which source was deployed. Preserve the current offered trio, business identity and public paths. Compare unmatched publishing changes before regenerating. Make the smallest requested correction in canonical source or the shared packaging layer, verify affected journeys and complete publication only within the request's scope.
 
-`autodeal-best` is an alias for the current polished `auto-best` in this workspace. The older Agency OS static `autodeal-best` was inspected for lineage; it is not the same implementation as the current 5173 preview and was not added as an eleventh duplicate.
+A dealer does not receive newer template source automatically. Port a selected reusable fix when requested; a whole-template refresh is an explicit migration with preserved dealer content and route/interaction QA.
 
-## 2. Confirm lead facts
+## Fact pack and records
 
-Read the client brief and existing Agency OS record. Inspect current official/site or marketplace sources for identity, stock, contact paths and real services. Do not copy claims or numbers from an old demo without checking. Carry existing CRM IDs forward; a directory is not a CRM event.
+Use existing `business-facts.json`, `stock.json`, `FACTS-AND-INVENTORY.json` and asset folders when present. No new disconnected content schema is required. Record source URLs, observation dates, unavailable facts and inventory meaning. Keep public business evidence separate from private CRM/sales material.
 
-## 3. Copy
+`dealer.json` declares actual variants, entry routes, explicit shared asset folders, repository identity and packaging version. It is consumed by packaging. Variant metadata records template SHA/digest, selected homepage, personalization and QA. The [technical registry](DEPLOYMENT-INVENTORY.json) records source/export/deployment identity and evidence. [Registry reference](REGISTRY.md) explains each state.
 
-From `J:/cars`:
-
-```powershell
-node scripts/new-client.mjs --client asko96 --templates auto-best --dry-run
-node scripts/new-client.mjs --client asko96 --templates auto-best
-
-# When three designs are requested:
-node scripts/new-client.mjs --client asko96 --templates rencar,autodeal,modern --dry-run
-node scripts/new-client.mjs --client asko96 --templates rencar,autodeal,modern
-```
-
-The helper resolves known aliases, refuses existing destinations, copies current template source, verifies every copied file's SHA-256, and records the template version and all available home routes. It excludes dependencies, runtime output, credentials, deployment/CRM bindings, source Git metadata and inherited agent instructions. It does not personalize, publish, send outreach, or register a CRM row. Its output remains `needs-personalization` until the next steps are complete.
-
-## 4. Apply the brand
-
-Use the chosen template's `TEMPLATE.md`. Prepare one lead asset set and one fact sheet before editing three variants. Reuse them consistently across the variants. Keep the current layout and interaction behavior.
-
-For a source that already has typed identity/inventory data, edit those boundaries. For captured-page templates, content is currently spread across many pages; a future template pass should extract shared identity, navigation, inventory and color settings once. A generic JSON brief is documentation until code actually reads it—do not claim changing a disconnected config will update the site.
-
-Scan names, phones, addresses, domains, socials, SEO, favicons, logos, watermarked images and every retained alternate homepage. Use real sample vehicles or clearly limited preview data, and keep facts consistent between cards and detail pages.
-
-## 5. Run and review
-
-Install dependencies from the template's lockfile, then use a free client port (suggested range 6600-6699):
-
-```powershell
-./scripts/start-preview.ps1 -Client asko96 -Template auto-best -Port 6601
-```
-
-The startup helper refuses an occupied port. It reports a process launch, not browser acceptance. The individual `TEMPLATE.md` files record install and check commands. Modern needs its full workspace, local Prisma generation and distinct app origins; its existing static demo mode can render the public site without production credentials.
-
-Run the existing relevant checks/build. Review desktop and mobile entry, inventory, detail, contact, navigation and at least one search/filter. Check offered homepage variants, Escape/focus return on overlays, images, horizontal overflow, console errors and direct phone/map/enquiry destinations. Do not submit messages to an external service during QA.
-
-Record what passed and what remains in `.client/project.json` and `CLIENT.md`. Stop the design work once the requested skin and QA are complete. Improvement ideas go into the shared template backlog.
-
-## 6. Offer
-
-Prepare one recommended design and, when requested, two distinct alternatives. Use a short set of public preview links; ten homepages inside a template need not become ten separately maintained projects. A comparison/choice page can be added when the owner asks to expose all home variants.
-
-Before sending: verify the exact public preview, recipient, channel and final message. This workspace setup does not authorize outreach. Agency OS remains the place to track actual lead/demo/outreach state; its fixed-root scripts require an explicit path integration before they can manage these J: copies.
-
-## Template improvement order
-
-1. Auto Best: a short content/identity pass for the next lead; no redesign.
-2. Rencar: adapt Home 2 and Home 5 to dealer inventory, shorten mobile, simplify motion, centralize repeated brand data. Keep the other homes available.
-3. Boxcar: reduce mobile search/header height, centralize content, remove misleading variant/menu aliases from client navigation.
-4. Carwow/Modern: fix concrete reusable issues only when a chosen lead exposes them.
-5. Motors/Nusavo: retain as reserves; route completeness and dealer fit come before visual polishing.
+The original Rencar trial and other historical source families remain independent references. Their conversion/promotion procedure is retained in [the Rencar reference](reference/RENCAR-PROMOTION.md); it is not an active template backlog.

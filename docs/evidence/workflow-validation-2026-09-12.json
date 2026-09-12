@@ -1,0 +1,184 @@
+{
+  "verifiedAt": "2026-09-12T18:31:58.711Z",
+  "node": "v24.21.0",
+  "tests": {
+    "command": "node --test scripts/*.test.mjs",
+    "passed": 17,
+    "failed": 0,
+    "logSha256": "8752ea60c32445d97668baa810a245b067a6acb59022aef9b43fa5020c8c97d4"
+  },
+  "commands": [
+    {
+      "command": "node scripts/check-workflow.mjs",
+      "result": "passed: 10 active document link checks, three skills and six command-help checks"
+    },
+    {
+      "command": "node scripts/index-deployments.mjs --check",
+      "result": "passed: 73 dealer records / 202 app entries; Import present for Promosale and OutletCars"
+    },
+    {
+      "command": "node scripts/template-release.mjs verify --key import",
+      "result": "approved snapshot digest verified"
+    },
+    {
+      "command": "./scripts/start-client.ps1 -Client promosale-varna -Plan",
+      "result": "all three canonical app paths/runtimes/routes resolved without starting new source servers"
+    },
+    {
+      "command": "node clients/promosale-varna/verify-content.mjs",
+      "result": "passed: six listings / 54 image checks; no live inventory refresh"
+    }
+  ],
+  "skillDiscovery": {
+    "cli": "0.116.0",
+    "skills": [
+      {
+        "name": "cars-lead-build",
+        "scope": "repo",
+        "enabled": true,
+        "path": ".agents/skills/cars-lead-build/SKILL.md"
+      },
+      {
+        "name": "cars-publish",
+        "scope": "repo",
+        "enabled": true,
+        "path": ".agents/skills/cars-publish/SKILL.md"
+      },
+      {
+        "name": "cars-template-release",
+        "scope": "repo",
+        "enabled": true,
+        "path": ".agents/skills/cars-template-release/SKILL.md"
+      }
+    ]
+  },
+  "documentationAudit": [
+    {
+      "repository": "https://github.com/darkapoparka/cars.git",
+      "originalMarkdownFiles": 3114,
+      "classificationCounts": {
+        "instructions": 1,
+        "historical": 348,
+        "generated-client": 2530,
+        "reference": 42,
+        "snapshot-reference": 193
+      }
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-auto-best.git",
+      "originalMarkdownFiles": 34,
+      "classificationCounts": {
+        "reference": 17,
+        "instructions": 4,
+        "historical": 13
+      }
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-modern.git",
+      "originalMarkdownFiles": 134,
+      "classificationCounts": {
+        "reference": 125,
+        "instructions": 1,
+        "historical": 8
+      }
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-carwow.git",
+      "originalMarkdownFiles": 54,
+      "classificationCounts": {
+        "reference": 47,
+        "instructions": 1,
+        "historical": 6
+      }
+    },
+    {
+      "repository": "https://github.com/darkapoparka/cars-template-import.git",
+      "originalMarkdownFiles": 15,
+      "classificationCounts": {
+        "reference": 11,
+        "instructions": 1,
+        "historical": 3
+      }
+    }
+  ],
+  "dashboard": {
+    "origin": "http://127.0.0.1:6792",
+    "registry": "docs/DEPLOYMENT-INVENTORY.json",
+    "case": "Promosale records its Import variant and scoped source/deployment/browser/owner-review evidence; inventory images use both stock/ and inventory/ layouts."
+  },
+  "carsPublishedSourceFiles": [
+    ".agents/skills/cars-lead-build/SKILL.md",
+    ".agents/skills/cars-publish/SKILL.md",
+    ".agents/skills/cars-template-release/SKILL.md",
+    "AGENTS.md",
+    "README.md",
+    "catalog.json",
+    "clients/index.json",
+    "clients/promosale-varna/AGENTS.md",
+    "clients/promosale-varna/CLIENT.md",
+    "clients/promosale-varna/auto-best/AGENTS.md",
+    "clients/promosale-varna/carwow/AGENTS.md",
+    "clients/promosale-varna/dealer.json",
+    "clients/promosale-varna/import/AGENTS.md",
+    "dashboard/README.md",
+    "dashboard/public/app.js",
+    "dashboard/public/index.html",
+    "dashboard/registry.mjs",
+    "dashboard/server.mjs",
+    "docs/COORDINATION.md",
+    "docs/DEPLOYMENT-INVENTORY.json",
+    "docs/DEPLOYMENTS.md",
+    "docs/LEAD-BUILD-GUARDRAILS.md",
+    "docs/LEAD-PUBLISHING.md",
+    "docs/LOCAL-SETUP.md",
+    "docs/PROJECTS.md",
+    "docs/QA.md",
+    "docs/README.md",
+    "docs/REGISTRY.md",
+    "docs/TEMPLATE-PROMOTION.md",
+    "docs/THREE-DESIGN-WORKFLOW.md",
+    "docs/WORKFLOW-MIGRATION-2026-09-12.md",
+    "docs/WORKFLOW.md",
+    "docs/evidence/import-release-2026-09-12.json",
+    "docs/history/2026-09-12-docs-WORKFLOW.md",
+    "docs/history/2026-09-12-instructions.md",
+    "docs/lead-build/README.md",
+    "docs/reference/EXCELLENT-CARS-MOUNTING.md",
+    "docs/reference/RENCAR-PROMOTION.md",
+    "scripts/check-workflow.mjs",
+    "scripts/export-dealer.mjs",
+    "scripts/index-clients.mjs",
+    "scripts/index-deployments.mjs",
+    "scripts/lib/dealer-guidance.mjs",
+    "scripts/lib/workflow.mjs",
+    "scripts/new-client.mjs",
+    "scripts/package-dealer.mjs",
+    "scripts/package-dealer.test.mjs",
+    "scripts/publishing/fix-svelte-service-output.mjs",
+    "scripts/publishing/mounts.mjs",
+    "scripts/publishing/preview-paths.ts.txt",
+    "scripts/publishing/preview-switcher.js",
+    "scripts/serve-dealer-preview.mjs",
+    "scripts/start-client.ps1",
+    "scripts/template-release.mjs",
+    "scripts/verify-dealer-preview.mjs",
+    "scripts/workflow.test.mjs",
+    "templates.lock.json",
+    "templates/auto-best/AGENTS.md",
+    "templates/carwow/AGENTS.md",
+    "templates/import/AGENTS.md",
+    "templates/import/README.md",
+    "templates/import/REUSE_GUIDE.md",
+    "templates/import/TEMPLATE.md",
+    "templates/import/docs/CARS-INTEGRATION.md",
+    "templates/import/docs/DESKTOP-UI-UX-AUDIT.md",
+    "templates/import/docs/LEAD-BUILD.md",
+    "templates/import/docs/QA.md",
+    "templates/import/docs/REPO-SPLIT.md",
+    "templates/import/docs/legacy/from-cars-2026-09-10/INSTRUCTIONS-HISTORY.md",
+    "templates/import/docs/legacy/from-cars-2026-09-10/README.md",
+    "templates/import/docs/legacy/from-cars-2026-09-10/TEMPLATE.md",
+    "templates/import/src/lib/data/vehicles.ts",
+    "templates/modern/AGENTS.md"
+  ]
+}

@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "slug": "promosale-varna",
+  "origin": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+  "access": {
+    "mode": "temporary-share-link",
+    "publicWithoutShareLink": false,
+    "expiresAt": "2026-09-13T17:20:37Z",
+    "note": "Direct deployment URL redirects to Vercel login. Temporary sharing was verified in new browser contexts without account login. Protection settings and production were not changed; the token stays in ignored runtime only."
+  },
+  "expectedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+  "commitVerification": {
+    "state": "verified",
+    "providerEvidence": "promosale-deployment-2026-09-12.json",
+    "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a"
+  },
+  "startedAt": "2026-09-12T18:21:43.648Z",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "import",
+      "base": "/variant-2",
+      "entry": "/variant-2/"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "results": [
+    {
+      "key": "auto-best",
+      "width": 390,
+      "routes": [
+        {
+          "label": "home",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/",
+          "title": "Promosale Varna — Премиум автомобили в Варна",
+          "bodyLength": 1778,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "inventory",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/listing-grid",
+          "title": "Налични автомобили — Promosale Varna",
+          "bodyLength": 739,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "detail",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/listing-detail-v1/1?return=%2Flisting-grid%23vehicle-1",
+          "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna",
+          "bodyLength": 1098,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "contact",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/contact",
+          "title": "Контакти — Promosale Varna",
+          "bodyLength": 479,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [],
+      "designChoices": [
+        "/",
+        "/variant-2/",
+        "/variant-3/"
+      ],
+      "switcherDismissed": true,
+      "focusReturned": true,
+      "switchedTo": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/",
+      "search": {
+        "state": "manual-review-required",
+        "reason": "No visible text search; inspect this template filter controls."
+      },
+      "switcher320": true,
+      "passed": true
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "routes": [
+        {
+          "label": "home",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/",
+          "title": "Promosale Varna — автомобили и подбор на автомобили",
+          "bodyLength": 1323,
+          "overflow": -8,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "inventory",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/inventory",
+          "title": "Автомобили — Promosale Varna",
+          "bodyLength": 918,
+          "overflow": -8,
+          "broken": [],
+          "phones": [],
+          "staleIdentity": []
+        },
+        {
+          "label": "detail",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/inventory/21788787563552939",
+          "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna",
+          "bodyLength": 1028,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "contact",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/contact",
+          "title": "Контакти — Promosale Varna",
+          "bodyLength": 441,
+          "overflow": -8,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [],
+      "designChoices": [
+        "/",
+        "/variant-2/",
+        "/variant-3/"
+      ],
+      "switcherDismissed": true,
+      "focusReturned": true,
+      "switchedTo": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/",
+      "search": {
+        "state": "manual-review-required",
+        "reason": "No visible text search; inspect this template filter controls."
+      },
+      "switcher320": true,
+      "passed": true
+    },
+    {
+      "key": "carwow",
+      "width": 390,
+      "routes": [
+        {
+          "label": "home",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/",
+          "title": "Promosale Varna Варна - проверени автомобили и бърз контакт",
+          "bodyLength": 1210,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "inventory",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/inventory",
+          "title": "Автомобили в наличност | Promosale Varna Варна",
+          "bodyLength": 752,
+          "overflow": -5,
+          "broken": [],
+          "phones": [],
+          "staleIdentity": []
+        },
+        {
+          "label": "detail",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/inventory/audi-a1-050885",
+          "title": "Audi A1 2017 г., Бензин, 150 300 км, Обявен | Promosale Varna",
+          "bodyLength": 470,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359359892020208",
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "contact",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/contact",
+          "title": "Контакти | Promosale Varna Варна",
+          "bodyLength": 531,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359359892020208"
+          ],
+          "staleIdentity": []
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [],
+      "designChoices": [
+        "/",
+        "/variant-2/",
+        "/variant-3/"
+      ],
+      "switcherDismissed": true,
+      "focusReturned": true,
+      "switchedTo": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/",
+      "search": {
+        "state": "manual-review-required",
+        "reason": "No visible text search; inspect this template filter controls."
+      },
+      "switcher320": true,
+      "passed": true
+    },
+    {
+      "key": "auto-best",
+      "width": 1440,
+      "routes": [
+        {
+          "label": "home",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/",
+          "title": "Promosale Varna — Премиум автомобили в Варна",
+          "bodyLength": 2903,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "inventory",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/listing-grid",
+          "title": "Налични автомобили — Promosale Varna",
+          "bodyLength": 2163,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "detail",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/listing-detail-v1/1?return=%2Flisting-grid%23vehicle-1",
+          "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna",
+          "bodyLength": 1685,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "contact",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/contact",
+          "title": "Контакти — Promosale Varna",
+          "bodyLength": 1016,
+          "overflow": 0,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [],
+      "designChoices": [
+        "/",
+        "/variant-2/",
+        "/variant-3/"
+      ],
+      "switcherDismissed": true,
+      "focusReturned": true,
+      "switchedTo": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/",
+      "search": {
+        "state": "manual-review-required",
+        "reason": "No visible text search; inspect this template filter controls."
+      },
+      "switcher320": true,
+      "passed": true
+    },
+    {
+      "key": "import",
+      "width": 1440,
+      "routes": [
+        {
+          "label": "home",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/",
+          "title": "Promosale Varna — автомобили и подбор на автомобили",
+          "bodyLength": 1783,
+          "overflow": -8,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "inventory",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/inventory",
+          "title": "Автомобили — Promosale Varna",
+          "bodyLength": 1487,
+          "overflow": -8,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "detail",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/inventory/21788787563552939",
+          "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna",
+          "bodyLength": 3001,
+          "overflow": -8,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "contact",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-2/contact",
+          "title": "Контакти — Promosale Varna",
+          "bodyLength": 979,
+          "overflow": -8,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [],
+      "designChoices": [
+        "/",
+        "/variant-2/",
+        "/variant-3/"
+      ],
+      "switcherDismissed": true,
+      "focusReturned": true,
+      "switchedTo": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/",
+      "search": {
+        "value": "BMW",
+        "tested": "input accepts and clears a query"
+      },
+      "switcher320": true,
+      "passed": true
+    },
+    {
+      "key": "carwow",
+      "width": 1440,
+      "routes": [
+        {
+          "label": "home",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/",
+          "title": "Promosale Varna Варна - проверени автомобили и бърз контакт",
+          "bodyLength": 2452,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "inventory",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/inventory",
+          "title": "Автомобили в наличност | Promosale Varna Варна",
+          "bodyLength": 1388,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "detail",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/inventory/mercedes-benz-eqe-552939",
+          "title": "Mercedes-Benz EQE 2022 г., Електрически, 294 900 км, Обявен | Promosale Varna",
+          "bodyLength": 2779,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        },
+        {
+          "label": "contact",
+          "status": 200,
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/variant-3/contact",
+          "title": "Контакти | Promosale Varna Варна",
+          "bodyLength": 1285,
+          "overflow": -5,
+          "broken": [],
+          "phones": [
+            "tel:+359892020208"
+          ],
+          "staleIdentity": []
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [],
+      "designChoices": [
+        "/",
+        "/variant-2/",
+        "/variant-3/"
+      ],
+      "switcherDismissed": true,
+      "focusReturned": true,
+      "switchedTo": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app/",
+      "search": {
+        "state": "manual-review-required",
+        "reason": "No visible text search; inspect this template filter controls."
+      },
+      "switcher320": true,
+      "passed": true
+    }
+  ],
+  "finishedAt": "2026-09-12T18:22:31.486Z",
+  "passed": true,
+  "interactions": {
+    "verifiedAt": "2026-09-12T18:27:08.829Z",
+    "tool": "agent-browser",
+    "brandFilters": [
+      {
+        "key": "auto-best",
+        "widths": [
+          390,
+          1440
+        ],
+        "route": "/listing-grid?make=BMW",
+        "result": "one BMW listing after applying the brand filter"
+      },
+      {
+        "key": "import",
+        "widths": [
+          390,
+          1440
+        ],
+        "routes": [
+          "/variant-2/inventory?brand=BMW",
+          "/variant-2/inventory?layout=classic&brand=BMW"
+        ],
+        "result": "one BMW listing after the drawer/quick-filter selection"
+      },
+      {
+        "key": "carwow",
+        "widths": [
+          390,
+          1440
+        ],
+        "route": "/variant-3/inventory?brand=BMW",
+        "result": "one BMW listing after the drawer apply action"
+      }
+    ],
+    "mobileMenus": {
+      "variants": [
+        "auto-best",
+        "import",
+        "carwow"
+      ],
+      "result": "opened and dismissed with the visible close control"
+    },
+    "visualInspection": {
+      "widths": [
+        390,
+        1440
+      ],
+      "variants": [
+        "auto-best",
+        "import",
+        "carwow"
+      ],
+      "result": "branded home screenshots inspected; distinct layouts, visible switcher and loaded imagery"
+    },
+    "contact": {
+      "phones": [
+        "tel:+359892020208",
+        "tel:+359359892020208"
+      ],
+      "externalSubmissions": 0,
+      "providerDelivery": "unverified demo behavior"
+    },
+    "scope": "Bounded storefront and packaging checks; not full template polish, owner approval, secondary/admin route verification or fresh inventory qualification."
+  },
+  "screenshots": {
+    "localDirectory": "runtime/workflow-overhaul-20260912/pilot-hosted-shared",
+    "files": [
+      {
+        "file": "auto-best-1440-contact.png",
+        "sha256": "f1475b631aa0743119d8629eac355e4c0e0731f473f5d20ec8ad5b8fbed7ad68"
+      },
+      {
+        "file": "auto-best-1440-detail.png",
+        "sha256": "06254a773fdeea2051debd6bb881a17ac3cf18559c4f95a7c1e36c683721f61f"
+      },
+      {
+        "file": "auto-best-1440-home.png",
+        "sha256": "994e7d6e026406b34b259edea6ac90fcc97405dfe90792ac00e41af7f2827f59"
+      },
+      {
+        "file": "auto-best-1440-inventory.png",
+        "sha256": "50fd45311422b5457bff9ae9365973954584179c488441d6fb9a38e57fba9c0f"
+      },
+      {
+        "file": "auto-best-390-contact.png",
+        "sha256": "1676c86a6fcd220d7597138f40f9d9733fa1964193638a6751e1a6314b192651"
+      },
+      {
+        "file": "auto-best-390-detail.png",
+        "sha256": "d8b01341a831d3548bd3cf438efe4497a54435cecd6db17bfe53f762604ff0ff"
+      },
+      {
+        "file": "auto-best-390-home.png",
+        "sha256": "f44c8b5985e1ac7ec54fd1ff4da7ca984d0803381d3c2e725516a1df85ec6f57"
+      },
+      {
+        "file": "auto-best-390-inventory.png",
+        "sha256": "3e891ce02ce53fba3e107411df982f4e39a701d90d1af002852cd19325d46e4f"
+      },
+      {
+        "file": "carwow-1440-contact.png",
+        "sha256": "58a52fa7833a63e7c9949a5901b5da83ade9643cb643d97dcb4acf9662603d2b"
+      },
+      {
+        "file": "carwow-1440-detail.png",
+        "sha256": "7f0c600c5d10b78a2be3556f26afce1f160f1478c9d914f4796733e4265e1253"
+      },
+      {
+        "file": "carwow-1440-home.png",
+        "sha256": "f75a542b3566960c1420cfd81909d129707b379d0eae03d23ba88573308a2e06"
+      },
+      {
+        "file": "carwow-1440-inventory.png",
+        "sha256": "1fb205e277714c3c7cf0f6cdac5189a16213ee982d6d53a0de9710481e0a9b35"
+      },
+      {
+        "file": "carwow-390-contact.png",
+        "sha256": "58c420a04a5f5b0e246927916f6b505d578af1a4d17abf5fee0c5c4cfe630587"
+      },
+      {
+        "file": "carwow-390-detail.png",
+        "sha256": "3630992401512a5ccbb9896031e390e4df2a129c312b9ddd8c753204c8507929"
+      },
+      {
+        "file": "carwow-390-home.png",
+        "sha256": "c5278afadd62fd8fbbd216f4a73e5484d588e63a6128c4002ffdbae57a3cf4ca"
+      },
+      {
+        "file": "carwow-390-inventory.png",
+        "sha256": "161438d579476f0e37e6e7812e19564dabd400cd90ba011ed9607950ae9256c0"
+      },
+      {
+        "file": "import-1440-contact.png",
+        "sha256": "e2c89879f34b30afa29dc52ae6ed66bb9a7004c761a2710cb5f0eb55e8458ed5"
+      },
+      {
+        "file": "import-1440-detail.png",
+        "sha256": "7998b152ca66a240c796461310860bf211e0433ddccf39a7dcdfe0821034e0b9"
+      },
+      {
+        "file": "import-1440-home.png",
+        "sha256": "8450d90a6c89853440b787d2216a3c5eaffe8d86a42eb1aa97921932308b4f4a"
+      },
+      {
+        "file": "import-1440-inventory.png",
+        "sha256": "7f709184e18a27352ba9f968df762add9fa5646db8c8f17cbc8c52cc8b4075d9"
+      },
+      {
+        "file": "import-390-contact.png",
+        "sha256": "6c8effaaa10d52e9564e4386dc4a73cc4d46681afae36d2d0206a81f6308081a"
+      },
+      {
+        "file": "import-390-detail.png",
+        "sha256": "9540f59dc66f9a4db640f9a9f49000ef1d83793963741b4b04dcde6c9c4fe774"
+      },
+      {
+        "file": "import-390-home.png",
+        "sha256": "7b320b7ff4c2114f7109c91363a2a115ec988848856deca513efbd9bde4d9a28"
+      },
+      {
+        "file": "import-390-inventory.png",
+        "sha256": "234a17f8db72f8a1d2d5c976dcff872258b21ed6cf5b1e6bbd009ff238906cf7"
+      }
+    ]
+  }
+}

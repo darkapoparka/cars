@@ -5,7 +5,10 @@
   import { brand } from '$config/brand';
   import { contactPreparation, type ContactTopic } from '$data/company';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
-  import VehicleEnquiry from './VehicleEnquiry.svelte';
+  import ImportEnquiry from './ImportEnquiry.svelte';
+  import TradeInEnquiry from './TradeInEnquiry.svelte';
+  import TradeInInfoDrawer from './TradeInInfoDrawer.svelte';
+  import ImportHowItWorks from './ImportHowItWorks.svelte';
 
   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
   const preparation = $derived(contactPreparation[topic.id]);
@@ -17,10 +20,10 @@
   ] as const;
 </script>
 
-<div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>
+<div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-intent--tradein={topic.id === 'trade-in'} class:dn-contact-intent--import={topic.id === 'import'}>
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
-      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</h1>
+      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продай или бартер' : topic.title}</h1>
     {/if}
     <div class="dn-contact-intent__heading">
       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
@@ -36,8 +39,10 @@
       <p>{#if topic.mobileDescription}<span class="dn-contact-description--wide">{topic.description}</span><span class="dn-contact-description--mobile">{topic.mobileDescription}</span>{:else}{topic.description}{/if}</p>
     </div>
 
-    {#if topic.id === 'trade-in' || topic.id === 'import'}
-      {#key topic.id}<VehicleEnquiry kind={topic.id} {importUrl} />{/key}
+    {#if topic.id === 'trade-in'}
+      <TradeInEnquiry />
+    {:else if topic.id === 'import'}
+      {#key topic.id}<ImportEnquiry {importUrl} />{/key}
     {:else if preparation}
       <div class="dn-contact-preparation">
         <h2>{preparation.title}</h2>
@@ -49,19 +54,12 @@
       </div>
     {/if}
 
-    {#if topic.id === 'import' && importUrl}
-      <div class="dn-contact-import" aria-label="Избрана обява за внос">
-        <strong>Обява за внос</strong>
-        <a href={importUrl} target="_blank" rel="noopener noreferrer">{importUrl}<Icon name="arrow-right" size={18} /></a>
-        <p>Линкът не е изпратен. Свържете се с нас, за да обсъдим обявата и възможностите за внос.</p>
-      </div>
-    {/if}
-
-    <a class="dn-contact-button dn-contact-button--primary" href={brand.phoneHref}>
+    {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+    <a class="dn-contact-button dn-contact-button--call" href={brand.phoneHref}>
       <span class="dn-contact-call-label">Обадете се · </span>{brand.phone}
     </a>
 
-    {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+
     <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
       <span>Социални мрежи</span>
       <div>
@@ -75,13 +73,13 @@
     {/if}
   </div>
 
-  {#if topic.id === 'trade-in' || topic.id === 'import'}
-    <a class="dn-contact-workflow-call dn-action--dark" href={brand.phoneHref}>
-      <Icon name="phone" size={18} strokeWidth={1.8} />
-      Обадете се · {brand.phone}
-    </a>
+  {#if topic.id === 'trade-in'}
+    <TradeInInfoDrawer />
+  {:else if topic.id === 'import'}
+    <ImportHowItWorks />
   {/if}
 
+  {#if topic.id !== 'import' && topic.id !== 'trade-in'}
   <aside class="dn-contact-card" aria-label="Контакти на шоурума">
     <div class="dn-contact-card__heading">
       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Контакти</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Посетете шоурума</span>{/if}</h2>
@@ -159,11 +157,17 @@
       </a>
     </div>
   </aside>
+  {/if}
 </div>
 
 <style>
   .dn-contact-description--mobile { display: none; }
   .dn-contact-desktop-copy, .dn-contact-visit { display: none; }
+  .dn-contact-intent--tradein { grid-template-columns: 1fr; width: min(920px, 100%); }
+  .dn-contact-intent--tradein .dn-contact-intent__main { position: relative; z-index: 1; width: 100%; }
+  .dn-contact-intent--import { grid-template-columns: 1fr; width: min(760px, 100%); }
+  .dn-contact-intent--import .dn-contact-intent__main { width: 100%; }
+
   @media (min-width: 992px) {
     .dn-contact-desktop-copy { display: inline; }
     .dn-contact-mobile-copy { display: none; }
@@ -179,40 +183,9 @@
     .dn-contact-visit > a:hover { background: #e3e6ea; }
     .dn-contact-visit > a:focus-visible { outline: 2px solid #202329; outline-offset: 3px; }
   }
-  .dn-contact-workflow-call { display: none; }
-
-  .dn-contact-intent--workflow .dn-contact-intent__main > .dn-contact-button {
-    min-height: 44px;
-    align-self: center;
-    width: auto;
-    margin-top: 14px;
-    padding: 8px 0;
-    background: transparent;
-    color: #525a66;
-    font-size: 14px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
   @media (max-width: 767px) {
     .dn-contact-description--wide { display: none; }
     .dn-contact-description--mobile { display: inline; }
-    .dn-contact-intent--workflow .dn-contact-intent__main > .dn-contact-button { display: none; }
-    .dn-contact-workflow-call {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      justify-self: center;
-      gap: 8px;
-      min-height: 44px;
-      max-width: 100%;
-      margin-top: 16px;
-      padding: 10px 16px;
-      border-radius: var(--dn-radius-button);
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.3;
-      text-decoration: none;
-    }
   }
 
   .dn-contact-preparation { display: none; }
@@ -223,32 +196,6 @@
     .dn-contact-preparation ul { display: grid; gap: 12px; margin: 14px 0 0; padding-left: 20px; list-style: disc; }
     .dn-contact-preparation li { padding-left: 4px; color: #525a66; font-size: 15px; line-height: 1.5; }
     .dn-contact-preparation li::marker { color: var(--dn-red); }
-  }
-
-  .dn-contact-import {
-    display: grid;
-    gap: 8px;
-    min-width: 0;
-    margin: 20px 0 0;
-    text-align: left;
-  }
-
-  .dn-contact-import > a {
-    display: flex;
-    min-height: 44px;
-    align-items: center;
-    gap: 12px;
-    color: var(--dn-red);
-    overflow-wrap: anywhere;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  .dn-contact-import > p {
-    margin: 0;
-    color: #525a66;
-    font-size: 14px;
-    line-height: 1.5;
   }
 
 </style>
