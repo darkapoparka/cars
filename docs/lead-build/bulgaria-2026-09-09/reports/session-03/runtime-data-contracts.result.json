@@ -1,0 +1,118 @@
+{
+  "scope": "Isolated transpiled-module fixtures and static head assertions only. Directory schema was stubbed; NOT full Zod validation, app typecheck, Svelte compilation, build or browser QA.",
+  "node": "v22.16.0",
+  "typescript": "5.8.3",
+  "sourceHashes": {
+    "home-page-data.ts": "4f909e5128145e15b241a5b46cf72923ea8e42e6",
+    "mock-directory.ts": "8fbfecdaab3563fca2af421dc3f21847f1879574",
+    "HomePageHead.svelte": "959b773077752ffe5ec24f9d41358eef7b2d0fe3"
+  },
+  "passed": 26,
+  "failed": 0,
+  "results": [
+    {
+      "id": "sunny-varna: own title and six non-hidden listings",
+      "passed": true
+    },
+    {
+      "id": "sunny-varna: explicit empty inventory stays empty",
+      "passed": true
+    },
+    {
+      "id": "sunny-varna: passed inventory and budget counts retained",
+      "passed": true
+    },
+    {
+      "id": "sunny-varna: directory imports without obsolete am IDs",
+      "passed": true
+    },
+    {
+      "id": "sunny-varna: directory has no invented verification or organizations",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: own title and six non-hidden listings",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: explicit empty inventory stays empty",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: passed inventory and budget counts retained",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: directory imports without obsolete am IDs",
+      "passed": true
+    },
+    {
+      "id": "rqs-auto-team: directory has no invented verification or organizations",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: own title and six non-hidden listings",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: explicit empty inventory stays empty",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: passed inventory and budget counts retained",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: directory imports without obsolete am IDs",
+      "passed": true
+    },
+    {
+      "id": "evrocar-varna-09: directory has no invented verification or organizations",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: own title and six non-hidden listings",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: explicit empty inventory stays empty",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: passed inventory and budget counts retained",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: directory imports without obsolete am IDs",
+      "passed": true
+    },
+    {
+      "id": "sprint-auto-varna: directory has no invented verification or organizations",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: own title and six non-hidden listings",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: explicit empty inventory stays empty",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: passed inventory and budget counts retained",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: directory imports without obsolete am IDs",
+      "passed": true
+    },
+    {
+      "id": "europa-varna: directory has no invented verification or organizations",
+      "passed": true
+    },
+    {
+      "id": "HomePageHead: dealer metadata and no false PNG/dimension claim",
+      "passed": true
+    }
+  ]
+}

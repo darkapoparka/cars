@@ -1,0 +1,3 @@
+# Branding provenance — R.Q.S. Auto Team
+
+Active `logo.svg`, `logo-dark.svg` and `favicon.svg` are ImageGen-assisted demo artwork integrated 2026-09-09. Image generation reference: `9a26afcd-be6c-4129-8eb0-9382b8ed9b95`. The generation used the published R.Q.S. visual reference as identity guidance; the integrated SVG is a web-safe refinement of that generated direction. It is a proposal, not dealer-approved artwork. No vehicle, premises, employee or customer imagery is fabricated by these logo assets.

@@ -1,0 +1,3 @@
+# Branding provenance — СЪНИ
+
+Active `logo.svg`, `logo-dark.svg` and `favicon.svg` are ImageGen-assisted demo artwork integrated 2026-09-09. Image generation reference: `087c029f-f694-406a-9318-b79f263b1eed`. The generation used the published/recovered СЪНИ visual reference as identity guidance; the integrated SVG is a web-safe refinement of that generated direction. It is a proposal, not dealer-approved artwork. Published-source reference material is preserved separately. No vehicle, premises, employee or customer imagery is fabricated by these logo assets.

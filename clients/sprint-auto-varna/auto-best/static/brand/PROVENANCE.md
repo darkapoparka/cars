@@ -1,0 +1,3 @@
+# Branding provenance — Спринт Ауто
+
+Active `logo.svg`, `logo-dark.svg` and `favicon.svg` are ImageGen-assisted demo artwork integrated 2026-09-09. Image generation reference: `12460a23-3c7a-495b-83e1-7a4b023455d6`. The generation used the published Спринт visual reference as identity guidance; the integrated SVG is a web-safe refinement of that generated direction. It is a proposal, not dealer-approved artwork. No vehicle, premises, employee or customer imagery is fabricated by these logo assets.

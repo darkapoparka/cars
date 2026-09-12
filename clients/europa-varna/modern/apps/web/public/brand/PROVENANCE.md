@@ -1,0 +1,3 @@
+# Branding provenance — Европа
+
+Active `logo.svg`, `logo-dark.svg` and `favicon.svg` are ImageGen-assisted demo artwork integrated 2026-09-09. Image generation reference: `f138c430-f4d8-4c8f-b830-12d47aaaa504`. No reliable standalone published dealer logo was established; this is a newly generated concept and web-safe SVG refinement, not official or dealer-approved artwork. No vehicle, premises, employee or customer imagery is fabricated by these logo assets.
