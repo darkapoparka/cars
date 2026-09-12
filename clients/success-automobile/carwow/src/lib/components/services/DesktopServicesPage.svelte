@@ -28,7 +28,7 @@
 		{
 			id: 'financing',
 			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+			summary: 'Подгответе въпросите си за плащане. Калкулаторът е илюстрация, а не финансова оферта.',
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
@@ -145,7 +145,7 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Day Night Auto">
+<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Success Automobile">
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
 		title="Услуги за твоя автомобил"
@@ -172,7 +172,7 @@
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Day Night Auto</h2>
+			<h2 class="desktop-services-sr-only">Конкретни услуги от Success Automobile</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}

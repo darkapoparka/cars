@@ -13,6 +13,10 @@ export type Vehicle = {
   id: number;
   verification: 'sample' | 'verified';
   evidenceUrl?: string;
+  sourceId: string;
+  observedAt: string;
+  taxLabel: string;
+  gallery: string[];
   image: string;
   category: string;
   body: string;
@@ -30,27 +34,372 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
-  { id: 1, image: '/assets/images/lead/day-night-stock-04.webp', category: 'Комби', body: 'Wagon', make: 'Audi', title: 'Audi RS 6 Avant', yearNumber: 2024, mileageKm: 99701, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 68804 },
-  { id: 2, image: '/assets/images/lead/day-night-stock-01.webp', category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
-  { id: 3, image: '/assets/images/lead/day-night-stock-06.webp', category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
-  { id: 4, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
-  { id: 5, image: '/assets/images/lead/day-night-stock-05.webp', category: 'SUV', body: 'SUV', make: 'Land Rover', title: 'Range Rover Sport', yearNumber: 2019, mileageKm: 84426, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 68313 },
-  { id: 6, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
-  { id: 7, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
-  { id: 8, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
+
+// Source-backed advertisement sample; not a live or independently verified stock feed.
+export const featuredVehicles: Vehicle[] = [
+  {
+    "id": 1,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-11788284441880300-mercedes-benz-e-220-amg-burmester-camera-podgrev-alcantar-lizing",
+    "sourceId": "11788284441880300",
+    "observedAt": "2026-09-09T03:06:11.690Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/11788284441880300-1.webp",
+    "gallery": [
+      "/dealer/stock/11788284441880300-1.webp",
+      "/dealer/stock/11788284441880300-2.webp",
+      "/dealer/stock/11788284441880300-3.webp",
+      "/dealer/stock/11788284441880300-4.webp",
+      "/dealer/stock/11788284441880300-5.webp",
+      "/dealer/stock/11788284441880300-6.webp"
+    ],
+    "category": "Седан",
+    "body": "Sedan",
+    "make": "Mercedes-Benz",
+    "title": "Mercedes-Benz E 220 AMG",
+    "year": "2018",
+    "yearNumber": 2018,
+    "mileage": "123 999 км",
+    "mileageKm": 123999,
+    "fuel": "Дизел",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 20999,
+    "href": "/listing-detail-v1/1"
+  },
+  {
+    "id": 2,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-21787149042592643-kia-niro-hybrid-camera-jbl-ledd-lizing",
+    "sourceId": "21787149042592643",
+    "observedAt": "2026-09-09T03:06:11.690Z",
+    "taxLabel": "Цената е с включено ДДС",
+    "image": "/dealer/stock/21787149042592643-1.webp",
+    "gallery": [
+      "/dealer/stock/21787149042592643-1.webp",
+      "/dealer/stock/21787149042592643-2.webp",
+      "/dealer/stock/21787149042592643-3.webp",
+      "/dealer/stock/21787149042592643-4.webp",
+      "/dealer/stock/21787149042592643-5.webp",
+      "/dealer/stock/21787149042592643-6.webp"
+    ],
+    "category": "Джип",
+    "body": "SUV",
+    "make": "Kia",
+    "title": "Kia Niro Hybrid",
+    "year": "2018",
+    "yearNumber": 2018,
+    "mileage": "133 000 км",
+    "mileageKm": 133000,
+    "fuel": "Хибрид",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник"
+    ],
+    "condition": "used",
+    "priceEur": 11999,
+    "href": "/listing-detail-v1/2"
+  },
+  {
+    "id": 3,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-11787147891422780-vw-alltrack-panorama-headup-podgrev-obduh-360cam-ledd-fu",
+    "sourceId": "11787147891422780",
+    "observedAt": "2026-09-09T03:06:11.691Z",
+    "taxLabel": "Цената е с включено ДДС",
+    "image": "/dealer/stock/11787147891422780-1.webp",
+    "gallery": [
+      "/dealer/stock/11787147891422780-1.webp",
+      "/dealer/stock/11787147891422780-2.webp",
+      "/dealer/stock/11787147891422780-3.webp",
+      "/dealer/stock/11787147891422780-4.webp",
+      "/dealer/stock/11787147891422780-5.webp",
+      "/dealer/stock/11787147891422780-6.webp"
+    ],
+    "category": "Комби",
+    "body": "Wagon",
+    "make": "VW",
+    "title": "VW Alltrack",
+    "year": "2019",
+    "yearNumber": 2019,
+    "mileage": "130 999 км",
+    "mileageKm": 130999,
+    "fuel": "Дизел",
+    "transmission": "Автоматик",
+    "equipment": [
+      "4x4",
+      "360° камера",
+      "Панорамен покрив",
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 16999,
+    "href": "/listing-detail-v1/3"
+  },
+  {
+    "id": 4,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-11784220398560751-audi-a3-35-sline-camera-ledd-recaro-lizing",
+    "sourceId": "11784220398560751",
+    "observedAt": "2026-09-09T03:06:11.691Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/11784220398560751-1.webp",
+    "gallery": [
+      "/dealer/stock/11784220398560751-1.webp",
+      "/dealer/stock/11784220398560751-2.webp",
+      "/dealer/stock/11784220398560751-3.webp",
+      "/dealer/stock/11784220398560751-4.webp",
+      "/dealer/stock/11784220398560751-5.webp",
+      "/dealer/stock/11784220398560751-6.webp"
+    ],
+    "category": "Седан",
+    "body": "Sedan",
+    "make": "Audi",
+    "title": "Audi A3 35 S line",
+    "year": "2021",
+    "yearNumber": 2021,
+    "mileage": "72 999 км",
+    "mileageKm": 72999,
+    "fuel": "Бензин",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 24999,
+    "href": "/listing-detail-v1/4"
+  },
+  {
+    "id": 5,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-21705706946317965-porsche-cayenne-cupe-chrono-podgrev-obduh-panorama-face-lizi",
+    "sourceId": "21705706946317965",
+    "observedAt": "2026-09-09T03:06:11.691Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/21705706946317965-1.webp",
+    "gallery": [
+      "/dealer/stock/21705706946317965-1.webp",
+      "/dealer/stock/21705706946317965-2.webp",
+      "/dealer/stock/21705706946317965-3.webp",
+      "/dealer/stock/21705706946317965-4.webp",
+      "/dealer/stock/21705706946317965-5.webp",
+      "/dealer/stock/21705706946317965-6.webp"
+    ],
+    "category": "Джип",
+    "body": "SUV",
+    "make": "Porsche",
+    "title": "Porsche Cayenne Coupe",
+    "year": "2020",
+    "yearNumber": 2020,
+    "mileage": "55 999 км",
+    "mileageKm": 55999,
+    "fuel": "Plug-in хибрид",
+    "transmission": "Автоматик",
+    "equipment": [
+      "4x4",
+      "Панорамен покрив",
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 66999,
+    "href": "/listing-detail-v1/5"
+  },
+  {
+    "id": 6,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-21752669153003762-kia-sportage-2-0-gtline-camera-4x4-ledd-lizing",
+    "sourceId": "21752669153003762",
+    "observedAt": "2026-09-09T03:06:11.692Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/21752669153003762-1.webp",
+    "gallery": [
+      "/dealer/stock/21752669153003762-1.webp",
+      "/dealer/stock/21752669153003762-2.webp",
+      "/dealer/stock/21752669153003762-3.webp",
+      "/dealer/stock/21752669153003762-4.webp",
+      "/dealer/stock/21752669153003762-5.webp",
+      "/dealer/stock/21752669153003762-6.webp"
+    ],
+    "category": "Джип",
+    "body": "SUV",
+    "make": "Kia",
+    "title": "Kia Sportage 2.0 GT Line",
+    "year": "2017",
+    "yearNumber": 2017,
+    "mileage": "166 999 км",
+    "mileageKm": 166999,
+    "fuel": "Дизел",
+    "transmission": "Автоматик",
+    "equipment": [
+      "4x4",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 14500,
+    "href": "/listing-detail-v1/6"
+  },
+  {
+    "id": 7,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-11777465890049135-skoda-superb-2-0-camera-face-distronic-lizing",
+    "sourceId": "11777465890049135",
+    "observedAt": "2026-09-09T03:06:11.692Z",
+    "taxLabel": "Цената е с включено ДДС",
+    "image": "/dealer/stock/11777465890049135-1.webp",
+    "gallery": [
+      "/dealer/stock/11777465890049135-1.webp",
+      "/dealer/stock/11777465890049135-2.webp",
+      "/dealer/stock/11777465890049135-3.webp",
+      "/dealer/stock/11777465890049135-4.webp",
+      "/dealer/stock/11777465890049135-5.webp",
+      "/dealer/stock/11777465890049135-6.webp"
+    ],
+    "category": "Комби",
+    "body": "Wagon",
+    "make": "Skoda",
+    "title": "Skoda Superb 2.0",
+    "year": "2023",
+    "yearNumber": 2023,
+    "mileage": "133 999 км",
+    "mileageKm": 133999,
+    "fuel": "Дизел",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 19000,
+    "href": "/listing-detail-v1/7"
+  },
+  {
+    "id": 8,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-21684066785818426-mercedes-benz-glc-220-amg-4matic-burmester-360cam-recaro-lizing",
+    "sourceId": "21684066785818426",
+    "observedAt": "2026-09-09T03:06:11.692Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/21684066785818426-1.webp",
+    "gallery": [
+      "/dealer/stock/21684066785818426-1.webp",
+      "/dealer/stock/21684066785818426-2.webp",
+      "/dealer/stock/21684066785818426-3.webp",
+      "/dealer/stock/21684066785818426-4.webp",
+      "/dealer/stock/21684066785818426-5.webp",
+      "/dealer/stock/21684066785818426-6.webp"
+    ],
+    "category": "Джип",
+    "body": "SUV",
+    "make": "Mercedes-Benz",
+    "title": "Mercedes-Benz GLC 220 AMG 4Matic",
+    "year": "2018",
+    "yearNumber": 2018,
+    "mileage": "145 000 км",
+    "mileageKm": 145000,
+    "fuel": "Дизел",
+    "transmission": "Автоматик",
+    "equipment": [
+      "4x4",
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 22999,
+    "href": "/listing-detail-v1/8"
+  },
+  {
+    "id": 9,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-11762241395630584-bmw-530e-mpak-headup-podgrev-360cam-harmann-lineasist",
+    "sourceId": "11762241395630584",
+    "observedAt": "2026-09-09T03:06:11.692Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/11762241395630584-1.webp",
+    "gallery": [
+      "/dealer/stock/11762241395630584-1.webp",
+      "/dealer/stock/11762241395630584-2.webp",
+      "/dealer/stock/11762241395630584-3.webp",
+      "/dealer/stock/11762241395630584-4.webp",
+      "/dealer/stock/11762241395630584-5.webp",
+      "/dealer/stock/11762241395630584-6.webp"
+    ],
+    "category": "Седан",
+    "body": "Sedan",
+    "make": "BMW",
+    "title": "BMW 530e M Sport",
+    "year": "2023",
+    "yearNumber": 2023,
+    "mileage": "88 999 км",
+    "mileageKm": 88999,
+    "fuel": "Plug-in хибрид",
+    "transmission": "Автоматик",
+    "equipment": [
+      "4x4",
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 39999,
+    "href": "/listing-detail-v1/9"
+  },
+  {
+    "id": 10,
+    "verification": "sample",
+    "evidenceUrl": "https://success.mobile.bg/obiava-11747591068099753-bmw-m4-competetion-carbon-harmann-podgrev-360cam-liz",
+    "sourceId": "11747591068099753",
+    "observedAt": "2026-09-09T03:06:11.693Z",
+    "taxLabel": "Не се начислява ДДС",
+    "image": "/dealer/stock/11747591068099753-1.webp",
+    "gallery": [
+      "/dealer/stock/11747591068099753-1.webp",
+      "/dealer/stock/11747591068099753-2.webp",
+      "/dealer/stock/11747591068099753-3.webp",
+      "/dealer/stock/11747591068099753-4.webp",
+      "/dealer/stock/11747591068099753-5.webp",
+      "/dealer/stock/11747591068099753-6.webp"
+    ],
+    "category": "Кабрио",
+    "body": "Convertible",
+    "make": "BMW",
+    "title": "BMW M4 Competition",
+    "year": "2022",
+    "yearNumber": 2022,
+    "mileage": "8000 км",
+    "mileageKm": 8000,
+    "fuel": "Бензин",
+    "transmission": "Автоматик",
+    "equipment": [
+      "Подгряване на седалки",
+      "Навигация",
+      "Парктроник",
+      "Безключов достъп"
+    ],
+    "condition": "used",
+    "priceEur": 66999,
+    "href": "/listing-detail-v1/10"
+  }
 ];
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
-export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
-  ...record,
-  verification: 'sample',
-  year: String(record.yearNumber),
-  mileage: `${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,
-  href: `/listing-detail-v1/${record.id}`
-}));
-
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+export const formatVehiclePrice = (priceEur: number | null | undefined) => typeof priceEur === "number" && priceEur > 0 ? `${new Intl.NumberFormat("bg-BG").format(priceEur)} €` : "Цена при запитване";

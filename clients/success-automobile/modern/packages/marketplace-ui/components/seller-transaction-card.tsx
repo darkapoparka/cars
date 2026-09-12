@@ -63,7 +63,7 @@ export const SellerTransactionCard = ({
       <p className="mt-1 font-semibold text-2xl tracking-tight">
         {formatMoney(primaryPrice, locale)}
         {isMonthlyTransaction ? `/${copy.month}` : ""}
-      </p>
+      {listing.priceTaxLabel ? <span className="block whitespace-normal font-normal text-xs text-muted-foreground leading-4">{listing.priceTaxLabel}</span> : null}</p>
       {approximatePrice ? (
         <p className="mt-1 text-muted-foreground text-sm">
           ≈ {formatMoney(approximatePrice, locale)}

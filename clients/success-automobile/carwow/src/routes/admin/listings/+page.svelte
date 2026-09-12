@@ -368,7 +368,7 @@
 					<div class="grid gap-3 p-6">
 						<p class="text-sm font-medium">No listings match the current filters.</p>
 						<p class="text-muted-foreground text-sm">
-							Create a listing or clear the filters to see the full Day Night Auto inventory
+							Create a listing or clear the filters to see the full Success Automobile inventory
 							workspace.
 						</p>
 						<div class="flex flex-wrap gap-2">

@@ -29,16 +29,16 @@
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
       <h1 id="about-title">За нас</h1>
-      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Собствен лизинг</p>
+      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Публични обяви · Оглед</p>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={resolve('/listing-grid')}>
       <span>Вижте автомобилите</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
     <nav class="dn-about-socials" aria-label="Последвайте ни в социалните мрежи">
-      <span>Последвайте ни</span>
+      <span>Потвърдете контактите по телефона</span>
       <div class="dn-about-socials__links">
-        {#each socialProfiles as profile (profile.name)}
+        {#each socialProfiles.filter(profile => Boolean(profile.href)) as profile (profile.name)}
           <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={`${profile.label} — отваря се в нов раздел`}>
             <SocialBrandIcon name={profile.name} size={28} />
           </a>

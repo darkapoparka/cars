@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "status": "not-applied-concurrent-client-update-detected",
+  "sourceBase": "b6c792ef02cd620a6f6dfba9d6ce8967314b88ed",
+  "newerObservedHead": "19f82fc301bd0e2435e0b5710e8c5471d9c6566b",
+  "reason": "The assigned branch advanced through Todorov, MG7 and Success while this in-memory content pass ran. Preserve the newer applications; do not apply these older-base replacements automatically.",
+  "fullApplicationTests": false,
+  "sourceChecks": {
+    "svelteCompiled": 374,
+    "tsParsed": 464,
+    "errors": [],
+    "warnings": {
+      "css_unused_selector": 24
+    },
+    "fullFrameworkBuild": false
+  },
+  "files": [
+    {
+      "path": "clients/todorov-auto/auto-best/src/app.css",
+      "baseBlob": "dfd18779235181939862fd9b80a7bbaae4a220d3",
+      "currentBlob": "9440b83181f2686432bdaa0d87def38d78016252",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/company/AboutHero.svelte",
+      "baseBlob": "615a20c45254f9d748147d6f3222e64d2ac07e0d",
+      "currentBlob": "615a20c45254f9d748147d6f3222e64d2ac07e0d",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/company/AboutProcess.svelte",
+      "baseBlob": "e6a8cef78bbcc8ec379d5531cd966ba06d4ebfdf",
+      "currentBlob": "7513a294d9d0871055b5720050928c9a47162c5e",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/company/ContactHero.svelte",
+      "baseBlob": "ed2c12155e57bf64d0fe92d50ff7466a3425d74c",
+      "currentBlob": "ed2c12155e57bf64d0fe92d50ff7466a3425d74c",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/editorial/BlogHero.svelte",
+      "baseBlob": "26ec78fda142002fab41f3a7f3101d8567feffa7",
+      "currentBlob": "26ec78fda142002fab41f3a7f3101d8567feffa7",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/home/BrandSection.svelte",
+      "baseBlob": "6c119af9150e960dbe181aca836248f4e5ad7cec",
+      "currentBlob": "6c119af9150e960dbe181aca836248f4e5ad7cec",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/home/Editorial.svelte",
+      "baseBlob": "59c8eb9e1f1e8f6f044ff0d5c9d39a352422a739",
+      "currentBlob": "59c8eb9e1f1e8f6f044ff0d5c9d39a352422a739",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/home/TrustActions.svelte",
+      "baseBlob": "57139037e66fe13473b8fd6abccbbeac2c025723",
+      "currentBlob": "7c575212663cdff46758d51755d8d755f426079d",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/layout/Footer.svelte",
+      "baseBlob": "44ede260d668b3c9c593b7160e265c6e98e0e145",
+      "currentBlob": "90ac548228f16c084831b45311e13eb294e92191",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/ui/HeroVehicles.svelte",
+      "baseBlob": "1a5892346b8676e4a430efb23a9c6d45a7ea4bf7",
+      "currentBlob": "1a5892346b8676e4a430efb23a9c6d45a7ea4bf7",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/ui/RouteHeroArtwork.svelte",
+      "baseBlob": "a79f13146e67afbe5e4e61aecdac1837ffb77e30",
+      "currentBlob": "a79f13146e67afbe5e4e61aecdac1837ffb77e30",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/components/vehicles/VehicleCard.svelte",
+      "baseBlob": "65d800110b105bba79973334613f23fd4714ce4a",
+      "currentBlob": "467c94befb74dfc4ec6df7490601a0c636318f3a",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/data/company.ts",
+      "baseBlob": "8f97018c78b9a10f774ac639688355aa3aa86a53",
+      "currentBlob": "8f97018c78b9a10f774ac639688355aa3aa86a53",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/data/demo-content.ts",
+      "baseBlob": "43268609a57341913558a78377540819fd985064",
+      "currentBlob": "d8f88ebffd2c3d91ab8363052a0cde826e152c79",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/data/editorial.ts",
+      "baseBlob": "49293c2d0dbe66da9fe64a25aa468dd8cdfffe4c",
+      "currentBlob": "49293c2d0dbe66da9fe64a25aa468dd8cdfffe4c",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/data/home.ts",
+      "baseBlob": "f67e87caa3faca8ab56bc12f95a5a24e09893aa4",
+      "currentBlob": "a5b8a445a68c112e9c2c47622cba2f23239223b9",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/data/navigation.ts",
+      "baseBlob": "73b900bdedec9f8362d4009f90fd49a5cc776b17",
+      "currentBlob": "0be1aab10821b5cc999952271db093809b8c637b",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/data/vehicle-artwork.ts",
+      "baseBlob": "7e335c39ba9614209c311cbdccefafad878b78ad",
+      "currentBlob": "7e335c39ba9614209c311cbdccefafad878b78ad",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/lib/styles/tokens.css",
+      "baseBlob": "41cb37d457bbca9a946039f324fe34b54141aa79",
+      "currentBlob": "9e59a100d699d12667661d79554d658e2434defe",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/routes/+page.svelte",
+      "baseBlob": "9d8a7cf86d90e72e81a8e7814e780a8c988c47a1",
+      "currentBlob": "2258012faa3bb3e8eb90829a050afbe4f00b19a5",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/routes/about-us/+page.svelte",
+      "baseBlob": "2ff829dd0780081ef03d7cd646b8bce04f6b3f0d",
+      "currentBlob": "407728e7360479e709c3845c8950daf2e6bd3df4",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/routes/listing-grid/+page.svelte",
+      "baseBlob": "4df8ed0c617c463af1b63fb3b0a20557dc50d424",
+      "currentBlob": "fb028fcec96d3096c3ae3180f685a44285bdb46a",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/auto-best/src/routes/listing-grid/listing.css",
+      "baseBlob": "45705f53dae91b30ed02f5adcca126a653922513",
+      "currentBlob": "45705f53dae91b30ed02f5adcca126a653922513",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/client/import-request-submit.ts",
+      "baseBlob": "08b5545646e1f3b073dc4b658ab65b17e2173938",
+      "currentBlob": "08b5545646e1f3b073dc4b658ab65b17e2173938",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/client/lead-submit.ts",
+      "baseBlob": "e5c5c0886eb3aa3272ee60cea070734390d356f8",
+      "currentBlob": "e5c5c0886eb3aa3272ee60cea070734390d356f8",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/about/DesktopAboutPage.svelte",
+      "baseBlob": "9f163facf77bb92d8f334d1276b50ff8632ac308",
+      "currentBlob": "e19cd4f460bfa50a944aa458a9d4ce34b295c6e6",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/about/DesktopDealerProfilePage.svelte",
+      "baseBlob": "5bc1d551b864279c899e51fb17e29aefa7cda488",
+      "currentBlob": "5535a8e8e048415d02ded10a53390795997e78ba",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/about/MobileAboutPage.svelte",
+      "baseBlob": "26fe50841a5c54c73e8109099763669fd51c5dca",
+      "currentBlob": "7d92c97ccf1802b3ca4caf22c3a5af649e367d3c",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardFavorites.svelte",
+      "baseBlob": "3ffdc8fc694513b035ca83f7be1349b6da4609fc",
+      "currentBlob": "3ffdc8fc694513b035ca83f7be1349b6da4609fc",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardHomeOverview.svelte",
+      "baseBlob": "42a1607effbe26058c0c4ed39a42e87c4440efdc",
+      "currentBlob": "42a1607effbe26058c0c4ed39a42e87c4440efdc",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardMessages.svelte",
+      "baseBlob": "92c0c28fb68593c2fc3fd9c5c61468d9d0172c8c",
+      "currentBlob": "92c0c28fb68593c2fc3fd9c5c61468d9d0172c8c",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardPage.svelte",
+      "baseBlob": "3d07829a25d3be723a86b0b6c9cb1064e6e39c1b",
+      "currentBlob": "3d07829a25d3be723a86b0b6c9cb1064e6e39c1b",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardProfile.svelte",
+      "baseBlob": "e281db5f8b3907554ed73e5cc16c2a01ff0e7d7c",
+      "currentBlob": "e281db5f8b3907554ed73e5cc16c2a01ff0e7d7c",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardReviews.svelte",
+      "baseBlob": "4bc4e041f1f6d328cc2845f736ca24a8564ac768",
+      "currentBlob": "4bc4e041f1f6d328cc2845f736ca24a8564ac768",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/blog/BlogArticlePage.svelte",
+      "baseBlob": "c0a37c8eea67cc6b34f272840371abd1bebaf975",
+      "currentBlob": "c0a37c8eea67cc6b34f272840371abd1bebaf975",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/contact/DesktopContactPage.svelte",
+      "baseBlob": "c40db5e90976600b20601847ea1ee492c3bb167a",
+      "currentBlob": "c40db5e90976600b20601847ea1ee492c3bb167a",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/contact/MobileContactPage.svelte",
+      "baseBlob": "da5dcb549edad08d753ce8ce6f4f05d481770840",
+      "currentBlob": "da5dcb549edad08d753ce8ce6f4f05d481770840",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte",
+      "baseBlob": "7218b8609ce6b51fc4df0a9c28988629155f7b2d",
+      "currentBlob": "62670e2924ca9ba1478a88130b476f1068290ca9",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte",
+      "baseBlob": "937b6041d4a169b64327748279fe3fc08452f876",
+      "currentBlob": "937b6041d4a169b64327748279fe3fc08452f876",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/financing/DesktopFinancingPage.svelte",
+      "baseBlob": "8b314c8e87fcd1f553b274cca860446d9fe724fa",
+      "currentBlob": "8b314c8e87fcd1f553b274cca860446d9fe724fa",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/financing/MobileFinancingPage.svelte",
+      "baseBlob": "ea06e3f126e785d6b914d95fce35ec13a14f680f",
+      "currentBlob": "ea06e3f126e785d6b914d95fce35ec13a14f680f",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/home/HomePageHead.svelte",
+      "baseBlob": "fcd791c8403f182f68640dfe789d937486c27762",
+      "currentBlob": "fcd791c8403f182f68640dfe789d937486c27762",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeHero.svelte",
+      "baseBlob": "040af43365c8c621fb0b064dbdc3d0934e406048",
+      "currentBlob": "7ac25ec3979882b054f27bded5ece79498c2e604",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeReviews.svelte",
+      "baseBlob": "0f07f26d201d2ce665b9fb172f91696866b19b10",
+      "currentBlob": "0f07f26d201d2ce665b9fb172f91696866b19b10",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
+      "baseBlob": "ca958db2dbc8686164bc4a7fa30846aad8ab6cf4",
+      "currentBlob": "f31701ec48cdb4e0df9475151c483a962beb4c62",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/home/mobile/MobileHome.svelte",
+      "baseBlob": "b807d7c623a5f0157d4f7c1a30766b36597025aa",
+      "currentBlob": "bb9a59996c9adc384c126752156c3ced6a471236",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/inventory/mobile/MobileInventoryPage.svelte",
+      "baseBlob": "dd6ad234185a17c61976e63d02c5ec2d1a32b55f",
+      "currentBlob": "dd6ad234185a17c61976e63d02c5ec2d1a32b55f",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/DayNightFooter.svelte",
+      "baseBlob": "cc76d531c16edcd59677e2b5e74dd48e7fb8da8e",
+      "currentBlob": "99a966b12223ed52614c449f5ebb7f33228d93a1",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/DesktopYellowRouteHero.svelte",
+      "baseBlob": "5e6d30c914d630d5e762d13985dcff01ff1e9ea4",
+      "currentBlob": "5e6d30c914d630d5e762d13985dcff01ff1e9ea4",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/RouteTemplateInteractionBehavior.svelte",
+      "baseBlob": "37e715662793e7919f8e54bf478f72dcefaaeafd",
+      "currentBlob": "37e715662793e7919f8e54bf478f72dcefaaeafd",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/RouteTemplateTextBehavior.svelte",
+      "baseBlob": "48ea67f936fe2dfc50adea58f6da5e0590ce1e9a",
+      "currentBlob": "48ea67f936fe2dfc50adea58f6da5e0590ce1e9a",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/SiteChromeContactList.svelte",
+      "baseBlob": "b5a7e8ea1b0719ab0f8c64abcc53700526adf365",
+      "currentBlob": "b5a7e8ea1b0719ab0f8c64abcc53700526adf365",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/SiteFooter.svelte",
+      "baseBlob": "b4e14b06bea75454548a5a25d57254c226ded377",
+      "currentBlob": "a045d48ebac82aad0eab6dff21e356cb64d064f5",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/layout/site-navigation-data.ts",
+      "baseBlob": "c77590ee057b05b75555901692f9447f9891f640",
+      "currentBlob": "c77590ee057b05b75555901692f9447f9891f640",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/sell/DesktopSellYourCarPage.svelte",
+      "baseBlob": "2c8267ae5b37163f651e163dc3f17e67705c225d",
+      "currentBlob": "2c8267ae5b37163f651e163dc3f17e67705c225d",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/sell/MobileSellYourCarPage.svelte",
+      "baseBlob": "86d7206edca7e0d9e20b624f53a35dd056abe084",
+      "currentBlob": "86d7206edca7e0d9e20b624f53a35dd056abe084",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/seo/RouteSeo.svelte",
+      "baseBlob": "166e6e0a77694b4163f2120bc75e19c54cb4c4bc",
+      "currentBlob": "166e6e0a77694b4163f2120bc75e19c54cb4c4bc",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/services/DesktopServicesPage.svelte",
+      "baseBlob": "d94c45aecc779f16fe7a95476d0f7510822aac3a",
+      "currentBlob": "f928b8e165c6ca517691c5a01c1263617a06c933",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/services/MobileServicesPage.svelte",
+      "baseBlob": "73a60710a9c4d433aa396bf8cdbc5f0819228607",
+      "currentBlob": "bcfa6fad7842e482b0e1f88ec9eb2c9786e9d1cf",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/team/DesktopTeamMemberPage.svelte",
+      "baseBlob": "c2a128c0b1de51e132a21a8c158c158576947108",
+      "currentBlob": "c2a128c0b1de51e132a21a8c158c158576947108",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/components/team/DesktopTeamPage.svelte",
+      "baseBlob": "cfd5d3d571fb7a816c3546fc35ce7681a716963a",
+      "currentBlob": "1359a69931dc51f9b96490402883ae0539b7023e",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/data/daynight-blog.ts",
+      "baseBlob": "6efa343e119b701594384d2957f662868b29d362",
+      "currentBlob": "44ede5241aa57f50e2f3d85638a93269d5df73a2",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/data/daynight-vehicles.ts",
+      "baseBlob": "82acb910e984c795e88feca3160fb6609407803c",
+      "currentBlob": "f0d02bc2925973bcf6c4dfb3a1497b4a1a83777c",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/data/editorial-guides.ts",
+      "baseBlob": "cd12d145ee160c61486f27a9b71841b5bc9aea4b",
+      "currentBlob": "cd12d145ee160c61486f27a9b71841b5bc9aea4b",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/server/daynight-template-chrome.ts",
+      "baseBlob": "d85191ecf9a58e93aa5b9d5d2fb4f8e74b76fbc9",
+      "currentBlob": "26953483f57168269c46fd60e4b6b23806ce3550",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/server/daynight-template-content.ts",
+      "baseBlob": "757f5e2d250005a374739d27c6c98548210d3924",
+      "currentBlob": "1633edf807dc6ac25bff1cb92e3d97fb2fa32a5d",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/server/daynight-template-renderer.ts",
+      "baseBlob": "270866d55f77c2804bbab8e7a666f98d401d8991",
+      "currentBlob": "270866d55f77c2804bbab8e7a666f98d401d8991",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/server/home-page-data.ts",
+      "baseBlob": "05f09f255b5b41448f114d8f099283d482115ec2",
+      "currentBlob": "05f09f255b5b41448f114d8f099283d482115ec2",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/server/repositories/posts.ts",
+      "baseBlob": "4f20a7648e2b0563ed77114a83acf9349c5466dc",
+      "currentBlob": "4f20a7648e2b0563ed77114a83acf9349c5466dc",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/styles/daynight-home-desktop.css",
+      "baseBlob": "09d4378019f5fa70eb9adcfef35b4115a812e791",
+      "currentBlob": "09d4378019f5fa70eb9adcfef35b4115a812e791",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/styles/tokens.css",
+      "baseBlob": "1fc27a57eaba66a286055fb1399e99b347d2d45e",
+      "currentBlob": "7ec3bef0b2ac94adde6122e56c4bb83b60e0dc76",
+      "concurrentChange": true
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/admin/+page.svelte",
+      "baseBlob": "8b9f7f945149c1e52805e731eed643298bfe6009",
+      "currentBlob": "8b9f7f945149c1e52805e731eed643298bfe6009",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/admin/listings/+page.svelte",
+      "baseBlob": "e4bff769ba83c25912990e4dd2712de7e4d854f3",
+      "currentBlob": "e4bff769ba83c25912990e4dd2712de7e4d854f3",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/admin/login/+page.svelte",
+      "baseBlob": "4b7047dc5bdf5390e281aaa088613d23c81f633c",
+      "currentBlob": "4b7047dc5bdf5390e281aaa088613d23c81f633c",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/api/import-requests/+server.ts",
+      "baseBlob": "b129df9deafb8a8791f645743122f0b3ca545d9b",
+      "currentBlob": "b129df9deafb8a8791f645743122f0b3ca545d9b",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/api/leads/+server.ts",
+      "baseBlob": "e8e8ed1e0ea4299ee89a9df69679d36def29dbaa",
+      "currentBlob": "e8e8ed1e0ea4299ee89a9df69679d36def29dbaa",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/presentation/home2/+page.server.ts",
+      "baseBlob": "3d1920282e940edbe831448bde05a8b6909fbb23",
+      "currentBlob": "3d1920282e940edbe831448bde05a8b6909fbb23",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/presentation/home2/+page.svelte",
+      "baseBlob": "9bededf1aeb45817050f32c5af5ed9045233f4c7",
+      "currentBlob": "9bededf1aeb45817050f32c5af5ed9045233f4c7",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/presentation/home3/+page.server.ts",
+      "baseBlob": "36bc31c7f5abe75d7d677eb4a090fb8f699d12ae",
+      "currentBlob": "36bc31c7f5abe75d7d677eb4a090fb8f699d12ae",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/routes/presentation/home3/+page.svelte",
+      "baseBlob": "f8ee96a7e5ef9ac4e252bf28bb80869b0c13702d",
+      "currentBlob": "f8ee96a7e5ef9ac4e252bf28bb80869b0c13702d",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/modern/apps/web/app/icon.png",
+      "baseBlob": null,
+      "currentBlob": null,
+      "proposedBlob": "fa72240bb28a1be1710ae734c1e7e316592d837c",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/modern/apps/web/app/apple-icon.png",
+      "baseBlob": null,
+      "currentBlob": null,
+      "proposedBlob": "3ae0f1b2c9a328f66ba477dca6bd190ded8ad787",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/modern/apps/web/app/opengraph-image.png",
+      "baseBlob": null,
+      "currentBlob": null,
+      "proposedBlob": "f233737fca22dd322ab5f0c5a27da0279161c37e",
+      "concurrentChange": false
+    },
+    {
+      "path": "clients/todorov-auto/carwow/src/lib/data/dealer-preview.ts",
+      "baseBlob": null,
+      "currentBlob": null,
+      "concurrentChange": false
+    }
+  ],
+  "patchFile": "todorov-content-pass-28856.patch"
+}

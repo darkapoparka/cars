@@ -1,0 +1,1669 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "business": {
+    "slug": "success-automobile",
+    "name": "Success Automobile",
+    "shortName": "Success",
+    "upperName": "SUCCESS AUTOMOBILE",
+    "city": "Пловдив",
+    "district": "Индустриална зона — Тракия",
+    "address": "Цариградско шосе, Индустриална зона — Тракия",
+    "phone": "0877 333 433",
+    "phoneDigits": "0877333433",
+    "phoneE164": "+359877333433",
+    "otherPhones": [],
+    "email": "",
+    "hours": "Работно време: потвърдете по телефона",
+    "sourceUrl": "https://success.mobile.bg/",
+    "logoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h11437247200639006.pic",
+    "accent": "#6a5038",
+    "tagline": "Автомобили в Пловдив. Разгледайте детайлите и уговорете оглед.",
+    "cautions": [
+      "Primary address has no street number; no number or opening hours invented.",
+      "Current primary Cayenne price EUR 66,999 differs from an older search excerpt EUR 65,999. Primary fresh profile used.",
+      "Lease-without-income-proof statements are not adopted as approval guarantees or a configured finance service."
+    ],
+    "websiteFinding": "No independently controlled dealer domain or corroborated Facebook/Instagram profile was established in bounded name/phone searches. Different India business excluded.",
+    "availabilityAudit": {
+      "advertisedEntries": 40,
+      "physicalAvailableCount": null
+    },
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Success%20Automobile%20%D0%A6%D0%B0%D1%80%D0%B8%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A2%D1%80%D0%B0%D0%BA%D0%B8%D1%8F%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2",
+    "mapsEmbedUrl": "https://www.google.com/maps?q=%D0%A6%D0%B0%D1%80%D0%B8%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A2%D1%80%D0%B0%D0%BA%D0%B8%D1%8F%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2&output=embed",
+    "logo": {
+      "publishedBranding": true,
+      "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h11437247200639006.pic",
+      "creationMethod": "Unaltered published larger cover artwork: crop its original italic SUCCESS AUTOMOBILE wordmark for compact headers and winged-S emblem for icons; no font substitution, generative redraw or vector claim.",
+      "workingLogoPath": "/dealer/logo-light.png",
+      "approvalStatus": "owner-directed private review concept; no dealer endorsement or third-party licence asserted",
+      "nativeArtworkSize": {
+        "width": 244,
+        "height": 147
+      },
+      "imageGeneration": false,
+      "sourceSha256": "66262ebd2cdc2f55e075f1ab5700812a90d8ddddcff132ac376097cedd108e1b",
+      "sourceThumbnailUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11437247200639006.pic",
+      "visualInspection": {
+        "observedOn": "2026-09-09",
+        "appearance": "Ivory car outline, italic SUCCESS AUTOMOBILE lettering and winged S medallion on dark brown; larger 244x147 cover inspected instead of poor 67x40 thumbnail."
+      }
+    },
+    "duplicateCheck": {
+      "main": {
+        "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+        "entries": [],
+        "absent": true
+      },
+      "astra": {
+        "head": "bcff94eabfba2b3c604bb61d6ea916584e61e4d5",
+        "entries": [],
+        "absent": true
+      },
+      "codex/astra-bg-05": {
+        "head": "9c20c3e94c2d6e89cdc6844d6709dc4eb78a2b5b",
+        "entries": [
+          "CLIENT.md",
+          "SOURCE-CHECK-2026-09-09.json"
+        ]
+      }
+    },
+    "identitySources": [
+      "https://success.mobile.bg/",
+      "https://success.mobile.bg/contacts",
+      "https://success.mobile.bg/about",
+      "https://www.auto.bg/dealer/success"
+    ]
+  },
+  "stock": [
+    {
+      "sourceId": "11788284441880300",
+      "sourceUrl": "https://success.mobile.bg/obiava-11788284441880300-mercedes-benz-e-220-amg-burmester-camera-podgrev-alcantar-lizing",
+      "observedAt": "2026-09-09T03:06:11.690Z",
+      "title": "Mercedes-Benz E 220 AMG",
+      "advertisedTitle": "Mercedes-Benz E 220 AMG* BURMESTER* CAMERA* PODGREV* ALCANTAR* LIZING",
+      "make": "Mercedes-Benz",
+      "model": "E 220 AMG",
+      "slug": "mercedes-benz-e-220-amg-880300",
+      "year": 2018,
+      "manufactureDateText": "януари 2018",
+      "mileageKm": 123999,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "color": "Черен",
+      "powerHp": 197,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 20999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Buy back",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "януари 2018",
+        "Двигател": "Дизелов",
+        "Мощност": "197 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Седан",
+        "Пробег [км]": "123999 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "2f363cf9b4299eb0502d4e9341ecfc620bbef1445b60617dc38b1991e244f524",
+      "sourceGalleryCount": 10,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/300/1/big1/11788284441880300_Kw.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11788284441880300-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "c1f1abecb154ecb3bb00eb3082021c1d95aa322e66a8fd0ab5a6e539ce18c830",
+          "gitBlob": "57aa4b1f644a85df44b5a712725feba65ab50110"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/300/1/big1/11788284441880300_sv.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11788284441880300-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "2496cfbace8edb388ea54e66277feeff30c7864d7f06410cde753bc185964df8",
+          "gitBlob": "596498c9c61cc4d1f89a4431dc1375b6d03aa865"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/300/1/big1/11788284441880300_VH.webp",
+          "sourceIndex": 4,
+          "localPath": "/dealer/stock/11788284441880300-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "75c7790a86eb165e5883fc283f0092f00b68ef694252d780e2b6a44f02917aca",
+          "gitBlob": "578befc250a5053bedaf0f76d6052f43f27a6d36"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/300/1/big1/11788284441880300_RL.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11788284441880300-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4c5763150418172ac5bd0c85122705559b354bcb72983fe6e062716726e812be",
+          "gitBlob": "d4b1de3d15d19eef1a21cd51e9ccf93925a17c4d"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/300/1/big1/11788284441880300_Di.webp",
+          "sourceIndex": 7,
+          "localPath": "/dealer/stock/11788284441880300-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4561775567e739f41b5e10a0f4baafd0d8d644fc531d6bb150f759e73509c1f4",
+          "gitBlob": "69b62b524edd72a97aa8fb45e0b81e014207df0c"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/300/1/big1/11788284441880300_oA.webp",
+          "sourceIndex": 10,
+          "localPath": "/dealer/stock/11788284441880300-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "23590d6395232b3bcd6fa8200b52b2a0e1317c3679148792b3220b606607cfa3",
+          "gitBlob": "753ed115e800729abfa85be06d481f8e1aede300"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21787149042592643",
+      "sourceUrl": "https://success.mobile.bg/obiava-21787149042592643-kia-niro-hybrid-camera-jbl-ledd-lizing",
+      "observedAt": "2026-09-09T03:06:11.690Z",
+      "title": "Kia Niro Hybrid",
+      "advertisedTitle": "Kia Niro HYBRID* CAMERA* JBL* LEDD* LIZING",
+      "make": "Kia",
+      "model": "Niro Hybrid",
+      "slug": "kia-niro-hybrid-592643",
+      "year": 2018,
+      "manufactureDateText": "януари 2018",
+      "mileageKm": 133000,
+      "fuel": "Хибриден",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Бял",
+      "powerHp": 141,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 11999,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Buy back",
+        "4(5) Врати",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Автоматично затваряне на багажника",
+        "Адаптивно въздушно окачване",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "януари 2018",
+        "Двигател": "Хибриден",
+        "Мощност": "141 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "133000 км",
+        "Цвят": "Бял"
+      },
+      "sourceDetailSha256": "135bca6c54198a2daffb578906d958f663ec5ebf314e6a286c24329bfa4e7c7f",
+      "sourceGalleryCount": 11,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/643/2/big1/21787149042592643_QZ.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21787149042592643-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6f51e0fae13d6f1f360abe4ab2022dfd7523cafb56071b371b7e75ec244fc6ba",
+          "gitBlob": "edd7c1bd3ff5a43c294a1b8910770e399da96dea"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/643/2/big1/21787149042592643_cS.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21787149042592643-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "b46033cf49bed66b4b7332a8856a5a9c3c646125a2aa783bb193624b263a9aa1",
+          "gitBlob": "25cfae9f4272d684ec36f521400e20efa721d74b"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/643/2/big1/21787149042592643_2i.webp",
+          "sourceIndex": 4,
+          "localPath": "/dealer/stock/21787149042592643-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "fce2ad131326cba0c9955da0ec575e36a017aad651dedeee0d89fd5f17025d60",
+          "gitBlob": "8b5aa2767ddf74c993d30fefc498870ef9ad5d39"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/643/2/big1/21787149042592643_O0.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21787149042592643-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ddb47e0112b9b10b5d61b0140e4acf75709b9f7c0847209ecbde97d4e59e3eda",
+          "gitBlob": "d82ac902a9b82d7b1509dd2dc52bce6be1b0c507"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/643/2/big1/21787149042592643_qc.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/21787149042592643-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "0116d9ffcb32bf6cf35e7bb78bdd1c6ea0567f5d8952595c38fa1ccd891bf159",
+          "gitBlob": "5b91727c70f0751ab5a8f690b45674a06287c0de"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/643/2/big1/21787149042592643_aw.webp",
+          "sourceIndex": 11,
+          "localPath": "/dealer/stock/21787149042592643-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "044d6bd4a5ac382ae9b7ba4b908fae0edf27f4efa099f3dcded8ec01895ef3db",
+          "gitBlob": "dc73871d3e52d9eb1e22ba053c7882ae918e1687"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11787147891422780",
+      "sourceUrl": "https://success.mobile.bg/obiava-11787147891422780-vw-alltrack-panorama-headup-podgrev-obduh-360cam-ledd-fu",
+      "observedAt": "2026-09-09T03:06:11.691Z",
+      "title": "VW Alltrack",
+      "advertisedTitle": "VW Alltrack PANORAMA* HEADUP* PODGREV* OBDUH* 360CAM* LEDD* FU",
+      "make": "VW",
+      "model": "Alltrack",
+      "slug": "vw-alltrack-422780",
+      "year": 2019,
+      "manufactureDateText": "октомври 2019",
+      "mileageKm": 130999,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "color": "Не е посочен",
+      "powerHp": 190,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 16999,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Buy back",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Панорамен люк",
+        "Рейлинг на покрива",
+        "Халогенни фарове",
+        "OFFROAD пакет",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "360 camera \\ Задна камера",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Head up display",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Автоматично затваряне на багажника",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Вентилация на седалките",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2019",
+        "Двигател": "Дизелов",
+        "Мощност": "190 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Комби",
+        "Пробег [км]": "130999 км"
+      },
+      "sourceDetailSha256": "629ccafafd082f8a6544e42b8f465f1529da15ade0b8f38122ee8bbe0f1b3287",
+      "sourceGalleryCount": 12,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/780/1/big1/11787147891422780_zx.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11787147891422780-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "bf0eebdf32d4cb1afda64c3a9a8d3fb061656ecd2ab11a102654291c5ee1dfef",
+          "gitBlob": "b2cdee307882158d500da34a7038da5d78d6b26e"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/780/1/big1/11787147891422780_nn.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11787147891422780-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f7a5f4f24fdd3ccc2e161befe1fad4395d324cf1df84045448642a7825a423ca",
+          "gitBlob": "97780a21edb024a86594211269e5fead76c3c08c"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/780/1/big1/11787147891422780_5O.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/11787147891422780-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "843d1742e09acadafcd065bad9d2976eac1e74e0855ba7afe7cf8c6ad8371b69",
+          "gitBlob": "c35cc8f447bf0ef24873f8d94840bc3db3439c21"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/780/1/big1/11787147891422780_jv.webp",
+          "sourceIndex": 7,
+          "localPath": "/dealer/stock/11787147891422780-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "741e1b0f7b42a48b2e3ef79ad5a2779eb14d28d910d8b08289c3f39ee7a13279",
+          "gitBlob": "4471580a127bd38d1fbd0dc2f8a6e85f1576dfa2"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/780/1/big1/11787147891422780_qH.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11787147891422780-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "5ea50b64bc658ba1a03ffc790f6426a967b792bc8d31383cf76f319e5358d760",
+          "gitBlob": "9dfdd49f3145ac83fbb135de4e823e2f97d371ab"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/780/1/big1/11787147891422780_u5.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11787147891422780-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "fd3dc820d27b65783a301f8fac2d0ddafea056291dc657f1b546a7c8ef19e4f6",
+          "gitBlob": "ebf9c05236ea263330dbdf7229f2440f69d0ced6"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11784220398560751",
+      "sourceUrl": "https://success.mobile.bg/obiava-11784220398560751-audi-a3-35-sline-camera-ledd-recaro-lizing",
+      "observedAt": "2026-09-09T03:06:11.691Z",
+      "title": "Audi A3 35 S line",
+      "advertisedTitle": "Audi A3 35* SLINE* CAMERA* LEDD* RECARO* LIZING",
+      "make": "Audi",
+      "model": "A3 35 S line",
+      "slug": "audi-a3-35-s-line-560751",
+      "year": 2021,
+      "manufactureDateText": "октомври 2021",
+      "mileageKm": 72999,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "color": "Черен",
+      "powerHp": null,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 24999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Buy back",
+        "4(5) Врати",
+        "LED фарове",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Аларма",
+        "Централно заключване",
+        "Велурен салон",
+        "Кожен салон",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Head up display",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Автоматично затваряне на багажника",
+        "Безключово палене",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2021",
+        "Двигател": "Бензинов",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Седан",
+        "Пробег [км]": "72999 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "e77845d1934bc3d8270bf42e6bb6e46c4f4b31eb8bc513356345f1a57d00c6d2",
+      "sourceGalleryCount": 8,
+      "photos": [
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/751/1/big1/11784220398560751_HM.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11784220398560751-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "a9f761cb72a16925d7f588bcb1f7852a5d73e4e4db3e0c40e7e2634cded719ba",
+          "gitBlob": "3e3acf3639d96f6d208fdedb18200bea30e5be01"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/751/1/big1/11784220398560751_cI.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11784220398560751-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "afa006a7f6e303edc75622eb1c120b96d57f391968a3bd023d2dbbd76aa26781",
+          "gitBlob": "c6ef8ee973a2c34407c4961c09a23dd3acb0d71e"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/751/1/big1/11784220398560751_3B.webp",
+          "sourceIndex": 3,
+          "localPath": "/dealer/stock/11784220398560751-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "679147e2e64e9fd0076ce0619f052baf9dd0f27e4858a57ad2d98dd941f02c2d",
+          "gitBlob": "164650e558288306b7cb264af079bcf22585145f"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/751/1/big1/11784220398560751_Yq.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/11784220398560751-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "37ca966fc5c97970c893e574b301b3c80338491959d9e1f30f6a770e025b2a85",
+          "gitBlob": "9fb1f7afe08ed2514890a84afcfdca9c9471b2dc"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/751/1/big1/11784220398560751_Dh.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11784220398560751-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "5854682218061f0ae4e7e76005018d3067c4a7e2efe2aceeb9e8f3be56256033",
+          "gitBlob": "42733938da9dccc5ee65d42b83418fff3aa082bc"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/751/1/big1/11784220398560751_Fz.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/11784220398560751-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "b8987a8bcbc27633c9521f0af526c8ca79cc2520e29d6ee30bb669c3f0810ac6",
+          "gitBlob": "efd9b612cf7c79ee0375bae0a7c2a69ac543baf6"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21705706946317965",
+      "sourceUrl": "https://success.mobile.bg/obiava-21705706946317965-porsche-cayenne-cupe-chrono-podgrev-obduh-panorama-face-lizi",
+      "observedAt": "2026-09-09T03:06:11.691Z",
+      "title": "Porsche Cayenne Coupe",
+      "advertisedTitle": "Porsche Cayenne CUPE* CHRONO* PODGREV* OBDUH* PANORAMA* FACE* LIZI",
+      "make": "Porsche",
+      "model": "Cayenne Coupe",
+      "slug": "porsche-cayenne-coupe-317965",
+      "year": 2020,
+      "manufactureDateText": "октомври 2020",
+      "mileageKm": 55999,
+      "fuel": "Plug-in хибрид",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Черен",
+      "powerHp": 462,
+      "engineCc": null,
+      "batteryKwh": 333,
+      "priceEur": 66999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Buy back",
+        "Сервизна книжка",
+        "Тунинг",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Панорамен люк",
+        "Рейлинг на покрива",
+        "Спойлери",
+        "Теглич",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Бързи \\ бавни скорости",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Печка",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2020",
+        "Двигател": "Plug-in хибрид",
+        "Мощност": "462 к.с.",
+        "Евростандарт": "Евро 6",
+        "Пробег с едно зареждане (WLTP) [км]": "80 км.",
+        "Капацитет на батерията [kWh]": "333 kWh.",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "55999 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "35f82ff38949c86a19480c091f3525fdbb7c017ad17c1d2891da1dbe67d4806f",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/965/2/big1/21705706946317965_9Y.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21705706946317965-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "2161e6678549a0ccaf5ffc52fabb3a22fd4412743ac87d54ddacd59816793afa",
+          "gitBlob": "6a7c7443e68f8a4012647ddd4e926fbd05d21c48"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/965/2/big1/21705706946317965_SR.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21705706946317965-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "c65e1230f9103a14a2532df136dba2e7a0831ec52d1961afff6724706d5336ed",
+          "gitBlob": "1a418e32fb8ec6e9f20285bff539e4d888bc2b6c"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/965/2/big1/21705706946317965_gw.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21705706946317965-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "42567dc831f4e3874f4ef6480ce1f36308b17b1ccb2c4398c2edecd53e18efae",
+          "gitBlob": "0beadc0c8c5c3aa9b4572ff46a1b11c270f648aa"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/965/2/big1/21705706946317965_mI.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21705706946317965-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ac9eef5bb9966bb729c8ed1148435f0eac1ee84a737c1e81395d8d89d530474e",
+          "gitBlob": "b870ebf728673fb74e52161b401db1bfe6350bac"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/965/2/big1/21705706946317965_B8.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21705706946317965-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "bb5d3591763193a7105bb4a59a1c656ebb5c7bf958a354125c0b70a6953e734c",
+          "gitBlob": "9e59cb0a2804e30fedf3f5c81c0d8751c3a57f10"
+        },
+        {
+          "sourceUrl": "https://mobistatic3.focus.bg/mobile/photosorg/965/2/big1/21705706946317965_fm.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/21705706946317965-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "5172de8d575e78e2d6b5b8eccd8be6a8930d80f972bd80e2e6c9da3314e5c0d7",
+          "gitBlob": "126e137f82263023cd55d1ea6c2958e279dafbe2"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21752669153003762",
+      "sourceUrl": "https://success.mobile.bg/obiava-21752669153003762-kia-sportage-2-0-gtline-camera-4x4-ledd-lizing",
+      "observedAt": "2026-09-09T03:06:11.692Z",
+      "title": "Kia Sportage 2.0 GT Line",
+      "advertisedTitle": "Kia Sportage 2.0* GTLINE* CAMERA* 4x4* LEDD* LIZING",
+      "make": "Kia",
+      "model": "Sportage 2.0 GT Line",
+      "slug": "kia-sportage-2-0-gt-line-003762",
+      "year": 2017,
+      "manufactureDateText": "октомври 2017",
+      "mileageKm": 166999,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Бял",
+      "powerHp": 180,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 14500,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Buy back",
+        "4(5) Врати",
+        "LED фарове",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Рейлинг на покрива",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Бързи \\ бавни скорости",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2017",
+        "Двигател": "Дизелов",
+        "Мощност": "180 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "166999 км",
+        "Цвят": "Бял"
+      },
+      "sourceDetailSha256": "658af831c51de4eb6a1fb942008b5bd75b856958cf2380eb17cd055719670a68",
+      "sourceGalleryCount": 9,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/762/2/big1/21752669153003762_VY.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21752669153003762-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "22486f7f0638df538652cea02459bf76cddf032f96aaf4a769dab38cc71ec569",
+          "gitBlob": "e8b540a1456cb7b54c56d9bc17e285c63c9b0a46"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/762/2/big1/21752669153003762_eC.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21752669153003762-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "15916ef7f017560a2080c786ca6222135887390b5de5b2c8f3bf35bfb5fd09a7",
+          "gitBlob": "5755f4755baa61fef7cd4e360ad9f1edc203a1dc"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/762/2/big1/21752669153003762_Ty.webp",
+          "sourceIndex": 4,
+          "localPath": "/dealer/stock/21752669153003762-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "bfe774757fb6cff703015dbc619f59214e0a64db8af315d1dbc6064afffdca4d",
+          "gitBlob": "e3a28a1cf242135819fe5f263d940585fcb3feac"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/762/2/big1/21752669153003762_Dk.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/21752669153003762-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "53805b5e107fbe7a9dccc011d083661579577fe82cd168f8f919e626c683a280",
+          "gitBlob": "84bc2cb53d9ac5efd9d3d6e24ae774c5a50e7d66"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/762/2/big1/21752669153003762_5j.webp",
+          "sourceIndex": 7,
+          "localPath": "/dealer/stock/21752669153003762-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "b9bc4647e22d424f7d7f9b34de9419905b8433382e4911870495f98120132d43",
+          "gitBlob": "d63f8cc639f6b673eb2604872a593bc10ff3b958"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/762/2/big1/21752669153003762_1D.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21752669153003762-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "f8bcd6c08ff68ec6d32f53313d417508371d42941334958dd8f0674d3e8c057d",
+          "gitBlob": "634f53fa6c8918f067c4b670e87ae3327c815a48"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11777465890049135",
+      "sourceUrl": "https://success.mobile.bg/obiava-11777465890049135-skoda-superb-2-0-camera-face-distronic-lizing",
+      "observedAt": "2026-09-09T03:06:11.692Z",
+      "title": "Skoda Superb 2.0",
+      "advertisedTitle": "Skoda Superb 2.0* CAMERA* FACE* DISTRONIC* LIZING",
+      "make": "Skoda",
+      "model": "Superb 2.0",
+      "slug": "skoda-superb-2-0-049135",
+      "year": 2023,
+      "manufactureDateText": "януари 2023",
+      "mileageKm": 133999,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "color": "Бял",
+      "powerHp": 150,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 19000,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Buy back",
+        "4(5) Врати",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Рейлинг на покрива",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "януари 2023",
+        "Двигател": "Дизелов",
+        "Мощност": "150 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Комби",
+        "Пробег [км]": "133999 км",
+        "Цвят": "Бял"
+      },
+      "sourceDetailSha256": "950786c96871911579eef6db0775a714cb5b3dd59c89831c89c876f0247cff4e",
+      "sourceGalleryCount": 9,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/135/1/big1/11777465890049135_I8.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11777465890049135-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "5108fd8b0340c89710044e286f50b8b4c85c5e64c8bd20ffad5bc97479781a8d",
+          "gitBlob": "988e57a94a4ef701b9829f7097817a6f223d68b1"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/135/1/big1/11777465890049135_vP.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11777465890049135-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "70e5dbd27e30363157d6e4990f0e40db14c2560dcdaeb3abe7a5fb185ecad153",
+          "gitBlob": "9e76e44d1b193d2e05322c34ab9978063f97bc63"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/135/1/big1/11777465890049135_PU.webp",
+          "sourceIndex": 4,
+          "localPath": "/dealer/stock/11777465890049135-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "aa01c448138ab20fd6e4d1b39636065f6f46d06338112da2beec8206dda7f66e",
+          "gitBlob": "04e138b93d219649d95a5b3d11693971d67d5707"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/135/1/big1/11777465890049135_Xs.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/11777465890049135-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f9e482b9d5b7de0aa795c3cd936c1e890bfa6b59649aa75deac03997c0a4ae47",
+          "gitBlob": "e4e9235fed47d4646f6ce1641bef7279ad91c5f4"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/135/1/big1/11777465890049135_GI.webp",
+          "sourceIndex": 7,
+          "localPath": "/dealer/stock/11777465890049135-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "450cce9218531898e9cb2b0a45106414b247cfc7f44e4f54f2547efab036bb26",
+          "gitBlob": "6cf264bdcb65e02cc7af56753a6ba13c4f71c9a3"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/135/1/big1/11777465890049135_cy.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11777465890049135-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "5c759a3603a0e5f1d1008fcf6f69ba68c068a0e9cb367d2704e3bc68580c4f20",
+          "gitBlob": "91327871b64e83e146ea4cd1cc758de431957d73"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21684066785818426",
+      "sourceUrl": "https://success.mobile.bg/obiava-21684066785818426-mercedes-benz-glc-220-amg-4matic-burmester-360cam-recaro-lizing",
+      "observedAt": "2026-09-09T03:06:11.692Z",
+      "title": "Mercedes-Benz GLC 220 AMG 4Matic",
+      "advertisedTitle": "Mercedes-Benz GLC 220 AMG* 4MATIC* BURMESTER* 360CAM* RECARO* LIZING",
+      "make": "Mercedes-Benz",
+      "model": "GLC 220 AMG 4Matic",
+      "slug": "mercedes-benz-glc-220-amg-4matic-818426",
+      "year": 2018,
+      "manufactureDateText": "октомври 2018",
+      "mileageKm": 145000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Не е посочен",
+      "powerHp": 197,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 22999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Buy back",
+        "Тунинг",
+        "4(5) Врати",
+        "LED фарове",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Рейлинг на покрива",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Бързи \\ бавни скорости",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2018",
+        "Двигател": "Дизелов",
+        "Мощност": "197 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "145000 км"
+      },
+      "sourceDetailSha256": "43a9d63b739eb5fd8f09510451db2764a6b2150d22bd65aea5bc37aecddbdcee",
+      "sourceGalleryCount": 12,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/426/2/big1/21684066785818426_bl.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21684066785818426-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ebfa77002e10a47c3a566e68e28d0281ba9c26d0b694caa26c42c74eb96fcfa1",
+          "gitBlob": "827f2bc2ae2e88d5b94cf2b4890d4e2d8706d7a7"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/426/2/big1/21684066785818426_AO.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21684066785818426-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "a14f8d8e732e5ebe0237e44517c2dc94d850f8849f10791fa060614529c130a1",
+          "gitBlob": "5cb006fbd6bdab7427a4054748596d4f94e48d36"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/426/2/big1/21684066785818426_Wg.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/21684066785818426-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "97156cd35b91d8fa2f4d98c2bc07edf0601e2ad99ec98caaee6a12d3541d1df4",
+          "gitBlob": "95d49277e9dae4ecf53d2959349f399dcce081eb"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/426/2/big1/21684066785818426_nL.webp",
+          "sourceIndex": 7,
+          "localPath": "/dealer/stock/21684066785818426-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "b8822a469fb54eb3e41e654fb7dec006f1851fb9c2fb8a2a0798816a58794f1b",
+          "gitBlob": "517b8c0a8e9efc3f9e97432e5ca12a9fbd337808"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/426/2/big1/21684066785818426_5m.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21684066785818426-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "8540ef9ed4378ff6167ca0dac1b2a7e542e7d99fc4925607efe2ecd97ef0f4c2",
+          "gitBlob": "a633aba16f47aa0f498e299e4d8b2dd2eea38652"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/426/2/big1/21684066785818426_6u.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21684066785818426-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "0385be08c55434eafa7ec20bf6d75aafd165ca2ac98dae774e9e33647999dc40",
+          "gitBlob": "2f090c252c8b0eca9edbd23eda7b7962717c9eda"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11762241395630584",
+      "sourceUrl": "https://success.mobile.bg/obiava-11762241395630584-bmw-530e-mpak-headup-podgrev-360cam-harmann-lineasist",
+      "observedAt": "2026-09-09T03:06:11.692Z",
+      "title": "BMW 530e M Sport",
+      "advertisedTitle": "BMW 530E MPAK* HEADUP* PODGREV* 360CAM* HARMANN* LINEASIST*",
+      "make": "BMW",
+      "model": "530e M Sport",
+      "slug": "bmw-530e-m-sport-630584",
+      "year": 2023,
+      "manufactureDateText": "октомври 2023",
+      "mileageKm": 88999,
+      "fuel": "Plug-in хибрид",
+      "transmission": "Автоматична",
+      "body": "Седан",
+      "color": "Черен",
+      "powerHp": 300,
+      "engineCc": null,
+      "batteryKwh": 12,
+      "priceEur": 39999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Buy back",
+        "Тунинг",
+        "4(5) Врати",
+        "LED фарове",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Шибедах",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Печка",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "октомври 2023",
+        "Двигател": "Plug-in хибрид",
+        "Мощност": "300 к.с.",
+        "Евростандарт": "Евро 6",
+        "Пробег с едно зареждане (WLTP) [км]": "60 км.",
+        "Капацитет на батерията [kWh]": "12 kWh.",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Седан",
+        "Пробег [км]": "88999 км",
+        "Цвят": "Черен"
+      },
+      "sourceDetailSha256": "10c31e09b00dcbd66c137fd2970279084a4accf24775005e2633e4baf763a96d",
+      "sourceGalleryCount": 14,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/584/1/big1/11762241395630584_KK.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11762241395630584-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "29a780fe17fec4415aab26271178fd48138351c06ef9fd6bb957febd797ca8a2",
+          "gitBlob": "7e68d645e39808c8ef81127c3e521898cee1e117"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/584/1/big1/11762241395630584_F3.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11762241395630584-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "83b9bda0de7645bb91f26c448b5b4be6656e06542ec2f4442ae95e1263c99dd2",
+          "gitBlob": "fd229f79e8f9140c602864a2f71384c8306d29ce"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/584/1/big1/11762241395630584_UL.webp",
+          "sourceIndex": 5,
+          "localPath": "/dealer/stock/11762241395630584-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d3c9b202aab65386c2510273ea3afa3f354a27b69269fb7478e917f15127e6f5",
+          "gitBlob": "dc3ed032a6e2ac449e12e4f3bfa8881eb0f32d67"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/584/1/big1/11762241395630584_DK.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/11762241395630584-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4473567322b25d8595f3a0156d3a167e695305924d56bd5ac8ec1df4a05c619c",
+          "gitBlob": "6e728f4c052f3ebffc335342aaab1a07a7586e78"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/584/1/big1/11762241395630584_2Q.webp",
+          "sourceIndex": 10,
+          "localPath": "/dealer/stock/11762241395630584-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "84498e82d791c1e7034c789f7e917a063fad5a1d4699e20be546e79ecf6c1db1",
+          "gitBlob": "3e2234e79ef3e0a3843f1016c1b5eada065315d4"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/584/1/big1/11762241395630584_EA.webp",
+          "sourceIndex": 14,
+          "localPath": "/dealer/stock/11762241395630584-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "22bbf67593da1e53adfdad25340ca4ef2ac2adf82ab6e1e816555ecb9ff37fb9",
+          "gitBlob": "fec9eba12aa218278704d5e265a6f529b277fe8c"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11747591068099753",
+      "sourceUrl": "https://success.mobile.bg/obiava-11747591068099753-bmw-m4-competetion-carbon-harmann-podgrev-360cam-liz",
+      "observedAt": "2026-09-09T03:06:11.693Z",
+      "title": "BMW M4 Competition",
+      "advertisedTitle": "BMW M4 COMPETETION* CARBON* HARMANN* PODGREV* 360CAM* LIZ",
+      "make": "BMW",
+      "model": "M4 Competition",
+      "slug": "bmw-m4-competition-099753",
+      "year": 2022,
+      "manufactureDateText": "януари 2022",
+      "mileageKm": 8000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Кабрио",
+      "color": "Не е посочен",
+      "powerHp": 606,
+      "engineCc": null,
+      "batteryKwh": null,
+      "priceEur": 66999,
+      "currency": "EUR",
+      "taxLabel": "Не се начислява ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "GPS система за проследяване",
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Buy back",
+        "Тунинг",
+        "4(5) Врати",
+        "LED фарове",
+        "Ксенонови фарове",
+        "Лети джанти",
+        "Металик",
+        "Шибедах",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)",
+        "Термопомпа"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "януари 2022",
+        "Двигател": "Бензинов",
+        "Мощност": "606 к.с.",
+        "Евростандарт": "Евро 6",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Кабрио",
+        "Пробег [км]": "8000 км"
+      },
+      "sourceDetailSha256": "d00110584d589fe405ec099c8c8728020daa96f223385cbc421e84ad2bc4c3ab",
+      "sourceGalleryCount": 15,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/753/1/big1/11747591068099753_yA.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11747591068099753-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "12052984e2413dfbd1d18f5a76fc48e9ad0a8b10156dc7158d031f08496c6788",
+          "gitBlob": "2e3631444961fc46955849dc5f4a45bf8583ba08"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/753/1/big1/11747591068099753_11.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11747591068099753-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "55b15eac200596bd4abb8f61395afe597ce8c92dfba073755bcb73c228b172a9",
+          "gitBlob": "5cf438c5f2775bda53aef9153dab1a5ca31f8c73"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/753/1/big1/11747591068099753_e4.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11747591068099753-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "ce80d62870c980c511888f99cecfa25903316781e51c1867dbeab91ab3e6e61d",
+          "gitBlob": "d4d077e63fafd243df560856fef0bdd6eb2bb4dd"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/753/1/big1/11747591068099753_8X.webp",
+          "sourceIndex": 8,
+          "localPath": "/dealer/stock/11747591068099753-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "da70847ca64a0a8524ca1da0ade5f221d0a0ac96431c52f573adbeacb613dedd",
+          "gitBlob": "db55e96d22a1bc27812d0ff586fa4fbf03dac7ca"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/753/1/big1/11747591068099753_xF.webp",
+          "sourceIndex": 11,
+          "localPath": "/dealer/stock/11747591068099753-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "83a7b7f9dbe88b91e923d2fc9d2edd345189857cd1ca11b042d0f144f8f39e32",
+          "gitBlob": "c82d1204c8328639f21b23a8b34ae5d28953aaea"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/753/1/big1/11747591068099753_mI.webp",
+          "sourceIndex": 15,
+          "localPath": "/dealer/stock/11747591068099753-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "89971f56a7f3993c87c13fe59e485b181015aeb5bc08e1a0f191e042cf2bc408",
+          "gitBlob": "07c29e01c237744de05c8ffe298eb88471b1de2e"
+        }
+      ],
+      "detailObserved": true
+    }
+  ],
+  "interpretation": "Dated public advertisements, not independently inspected or guaranteed available stock. Native EUR and km; no currency conversion.",
+  "mediaScope": "Owner-directed private technical review. Public sources and original watermarks retained. No dealership endorsement or third-party licence grant is asserted.",
+  "publicationApproved": false,
+  "outreachPerformed": false
+}

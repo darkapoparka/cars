@@ -56,7 +56,7 @@
 	}
 </script>
 
-<div class="mobile-about-app" aria-label="За Day Night Auto">
+<div class="mobile-about-app" aria-label="За Success Automobile">
 	<header class="mobile-about-hero">
 		<img
 			class="mobile-about-hero__bg"
@@ -65,8 +65,8 @@
 			aria-hidden="true"
 		/>
 		<div class="mobile-about-hero__bar">
-			<a href={resolve('/')} aria-label="Day Night Auto начало">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+			<a href={resolve('/')} aria-label="Success Automobile начало">
+				<img src={resolve('/dealer/logo-light.png')} alt={daynightSite.shortName} />
 			</a>
 			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
 				<Phone size={19} strokeWidth={2.45} />
@@ -75,8 +75,8 @@
 
 		<div class="mobile-about-hero__copy">
 			<span>За нас</span>
-			<h1>Проверени автомобили и ясен процес</h1>
-			<p>Day Night Auto в София помага с избор, оглед, документи, финансиране и бартер.</p>
+			<h1>Публикувани обяви и ясен процес</h1>
+			<p>Success Automobile · Пловдив. Публични обяви, информация за автомобилите и директен контакт за оглед.</p>
 		</div>
 
 		<div class="mobile-about-actions">
@@ -98,7 +98,7 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-about-section" aria-labelledby="mobile-about-trust-title">
 			<div class="mobile-about-heading">
-				<span>Day Night Auto</span>
+				<span>Success Automobile</span>
 				<h2 id="mobile-about-trust-title">Защо при нас</h2>
 			</div>
 
@@ -119,12 +119,12 @@
 		<section class="mobile-about-location" aria-labelledby="mobile-about-location-title">
 			<img
 				src={resolve('/assets/images/pages/daynight-about-consultation-v1.webp')}
-				alt="Консултация със Day Night Auto"
+				alt="Консултация със Success Automobile"
 				loading="lazy"
 				decoding="async"
 			/>
 			<div>
-				<span>Шоурум в София</span>
+				<span>Шоурум в Пловдив</span>
 				<h2 id="mobile-about-location-title">Огледи и съдействие на място</h2>
 				<p>{daynightSite.location}</p>
 				<button type="button" onclick={openMap}>

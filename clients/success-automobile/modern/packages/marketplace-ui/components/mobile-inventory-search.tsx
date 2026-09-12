@@ -278,7 +278,7 @@ const SearchResultButton = ({
               </span>
               <span className="shrink-0 whitespace-nowrap font-semibold text-[14px] text-zinc-950 tabular-nums">
                 {formatMoney(listing.price, isBg ? "bg" : "en")}
-              </span>
+              {listing.priceTaxLabel ? <span className="block whitespace-normal font-normal text-xs text-muted-foreground leading-4">{listing.priceTaxLabel}</span> : null}</span>
             </span>
           </span>
         </>

@@ -44,7 +44,7 @@
 }
 
 /*
- * Day Night Auto — design tokens (single source of truth).
+ * Success Automobile — design tokens (single source of truth).
  * Relocated verbatim from daynight-mobile.css (Phase 1.1). Imported FIRST in
  * src/routes/+layout.svelte (before daynight-mobile.css) so values also reach
  * vaul drawers, which portal to <body> outside the page wrappers.
@@ -52,12 +52,12 @@
  * aliasing are deferred to Phase 6 (deliberate colour decisions, not 1:1).
  */
 :root {
-	/* Brand — Day & Night uses black/graphite for structure and red for action.
+	/* Brand — Success Automobile uses black/graphite for structure and red for action.
 	 * The legacy --sa-blue aliases remain for compatibility, but resolve to ink. */
-	--sa-red: #d71920;
-	--sa-red-strong: #a50f15;
-	--sa-red-soft: #fee2e2;
-	--sa-red-tint: #fff5f5;
+	--sa-red: #6a5038;
+	--sa-red-strong: #4c3a28;
+	--sa-red-soft: #e9edf6;
+	--sa-red-tint: #f5f7fb;
 	--sa-yellow: #f5c542;
 	--sa-blue: #050505;
 	--sa-blue-strong: #000000;
@@ -280,3 +280,6 @@
 		--sa-button-font-size: var(--sa-text-desktop-action);
 	}
 }
+
+/* Original published dealer artwork: do not apply inherited monochrome masks. */
+img[src*="/dealer/logo-"], img[srcset*="/dealer/logo-"], img[src*="dealer%2Flogo-"] { filter:none !important; clip-path:none !important; object-fit:contain !important; }

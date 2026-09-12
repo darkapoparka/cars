@@ -285,7 +285,7 @@
 				<h1 class="mobile-detail-sheet__title">{vehicle.shortTitle}</h1>
 				<div class="mobile-detail-sheet__price">
 					<strong class="mobile-detail-sheet__price-eur">{vehicle.priceEur}</strong>
-					<span class="mobile-detail-sheet__price-bgn">{vehicle.priceBgn}</span>
+					<span class="mobile-detail-sheet__price-bgn">{vehicle.taxLabel ?? ''}</span>
 				</div>
 			</header>
 
@@ -405,12 +405,12 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Day Night Auto предлага</strong>
+					<strong>icars предлага</strong>
 					<ul class="mobile-detail-sheet__offer-list">
 						<li>Финансиране и лизинг</li>
 						<li>Бартер и замяна</li>
 						<li>Съдействие с документите</li>
-						<li>Оглед в София</li>
+						<li>Оглед в Пловдив</li>
 					</ul>
 				</div>
 

@@ -91,7 +91,7 @@ const importFaqs = {
     },
     {
       answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на Day & Night ще се свърже с вас, за да уточни следващата стъпка.",
+        "Не е нужен акаунт. Оставете телефон и екипът на MG7 Group ще се свърже с вас, за да уточни следващата стъпка.",
       question: "Трябва ли да се регистрирам?",
     },
   ],
@@ -113,7 +113,7 @@ const importFaqs = {
     },
     {
       answer:
-        "No account is required. Leave a phone number and the Day & Night team will contact you about the next step.",
+        "No account is required. Leave a phone number and the MG7 Group team will contact you about the next step.",
       question: "Do I need to register?",
     },
   ],
@@ -186,13 +186,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. Day & Night ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. Day & Night will discuss the import request and delivery to Bulgaria.",
+      ? "Изпратете линк или данни за автомобил от чужбина. MG7 Group ще уточни заявката за внос и доставка до България."
+      : "Send a listing link or vehicle details from abroad. MG7 Group will discuss the import request and delivery to Bulgaria.",
     locale,
     path,
     title: isBg
-      ? "Внос на автомобил по заявка | Day & Night"
-      : "Vehicle import request | Day & Night",
+      ? "Внос на автомобил по заявка | MG7 Group"
+      : "Vehicle import request | MG7 Group",
   });
 };
 

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "client": "voivodov-auto-antonio",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-09T03:33:04.920Z",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    "main"
+  ],
+  "publicUrl": null,
+  "repository": "https://github.com/darkapoparka/cars",
+  "branch": "codex/astra-bg-05",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false,
+    "existingIdentityPreserved": true
+  },
+  "verification": {
+    "fullRuntime": "not-run",
+    "ownerManualReview": "pending",
+    "sourceOnly": "passed-as-recorded-in-../SOURCE-QA.json",
+    "sourceCheckDate": "2026-09-09T03:33:04.903Z"
+  },
+  "preview": {
+    "entry": "/cars",
+    "proposedPort": 6632,
+    "started": false,
+    "portAvailabilityChecked": false
+  },
+  "stockObservationDate": "2026-09-09",
+  "sourceInventory": "https://voivodovauto.mobile.bg/"
+}

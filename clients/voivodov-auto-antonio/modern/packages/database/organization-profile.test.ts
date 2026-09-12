@@ -23,7 +23,7 @@ const profile = {
     "Подбрани автомобили и съдействие по целия процес на покупка и внос.",
   displayName: "Example Auto",
   headline: "Автомобили с ясна история",
-  headquarters: { city: "София", countryCode: "BG", region: "София-град" },
+  headquarters: { city: "Пловдив", countryCode: "BG", region: "Пловдив-град" },
   logoUrl: "https://example.bg/logo.png",
   profileImageUrl: "https://example.bg/profile.jpg",
   services: ["inspection", "transport"] as const,

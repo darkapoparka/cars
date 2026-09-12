@@ -1,5 +1,6 @@
 <script lang="ts">
   import './detail.css';
+  import DealerGallery from '$components/vehicles/DealerGallery.svelte';
   import { vehicleContactHref } from '$data/journeys';
   import { bodyLabel } from '$data/listing';
   import { resolve } from '$app/paths';
@@ -61,7 +62,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Публикувана обява от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -83,14 +84,7 @@
                 <a class="dn-detail-mobile-back" href={data.returnTo} aria-label="Назад към автомобилите">
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
-                <img
-                  src={data.vehicle.image}
-                  alt={data.vehicle.title}
-                  width="1245"
-                  height="988"
-                  fetchpriority="high"
-                  decoding="async"
-                />
+                {#key data.vehicle.id}<DealerGallery images={data.vehicle.gallery} title={data.vehicle.title} />{/key}
               </figure>
             </div>
 
@@ -130,7 +124,7 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
+                    {data.vehicle.title} е включен в демонстрационната извадка от публични обяви на {brand.name}. Свържете се с
                     екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
                   </p>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
@@ -162,6 +156,8 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
+              <p class="dn-detail-summary__availability">{data.vehicle.taxLabel}</p>
+              <p class="dn-detail-summary__availability">Обява, наблюдавана на 09.09.2026 г. <a href={data.vehicle.evidenceUrl} target="_blank" rel="noreferrer">Първоизточник</a>.</p>
               <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>

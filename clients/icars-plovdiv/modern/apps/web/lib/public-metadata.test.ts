@@ -10,7 +10,7 @@ describe("public metadata contracts", () => {
     vi.unstubAllEnvs();
   });
 
-  it("uses the Day & Night hero for shared social metadata", () => {
+  it("uses the icars hero for shared social metadata", () => {
     const metadata = createPublicLocalizedMetadata({
       baseUrl: "https://day-night.example",
       description: "Vehicle guides",

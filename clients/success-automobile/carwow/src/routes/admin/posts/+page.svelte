@@ -312,7 +312,7 @@
 				{:else}
 					<AdminEmptyState
 						title="No posts match the current filters"
-						description="Create a post or clear filters to manage all Day Night Auto content records."
+						description="Create a post or clear filters to manage all Success Automobile content records."
 						class="m-4"
 					>
 						<Button href={resolve('/admin/posts')} variant="outline">Clear filters</Button>

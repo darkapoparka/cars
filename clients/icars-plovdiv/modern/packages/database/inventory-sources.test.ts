@@ -9,7 +9,7 @@ describe("inventory source boundary", () => {
     expect(() =>
       assertSafeInventorySourceConfig({
         delimiter: ";",
-        expectedTimeZone: "Europe/Sofia",
+        expectedTimeZone: "Europe/Пловдив",
         mode: "full_snapshot",
       })
     ).not.toThrow();

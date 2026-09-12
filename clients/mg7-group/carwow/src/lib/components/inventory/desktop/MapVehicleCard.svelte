@@ -150,7 +150,7 @@
 		<p class="text-secondary clamp-1 clamp mb-[8px]">{vehicle.conditionLine}</p>
 		<VehicleMetaRow {vehicle} styleClass="style3 mb-[14px]" />
 		<p class="h6 card-box__price mb-[10px] flex items-center justify-between gap-[8px]">
-			<span class="daynight-card-price__value">{displayPrice}</span>
+			<span class="daynight-card-price__value">{displayPrice}{#if vehicle.taxLabel}<small style="display:block;font-size:12px;font-weight:400;white-space:normal">{vehicle.taxLabel}</small>{/if}</span>
 		</p>
 	</div>
 </div>

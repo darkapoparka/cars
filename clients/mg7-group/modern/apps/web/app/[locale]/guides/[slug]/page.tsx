@@ -27,7 +27,7 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description:
-      guide?.description[language] ?? "Day & Night vehicle buying guide.",
+      guide?.description[language] ?? "MG7 Group vehicle buying guide.",
     locale,
     path: `/guides/${slug}`,
     title: guide?.title[language] ?? "Vehicle guide",

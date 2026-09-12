@@ -44,7 +44,7 @@ const collectionCopy = {
     resultsLabel: "резултата",
     title: "Китайски електромобили и хибриди",
     truth:
-      "Day & Night не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
+      "MG7 Group не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
   },
   en: {
     badge: "Editorial collection",
@@ -62,7 +62,7 @@ const collectionCopy = {
     resultsLabel: "results",
     title: "Chinese EVs and hybrids",
     truth:
-      "Day & Night does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
+      "MG7 Group does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
   },
 } as const;
 

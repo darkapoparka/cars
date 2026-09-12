@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalizedMetadata } from "./metadata";
 
-describe("Day & Night localized metadata", () => {
+describe("Success Automobile localized metadata", () => {
   it("brands Bulgarian pages and emits canonical locale metadata", () => {
     const metadata = createLocalizedMetadata({
       baseUrl: "https://day-night.example",
@@ -11,8 +11,8 @@ describe("Day & Night localized metadata", () => {
       title: "Автомобили",
     });
 
-    expect(metadata.title).toBe("Автомобили | Day & Night Auto Group");
-    expect(metadata.applicationName).toBe("Day & Night Auto Group");
+    expect(metadata.title).toBe("Автомобили | Success Automobile");
+    expect(metadata.applicationName).toBe("Success Automobile");
     expect(metadata.alternates?.canonical).toBe(
       "https://day-night.example/bg/cars"
     );

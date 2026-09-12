@@ -30,7 +30,7 @@
 				<h3>{vehicle.shortTitle}</h3>
 				<div class="mobile-inventory-card__price">
 					<span class="mobile-inventory-card__price-stack">
-						<strong>{vehicle.priceEur}</strong>
+						<strong>{vehicle.priceEur}{#if vehicle.taxLabel}<small style="display:block;font-size:12px;font-weight:400;line-height:1.4;white-space:normal">{vehicle.taxLabel}</small>{/if}</strong>
 						<span>{vehicle.monthly}</span>
 					</span>
 					<span class="mobile-inventory-card__arrow" aria-hidden="true">

@@ -32,7 +32,7 @@
 
 <LazyMapEmbed
 	class="widget-gg-map radius-16 mb-40 flex overflow-hidden"
-	title="Карта до Day Night Auto София"
+	title="Карта до Success Automobile Пловдив"
 	src={mapEmbedSrc}
 	height="520px"
 	iframeStyle="border:0;width: 100%;"

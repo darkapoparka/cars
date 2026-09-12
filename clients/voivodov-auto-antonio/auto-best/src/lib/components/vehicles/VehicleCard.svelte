@@ -58,13 +58,14 @@
       </div>
 
       {#if showPrice}
-        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}</div>
+        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}<small class="dn-vehicle-tax">{vehicle.taxLabel}</small></div>
       {/if}
     </div>
   </a>
 </article>
 
 <style>
+ .dn-vehicle-tax { display:block; margin-top:4px; color:var(--dn-muted); font-size:12px; font-weight:400; line-height:1.35; letter-spacing:normal; white-space:normal; }
   .dn-vehicle-card__mobile-meta { display: none; }
   .dn-vehicle-card {
     display: flex;

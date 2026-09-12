@@ -25,8 +25,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Практични материали от Day & Night за избор на автомобил, внос, оглед и финансиране."
-      : "Practical Day & Night guidance on choosing, importing, inspecting, and financing a vehicle.",
+      ? "Практични материали от VOIVODOV AUTO & ANTONIO за избор на автомобил, внос, оглед и финансиране."
+      : "Practical VOIVODOV AUTO & ANTONIO guidance on choosing, importing, inspecting, and financing a vehicle.",
     locale,
     path: "/blog",
     title: isBg ? "Новини и анализи" : "News and insights",
@@ -42,8 +42,8 @@ const BlogIndex = async ({ params }: BlogProps) => {
     "@context": "https://schema.org",
     "@type": "Blog",
     description: isBg
-      ? "Практични материали от Day & Night за вноса и избора на автомобил."
-      : "Practical Day & Night guidance on importing and choosing a vehicle.",
+      ? "Практични материали от VOIVODOV AUTO & ANTONIO за вноса и избора на автомобил."
+      : "Practical VOIVODOV AUTO & ANTONIO guidance on importing and choosing a vehicle.",
     inLanguage: isBg ? "bg-BG" : "en",
     name: isBg ? "Новини и анализи" : "News and insights",
     publisher: {
@@ -59,7 +59,7 @@ const BlogIndex = async ({ params }: BlogProps) => {
       <main className="mx-auto min-h-[60dvh] max-w-[90rem] px-4 py-8 lg:px-6 lg:py-10">
         <header className="max-w-2xl">
           <p className="font-semibold text-muted-foreground text-xs uppercase tracking-[0.12em]">
-            Day &amp; Night
+            VOIVODOV AUTO & ANTONIO
           </p>
           <h1 className="mt-2 font-semibold text-page-title tracking-tight sm:text-page-title-lg">
             {isBg ? "Новини и анализи" : "News and insights"}

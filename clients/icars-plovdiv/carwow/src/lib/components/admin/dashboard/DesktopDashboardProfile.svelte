@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'Пловдив, Пловдив, гр. Пловдив, Индустриална зона — Север, ул. Напредък 1, Индустриална зона — Север';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="icars map"
 					></iframe>
 				</div>
 			</div>

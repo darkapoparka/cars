@@ -1,0 +1,21 @@
+{
+  "name": "icars",
+  "short_name": "icars",
+  "lang": "bg-BG",
+  "start_url": "/cars",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#079b75",
+  "icons": [
+    {
+      "src": "/dealer/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dealer/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

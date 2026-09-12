@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 
 	const DEFAULT_DESCRIPTION =
-		'Day Night Auto предлага проверени автомобили, финансиране и съдействие при покупка в София.';
+		'MG7 Group предлага проверени автомобили, финансиране и съдействие при покупка в Бургас.';
 	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
 
 	let {
@@ -48,7 +48,7 @@
 	{/if}
 
 	<meta property="og:type" content={ogType} />
-	<meta property="og:site_name" content="Day Night Auto София" />
+	<meta property="og:site_name" content="MG7 Group Бургас" />
 	<meta property="og:locale" content="bg_BG" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
@@ -60,7 +60,7 @@
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:alt" content="Day Night Auto София" />
+		<meta property="og:image:alt" content="MG7 Group Бургас" />
 	{/if}
 
 	<meta name="twitter:card" content="summary_large_image" />

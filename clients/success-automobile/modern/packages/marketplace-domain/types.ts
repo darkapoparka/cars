@@ -187,6 +187,8 @@ export interface VehicleListing {
   priceType: PriceType;
   promoted: boolean;
   publishedAt: string;
+  /** Published advertisement tax qualification; not a computed tax rate. */
+  priceTaxLabel?: string;
   seller: SellerSummary;
   slug: string;
   spec: VehicleSpec;

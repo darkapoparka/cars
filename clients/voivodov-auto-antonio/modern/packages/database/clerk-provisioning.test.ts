@@ -11,7 +11,7 @@ describe("Clerk organization provisioning projection", () => {
           applicantAccountId: "account_1",
           id: "provisioning_1",
           requestedCountryCode: "BG",
-          requestedDisplayName: "Auto Import Sofia",
+          requestedDisplayName: "Auto Import Пловдив",
           requestedOrgType: "importer",
         }),
         updateMany: vi.fn().mockResolvedValue({ count: 1 }),

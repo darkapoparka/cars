@@ -36,7 +36,7 @@ export function setupDashboardExportPanel() {
 	const buildXml = () => {
 		const lines = [
 			'<?xml version="1.0" encoding="UTF-8"?>',
-			'<ads source="Day Night Auto" type="demo-feed">'
+			'<ads source="icars" type="demo-feed">'
 		];
 		feed.forEach((vehicle) => {
 			lines.push('  <ad>');

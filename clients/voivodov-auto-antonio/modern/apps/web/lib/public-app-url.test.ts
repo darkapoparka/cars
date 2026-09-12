@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { getPublicAppBaseUrl, getPublicAppUrl } from "./public-app-url";
 
-describe("Day & Night companion app URLs", () => {
+describe("VOIVODOV AUTO & ANTONIO companion app URLs", () => {
   it("normalizes an explicitly configured HTTP origin", () => {
     expect(
       getPublicAppUrl("/saved", "https://day-night-app.example/workspace/")

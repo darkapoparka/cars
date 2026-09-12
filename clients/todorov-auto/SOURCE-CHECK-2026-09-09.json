@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "status": "blocked",
+  "scope": "Identity and representative public-source check, not a complete 8-12-car implementation pack or available-stock audit.",
+  "clientSlug": "todorov-auto",
+  "crmId": null,
+  "identity": {
+    "name": "Автосалон Тодоров",
+    "city": "Бургас",
+    "addressAsPublished": "Изгрев, ул. Транспортна 5-ти километър",
+    "primaryContactSource": "https://todorovauto.mobile.bg/contacts",
+    "phonesAsPublished": ["056/861264", "0888417282"],
+    "normalizedPhones": ["+35956861264", "+359888417282"],
+    "hoursAsPublished": {"mondayToFriday": "09:00-18:00", "saturday": "10:00-16:30", "sunday": "closed"},
+    "publicEmail": null,
+    "servicesAsPublished": ["Регистрация в КАТ", "Застрахователни услуги"],
+    "servicesSource": "https://todorovauto.mobile.bg/about",
+    "mobileBgMemberSince": 2006,
+    "foundingYear": null,
+    "secondaryProfile": "https://www.cars.bg/company/todorovauto/",
+    "secondaryPhone": "+359888225450",
+    "secondaryPhoneNote": "CARS.BG also publishes 0888225450. Do not silently replace the primary profile phone.",
+    "legacyAccountMatch": {
+      "matched": true,
+      "basis": ["same name", "Burgas", "0888417282", "todorovauto.mobile.bg"],
+      "readOnlyPaths": ["M:/codex/agency-os-projects/leads/automotive/todorov-auto/modern-showroom/packages/marketplace/lead-site.ts", "M:/codex/agency-os-projects/leads/automotive/todorov-auto/showroom/src/lib/data/showroom-site.ts"],
+      "modifications": false,
+      "existingDemoQaAudited": false
+    },
+    "independentWebsite": {"candidate": "http://todorovauto.com/", "candidateSource": "https://gbg.bg/ukazatel/avto_moto/r/104/", "status": "unconfirmed; HTTP/HTTPS retrieval returned a non-retryable tool safety error", "absenceEstablished": false},
+    "social": {"matchedFacebook": null, "matchedInstagram": null, "recentPostVerified": false, "excluded": "Same-name Facebook results for Rakovski with phone 0896326885 do not match this Burgas account."}
+  },
+  "publishedBranding": {
+    "visuallyInspected": true,
+    "sourcePage": "https://www.cars.bg/company/todorovauto/",
+    "sourceLogoUrl": "https://g1-bg.cars.bg/users_logos/301.jpg",
+    "appearance": "White-background horizontal bitmap with blue italic Cyrillic Автосалон Тодоров lettering and an overline.",
+    "workingLogoPath": null,
+    "creationMethod": "none; original source image viewed only",
+    "approvalStatus": "no reuse grant established",
+    "generatedAsset": false
+  },
+  "inventory": {
+    "mobileBgAdvertisedCategoryEntries": 36,
+    "carsBgAdvertisements": 38,
+    "countMeaning": "Different marketplace advertisement totals, not verified available whole-car stock.",
+    "independentlyVerifiedAvailableCount": null,
+    "representativeListing": {
+      "sourceId": "11763371717307272",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11763371717307272-renault-captur-1-3tce-intens-140ks",
+      "title": "Renault Captur 1.3TCe Intens 140кс",
+      "advertisedCashPrice": 16450,
+      "currency": "EUR",
+      "taxQualificationAsPublished": "Цената е с включено ДДС",
+      "manufactureMonth": "2021-03",
+      "mileage": 46000,
+      "mileageUnit": "km",
+      "fuel": "Бензин",
+      "transmission": "Автоматична",
+      "powerHp": 140,
+      "engineCc": 1332,
+      "emissionClass": "Euro 6",
+      "bodyAsPublished": "Хечбек",
+      "colorAsPublished": "Сив",
+      "availability": "advertised; physical availability not independently confirmed",
+      "photoReference": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_Xv.webp",
+      "photoReadOutcome": "Image link retrieval returned Cache miss; no image bytes saved or incorporated.",
+      "photoReusePermission": "not established"
+    },
+    "conflictsAndExclusions": [
+      "Toyota Yaris 1.5i Hybrid: mobile.bg lists EUR 8690, CARS.BG EUR 8700; do not silently reconcile.",
+      "The Yaris description mentions insurance to July 2026, which is already past on observation date.",
+      "Peugeot 404 listing title conflicts with 403/1960 description and 1971 listing year; exclude until clarified.",
+      "Seller finance approval/rate promises have not been verified and must not become demo guarantees or provider integrations.",
+      "Legacy showroom source contains source-bound/raw stock and placeholder contact data; it was not accepted as current dealer inventory."
+    ]
+  },
+  "mediaClearance": {
+    "status": "unresolved-essential",
+    "researchDefault": "docs/lead-research/bulgaria/screening-other.json: mediaReuseCleared=false",
+    "legacyProvenanceRead": "M:/codex/agency-os-projects/leads/automotive/todorov-auto/modern-showroom/ASSET_PROVENANCE.md",
+    "legacyProvenanceScope": "Generic first-party template artwork and generated unbadged vehicle fixtures; not a grant for current Todorov listing photos or published logo.",
+    "publicVisibilityTreatedAsLicense": false,
+    "needed": "A documented permission or other established reuse basis covering correctly matched real vehicle photos, and a usable authorized original logo or a clearly proposed generated identity. No dealership contact was made."
+  },
+  "existingJourney": {"sourceInspectionOnly": true, "observedCapabilities": ["brand/model/fuel/transmission/year/price filters", "listing details and photo links", "about and contact routes", "phone and map paths"], "viewportComparisonRun": false, "websiteDefectClaim": false},
+  "applicationsCreated": [],
+  "checks": {"identitySourceReview": true, "logoVisualSourceInspection": true, "install": "not-run", "build": "not-run", "typecheck": "not-run", "browser320": "not-run", "browser390": "not-run", "browser1440": "not-run", "ownerManualReview": "pending"}
+}

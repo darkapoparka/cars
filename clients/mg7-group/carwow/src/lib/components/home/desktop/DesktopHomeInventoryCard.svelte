@@ -94,7 +94,7 @@
 			</li>
 		</ul>
 		<p class="daynight-home-inventory-card__price">
-			<span class="daynight-card-price__value">{vehicle.priceEur}</span>
+			<span class="daynight-card-price__value">{vehicle.priceEur}{#if vehicle.taxLabel}<small style="display:block;font-size:12px;font-weight:400;line-height:1.4;white-space:normal">{vehicle.taxLabel}</small>{/if}</span>
 			<span class="daynight-card-price__meta"
 				><span class="daynight-card-price__monthly">{vehicle.monthly}</span><a
 					href={resolve('/financing')}

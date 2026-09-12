@@ -16,7 +16,7 @@
 		<div class="listing-details--contact-dealer mb-28">
 			<img
 				src="/assets/images/avatar/contact-avatar.webp"
-				alt="Day Night Auto"
+				alt="Success Automobile"
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
@@ -24,7 +24,7 @@
 
 			<div class="content">
 				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
-					Day Night Auto
+					Success Automobile
 				</a>
 
 				<div class="verify">
@@ -35,7 +35,7 @@
 						decoding="async"
 						loading="lazy"
 					/>
-					<p class="text-highlight text-sm">Проверена автокъща</p>
+					<p class="text-highlight text-sm">Профил на автосалона</p>
 				</div>
 			</div>
 		</div>

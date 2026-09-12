@@ -172,7 +172,7 @@
 	function buildXml() {
 		const lines = [
 			'<?xml version="1.0" encoding="UTF-8"?>',
-			'<ads source="Day Night Auto" type="demo-feed">'
+			'<ads source="MG7 Group" type="demo-feed">'
 		];
 
 		for (const vehicle of exportFeed) {

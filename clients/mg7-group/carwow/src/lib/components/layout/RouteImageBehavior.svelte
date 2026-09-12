@@ -19,7 +19,7 @@
 			return headingText;
 		}
 
-		return img.closest('a')?.getAttribute('title')?.trim() || 'Day Night Auto';
+		return img.closest('a')?.getAttribute('title')?.trim() || 'MG7 Group';
 	}
 
 	// One pass over route images: lazy-load below-the-fold media, async-decode,

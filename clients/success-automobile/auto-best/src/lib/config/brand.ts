@@ -8,27 +8,23 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  youtubeUrl: string;
+  instagramUrl: string;
+  facebookUrl: string;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
 
-export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
-} as const satisfies BrandConfig;
+export const brand: BrandConfig = {
+  "name": "Success Automobile",
+  "shortName": "Success",
+  "city": "Пловдив",
+  "addressLine": "Цариградско шосе, Индустриална зона — Тракия",
+  "address": "Цариградско шосе, Индустриална зона — Тракия, Пловдив",
+  "phone": "0877 333 433",
+  "phoneHref": "tel:+359877333433",
+  "appointment": "Работно време: потвърдете по телефона",
+  "logo": "/dealer/logo-light.png",
+  "youtubeUrl": "",
+  "instagramUrl": "",
+  "facebookUrl": ""
+};

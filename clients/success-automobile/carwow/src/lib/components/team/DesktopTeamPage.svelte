@@ -150,8 +150,8 @@
 			<li>
 				<a
 					href={`mailto:${member.email}`}
-					title="Имейл към Day Night Auto"
-					aria-label="Имейл към Day Night Auto"
+					title="Имейл към Success Automobile"
+					aria-label="Имейл към Success Automobile"
 				>
 					{@render mailIcon(24)}
 				</a>
@@ -201,7 +201,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на Day Night Auto</span>
+					<span>Контакт с Success Automobile</span>
 				</li>
 			</ul>
 		</div>
@@ -209,7 +209,7 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на Day Night Auto</h1>
+			<h1>Контакт с Success Automobile</h1>
 			<p class="team-disclosure">{daynightTeamDisclosure}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>

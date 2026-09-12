@@ -19,7 +19,7 @@
 	<div class="rating-box__content">
 		<div class="rating-box__overview">
 			<div class="rating-box__average">
-				<span class="rating-box__score">{daynightReviewAverage.toFixed(1)}</span>
+				<span class="rating-box__score">{daynightReviewAverage > 0 ? daynightReviewAverage.toFixed(1) : '—'}</span>
 				<div class="rating-box__stars">
 					{#each desktopDetailStarIndexes as starIndex (starIndex)}
 						<img

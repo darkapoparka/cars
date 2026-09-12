@@ -29,7 +29,7 @@ import {
 } from "./media";
 
 const actor = {
-  city: "Sofia",
+  city: "Пловдив",
   clerkOrgId: "org_1",
   clerkUserId: "user_1",
   displayName: "Dealer",

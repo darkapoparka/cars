@@ -82,11 +82,11 @@ const toPriceCurrency = (currency: string): PriceCurrency => {
 
 const demoDealerOrgs = [
   {
-    city: "Sofia",
+    city: "Пловдив",
     clerkOrgId: "org_demo_sofia_premium",
-    displayName: "Sofia Premium Cars",
+    displayName: "Пловдив Premium Cars",
     id: "dealer-org-sofia-premium",
-    legalName: "Sofia Premium Cars OOD",
+    legalName: "Пловдив Premium Cars OOD",
     orgType: "dealer" as const,
     phone: "+359 2 000 1001",
     sellerId: "dealer-sofia-premium",
@@ -106,7 +106,7 @@ const demoDealerOrgs = [
     websiteUrl: "https://black-sea-ev.example",
   },
   {
-    city: "Sofia",
+    city: "Пловдив",
     clerkOrgId: "org_demo_pro_vans",
     displayName: "Pro Vans Bulgaria",
     id: "dealer-org-pro-vans",

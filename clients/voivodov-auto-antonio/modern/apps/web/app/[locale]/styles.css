@@ -203,3 +203,6 @@ html {
   content: attr(title);
   @apply inline-block text-muted-foreground text-right mb-6 text-sm;
 }
+
+/* Original published dealer artwork: do not apply inherited monochrome masks. */
+img[src*="/dealer/logo-"], img[srcset*="/dealer/logo-"], img[src*="dealer%2Flogo-"] { filter:none !important; clip-path:none !important; object-fit:contain !important; }

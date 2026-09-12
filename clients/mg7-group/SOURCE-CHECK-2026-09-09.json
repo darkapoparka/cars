@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "clientSlug": "mg7-group",
+  "leadId": "bg-burgas-mg7-group",
+  "status": "blocked",
+  "purpose": "Fresh source/provenance checkpoint; not application data or a verified available-stock feed.",
+  "preservedFiles": {
+    "HANDOFF.md": "6c5acfa01b8663eeabe64a653b2250e131f370cd",
+    "SOURCE-PACK.json": "46f85407abf65aab1f1db9bfbb76345b7ad41652"
+  },
+  "identity": {
+    "name": "MG7 Group",
+    "city": "Бургас",
+    "address": "Северна промишлена зона, ул. Атанас Буров 7",
+    "phone": "+359876277777",
+    "email": null,
+    "hours": null,
+    "hoursNote": "The contact profile explicitly says hours have not been entered.",
+    "sources": ["https://mg7group.mobile.bg/", "https://mg7group.mobile.bg/contacts", "https://mg7group.mobile.bg/about", "https://www.auto.bg/dealer/mg7group"],
+    "independentWebsite": null,
+    "websiteFinding": "No confidently matching independent domain found in the bounded name/phone/domain searches; absence is not proved.",
+    "matchedFacebook": null,
+    "matchedInstagram": null,
+    "recentSocialPostVerified": false,
+    "legacyAccountMatch": "Existing slug, identical marketplace domain in both legacy asset-source notes, and matching published brand. Old projects retained unchanged."
+  },
+  "inventoryRecheck": {
+    "sourceUrl": "https://mg7group.mobile.bg/",
+    "advertisedEntries": 32,
+    "combinedReservedSoldLabels": 6,
+    "verifiedAvailableCount": null,
+    "rawExcludedLabel": "Капариран\\Продаден",
+    "excludedSourceIds": ["11783765861930826", "21773661860374633", "21757667206320325", "11746533701934051", "21747300324752811"],
+    "sixthExcludedTitle": "Mercedes-Benz AMG GT 43 4matic+ V8 Package",
+    "sixthSourceId": null,
+    "scope": "The complete profile was read. BMW X7, BMW 740d and BRABUS B700 detail pages were separately opened. The ten older sample records are retained, not silently relabeled as individually rechecked detail pages.",
+    "detailRechecks": [
+      {"sourceId":"21785564544332885","sourceUrl":"https://mg7group.mobile.bg/obiava-21785564544332885-bmw-x7-40d-xdrive-m-sport-facelift-carbon-1-vi-sobstvenik","title":"BMW X7 40d xDrive M Sport","manufactureMonth":"2023-09","mileageKm":45000,"fuel":"Дизелов","transmission":"Автоматична","powerHp":352,"advertisedCashPrice":61900,"currency":"EUR","taxQualification":"Цената е без ДДС","availability":"advertised-unconfirmed","galleryLinksObserved":17,"sellerEditedOn":"2026-08-30","photoUrl":"https://mobistatic3.focus.bg/mobile/photosorg/885/2/big1/21785564544332885_sZ.webp","localPhotoPaths":[],"photoReuseBasis":"not established"},
+      {"sourceId":"11783765861930826","sourceUrl":"https://mg7group.mobile.bg/obiava-11783765861930826-bmw-740-d-xdrive-m-sport-pro-individual-nov-ot-balgariya","title":"BMW 740d xDrive M Sport Pro","availability":"reserved-or-sold","useInAvailableInventory":false},
+      {"sourceId":"11746533701934051","sourceUrl":"https://mg7group.mobile.bg/obiava-11746533701934051-mercedes-benz-amg-gt-brabus-b700","title":"Mercedes-Benz AMG GT BRABUS B700","availability":"reserved-or-sold","useInAvailableInventory":false}
+    ],
+    "cautions": ["Do not convert the combined label into a definitive sold-versus-reserved state.", "The source's 26 ads without that label are not a verified available count.", "Keep the existing BMW 840d production/first-registration conflict unresolved.", "Do not turn per-vehicle seller warranty statements into dealer-wide guarantees.", "The profile includes expired insurance-date claims; do not carry them forward as current cover."]
+  },
+  "assetEvidence": {
+    "originalLogoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h16993744142105534.pic",
+    "bannerSource": "https://cdn2.focus.bg/mobile/images/housespicts/h16993744142105534.pic",
+    "legacyOriginalVisuallyInspected": "M:/codex/agency-os-projects/leads/automotive/mg7-group/showroom/static/lead-assets/source-logo-original.jpg",
+    "appearance": "Black square with thin white geometric MG7, a circular G and small GROUP text.",
+    "legacyNotesRead": ["M:/codex/agency-os-projects/leads/automotive/mg7-group/showroom/static/lead-assets/SOURCES.md", "M:/codex/agency-os-projects/leads/automotive/mg7-group/import/static/lead-assets/SOURCES.md"],
+    "legacyNotesScope": "Source URLs and earlier logo cleanup plus generic/generated hero provenance; no permission covering the current real-stock gallery set.",
+    "currentRemoteImageAttempts": "Web opens of the banner, original-logo URL and X7 photograph returned Internal Error. The retained local original logo rendered successfully through a read-only file tool.",
+    "permissionStatus": "unresolved-essential",
+    "newAssetsGenerated": false,
+    "newAssetsCommitted": false,
+    "legacyFilesModified": false
+  },
+  "applicationsCreated": [],
+  "review": {"autoBestEntry":null,"modernEntry":null,"carwowEntry":null,"applicationCommandsRun":[],"browser320":"not-run","browser390":"not-run","browser1440":"not-run","ownerManualReview":"pending"},
+  "resumeRequirement": "Establish a reuse basis and usable local bytes for correctly matched current real vehicle photos, then complete the fact/gallery set before cloning the retained masters. No outreach is authorized."
+}

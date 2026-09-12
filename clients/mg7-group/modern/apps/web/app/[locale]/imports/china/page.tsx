@@ -19,13 +19,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Започнете заявка за автомобил от Китай с доставка до България от Day & Night."
-      : "Start a request for a vehicle from China with delivery to Bulgaria from Day & Night.",
+      ? "Започнете заявка за автомобил от Китай с доставка до България от MG7 Group."
+      : "Start a request for a vehicle from China with delivery to Bulgaria from MG7 Group.",
     locale,
     path,
     title: isBg
-      ? "Внос от Китай | Day & Night"
-      : "Import from China | Day & Night",
+      ? "Внос от Китай | MG7 Group"
+      : "Import from China | MG7 Group",
   });
 };
 

@@ -6,13 +6,13 @@
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
 
-	let activePaymentMode = $state<PaymentMode>('finance');
+	let activePaymentMode = $state<PaymentMode>('cash');
 	let isVatDropdownOpen = $state(false);
 
 	const vatRows = $derived([
-		{ id: 'price', label: 'Цена:', value: vehicle.priceBgn },
+		{ id: 'price', label: 'Цена:', value: vehicle.priceEur },
 		{ id: 'tax', label: 'Данък върху МПС:', value: 'уточняват се' },
-		{ id: 'total', label: 'Цена с данък:', value: vehicle.priceBgn }
+		{ id: 'total', label: 'ДДС по обявата:', value: vehicle.taxLabel ?? 'По потвърждение' }
 	]);
 
 	function selectPaymentMode(mode: PaymentMode) {
@@ -66,7 +66,7 @@
 				<p class="pdp-payment-price mb-4">
 					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 				</p>
-				<p class="text-secondary mb-16">Цена без данъци и такси</p>
+				<p class="text-secondary mb-16">{vehicle.taxLabel ?? 'Данъчното третиране се уточнява с продавача'}</p>
 
 				<p class="flex items-center gap-8">
 					<img
@@ -77,7 +77,7 @@
 						decoding="async"
 						loading="eager"
 					/>
-					<a href={resolve('/terms')} class="text-underline text-highlight">Автомобил по ДДС</a>
+					<a href={resolve('/terms')} class="text-underline text-highlight">Данни за цената</a>
 				</p>
 			</div>
 
@@ -87,8 +87,8 @@
 					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 					<span class="pdp-payment-price__monthly">{vehicle.monthly}</span>
 				</p>
-				<p class="text-secondary mb-4">Вноска без данъци и такси</p>
-				<p class="text-secondary mb-16">Първоначална вноска · 72 мес. · 7.89% ГПР</p>
+				<p class="text-secondary mb-4">Не е предоставена индивидуална финансова оферта</p>
+				<p class="text-secondary mb-16">Свържете се с продавача за възможните начини на плащане.</p>
 
 				<div class={['core-dropdown flex items-center gap-8', isVatDropdownOpen && 'active']}>
 					<img
@@ -107,7 +107,7 @@
 						aria-controls="coreDropdownMenu"
 						onclick={toggleVatDropdown}
 					>
-						Автомобил по ДДС
+						Данни за цената
 					</button>
 					<div class="core-dropdown__menu" id="coreDropdownMenu">
 						<ul class="core-dropdown__list">

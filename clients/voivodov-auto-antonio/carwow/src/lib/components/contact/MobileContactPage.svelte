@@ -252,8 +252,8 @@
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
-					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<a href={resolve('/')} aria-label="VOIVODOV AUTO & ANTONIO начало">
+					<img src={resolve('/dealer/logo-light.png')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -263,7 +263,7 @@
 		<div class="mobile-contact-hero__copy">
 			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със VOIVODOV AUTO & ANTONIO'}
 			</h1>
 			<p>
 				{isImportMode
@@ -513,7 +513,7 @@
 			<div class="mobile-contact-map__head">
 				<div>
 					<span>Локация</span>
-					<h2>Шоурум в София</h2>
+					<h2>Шоурум в Пловдив</h2>
 				</div>
 				<a href={resolve('/inventory')}>
 					<CarFront size={18} strokeWidth={2.45} />
@@ -522,7 +522,7 @@
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Карта до VOIVODOV AUTO & ANTONIO Пловдив"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/brand/daynight-logo-generated.png')}
+						src={resolve('/dealer/logo-light.png')}
 						alt=""
 						aria-hidden="true"
 					/>

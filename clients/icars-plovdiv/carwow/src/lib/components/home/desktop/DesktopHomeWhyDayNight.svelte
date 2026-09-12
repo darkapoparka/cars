@@ -30,7 +30,7 @@
 			copy: 'Изберете автомобил и уговорете удобно посещение.',
 			cta: 'Запазете оглед',
 			href: '/contact',
-			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
+			image: '/dealer/logo-light.png'
 		},
 		{
 			id: 'financing',
@@ -55,24 +55,24 @@
 		{
 			id: 'stock',
 			value: String(daynightVehicles.length),
-			label: 'Налични автомобила',
+			label: 'Обяви в този преглед',
 			hasDivider: true
 		},
 		{
 			id: 'brands',
 			value: String(new Set(daynightVehicles.map((vehicle) => vehicle.brand)).size),
-			label: 'марки в наличност',
+			label: 'марки в извадката',
 			hasDivider: true
 		},
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в София',
+			label: 'локация в Пловдив',
 			hasDivider: true
 		},
 		{
 			id: 'contact',
-			value: '4',
+			value: '3',
 			label: 'директни канала за контакт'
 		}
 	] as const;
@@ -117,7 +117,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
+							'/dealer/logo-light.png',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}

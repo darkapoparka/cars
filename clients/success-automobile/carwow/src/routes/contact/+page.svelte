@@ -20,9 +20,9 @@
 	const currentSeo = $derived(
 		browser && page.url.searchParams.get('intent') === 'import'
 			? {
-					title: 'Внос на автомобил | Day Night Auto София',
+					title: 'Внос на автомобил | Success Automobile Пловдив',
 					description:
-						'Изпратете обява или опишете желания автомобил и получете конкретни варианти за внос от Day Night Auto.'
+						'Изпратете обява или опишете желания автомобил и получете конкретни варианти за внос от Success Automobile.'
 				}
 			: data.seo
 	);

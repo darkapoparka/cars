@@ -28,7 +28,7 @@ const createInventoryRecord = (index: number): InventoryRecord => ({
       exponent: 2,
     },
     physicalLocation: {
-      city: "Sofia",
+      city: "Пловдив",
       country: "Bulgaria",
       countryCode: "BG",
     },

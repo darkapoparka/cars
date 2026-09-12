@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'Бургас, Бургас, гр. Бургас, Промишлена зона — Север, Северна промишлена зона, ул. Атанас Буров 7';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="MG7 Group map"
 					></iframe>
 				</div>
 			</div>

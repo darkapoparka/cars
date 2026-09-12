@@ -3,646 +3,725 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    id: "am-1001",
-    slug: "bmw-x5-m50d-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 BMW X5 M50d",
-    description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
-    price: { amount: 89_379, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1360, currency: "BGN" },
-    images: [
+    "id": "21785564544332885",
+    "slug": "bmw-x7-40d-xdrive-m-sport-332885",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "BMW X7 40d xDrive M Sport",
+    "description": "BMW X7 40d xDrive M Sport, 2023 г., 45 000 км. Цената е без ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-21785564544332885-bmw-x7-40d-xdrive-m-sport-facelift-carbon-1-vi-sobstvenik",
+    "price": {
+      "amount": 61900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "Бял BMW X5 SUV",
+        "url": "/dealer/stock/21785564544332885-1.webp",
+        "alt": "BMW X7 40d xDrive M Sport — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21785564544332885-2.webp",
+        "alt": "BMW X7 40d xDrive M Sport — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21785564544332885-3.webp",
+        "alt": "BMW X7 40d xDrive M Sport — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21785564544332885-4.webp",
+        "alt": "BMW X7 40d xDrive M Sport — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21785564544332885-5.webp",
+        "alt": "BMW X7 40d xDrive M Sport — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21785564544332885-6.webp",
+        "alt": "BMW X7 40d xDrive M Sport — снимка 6"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    features: [
-      { bg: "360° камери", en: "360° cameras" },
-      { bg: "Панорамен покрив", en: "Panoramic roof" },
-      { bg: "Head-up display", en: "Head-up display" },
-      { bg: "Обдухване на седалките", en: "Ventilated seats" },
+    "badges": [
+      "used"
     ],
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "M50d",
-      year: 2020,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 167_000,
-      mileageUnit: "km",
-      enginePowerHp: 400,
-      colorExterior: "Черен металик",
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "BMW",
+      "model": "X7 40d xDrive M Sport",
+      "year": 2023,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 45000,
+      "mileageUnit": "km",
+      "enginePowerHp": 352,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-28T09:00:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.748Z",
+    "promoted": false,
+    "priceTaxLabel": "Цената е без ДДС"
   },
   {
-    id: "am-1010",
-    slug: "mercedes-benz-gls-400d-4matic-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
-    description:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    price: { amount: 122_629, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1870, currency: "BGN" },
-    images: [
+    "id": "21745605265440995",
+    "slug": "mercedes-benz-g-63-amg-440995",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "Mercedes-Benz G 63 AMG",
+    "description": "Mercedes-Benz G 63 AMG, 2025 г., 22 000 км. Цената е без ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-21745605265440995-mercedes-benz-g-63-amg-2025g-nov-ot-silvar-star",
+    "price": {
+      "amount": 181000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes SUV GLS",
+        "url": "/dealer/stock/21745605265440995-1.webp",
+        "alt": "Mercedes-Benz G 63 AMG — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21745605265440995-2.webp",
+        "alt": "Mercedes-Benz G 63 AMG — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21745605265440995-3.webp",
+        "alt": "Mercedes-Benz G 63 AMG — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21745605265440995-4.webp",
+        "alt": "Mercedes-Benz G 63 AMG — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21745605265440995-5.webp",
+        "alt": "Mercedes-Benz G 63 AMG — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21745605265440995-6.webp",
+        "alt": "Mercedes-Benz G 63 AMG — снимка 6"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "G 63 AMG",
+      "year": 2025,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 22000,
+      "mileageUnit": "km",
+      "enginePowerHp": 605,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-27T10:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.749Z",
+    "promoted": false,
+    "priceTaxLabel": "Цената е без ДДС"
   },
   {
-    id: "am-1011",
-    slug: "bmw-750e-xdrive-m-sport-sofia-2024",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2024 BMW 750e xDrive M Sport",
-    description:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    price: { amount: 175_436, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2680, currency: "BGN" },
-    images: [
+    "id": "11786258864975456",
+    "slug": "bmw-850-v8-gran-coupe-975456",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "BMW 850 V8 Gran Coupe",
+    "description": "BMW 850 V8 Gran Coupe, 2022 г., 107 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11786258864975456-bmw-850-v8-gran-coupe-1-vi-sobstvenik-v-garantsiya",
+    "price": {
+      "amount": 54555,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80",
-        alt: "BMW 7 Series",
+        "url": "/dealer/stock/11786258864975456-1.webp",
+        "alt": "BMW 850 V8 Gran Coupe — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11786258864975456-2.webp",
+        "alt": "BMW 850 V8 Gran Coupe — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11786258864975456-3.webp",
+        "alt": "BMW 850 V8 Gran Coupe — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11786258864975456-4.webp",
+        "alt": "BMW 850 V8 Gran Coupe — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11786258864975456-5.webp",
+        "alt": "BMW 850 V8 Gran Coupe — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11786258864975456-6.webp",
+        "alt": "BMW 850 V8 Gran Coupe — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "7 Series",
-      trim: "750e xDrive M Sport",
-      year: 2024,
-      bodyType: "sedan",
-      fuelType: "plug_in_hybrid",
-      transmission: "automatic",
-      mileageValue: 40_000,
-      mileageUnit: "km",
-      enginePowerHp: 489,
-      colorExterior: "Черен сапфир",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "BMW",
+      "model": "850 V8 Gran Coupe",
+      "year": 2022,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 107000,
+      "mileageUnit": "km",
+      "enginePowerHp": 531,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-26T08:40:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.749Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1012",
-    slug: "mercedes-benz-e-63-s-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz E 63 S AMG",
-    description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    price: { amount: 165_657, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2530, currency: "BGN" },
-    images: [
+    "id": "21782394387362812",
+    "slug": "bmw-x6-m-sport-362812",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "BMW X6 M Sport",
+    "description": "BMW X6 M Sport, 2020 г., 141 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-21782394387362812-bmw-x6-m-sport-v-garantsiya-do-09-2027g",
+    "price": {
+      "amount": 45000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1609703048009-d3576872b32c?w=1200&q=80",
-        alt: "Mercedes-Benz E-Class sedan",
+        "url": "/dealer/stock/21782394387362812-1.webp",
+        "alt": "BMW X6 M Sport — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21782394387362812-2.webp",
+        "alt": "BMW X6 M Sport — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21782394387362812-3.webp",
+        "alt": "BMW X6 M Sport — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21782394387362812-4.webp",
+        "alt": "BMW X6 M Sport — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21782394387362812-5.webp",
+        "alt": "BMW X6 M Sport — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21782394387362812-6.webp",
+        "alt": "BMW X6 M Sport — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "E-Class",
-      trim: "E 63 S AMG",
-      year: 2021,
-      bodyType: "sedan",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 96_000,
-      mileageUnit: "km",
-      enginePowerHp: 612,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "BMW",
+      "model": "X6 M Sport",
+      "year": 2020,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 141000,
+      "mileageUnit": "km",
+      "enginePowerHp": 286,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-25T13:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.749Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1013",
-    slug: "mercedes-benz-cls-400d-4matic-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 Mercedes-Benz CLS 400d 4MATIC",
-    description:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    price: { amount: 73_733, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1125, currency: "BGN" },
-    images: [
+    "id": "11774522821457814",
+    "slug": "mercedes-benz-e-53-amg-coupe-457814",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "Mercedes-Benz E 53 AMG Coupe",
+    "description": "Mercedes-Benz E 53 AMG Coupe, 2019 г., 144 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11774522821457814-mercedes-benz-e-53-amg-coupe-amg",
+    "price": {
+      "amount": 31000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1624085568108-36410cfe4d24?w=1200&q=80",
-        alt: "Mercedes CLS",
+        "url": "/dealer/stock/11774522821457814-1.webp",
+        "alt": "Mercedes-Benz E 53 AMG Coupe — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11774522821457814-2.webp",
+        "alt": "Mercedes-Benz E 53 AMG Coupe — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11774522821457814-3.webp",
+        "alt": "Mercedes-Benz E 53 AMG Coupe — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11774522821457814-4.webp",
+        "alt": "Mercedes-Benz E 53 AMG Coupe — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11774522821457814-5.webp",
+        "alt": "Mercedes-Benz E 53 AMG Coupe — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11774522821457814-6.webp",
+        "alt": "Mercedes-Benz E 53 AMG Coupe — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "CLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2020,
-      bodyType: "coupe",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 171_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Сив металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "E 53 AMG Coupe",
+      "year": 2019,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 144000,
+      "mileageUnit": "km",
+      "enginePowerHp": 435,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-24T15:05:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.749Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1014",
-    slug: "audi-q8-50-tdi-quattro-s-line-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Audi Q8 50 TDI quattro S line",
-    description:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    price: { amount: 99_159, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1515, currency: "BGN" },
-    images: [
+    "id": "11784017637362453",
+    "slug": "chevrolet-camaro-362453",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "Chevrolet Camaro",
+    "description": "Chevrolet Camaro, 2000 г., 90 700 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11784017637362453-chevrolet-camaro-palna-servizna-istoriya-90-700km",
+    "price": {
+      "amount": 5300,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
-        alt: "Audi Q8",
+        "url": "/dealer/stock/11784017637362453-1.webp",
+        "alt": "Chevrolet Camaro — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11784017637362453-2.webp",
+        "alt": "Chevrolet Camaro — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11784017637362453-3.webp",
+        "alt": "Chevrolet Camaro — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11784017637362453-4.webp",
+        "alt": "Chevrolet Camaro — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11784017637362453-5.webp",
+        "alt": "Chevrolet Camaro — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11784017637362453-6.webp",
+        "alt": "Chevrolet Camaro — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Audi",
-      model: "Q8",
-      trim: "50 TDI quattro S line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 163_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "year": 2000,
+      "bodyType": "convertible",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 90700,
+      "mileageUnit": "km",
+      "enginePowerHp": 193,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-23T09:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.750Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1002",
-    slug: "mercedes-benz-gle-400d-coupe-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLE 400d Coupe",
-    description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    price: { amount: 124_584, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1900, currency: "BGN" },
-    images: [
+    "id": "11787220789122620",
+    "slug": "bmw-840ci-m-sport-122620",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "BMW 840Ci M Sport",
+    "description": "BMW 840Ci M Sport, 1995 г., 173 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11787220789122620-bmw-840-ci-m-sport",
+    "price": {
+      "amount": 24900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE SUV",
+        "url": "/dealer/stock/11787220789122620-1.webp",
+        "alt": "BMW 840Ci M Sport — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11787220789122620-2.webp",
+        "alt": "BMW 840Ci M Sport — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11787220789122620-3.webp",
+        "alt": "BMW 840Ci M Sport — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11787220789122620-4.webp",
+        "alt": "BMW 840Ci M Sport — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11787220789122620-5.webp",
+        "alt": "BMW 840Ci M Sport — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11787220789122620-6.webp",
+        "alt": "BMW 840Ci M Sport — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "400d Coupe 4MATIC AMG",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "BMW",
+      "model": "840Ci M Sport",
+      "year": 1995,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 173000,
+      "mileageUnit": "km",
+      "enginePowerHp": 286,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-22T11:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.750Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1003",
-    slug: "mercedes-benz-gle-53-amg-coupe-sofia-2022",
-    category: "lease",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    description:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    price: { amount: 140_231, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2140, currency: "BGN" },
-    images: [
+    "id": "11787219518736875",
+    "slug": "audi-a8-50-tdi-v6-736875",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "Audi A8 50 TDI V6",
+    "description": "Audi A8 50 TDI V6, 2018 г., 175 000 км. Цената е с включено ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11787219518736875-audi-a8-50-tdi-v6",
+    "price": {
+      "amount": 29900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE 53 AMG SUV",
+        "url": "/dealer/stock/11787219518736875-1.webp",
+        "alt": "Audi A8 50 TDI V6 — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11787219518736875-2.webp",
+        "alt": "Audi A8 50 TDI V6 — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11787219518736875-3.webp",
+        "alt": "Audi A8 50 TDI V6 — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11787219518736875-4.webp",
+        "alt": "Audi A8 50 TDI V6 — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11787219518736875-5.webp",
+        "alt": "Audi A8 50 TDI V6 — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11787219518736875-6.webp",
+        "alt": "Audi A8 50 TDI V6 — снимка 6"
+      }
     ],
-    badges: ["used", "lease"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "53 AMG Coupe 4MATIC",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 105_000,
-      mileageUnit: "km",
-      enginePowerHp: 435,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Audi",
+      "model": "A8 50 TDI V6",
+      "year": 2018,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 175000,
+      "mileageUnit": "km",
+      "enginePowerHp": 286,
+      "colorExterior": "Не е посочен"
     },
-    publishedAt: "2026-07-21T08:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.750Z",
+    "promoted": false,
+    "priceTaxLabel": "Цената е с включено ДДС"
   },
   {
-    id: "am-1004",
-    slug: "mercedes-benz-s-350d-long-amg-sofia-2019",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2019 Mercedes-Benz S 350d Long AMG",
-    description:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    price: { amount: 83_512, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1275, currency: "BGN" },
-    images: [
+    "id": "11787042642128831",
+    "slug": "audi-a6-allroad-50-tdi-v6-128831",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "Audi A6 Allroad 50 TDI V6",
+    "description": "Audi A6 Allroad 50 TDI V6, 2020 г., 115 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11787042642128831-audi-a6-allroad-50-tdi-v6-286hp-dosie-ot-0-km",
+    "price": {
+      "amount": 27000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?w=1200&q=80",
-        alt: "Mercedes-Benz S-Class sedan",
+        "url": "/dealer/stock/11787042642128831-1.webp",
+        "alt": "Audi A6 Allroad 50 TDI V6 — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11787042642128831-2.webp",
+        "alt": "Audi A6 Allroad 50 TDI V6 — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11787042642128831-3.webp",
+        "alt": "Audi A6 Allroad 50 TDI V6 — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11787042642128831-4.webp",
+        "alt": "Audi A6 Allroad 50 TDI V6 — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11787042642128831-5.webp",
+        "alt": "Audi A6 Allroad 50 TDI V6 — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11787042642128831-6.webp",
+        "alt": "Audi A6 Allroad 50 TDI V6 — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "S-Class",
-      trim: "S 350d Long AMG Optic",
-      year: 2019,
-      bodyType: "sedan",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 145_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Audi",
+      "model": "A6 Allroad 50 TDI V6",
+      "year": 2020,
+      "bodyType": "wagon",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 115000,
+      "mileageUnit": "km",
+      "enginePowerHp": 286,
+      "colorExterior": "Сив"
     },
-    publishedAt: "2026-07-20T14:45:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:00:38.750Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1005",
-    slug: "mercedes-benz-v-250d-vip-business-sofia-2018",
-    category: "van",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2018 Mercedes-Benz V 250d VIP Business",
-    description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
+    "id": "11754657468074384",
+    "slug": "porsche-911-997-turbo-074384",
+    "category": "car",
+    "dealerOrgId": "dealer-mg7-group",
+    "status": "active",
+    "title": "Porsche 911 997 Turbo",
+    "description": "Porsche 911 997 Turbo, 2008 г., 79 907 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://mg7group.mobile.bg/obiava-11754657468074384-porsche-911-997-turbo-mezger-carbon-akrapovic",
+    "price": {
+      "amount": 83000,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "/lead-sell-van-v1.png",
-        alt: "V-Class van",
+        "url": "/dealer/stock/11754657468074384-1.webp",
+        "alt": "Porsche 911 997 Turbo — снимка 1"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "V-Class",
-      trim: "V 250d VIP Business",
-      year: 2018,
-      bodyType: "van",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 44_500,
-      mileageUnit: "km",
-      enginePowerHp: 190,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-19T10:20:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1006",
-    slug: "range-rover-sport-svr-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Range Rover Sport SVR",
-    description:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1679506640590-f0152786dff0?w=1200&q=80",
-        alt: "Range Rover Sport",
+        "url": "/dealer/stock/11754657468074384-2.webp",
+        "alt": "Porsche 911 997 Turbo — снимка 2"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Land Rover",
-      model: "Range Rover Sport",
-      trim: "SVR",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 155_000,
-      mileageUnit: "km",
-      enginePowerHp: 600,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-18T12:10:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1007",
-    slug: "bmw-430i-xdrive-gran-coupe-sofia-2023",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2023 BMW 430i xDrive Gran Coupe",
-    description:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    price: { amount: 81_556, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1245, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=1200&q=80",
-        alt: "BMW 4 Series",
+        "url": "/dealer/stock/11754657468074384-3.webp",
+        "alt": "Porsche 911 997 Turbo — снимка 3"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "4 Series",
-      trim: "430i xDrive Gran Coupe M Sport",
-      year: 2023,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 35_000,
-      mileageUnit: "km",
-      enginePowerHp: 245,
-      colorExterior: "Син металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-17T16:00:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1008",
-    slug: "bmw-m4-competition-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 BMW M4 Competition",
-    description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    price: { amount: 128_496, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1960, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80",
-        alt: "Червено BMW M4 Competition пред модерен шоурум",
+        "url": "/dealer/stock/11754657468074384-4.webp",
+        "alt": "Porsche 911 997 Turbo — снимка 4"
       },
-    ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "M4",
-      trim: "Competition",
-      year: 2021,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 165_000,
-      mileageUnit: "km",
-      enginePowerHp: 510,
-      colorExterior: "Червен металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-16T07:40:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1009",
-    slug: "bmw-x5-xdrive40d-berlin-2022",
-    category: "car",
-    status: "active",
-    title: "2022 BMW X5 xDrive40d",
-    description:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    price: { amount: 112_456, currency: "BGN" },
-    priceType: "fixed",
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "BMW X5 SUV в градска среда",
+        "url": "/dealer/stock/11754657468074384-5.webp",
+        "alt": "Porsche 911 997 Turbo — снимка 5"
       },
+      {
+        "url": "/dealer/stock/11754657468074384-6.webp",
+        "alt": "Porsche 911 997 Turbo — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "Berlin", region: "Berlin", country: "Germany" },
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "xDrive40d",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 28_531,
-      mileageUnit: "km",
-      enginePowerHp: 340,
-      colorExterior: "Carbon Black",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Бургас",
+      "region": "Промишлена зона — Север",
+      "country": "България"
     },
-    seller: {
-      id: "import-demo-supplier",
-      type: "dealer",
-      displayName: "AutoMarket Import Demo",
-      verificationStatus: "verified",
-      city: "Hamburg",
+    "features": [],
+    "spec": {
+      "make": "Porsche",
+      "model": "911 997 Turbo",
+      "year": 2008,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 79907,
+      "mileageUnit": "km",
+      "enginePowerHp": 480,
+      "colorExterior": "Не е посочен"
     },
-    supply: {
-      convertedPrice: { amount: 112_456, currency: "BGN" },
-      delivery: {
-        destinationCountryCode: "BG",
-        eligibleCountryCodes: ["BG", "DE", "RO"],
-        status: "quote_required",
-      },
-      documentCount: 4,
-      landedCostStatus: "quote_required",
-      nativePrice: { amount: 57_499, currency: "EUR" },
-      origin: {
-        city: "Berlin",
-        country: "Germany",
-        countryCode: "DE",
-        region: "Berlin",
-      },
-      priceConversion: {
-        convertedAt: "2026-07-12T18:00:00.000Z",
-        status: "converted_estimate",
-      },
-      provenance: {
-        externalReference: "DEMO-1009",
-        freshUntil: "2026-07-14T18:00:00.000Z",
-        freshnessStatus: "fresh",
-        lastConfirmedAt: "2026-07-12T18:00:00.000Z",
-        sourceDisplayName: "Authorized demo feed",
-        sourceKind: "https_feed",
-      },
-      supplier: {
-        kybStatus: "verified",
-        orgType: "importer",
-        trustStatus: "verified",
-        verifiedImporter: true,
-      },
+    "seller": {
+      "id": "dealer-mg7-group",
+      "type": "dealer",
+      "displayName": "MG7 Group",
+      "verificationStatus": "unverified",
+      "city": "Бургас",
+      "logoUrl": "/dealer/logo-light.png"
     },
-    publishedAt: "2026-07-12T18:00:00.000Z",
-    promoted: false,
-  },
+    "publishedAt": "2026-09-09T03:00:38.750Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
+  }
 ];
 
 const matchesText = (listing: VehicleListing, query: string) => {
@@ -726,9 +805,7 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {
-  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
-};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
 
 export const getMockListingBySlug = (slug: string) => {
   const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
@@ -760,7 +837,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
+export const mockSavedListingIds = [] as string[];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -775,54 +852,9 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [
-  {
-    id: "saved-search-premium-suv",
-    title: "Premium SUVs under 100k",
-    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
-    filters: {
-      body: "suv",
-      category: "car",
-      priceMax: 100_000,
-      seller: "dealer",
-    },
-    cadence: "daily",
-    newMatches: 3,
-    lastRunAt: "2026-06-06T07:00:00.000Z",
-  },
-  {
-    id: "saved-search-lease-ev",
-    title: "Lease-ready EVs",
-    description: "Electric lease offers with automatic transmission.",
-    filters: {
-      category: "lease",
-      fuel: "electric",
-      transmission: "automatic",
-    },
-    cadence: "instant",
-    newMatches: 1,
-    lastRunAt: "2026-06-07T06:30:00.000Z",
-  },
-  {
-    id: "saved-search-family-varna",
-    title: "Family cars near Varna",
-    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
-    filters: {
-      category: "car",
-      location: "Varna",
-      mileageMax: 90_000,
-    },
-    cadence: "weekly",
-    newMatches: 0,
-    lastRunAt: "2026-06-03T08:00:00.000Z",
-  },
-];
+export const mockSavedSearches: MockSavedSearch[] = [];
 
-const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
-  "am-1001": "active",
-  "am-1003": "pending_review",
-  "am-1007": "draft",
-};
+const sellerListingStatuses: Record<string, VehicleListing["status"]> = {};
 
 export const getMockSellerListings = () =>
   mockListings
@@ -851,48 +883,7 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [
-  {
-    buyerName: "Nikolay Petrov",
-    id: "lead-1001",
-    intent: "finance",
-    listingId: "am-1001",
-    listingTitle: "2020 BMW X5 M50d",
-    receivedAt: "2026-06-07T07:30:00.000Z",
-    source: "listing",
-    status: "new",
-  },
-  {
-    buyerName: "Elena Dimitrova",
-    id: "lead-1002",
-    intent: "test_drive",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    receivedAt: "2026-06-06T15:20:00.000Z",
-    source: "saved_search",
-    status: "contacted",
-  },
-  {
-    buyerName: "Martin Georgiev",
-    id: "lead-1003",
-    intent: "availability",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    receivedAt: "2026-06-05T12:10:00.000Z",
-    source: "dealer_profile",
-    status: "qualified",
-  },
-  {
-    buyerName: "Iva Marinova",
-    id: "lead-1004",
-    intent: "trade_in",
-    listingId: "am-1005",
-    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
-    receivedAt: "2026-06-04T09:45:00.000Z",
-    source: "listing",
-    status: "closed",
-  },
-];
+export const mockDealerLeads: MockDealerLead[] = [];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -930,64 +921,7 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [
-  {
-    id: "report-1001",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    reason: "incorrect_details",
-    details:
-      "Buyer says lease terms in the message thread do not match the listing price.",
-    reporter: "Elena Dimitrova",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
-    createdAt: "2026-06-07T09:20:00.000Z",
-  },
-  {
-    id: "report-1002",
-    listingId: "am-1006",
-    listingTitle: "2021 Range Rover Sport SVR",
-    reason: "duplicate",
-    details:
-      "System found matching photos and mileage on another active dealer listing.",
-    reporter: "System",
-    source: "system_flag",
-    status: "reviewing",
-    severity: "medium",
-    flags: ["Photo reuse", "Similar VIN pattern"],
-    createdAt: "2026-06-07T06:45:00.000Z",
-  },
-  {
-    id: "report-1003",
-    listingId: "am-1002",
-    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
-    reason: "seller_behavior",
-    details:
-      "Reporter says seller asked to move payment to an unverified channel.",
-    reporter: "Nikolay Petrov",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Payment risk", "Private seller"],
-    createdAt: "2026-06-06T17:30:00.000Z",
-  },
-  {
-    id: "report-1004",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    reason: "prohibited_content",
-    details:
-      "Admin review flagged promotional copy that may overstate warranty coverage.",
-    reporter: "Admin review",
-    source: "admin_review",
-    status: "dismissed",
-    severity: "low",
-    flags: ["Copy review"],
-    createdAt: "2026-06-05T12:10:00.000Z",
-  },
-];
+export const mockModerationReports: MockModerationReport[] = [];
 
 export interface MockTrustReview {
   city: string;
@@ -1001,52 +935,7 @@ export interface MockTrustReview {
   submittedAt: string;
 }
 
-export const mockTrustReviews: MockTrustReview[] = [
-  {
-    entityId: "dealer-black-sea-ev",
-    entityName: "Black Sea EV",
-    entityType: "dealer",
-    city: "Varna",
-    status: "pending",
-    riskLevel: "medium",
-    linkedListings: 1,
-    documents: ["Business registration", "VAT certificate", "Dealer address"],
-    submittedAt: "2026-06-07T08:00:00.000Z",
-  },
-  {
-    entityId: "seller-124",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Plovdiv",
-    status: "pending",
-    riskLevel: "high",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-06T16:15:00.000Z",
-  },
-  {
-    entityId: "dealer-trakia-auto",
-    entityName: "Trakia Auto",
-    entityType: "dealer",
-    city: "Stara Zagora",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["Business registration", "Dealer address"],
-    submittedAt: "2026-06-05T10:30:00.000Z",
-  },
-  {
-    entityId: "seller-882",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Varna",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-04T14:40:00.000Z",
-  },
-];
+export const mockTrustReviews: MockTrustReview[] = [];
 
 export interface MockAuditLogEntry {
   action: string;
@@ -1058,35 +947,7 @@ export interface MockAuditLogEntry {
   note: string;
 }
 
-export const mockAuditLog: MockAuditLogEntry[] = [
-  {
-    id: "audit-1001",
-    actor: "Admin",
-    action: "report.opened",
-    entityType: "report",
-    entityId: "report-1001",
-    note: "Moved Tesla lease report to new queue.",
-    createdAt: "2026-06-07T09:25:00.000Z",
-  },
-  {
-    id: "audit-1002",
-    actor: "System",
-    action: "listing.flagged",
-    entityType: "listing",
-    entityId: "am-1006",
-    note: "Duplicate image match over threshold.",
-    createdAt: "2026-06-07T06:45:00.000Z",
-  },
-  {
-    id: "audit-1003",
-    actor: "Trust ops",
-    action: "dealer.verified",
-    entityType: "dealer",
-    entityId: "dealer-trakia-auto",
-    note: "Business registry and address checks passed.",
-    createdAt: "2026-06-06T11:15:00.000Z",
-  },
-];
+export const mockAuditLog: MockAuditLogEntry[] = [];
 
 export const getMockAdminStats = () => {
   const openReports = mockModerationReports.filter(
@@ -1202,44 +1063,7 @@ export interface MockActivePromotion {
   status: "scheduled" | "active" | "ended";
 }
 
-export const mockActivePromotions: MockActivePromotion[] = [
-  {
-    id: "promotion-1001",
-    listingId: "am-1001",
-    productId: "promo-search-top-7",
-    status: "active",
-    startsAt: "2026-06-05T08:00:00.000Z",
-    endsAt: "2026-06-12T08:00:00.000Z",
-    spend: { amount: 39, currency: "EUR" },
-    impressions: 4200,
-    clicks: 184,
-    leads: 8,
-  },
-  {
-    id: "promotion-1002",
-    listingId: "am-1003",
-    productId: "promo-lease-partner-30",
-    status: "active",
-    startsAt: "2026-06-01T08:00:00.000Z",
-    endsAt: "2026-07-01T08:00:00.000Z",
-    spend: { amount: 149, currency: "EUR" },
-    impressions: 6100,
-    clicks: 246,
-    leads: 12,
-  },
-  {
-    id: "promotion-1003",
-    listingId: "am-1008",
-    productId: "promo-category-featured-14",
-    status: "scheduled",
-    startsAt: "2026-06-10T08:00:00.000Z",
-    endsAt: "2026-06-24T08:00:00.000Z",
-    spend: { amount: 79, currency: "EUR" },
-    impressions: 0,
-    clicks: 0,
-    leads: 0,
-  },
-];
+export const mockActivePromotions: MockActivePromotion[] = [];
 
 export interface MockDealerBillingAccount {
   currentPlanId: string;

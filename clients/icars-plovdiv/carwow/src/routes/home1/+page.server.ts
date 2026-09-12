@@ -4,7 +4,7 @@ import { routeSeo } from '$lib/server/daynight-seo';
 import type { HomeInitialViewport } from '$lib/types/home';
 import type { PageServerLoad } from './$types';
 
-// /home1 is an A/B copy of the home for the Day Night Auto CEO to choose between
+// /home1 is an A/B copy of the home for the icars CEO to choose between
 // the hero toggle styles: identical data + layout, but the segmented-control
 // variant of Купи/Продай instead of the underline (see +page.svelte).
 export const load: PageServerLoad = ({ request, setHeaders }) => {

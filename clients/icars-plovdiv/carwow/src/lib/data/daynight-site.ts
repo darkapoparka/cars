@@ -4,35 +4,34 @@ import {
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const location = 'гр. София, Студентски град, ул. Атанас Манчев 18';
+const location = "ул. Напредък 1, Индустриална зона — Север, Пловдив";
 
 export const daynightSite = {
-	name: 'DAY NIGHT AUTO GROUP',
-	shortName: 'Day Night Auto',
-	phone: '0877733110',
-	phoneLabel: '0877 733 110',
-	email: '',
-	location,
-	locationShort: 'Студентски град, София',
-	hoursLabel: 'Огледи с предварителна уговорка',
-	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
-	mapUrl:
-		'https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018',
-	mapLabel: 'Day Night Auto Group, София, България',
-	sourceInventory: 'https://daynight.mobile.bg/',
-	inventoryCount: 40,
-	logoLight: '/brand/daynight-logo-generated.png',
-	logoDark: '/brand/daynight-logo-generated.png',
-	primaryCta: 'Виж наличните автомобили',
-	sellCarCta: 'Продай автомобил',
-	accountCta: 'Свържи се с екипа',
-	phoneCta: 'Обади се за оглед',
-	heroTitle: 'DAY NIGHT AUTO GROUP',
-	heroSubtitle: 'София - Премиум автомобили в София с подреден процес за оглед и запитване',
-	reviewCount: daynightReviewCount,
-	reviewCountLabel: daynightReviewCountLabel,
-	reviewLinkLabel: daynightReviewLinkLabel
-} as const;
+  "name": "icars",
+  "shortName": "icars",
+  "phone": "0885595555",
+  "phoneLabel": "0885 595 555",
+  "email": "",
+  "location": "ул. Напредък 1, Индустриална зона — Север, Пловдив",
+  "locationShort": "Индустриална зона — Север, Пловдив",
+  "hoursLabel": "Оглед с предварителна уговорка. Работно време: потвърдете по телефона.",
+  "mapEmbedSrc": "https://www.google.com/maps?q=%D1%83%D0%BB.%20%D0%9D%D0%B0%D0%BF%D1%80%D0%B5%D0%B4%D1%8A%D0%BA%201%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2&output=embed",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=icars%20%D1%83%D0%BB.%20%D0%9D%D0%B0%D0%BF%D1%80%D0%B5%D0%B4%D1%8A%D0%BA%201%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2",
+  "mapLabel": "icars, Пловдив",
+  "sourceInventory": "https://icars.mobile.bg/",
+  "inventoryCount": 10,
+  "logoLight": "/dealer/logo-light.png",
+  "logoDark": "/dealer/logo-dark.png",
+  "primaryCta": "Разгледайте обявите",
+  "sellCarCta": "Въпрос за автомобил",
+  "accountCta": "Свържете се с автосалона",
+  "phoneCta": "Обадете се за оглед",
+  "heroTitle": "ICARS",
+  "heroSubtitle": "Автомобилни обяви в Пловдив. Сравнете детайлите и уговорете оглед.",
+  "reviewCount": 0,
+  "reviewCountLabel": "Няма добавени отзиви",
+  "reviewLinkLabel": "Информация за отзивите"
+};
 
 export const publicNavItems = [
 	{ label: 'Начало', href: '/' },
@@ -77,7 +76,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Day Night Auto', href: '/about' },
+			{ label: 'За icars', href: '/about' },
 			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },

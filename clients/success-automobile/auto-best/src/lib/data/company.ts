@@ -56,78 +56,73 @@ export function resolveImportUrl(value: string | null): string | null {
 
 export const companyServices: CompanyService[] = [
   {
-    index: '01',
-    icon: 'inspection',
-    title: `Оглед в ${brand.city}`,
-    description: `Посещение в ${brand.city} с предварителна уговорка.`,
-    href: '/contact?topic=inspection',
-    cta: 'Запазете оглед'
+    "index": "01",
+    "icon": "inspection",
+    "title": "Оглед в Пловдив",
+    "description": "Потвърдете автомобила, адреса и удобния час по телефона.",
+    "href": "/contact?topic=inspection",
+    "cta": "Уговорете посещение"
   },
   {
-    index: '02',
-    icon: 'import',
-    title: 'Внос по заявка',
-    description: 'Обсъдете автомобил, бюджет и внос с екипа.',
-    href: '/contact?topic=import',
-    cta: 'Попитайте за внос'
+    "index": "02",
+    "icon": "import",
+    "title": "Документи за автомобила",
+    "description": "Поискайте информация за произход, регистрация и документи преди решение.",
+    "href": "/contact?topic=import",
+    "cta": "Попитайте за документи"
   },
   {
-    index: '03',
-    icon: 'leasing',
-    title: 'Собствен лизинг',
-    description: 'Условия според избрания автомобил.',
-    href: '/contact?topic=leasing',
-    cta: 'Обсъдете лизинг'
+    "index": "03",
+    "icon": "leasing",
+    "title": "Бюджет и условия",
+    "description": "Потвърдете цялата цена и условията. Демо калкулаторът не е оферта или одобрение за кредит.",
+    "href": "/contact?topic=leasing",
+    "cta": "Уточнете условията"
   },
   {
-    index: '04',
-    icon: 'trade-in',
-    title: 'Оценка за бартер',
-    description: 'Предложете своя автомобил за индивидуална оценка.',
-    href: '/contact?topic=trade-in',
-    cta: 'Поискайте оценка'
+    "index": "04",
+    "icon": "trade-in",
+    "title": "Въпрос за автомобила",
+    "description": "Изберете обява и подгответе въпросите си. Този преглед не изпраща съобщения.",
+    "href": "/contact?topic=trade-in",
+    "cta": "Подгответе въпрос"
   }
 ];
 
 export const contactTopics: ContactTopic[] = [
   {
-    id: 'general',
-    label: 'Общ въпрос',
-    title: 'Разговор с екипа',
-    description: `За наличност, следващи стъпки или друг въпрос за ${brand.name}.`
+    "id": "general",
+    "label": "Общ въпрос",
+    "title": "Контакт с Success Automobile",
+    "description": "Автомобили в Пловдив. Разгледайте детайлите и уговорете оглед."
   },
   {
-    id: 'inspection',
-    label: 'Оглед',
-    title: `Оглед в ${brand.city}`,
-    description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
+    "id": "inspection",
+    "label": "Оглед",
+    "title": "Оглед в Пловдив",
+    "description": "Обадете се, за да потвърдите наличността и часа. Онлайн потвърждение за запазване не се изпраща."
   },
   {
-    id: 'import',
-    label: 'Внос',
-    title: 'Внос по заявка',
-    description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
-    mobileDescription: 'Добавете обява или опишете какво търсите.'
+    "id": "import",
+    "label": "Документи",
+    "title": "Въпрос за произход и документи",
+    "description": "Уточнете произход, регистрация и налични документи за избрания автомобил."
   },
   {
-    id: 'leasing',
-    label: 'Лизинг',
-    title: 'Собствен лизинг',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
+    "id": "leasing",
+    "label": "Условия",
+    "title": "Цена и условия",
+    "description": "Уточнете условията директно. Изчисленията в този демо сайт не са финансова оферта."
   },
   {
-    id: 'trade-in',
-    label: 'Бартер',
-    title: 'Бартер и оценка',
-    description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
-    mobileDescription: 'Поискайте оценка за продажба или бартер.'
+    "id": "trade-in",
+    "label": "Друг въпрос",
+    "title": "Въпрос към автосалона",
+    "description": "Демонстрационна подготовка на запитване. Приемането на бартер или изкупуване не е потвърдено за всяка обява."
   }
 ];
 
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
 
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+export const showroomCoordinates = null;

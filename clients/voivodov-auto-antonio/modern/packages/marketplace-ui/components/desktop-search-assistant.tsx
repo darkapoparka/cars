@@ -104,7 +104,7 @@ const ListingSuggestionContent = ({
       <span className="min-w-32 shrink-0 text-right">
         <span className="block font-semibold text-compact-control text-foreground">
           {formatMoney(listing.price, isBg ? "bg" : "en")}
-        </span>
+        {listing.priceTaxLabel ? <span className="block whitespace-normal font-normal text-xs text-muted-foreground leading-4">{listing.priceTaxLabel}</span> : null}</span>
         {listing.monthlyEstimate ? (
           <span className="mt-1 block text-micro text-muted-foreground">
             {isBg ? "от " : "from "}

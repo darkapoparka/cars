@@ -41,7 +41,7 @@ import {
 } from "./listings";
 
 const actor = {
-  city: "Sofia",
+  city: "Пловдив",
   clerkUserId: "user_1",
   displayName: "Seller",
 };
@@ -54,7 +54,7 @@ const listingInput = {
   description: "Well maintained vehicle with service history.",
   enginePowerHp: undefined,
   fuelType: "diesel" as const,
-  locationCity: "Sofia",
+  locationCity: "Пловдив",
   locationCountry: "Bulgaria",
   locationRegion: undefined,
   make: "BMW",
@@ -81,7 +81,7 @@ describe("owner mutation guards for source-managed projections", () => {
     mocks.ensureSellerProfile.mockResolvedValue({
       account: { id: "account_1" },
       sellerProfile: {
-        city: "Sofia",
+        city: "Пловдив",
         displayName: "Seller",
         id: "seller_1",
         verificationStatus: "verified",
@@ -254,7 +254,7 @@ describe("owner mutation guards for source-managed projections", () => {
     mocks.ensureDealerActor.mockResolvedValueOnce({
       account: { id: "account_1" },
       dealerOrg: {
-        city: "София",
+        city: "Пловдив",
         displayName: "Dealer",
         id: "dealer_1",
         verificationStatus: "verified",

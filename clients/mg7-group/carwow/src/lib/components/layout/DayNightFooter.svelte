@@ -8,12 +8,12 @@
 	const phoneHref = `tel:${daynightSite.phone}`;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: 'https://www.facebook.com/61566304063141/',
+		href: '',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
+		href: '',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
@@ -52,7 +52,7 @@
 							<a
 								href={resolve('/')}
 								class="inline-block no-underline"
-								aria-label="Day Night Auto начална страница"
+								aria-label="MG7 Group начална страница"
 							>
 								<img
 									class="mb-[22px] block h-[54px] w-[190px] object-contain"
@@ -136,29 +136,15 @@
 								{daynightSite.location}
 							</a>
 							<p class="m-0 mb-4 text-sa-sm leading-[22px] text-sa-surface/60">
-								Day Night Auto предлага актуална дигитална витрина с наличност, запитвания и ясни
+								MG7 Group предлага актуална дигитална витрина с наличност, запитвания и ясни
 								следващи стъпки.
 							</p>
 							<ul class="m-0 mb-3 flex list-none flex-wrap gap-2 p-0">
 								<li>
-									<a
-										{...facebookLinkProps}
-										title="Facebook"
-										aria-label="Facebook"
-										class={socialLinkClasses}
-									>
-										<DayNightFooterIcon name="facebook" />
-									</a>
+									
 								</li>
 								<li>
-									<a
-										{...instagramLinkProps}
-										title="Instagram"
-										aria-label="Instagram"
-										class={socialLinkClasses}
-									>
-										<DayNightFooterIcon name="instagram" />
-									</a>
+									
 								</li>
 								<li>
 									<a
@@ -183,8 +169,8 @@
 								<li>
 									<a
 										{...mapLinkProps}
-										title="Отвори локацията на Day Night Auto в Google Maps"
-										aria-label="Отвори локацията на Day Night Auto в Google Maps"
+										title="Отвори локацията на MG7 Group в Google Maps"
+										aria-label="Отвори локацията на MG7 Group в Google Maps"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="location" />
@@ -202,7 +188,7 @@
 								<a
 									href={resolve(contactHref)}
 									class="inline-flex min-h-11 items-center justify-center rounded-sa-xs border border-sa-surface/20 px-3.5 text-sa-base leading-none font-semibold text-sa-surface/75 no-underline transition duration-150 ease-sa hover:border-sa-blue hover:bg-sa-blue hover:text-sa-surface focus-visible:border-sa-blue focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue"
-									title="Свържете се със Day Night Auto."
+									title="Свържете се със MG7 Group."
 								>
 									Свържете се
 								</a>
@@ -222,8 +208,8 @@
 				<p class="m-0 text-sa-sm leading-[22px] text-sa-surface/60">
 					©2026 <a
 						class="text-sa-sm leading-[22px] text-sa-surface no-underline"
-						href={resolve('/')}>Day Night Auto</a
-					>. Всички права запазени.
+						href={resolve('/')}>MG7 Group</a
+					>. Демонстрационна концепция. Не е официалният сайт.
 				</p>
 				<ul
 					class="m-0 flex list-none flex-wrap items-center p-0 max-[767px]:w-full max-[767px]:justify-start"

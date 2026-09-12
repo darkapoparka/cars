@@ -20,9 +20,9 @@
 	const currentSeo = $derived(
 		browser && page.url.searchParams.get('intent') === 'import'
 			? {
-					title: 'Внос на автомобил | Day Night Auto София',
+					title: 'Внос на автомобил | MG7 Group Бургас',
 					description:
-						'Изпратете обява или опишете желания автомобил и получете конкретни варианти за внос от Day Night Auto.'
+						'Изпратете обява или опишете желания автомобил и получете конкретни варианти за внос от MG7 Group.'
 				}
 			: data.seo
 	);

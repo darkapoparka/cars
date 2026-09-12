@@ -14,42 +14,22 @@ export interface Dealer {
 }
 
 export const dealers: Dealer[] = [
-	{
-		slug: "day-night-auto-group",
-		name: daynightSite.name,
-		location: "София",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/brand/daynight-hero-search-composed.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.8,
-		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Финансиране']
-	},
-	{
-		slug: "day-night-auto-group-documents",
-		name: "Day Night Auto Документи и съдействие",
-		location: "София",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: daynightSite.logoDark,
-		cover: '/brand/daynight-hero-mobile-search-composed.webp',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Документи', 'Регистрация', 'Съдействие']
-	},
-	{
-		slug: "day-night-auto-group-sourcing",
-		name: "Day Night Auto Подбор на автомобил",
-		location: "София",
-		address: daynightSite.location,
-		phone: daynightSite.phoneLabel,
-		logo: '/brand/daynight-logo-generated.png',
-		cover: '/brand/daynight-logo-generated.png',
-		inventory: daynightSite.inventoryCount,
-		rating: 4.7,
-		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
-	}
+  {
+    "slug": "mg7-group",
+    "name": "MG7 Group",
+    "location": "Бургас",
+    "address": "Северна промишлена зона, ул. Атанас Буров 7",
+    "phone": "0876 277 777",
+    "logo": "/dealer/logo-light.png",
+    "cover": "/dealer/stock/21785564544332885-1.webp",
+    "inventory": 10,
+    "rating": 0,
+    "specialties": [
+      "Публични обяви",
+      "Контакт по телефона",
+      "Оглед след потвърждение"
+    ]
+  }
 ];
 
 export function getDealerBySlug(slug: string) {

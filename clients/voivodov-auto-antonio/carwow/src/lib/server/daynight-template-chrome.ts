@@ -31,8 +31,8 @@ type PresentationIconLink = {
 	kind: 'direct' | 'external';
 };
 
-const daynightFacebookUrl = 'https://www.facebook.com/61566304063141/';
-const daynightInstagramUrl = 'https://www.instagram.com/daynight.auto.plovdiv/';
+const daynightFacebookUrl = '';
+const daynightInstagramUrl = '';
 
 const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
 	{
@@ -102,9 +102,9 @@ const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 
 const footerLinkGroups: readonly FooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'VOIVODOV AUTO & ANTONIO',
 		links: [
-			{ label: 'За Day Night Auto', href: '/about' },
+			{ label: 'За VOIVODOV AUTO & ANTONIO', href: '/about' },
 			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
@@ -284,6 +284,7 @@ function renderHeaderTopBarSocialLinks() {
 	];
 
 	return `<ul class="header-top-bar--socical pl-40">${links
+		.filter(link => Boolean(link.href))
 		.map((link) => renderIconLink(link))
 		.join('')}</ul>`;
 }
@@ -346,9 +347,9 @@ function renderFooterSocialLinks() {
 			kind: 'external'
 		},
 		{
-			label: 'Viber / Телефон',
+			label: 'Телефон',
 			href: `tel:${daynightSite.phone}`,
-			title: `Свържете се с ${daynightSite.shortName} по телефон или Viber.`,
+			title: `Свържете се с ${daynightSite.shortName} по телефона.`,
 			kind: 'direct',
 			icon: whitePhoneIcon
 		},
@@ -362,13 +363,14 @@ function renderFooterSocialLinks() {
 		{
 			label: 'Google Maps',
 			href: daynightSite.mapUrl,
-			title: 'Отвори локацията на Day Night Auto в Google Maps',
+			title: 'Отвори локацията на VOIVODOV AUTO & ANTONIO в Google Maps',
 			kind: 'external',
 			icon: whiteLocationIcon
 		}
 	];
 
 	return `<ul class="widget-socical mb-12">${links
+		.filter(link => Boolean(link.href))
 		.map((link) => renderIconLink(link, 'effect-svg-hover'))
 		.join('')}</ul>`;
 }
@@ -387,7 +389,7 @@ export function renderPresentationFooter() {
 <img class="logo" ${desktopOnlyImageAttrs(daynightSite.logoLight, 570, '190px')} alt="${daynightSite.shortName}">
 </a>
 <p class="text-xs uppercase font-weight-500 mb-8 text-muted">Огледи и консултация</p>
-<p class="text-white mb-28">Огледи с предварителна уговорка.<br>Наличност, финансиране, бартер и съдействие по документи.</p>
+<p class="text-white mb-28">Огледи с предварителна уговорка.<br>Публични обяви, въпроси и подготовка за оглед.</p>
 </div>
 <form class="form-footer relative" action="/contact" method="get">
 <label class="sr-only" for="footer-email">Имейл за нови оферти</label>
@@ -410,13 +412,13 @@ ${footerColumns}
 <a href="tel:${daynightSite.phone}" class="flex items-start h7">${daynightSite.phoneLabel}</a>
 </p>
 <a href="${daynightSite.mapUrl}" target="_blank" rel="noopener" class="block font-weight-500 text-white mb-20 h7">${daynightSite.location}</a>
-<p class="text-sm text-muted mb-16">Day Night Auto предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
+<p class="text-sm text-muted mb-16">VOIVODOV AUTO & ANTONIO предлага актуална дигитална витрина с наличност, запитвания и ясни следващи стъпки.</p>
 ${renderFooterSocialLinks()}
 </div>
 <div>
 <p class="text-sm text-white font-weight-600 mb-8">Имате въпрос?</p>
 <div class="flex items-center gap-12">
-<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Day Night Auto">Свържете се</a>
+<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със VOIVODOV AUTO & ANTONIO">Свържете се</a>
 </div>
 </div>
 </div>
@@ -428,7 +430,7 @@ ${renderFooterSocialLinks()}
 <div class="footer-bottom">
 <div class="container">
 <div class="flex justify-between md-flex-col">
-<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">Day Night Auto</a>. Всички права запазени.</p>
+<p class="text-sm text-muted">©2026 <a class="text-sm text-white" href="/">VOIVODOV AUTO & ANTONIO</a>. Демонстрационна концепция. Не е официалният сайт.</p>
 <ul class="footer-bottom-links">
 <li><a href="/terms">Условия за ползване</a></li>
 <li><a href="/terms">Поверителност</a></li>
@@ -451,7 +453,7 @@ export function renderHeaderContact() {
 
 	return `<ul class="header-contact">
 <li class="daynight-header-contact daynight-header-contact--phone">
-<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на Day Night Auto">${phoneIcon()}</a>
+<a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на VOIVODOV AUTO & ANTONIO">${phoneIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="tel:${daynightSite.phone}">${daynightSite.phoneLabel}</a>
 <a class="text-xs font-weight-500" href="${viberHref}">Обаждане / Viber</a>
@@ -466,17 +468,17 @@ export function renderHeaderContact() {
 </div>
 </li>
 <li class="daynight-header-contact daynight-header-contact--location">
-<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до Day Night Auto">${locationIcon()}</a>
+<a href="${daynightSite.mapUrl}" class="icon" target="_blank" rel="noopener" aria-label="Отвори карта до VOIVODOV AUTO & ANTONIO">${locationIcon()}</a>
 <div class="daynight-header-contact__body">
 <a class="text" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">${daynightSite.mapLabel}</a>
 <a class="text-xs font-weight-500 uppercase" href="${daynightSite.mapUrl}" target="_blank" rel="noopener">ВИЖ КАРТА</a>
 </div>
-<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до Day Night Auto">
+<a class="daynight-map-preview" href="${daynightSite.mapUrl}" target="_blank" rel="noopener" aria-label="Отвори Google карта до VOIVODOV AUTO & ANTONIO">
 <span class="daynight-map-preview__thumb">
 <span class="daynight-map-preview__pin"></span>
 </span>
 <span class="daynight-map-preview__body">
-<strong>Day Night Auto София</strong>
+<strong>VOIVODOV AUTO & ANTONIO Пловдив</strong>
 <span>${daynightSite.mapLabel}</span>
 <em>Отвори в Google Maps</em>
 </span>

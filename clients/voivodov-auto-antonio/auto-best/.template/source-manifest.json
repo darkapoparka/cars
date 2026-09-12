@@ -1,1121 +1,1186 @@
 {
   "schemaVersion": 1,
   "key": "auto-best",
-  "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
-  "destination": "J:\\cars\\templates\\auto-best",
-  "copiedAt": "2026-09-06T14:14:49.865Z",
-  "sourceUrl": "http://127.0.0.1:5173/",
+  "source": "https://github.com/darkapoparka/cars/tree/faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca/templates/auto-best",
+  "destination": "clients/voivodov-auto-antonio/auto-best",
+  "copiedAt": "2026-09-09T03:33:04.904Z",
+  "method": "independent Git tree reconstruction; retained blobs reused by exact Git object ID",
   "git": {
-    "root": "M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/autodeal-best-day-night",
-    "branch": "main",
-    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
-    "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
-    "status": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp",
-    "headAfterCopy": "ab92ce9671fb1b56afa38f693755b41aee9c28b0"
+    "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976"
   },
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 42,
-      "sha256": "bfe2e7093f352205764534b2fc590dd92addf7e46dc6e29e66e6701706a9e581"
+      "gitBlob": "f8ff2b5de18419593b5a1b49c877160bf34c5408",
+      "bytes": 42
     },
     {
       "path": ".gitignore",
-      "bytes": 562,
-      "sha256": "fc366628445d07863dfc09f8664220b3a91b9c7e196dd7ddb924d7e5008a5a22"
+      "gitBlob": "2e0ab7c234a91d518655ca02d522c63f70e28bd4",
+      "bytes": 562
     },
     {
       "path": ".vercelignore",
-      "bytes": 749,
-      "sha256": "28c742b5673ffd02fd48cfb0091c623cea98e72819496141cfdc15d7dc5dfb0c"
+      "gitBlob": "60e136c9beceb1976d95b97a9e89d4e058ccc58c",
+      "bytes": 749
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "gitBlob": "ce98b7b910b4e5ad11af3dac68281dd6c325f2ef",
+      "bytes": 4699
     },
     {
       "path": "ASSET_PROVENANCE.md",
-      "bytes": 24444,
-      "sha256": "27f8a80bbde149c9374e1657a8a2c67d998ca948d2d364280cb6bfe8cbfa7b06"
-    },
-    {
-      "path": "docs/architecture/.migration-marker",
-      "bytes": 193,
-      "sha256": "1ba90a1069331d8f5283fb546b7fe73f3596eae28b440f484c4727a92d43cb86"
-    },
-    {
-      "path": "docs/architecture/README.md",
-      "bytes": 7199,
-      "sha256": "f9e23d4789779ed27286e51e874f0d7974eabd7db7a94e2213a121dfe59a2140"
-    },
-    {
-      "path": "package-lock.json",
-      "bytes": 78666,
-      "sha256": "9e9d03327224086f01ec6de7d0d5b85816aabe92fd354f504825ad306db1f90d"
-    },
-    {
-      "path": "package.json",
-      "bytes": 1204,
-      "sha256": "23e0195643d89f623756eb984ae3e726609b131550865442cda0cbacb30eeefd"
+      "gitBlob": "1cc6ab999c97a977924393898fc21d4ad5c85c50",
+      "bytes": 24444
     },
     {
       "path": "PRODUCT.md",
-      "bytes": 2128,
-      "sha256": "4a671507afa97f22465acee1bc19dd863655e395b6430c743da955bc2b4a8f60"
-    },
-    {
-      "path": "provenance/browse-campaign-pair-2026-09-06.md",
-      "bytes": 2938,
-      "sha256": "6392fcab3d9f7067d4de05ce0137316d54631bfb0a9b8287ee30c25217308b8c"
-    },
-    {
-      "path": "provenance/collection-lineup-2026-09-06.md",
-      "bytes": 2761,
-      "sha256": "d8c633efec6273b5be3bb1fc8d13046eb536cab5502d66a51eb4aa2fae6160ad"
-    },
-    {
-      "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
-      "bytes": 3314,
-      "sha256": "3b6f123f61b9a941671ed29550151eb442307431b98652c98cf6ea1f8df2e1f9"
-    },
-    {
-      "path": "provenance/hugeicons-LICENSE.txt",
-      "bytes": 1338,
-      "sha256": "50714aa0930b7ec52a08c79f608bf360841e9ef2ade5917ccc6551695570057f"
-    },
-    {
-      "path": "provenance/mirror-manifest.json",
-      "bytes": 67581,
-      "sha256": "4534b039345912e60ca0f634ada4882ba9e9e166f5f5b8b50bd5a0fb089f4d62"
-    },
-    {
-      "path": "provenance/phosphor-icons-LICENSE.txt",
-      "bytes": 1092,
-      "sha256": "ddbe6082ec3cf979db47e5af549d2849c5d6182b3e005ef91ce1dbb9eb122f11"
-    },
-    {
-      "path": "provenance/README.md",
-      "bytes": 1026,
-      "sha256": "6339af1ad39ee64136cd3637fab9f4bd70abc5a7ce14341e4dad6068491552c9"
-    },
-    {
-      "path": "provenance/simple-icons-LICENSE.md",
-      "bytes": 6569,
-      "sha256": "9046848b63a5c92bff14e4accca80bd987e0623b74adf9226ce5198d312b79d5"
-    },
-    {
-      "path": "provenance/superseded-collection-lineup/day-night-collection-lineup-v1.webp",
-      "bytes": 104868,
-      "sha256": "2f46252053944d55d8adaa6f235b792efabe004d6c19bb7afe13bca0bd1729e0"
-    },
-    {
-      "path": "provenance/superseded-hero-art/day-night-about-detail-v1.webp",
-      "bytes": 90850,
-      "sha256": "8ac8a13af6ab3a6d2791b181e40d8387f69dbff58b8d53f6ecd2cfada06790b2"
-    },
-    {
-      "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
-      "bytes": 57966,
-      "sha256": "fb1b9a24c1935e8458bee71a330cedc0766fe9d686fbfc21c1c4ac74cafae2d3"
-    },
-    {
-      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
-      "bytes": 118220,
-      "sha256": "3c86dc46335a9adbbd61d601a90b8332ac0f4663f6ca1eb777a9b11af9d64059"
-    },
-    {
-      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-graphite-v1.webp",
-      "bytes": 103672,
-      "sha256": "0dbe76f50ec8f198b63b57c8a0891fabb1fd875a745b18fc222d3be028d0f0b9"
-    },
-    {
-      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-silver-v1.webp",
-      "bytes": 103038,
-      "sha256": "56af63d9ca92410e85c262a852c732640296956e1139efea44b80e2a161132f6"
-    },
-    {
-      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-urus-v1.webp",
-      "bytes": 98126,
-      "sha256": "3d7d4882c635941a0430e67fb83b52a391b6d64a5cf3ef30726afa4eae981428"
-    },
-    {
-      "path": "provenance/vehicle-cutouts-2026-09-06.md",
-      "bytes": 4927,
-      "sha256": "98852c6449dbbfe5548492a1f90c681585c77f90bc0c2948c9642b7a6c0b886f"
-    },
-    {
-      "path": "provenance/vehicle-side-profile-prompts-2026-09-06.json",
-      "bytes": 5476,
-      "sha256": "74f1cd3f6c01031b696a624f9e762b85c2a181fcdd1a89f64597ef0e7a75c3fa"
-    },
-    {
-      "path": "provenance/vehicle-side-profiles-2026-09-06.md",
-      "bytes": 2087,
-      "sha256": "cb405da2c931a2772c0f21e149fe285b1804c78cf7eb858cfa50ffb2968264aa"
+      "gitBlob": "9f37713f9412fb1974d004d64bc3e5a8b7ccd10e",
+      "bytes": 2128
     },
     {
       "path": "README.md",
-      "bytes": 4992,
-      "sha256": "ecf340d0bf7999fac58132551327239a6fa9194b5874ae151d634a259034b790"
+      "gitBlob": "046c20a904d69ab54bc12293b5e35d8992aff130",
+      "bytes": 568
     },
     {
       "path": "REUSE_GUIDE.md",
-      "bytes": 2294,
-      "sha256": "a12cc36c04621533c330e1065baeeea86f513a3f2574ea0266ce7c5a9ba0f4b6"
-    },
-    {
-      "path": "scripts/check-architecture.mjs",
-      "bytes": 5438,
-      "sha256": "1fbba0a95299d0e257d15f5550120193ddd771dd76f2b5011963a99f2b1a0eb1"
-    },
-    {
-      "path": "scripts/check-assets.mjs",
-      "bytes": 3818,
-      "sha256": "5684df078304b3b0fd9002b1b2d544fdc371fb2384749a5d30408aa44c6ca987"
-    },
-    {
-      "path": "scripts/desktop-discovery-smoke.mjs",
-      "bytes": 6471,
-      "sha256": "542418452d5144404f4a8d4b98e1722092522795e421c1769484d808e86faf75"
-    },
-    {
-      "path": "scripts/enquiry-smoke.mjs",
-      "bytes": 8537,
-      "sha256": "8c721e4ba503826e52899ce3398c1e1258537fd9dfcf6a70d8e6f7e0815cc06a"
-    },
-    {
-      "path": "scripts/mobile-filter-smoke.mjs",
-      "bytes": 6403,
-      "sha256": "6ef2cc5ddbc378f8f049c30207790948a59862878831550d7347ad59a6814b7b"
-    },
-    {
-      "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
-      "bytes": 5474,
-      "sha256": "0d59888bfd2feda3dee279de297545b745cad2e2bbeb76c00ac296b8cb60e8ab"
-    },
-    {
-      "path": "scripts/provenance/legacy-mirror-snapshot-check.mjs",
-      "bytes": 1935,
-      "sha256": "a0c8d53864bbd4fb9108be6dee3abb21be361f951f1b305c062792a93216c090"
-    },
-    {
-      "path": "scripts/sveltekit-smoke.mjs",
-      "bytes": 153314,
-      "sha256": "f006e2f2312223f6962bde636b0c7c2eba9e386d2ce4766fe5d507dba5c5abc8"
+      "gitBlob": "d410d186d505da80848b07f3bdc47b6715def1fb",
+      "bytes": 2294
     },
     {
       "path": "SOURCE_LICENSE.md",
-      "bytes": 2263,
-      "sha256": "c77be97a4d764a3cb369bb2789458a1c89ca38e54b4238da39f2b29841f3964f"
+      "gitBlob": "31cce6d6277bf27276f049430e4c63c8d4b1867a",
+      "bytes": 2263
+    },
+    {
+      "path": "TEMPLATE.md",
+      "gitBlob": "524836fcd665b121c7887602ac10b904546bdb1c",
+      "bytes": 3570
+    },
+    {
+      "path": "docs/architecture/.migration-marker",
+      "gitBlob": "546edae6c1c6aa3044963987bc53a2256968aacf",
+      "bytes": 193
+    },
+    {
+      "path": "docs/architecture/README.md",
+      "gitBlob": "a38f3560b0d632d3a41e95c52d665a89b3e52695",
+      "bytes": 7199
+    },
+    {
+      "path": "package-lock.json",
+      "gitBlob": "b90ebe2da515b0620a8c436a1bc401de351ae764",
+      "bytes": 78666
+    },
+    {
+      "path": "package.json",
+      "gitBlob": "fb12508abf186720f54530eb3a55d02f3f4d75de",
+      "bytes": 1300
+    },
+    {
+      "path": "provenance/README.md",
+      "gitBlob": "834949f6b9ccb57db2269c06ab0441c7b478d3a4",
+      "bytes": 1026
+    },
+    {
+      "path": "provenance/browse-campaign-pair-2026-09-06.md",
+      "gitBlob": "7332154cb23789f260a2afbb0c0094d6fe72e5ef",
+      "bytes": 2938
+    },
+    {
+      "path": "provenance/collection-lineup-2026-09-06.md",
+      "gitBlob": "88c4cca2df1d0f6e873d6012fb76640f41823478",
+      "bytes": 2761
+    },
+    {
+      "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
+      "gitBlob": "7c9037b0f6b2c39c2aabc3f3ace7c614202ba20e",
+      "bytes": 3314
+    },
+    {
+      "path": "provenance/hugeicons-LICENSE.txt",
+      "gitBlob": "df8bd19ce770b4fcf36aa581fa2a665ecad240ad",
+      "bytes": 1338
+    },
+    {
+      "path": "provenance/mirror-manifest.json",
+      "gitBlob": "83d7dbf80c880335796a379e4077a4494db2dc82",
+      "bytes": 67581
+    },
+    {
+      "path": "provenance/phosphor-icons-LICENSE.txt",
+      "gitBlob": "cd036c93efaa44a5073e2321217899892facbc15",
+      "bytes": 1092
+    },
+    {
+      "path": "provenance/simple-icons-LICENSE.md",
+      "gitBlob": "70d4a7b6740c5d9b594ff2fc27d3ea7e89413185",
+      "bytes": 6569
+    },
+    {
+      "path": "provenance/superseded-collection-lineup/day-night-collection-lineup-v1.webp",
+      "gitBlob": "6da96a0da65c320cdf67202ce1e2d6cf6f0667ad",
+      "bytes": 104868
+    },
+    {
+      "path": "provenance/superseded-hero-art/day-night-about-detail-v1.webp",
+      "gitBlob": "8eade0d7d9d3bc127e08dc4fbd2347597b2b65c7",
+      "bytes": 90850
+    },
+    {
+      "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
+      "gitBlob": "64143ca06ec063abaec93a4998573646fedf7722",
+      "bytes": 57966
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
+      "gitBlob": "c03b3dec0d6cb4916b051b122a9ce14a11d2f778",
+      "bytes": 118220
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-graphite-v1.webp",
+      "gitBlob": "abe5aad7174392018a97c34d010ddf1b31875a8b",
+      "bytes": 103672
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-silver-v1.webp",
+      "gitBlob": "a5fa85a86591e85777d0382712f7362ee8d6730f",
+      "bytes": 103038
+    },
+    {
+      "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-urus-v1.webp",
+      "gitBlob": "4d3cd0a91280a0313a7a38db6794acf5d34860a2",
+      "bytes": 98126
+    },
+    {
+      "path": "provenance/vehicle-cutouts-2026-09-06.md",
+      "gitBlob": "5a7ec7f1997424287342d13f4f20489b8ff200a2",
+      "bytes": 4927
+    },
+    {
+      "path": "provenance/vehicle-side-profile-prompts-2026-09-06.json",
+      "gitBlob": "ba1b1bc937638115d857ce6fe857e12a251f29f7",
+      "bytes": 5476
+    },
+    {
+      "path": "provenance/vehicle-side-profiles-2026-09-06.md",
+      "gitBlob": "28999349f83f651beb3058f804b90b9db0ee76fa",
+      "bytes": 2087
+    },
+    {
+      "path": "scripts/browser.mjs",
+      "gitBlob": "7aaad808581d7123c204770913f97bb76c9cd8a5",
+      "bytes": 508
+    },
+    {
+      "path": "scripts/check-architecture.mjs",
+      "gitBlob": "1081678f19db64205a9c7e2e42dcc8b21e07c016",
+      "bytes": 5438
+    },
+    {
+      "path": "scripts/check-assets.mjs",
+      "gitBlob": "47af241fe534888bcc2eb5dc44b3b81c26847f0e",
+      "bytes": 4043
+    },
+    {
+      "path": "scripts/check-domain.mjs",
+      "gitBlob": "08dd03dcec8224d46954f0b4ff7ac305c1a522d0",
+      "bytes": 4037
+    },
+    {
+      "path": "scripts/desktop-discovery-smoke.mjs",
+      "gitBlob": "edd04059ef35cf638e4d8b8a6b9f84ca826051da",
+      "bytes": 6705
+    },
+    {
+      "path": "scripts/enquiry-smoke.mjs",
+      "gitBlob": "f973f63eddb458cd320b7e730225718147a00066",
+      "bytes": 8854
+    },
+    {
+      "path": "scripts/journey-smoke.mjs",
+      "gitBlob": "d2f0e7c421a635346d88e3762db933ef45f32494",
+      "bytes": 7206
+    },
+    {
+      "path": "scripts/mobile-filter-smoke.mjs",
+      "gitBlob": "9df2ec075577ec33b63611bd3366e3c417ab0f74",
+      "bytes": 6607
+    },
+    {
+      "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
+      "gitBlob": "3088e6e6c17fdf819eeb2712ce23846195efb705",
+      "bytes": 5474
+    },
+    {
+      "path": "scripts/provenance/legacy-mirror-snapshot-check.mjs",
+      "gitBlob": "1a21735fc9b5a0fb241dde44bd276d7274c78948",
+      "bytes": 1935
+    },
+    {
+      "path": "scripts/route-smoke.mjs",
+      "gitBlob": "c1ea1924cdd32505de2a38e320cfad278eec034b",
+      "bytes": 4190
+    },
+    {
+      "path": "scripts/smoke-report.mjs",
+      "gitBlob": "77716e7a887b81740c67274e9aa87f6bfc2c7652",
+      "bytes": 1050
+    },
+    {
+      "path": "scripts/sveltekit-smoke.mjs",
+      "gitBlob": "94101cac043e71364ac593617ccbe50c113632d1",
+      "bytes": 74
     },
     {
       "path": "src/app.css",
-      "bytes": 28611,
-      "sha256": "b2a86ca5f010df5e0aa385c02ab7d4fc79c9db9712bfd67b714734afe88e872d"
+      "gitBlob": "dfd18779235181939862fd9b80a7bbaae4a220d3",
+      "bytes": 253
     },
     {
       "path": "src/app.html",
-      "bytes": 404,
-      "sha256": "3bac60bfee8d1682bb7ec04e4255a070e8a327bcecc3350b6b705b9a651dc07c"
+      "gitBlob": "3629dcf9aae71922f3a7b073ae60432b78bf80a1",
+      "bytes": 404
     },
     {
       "path": "src/hooks.server.ts",
-      "bytes": 2243,
-      "sha256": "0317247034a0396c8a8540f6188725f7f8e4a6ffb09460e0d3f9e64fc3bb1edd"
+      "gitBlob": "75306634ebed41cd58543e4fa3cf40c1d466fa10",
+      "bytes": 2453
     },
     {
       "path": "src/lib/components/company/AboutHero.svelte",
-      "bytes": 2917,
-      "sha256": "0f1334953b01b7245fcebff055341f7eb5836b2c91805cee5701c986f565cc73"
+      "gitBlob": "33fe6ae6c76b30d6c2b67cfa122906a9677b34bd",
+      "bytes": 2917
     },
     {
       "path": "src/lib/components/company/AboutPartners.svelte",
-      "bytes": 3050,
-      "sha256": "d364d18635bdd04a26cd66015fb68ac3e90a874c4be7565a60f657d9b5fca57c"
+      "gitBlob": "6d3e0f6ed46cb455cf322b6c1ec6afef98801b2e",
+      "bytes": 3050
     },
     {
       "path": "src/lib/components/company/AboutProcess.svelte",
-      "bytes": 1583,
-      "sha256": "14ece1003bd74e971f50399fef19bee0ff8f8471c35e908c170e25f2120fc4c1"
+      "gitBlob": "e6a8cef78bbcc8ec379d5531cd966ba06d4ebfdf",
+      "bytes": 1583
     },
     {
       "path": "src/lib/components/company/AboutServiceIcon.svelte",
-      "bytes": 16297,
-      "sha256": "d81137b45db0b31759ea99832c5c29c4ef3aec54207453adbaea13533a0209b4"
+      "gitBlob": "d224636387247c2d9509302b9d8400ad24422c3c",
+      "bytes": 16297
     },
     {
       "path": "src/lib/components/company/AboutTeam.svelte",
-      "bytes": 6639,
-      "sha256": "ad243036f9079c5e1ae2c5da36a1b7457d1b1d6874707e6f9ce91f2535365a37"
+      "gitBlob": "cfb4d2feacdc65b6d68294ce6803e07313e57a42",
+      "bytes": 5356
     },
     {
       "path": "src/lib/components/company/ContactHero.svelte",
-      "bytes": 2961,
-      "sha256": "4e32c31b9b023438bd15c9a078a04b573117c69957c00d12f0f39365d6bb7765"
+      "gitBlob": "ed2c12155e57bf64d0fe92d50ff7466a3425d74c",
+      "bytes": 3712
     },
     {
       "path": "src/lib/components/company/ContactIntent.svelte",
-      "bytes": 10452,
-      "sha256": "476b552987e88b74cd4e2a4311064da42ef9adac96382462b7abd1ddf5c8870b"
+      "gitBlob": "875771077164c30f03be6d0b8adec34a891ccfa2",
+      "bytes": 10939
+    },
+    {
+      "path": "src/lib/components/company/ContactVehicle.svelte",
+      "gitBlob": "ab7235ac89805b951e1fc49b9671d700464a878a",
+      "bytes": 1513
     },
     {
       "path": "src/lib/components/company/ShowroomMap.svelte",
-      "bytes": 2072,
-      "sha256": "707692a5f7a1d33d5971aec6d35bff7ee8d6fbdaa302d739221c5d45366b1622"
+      "gitBlob": "eb494aad176bef89fb6b9d854f443c549a192e0b",
+      "bytes": 2072
     },
     {
       "path": "src/lib/components/company/SocialBrandIcon.svelte",
-      "bytes": 3443,
-      "sha256": "90dd7eafa720e4b875a8802e84e8ec8039f029d76d173d2e2831a422cd6fd3fc"
+      "gitBlob": "7d99388c5290403f21f93a60976ea5057a1eb690",
+      "bytes": 3443
     },
     {
       "path": "src/lib/components/company/TeamSocialIcon.svelte",
-      "bytes": 3142,
-      "sha256": "da897ba1ec38b32a2435f6763a5ab2a70b8eaff8f09ba949459f56d4b815c74a"
+      "gitBlob": "74c7fc7e37d4c6d40d8b7339f493c6893ace04ed",
+      "bytes": 3142
     },
     {
       "path": "src/lib/components/company/VehicleEnquiry.svelte",
-      "bytes": 23816,
-      "sha256": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a"
+      "gitBlob": "300d70f3e795b2d1f8b60e8e279122b2496d300a",
+      "bytes": 23816
+    },
+    {
+      "path": "src/lib/components/editorial/ArticleSupport.svelte",
+      "gitBlob": "ffcf3c25d5024b7f868385542bb63a57c13aa41e",
+      "bytes": 1530
     },
     {
       "path": "src/lib/components/editorial/BlogCard.svelte",
-      "bytes": 3934,
-      "sha256": "488d7e18e0536a528b2544b54c878a0bea548c212787d79faaf26309ec77fa71"
+      "gitBlob": "934606e9a679c7146e8422e73c708698aae99d2a",
+      "bytes": 4229
     },
     {
       "path": "src/lib/components/editorial/BlogHero.svelte",
-      "bytes": 2317,
-      "sha256": "322b1450672c95ce3a75ca4aa82c697c4949f699753bd904e98b1d6afd4d4c62"
+      "gitBlob": "26ec78fda142002fab41f3a7f3101d8567feffa7",
+      "bytes": 2317
     },
     {
       "path": "src/lib/components/home/BodyTypes.svelte",
-      "bytes": 7096,
-      "sha256": "b8602d394120d5f3a6dc4fd19380cf9ec3c31f6c485f301f8c4f31c15da2b248"
+      "gitBlob": "bee351554b686cefa02877eb58e55d7812da48e7",
+      "bytes": 7055
     },
     {
       "path": "src/lib/components/home/BrandSection.svelte",
-      "bytes": 10070,
-      "sha256": "f4593770ed49690ffdda7d506ac866f78ae9d9a65f9bbd1141ad899e499e7d6b"
+      "gitBlob": "6c119af9150e960dbe181aca836248f4e5ad7cec",
+      "bytes": 10029
     },
     {
       "path": "src/lib/components/home/BrowseAllCard.svelte",
-      "bytes": 2263,
-      "sha256": "9f647078b0034ffcc059a4187138835bccd5fe6ce44c1ce3cc228d7750f28a74"
+      "gitBlob": "ddaa671c70d55af1d80b3f07389ba629d35c4b2a",
+      "bytes": 2263
     },
     {
       "path": "src/lib/components/home/Editorial.svelte",
-      "bytes": 12103,
-      "sha256": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b"
+      "gitBlob": "59c8eb9e1f1e8f6f044ff0d5c9d39a352422a739",
+      "bytes": 12103
     },
     {
       "path": "src/lib/components/home/Hero.svelte",
-      "bytes": 3084,
-      "sha256": "b0a6316fc17828b6fa5a535ca137aa10168f8e4f364f4704b0360ba802246649"
+      "gitBlob": "f32441a5e00a711f5c476e3e358ebf3cef6ffa56",
+      "bytes": 1994
     },
     {
       "path": "src/lib/components/home/InventorySection.svelte",
-      "bytes": 6346,
-      "sha256": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18"
+      "gitBlob": "35a4eb57ce1cad02f135eaa46e36fd301e67f5f6",
+      "bytes": 6346
     },
     {
       "path": "src/lib/components/home/MobileBudget.svelte",
-      "bytes": 3955,
-      "sha256": "46cffaeec6e414b5d14e89ac93c115a5ac47323f71f48aa209facb9435f0fc27"
+      "gitBlob": "f2fa4737532e6663bd0ba8a8762b82ad3f464759",
+      "bytes": 3955
     },
     {
       "path": "src/lib/components/home/SearchBox.svelte",
-      "bytes": 10497,
-      "sha256": "7f0bfd4b6595b2e96dac50dc8ae569caa3847979b6c5aa1271f67460351e198a"
+      "gitBlob": "6919717d762b38245619ac1ea7dd24ababbc2920",
+      "bytes": 10497
     },
     {
       "path": "src/lib/components/home/TrustActions.svelte",
-      "bytes": 13637,
-      "sha256": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc"
+      "gitBlob": "57139037e66fe13473b8fd6abccbbeac2c025723",
+      "bytes": 13637
     },
     {
       "path": "src/lib/components/home/VehicleQuickSearch.svelte",
-      "bytes": 24152,
-      "sha256": "e2d552436161dbe509f3062aa9e587cc174242edfa50feb0ac165b1cb5d40fda"
+      "gitBlob": "82b52a17668e473ff9ef3e0e286edc5f39e458da",
+      "bytes": 24194
     },
     {
       "path": "src/lib/components/home/VideoSection.svelte",
-      "bytes": 9591,
-      "sha256": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972"
+      "gitBlob": "b9feee95778f886ed131e81088ce301209699d7b",
+      "bytes": 9591
     },
     {
       "path": "src/lib/components/layout/Footer.svelte",
-      "bytes": 3638,
-      "sha256": "4661ed2a2d7c2a8875e8e2adb95df6631fbdf79ce33c16c5a0a29c6f06e6a567"
+      "gitBlob": "44ede260d668b3c9c593b7160e265c6e98e0e145",
+      "bytes": 3723
     },
     {
       "path": "src/lib/components/layout/Header.svelte",
-      "bytes": 29984,
-      "sha256": "bc3b46d1c24f5af9eeda806bf10624e8ead7823649efa6f359a14ecc8bed7d3d"
+      "gitBlob": "46b573348f5a31afcdfa91f9aa35142cd7494c56",
+      "bytes": 25061
+    },
+    {
+      "path": "src/lib/components/layout/MobileMenu.svelte",
+      "gitBlob": "78d8969299efe04df069e6d44af54c1c466e6ca9",
+      "bytes": 5760
     },
     {
       "path": "src/lib/components/layout/MobileNavIcon.svelte",
-      "bytes": 9542,
-      "sha256": "fc4711462bbbee641954eaaf01abec68d3b33664c1ab665a1c4f80cd6b763cf9"
+      "gitBlob": "c6c439c6129c25abb4b5834f94b9ba9a8ec46ae9",
+      "bytes": 9542
     },
     {
       "path": "src/lib/components/layout/SiteShell.svelte",
-      "bytes": 463,
-      "sha256": "c3be99729f6e921a1e795c046776bae1c8b7faa45583a5e7dc9466ac488ecd0a"
+      "gitBlob": "050a1c25ab6d6f5cd90facd5c5d8caa180f17d81",
+      "bytes": 591
     },
     {
       "path": "src/lib/components/listing/ListingFilters.svelte",
-      "bytes": 10730,
-      "sha256": "79b6b4fb028ae29dc5772f6b2dac37b94b1b5aafa7c530d09d49d8774d75db45"
+      "gitBlob": "ad407ef13ce984bd97c5e0c35454c64db62010ad",
+      "bytes": 9891
     },
     {
       "path": "src/lib/components/listing/ListingHero.svelte",
-      "bytes": 772,
-      "sha256": "83386703733e226330886645028fb479a63e4b7f80c24fffa6b36927824f9dfc"
+      "gitBlob": "2ab4c7f95d70575d966c878753877b79f634ae64",
+      "bytes": 772
     },
     {
       "path": "src/lib/components/listing/ListingResults.svelte",
-      "bytes": 10190,
-      "sha256": "dd7940a029219e5c6cbb62ffeaa6932d0d9295df193a5308dc9776bbfa89a6ec"
+      "gitBlob": "f7f731945e15b6f974927aaf86d368d4e0c6078e",
+      "bytes": 9451
     },
     {
       "path": "src/lib/components/listing/QuickFilterSheet.svelte",
-      "bytes": 14005,
-      "sha256": "4c4ded372d764ae1d5132af28f72bc537e5b499feaa8867f95db5f9b8ae2f253"
+      "gitBlob": "d61964f846ae1f9b38bf7b71e49af91bccf8d917",
+      "bytes": 13740
     },
     {
       "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
-      "bytes": 12175,
-      "sha256": "e402c55fda3dc0242b484c1dcb6935f9495e6db2dfeddd0fcea37df24cfa5aed"
+      "gitBlob": "2b9081d4ae769a6319f0646b96da0a5c461ffb2d",
+      "bytes": 12192
     },
     {
       "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
-      "bytes": 28082,
-      "sha256": "abc9d4bcdf15aacee47659a9efa92f859058b8f8f433d4017411d48481a93e37"
+      "gitBlob": "989c1f66e0fc863279564742381f551a4b232d4c",
+      "bytes": 28225
     },
     {
       "path": "src/lib/components/ui/HeroVehicles.svelte",
-      "bytes": 3133,
-      "sha256": "49ace952ea6c3e1b42f78eb8aed3c131575712080259a82a634d3170d7758842"
+      "gitBlob": "1a5892346b8676e4a430efb23a9c6d45a7ea4bf7",
+      "bytes": 3289
     },
     {
       "path": "src/lib/components/ui/Icon.svelte",
-      "bytes": 3839,
-      "sha256": "b831854b6452271e8ab6138de7f40ae9814744704fe06d40c45b9eeb3308f0c8"
-    },
-    {
-      "path": "src/lib/components/ui/icons/OriginalActionIcon.svelte",
-      "bytes": 17068,
-      "sha256": "029bd306547c967824db32dd05f13daf128ea3fc0d7388c3bbe7979da2ac0e6f"
+      "gitBlob": "f66d52c3daba65599c9364d47b48527589b35bed",
+      "bytes": 3839
     },
     {
       "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
-      "bytes": 4264,
-      "sha256": "6e739089e1b12b6ba0fa2ac76878eb71a6e83a6982510d86bf612cc87b3baaf5"
+      "gitBlob": "713946e3076f1784ff4583efd482b02566997145",
+      "bytes": 4264
     },
     {
       "path": "src/lib/components/ui/VehicleCutout.svelte",
-      "bytes": 1128,
-      "sha256": "17f681988e8df2945c3723554688c7f6fd658b56eac94193058996fc08c29369"
+      "gitBlob": "6c80331690c9c9c1046ac8d043875186751c2940",
+      "bytes": 1312
+    },
+    {
+      "path": "src/lib/components/ui/icons/OriginalActionIcon.svelte",
+      "gitBlob": "0eb1f8446973df85ab649f3da583e360d21f6592",
+      "bytes": 17068
     },
     {
       "path": "src/lib/components/vehicles/VehicleCard.svelte",
-      "bytes": 9425,
-      "sha256": "9efabd72156d2d2539936a7c31cbc27900e5a31c44b6bd51b1f99f8e246ed2d5"
+      "gitBlob": "65d800110b105bba79973334613f23fd4714ce4a",
+      "bytes": 9792
     },
     {
       "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
-      "bytes": 5103,
-      "sha256": "5a04ca9e0b8dae1ffaf505af48bc9a498767bfd892fc1127edd8e20cb973d9cb"
+      "gitBlob": "041dabca45885c613cfaa948349af50fc51ed1e8",
+      "bytes": 5323
     },
     {
       "path": "src/lib/config/brand.ts",
-      "bytes": 704,
-      "sha256": "2d8aaf30e7a898a7022271f4d9ecc846c33719fe7cb32d84cb6d51780385db59"
+      "gitBlob": "e261761bbfaf63a6d8df5b5103d5c280db85597d",
+      "bytes": 1053
+    },
+    {
+      "path": "src/lib/config/template.ts",
+      "gitBlob": "78b0d9a0b6a1f2a6cab4e2ba36fed9744d1aeb83",
+      "bytes": 1396
     },
     {
       "path": "src/lib/data/company.ts",
-      "bytes": 5138,
-      "sha256": "4a4b3b10ad6deaf7af61bd5de17c556759057aee79e8cd7d792dac95749376a3"
+      "gitBlob": "97474a06dbc853ee7c31fd054c801e26235e70da",
+      "bytes": 5138
     },
     {
       "path": "src/lib/data/demo-content.ts",
-      "bytes": 1856,
-      "sha256": "19ac138545f9704bf02ffe69701146730a86be51d760af43846558dcd02f3a8d"
+      "gitBlob": "43268609a57341913558a78377540819fd985064",
+      "bytes": 1856
     },
     {
       "path": "src/lib/data/editorial.ts",
-      "bytes": 13543,
-      "sha256": "bdb313d9d89f0945fb2c5069edddefb38ae806b85edc0d3b1202533b0ad18ae1"
+      "gitBlob": "49293c2d0dbe66da9fe64a25aa468dd8cdfffe4c",
+      "bytes": 13543
     },
     {
       "path": "src/lib/data/home.ts",
-      "bytes": 3268,
-      "sha256": "e1677636876aee70b586f139014718976e2b357cd197402da00d4bdf5f098476"
+      "gitBlob": "f67e87caa3faca8ab56bc12f95a5a24e09893aa4",
+      "bytes": 4199
     },
     {
       "path": "src/lib/data/inventory.ts",
-      "bytes": 5600,
-      "sha256": "6f014cbec675c463debb411c68b46efc5a7f60ecc6f2c3139da02daa8417f466"
+      "gitBlob": "d976cae5c2a2b596ed8e046e4a6fdb34f31e1713",
+      "bytes": 5644
+    },
+    {
+      "path": "src/lib/data/journeys.ts",
+      "gitBlob": "204aa6532454a8d93ec26aa0fdd924f5ef9595f8",
+      "bytes": 1172
     },
     {
       "path": "src/lib/data/listing.ts",
-      "bytes": 6038,
-      "sha256": "f1a2832e64576c14d56d98dd36f1ce3ee6aae605f3e3322dc041157d27e192d1"
+      "gitBlob": "e53794d1624a84751bbae82775f15a32429d90da",
+      "bytes": 7678
     },
     {
       "path": "src/lib/data/navigation.ts",
-      "bytes": 7161,
-      "sha256": "6afa51239090b8a7bb7127881ae8ee57117980701bc8c9c75fd638628ea6b63f"
+      "gitBlob": "73b900bdedec9f8362d4009f90fd49a5cc776b17",
+      "bytes": 7357
     },
     {
       "path": "src/lib/data/vehicle-artwork.ts",
-      "bytes": 2170,
-      "sha256": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db"
+      "gitBlob": "7e335c39ba9614209c311cbdccefafad878b78ad",
+      "bytes": 2170
     },
     {
       "path": "src/lib/data/videos.ts",
-      "bytes": 908,
-      "sha256": "57217c36b4b0e67a318f44b3f64eade67ea19b1d63541b88aa96605cd1615d1e"
+      "gitBlob": "0363bd9167554d7bcf621fd65a7b4575d4334fb7",
+      "bytes": 908
+    },
+    {
+      "path": "src/lib/styles/base.css",
+      "gitBlob": "7907df5ccabb98bb1ddc16883ec5354b67db8904",
+      "bytes": 1633
+    },
+    {
+      "path": "src/lib/styles/composition.css",
+      "gitBlob": "8b83dff7a71deebbc482850073abd0e08825bd7a",
+      "bytes": 20567
+    },
+    {
+      "path": "src/lib/styles/navigation.css",
+      "gitBlob": "8cfcdaca34d2ecd8d61a8e0adf44aaf6aac6b8f4",
+      "bytes": 5233
+    },
+    {
+      "path": "src/lib/styles/tokens.css",
+      "gitBlob": "41cb37d457bbca9a946039f324fe34b54141aa79",
+      "bytes": 1495
+    },
+    {
+      "path": "src/lib/ui/overlay.ts",
+      "gitBlob": "079d2deb65f5c1b06010bc006c19d6d0d6b65468",
+      "bytes": 1606
     },
     {
       "path": "src/routes/+error.svelte",
-      "bytes": 2945,
-      "sha256": "66be7df827725c56e1e1ca5a4eabe79ee7c98fb86aee359c45f1230ec78e1bfc"
+      "gitBlob": "61cd970edbd9580abf0533396f5e0165c9f8cf4a",
+      "bytes": 2945
     },
     {
       "path": "src/routes/+layout.svelte",
-      "bytes": 693,
-      "sha256": "771aa7e400dc3d954fa8ca7902262b1dc1828cc8249fed4c23258e311d8b96fd"
+      "gitBlob": "8b57a31e21ab2159aec340fa7228961711aeab1c",
+      "bytes": 945
     },
     {
       "path": "src/routes/+page.svelte",
-      "bytes": 3793,
-      "sha256": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660"
+      "gitBlob": "9d8a7cf86d90e72e81a8e7814e780a8c988c47a1",
+      "bytes": 3793
     },
     {
       "path": "src/routes/about-us/+page.svelte",
-      "bytes": 1161,
-      "sha256": "39916dbda7377aee664025c4c299707a2c9a76bd6eed3f2ca8ce5216017adb6f"
+      "gitBlob": "2ff829dd0780081ef03d7cd646b8bce04f6b3f0d",
+      "bytes": 1307
     },
     {
       "path": "src/routes/about-us/about.css",
-      "bytes": 7544,
-      "sha256": "c75224b45705f1442f8ddb413ee811d7f643e5ecd60973fd4ce1c7808a192bfb"
-    },
-    {
-      "path": "src/routes/blog/+page.svelte",
-      "bytes": 1456,
-      "sha256": "6600e8406ae4e9139aa959ef8e94c70108daf9a23ab6ae0da4fc5a8bb405753f"
-    },
-    {
-      "path": "src/routes/blog/+page.ts",
-      "bytes": 311,
-      "sha256": "040ab75b8cfaf31b2e9f2679ea6dc86fefb9100ad4f801ffe28007e5d85fc744"
-    },
-    {
-      "path": "src/routes/blog/blog.css",
-      "bytes": 4349,
-      "sha256": "c28b6a338e0fb4193ad2816924b96f3018f7e4cd4619a5167ea125c69b7c1f2e"
+      "gitBlob": "23d1052c817eeea061a26deef83d762ac2dd83e1",
+      "bytes": 7544
     },
     {
       "path": "src/routes/blog-detail/[id]/+page.svelte",
-      "bytes": 5014,
-      "sha256": "5a745497bb54bcce5fe6bf4e3766f9ff67284ea1e432ffcc0e08eb32eb5121df"
+      "gitBlob": "da68a0fce84dae25daaec6cba10fe3096ab3f447",
+      "bytes": 2654
     },
     {
       "path": "src/routes/blog-detail/[id]/+page.ts",
-      "bytes": 1016,
-      "sha256": "e6d4315fcd1ead985c50d148939747a404beb4146af681e65463f333f1be747a"
+      "gitBlob": "1ed3a30997fa12922dc8fc89b675fb40aafa19db",
+      "bytes": 1151
     },
     {
       "path": "src/routes/blog-detail/[id]/detail.css",
-      "bytes": 9353,
-      "sha256": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305"
+      "gitBlob": "baee5afb6024c92e61aa636b7cb550946230a763",
+      "bytes": 9353
+    },
+    {
+      "path": "src/routes/blog/+page.svelte",
+      "gitBlob": "4a1b608e4623a3b80fa4dbfaf58dd8356432c207",
+      "bytes": 1594
+    },
+    {
+      "path": "src/routes/blog/+page.ts",
+      "gitBlob": "95828311e2498a17937fc52a300f5ca472e231d6",
+      "bytes": 311
+    },
+    {
+      "path": "src/routes/blog/blog.css",
+      "gitBlob": "9fa065780f3f496e49256e5c8822385aa9d4894b",
+      "bytes": 4349
     },
     {
       "path": "src/routes/contact/+page.svelte",
-      "bytes": 1430,
-      "sha256": "2ba55cf3c788ed71bdc5aabd6d66e36efb4c3d29a62d326c196add4112eeb8b5"
+      "gitBlob": "3df1313889da0884140ddeba2edd993ce3f52360",
+      "bytes": 1493
     },
     {
       "path": "src/routes/contact/+page.ts",
-      "bytes": 348,
-      "sha256": "38f9f4d3d8b9ec495b35880712aec6af3c017e1e6774aec8f47abfd0d46fa6be"
+      "gitBlob": "cf27297f96effa8c0eeadb68b946cbd14230ea2f",
+      "bytes": 545
     },
     {
       "path": "src/routes/contact/contact.css",
-      "bytes": 19232,
-      "sha256": "4aca418e7c39f6cb4d50ee3ecf5326bd73b02486825abfec0a399cbb93ce8088"
+      "gitBlob": "45bd004552c8a7def50490a3407145a312596042",
+      "bytes": 19505
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
-      "bytes": 10436,
-      "sha256": "5254c56c4feac37563bacb3de2ba4661804816dd1f90ae91d541445e2829a6f7"
+      "gitBlob": "f32fe7176519e0bd58fc6e3636a1a15dc27012ca",
+      "bytes": 10607
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.ts",
-      "bytes": 1064,
-      "sha256": "7a418df9ce58a5bd1b7bc9631aa3d033af90a81992d5f468867be55aa86e90fc"
+      "gitBlob": "eaa0df2e86f00c51df6c9ef9f191108127cbbf91",
+      "bytes": 1193
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/detail.css",
-      "bytes": 15492,
-      "sha256": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b"
+      "gitBlob": "ce8dbffcfeebae6d7a5f6fd5595c6b6a5eb841cc",
+      "bytes": 15492
     },
     {
       "path": "src/routes/listing-grid/+page.svelte",
-      "bytes": 1259,
-      "sha256": "81d1308316251af7088e2681345cf7139cab5f519c0784df5f2e93db83992e7a"
+      "gitBlob": "4df8ed0c617c463af1b63fb3b0a20557dc50d424",
+      "bytes": 1259
     },
     {
       "path": "src/routes/listing-grid/+page.ts",
-      "bytes": 344,
-      "sha256": "62e80b84d0360c5442b89e9486011515153ba7dce9fe7f7c897aab03002d26a3"
+      "gitBlob": "4c389d7e3f569f023153b659ca7737868f6b78e8",
+      "bytes": 344
     },
     {
       "path": "src/routes/listing-grid/listing.css",
-      "bytes": 13059,
-      "sha256": "c76c77afd19c0e71499e6a4b3d474a1c7a953281968cbc922c160a74ee7423d3"
+      "gitBlob": "45705f53dae91b30ed02f5adcca126a653922513",
+      "bytes": 13059
     },
     {
       "path": "src/routes/robots.txt/+server.ts",
-      "bytes": 356,
-      "sha256": "fc9004659301978e40f393420ea59e6883a4639850a87a11b36f4c5f573b5ea7"
+      "gitBlob": "55501b57656c8a772389e6264de83c5cc474cbf5",
+      "bytes": 506
     },
     {
       "path": "src/routes/sitemap.xml/+server.ts",
-      "bytes": 1085,
-      "sha256": "588d606eb64a6eb49c82a32c1dd230590a6d9fe4d7766109e4a2e8fdde606574"
+      "gitBlob": "72cdd2d29fd57db4b89308332ff31e6efbab4711",
+      "bytes": 1269
     },
     {
       "path": "static/assets/images/blog/blog-1.jpg",
-      "bytes": 93721,
-      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+      "gitBlob": "e3b162d314cc32d54ad3f60d5445b5d826ed3f6e",
+      "bytes": 93721
     },
     {
       "path": "static/assets/images/blog/blog-2.jpg",
-      "bytes": 34864,
-      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+      "gitBlob": "1e7f7b934adbc5a9f4bd3dcc77c1e88eba81b089",
+      "bytes": 34864
     },
     {
       "path": "static/assets/images/blog/blog-3.jpg",
-      "bytes": 94447,
-      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+      "gitBlob": "444ca12c47e2ff237786d6e3bbb0d780712345fd",
+      "bytes": 94447
     },
     {
       "path": "static/assets/images/blog/blog-4.jpg",
-      "bytes": 165710,
-      "sha256": "d3c61f0a21b785e81cbc2ee4113c659a2ad456d1a2e7347248ae64b364eb5d8b"
+      "gitBlob": "559f7cfa6f0d304d9be1c17bf7c751b7dcb144be",
+      "bytes": 165710
     },
     {
       "path": "static/assets/images/blog/blog-5.jpg",
-      "bytes": 52086,
-      "sha256": "e60f20403837bd1c48a9efd90c9fb8ca118e3fece2bd1f33b7607c85a09792dc"
+      "gitBlob": "7f57dad95517ace4c409a4a34feca58390b79418",
+      "bytes": 52086
     },
     {
       "path": "static/assets/images/blog/blog-6.jpg",
-      "bytes": 86362,
-      "sha256": "ad6b82d92f73b87ffd9e8d047e901152d84e43655d950260189cf9e104b414d0"
+      "gitBlob": "8f442b5e78846220940f3191f3bfdeba7113d4bb",
+      "bytes": 86362
     },
     {
       "path": "static/assets/images/blog/blog-7.jpg",
-      "bytes": 48660,
-      "sha256": "48609ff46522e8f355d37e18d291ff20d989208f8ffb4e6812d4cc396a4f6b32"
+      "gitBlob": "9ea1426ce1ded2b2067a4b9ce838e5867b3f2757",
+      "bytes": 48660
     },
     {
       "path": "static/assets/images/blog/blog-8.jpg",
-      "bytes": 38400,
-      "sha256": "47d04954266de4ba3c9113fd07580847adf05789393f0d1ef7038eed22e87f8b"
+      "gitBlob": "776c69f86c28911216dcb293cb264b2ab088af10",
+      "bytes": 38400
     },
     {
       "path": "static/assets/images/blog/blog-9.jpg",
-      "bytes": 92539,
-      "sha256": "5d999d7e8820fdbe68f01ddf262951579cb931e5ddfcc8af4cd99ff8a0e29a8b"
+      "gitBlob": "7d49fa58babd5a0008c8e8f52e9f983e6bbb6893",
+      "bytes": 92539
     },
     {
       "path": "static/assets/images/icon-box/car-list1.png",
-      "bytes": 17569,
-      "sha256": "77bf4c2219a12b07d7c1620a35c547f3b97c90c8be4fb838cad54bdf257f4028"
+      "gitBlob": "a6edfadb4fdf4d64fd3c240913ff76d0f3800a03",
+      "bytes": 17569
     },
     {
       "path": "static/assets/images/icon-box/car-list2.png",
-      "bytes": 17766,
-      "sha256": "65456e3ed0de84598f77ed8a58b3e10edffc4a898ee2f101e56ae5723840ce95"
+      "gitBlob": "9df09b5492780ca312240fbffa42b4962d94d597",
+      "bytes": 17766
     },
     {
       "path": "static/assets/images/icon-box/car-list3.png",
-      "bytes": 17222,
-      "sha256": "1a9d0ad2d3bbba6640f531135648418ca9cd2358e3b5687972896fb9ea17c9fe"
+      "gitBlob": "ce7f5727e1bd12209173deea07bdf85b10512886",
+      "bytes": 17222
     },
     {
       "path": "static/assets/images/icon-box/car-list4.png",
-      "bytes": 18028,
-      "sha256": "f03f8f094494932d0a73c44741e9e8ee03d638ee78b04e166df0deef05d9a59b"
+      "gitBlob": "429a04ee90c63502a00e3f873a141dfdbf61c025",
+      "bytes": 18028
     },
     {
       "path": "static/assets/images/icon-box/car-list5.png",
-      "bytes": 18159,
-      "sha256": "91a9aa878a6ec639045ad5dc09525a2444078c7aa349f00805683d22ee9ab03b"
+      "gitBlob": "7c73900bc038862083eaf8ff177597cd76acbe94",
+      "bytes": 18159
     },
     {
       "path": "static/assets/images/icon-box/car-list6.png",
-      "bytes": 15335,
-      "sha256": "e1a0894c839e8411c5f454d2696ed7b76371cf8446eecccc359afab5fa8847e1"
+      "gitBlob": "c9511f1966c19d02f045a5711ca88e02ce6749f7",
+      "bytes": 15335
     },
     {
       "path": "static/assets/images/icon-box/car-list7.png",
-      "bytes": 14609,
-      "sha256": "3fbd0debd40517f85a89fdd7b422c3142257a170d4a7dbddb4f23aa754061a71"
+      "gitBlob": "f88295a722856e29d1fa0710a83fbab2cbb732ad",
+      "bytes": 14609
     },
     {
       "path": "static/assets/images/icon-box/car-list8.png",
-      "bytes": 13861,
-      "sha256": "ab207b7348f9e9107f35f37007ff44555c540709bbdecd6359690a6638dc13d2"
+      "gitBlob": "ae4f46a212df089a7e46d1175654f99ced862b04",
+      "bytes": 13861
     },
     {
       "path": "static/assets/images/img-box/team1.jpg",
-      "bytes": 13209,
-      "sha256": "ffd77bec7d645e5a94b5d8f30f32c4a8801d037f469552f93f48d5d5f21f85f3"
+      "gitBlob": "4b2085a7acde63e83ddf124a1ebd23954f39bb2a",
+      "bytes": 13209
     },
     {
       "path": "static/assets/images/img-box/team2.jpg",
-      "bytes": 20556,
-      "sha256": "665ac311d11cc8c478329ac5b88c22270699eb20db2d6bd9e27db1488479799a"
+      "gitBlob": "12337fd444fefd72e9e48d619650272422231e13",
+      "bytes": 20556
     },
     {
       "path": "static/assets/images/img-box/team3.jpg",
-      "bytes": 18029,
-      "sha256": "2c34bbe7550b57044c1a988dd6e56e2361f6e3917b8afd9fc973723352b17ea2"
+      "gitBlob": "d3bfcb0288fc4f3b3dadaca7d7831e6c9e015f8c",
+      "bytes": 18029
     },
     {
       "path": "static/assets/images/img-box/team4.jpg",
-      "bytes": 21356,
-      "sha256": "4230ac3857c403d9938e38ffaf2f98102cfdd46e4227c3e314908fc649ce7610"
+      "gitBlob": "6c3706a394d9e055e8d730c1a79bddf296bda6ae",
+      "bytes": 21356
     },
     {
       "path": "static/assets/images/lead/day-night-about-kristian-v1-light.webp",
-      "bytes": 64114,
-      "sha256": "b3d58392c4f5285409be5cbf484c59b8c89fbd40932efbd96e0fb943ca617bb3"
+      "gitBlob": "ca71bacf3080dc51273655eb46bea828d6faf753",
+      "bytes": 64114
     },
     {
       "path": "static/assets/images/lead/day-night-about-showroom-v1-light.webp",
-      "bytes": 68726,
-      "sha256": "6b26a7733ccd2a5a9f292c3781a6269861b7d16cc363a0666ae279888ff606a8"
+      "gitBlob": "400c41bae683c2c27cef2c2725f9697123bea150",
+      "bytes": 68726
     },
     {
       "path": "static/assets/images/lead/day-night-blog-hero-v2.webp",
-      "bytes": 325078,
-      "sha256": "bb948611c607935f49a7e87a5af33e75e48725438ed56b55da52a8056cfb7530"
+      "gitBlob": "9e6296300a9b865791db59dac9ee5f5c1a5e5f46",
+      "bytes": 325078
     },
     {
       "path": "static/assets/images/lead/day-night-collection-banner-v2.webp",
-      "bytes": 113046,
-      "sha256": "d9f896f744abf519acbd28897c7eabd6e9082bddfa0174ff52506d01fdb09e75"
+      "gitBlob": "9d55cb0edfd796f3db596c00af4551aab7870770",
+      "bytes": 113046
     },
     {
       "path": "static/assets/images/lead/day-night-contact-email-red-v1.webp",
-      "bytes": 35466,
-      "sha256": "fc14424f78e1a2961fef0cae0af6fa15184b44d21ec751565167a0b2119eca80"
+      "gitBlob": "5adc214edeadf1da24625c88e414cfca00c31033",
+      "bytes": 35466
     },
     {
       "path": "static/assets/images/lead/day-night-contact-email-v1-light.webp",
-      "bytes": 25264,
-      "sha256": "f08fef2a380c39a1ea8d9f99488187e1fbb795b7776d8e42dfa64666ef263a85"
+      "gitBlob": "1e415a5df4c26701291101d60907fab8d22563e8",
+      "bytes": 25264
     },
     {
       "path": "static/assets/images/lead/day-night-contact-hero-v2.webp",
-      "bytes": 254674,
-      "sha256": "fe0e053b5c63bc3facd544378f5482f98005944803ba733c8f8b5cadd35ff80b"
+      "gitBlob": "68dfad749df96beaeacdbed97a32a1848c4f58a8",
+      "bytes": 254674
     },
     {
       "path": "static/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp",
-      "bytes": 72532,
-      "sha256": "017f9ded454ab0ab948737e003354b25af9f5d3d4546d114496f0015d849218b"
+      "gitBlob": "c1d684dd6a38c5e1091210c8630ef63454d9d993",
+      "bytes": 72532
     },
     {
       "path": "static/assets/images/lead/day-night-contact-phone-red-v1.webp",
-      "bytes": 105392,
-      "sha256": "1b4934a5d0c1807c69f40e49144873215e7f2ae33f023904dbc43a86b4804b69"
+      "gitBlob": "53425aeb83ef6cabfc9803c993e0425b3e439cf8",
+      "bytes": 105392
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-a45-v1.webp",
-      "bytes": 83132,
-      "sha256": "dac81d872cf50c8142cd0ade045d80962ed2aa9acaefcb62cb2e2d835ff1f277"
+      "gitBlob": "d4fe6764ed573d8ce880b67a1afbf7ac366692ab",
+      "bytes": 83132
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-amggt-v1.webp",
-      "bytes": 76252,
-      "sha256": "42c3099748c113bbc36dc10c969f0a63b2074d43efac35e586422ae85158b329"
+      "gitBlob": "d2e72839271df23dd2ad16049817c4babc00514f",
+      "bytes": 76252
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-e63-v1.webp",
-      "bytes": 69448,
-      "sha256": "18a7c8a7448e0abb5a361a8f83c5ac13c584182ba2396b98885aee2c0b53d111"
+      "gitBlob": "943a2d40f45cc641d9fcbecffa43bc19d09b7de1",
+      "bytes": 69448
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-gclass-v1.webp",
-      "bytes": 84112,
-      "sha256": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a"
+      "gitBlob": "1f8bcbd765428b3317eefa1d565a2e3bddfbca0e",
+      "bytes": 84112
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-golf-v1.webp",
-      "bytes": 80380,
-      "sha256": "ae2508c29902b35c5ae02a738e60b3d6805ce9e6d7688e7c13fd0ae24b885888"
+      "gitBlob": "0c712d0c3a39a03a40b9b7d01fdeb57538060477",
+      "bytes": 80380
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-graphite-v1.webp",
-      "bytes": 71336,
-      "sha256": "2e2a1144f12db5fcea849fb76434df8a00adc2b9589e7956d203e9abc8da05b5"
+      "gitBlob": "96f0a9a2fe022cb15f7fba745f543d3c5e1de99a",
+      "bytes": 71336
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-m4-v1.webp",
-      "bytes": 79178,
-      "sha256": "eee707e7a3a891a934e7346b5a33c9e77f3dd2128768458f09fe2d5a5150f627"
+      "gitBlob": "2ffeda196b5731e33dab40298fa4fb3a360d582e",
+      "bytes": 79178
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-m5-v1.webp",
-      "bytes": 75030,
-      "sha256": "891d287bb21fe52e43ddb4e8b204c2eb8645f7401974f671f1559a9b2599d19c"
+      "gitBlob": "c85faf784840cd75f1bbe721690896f4b7600f23",
+      "bytes": 75030
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-porsche-v1.webp",
-      "bytes": 74932,
-      "sha256": "740d09a56a3524ef81d76298cf0b3f1953c2f921395c0d05ac4d69c309f77d44"
+      "gitBlob": "ebc3911d399ab5c80996f867825a9df9ec2dcb01",
+      "bytes": 74932
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-rs5-v1.webp",
-      "bytes": 76144,
-      "sha256": "eaa9c59c37090f1571972836b8ead35c1a118089c7eae0e7c5c1af147b104e13"
+      "gitBlob": "aa79db37da750e4a3c8d723247f28887a5d041c9",
+      "bytes": 76144
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-silver-v1.webp",
-      "bytes": 79120,
-      "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff"
+      "gitBlob": "9ff885ea52399d4027e4783413b2ed6445de56fd",
+      "bytes": 79120
     },
     {
       "path": "static/assets/images/lead/day-night-cutout-urus-v1.webp",
-      "bytes": 65210,
-      "sha256": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027"
+      "gitBlob": "e58c82e88bc8549e12a325b36cfbc54f85672b40",
+      "bytes": 65210
     },
     {
       "path": "static/assets/images/lead/day-night-editorial-banner-v2.webp",
-      "bytes": 112542,
-      "sha256": "54a9ab5cd4bbbfccbcde9f33e253524ef22b92942878b7f3074f2b80751a5c2a"
+      "gitBlob": "4fec00d68e40177134dbc81ab3c8f758f0750724",
+      "bytes": 112542
     },
     {
       "path": "static/assets/images/lead/day-night-graphite-color-v1.webp",
-      "bytes": 106190,
-      "sha256": "f83edea40a244b762716873ac4baeb6ac7aeea8ca3e27b143cf43761681c44ef"
+      "gitBlob": "68461dddee1ed6275de89b5c6f3b17d3d2f04987",
+      "bytes": 106190
     },
     {
       "path": "static/assets/images/lead/day-night-guide-import.webp",
-      "bytes": 64648,
-      "sha256": "e0f7e8bc80f0ad8e2ffe947183db974b8481673771d31888a4d5d017fcf0a9f0"
+      "gitBlob": "0e7fd3865ce7dd5ddbe4a9e15d68890342bc850c",
+      "bytes": 64648
     },
     {
       "path": "static/assets/images/lead/day-night-guide-inspection.webp",
-      "bytes": 66926,
-      "sha256": "93ba31dffd89b4e014fad2465645908c5624e4a512a8b87f6a0fb2d37e7aae02"
+      "gitBlob": "ff9f614c01614502c57f9e74b0da5e1b001416c1",
+      "bytes": 66926
     },
     {
       "path": "static/assets/images/lead/day-night-guide-leasing.webp",
-      "bytes": 53020,
-      "sha256": "8ed8b3cc3fef615277afdb02c7f8bd2c8ce43a5f4825fa29b45689c06d9c7a2f"
+      "gitBlob": "a86e64db561113e377097ec6c26e24597dec982f",
+      "bytes": 53020
     },
     {
       "path": "static/assets/images/lead/day-night-guide-yellow-v1.webp",
-      "bytes": 100924,
-      "sha256": "c3c0376130deb45dd3a829dffcc5dc6376383c64610917973eddc5c5135b19ac"
+      "gitBlob": "cb7b03c55c4285bc25fc7771d2fe71513945cf47",
+      "bytes": 100924
     },
     {
       "path": "static/assets/images/lead/day-night-hero-graphite-v1.webp",
-      "bytes": 91314,
-      "sha256": "282ca58808b79a13d74aeffa072a0e42b7585dd4a5fda530f2aca310a3dc3d7c"
+      "gitBlob": "3a69ecf7d9011ea3f574def0dd55964838d5dc48",
+      "bytes": 91314
     },
     {
       "path": "static/assets/images/lead/day-night-hero-silver-v1.webp",
-      "bytes": 101826,
-      "sha256": "cd3c12b31c74c4b10c888c3a81019f40adf228134cb15ef9870b7043dc32c59f"
+      "gitBlob": "a95abe9fdc7f26414e168b2340043291d3295c81",
+      "bytes": 101826
     },
     {
       "path": "static/assets/images/lead/day-night-home-black-v1.webp",
-      "bytes": 41178,
-      "sha256": "42b8af4cbf13328e558cc151a91517dc0c365551c7da48c8bc574f1c7337ccaf"
+      "gitBlob": "0010f33b62793d5114d67b9470b8d80b73022573",
+      "bytes": 41178
     },
     {
       "path": "static/assets/images/lead/day-night-home-hero-v3.webp",
-      "bytes": 114870,
-      "sha256": "6496510def178620c33aa4403c7945b0dc9fa05e337aa489110b87d90686c135"
+      "gitBlob": "fb2ff3e188bf1c666773beacab2143e639c459d2",
+      "bytes": 114870
     },
     {
       "path": "static/assets/images/lead/day-night-import-banner-v1.webp",
-      "bytes": 78680,
-      "sha256": "745199db8d7ea1332d34b340dfedcdf64a09bb6cc5283ef7eff58e099d1af4f0"
+      "gitBlob": "ca28caf70ada2c7edd565ebb99b39f452e605405",
+      "bytes": 78680
     },
     {
       "path": "static/assets/images/lead/day-night-keys-yellow-v1.webp",
-      "bytes": 76000,
-      "sha256": "19bb9764b5194c5cde1e01b46302e525240bd074fb48a2bcb78be6c77c5a3b2c"
+      "gitBlob": "9c1c96d1fade69bdffbf8c23dfae465178f47383",
+      "bytes": 76000
     },
     {
       "path": "static/assets/images/lead/day-night-logo.png",
-      "bytes": 736865,
-      "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
+      "gitBlob": "79c6b4eb937b90c5e0ec3ffd97cd5918084d8172",
+      "bytes": 736865
     },
     {
       "path": "static/assets/images/lead/day-night-portrait-color-v1.webp",
-      "bytes": 98582,
-      "sha256": "a01b8fd3df9084e1b5f70d7b26396acec6136c527e263c3eeb3c9beed32d5a97"
+      "gitBlob": "f5b199f43812836cd12117c1f0d4517f69786ae8",
+      "bytes": 98582
     },
     {
       "path": "static/assets/images/lead/day-night-sell-banner-v1.webp",
-      "bytes": 94492,
-      "sha256": "fcd8f4f35ca6e9814b8e6a038a90381e2df22457fe9b6375ba76b77b65bf9e62"
+      "gitBlob": "5264555a42cb9fccdbb82580694630d24bc3b435",
+      "bytes": 94492
     },
     {
       "path": "static/assets/images/lead/day-night-sell-banner-v2.webp",
-      "bytes": 149664,
-      "sha256": "393fe03e5694f948ff56bf2b124734119a371fcaa4125a62b560322136d23f7f"
+      "gitBlob": "cd8b7cf49e0d078b7828703dd14d6c33c26f768e",
+      "bytes": 149664
     },
     {
       "path": "static/assets/images/lead/day-night-showroom-color-v1.webp",
-      "bytes": 164760,
-      "sha256": "d1b6d0d6d3215e125a15b64f9c6d12bf459c8ab8c9d965beb94b01de99c5eb26"
+      "gitBlob": "6813991a3762c1a9ac269dbda9631bc3a2f90e16",
+      "bytes": 164760
     },
     {
       "path": "static/assets/images/lead/day-night-silver-color-v1.webp",
-      "bytes": 118976,
-      "sha256": "c74fced7b50da9dc45b4d37c66250343cfdf91eaadc06139636d3bcb6c81582d"
+      "gitBlob": "f26f427af950562cd2189e23e6f1c5f3f82344eb",
+      "bytes": 118976
     },
     {
       "path": "static/assets/images/lead/day-night-stock-01.webp",
-      "bytes": 278312,
-      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+      "gitBlob": "6be96162cbd13cf4d28c8964fd1d4643b983a0a5",
+      "bytes": 278312
     },
     {
       "path": "static/assets/images/lead/day-night-stock-02.webp",
-      "bytes": 248390,
-      "sha256": "40d22530c50efb7d486f12b394dbaebb821e368352492954966e19ba84910b7f"
+      "gitBlob": "27b081781754820e9a09144188064a565cca2edc",
+      "bytes": 248390
     },
     {
       "path": "static/assets/images/lead/day-night-stock-03.webp",
-      "bytes": 181070,
-      "sha256": "a63e64bbdfcd7627da5e97e2a355efa7a6192d939d0cdeecc8f9b55a4dd25930"
+      "gitBlob": "912eb1214ca162697b7fb06f65e2ad18ce55f074",
+      "bytes": 181070
     },
     {
       "path": "static/assets/images/lead/day-night-stock-04.webp",
-      "bytes": 182452,
-      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+      "gitBlob": "1c6c6013a571a0b298326abc567c38b6cca295d9",
+      "bytes": 182452
     },
     {
       "path": "static/assets/images/lead/day-night-stock-05.webp",
-      "bytes": 280428,
-      "sha256": "d3a53c20bd0b5f59ebd5a053b5174ba75d2ec4429df9e45d2b61071ca99f981a"
+      "gitBlob": "cdf1102f98a2ee5a4e00dfc30bb85544e932f43a",
+      "bytes": 280428
     },
     {
       "path": "static/assets/images/lead/day-night-stock-06.webp",
-      "bytes": 207938,
-      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+      "gitBlob": "72b9b750b5ea060afba8a0154a5d073a65a26d60",
+      "bytes": 207938
     },
     {
       "path": "static/assets/images/lead/day-night-studio-cars-v1.webp",
-      "bytes": 49310,
-      "sha256": "23dd9e6f0cc391878bbc10a28479b5579a4905e333e3de587db8d503a1e3a2c3"
+      "gitBlob": "e6cbc8af81859f3268bf2128d68f64f625e2b19c",
+      "bytes": 49310
     },
     {
       "path": "static/assets/images/lead/day-night-studio-guide-v1.webp",
-      "bytes": 57486,
-      "sha256": "c01c841fab26485ffac3c5d8f23e046c07fb47afea7abf0e5893c0e4b0d3b9df"
+      "gitBlob": "c7f74babae7afa25164be4dec18073038ae7e71e",
+      "bytes": 57486
     },
     {
       "path": "static/assets/images/lead/day-night-studio-keys-v1.webp",
-      "bytes": 38104,
-      "sha256": "993523b38286449b2e84cab96598203945fdbc84411aeed2afa40807c1267f1a"
+      "gitBlob": "481559f8e48c3eac30a1729493119bb005c4a490",
+      "bytes": 38104
     },
     {
       "path": "static/assets/images/lead/day-night-urus-front-v1.webp",
-      "bytes": 61626,
-      "sha256": "067acd750a9cc40c21c513b395661be16d66b9d1a1f971e1752ed1adda171f9b"
+      "gitBlob": "24c8ea3e0f5f4d03087d0ff95314cfd8c5167b5a",
+      "bytes": 61626
     },
     {
       "path": "static/assets/images/lead/day-night-video-g-class.jpg",
-      "bytes": 72876,
-      "sha256": "b0ac53b05420d63ef003a15a798f8d1649fc90e1f857c50818370b90f83e8519"
+      "gitBlob": "b2e21a7552b3f35bfe7c756852e47456839d7f2b",
+      "bytes": 72876
     },
     {
       "path": "static/assets/images/lead/day-night-video-panamera.jpg",
-      "bytes": 63050,
-      "sha256": "80d061165773684c8beaff4785d04ed18728ed53ccbd57f6817c2cb335262c16"
+      "gitBlob": "4bfecba451a95c22fec44abe701b5a3123203f26",
+      "bytes": 63050
     },
     {
       "path": "static/assets/images/lead/day-night-video-urus.jpg",
-      "bytes": 70812,
-      "sha256": "deb043717b97a0b6704e650baf65588960660c5e72f178608b7077516dee08d7"
+      "gitBlob": "984c09c383047d9ff5b2019f86ac949c40aa7bd9",
+      "bytes": 70812
     },
     {
       "path": "static/assets/images/partner/par1.png",
-      "bytes": 2164,
-      "sha256": "943421922f5a231b07e4fcd74ed331e00333afe2e87dd071e48492ae347fce88"
+      "gitBlob": "9c67d644bc3476d1eb503a499252f87ca7d738a3",
+      "bytes": 2164
     },
     {
       "path": "static/assets/images/partner/par2.png",
-      "bytes": 1946,
-      "sha256": "ad57319564ce4e24c61e053ccb13e6d6992ee7e80ab1deed9b2b1ac49c410ebf"
+      "gitBlob": "e9744f4cb9d7d2156a6a04b2eec2031ca6dba315",
+      "bytes": 1946
     },
     {
       "path": "static/assets/images/partner/par3.png",
-      "bytes": 2217,
-      "sha256": "0219ac21a5f9bbae7d22cfc3de27bd8044940869f5aa0cd55eb5d6c8f375d078"
+      "gitBlob": "3a07f5ace3fec51c01513b60c2739eddb8a09d23",
+      "bytes": 2217
     },
     {
       "path": "static/assets/images/partner/par4.png",
-      "bytes": 1421,
-      "sha256": "4a20e7b310b4dc41a27fd586dc5c1cd7acb052c241fd026fab3186a6e1a652c3"
+      "gitBlob": "cfc834d8b3a5c14c84e50116de44be9cee086f9b",
+      "bytes": 1421
     },
     {
       "path": "static/assets/images/partner/par5.png",
-      "bytes": 1739,
-      "sha256": "4f28ec3a0b7a7f5fc4acdb20cd7f2967bc18855079819d677049604f4610abc1"
+      "gitBlob": "7b877ba0571d4e92bd44fa55900d8eb728aa88b3",
+      "bytes": 1739
     },
     {
       "path": "static/assets/images/partner/par6.png",
-      "bytes": 1505,
-      "sha256": "b9b220c9ab29e91a90d4e6dbf8c458aaf15d9d750e4fd08b80017b212710e816"
+      "gitBlob": "b33a9a173a19264472b2e0a2292dde0faf78dc5a",
+      "bytes": 1505
     },
     {
       "path": "static/assets/images/partner/parner10.png",
-      "bytes": 981,
-      "sha256": "c766fb50b11985cadfcd040a3f8b09861eac7bcd736818ad521c6a2ad54beb27"
+      "gitBlob": "a74cca36d57736ea2200dd56caf1eedf0babad5d",
+      "bytes": 981
     },
     {
       "path": "static/assets/images/partner/parner11.png",
-      "bytes": 1241,
-      "sha256": "8441496b7499d543d5e2dfebc9b4ec0b1a354cb51f3e2895cc1139ce81fdf0ce"
+      "gitBlob": "80eda23a5b8f339891bce3be80364faf20280737",
+      "bytes": 1241
     },
     {
       "path": "static/assets/images/partner/parner12.png",
-      "bytes": 1261,
-      "sha256": "8cec077472ed19dec9e3a7f136f4de8ede5fe526383972364e71722dfb9bd6e7"
+      "gitBlob": "434604da20e41a853e693382322fea51a9459bff",
+      "bytes": 1261
     },
     {
       "path": "static/assets/images/partner/parner7.png",
-      "bytes": 785,
-      "sha256": "8f773623b38d2ed8f40655eece46ed49969957354e34df7dfb8e5806b44ab8fe"
+      "gitBlob": "e918e362ad6912473092bf269567a9cc91f09082",
+      "bytes": 785
     },
     {
       "path": "static/assets/images/partner/parner8.png",
-      "bytes": 908,
-      "sha256": "5e0295c9b6b30f606f60ed3f3b8ec9c078d431fd2ac5064ef579d92a2487c107"
+      "gitBlob": "5899d49105e46588483662390c65df69f01724a1",
+      "bytes": 908
     },
     {
       "path": "static/assets/images/partner/parner9.png",
-      "bytes": 1409,
-      "sha256": "2423d254763c975bd21259f9f350e817f601318cfea1fdaa5f3649376eac1bcb"
+      "gitBlob": "8acd160c54c61ddcb7adff4e0ffff56dce272df2",
+      "bytes": 1409
     },
     {
       "path": "static/assets/images/partner/partner1.png",
-      "bytes": 7939,
-      "sha256": "fd0644a6659ed7b041a5a527b8cbe706e85a3d313f3c0cc2586ff4d91aa5b4e2"
+      "gitBlob": "2f552466deb3c22e4c71ef3dd1994e8d8a4040ae",
+      "bytes": 7939
     },
     {
       "path": "static/assets/images/partner/partner2.png",
-      "bytes": 855,
-      "sha256": "72f825dd15c98d1c37d1960520587d7b2dcdb4308f569a3e674fffe1ae4dc36e"
+      "gitBlob": "7a3efda8814d7a173cddb76a8e1c0d33fc25319a",
+      "bytes": 855
     },
     {
       "path": "static/assets/images/partner/partner3.png",
-      "bytes": 4398,
-      "sha256": "894f4d69cf82bf7aac80b2315bd5c570c1171b3f3e7f881b40643fa572c2f950"
+      "gitBlob": "d3e817a51065a2e87690ace503f2846e8c07e649",
+      "bytes": 4398
     },
     {
       "path": "static/assets/images/partner/partner4.png",
-      "bytes": 1162,
-      "sha256": "95e13967fff39b7ca18813314f66a18c61540fb2b780d93f2df8cacd539d9fce"
+      "gitBlob": "a4ed49230332e0a94023461f7a26803eb05c6179",
+      "bytes": 1162
     },
     {
       "path": "static/assets/images/partner/partner5.png",
-      "bytes": 1980,
-      "sha256": "65fb90df18b8d8ac9c4cc1a683a73c5d34d436a268d257ae43945d286f37a8c2"
+      "gitBlob": "cbdab25cef3740a9cfe602e2f4226be3c3d42a5f",
+      "bytes": 1980
     },
     {
       "path": "static/assets/images/partner/partner6.png",
-      "bytes": 2475,
-      "sha256": "d496020efe2c13f27e3167ea3804f0f07fd316b8ec3672be7fde878c56559432"
+      "gitBlob": "7efd8a94f7fc27de32bfa4d07a91a179da436882",
+      "bytes": 2475
     },
     {
       "path": "static/assets/images/section/bg-12.jpg",
-      "bytes": 181376,
-      "sha256": "6e83f0f876739eeed9397afc21d1adb2b80361cc4fd4bbfa40e9f8a011fcb620"
+      "gitBlob": "58fd08a21f306a39816eb36303278c6f521c868b",
+      "bytes": 181376
     },
     {
       "path": "static/assets/images/section/bg-4.jpg",
-      "bytes": 447246,
-      "sha256": "442c996e79c246489c92f48a1483f31dcf63a02fcee27237a86ce845540369da"
+      "gitBlob": "6e03400fc674d05c09138037986f603659ac1b9c",
+      "bytes": 447246
     },
     {
       "path": "static/assets/images/section/bg-6.jpg",
-      "bytes": 199583,
-      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
+      "gitBlob": "959b54e94521e3cb30af9f1cb78ac2bf52b2cfc1",
+      "bytes": 199583
     },
     {
       "path": "static/assets/images/section/car-slide1.png",
-      "bytes": 41257,
-      "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72"
+      "gitBlob": "0b91ea602a4aee1a823f126ea7cb28ffbe0d5d29",
+      "bytes": 41257
     },
     {
       "path": "static/assets/images/section/car-slide2.png",
-      "bytes": 32424,
-      "sha256": "deb4dd110aad16100226bb9584fa8bd8658d1526b644579ade21d1853178e279"
+      "gitBlob": "61d0c03fc1b032251e5e1830d798ce6d6c1cbadf",
+      "bytes": 32424
     },
     {
       "path": "static/assets/images/section/car-slide3.png",
-      "bytes": 27720,
-      "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a"
+      "gitBlob": "2b5b28d535ddddec4cb19cc4d994cd23ec4be54d",
+      "bytes": 27720
     },
     {
       "path": "static/favicon.ico",
-      "bytes": 520,
-      "sha256": "17479d0354ba5cede84e623dbb0ceb77b638784a9535ea829e5ac9969c5a94eb"
+      "gitBlob": "e79747921cb7c25f2e36715cc872336f31d6722f",
+      "bytes": 520
     },
     {
       "path": "svelte.config.js",
-      "bytes": 404,
-      "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      "gitBlob": "03798886c68f195510e047af003df087a9a3d1a5",
+      "bytes": 404
     },
     {
       "path": "tsconfig.json",
-      "bytes": 340,
-      "sha256": "d365eb34f8cb5002d00158ebc356b495f2bf0238ad64807deca526050ffde4f5"
+      "gitBlob": "575d5d90c086771b56a259371f6130ee40115140",
+      "bytes": 340
     },
     {
       "path": "vercel.json",
-      "bytes": 150,
-      "sha256": "9d4b2226788d1516171086ad871eb5e4fd6e17d0453bde84c1dda75bc995ca8a"
+      "gitBlob": "e83a346dae5e86853caee8b53a4b52696dcba706",
+      "bytes": 150
     },
     {
       "path": "vite.config.ts",
-      "bytes": 270,
-      "sha256": "986e839ded781587bab66ca8793d66da71ca99a1b3c455dd08b9d3e435f0db93"
+      "gitBlob": "5260d9b3a56eb664a12ee959887dd0072b780c43",
+      "bytes": 270
     }
   ],
   "excluded": [
-    ".agency-os",
-    ".git",
-    ".github",
-    ".svelte-kit",
-    ".vercel",
-    "AGENTS.md",
-    "artifacts",
-    "node_modules",
-    "SVELTE_TASKS.md"
+    ".template/source-manifest.json",
+    ".template/source-readme.md",
+    ".template/template.json",
+    "AGENTS.md"
   ],
-  "links": [],
-  "bytes": 7822988,
-  "configurationSupplement": {
-    "at": "2026-09-06T14:52:29.899Z",
-    "files": [
-      ".gitattributes",
-      ".gitignore",
-      ".vercelignore"
-    ]
-  },
-  "refreshedAt": "2026-09-06T20:48:34.194Z",
-  "refreshEvidence": "../../audits/2026-09-06/asko96-build"
+  "links": []
 }

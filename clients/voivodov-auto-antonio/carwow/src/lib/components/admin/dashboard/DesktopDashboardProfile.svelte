@@ -147,7 +147,7 @@
 		]
 	];
 
-	const locationText = 'София, София, гр. София, Студентски град, ул. Атанас Манчев 18';
+	const locationText = 'Пловдив, Пловдив, гр. Пловдив, Въстанически, кв. Въстанически — точният адрес се уточнява по телефона';
 	const locationOptions: LocationOption[] = [
 		{
 			id: 'location-main',
@@ -417,7 +417,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="VOIVODOV AUTO & ANTONIO map"
 					></iframe>
 				</div>
 			</div>

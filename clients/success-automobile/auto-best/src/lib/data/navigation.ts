@@ -93,9 +93,9 @@ export const navigation: NavigationItem[] = [
       title: brand.name,
       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
       features: [
-        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
-        { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
+        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/dealer/stock/11788284441880300-1.webp', href: '/about-us' },
+        { id: 'about-import', title: 'Документи и произход', detail: 'Попитайте за конкретния автомобил.', image: '/dealer/stock/21787149042592643-1.webp', href: '/contact?topic=import' },
+        { id: 'about-leasing', title: 'Условия за плащане', detail: 'Обсъдете условията директно с екипа.', image: '/dealer/stock/11787147891422780-1.webp', href: '/contact?topic=leasing' }
       ],
       groups: [
         {
@@ -117,7 +117,7 @@ export const navigation: NavigationItem[] = [
           ]
         }
       ],
-      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
+      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и условия за плащане.' }
     }
   },
   {

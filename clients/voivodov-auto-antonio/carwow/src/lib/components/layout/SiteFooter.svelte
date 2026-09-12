@@ -9,9 +9,9 @@
 <footer class="site-footer">
 	<div class="site-footer__top container">
 		<div class="site-footer__brand">
-			<img src={daynightSite.logoLight} alt={daynightSite.name} />
+			<img src="/dealer/logo-dark.png" alt={daynightSite.name} />
 			<p>
-				Проверени автомобили в София със съдействие за оглед, документи, регистрация, финансиране
+				Публикувани обяви в Пловдив със съдействие за оглед, документи, регистрация, финансиране
 				и бартер.
 			</p>
 		</div>
@@ -40,7 +40,7 @@
 	</div>
 	<div class="site-footer__bottom">
 		<div class="container">
-			<span>©2026 {daynightSite.shortName}. Всички права запазени.</span>
+			<span>©2026 {daynightSite.shortName}. Демонстрационна концепция. Не е официалният сайт.</span>
 			<div>
 				<a href={resolve('/terms')}>Условия</a>
 				<a href={resolve('/contact')}>Поверителност</a>

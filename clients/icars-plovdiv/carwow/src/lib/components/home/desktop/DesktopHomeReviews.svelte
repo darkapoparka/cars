@@ -78,7 +78,7 @@
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на Day Night Auto.',
+				'Получете обратна връзка от екипа на icars.',
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -113,7 +113,8 @@
 		>
 			<div class="daynight-home-review-grid">
 				<div class="daynight-home-review-grid__items">
-					{#each reviews as review (review.id)}
+					{#if daynightReviews.length === 0}<div class="testimonior-box"><p>Няма добавени клиентски мнения в този преглед. Вместо примерни оценки показваме само данните от публичните обяви.</p><a href="https://icars.mobile.bg/" target="_blank" rel="noreferrer">Публичен профил</a></div>{/if}
+{#each reviews as review (review.id)}
 						<div class="daynight-home-review-grid__item">
 							<a href={resolve('/reviews')} class="daynight-home-review-card">
 								<div class="daynight-home-review-card__rating">

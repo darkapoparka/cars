@@ -59,7 +59,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+          "Финалната оценка се прави след оглед на място в шоурума ни в Индустриална зона — Тракия, Пловдив.",
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -106,7 +106,7 @@ const pageCopy = {
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Пловдив.",
         question: "Can you appraise it from photos only?",
       },
       {

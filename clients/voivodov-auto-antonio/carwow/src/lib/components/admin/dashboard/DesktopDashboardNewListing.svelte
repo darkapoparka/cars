@@ -43,7 +43,7 @@
 				'Проследяване на запитване',
 				'Допълнителни снимки при нужда',
 				'Listings Active for 7 Days',
-				'Отговор от екипа на Day Night Auto'
+				'Отговор от екипа на VOIVODOV AUTO & ANTONIO'
 			]
 		},
 		{
@@ -76,7 +76,7 @@
 				'Проследяване на запитване',
 				'Допълнителни уточнения при нужда',
 				'Listings Active for 2 Months',
-				'Отговор от екипа на Day Night Auto'
+				'Отговор от екипа на VOIVODOV AUTO & ANTONIO'
 			]
 		},
 		{
@@ -92,7 +92,7 @@
 				'Проследяване на запитване',
 				'Допълнителни уточнения при нужда',
 				'Listings Active for 2 Months',
-				'Отговор от екипа на Day Night Auto'
+				'Отговор от екипа на VOIVODOV AUTO & ANTONIO'
 			]
 		}
 	];
@@ -139,7 +139,7 @@
 			href={resolve('/sell-your-car/request')}
 			class="btn btn-line btn-large font-weight-600 px-24"
 		>
-			Изпрати към Day Night Auto
+			Изпрати към VOIVODOV AUTO & ANTONIO
 		</a>
 	</div>
 
@@ -177,7 +177,7 @@
 					? 'dashboard-box style-2 content-inner active bg-white'
 					: 'dashboard-box style-2 content-inner bg-white'}
 			>
-				<p class="h4 mb-20 text-center">Заявка към Day Night Auto</p>
+				<p class="h4 mb-20 text-center">Заявка към VOIVODOV AUTO & ANTONIO</p>
 
 				<div
 					class="xl-grid-cols-2 sm-grid-cols-1 listing-grid2-columns md-grid-cols-1 grid grid-cols-4 gap-30"

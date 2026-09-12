@@ -159,7 +159,7 @@ function buildBudgetTiles(vehicles: Car[]) {
 }
 
 export function loadHomePageData(
-	home: HomePageHeadData = { title: 'Day Night Auto' },
+	home: HomePageHeadData = { title: 'Success Automobile' },
 	initialViewport: HomeInitialViewport = 'desktop',
 	vehicles?: Car[]
 ) {

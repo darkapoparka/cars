@@ -46,7 +46,7 @@ describe("public sitemap", () => {
     expect(dynamic).toBe("force-dynamic");
   });
 
-  it("includes only intentional localized Day & Night routes", async () => {
+  it("includes only intentional localized icars routes", async () => {
     const entries = await sitemap();
     const urls = entries.map(({ url }) => url);
 

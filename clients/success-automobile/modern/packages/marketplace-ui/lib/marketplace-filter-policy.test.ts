@@ -14,7 +14,7 @@ describe("marketplace filter policy", () => {
 
   it("keeps quick filter activation and labels derived from the same filter state", () => {
     const filters = parseMarketplaceSearchParams({
-      location: "Sofia",
+      location: "Пловдив",
       priceMax: 70_000,
       priceMin: 50_000,
       sort: "newest",
@@ -24,7 +24,7 @@ describe("marketplace filter policy", () => {
     expect(isMarketplaceQuickFilterActive("price", filters)).toBe(true);
     expect(isMarketplaceQuickFilterActive("fuel", filters)).toBe(false);
     expect(getMarketplaceQuickFilterLabel("location", filters, "bg")).toBe(
-      "София"
+      "Пловдив"
     );
     expect(getMarketplaceQuickFilterLabel("sort", filters, "bg")).toBe(
       "Най-нови"
@@ -35,7 +35,7 @@ describe("marketplace filter policy", () => {
     const filters = parseMarketplaceSearchParams({
       make: "BMW",
       model: "X5",
-      location: "Sofia",
+      location: "Пловдив",
     });
 
     expect(

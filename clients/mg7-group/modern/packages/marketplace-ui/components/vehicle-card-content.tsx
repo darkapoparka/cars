@@ -130,7 +130,7 @@ const VehiclePriceSummary = ({
             {copy.monthSuffix}
           </span>
         ) : null}
-      </p>
+      {listing.priceTaxLabel ? <span className="block whitespace-normal font-normal text-xs text-muted-foreground leading-4">{listing.priceTaxLabel}</span> : null}</p>
       {secondaryPriceLabel ? (
         <p
           className="text-[12px] text-muted-foreground leading-4"

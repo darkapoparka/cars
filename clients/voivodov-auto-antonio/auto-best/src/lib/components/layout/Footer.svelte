@@ -21,14 +21,14 @@
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
+      title: 'Условия за плащане',
       description: 'Попитайте за актуалните условия',
       href: '/contact?topic=leasing',
       icon: 'finance'
     },
     {
-      title: 'Внос по заявка',
-      description: 'Уточнете критериите с екипа',
+      title: 'Документи и произход',
+      description: 'Попитайте за конкретната обява',
       href: '/contact?topic=import',
       icon: 'value'
     }
@@ -56,8 +56,8 @@
 <footer class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
-      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+      <a class="dn-footer__logo" href={resolve('/')}><img src="/dealer/logo-dark.png" alt={brand.name} width="220" height="58" /></a>
+      <p>Публични автомобилни обяви, информация за избора и директен контакт за оглед.</p>
     </div>
     <nav aria-label="Автомобили">
       <strong>Автомобили</strong>
@@ -85,5 +85,5 @@
       <p class="dn-footer__appointment">{brand.appointment}</p>
     </div>
   </div>
-  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
+  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Детайли · Контакт</span></div>
 </footer>

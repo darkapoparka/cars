@@ -14,58 +14,50 @@ export interface Agent {
 }
 
 export const agents: Agent[] = [
-	{
-		slug: 'prodazhbi-daynight-auto',
-		name: daynightTeam[0]?.name ?? 'Day Night Auto Sales Team',
-		title: daynightTeam[0]?.role ?? 'Консултанти продажби',
-		phone: daynightSite.phoneLabel,
-		email: daynightSite.email,
-		image: daynightTeam[0]?.image ?? daynightSite.logoDark,
-		rating: 4.9,
-		sales: daynightSite.inventoryCount,
-		bio:
-			daynightTeam[0]?.bio ??
-			'Екипът съдейства при избор на автомобил, оглед, документи, бартер и финансиране.'
-	},
-	{
-		slug: 'barter-i-ocenka',
-		name: daynightTeam[1]?.name ?? 'Day Night Auto Trade-In Team',
-		title: daynightTeam[1]?.role ?? 'Оценка, покупка и бартер',
-		phone: daynightSite.phoneLabel,
-		email: daynightSite.email,
-		image: daynightTeam[1]?.image ?? daynightSite.logoDark,
-		rating: 4.8,
-		sales: 0,
-		bio:
-			daynightTeam[1]?.bio ??
-			'Екипът приема заявки за продажба или замяна на автомобил и подготвя следващите стъпки за оглед.'
-	},
-	{
-		slug: 'dokumenti-finansirane',
-		name: daynightTeam[2]?.name ?? 'Екип документи и финансиране',
-		title: daynightTeam[2]?.role ?? 'Документи и финансиране',
-		phone: daynightSite.phoneLabel,
-		email: daynightSite.email,
-		image: daynightTeam[2]?.image ?? daynightSite.logoDark,
-		rating: 4.8,
-		sales: 0,
-		bio:
-			daynightTeam[2]?.bio ??
-			'Екипът съдейства с документи, регистрация, финансиране и практични стъпки след избора на автомобил.'
-	},
-	{
-		slug: 'klientski-zapitvania',
-		name: daynightTeam[3]?.name ?? 'Екип клиентски заявки',
-		title: daynightTeam[3]?.role ?? 'Огледи и следващи стъпки',
-		phone: daynightSite.phoneLabel,
-		email: daynightSite.email,
-		image: daynightTeam[3]?.image ?? daynightSite.logoDark,
-		rating: 4.8,
-		sales: 0,
-		bio:
-			daynightTeam[3]?.bio ??
-			'Екипът координира клиентските запитвания, огледите и следващите стъпки до посещението на място.'
-	}
+  {
+    "slug": "prodazhbi-showroom",
+    "name": "Оглед на автомобил",
+    "title": "Контактна тема",
+    "phone": "0877 333 433",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "rating": 0,
+    "sales": 0,
+    "bio": "Посочете автомобила и попитайте за наличността, мястото и часа за оглед."
+  },
+  {
+    "slug": "barter-i-ocenka",
+    "name": "Друг въпрос",
+    "title": "Контактна тема",
+    "phone": "0877 333 433",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "rating": 0,
+    "sales": 0,
+    "bio": "Попитайте дали автосалонът разглежда конкретното ви предложение. Приемане на бартер или изкупуване не се обещава."
+  },
+  {
+    "slug": "dokumenti-finansirane",
+    "name": "Документи и цена",
+    "title": "Контактна тема",
+    "phone": "0877 333 433",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "rating": 0,
+    "sales": 0,
+    "bio": "Поискайте конкретни документи и пълни условия за плащане. Този сайт не одобрява кредит."
+  },
+  {
+    "slug": "klientski-zapitvania",
+    "name": "Подготовка за контакт",
+    "title": "Контактна тема",
+    "phone": "0877 333 433",
+    "email": "",
+    "image": "/dealer/logo-light.png",
+    "rating": 0,
+    "sales": 0,
+    "bio": "Подгответе въпросите си и използвайте публикувания телефон. Демо формите не изпращат съобщение."
+  }
 ];
 
 export function getAgentBySlug(slug: string) {

@@ -1,0 +1,1523 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-09-09",
+  "business": {
+    "slug": "todorov-auto",
+    "name": "Автосалон Тодоров",
+    "shortName": "Тодоров",
+    "upperName": "АВТОСАЛОН ТОДОРОВ",
+    "city": "Бургас",
+    "district": "Изгрев",
+    "address": "Изгрев, ул. Транспортна, 5-ти километър",
+    "phone": "0888 417 282",
+    "phoneDigits": "0888417282",
+    "phoneE164": "+359888417282",
+    "otherPhones": [
+      "+35956861264",
+      "+359888225450"
+    ],
+    "email": "",
+    "hours": "Пон.–Пет. 09:00–18:00 · Съб. 10:00–16:30 · Нед. почивен ден",
+    "sourceUrl": "https://todorovauto.mobile.bg/",
+    "logoUrl": "https://g1-bg.cars.bg/users_logos/301.jpg",
+    "accent": "#133ab9",
+    "tagline": "Автомобили в Бургас. Изберете, сравнете и уговорете оглед.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%B2%D1%82%D0%BE%D1%81%D0%B0%D0%BB%D0%BE%D0%BD%20%D0%A2%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%20%D0%98%D0%B7%D0%B3%D1%80%D0%B5%D0%B2%2C%20%D1%83%D0%BB.%20%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%2C%205-%D1%82%D0%B8%20%D0%BA%D0%B8%D0%BB%D0%BE%D0%BC%D0%B5%D1%82%D1%8A%D1%80%20%D0%91%D1%83%D1%80%D0%B3%D0%B0%D1%81",
+    "mapsEmbedUrl": "https://www.google.com/maps?q=%D0%98%D0%B7%D0%B3%D1%80%D0%B5%D0%B2%2C%20%D1%83%D0%BB.%20%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D0%B0%2C%205-%D1%82%D0%B8%20%D0%BA%D0%B8%D0%BB%D0%BE%D0%BC%D0%B5%D1%82%D1%8A%D1%80%20%D0%91%D1%83%D1%80%D0%B3%D0%B0%D1%81&output=embed",
+    "logo": {
+      "publishedBranding": true,
+      "sourceLogoUrl": "https://g1-bg.cars.bg/users_logos/301.jpg",
+      "creationMethod": "source bitmap cropped only for outer matte; spelling and artwork unchanged",
+      "workingLogoPath": "/dealer/logo-light.png",
+      "approvalStatus": "owner-directed private review concept; no dealer endorsement or third-party licence asserted",
+      "nativeArtworkSize": {
+        "width": 148,
+        "height": 16
+      },
+      "imageGeneration": false,
+      "sourceSha256": "6a9d6539106cc5df4bf687cff0d119802ceebef8eb0f5f3f9f58f576e1e7e685"
+    }
+  },
+  "stock": [
+    {
+      "sourceId": "11763371717307272",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11763371717307272-renault-captur-1-3tce-intens-140ks",
+      "observedAt": "2026-09-09T01:47:15.697Z",
+      "title": "Renault Captur 1.3 TCe Intens",
+      "advertisedTitle": "Renault Captur 1.3TCe Intens, 140кс.",
+      "make": "Renault",
+      "model": "Captur 1.3 TCe Intens",
+      "slug": "renault-captur-1-3-tce-intens-307272",
+      "year": 2021,
+      "manufactureDateText": "март 2021",
+      "mileageKm": 46000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "color": "Сив",
+      "powerHp": 140,
+      "engineCc": 1332,
+      "batteryKwh": null,
+      "priceEur": 16450,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "март 2021",
+        "Двигател": "Бензинов",
+        "Мощност": "140 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1332 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Хечбек",
+        "Пробег [км]": "46000 км",
+        "Цвят": "Сив",
+        "VIN номер": "VF1RJB00866801585"
+      },
+      "sourceDetailSha256": "c4537dabbd595da5ff0a71967116983123a3fd91409f514afcda0ceb91daf980",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_Xv.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11763371717307272-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "c3934d400db63e16f602ef0f887e71324ae86a2bb430767cdac25877d541fd45",
+          "gitBlob": "7a7f5244da048dad88f441a73bfb050a799dc128"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_7n.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11763371717307272-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "29e9246056b689d0d42a2d0dce483cb7e2ba60891ee33fa629750ba943041bc8",
+          "gitBlob": "f72304652ef009ac8c4b4083392e99a6210e7063"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_gd.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11763371717307272-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "262934850fbce88a69dfad0327691a053f8e12fab63a5741be0524017fbb1444",
+          "gitBlob": "e56b18b48703ff2e8c4208e617b81f79b4309302"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_1a.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11763371717307272-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "941fcfc2b231e6a3b16c5b766b5b45e29aefa0847681ab0e45378cbf182da198",
+          "gitBlob": "dab5683b034c814867789acc79805fc58dbe60c3"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_6o.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11763371717307272-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "cbe7fe3607175443db9cbaebf6ff727abff77a08f096ed197558b912e6351e9a",
+          "gitBlob": "b6392a0124f8e0ea8cdac282d9db5b697a726e92"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/272/1/big1/11763371717307272_7u.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11763371717307272-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "f42f16a72d9709264b854531427d1c0200f11e5528480a07bf56b25538b079ff",
+          "gitBlob": "2dda8f78eb904027fc1dce9bcc084576fc2f4f56"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11704208021161812",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11704208021161812-nissan-micra-ig-tacenta-xtronic92k",
+      "observedAt": "2026-09-09T01:47:15.699Z",
+      "title": "Nissan Micra IG-T Acenta Xtronic",
+      "advertisedTitle": "Nissan Micra IG-Tacenta Xtronic92k",
+      "make": "Nissan",
+      "model": "Micra IG-T Acenta Xtronic",
+      "slug": "nissan-micra-ig-t-acenta-xtronic-161812",
+      "year": 2021,
+      "manufactureDateText": "ноември 2021",
+      "mileageKm": 14144,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "color": "Бял",
+      "powerHp": 92,
+      "engineCc": 999,
+      "batteryKwh": null,
+      "priceEur": 11950,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Металик",
+        "Аларма",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "ноември 2021",
+        "Двигател": "Бензинов",
+        "Мощност": "92 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "999 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Хечбек",
+        "Пробег [км]": "14144 км",
+        "Цвят": "Бял",
+        "VIN номер": "VNVK1400868551990"
+      },
+      "sourceDetailSha256": "44497073e315b29a052af5d00ce6eaf9f8d7ba2119e69b1022299ae971b445b2",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/812/1/big1/11704208021161812_LM.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11704208021161812-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "24c13c702d85aad1dcaa36a26e0dee6d6e1729271ded4c377b4aaf82309dbe94",
+          "gitBlob": "e5ce563d6517bb1cbd80f3e01d156f550ca1b9f5"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/812/1/big1/11704208021161812_O6.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11704208021161812-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "aa87bb4d844003f3c4da1da266e6252a3ab3006ee45b4f9ba69c5f2c498bf987",
+          "gitBlob": "1030a4311069f5b72ca0ed4880a00356d35fe361"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/812/1/big1/11704208021161812_qw.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11704208021161812-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "6dc6a1ddf2092e3360f19c4da25ef6925843824871e171e63f323baf92a7d84a",
+          "gitBlob": "6d86c6758d7336fc3c32c3bfaa35fba28d213e94"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/812/1/big1/11704208021161812_i4.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11704208021161812-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1800
+          },
+          "sha256": "53fb1278900f2b42010c300253ce872aadabc6007f219ef754d4b2edd7469f2c",
+          "gitBlob": "e40d5c544989d541e5b20e240a16b7857325ccbc"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/812/1/big1/11704208021161812_k.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11704208021161812-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "972af3e8040051593cfadf9acd331385b8b1eb1ae199498bc1a5df660636ec2a",
+          "gitBlob": "b50df3e70a521b0e2465e05e4662a62e3035c8ee"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/812/1/big1/11704208021161812_Jb.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11704208021161812-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1787
+          },
+          "sha256": "4aa70db7bb7ff9df44ebc41d748c25d49b1af87815312e98dd912be2f775d3fd",
+          "gitBlob": "dc9b718127d133a2bdd4b13521998c8471ecab89"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11735041255980884",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11735041255980884-nissan-leaf-2-zeroemission-150ks",
+      "observedAt": "2026-09-09T01:47:15.700Z",
+      "title": "Nissan Leaf 2 ZeroEmission",
+      "advertisedTitle": "Nissan Leaf 2 ZeroEmission 150кс",
+      "make": "Nissan",
+      "model": "Leaf 2 ZeroEmission",
+      "slug": "nissan-leaf-2-zeroemission-980884",
+      "year": 2018,
+      "manufactureDateText": "юли 2018",
+      "mileageKm": 102600,
+      "fuel": "Електрически",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "color": "Резидав",
+      "powerHp": 150,
+      "engineCc": null,
+      "batteryKwh": 40,
+      "priceEur": 11250,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "юли 2018",
+        "Двигател": "Електрически",
+        "Мощност": "150 к.с.",
+        "Евростандарт": "Евро 6",
+        "Пробег с едно зареждане (WLTP) [км]": "250 км.",
+        "Капацитет на батерията [kWh]": "40 kWh.",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Хечбек",
+        "Пробег [км]": "102600 км",
+        "Цвят": "Резидав",
+        "VIN номер": "SJNFAAZE1U0018220"
+      },
+      "sourceDetailSha256": "88b1521e41ffcb0683cc409a3c5830976bc7e001cec6ae782c0538859791bc19",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/big1/11735041255980884_3E.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11735041255980884-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d9a8685de270b790c41e4cdc65b11640d783226ae2b7ee1c392e797456dd85e5",
+          "gitBlob": "819914f7a583c8f195cd1a7ac7a948fdedff829d"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/big1/11735041255980884_uk.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11735041255980884-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "e8072d4ac45215d8c1c06254be7e656a1fdb16378a93439b175ca51fe36ca643",
+          "gitBlob": "b4ac733cdd34e0659b94d7a37acb2e086ba08277"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/big1/11735041255980884_Er.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11735041255980884-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "d0d8947079c34c31819e9265d045b703ef048aa31cb80599c997a33fa9e986ec",
+          "gitBlob": "b738fe69de3bbfcb3a23c4dc4ea75ab300fb66b8"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/big1/11735041255980884_3i.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11735041255980884-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "871072c273b391034a506c2360f2b79a7a5dc3ba01ab0c9a7e105c46574d60f0",
+          "gitBlob": "f81fd116115cc73b1c82c18dd43f89a6b78f107d"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/big1/11735041255980884_73.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11735041255980884-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "0c9b26961f76e6bef1d2b113947e08cdbd79a14e15a60c4cfac5ab9fc031b4d6",
+          "gitBlob": "2f08bbfa32c91dbfaa485f8ea1b46b304be0dab6"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/big1/11735041255980884_9U.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11735041255980884-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 600
+          },
+          "sha256": "e0e2ab32dce292326b838bb3d21f1ad10aac334b7735ef775c05d21ddc400f3a",
+          "gitBlob": "b6c39946900de71c48a1ef37dd89ada7e5de6a82"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11757098776259646",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11757098776259646-toyota-yaris-1-5i-hybrid",
+      "observedAt": "2026-09-09T01:47:15.700Z",
+      "title": "Toyota Yaris 1.5 Hybrid",
+      "advertisedTitle": "Toyota Yaris 1.5i Hybrid",
+      "make": "Toyota",
+      "model": "Yaris 1.5 Hybrid",
+      "slug": "toyota-yaris-1-5-hybrid-259646",
+      "year": 2017,
+      "manufactureDateText": "април 2017",
+      "mileageKm": 139590,
+      "fuel": "Хибриден",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "color": "Червен",
+      "powerHp": 75,
+      "engineCc": 1497,
+      "batteryKwh": null,
+      "priceEur": 8690,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Антиблокираща система",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Система ISOFIX",
+        "Система за защита от пробуксуване",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "Аларма",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Бордкомпютър",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Хомологация N1"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "април 2017",
+        "Двигател": "Хибриден",
+        "Мощност": "75 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1497 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Хечбек",
+        "Пробег [км]": "139590 км",
+        "Цвят": "Червен",
+        "VIN номер": "VNKKD3D380A313432"
+      },
+      "sourceDetailSha256": "6e46a367a90fb1bdb9211abfe682480e7eff67af04e3749ed73ee0c82c217735",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/646/1/big1/11757098776259646_zw.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11757098776259646-1.webp",
+          "originalDimensions": {
+            "width": 1440,
+            "height": 1080
+          },
+          "sha256": "ab7106774478af3476f6ec39a0d9d66f51a3386d0b46e47e28f530de234cd126",
+          "gitBlob": "d9adb68929e68cef0908b6f0614cb6d955352fbc"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/646/1/big1/11757098776259646_Jv.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11757098776259646-2.webp",
+          "originalDimensions": {
+            "width": 1440,
+            "height": 1080
+          },
+          "sha256": "1177cfb3b550f8383ac1264f55afaed3c09a71ae40d03d30ab2018b0b4d15905",
+          "gitBlob": "d09f42f36db72e1b043d6715b2a777bc52801a77"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/646/1/big1/11757098776259646_Ku.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11757098776259646-3.webp",
+          "originalDimensions": {
+            "width": 1440,
+            "height": 1080
+          },
+          "sha256": "e3e1b89643301af39f0a4a9d56ffd0c0258e9c0a42fadbb2220dfbdb77a341be",
+          "gitBlob": "d6577d3271feef71a210c333d9d498b5c964508f"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/646/1/big1/11757098776259646_2u.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11757098776259646-4.webp",
+          "originalDimensions": {
+            "width": 1440,
+            "height": 1080
+          },
+          "sha256": "da7dff0aba895954adef1e4e7a31700c8ca0f7b8169cdaf05f72183f2cd83528",
+          "gitBlob": "b55a9c588082650ad8183a540560fa6cf4dd3f55"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/646/1/big1/11757098776259646_Ov.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11757098776259646-5.webp",
+          "originalDimensions": {
+            "width": 1440,
+            "height": 1080
+          },
+          "sha256": "e147ccb4cb53a981bfe76471b2de0f6b7e23f4d0351358902aa192dd1fc9eec4",
+          "gitBlob": "fceff5e6dfa012034810b6a9178bacddef2ea2b2"
+        },
+        {
+          "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/646/1/big1/11757098776259646_q1.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11757098776259646-6.webp",
+          "originalDimensions": {
+            "width": 1440,
+            "height": 2160
+          },
+          "sha256": "580b539f4dedf571513ed084dce34d1ace1fc408c8d66a871b5860d4a3e7c3df",
+          "gitBlob": "981862e0ec3f454b8ccba19ca058f2b99915d5f2"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11649235957114307",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11649235957114307-renault-megane-1-5-dci-zen-110-k-s",
+      "observedAt": "2026-09-09T01:47:15.701Z",
+      "title": "Renault Megane 1.5 dCi Zen",
+      "advertisedTitle": "Renault Megane 1.5 dCi Zen, 110 к.с",
+      "make": "Renault",
+      "model": "Megane 1.5 dCi Zen",
+      "slug": "renault-megane-1-5-dci-zen-114307",
+      "year": 2016,
+      "manufactureDateText": "юни 2016",
+      "mileageKm": 129000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "color": "Черен",
+      "powerHp": 110,
+      "engineCc": 1461,
+      "batteryKwh": null,
+      "priceEur": 9800,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Металик",
+        "Халогенни фарове",
+        "Аларма",
+        "Каско",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "юни 2016",
+        "Двигател": "Дизелов",
+        "Мощност": "110 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1461 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Хечбек",
+        "Пробег [км]": "129000 км",
+        "Цвят": "Черен",
+        "VIN номер": "VF1RFB00955219825"
+      },
+      "sourceDetailSha256": "16dc1156c16def9d027bb93a0dca76ee47bf8b6ba065e7c4b301134650f49362",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/307/1/big/11649235957114307_2.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11649235957114307-1.webp",
+          "originalDimensions": {
+            "width": 800,
+            "height": 600
+          },
+          "sha256": "0195178d991b21b6e5586e6ad35777db93ddbb6d10f4b9a51b5c88fb522b7bd3",
+          "gitBlob": "2f406588adb263acfb6dd82115610206c99c4f8f"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/307/1/big/11649235957114307_Ai.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11649235957114307-2.webp",
+          "originalDimensions": {
+            "width": 800,
+            "height": 600
+          },
+          "sha256": "39a87e6e55670cd85c36c4476afe94af5a7a9787f7d6b6ab4fdcfbee729f0bb0",
+          "gitBlob": "bc85c3f757dff6e3acd2d2c8ce272c588f26436d"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/307/1/big/11649235957114307_fF.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11649235957114307-3.webp",
+          "originalDimensions": {
+            "width": 800,
+            "height": 600
+          },
+          "sha256": "a3e4f744ae32d8285888f310503f8babb515b8330ff2559354a64d085fed55b1",
+          "gitBlob": "68ae219ae60f067783953da6699665cb13c2fecc"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/307/1/big/11649235957114307_iM.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11649235957114307-4.webp",
+          "originalDimensions": {
+            "width": 800,
+            "height": 600
+          },
+          "sha256": "2c742f380cf8c7026d67f266aac86b64b0b602725c58833bfb536f61ef0bf230",
+          "gitBlob": "4ec2d921d4f2186c35e95425681bf10793f921c8"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/307/1/big/11649235957114307_XV.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11649235957114307-5.webp",
+          "originalDimensions": {
+            "width": 800,
+            "height": 800
+          },
+          "sha256": "1cbf64499db5ce00e688b0b7429ad70e3bf24d6e76e205a29559107cb6ad60d9",
+          "gitBlob": "839e0d27e661afdfb62b05aac2626993cb15eb3a"
+        },
+        {
+          "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/307/1/big/11649235957114307_ks.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11649235957114307-6.webp",
+          "originalDimensions": {
+            "width": 800,
+            "height": 800
+          },
+          "sha256": "25d9ab5d1488eaa0f2a7d615073c2468fa0813984cec27a85690080541642494",
+          "gitBlob": "efe605dd0d618db5a2af56d096f41a6808e9ec01"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11784299299170761",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11784299299170761-peugeot-2008-1-2pt-allure-premium",
+      "observedAt": "2026-09-09T01:47:15.701Z",
+      "title": "Peugeot 2008 Allure Premium",
+      "advertisedTitle": "Peugeot 2008 1.2PT Allure Premium",
+      "make": "Peugeot",
+      "model": "2008 Allure Premium",
+      "slug": "peugeot-2008-allure-premium-170761",
+      "year": 2025,
+      "manufactureDateText": "май 2025",
+      "mileageKm": 4000,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Тъмно сив",
+      "powerHp": 130,
+      "engineCc": 1199,
+      "batteryKwh": null,
+      "priceEur": 24900,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Рейлинг на покрива",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "360 camera \\ Задна камера",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "май 2025",
+        "Двигател": "Бензинов",
+        "Мощност": "130 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1199 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "4000 км",
+        "Цвят": "Тъмно сив",
+        "VIN номер": "VR3USHNS9SJ625173"
+      },
+      "sourceDetailSha256": "0d5e0643cfa6b53eeb585f3ae55ff72a43a50c09749962948cba6ae752e5878a",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/761/1/big1/11784299299170761_Yd.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11784299299170761-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6447d231ab2482c8e8a13914aced291969fd3d83d9c4751f7e578d9d2aa46f62",
+          "gitBlob": "d11b813705f9ebea65e6ebb1518e40514e7441e9"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/761/1/big1/11784299299170761_y0.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11784299299170761-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "dc4095b9d24e4e17097ecae033fa25100a2d9411ad4474278d6fcf10a3c186e0",
+          "gitBlob": "482142ab89ab63cf0b70a5645ef28306135b95f0"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/761/1/big1/11784299299170761_6t.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11784299299170761-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4aca4fc321f0bf542fec8eac872c82cfacabc013d51320cb958d4af78f4e64e4",
+          "gitBlob": "ec97c437cd70be35bd7fe350718b57714a93a5ff"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/761/1/big1/11784299299170761_2g.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11784299299170761-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "501571e62cf33785bd972cd8598e8ad8a57152de6b549333a946f9d45200147e",
+          "gitBlob": "325594c5622c57ef06dd23a76feb29d563ae9bb4"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/761/1/big1/11784299299170761_Qo.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11784299299170761-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "f9936907ea6908753811d70f18361f6dce27fa16f785569f0fba7e4f7bf82c95",
+          "gitBlob": "d3059440fe800a261480aba6e11a6a37c18d0ef6"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/761/1/big1/11784299299170761_UZ.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11784299299170761-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "366b64876883f485f4ac7475e6545da50d21256d4bb4d1bbc089d06bf107af66",
+          "gitBlob": "029d54d969effc970536bc378d1b671b2dd95351"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21782384979656784",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-21782384979656784-opel-crossland-x-1-2i-tp-ultim-110-k-s",
+      "observedAt": "2026-09-09T01:47:15.702Z",
+      "title": "Opel Crossland X 1.2 TP Ultim",
+      "advertisedTitle": "Opel Crossland X 1.2i TP Ultim 110 к.с.",
+      "make": "Opel",
+      "model": "Crossland X 1.2 TP Ultim",
+      "slug": "opel-crossland-x-1-2-tp-ultim-656784",
+      "year": 2018,
+      "manufactureDateText": "юли 2018",
+      "mileageKm": 115403,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Хечбек",
+      "color": "Бял",
+      "powerHp": 110,
+      "engineCc": 1199,
+      "batteryKwh": null,
+      "priceEur": 10450,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за защита от пробуксуване",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Рейлинг на покрива",
+        "Халогенни фарове",
+        "Аларма",
+        "Централно заключване",
+        "360 camera \\ Задна камера",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Head up display",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Безключово палене",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "юли 2018",
+        "Двигател": "Бензинов",
+        "Мощност": "110 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1199 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Хечбек",
+        "Пробег [км]": "115403 км",
+        "Цвят": "Бял",
+        "VIN номер": "W0V7H9EDXJ4378298"
+      },
+      "sourceDetailSha256": "6331de7617386e32240dd1905e3f8e602b52ff53397b594e50843c3c2d3229c1",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/784/2/big1/21782384979656784_jQ.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21782384979656784-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "59cb75b8e8bc43b0d260853ee63c23ec08b8cd5a39af0328cac128c4b9d29ead",
+          "gitBlob": "df0d2e1cda8356f7221b7e15d0a0f220f33cc5c3"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/784/2/big1/21782384979656784_4j.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21782384979656784-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6d6528c71c45884f4079c205b751a2b3e10a59796ed728f11764e81bebe908e7",
+          "gitBlob": "a47639eb855144c92bc2543e6e8269022a081548"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/784/2/big1/21782384979656784_BG.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21782384979656784-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "e107c349ac5fbce5f8e28f5421eff604f19adbefea8f3a5e3285b16e1c8caf93",
+          "gitBlob": "fab552effd721e31a205eb68bfc36143d963a4b6"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/784/2/big1/21782384979656784_3E.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21782384979656784-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "489a830614a4c882b0e29bc6663c26cfd7240b283abe9f6ced36fab84bd731ac",
+          "gitBlob": "2648a70a4c57df2523f4ec320122cbb43aaaf7ab"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/784/2/big1/21782384979656784_jg.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21782384979656784-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6740b6f5aab84c650a55ce3e81368dc47fe999d0a8e7bc83d5881d2d5584c152",
+          "gitBlob": "0a0fda3a10556a06e1f47e038f15ef5b486eb521"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/784/2/big1/21782384979656784_rI.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/21782384979656784-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "6b742d88fb9cb53740a0354f6cde314481201360906e39fc0da52cd3181ce64e",
+          "gitBlob": "ed6148a2ed0b288bda7192f8e89bd972b04d78d4"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11701427910651766",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11701427910651766-opel-astra-1-6cdtiecofenjoy136ks",
+      "observedAt": "2026-09-09T01:47:15.702Z",
+      "title": "Opel Astra 1.6 CDTi",
+      "advertisedTitle": "Opel Astra 1.6CDTiecoFEnjoy136кс",
+      "make": "Opel",
+      "model": "Astra 1.6 CDTi",
+      "slug": "opel-astra-1-6-cdti-651766",
+      "year": 2017,
+      "manufactureDateText": "март 2017",
+      "mileageKm": 166000,
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "body": "Комби",
+      "color": "Сив",
+      "powerHp": 136,
+      "engineCc": 1598,
+      "batteryKwh": null,
+      "priceEur": 7400,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на спускането",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Металик",
+        "Рейлинг на покрива",
+        "Аларма",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Бордкомпютър",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "март 2017",
+        "Двигател": "Дизелов",
+        "Мощност": "136 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1598 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Комби",
+        "Пробег [км]": "166000 км",
+        "Цвят": "Сив",
+        "VIN номер": "W0LBD8EG8H8047855"
+      },
+      "sourceDetailSha256": "10edd10ac391f295bfac75ca85908274c6d7a58ec5a4e605ba8ac37ac16b5dc1",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/766/1/big1/11701427910651766_vB.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11701427910651766-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "11ed1755fe6d2b451985db52fad543bbb746f94e73563aed65a831a7fb741707",
+          "gitBlob": "9a8f45003e618c42f2c19503ca86e12c660604c6"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/766/1/big1/11701427910651766_jT.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11701427910651766-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "b116445dfe82bf776a4c6491763876535ec5846ff9ebb6742dee833359c65cca",
+          "gitBlob": "16067d5e0f80621e9d1a8a63d8895527785cad00"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/766/1/big1/11701427910651766_J5.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11701427910651766-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "276af1b07750e1861055aa89a78596bccd2b891b043f13f300b842822290acde",
+          "gitBlob": "ab22dc3380d2b8ecd5a47d4ba8a2a366ed2d67ad"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/766/1/big1/11701427910651766_Er.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11701427910651766-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 900
+          },
+          "sha256": "60e8bc60fc4046dba242da9240181a78fccb65e2f740e5366f8110803fa89fa2",
+          "gitBlob": "0327aaaf24ef3e7f074fd0d570db3fbc9f7c3e25"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/766/1/big1/11701427910651766_Kz.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11701427910651766-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "41c4791f6397ae5162f344f0160ff35a4a47688f3e4afd68742452aa2edfe0f4",
+          "gitBlob": "51b4f8b3d2595ab164ada69f49ef6f4db5805278"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/766/1/big1/11701427910651766_1W.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11701427910651766-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1600
+          },
+          "sha256": "b82cea0f59e61e7d5898cdf898b364d43828677a2192a6b50e873d3ed5f4cf28",
+          "gitBlob": "0b6f1b538b8ca4bb7a9c876b28d0dd930a71d48a"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "21784126666986144",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-21784126666986144-mercedes-benz-glc-43-amg-4matic-390-k-s",
+      "observedAt": "2026-09-09T01:47:15.704Z",
+      "title": "Mercedes-Benz GLC 43 AMG 4Matic",
+      "advertisedTitle": "Mercedes-Benz GLC 43 AMG 4Matic, 390 к.с.",
+      "make": "Mercedes-Benz",
+      "model": "GLC 43 AMG 4Matic",
+      "slug": "mercedes-benz-glc-43-amg-4matic-986144",
+      "year": 2020,
+      "manufactureDateText": "април 2020",
+      "mileageKm": 142065,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Джип",
+      "color": "Тъмно сив",
+      "powerHp": 390,
+      "engineCc": 2996,
+      "batteryKwh": null,
+      "priceEur": 35750,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Адаптивни предни светлини",
+        "Антиблокираща система",
+        "Въздушни възглавници - Задни",
+        "Въздушни възглавници - Предни",
+        "Въздушни възглавници - Странични",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Парктроник",
+        "Система ISOFIX",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Система за контрол на дистанцията",
+        "Система за контрол на спускането",
+        "4x4",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "LED фарове",
+        "Лети джанти",
+        "Металик",
+        "Панорамен люк",
+        "Рейлинг на покрива",
+        "Спойлери",
+        "Теглич",
+        "Халогенни фарове",
+        "Шибедах",
+        "Аларма",
+        "Централно заключване",
+        "Кожен салон",
+        "360 camera \\ Задна камера",
+        "Apple CarPlay \\ Android Auto",
+        "Auto Start Stop function",
+        "Bluetooth \\ handsfree система",
+        "DVD, TV",
+        "Head up display",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Автоматично затваряне на багажника",
+        "Адаптивно въздушно окачване",
+        "Безключово палене",
+        "Блокаж на диференциала",
+        "Бордкомпютър",
+        "Вентилация на седалките",
+        "Датчик за светлина",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Ел. регулиране на седалките",
+        "Ел. усилвател на волана",
+        "Климатроник",
+        "Мултифункционален волан",
+        "Навигация",
+        "Отопление на волана",
+        "Подгряване на предното стъкло",
+        "Подгряване на седалките",
+        "Регулиране на волана",
+        "Сензор за дъжд",
+        "Серво усилвател на волана",
+        "Система за измиване на фаровете",
+        "Система за контрол на скоростта (автопилот)",
+        "Хладилна жабка"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "април 2020",
+        "Двигател": "Бензинов",
+        "Мощност": "390 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "2996 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Джип",
+        "Пробег [км]": "142065 км",
+        "Цвят": "Тъмно сив",
+        "VIN номер": "W1N2539641F818182"
+      },
+      "sourceDetailSha256": "a1958a141bf7ad6c3afbf28b4058ec1f396c71d910f9233ffaed8d2d8923fac4",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/144/2/big1/21784126666986144_aE.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/21784126666986144-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "e2d97e33503a59ef5231d76140bb78a0f5d39fc4d8c4da811c43d268ea9a6f5b",
+          "gitBlob": "c1ea299c6ce517d0b7d0a4909b363f3558253842"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/144/2/big1/21784126666986144_aX.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/21784126666986144-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "06c394e678b0ef5d593279b31c701d459332ebc392f5254bab835968acbb84ef",
+          "gitBlob": "ee6b60a6716066f6e0467f4bc0c8b91dc0c622e1"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/144/2/big1/21784126666986144_rs.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/21784126666986144-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "9ac0fef7b43f3bb6321053da6904fc0d28c3bc7537b3808917a2ab01d042d855",
+          "gitBlob": "b934dc46df20b30273e3c1f004c78f7c7867f7d6"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/144/2/big1/21784126666986144_PV.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/21784126666986144-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "6f1065eefa89413930c4a7b1cd73d79ad26194a32ead040ce030f524d2a2ead9",
+          "gitBlob": "f4644bc917407150415cc5992be997a010e722d6"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/144/2/big1/21784126666986144_ZO.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/21784126666986144-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "750dc8169b92586519ee0a97c20ea94956e44876fa82e58a9f2ed2c69de2b207",
+          "gitBlob": "ea7e7e8c1677f2fb3f4a1be44a12765081bb6bd8"
+        },
+        {
+          "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/144/2/big1/21784126666986144_SA.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/21784126666986144-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "04d675d685a836ecd7fec1a889044f436be2117ba9d33c904e97bb0ed89c4070",
+          "gitBlob": "b3e942d685e62bdf3feb403429474e8fd55f7023"
+        }
+      ],
+      "detailObserved": true
+    },
+    {
+      "sourceId": "11776511305281815",
+      "sourceUrl": "https://todorovauto.mobile.bg/obiava-11776511305281815-vw-caddy-1-4tsi-bluemotion-technology-dsg",
+      "observedAt": "2026-09-09T01:47:15.705Z",
+      "title": "VW Caddy 1.4 TSI DSG",
+      "advertisedTitle": "VW Caddy 1.4TSI BlueMotion Technology DSG",
+      "make": "VW",
+      "model": "Caddy 1.4 TSI DSG",
+      "slug": "vw-caddy-1-4-tsi-dsg-281815",
+      "year": 2017,
+      "manufactureDateText": "януари 2017",
+      "mileageKm": 192781,
+      "fuel": "Бензинов",
+      "transmission": "Автоматична",
+      "body": "Ван",
+      "color": "Бял",
+      "powerHp": 125,
+      "engineCc": 1395,
+      "batteryKwh": null,
+      "priceEur": 9450,
+      "currency": "EUR",
+      "taxLabel": "Цената е с включено ДДС",
+      "availability": "advertised-unconfirmed",
+      "features": [
+        "Антиблокираща система",
+        "Въздушни възглавници - Предни",
+        "Ел. разпределяне на спирачното усилие",
+        "Електронна програма за стабилизиране",
+        "Контрол на налягането на гумите",
+        "Система за динамична устойчивост",
+        "Система за защита от пробуксуване",
+        "Сервизна книжка",
+        "4(5) Врати",
+        "Централно заключване",
+        "Auto Start Stop function",
+        "Steptronic, Tiptronic",
+        "USB, audio\\video, IN\\AUX изводи",
+        "Бордкомпютър",
+        "Ел. Огледала",
+        "Ел. Стъкла",
+        "Регулиране на волана",
+        "Серво усилвател на волана",
+        "Система за контрол на скоростта (автопилот)",
+        "Хомологация N1"
+      ],
+      "sourceTechnicalFields": {
+        "Дата на производство": "януари 2017",
+        "Двигател": "Бензинов",
+        "Мощност": "125 к.с.",
+        "Евростандарт": "Евро 6",
+        "Кубатура [куб.см]": "1395 см 3",
+        "Скоростна кутия": "Автоматична",
+        "Категория": "Ван",
+        "Пробег [км]": "192781 км",
+        "Цвят": "Бял",
+        "VIN номер": "WV1ZZZ2KZHX076464"
+      },
+      "sourceDetailSha256": "cc8a231db784895d14bd8d0601bc85b0f3289e3737a0e316345a333987fb452c",
+      "sourceGalleryCount": 17,
+      "photos": [
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/815/1/big1/11776511305281815_mv.webp",
+          "sourceIndex": 1,
+          "localPath": "/dealer/stock/11776511305281815-1.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "4907f673d91fc25a7174fa78f3bed1b7d49618af8d684b9e65ee4ece1c17b955",
+          "gitBlob": "cd4b46f2c3bc799b3f40014114e76400e6400541"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/815/1/big1/11776511305281815_RY.webp",
+          "sourceIndex": 2,
+          "localPath": "/dealer/stock/11776511305281815-2.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "81121ea848762cb92496110af8a240948e0b24505c6e75b20e7a61270cb13dcc",
+          "gitBlob": "caa353c980daa632b7678c4e45f30087379fa567"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/815/1/big1/11776511305281815_tX.webp",
+          "sourceIndex": 6,
+          "localPath": "/dealer/stock/11776511305281815-3.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "bfe1575dd41ac70c160f9b23b41a34171af9402a54543d04ee25d13f97b28402",
+          "gitBlob": "e003358727c0af78d2b84c22f9ba8d4222971d91"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/815/1/big1/11776511305281815_ko.webp",
+          "sourceIndex": 9,
+          "localPath": "/dealer/stock/11776511305281815-4.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "a5b3f6bcbc6c208fc5369cc24e24541f1e76ab98c255d04e86cf83d095b95c88",
+          "gitBlob": "e207624954018783632e5fc29f468cefbf988541"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/815/1/big1/11776511305281815_52.webp",
+          "sourceIndex": 12,
+          "localPath": "/dealer/stock/11776511305281815-5.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 1200
+          },
+          "sha256": "cd09e822849a4aac51ece547d4a8da887eacc98d7a255a79c342e9a907429e04",
+          "gitBlob": "11cc9a5f612ec04af8f1c9af7a19749aad7cc440"
+        },
+        {
+          "sourceUrl": "https://mobistatic4.focus.bg/mobile/photosorg/815/1/big1/11776511305281815_TU.webp",
+          "sourceIndex": 17,
+          "localPath": "/dealer/stock/11776511305281815-6.webp",
+          "originalDimensions": {
+            "width": 1600,
+            "height": 2400
+          },
+          "sha256": "c6ce7a3a08fbef7259eea7c6793817d54e19d092c0c1f1af269697b1fc86e17f",
+          "gitBlob": "663ba780600f5fb950a1945e8484377819c15365"
+        }
+      ],
+      "detailObserved": true
+    }
+  ],
+  "interpretation": "Dated public advertisements, not independently inspected or guaranteed available stock. Native EUR and km; no currency conversion.",
+  "mediaScope": "Owner-directed private technical review. Public sources and original watermarks retained. No dealership endorsement or third-party licence grant is asserted.",
+  "publicationApproved": false,
+  "outreachPerformed": false
+}

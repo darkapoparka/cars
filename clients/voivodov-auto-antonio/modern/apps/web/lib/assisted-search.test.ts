@@ -19,7 +19,7 @@ const parse = (query: string, locale = "bg") =>
 describe("schema-constrained assisted marketplace search", () => {
   it("parses the Bulgarian product example into canonical filters", () => {
     const result = parse(
-      "семеен автоматик под 35 000 лв, след 2020, около София."
+      "семеен автоматик под 35 000 лв, след 2020, около Пловдив."
     );
 
     expect(result.filters).toMatchObject({
@@ -40,7 +40,7 @@ describe("schema-constrained assisted marketplace search", () => {
 
   it("keeps English behavior equivalent", () => {
     const result = parse(
-      "family automatic under 35,000 BGN after 2020 around Sofia",
+      "family automatic under 35,000 BGN after 2020 around Пловдив",
       "en"
     );
 
@@ -84,7 +84,7 @@ describe("schema-constrained assisted marketplace search", () => {
   });
 
   it("returns no fabricated listings and executes only through a canonical URL", () => {
-    const result = parse("Volvo XC60 hybrid automatic in Sofia");
+    const result = parse("Volvo XC60 hybrid automatic in Пловдив");
 
     expect(result.execution).toBe("canonical-url");
     expect(result).not.toHaveProperty("listings");

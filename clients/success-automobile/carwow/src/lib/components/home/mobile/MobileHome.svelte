@@ -431,13 +431,13 @@
 	</svg>
 {/snippet}
 
-<div class="mobile-home" aria-label="Day Night Auto — начало">
+<div class="mobile-home" aria-label="Success Automobile — начало">
 	<header class="mh-hero">
 		<div class="mh-hero__bar">
-			<a class="mh-hero__brand" href={resolve('/')} aria-label="Day Night Auto home">
+			<a class="mh-hero__brand" href={resolve('/')} aria-label="Success Automobile home">
 				<img
 					class="mh-hero__logo"
-					src={resolve('/brand/daynight-logo-generated.png')}
+					src={resolve('/dealer/logo-light.png')}
 					alt={daynightSite.shortName}
 				/>
 			</a>
@@ -453,14 +453,14 @@
 				<a
 					class="mh-hero__bar-action mh-hero__bar-action--call"
 					href={phoneHref}
-					aria-label="Обади се на Day Night Auto"
+					aria-label="Обади се на Success Automobile"
 				>
 					<Phone size={19} strokeWidth={2.35} aria-hidden="true" />
 				</a>
 			</div>
 		</div>
 
-		<h1 class="mh-hero__title">Day Night Auto</h1>
+		<h1 class="mh-hero__title">Success Automobile</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
@@ -678,7 +678,7 @@
 		<section class="mh-cta-wrap" aria-label="Призив за действие">
 			<div class="mh-cta">
 				<div class="mh-cta__copy">
-					<strong>{total} обяви · Оглед в София</strong>
+					<strong>{total} обяви · Оглед в Пловдив</strong>
 					<span>Финансиране · бартер · съдействие с документите</span>
 				</div>
 				<div class="mh-cta__actions">
@@ -688,7 +688,7 @@
 			</div>
 			<div class="mh-trust">
 				<span>Проверени коли</span>
-				<span>В София</span>
+				<span>В Пловдив</span>
 				<span>Оглед по уговорка</span>
 			</div>
 		</section>
@@ -698,11 +698,11 @@
 		<div class="mh-footer__brand">
 			<img
 				class="mh-footer__logo"
-				src={resolve('/brand/daynight-logo-generated.png')}
+				src={resolve('/dealer/logo-light.png')}
 				alt={daynightSite.name}
 			/>
 			<p>
-				Автокъща в София с подбрани употребявани автомобили. Съдействие за документи, регистрация,
+				Автокъща в Пловдив с подбрани употребявани автомобили. Съдействие за документи, регистрация,
 				финансиране и доставка.
 			</p>
 		</div>
@@ -798,7 +798,7 @@
 				{daynightSite.location}
 			</a>
 		</div>
-		<span class="mh-footer__copy">© 2026 Day Night Auto София. Всички права запазени.</span>
+		<span class="mh-footer__copy">© 2026 Success Automobile Пловдив. Демонстрационна концепция. Не е официалният сайт.</span>
 	</footer>
 
 	<MobileBottomDock />
@@ -1146,7 +1146,7 @@
 				<span class="mh-location-sheet__pin">
 					<MapPin size={24} strokeWidth={2.5} />
 				</span>
-				<span>София</span>
+				<span>Пловдив</span>
 				<strong>{daynightSite.location}</strong>
 			</div>
 

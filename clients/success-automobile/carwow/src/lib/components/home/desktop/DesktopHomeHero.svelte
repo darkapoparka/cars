@@ -74,7 +74,7 @@
 				class="daynight-home-hero__photo"
 				src={desktopOnlyImagePlaceholder}
 				srcset={desktopOnlySrcset(
-					'/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
+					'/dealer/og-image.png',
 					1983
 				)}
 				sizes={desktopOnlySizes('100vw')}
@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Студентски град · ул. Атанас Манчев 18</span>
+						<span>Индустриална зона — Тракия · Цариградско шосе, Индустриална зона — Тракия</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Day Night Auto"
+						aria-label="Отвори Google Maps до Success Automobile"
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,19 +120,19 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">DAY NIGHT AUTO GROUP</span>
+							<span class="daynight-home-hero__location-map-label">Success Automobile</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Day Night Auto София</strong>
-							<span>гр. София, Студентски град, ул. Атанас Манчев 18</span>
+							<strong>Success Automobile Пловдив</strong>
+							<span>гр. Пловдив, Индустриална зона — Тракия, Цариградско шосе, Индустриална зона — Тракия</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Проверени автомобили.</span>
-						<strong>Ясни условия.</strong>
+						<span>Публикувани обяви.</span>
+						<strong>Директен контакт.</strong>
 					</span>
 				</h1>
 				<p class="daynight-home-hero__subtitle">

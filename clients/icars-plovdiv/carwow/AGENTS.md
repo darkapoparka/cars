@@ -1,5 +1,3 @@
-# Carwow template instructions
+# icars — carwow
 
-Read J:/cars/AGENTS.md, this TEMPLATE.md and .template/template.json first. This is a reusable source baseline. Preserve the current UI/UX. For a lead, clone into J:/cars/clients/<client>/carwow before changing identity, colors, assets or copy. Historic source-client instructions and task ledgers do not authorize work in this copy. Use the Cars startup helper with a free port rather than old source-specific launch commands. No sending, deployment or CRM state change is implied.
-
-For shared repairs, follow docs/ARCHITECTURE.md, docs/COMPONENT-PATTERNS.md and docs/CONTENT-CONTRACT.md alongside DESKTOP_STYLE_GUIDE.md. Keep the separate desktop/mobile layouts and shared calculation, URL, modal and business-data owners. Current repair evidence and unresolved public-delivery prerequisites: J:/cars/audits/2026-09-08/carwow-finalization/REPORT.md.
+Independent copy of templates/carwow at faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Preserve its composition. This task is branch-only on codex/astra-bg-05; no deployment, outreach, database provisioning or shared Windows checkout edits. Current review state: implemented-unverified. Read .client/project.json and ../HANDOFF-2026-09-09.md. Retained source documentation describes the master, not passed client QA.

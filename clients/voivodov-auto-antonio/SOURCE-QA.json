@@ -1,0 +1,195 @@
+{
+  "checkedAt": "2026-09-09T03:33:04.903Z",
+  "status": "implemented-unverified",
+  "runtime": {
+    "node": "v24.18.0",
+    "typescript": "5.9.3",
+    "svelte": "5.57.0"
+  },
+  "syntax": {
+    "counts": {
+      "svelte": 79,
+      "typescript": 106,
+      "json": 9
+    },
+    "errors": [],
+    "warnings": [
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "auto-best",
+        "path": "src/lib/components/home/VideoSection.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "carwow",
+        "path": "src/lib/components/about/DesktopAboutPage.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "carwow",
+        "path": "src/lib/components/about/DesktopAboutPage.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "carwow",
+        "path": "src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "carwow",
+        "path": "src/lib/components/layout/DesktopDealerFooter.svelte",
+        "code": "css_unused_selector"
+      },
+      {
+        "template": "carwow",
+        "path": "src/lib/components/layout/DesktopDealerFooter.svelte",
+        "code": "css_unused_selector"
+      }
+    ]
+  },
+  "narrowDataSemanticDiagnostics": {
+    "autoBest": [],
+    "carwow": [],
+    "modern": []
+  },
+  "inventoryParity": {
+    "vehicles": 10,
+    "variants": 3,
+    "matchedValues": [
+      "source ID",
+      "price EUR",
+      "mileage km",
+      "local galleries"
+    ],
+    "photosPerVariant": 60,
+    "pass": true
+  },
+  "directorySchema": {
+    "actualSchemaRun": true,
+    "entries": 1
+  },
+  "assetReferenceScan": {
+    "auto-best": {
+      "checkedFiles": 87,
+      "missing": []
+    },
+    "carwow": {
+      "checkedFiles": 517,
+      "missing": []
+    },
+    "modern": {
+      "checkedFiles": 631,
+      "missing": []
+    }
+  },
+  "nonRuntimeComments": [
+    {
+      "p": "src/lib/components/team/DesktopTeamMemberPage.svelte",
+      "asset": "/assets/right.svg",
+      "reason": "Source CSS comment describing retired chevron; not an executable asset reference"
+    },
+    {
+      "p": "src/lib/components/team/DesktopTeamPage.svelte",
+      "asset": "/assets/right.svg",
+      "reason": "Source CSS comment describing retired chevron; not an executable asset reference"
+    }
+  ],
+  "virtualAutoAssetCheck": {
+    "scope": "Actual client asset validator against the in-memory final file snapshot; no disk write or full application build",
+    "output": [
+      "Asset check passed: 145 inventoried static files, 144 guarded media files, 137 referenced public assets."
+    ],
+    "exit": 0
+  },
+  "fullDependencyInstall": "not-run",
+  "fullAppTypecheck": "not-run",
+  "productionBuild": "not-run",
+  "browser": {
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "result": "not-run"
+  },
+  "ownerManualReview": "pending"
+}

@@ -149,12 +149,12 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 			<div class="listing-details--contact-dealer mb-20">
-					<img src="/brand/daynight-logo-generated.png" alt={daynightSite.shortName} />
+					<img src="/dealer/logo-light.png" alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
-							Day Night Auto
+							MG7 Group
 						</a>
-						<p class="text-secondary mb-18">Автокъща в София</p>
+						<p class="text-secondary mb-18">Автокъща в Бургас</p>
 						{#if daynightSite.email}
 							<a href={`mailto:${daynightSite.email}`} class="text-highlight text-sm">
 								{daynightSite.email}

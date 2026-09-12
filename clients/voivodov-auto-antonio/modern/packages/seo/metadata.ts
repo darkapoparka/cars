@@ -24,7 +24,7 @@ type LocalizedMetadataGenerator = MetadataGenerator & {
   path: string;
 };
 
-export const DEFAULT_APPLICATION_NAME = "Day & Night Auto Group";
+export const DEFAULT_APPLICATION_NAME = "VOIVODOV AUTO & ANTONIO";
 
 const applicationName = DEFAULT_APPLICATION_NAME;
 const publisher = DEFAULT_APPLICATION_NAME;

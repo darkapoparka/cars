@@ -29,9 +29,9 @@
 
 <header class={cn('site-header', variant === 'home' && 'site-header--home')}>
 	<div class="site-header__inner">
-		<a class="site-header__logo" href={resolve('/')} aria-label="Day Night Auto home">
+		<a class="site-header__logo" href={resolve('/')} aria-label="VOIVODOV AUTO & ANTONIO home">
 			<img
-				src={variant === 'home' ? daynightSite.logoLight : daynightSite.logoDark}
+				src={variant === "home" ? "/dealer/logo-dark.png" : "/dealer/logo-light.png"}
 				alt={daynightSite.name}
 			/>
 		</a>

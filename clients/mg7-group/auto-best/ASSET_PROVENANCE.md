@@ -12,7 +12,7 @@ The cleared source and reuse boundary is recorded in `SOURCE_LICENSE.md`. The pr
 - `day-night-import-banner-v1.webp`: ImageGen illustration of a graphite sedan in a fictional logistics terminal. Original: `C:/Users/radev/.codex/generated_images/01a06e17-cc86-76a2-a8d2-0267e576c5ff/exec-60f194bd-e67f-416e-804a-55f5df330dc6.png`.
 - Generated with the built-in image tool on explicit owner request. Original PNGs retained; runtime versions are WebP encodings at original dimensions. Decorative service illustrations, not evidence of actual stock, locations, facilities, or import operations. Used only in mobile contact-topic banners; desktop imagery retained.
 
-- Day & Night logo and representative stock images are lead-specific media retained for this registered Sales Demo.
+- MG7 Group logo and representative stock images are lead-specific media retained for this registered Sales Demo.
 - The Blog, Contact, and three guide hero images are original ImageGen outputs created for this lead demo. They contain no embedded copy, third-party logo, readable plate, or watermark.
 - Body silhouettes, background imagery, article imagery, vehicle-menu imagery, team portraits, and partner marks come from the cleared licensed AutoDeal reference. Team and partner material remains visibly disclosed in the UI as temporary demo presentation content.
 - `favicon.ico` is the cleared reference icon used by this demo.
@@ -28,7 +28,7 @@ remote-font-clearance: not-applicable
 ## Complete runtime inventory
 
 - `static/favicon.ico`
-- `static/assets/images/lead/day-night-logo.png`
+- `static/dealer/logo-light.png`
 - `static/assets/images/lead/day-night-home-hero-v3.webp`
 - `static/assets/images/lead/day-night-hero-silver-v1.webp`
 - `static/assets/images/lead/day-night-hero-graphite-v1.webp`
@@ -134,7 +134,7 @@ Mobile header and discovery Hugeicons extension (2026-09-05): reuse the same @hu
 
 ## Selected YouTube video thumbnails — 2026-09-05
 
-Owner requested automotive videos from https://www.youtube.com/@kristiankirilov1355/videos on the homepage. The three selected videos belong to Kristian Kirilov; their YouTube descriptions link Day & Night Auto Group. Original 720x404 thumbnails were copied without visual modification for the corresponding video cards, with direct links and click-activated YouTube privacy-enhanced players. These are third-party channel assets, not stock media or identity-neutral reusable template assets. No ownership or wider reuse license is asserted.
+Owner requested automotive videos from https://www.youtube.com/@kristiankirilov1355/videos on the homepage. The three selected videos belong to MG7 Group; their YouTube descriptions link MG7 Group. Original 720x404 thumbnails were copied without visual modification for the corresponding video cards, with direct links and click-activated YouTube privacy-enhanced players. These are third-party channel assets, not stock media or identity-neutral reusable template assets. No ownership or wider reuse license is asserted.
 
 - `static/assets/images/lead/day-night-video-urus.jpg`: https://www.youtube.com/watch?v=6S3dLIgeAT8 — original title `НАЙ-ЖЕЛАНАТА КОЛА В БЪЛГАРИЯ | LAMBORGHINI URUS`, 23:19.
 - `static/assets/images/lead/day-night-video-panamera.jpg`: https://www.youtube.com/watch?v=zG6rjLpT4u8 — original title `ПРОДАДОХ НАЙ-НОВАТА ПАНАМЕРА`, 14:33.
@@ -157,7 +157,7 @@ Owner requested a yellow or black editorial hero as part of desktop consistency 
 
 ## Contact social links and YouTube mark — 2026-09-06
 
-Use Day & Night's Instagram `https://www.instagram.com/dayandnight_autogroup/` and Facebook `https://www.facebook.com/deninoshtautogroup/`, explicitly labelled as the dealership profiles in all three saved owner-channel video descriptions (watch IDs6S3dLIgeAT8, zG6rjLpT4u8, w_XaGmIWJFM). YouTube points to the owner-supplied Kristian Kirilov channel already used by the homepage videos. Extracted source descriptions: artifacts/banner-social-correction/social-source-descriptions.txt; originals remain under artifacts/video-section.
+Use MG7 Group's Instagram `https://www.instagram.com/dayandnight_autogroup/` and Facebook `https://www.facebook.com/deninoshtautogroup/`, explicitly labelled as the dealership profiles in all three saved owner-channel video descriptions (watch IDs6S3dLIgeAT8, zG6rjLpT4u8, w_XaGmIWJFM). YouTube points to the owner-supplied MG7 Group channel already used by the homepage videos. Extracted source descriptions: artifacts/banner-social-correction/social-source-descriptions.txt; originals remain under artifacts/video-section.
 
 Contact reuses the existing Instagram/Facebook brand glyphs and replaces TikTok with the unmodified YouTube SVG path from Simple Icons15.16.0, https://cdn.jsdelivr.net/npm/simple-icons@15.16.0/icons/youtube.svg . Source copy under artifacts/banner-social-correction/youtube.svg; CC0 license retained in provenance/simple-icons-LICENSE.md. Marks identify outgoing platforms; no endorsement is asserted. Native SVG component only, no new public media or runtime dependency. Assets remain80/80.
 ## Contact red artwork and unified panel — 2026-09-06

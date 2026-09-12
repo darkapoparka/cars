@@ -46,8 +46,8 @@
 			contact: 'brooklyn',
 			classes: 'user-offline',
 			avatar: '/assets/images/avatar/avatar-7.png',
-			alt: 'Клиент от София',
-			name: 'Клиент от София',
+			alt: 'Клиент от Пловдив',
+			name: 'Клиент от Пловдив',
 			preview: "Hey! there I'm available",
 			time: '14:10 PM',
 			badge: '2'
@@ -55,16 +55,16 @@
 		{
 			id: 'plovdiv-1123',
 			avatar: '/assets/images/avatar/avatar-8.png',
-			alt: 'Клиент от София',
-			name: 'Клиент от София',
+			alt: 'Клиент от Пловдив',
+			name: 'Клиент от Пловдив',
 			preview: "Hey! there I'm available",
 			time: '11:23 AM'
 		},
 		{
 			id: 'daynight-auto',
 			avatar: '/assets/images/avatar/avatar-9.png',
-			alt: 'Day Night Auto',
-			name: 'Day Night Auto',
+			alt: 'Success Automobile',
+			name: 'Success Automobile',
 			preview: "Hey! there I'm available",
 			time: 'Yesterday'
 		},
@@ -72,7 +72,7 @@
 			id: 'plovdiv-tuesday',
 			avatar: '/assets/images/avatar/avatar-5.png',
 			alt: 'Клиент от сайта',
-			name: 'Клиент от София',
+			name: 'Клиент от Пловдив',
 			preview: "Hey! there I'm available",
 			time: 'Tuesday'
 		},
@@ -80,7 +80,7 @@
 			id: 'plovdiv-june-1',
 			avatar: '/assets/images/avatar/avatar-6.png',
 			alt: 'Клиент от сайта',
-			name: 'Клиент от София',
+			name: 'Клиент от Пловдив',
 			preview: "Hey! there I'm available",
 			time: '01/06/2024'
 		},

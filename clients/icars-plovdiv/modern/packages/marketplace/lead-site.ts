@@ -28,30 +28,26 @@ export interface LeadSiteConfig {
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  accent: "#c40101",
-  address: "ул. „Атанас Манчев“ 18, Студентски град",
-  city: "София",
-  contactUrl: "tel:+359877733110",
-  country: "България",
-  countryCode: "BG",
-  currency: "BGN",
-  email: "",
-  heroPath: "/lead-hero.jpg",
-  locale: "bg-BG",
-  logoPath: "/lead-logo.png",
-  mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7302.453092836291!2d23.3443286!3d42.649331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1627293157601!5m2!1sen!2s",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-  name: "Day & Night Auto Group",
-  phoneDisplay: "0877 733 110",
-  phoneHref: "tel:+359877733110",
-  shortName: "Day & Night",
-  slug: "day-night-auto-group",
-  socialLinks: {
-    instagram: "https://www.instagram.com/dayandnight_autogroup/",
-  },
-  staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в София.",
+  "accent": "#079b75",
+  "address": "ул. Напредък 1, Индустриална зона — Север",
+  "city": "Пловдив",
+  "contactUrl": "tel:+359885595555",
+  "country": "България",
+  "countryCode": "BG",
+  "currency": "EUR",
+  "email": "",
+  "heroPath": "/dealer/stock/11760378435449508-1.webp",
+  "locale": "bg-BG",
+  "logoPath": "/dealer/logo-light.png",
+  "mapsEmbedUrl": "https://www.google.com/maps?q=%D1%83%D0%BB.%20%D0%9D%D0%B0%D0%BF%D1%80%D0%B5%D0%B4%D1%8A%D0%BA%201%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2&output=embed",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=icars%20%D1%83%D0%BB.%20%D0%9D%D0%B0%D0%BF%D1%80%D0%B5%D0%B4%D1%8A%D0%BA%201%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2",
+  "name": "icars",
+  "phoneDisplay": "0885 595 555",
+  "phoneHref": "tel:+359885595555",
+  "shortName": "icars",
+  "slug": "icars-plovdiv",
+  "socialLinks": {},
+  "staticDemoMode": true,
+  "tagline": "Автомобилни обяви в Пловдив. Сравнете детайлите и уговорете оглед."
 };
 // LEAD_SITE_CONFIG_END

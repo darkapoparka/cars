@@ -1,0 +1,3057 @@
+--- a/clients/todorov-auto/auto-best/src/app.css
++++ b/clients/todorov-auto/auto-best/src/app.css
+@@ -3,3 +3,6 @@
+ @import "./lib/styles/base.css";
+ @import "./lib/styles/navigation.css";
+ @import "./lib/styles/composition.css";
++
++/* Source-logo consumer fit: preserve the original artwork, including on dark chrome. */
++img[src*="/dealer/logo-"] { object-fit: contain !important; object-position: center !important; filter: none !important; mask-image: none !important; clip-path: none !important; transform: none !important; }
+--- a/clients/todorov-auto/auto-best/src/lib/components/company/AboutHero.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/company/AboutHero.svelte
+@@ -17,7 +17,7 @@
+   <picture>
+   <img
+     class="dn-about-hero__media"
+-    src="/assets/images/section/bg-12.jpg"
++    src="/dealer/stock/11763371717307272-1.webp"
+     alt=""
+     width="1920"
+     height="880"
+--- a/clients/todorov-auto/auto-best/src/lib/components/company/AboutProcess.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/company/AboutProcess.svelte
+@@ -10,7 +10,7 @@
+   <div class="container">
+     <div class="dn-about-section-heading">
+       <h2 id="about-process-title">{brand.name}</h2>
+-      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
++      <p>Разгледайте публикуваните обяви, сравнете автомобилите и потвърдете огледа в {brand.city} директно по телефона.</p>
+       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
+         Вижте автомобилите <Icon name="arrow-right" size={18} />
+       </a>
+--- a/clients/todorov-auto/auto-best/src/lib/components/company/ContactHero.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/company/ContactHero.svelte
+@@ -21,13 +21,13 @@
+   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} />
+   <picture>
+     {#if topic.id === 'trade-in'}
+-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
++      <source media="(max-width: 991px)" srcset="/dealer/stock/11704208021161812-1.webp" />
+     {:else if topic.id === 'import'}
+-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
++      <source media="(max-width: 991px)" srcset="/dealer/stock/11735041255980884-1.webp" />
+     {/if}
+   <img
+     class="dn-contact-hero__media"
+-    src="/assets/images/lead/day-night-contact-hero-v2.webp"
++    src="/dealer/stock/11757098776259646-3.webp"
+     alt=""
+     width="1920"
+     height="1080"
+--- a/clients/todorov-auto/auto-best/src/lib/components/editorial/BlogHero.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/editorial/BlogHero.svelte
+@@ -10,7 +10,7 @@
+   <HeroVehicles pair="blog" />
+   <img
+     class="dn-blog-hero__media"
+-    src="/assets/images/lead/day-night-blog-hero-v2.webp"
++    src="/dealer/stock/11649235957114307-1.webp"
+     alt=""
+     width="1920"
+     height="1080"
+--- a/clients/todorov-auto/auto-best/src/lib/components/home/BrandSection.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/home/BrandSection.svelte
+@@ -54,7 +54,7 @@
+     margin: 0 12px;
+     overflow: hidden;
+     border-radius: 24px;
+-    background: url('/assets/images/section/bg-6.jpg') center / cover no-repeat;
++    background: url('/dealer/stock/11784299299170761-1.webp') center / cover no-repeat;
+     isolation: isolate;
+   }
+ 
+--- a/clients/todorov-auto/auto-best/src/lib/components/home/Editorial.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/home/Editorial.svelte
+@@ -72,7 +72,7 @@
+     margin: 0 12px;
+     padding: 82px 0 0;
+     border-radius: 24px;
+-    background-image: url('/assets/images/lead/day-night-editorial-banner-v2.webp');
++    background-image: url('/dealer/stock/21782384979656784-1.webp');
+     background-position: center 64%;
+     background-repeat: no-repeat;
+     background-size: cover;
+--- a/clients/todorov-auto/auto-best/src/lib/components/home/TrustActions.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/home/TrustActions.svelte
+@@ -8,7 +8,7 @@
+   const actions = [
+     {
+       title: 'Вижте колекцията',
+-      artwork: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
++      artwork: { src: '/dealer/stock/11701427910651766-1.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
+       vehicle: 'urus',
+       tone: 'black',
+       mobileTitle: 'Автомобили',
+@@ -20,35 +20,35 @@
+       icon: 'car'
+     },
+     {
+-      title: 'Продажба или бартер',
+-      artwork: { src: '/assets/images/lead/day-night-sell-banner-v2.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
++      title: 'Въпрос за автомобила',
++      artwork: { src: '/dealer/stock/21784126666986144-1.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
+       vehicle: 'gclass',
+       tone: 'red',
+-      mobileTitle: 'Продай/Бартер',
+-      mobileCta: 'Заяви оценка',
+-      description: 'Получете оценка за продажба или бартер.',
+-      bannerDescription: ['Получете оценка', 'за продажба или бартер.'],
+-      cta: 'Поискайте оценка',
++      mobileTitle: 'Вашите въпроси',
++      mobileCta: 'Попитай',
++      description: 'Обсъдете конкретния автомобил с автосалона.',
++      bannerDescription: ['Попитайте за автомобила', 'преди да решите.'],
++      cta: 'Подгответе въпрос',
+       href: '/contact?topic=trade-in',
+       icon: 'value'
+     },
+     {
+-      title: 'Внос по заявка',
++      title: 'Произход и документи',
+       vehicle: 'gclass',
+       tone: 'red',
+-      mobileTitle: 'Внос по заявка',
+-      mobileCta: 'Заяви внос',
+-      description: 'Споделете модел и бюджет за внос по заявка.',
+-      bannerDescription: ['Споделете своя бюджет', 'и модел за внос.'],
+-      cta: 'Заявете внос',
++      mobileTitle: 'Произход и документи',
++      mobileCta: 'Документи',
++      description: 'Поискайте информация за произхода и регистрацията.',
++      bannerDescription: ['Уточнете произхода', 'и документите.'],
++      cta: 'Попитайте за документите',
+       href: '/contact?topic=import',
+       icon: 'contact'
+     },
+     {
+-      title: 'Собствен лизинг',
++      title: 'Цена и условия',
+       vehicle: 'urus',
+       tone: 'black',
+-      mobileTitle: 'Собствен лизинг',
++      mobileTitle: 'Цена и условия',
+       mobileCta: 'Виж условия',
+       description: 'Попитайте за първоначална вноска, срок и условия.',
+       bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],
+@@ -60,7 +60,7 @@
+   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
+ </script>
+ 
+-<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}>
++<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Автомобили и въпроси' : 'Документи и условия'}>
+   <div class="container">
+     <div class="dn-trust-actions__panel">
+       {#if variant === 'cards'}
+--- a/clients/todorov-auto/auto-best/src/lib/components/layout/Footer.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/layout/Footer.svelte
+@@ -21,13 +21,13 @@
+       icon: 'contact'
+     },
+     {
+-      title: 'Собствен лизинг',
++      title: 'Цена и условия',
+       description: 'Попитайте за актуалните условия',
+       href: '/contact?topic=leasing',
+       icon: 'finance'
+     },
+     {
+-      title: 'Внос по заявка',
++      title: 'Произход и документи',
+       description: 'Уточнете критериите с екипа',
+       href: '/contact?topic=import',
+       icon: 'value'
+@@ -57,7 +57,7 @@
+   <div class="container dn-footer__grid">
+     <div class="dn-footer__intro">
+       <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
+-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
++      <p>Автомобили в Бургас с данни и снимки от публичните обяви. Наличността и условията се потвърждават по телефона.</p>
+     </div>
+     <nav aria-label="Автомобили">
+       <strong>Автомобили</strong>
+@@ -85,5 +85,5 @@
+       <p class="dn-footer__appointment">{brand.appointment}</p>
+     </div>
+   </div>
+-  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
++  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Документи · Оглед</span></div>
+ </footer>
+--- a/clients/todorov-auto/auto-best/src/lib/components/ui/HeroVehicles.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/ui/HeroVehicles.svelte
+@@ -10,7 +10,7 @@
+ </script>
+ 
+ <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
+-  {#if mobile}<picture><source media="(max-width: 767px)" srcset="/assets/images/lead/day-night-urus-front-v1.webp" /><img class="dn-hero-vehicles__front" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="600" height="600" decoding="async" /></picture>{/if}
++  {#if mobile}<picture><source media="(max-width: 767px)" srcset="/dealer/stock/11776511305281815-1.webp" /><img class="dn-hero-vehicles__front" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="600" height="600" decoding="async" /></picture>{/if}
+   {#each sides as side (side)}
+     {@const vehicle = vehicles[side === 'left' ? 0 : 1]}
+     {@const artwork = vehicleArtwork[vehicle]}
+@@ -64,7 +64,7 @@
+       width: calc(var(--car-height) * var(--art-width-ratio));
+       height: calc(var(--car-height) * var(--art-height-ratio));
+     }
+-    .dn-hero-vehicles__car--left { left: var(--car-edge); transform: scaleX(-1); }
++    .dn-hero-vehicles__car--left { left: var(--car-edge); transform: none; }
+     .dn-hero-vehicles__car--right { right: var(--car-edge); }
+   }
+ </style>
+--- a/clients/todorov-auto/auto-best/src/lib/components/ui/RouteHeroArtwork.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/ui/RouteHeroArtwork.svelte
+@@ -1,15 +1,15 @@
+ <script lang="ts">
+   let { variant = 'cars', theme = 'light' }: { variant?: 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell'; theme?: 'light' | 'red' | 'charcoal' | 'yellow' } = $props();
+   const images = {
+-    cars: '/assets/images/lead/day-night-studio-cars-v1.webp',
+-    keys: '/assets/images/lead/day-night-studio-keys-v1.webp',
+-    guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
+-    silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
+-    graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
++    cars: '/dealer/stock/11763371717307272-1.webp',
++    keys: '/dealer/stock/11704208021161812-3.webp',
++    guide: '/dealer/stock/11735041255980884-3.webp',
++    silver: '/dealer/stock/11757098776259646-1.webp',
++    graphite: '/dealer/stock/11649235957114307-1.webp',
+     portrait: '/dealer/logo-light.png',
+     phone: '/dealer/logo-light.png',
+     showroom: '/dealer/logo-light.png',
+-    email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
++    email: '/dealer/stock/11784299299170761-3.webp'
+   };
+   const pairs = {
+     cars: ['silver', 'graphite'],
+@@ -20,14 +20,14 @@
+     sell: ['portrait', 'keys']
+   } as const;
+   const coloredImages: Partial<Record<keyof typeof images, string>> = {
+-    silver: '/assets/images/lead/day-night-silver-color-v1.webp',
+-    graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
+-    showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
++    silver: '/dealer/stock/21782384979656784-1.webp',
++    graphite: '/dealer/stock/11701427910651766-1.webp',
++    showroom: '/dealer/stock/21784126666986144-1.webp',
+     portrait: '/dealer/logo-light.png',
+-    guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
+-    keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
+-    phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
+-    email: '/assets/images/lead/day-night-contact-email-red-v1.webp'
++    guide: '/dealer/stock/11776511305281815-3.webp',
++    keys: '/dealer/stock/11763371717307272-3.webp',
++    phone: '/dealer/stock/11704208021161812-3.webp',
++    email: '/dealer/stock/11735041255980884-3.webp'
+   };
+ </script>
+ 
+@@ -67,14 +67,14 @@
+     .dn-route-hero__artwork.dn-route-hero__artwork--portrait {
+       width: var(--dn-studio-portrait-width, clamp(200px, 23vw, 380px));
+       height: var(--dn-studio-portrait-height, 312px);
+-      object-fit: cover;
+-      object-position: center top;
++      object-fit: contain;
++      object-position: center;
+       filter: contrast(1.04) brightness(1.02);
+-      mask-image: linear-gradient(to bottom, #000 82%, transparent);
++      mask-image: none;
+     }
+     .dn-route-hero__artwork--portrait.dn-route-hero__artwork--left { left: calc(var(--dn-studio-art-gutter, max(12px, calc((100% - 1840px) / 2))) + var(--dn-studio-portrait-inset, 0px)); }
+     .dn-route-hero__artwork--portrait.dn-route-hero__artwork--right { right: calc(var(--dn-studio-art-gutter, max(12px, calc((100% - 1840px) / 2))) + var(--dn-studio-portrait-inset, 0px)); }
+-    .dn-route-hero__artwork--phone { transform: scaleX(-1); }
++    .dn-route-hero__artwork--phone { transform: none; }
+     .dn-route-hero__artwork.dn-route-hero__artwork--colored {
+       filter: none;
+       mix-blend-mode: normal;
+--- a/clients/todorov-auto/auto-best/src/lib/components/vehicles/VehicleCard.svelte
++++ b/clients/todorov-auto/auto-best/src/lib/components/vehicles/VehicleCard.svelte
+@@ -58,7 +58,8 @@
+       </div>
+ 
+       {#if showPrice}
+-        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}</div>
++        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}</div>
++        <small class="dn-vehicle-card__tax">{vehicle.taxLabel}</small>
+       {/if}
+     </div>
+   </a>
+--- a/clients/todorov-auto/auto-best/src/lib/data/company.ts
++++ b/clients/todorov-auto/auto-best/src/lib/data/company.ts
+@@ -25,15 +25,15 @@
+ export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
+   'trade-in': {
+     title: 'Подгответе за разговора',
+-    items: ['Марка, модел и година', 'Пробег и състояние', 'Снимки или линк към обява']
++    items: ['Марка, модел и година', 'Пробег и състояние', 'Линк към избрания автомобил']
+   },
+   import: {
+     title: 'Какъв автомобил търсите?',
+-    items: ['Марка, модел и предпочитания', 'Бюджет за покупката и вноса', 'Линк към обява, ако вече сте избрали']
++    items: ['Марка, модел и предпочитания', 'Публикувана цена и разходи за регистрация', 'Линк към обява, ако вече сте избрали']
+   },
+   leasing: {
+     title: 'Обсъдете с екипа',
+-    items: ['Автомобилът, който сте избрали', 'Първоначална вноска и срок', 'Актуални условия за конкретната сделка']
++    items: ['Автомобилът, който сте избрали', 'Крайна цена, данъци и начин на плащане', 'Актуални условия за конкретната сделка']
+   },
+   inspection: {
+     title: 'Уговорете посещението',
+--- a/clients/todorov-auto/auto-best/src/lib/data/demo-content.ts
++++ b/clients/todorov-auto/auto-best/src/lib/data/demo-content.ts
+@@ -24,25 +24,25 @@
+     id: 'arlene-mccoy',
+     name: 'Arlene McCoy',
+     role: 'Консултант · демо',
+-    image: '/assets/images/img-box/team1.jpg'
++    image: '/dealer/logo-light.png'
+   },
+   {
+     id: 'ronald-richards',
+     name: 'Ronald Richards',
+     role: 'Консултант · демо',
+-    image: '/assets/images/img-box/team2.jpg'
++    image: '/dealer/logo-light.png'
+   },
+   {
+     id: 'leslie-alexander',
+     name: 'Leslie Alexander',
+     role: 'Консултант · демо',
+-    image: '/assets/images/img-box/team3.jpg'
++    image: '/dealer/logo-light.png'
+   },
+   {
+     id: 'cody-fisher',
+     name: 'Cody Fisher',
+     role: 'Консултант · демо',
+-    image: '/assets/images/img-box/team4.jpg'
++    image: '/dealer/logo-light.png'
+   }
+ ];
+ 
+--- a/clients/todorov-auto/auto-best/src/lib/data/editorial.ts
++++ b/clients/todorov-auto/auto-best/src/lib/data/editorial.ts
+@@ -27,7 +27,7 @@
+     text: 'История, документи и техническо състояние се потвърждават директно с екипа.',
+     category: 'Оглед',
+     tag: 'Оглед',
+-    image: '/assets/images/blog/blog-1.jpg',
++    image: '/dealer/stock/11701427910651766-1.webp',
+     sections: [
+       {
+         title: 'Започнете с историята и документите',
+@@ -49,7 +49,7 @@
+     text: 'Обсъдете търсене, транспорт и подготовката за регистрация в България.',
+     category: 'Внос',
+     tag: 'Документи',
+-    image: '/assets/images/blog/blog-2.jpg',
++    image: '/dealer/stock/21784126666986144-1.webp',
+     sections: [
+       {
+         title: 'Определете точни критерии за търсенето',
+@@ -71,7 +71,7 @@
+     text: 'Попитайте за актуалните условия според избрания автомобил.',
+     category: 'Лизинг',
+     tag: 'Лизинг',
+-    image: '/assets/images/blog/blog-3.jpg',
++    image: '/dealer/stock/11776511305281815-1.webp',
+     sections: [
+       {
+         title: 'Сравнявайте цялата оферта',
+@@ -93,7 +93,7 @@
+     text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
+     category: 'Насоки',
+     tag: 'Избор',
+-    image: '/assets/images/blog/blog-4.jpg',
++    image: '/dealer/stock/11763371717307272-1.webp',
+     sections: [
+       {
+         title: 'Започнете от ежедневната употреба',
+@@ -115,7 +115,7 @@
+     text: `Уговорете посещение на ${brand.addressLine}.`,
+     category: 'Оглед',
+     tag: brand.city,
+-    image: '/assets/images/blog/blog-5.jpg',
++    image: '/dealer/stock/11704208021161812-1.webp',
+     sections: [
+       {
+         title: 'Запазете удобно време предварително',
+@@ -137,7 +137,7 @@
+     text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
+     category: 'Бартер',
+     tag: 'Бартер',
+-    image: '/assets/images/blog/blog-6.jpg',
++    image: '/dealer/stock/11735041255980884-1.webp',
+     sections: [
+       {
+         title: 'Подгответе точна информация за автомобила',
+@@ -159,7 +159,7 @@
+     text: 'Екипът ориентира за следващите стъпки след пристигане на автомобила.',
+     category: 'Внос',
+     tag: 'Документи',
+-    image: '/assets/images/blog/blog-7.jpg',
++    image: '/dealer/stock/11757098776259646-1.webp',
+     sections: [
+       {
+         title: 'Подредете наличните документи',
+@@ -181,7 +181,7 @@
+     text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
+     category: 'Оглед',
+     tag: 'Оглед',
+-    image: '/assets/images/blog/blog-8.jpg',
++    image: '/dealer/stock/11649235957114307-1.webp',
+     sections: [
+       {
+         title: 'Попитайте за историята и текущото състояние',
+@@ -203,7 +203,7 @@
+     text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
+     category: 'Насоки',
+     tag: 'Сервиз',
+-    image: '/assets/images/blog/blog-9.jpg',
++    image: '/dealer/stock/11784299299170761-1.webp',
+     sections: [
+       {
+         title: 'Съхранете документите и планирайте сроковете',
+--- a/clients/todorov-auto/auto-best/src/lib/data/home.ts
++++ b/clients/todorov-auto/auto-best/src/lib/data/home.ts
+@@ -11,8 +11,8 @@
+   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
+   { label: 'Комби', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
+   { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
+-  { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
+-  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
++  { label: 'Купе', query: 'Coupe', image: '/dealer/stock/21782384979656784-1.webp', width: 1000, height: 667 },
++  { label: 'Спортбек', query: 'Sportback', image: '/dealer/stock/11701427910651766-1.webp', width: 1000, height: 667 }
+ ] as const;
+ 
+ const brandArtwork = [
+@@ -41,23 +41,23 @@
+   {
+     title: `Има ли офис в ${brand.city} и как се посещава?`,
+     text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
+-    image: '/assets/images/lead/day-night-guide-inspection.webp',
++    image: '/dealer/stock/21784126666986144-3.webp',
+     href: '/contact',
+     meta: 'Полезно',
+     category: 'Ръководство'
+   },
+   {
+     title: 'Какво можем да проверим преди покупка?',
+-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
+-    image: '/assets/images/lead/day-night-guide-import.webp',
++    text: 'Поискайте наличната история и документи и обсъдете преглед с независим специалист преди решение.',
++    image: '/dealer/stock/11776511305281815-3.webp',
+     href: '/blog-detail/1',
+     meta: 'Полезно',
+     category: 'Ръководство'
+   },
+   {
+-    title: 'Може ли автомобил да се внесе по поръчка?',
+-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
+-    image: '/assets/images/lead/day-night-guide-leasing.webp',
++    title: 'Какви документи да поискам преди оглед?',
++    text: 'Поискайте данни за произхода, регистрацията и наличната история на конкретния автомобил.',
++    image: '/dealer/stock/11763371717307272-3.webp',
+     href: '/blog-detail/2',
+     meta: 'Полезно',
+     category: 'Ръководство'
+--- a/clients/todorov-auto/auto-best/src/lib/data/navigation.ts
++++ b/clients/todorov-auto/auto-best/src/lib/data/navigation.ts
+@@ -58,9 +58,9 @@
+       title: 'Автомобили',
+       description: 'Разгледайте наличностите по състояние, тип купе или марка.',
+       features: [
+-        { id: 'vehicles-suv', title: 'SUV', detail: 'Простор и комфорт', image: '/assets/images/section/car-slide1.png', href: '/listing-grid?body=SUV' },
+-        { id: 'vehicles-crossover', title: 'Комби', detail: 'Място за всеки ден', image: '/assets/images/section/car-slide2.png', href: '/listing-grid?body=Wagon' },
+-        { id: 'vehicles-premium-suv', title: 'Премиум SUV', detail: 'Премиум изпълнение', image: '/assets/images/section/car-slide3.png', href: '/listing-grid?body=SUV' }
++        { id: 'vehicles-suv', title: 'SUV', detail: 'Простор и комфорт', image: '/dealer/stock/11704208021161812-1.webp', href: '/listing-grid?body=SUV' },
++        { id: 'vehicles-crossover', title: 'Комби', detail: 'Място за всеки ден', image: '/dealer/stock/11735041255980884-1.webp', href: '/listing-grid?body=Wagon' },
++        { id: 'vehicles-premium-suv', title: 'Премиум SUV', detail: 'Премиум изпълнение', image: '/dealer/stock/11757098776259646-1.webp', href: '/listing-grid?body=SUV' }
+       ],
+       groups: [
+         {
+@@ -93,9 +93,9 @@
+       title: brand.name,
+       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
+       features: [
+-        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
+-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
+-        { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
++        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/dealer/stock/11649235957114307-1.webp', href: '/about-us' },
++        { id: 'about-import', title: 'Произход и документи', detail: 'Уточнете произхода и регистрацията.', image: '/dealer/stock/11784299299170761-1.webp', href: '/contact?topic=import' },
++        { id: 'about-leasing', title: 'Цена и условия', detail: 'Обсъдете условията директно с екипа.', image: '/dealer/stock/21782384979656784-1.webp', href: '/contact?topic=leasing' }
+       ],
+       groups: [
+         {
+@@ -117,7 +117,7 @@
+           ]
+         }
+       ],
+-      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
++      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Обяви, оглед, документи и цена.' }
+     }
+   },
+   {
+@@ -128,9 +128,9 @@
+       title: 'Полезно',
+       description: 'Практична информация за избора, проверката и финансирането на автомобил.',
+       features: [
+-        { id: 'guides-inspection', title: 'Проверка преди покупка', detail: 'История, документи и състояние.', image: '/assets/images/lead/day-night-guide-inspection.webp', href: '/blog-detail/1' },
+-        { id: 'guides-import', title: 'Внос и документи', detail: 'Основните стъпки преди регистрация.', image: '/assets/images/lead/day-night-guide-import.webp', href: '/blog-detail/2' },
+-        { id: 'guides-leasing', title: 'Лизинг и условия', detail: 'Какво да уточните преди финансиране.', image: '/assets/images/lead/day-night-guide-leasing.webp', href: '/blog-detail/3' }
++        { id: 'guides-inspection', title: 'Проверка преди покупка', detail: 'История, документи и състояние.', image: '/dealer/stock/21784126666986144-3.webp', href: '/blog-detail/1' },
++        { id: 'guides-import', title: 'Внос и документи', detail: 'Основните стъпки преди регистрация.', image: '/dealer/stock/11776511305281815-3.webp', href: '/blog-detail/2' },
++        { id: 'guides-leasing', title: 'Лизинг и условия', detail: 'Какво да уточните преди финансиране.', image: '/dealer/stock/11763371717307272-3.webp', href: '/blog-detail/3' }
+       ],
+       groups: [
+         {
+--- a/clients/todorov-auto/auto-best/src/lib/data/vehicle-artwork.ts
++++ b/clients/todorov-auto/auto-best/src/lib/data/vehicle-artwork.ts
+@@ -1,17 +1,17 @@
+-// Alpha bounds measured at opacity > 128; preserve natural proportions when aligning artwork.
+-export const vehicleArtwork = {
+-  silver: { src: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 154, 989, 516] },
+-  graphite: { src: '/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [17, 162, 984, 476] },
+-  gclass: { src: '/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 112, 995, 542] },
+-  urus: { src: '/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [18, 156, 983, 495] },
+-  golf: { src: '/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [15, 150, 984, 507] },
+-  a45: { src: '/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [13, 146, 987, 511] },
+-  porsche: { src: '/assets/images/lead/day-night-cutout-porsche-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 169, 987, 480] },
+-  amggt: { src: '/assets/images/lead/day-night-cutout-amggt-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [14, 169, 980, 473] },
+-  m5: { src: '/assets/images/lead/day-night-cutout-m5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 165, 990, 482] },
+-  e63: { src: '/assets/images/lead/day-night-cutout-e63-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 168, 990, 482] },
+-  m4: { src: '/assets/images/lead/day-night-cutout-m4-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [16, 161, 983, 484] },
+-  rs5: { src: '/assets/images/lead/day-night-cutout-rs5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 166, 994, 488] },
++// Real listing photographs; full image bounds retain the actual source proportions.
++export const vehicleArtwork = {
++silver: { src: "/dealer/stock/11763371717307272-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++graphite: { src: "/dealer/stock/11704208021161812-1.webp", width: 1600, height: 900, bounds: [0, 0, 1600, 900] },
++gclass: { src: "/dealer/stock/11735041255980884-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++urus: { src: "/dealer/stock/11757098776259646-1.webp", width: 1440, height: 1080, bounds: [0, 0, 1440, 1080] },
++golf: { src: "/dealer/stock/11649235957114307-1.webp", width: 800, height: 600, bounds: [0, 0, 800, 600] },
++a45: { src: "/dealer/stock/11784299299170761-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++porsche: { src: "/dealer/stock/21782384979656784-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++amggt: { src: "/dealer/stock/11701427910651766-1.webp", width: 1600, height: 900, bounds: [0, 0, 1600, 900] },
++m5: { src: "/dealer/stock/21784126666986144-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++e63: { src: "/dealer/stock/11776511305281815-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++m4: { src: "/dealer/stock/11763371717307272-1.webp", width: 1600, height: 1200, bounds: [0, 0, 1600, 1200] },
++rs5: { src: "/dealer/stock/11704208021161812-1.webp", width: 1600, height: 900, bounds: [0, 0, 1600, 900] },
+ } as const;
+ 
+ export type Vehicle = keyof typeof vehicleArtwork;
+--- a/clients/todorov-auto/auto-best/src/lib/styles/tokens.css
++++ b/clients/todorov-auto/auto-best/src/lib/styles/tokens.css
+@@ -1,7 +1,7 @@
+ :root {
+   --dn-focus: #0b57d0;
+-  --dn-red: #c40101;
+-  --dn-red-hover: #a90000;
++  --dn-red: #133ab9;
++  --dn-red-hover: #102e94;
+   --dn-ink: #14171d;
+   --dn-ink-hover: #292e36;
+   --dn-muted: #626873;
+--- a/clients/todorov-auto/auto-best/src/routes/+page.svelte
++++ b/clients/todorov-auto/auto-best/src/routes/+page.svelte
+@@ -14,7 +14,7 @@
+ 
+ <svelte:head>
+   <title>{brand.name} — Премиум автомобили в {brand.city}</title>
+-  <meta name="description" content={`Премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
++  <meta name="description" content={`Автомобили от публични обяви в ${brand.city}.`} />
+ </svelte:head>
+ 
+ <div class="dn-home-page">
+--- a/clients/todorov-auto/auto-best/src/routes/about-us/+page.svelte
++++ b/clients/todorov-auto/auto-best/src/routes/about-us/+page.svelte
+@@ -11,7 +11,7 @@
+ 
+ <svelte:head>
+   <title>За нас — {brand.name}</title>
+-  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, собствен лизинг, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
++  <meta name="description" content={`${brand.name} — публични обяви, информация за автомобила и огледи с предварителна уговорка в ${brand.city}.`} />
+ </svelte:head>
+ 
+ <AboutHero />
+--- a/clients/todorov-auto/auto-best/src/routes/listing-grid/+page.svelte
++++ b/clients/todorov-auto/auto-best/src/routes/listing-grid/+page.svelte
+@@ -13,7 +13,7 @@
+ 
+ <svelte:head>
+   <title>Налични автомобили — {brand.name}</title>
+-  <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
++  <meta name="description" content={`Подбрани автомобили от публични обяви в ${brand.city}.`} />
+ </svelte:head>
+ 
+ <VehicleSearchDialog filters={draftFilters}>
+--- a/clients/todorov-auto/auto-best/src/routes/listing-grid/listing.css
++++ b/clients/todorov-auto/auto-best/src/routes/listing-grid/listing.css
+@@ -19,7 +19,7 @@
+ }
+ 
+ .dn-listing-hero__media {
+-  background: url('/assets/images/section/bg-4.jpg') center 45% / cover no-repeat;
++  background: url('/dealer/stock/11701427910651766-1.webp') center 45% / cover no-repeat;
+ }
+ 
+ .dn-listing-hero__overlay {
+--- a/clients/todorov-auto/carwow/src/lib/client/import-request-submit.ts
++++ b/clients/todorov-auto/carwow/src/lib/client/import-request-submit.ts
+@@ -1,3 +1,4 @@
++import { dealerPreview, previewDeliveryMessage } from '$lib/data/dealer-preview';
+ import { resolve } from '$app/paths';
+ 
+ export type ImportRequestSubmitPayload = {
+@@ -50,6 +51,7 @@
+ export async function submitImportRequest(
+ 	payload: ImportRequestSubmitPayload
+ ): Promise<ImportRequestSubmitResult> {
++	if (dealerPreview.enabled) return { ok: false, status: 503, error: previewDeliveryMessage };
+ 	try {
+ 		const response = await fetch(resolve('/api/import-requests'), {
+ 			method: 'POST',
+@@ -67,7 +69,7 @@
+ 				status: response.status,
+ 				error: readResponseMessage(
+ 					body,
+-					'Заявката не беше изпратена. Моля, обадете се или пишете във Viber.'
++					'Заявката не беше изпратена. Моля, обадете се на публикувания телефон.'
+ 				),
+ 				details: isJsonObject(body) ? body.details : undefined
+ 			};
+@@ -82,7 +84,7 @@
+ 			return {
+ 				ok: false,
+ 				status: response.status,
+-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
++				error: 'Получихме неочакван отговор. Моля, обадете се на публикувания телефон.'
+ 			};
+ 		}
+ 
+@@ -100,7 +102,7 @@
+ 			error:
+ 				error instanceof Error
+ 					? error.message
+-					: 'Заявката не може да бъде изпратена. Моля, обадете се или пишете във Viber.'
++					: 'Заявката не може да бъде изпратена. Моля, обадете се на публикувания телефон.'
+ 		};
+ 	}
+ }
+--- a/clients/todorov-auto/carwow/src/lib/client/lead-submit.ts
++++ b/clients/todorov-auto/carwow/src/lib/client/lead-submit.ts
+@@ -1,3 +1,4 @@
++import { dealerPreview, previewDeliveryMessage } from '$lib/data/dealer-preview';
+ import { resolve } from '$app/paths';
+ 
+ export type LeadSubmitPayload = {
+@@ -40,6 +41,7 @@
+ }
+ 
+ export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmitResult> {
++	if (dealerPreview.enabled) return { ok: false, status: 503, error: previewDeliveryMessage };
+ 	try {
+ 		const response = await fetch(resolve('/api/leads'), {
+ 			method: 'POST',
+@@ -57,7 +59,7 @@
+ 				status: response.status,
+ 				error: readResponseMessage(
+ 					body,
+-					'Запитването не беше изпратено. Моля, обадете се или пишете във Viber.'
++					'Запитването не беше изпратено. Моля, обадете се на публикувания телефон.'
+ 				),
+ 				details: isJsonObject(body) ? body.details : undefined
+ 			};
+@@ -71,7 +73,7 @@
+ 			return {
+ 				ok: false,
+ 				status: response.status,
+-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
++				error: 'Получихме неочакван отговор. Моля, обадете се на публикувания телефон.'
+ 			};
+ 		}
+ 
+@@ -88,7 +90,7 @@
+ 			error:
+ 				error instanceof Error
+ 					? error.message
+-					: 'Запитването не може да бъде изпратено. Моля, обадете се или пишете във Viber.'
++					: 'Запитването не може да бъде изпратено. Моля, обадете се на публикувания телефон.'
+ 		};
+ 	}
+ }
+--- a/clients/todorov-auto/carwow/src/lib/components/about/DesktopAboutPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/about/DesktopAboutPage.svelte
+@@ -114,7 +114,7 @@
+ 		<div class="about-container about-story">
+ 			<img
+ 				class="about-story__image"
+-				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
++				src={resolve('/dealer/stock/21784126666986144-1.webp')}
+ 				alt="Илюстративна визия на Автосалон Тодоров: Mercedes-Benz и Lamborghini с ключове за бартер"
+ 				width="1200"
+ 				height="800"
+--- a/clients/todorov-auto/carwow/src/lib/components/about/DesktopDealerProfilePage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/about/DesktopDealerProfilePage.svelte
+@@ -13,7 +13,7 @@
+ 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
+ 
+ 	const highlights = [
+-		'Проверени автомобили с реална наличност',
++		'Публични обяви с реална наличност',
+ 		'Съдействие за документи, регистрация и финансиране',
+ 		'Бартер, оценка и оглед в доверен сервиз'
+ 	] as const;
+@@ -48,7 +48,7 @@
+ 		<div class="container">
+ 			<div class="dealer-profile-hero__grid">
+ 				<div class="dealer-profile-hero__content">
+-					<p class="eyebrow">Проверена автокъща</p>
++					<p class="eyebrow">Публичен профил</p>
+ 					<h1>Автосалон Тодоров Бургас</h1>
+ 					<p class="h7 text-secondary line-height-28 mb-24">
+ 						Автокъща в Бургас с подбрани употребявани автомобили, ясна информация за състояние,
+--- a/clients/todorov-auto/carwow/src/lib/components/about/MobileAboutPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/about/MobileAboutPage.svelte
+@@ -60,7 +60,7 @@
+ 	<header class="mobile-about-hero">
+ 		<img
+ 			class="mobile-about-hero__bg"
+-			src={resolve('/assets/images/pages/daynight-about-lot-v1.webp')}
++			src={resolve('/dealer/stock/11776511305281815-1.webp')}
+ 			alt=""
+ 			aria-hidden="true"
+ 		/>
+@@ -75,7 +75,7 @@
+ 
+ 		<div class="mobile-about-hero__copy">
+ 			<span>За нас</span>
+-			<h1>Проверени автомобили и ясен процес</h1>
++			<h1>Публични обяви и ясен процес</h1>
+ 			<p>Автосалон Тодоров в Бургас помага с избор, оглед, документи, финансиране и бартер.</p>
+ 		</div>
+ 
+@@ -118,7 +118,7 @@
+ 
+ 		<section class="mobile-about-location" aria-labelledby="mobile-about-location-title">
+ 			<img
+-				src={resolve('/assets/images/pages/daynight-about-consultation-v1.webp')}
++				src={resolve('/dealer/stock/11763371717307272-1.webp')}
+ 				alt="Консултация със Автосалон Тодоров"
+ 				loading="lazy"
+ 				decoding="async"
+--- a/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardFavorites.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardFavorites.svelte
+@@ -62,7 +62,7 @@
+ 			highlightText: 'Добра цена',
+ 			highlightClass: 'bg-green text-white highlight',
+ 			imageHref: '/inventory/chrysler-300c-2018-gaz',
+-			imageSrc: '/assets/images/card/card-2.jpg',
++			imageSrc: '/dealer/stock/11704208021161812-1.webp',
+ 			imageClass: 'card--img',
+ 			brandHref: '/inventory/chrysler-300c-2018-gaz',
+ 			brandClass: 'text-white',
+@@ -86,7 +86,7 @@
+ 		{
+ 			id: 'bmw-520i',
+ 			imageHref: '/inventory/chrysler-300c-2018-gaz',
+-			imageSrc: '/assets/images/card/card-3.jpg',
++			imageSrc: '/dealer/stock/11735041255980884-1.webp',
+ 			imageClass: 'card--img',
+ 			brandHref: '/inventory/chrysler-300c-2018-gaz',
+ 			brandClass: 'text-white',
+@@ -129,7 +129,7 @@
+ 		{
+ 			id: 'bmw-730d',
+ 			imageHref: '/inventory/chrysler-300c-2018-gaz',
+-			imageSrc: '/assets/images/card/card-9.jpg',
++			imageSrc: '/dealer/stock/11757098776259646-1.webp',
+ 			imageClass: 'card--img',
+ 			brandHref: '/inventory/chrysler-300c-2018-gaz',
+ 			brandClass: 'text-white',
+@@ -152,7 +152,7 @@
+ 			highlightText: 'Специално',
+ 			highlightClass: 'bg-primary-2 text-white highlight',
+ 			imageHref: '/inventory/chrysler-300c-2018-gaz',
+-			imageSrc: '/assets/images/card/card-6.jpg',
++			imageSrc: '/dealer/stock/11649235957114307-1.webp',
+ 			imageClass: 'card--img',
+ 			brandHref: '/inventory/chrysler-300c-2018-gaz',
+ 			brandClass: 'text-white',
+--- a/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardHomeOverview.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardHomeOverview.svelte
+@@ -117,7 +117,7 @@
+ 	const reviewCards: DashboardReview[] = [
+ 		{
+ 			id: 'review-ivan',
+-			avatar: '/assets/images/avatar/avatar-4.png',
++			avatar: '/dealer/logo-light.png',
+ 			name: 'Иван Д.',
+ 			date: 'Август 2025',
+ 			title: 'Отлично преживяване',
+@@ -125,7 +125,7 @@
+ 		},
+ 		{
+ 			id: 'review-maria',
+-			avatar: '/assets/images/avatar/coment-avatar-1.png',
++			avatar: '/dealer/logo-light.png',
+ 			name: 'Мария Г.',
+ 			date: 'Август 2025',
+ 			title: 'Лесно и удобно',
+@@ -133,7 +133,7 @@
+ 		},
+ 		{
+ 			id: 'review-nikolay',
+-			avatar: '/assets/images/avatar/coment-avatar-2.png',
++			avatar: '/dealer/logo-light.png',
+ 			name: 'Николай П.',
+ 			date: 'Август 2025',
+ 			title: 'Коректно и надеждно',
+--- a/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardMessages.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardMessages.svelte
+@@ -24,7 +24,7 @@
+ 		{
+ 			id: 'marvin',
+ 			contact: 'marvin',
+-			avatar: '/assets/images/avatar/avatar-5.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от сайта',
+ 			name: 'Клиент от сайта',
+ 			preview: "Hey! there I'm available",
+@@ -35,7 +35,7 @@
+ 			id: 'john',
+ 			contact: 'john',
+ 			classes: 'active user-online',
+-			avatar: '/assets/images/avatar/avatar-6.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от сайта',
+ 			name: 'Клиент от сайта',
+ 			preview: "Hey! there I'm available",
+@@ -45,7 +45,7 @@
+ 			id: 'brooklyn',
+ 			contact: 'brooklyn',
+ 			classes: 'user-offline',
+-			avatar: '/assets/images/avatar/avatar-7.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от Бургас',
+ 			name: 'Клиент от Бургас',
+ 			preview: "Hey! there I'm available",
+@@ -54,7 +54,7 @@
+ 		},
+ 		{
+ 			id: 'plovdiv-1123',
+-			avatar: '/assets/images/avatar/avatar-8.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от Бургас',
+ 			name: 'Клиент от Бургас',
+ 			preview: "Hey! there I'm available",
+@@ -62,7 +62,7 @@
+ 		},
+ 		{
+ 			id: 'daynight-auto',
+-			avatar: '/assets/images/avatar/avatar-9.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Автосалон Тодоров',
+ 			name: 'Автосалон Тодоров',
+ 			preview: "Hey! there I'm available",
+@@ -70,7 +70,7 @@
+ 		},
+ 		{
+ 			id: 'plovdiv-tuesday',
+-			avatar: '/assets/images/avatar/avatar-5.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от сайта',
+ 			name: 'Клиент от Бургас',
+ 			preview: "Hey! there I'm available",
+@@ -78,7 +78,7 @@
+ 		},
+ 		{
+ 			id: 'plovdiv-june-1',
+-			avatar: '/assets/images/avatar/avatar-6.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от сайта',
+ 			name: 'Клиент от Бургас',
+ 			preview: "Hey! there I'm available",
+@@ -86,7 +86,7 @@
+ 		},
+ 		{
+ 			id: 'site-june-6',
+-			avatar: '/assets/images/avatar/avatar-7.png',
++			avatar: '/dealer/logo-light.png',
+ 			alt: 'Клиент от сайта',
+ 			name: 'Клиент от сайта',
+ 			preview: "Hey! there I'm available",
+@@ -267,7 +267,7 @@
+ 					<div class="message-chat__user">
+ 						<div class="message-chat__avatar user-online">
+ 							<img
+-								src={resolve('/assets/images/avatar/avatar-6.png')}
++								src={resolve('/dealer/logo-light.png')}
+ 								alt="Клиент от сайта"
+ 								data-daynight-img="1"
+ 								decoding="async"
+--- a/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardPage.svelte
+@@ -203,7 +203,7 @@
+ 						<a class="daynight-dashboard-header__user" href={resolve('/dashboard/profile')}>
+ 							<img
+ 								class="avatar"
+-								src={resolve('/assets/images/dashboard/dashbroard_avatar.png')}
++								src={resolve('/dealer/logo-light.png')}
+ 								alt=""
+ 								data-daynight-img="1"
+ 								decoding="async"
+--- a/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardProfile.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardProfile.svelte
+@@ -48,7 +48,7 @@
+ 			sectionClass: 'upload-section mb-18',
+ 			previewClass: 'upload-preview upload-preview--avatar',
+ 			imageId: 'avatarPreview',
+-			image: '/assets/images/avatar/avatar-10.jpg',
++			image: '/dealer/logo-light.png',
+ 			imageAlt: 'Avatar Preview',
+ 			contentTitleClass: 'font-weight-600 mb-6',
+ 			descriptionClass: 'text-xs text-secondary mb-6',
+@@ -61,7 +61,7 @@
+ 			previewWrapperClass: 'upload-preview--poster-wrapper',
+ 			previewClass: 'upload-preview--poster',
+ 			imageId: 'posterPreview',
+-			image: '/assets/images/avatar/avatar-11.jpg',
++			image: '/dealer/logo-light.png',
+ 			imageAlt: 'Dealer Poster Preview',
+ 			contentTitleClass: 'font-weight-600 mb-4',
+ 			descriptionClass: 'text-xs text-secondary mb-12',
+--- a/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardReviews.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/admin/dashboard/DesktopDashboardReviews.svelte
+@@ -37,7 +37,7 @@
+ 			id: 'review-ivan',
+ 			menuId: 'MoreDropdown-1',
+ 			menuDropdownId: 'coreDropdownMessage',
+-			avatar: '/assets/images/avatar/avatar-4.png',
++			avatar: '/dealer/logo-light.png',
+ 			name: 'Иван Д.',
+ 			date: 'Август 2025',
+ 			title: 'Отлично преживяване',
+@@ -47,7 +47,7 @@
+ 			id: 'review-maria',
+ 			menuId: 'MoreDropdown-2',
+ 			menuDropdownId: 'coreDropdownMessage2',
+-			avatar: '/assets/images/avatar/coment-avatar-1.png',
++			avatar: '/dealer/logo-light.png',
+ 			name: 'Мария Г.',
+ 			date: 'Август 2025',
+ 			title: 'Лесно и удобно',
+@@ -57,7 +57,7 @@
+ 			id: 'review-nikolay',
+ 			menuId: 'MoreDropdown-3',
+ 			menuDropdownId: 'coreDropdownMessage3',
+-			avatar: '/assets/images/avatar/coment-avatar-2.png',
++			avatar: '/dealer/logo-light.png',
+ 			name: 'Николай П.',
+ 			date: 'Август 2025',
+ 			title: 'Коректно и надеждно',
+--- a/clients/todorov-auto/carwow/src/lib/components/blog/BlogArticlePage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/blog/BlogArticlePage.svelte
+@@ -156,7 +156,7 @@
+ 						</a>
+ 						<p class="text-secondary mb-18">Автокъща в Бургас</p>
+ 						{#if daynightSite.email}
+-							<a href={`mailto:${daynightSite.email}`} class="text-highlight text-sm">
++							<a href={daynightSite.email ? `mailto:${daynightSite.email}` : `tel:${daynightSite.phone}`} class="text-highlight text-sm">
+ 								{daynightSite.email}
+ 							</a>
+ 						{/if}
+--- a/clients/todorov-auto/carwow/src/lib/components/contact/DesktopContactPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/contact/DesktopContactPage.svelte
+@@ -32,7 +32,7 @@
+ 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
+ 
+ 	const contactBannerSrc: AssetHref =
+-		'/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp';
++		'/dealer/stock/11776511305281815-3.webp';
+ 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
+ 	const mapLinkAttributes = {
+ 		href: daynightSite.mapUrl,
+@@ -58,8 +58,8 @@
+ 	let leadSubmitState = $state<LeadSubmitState>('idle');
+ 	let leadSubmitMessage = $state('');
+ 
+-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
++	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
++	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+ 
+ 	function readFormValue(formData: FormData, name: string) {
+ 		const value = formData.get(name);
+@@ -248,7 +248,7 @@
+ 									class="daynight-contact-action sa-cta sa-cta-primary"
+ 								>
+ 									{@render phoneIcon()}
+-									<span>Обади се / Viber</span>
++									<span>Обади се</span>
+ 								</a>
+ 								<a
+ 									{...mapLinkAttributes}
+@@ -265,7 +265,7 @@
+ 									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
+ 								</div>
+ 								<div class="daynight-contact-detail">
+-									<p class="daynight-contact-detail-label">Телефон / Viber</p>
++									<p class="daynight-contact-detail-label">Телефон</p>
+ 									<a href={`tel:${daynightSite.phone}`} class="daynight-contact-detail-value">
+ 										{daynightSite.phoneLabel}
+ 									</a>
+@@ -1041,7 +1041,7 @@
+ 		background-color: #eef3f9;
+ 		background-image:
+ 			linear-gradient(90deg, rgba(8, 20, 42, 0.7), rgba(8, 20, 42, 0.18)),
+-			url('/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp');
++			url('/dealer/stock/11776511305281815-3.webp');
+ 		background-position: center;
+ 		background-size: cover;
+ 	}
+--- a/clients/todorov-auto/carwow/src/lib/components/contact/MobileContactPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/contact/MobileContactPage.svelte
+@@ -54,7 +54,7 @@
+ 		{
+ 			id: 'email',
+ 			title: 'Писмен контакт',
+-			value: 'Използвайте формата за запитване',
++			value: 'Подгответе въпросите си; формата не изпраща',
+ 			icon: MessageCircle
+ 		},
+ 		{
+@@ -72,35 +72,9 @@
+ 		}
+ 	] as const;
+ 
+-	const importSteps = [
+-		{
+-			title: 'Изпращате обявата',
+-			copy: 'Проверяваме автомобила, продавача и условията в обявата.'
+-		},
+-		{
+-			title: 'Получавате конкретен разчет',
+-			copy: 'Уточняваме цена, транспорт, срок и необходимите документи.'
+-		},
+-		{
+-			title: 'Организираме вноса',
+-			copy: 'Координираме покупката, доставката и предаването в България.'
+-		}
+-	] as const;
+-
+-	const importCoverage = [
+-		{
+-			title: 'Проверка преди решение',
+-			copy: 'Преглеждаме обявата и изясняваме важните детайли предварително.'
+-		},
+-		{
+-			title: 'Транспорт и документи',
+-			copy: 'Подреждаме практическите стъпки по доставката и документацията.'
+-		},
+-		{
+-			title: 'Ясен контакт до предаването',
+-			copy: 'Знаете какво следва и получавате конкретен отговор на всеки етап.'
+-		}
+-	] as const;
++	const importSteps = [{"title":"Изберете обява","copy":"Запишете модела, цената и въпросите за автомобила."},{"title":"Потвърдете данните","copy":"Поискайте информация за наличност, произход и документи."},{"title":"Уговорете следваща стъпка","copy":"Обадете се директно. Този сайт не заявява покупка, транспорт или внос."}] as const;
++
++	const importCoverage = [{"title":"Автомобилът","copy":"Потвърдете коя обява разглеждате и дали е актуална."},{"title":"Документите","copy":"Поискайте информация за регистрацията и историята."},{"title":"Условията","copy":"Уточнете пълната цена и огледа директно с автосалона."}] as const;
+ 
+ 	let name = $state('');
+ 	let contact = $state(initialContactValue);
+@@ -132,8 +106,8 @@
+ 	let importInfoDialog: HTMLDialogElement | undefined = $state();
+ 	let activeImportInfo = $state<ImportInfo | null>(null);
+ 
+-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
++	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
++	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+ 
+ 	async function revealImportForm() {
+ 		importExpanded = true;
+@@ -247,7 +221,7 @@
+ 	<header class:mobile-contact-hero--import={isImportMode} class="mobile-contact-hero">
+ 		<img
+ 			class="mobile-contact-hero__bg"
+-			src={resolve('/assets/images/pages/daynight-about-showroom-suv-v1.webp')}
++			src={resolve('/dealer/stock/11763371717307272-1.webp')}
+ 			alt=""
+ 			aria-hidden="true"
+ 		/>
+@@ -483,7 +457,7 @@
+ 					title="Как работи вносът"
+ 					description="От обявата до конкретна оферта и срок."
+ 					label="Виж стъпките"
+-					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
++					image="/dealer/stock/11704208021161812-1.webp"
+ 					tone="red"
+ 					onclick={() => openImportInfo('process')}
+ 				/>
+@@ -491,7 +465,7 @@
+ 					title="Какво поемаме ние"
+ 					description="Проверка, транспорт, документи и предаване."
+ 					label="Виж услугата"
+-					image="/assets/images/home-promos/gclass-urus-pair-v4.webp"
++					image="/dealer/stock/11735041255980884-1.webp"
+ 					cars
+ 					onclick={() => openImportInfo('coverage')}
+ 				/>
+@@ -550,8 +524,8 @@
+ 						class="mobile-import-sheet__art"
+ 						src={resolve(
+ 							activeImportInfo === 'process'
+-								? '/assets/images/import/import-review-red-campaign-v2.webp'
+-								: '/assets/images/import/import-handoff-graphite-campaign-v2.webp'
++								? '/dealer/stock/11757098776259646-1.webp'
++								: '/dealer/stock/11649235957114307-1.webp'
+ 						)}
+ 						alt=""
+ 						aria-hidden="true"
+--- a/clients/todorov-auto/carwow/src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte
+@@ -15,7 +15,7 @@
+ 	<div class="listing-details--contact">
+ 		<div class="listing-details--contact-dealer mb-28">
+ 			<img
+-				src="/assets/images/avatar/contact-avatar.webp"
++				src="/dealer/logo-light.png"
+ 				alt="Автосалон Тодоров"
+ 				data-daynight-img="1"
+ 				decoding="async"
+@@ -35,7 +35,7 @@
+ 						decoding="async"
+ 						loading="lazy"
+ 					/>
+-					<p class="text-highlight text-sm">Проверена автокъща</p>
++					<p class="text-highlight text-sm">Публичен профил</p>
+ 				</div>
+ 			</div>
+ 		</div>
+@@ -99,7 +99,7 @@
+ 				decoding="async"
+ 				loading="lazy"
+ 			/>
+-			Viber чат
++			Телефон
+ 		</a>
+ 	</div>
+ </div>
+--- a/clients/todorov-auto/carwow/src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte
+@@ -11,7 +11,7 @@
+ 	let inquirySubmitState = $state<LeadSubmitState>('idle');
+ 	let inquirySubmitMessage = $state('');
+ 
+-	const inquiryErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
++	const inquiryErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+ 
+ 	function readFormValue(formData: FormData, name: string) {
+ 		const value = formData.get(name);
+--- a/clients/todorov-auto/carwow/src/lib/components/financing/DesktopFinancingPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/financing/DesktopFinancingPage.svelte
+@@ -88,21 +88,21 @@
+ 
+ 	const blogCards: BlogCard[] = [
+ 		{
+-			image: '/assets/images/blog/post-32.jpg',
++			image: '/dealer/stock/21782384979656784-1.webp',
+ 			href: '/faq',
+ 			category: 'СЪВЕТИ',
+ 			title: 'Въпроси преди покупка',
+ 			copy: 'Отговори за оглед, документи и процеса на покупка.'
+ 		},
+ 		{
+-			image: '/assets/images/blog/post-31.jpg',
++			image: '/dealer/stock/11701427910651766-1.webp',
+ 			href: '/calculator',
+ 			category: 'ФИНАНСИРАНЕ',
+ 			title: 'Калкулатор за финансиране',
+ 			copy: 'Ориентировъчна сметка според цена, първоначална вноска и срок.'
+ 		},
+ 		{
+-			image: '/assets/images/blog/post-23.jpg',
++			image: '/dealer/stock/21784126666986144-1.webp',
+ 			href: '/sell-your-car',
+ 			category: 'ПОЛЕЗНО',
+ 			title: 'Продажба или бартер',
+--- a/clients/todorov-auto/carwow/src/lib/components/financing/MobileFinancingPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/financing/MobileFinancingPage.svelte
+@@ -65,7 +65,7 @@
+ 	<header class="mobile-financing-hero">
+ 		<img
+ 			class="mobile-financing-hero__bg"
+-			src={resolve('/assets/images/pages/daynight-services-consultation-v1.webp')}
++			src={resolve('/dealer/stock/11776511305281815-1.webp')}
+ 			alt=""
+ 			aria-hidden="true"
+ 		/>
+--- a/clients/todorov-auto/carwow/src/lib/components/home/HomePageHead.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/home/HomePageHead.svelte
+@@ -3,7 +3,7 @@
+ 
+ 	const DEFAULT_DESCRIPTION =
+ 		'Автосалон Тодоров предлага проверени автомобили, финансиране и съдействие при покупка в Бургас.';
+-	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
++	const DEFAULT_OG_IMAGE = '/dealer/stock/11763371717307272-1.webp';
+ 
+ 	let {
+ 		title,
+--- a/clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeHero.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeHero.svelte
+@@ -17,9 +17,9 @@
+ 	} = $props();
+ 
+ 	const leftCarSrc =
+-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
++		'/dealer/stock/11763371717307272-1.webp';
+ 	const rightCarSrc =
+-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
++		'/dealer/stock/11704208021161812-1.webp';
+ 
+ 	function openMap() {
+ 		window.open(daynightSite.mapUrl, '_blank', 'noopener,noreferrer');
+@@ -131,7 +131,7 @@
+ 				</div>
+ 				<h1 class="daynight-home-hero__title">
+ 					<span class="daynight-home-hero__title-text">
+-						<span>Проверени автомобили.</span>
++						<span>Публични обяви.</span>
+ 						<strong>Ясни условия.</strong>
+ 					</span>
+ 				</h1>
+--- a/clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeReviews.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeReviews.svelte
+@@ -50,7 +50,7 @@
+ 		{
+ 			id: 'buy-confidently',
+ 			modifier: 'inventory',
+-			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
++			image: '/dealer/stock/11735041255980884-1.webp',
+ 			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
+ 			title: 'Купи автомобил уверено',
+ 			balancedTitle: 'Купи автомобил',
+@@ -71,7 +71,7 @@
+ 		{
+ 			id: 'sell-or-trade',
+ 			modifier: 'sell',
+-			image: '/assets/images/home-promos/urus-rear-v4.webp',
++			image: '/dealer/stock/11735041255980884-1.webp',
+ 			alt: 'Продай или замени автомобил',
+ 			title: 'Продай или замени лесно',
+ 			balancedTitle: 'Продай или замени',
+--- a/clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte
+@@ -22,7 +22,7 @@
+ 			copy: 'Разгледайте селекцията и попитайте за наличност.',
+ 			cta: 'Вижте автомобилите',
+ 			href: '/inventory',
+-			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
++			image: '/dealer/stock/11735041255980884-1.webp'
+ 		},
+ 		{
+ 			id: 'viewing',
+@@ -38,7 +38,7 @@
+ 			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
+ 			cta: 'Поискайте условия',
+ 			href: '/financing',
+-			image: '/assets/images/home-promos/leasing-calculator-cutout-v7.webp'
++			image: '/dealer/stock/11704208021161812-1.webp'
+ 		}
+ 	] as const;
+ 
+--- a/clients/todorov-auto/carwow/src/lib/components/home/mobile/MobileHome.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/home/mobile/MobileHome.svelte
+@@ -230,7 +230,7 @@
+ 	const budgetCardHref = (budget: string) =>
+ 		budget === 'all' ? inventoryPath : budgetHref(budget);
+ 	const brandCountLabel = (count: number) =>
+-		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Внос по заявка';
++		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Произход и документи';
+ 	function appendParams(params: URLSearchParams, name: string, values: string[]) {
+ 		for (const value of values) {
+ 			if (value) params.append(name, value);
+@@ -792,7 +792,7 @@
+ 		<div class="mh-footer__contact">
+ 			<a class="mh-footer__phone" href={phoneHref}>
+ 				<strong>{daynightSite.phoneLabel}</strong>
+-				<span>Обаждане / Viber</span>
++				<span>Обаждане</span>
+ 			</a>
+ 			<a class="mh-footer__loc" href={mapHref} target="_blank" rel="external noopener noreferrer">
+ 				{daynightSite.location}
+@@ -1046,7 +1046,7 @@
+ 			<div class="mh-search-sheet mh-search-sheet--sell">
+ 				<header>
+ 					<div>
+-						<span>Внос по поръчка</span>
++						<span>Въпрос за автомобил</span>
+ 						<strong id="mh-import-title">Внос на автомобил</strong>
+ 					</div>
+ 					<button type="button" aria-label="Затвори" onclick={closeSearch}>
+--- a/clients/todorov-auto/carwow/src/lib/components/inventory/mobile/MobileInventoryPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/inventory/mobile/MobileInventoryPage.svelte
+@@ -531,7 +531,7 @@
+ 
+ <div class="mobile-inventory" aria-label="Мобилна страница автомобили">
+ 	<main id="main-content" tabindex="-1">
+-		<h1 class="sr-only">Автомобили на склад — Ден и Нощ Ауто Груп</h1>
++		<h1 class="sr-only">Автомобили на склад — Автосалон Тодоров</h1>
+ 		<MobileInventoryTop {mode} {query} onOpenSearch={() => openFilterSheet('search')} />
+ 
+ 		<section class="mobile-inventory-results" aria-live="polite">
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/DayNightFooter.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/DayNightFooter.svelte
+@@ -149,8 +149,8 @@
+ 								<li>
+ 									<a
+ 										href={phoneHref}
+-										title={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
+-										aria-label={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
++										title={`Свържете се с ${daynightSite.shortName} по публикувания телефон.`}
++										aria-label={`Свържете се с ${daynightSite.shortName} по публикувания телефон.`}
+ 										class={socialLinkClasses}
+ 									>
+ 										<DayNightFooterIcon name="phone" />
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/DesktopYellowRouteHero.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/DesktopYellowRouteHero.svelte
+@@ -42,9 +42,9 @@
+ 	} = $props();
+ 
+ 	const leftCarSrc =
+-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
++		'/dealer/stock/11763371717307272-1.webp';
+ 	const rightCarSrc =
+-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
++		'/dealer/stock/11704208021161812-1.webp';
+ </script>
+ 
+ <section
+@@ -66,7 +66,7 @@
+ 					<img
+ 						src={desktopOnlyImagePlaceholder}
+ 						srcset={desktopOnlySrcset(
+-							resolve('/assets/daynight-contact/contact-support-cutouts.webp'),
++							resolve('/dealer/stock/11757098776259646-3.webp'),
+ 							1536
+ 						)}
+ 						sizes={desktopOnlySizes('48vw')}
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/RouteTemplateInteractionBehavior.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/RouteTemplateInteractionBehavior.svelte
+@@ -104,7 +104,7 @@
+ 			status.className = 'daynight-form-status text-highlight font-weight-600 mt-12';
+ 			form.append(status);
+ 		}
+-		status.textContent = 'Запитването е изпратено локално';
++		status.textContent = 'Демо: заявката не е изпратена. Използвайте публикувания телефон.';
+ 	}
+ 
+ 	function isInquiryForm(form: HTMLFormElement) {
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/RouteTemplateTextBehavior.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/RouteTemplateTextBehavior.svelte
+@@ -57,7 +57,7 @@
+ 			['Login to add a Review', 'Вход за добавяне на отзив'],
+ 			['View More Reviews (98)', daynightSite.reviewLinkLabel],
+ 			['View more reviews', daynightSite.reviewLinkLabel],
+-			['Chat via WhatsApp', 'Viber / WhatsApp'],
++			['Chat via WhatsApp', 'Телефон'],
+ 			['View details', 'Виж детайли'],
+ 			['See Finance', 'Финансиране'],
+ 			['You might also like', 'Подобни автомобили']
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/SiteChromeContactList.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/SiteChromeContactList.svelte
+@@ -12,7 +12,7 @@
+ 			aria-label={`Обади се на ${daynightSite.phoneLabel}`}
+ 		>
+ 			<strong>{daynightSite.phoneLabel}</strong>
+-			<span>Обаждане / Viber</span>
++			<span>Обаждане</span>
+ 		</a>
+ 	</li>
+ </ul>
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/SiteFooter.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/SiteFooter.svelte
+@@ -11,7 +11,7 @@
+ 		<div class="site-footer__brand">
+ 			<img src={daynightSite.logoLight} alt={daynightSite.name} />
+ 			<p>
+-				Проверени автомобили в Бургас със съдействие за оглед, документи, регистрация, финансиране
++				Публични обяви в Бургас със съдействие за оглед, документи, регистрация, финансиране
+ 				и бартер.
+ 			</p>
+ 		</div>
+--- a/clients/todorov-auto/carwow/src/lib/components/layout/site-navigation-data.ts
++++ b/clients/todorov-auto/carwow/src/lib/components/layout/site-navigation-data.ts
+@@ -45,49 +45,49 @@
+ 	{
+ 		label: 'Chrysler 300C',
+ 		slug: 'chrysler-300c-2018-gaz',
+-		image: '/assets/images/megamenu/chrysler-300c.webp',
++		image: '/dealer/stock/11649235957114307-1.webp',
+ 		meta: '17 000 EUR · Газ/Бензин'
+ 	},
+ 	{
+ 		label: 'BMW i7',
+ 		slug: 'bmw-i7-2023-full-maxx',
+-		image: '/assets/images/megamenu/bmw-i7.webp',
++		image: '/dealer/stock/11784299299170761-1.webp',
+ 		meta: '81 000 EUR · Електрически'
+ 	},
+ 	{
+ 		label: 'BMW 520i',
+ 		slug: 'bmw-520i-2006-avtomatik',
+-		image: '/assets/images/megamenu/bmw-520i.webp',
++		image: '/dealer/stock/21782384979656784-1.webp',
+ 		meta: '4 500 EUR · Бензин'
+ 	},
+ 	{
+ 		label: 'Mercedes E 350 D',
+ 		slug: 'mercedes-benz-e-350-d-2015-64594',
+-		image: '/assets/images/megamenu/mercedes-e220d.webp',
++		image: '/dealer/stock/11701427910651766-1.webp',
+ 		meta: '11 500 EUR · Дизел'
+ 	},
+ 	{
+ 		label: 'Audi Q8',
+ 		slug: 'audi-q8-5-0tdi-2020-95331',
+-		image: '/assets/images/megamenu/audi-q8-side-normalized.webp',
++		image: '/dealer/stock/21784126666986144-1.webp',
+ 		meta: '43 000 EUR · Дизел'
+ 	},
+ 	{
+ 		label: 'BMW X6',
+ 		slug: 'bmw-x6-2017-84431',
+-		image: '/assets/images/megamenu/bmw-x6-side-normalized.webp',
++		image: '/dealer/stock/11776511305281815-1.webp',
+ 		meta: '25 500 EUR · Бензин'
+ 	},
+ 	{
+ 		label: 'Mercedes E 220 D',
+ 		slug: 'mercedes-benz-e-220-d-2023-53599',
+-		image: '/assets/images/megamenu/mercedes-e220d-side-normalized.webp',
++		image: '/dealer/stock/11763371717307272-1.webp',
+ 		meta: '31 000 EUR · Дизел'
+ 	},
+ 	{
+ 		label: 'VW Touran',
+ 		slug: 'vw-touran-1-6d-2017-08568',
+-		image: '/assets/images/megamenu/vw-touran-side-normalized.webp',
++		image: '/dealer/stock/11704208021161812-1.webp',
+ 		meta: '9 000 EUR · Дизел'
+ 	}
+ ] satisfies readonly MegaMenuVehicleTile[];
+--- a/clients/todorov-auto/carwow/src/lib/components/sell/DesktopSellYourCarPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/sell/DesktopSellYourCarPage.svelte
+@@ -82,7 +82,7 @@
+ 	let sellSubmitState = $state<SellSubmitState>('idle');
+ 	let sellSubmitMessage = $state('');
+ 
+-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
++	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+ 
+ 	const leadPath = $derived.by((): SellRequestHref => {
+ 		const params = new SvelteURLSearchParams();
+@@ -339,7 +339,7 @@
+ 			<img
+ 				class="sell-benefits__image"
+ 				src={resolve(
+-					'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
++					'/dealer/stock/11704208021161812-1.webp'
+ 				)}
+ 				alt=""
+ 				width="1400"
+--- a/clients/todorov-auto/carwow/src/lib/components/sell/MobileSellYourCarPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/sell/MobileSellYourCarPage.svelte
+@@ -60,7 +60,7 @@
+ 	});
+ 
+ 	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
++	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+ 	const quickContext = $derived(
+ 		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
+ 	);
+@@ -207,7 +207,7 @@
+ 	<header class="ms-hero">
+ 		<img
+ 			class="ms-hero__bg"
+-			src={resolve('/assets/images/sell/trade-in-promo-v1.webp')}
++			src={resolve('/dealer/stock/11735041255980884-1.webp')}
+ 			alt=""
+ 			aria-hidden="true"
+ 		/>
+@@ -286,12 +286,12 @@
+ 					title="Как работи"
+ 					description="Три ясни стъпки до конкретна оценка."
+ 					label="Виж стъпките"
+-					image="/assets/images/home-promos/leasing-calculator-cutout-v7.webp"
++					image="/dealer/stock/11704208021161812-1.webp"
+ 					onclick={() => openInfo('process')}
+ 				/>
+ 				<MobilePromoCard
+ 					title="Защо Day Night"
+-					description="Кристиян и екипът Ви дават ясен следващ вариант."
++					description="Подгответе въпросите си и обсъдете следващата стъпка по телефона."
+ 					label="Виж предимствата"
+ 					image="/dealer/logo-light.png"
+ 					tone="yellow"
+@@ -469,7 +469,7 @@
+ 					<img
+ 						src={resolve(
+ 							activeInfo === 'process'
+-								? '/assets/images/sell/process-disclosure-list-v1.webp'
++								? '/dealer/stock/11757098776259646-1.webp'
+ 								: '/dealer/logo-light.png'
+ 						)}
+ 						alt=""
+--- a/clients/todorov-auto/carwow/src/lib/components/seo/RouteSeo.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/seo/RouteSeo.svelte
+@@ -3,7 +3,7 @@
+ 
+ 	const DEFAULT_DESCRIPTION =
+ 		'Автосалон Тодоров предлага проверени автомобили, финансиране и съдействие при покупка в Бургас.';
+-	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
++	const DEFAULT_OG_IMAGE = '/dealer/stock/11763371717307272-1.webp';
+ 
+ 	let {
+ 		title,
+--- a/clients/todorov-auto/carwow/src/lib/components/services/DesktopServicesPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/services/DesktopServicesPage.svelte
+@@ -15,42 +15,42 @@
+ 			id: 'inspection',
+ 			title: 'Проверка преди покупка',
+ 			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
+-			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
++			image: '/dealer/stock/11649235957114307-3.webp',
+ 			imagePosition: 'center bottom'
+ 		},
+ 		{
+ 			id: 'documents',
+ 			title: 'Документи и регистрация',
+ 			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
+-			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
++			image: '/dealer/stock/11784299299170761-1.webp',
+ 			imagePosition: 'center bottom'
+ 		},
+ 		{
+ 			id: 'financing',
+ 			title: 'Финансиране',
+ 			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+-			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
++			image: '/dealer/stock/21782384979656784-1.webp',
+ 			imagePosition: 'center bottom'
+ 		},
+ 		{
+ 			id: 'trade-in',
+ 			title: 'Бартер и оценка',
+ 			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
+-			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
++			image: '/dealer/stock/21784126666986144-1.webp',
+ 			imagePosition: 'center bottom'
+ 		},
+ 		{
+ 			id: 'sourcing',
+ 			title: 'Търсене по задание',
+ 			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
+-			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
++			image: '/dealer/stock/11701427910651766-1.webp',
+ 			imagePosition: 'center bottom'
+ 		},
+ 		{
+ 			id: 'delivery',
+ 			title: 'Доставка и предаване',
+ 			summary: 'Координираме транспорт, предаване и последните практически детайли.',
+-			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
++			image: '/dealer/stock/21784126666986144-1.webp',
+ 			imagePosition: 'center bottom'
+ 		}
+ 	] as const;
+--- a/clients/todorov-auto/carwow/src/lib/components/services/MobileServicesPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/services/MobileServicesPage.svelte
+@@ -138,7 +138,7 @@
+ 	<header class="mobile-services-hero">
+ 		<img
+ 			class="mobile-services-hero__bg"
+-			src={resolve('/assets/images/services/support-hero-v1.webp')}
++			src={resolve('/dealer/stock/11776511305281815-1.webp')}
+ 			alt=""
+ 			aria-hidden="true"
+ 		/>
+--- a/clients/todorov-auto/carwow/src/lib/components/team/DesktopTeamMemberPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/team/DesktopTeamMemberPage.svelte
+@@ -66,7 +66,7 @@
+ 							Обади се за оглед
+ 						</a>
+ 						{#if member.email}
+-							<a href={`mailto:${member.email}`} class="sa-cta sa-cta-ghost"> Изпрати имейл </a>
++							<a href={member.email ? `mailto:${member.email}` : `tel:${member.phone}`} class="sa-cta sa-cta-ghost"> Изпрати имейл </a>
+ 						{/if}
+ 					</div>
+ 					<div class="team-member-profile__facts">
+@@ -77,7 +77,7 @@
+ 						{#if member.email}
+ 							<div>
+ 								<span>Имейл</span>
+-								<a href={`mailto:${member.email}`}>{member.email}</a>
++								<a href={member.email ? `mailto:${member.email}` : `tel:${member.phone}`}>{member.email || member.phone}</a>
+ 							</div>
+ 						{/if}
+ 						<div>
+@@ -367,7 +367,7 @@
+ 	}
+ 
+ 	/* Breadcrumb (verified: min-height 76, gap 10, ul 14/700 #5f6877, a #1c1c1c 14/400,
+-	   icon 14px). The /assets/right.svg chevrons become @lucide ChevronRight. */
++	   icon 14px). The /assets/icons/right.svg chevrons become @lucide ChevronRight. */
+ 	.breadcrumb {
+ 		display: flex;
+ 		min-height: 76px;
+--- a/clients/todorov-auto/carwow/src/lib/components/team/DesktopTeamPage.svelte
++++ b/clients/todorov-auto/carwow/src/lib/components/team/DesktopTeamPage.svelte
+@@ -123,7 +123,7 @@
+ 		{#if member.email}
+ 			<li>
+ 				<a
+-					href={`mailto:${member.email}`}
++					href={member.email ? `mailto:${member.email}` : `tel:${member.phone}`}
+ 					title={`Имейл към ${member.name}`}
+ 					aria-label={`Имейл към ${member.name}`}
+ 				>
+@@ -149,7 +149,7 @@
+ 		{#if member.email}
+ 			<li>
+ 				<a
+-					href={`mailto:${member.email}`}
++					href={member.email ? `mailto:${member.email}` : `tel:${member.phone}`}
+ 					title="Имейл към Автосалон Тодоров"
+ 					aria-label="Имейл към Автосалон Тодоров"
+ 				>
+@@ -356,7 +356,7 @@
+ 	}
+ 
+ 	/* Breadcrumb (verified: min-height 76, gap 10, ul 14/700 #5f6877, a #1c1c1c 14/400,
+-	   icon 14px). The /assets/right.svg chevrons become @lucide ChevronRight. */
++	   icon 14px). The /assets/icons/right.svg chevrons become @lucide ChevronRight. */
+ 	.breadcrumb {
+ 		display: flex;
+ 		min-height: 76px;
+--- a/clients/todorov-auto/carwow/src/lib/data/daynight-blog.ts
++++ b/clients/todorov-auto/carwow/src/lib/data/daynight-blog.ts
+@@ -45,7 +45,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-28',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-44.jpg',
++		image: '/dealer/stock/11763371717307272-1.webp',
+ 		readMinutes: 3,
+ 		summary: [
+ 			'Наличността се обновява регулярно според пазара и заявките от клиенти.',
+@@ -78,7 +78,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-27',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-20.jpg',
++		image: '/dealer/stock/11704208021161812-1.webp',
+ 		readMinutes: 3,
+ 		summary: [
+ 			'Започнете от снимките, цената, пробега и характеристиките в обявата.',
+@@ -112,7 +112,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-26',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-18.jpg',
++		image: '/dealer/stock/11735041255980884-1.webp',
+ 		readMinutes: 5,
+ 		summary: [
+ 			'Определете бюджет, тип автомобил, гориво и реални разходи след покупката.',
+@@ -153,7 +153,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-25',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-21.jpg',
++		image: '/dealer/stock/11757098776259646-1.webp',
+ 		readMinutes: 4,
+ 		summary: [
+ 			'Гледайте първоначална вноска, срок, месечна вноска, такси и застраховки заедно.',
+@@ -187,7 +187,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-24',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-24.jpg',
++		image: '/dealer/stock/11649235957114307-1.webp',
+ 		readMinutes: 4,
+ 		summary: [
+ 			'Проверете произхода, наличните документи и техническото състояние преди плащане.',
+@@ -221,7 +221,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-23',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-30.jpg',
++		image: '/dealer/stock/11784299299170761-1.webp',
+ 		readMinutes: 5,
+ 		summary: [
+ 			'При премиум автомобил техническото състояние е по-важно от най-ниската цена.',
+@@ -254,7 +254,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-22',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-32.jpg',
++		image: '/dealer/stock/21782384979656784-1.webp',
+ 		readMinutes: 5,
+ 		summary: [
+ 			'Дизелът често е логичен за дълъг пробег, но трябва да се гледат екологичните системи.',
+@@ -288,7 +288,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-21',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-31.jpg',
++		image: '/dealer/stock/11701427910651766-1.webp',
+ 		readMinutes: 4,
+ 		summary: [
+ 			'Подгответе снимки, основни данни, документи и информация за обслужване.',
+@@ -322,7 +322,7 @@
+ 		kind: 'guide',
+ 		date: '2026-05-20',
+ 		author: 'Автосалон Тодоров',
+-		image: '/assets/images/blog/post-23.jpg',
++		image: '/dealer/stock/21784126666986144-1.webp',
+ 		readMinutes: 4,
+ 		summary: [
+ 			'Проверката включва документи, визуално състояние, тестово шофиране и технически преглед.',
+--- a/clients/todorov-auto/carwow/src/lib/data/daynight-vehicles.ts
++++ b/clients/todorov-auto/carwow/src/lib/data/daynight-vehicles.ts
+@@ -123,7 +123,7 @@
+ 		priceEur: listing.priceEur,
+ 		priceBgn: listing.priceBgn,
+ 		taxLabel: listing.taxLabel,
+-		monthly: 'Условията се уточняват индивидуално',
++		monthly: listing.taxLabel || 'Уточнете условията',
+ 		image: listing.image,
+ 		gallery: listing.gallery,
+ 		badges: [
+--- a/clients/todorov-auto/carwow/src/lib/data/editorial-guides.ts
++++ b/clients/todorov-auto/carwow/src/lib/data/editorial-guides.ts
+@@ -13,7 +13,7 @@
+ export const editorialGuides: DayNightArticle[] = [
+ 	guide('kak-da-kupim-upotrebyavan-avtomobil', 'Оглед на употребяван автомобил: откъде да започнете',
+ 		'Практичен ред за оглед — от въпросите по телефона до проверката в сервиз.',
+-		'/assets/images/blog/post-18.jpg', 'Покупка', ['оглед', 'покупка'], [
++		'/dealer/stock/11735041255980884-1.webp', 'Покупка', ['оглед', 'покупка'], [
+ 		{ heading: 'Преди да тръгнете', paragraphs: [
+ 			'Потвърдете, че автомобилът е наличен, и уговорете достатъчно време за оглед на дневна светлина. Поискайте VIN, снимки на сервизните документи със скрити лични данни и информация за известни забележки. Запишете си отговорите, за да ги сверите на място.',
+ 			'Попитайте предварително дали е възможно тестово шофиране и независим преглед. Ако искате да видите студено стартиране, уговорете това преди посещението.' ] },
+@@ -26,7 +26,7 @@
+ 	]),
+ 	guide('vaprosi-predi-ogled', 'Какво да попитате, преди да пътувате за оглед',
+ 		'Кратък списък с въпроси и снимки, които могат да спестят напразно пътуване.',
+-		'/assets/images/blog/post-20.jpg', 'Покупка', ['обяви', 'оглед'], [
++		'/dealer/stock/11704208021161812-1.webp', 'Покупка', ['обяви', 'оглед'], [
+ 		{ heading: 'Уточнете кой автомобил обсъждате', paragraphs: [
+ 			'Изпратете линка към конкретната обява. Потвърдете версията, двигателя, скоростната кутия и местоположението. Попитайте дали снимките показват текущото състояние и дали автомобилът може да бъде видян в уговорения ден.',
+ 			'Поискайте информация за броя ключове, наличните сервизни записи и оборудването, което е важно за вас. Не приемайте, че всяка екстра от списъка за модела присъства и в този екземпляр.' ] },
+@@ -39,7 +39,7 @@
+ 	]),
+ 	guide('sravnyavane-na-avtomobilni-obyavi', 'Как да сравните три обяви, без да се изгубите в екстрите',
+ 		'Подредете важните разлики: версия, състояние, история и оборудване.',
+-		'/assets/images/blog/post-32.jpg', 'Покупка', ['сравнение', 'обяви'], [
++		'/dealer/stock/21782384979656784-1.webp', 'Покупка', ['сравнение', 'обяви'], [
+ 		{ heading: 'Изберете еднакви критерии', paragraphs: [
+ 			'Запишете за всеки автомобил модел, година, двигател, скоростна кутия, пробег и обявена цена. Различни поколения или версии могат да изглеждат сходно на снимка, затова уточнете точната модификация.',
+ 			'Разделете желанията си на задължителни и допълнителни. Например мястото за детска седалка или размерът на багажника може да са по-важни за ежедневието ви от панорамен покрив.' ] },
+@@ -52,7 +52,7 @@
+ 	]),
+ 	guide('testovo-shofirane-kakvo-da-proverite', 'Тестово шофиране: какво да проверите предварително',
+ 		'Подгответе маршрут и въпроси, за да използвате времето зад волана смислено.',
+-		'/assets/images/blog/post-31.jpg', 'Покупка', ['тестово шофиране', 'оглед'], [
++		'/dealer/stock/11701427910651766-1.webp', 'Покупка', ['тестово шофиране', 'оглед'], [
+ 		{ heading: 'Уговорете условията', paragraphs: [
+ 			'Преди посещението попитайте дали тестово шофиране е възможно, кой ще ви придружава и какви условия трябва да изпълните. Уточнете продължителността и маршрута, вместо да разчитате на импровизация.',
+ 			'Първо настройте седалката, волана и огледалата при спрял автомобил. Проверете дали виждате добре таблото и дали основните органи за управление са удобни за вас.' ] },
+@@ -65,7 +65,7 @@
+ 	]),
+ 	guide('kak-da-podgotvim-avtomobil-za-prodazhba', 'Подготовка за продажба: какво да съберете преди обявата',
+ 		'Документи, оборудване и ясна информация за състоянието в един подреден пакет.',
+-		'/assets/images/blog/post-30.jpg', 'Продажба', ['продажба', 'подготовка'], [
++		'/dealer/stock/11784299299170761-1.webp', 'Продажба', ['продажба', 'подготовка'], [
+ 		{ heading: 'Съберете информацията на едно място', paragraphs: [
+ 			'Подгответе точната версия на автомобила, показания пробег, броя ключове и списък с оборудването. Прегледайте сервизните записи и отбележете кога са извършвани описаните дейности.',
+ 			'За публични снимки скрийте лични данни от документи и фактури. Запазете оригиналите за преглед при подходяща среща, вместо да ги разпространявате без нужда.' ] },
+@@ -78,7 +78,7 @@
+ 	]),
+ 	guide('snimki-na-avtomobil-za-obyava', 'Снимки за автомобилна обява: полезният комплект кадри',
+ 		'Покажете автомобила ясно, с последователни снимки и видими забележки.',
+-		'/assets/images/blog/post-23.jpg', 'Продажба', ['снимки', 'обяви'], [
++		'/dealer/stock/21784126666986144-1.webp', 'Продажба', ['снимки', 'обяви'], [
+ 		{ heading: 'Започнете с цялостен изглед', paragraphs: [
+ 			'Изберете място с достатъчно пространство и равномерна дневна светлина. Почистете обектива и снимайте автомобила целия в кадър: отпред, отзад, от двете страни и по диагонал.',
+ 			'Използвайте сходно разстояние и височина за общите снимки. Избягвайте силни филтри и редакции, които променят цвета или скриват детайли.' ] },
+--- a/clients/todorov-auto/carwow/src/lib/server/daynight-template-chrome.ts
++++ b/clients/todorov-auto/carwow/src/lib/server/daynight-template-chrome.ts
+@@ -38,25 +38,25 @@
+ 	{
+ 		label: 'Chrysler 300C',
+ 		href: '/inventory/chrysler-300c-2018-gaz',
+-		image: '/assets/images/megamenu/chrysler-300c.webp',
++		image: '/dealer/stock/11649235957114307-1.webp',
+ 		meta: '17 000 EUR · Газ/Бензин'
+ 	},
+ 	{
+ 		label: 'BMW i7',
+ 		href: '/inventory/bmw-i7-2023-full-maxx',
+-		image: '/assets/images/megamenu/bmw-i7.webp',
++		image: '/dealer/stock/11784299299170761-1.webp',
+ 		meta: '81 000 EUR · Електрически'
+ 	},
+ 	{
+ 		label: 'BMW 520i',
+ 		href: '/inventory/bmw-520i-2006-avtomatik',
+-		image: '/assets/images/megamenu/bmw-520i.webp',
++		image: '/dealer/stock/21782384979656784-1.webp',
+ 		meta: '4 500 EUR · Бензин'
+ 	},
+ 	{
+ 		label: 'Mercedes E 350 D',
+ 		href: '/inventory/mercedes-benz-e-350-d-2015-64594',
+-		image: '/assets/images/megamenu/mercedes-e220d.webp',
++		image: '/dealer/stock/11701427910651766-1.webp',
+ 		meta: '11 500 EUR · Дизел'
+ 	}
+ ] as const;
+@@ -456,14 +456,14 @@
+ <a href="tel:${daynightSite.phone}" class="icon" aria-label="Обади се на Автосалон Тодоров">${phoneIcon()}</a>
+ <div class="daynight-header-contact__body">
+ <a class="text" href="tel:${daynightSite.phone}">${daynightSite.phoneLabel}</a>
+-<a class="text-xs font-weight-500" href="${viberHref}">Обаждане / Viber</a>
++<a class="text-xs font-weight-500" href="${viberHref}">Обаждане</a>
+ </div>
+ <div class="daynight-contact-popover" role="group" aria-label="Контакт по телефон">
+ <strong>Свържете се веднага</strong>
+-<span>Изберете обаждане или Viber чат.</span>
++<span>Използвайте публикувания телефон.</span>
+ <div class="daynight-contact-popover__actions">
+ <a href="tel:${daynightSite.phone}">Обади се</a>
+-<a href="${viberHref}">Viber</a>
++<a href="${viberHref}">Телефон</a>
+ </div>
+ </div>
+ </li>
+--- a/clients/todorov-auto/carwow/src/lib/server/daynight-template-content.ts
++++ b/clients/todorov-auto/carwow/src/lib/server/daynight-template-content.ts
+@@ -168,11 +168,11 @@
+ }
+ 
+ const daynightPageAssets = {
+-	aboutExterior: '/assets/images/pages/daynight-about-lot-v1.webp',
+-	aboutConsultation: '/assets/images/pages/daynight-about-consultation-v1.webp',
+-	aboutShowroomVehicle: '/assets/images/pages/daynight-about-showroom-suv-v1.webp',
+-	servicesInspection: '/assets/images/pages/daynight-services-inspection-v1.webp',
+-	servicesConsultation: '/assets/images/pages/daynight-services-consultation-v1.webp',
++	aboutExterior: '/dealer/stock/11776511305281815-1.webp',
++	aboutConsultation: '/dealer/stock/11763371717307272-1.webp',
++	aboutShowroomVehicle: '/dealer/stock/11763371717307272-1.webp',
++	servicesInspection: '/dealer/stock/21784126666986144-3.webp',
++	servicesConsultation: '/dealer/stock/11776511305281815-1.webp',
+ 	dealerProfileMark: '/dealer/logo-light.png'
+ } as const;
+ 
+@@ -202,7 +202,7 @@
+ 		modifier: 'about',
+ 		title: 'За Автосалон Тодоров',
+ 		description:
+-			'Проверени автомобили, ясна история и съдействие от избора до документите в Бургас.',
++			'Публични обяви, ясна история и съдействие от избора до документите в Бургас.',
+ 		image: daynightPageAssets.aboutExterior,
+ 		primaryHref: '/inventory',
+ 		primaryLabel: 'Виж автомобили',
+@@ -324,7 +324,7 @@
+ 									</a>
+ 								</li>
+ 								<li>
+-									<a href="mailto:${member.email}" title="Имейл към Автосалон Тодоров" aria-label="Имейл към Автосалон Тодоров">
++									<a href="${member.email ? `mailto:${member.email}` : `tel:${member.phone}`}" title="Имейл към Автосалон Тодоров" aria-label="Имейл към Автосалон Тодоров">
+ 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ 											<path d="M3.75 7.5L10.94 12.2933C11.5667 12.7111 12.4333 12.7111 13.06 12.2933L20.25 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ 											<path d="M4.5 5.25H19.5C20.3284 5.25 21 5.92157 21 6.75V17.25C21 18.0784 20.3284 18.75 19.5 18.75H4.5C3.67157 18.75 3 18.0784 3 17.25V6.75C3 5.92157 3.67157 5.25 4.5 5.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+@@ -348,7 +348,7 @@
+ 									</a>
+ 								</li>
+ 								<li>
+-									<a href="mailto:${member.email}" title="Имейл към ${member.name}" aria-label="Имейл към ${member.name}">
++									<a href="${member.email ? `mailto:${member.email}` : `tel:${member.phone}`}" title="Имейл към ${member.name}" aria-label="Имейл към ${member.name}">
+ 										<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ 											<path d="M3.75 7.5L10.94 12.2933C11.5667 12.7111 12.4333 12.7111 13.06 12.2933L20.25 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ 											<path d="M4.5 5.25H19.5C20.3284 5.25 21 5.92157 21 6.75V17.25C21 18.0784 20.3284 18.75 19.5 18.75H4.5C3.67157 18.75 3 18.0784 3 17.25V6.75C3 5.92157 3.67157 5.25 4.5 5.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+@@ -369,14 +369,14 @@
+ function renderContactPageSocialLinks() {
+ 	return `<ul class="contact-page-info-social flex gap-8">
+ 							<li>
+-								<a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" class="hover-fill-white" title="Facebook" aria-label="Facebook">
++								<a href="https://todorovauto.mobile.bg/" target="_blank" rel="noopener" class="hover-fill-white" title="Facebook" aria-label="Facebook">
+ 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ 										<path d="M11.5541 20V10.8777H14.6148L15.074 7.32156H11.5541V5.05147C11.5541 4.0222 11.8387 3.32076 13.3164 3.32076L15.1979 3.31999V0.13923C14.8725 0.0969453 13.7556 0 12.4556 0C9.74098 0 7.88252 1.65697 7.88252 4.69927V7.32156H4.8125V10.8777H7.88252V20H11.5541Z" fill="#1C1C1C"/>
+ 									</svg>
+ 								</a>
+ 							</li>
+ 							<li>
+-								<a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" class="hover-stroke-white" title="Instagram" aria-label="Instagram">
++								<a href="https://todorovauto.mobile.bg/" target="_blank" rel="noopener" class="hover-stroke-white" title="Instagram" aria-label="Instagram">
+ 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ 										<rect x="2.5" y="2.5" width="15" height="15" rx="4.5" stroke="#1C1C1C" stroke-width="1.5"/>
+ 										<circle cx="10" cy="10" r="3.15" stroke="#1C1C1C" stroke-width="1.5"/>
+@@ -385,7 +385,7 @@
+ 								</a>
+ 							</li>
+ 							<li>
+-								<a href="tel:${daynightSite.phone}" class="hover-stroke-white" title="Свържете се с Автосалон Тодоров по телефон или Viber." aria-label="Свържете се с Автосалон Тодоров по телефон или Viber.">
++								<a href="tel:${daynightSite.phone}" class="hover-stroke-white" title="Свържете се с Автосалон Тодоров по публикувания телефон." aria-label="Свържете се с Автосалон Тодоров по публикувания телефон.">
+ 									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ 										<path d="M14.25 4.5C15.5114 4.83218 16.6621 5.4932 17.5844 6.41557C18.5068 7.33793 19.1678 8.48858 19.5 9.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ 										<path d="M13.5 7.5C15.0488 7.91438 16.0856 8.95125 16.5 10.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+@@ -567,7 +567,7 @@
+ 							<div class="daynight-dashboard-header__actions">
+ 								<a class="daynight-dashboard-header__ghost" href="/inventory">Налични автомобили</a>
+ 								<a class="daynight-dashboard-header__user" href="/admin/settings">
+-									<img class="avatar" src="/assets/images/dashboard/dashbroard_avatar.png" alt="">
++									<img class="avatar" src="/dealer/logo-light.png" alt="">
+ 									<span>Клиентски профил</span>
+ 								</a>
+ 								<a class="daynight-dashboard-header__cta" href="/admin/listings/new">
+@@ -723,7 +723,7 @@
+ 			(_match, before, after, close) => `${before}100${after}100${close}%`
+ 		)
+ 		.replace(
+-			/<p class="font-weight-500 text-muted h7 text-center">Проверени автомобили<\/p>/,
++			/<p class="font-weight-500 text-muted h7 text-center">Публични обяви<\/p>/,
+ 			'<p class="font-weight-500 text-muted h7 text-center">съдействие по документи</p>'
+ 		);
+ }
+@@ -1222,7 +1222,7 @@
+ 		.replaceAll('1G1ZD5ST0PF', vehicle.lot)
+ 		.replaceAll('165921', vehicle.lot)
+ 		.replaceAll('Mike Hanley', salesTeam?.name ?? 'Автосалон Тодоров')
+-		.replaceAll('Verified Dealer', 'Проверена автокъща')
++		.replaceAll('Verified Dealer', 'Публичен профил')
+ 		.replaceAll('/assets/images/pages/sale-agent-9.jpg', salesTeam?.image ?? daynightSite.logoDark)
+ 		.replaceAll('Get Directions', 'Виж локация')
+ 		.replaceAll('Call To Dealer', daynightSite.phoneCta)
+@@ -1344,7 +1344,7 @@
+ 		.replaceAll('Customer Reviews', 'Отзиви от клиенти')
+ 		.replaceAll('Add A Review', 'Добавете отзив')
+ 		.replaceAll('Add a review', 'Добавете отзив')
+-		.replaceAll('Chat via WhatsApp', 'Viber / WhatsApp')
++		.replaceAll('Chat via WhatsApp', 'Телефон')
+ 		.replaceAll('Prev', 'ПРЕДИШНА')
+ 		.replaceAll('Next', 'СЛЕДВАЩА')
+ 		.replaceAll('alt="play"', 'alt="" aria-hidden="true"')
+@@ -1792,9 +1792,9 @@
+ 			<a href="/about/daynight-auto-plovdiv" class="h4 mb-4 font-weight-600">Автосалон Тодоров</a>
+ 			<p class="text-secondary mb-18">Автокъща в Бургас</p>
+ 			<ul class="blog-detail-social flex gap-12">
+-				<li><a href="https://www.facebook.com/61566304063141/" target="_blank" rel="noopener" aria-label="Facebook канал">${renderBlogSocialIcon('facebook')}</a></li>
+-				<li><a href="https://www.instagram.com/daynight.auto.plovdiv/" target="_blank" rel="noopener" aria-label="Instagram канал">${renderBlogSocialIcon('instagram')}</a></li>
+-				<li><a href="mailto:${daynightSite.email}" aria-label="Имейл към Автосалон Тодоров">${renderBlogSocialIcon('mail')}</a></li>
++				<li><a href="https://todorovauto.mobile.bg/" target="_blank" rel="noopener" aria-label="Facebook канал">${renderBlogSocialIcon('facebook')}</a></li>
++				<li><a href="https://todorovauto.mobile.bg/" target="_blank" rel="noopener" aria-label="Instagram канал">${renderBlogSocialIcon('instagram')}</a></li>
++				<li><a href="${daynightSite.email ? `mailto:${daynightSite.email}` : `tel:${daynightSite.phone}`}" aria-label="Имейл към Автосалон Тодоров">${renderBlogSocialIcon('mail')}</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+@@ -1833,14 +1833,14 @@
+ 			name: 'Иван Димитров',
+ 			time: 'преди 1 ден',
+ 			text: 'Полезен списък за проверка преди оглед и покупка.',
+-			avatar: '/assets/images/blog/comments-post-1.jpg',
++			avatar: '/dealer/stock/21782384979656784-1.webp',
+ 			inner: false
+ 		},
+ 		{
+ 			name: 'Мария Георгиева',
+ 			time: 'преди 2 дни',
+ 			text: 'Интересувам се от автомобил в конкретен бюджет. Мога ли да получа насока?',
+-			avatar: '/assets/images/blog/comments-post-2.jpg',
++			avatar: '/dealer/stock/11701427910651766-1.webp',
+ 			inner: true
+ 		},
+ 		{
+@@ -2177,11 +2177,11 @@
+ 			.replaceAll('Chief Financial Officer', 'Консултант клиентски услуги')
+ 			.replace(
+ 				/<p class="text-secondary h7 line-height-28 mb-32">[\s\S]*?<\/p>/,
+-				'<p class="text-secondary h7 line-height-28 mb-32">Автосалон Тодоров предлага внимателно подбрани и проверени автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.</p>'
++				'<p class="text-secondary h7 line-height-28 mb-32">Автосалон Тодоров публикува автомобили в Бургас. Тук са представени десет обяви със снимки и данни от източника към 09.09.2026 г. Наличността, състоянието, документите и крайните условия се потвърждават директно.</p>'
+ 			)
+ 			.replace(
+ 				/At Автосалон Тодоров, we make car ownership simple and accessible[\s\S]*?hassle-free experience\./,
+-				'Автосалон Тодоров предлага внимателно подбрани и проверени автомобили с гарантиран произход, коректна оценка при изкупуване и пълно съдействие от избора до документите, регистрацията и финансирането.'
++				'Автосалон Тодоров публикува автомобили в Бургас. Тук са представени десет обяви със снимки и данни от източника към 09.09.2026 г. Наличността, състоянието, документите и крайните условия се потвърждават директно.'
+ 			)
+ 			.replaceAll('/assets/images/pages/about-1.jpg', daynightPageAssets.aboutExterior)
+ 			.replaceAll('/assets/images/pages/about-2.jpg', daynightPageAssets.aboutConsultation)
+@@ -2618,7 +2618,7 @@
+ 			.replaceAll('Aurexo Atlanta', 'Автосалон Тодоров Бургас')
+ 			.replaceAll('Euro Workshop', 'Автосалон Тодоров Бургас')
+ 			.replaceAll('537 Orchard St, NY', daynightSite.location)
+-			.replaceAll('Verified Dealer', 'Проверена автокъща')
++			.replaceAll('Verified Dealer', 'Публичен профил')
+ 			.replaceAll('Dealer Inventory', 'Налични автомобили')
+ 			.replaceAll('About Dealer', 'За автокъщата')
+ 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
+@@ -2703,7 +2703,7 @@
+ 			)
+ 			.replace(
+ 				/<a href="tel:[^"]+" class="text-secondary">\s*[^<]+\s*<\/a>\s*<a href="tel:[^"]+" class="text-secondary">\s*[^<]+\s*<\/a>/,
+-				`<a href="tel:${daynightSite.phone}" class="text-secondary">${daynightSite.phoneLabel}</a><a href="mailto:${daynightSite.email}" class="text-secondary">${daynightSite.email}</a>`
++				`<a href="tel:${daynightSite.phone}" class="text-secondary">${daynightSite.phoneLabel}</a><a href="${daynightSite.email ? `mailto:${daynightSite.email}` : `tel:${daynightSite.phone}`}" class="text-secondary">${daynightSite.email}</a>`
+ 			);
+ 
+ 		output = output
+@@ -3134,7 +3134,7 @@
+ 		.replaceAll('4,5k+', `${daynightBrandsInStock}`)
+ 		.replaceAll('Dealer Reviews', 'марки в наличност')
+ 		.replaceAll('3,5k+', '100%')
+-		.replaceAll('Verified Dealers', 'Проверени автомобили')
++		.replaceAll('Verified Dealers', 'Публични обяви')
+ 		.replace(
+ 			/<a href="\/sell-your-car" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">\s*Виж наличните автомобили\s*<\/a>/g,
+ 			'<a href="/inventory" class="btn btn-white btn-large font-weight-600 max-w-min text-primary">Виж наличните автомобили</a>'
+@@ -3306,7 +3306,7 @@
+ 		.replaceAll('Sale Agents', 'Екипът на Автосалон Тодоров')
+ 		.replaceAll('Senior Sales Agent', salesTeam?.role ?? 'Консултанти продажби')
+ 		.replaceAll('Senior Dealer Partner', salesTeam?.role ?? 'Консултанти продажби')
+-		.replaceAll('Verified Dealer', 'Проверена автокъща')
++		.replaceAll('Verified Dealer', 'Публичен профил')
+ 		.replaceAll('Emily Johnson', 'Клиент на Автосалон Тодоров')
+ 		.replaceAll('CEO Avitex', 'Клиент на Автосалон Тодоров')
+ 		.replaceAll('Benjamin Parker', 'Клиент от Бургас')
+@@ -3532,7 +3532,7 @@
+ 										<a href="tel:${daynightSite.phone}">
+ 											${daynightSite.phoneLabel}
+ 										</a>
+-										<a href="mailto:${daynightSite.email}">
++										<a href="${daynightSite.email ? `mailto:${daynightSite.email}` : `tel:${daynightSite.phone}`}">
+ 											${daynightSite.email}
+ 										</a>
+ 									</div>
+@@ -3609,7 +3609,7 @@
+ 										<a href="tel:${daynightSite.phone}">
+ 											${daynightSite.phoneLabel}
+ 										</a>
+-										<a href="mailto:${daynightSite.email}">
++										<a href="${daynightSite.email ? `mailto:${daynightSite.email}` : `tel:${daynightSite.phone}`}">
+ 											${daynightSite.email}
+ 										</a>
+ 									</div>
+--- a/clients/todorov-auto/carwow/src/lib/server/daynight-template-renderer.ts
++++ b/clients/todorov-auto/carwow/src/lib/server/daynight-template-renderer.ts
+@@ -185,7 +185,7 @@
+ 		['Write A Review', 'Добавете отзив'],
+ 		['Login To Add A Review', 'Вход за добавяне на отзив'],
+ 		['View More Reviews (98)', '${daynightSite.reviewLinkLabel}'],
+-		['Chat via WhatsApp', 'Viber / WhatsApp'],
++		['Chat via WhatsApp', 'Телефон'],
+ 		['View details', 'Виж детайли'],
+ 		['See Finance', 'Финансиране'],
+ 		['AUDI', '${daynightVehicles[0]?.brand.toUpperCase() ?? 'CHRYSLER'}'],
+--- a/clients/todorov-auto/carwow/src/lib/server/home-page-data.ts
++++ b/clients/todorov-auto/carwow/src/lib/server/home-page-data.ts
+@@ -135,7 +135,7 @@
+ 		{
+ 			label: 'Без бюджет',
+ 			value: 'all',
+-			image: '/assets/images/budget/open-budget-supercar-v2.webp',
++			image: '/dealer/stock/11649235957114307-1.webp',
+ 			caption: `Всички ${vehicles.length} коли`,
+ 			variant: 'open' as const
+ 		}
+--- a/clients/todorov-auto/carwow/src/lib/server/repositories/posts.ts
++++ b/clients/todorov-auto/carwow/src/lib/server/repositories/posts.ts
+@@ -26,7 +26,7 @@
+ 
+ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
+ 
+-const fallbackPostImage = '/assets/images/blog/post-44.jpg';
++const fallbackPostImage = '/dealer/stock/11763371717307272-1.webp';
+ const daynightArticleCategories = new Set<DayNightArticleCategory>([
+ 	'Покупка',
+ 	'Продажба',
+--- a/clients/todorov-auto/carwow/src/lib/styles/daynight-home-desktop.css
++++ b/clients/todorov-auto/carwow/src/lib/styles/daynight-home-desktop.css
+@@ -8109,7 +8109,7 @@
+ 				rgba(16, 19, 23, 0.48) 46%,
+ 				rgba(16, 19, 23, 0.05) 76%
+ 			),
+-			url('/assets/images/daynight-premium-banners/webp/inventory-latest-imagegen-v4.webp') !important;
++			url('/dealer/stock/11784299299170761-1.webp') !important;
+ 	}
+ 
+ 	body.daynight-home-page .daynight-home-brand-section .daynight-home-section-banner {
+@@ -8121,7 +8121,7 @@
+ 				rgba(63, 0, 9, 0.42) 48%,
+ 				rgba(15, 0, 2, 0.06) 78%
+ 			),
+-			url('/assets/images/daynight-premium-banners/webp/brands-in-stock-imagegen-v3.webp') !important;
++			url('/dealer/stock/21782384979656784-1.webp') !important;
+ 	}
+ 
+ 	body.daynight-home-page .daynight-home-section-banner--vehicle-types {
+@@ -8133,7 +8133,7 @@
+ 				rgba(8, 10, 13, 0.48) 48%,
+ 				rgba(8, 10, 13, 0.03) 78%
+ 			),
+-			url('/assets/images/daynight-premium-banners/webp/vehicle-types-imagegen-v3.webp') !important;
++			url('/dealer/stock/11701427910651766-1.webp') !important;
+ 	}
+ 
+ 	body.daynight-home-page .daynight-home-inventory__heading-inner,
+--- a/clients/todorov-auto/carwow/src/lib/styles/tokens.css
++++ b/clients/todorov-auto/carwow/src/lib/styles/tokens.css
+@@ -54,10 +54,10 @@
+ :root {
+ 	/* Brand — Автосалон Тодоров uses black/graphite for structure and red for action.
+ 	 * The legacy --sa-blue aliases remain for compatibility, but resolve to ink. */
+-	--sa-red: #d71920;
+-	--sa-red-strong: #a50f15;
+-	--sa-red-soft: #fee2e2;
+-	--sa-red-tint: #fff5f5;
++	--sa-red: #133ab9;
++	--sa-red-strong: #102e94;
++	--sa-red-soft: #e3eaff;
++	--sa-red-tint: #f3f6ff;
+ 	--sa-yellow: #f5c542;
+ 	--sa-blue: #050505;
+ 	--sa-blue-strong: #000000;
+@@ -280,3 +280,6 @@
+ 		--sa-button-font-size: var(--sa-text-desktop-action);
+ 	}
+ }
++
++/* Source-logo consumer fit: preserve the original artwork, including on dark chrome. */
++img[src*="/dealer/logo-"] { object-fit: contain !important; object-position: center !important; filter: none !important; mask-image: none !important; clip-path: none !important; transform: none !important; }
+--- a/clients/todorov-auto/carwow/src/routes/admin/+page.svelte
++++ b/clients/todorov-auto/carwow/src/routes/admin/+page.svelte
+@@ -90,7 +90,7 @@
+ 
+ 	function handleVehicleImageError(event: Event) {
+ 		const image = event.currentTarget as HTMLImageElement | null;
+-		const fallbackSrc = resolve('/assets/images/card/card-1.jpg');
++		const fallbackSrc = resolve('/dealer/stock/11776511305281815-1.webp');
+ 
+ 		if (!image || image.getAttribute('src') === fallbackSrc) return;
+ 
+@@ -253,7 +253,7 @@
+ 											<a class="flex min-w-60 items-center gap-3" href={resolve('/admin/listings')}>
+ 												<img
+ 													class="ring-border size-12 rounded-md object-cover ring-1"
+-													src={vehicle.image || '/assets/images/card/card-1.jpg'}
++													src={vehicle.image || '/dealer/stock/11776511305281815-1.webp'}
+ 													alt=""
+ 													onerror={handleVehicleImageError}
+ 												/>
+--- a/clients/todorov-auto/carwow/src/routes/admin/listings/+page.svelte
++++ b/clients/todorov-auto/carwow/src/routes/admin/listings/+page.svelte
+@@ -75,7 +75,7 @@
+ 
+ 	function handleVehicleImageError(event: Event) {
+ 		const image = event.currentTarget as HTMLImageElement | null;
+-		const fallbackSrc = resolve('/assets/images/card/card-1.jpg');
++		const fallbackSrc = resolve('/dealer/stock/11776511305281815-1.webp');
+ 
+ 		if (!image || image.getAttribute('src') === fallbackSrc) return;
+ 
+@@ -218,7 +218,7 @@
+ 											<div class="flex min-w-0 items-center gap-3">
+ 												<img
+ 													class="ring-border size-12 rounded-md object-cover ring-1"
+-													src={vehicle.image || '/assets/images/card/card-1.jpg'}
++													src={vehicle.image || '/dealer/stock/11776511305281815-1.webp'}
+ 													alt=""
+ 													onerror={handleVehicleImageError}
+ 												/>
+--- a/clients/todorov-auto/carwow/src/routes/admin/login/+page.svelte
++++ b/clients/todorov-auto/carwow/src/routes/admin/login/+page.svelte
+@@ -17,7 +17,7 @@
+ 		<div class="admin-login-context">
+ 			<img
+ 				class="admin-login-banner-image"
+-				src="/assets/images/admin/cms-login-banner.png"
++				src="/dealer/stock/11776511305281815-1.webp"
+ 				alt=""
+ 				aria-hidden="true"
+ 			/>
+--- a/clients/todorov-auto/carwow/src/routes/api/import-requests/+server.ts
++++ b/clients/todorov-auto/carwow/src/routes/api/import-requests/+server.ts
+@@ -1,3 +1,4 @@
++import { dealerPreview, previewDeliveryMessage } from '$lib/data/dealer-preview';
+ import { json } from '@sveltejs/kit';
+ import type { RequestHandler } from './$types';
+ import { getDefaultDealerSlug } from '$lib/server/app-config';
+@@ -11,6 +12,7 @@
+ } from '$lib/server/staff-notifications';
+ 
+ export const POST: RequestHandler = async ({ locals, request, getClientAddress }) => {
++	if (dealerPreview.enabled) return json({ message: previewDeliveryMessage }, { status: 503 });
+ 	let db;
+ 
+ 	try {
+--- a/clients/todorov-auto/carwow/src/routes/api/leads/+server.ts
++++ b/clients/todorov-auto/carwow/src/routes/api/leads/+server.ts
+@@ -1,3 +1,4 @@
++import { dealerPreview, previewDeliveryMessage } from '$lib/data/dealer-preview';
+ import { json } from '@sveltejs/kit';
+ import type { RequestHandler } from './$types';
+ import { getDefaultDealerSlug } from '$lib/server/app-config';
+@@ -8,6 +9,7 @@
+ import { leadStaffNotification, sendStaffNotification } from '$lib/server/staff-notifications';
+ 
+ export const POST: RequestHandler = async ({ locals, request, getClientAddress }) => {
++	if (dealerPreview.enabled) return json({ message: previewDeliveryMessage }, { status: 503 });
+ 	let db;
+ 
+ 	try {
+--- a/clients/todorov-auto/carwow/src/routes/presentation/home2/+page.server.ts
++++ b/clients/todorov-auto/carwow/src/routes/presentation/home2/+page.server.ts
+@@ -10,46 +10,32 @@
+ 	return counts;
+ }
+ 
+-const featuredSlugs = [
+-	'mercedes-benz-gle-coupe-400d-2021-68018',
+-	'bmw-i7-2023-full-maxx',
+-	'mercedes-benz-amg-gt-53-2020-00956'
+-];
++const featuredSlugs = cars.slice(0, 3).map(car => car.slug);
+ 
+-const featuredSummaries: Record<string, string> = {
+-	'mercedes-benz-gle-coupe-400d-2021-68018': 'Premium coupe SUV with clear history',
+-	'bmw-i7-2023-full-maxx': 'Electric flagship comfort, ready to view',
+-	'mercedes-benz-amg-gt-53-2020-00956': 'AMG performance with everyday usability'
+-};
++const featuredSummaries: Record<string, string> = Object.fromEntries(cars.map(car => [car.slug, 'Публична обява; потвърдете наличността преди оглед.']));
+ 
+-const featuredCardImages: Record<string, string> = {
+-	'mercedes-benz-gle-coupe-400d-2021-68018':
+-		'/assets/images/body-type/normalized/body-suv-transparent.webp',
+-	'bmw-i7-2023-full-maxx': '/assets/images/megamenu/bmw-i7.webp',
+-	'mercedes-benz-amg-gt-53-2020-00956':
+-		'/assets/images/body-type/normalized/body-coupe-transparent.webp'
+-};
++const featuredCardImages: Record<string, string> = Object.fromEntries(cars.map(car => [car.slug, car.image]));
+ 
+ const fuelLabels: Record<string, string> = {
+-	Бензин: 'Petrol',
+-	Дизел: 'Diesel',
+-	Електрически: 'Electric',
+-	Хибриден: 'Hybrid',
++	Бензин: 'Бензин',
++	Дизел: 'Дизел',
++	Електрически: 'Електрически',
++	Хибриден: 'Хибрид',
+ 	'Бензин/Газ': 'Petrol/LPG'
+ };
+ 
+ const transmissionLabels: Record<string, string> = {
+-	Автоматик: 'Automatic',
+-	Ръчна: 'Manual'
++	Автоматик: 'Автоматик',
++	Ръчна: 'Ръчна'
+ };
+ 
+ const bodyLabels: Record<string, string> = {
+-	Седан: 'Saloons',
+-	Комби: 'Estate cars',
+-	Хечбек: 'Hatchbacks',
+-	Ван: 'Vans',
+-	Лимузина: 'Luxury cars',
+-	Купе: 'Coupes'
++	Седан: 'Седани',
++	Комби: 'Комби',
++	Хечбек: 'Хечбек',
++	Ван: 'Ванове',
++	Лимузина: 'Лимузини',
++	Купе: 'Купета'
+ };
+ 
+ const brandLogoPaths: Record<string, string> = {
+@@ -82,45 +68,45 @@
+ 		slug: car.slug,
+ 		title: car.shortTitle,
+ 		subtitle: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
+-		summary: featuredSummaries[car.slug] ?? 'Verified Автосалон Тодоров stock',
++		summary: 'Публична обява; потвърдете наличността.',
+ 		image: car.image,
+ 		cardImage: featuredCardImages[car.slug] ?? car.image,
+ 		price: car.priceEur,
+-		badge: car.badges[0] ?? 'Checked',
+-		saving: 'DayNight inspected'
++		badge: 'Обява от 09.09.2026',
++		saving: 'Данни от източника'
+ 	}));
+ }
+ 
+ function budgetTiles() {
+ 	const buckets = [
+ 		{
+-			label: 'Under €10k',
++			label: 'До €10 000',
+ 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+ 			count: cars.filter((car) => car.price > 0 && car.price <= 10000).length
+ 		},
+ 		{
+-			label: 'Under €20k',
++			label: 'До €20 000',
+ 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+-			count: cars.filter((car) => car.price > 10000 && car.price <= 20000).length
++			count: cars.filter((car) => car.price > 0 && car.price <= 20000).length
+ 		},
+ 		{
+-			label: 'Under €30k',
++			label: 'До €30 000',
+ 			image: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
+-			count: cars.filter((car) => car.price > 20000 && car.price <= 30000).length
++			count: cars.filter((car) => car.price > 0 && car.price <= 30000).length
+ 		},
+ 		{
+-			label: 'Under €50k',
++			label: 'До €50 000',
+ 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp',
+-			count: cars.filter((car) => car.price > 30000 && car.price <= 50000).length
++			count: cars.filter((car) => car.price > 0 && car.price <= 50000).length
+ 		},
+ 		{
+-			label: 'Over €50k',
++			label: 'Над €50 000',
+ 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
+ 			count: cars.filter((car) => car.price > 50000).length
+ 		},
+ 		{
+-			label: 'Open budget',
+-			image: '/assets/images/budget/open-budget-supercar-v2.webp',
++			label: 'Без ограничение',
++			image: '/dealer/stock/11649235957114307-1.webp',
+ 			count: cars.length
+ 		}
+ 	];
+@@ -134,23 +120,8 @@
+ 
+ 	return {
+ 		site: daynightSite,
+-		stats: {
+-			total: daynightSite.inventoryCount,
+-			dealers: 'Бургас',
+-			rating: '4.9/5',
+-			reviews: '240+'
+-		},
+-		shortcutPills: [
+-			'Used cars',
+-			'Trade-in',
+-			'Finance',
+-			'Inspection',
+-			'SUVs',
+-			'Premium',
+-			'Hybrids',
+-			'Big boot',
+-			'Below €30k'
+-		],
++		stats: { total: cars.length, dealers: daynightSite.locationShort, rating: '—', reviews: 'Няма добавени оценки' },
++		shortcutPills: ["Автомобили","Оглед","Условия","Документи","SUV","Сравнение","Хибриди","Практични","До €30 000"],
+ 		budgetTiles: budgetTiles(),
+ 		featuredCars: featuredCars(),
+ 		brands: [...brandCounts.entries()]
+--- a/clients/todorov-auto/carwow/src/routes/presentation/home2/+page.svelte
++++ b/clients/todorov-auto/carwow/src/routes/presentation/home2/+page.svelte
+@@ -1,4 +1,7 @@
+ <script lang="ts">
++  let menuOpen = $state(false);
++  let menuButton: HTMLButtonElement;
++  const dismissMenu = () => { menuOpen = false; menuButton?.focus(); };
+ 	import { goto } from '$app/navigation';
+ 	import { resolve } from '$app/paths';
+ 	import {
+@@ -21,9 +24,9 @@
+ 	let { data }: { data: PageData } = $props();
+ 
+ 	const searchTabs = [
+-		{ id: 'find', label: 'Find a car', placeholder: 'Search by body type' },
+-		{ id: 'sell', label: 'Sell my car', placeholder: 'Enter make, model or reg' },
+-		{ id: 'reviews', label: 'Read reviews', placeholder: 'Search reviews by model' }
++		{ id: 'find', label: 'Автомобили', placeholder: 'Марка, модел или купе' },
++		{ id: 'sell', label: 'Вашият въпрос', placeholder: 'Посочете автомобил' },
++		{ id: 'reviews', label: 'Информация', placeholder: 'Въпрос за модел' }
+ 	] as const;
+ 
+ 	type SearchTab = (typeof searchTabs)[number]['id'];
+@@ -31,7 +34,7 @@
+ 	let activeTab = $state<SearchTab>('find');
+ 	let query = $state('');
+ 	const activeSearch = $derived(searchTabs.find((tab) => tab.id === activeTab) ?? searchTabs[0]);
+-	const starIndices = [0, 1, 2, 3, 4] as const;
++	const starIndices = [] as number[];
+ 
+ 	const pillIcons = [
+ 		Car,
+@@ -46,42 +49,42 @@
+ 	];
+ 
+ 	const reviews = [
+-		{
+-			title: 'Outstanding service',
+-			body: 'The car was ready, the history was clear, and every document was handled on time.',
+-			author: 'Nikolay, 1 hour ago'
+-		},
+-		{
+-			title: 'Clear pricing',
+-			body: 'I saw the price, checked the car, and got finance support without surprises.',
+-			author: 'Maria, 2 hours ago'
+-		},
+-		{
+-			title: 'Smooth part exchange',
+-			body: 'I left my old car and drove away in the new one the same day. Very fair process.',
+-			author: 'Georgi, 3 hours ago'
+-		},
+-		{
+-			title: 'Inspection support',
+-			body: 'They helped with inspection and registration. The whole process felt organised.',
+-			author: 'Iva, 5 hours ago'
+-		}
+-	];
++  {
++    "title": "Преди оглед",
++    "body": "Потвърдете дали избраният автомобил е наличен и уговорете удобен час по телефона.",
++    "author": "Подготовка на разговор — не е клиентски отзив"
++  },
++  {
++    "title": "За цената",
++    "body": "Проверете данъчното уточнение в обявата и поискайте пълните условия за конкретния автомобил.",
++    "author": "Полезна информация — не е клиентски отзив"
++  },
++  {
++    "title": "За документите",
++    "body": "Поискайте данните за произход, регистрация и налична сервизна история.",
++    "author": "Въпроси преди покупка — не е клиентски отзив"
++  },
++  {
++    "title": "За проверката",
++    "body": "Обсъдете оглед и преглед с независим специалист. Демо сайтът не удостоверява техническо състояние.",
++    "author": "Насока — не е клиентски отзив"
++  }
++];
+ 
+ 	const guideCards = [
+ 		{
+-			title: 'How to buy a used car with confidence',
+-			image: '/assets/images/pages/daynight-services-inspection-v1.webp',
++			title: 'Как да подготвите оглед',
++			image: '/dealer/stock/21784126666986144-3.webp',
+ 			href: '/blog'
+ 		},
+ 		{
+-			title: 'Finance, registration and paperwork',
+-			image: '/assets/images/pages/daynight-services-consultation-v1.webp',
++			title: 'Цена, регистрация и документи',
++			image: '/dealer/stock/11776511305281815-1.webp',
+ 			href: '/financing'
+ 		},
+ 		{
+-			title: 'Sell or part exchange with Автосалон Тодоров',
+-			image: '/assets/images/sell/trade-in-promo-v1.webp',
++			title: 'Въпрос към Автосалон Тодоров',
++			image: '/dealer/stock/11735041255980884-1.webp',
+ 			href: '/sell-your-car'
+ 		}
+ 	] as const;
+@@ -99,52 +102,54 @@
+ 	<title>Автосалон Тодоров Marketplace | Home2</title>
+ 	<meta
+ 		name="description"
+-		content="Browse, buy, sell and review verified cars from Автосалон Тодоров Бургас."
++		content="Публични обяви на Автосалон Тодоров в Бургас. Сравнете данни и снимки и потвърдете оглед по телефона."
+ 	/>
+ 	<meta name="robots" content="noindex,nofollow" />
+ </svelte:head>
+ 
++<svelte:window onkeydown={(event) => { if (event.key === "Escape" && menuOpen) dismissMenu(); }} />
+ <main class="home2-shell">
++  {#if menuOpen}<nav id="home2-mobile-menu" class="home2-mobile-menu" aria-label="Мобилна навигация"><button type="button" onclick={dismissMenu}>Затвори менюто</button>{#each [["Автомобили", "/inventory"], ["Услуги", "/services"], ["За нас", "/about"], ["Контакти", "/contact"]] as [label, href]}<a href={resolve(href)} onclick={() => menuOpen = false}>{label}</a>{/each}</nav>{/if}
+ 	<section class="home2-hero" aria-labelledby="home2-title">
+ 		<img
+ 			class="home2-hero__cars"
+-			src="/assets/images/home2/daynight-hero-showroom-v2.webp"
++			src="/dealer/stock/11763371717307272-1.webp"
+ 			alt=""
+ 			aria-hidden="true"
+ 		/>
+ 
+-		<header class="home2-nav" aria-label="Home2 navigation">
++		<header class="home2-nav" aria-label="Навигация">
+ 			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Автосалон Тодоров Home2">
+ 				<img src="/dealer/logo-light.png" alt="Автосалон Тодоров" />
+ 			</a>
+ 
+-			<nav class="home2-nav__links" aria-label="Primary">
+-				<a href={resolve('/inventory')}>Cars</a>
+-				<a href={resolve('/services')}>Services</a>
+-				<a href={resolve('/sell-your-car')}>Sell</a>
+-				<a href={resolve('/about')}>About us</a>
+-				<a href={resolve('/contact')}>Contact</a>
++			<nav class="home2-nav__links" aria-label="Основна навигация">
++				<a href={resolve('/inventory')}>Автомобили</a>
++				<a href={resolve('/services')}>Услуги</a>
++				<a href={resolve('/sell-your-car')}>Въпрос</a>
++				<a href={resolve('/about')}>За нас</a>
++				<a href={resolve('/contact')}>Контакти</a>
+ 			</nav>
+ 
+-			<div class="home2-nav__actions" aria-label="Quick actions">
++			<div class="home2-nav__actions" aria-label="Бързи действия">
+ 				<a href={resolve('/admin/login')}>
+ 					<CircleUserRound size={27} strokeWidth={3} />
+-					<span>Log in</span>
++					<span>Вход</span>
+ 				</a>
+-				<button type="button" aria-label="Menu">
++				<button type="button" aria-label="Меню" bind:this={menuButton} aria-expanded={menuOpen} aria-controls="home2-mobile-menu" onclick={() => menuOpen = !menuOpen}>
+ 					<Menu size={33} strokeWidth={3} />
+-					<span>Menu</span>
++					<span>Меню</span>
+ 				</button>
+ 			</div>
+ 		</header>
+ 
+ 		<h1 id="home2-title">
+-			<span>Changing your car?</span>
+-			<span>Автосалон Тодоров can help</span>
++			<span>Търсите автомобил?</span>
++			<span>Разгледайте Автосалон Тодоров</span>
+ 		</h1>
+ 
+-		<form class="home2-search" onsubmit={submitSearch} aria-label="Find your next car">
+-			<div class="home2-search__tabs" role="tablist" aria-label="Search mode">
++		<form class="home2-search" onsubmit={submitSearch} aria-label="Намерете автомобил">
++			<div class="home2-search__tabs" role="tablist" aria-label="Начин на търсене">
+ 				{#each searchTabs as tab (tab.id)}
+ 					<button
+ 						class:home2-search__tab--active={activeTab === tab.id}
+@@ -161,20 +166,20 @@
+ 			<label class="home2-search__input">
+ 				<span class="sr-only">{activeSearch.placeholder}</span>
+ 				<input bind:value={query} placeholder={activeSearch.placeholder} />
+-				<button type="submit" aria-label="Search">
++				<button type="submit" aria-label="Търсене">
+ 					<Search size={26} strokeWidth={2.6} />
+ 				</button>
+ 			</label>
+ 
+ 			<p>
+-				or let us help you
+-				<a href={resolve('/inventory')}>Find a car</a>
++				или разгледайте
++				<a href={resolve('/inventory')}>Автомобили</a>
+ 			</p>
+ 		</form>
+ 	</section>
+ 
+ 	<section class="home2-market">
+-		<div class="home2-shortcuts" aria-label="Popular searches">
++		<div class="home2-shortcuts" aria-label="Популярни търсения">
+ 			{#each data.shortcutPills as pill, index (pill)}
+ 				{@const ShortcutIcon = pillIcons[index] ?? Car}
+ 				<a href={resolve('/inventory')}>
+@@ -186,21 +191,20 @@
+ 
+ 		<section class="home2-sell-card" aria-labelledby="sell-car-title">
+ 			<div class="home2-sell-card__copy">
+-				<h2 id="sell-car-title">Sell your car for what it’s really worth</h2>
++				<h2 id="sell-car-title">Подгответе въпрос за автомобила</h2>
+ 				<p>
+-					Get a clear valuation, part-exchange support, and help with the paperwork from our Plovdiv
+-					team.
++					Посочете избрания автомобил, подгответе въпросите си и потвърдете условията по телефона.
+ 				</p>
+-				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
++				<a href={resolve('/sell-your-car')}>Подгответе запитване</a>
+ 			</div>
+ 			<div class="home2-sell-card__media">
+-				<img src="/assets/images/home2/daynight-sell-banner-v2.webp" alt="" aria-hidden="true" />
+-				<span>ENTER REG</span>
++				<img src="/dealer/stock/11704208021161812-1.webp" alt="" aria-hidden="true" />
++				<span>ИЗБЕРЕТЕ ОБЯВА</span>
+ 			</div>
+ 		</section>
+ 
+ 		<section class="home2-budget" aria-labelledby="budget-title">
+-			<h2 id="budget-title">Browse by budget</h2>
++			<h2 id="budget-title">Според бюджета</h2>
+ 			<div class="home2-budget__grid">
+ 				{#each data.budgetTiles as tile (tile.label)}
+ 					<a href={resolve('/inventory')} class="home2-budget-tile">
+@@ -216,8 +220,8 @@
+ 			<div class="home2-section-title">
+ 				<Zap size={54} fill="currentColor" strokeWidth={2.4} />
+ 				<div>
+-					<h2 id="trending-title">Premium is trending</h2>
+-					<p>Popular Автосалон Тодоров picks, ready to compare side by side</p>
++					<h2 id="trending-title">Подбрани обяви</h2>
++					<p>Сравнете данните и снимките на избраните автомобили</p>
+ 				</div>
+ 			</div>
+ 
+@@ -242,13 +246,13 @@
+ 						<div class="home2-car-card__price">
+ 							<div class="home2-car-card__offers">
+ 								<span class="home2-car-card__cash">
+-									<em>Cash from</em>
++									<em>Обявена цена</em>
+ 									<b>{car.price}</b>
+ 								</span>
+-								<span class="home2-car-card__finance">Finance available</span>
++								<span class="home2-car-card__finance">Условия при запитване</span>
+ 							</div>
+ 							<a href={resolve(`/inventory/${car.slug}`)} aria-label={`View ${car.title}`}>
+-								<span class="sr-only">View car</span>
++								<span class="sr-only">Вижте автомобила</span>
+ 								<ChevronRight size={20} strokeWidth={3} />
+ 							</a>
+ 						</div>
+@@ -261,15 +265,15 @@
+ 			<div class="home2-section-title">
+ 				<Star size={55} fill="currentColor" strokeWidth={1.8} />
+ 				<div>
+-					<h2 id="reviews-title">This is how it should feel</h2>
+-					<p>Customers rate Автосалон Тодоров as excellent for buying, selling and support</p>
++					<h2 id="reviews-title">Подготовка за следващата стъпка</h2>
++					<p>В този демонстрационен преглед няма добавени клиентски отзиви. Следват въпроси за подготовка на оглед.</p>
+ 				</div>
+ 			</div>
+ 
+ 			<div class="home2-review-grid">
+ 				{#each reviews as review (review.title)}
+ 					<article class="home2-review">
+-						<div class="home2-review__stars" aria-label="5 star rating">
++						<div class="home2-review__stars" aria-label="Няма добавена клиентска оценка">
+ 							{#each starIndices as star (`${review.title}-${star}`)}
+ 								<span>★</span>
+ 							{/each}
+@@ -289,9 +293,9 @@
+ 
+ 	<section class="home2-dark" aria-labelledby="easy-title">
+ 		<div class="home2-dark__intro">
+-			<img src="/brand/daynight-team-placeholder.svg" alt="Автосалон Тодоров consultant" />
++			<img src="/dealer/logo-light.png" alt="Автосалон Тодоров — информация за контакт" />
+ 			<div>
+-				<h2 id="easy-title">We make car changing easy</h2>
++				<h2 id="easy-title">Подгответе се за избора</h2>
+ 				<p>
+ 					From the first search to the final documents, our team helps you compare cars, arrange
+ 					inspection, financing, registration and trade-in without losing the simple marketplace
+@@ -314,13 +318,13 @@
+ 		<div class="home2-section-title home2-section-title--explore">
+ 			<HeartHandshake size={58} fill="currentColor" strokeWidth={2.3} />
+ 			<div>
+-				<h2 id="explore-title">Explore cars</h2>
+-				<p>Browse Автосалон Тодоров stock by the brands and body styles customers ask for most.</p>
++				<h2 id="explore-title">Разгледайте автомобилите</h2>
++				<p>Изберете марка или тип купе от представените обяви.</p>
+ 			</div>
+ 		</div>
+ 
+ 		<section class="home2-browse-block" aria-labelledby="brand-browse-title">
+-			<h3 id="brand-browse-title">Browse by brand</h3>
++			<h3 id="brand-browse-title">Според марката</h3>
+ 			<div class="home2-brand-grid">
+ 				{#each data.brands as brand (brand.brand)}
+ 					<a href={resolve('/inventory')} class="home2-brand-card">
+@@ -342,7 +346,7 @@
+ 		</section>
+ 
+ 		<section class="home2-browse-block" aria-labelledby="type-browse-title">
+-			<h3 id="type-browse-title">Browse by body type</h3>
++			<h3 id="type-browse-title">Според купето</h3>
+ 			<div class="home2-type-grid">
+ 				{#each data.bodyTypes as body (body.body)}
+ 					<a href={resolve('/inventory')} class="home2-type-card">
+@@ -359,6 +363,8 @@
+ </main>
+ 
+ <style>
++  .home2-mobile-menu { position: fixed; z-index: 1000; top: 70px; right: 12px; display: grid; min-width: 220px; padding: 12px; gap: 8px; border-radius: 12px; background: white; color: #14171d; box-shadow: 0 12px 40px #0003; }
++  .home2-mobile-menu a, .home2-mobile-menu button { min-height: 44px; padding: 10px 14px; text-align: left; }
+ 	:global(body:has(.home2-shell)) {
+ 		margin: 0;
+ 		background: #f3f4f6;
+--- a/clients/todorov-auto/carwow/src/routes/presentation/home3/+page.server.ts
++++ b/clients/todorov-auto/carwow/src/routes/presentation/home3/+page.server.ts
+@@ -1,18 +1,18 @@
+ import { cars } from '$lib/data/daynight-vehicles';
+ 
+ const fuelLabels: Record<string, string> = {
+-	Бензин: 'Petrol',
++	Бензин: 'Бензин',
+ 	'Газ/Бензин': 'Petrol/LPG',
+ 	'Бензин/Газ': 'Petrol/LPG',
+-	Дизел: 'Diesel',
+-	Електрически: 'Electric',
+-	Хибриден: 'Hybrid'
++	Дизел: 'Дизел',
++	Електрически: 'Електрически',
++	Хибриден: 'Хибрид'
+ };
+ 
+ const transmissionLabels: Record<string, string> = {
+-	Автоматик: 'Automatic',
+-	Ръчна: 'Manual',
+-	Ръчни: 'Manual'
++	Автоматик: 'Автоматик',
++	Ръчна: 'Ръчна',
++	Ръчни: 'Ръчна'
+ };
+ 
+ const brandLogoPaths: Record<string, string> = {
+@@ -35,13 +35,13 @@
+ };
+ 
+ const bodyLabels: Record<string, string> = {
+-	Седан: 'Saloons',
+-	Комби: 'Estate cars',
+-	Хечбек: 'Hatchbacks',
+-	Ван: 'Vans',
+-	Лимузина: 'Luxury cars',
+-	Купе: 'Coupes',
+-	Кабрио: 'Convertibles'
++	Седан: 'Седани',
++	Комби: 'Комби',
++	Хечбек: 'Хечбек',
++	Ван: 'Ванове',
++	Лимузина: 'Лимузини',
++	Купе: 'Купета',
++	Кабрио: 'Кабриолети'
+ };
+ 
+ const bodyImagePaths: Record<string, string> = {
+@@ -55,17 +55,9 @@
+ 	Кабрио: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
+ };
+ 
+-const featuredSlugs = [
+-	'mercedes-benz-gle-coupe-400d-2021-68018',
+-	'bmw-i7-2023-full-maxx',
+-	'porsche-macan-s-2015-02733'
+-];
++const featuredSlugs = cars.slice(0, 3).map(car => car.slug);
+ 
+-const fallbackFeatureImages = [
+-	'/assets/images/body-type/normalized/body-suv-transparent.webp',
+-	'/assets/images/megamenu/bmw-i7.webp',
+-	'/assets/images/body-type/normalized/body-suv-transparent.webp'
+-];
++const fallbackFeatureImages = cars.slice(0, 3).map(car => car.image);
+ 
+ function pickFeaturedCars() {
+ 	const bySlug = new Map(cars.map((car) => [car.slug, car]));
+@@ -79,16 +71,12 @@
+ 	return [...selected, ...fallback].slice(0, 3).map((car, index) => ({
+ 		slug: car.slug,
+ 		title:
+-			index === 0
+-				? 'Mercedes-Benz GLC 300d 4MATIC'
+-				: index === 1
+-					? 'BMW i5 eDrive40 M Sport'
+-					: 'Porsche Macan T',
++			car.shortTitle,
+ 		meta: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
+-		image: fallbackFeatureImages[index] ?? car.image,
+-		cash: index === 0 ? '£41,990' : index === 1 ? '£53,990' : '£69,990',
+-		lease: index === 0 ? '£499 / month' : index === 1 ? '£599 / month' : '£779 / month',
+-		badge: 'DayNight inspected'
++		image: car.image,
++		cash: car.priceEur,
++		lease: 'Уточнете условията',
++		badge: 'Публична обява'
+ 	}));
+ }
+ 
+@@ -110,87 +98,13 @@
+ 	const bodyCounts = countBy(cars, (car) => car.body);
+ 
+ 	return {
+-		navItems: [
+-			'New cars',
+-			'Used cars',
+-			'Electric',
+-			'Leasing',
+-			'Vans',
+-			'Reviews',
+-			'News',
+-			'Financing'
+-		],
+-		searchTabs: [
+-			{ id: 'find', label: 'Find a car', placeholder: 'Search make, model or keyword' },
+-			{ id: 'sell', label: 'Sell my car', placeholder: 'Enter make, model or reg' },
+-			{ id: 'reviews', label: 'Read reviews', placeholder: 'Search reviews by model' }
+-		],
+-		shortcutPills: [
+-			{ label: 'EVs', icon: 'zap' },
+-			{ label: 'Lease', icon: 'lease' },
+-			{ label: 'New', icon: 'star' },
+-			{ label: 'Used', icon: 'car' },
+-			{ label: 'Vans', icon: 'truck' },
+-			{ label: 'SUVs', icon: 'suv' },
+-			{ label: 'Hybrids', icon: 'fuel' },
+-			{ label: 'Big boot', icon: 'box' },
+-			{ label: 'Below £30k', icon: 'tag' }
+-		],
+-		sellPoints: ['5,500+ dealers competing for your car', 'Free home collection', 'Fast payment'],
+-		budgetTiles: [
+-			{
+-				label: 'Under £10k',
+-				count: `${Math.max(148, countBetween(0, 10000))} cars`,
+-				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
+-			},
+-			{
+-				label: 'Under £20k',
+-				count: `${Math.max(326, countBetween(10000, 20000))} cars`,
+-				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+-				tone: 'blue'
+-			},
+-			{
+-				label: 'Under £30k',
+-				count: `${Math.max(412, countBetween(20000, 30000))} cars`,
+-				image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
+-			},
+-			{
+-				label: 'Under £40k',
+-				count: `${Math.max(276, countBetween(30000, 40000))} cars`,
+-				image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+-				tone: 'dark'
+-			},
+-			{
+-				label: 'Under £50k',
+-				count: `${Math.max(184, countBetween(40000, 50000))} cars`,
+-				image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
+-			},
+-			{
+-				label: 'Over £50k',
+-				count: '112 cars',
+-				image: '/assets/images/budget/open-budget-supercar-v2.webp',
+-				tone: 'red'
+-			}
+-		],
++		navItems: ["Автомобили","Каталог","Електрически","Условия","Ванове","Информация","Полезно","Контакт"],
++		searchTabs: [{"id":"find","label":"Автомобили","placeholder":"Марка, модел или ключова дума"},{"id":"sell","label":"Въпрос","placeholder":"Посочете автомобил"},{"id":"reviews","label":"Информация","placeholder":"Въпрос за модел"}],
++		shortcutPills: [{"label":"Електрически","icon":"zap"},{"label":"Условия","icon":"lease"},{"label":"Каталог","icon":"star"},{"label":"Употребявани","icon":"car"},{"label":"Ванове","icon":"truck"},{"label":"SUV","icon":"suv"},{"label":"Хибриди","icon":"fuel"},{"label":"Практични","icon":"box"},{"label":"До €30 000","icon":"tag"}],
++		sellPoints: ["Посочете конкретен автомобил","Подгответе въпросите си","Обадете се за потвърждение"],
++		budgetTiles: [10000, 20000, 30000, 40000, 50000, null].map((max, index) => ({ label: max ? `До €${max.toLocaleString('bg-BG')}` : 'Над €50 000', count: `${cars.filter(car => max ? car.price > 0 && car.price <= max : car.price > 50000).length} обяви`, image: cars[index % cars.length].image, tone: index === 1 ? 'blue' : index === 3 ? 'dark' : index === 5 ? 'red' : undefined })),
+ 		premiumCars: pickFeaturedCars(),
+-		newsCards: [
+-			{
+-				title: 'Skoda Enyaq review',
+-				image: '/assets/images/blog/post-31.jpg'
+-			},
+-			{
+-				title: 'New Hyundai Santa Fe',
+-				image: '/assets/images/blog/post-32.jpg'
+-			},
+-			{
+-				title: 'EV charging guide',
+-				image: '/assets/images/blog/post-30.jpg'
+-			},
+-			{
+-				title: 'New Audi A5 review',
+-				image: '/assets/images/blog/post-34.jpg'
+-			}
+-		],
++		newsCards: cars.slice(0,4).map((car,index) => ({ title: ['Подготовка за оглед', 'Документи за автомобила', 'Проверка на оборудването', 'Цена и условия'][index], image: car.image })),
+ 		brands: [...brandCounts.entries()]
+ 			.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'bg'))
+ 			.slice(0, 10)
+--- a/clients/todorov-auto/carwow/src/routes/presentation/home3/+page.svelte
++++ b/clients/todorov-auto/carwow/src/routes/presentation/home3/+page.svelte
+@@ -66,28 +66,25 @@
+ </svelte:head>
+ 
+ <main class="home3-shell">
+-	<header class="home3-header" aria-label="Home3 navigation">
+-		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Автосалон Тодоров Home3">
+-			<span>DAY</span>
+-			<strong>AUTO</strong>
+-		</a>
+-
+-		<nav class="home3-nav" aria-label="Primary">
++	<header class="home3-header" aria-label="Навигация">
++		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Автосалон Тодоров Home3"><img src="/dealer/logo-light.png" alt="Автосалон Тодоров" width="180" height="48" style="object-fit:contain" /></a>
++
++		<nav class="home3-nav" aria-label="Основна навигация">
+ 			{#each data.navItems as item (item)}
+ 				<a href={resolve('/inventory')}>{item}</a>
+ 			{/each}
+ 		</nav>
+ 
+-		<div class="home3-actions" aria-label="Account actions">
+-			<a href={resolve('/favorites')} aria-label="Saved cars">
++		<div class="home3-actions" aria-label="Действия">
++			<a href={resolve('/favorites')} aria-label="Запазени автомобили">
+ 				<Heart size={23} strokeWidth={2.1} />
+-				<span>Saved</span>
++				<span>Запазени</span>
+ 			</a>
+ 			<a href={resolve('/admin/login')} aria-label="Sign in">
+ 				<CircleUserRound size={23} strokeWidth={2.1} />
+-				<span>Sign in</span>
++				<span>Вход</span>
+ 			</a>
+-			<a class="home3-sell-button" href={resolve('/sell-your-car')}>Sell my car</a>
++			<a class="home3-sell-button" href={resolve('/sell-your-car')}>Вашият въпрос</a>
+ 		</div>
+ 	</header>
+ 
+@@ -107,13 +104,13 @@
+ 
+ 		<div class="home3-hero__center">
+ 			<h1 id="home3-title">
+-				<span>Changing your car?</span>
+-				<span>Автосалон Тодоров can help</span>
++				<span>Търсите автомобил?</span>
++				<span>Разгледайте Автосалон Тодоров</span>
+ 			</h1>
+ 			<i aria-hidden="true"></i>
+ 
+-			<form class="home3-search" onsubmit={submitSearch} aria-label="Find your next car">
+-				<div class="home3-search__tabs" role="tablist" aria-label="Search mode">
++			<form class="home3-search" onsubmit={submitSearch} aria-label="Намерете автомобил">
++				<div class="home3-search__tabs" role="tablist" aria-label="Начин на търсене">
+ 					{#each data.searchTabs as tab (tab.id)}
+ 						<button
+ 							class:home3-search__tab--active={activeTab === tab.id}
+@@ -130,21 +127,21 @@
+ 				<label class="home3-search__input">
+ 					<span class="sr-only">{activeSearch.placeholder}</span>
+ 					<input bind:value={query} placeholder={activeSearch.placeholder} />
+-					<button type="submit" aria-label="Search">
++					<button type="submit" aria-label="Търсене">
+ 						<Search size={26} strokeWidth={2.6} />
+ 					</button>
+ 				</label>
+ 
+ 				<p>
+-					or let us help you
+-					<a href={resolve('/inventory')}>Find a car</a>
++					или разгледайте
++					<a href={resolve('/inventory')}>Автомобили</a>
+ 				</p>
+ 			</form>
+ 		</div>
+ 	</section>
+ 
+ 	<section class="home3-market">
+-		<div class="home3-chips" aria-label="Popular searches">
++		<div class="home3-chips" aria-label="Популярни търсения">
+ 			{#each data.shortcutPills as pill (pill.label)}
+ 				{@const PillIcon = getPillIcon(pill.icon)}
+ 				<a href={resolve('/inventory')}>
+@@ -156,19 +153,18 @@
+ 
+ 		<section class="home3-sell-panel" aria-labelledby="home3-sell-title">
+ 			<div class="home3-sell-panel__copy">
+-				<h2 id="home3-sell-title">Sell your car for what it’s really worth</h2>
++				<h2 id="home3-sell-title">Подгответе въпрос за автомобила</h2>
+ 				<p>
+-					We’ll put your car in front of 5,500+ verified dealers. Fast payment, home collection,
+-					completely free.
++					Това е подготовка за разговор, а не автоматична оценка или изпратена заявка. Няма обещано изкупуване, бартер или плащане.
+ 				</p>
+-				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
++				<a href={resolve('/sell-your-car')}>Подгответе запитване</a>
+ 			</div>
+ 
+ 			<div class="home3-sell-panel__media" aria-hidden="true">
+-				<img src="/assets/images/card/card-32.png" alt="" />
++				<img src="/dealer/stock/11757098776259646-1.webp" alt="" />
+ 			</div>
+ 
+-			<ul class="home3-sell-panel__points" aria-label="Selling benefits">
++			<ul class="home3-sell-panel__points" aria-label="Преди разговора">
+ 				{#each data.sellPoints as point, index (point)}
+ 					{@const SellIcon = sellIcons[index] ?? BadgeCheck}
+ 					<li>
+@@ -180,7 +176,7 @@
+ 		</section>
+ 
+ 		<section class="home3-budget" aria-labelledby="home3-budget-title">
+-			<h2 id="home3-budget-title">Browse by budget</h2>
++			<h2 id="home3-budget-title">Според бюджета</h2>
+ 			<div class="home3-budget__grid">
+ 				{#each data.budgetTiles as tile (tile.label)}
+ 					<a
+@@ -204,9 +200,9 @@
+ 			<div class="home3-section-head">
+ 				<div>
+ 					<Zap size={25} fill="currentColor" strokeWidth={2.2} />
+-					<h2 id="home3-premium-title">Premium is trending</h2>
++					<h2 id="home3-premium-title">Подбрани обяви</h2>
+ 				</div>
+-				<a href={resolve('/inventory')}>See all premium</a>
++				<a href={resolve('/inventory')}>Всички автомобили</a>
+ 			</div>
+ 
+ 			<div class="home3-premium__grid">
+@@ -226,9 +222,9 @@
+ 							alt={car.title}
+ 						/>
+ 						<div class="home3-premium-card__price">
+-							<small>Cash from</small>
++							<small>Обявена цена</small>
+ 							<strong>{car.cash}</strong>
+-							<small>Lease from</small>
++							<small>Условия</small>
+ 							<b>{car.lease}</b>
+ 						</div>
+ 						<a href={resolve(`/inventory/${car.slug}`)} aria-label={`View ${car.title}`}>
+@@ -241,8 +237,8 @@
+ 
+ 		<section class="home3-news" aria-labelledby="home3-news-title">
+ 			<div class="home3-section-head">
+-				<h2 id="home3-news-title">Expert reviews & latest news</h2>
+-				<a href={resolve('/blog')}>View all</a>
++				<h2 id="home3-news-title">Полезно преди оглед</h2>
++				<a href={resolve('/blog')}>Всички материали</a>
+ 			</div>
+ 
+ 			<div class="home3-news__grid">
+@@ -259,13 +255,13 @@
+ 			<div class="home3-section-head">
+ 				<div>
+ 					<Star size={25} fill="currentColor" strokeWidth={2.2} />
+-					<h2 id="home3-explore-title">Browse popular cars</h2>
++					<h2 id="home3-explore-title">Марки и купета</h2>
+ 				</div>
+-				<a href={resolve('/inventory')}>View all cars</a>
++				<a href={resolve('/inventory')}>Всички автомобили</a>
+ 			</div>
+ 
+ 			<section class="home3-browse-block" aria-labelledby="home3-brand-title">
+-				<h3 id="home3-brand-title">Browse by brand</h3>
++				<h3 id="home3-brand-title">Според марката</h3>
+ 				<div class="home3-brand-grid">
+ 					{#each data.brands as brand (brand.brand)}
+ 						<a href={resolve('/inventory')} class="home3-brand-card">
+@@ -287,7 +283,7 @@
+ 			</section>
+ 
+ 			<section class="home3-browse-block" aria-labelledby="home3-type-title">
+-				<h3 id="home3-type-title">Browse by body type</h3>
++				<h3 id="home3-type-title">Според купето</h3>
+ 				<div class="home3-type-grid">
+ 					{#each data.bodyTypes as body (body.body)}
+ 						<a href={resolve('/inventory')} class="home3-type-card">
+--- a/clients/todorov-auto/carwow/src/lib/data/dealer-preview.ts
++++ b/clients/todorov-auto/carwow/src/lib/data/dealer-preview.ts
+@@ -0,0 +1,3 @@
++/** This branch is an offline review concept. Enable delivery only in a separately approved integration. */
++export const dealerPreview = { enabled: true, deliveryConfigured: false } as const;
++export const previewDeliveryMessage = 'Демо преглед: нищо не е изпратено. Използвайте публикувания телефон за реален контакт.';

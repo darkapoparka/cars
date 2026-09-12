@@ -183,7 +183,7 @@ describe("active marketplace account provisioning", () => {
 
     await ensureSellerProfile(
       {
-        city: "София",
+        city: "Пловдив",
         clerkUserId: "user_1",
         displayName: "Seller",
       },
@@ -205,7 +205,7 @@ describe("active marketplace account provisioning", () => {
     expect(sellerProfileUpsert).toHaveBeenCalledWith({
       create: {
         accountId: "account-1",
-        city: "София",
+        city: "Пловдив",
         displayName: "Seller",
         status: "active",
         verificationStatus: "unverified",
@@ -227,7 +227,7 @@ describe("active marketplace account provisioning", () => {
     await expect(
       ensureSellerProfile(
         {
-          city: "София",
+          city: "Пловдив",
           clerkUserId: "user_1",
           displayName: "Seller",
         },

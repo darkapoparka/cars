@@ -3,646 +3,1819 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    id: "am-1001",
-    slug: "bmw-x5-m50d-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 BMW X5 M50d",
-    description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
-    price: { amount: 89_379, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1360, currency: "BGN" },
-    images: [
+    "id": "21787584817368418",
+    "slug": "hyundai-ix35-368418",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Hyundai IX35",
+    "description": "Hyundai IX35, 2012 г., 175 679 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-21787584817368418-hyundai-ix35-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 5800,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "Бял BMW X5 SUV",
+        "url": "/dealer/stock/21787584817368418-1.webp",
+        "alt": "Hyundai IX35 — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21787584817368418-2.webp",
+        "alt": "Hyundai IX35 — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21787584817368418-3.webp",
+        "alt": "Hyundai IX35 — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21787584817368418-4.webp",
+        "alt": "Hyundai IX35 — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21787584817368418-5.webp",
+        "alt": "Hyundai IX35 — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21787584817368418-6.webp",
+        "alt": "Hyundai IX35 — снимка 6"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    features: [
-      { bg: "360° камери", en: "360° cameras" },
-      { bg: "Панорамен покрив", en: "Panoramic roof" },
-      { bg: "Head-up display", en: "Head-up display" },
-      { bg: "Обдухване на седалките", en: "Ventilated seats" },
+    "badges": [
+      "used"
     ],
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "M50d",
-      year: 2020,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 167_000,
-      mileageUnit: "km",
-      enginePowerHp: 400,
-      colorExterior: "Черен металик",
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      }
+    ],
+    "spec": {
+      "make": "Hyundai",
+      "model": "IX35",
+      "year": 2012,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 175679,
+      "mileageUnit": "km",
+      "enginePowerHp": 115,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-28T09:00:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.511Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1010",
-    slug: "mercedes-benz-gls-400d-4matic-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
-    description:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    price: { amount: 122_629, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1870, currency: "BGN" },
-    images: [
+    "id": "21778688064239119",
+    "slug": "toyota-rav4-hybrid-239119",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Toyota RAV4 Hybrid",
+    "description": "Toyota RAV4 Hybrid, 2017 г., 175 447 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-21778688064239119-toyota-rav4-hibrid-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 14800,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes SUV GLS",
+        "url": "/dealer/stock/21778688064239119-1.webp",
+        "alt": "Toyota RAV4 Hybrid — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21778688064239119-2.webp",
+        "alt": "Toyota RAV4 Hybrid — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21778688064239119-3.webp",
+        "alt": "Toyota RAV4 Hybrid — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21778688064239119-4.webp",
+        "alt": "Toyota RAV4 Hybrid — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21778688064239119-5.webp",
+        "alt": "Toyota RAV4 Hybrid — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21778688064239119-6.webp",
+        "alt": "Toyota RAV4 Hybrid — снимка 6"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Електронна програма за стабилизиране",
+        "en": "Електронна програма за стабилизиране"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за динамична устойчивост",
+        "en": "Система за динамична устойчивост"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "Система за контрол на спускането",
+        "en": "Система за контрол на спускането"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Ксенонови фарове",
+        "en": "Ксенонови фарове"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic, Tiptronic",
+        "en": "Steptronic, Tiptronic"
+      },
+      {
+        "bg": "USB, audio\\video, IN\\AUX изводи",
+        "en": "USB, audio\\video, IN\\AUX изводи"
+      },
+      {
+        "bg": "Автоматично затваряне на багажника",
+        "en": "Автоматично затваряне на багажника"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Ел. регулиране на седалките",
+        "en": "Ел. регулиране на седалките"
+      },
+      {
+        "bg": "Ел. усилвател на волана",
+        "en": "Ел. усилвател на волана"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Подгряване на седалките",
+        "en": "Подгряване на седалките"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Сензор за дъжд",
+        "en": "Сензор за дъжд"
+      },
+      {
+        "bg": "Система за контрол на скоростта (автопилот)",
+        "en": "Система за контрол на скоростта (автопилот)"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "RAV4 Hybrid",
+      "year": 2017,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 175447,
+      "mileageUnit": "km",
+      "enginePowerHp": 197,
+      "colorExterior": "Сив"
     },
-    publishedAt: "2026-07-27T10:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.511Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1011",
-    slug: "bmw-750e-xdrive-m-sport-sofia-2024",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2024 BMW 750e xDrive M Sport",
-    description:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    price: { amount: 175_436, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2680, currency: "BGN" },
-    images: [
+    "id": "11781437915261347",
+    "slug": "opel-corsa-261347",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Opel Corsa",
+    "description": "Opel Corsa, 2018 г., 46 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-11781437915261347-opel-corsa-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 5800,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80",
-        alt: "BMW 7 Series",
+        "url": "/dealer/stock/11781437915261347-1.webp",
+        "alt": "Opel Corsa — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11781437915261347-2.webp",
+        "alt": "Opel Corsa — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11781437915261347-3.webp",
+        "alt": "Opel Corsa — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11781437915261347-4.webp",
+        "alt": "Opel Corsa — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11781437915261347-5.webp",
+        "alt": "Opel Corsa — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11781437915261347-6.webp",
+        "alt": "Opel Corsa — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "7 Series",
-      trim: "750e xDrive M Sport",
-      year: 2024,
-      bodyType: "sedan",
-      fuelType: "plug_in_hybrid",
-      transmission: "automatic",
-      mileageValue: 40_000,
-      mileageUnit: "km",
-      enginePowerHp: 489,
-      colorExterior: "Черен сапфир",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Електронна програма за стабилизиране",
+        "en": "Електронна програма за стабилизиране"
+      },
+      {
+        "bg": "2(3) Врати",
+        "en": "2(3) Врати"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Ел. усилвател на волана",
+        "en": "Ел. усилвател на волана"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      }
+    ],
+    "spec": {
+      "make": "Opel",
+      "model": "Corsa",
+      "year": 2018,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 46000,
+      "mileageUnit": "km",
+      "enginePowerHp": 70,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-26T08:40:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.511Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1012",
-    slug: "mercedes-benz-e-63-s-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz E 63 S AMG",
-    description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    price: { amount: 165_657, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2530, currency: "BGN" },
-    images: [
+    "id": "21784640560836463",
+    "slug": "mazda-cx-5-836463",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Mazda CX-5",
+    "description": "Mazda CX-5, 2013 г., 173 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-21784640560836463-mazda-cx-5-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 6800,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1609703048009-d3576872b32c?w=1200&q=80",
-        alt: "Mercedes-Benz E-Class sedan",
+        "url": "/dealer/stock/21784640560836463-1.webp",
+        "alt": "Mazda CX-5 — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21784640560836463-2.webp",
+        "alt": "Mazda CX-5 — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21784640560836463-3.webp",
+        "alt": "Mazda CX-5 — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21784640560836463-4.webp",
+        "alt": "Mazda CX-5 — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21784640560836463-5.webp",
+        "alt": "Mazda CX-5 — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21784640560836463-6.webp",
+        "alt": "Mazda CX-5 — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "E-Class",
-      trim: "E 63 S AMG",
-      year: 2021,
-      bodyType: "sedan",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 96_000,
-      mileageUnit: "km",
-      enginePowerHp: 612,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "Система за контрол на спускането",
+        "en": "Система за контрол на спускането"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Ксенонови фарове",
+        "en": "Ксенонови фарове"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD, TV",
+        "en": "DVD, TV"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Система за контрол на скоростта (автопилот)",
+        "en": "Система за контрол на скоростта (автопилот)"
+      }
+    ],
+    "spec": {
+      "make": "Mazda",
+      "model": "CX-5",
+      "year": 2013,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 173000,
+      "mileageUnit": "km",
+      "enginePowerHp": 150,
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-25T13:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.512Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1013",
-    slug: "mercedes-benz-cls-400d-4matic-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 Mercedes-Benz CLS 400d 4MATIC",
-    description:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    price: { amount: 73_733, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1125, currency: "BGN" },
-    images: [
+    "id": "21776177602007255",
+    "slug": "jeep-cherokee-007255",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Jeep Cherokee",
+    "description": "Jeep Cherokee, 2016 г., 146 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-21776177602007255-jeep-cherokee-nov-vnos-ot-italiya-4h4",
+    "price": {
+      "amount": 10500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1624085568108-36410cfe4d24?w=1200&q=80",
-        alt: "Mercedes CLS",
+        "url": "/dealer/stock/21776177602007255-1.webp",
+        "alt": "Jeep Cherokee — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21776177602007255-2.webp",
+        "alt": "Jeep Cherokee — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21776177602007255-3.webp",
+        "alt": "Jeep Cherokee — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21776177602007255-4.webp",
+        "alt": "Jeep Cherokee — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21776177602007255-5.webp",
+        "alt": "Jeep Cherokee — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21776177602007255-6.webp",
+        "alt": "Jeep Cherokee — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "CLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2020,
-      bodyType: "coupe",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 171_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Сив металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Електронна програма за стабилизиране",
+        "en": "Електронна програма за стабилизиране"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за динамична устойчивост",
+        "en": "Система за динамична устойчивост"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Ксенонови фарове",
+        "en": "Ксенонови фарове"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic, Tiptronic",
+        "en": "Steptronic, Tiptronic"
+      },
+      {
+        "bg": "USB, audio\\video, IN\\AUX изводи",
+        "en": "USB, audio\\video, IN\\AUX изводи"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Подгряване на седалките",
+        "en": "Подгряване на седалките"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Сензор за дъжд",
+        "en": "Сензор за дъжд"
+      },
+      {
+        "bg": "Система за контрол на скоростта (автопилот)",
+        "en": "Система за контрол на скоростта (автопилот)"
+      }
+    ],
+    "spec": {
+      "make": "Jeep",
+      "model": "Cherokee",
+      "year": 2016,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 146000,
+      "mileageUnit": "km",
+      "enginePowerHp": 200,
+      "colorExterior": "Сив"
     },
-    publishedAt: "2026-07-24T15:05:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.512Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1014",
-    slug: "audi-q8-50-tdi-quattro-s-line-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Audi Q8 50 TDI quattro S line",
-    description:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    price: { amount: 99_159, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1515, currency: "BGN" },
-    images: [
+    "id": "11781213566653263",
+    "slug": "honda-jazz-automatic-653263",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Honda Jazz Automatic",
+    "description": "Honda Jazz Automatic, 2020 г., 24 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-11781213566653263-honda-jazz-avtomat-realni-kilometri",
+    "price": {
+      "amount": 16890,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
-        alt: "Audi Q8",
+        "url": "/dealer/stock/11781213566653263-1.webp",
+        "alt": "Honda Jazz Automatic — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11781213566653263-2.webp",
+        "alt": "Honda Jazz Automatic — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11781213566653263-3.webp",
+        "alt": "Honda Jazz Automatic — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11781213566653263-4.webp",
+        "alt": "Honda Jazz Automatic — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11781213566653263-5.webp",
+        "alt": "Honda Jazz Automatic — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11781213566653263-6.webp",
+        "alt": "Honda Jazz Automatic — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Audi",
-      model: "Q8",
-      trim: "50 TDI quattro S line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 163_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Електронна програма за стабилизиране",
+        "en": "Електронна програма за стабилизиране"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за динамична устойчивост",
+        "en": "Система за динамична устойчивост"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Ксенонови фарове",
+        "en": "Ксенонови фарове"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Сензор за дъжд",
+        "en": "Сензор за дъжд"
+      },
+      {
+        "bg": "Система за измиване на фаровете",
+        "en": "Система за измиване на фаровете"
+      }
+    ],
+    "spec": {
+      "make": "Honda",
+      "model": "Jazz Automatic",
+      "year": 2020,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 24000,
+      "mileageUnit": "km",
+      "enginePowerHp": 131,
+      "colorExterior": "Металик"
     },
-    publishedAt: "2026-07-23T09:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.512Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1002",
-    slug: "mercedes-benz-gle-400d-coupe-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLE 400d Coupe",
-    description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    price: { amount: 124_584, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1900, currency: "BGN" },
-    images: [
+    "id": "21784225734010518",
+    "slug": "honda-cr-v-hybrid-010518",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Honda CR-V Hybrid",
+    "description": "Honda CR-V Hybrid, 2023 г., 79 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-21784225734010518-honda-cr-v-realni-kilometri-sas-servizna-knizhka",
+    "price": {
+      "amount": 24999,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE SUV",
+        "url": "/dealer/stock/21784225734010518-1.webp",
+        "alt": "Honda CR-V Hybrid — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21784225734010518-2.webp",
+        "alt": "Honda CR-V Hybrid — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21784225734010518-3.webp",
+        "alt": "Honda CR-V Hybrid — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21784225734010518-4.webp",
+        "alt": "Honda CR-V Hybrid — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21784225734010518-5.webp",
+        "alt": "Honda CR-V Hybrid — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21784225734010518-6.webp",
+        "alt": "Honda CR-V Hybrid — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "400d Coupe 4MATIC AMG",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Електронна програма за стабилизиране",
+        "en": "Електронна програма за стабилизиране"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за динамична устойчивост",
+        "en": "Система за динамична устойчивост"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "Система за контрол на дистанцията",
+        "en": "Система за контрол на дистанцията"
+      },
+      {
+        "bg": "Система за контрол на спускането",
+        "en": "Система за контрол на спускането"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Ксенонови фарове",
+        "en": "Ксенонови фарове"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD, TV",
+        "en": "DVD, TV"
+      },
+      {
+        "bg": "Steptronic, Tiptronic",
+        "en": "Steptronic, Tiptronic"
+      },
+      {
+        "bg": "USB, audio\\video, IN\\AUX изводи",
+        "en": "USB, audio\\video, IN\\AUX изводи"
+      },
+      {
+        "bg": "Блокаж на диференциала",
+        "en": "Блокаж на диференциала"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Ел. регулиране на седалките",
+        "en": "Ел. регулиране на седалките"
+      },
+      {
+        "bg": "Ел. усилвател на волана",
+        "en": "Ел. усилвател на волана"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Подгряване на седалките",
+        "en": "Подгряване на седалките"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Сензор за дъжд",
+        "en": "Сензор за дъжд"
+      },
+      {
+        "bg": "Серво усилвател на волана",
+        "en": "Серво усилвател на волана"
+      },
+      {
+        "bg": "Система за измиване на фаровете",
+        "en": "Система за измиване на фаровете"
+      },
+      {
+        "bg": "Система за контрол на скоростта (автопилот)",
+        "en": "Система за контрол на скоростта (автопилот)"
+      }
+    ],
+    "spec": {
+      "make": "Honda",
+      "model": "CR-V Hybrid",
+      "year": 2023,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 79000,
+      "mileageUnit": "km",
+      "enginePowerHp": 146,
+      "colorExterior": "Сив"
     },
-    publishedAt: "2026-07-22T11:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.513Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1003",
-    slug: "mercedes-benz-gle-53-amg-coupe-sofia-2022",
-    category: "lease",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    description:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    price: { amount: 140_231, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2140, currency: "BGN" },
-    images: [
+    "id": "11781101254100384",
+    "slug": "toyota-prius-100384",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Toyota Prius",
+    "description": "Toyota Prius, 2009 г., 159 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-11781101254100384-toyota-prius-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 8200,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE 53 AMG SUV",
+        "url": "/dealer/stock/11781101254100384-1.webp",
+        "alt": "Toyota Prius — снимка 1"
       },
+      {
+        "url": "/dealer/stock/11781101254100384-2.webp",
+        "alt": "Toyota Prius — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/11781101254100384-3.webp",
+        "alt": "Toyota Prius — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/11781101254100384-4.webp",
+        "alt": "Toyota Prius — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/11781101254100384-5.webp",
+        "alt": "Toyota Prius — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/11781101254100384-6.webp",
+        "alt": "Toyota Prius — снимка 6"
+      }
     ],
-    badges: ["used", "lease"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "53 AMG Coupe 4MATIC",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 105_000,
-      mileageUnit: "km",
-      enginePowerHp: 435,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за динамична устойчивост",
+        "en": "Система за динамична устойчивост"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "Система за контрол на дистанцията",
+        "en": "Система за контрол на дистанцията"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Велурен салон",
+        "en": "Велурен салон"
+      },
+      {
+        "bg": "Head up display",
+        "en": "Head up display"
+      },
+      {
+        "bg": "Steptronic, Tiptronic",
+        "en": "Steptronic, Tiptronic"
+      },
+      {
+        "bg": "USB, audio\\video, IN\\AUX изводи",
+        "en": "USB, audio\\video, IN\\AUX изводи"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Ел. усилвател на волана",
+        "en": "Ел. усилвател на волана"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Сензор за дъжд",
+        "en": "Сензор за дъжд"
+      },
+      {
+        "bg": "Серво усилвател на волана",
+        "en": "Серво усилвател на волана"
+      },
+      {
+        "bg": "Система за измиване на фаровете",
+        "en": "Система за измиване на фаровете"
+      },
+      {
+        "bg": "Система за контрол на скоростта (автопилот)",
+        "en": "Система за контрол на скоростта (автопилот)"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Prius",
+      "year": 2009,
+      "bodyType": "sedan",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 159000,
+      "mileageUnit": "km",
+      "enginePowerHp": 100,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-21T08:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.514Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1004",
-    slug: "mercedes-benz-s-350d-long-amg-sofia-2019",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2019 Mercedes-Benz S 350d Long AMG",
-    description:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    price: { amount: 83_512, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1275, currency: "BGN" },
-    images: [
+    "id": "21775747569183753",
+    "slug": "skoda-yeti-183753",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Skoda Yeti",
+    "description": "Skoda Yeti, 2015 г., 143 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-21775747569183753-skoda-yeti-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 6700,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?w=1200&q=80",
-        alt: "Mercedes-Benz S-Class sedan",
+        "url": "/dealer/stock/21775747569183753-1.webp",
+        "alt": "Skoda Yeti — снимка 1"
       },
+      {
+        "url": "/dealer/stock/21775747569183753-2.webp",
+        "alt": "Skoda Yeti — снимка 2"
+      },
+      {
+        "url": "/dealer/stock/21775747569183753-3.webp",
+        "alt": "Skoda Yeti — снимка 3"
+      },
+      {
+        "url": "/dealer/stock/21775747569183753-4.webp",
+        "alt": "Skoda Yeti — снимка 4"
+      },
+      {
+        "url": "/dealer/stock/21775747569183753-5.webp",
+        "alt": "Skoda Yeti — снимка 5"
+      },
+      {
+        "url": "/dealer/stock/21775747569183753-6.webp",
+        "alt": "Skoda Yeti — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "S-Class",
-      trim: "S 350d Long AMG Optic",
-      year: 2019,
-      bodyType: "sedan",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 145_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "Skoda",
+      "model": "Yeti",
+      "year": 2015,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 143000,
+      "mileageUnit": "km",
+      "enginePowerHp": 105,
+      "colorExterior": "Бял"
     },
-    publishedAt: "2026-07-20T14:45:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T03:28:23.514Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
   },
   {
-    id: "am-1005",
-    slug: "mercedes-benz-v-250d-vip-business-sofia-2018",
-    category: "van",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2018 Mercedes-Benz V 250d VIP Business",
-    description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
+    "id": "11775730754815024",
+    "slug": "skoda-octavia-815024",
+    "category": "car",
+    "dealerOrgId": "dealer-voivodov-auto-antonio",
+    "status": "active",
+    "title": "Skoda Octavia",
+    "description": "Skoda Octavia, 2018 г., 204 000 км. Не се начислява ДДС. Публикувана обява, наблюдавана на 09.09.2026 г. Наличността, техническото състояние и условията се потвърждават от продавача. Източник: https://voivodovauto.mobile.bg/obiava-11775730754815024-skoda-octavia-nov-vnos-ot-italiya",
+    "price": {
+      "amount": 10100,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "/lead-sell-van-v1.png",
-        alt: "V-Class van",
+        "url": "/dealer/stock/11775730754815024-1.webp",
+        "alt": "Skoda Octavia — снимка 1"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "V-Class",
-      trim: "V 250d VIP Business",
-      year: 2018,
-      bodyType: "van",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 44_500,
-      mileageUnit: "km",
-      enginePowerHp: 190,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-19T10:20:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1006",
-    slug: "range-rover-sport-svr-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Range Rover Sport SVR",
-    description:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1679506640590-f0152786dff0?w=1200&q=80",
-        alt: "Range Rover Sport",
+        "url": "/dealer/stock/11775730754815024-2.webp",
+        "alt": "Skoda Octavia — снимка 2"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Land Rover",
-      model: "Range Rover Sport",
-      trim: "SVR",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 155_000,
-      mileageUnit: "km",
-      enginePowerHp: 600,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-18T12:10:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1007",
-    slug: "bmw-430i-xdrive-gran-coupe-sofia-2023",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2023 BMW 430i xDrive Gran Coupe",
-    description:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    price: { amount: 81_556, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1245, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=1200&q=80",
-        alt: "BMW 4 Series",
+        "url": "/dealer/stock/11775730754815024-3.webp",
+        "alt": "Skoda Octavia — снимка 3"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "4 Series",
-      trim: "430i xDrive Gran Coupe M Sport",
-      year: 2023,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 35_000,
-      mileageUnit: "km",
-      enginePowerHp: 245,
-      colorExterior: "Син металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-17T16:00:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1008",
-    slug: "bmw-m4-competition-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 BMW M4 Competition",
-    description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    price: { amount: 128_496, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1960, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80",
-        alt: "Червено BMW M4 Competition пред модерен шоурум",
+        "url": "/dealer/stock/11775730754815024-4.webp",
+        "alt": "Skoda Octavia — снимка 4"
       },
-    ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "M4",
-      trim: "Competition",
-      year: 2021,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 165_000,
-      mileageUnit: "km",
-      enginePowerHp: 510,
-      colorExterior: "Червен металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-16T07:40:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1009",
-    slug: "bmw-x5-xdrive40d-berlin-2022",
-    category: "car",
-    status: "active",
-    title: "2022 BMW X5 xDrive40d",
-    description:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    price: { amount: 112_456, currency: "BGN" },
-    priceType: "fixed",
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "BMW X5 SUV в градска среда",
+        "url": "/dealer/stock/11775730754815024-5.webp",
+        "alt": "Skoda Octavia — снимка 5"
       },
+      {
+        "url": "/dealer/stock/11775730754815024-6.webp",
+        "alt": "Skoda Octavia — снимка 6"
+      }
     ],
-    badges: ["used"],
-    location: { city: "Berlin", region: "Berlin", country: "Germany" },
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "xDrive40d",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 28_531,
-      mileageUnit: "km",
-      enginePowerHp: 340,
-      colorExterior: "Carbon Black",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Въстанически",
+      "country": "България"
     },
-    seller: {
-      id: "import-demo-supplier",
-      type: "dealer",
-      displayName: "AutoMarket Import Demo",
-      verificationStatus: "verified",
-      city: "Hamburg",
+    "features": [
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. разпределяне на спирачното усилие",
+        "en": "Ел. разпределяне на спирачното усилие"
+      },
+      {
+        "bg": "Контрол на налягането на гумите",
+        "en": "Контрол на налягането на гумите"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Система за защита от пробуксуване",
+        "en": "Система за защита от пробуксуване"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Лети джанти",
+        "en": "Лети джанти"
+      },
+      {
+        "bg": "Халогенни фарове",
+        "en": "Халогенни фарове"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Централно заключване",
+        "en": "Централно заключване"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic, Tiptronic",
+        "en": "Steptronic, Tiptronic"
+      },
+      {
+        "bg": "USB, audio\\video, IN\\AUX изводи",
+        "en": "USB, audio\\video, IN\\AUX изводи"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      },
+      {
+        "bg": "Ел. Стъкла",
+        "en": "Ел. Стъкла"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      },
+      {
+        "bg": "Мултифункционален волан",
+        "en": "Мултифункционален волан"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Регулиране на волана",
+        "en": "Регулиране на волана"
+      },
+      {
+        "bg": "Система за контрол на скоростта (автопилот)",
+        "en": "Система за контрол на скоростта (автопилот)"
+      }
+    ],
+    "spec": {
+      "make": "Skoda",
+      "model": "Octavia",
+      "year": 2018,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 204000,
+      "mileageUnit": "km",
+      "enginePowerHp": 150,
+      "colorExterior": "Черен"
     },
-    supply: {
-      convertedPrice: { amount: 112_456, currency: "BGN" },
-      delivery: {
-        destinationCountryCode: "BG",
-        eligibleCountryCodes: ["BG", "DE", "RO"],
-        status: "quote_required",
-      },
-      documentCount: 4,
-      landedCostStatus: "quote_required",
-      nativePrice: { amount: 57_499, currency: "EUR" },
-      origin: {
-        city: "Berlin",
-        country: "Germany",
-        countryCode: "DE",
-        region: "Berlin",
-      },
-      priceConversion: {
-        convertedAt: "2026-07-12T18:00:00.000Z",
-        status: "converted_estimate",
-      },
-      provenance: {
-        externalReference: "DEMO-1009",
-        freshUntil: "2026-07-14T18:00:00.000Z",
-        freshnessStatus: "fresh",
-        lastConfirmedAt: "2026-07-12T18:00:00.000Z",
-        sourceDisplayName: "Authorized demo feed",
-        sourceKind: "https_feed",
-      },
-      supplier: {
-        kybStatus: "verified",
-        orgType: "importer",
-        trustStatus: "verified",
-        verifiedImporter: true,
-      },
+    "seller": {
+      "id": "dealer-voivodov-auto-antonio",
+      "type": "dealer",
+      "displayName": "VOIVODOV AUTO & ANTONIO",
+      "verificationStatus": "unverified",
+      "city": "Пловдив",
+      "logoUrl": "/dealer/logo-light.png"
     },
-    publishedAt: "2026-07-12T18:00:00.000Z",
-    promoted: false,
-  },
+    "publishedAt": "2026-09-09T03:28:23.514Z",
+    "promoted": false,
+    "priceTaxLabel": "Не се начислява ДДС"
+  }
 ];
 
 const matchesText = (listing: VehicleListing, query: string) => {
@@ -726,9 +1899,7 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {
-  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
-};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
 
 export const getMockListingBySlug = (slug: string) => {
   const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
@@ -760,7 +1931,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
+export const mockSavedListingIds = [] as string[];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -775,54 +1946,9 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [
-  {
-    id: "saved-search-premium-suv",
-    title: "Premium SUVs under 100k",
-    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
-    filters: {
-      body: "suv",
-      category: "car",
-      priceMax: 100_000,
-      seller: "dealer",
-    },
-    cadence: "daily",
-    newMatches: 3,
-    lastRunAt: "2026-06-06T07:00:00.000Z",
-  },
-  {
-    id: "saved-search-lease-ev",
-    title: "Lease-ready EVs",
-    description: "Electric lease offers with automatic transmission.",
-    filters: {
-      category: "lease",
-      fuel: "electric",
-      transmission: "automatic",
-    },
-    cadence: "instant",
-    newMatches: 1,
-    lastRunAt: "2026-06-07T06:30:00.000Z",
-  },
-  {
-    id: "saved-search-family-varna",
-    title: "Family cars near Varna",
-    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
-    filters: {
-      category: "car",
-      location: "Varna",
-      mileageMax: 90_000,
-    },
-    cadence: "weekly",
-    newMatches: 0,
-    lastRunAt: "2026-06-03T08:00:00.000Z",
-  },
-];
+export const mockSavedSearches: MockSavedSearch[] = [];
 
-const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
-  "am-1001": "active",
-  "am-1003": "pending_review",
-  "am-1007": "draft",
-};
+const sellerListingStatuses: Record<string, VehicleListing["status"]> = {};
 
 export const getMockSellerListings = () =>
   mockListings
@@ -851,48 +1977,7 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [
-  {
-    buyerName: "Nikolay Petrov",
-    id: "lead-1001",
-    intent: "finance",
-    listingId: "am-1001",
-    listingTitle: "2020 BMW X5 M50d",
-    receivedAt: "2026-06-07T07:30:00.000Z",
-    source: "listing",
-    status: "new",
-  },
-  {
-    buyerName: "Elena Dimitrova",
-    id: "lead-1002",
-    intent: "test_drive",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    receivedAt: "2026-06-06T15:20:00.000Z",
-    source: "saved_search",
-    status: "contacted",
-  },
-  {
-    buyerName: "Martin Georgiev",
-    id: "lead-1003",
-    intent: "availability",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    receivedAt: "2026-06-05T12:10:00.000Z",
-    source: "dealer_profile",
-    status: "qualified",
-  },
-  {
-    buyerName: "Iva Marinova",
-    id: "lead-1004",
-    intent: "trade_in",
-    listingId: "am-1005",
-    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
-    receivedAt: "2026-06-04T09:45:00.000Z",
-    source: "listing",
-    status: "closed",
-  },
-];
+export const mockDealerLeads: MockDealerLead[] = [];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -930,64 +2015,7 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [
-  {
-    id: "report-1001",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    reason: "incorrect_details",
-    details:
-      "Buyer says lease terms in the message thread do not match the listing price.",
-    reporter: "Elena Dimitrova",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
-    createdAt: "2026-06-07T09:20:00.000Z",
-  },
-  {
-    id: "report-1002",
-    listingId: "am-1006",
-    listingTitle: "2021 Range Rover Sport SVR",
-    reason: "duplicate",
-    details:
-      "System found matching photos and mileage on another active dealer listing.",
-    reporter: "System",
-    source: "system_flag",
-    status: "reviewing",
-    severity: "medium",
-    flags: ["Photo reuse", "Similar VIN pattern"],
-    createdAt: "2026-06-07T06:45:00.000Z",
-  },
-  {
-    id: "report-1003",
-    listingId: "am-1002",
-    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
-    reason: "seller_behavior",
-    details:
-      "Reporter says seller asked to move payment to an unverified channel.",
-    reporter: "Nikolay Petrov",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Payment risk", "Private seller"],
-    createdAt: "2026-06-06T17:30:00.000Z",
-  },
-  {
-    id: "report-1004",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    reason: "prohibited_content",
-    details:
-      "Admin review flagged promotional copy that may overstate warranty coverage.",
-    reporter: "Admin review",
-    source: "admin_review",
-    status: "dismissed",
-    severity: "low",
-    flags: ["Copy review"],
-    createdAt: "2026-06-05T12:10:00.000Z",
-  },
-];
+export const mockModerationReports: MockModerationReport[] = [];
 
 export interface MockTrustReview {
   city: string;
@@ -1001,52 +2029,7 @@ export interface MockTrustReview {
   submittedAt: string;
 }
 
-export const mockTrustReviews: MockTrustReview[] = [
-  {
-    entityId: "dealer-black-sea-ev",
-    entityName: "Black Sea EV",
-    entityType: "dealer",
-    city: "Varna",
-    status: "pending",
-    riskLevel: "medium",
-    linkedListings: 1,
-    documents: ["Business registration", "VAT certificate", "Dealer address"],
-    submittedAt: "2026-06-07T08:00:00.000Z",
-  },
-  {
-    entityId: "seller-124",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Plovdiv",
-    status: "pending",
-    riskLevel: "high",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-06T16:15:00.000Z",
-  },
-  {
-    entityId: "dealer-trakia-auto",
-    entityName: "Trakia Auto",
-    entityType: "dealer",
-    city: "Stara Zagora",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["Business registration", "Dealer address"],
-    submittedAt: "2026-06-05T10:30:00.000Z",
-  },
-  {
-    entityId: "seller-882",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Varna",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-04T14:40:00.000Z",
-  },
-];
+export const mockTrustReviews: MockTrustReview[] = [];
 
 export interface MockAuditLogEntry {
   action: string;
@@ -1058,35 +2041,7 @@ export interface MockAuditLogEntry {
   note: string;
 }
 
-export const mockAuditLog: MockAuditLogEntry[] = [
-  {
-    id: "audit-1001",
-    actor: "Admin",
-    action: "report.opened",
-    entityType: "report",
-    entityId: "report-1001",
-    note: "Moved Tesla lease report to new queue.",
-    createdAt: "2026-06-07T09:25:00.000Z",
-  },
-  {
-    id: "audit-1002",
-    actor: "System",
-    action: "listing.flagged",
-    entityType: "listing",
-    entityId: "am-1006",
-    note: "Duplicate image match over threshold.",
-    createdAt: "2026-06-07T06:45:00.000Z",
-  },
-  {
-    id: "audit-1003",
-    actor: "Trust ops",
-    action: "dealer.verified",
-    entityType: "dealer",
-    entityId: "dealer-trakia-auto",
-    note: "Business registry and address checks passed.",
-    createdAt: "2026-06-06T11:15:00.000Z",
-  },
-];
+export const mockAuditLog: MockAuditLogEntry[] = [];
 
 export const getMockAdminStats = () => {
   const openReports = mockModerationReports.filter(
@@ -1202,44 +2157,7 @@ export interface MockActivePromotion {
   status: "scheduled" | "active" | "ended";
 }
 
-export const mockActivePromotions: MockActivePromotion[] = [
-  {
-    id: "promotion-1001",
-    listingId: "am-1001",
-    productId: "promo-search-top-7",
-    status: "active",
-    startsAt: "2026-06-05T08:00:00.000Z",
-    endsAt: "2026-06-12T08:00:00.000Z",
-    spend: { amount: 39, currency: "EUR" },
-    impressions: 4200,
-    clicks: 184,
-    leads: 8,
-  },
-  {
-    id: "promotion-1002",
-    listingId: "am-1003",
-    productId: "promo-lease-partner-30",
-    status: "active",
-    startsAt: "2026-06-01T08:00:00.000Z",
-    endsAt: "2026-07-01T08:00:00.000Z",
-    spend: { amount: 149, currency: "EUR" },
-    impressions: 6100,
-    clicks: 246,
-    leads: 12,
-  },
-  {
-    id: "promotion-1003",
-    listingId: "am-1008",
-    productId: "promo-category-featured-14",
-    status: "scheduled",
-    startsAt: "2026-06-10T08:00:00.000Z",
-    endsAt: "2026-06-24T08:00:00.000Z",
-    spend: { amount: 79, currency: "EUR" },
-    impressions: 0,
-    clicks: 0,
-    leads: 0,
-  },
-];
+export const mockActivePromotions: MockActivePromotion[] = [];
 
 export interface MockDealerBillingAccount {
   currentPlanId: string;

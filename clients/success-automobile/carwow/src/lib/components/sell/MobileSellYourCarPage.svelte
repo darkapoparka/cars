@@ -293,7 +293,7 @@
 					title="Защо Day Night"
 					description="Кристиян и екипът Ви дават ясен следващ вариант."
 					label="Виж предимствата"
-					image="/assets/images/home-promos/phone-portrait-generated-v7.webp"
+					image="/dealer/logo-light.png"
 					tone="yellow"
 					portrait
 					onclick={() => openInfo('benefits')}
@@ -470,7 +470,7 @@
 						src={resolve(
 							activeInfo === 'process'
 								? '/assets/images/sell/process-disclosure-list-v1.webp'
-								: '/assets/images/sell/kristian-trust-disclosure-list-v1.webp'
+								: '/dealer/logo-light.png'
 						)}
 						alt=""
 						aria-hidden="true"

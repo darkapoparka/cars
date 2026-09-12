@@ -169,7 +169,7 @@ export const dealerSettingsSchema = z.object({
 	address: z.string().trim().max(240).optional().nullable(),
 	city: z.string().trim().max(120).optional().nullable(),
 	countryCode: z.string().trim().min(2).max(2).default('BG'),
-	timezone: z.string().trim().max(80).default('Europe/Sofia'),
+	timezone: z.string().trim().max(80).default('Europe/Пловдив'),
 	defaultLocale: z.string().trim().max(20).default('bg-BG'),
 	currencyCode: z.string().trim().min(3).max(3).default('EUR'),
 	logoLightUrl: z.string().trim().max(1000).optional().nullable(),

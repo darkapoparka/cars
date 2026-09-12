@@ -170,7 +170,7 @@
 		</ul>
 
 		<p class="dashboard-bottom text-muted text-center text-sm" style="margin-top: auto;">
-			©2026 <a class="text-sm text-white" href={resolve('/')} target="_blank">Day Night Auto</a>. All
+			©2026 <a class="text-sm text-white" href={resolve('/')} target="_blank">MG7 Group</a>. All
 			Rights Reserved.
 		</p>
 	</div>
