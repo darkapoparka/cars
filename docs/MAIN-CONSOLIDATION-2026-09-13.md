@@ -35,3 +35,17 @@ The final handoff records the published main heads, deletion results and actual 
 - A syntax scan of 5,425 unique changed Cars source blobs and the four standalone source candidates found one inherited failure: `clients/golden-dreams-auto/auto-best/src/lib/data/company.ts` contains an unquoted `trade-in` object key (17 cascading parser diagnostics). The four standalone candidates had no syntax errors. This is source preservation, not release or browser acceptance; the inherited defect remains recorded for a scoped correction.
 - New Auto Best, Carwow and Import edits arrived from other active tasks after the source checkpoints. They remain in their original checkouts as working changes over main, with a recovery patch and copies of new files under each archive's `live-delta/` directory. Their continued work is separate from the completed branch consolidation. Modern's development-server metadata remains local.
 - The sparse registry now distinguishes dealer metadata on disk from application folders stored only on main. It does not upgrade deployment, browser or owner-review evidence.
+
+## Completed publication and cleanup
+
+All five consolidated main branches were pushed without force and verified against live GitHub refs. Only `main` remains locally and on GitHub in these repositories. Nineteen local branches and fourteen remote branches were removed after ancestry checks. Each repository has its one canonical registered checkout; no extra worktree required removal. Temporary consolidation refs were also removed after their commits became reachable from main.
+
+| Repository | Verified consolidation publication | Local branches removed | Remote branches removed |
+| --- | --- | --- | --- |
+| cars | `95a1f32fdc04066b58099e3916a698dbc86bb370` | 13 | 14 |
+| cars-template-auto-best | `629ea28adbcfbaf9621a7ccc604e98b3f0cb1570` | 1 | 0 |
+| cars-template-modern | `406ba79b02e9d2b3e747e7860470232adf8a2fd8` | 2 | 0 |
+| cars-template-carwow | `d9960c514b7f3958eb7c9e332a10c8b222aaae07` | 2 | 0 |
+| cars-template-import | `ba300e0d037457254dc2e22187962794371c255b` | 1 | 0 |
+
+Cars and Modern were clean at verification. The active Auto Best, Carwow and Import tasks retain their newer working edits; those are not abandoned branch work. This handoff is a later documentation commit on Cars main. Dealer publishing mirrors, deployments and unrelated repositories were outside this cleanup.
