@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "branch": "codex/astra-bg-01",
+  "observedHead": "e0058cebb481a53241380073f1aa545f945320bc",
+  "status": "incomplete",
+  "reviewReady": false,
+  "firstPreviouslyVerifiedImplementationCommit": "5f63a26e138efa00b785bcfa1f43ef146f89e0f4",
+  "applicationBuildsVerified": false,
+  "browserChecksVerified": false,
+  "dealerResults": [
+    {
+      "slug": "tesi-car",
+      "applications": [
+        {
+          "path": "clients/tesi-car/auto-best",
+          "metadataState": "needs-personalization",
+          "implementationStatus": "in-progress",
+          "qa": {
+            "desktop": false,
+            "mobile": false,
+            "identity": false,
+            "contactPath": false
+          },
+          "assetChecks": {}
+        },
+        {
+          "path": "clients/tesi-car/modern",
+          "metadataState": "needs-personalization",
+          "implementationStatus": "in-progress",
+          "qa": {
+            "desktop": false,
+            "mobile": false,
+            "identity": false,
+            "contactPath": false
+          },
+          "assetChecks": {}
+        },
+        {
+          "path": "clients/tesi-car/carwow",
+          "metadataState": "needs-personalization",
+          "implementationStatus": "in-progress",
+          "qa": {
+            "desktop": false,
+            "mobile": false,
+            "identity": false,
+            "contactPath": false
+          },
+          "assetChecks": {}
+        }
+      ],
+      "outcome": "in-progress, not review-ready"
+    },
+    {
+      "slug": "central-autosalon",
+      "applications": [
+        {
+          "path": "clients/central-autosalon/auto-best",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/central-autosalon/modern",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/central-autosalon/carwow",
+          "metadataRead": "not-established"
+        }
+      ],
+      "outcome": "not completed by this session"
+    },
+    {
+      "slug": "autofest",
+      "applications": [
+        {
+          "path": "clients/autofest/auto-best",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/autofest/modern",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/autofest/carwow",
+          "metadataRead": "not-established"
+        }
+      ],
+      "outcome": "not completed by this session"
+    },
+    {
+      "slug": "express-auto-varna",
+      "applications": [
+        {
+          "path": "clients/express-auto-varna/auto-best",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/express-auto-varna/modern",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/express-auto-varna/carwow",
+          "metadataRead": "not-established"
+        }
+      ],
+      "outcome": "not completed by this session"
+    },
+    {
+      "slug": "perfekt-auto",
+      "applications": [
+        {
+          "path": "clients/perfekt-auto/auto-best",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/perfekt-auto/modern",
+          "metadataRead": "not-established"
+        },
+        {
+          "path": "clients/perfekt-auto/carwow",
+          "metadataRead": "not-established"
+        }
+      ],
+      "outcome": "not completed by this session"
+    }
+  ],
+  "scope": "GitHub branch operations only; no source checkout writes or deployments.",
+  "committedMediaManifest": {
+    "path": "clients/tesi-car/source/media-manifest.json",
+    "localPhotoCount": 12,
+    "expectedPhotoCount": 16,
+    "errors": [
+      {
+        "path": "/dealer/vehicles/21782292613523387-1.avif",
+        "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_3f.webp",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "path": "/dealer/vehicles/21782292613523387-2.avif",
+        "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/387/2/big1/21782292613523387_GO.webp",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "path": "/dealer/vehicles/11766203342784314-1.avif",
+        "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_cG.webp",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "path": "/dealer/vehicles/11766203342784314-2.avif",
+        "retrievedFrom": "https://mobistatic2.focus.bg/mobile/photosorg/314/1/big1/11766203342784314_5.webp",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "reuseClearance": "not-evidenced"
+  },
+  "remaining": "Complete remaining rendered content/data consumers and supporting-page behavior, finalize branding, then run actual app/workspace and browser checks. Four dealer implementations remain unfinished. Source-provider assertions are not application QA."
+}
