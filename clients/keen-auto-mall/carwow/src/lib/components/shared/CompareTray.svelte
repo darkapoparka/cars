@@ -21,7 +21,7 @@
 				<div class="compare-tray__heading">
 					<span class="compare-tray__icon" aria-hidden="true"><GitCompare size={17} /></span>
 					<div>
-						<strong>Сравнение</strong>
+						<strong>Compare</strong>
 						<span>{vehicles.length} от 3 автомобила</span>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
 						Сравни <ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
 					</a>
 					<button type="button" class="compare-tray__clear" onclick={() => garage.clearCompare()}>
-						Изчисти
+						Clear
 					</button>
 				</div>
 			</div>

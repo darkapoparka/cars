@@ -32,7 +32,7 @@ The existing responsive composition is not rewritten into a new token/theme syst
 
 ## Content and reuse
 
-This master retains Day & Night source identity and eight **sample**, unverified vehicle records. Shared images on records 4/7 and 6/8 are retained source media, not proof of the same physical stock. Do not invent replacement stock facts. A client copy must replace/verify identity, each vehicle, equipment, images, map coordinates, services and editorial promises.
+This master uses a neutral Auto Best name, logo and icon. Day & Night source contact details, social/video content, business copy and eight **sample**, unverified vehicle records remain as personalization inputs. This is not complete genericization. Shared images on records 4/7 and 6/8 are retained source media, not proof of the same physical stock. Do not invent replacement stock facts. A client copy must replace/verify identity, each vehicle, equipment, images, map coordinates, services and editorial promises.
 
 Sample people and partner sections default off. They remain available for template review through `template.sections`; enabling them does not establish real identities or partnerships. No fake social controls remain on sample people.
 

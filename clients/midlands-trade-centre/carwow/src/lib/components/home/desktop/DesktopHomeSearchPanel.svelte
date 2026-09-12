@@ -52,9 +52,9 @@
 	let keywordQuery = $state('');
 	type HeroIntent = 'buy' | 'sell' | 'import';
 	const intents = [
-		{ value: 'buy', label: 'Купи' },
-		{ value: 'sell', label: 'Продай' },
-		{ value: 'import', label: 'Внос' }
+		{ value: 'buy', label: 'Browse' },
+		{ value: 'sell', label: 'Enquire' },
+		{ value: 'import', label: 'Vehicle enquiry' }
 	] as const;
 	let activeIntent = $state<HeroIntent>('buy');
 	let hydrated = $state(false);
@@ -285,7 +285,7 @@
 						type="search"
 						name="q"
 						autocomplete="off"
-						placeholder="Марка, модел или ключова дума"
+						placeholder="Make, model or keyword"
 						bind:value={keywordQuery}
 					/>
 					<button
@@ -326,7 +326,7 @@
 			{:else if activeIntent === 'sell'}
 				<div class="hero-intent__row hero-intent__row--sell">
 					<label class="hero-intent__label" for="hero-sell-make"
-						>Марка
+						>Make
 						<input
 							id="hero-sell-make"
 							class="hero-intent__input"
@@ -339,7 +339,7 @@
 						/>
 					</label>
 					<label class="hero-intent__label" for="hero-sell-model"
-						>Модел
+						>Model
 						<input
 							id="hero-sell-model"
 							class="hero-intent__input"
@@ -351,7 +351,7 @@
 							bind:value={sellModel}
 						/>
 					</label>
-					<button class="hero-intent__submit" type="submit">Продължи</button>
+					<button class="hero-intent__submit" type="submit">Continue</button>
 				</div>
 				<p class="hero-intent__hint">
 					Добави данните за автомобила. Следващата стъпка е заявка за оценка.
@@ -372,7 +372,7 @@
 						aria-describedby="hero-import-hint"
 						bind:value={importSourceUrl}
 					/>
-					<button class="hero-intent__submit" type="submit">Продължи</button>
+					<button class="hero-intent__submit" type="submit">Continue</button>
 				</div>
 				<p id="hero-import-hint" class="hero-intent__hint">
 					Хареса автомобил в чужбина? Добави линка към заявката си за внос.
@@ -406,7 +406,7 @@
 									]}
 									data-vehicle-condition="all"
 									aria-pressed={activeCondition === 'all'}
-									onclick={() => setActiveCondition('all')}>Всички</button
+									onclick={() => setActiveCondition('all')}>All</button
 								>
 								<button
 									type="button"
@@ -416,7 +416,7 @@
 									]}
 									data-vehicle-condition="new"
 									aria-pressed={activeCondition === 'new'}
-									onclick={() => setActiveCondition('new')}>Нови</button
+									onclick={() => setActiveCondition('new')}>New</button
 								>
 								<button
 									type="button"
@@ -426,7 +426,7 @@
 									]}
 									data-vehicle-condition="used"
 									aria-pressed={activeCondition === 'used'}
-									onclick={() => setActiveCondition('used')}>Употребявани</button
+									onclick={() => setActiveCondition('used')}>Used</button
 								>
 							</div>
 						</div>
@@ -483,7 +483,7 @@
 		</svg>
 		<span
 			>{matchingVehicleCount === 1
-				? 'Покажи 1 автомобил'
+				? 'Show 1 vehicle'
 				: `Покажи ${matchingVehicleCount} автомобила`}</span
 		>
 	</button>
@@ -503,7 +503,7 @@
 		<button
 			type="button"
 			class="daynight-hero-filter-sheet__backdrop"
-			aria-label="Затвори"
+			aria-label="Close"
 			onclick={closeQuickField}
 		></button>
 		<div class="daynight-hero-filter-sheet__sheet">
@@ -512,7 +512,7 @@
 				<button
 					type="button"
 					class="daynight-hero-filter-sheet__close"
-					aria-label="Затвори"
+					aria-label="Close"
 					onclick={closeQuickField}>✕</button
 				>
 			</div>

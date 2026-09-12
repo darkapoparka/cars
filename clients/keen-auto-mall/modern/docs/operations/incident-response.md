@@ -46,4 +46,3 @@ prevent header or log injection.
 Within two business days, record impact, timeline, detection gap, contributing
 conditions, corrective actions, owners, and due dates. Avoid blame and avoid
 including personal data in the retrospective.
-

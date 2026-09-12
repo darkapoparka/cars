@@ -6,7 +6,7 @@
 	const isVehicleMissing = $derived(page.error?.message === 'Vehicle not found');
 	const heading = $derived.by(() => {
 		if (isVehicleMissing) return 'Този автомобил вече не е наличен';
-		if (page.status === 404) return 'Страницата не е намерена';
+		if (page.status === 404) return 'Page not found';
 		return 'Нещо се обърка';
 	});
 	const detail = $derived.by(() => {
@@ -35,7 +35,7 @@
 			</a>
 			<a class="daynight-error__action" href={resolve('/')}>
 				<House size={18} strokeWidth={2.3} aria-hidden="true" />
-				<span>Начало</span>
+				<span>Home</span>
 			</a>
 		</div>
 	</div>

@@ -1,21 +1,19 @@
 <script lang="ts">
   import BrowseAllCard from './BrowseAllCard.svelte';
-  import VehicleCutout from '$components/ui/VehicleCutout.svelte';
   import { resolve } from '$app/paths';
   import { editorial } from '$data/home';
 </script>
 
 <section class="dn-editorial" aria-labelledby="editorial-title">
   <div class="dn-editorial__banner">
-    <div class="dn-editorial__vehicle"><VehicleCutout vehicle="urus" framing="banner" /></div>
     <div class="container">
-      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--banner">
+      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
-          <span class="dn-heading-mobile">Полезно</span>
+          <span class="dn-heading-desktop">Guides to choosing a vehicle</span>
+          <span class="dn-heading-mobile">Guides</span>
         </h2>
-        <p>Практични насоки за оглед, покупка и внос на автомобил.</p>
-        <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
+
+        <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>View all articles</a>
       </div>
     </div>
   </div>
@@ -39,7 +37,7 @@
               </span>
 
               <span class="dn-editorial-item__content">
-                <span class="dn-editorial-item__meta" aria-label="Категория">
+                <span class="dn-editorial-item__meta" aria-label="Category">
                   <span>{item.category}</span>
                 </span>
                 <h3>{item.title}</h3>
@@ -48,14 +46,13 @@
             </a>
           </article>
         {/each}
-        <BrowseAllCard href="/blog" label="Още полезно" detail="Съвети за избор, оглед и внос" action="Прочети всички" />
+        <BrowseAllCard href="/blog" label="More guides" detail="Advice on choosing a vehicle, vehicle viewings and imports" action="Read all" />
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .dn-editorial__vehicle { display: none; }
   .dn-editorial {
     padding: 80px 0 96px;
     background: #fff;
@@ -109,13 +106,7 @@
     text-align: center;
   }
 
-  .dn-editorial__heading p {
-    margin: 0 0 26px;
-    color: rgba(255, 255, 255, 0.84);
-    font-size: var(--dn-text-lead);
-    line-height: var(--dn-leading-lead);
-    text-align: center;
-  }
+
 
   .dn-editorial__cta {
     display: inline-flex;
@@ -350,9 +341,7 @@
       display: inline;
     }
 
-    .dn-editorial__heading p {
-      display: none;
-    }
+
 
     .dn-editorial__cta {
       min-height: 44px;
@@ -423,12 +412,15 @@
 
     .dn-editorial__banner {
       width: min(var(--dn-content), calc(100% - 48px));
-      min-height: 184px;
+      min-height: 0;
       margin-inline: auto;
-      padding: 32px;
-      border-radius: 20px;
+      padding: 0;
+      border-radius: 20px 20px 0 0;
+      background: var(--dn-home-panel);
       background-attachment: scroll;
     }
+
+    .dn-editorial__banner::before { display: none; }
 
     .dn-editorial__banner > .container {
       width: 100%;
@@ -443,23 +435,16 @@
     }
 
     .dn-editorial__heading h2,
-    .dn-editorial__heading p {
-      margin: 0;
-      text-align: left;
-    }
+
 
     .dn-editorial__heading h2 {
       font-size: 32px;
+      color: #171a20;
       text-align: left;
       margin: 0;
     }
 
-    .dn-editorial__heading p {
-      grid-column: 1;
-      margin: 0;
-      text-align: left;
-      font-size: 16px;
-    }
+
 
     .dn-editorial__cta {
       min-height: 44px;
@@ -478,10 +463,10 @@
     }
 
     .dn-editorial__cards {
-      margin: -24px 0 0;
+      margin: calc(-1 * var(--dn-home-banner-overlap)) 0 0;
       padding: 24px;
-      border-radius: 16px;
-      background: #fff;
+      border-radius: var(--dn-radius);
+      background: var(--dn-home-panel);
     }
 
     .dn-editorial__layout {
@@ -492,12 +477,5 @@
 
   @media (max-width: 767px) {
     .dn-editorial__cta { display: none; }
-  }
-  @media (min-width: 992px) {
-    .dn-editorial__banner { background: #b80024; min-height: 234px; overflow: hidden; }
-    .dn-editorial__banner::before { display: none; }
-    .dn-editorial__heading { width: calc(100% - 310px); margin: 0; grid-template-columns: 1fr; gap: 10px; }
-    .dn-editorial__cta { grid-column: 1; grid-row: auto; justify-self: start; }
-    .dn-editorial__vehicle { display: block; position: absolute; right: -32px; bottom: 4px; width: 340px; height: 226px; pointer-events: none; }
   }
 </style>

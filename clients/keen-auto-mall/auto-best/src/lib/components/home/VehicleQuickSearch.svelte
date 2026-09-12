@@ -42,17 +42,17 @@
     sort: 'default'
   }));
   let hasFilters = $derived(Boolean(query || make || model || body || priceMax || fuel || mileageMax || yearMin));
-  const formatNumber = (value: string) => new Intl.NumberFormat('bg-BG').format(Number(value));
-  let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
+  const formatNumber = (value: string) => new Intl.NumberFormat('en-US').format(Number(value));
+  let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'All makes');
   let mobileMenuTitle = $derived.by(() => {
-    if (mobileView === 'make') return 'Марка';
-    if (mobileView === 'model') return make || 'Модел';
-    if (mobileView === 'body') return 'Купе';
-    if (mobileView === 'price') return 'Бюджет';
-    if (mobileView === 'fuel') return 'Гориво';
-    if (mobileView === 'mileage') return 'Пробег';
-    if (mobileView === 'year') return 'Година';
-    return 'Филтри';
+    if (mobileView === 'make') return 'Make';
+    if (mobileView === 'model') return make || 'Model';
+    if (mobileView === 'body') return 'Body type';
+    if (mobileView === 'price') return 'Budget';
+    if (mobileView === 'fuel') return 'Fuel';
+    if (mobileView === 'mileage') return 'Mileage';
+    if (mobileView === 'year') return 'Year';
+    return 'Filters';
   });
   let mobileMenuValue = $derived.by(() => {
     if (mobileView === 'make') return make;
@@ -65,13 +65,13 @@
     return '';
   });
   let mobileMenuOptions = $derived.by<MobileFilterOption[]>(() => {
-    if (mobileView === 'make') return listingFilterOptions.makes.map((value) => ({ value, label: value || 'Всички марки' }));
-    if (mobileView === 'model') return modelOptions.map((value) => ({ value, label: value || 'Всички модели' }));
-    if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: bodyLabel(value) || 'Всички купета' }));
-    if (mobileView === 'price') return listingFilterOptions.prices.map((value) => ({ value, label: value ? `До ${formatNumber(value)} €` : 'Всеки бюджет' }));
-    if (mobileView === 'fuel') return listingFilterOptions.fuels.map((value) => ({ value, label: value || 'Всяко гориво' }));
-    if (mobileView === 'mileage') return listingFilterOptions.mileages.map((value) => ({ value, label: value ? `До ${formatNumber(value)} км` : 'Всеки пробег' }));
-    if (mobileView === 'year') return listingFilterOptions.years.map((value) => ({ value, label: value ? `От ${value}` : 'Всяка година' }));
+    if (mobileView === 'make') return listingFilterOptions.makes.map((value) => ({ value, label: value || 'All makes' }));
+    if (mobileView === 'model') return modelOptions.map((value) => ({ value, label: value || 'All models' }));
+    if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: bodyLabel(value) || 'All body types' }));
+    if (mobileView === 'price') return listingFilterOptions.prices.map((value) => ({ value, label: value ? `Up to ${formatNumber(value)} $` : 'Any budget' }));
+    if (mobileView === 'fuel') return listingFilterOptions.fuels.map((value) => ({ value, label: value || 'Any fuel' }));
+    if (mobileView === 'mileage') return listingFilterOptions.mileages.map((value) => ({ value, label: value ? `Up to ${formatNumber(value)} miles` : 'Any mileage' }));
+    if (mobileView === 'year') return listingFilterOptions.years.map((value) => ({ value, label: value ? `From ${value}` : 'Any year' }));
     return [];
   });
   const attachDialog: Attachment<HTMLDialogElement> = (node) => {
@@ -181,13 +181,13 @@
   aria-haspopup="dialog"
   aria-controls="dn-quick-search-dialog"
   aria-expanded={searchOpen}
-  aria-label="Търсете марка, модел или ключова дума"
+  aria-label="Search by make, model or keyword"
   onclick={openSearch}
 >
   <MobileNavIcon name="search" size={20} />
-  <span class="dn-quick-search__label-full">Търсете марка, модел или ключова дума</span>
-  <span class="dn-quick-search__label-mobile" aria-hidden="true">Марка или модел</span>
-  <span class="dn-quick-search__hint" aria-hidden="true">Бързо търсене</span>
+  <span class="dn-quick-search__label-full">Search by make, model or keyword</span>
+  <span class="dn-quick-search__label-mobile" aria-hidden="true">Make or model</span>
+  <span class="dn-quick-search__hint" aria-hidden="true">Quick search</span>
   <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileNavIcon name="filters" size={20} /></span>
 </button>
 
@@ -203,22 +203,22 @@
   <div class="dn-quick-search__panel">
     <header class="dn-quick-search__header">
       {#if mobileView === 'main'}
-        <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>Нулирай</button>
+        <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>Reset</button>
       {:else}
         <button
           class="dn-quick-search__back"
           type="button"
-          aria-label={mobileView === 'model' ? 'Назад към марките' : 'Назад към филтрите'}
+          aria-label={mobileView === 'model' ? 'Back to makes' : 'Back to filters'}
           onclick={returnToMobileOverview}
         >
           <Icon name="arrow-left" size={21} strokeWidth={1.8} />
         </button>
       {/if}
       <h2 id="quick-search-title">
-        <span class="dn-quick-search__title-desktop">Търсене на автомобил</span>
+        <span class="dn-quick-search__title-desktop">Vehicle search</span>
         <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
       </h2>
-      <button class="dn-quick-search__close" type="button" aria-label="Затворете търсенето" onclick={closeSearch}>
+      <button class="dn-quick-search__close" type="button" aria-label="Close search" onclick={closeSearch}>
         <Icon name="x" size={22} strokeWidth={1.8} />
       </button>
     </header>
@@ -230,7 +230,7 @@
       onsubmit={closeSearch}
       onformdata={cleanFormData}
     >
-      <label class="dn-sr-only" for="quick-search-input">Марка, модел или ключова дума</label>
+      <label class="dn-sr-only" for="quick-search-input">Make, model or keyword</label>
       <div class="dn-quick-search__input-wrap">
         <Icon name="search" size={21} strokeWidth={1.8} />
         <input
@@ -239,7 +239,7 @@
           bind:value={query}
           type="search"
           name="q"
-          placeholder="Например Audi, BMW или SUV"
+          placeholder="For example Audi, BMW or SUV"
           autocomplete="off"
           aria-describedby="quick-search-status"
           onkeydown={handleKeydown}
@@ -267,38 +267,38 @@
       {#if mobileView === 'main'}
         <div class="dn-quick-search__filter-rows">
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('make')}>
-            <strong>Марка и модел</strong>
+            <strong>Make and model</strong>
             <span>{makeModelSummary}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
-            <strong>Купе</strong>
-            <span>{bodyLabel(body) || 'Всички купета'}</span>
+            <strong>Body type</strong>
+            <span>{bodyLabel(body) || 'All body types'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
-            <strong>Бюджет</strong>
-            <span>{priceMax ? `До ${formatNumber(priceMax)} €` : 'Всеки бюджет'}</span>
+            <strong>Budget</strong>
+            <span>{priceMax ? `Up to ${formatNumber(priceMax)} $` : 'Any budget'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('fuel')}>
-            <strong>Гориво</strong>
-            <span>{fuel || 'Всяко гориво'}</span>
+            <strong>Fuel</strong>
+            <span>{fuel || 'Any fuel'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
-            <strong>Пробег</strong>
-            <span>{mileageMax ? `До ${formatNumber(mileageMax)} км` : 'Всеки пробег'}</span>
+            <strong>Mileage</strong>
+            <span>{mileageMax ? `Up to ${formatNumber(mileageMax)} miles` : 'Any mileage'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('year')}>
-            <strong>Година</strong>
-            <span>{yearMin ? `От ${yearMin}` : 'Всяка година'}</span>
+            <strong>Year</strong>
+            <span>{yearMin ? `From ${yearMin}` : 'Any year'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
         </div>
@@ -321,7 +321,7 @@
 
       <footer class="dn-quick-search__mobile-footer">
         <button type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
-          {filteredVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${filteredVehicles.length} автомобила`}
+          {filteredVehicles.length === 1 ? 'Show 1 vehicle' : `Show ${filteredVehicles.length} vehicles`}
         </button>
       </footer>
     </form>
@@ -329,9 +329,9 @@
     <span class="dn-sr-only" id="quick-search-status" role="status" aria-live="polite">
       {query.trim()
         ? filteredVehicles.length === 1
-          ? '1 съвпадение'
-          : `${filteredVehicles.length} съвпадения`
-        : 'Въведете марка, модел или ключова дума.'}
+          ? '1 match'
+          : `${filteredVehicles.length} matches`
+        : 'Enter a make, model or keyword.'}
     </span>
 
   </div>

@@ -43,7 +43,7 @@
 
 <div class="daynight-inventory-searchbar">
 	<div class="daynight-inventory-search">
-		<label class="daynight-inventory-searchbar__label" for={searchId}>Търсене</label>
+		<label class="daynight-inventory-searchbar__label" for={searchId}>Search</label>
 		{#if onOpen}
 			<button
 				id={searchId}
@@ -52,7 +52,7 @@
 				class:has-query={!!filters.store.query}
 				aria-label={filters.store.query
 					? `Търсене: ${filters.store.query}`
-					: 'Търсене на автомобили'}
+					: 'Vehicle search'}
 				aria-haspopup="dialog"
 				disabled={!hydrated}
 				onclick={onOpen}>{filters.store.query || searchPlaceholder}</button
@@ -81,7 +81,7 @@
 			onclick={submit}
 		>
 			<Search size={20} strokeWidth={2} aria-hidden="true" />
-			{#if !onOpen}<span>Търси</span>{/if}
+			{#if !onOpen}<span>Search</span>{/if}
 		</button>
 	</div>
 </div>

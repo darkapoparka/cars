@@ -136,7 +136,7 @@ export function load() {
 		site: daynightSite,
 		stats: {
 			total: daynightSite.inventoryCount,
-			dealers: 'София',
+			dealers: 'Dealer location',
 			rating: '4.9/5',
 			reviews: '240+'
 		},

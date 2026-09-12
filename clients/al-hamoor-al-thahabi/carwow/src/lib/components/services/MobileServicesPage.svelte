@@ -15,13 +15,13 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
 		{
 			id: 'inspection',
-			label: 'Оглед',
+			label: 'Viewing',
 			title: 'Проверка преди покупка',
 			kicker: 'Оглед и история',
 			cta: 'Заяви оглед',
@@ -31,7 +31,7 @@
 		},
 		{
 			id: 'documents',
-			label: 'Документи',
+			label: 'Documents',
 			title: 'Регистрация и документи',
 			kicker: 'Договор и прехвърляне',
 			cta: 'Попитай за документи',
@@ -41,10 +41,10 @@
 		},
 		{
 			id: 'trade',
-			label: 'Бартер',
+			label: 'Trade-in',
 			title: 'Бартер или изкупуване',
 			kicker: 'Оценка на автомобил',
-			cta: 'Заяви оценка',
+			cta: 'Request a valuation',
 			href: '/sell-your-car',
 			icon: Repeat,
 			points: [
@@ -55,8 +55,8 @@
 		},
 		{
 			id: 'finance',
-			label: 'Финансиране',
-			title: 'Финансиране',
+			label: 'Buying options',
+			title: 'Buying options',
 			kicker: 'Лизинг и бюджет',
 			cta: 'Виж варианти',
 			href: '/financing',
@@ -149,13 +149,13 @@
 					alt={daynightSite.shortName}
 				/>
 			</a>
-			<a class="mobile-services-hero__phone" href={phoneHref} aria-label="Обади се">
+			<a class="mobile-services-hero__phone" href={phoneHref} aria-label="Call">
 				<Phone size={19} strokeWidth={2.45} />
 			</a>
 		</div>
 
 		<div class="mobile-services-hero__copy">
-			<span>Услуги</span>
+			<span>Services</span>
 			<h1>Подкрепа преди и след покупка</h1>
 			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в София.</p>
 		</div>
@@ -230,7 +230,7 @@
 						<span>{activeService.kicker}</span>
 						<h2 id="mobile-service-drawer-title">{activeService.title}</h2>
 					</div>
-					<button type="button" aria-label="Затвори" onclick={() => (serviceDrawerOpen = false)}>
+					<button type="button" aria-label="Close" onclick={() => (serviceDrawerOpen = false)}>
 						<X size={19} strokeWidth={2.5} />
 					</button>
 				</header>
@@ -256,7 +256,7 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-vehicle-${activeService.id}`}
 						>
-							<span>Автомобил</span>
+							<span>Vehicle</span>
 							<input
 								id={`mobile-service-vehicle-${activeService.id}`}
 								type="text"
@@ -269,7 +269,7 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-phone-${activeService.id}`}
 						>
-							<span>Телефон</span>
+							<span>Phone</span>
 							<input
 								id={`mobile-service-phone-${activeService.id}`}
 								type="tel"

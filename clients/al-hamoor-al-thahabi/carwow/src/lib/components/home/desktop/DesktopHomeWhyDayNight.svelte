@@ -18,17 +18,17 @@
 	const campaigns = [
 		{
 			id: 'collection',
-			title: 'Вижте колекцията',
+			title: 'View the collection',
 			copy: 'Разгледайте селекцията и попитайте за наличност.',
-			cta: 'Вижте автомобилите',
+			cta: 'View vehicles',
 			href: '/inventory',
 			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
 		},
 		{
 			id: 'viewing',
-			title: 'Запазете оглед',
+			title: 'Book a vehicle viewing',
 			copy: 'Изберете автомобил и уговорете удобно посещение.',
-			cta: 'Запазете оглед',
+			cta: 'Book a vehicle viewing',
 			href: '/contact',
 			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
 		},
@@ -36,7 +36,7 @@
 			id: 'financing',
 			title: 'Лизинг и замяна',
 			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
-			cta: 'Поискайте условия',
+			cta: 'Request terms',
 			href: '/financing',
 			image: '/assets/images/home-promos/leasing-calculator-cutout-v7.webp'
 		}
@@ -134,7 +134,7 @@
 					</p>
 
 					<a href={resolve('/financing')} class="daynight-home-why__cta">
-						<span>Поискайте условия</span>
+						<span>Request terms</span>
 						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
 							<path
 								d="M5 12h14M13 6l6 6-6 6"

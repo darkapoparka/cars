@@ -96,11 +96,11 @@
 	{:else if !conversation}
 		<form class="chat-thread__start" onsubmit={submitStart}>
 			<label>
-				<span>Име</span>
+				<span>Name</span>
 				<input bind:value={name} name="name" autocomplete="name" maxlength="140" />
 			</label>
 			<label>
-				<span>Съобщение</span>
+				<span>Message</span>
 				<textarea bind:value={startMessage} name="message" rows="4" maxlength="1200" required
 				></textarea>
 			</label>
@@ -139,7 +139,7 @@
 			></textarea>
 			<button type="submit" disabled={sending || !draft.trim()}>
 				<Send aria-hidden="true" />
-				Изпрати
+				Prepare draft
 			</button>
 		</form>
 	{/if}

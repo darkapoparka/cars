@@ -10,7 +10,7 @@
 	// (Svelte scopes it to this component's own markup — no legacy template CSS is
 	// needed). Brand colours route through tokens (--sa-*); template neutrals stay
 	// literal for an exact baseline match. The breadcrumb labels are written in
-	// their final (runtime-localized) Bulgarian form — "Начало"/"Още" — to match
+	// their final (runtime-localized) Bulgarian form — "Home"/"Още" — to match
 	// the rendered DOM, exactly like /faq and /terms. The legacy /assets chevron
 	// img is replaced with @lucide/svelte's ChevronRight, like FaqContent.
 
@@ -25,7 +25,7 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />

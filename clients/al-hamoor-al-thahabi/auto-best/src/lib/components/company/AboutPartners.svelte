@@ -5,16 +5,16 @@
 <section class="dn-about-partners" aria-labelledby="about-partners-title" data-demo-content="true">
   <div class="container">
     <header class="dn-about-partners__heading">
-      <h2 id="about-partners-title">Партньори</h2>
+      <h2 id="about-partners-title">Partners</h2>
       <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoPartnerIntro}</p>
     </header>
 
-    <ul class="dn-about-partners__grid" aria-label="Демо партньорски лога">
+    <ul class="dn-about-partners__grid" aria-label="Demo partner logos">
       {#each demoPartners as partner (partner.id)}
         <li>
           <img
             src={partner.image}
-            alt={`Демо лого: ${partner.name}`}
+            alt={`Demo logo: ${partner.name}`}
             width="180"
             height="80"
             loading="lazy"

@@ -33,20 +33,20 @@ const pageCopy = {
     heroImageAlt: "Нощен автомобилен шоурум",
     title: "Премиум автомобили. Внос. Лизинг.",
     description:
-      "Вижте автомобилите в наличност или говорете директно с Day & Night за следващия си автомобил.",
+      "Вижте автомобилите в наличност или говорете директно с Midlands Trade Centre за следващия си автомобил.",
     inventoryAction: "Вижте наличностите",
     phoneAction: "Обадете се",
     contactTitle: "Говорете директно с нас.",
     contactDescription:
-      "Един телефон за автомобил, внос или финансиране. Шоурум в Студентски град.",
-    locationLabel: "Шоурум · Студентски град",
+      "Един телефон за автомобил, внос или финансиране. Шоурум в Birmingham.",
+    locationLabel: "Шоурум · Birmingham",
     mapAction: "Отворете картата",
     servicesTitle: "Изберете правилната посока.",
     servicesDescription:
       "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
     sellHandoffAction: "Обадете се за оферта",
     sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Day & Night, за да уточним оглед и конкретна оферта.",
+      "Данните за автомобила са готови. Обадете се на Midlands Trade Centre, за да уточним оглед и конкретна оферта.",
     sellHandoffEditAction: "Редактирайте данните",
     sellHandoffTitle: "Заявете оценка за автомобила",
     sellCategoryLabel: "Категория",
@@ -54,7 +54,7 @@ const pageCopy = {
     sellMileageLabel: "Пробег",
     sellVehicleLabel: "Автомобил",
     sellYearLabel: "Година",
-    sellLocationLabel: "Шоурум · Студентски град",
+    sellLocationLabel: "Шоурум · Birmingham",
     services: [
       {
         title: "Автомобили в наличност",
@@ -83,23 +83,23 @@ const pageCopy = {
     ],
   },
   en: {
-    heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
+    heroImageAlt: "Source vehicle photography for this private preview",
+    title: "Used vehicles. Clear details. Direct enquiries.",
     description:
-      "Browse the vehicles in stock or speak directly with Day & Night about your next vehicle.",
-    inventoryAction: "View available vehicles",
+      "Browse the dated vehicle samples or speak directly with Midlands Trade Centre about your next vehicle.",
+    inventoryAction: "View listing samples",
     phoneAction: "Call us",
     contactTitle: "Speak directly with us.",
     contactDescription:
-      "One phone number for vehicles, imports, or finance. Showroom in Studentski grad.",
-    locationLabel: "Showroom · Studentski grad",
+      "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    locationLabel: "Showroom · Birmingham",
     mapAction: "Open the map",
     servicesTitle: "Choose the right direction.",
     servicesDescription:
-      "From a vehicle in stock to an import on request, our team is one call away.",
+      "From a vehicle in stock to an vehicle enquiry, our team is one call away.",
     sellHandoffAction: "Call for an offer",
     sellHandoffDescription:
-      "Your vehicle details are ready. Call Day & Night to arrange an inspection and a concrete offer.",
+      "Your local vehicle draft is ready. Nothing has been sent. Contact the dealership to discuss availability and next steps.",
     sellHandoffEditAction: "Edit vehicle details",
     sellHandoffTitle: "Request a vehicle appraisal",
     sellCategoryLabel: "Category",
@@ -107,23 +107,23 @@ const pageCopy = {
     sellMileageLabel: "Mileage",
     sellVehicleLabel: "Vehicle",
     sellYearLabel: "Year",
-    sellLocationLabel: "Showroom · Studentski grad",
+    sellLocationLabel: "Showroom · Birmingham",
     services: [
       {
-        title: "Vehicles in stock",
+        title: "Advertised samples",
         description: "Browse the offers and plan an inspection.",
         href: "/cars",
         icon: CarFront,
       },
       {
-        title: "Import on request",
+        title: "Vehicle enquiries",
         description:
           "Tell us what you are looking for and start a conversation.",
         href: "/imports",
         icon: Ship,
       },
       {
-        title: "In-house leasing",
+        title: "Buying options",
         description: "Discuss an option for the vehicle and your budget.",
         href: "/lease",
         icon: Landmark,
@@ -184,14 +184,14 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? "Midlands Trade Centre Limited в Birmingham — автомобили в наличност, внос по заявка и собствен лизинг."
+      : "Midlands Trade Centre Limited in Birmingham — dated vehicle samples, vehicle enquiry, and purchase enquiries.",
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
     title: isBg
-      ? "За нас и контакти | Day & Night"
-      : "About and contact | Day & Night",
+      ? "За нас и контакти | Midlands Trade Centre"
+      : "About and contact | Midlands Trade Centre",
   });
 };
 
@@ -251,7 +251,7 @@ export default async function ContactPage({
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/images/sell/day-night-sell-centered-hero-v2.webp"
+                src="/dealer/inventory/202601169196000-1.webp"
               />
               <div
                 aria-hidden="true"
@@ -298,7 +298,7 @@ export default async function ContactPage({
                           )}{" "}
                           · {sellContext.year || "—"} ·{" "}
                           {sellContext.mileage
-                            ? `${sellContext.mileage} км`
+                            ? `${sellContext.mileage} miles`
                             : "—"}
                         </span>
                       </span>
@@ -370,7 +370,7 @@ export default async function ContactPage({
               fill
               priority
               sizes="100vw"
-              src="/day-night-contact-hero-v1.png"
+              src="/dealer/inventory/202601169196000-1.webp"
             />
           </div>
           <div
@@ -410,7 +410,7 @@ export default async function ContactPage({
                 {copy.contactTitle}
               </h2>
               <p className="mt-2 max-w-xs text-body text-white/75">
-                {copy.contactDescription}
+                {copy.contactDescription} {leadSite.locationNote} {leadSite.priceNotice}
               </p>
               <div className="mt-6 max-w-xs">
                 <a
@@ -419,7 +419,7 @@ export default async function ContactPage({
                 >
                   <span>
                     <span className="block text-meta text-white/65">
-                      Телефон
+                      Phone
                     </span>
                     <span className="mt-1 block font-semibold text-base">
                       {leadSite.phoneDisplay}

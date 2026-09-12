@@ -35,9 +35,9 @@
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={resolve('/')}>Home</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/about')}>За нас</a></li>
+				<li><a href={resolve('/about')}>About</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><span>Профил на Day Night Auto</span></li>
 			</ul>
@@ -82,8 +82,8 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Налични автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<h2>Advertised samples</h2>
+				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each vehicles as vehicle (vehicle.slug)}
@@ -117,7 +117,7 @@
 						регистрация, финансиране и бартер. Фокусът е клиентът да има реална информация преди
 						решение, без излишни обещания.
 					</p>
-					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
+					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Get in touch </a>
 				</div>
 				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Day Night Auto София" height="330" />
 			</div>
@@ -127,7 +127,7 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Екип</h2>
+				<h2>Team</h2>
 				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж екипа</a>
 			</div>
 			<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
@@ -152,7 +152,7 @@
 					<h2>Отзиви от клиенти</h2>
 					<p class="text-secondary">{daynightReviewDisclosure}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}

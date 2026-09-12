@@ -20,7 +20,7 @@
 	];
 
 	const filterOptions = [
-		{ value: 'popover' as const, label: 'Меню', hint: 'Падащи менюта в страницата' },
+		{ value: 'popover' as const, label: 'Menu', hint: 'Падащи менюта в страницата' },
 		{ value: 'modal' as const, label: 'Прозорец', hint: 'Филтри в отделен прозорец' }
 	];
 </script>
@@ -46,7 +46,7 @@
 			</div>
 
 			<div class="daynight-preview-seg" role="group" aria-label="Начин на отваряне на филтрите">
-				<span class="daynight-preview-seg__caption">Филтри</span>
+				<span class="daynight-preview-seg__caption">Filters</span>
 				<div class="daynight-preview-seg__track">
 					{#each filterOptions as option (option.value)}
 						<button

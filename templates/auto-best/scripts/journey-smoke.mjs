@@ -37,7 +37,9 @@ try {
       for (let id = 1; id <= 8; id++) {
         await page.goto(`${base}/listing-detail-v1/${id}`, { waitUntil: 'networkidle' });
         const title = await page.locator('h1').innerText();
-        const finance = page.locator('.dn-finance-calculator');
+        const trigger = page.locator('.dn-detail-finance-trigger');
+        if (await trigger.isVisible()) { await trigger.click(); await page.locator('.dn-detail-finance-dialog:modal').waitFor(); }
+        const finance = page.locator('.dn-finance-calculator:visible');
         const amountBefore = await finance.locator('dd').first().innerText();
         await finance.locator('input').fill('10000');
         await finance.locator('select').selectOption('24');
@@ -50,8 +52,13 @@ try {
         await finance.locator('a').click();
         await page.waitForURL(url => url.pathname === '/contact');
         assert.equal(new URL(page.url()).searchParams.get('vehicle'), String(id));
+        assert.equal(new URL(page.url()).searchParams.get('down_payment'), '10000');
+        assert.equal(new URL(page.url()).searchParams.get('term'), '24');
+        const returnHref = new URL(await page.locator('.dn-contact-vehicle').getAttribute('href'), base);
+        assert.equal(returnHref.searchParams.get('down_payment'), '10000');
+        assert.equal(returnHref.searchParams.get('term'), '24');
         assert.equal(await page.locator('.dn-contact-vehicle strong').innerText(), title);
-        assert.equal(await page.locator('.dn-contact-vehicle').getAttribute('href'), `/listing-detail-v1/${id}`);
+        assert.equal(returnHref.pathname, `/listing-detail-v1/${id}`);
       }
       await page.goto(`${base}/contact?topic=leasing&vehicle=999`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-contact-vehicle').count(), 0);
@@ -86,6 +93,7 @@ try {
       for (let i = 0; i < 18; i++) { await page.keyboard.press('Tab'); assert(await dialog.evaluate(el => el.contains(document.activeElement))); }
       await page.screenshot({ path: `${output}/mobile-menu.png` });
       await page.keyboard.press('Escape');
+      await page.waitForFunction(() => document.activeElement?.matches('.dn-mobile-bottom-nav button'));
       assert(await trigger.evaluate(el => el === document.activeElement));
       assert.equal(await page.evaluate(() => document.body.style.overflow), '');
       await trigger.click(); await page.setViewportSize({ width: 992, height: 900 });

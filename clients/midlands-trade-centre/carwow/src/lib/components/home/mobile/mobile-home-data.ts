@@ -109,4 +109,4 @@ export const bodyChipIconFor = (body: string): BodyChipIcon => {
 	return 'suv';
 };
 
-export const bodyLabel = (body: string) => (body === 'SUV' ? 'Джип' : body);
+export const bodyLabel = (body: string) => (body === 'SUV' ? 'SUV' : body);

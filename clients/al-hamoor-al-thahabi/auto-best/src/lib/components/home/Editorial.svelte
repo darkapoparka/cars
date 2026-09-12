@@ -11,11 +11,11 @@
     <div class="container">
       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--banner">
         <h2 id="editorial-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
-          <span class="dn-heading-mobile">Полезно</span>
+          <span class="dn-heading-desktop">Guides to choosing a vehicle</span>
+          <span class="dn-heading-mobile">Guides</span>
         </h2>
-        <p>Практични насоки за оглед, покупка и внос на автомобил.</p>
-        <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
+        <p>Practical advice on vehicle viewings, buying and importing a vehicle.</p>
+        <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>View all articles</a>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
               </span>
 
               <span class="dn-editorial-item__content">
-                <span class="dn-editorial-item__meta" aria-label="Категория">
+                <span class="dn-editorial-item__meta" aria-label="Category">
                   <span>{item.category}</span>
                 </span>
                 <h3>{item.title}</h3>
@@ -48,7 +48,7 @@
             </a>
           </article>
         {/each}
-        <BrowseAllCard href="/blog" label="Още полезно" detail="Съвети за избор, оглед и внос" action="Прочети всички" />
+        <BrowseAllCard href="/blog" label="More guides" detail="Advice on choosing a vehicle, vehicle viewings and imports" action="Read all" />
       </div>
     </div>
   </div>

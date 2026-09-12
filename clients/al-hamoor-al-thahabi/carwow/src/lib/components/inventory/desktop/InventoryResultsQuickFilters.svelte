@@ -51,7 +51,7 @@
 <section
 	class="daynight-inventory-results-quick-filters daynight-inventory-filterbar daynight-inventory-results-filterbar"
 	data-daynight-results-quick-filters
-	aria-label="Бързи филтри"
+	aria-label="Quick filters"
 >
 	<div class="daynight-inventory-results-filterbar__fields">
 		{#each quickFilters as filter (filter.name)}
@@ -72,7 +72,7 @@
 			{/if}
 		</button>
 		<div class="daynight-inventory-results-filterbar__sort">
-			<SortDropdown buttonLabel="Сортиране" />
+			<SortDropdown buttonLabel="Sort" />
 		</div>
 	</div>
 

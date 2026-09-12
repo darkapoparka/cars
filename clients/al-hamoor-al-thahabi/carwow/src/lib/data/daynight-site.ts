@@ -1,5 +1,35 @@
-const location='Souk Al Haraj, showroom 353, Sharjah';
-export const daynightSite={name:'AL HAMOOR AL THAHABI USED CARS',shortName:'Al Hamoor Al Thahabi',phone:'+971545555204',phoneLabel:'+971 54 555 5204',email:'',location,locationShort:'Souk Al Haraj, Sharjah',hoursLabel:'Confirm viewing time by phone before travelling',mapEmbedSrc:`https://maps.google.com/maps?q=${encodeURIComponent(location)}&output=embed`,mapUrl:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,mapLabel:'Al Hamoor Al Thahabi Used Cars, Sharjah',sourceInventory:'https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414',inventoryCount:8,logoLight:'/dealer/logo.svg',logoDark:'/dealer/logo.svg',primaryCta:'Browse sample vehicles',sellCarCta:'Vehicle enquiry',accountCta:'Contact the showroom',phoneCta:'Call to confirm',heroTitle:'AL HAMOOR AL THAHABI',heroSubtitle:'Private design preview for a Sharjah used-car showroom. Dated sample stock; confirm availability and viewing location.',reviewCount:0,reviewCountLabel:'Reviews not imported',reviewLinkLabel:'No review claims in this preview'} as const;
-export const publicNavItems=[{label:'Home',href:'/'},{label:'Vehicles',href:'/inventory'},{label:'Enquire',href:'/sell-your-car'},{label:'Services',href:'/services'},{label:'About',href:'/about'},{label:'Guide',href:'/blog'},{label:'Contact',href:'/contact'}] as const;
-export const publicNavGroups=[{label:'Home',href:'/'},{label:'Vehicles',href:'/inventory',children:[{label:'All vehicles',href:'/inventory'},{label:'Compare',href:'/compare'},{label:'Calculator',href:'/calculator'}]},{label:'Enquire',href:'/sell-your-car',children:[{label:'Prepare an enquiry',href:'/sell-your-car'}]},{label:'Services',href:'/services',children:[{label:'Dealer information',href:'/services'},{label:'Finance information',href:'/financing'},{label:'FAQ',href:'/faq'}]},{label:'About',href:'/about',children:[{label:'About the showroom',href:'/about'},{label:'Terms',href:'/terms'}]},{label:'Contact',href:'/contact'}] as const;
-export const footerNavItems=[{label:'Sample vehicles',href:'/inventory'},{label:'Compare',href:'/compare'},{label:'Calculator',href:'/calculator'},{label:'Contact',href:'/contact'},{label:'FAQ',href:'/faq'}] as const;
+export const daynightSite = {
+  "name": "Al Hamoor Al Thahabi Used Cars",
+  "shortName": "Al Hamoor Al Thahabi",
+  "phone": "+971545555204",
+  "phoneLabel": "+971 54 555 5204",
+  "email": "",
+  "location": "Souk Al Haraj, showroom 353, Sharjah",
+  "locationShort": "Sharjah",
+  "hoursLabel": "Please confirm opening hours and arrange your visit with the dealership.",
+  "mapEmbedSrc": "https://maps.google.com/maps?q=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah&output=embed",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah",
+  "mapLabel": "Al Hamoor Al Thahabi Used Cars — address search",
+  "sourceInventory": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
+  "inventoryCount": 8,
+  "logoLight": "/dealer/logo-light.png",
+  "logoDark": "/dealer/logo-dark.png",
+  "primaryCta": "Browse samples",
+  "sellCarCta": "Trade-in enquiry",
+  "accountCta": "Contact the dealership",
+  "phoneCta": "Call to confirm a viewing",
+  "heroTitle": "Al Hamoor Al Thahabi Used Cars",
+  "heroSubtitle": "Used cars in Sharjah. Clear details. A direct conversation.",
+  "reviewCount": 0,
+  "reviewCountLabel": "Reviews not verified",
+  "reviewLinkLabel": "Review information",
+  "currency": "AED",
+  "locale": "en-AE",
+  "distanceUnit": "km",
+  "previewNotice": "Independent design preview. Dated listing samples, not a live stock feed. Confirm availability, price, vehicle condition and location directly. No dealership approval or form delivery is implied.",
+  "locationNote": "The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.",
+  "priceNotice": "Confirm the advertised price and final terms directly."
+} as const;
+export const publicNavItems = [{"label": "Home", "href": "/"}, {"label": "Vehicles", "href": "/inventory"}, {"label": "Trade-in enquiry", "href": "/sell-your-car"}, {"label": "Services", "href": "/services"}, {"label": "About", "href": "/about"}, {"label": "Guides", "href": "/blog"}, {"label": "Contact", "href": "/contact"}] as const;
+export const publicNavGroups = [{"label": "Home", "href": "/"}, {"label": "Vehicles", "href": "/inventory", "children": [{"label": "All samples", "href": "/inventory"}, {"label": "Location information", "href": "/inventory/map"}, {"label": "Compare", "href": "/compare"}, {"label": "Budget calculator", "href": "/calculator"}]}, {"label": "Trade-in enquiry", "href": "/sell-your-car", "children": [{"label": "Prepare vehicle details", "href": "/sell-your-car"}, {"label": "Local enquiry draft", "href": "/sell-your-car/request"}]}, {"label": "Services", "href": "/services", "children": [{"label": "Enquiry options", "href": "/services"}, {"label": "Buying options", "href": "/financing"}, {"label": "Questions and answers", "href": "/faq"}]}, {"label": "About", "href": "/about", "children": [{"label": "Dealer information", "href": "/about"}, {"label": "Team information", "href": "/team"}, {"label": "Reviews information", "href": "/reviews"}, {"label": "Guides", "href": "/blog"}, {"label": "Preview terms", "href": "/terms"}]}, {"label": "Contact", "href": "/contact"}] as const;
+export const footerNavItems = [{"label": "All samples", "href": "/inventory"}, {"label": "Location information", "href": "/inventory/map"}, {"label": "Compare", "href": "/compare"}, {"label": "Budget calculator", "href": "/calculator"}, {"label": "Prepare vehicle details", "href": "/sell-your-car"}, {"label": "Local enquiry draft", "href": "/sell-your-car/request"}, {"label": "Enquiry options", "href": "/services"}, {"label": "Buying options", "href": "/financing"}, {"label": "Questions and answers", "href": "/faq"}] as const;

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
 
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
+  const mapEmbedUrl = brand.mapsEmbedUrl;
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
@@ -10,11 +9,11 @@
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={`Map to ${brand.name}`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Open in Google Maps</a>
 </div>
 
 <style>

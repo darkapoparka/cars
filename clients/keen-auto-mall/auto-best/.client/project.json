@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "client": "keen-auto-mall",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-refresh-2",
+  "createdAt": "2026-09-09T01:52:21.647Z",
+  "state": "implemented-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "sourcePack": "../SOURCE-PACK.json",
+    "stock": "../stock.json",
+    "stockCount": 8,
+    "localAssets": true,
+    "qaOwner": "local-review"
+  }
+}

@@ -1,4 +1,4 @@
-export type DayNightArticleCategory = 'Новини' | 'Съвети' | 'Финансиране' | 'Документи' | 'Марки' | 'Покупка' | 'Продажба';
+export type DayNightArticleCategory = 'Новини' | 'Съвети' | 'Buying options' | 'Documents' | 'Марки' | 'Покупка' | 'Vehicle enquiry';
 export type DayNightArticleKind = 'news' | 'guide';
 
 export type DayNightArticleSection = {
@@ -68,7 +68,7 @@ export const daynightArticles: DayNightArticle[] = [
 				]
 			}
 		],
-		tags: ['новини', 'наличност', 'София']
+		tags: ['новини', 'наличност', 'Dealer location']
 	}),
 	article({
 		slug: 'novi-avtomobili-v-nalichnost-daynight-auto',
@@ -149,7 +149,7 @@ export const daynightArticles: DayNightArticle[] = [
 		title: 'Лизинг за употребяван автомобил в София',
 		description:
 			'Какво да подготвите, как се гледа месечната вноска и защо общата цена е по-важна от най-ниската вноска.',
-		category: 'Финансиране',
+		category: 'Buying options',
 		kind: 'guide',
 		date: '2026-05-25',
 		author: 'Day Night Auto',
@@ -176,14 +176,14 @@ export const daynightArticles: DayNightArticle[] = [
 				]
 			}
 		],
-		tags: ['лизинг', 'финансиране', 'София']
+		tags: ['лизинг', 'финансиране', 'Dealer location']
 	}),
 	article({
 		slug: 'dokumenti-registratsia-nov-vnos',
 		title: 'Документи и регистрация при автомобил нов внос',
 		description:
 			'Какви стъпки обикновено следват след избор на автомобил нов внос и какво може да бъде подготвено предварително.',
-		category: 'Документи',
+		category: 'Documents',
 		kind: 'guide',
 		date: '2026-05-24',
 		author: 'Day Night Auto',
@@ -304,7 +304,7 @@ export const daynightArticles: DayNightArticle[] = [
 				]
 			},
 			{
-				heading: 'Продажба или бартер',
+				heading: 'Sell or trade in',
 				paragraphs: [
 					'Ако целта е бартер, подгответе и ориентир за желания следващ автомобил: марка, бюджет, тип купе и гориво.',
 					'Екипът може да предложи вариант според наличността и реалното състояние на автомобила за замяна.'

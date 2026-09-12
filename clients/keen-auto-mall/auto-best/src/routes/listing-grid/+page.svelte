@@ -12,8 +12,8 @@
 </script>
 
 <svelte:head>
-  <title>Налични автомобили — {brand.name}</title>
-  <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
+  <title>Available vehicles — {brand.name}</title>
+  <meta name="description" content={`Selected premium vehicles, imports and buying options in ${brand.city}.`} />
 </svelte:head>
 
 <VehicleSearchDialog filters={draftFilters}>

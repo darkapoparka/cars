@@ -48,18 +48,18 @@
 		const labels: [string, string][] = [
 			[plate, 'Рег. номер'],
 			[vin, 'VIN'],
-			[make, 'Марка'],
-			[model, 'Модел'],
-			[year, 'Година'],
+			[make, 'Make'],
+			[model, 'Model'],
+			[year, 'Year'],
 			[mileage, 'Километри'],
-			[phone, 'Телефон']
+			[phone, 'Phone']
 		];
 		return labels
 			.map(([value, label]) => ({ label, value: value.trim() }))
 			.filter((field) => field.value);
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
 	const quickContext = $derived(
 		plate.trim() ? `Рег. номер ${plate.trim().toUpperCase()}` : 'Без регистрационен номер'
@@ -130,9 +130,9 @@
 		return [
 			['Рег. номер', plate.trim().toUpperCase()],
 			['VIN', vin.trim().toUpperCase()],
-			['Марка', make.trim()],
-			['Модел', model.trim()],
-			['Година', year.trim()],
+			['Make', make.trim()],
+			['Model', model.trim()],
+			['Year', year.trim()],
 			['Километри', mileage.trim()]
 		]
 			.filter(([, value]) => value)
@@ -224,7 +224,7 @@
 					<span>Регистрационен номер</span>
 					<input type="text" bind:value={plate} placeholder="СА 1234 АВ" autocomplete="off" />
 				</label>
-				<button type="submit" aria-label="Продължи">
+				<button type="submit" aria-label="Continue">
 					<ChevronRight size={22} strokeWidth={2.7} aria-hidden="true" />
 				</button>
 			</form>
@@ -317,9 +317,9 @@
 				<header class="ms-sheet__head">
 					<div>
 						<h2 id="ms-form-title">Оценка на автомобила</h2>
-						<p>Стъпка {formStep} от 2 · {formStep === 1 ? 'Автомобил' : 'Контакт'}</p>
+						<p>Стъпка {formStep} от 2 · {formStep === 1 ? 'Vehicle' : 'Контакт'}</p>
 					</div>
-					<button type="button" class="ms-sheet__close" onclick={closeDetails} aria-label="Затвори">
+					<button type="button" class="ms-sheet__close" onclick={closeDetails} aria-label="Close">
 						<X size={20} strokeWidth={2.45} />
 					</button>
 				</header>
@@ -339,13 +339,13 @@
 					{#if formStep === 1}
 						<section class="ms-wizard-step" aria-labelledby="ms-vehicle-step-title">
 							<div class="ms-wizard-step__intro">
-								<span>Автомобил</span>
+								<span>Vehicle</span>
 								<h3 id="ms-vehicle-step-title">Кой автомобил продавате?</h3>
 								<p>{quickContext}. Добавете само данните, които знаете.</p>
 							</div>
 							<div class="ms-form-grid">
 								<label class="ms-field">
-									<span>Марка</span>
+									<span>Make</span>
 									<input
 										data-autofocus
 										type="text"
@@ -355,11 +355,11 @@
 									/>
 								</label>
 								<label class="ms-field">
-									<span>Модел</span>
+									<span>Model</span>
 									<input type="text" bind:value={model} placeholder="320d" autocomplete="off" />
 								</label>
 								<label class="ms-field">
-									<span>Година</span>
+									<span>Year</span>
 									<input type="text" inputmode="numeric" bind:value={year} placeholder="2019" />
 								</label>
 								<label class="ms-field">
@@ -396,17 +396,17 @@
 								aria-label="Въведени данни за автомобила"
 							>
 								<div>
-									<span>Автомобил</span>
+									<span>Vehicle</span>
 									<strong>{[make, model].filter(Boolean).join(' ') || quickContext}</strong>
 									<small
 										>{[year, mileage && `${mileage} км`].filter(Boolean).join(' · ') ||
 											'Данните могат да се допълнят по телефона'}</small
 									>
 								</div>
-								<button type="button" onclick={goToVehicleStep}>Редактирай</button>
+								<button type="button" onclick={goToVehicleStep}>Edit</button>
 							</div>
 							<label class="ms-field ms-field--phone">
-								<span>Телефон</span>
+								<span>Phone</span>
 								<input
 									data-contact-autofocus
 									type="tel"
@@ -420,7 +420,7 @@
 					{/if}
 
 					<label class="ms-honeypot" aria-hidden="true">
-						<span>Компания</span>
+						<span>Company</span>
 						<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 					</label>
 
@@ -486,7 +486,7 @@
 								: 'Ясни следващи стъпки за Вашия автомобил'}
 						</p>
 					</div>
-					<button type="button" class="ms-sheet__close" onclick={closeInfo} aria-label="Затвори">
+					<button type="button" class="ms-sheet__close" onclick={closeInfo} aria-label="Close">
 						<X size={20} strokeWidth={2.45} aria-hidden="true" />
 					</button>
 				</header>

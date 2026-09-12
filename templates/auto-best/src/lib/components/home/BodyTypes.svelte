@@ -46,8 +46,8 @@
           </a>
         {/each}
         <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
-          <span class="dn-discovery-toggle__icon" aria-hidden="true">
-            <svg class:expanded width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+          <span class="dn-body-all-glyph" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
           </span>
           <strong>{expanded ? 'Покажи по-малко' : 'Всички типове'}</strong>
         </button>
@@ -62,25 +62,14 @@
   @media (max-width: 767px) {
     .dn-body-type--additional { order: 2; }
     .dn-discovery-toggle {
-      display: grid;
-      order: 1;
-      grid-template-rows: 78px auto;
-      min-height: 126px;
-      min-width: 0;
-      padding: 8px 12px 12px;
-      border: 0;
-      border-radius: 14px;
-      background: var(--dn-mobile-surface);
-      color: var(--dn-ink);
-      text-align: left;
-      font: inherit;
-      cursor: pointer;
+      order: 1; display: block; min-height: 126px; margin: 0; padding: 8px 12px 12px;
+      border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink);
+      font: inherit; font-size: 15px; text-align: center; cursor: pointer;
     }
-    .dn-discovery-toggle__icon { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--dn-muted); }
-    .dn-discovery-toggle__icon svg { padding: 8px; border-radius: 50%; background: var(--dn-mobile-canvas); color: var(--dn-red); }
-    .dn-discovery-toggle__icon svg.expanded { transform: rotate(180deg); }
-    .dn-discovery-toggle strong { align-self: end; font-size: 15px; line-height: 20px; font-weight: 700; }
-    .dn-discovery-toggle:hover { background: var(--dn-surface); }
+    .dn-body-all-glyph { display: grid; width: 58px; height: 58px; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto 8px; padding: 9px; border-radius: 16px; background: #f1f3f5; }
+    .dn-body-all-glyph span { border-radius: 50%; background: #cdd2d8; }
+    .dn-body-all-glyph span:first-child { background: var(--dn-red); }
+    .dn-discovery-toggle strong { display: block; line-height: 1.2; font-weight: 700; }
     .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   }
 
@@ -268,7 +257,7 @@
 
   @media (max-width: 767px) {
     .dn-body-types {
-      padding: 24px 0 12px;
+      padding: 24px 0 6px;
       background: var(--dn-mobile-canvas);
     }
 
@@ -359,14 +348,17 @@
     .dn-body-type__content {
       display: flex;
       align-items: end;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0;
+      text-align: center;
     }
 
     .dn-body-type__title {
       margin: 0;
+      width: 100%;
       font-size: 15px;
       font-weight: 700;
+      text-align: center;
     }
 
     .dn-body-type__subtitle {
@@ -376,3 +368,4 @@
     .dn-body-type--secondary { display: none; }
   }
 </style>
+

@@ -11,4 +11,3 @@ Create one transparent-background photorealistic automotive collection cutout fo
 First output exec-4af7d2d7-4deb-4600-a4ba-eef2d663db55.png had an opaque backdrop and excessive overlap. ImageGen edit reduced overlap and center-car scale; exec-de9ca01f-893b-421d-bdee-1683218367c0.png had a baked checkerboard. Final edit used: "Remove the background from this image. Keep the three cars exactly as they are. Deliver a transparent background cutout of the three cars. Remove the checkerboard pattern completely; it is unwanted background. Crop canvas tightly around the complete three-car lineup with small transparent margin. No other changes."
 
 The final asset has true transparency (alpha range0–255). Only the desktop collection banner selects it. Existing service banners, mobile icon cards, hero pairs and link destinations remain unchanged. Strict media count increases96 to97 with all checks retained.
-

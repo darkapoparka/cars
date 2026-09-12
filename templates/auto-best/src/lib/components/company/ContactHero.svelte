@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { FinanceSelection } from '$data/finance';
   import { resolve } from '$app/paths';
   import type { Vehicle } from '$data/inventory';
   import ContactVehicle from './ContactVehicle.svelte';
@@ -7,17 +8,17 @@
   import { brand } from '$config/brand';
   import type { ContactTopic } from '$data/company';
 
-  let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
+  let { topic, vehicle = null, financeSelection = null }: { topic: ContactTopic; vehicle?: Vehicle | null; financeSelection?: FinanceSelection | null } = $props();
   const heroDescriptions = {
     general: `${brand.city} · Оглед с предварителна уговорка`,
     inspection: 'Изберете автомобил и уговорете удобен час',
-    import: 'Обсъдете автомобил, бюджет и внос с екипа',
+    import: 'Започнете с обява или критерии за автомобил',
     leasing: 'Условия според избрания автомобил',
     'trade-in': 'Получете оценка за своя автомобил'
   };
 </script>
 
-<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} aria-labelledby="contact-title">
+<section class="dn-contact-hero dn-route-hero" class:dn-route-hero--studio={topic.id !== 'general'} class:dn-route-hero--charcoal={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
   <picture>
     {#if topic.id === 'trade-in'}
@@ -44,7 +45,7 @@
     {#if topic.id === 'leasing'}
       {#if vehicle}
         <div class="dn-contact-hero__vehicle dn-route-hero__control">
-          <ContactVehicle {vehicle} hero />
+          <ContactVehicle {vehicle} {financeSelection} hero />
         </div>
       {:else}
         <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href={resolve('/listing-grid')}>

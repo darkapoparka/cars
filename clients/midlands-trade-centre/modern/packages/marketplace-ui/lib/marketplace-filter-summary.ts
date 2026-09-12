@@ -63,7 +63,7 @@ const filterSummaryFormatters: Record<FullFilterView, SummaryFormatter> = {
     const value = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US").format(
       filters.mileageMax
     );
-    return `${isBg ? "До" : "To"} ${value} km`;
+    return `${isBg ? "До" : "To"} ${value} miles`;
   },
   origin: (filters, locale) =>
     filters.origin

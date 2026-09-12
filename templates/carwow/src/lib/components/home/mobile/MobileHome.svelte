@@ -62,7 +62,7 @@
 
 	const bodyTiles = $derived(data.bodyTiles.slice(0, 6));
 	const budgetTiles = $derived(
-		[...data.budgetTiles].sort((a, b) => Number(b.count > 0) - Number(a.count > 0)).slice(0, 6)
+		data.budgetTiles.filter((tile) => tile.count > 0 || tile.value === 'all').slice(0, 4)
 	);
 	const mobileBrandCatalog = [
 		{ brand: 'BMW', label: 'BMW' },
@@ -104,6 +104,7 @@
 	let searchOpen = $state(false);
 	let locationOpen = $state(false);
 	let query = $state('');
+	let searchPrice = $state('');
 	// The buy overlay stacks: 'main' (quick chips) → a facet drill-in with the
 	// full searchable brand/model/body list. facetQuery is the in-facet search.
 	let searchView = $state<'main' | 'brand' | 'model' | 'body'>('main');
@@ -200,6 +201,7 @@
 	const searchHref = $derived.by((): InventoryHref => {
 		const params = new SvelteURLSearchParams();
 		if (query.trim()) params.set('q', query.trim());
+		if (searchPrice) params.set('price', searchPrice);
 		appendParams(params, 'brand', selectedBrands);
 		appendParams(params, 'model', selectedModels);
 		appendParams(params, 'body', selectedBodies);
@@ -547,7 +549,7 @@
 							/>
 						</span>
 						<span class="mh-budget-card__copy">
-							<strong>{tile.label}</strong>
+							<strong>{tile.label.replace('EUR', '€')}</strong>
 							<span>{tile.caption ?? `${tile.count} коли`}</span>
 						</span>
 					</a>
@@ -627,7 +629,15 @@
 			</div>
 			<div class="mh-brand-grid">
 				{#each brandTiles as tile (tile.brand)}
-					<a class="mh-brandcard" data-brand={tile.brand} href={resolve(brandHref(tile.brand))}>
+					<a
+						class="mh-brandcard"
+						data-brand={tile.brand}
+						href={resolve(
+							tile.count > 0
+								? brandHref(tile.brand)
+								: `/contact?intent=import&make=${encodeURIComponent(tile.brand)}`
+						)}
+					>
 						<span class="mh-brandcard__icon">
 							{#if brandLogos[tile.brand]}
 								<img
@@ -648,7 +658,7 @@
 				{/each}
 				<a class="mh-brandcard mh-brandcard--all" href={inventoryHref}>
 					<span class="mh-brandcard__all-icon" aria-hidden="true">
-						<ArrowRight size={22} strokeWidth={2} />
+						<img src={resolve('/brand/daynight-logo-generated.png')} alt="" loading="lazy" />
 					</span>
 					<span class="mh-brandcard__name">Всички марки</span>
 				</a>
@@ -934,6 +944,15 @@
 								{/each}
 							</div>
 						</div>
+						<label class="mh-search-sheet__group">
+							<span>Бюджет</span>
+							<select class="mh-price-select" bind:value={searchPrice}>
+								<option value="">Всички цени</option>
+								{#each data.budgetTiles.filter((tile) => tile.value !== 'all') as tile (tile.value)}
+									<option value={tile.value}>{tile.label}</option>
+								{/each}
+							</select>
+						</label>
 					</div>
 
 					<a class="mh-search-sheet__go" href={resolve(searchHref)}>Виж автомобилите →</a>
@@ -1622,8 +1641,8 @@
 	.mh-budget-card {
 		position: relative;
 		display: grid;
-		grid-template-rows: 120px minmax(0, 1fr);
-		height: 184px;
+		grid-template-rows: 80px minmax(0, 1fr);
+		min-height: 140px;
 		overflow: hidden;
 		border: 1px solid #e0e5ec;
 		border-radius: 8px;
@@ -1640,10 +1659,10 @@
 	.mh-budget-card__media {
 		position: relative;
 		display: grid;
-		min-height: 120px;
+		min-height: 80px;
 		place-items: end center;
 		overflow: hidden;
-		padding: 15px 0 0;
+		padding: 4px 8px 0;
 	}
 
 	.mh-budget-card__media::after {
@@ -1662,12 +1681,12 @@
 		position: relative;
 		z-index: 1;
 		display: block;
-		width: 150%;
-		max-width: none;
-		height: 86px;
+		width: 100%;
+		max-width: 100%;
+		height: 72px;
 		object-fit: contain;
 		object-position: center bottom;
-		transform: translateX(18%);
+		transform: none;
 	}
 
 	.mh-budget-card__media :global(img.daynight-img-fallback) {
@@ -1680,8 +1699,8 @@
 	}
 
 	.mh-budget-card--open .mh-budget-card__media img {
-		width: 116%;
-		height: 94px;
+		width: 100%;
+		height: 72px;
 		transform: translateX(0);
 	}
 
@@ -1690,17 +1709,14 @@
 		align-content: start;
 		gap: 4px;
 		min-width: 0;
-		padding: 4px 14px 14px;
+		padding: 8px 10px 10px;
 	}
 
 	.mh-budget-card__copy strong {
-		overflow: hidden;
 		color: var(--sa-ink);
-		font-size: var(--sa-text-base);
+		font-size: var(--sa-text-sm);
 		font-weight: var(--sa-weight-semibold);
-		line-height: 1.1;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		line-height: 1.3;
 	}
 
 	.mh-budget-card__copy span {
@@ -1714,7 +1730,7 @@
 	}
 
 	.mh-rail--cat {
-		grid-auto-columns: min(234px, calc(100vw - 96px));
+		grid-auto-columns: calc((100% - 8px) / 2);
 	}
 
 	/* Horizontal rails */
@@ -1751,7 +1767,7 @@
 	.mh-cat {
 		display: grid;
 		grid-template-rows: minmax(0, 1fr) 42px;
-		aspect-ratio: 234 / 148;
+		min-height: 132px;
 		overflow: hidden;
 		border: 1px solid #e2e7ee;
 		border-radius: 8px;
@@ -1775,7 +1791,7 @@
 		display: block;
 		width: auto;
 		max-width: 100%;
-		height: 74px;
+		height: 68px;
 		max-height: 100%;
 		filter: drop-shadow(0 7px 8px rgba(15, 20, 27, 0.13));
 		object-fit: contain;
@@ -1900,12 +1916,17 @@
 
 	.mh-brandcard__all-icon {
 		display: grid;
-		width: 42px;
-		height: 42px;
+		width: 100%;
+		height: 48px;
 		place-items: center;
-		border: 1px solid #161b22;
-		border-radius: 50%;
-		color: #161b22;
+	}
+
+	.mh-brandcard__all-icon img {
+		display: block;
+		width: 100%;
+		max-width: 104px;
+		height: auto;
+		object-fit: contain;
 	}
 
 	/* Car card — real inventory rail */
@@ -2609,6 +2630,17 @@
 		font-size: var(--sa-text-sm);
 	}
 
+	.mh-price-select {
+		width: 100%;
+		min-height: var(--sa-mobile-action-h);
+		border: 1px solid var(--sa-line);
+		border-radius: var(--sa-r-md);
+		background: var(--sa-fill);
+		padding: 0 12px;
+		color: var(--sa-ink);
+		font: inherit;
+	}
+
 	.mh-chips {
 		display: flex;
 		flex-wrap: wrap;
@@ -2636,7 +2668,7 @@
 		border: 1px solid #dfe6ef;
 		border-radius: var(--sa-pill-radius);
 		background: #f2f5f9;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+		box-shadow: none;
 		padding: 0 var(--sa-pill-pad-x);
 		color: var(--sa-ink-soft);
 		font-family: var(--mh-sheet-font);
@@ -2699,7 +2731,7 @@
 	.mh-chip.is-active {
 		border-color: var(--sa-blue);
 		background: var(--sa-blue);
-		box-shadow: 0 8px 18px rgba(176, 0, 0, 0.22);
+		box-shadow: none;
 		color: #fff;
 	}
 

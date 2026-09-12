@@ -9,19 +9,19 @@
 
 	const groups = [
 		{ title: 'Бързи връзки', links: [
-			{ href: '/about', label: 'За нас' },
+			{ href: '/about', label: 'About' },
 			{ href: '/team', label: 'Нашият екип' },
-			{ href: '/services', label: 'Услуги' },
+			{ href: '/services', label: 'Services' },
 			{ href: '/faq', label: 'Често задавани въпроси' },
-			{ href: '/blog', label: 'Блог' },
-			{ href: '/contact', label: 'Контакти' }
+			{ href: '/blog', label: 'Guides' },
+			{ href: '/contact', label: 'Contact' }
 		] },
-		{ title: 'Покупка и продажба', links: [
-			{ href: '/inventory', label: 'Намери автомобил' },
-			{ href: '/sell-your-car', label: 'Продай или замени' },
+		{ title: 'Buying and selling', links: [
+			{ href: '/inventory', label: 'Find a vehicle' },
+			{ href: '/sell-your-car', label: 'Trade-in enquiry' },
 			{ href: '/financing', label: 'Лизинг и финансиране' },
 			{ href: '/inventory/map', label: 'Карта на автомобилите' },
-			{ href: '/calculator', label: 'Калкулатор за финансиране' },
+			{ href: '/calculator', label: 'Finance calculator' },
 			{ href: '/reviews', label: 'Отзиви от клиенти' }
 		] }
 	] as const;
@@ -59,7 +59,7 @@
 				<a class="dealer-footer__contact-row" {...mapLink}>
 					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
 				</a>
-				<div class="dealer-footer__socials" aria-label="Социални мрежи">
+				<div class="dealer-footer__socials" aria-label="Social media">
 					<a href="https://www.facebook.com/61566304063141/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a>
 					<a {...youtubeLink} aria-label="YouTube"><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a>
 					<a href="https://www.instagram.com/daynight.auto.plovdiv/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a>
@@ -120,4 +120,3 @@
 	}
 	@media (max-width: 991px) { .dealer-footer { display: none; } }
 </style>
-

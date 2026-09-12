@@ -16,7 +16,7 @@
 		showHeaderCta = true,
 		showBelowCta = false,
 		balancedActionCards = false,
-		ctaLabel = 'Виж всички'
+		ctaLabel = 'View all'
 	}: {
 		showReviews?: boolean;
 		showActionCards?: boolean;
@@ -74,7 +74,7 @@
 			image: '/assets/images/home-promos/urus-rear-v4.webp',
 			alt: 'Продай или замени автомобил',
 			title: 'Продай или замени лесно',
-			balancedTitle: 'Продай или замени',
+			balancedTitle: 'Trade-in enquiry',
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
@@ -87,7 +87,7 @@
 				'Обсъдете продажба или замяна.'
 			],
 			ctaHref: '/sell-your-car/request',
-			ctaLabel: 'Продай автомобил'
+			ctaLabel: 'Prepare vehicle details'
 		}
 	];
 </script>

@@ -32,8 +32,10 @@ const publicSans = Inter({
 
 export const metadata: Metadata = {
   applicationName: leadSite.name,
+  robots: { index: false, follow: false },
   icons: {
-    icon: [{ type: "image/png", url: leadSite.logoPath }],
+    icon: [{ type: "image/png", url: "/dealer/favicon.png" }],
+    apple: "/dealer/apple-touch-icon.png",
   },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
@@ -84,7 +86,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
         <MobileVisibleViewport />
         <ThemeProvider>
           {leadSite.staticDemoMode ? (
-            <TooltipProvider>{children}</TooltipProvider>
+            <TooltipProvider>{children}<aside className="bg-zinc-100 px-4 pt-4 pb-24 text-xs leading-5 text-zinc-600 lg:px-10 lg:pb-4">{leadSite.previewNotice} {leadSite.locationNote} {leadSite.priceNotice} Decorative illustrations are not stock photographs.</aside></TooltipProvider>
           ) : (
             <AnalyticsProvider
               locale={normalizedLocale}

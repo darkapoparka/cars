@@ -2,19 +2,6 @@ import { featuredVehicles } from '$data/inventory';
 import type { Handle } from '@sveltejs/kit';
 
 const securityHeaders: Readonly<Record<string, string>> = {
-  'Content-Security-Policy': [
-    "default-src 'self'",
-    "base-uri 'self'",
-    "connect-src 'self' ws: wss:",
-    "font-src 'self'",
-    "form-action 'self'",
-    "frame-ancestors 'self'",
-    "frame-src https://maps.google.com https://www.google.com https://www.youtube-nocookie.com",
-    "img-src 'self' data: blob:",
-    "object-src 'none'",
-    "script-src 'self' 'unsafe-inline'",
-    "style-src 'self' 'unsafe-inline'"
-  ].join('; '),
   'Permissions-Policy': 'camera=(), microphone=(), payment=(), usb=()',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Strict-Transport-Security': 'max-age=31536000',

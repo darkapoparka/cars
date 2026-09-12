@@ -1,0 +1,134 @@
+[
+  {
+    "source": "/assets/images/template/body-wagon-v1.png",
+    "runtime": "/assets/images/template/body-wagon-v1.webp",
+    "originalBytes": 1151143,
+    "runtimeBytes": 781034,
+    "width": 1832,
+    "height": 858,
+    "identicalRGBA": true,
+    "sourceSha256": "5d70b2a70636d8700570c199589c6a7d714a7dab6021a6aefd0f8123c6da259b",
+    "runtimeSha256": "d14334273a3f962ae5cb56563912e5b9a9265f9e191aa5ab61488678f8b7e706"
+  },
+  {
+    "source": "/assets/images/template/menu-editorial-import-v1.png",
+    "runtime": "/assets/images/template/menu-editorial-import-v1.webp",
+    "originalBytes": 2010193,
+    "runtimeBytes": 1320808,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "682c268ab0ef50cb04dbb6dd67f02d80579ddd302d12e406f0ff184486b7924e",
+    "runtimeSha256": "db3ab6b9b19d8c2601d1cb83e35997ac6dbb11272e51ee6f0b680338c61a7ba8"
+  },
+  {
+    "source": "/assets/images/template/menu-editorial-inspection-v1.png",
+    "runtime": "/assets/images/template/menu-editorial-inspection-v1.webp",
+    "originalBytes": 1812369,
+    "runtimeBytes": 1083068,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "e819987d2940213f6c6ce8fa593d794532cd3d5c4e6c8d1ca82db8c0315a8a53",
+    "runtimeSha256": "5abe289b7fb895ddf4b15a28b926fa348466168fd91655bac9925383b7653844"
+  },
+  {
+    "source": "/assets/images/template/menu-editorial-leasing-v1.png",
+    "runtime": "/assets/images/template/menu-editorial-leasing-v1.webp",
+    "originalBytes": 1742501,
+    "runtimeBytes": 1096968,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "650e3eb800052a848ee24b60c2e38e0b893c389e628e48104b66fcf81de507c5",
+    "runtimeSha256": "b8c0af04dd673b664404a94b50415362e3f1f4ae68f186a8e16757070629ddcb"
+  },
+  {
+    "source": "/assets/images/template/menu-import-v2.png",
+    "runtime": "/assets/images/template/menu-import-v2.webp",
+    "originalBytes": 1615820,
+    "runtimeBytes": 998250,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "e9df6afa601a73b9529a85e87a0854afe7250ac4f6a6bc571deca084726985c6",
+    "runtimeSha256": "042f72aee49c3588b5081bfab6b0777aab7f8af11edde9fabebae461b5704a35"
+  },
+  {
+    "source": "/assets/images/template/menu-leasing-v2.png",
+    "runtime": "/assets/images/template/menu-leasing-v2.webp",
+    "originalBytes": 1618698,
+    "runtimeBytes": 1166124,
+    "width": 1610,
+    "height": 977,
+    "identicalRGBA": true,
+    "sourceSha256": "038f1db5f13dfd50ad890f9cd39af2b50cf94f043f372a31650cec6b070af1bd",
+    "runtimeSha256": "a82c4f8f3dc487dc2e83fe24827cbbd5683f1040d088174d8445386b5330ba2b"
+  },
+  {
+    "source": "/assets/images/template/menu-showroom-v2.png",
+    "runtime": "/assets/images/template/menu-showroom-v2.webp",
+    "originalBytes": 1421548,
+    "runtimeBytes": 886372,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "bc20ecd0e0f113acfda46197c8798386b53ac09b71c634233a00a430e35e1ec3",
+    "runtimeSha256": "94b638335ea2f8a47c986a0c6439ae839bc4ccec50f856d862948f8c4c174854"
+  },
+  {
+    "source": "/assets/images/template/service-car-v1.png",
+    "runtime": "/assets/images/template/service-car-v1.webp",
+    "originalBytes": 1545591,
+    "runtimeBytes": 965952,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "4803c703463382e22fbd99235b8824a8175b6ce31d8b0234cfcf92b5f3f71cf2",
+    "runtimeSha256": "73f192187eef45f1bbc4a344d71010a0a6daba895f79efea52a44c6b50e341e2"
+  },
+  {
+    "source": "/assets/images/template/service-import-v1.png",
+    "runtime": "/assets/images/template/service-import-v1.webp",
+    "originalBytes": 1872728,
+    "runtimeBytes": 1214774,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "11060e6fe5f9b8baae36b5ff44128644a8c5ab111e53f1af46ea5e7b68ffd5da",
+    "runtimeSha256": "1d52d58de53d5e30eceb7cf63122357c949a509431a9ac01269b2db3efed3ead"
+  },
+  {
+    "source": "/assets/images/template/service-leasing-v1.png",
+    "runtime": "/assets/images/template/service-leasing-v1.webp",
+    "originalBytes": 2017929,
+    "runtimeBytes": 1205670,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "1b12eae41b022db585b4f15ef20d9d0bcb0c358a33b451f0349f50d6f77d6de7",
+    "runtimeSha256": "5b1f9f0e62fbd81b8cbf79a9621de0145e0eee49f597c6525a42a095ff0234b4"
+  },
+  {
+    "source": "/assets/images/template/service-sell-euros-v1.png",
+    "runtime": "/assets/images/template/service-sell-euros-v1.webp",
+    "originalBytes": 2249227,
+    "runtimeBytes": 1410170,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "d34fed66c483db27056ecfe268b5a53ad16872f7c488b35b24464cfc3bc50593",
+    "runtimeSha256": "ec572a0ee9a1b7d5ec64b590e67af70f184c068340e3d97fe557cce77bbd81fc"
+  },
+  {
+    "source": "/assets/images/template/service-sell-key-v1.png",
+    "runtime": "/assets/images/template/service-sell-key-v1.webp",
+    "originalBytes": 1599155,
+    "runtimeBytes": 932124,
+    "width": 1536,
+    "height": 1024,
+    "identicalRGBA": true,
+    "sourceSha256": "bfe86fb2f41f000da35e04e3d67f03336657ec9b9a3a311b7981912d7c4eed3e",
+    "runtimeSha256": "e17e4272f6806e7386cd76453d6152f4c1a55c6f64c3a03eca6d26ab00ca40ad"
+  }
+]

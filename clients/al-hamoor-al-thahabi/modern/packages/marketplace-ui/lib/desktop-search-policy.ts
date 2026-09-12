@@ -162,18 +162,18 @@ const vehicleSuggestions = leadSite.staticDemoMode
 
 const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
   {
-    descriptionBg: "Проверен дилър · София",
-    descriptionEn: "Verified dealer · Sofia",
+    descriptionBg: "Проверен дилър · Sharjah",
+    descriptionEn: "Verified dealer · Sharjah",
     id: "sofia-premium-cars",
     keywords: "sofia premium cars dealer дилър софия bmw audi",
     kind: "dealer",
-    label: "Sofia Premium Cars",
+    label: "Sharjah Premium Cars",
     popular: true,
-    value: "Sofia Premium Cars",
+    value: "Sharjah Premium Cars",
   },
   {
-    descriptionBg: "Вносител от Китай · София",
-    descriptionEn: "Importer from China · Sofia",
+    descriptionBg: "Вносител от Китай · Sharjah",
+    descriptionEn: "Importer from China · Sharjah",
     id: "china-ev-import",
     keywords: "china ev import importer китай вносител софия byd geely",
     kind: "dealer",
@@ -201,14 +201,14 @@ const organizationSuggestions: readonly SearchSuggestionDefinition[] = [
     value: "Black Sea EV",
   },
   {
-    descriptionBg: "Дилъри и вносители в София",
-    descriptionEn: "Dealers and importers in Sofia",
+    descriptionBg: "Дилъри и вносители в Sharjah",
+    descriptionEn: "Dealers and importers in Sharjah",
     id: "sofia-organizations",
     keywords: "sofia city софия дилъри вносители",
     kind: "location",
-    label: "София",
+    label: "Sharjah",
     popular: true,
-    value: "София",
+    value: "Sharjah",
   },
   {
     descriptionBg: "Дилъри и вносители във Варна",

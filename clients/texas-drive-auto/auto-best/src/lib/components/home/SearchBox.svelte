@@ -104,8 +104,8 @@
 
   </div>
   <nav class="dn-search__mobile-shortcuts" aria-label="Quick filters">
-    <a href={resolve('/listing-grid?price_max=60000')}>Up to 60 000 USD</a>
-    <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 $</a>
+    <a href={resolve('/listing-grid?price_max=7000')}>Up to $7,000</a>
+    <a href={resolve('/listing-grid?price_min=7001&price_max=9000')}>$7,001?$9,000</a>
     <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
     <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
     <a href={resolve('/listing-grid?make=BMW')}>BMW</a>

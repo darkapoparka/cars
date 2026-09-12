@@ -17,7 +17,7 @@
   <picture>
   <img
     class="dn-about-hero__media"
-    src="/assets/images/section/bg-12.jpg"
+    src="/dealer/showroom.webp"
     alt=""
     width="1920"
     height="880"
@@ -28,23 +28,23 @@
   <div class="dn-about-hero__overlay" aria-hidden="true"></div>
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
-      <h1 id="about-title">За нас</h1>
-      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Собствен лизинг</p>
+      <h1 id="about-title">About us</h1>
+      <p class="dn-about-hero__lead">Used vehicles in {brand.city} · Viewings by arrangement</p>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={resolve('/listing-grid')}>
-      <span>Вижте автомобилите</span>
+      <span>View vehicles</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
-    <nav class="dn-about-socials" aria-label="Последвайте ни в социалните мрежи">
-      <span>Последвайте ни</span>
+    <nav class="dn-about-socials" aria-label="Follow us on social media">
+      <span>Contact the dealership</span>
       <div class="dn-about-socials__links">
-        {#each socialProfiles as profile (profile.name)}
-          <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={`${profile.label} — отваря се в нов раздел`}>
+        {#each socialProfiles.filter(profile => profile.href) as profile (profile.name)}
+          <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={`${profile.label} — opens in a new tab`}>
             <SocialBrandIcon name={profile.name} size={28} />
           </a>
         {/each}
       </div>
-    </nav>
+    <a href={brand.phoneHref} aria-label={`Call ${brand.phone}`}>{brand.phone}</a></nav>
   </div>
 </section>
 

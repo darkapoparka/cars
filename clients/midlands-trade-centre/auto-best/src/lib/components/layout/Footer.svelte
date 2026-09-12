@@ -9,26 +9,26 @@
 
   const actions = [
     {
-      title: 'Подбрани автомобили',
-      description: 'Разгледайте актуалната селекция',
+      title: 'Selected vehicles',
+      description: 'Browse the current selection',
       href: '/listing-grid',
       icon: 'car'
     },
     {
-      title: `Оглед в ${brand.city}`,
-      description: 'С предварителна уговорка',
+      title: `Vehicle viewing in ${brand.city}`,
+      description: 'By appointment',
       href: '/contact?topic=inspection',
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
-      description: 'Попитайте за актуалните условия',
+      title: 'Buying options',
+      description: 'Ask about current terms',
       href: '/contact?topic=leasing',
       icon: 'finance'
     },
     {
-      title: 'Внос по заявка',
-      description: 'Уточнете критериите с екипа',
+      title: 'Vehicle enquiry',
+      description: 'Discuss your criteria with the team',
       href: '/contact?topic=import',
       icon: 'value'
     }
@@ -36,7 +36,7 @@
 </script>
 
 {#if showActions}
-  <section class="dn-footer-actions" aria-label="Следващи стъпки">
+  <section class="dn-footer-actions" aria-label="Next steps">
     <div class="container dn-footer-actions__grid">
       {#each actions as action (action.href)}
         <a href={resolve(action.href)}>
@@ -56,22 +56,22 @@
 <footer class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
-      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logoDark} alt={brand.name} width="220" height="58" /></a>
+      <p>Dated vehicle samples and a direct conversation about availability, condition and your visit.</p>
     </div>
-    <nav aria-label="Автомобили">
-      <strong>Автомобили</strong>
-      <a href={resolve('/listing-grid')}>Всички автомобили</a>
-      <a href={resolve('/listing-grid?condition=used')}>Употребявани</a>
-      <a href={resolve('/listing-grid?sort=newest')}>Най-нови предложения</a>
+    <nav aria-label="Vehicles">
+      <strong>Vehicles</strong>
+      <a href={resolve('/listing-grid')}>All vehicles</a>
+      <a href={resolve('/listing-grid?condition=used')}>Used</a>
+      <a href={resolve('/listing-grid?sort=newest')}>Listing samples</a>
     </nav>
-    <nav aria-label="Компания">
-      <strong>Компания</strong>
-      <a href={resolve('/about-us')}>За нас</a>
-      <a href={resolve('/blog')}>Полезно</a>
-      <a href={resolve('/contact')}>Контакти</a>
+    <nav aria-label="Company">
+      <strong>Company</strong>
+      <a href={resolve('/about-us')}>About us</a>
+      <a href={resolve('/blog')}>Guides</a>
+      <a href={resolve('/contact')}>Contact</a>
     </nav>
-    <div class="dn-footer__contact" aria-label="Контакт с екипа">
+    <div class="dn-footer__contact" aria-label="Contact the team">
       <a {...phoneLinkAttributes} class="dn-footer__contact-link">
         <Icon name="phone" size={18} />
         <span class="dn-footer__phone">{brand.phone}</span>
@@ -85,5 +85,5 @@
       <p class="dn-footer__appointment">{brand.appointment}</p>
     </div>
   </div>
-  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
+  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Vehicles · Viewings · Enquiries</span></div>
 </footer>

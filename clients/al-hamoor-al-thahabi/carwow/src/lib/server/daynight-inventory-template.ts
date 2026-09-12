@@ -63,7 +63,7 @@ function renderCompareIcon() {
 }
 
 function renderViewDetailsLink(route: string) {
-	return `<a href="${route}" class="view-details">Виж детайли<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>`;
+	return `<a href="${route}" class="view-details">View details<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>`;
 }
 
 function renderCardPrice(value: string) {
@@ -252,13 +252,13 @@ ${renderInventoryPillIcon(icon)}
 
 function renderInventoryTypePills() {
 	return [
-		renderInventoryTypePill('Всички', inventoryHref({}), 'all', true),
-		renderInventoryTypePill('Електрически', inventoryHref({ fuel: 'Електрически' }), 'electric'),
-		renderInventoryTypePill('Седан', inventoryHref({ body: 'Седан' }), 'sedan'),
-		renderInventoryTypePill('Джип', inventoryHref({ body: 'SUV' }), 'suv'),
-		renderInventoryTypePill('Комби', inventoryHref({ body: 'Комби' }), 'wagon'),
-		renderInventoryTypePill('Хечбек', inventoryHref({ body: 'Хечбек' }), 'hatchback'),
-		renderInventoryTypePill('Купе', inventoryHref({ body: 'Купе' }), 'coupe'),
+		renderInventoryTypePill('All', inventoryHref({}), 'all', true),
+		renderInventoryTypePill('Electric', inventoryHref({ fuel: 'Electric' }), 'electric'),
+		renderInventoryTypePill('Sedan', inventoryHref({ body: 'Sedan' }), 'sedan'),
+		renderInventoryTypePill('SUV', inventoryHref({ body: 'SUV' }), 'suv'),
+		renderInventoryTypePill('Wagon', inventoryHref({ body: 'Wagon' }), 'wagon'),
+		renderInventoryTypePill('Hatchback', inventoryHref({ body: 'Hatchback' }), 'hatchback'),
+		renderInventoryTypePill('Body type', inventoryHref({ body: 'Body type' }), 'coupe'),
 		renderInventoryTypePill('До 20 000 EUR', inventoryHref({ price: 'under-20000' }), 'price')
 	].join('\n');
 }
@@ -285,7 +285,7 @@ ${renderVehicleTags(vehicle, 'style3 mb-14')}
 <p class="h6 card-box__price mb-10 flex justify-between gap-8 items-center"><span class="daynight-card-price__value">${renderCardPrice(vehicle.priceEur)}</span></p>
 <div class="flex gap-32">
 ${renderCompareLink()}
-<a href="${route}" class="view-details">Виж детайли<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>
+<a href="${route}" class="view-details">View details<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="" aria-hidden="true"></a>
 </div>
 </div>
 </div>`;
@@ -492,25 +492,25 @@ export function renderInventoryQuickFilters() {
 		})
 	);
 	return `<div class="col-md-12 daynight-inventory-controls">
-<h1 class="daynight-inventory-heading">Налични автомобили</h1>
-<form class="daynight-inventory-quick-form" data-daynight-inventory-filter aria-label="Бързи филтри">
+<h1 class="daynight-inventory-heading">Advertised samples</h1>
+<form class="daynight-inventory-quick-form" data-daynight-inventory-filter aria-label="Quick filters">
 <div class="daynight-inventory-searchbar">
 <div class="daynight-inventory-search">
-<label class="daynight-inventory-searchbar__label" for="daynight-inventory-search">Търсене</label>
+<label class="daynight-inventory-searchbar__label" for="daynight-inventory-search">Search</label>
 <input id="daynight-inventory-search" class="daynight-inventory-search__input" type="search" name="q" autocomplete="off" placeholder="Търси по марка, модел, година, гориво, екстри...">
 </div>
-<button class="daynight-inventory-searchbar__submit flex items-center gap-8 justify-center" type="submit"><img src="/assets/icons/search.svg" alt="" aria-hidden="true"><span>Търси</span></button>
+<button class="daynight-inventory-searchbar__submit flex items-center gap-8 justify-center" type="submit"><img src="/assets/icons/search.svg" alt="" aria-hidden="true"><span>Search</span></button>
 </div>
 <div class="daynight-inventory-filter-group daynight-inventory-filterbar">
-<button class="daynight-inventory-filter-toggle daynight-inventory-quick-sidebar" type="button" data-daynight-open-sidebar aria-label="Филтри"><img src="/assets/icons/filter.svg" alt="" aria-hidden="true"></button>
-${renderQuickSelect('brand', 'Марка', 'Всички марки', brandOptions)}
-${renderQuickSelect('model', 'Модел', 'Всички модели', modelOptions)}
-${renderQuickSelect('price', 'Цена', 'Всички цени', priceOptions)}
-${renderQuickSelect('mileage', 'Пробег', 'Всички пробези', mileageOptions)}
-${renderQuickSelect('fuel', 'Гориво', 'Всички горива', fuelOptions)}
-${renderQuickSelect('transmission', 'Скорости', 'Всички скорости', transmissionOptions)}
-${renderQuickSelect('body', 'Купе', 'Всички купета', bodyOptions)}
-${renderQuickSelect('feature', 'Екстри', 'Всички екстри', featureOptions)}
+<button class="daynight-inventory-filter-toggle daynight-inventory-quick-sidebar" type="button" data-daynight-open-sidebar aria-label="Filters"><img src="/assets/icons/filter.svg" alt="" aria-hidden="true"></button>
+${renderQuickSelect('brand', 'Make', 'All makes', brandOptions)}
+${renderQuickSelect('model', 'Model', 'All models', modelOptions)}
+${renderQuickSelect('price', 'Price', 'Всички цени', priceOptions)}
+${renderQuickSelect('mileage', 'Mileage', 'Всички пробези', mileageOptions)}
+${renderQuickSelect('fuel', 'Fuel', 'Всички горива', fuelOptions)}
+${renderQuickSelect('transmission', 'Transmission', 'Всички скорости', transmissionOptions)}
+${renderQuickSelect('body', 'Body type', 'All body types', bodyOptions)}
+${renderQuickSelect('feature', 'Features', 'Всички екстри', featureOptions)}
 </div>
 <div class="daynight-inventory-type-pills" aria-label="Бърз избор">
 ${renderInventoryTypePills()}

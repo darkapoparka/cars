@@ -3,36 +3,36 @@
   import { featuredVehicles } from '$data/inventory';
 
   const budgetTiles = [
-    {
-      label: 'До 60 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur <= 60000).length} автомобила`,
-      href: '/listing-grid?price_max=60000',
-      image: featuredVehicles[1].image
-    },
-    {
-      label: '60–70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 60000 && vehicle.priceEur <= 70000).length} автомобила`,
-      href: '/listing-grid?price_min=60000&price_max=70000',
-      image: featuredVehicles[0].image
-    },
-    {
-      label: 'Над 70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 70000).length} автомобила`,
-      href: '/listing-grid?price_min=70000',
-      image: featuredVehicles[6].image
-    },
-    {
-      label: 'Виж всички',
-      detail: `${featuredVehicles.length} автомобила`,
-      href: '/listing-grid',
-      image: featuredVehicles[2].image
-    }
-  ] as const;
+  {
+    "label": "Up to £3,500",
+    "detail": "3 samples",
+    "href": "/listing-grid?price_max=3500",
+    "image": "/dealer/inventory/202601169196000-1.webp"
+  },
+  {
+    "label": "£3,501–£4,000",
+    "detail": "3 samples",
+    "href": "/listing-grid?price_min=3501&price_max=4000",
+    "image": "/dealer/inventory/202607073982268-1.webp"
+  },
+  {
+    "label": "Over £4,000",
+    "detail": "2 samples",
+    "href": "/listing-grid?price_min=4001",
+    "image": "/dealer/inventory/202607254508952-1.webp"
+  },
+  {
+    "label": "All samples",
+    "detail": "8 vehicles",
+    "href": "/listing-grid",
+    "image": "/dealer/inventory/202609075805069-1.webp"
+  }
+] as const;
 </script>
 
 <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">
   <div class="dn-mobile-section-heading">
-    <h2 id="mobile-budget-title">Изберете по бюджет</h2>
+    <h2 id="mobile-budget-title">Choose by budget</h2>
 
   </div>
 

@@ -10,7 +10,7 @@
 <section class="dn-about-team" aria-labelledby="about-team-title" data-demo-content="true">
   <div class="container">
     <header class="dn-about-team__heading">
-      <h2 id="about-team-title">Екипът</h2>
+      <h2 id="about-team-title">The team</h2>
       <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoTeamIntro}</p>
     </header>
 
@@ -20,7 +20,7 @@
           <div class="dn-about-team-card__media">
             <img
               src={member.image}
-              alt={`Демо профил: ${member.name}`}
+              alt={`Demo profile: ${member.name}`}
               width="450"
               height="450"
               loading="lazy"
@@ -33,10 +33,10 @@
               <p>{member.role}</p>
             </div>
             <div class="dn-about-team-card__actions">
-              <a {...phoneLinkAttributes} aria-label={`Обадете се на ${brand.name}`}>
+              <a {...phoneLinkAttributes} aria-label={`Call ${brand.name}`}>
                 <Icon name="phone" size={16} strokeWidth={1.8} />
               </a>
-              <a href={resolve('/contact')} aria-label={`Изпратете запитване до ${brand.name}`}>
+              <a href={resolve('/contact')} aria-label={`Send an enquiry to ${brand.name}`}>
                 <Icon name="mail" size={16} strokeWidth={1.8} />
               </a>
             </div>
@@ -210,10 +210,10 @@
   }
 
   @media (hover: none) {
-  
+
   }
 
   @media (prefers-reduced-motion: reduce) {
-  
+
   }
 </style>

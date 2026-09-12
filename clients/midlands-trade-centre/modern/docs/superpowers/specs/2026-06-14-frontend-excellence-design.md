@@ -26,7 +26,7 @@ The verification corrected several assumptions. The current state is **further a
 ## Architecture decisions (verified)
 
 ### D1 — Crawlable filtering via progressive enhancement (the core decision)
-`MarketplaceShell` is `'use client'` and mutates filters via `router.replace` (`marketplace-shell.tsx:232-243`); chips are `<button>`, so filter *state* is not in crawlable links (the result grid already is — `VehicleCard` uses real `<Link href={/listing/{slug}}>`). 
+`MarketplaceShell` is `'use client'` and mutates filters via `router.replace` (`marketplace-shell.tsx:232-243`); chips are `<button>`, so filter *state* is not in crawlable links (the result grid already is — `VehicleCard` uses real `<Link href={/listing/{slug}}>`).
 
 **Decision:** keep the slick client drawers as islands, but make the **discrete-facet** chips, category selector, and pagination render as real `<Link href={buildMarketplaceSearchHref(withSearchParamUpdates(filters, patch), basePath)}>`; change `commitFilters` from `router.replace` → `router.push` so the RSC re-runs `searchMarketplaceListings`. Range sliders / make-model drawer stay client, but their "Show results" navigates (push) rather than replaces. Result: Google and a JS-off user see real, paginated, filterable pages. *Rejected:* a parallel SSR results list (duplicates filter logic) and full-client SPA (kills SEO).
 

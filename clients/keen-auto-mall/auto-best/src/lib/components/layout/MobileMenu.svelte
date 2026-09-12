@@ -25,34 +25,30 @@
         oncancel={(event) => { event.preventDefault(); void closeMobile(); }}
         onclick={(event) => { if (event.target === event.currentTarget) void closeMobile(); }}
       >
-        <h2 class="dn-sr-only" id="dn-mobile-menu-title">Основна навигация</h2>
+        <h2 class="dn-sr-only" id="dn-mobile-menu-title">Main navigation</h2>
         <div class="dn-mobile-menu__header">
-          <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — начало`} onclick={() => void closeMobile(false)}>
+          <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — home`} onclick={() => void closeMobile(false)}>
             <img src={brand.logo} alt={brand.name} width="160" height="44" />
           </a>
         <button
           class="dn-mobile-menu__close"
           type="button"
           {@attach attachMobileCloseButton}
-          aria-label="Затворете менюто"
+          aria-label="Close menu"
           onclick={() => closeMobile()}
         ><MobileNavIcon name="close" size={20} /></button>
         </div>
         <div class="dn-mobile-menu__contact">
-          <a class="dn-mobile-menu__call" {...phoneLinkAttributes}><MobileNavIcon name="phone" size={20} /><strong>Обадете се</strong><span>{brand.phone}</span></a>
-          <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><strong>Локация</strong><span>{brand.city}</span></a>
+          <a class="dn-mobile-menu__call" {...phoneLinkAttributes}><MobileNavIcon name="phone" size={20} /><strong>Call us</strong><span>{brand.phone}</span></a>
+          <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><strong>Location</strong><span>{brand.city}</span></a>
         </div>
-        <nav aria-label="Мобилна навигация">
-          <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
+        <nav aria-label="Mobile navigation">
+          <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>All vehicles</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Buying advice</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>About us</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Contact and visits</span><Icon name="arrow-right" size={16} /></a>
         </nav>
-        <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
-          <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
-          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
-          <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
-        </div>
+        <div class="dn-mobile-menu__social" aria-label="Preview information"><p>Independent design preview. No message delivery is connected.</p></div>
         <p class="dn-mobile-menu__address">{brand.addressLine}</p>
       </dialog>
 <style>
@@ -65,7 +61,7 @@
     .dn-mobile-menu__contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
     .dn-mobile-menu__contact a { display: grid; grid-template-columns: 20px 1fr; align-items: center; gap: 6px 8px; padding: 16px 12px; border-radius: 14px; background: #f3f4f6; color: #202329; font-size: 14px; }
     .dn-mobile-menu__contact span { grid-column: 1 / -1; font-size: 14px; }
-    .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-red); color: #fff; }
+    .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-ink); color: #fff; }
     .dn-mobile-menu nav { margin-top: 16px; }
     .dn-mobile-menu nav a { min-height: 52px; gap: 12px; font-size: 15px; font-weight: 600; }
     .dn-mobile-menu nav a span { flex: 1; }

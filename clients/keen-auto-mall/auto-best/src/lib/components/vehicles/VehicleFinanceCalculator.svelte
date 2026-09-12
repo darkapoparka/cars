@@ -3,49 +3,49 @@
   import { resolve } from '$app/paths';
   import { formatVehiclePrice } from '$data/inventory';
 
-  let { priceEur, vehicleId }: { priceEur: number; vehicleId: number } = $props();
+  let { priceAmount, vehicleId }: { priceAmount: number; vehicleId: number } = $props();
 
   const financeTerms = [12, 24, 36, 48, 60] as const;
-  let downPaymentEur = $state(0);
+  let downPaymentAmount = $state(0);
   let termMonths = $state<(typeof financeTerms)[number]>(60);
 
-  let normalizedDownPayment = $derived(Math.min(Math.max(Number(downPaymentEur) || 0, 0), priceEur));
-  let financedPrincipal = $derived(Math.max(priceEur - normalizedDownPayment, 0));
+  let normalizedDownPayment = $derived(Math.min(Math.max(Number(downPaymentAmount) || 0, 0), priceAmount));
+  let financedPrincipal = $derived(Math.max(priceAmount - normalizedDownPayment, 0));
   let principalPerMonth = $derived(Math.round(financedPrincipal / termMonths));
 
   function normalizeDownPayment() {
-    downPaymentEur = normalizedDownPayment;
+    downPaymentAmount = normalizedDownPayment;
   }
 </script>
 
 <div class="dn-finance-calculator">
   <header>
-    <h2>Калкулатор за финансиране</h2>
-    <p>Променете първоначалната вноска и срока, за да видите оставащата главница.</p>
+    <h2>Finance calculator</h2>
+    <p>Adjust the down payment and term to see the remaining principal.</p>
   </header>
 
   <div class="dn-finance-calculator__fields">
     <label>
-      <span>Първоначална вноска</span>
+      <span>Down payment</span>
       <span class="dn-finance-calculator__input">
         <input
           type="number"
           min="0"
-          max={priceEur}
+          max={priceAmount}
           step="500"
-          bind:value={downPaymentEur}
+          bind:value={downPaymentAmount}
           onblur={normalizeDownPayment}
           aria-describedby="finance-disclaimer"
         />
-        <b>€</b>
+        <b>$</b>
       </span>
     </label>
 
     <label>
-      <span>Срок</span>
+      <span>Term</span>
       <select bind:value={termMonths} aria-describedby="finance-disclaimer">
         {#each financeTerms as term (term)}
-          <option value={term}>{term} месеца</option>
+          <option value={term}>{term} months</option>
         {/each}
       </select>
     </label>
@@ -53,21 +53,21 @@
 
   <dl class="dn-finance-calculator__result" aria-live="polite">
     <div>
-      <dt>Оставаща главница</dt>
+      <dt>Remaining principal</dt>
       <dd>{formatVehiclePrice(financedPrincipal)}</dd>
     </div>
     <div>
-      <dt>Главница / месец</dt>
+      <dt>Principal / month</dt>
       <dd>{formatVehiclePrice(principalPerMonth)}</dd>
     </div>
   </dl>
 
   <p id="finance-disclaimer" class="dn-finance-calculator__disclaimer">
-    Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
+    Estimate excluding interest, fees and insurance. This is not a credit offer.
   </p>
 
   <a href={resolve(vehicleContactHref(vehicleId, 'leasing'))}>
-    Обсъдете финансиране
+    Discuss financing
   </a>
 </div>
 

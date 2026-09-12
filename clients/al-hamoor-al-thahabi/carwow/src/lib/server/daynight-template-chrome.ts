@@ -63,37 +63,37 @@ const inventoryMegaMenuVehicles: readonly MegaMenuVehicleTile[] = [
 
 const inventoryMegaMenuLinkColumns: readonly MegaMenuColumn[] = [
 	{
-		title: 'Наличност',
+		title: 'Listing samples',
 		links: [
-			{ label: 'Всички автомобили', href: '/inventory' },
+			{ label: 'All samples', href: '/inventory' },
 			{ label: 'Автомобили на карта', href: '/inventory/map' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'Калкулатор', href: '/calculator' }
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'Budget calculator', href: '/calculator' }
 		]
 	},
 	{
 		title: 'По тип',
 		links: [
-			{ label: 'Седан', href: '/inventory?body=Седан' },
-			{ label: 'Джип', href: '/inventory?body=SUV' },
-			{ label: 'Купе', href: '/inventory?body=Купе' },
-			{ label: 'Комби', href: '/inventory?body=Комби' }
+			{ label: 'Sedan', href: '/inventory?body=Седан' },
+			{ label: 'SUV', href: '/inventory?body=SUV' },
+			{ label: 'Body type', href: '/inventory?body=Купе' },
+			{ label: 'Wagon', href: '/inventory?body=Комби' }
 		]
 	},
 	{
 		title: 'По гориво',
 		links: [
-			{ label: 'Дизел', href: '/inventory?fuel=Дизел' },
-			{ label: 'Бензин', href: '/inventory?fuel=Бензин' },
+			{ label: 'Diesel', href: '/inventory?fuel=Дизел' },
+			{ label: 'Petrol', href: '/inventory?fuel=Бензин' },
 			{ label: 'Газ/Бензин', href: '/inventory?fuel=Газ/Бензин' },
-			{ label: 'Електрически', href: '/inventory?fuel=Електрически' }
+			{ label: 'Electric', href: '/inventory?fuel=Електрически' }
 		]
 	},
 	{
 		title: 'Помощ при избор',
 		links: [
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'Услуги', href: '/services' },
+			{ label: 'Buying options', href: '/financing' },
+			{ label: 'Services', href: '/services' },
 			{ label: 'Често задавани въпроси', href: '/faq' },
 			{ label: 'Полезно за купувачи', href: '/blog' }
 		]
@@ -106,21 +106,21 @@ const footerLinkGroups: readonly FooterLinkGroup[] = [
 		links: [
 			{ label: 'За Day Night Auto', href: '/about' },
 			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
-			{ label: 'Екип', href: '/team' },
-			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{ label: 'Контакти', href: '/contact' }
+			{ label: 'Team', href: '/team' },
+			{ label: 'Reviews', href: '/reviews' },
+			{ label: 'Guides', href: '/blog' },
+			{ label: 'Contact', href: '/contact' }
 		]
 	},
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ label: 'Налични автомобили', href: '/inventory' },
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'Калкулатор', href: '/calculator' },
-			{ label: 'Продай или замени', href: '/sell-your-car' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'ЧЗВ', href: '/faq' }
+			{ label: 'Advertised samples', href: '/inventory' },
+			{ label: 'Buying options', href: '/financing' },
+			{ label: 'Budget calculator', href: '/calculator' },
+			{ label: 'Trade-in enquiry', href: '/sell-your-car' },
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'FAQ', href: '/faq' }
 		]
 	},
 	{
@@ -128,8 +128,8 @@ const footerLinkGroups: readonly FooterLinkGroup[] = [
 		links: [
 			{ label: 'Контакт за оглед', href: '/contact' },
 			{ label: 'Заявка за оценка', href: '/sell-your-car/request' },
-			{ label: 'Продай или замени', href: '/sell-your-car' },
-			{ label: 'ЧЗВ', href: '/faq' }
+			{ label: 'Trade-in enquiry', href: '/sell-your-car' },
+			{ label: 'FAQ', href: '/faq' }
 		]
 	}
 ] as const;
@@ -416,7 +416,7 @@ ${renderFooterSocialLinks()}
 <div>
 <p class="text-sm text-white font-weight-600 mb-8">Имате въпрос?</p>
 <div class="flex items-center gap-12">
-<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Day Night Auto">Свържете се</a>
+<a href="/contact" class="btn btn-line-1 btn-small" title="Свържете се със Day Night Auto">Get in touch</a>
 </div>
 </div>
 </div>
@@ -460,7 +460,7 @@ export function renderHeaderContact() {
 <strong>Свържете се веднага</strong>
 <span>Изберете обаждане или Viber чат.</span>
 <div class="daynight-contact-popover__actions">
-<a href="tel:${daynightSite.phone}">Обади се</a>
+<a href="tel:${daynightSite.phone}">Call</a>
 <a href="${viberHref}">Viber</a>
 </div>
 </div>
@@ -500,7 +500,7 @@ ${closeIcon()}
 <form class="search-modal__form daynight-header-search-form" action="/inventory" method="get" role="search">
 <div class="search-modal__input-wrapper">
 <input type="text" class="search-modal__input daynight-header-search__input" placeholder="Търси по марка, модел, година, гориво..." autocomplete="off" id="searchModalInput" name="q">
-<button type="submit" class="search-modal__submit" aria-label="Търси">
+<button type="submit" class="search-modal__submit" aria-label="Search">
 ${searchIcon()}
 </button>
 </div>
@@ -528,7 +528,7 @@ export function replaceHeaderSearch(html: string) {
 }
 
 function renderDropdownToggle(label: string, chevronStroke: string, href = '#') {
-	return `<a href="${href}">${label} 
+	return `<a href="${href}">${label}
 ${chevronDownIcon(chevronStroke)}
 </a>`;
 }
@@ -546,7 +546,7 @@ function renderMegaColumn(column: MegaMenuColumn) {
 	const links = column.links.map((link) => `<li>${renderLink(link, '')}</li>`).join('');
 
 	return `<div class="sub-menu-item-listing">
-<p class="h5 mb-16 menu-item-inner-title">${column.title} 
+<p class="h5 mb-16 menu-item-inner-title">${column.title}
 ${chevronDownIcon('#9FA1A4', 'chevron-down hidden lg-show')}
 </p>
 <ul class="flex flex-col gap-16 sub-menu-item-inner">${links}</ul>
@@ -560,7 +560,7 @@ function renderVehicleTile(vehicle: MegaMenuVehicleTile) {
 </span>
 <span class="daynight-mega-car__title">${vehicle.label}</span>
 <span class="daynight-mega-car__meta">${vehicle.meta}</span>
-<span class="daynight-mega-car__actions"><span>Виж</span><span>Детайли</span></span>
+<span class="daynight-mega-car__actions"><span>Виж</span><span>Details</span></span>
 </a>`;
 }
 
@@ -576,7 +576,7 @@ function renderInventoryMegaMenu(chevronStroke: string) {
 	const sideColumns = inventoryMegaMenuLinkColumns.map(renderMegaColumn).join('');
 
 	return `<li class="menu-item menu-item-has-children menu-item--static">
-${renderDropdownToggle('Автомобили', chevronStroke, '/inventory')}
+${renderDropdownToggle('Vehicles', chevronStroke, '/inventory')}
 <div class="sub-menu sub-menu--full sub-menu--listing daynight-mega daynight-mega--vehicles">
 <div class="daynight-mega__content">
 <div class="daynight-mega__vehicle-panel">
@@ -596,7 +596,7 @@ ${renderDropdownToggle('Автомобили', chevronStroke, '/inventory')}
 }
 
 function renderPublicNavItem(item: PublicNavLink, chevronStroke: string, includeMegaMenu: boolean) {
-	if (includeMegaMenu && item.label === 'Автомобили') {
+	if (includeMegaMenu && item.label === 'Vehicles') {
 		return renderInventoryMegaMenu(chevronStroke);
 	}
 

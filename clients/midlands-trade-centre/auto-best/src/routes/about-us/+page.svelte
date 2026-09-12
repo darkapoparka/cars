@@ -10,8 +10,8 @@
 </script>
 
 <svelte:head>
-  <title>За нас — {brand.name}</title>
-  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, собствен лизинг, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
+  <title>About us — {brand.name}</title>
+  <meta name="description" content={`${brand.name} — premium vehicles, vehicle enquiries, buying options, trade-ins and vehicle viewings by appointment in ${brand.city}.`} />
 </svelte:head>
 
 <AboutHero />
@@ -22,7 +22,7 @@
 <section class="dn-about-showroom dn-section" aria-labelledby="about-showroom-title">
   <div class="container">
     <div class="dn-about-showroom__heading">
-      <h2 id="about-showroom-title">Шоурум в {brand.city}</h2>
+      <h2 id="about-showroom-title">Showroom in {brand.city}</h2>
       <p>{brand.address}. {brand.appointment}.</p>
     </div>
     <ShowroomMap />

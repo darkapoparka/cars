@@ -29,9 +29,9 @@
 
 <header class={cn('site-header', variant === 'home' && 'site-header--home')}>
 	<div class="site-header__inner">
-		<a class="site-header__logo" href={resolve('/')} aria-label="Day Night Auto home">
+		<a class="site-header__logo" href={resolve('/')} aria-label={daynightSite.name + " home"}>
 			<img
-				src={variant === 'home' ? daynightSite.logoLight : daynightSite.logoDark}
+				src={variant === 'home' ? daynightSite.logoDark : daynightSite.logoLight}
 				alt={daynightSite.name}
 			/>
 		</a>
@@ -56,31 +56,31 @@
 			<a
 				class="header-pill header-pill--outline"
 				href={resolve('/admin/login')}
-				aria-label="Екип вход"
+				aria-label="Preview staff sign-in"
 			>
 				<User size={20} />
-				<span>Екип вход</span>
+				<span>Preview staff sign-in</span>
 			</a>
 			<a class="header-pill header-pill--solid" href={resolve('/sell-your-car/request')}>
 				<Plus size={20} />
-				<span>Продай автомобил</span>
+				<span>Prepare vehicle details</span>
 			</a>
 			<button
 				class="icon-button"
 				type="button"
-				aria-label="Търсене"
+				aria-label="Search"
 				onclick={() => (searchOpen = true)}
 			>
 				<Search size={23} />
 			</button>
-			<a class="icon-button icon-button--badge" href={resolve('/compare')} aria-label="Сравни">
+			<a class="icon-button icon-button--badge" href={resolve('/compare')} aria-label="Compare">
 				<GitCompare size={23} />
 				<span>{garage.compare.length}</span>
 			</a>
 			<a
 				class="icon-button icon-button--badge"
 				href={resolve('/favorites')}
-				aria-label="Запазени автомобили"
+				aria-label="Saved vehicles"
 			>
 				<Heart size={23} />
 				<span>{garage.favorites.length}</span>
@@ -88,7 +88,7 @@
 			<button
 				class="icon-button site-header__menu"
 				type="button"
-				aria-label="Меню"
+				aria-label="Menu"
 				onclick={() => (menuOpen = !menuOpen)}
 			>
 				{#if menuOpen}
@@ -102,32 +102,32 @@
 </header>
 
 {#if searchOpen}
-	<div class="search-modal" role="dialog" aria-modal="true" aria-label="Търсене">
+	<div class="search-modal" role="dialog" aria-modal="true" aria-label="Search">
 		<button
 			class="search-modal__backdrop"
 			type="button"
-			aria-label="Затвори търсенето"
+			aria-label="Close search"
 			onclick={() => (searchOpen = false)}
 		></button>
 		<div class="search-modal__panel">
 			<button
 				class="search-modal__close"
 				type="button"
-				aria-label="Затвори търсенето"
+				aria-label="Close search"
 				onclick={() => (searchOpen = false)}
 			>
 				<X size={24} />
 			</button>
-			<p class="eyebrow">Какъв автомобил търсите?</p>
+			<p class="eyebrow">What vehicle are you looking for?</p>
 			<form class="search-modal__form" onsubmit={submitSearch}>
 				<input
 					bind:value={searchQuery}
-					placeholder="Марка, модел, година, гориво..."
-					aria-label="Търсене в наличността"
+					placeholder="Make, model, year, fuel..."
+					aria-label="Search listing samples"
 				/>
 				<button class="btn btn-primary" type="submit">
 					<Search size={20} />
-					Търси
+					Search
 				</button>
 			</form>
 		</div>

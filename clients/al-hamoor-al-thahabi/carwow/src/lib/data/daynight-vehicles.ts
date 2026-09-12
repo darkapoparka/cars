@@ -1,14 +1,33 @@
-export type Car={slug:string;title:string;shortTitle:string;brand:string;model:string;year:number;mileage:string;mileageValue:number;fuel:string;transmission:string;body:string;doors:number;engine:string;power:string;drive:string;color:string;price:number;priceEur:string;priceBgn:string;monthly:string;image:string;gallery:string[];badges:string[];conditionLine:string;description:string;features:string[];highlights:string[];lot:string;sourceUrl:string};
-const raw=[
- ['mercedes-cla250-965722','Mercedes-Benz','CLA250 Premium + 2.0L',2025,22000,95000,'Sedan','https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html'],
- ['nissan-rogue-1005647','Nissan','Rogue Platinum',2023,56000,45000,'SUV','https://www.dubicars.com/2023-nissan-rogue-1005647.html'],
- ['toyota-prado-1010924','Toyota','Prado TX-L',2011,212000,56000,'SUV','https://www.dubicars.com/2011-toyota-prado-1010924.html'],
- ['chevrolet-malibu-1018774','Chevrolet','Malibu LT',2022,95000,32000,'Sedan','https://www.dubicars.com/2022-chevrolet-malibu-1018774.html'],
- ['toyota-rush-916417','Toyota','Rush EX 1.5L',2023,121000,43000,'SUV','https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html'],
- ['chevrolet-trax-906007','Chevrolet','Trax LT 1.8L AWD',2020,106000,14500,'SUV','https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html'],
- ['ford-figo-1017078','Ford','Figo Ambiente',2019,185000,13500,'Sedan','https://www.dubicars.com/2019-ford-figo-1017078.html'],
- ['nissan-sentra-969234','Nissan','Sentra SV 1.6L',2021,116000,23000,'Sedan','https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html']
-] as const;
-const money=(n:number)=>new Intl.NumberFormat('en-AE',{style:'currency',currency:'AED',maximumFractionDigits:0}).format(n);
-export const cars:Car[]=raw.map(([slug,brand,model,year,mileage,price,body,sourceUrl])=>({slug,title:`${brand} ${model} ${year}`,shortTitle:`${brand} ${model}`,brand,model,year,mileage:`${new Intl.NumberFormat('en-AE').format(mileage)} km`,mileageValue:mileage,fuel:'Petrol',transmission:'Automatic',body,doors:body==='Sedan'?4:5,engine:'—',power:'—',drive:'—',color:'—',price,priceEur:money(price),priceBgn:money(price),monthly:'Finance terms: ask dealer',image:'/dealer/vehicle-preview.svg',gallery:['/dealer/vehicle-preview.svg'],badges:['Dated sample'],conditionLine:'Advertised sample — confirm current availability and viewing location.',description:'Private design-preview sample based on a dated public listing. Confirm condition, price and location directly.',features:[],highlights:['Availability confirmation required'],lot:slug,sourceUrl}));
-export const daynightVehicles=cars; export type DayNightVehicle=Car; export type DayNightVehicleCondition='new'|'used'; export type DayNightVehicleAvailability='available'|'incoming'; export const getDayNightVehicleCondition=()=> 'used' as const; export const getDayNightVehicleAvailability=()=> 'available' as const; export const getDayNightVehicleBySlug=(slug:string)=>cars.find(c=>c.slug===slug); export const placeholderImageSlugs=new Set<string>(); export const featuredDayNightVehicles=cars.slice(0,6);
+import { dealerFacts, dealerStock } from './dealer';
+export type Car = {
+ slug:string;title:string;shortTitle:string;brand:string;model:string;year:number;
+ mileage:string;mileageValue:number;fuel:string;transmission:string;body:string;doors:number|null;
+ engine:string;power:string;drive:string;color:string;price:number;priceEur:string;priceBgn:string;
+ monthly:string;image:string;gallery:string[];badges:string[];conditionLine:string;description:string;
+ features:string[];highlights:string[];lot:string;sourceUrl:string;currency?:string;distanceUnit?:string;
+};
+/** Retained field priceEur is a compatibility label, not a converted EUR amount. */
+export const cars:Car[]=dealerStock.map(record=>({
+ slug:`${record.make}-${record.model}-${record.year}-${record.id}`.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),
+ title:`${record.year} ${record.make} ${record.model} ${record.trim}`,shortTitle:`${record.make} ${record.model} ${record.trim}`,
+ brand:record.make,model:record.model,year:record.year,
+ mileage:`${new Intl.NumberFormat(dealerFacts.locale).format(record.mileage)} ${record.distanceUnit==='mi'?'miles':'km'}`,
+ mileageValue:record.mileage,fuel:record.fuel,transmission:record.transmission,
+ body:record.body==='SUV/Crossover'?'SUV':record.body,doors:record.doors,
+ engine:'Not listed',power:'Not listed',drive:record.features.find(feature=>/4x2|4x4|all-wheel|front-wheel|rear-wheel/i.test(feature))??'Not listed',
+ color:record.color??'Not listed',price:record.price,currency:record.currency,distanceUnit:record.distanceUnit,
+ priceEur:new Intl.NumberFormat(dealerFacts.locale,{style:'currency',currency:record.currency,maximumFractionDigits:0}).format(record.price),priceBgn:'',
+ monthly:'No finance quote is provided by this preview',image:record.image,gallery:record.photos,
+ badges:['Dated sample'],conditionLine:dealerFacts.locationNote,
+ description:`${record.description} ${dealerFacts.locationNote} Source: ${record.sourceUrl}. Observed ${record.observedAt}.`,
+ features:record.features,highlights:['Advertised; confirm availability'],lot:`Source ${record.id}`,sourceUrl:record.sourceUrl
+}));
+export const daynightVehicles=cars;
+export type DayNightVehicle=Car;
+export type DayNightVehicleCondition='new'|'used';
+export type DayNightVehicleAvailability='available'|'incoming';
+export const getDayNightVehicleCondition=(_vehicle:Pick<Car,'mileageValue'>):DayNightVehicleCondition=>'used';
+export const getDayNightVehicleAvailability=(_vehicle:Pick<Car,'highlights'>):DayNightVehicleAvailability=>'available';
+export const getDayNightVehicleBySlug=(slug:string)=>cars.find(car=>car.slug===slug);
+export const placeholderImageSlugs=new Set<string>();
+export const featuredDayNightVehicles=cars.slice(0,6);

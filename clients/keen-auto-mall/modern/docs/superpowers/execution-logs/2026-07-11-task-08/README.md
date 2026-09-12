@@ -1,7 +1,7 @@
 # Task 08 execution handoff
 
-Date: 2026-07-11  
-Runtime: Node 22.22.0, pnpm 10.31.0  
+Date: 2026-07-11
+Runtime: Node 22.22.0, pnpm 10.31.0
 Approved source: `docs/superpowers/execution-proposals/2026-07-11-task-08-durable-marketplace-schema-and-migration-proposal.md`
 
 ## Delivered

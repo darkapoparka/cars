@@ -94,37 +94,37 @@ export const inventoryMegaMenuVehicleTiles = [
 
 export const inventoryMegaMenuLinkColumns = [
 	{
-		title: 'Наличност',
+		title: 'Listing samples',
 		links: [
-			{ label: 'Всички автомобили', href: '/inventory' },
+			{ label: 'All samples', href: '/inventory' },
 			{ label: 'Автомобили на карта', href: '/inventory/map' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'Калкулатор', href: '/calculator' }
+			{ label: 'Compare', href: '/compare' },
+			{ label: 'Budget calculator', href: '/calculator' }
 		]
 	},
 	{
 		title: 'По тип',
 		links: [
-			{ label: 'Седан', href: '/inventory?body=Седан' },
-			{ label: 'Джип', href: '/inventory?body=SUV' },
-			{ label: 'Купе', href: '/inventory?body=Купе' },
-			{ label: 'Комби', href: '/inventory?body=Комби' }
+			{ label: 'Sedan', href: '/inventory?body=Седан' },
+			{ label: 'SUV', href: '/inventory?body=SUV' },
+			{ label: 'Body type', href: '/inventory?body=Купе' },
+			{ label: 'Wagon', href: '/inventory?body=Комби' }
 		]
 	},
 	{
 		title: 'По гориво',
 		links: [
-			{ label: 'Дизел', href: '/inventory?fuel=Дизел' },
-			{ label: 'Бензин', href: '/inventory?fuel=Бензин' },
+			{ label: 'Diesel', href: '/inventory?fuel=Дизел' },
+			{ label: 'Petrol', href: '/inventory?fuel=Бензин' },
 			{ label: 'Газ/Бензин', href: '/inventory?fuel=Газ/Бензин' },
-			{ label: 'Електрически', href: '/inventory?fuel=Електрически' }
+			{ label: 'Electric', href: '/inventory?fuel=Електрически' }
 		]
 	},
 	{
 		title: 'Помощ при избор',
 		links: [
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'Услуги', href: '/services' },
+			{ label: 'Buying options', href: '/financing' },
+			{ label: 'Services', href: '/services' },
 			{ label: 'Често задавани въпроси', href: '/faq' },
 			{ label: 'Полезно за купувачи', href: '/blog' }
 		]

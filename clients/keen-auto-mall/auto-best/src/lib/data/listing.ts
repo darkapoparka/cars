@@ -20,7 +20,7 @@ export type ListingFilters = {
   sort: ListingSort;
 };
 
-const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Купе', Wagon: 'Комби', Sportback: 'Спортбек', Sedan: 'Седан', Crossover: 'Кросоувър', Hatchback: 'Хечбек', 'Pickup Truck': 'Пикап', Minivan: 'Миниван', Convertible: 'Кабриолет' };
+const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Coupe', Wagon: 'Wagon', Sportback: 'Sportback', Sedan: 'Sedan', Crossover: 'Crossover', Hatchback: 'Hatchback', 'Pickup Truck': 'Pickup truck', Minivan: 'Minivan', Convertible: 'Convertible' };
 export const bodyLabel = (body: string) => bodyLabels[body] ?? body;
 const availableValues = (key: 'make' | 'body' | 'fuel' | 'transmission') => ['', ...new Set(featuredVehicles.map(vehicle => vehicle[key]))];
 
@@ -52,17 +52,17 @@ export const listingFilterOptions = {
   bodies: availableValues('body'),
   fuels: availableValues('fuel'),
   transmissions: availableValues('transmission'),
-  versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
-  equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
-  years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
-  prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
-  mileages: ['', '50000', '75000', '100000'],
+  versions: ["", "2.0T CVT", "328i Convertible", "335i", "4.2 quattro Premium Plus", "LS", "LT Crew Cab", "LT Regular Cab", "S Plus"],
+  equipment: [...new Set(featuredVehicles.flatMap(vehicle => vehicle.equipment))] satisfies readonly VehicleEquipment[],
+  years: ['', ...new Set(featuredVehicles.map(vehicle => vehicle.year).sort().reverse())],
+  prices: ["", "5000", "10000", "15000", "20000", "25000", "30000"],
+  mileages: ['', '50000', '100000', '150000', '200000', '250000'],
   sorts: [
-    ['default', 'Препоръчани'],
-    ['newest', 'Най-нови'],
-    ['price-asc', 'Цена: ниска към висока'],
-    ['price-desc', 'Цена: висока към ниска'],
-    ['mileage-asc', 'Най-нисък пробег']
+    ['default', 'Recommended'],
+    ['newest', 'Newest'],
+    ['price-asc', 'Price: low to high'],
+    ['price-desc', 'Price: high to low'],
+    ['mileage-asc', 'Lowest mileage']
   ] as const
 } as const;
 
@@ -87,7 +87,7 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
     fuel: params.get('fuel')?.trim() ?? '',
     transmission: params.get('transmission')?.trim() ?? '',
     version: params.get('version')?.trim() ?? '',
-    equipment: [...new Set(params.getAll('equipment'))].filter((value): value is VehicleEquipment => equipmentValues.has(value as VehicleEquipment)),
+    equipment: [...new Set(featuredVehicles.flatMap(vehicle => vehicle.equipment))] satisfies readonly VehicleEquipment[],
     condition: requestedCondition === 'new' || requestedCondition === 'used' ? requestedCondition : '',
     yearMin: integerParam(params, 'year_min'),
     yearMax: integerParam(params, 'year_max'),
@@ -98,7 +98,7 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
   };
 };
 
-const normalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
+const normalize = (value: string) => value.toLocaleLowerCase('en-US').trim();
 
 export const listingModelsForMake = (make: string) => {
   const normalizedMake = normalize(make);
@@ -147,17 +147,17 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
     if (filters.condition && vehicle.condition !== filters.condition) return false;
     if (filters.yearMin !== null && vehicle.yearNumber < filters.yearMin) return false;
     if (filters.yearMax !== null && vehicle.yearNumber > filters.yearMax) return false;
-    if (filters.priceMin !== null && vehicle.priceEur < filters.priceMin) return false;
-    if (filters.priceMax !== null && vehicle.priceEur > filters.priceMax) return false;
-    if (filters.mileageMax !== null && vehicle.mileageKm > filters.mileageMax) return false;
+    if (filters.priceMin !== null && (vehicle.priceAmount === null || vehicle.priceAmount < filters.priceMin)) return false;
+    if (filters.priceMax !== null && (vehicle.priceAmount === null || vehicle.priceAmount > filters.priceMax)) return false;
+    if (filters.mileageMax !== null && vehicle.mileageValue > filters.mileageMax) return false;
     return true;
   });
 
   return [...filtered].sort((a, b) => {
     if (filters.sort === 'newest') return b.yearNumber - a.yearNumber;
-    if (filters.sort === 'price-asc') return a.priceEur - b.priceEur;
-    if (filters.sort === 'price-desc') return b.priceEur - a.priceEur;
-    if (filters.sort === 'mileage-asc') return a.mileageKm - b.mileageKm;
+    if (filters.sort === 'price-asc') return a.priceAmount === null ? 1 : b.priceAmount === null ? -1 : a.priceAmount - b.priceAmount;
+    if (filters.sort === 'price-desc') return a.priceAmount === null ? 1 : b.priceAmount === null ? -1 : b.priceAmount - a.priceAmount;
+    if (filters.sort === 'mileage-asc') return a.mileageValue - b.mileageValue;
     return a.id - b.id;
   });
 };

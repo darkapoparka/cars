@@ -25,7 +25,7 @@
 	const inventoryHref = resolve('/inventory');
 	const importHref = resolve('/contact?intent=import');
 	const sellHref = resolve('/sell-your-car');
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapHref = daynightSite.mapUrl;
 	const currentPath = $derived(appPage.url.pathname);
 	const garage = getOptionalGarageContext();
@@ -67,8 +67,8 @@
 	const menuItems = (
 		[
 			...publicNavItems.slice(0, 3),
-			{ href: '/favorites', label: 'Запазени' },
-			{ href: '/compare', label: 'Сравнение' },
+			{ href: '/favorites', label: 'Saved locally' },
+			{ href: '/compare', label: 'Compare' },
 			...publicNavItems.slice(3).filter((item) => item.href !== '/contact')
 		] as Array<{ href: MenuHref; label: string }>
 	).map((item) => ({
@@ -177,7 +177,7 @@
 
 <nav
 	class={keyboardOpen ? 'mobile-bottom-dock is-keyboard-open' : 'mobile-bottom-dock'}
-	aria-label="Основни действия"
+	aria-label="Main actions"
 >
 	<a
 		class={isHome ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
@@ -187,7 +187,7 @@
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<NavHomeIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
 		</span>
-		<span class="mobile-bottom-dock__label">Начало</span>
+		<span class="mobile-bottom-dock__label">Home</span>
 	</a>
 	<a
 		class={isInventory ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
@@ -197,7 +197,7 @@
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<NavCarIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
 		</span>
-		<span class="mobile-bottom-dock__label">Коли</span>
+		<span class="mobile-bottom-dock__label">Cars</span>
 	</a>
 	<a
 		class={isSell ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
@@ -207,7 +207,7 @@
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<NavSellIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
 		</span>
-		<span class="mobile-bottom-dock__label">Продай</span>
+		<span class="mobile-bottom-dock__label">Enquire</span>
 	</a>
 	<a
 		class={isImport ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
@@ -217,14 +217,14 @@
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<NavImportIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
 		</span>
-		<span class="mobile-bottom-dock__label">Внос</span>
+		<span class="mobile-bottom-dock__label">Vehicle enquiry</span>
 	</a>
 	<button
 		class={menuOpen || isMenuSection
 			? 'mobile-bottom-dock__item is-active'
 			: 'mobile-bottom-dock__item'}
 		type="button"
-		aria-label="Меню"
+		aria-label="Menu"
 		aria-controls="mobile-menu-sheet"
 		aria-expanded={menuOpen}
 		onclick={openMenu}
@@ -232,13 +232,13 @@
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<NavMenuIcon size={23} strokeWidth={2.2} absoluteStrokeWidth />
 		</span>
-		<span class="mobile-bottom-dock__label">Меню</span>
+		<span class="mobile-bottom-dock__label">Menu</span>
 	</button>
 </nav>
 
 <MobileDrawer bind:open={menuOpen} labelledBy="mobile-menu-title">
-	<section id="mobile-menu-sheet" class="mobile-menu-sheet" aria-label="Меню">
-		<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">Меню</h2>
+	<section id="mobile-menu-sheet" class="mobile-menu-sheet" aria-label="Menu">
+		<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">Menu</h2>
 		<div class="mobile-menu-sheet__head">
 			<div class="mobile-menu-sheet__brand">
 				<img
@@ -249,7 +249,7 @@
 			</div>
 			<button
 				type="button"
-				aria-label="Затвори"
+				aria-label="Close"
 				data-mobile-drawer-initial-focus
 				onclick={() => (menuOpen = false)}
 			>
@@ -265,14 +265,14 @@
 			>
 				<PhoneCall size={20} strokeWidth={2.2} />
 				<span>
-					<strong>Обади се</strong>
+					<strong>Call</strong>
 				</span>
 			</a>
 			<a
 				class="mobile-menu-sheet__quick-action mobile-menu-sheet__quick-action--map"
 				href={resolve('/contact')}
 				onclick={openMap}
-				aria-label="Отвори карта"
+				aria-label="Open map"
 			>
 				<MapPin size={20} strokeWidth={2.2} />
 				<span>
@@ -281,7 +281,7 @@
 			</a>
 		</div>
 
-		<nav class="mobile-menu-sheet__nav" aria-label="Навигация">
+		<nav class="mobile-menu-sheet__nav" aria-label="Navigation">
 			{#each menuItems as item (item.href)}
 				{@const RowIcon = item.icon}
 				<a

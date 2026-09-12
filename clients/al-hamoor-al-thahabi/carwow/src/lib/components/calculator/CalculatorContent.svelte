@@ -104,7 +104,7 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
@@ -116,7 +116,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Калкулатор</span>
+					<span>Budget calculator</span>
 				</li>
 			</ul>
 		</div>
@@ -170,7 +170,7 @@
 
 							<div>
 								<label class="mb-8" for="КалкулаторInterestRate"
-									>Срок <span class="text-muted">(месеци)</span></label
+									>Term <span class="text-muted">(месеци)</span></label
 								>
 								<input
 									id="КалкулаторInterestRate"
@@ -266,7 +266,7 @@
 							<span class="h7">{amount(estimate.valid ? estimate.price : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Първоначална вноска</span>
+							<span class="h7 text-secondary">Initial payment</span>
 							<span class="h7">{amount(estimate.valid ? -estimate.deposit : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
@@ -295,7 +295,7 @@
 					</div>
 
 					<div class="flex justify-between gap-8">
-						<p class="h4">Месечна вноска</p>
+						<p class="h4">Illustrative monthly amount</p>
 						<p class="h4">{amount(estimate.valid ? estimate.monthly : undefined)}</p>
 					</div>
 				</div>
@@ -324,7 +324,7 @@
 			</div>
 
 			<div class="flex justify-center">
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> View all </a>
 			</div>
 		</div>
 	</section>

@@ -24,7 +24,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
               {leadSite.city}
             </h2>
             <p className="mt-1 font-medium text-sm">
-              {isBg ? "Студентски град" : "Studentski grad"}
+              {isBg ? "Pompano Beach" : "Pompano Beach"}
             </p>
             <p className="mt-0.5 text-muted-foreground text-sm">
               {leadSite.address}, {leadSite.country}

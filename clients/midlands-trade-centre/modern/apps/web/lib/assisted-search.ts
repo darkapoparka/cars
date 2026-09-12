@@ -249,7 +249,7 @@ const chipLabelGetters: Record<string, ChipLabelGetter> = {
   body: (filters, isBg) => `${isBg ? "Купе" : "Body"}: ${filters.body}`,
   fuel: (filters, isBg) => `${isBg ? "Гориво" : "Fuel"}: ${filters.fuel}`,
   mileage: (filters, isBg) =>
-    `${isBg ? "До" : "Up to"} ${filters.mileageMax} km`,
+    `${isBg ? "До" : "Up to"} ${filters.mileageMax} miles`,
   price: getPriceChipLabel,
   seller: (filters, isBg) =>
     `${isBg ? "Продавач" : "Seller"}: ${filters.seller}`,

@@ -1,5 +1,5 @@
 {
-  "name": "day-and-night-autodeal",
+  "name": "auto-best",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -11,13 +11,18 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --threshold error",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
     "check:architecture": "node scripts/check-architecture.mjs",
     "check:assets": "node scripts/check-assets.mjs",
-    "validate": "npm run check:architecture && npm run check:assets && npm run check:domain && npm run check && npm run build",
-    "quality": "npm run validate && npm run smoke",
-    "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/desktop-discovery-smoke.mjs",
-    "check:domain": "node scripts/check-domain.mjs"
+    "validate": "npm run check:architecture && npm run check:docs && npm run check:assets && npm run check:domain && npm run check && npm run build",
+    "quality": "npm run validate && npm run smoke && npm run check:mobile && npm run check:resilience",
+    "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/desktop-discovery-smoke.mjs && node scripts/home-hierarchy-smoke.mjs",
+    "check:domain": "node scripts/check-domain.mjs",
+    "check:mobile": "node scripts/mobile-quality.mjs",
+    "check:resilience": "node scripts/mobile-resilience.mjs",
+    "check:docs": "node scripts/check-docs.mjs",
+    "visual:baseline": "node scripts/visual-regression.mjs baseline",
+    "visual:compare": "node scripts/visual-regression.mjs compare"
   },
   "dependencies": {
     "@fontsource-variable/onest": "5.3.1"
@@ -31,6 +36,12 @@
     "svelte": "^5.57.0",
     "svelte-check": "^4.7.6",
     "typescript": "^5.9.2",
-    "vite": "^8.2.2"
+    "vite": "^8.2.2",
+    "axe-core": "4.13.0"
+  },
+  "overrides": {
+    "@sveltejs/kit": {
+      "cookie": "0.7.2"
+    }
   }
 }

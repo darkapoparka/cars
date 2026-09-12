@@ -42,8 +42,8 @@ export function calculateMonthlyPayment(
 }
 
 /** Compact fuel label for tight spec chips — truncates the one long Bulgarian
- * fuel name ("Електрически" → "Електрич.") so it never clips the 2×2 spec grid.
+ * fuel name ("Electric" → "Електрич.") so it never clips the 2×2 spec grid.
  * The full word is kept on detail pages where there's room. */
 export function shortFuel(fuel: string): string {
-	return fuel === 'Електрически' ? 'Електрич.' : fuel;
+	return fuel === 'Electric' ? 'Електрич.' : fuel;
 }

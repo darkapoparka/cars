@@ -42,12 +42,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "The form is ready, but message delivery is not configured yet. Call Day & Night directly."
+          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Al Hamoor Al Thahabi.",
+          "The form is ready, but message delivery is not configured yet. Call Al Hamoor Al Thahabi directly."
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "Message delivery is not configured yet. Call Day & Night directly."
+          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Al Hamoor Al Thahabi.",
+          "Message delivery is not configured yet. Call Al Hamoor Al Thahabi directly."
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +59,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на Day & Night."
-        : "Запитването е изпратено до екипа на Day & Night.",
-      "Your request has been sent to the Day & Night team."
+        ? "Заявката е изпратена до екипа на Al Hamoor Al Thahabi."
+        : "Запитването е изпратено до екипа на Al Hamoor Al Thahabi.",
+      "Your request has been sent to the Al Hamoor Al Thahabi team."
     ),
   };
 };
@@ -168,7 +168,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Day & Night: ${topic.en}`,
+          subject: `Al Hamoor Al Thahabi: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

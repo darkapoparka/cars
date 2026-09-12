@@ -40,4 +40,3 @@ project settings and must be checked before the drill.
 
 References: [Neon branch restore](https://neon.com/docs/introduction/branch-restore)
 and [branching guide](https://neon.com/docs/guides/branching-intro).
-

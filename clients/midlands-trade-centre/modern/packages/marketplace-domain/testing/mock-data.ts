@@ -1,648 +1,461 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
+// Dated advertised snapshots. publishedAt carries observation time, not a verified first-advertised date.
 export const mockListings: VehicleListing[] = [
   {
-    id: "am-1001",
-    slug: "bmw-x5-m50d-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 BMW X5 M50d",
-    description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
-    price: { amount: 89_379, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1360, currency: "BGN" },
-    images: [
+    "id": "listing-202601169196000",
+    "slug": "bmw-5-series-gran-turismo-2011-202601169196000",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2011 BMW 5 Series Gran Turismo 530d SE GT Steptronic",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/bmw-5-series-gran-turismo-3-0-530d-se-gt-steptronic-euro-5-5dr-birmingham-202601169196000 Observed 2026-09-09.",
+    "price": {
+      "amount": 4900,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "Бял BMW X5 SUV",
+        "url": "/dealer/inventory/202601169196000-1.webp",
+        "alt": "2011 BMW 5 Series Gran Turismo 530d SE GT Steptronic — source photograph 1"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
+    },
+    "features": [
+      {
+        "bg": "Panoramic roof",
+        "en": "Panoramic roof"
       },
+      {
+        "bg": "Heated seats",
+        "en": "Heated seats"
+      },
+      {
+        "bg": "Navigation",
+        "en": "Navigation"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    features: [
-      { bg: "360° камери", en: "360° cameras" },
-      { bg: "Панорамен покрив", en: "Panoramic roof" },
-      { bg: "Head-up display", en: "Head-up display" },
-      { bg: "Обдухване на седалките", en: "Ventilated seats" },
-    ],
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "M50d",
-      year: 2020,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 167_000,
-      mileageUnit: "km",
-      enginePowerHp: 400,
-      colorExterior: "Черен металик",
+    "spec": {
+      "make": "BMW",
+      "model": "5 Series Gran Turismo",
+      "trim": "530d SE GT Steptronic",
+      "year": 2011,
+      "bodyType": "hatchback",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 149900,
+      "mileageUnit": "mi",
+      "colorExterior": "Black"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
     },
-    publishedAt: "2026-07-28T09:00:00.000Z",
-    promoted: true,
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1010",
-    slug: "mercedes-benz-gls-400d-4matic-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
-    description:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    price: { amount: 122_629, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1870, currency: "BGN" },
-    images: [
+    "id": "listing-202607073982268",
+    "slug": "bmw-x3-2015-202607073982268",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2015 BMW X3 20d M Sport xDrive",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/bmw-x3-2-0-20d-m-sport-xdrive-euro-6-ss-5dr-birmingham-202607073982268 Observed 2026-09-09.",
+    "price": {
+      "amount": 4400,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes SUV GLS",
-      },
+        "url": "/dealer/inventory/202607073982268-1.webp",
+        "alt": "2015 BMW X3 20d M Sport xDrive — source photograph 1"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Heated front seats",
+        "en": "Heated front seats"
+      },
+      {
+        "bg": "Navigation",
+        "en": "Navigation"
+      },
+      {
+        "bg": "Bluetooth",
+        "en": "Bluetooth"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "X3",
+      "trim": "20d M Sport xDrive",
+      "year": 2015,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 173000,
+      "mileageUnit": "mi",
+      "colorExterior": "Black"
     },
-    publishedAt: "2026-07-27T10:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1011",
-    slug: "bmw-750e-xdrive-m-sport-sofia-2024",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2024 BMW 750e xDrive M Sport",
-    description:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    price: { amount: 175_436, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2680, currency: "BGN" },
-    images: [
+    "id": "listing-202607254508952",
+    "slug": "toyota-aygo-2021-202607254508952",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2021 Toyota Aygo 1.0 VVT-i x-play",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/toyota-aygo-1-0-vvt-i-x-play-euro-6-5dr-safety-sense-birmingham-202607254508952 Observed 2026-09-09.",
+    "price": {
+      "amount": 4000,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80",
-        alt: "BMW 7 Series",
-      },
+        "url": "/dealer/inventory/202607254508952-1.webp",
+        "alt": "2021 Toyota Aygo 1.0 VVT-i x-play — source photograph 1"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "7 Series",
-      trim: "750e xDrive M Sport",
-      year: 2024,
-      bodyType: "sedan",
-      fuelType: "plug_in_hybrid",
-      transmission: "automatic",
-      mileageValue: 40_000,
-      mileageUnit: "km",
-      enginePowerHp: 489,
-      colorExterior: "Черен сапфир",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Reverse camera",
+        "en": "Reverse camera"
+      },
+      {
+        "bg": "Air conditioning",
+        "en": "Air conditioning"
+      },
+      {
+        "bg": "Bluetooth",
+        "en": "Bluetooth"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Aygo",
+      "trim": "1.0 VVT-i x-play",
+      "year": 2021,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 117000,
+      "mileageUnit": "mi"
     },
-    publishedAt: "2026-07-26T08:40:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1012",
-    slug: "mercedes-benz-e-63-s-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz E 63 S AMG",
-    description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    price: { amount: 165_657, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2530, currency: "BGN" },
-    images: [
+    "id": "listing-202609075805069",
+    "slug": "audi-q3-2012-202609075805069",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2012 Audi Q3 2.0 TDI S line",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/audi-q3-2-0-tdi-s-line-euro-5-ss-5dr-birmingham-202609075805069 Observed 2026-09-09.",
+    "price": {
+      "amount": 3900,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1609703048009-d3576872b32c?w=1200&q=80",
-        alt: "Mercedes-Benz E-Class sedan",
-      },
+        "url": "/dealer/inventory/202609075805069-1.webp",
+        "alt": "2012 Audi Q3 2.0 TDI S line — source photograph 1"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "E-Class",
-      trim: "E 63 S AMG",
-      year: 2021,
-      bodyType: "sedan",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 96_000,
-      mileageUnit: "km",
-      enginePowerHp: 612,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Sports leather interior",
+        "en": "Sports leather interior"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Q3",
+      "trim": "2.0 TDI S line",
+      "year": 2012,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 139900,
+      "mileageUnit": "mi"
     },
-    publishedAt: "2026-07-25T13:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1013",
-    slug: "mercedes-benz-cls-400d-4matic-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 Mercedes-Benz CLS 400d 4MATIC",
-    description:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    price: { amount: 73_733, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1125, currency: "BGN" },
-    images: [
+    "id": "listing-202608275484997",
+    "slug": "nissan-qashqai-2017-202608275484997",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2017 Nissan Qashqai 1.6 dCi Tekna",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/nissan-qashqai-1-6-dci-tekna-euro-6-ss-5dr-birmingham-202608275484997 Observed 2026-09-09.",
+    "price": {
+      "amount": 3900,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1624085568108-36410cfe4d24?w=1200&q=80",
-        alt: "Mercedes CLS",
-      },
+        "url": "/dealer/inventory/202608275484997-1.webp",
+        "alt": "2017 Nissan Qashqai 1.6 dCi Tekna — source photograph 1"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "CLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2020,
-      bodyType: "coupe",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 171_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Сив металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "1.6 dCi Tekna",
+      "year": 2017,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 153000,
+      "mileageUnit": "mi"
     },
-    publishedAt: "2026-07-24T15:05:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1014",
-    slug: "audi-q8-50-tdi-quattro-s-line-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Audi Q8 50 TDI quattro S line",
-    description:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    price: { amount: 99_159, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1515, currency: "BGN" },
-    images: [
+    "id": "listing-202609055756720",
+    "slug": "subaru-legacy-2004-202609055756720",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2004 Subaru Legacy 3.0 R Sport Tourer",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/subaru-legacy-3-0-r-sport-tourer-5dr-birmingham-202609055756720 Observed 2026-09-09.",
+    "price": {
+      "amount": 3500,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
-        alt: "Audi Q8",
-      },
+        "url": "/dealer/inventory/202609055756720-1.webp",
+        "alt": "2004 Subaru Legacy 3.0 R Sport Tourer — source photograph 1"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Audi",
-      model: "Q8",
-      trim: "50 TDI quattro S line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 163_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "Panoramic sunroof",
+        "en": "Panoramic sunroof"
+      },
+      {
+        "bg": "Heated seats",
+        "en": "Heated seats"
+      },
+      {
+        "bg": "Cruise control",
+        "en": "Cruise control"
+      }
+    ],
+    "spec": {
+      "make": "Subaru",
+      "model": "Legacy",
+      "trim": "3.0 R Sport Tourer",
+      "year": 2004,
+      "bodyType": "wagon",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 124800,
+      "mileageUnit": "mi",
+      "colorExterior": "Silver"
     },
-    publishedAt: "2026-07-23T09:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1002",
-    slug: "mercedes-benz-gle-400d-coupe-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLE 400d Coupe",
-    description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    price: { amount: 124_584, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1900, currency: "BGN" },
-    images: [
+    "id": "listing-202608255427907",
+    "slug": "ford-mondeo-2012-202608255427907",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2012 Ford Mondeo 2.2 TDCi Titanium X Sport",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/ford-mondeo-2-2-tdci-titanium-x-sport-euro-5-5dr-birmingham-202608255427907 Observed 2026-09-09.",
+    "price": {
+      "amount": 3400,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE SUV",
-      },
+        "url": "/dealer/inventory/202608255427907-1.webp",
+        "alt": "2012 Ford Mondeo 2.2 TDCi Titanium X Sport — source photograph 1"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "400d Coupe 4MATIC AMG",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Ford",
+      "model": "Mondeo",
+      "trim": "2.2 TDCi Titanium X Sport",
+      "year": 2012,
+      "bodyType": "wagon",
+      "fuelType": "diesel",
+      "transmission": "manual",
+      "mileageValue": 141000,
+      "mileageUnit": "mi"
     },
-    publishedAt: "2026-07-22T11:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1003",
-    slug: "mercedes-benz-gle-53-amg-coupe-sofia-2022",
-    category: "lease",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    description:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    price: { amount: 140_231, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2140, currency: "BGN" },
-    images: [
+    "id": "listing-202604141546870",
+    "slug": "vauxhall-insignia-2012-202604141546870",
+    "category": "car",
+    "dealerOrgId": "dealer-midlands-trade-centre",
+    "status": "active",
+    "title": "2012 Vauxhall Insignia 1.8 16V SRi",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly. All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.  Source listing: https://www.midlandstradecentreltd.co.uk/used-cars/vauxhall-insignia-1-8-16v-sri-euro-5-5dr-birmingham-202604141546870 Observed 2026-09-09.",
+    "price": {
+      "amount": 2800,
+      "currency": "GBP"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE 53 AMG SUV",
-      },
+        "url": "/dealer/inventory/202604141546870-1.webp",
+        "alt": "2012 Vauxhall Insignia 1.8 16V SRi — source photograph 1"
+      }
     ],
-    badges: ["used", "lease"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "53 AMG Coupe 4MATIC",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 105_000,
-      mileageUnit: "km",
-      enginePowerHp: 435,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-21T08:15:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1004",
-    slug: "mercedes-benz-s-350d-long-amg-sofia-2019",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2019 Mercedes-Benz S 350d Long AMG",
-    description:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    price: { amount: 83_512, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1275, currency: "BGN" },
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?w=1200&q=80",
-        alt: "Mercedes-Benz S-Class sedan",
-      },
+    "badges": [
+      "used"
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "S-Class",
-      trim: "S 350d Long AMG Optic",
-      year: 2019,
-      bodyType: "sedan",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 145_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "location": {
+      "city": "Birmingham",
+      "country": "United Kingdom"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [],
+    "spec": {
+      "make": "Vauxhall",
+      "model": "Insignia",
+      "trim": "1.8 16V SRi",
+      "year": 2012,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 64500,
+      "mileageUnit": "mi",
+      "colorExterior": "Black"
     },
-    publishedAt: "2026-07-20T14:45:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1005",
-    slug: "mercedes-benz-v-250d-vip-business-sofia-2018",
-    category: "van",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2018 Mercedes-Benz V 250d VIP Business",
-    description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
-      {
-        url: "/lead-sell-van-v1.png",
-        alt: "V-Class van",
-      },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "V-Class",
-      trim: "V 250d VIP Business",
-      year: 2018,
-      bodyType: "van",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 44_500,
-      mileageUnit: "km",
-      enginePowerHp: 190,
-      colorExterior: "Черен",
+    "seller": {
+      "id": "dealer-midlands-trade-centre",
+      "type": "dealer",
+      "displayName": "Midlands Trade Centre Limited",
+      "verificationStatus": "unverified",
+      "city": "Birmingham",
+      "logoUrl": "/dealer/logo-light.png"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-19T10:20:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1006",
-    slug: "range-rover-sport-svr-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Range Rover Sport SVR",
-    description:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1679506640590-f0152786dff0?w=1200&q=80",
-        alt: "Range Rover Sport",
-      },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Land Rover",
-      model: "Range Rover Sport",
-      trim: "SVR",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 155_000,
-      mileageUnit: "km",
-      enginePowerHp: 600,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-18T12:10:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1007",
-    slug: "bmw-430i-xdrive-gran-coupe-sofia-2023",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2023 BMW 430i xDrive Gran Coupe",
-    description:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    price: { amount: 81_556, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1245, currency: "BGN" },
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=1200&q=80",
-        alt: "BMW 4 Series",
-      },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "4 Series",
-      trim: "430i xDrive Gran Coupe M Sport",
-      year: 2023,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 35_000,
-      mileageUnit: "km",
-      enginePowerHp: 245,
-      colorExterior: "Син металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-17T16:00:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1008",
-    slug: "bmw-m4-competition-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 BMW M4 Competition",
-    description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    price: { amount: 128_496, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1960, currency: "BGN" },
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80",
-        alt: "Червено BMW M4 Competition пред модерен шоурум",
-      },
-    ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "M4",
-      trim: "Competition",
-      year: 2021,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 165_000,
-      mileageUnit: "km",
-      enginePowerHp: 510,
-      colorExterior: "Червен металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-16T07:40:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1009",
-    slug: "bmw-x5-xdrive40d-berlin-2022",
-    category: "car",
-    status: "active",
-    title: "2022 BMW X5 xDrive40d",
-    description:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    price: { amount: 112_456, currency: "BGN" },
-    priceType: "fixed",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "BMW X5 SUV в градска среда",
-      },
-    ],
-    badges: ["used"],
-    location: { city: "Berlin", region: "Berlin", country: "Germany" },
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "xDrive40d",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 28_531,
-      mileageUnit: "km",
-      enginePowerHp: 340,
-      colorExterior: "Carbon Black",
-    },
-    seller: {
-      id: "import-demo-supplier",
-      type: "dealer",
-      displayName: "AutoMarket Import Demo",
-      verificationStatus: "verified",
-      city: "Hamburg",
-    },
-    supply: {
-      convertedPrice: { amount: 112_456, currency: "BGN" },
-      delivery: {
-        destinationCountryCode: "BG",
-        eligibleCountryCodes: ["BG", "DE", "RO"],
-        status: "quote_required",
-      },
-      documentCount: 4,
-      landedCostStatus: "quote_required",
-      nativePrice: { amount: 57_499, currency: "EUR" },
-      origin: {
-        city: "Berlin",
-        country: "Germany",
-        countryCode: "DE",
-        region: "Berlin",
-      },
-      priceConversion: {
-        convertedAt: "2026-07-12T18:00:00.000Z",
-        status: "converted_estimate",
-      },
-      provenance: {
-        externalReference: "DEMO-1009",
-        freshUntil: "2026-07-14T18:00:00.000Z",
-        freshnessStatus: "fresh",
-        lastConfirmedAt: "2026-07-12T18:00:00.000Z",
-        sourceDisplayName: "Authorized demo feed",
-        sourceKind: "https_feed",
-      },
-      supplier: {
-        kybStatus: "verified",
-        orgType: "importer",
-        trustStatus: "verified",
-        verifiedImporter: true,
-      },
-    },
-    publishedAt: "2026-07-12T18:00:00.000Z",
-    promoted: false,
-  },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
+  }
 ];
 
 const matchesText = (listing: VehicleListing, query: string) => {
@@ -677,15 +490,15 @@ const createListingPredicates = (
   (listing) =>
     !filters.origin ||
     listing.supply?.origin.countryCode === filters.origin ||
-    (filters.origin === "BG" &&
-      (listing.location.country === "Bulgaria" ||
-        listing.location.country === "България")),
+    (filters.origin === "GB" &&
+      (listing.location.country === "United Kingdom" ||
+        listing.location.country === "United Kingdom")),
   (listing) =>
     !filters.deliverTo ||
     listing.supply?.delivery.eligibleCountryCodes.includes(filters.deliverTo) ||
-    (filters.deliverTo === "BG" &&
-      (listing.location.country === "Bulgaria" ||
-        listing.location.country === "България")),
+    (filters.deliverTo === "GB" &&
+      (listing.location.country === "United Kingdom" ||
+        listing.location.country === "United Kingdom")),
   (listing) => !filters.currency || listing.price.currency === filters.currency,
   (listing) =>
     filters.priceMin === undefined || listing.price.amount >= filters.priceMin,
@@ -726,9 +539,7 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {
-  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
-};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
 
 export const getMockListingBySlug = (slug: string) => {
   const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
@@ -760,7 +571,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
+export const mockSavedListingIds: string[] = [];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -775,48 +586,7 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [
-  {
-    id: "saved-search-premium-suv",
-    title: "Premium SUVs under 100k",
-    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
-    filters: {
-      body: "suv",
-      category: "car",
-      priceMax: 100_000,
-      seller: "dealer",
-    },
-    cadence: "daily",
-    newMatches: 3,
-    lastRunAt: "2026-06-06T07:00:00.000Z",
-  },
-  {
-    id: "saved-search-lease-ev",
-    title: "Lease-ready EVs",
-    description: "Electric lease offers with automatic transmission.",
-    filters: {
-      category: "lease",
-      fuel: "electric",
-      transmission: "automatic",
-    },
-    cadence: "instant",
-    newMatches: 1,
-    lastRunAt: "2026-06-07T06:30:00.000Z",
-  },
-  {
-    id: "saved-search-family-varna",
-    title: "Family cars near Varna",
-    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
-    filters: {
-      category: "car",
-      location: "Varna",
-      mileageMax: 90_000,
-    },
-    cadence: "weekly",
-    newMatches: 0,
-    lastRunAt: "2026-06-03T08:00:00.000Z",
-  },
-];
+export const mockSavedSearches: MockSavedSearch[] = [];
 
 const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
   "am-1001": "active",
@@ -851,48 +621,7 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [
-  {
-    buyerName: "Nikolay Petrov",
-    id: "lead-1001",
-    intent: "finance",
-    listingId: "am-1001",
-    listingTitle: "2020 BMW X5 M50d",
-    receivedAt: "2026-06-07T07:30:00.000Z",
-    source: "listing",
-    status: "new",
-  },
-  {
-    buyerName: "Elena Dimitrova",
-    id: "lead-1002",
-    intent: "test_drive",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    receivedAt: "2026-06-06T15:20:00.000Z",
-    source: "saved_search",
-    status: "contacted",
-  },
-  {
-    buyerName: "Martin Georgiev",
-    id: "lead-1003",
-    intent: "availability",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    receivedAt: "2026-06-05T12:10:00.000Z",
-    source: "dealer_profile",
-    status: "qualified",
-  },
-  {
-    buyerName: "Iva Marinova",
-    id: "lead-1004",
-    intent: "trade_in",
-    listingId: "am-1005",
-    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
-    receivedAt: "2026-06-04T09:45:00.000Z",
-    source: "listing",
-    status: "closed",
-  },
-];
+export const mockDealerLeads: MockDealerLead[] = [];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -930,64 +659,7 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [
-  {
-    id: "report-1001",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    reason: "incorrect_details",
-    details:
-      "Buyer says lease terms in the message thread do not match the listing price.",
-    reporter: "Elena Dimitrova",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
-    createdAt: "2026-06-07T09:20:00.000Z",
-  },
-  {
-    id: "report-1002",
-    listingId: "am-1006",
-    listingTitle: "2021 Range Rover Sport SVR",
-    reason: "duplicate",
-    details:
-      "System found matching photos and mileage on another active dealer listing.",
-    reporter: "System",
-    source: "system_flag",
-    status: "reviewing",
-    severity: "medium",
-    flags: ["Photo reuse", "Similar VIN pattern"],
-    createdAt: "2026-06-07T06:45:00.000Z",
-  },
-  {
-    id: "report-1003",
-    listingId: "am-1002",
-    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
-    reason: "seller_behavior",
-    details:
-      "Reporter says seller asked to move payment to an unverified channel.",
-    reporter: "Nikolay Petrov",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Payment risk", "Private seller"],
-    createdAt: "2026-06-06T17:30:00.000Z",
-  },
-  {
-    id: "report-1004",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    reason: "prohibited_content",
-    details:
-      "Admin review flagged promotional copy that may overstate warranty coverage.",
-    reporter: "Admin review",
-    source: "admin_review",
-    status: "dismissed",
-    severity: "low",
-    flags: ["Copy review"],
-    createdAt: "2026-06-05T12:10:00.000Z",
-  },
-];
+export const mockModerationReports: MockModerationReport[] = [];
 
 export interface MockTrustReview {
   city: string;
@@ -1001,52 +673,7 @@ export interface MockTrustReview {
   submittedAt: string;
 }
 
-export const mockTrustReviews: MockTrustReview[] = [
-  {
-    entityId: "dealer-black-sea-ev",
-    entityName: "Black Sea EV",
-    entityType: "dealer",
-    city: "Varna",
-    status: "pending",
-    riskLevel: "medium",
-    linkedListings: 1,
-    documents: ["Business registration", "VAT certificate", "Dealer address"],
-    submittedAt: "2026-06-07T08:00:00.000Z",
-  },
-  {
-    entityId: "seller-124",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Plovdiv",
-    status: "pending",
-    riskLevel: "high",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-06T16:15:00.000Z",
-  },
-  {
-    entityId: "dealer-trakia-auto",
-    entityName: "Trakia Auto",
-    entityType: "dealer",
-    city: "Stara Zagora",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["Business registration", "Dealer address"],
-    submittedAt: "2026-06-05T10:30:00.000Z",
-  },
-  {
-    entityId: "seller-882",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Varna",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-04T14:40:00.000Z",
-  },
-];
+export const mockTrustReviews: MockTrustReview[] = [];
 
 export interface MockAuditLogEntry {
   action: string;

@@ -119,7 +119,7 @@ export const marketplaceSearchSchema = z
         priceMax !== undefined ||
         filters.sort === "price_asc" ||
         filters.sort === "price_desc"
-          ? "BGN"
+          ? "USD"
           : undefined),
     };
   });

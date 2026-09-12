@@ -31,7 +31,7 @@
 	<section class="desktop-favorites__hero" aria-labelledby="favorites-title">
 		<div class="desktop-favorites__hero-inner">
 			<div class="desktop-favorites__hero-copy">
-				<p class="desktop-favorites__eyebrow">Любими</p>
+				<p class="desktop-favorites__eyebrow">Favorites</p>
 				<h1 id="favorites-title">Запазени автомобили</h1>
 				<p>
 					{vehicles.length
@@ -84,7 +84,7 @@
 					<h2>Автомобили, които може да разгледате</h2>
 				</div>
 				<a class="desktop-favorites__section-link" href={resolve('/inventory')}>
-					Всички автомобили
+					All samples
 				</a>
 			</div>
 			<div class="desktop-favorites__grid">

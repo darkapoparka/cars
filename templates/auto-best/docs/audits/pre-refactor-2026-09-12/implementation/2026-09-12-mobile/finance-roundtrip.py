@@ -1,0 +1,23 @@
+from pathlib import Path
+root = Path('J:/cars/templates/auto-best')
+def replace(file, old, new):
+    p = root / file
+    source = p.read_text(encoding='utf-8')
+    assert source.count(old) == 1, (file, old[:70], source.count(old))
+    p.write_text(source.replace(old, new), encoding='utf-8')
+replace('src/routes/listing-detail-v1/[id]/+page.ts', "import { listReturn }", "import { parseFinanceSelection } from '$data/finance';\nimport { listReturn }")
+replace('src/routes/listing-detail-v1/[id]/+page.ts', 'vehicle, recommendations };', 'vehicle, recommendations, finance: parseFinanceSelection(url.searchParams, vehicle.priceEur) };')
+replace('src/routes/listing-detail-v1/[id]/+page.svelte', '<VehicleFinancing priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />', '<VehicleFinancing priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} initialSelection={data.finance} />')
+replace('src/lib/components/vehicles/VehicleFinancing.svelte', "  import { featureArtwork }", "  import type { FinanceSelection } from '$data/finance';\n  import { featureArtwork }")
+replace('src/lib/components/vehicles/VehicleFinancing.svelte', 'let { priceEur, vehicleId }: { priceEur: number; vehicleId: number }', 'let { priceEur, vehicleId, initialSelection = null }: { priceEur: number; vehicleId: number; initialSelection?: FinanceSelection | null }')
+replace('src/lib/components/vehicles/VehicleFinancing.svelte', '{priceEur} {vehicleId} showHeading={false}', '{priceEur} {vehicleId} {initialSelection} showHeading={false}')
+replace('src/lib/components/vehicles/VehicleFinanceCalculator.svelte', 'financePolicy, calculateFinance }', 'financePolicy, calculateFinance, type FinanceSelection }')
+replace('src/lib/components/vehicles/VehicleFinanceCalculator.svelte', 'let { priceEur, vehicleId, showHeading = true }: { priceEur: number; vehicleId: number; showHeading?: boolean }', 'let { priceEur, vehicleId, showHeading = true, initialSelection = null }: { priceEur: number; vehicleId: number; showHeading?: boolean; initialSelection?: FinanceSelection | null }')
+replace('src/lib/components/vehicles/VehicleFinanceCalculator.svelte', 'let downPaymentEur = $state(0);', 'let downPaymentEur = $derived(initialSelection?.downPaymentEur ?? 0);')
+replace('src/lib/components/vehicles/VehicleFinanceCalculator.svelte', 'let termMonths = $state<number>(financePolicy.defaultTermMonths);', 'let termMonths = $derived<number>(initialSelection?.termMonths ?? financePolicy.defaultTermMonths);')
+replace('src/lib/components/company/ContactIntent.svelte', "  import { formatVehiclePrice", "  import { resolve } from '$app/paths';\n  import { formatVehiclePrice")
+replace('src/lib/components/company/ContactIntent.svelte', '<p>{financePolicy.disclaimer}</p>', '<p>{financePolicy.disclaimer}</p>\n        {#if vehicle}<a class="dn-contact-finance__edit" href={`${resolve(\'/listing-detail-v1/[id]\', { id: String(vehicle.id) })}?${new URLSearchParams({ down_payment: String(finance.downPaymentEur), term: String(finance.termMonths) })}`}>Промени вноската и срока <Icon name="arrow-right" size={18} /></a>{/if}')
+replace('src/lib/components/company/ContactIntent.svelte', '<style>', '<style>\n  .dn-contact-finance__edit { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; margin-top: 8px; color: var(--dn-ink); font-weight: 600; font-size: var(--dn-text-meta); }')
+replace('src/lib/components/company/ContactVehicle.svelte', "  import Icon from", "  import { imageMedia } from '$data/image-media';\n  import Icon from")
+replace('src/lib/components/company/ContactVehicle.svelte', 'src={vehicle.image} alt="" width="120" height="90"', 'src={imageMedia(vehicle.image).src} srcset={imageMedia(vehicle.image).srcset} sizes="88px" alt="" width="120" height="90"')
+print('Finance selection can now make a validated round trip; contact thumbnail uses responsive exports.')

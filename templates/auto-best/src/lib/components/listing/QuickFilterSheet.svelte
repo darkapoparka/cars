@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { cleanFilterFormData as clean } from '$lib/ui/forms';
+  import { invalidRange } from '$data/filter-fields';
   import { preserveScrollOffset } from '$lib/ui/overlay';
   import { onDestroy } from 'svelte';
   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
@@ -33,7 +35,7 @@
   const searchLabel = $derived(field === 'make' ? 'Търси марка' : field === 'model' ? 'Търси модел' : `Търси в ${title.toLocaleLowerCase('bg-BG')}`);
   const optionLabel = (option: string) => field === 'body' ? bodyLabel(option) || 'Всички' : field === 'sort' ? options.sorts.find(([value]) => value === (option || 'default'))?.[1] ?? option : option === 'new' ? 'Нови' : option === 'used' ? 'Употребявани' : option || 'Всички';
   const matchesSearch = (option: string) => search.trim().toLocaleLowerCase('bg-BG').split(/\s+/).every(term => optionLabel(option).toLocaleLowerCase('bg-BG').includes(term));
-  const invalid = $derived(range && minimum !== '' && maximum !== '' && Number(minimum) > Number(maximum));
+  const invalid = $derived(range && invalidRange(minimum, maximum));
   const choices = $derived.by((): readonly string[] => {
     switch (field) {
       case 'sort': return options.sorts.map(([value]) => value === 'default' ? '' : value);
@@ -50,6 +52,7 @@
   });
   const visibleChoices = $derived(choices.filter(matchesSearch));
   const preserved = $derived([...params.entries()].filter(([key]) => {
+    if (field === 'price' && key === 'price_min_exclusive') return false;
     if (range) return key !== `${field}_min` && key !== `${field}_max`;
     if (field === 'make' && key === 'model' && selected !== params.get('make')) return false;
     return key !== field;
@@ -87,11 +90,7 @@
     }
     dialog.close();
   }
-  function clean(event: FormDataEvent) {
-    for (const key of new Set(event.formData.keys())) {
-      if (event.formData.getAll(key).every(value => value === '')) event.formData.delete(key);
-    }
-  }
+
 </script>
 
 {@render children(open, opened)}

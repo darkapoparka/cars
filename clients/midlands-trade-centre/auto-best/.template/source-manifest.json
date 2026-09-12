@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "key": "auto-best",
-  "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
-  "destination": "J:\\cars\\templates\\auto-best",
-  "copiedAt": "2026-09-06T14:14:49.865Z",
-  "sourceUrl": "http://127.0.0.1:5173/",
+  "source": "J:\\cars\\templates\\auto-best",
+  "destination": "J:\\cars\\clients\\midlands-trade-centre\\auto-best",
+  "copiedAt": "2026-09-09T01:53:01.778Z",
+  "sourceUrl": null,
   "git": {
-    "root": "M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/autodeal-best-day-night",
+    "root": "J:/cars",
     "branch": "main",
-    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
-    "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
-    "status": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp",
-    "headAfterCopy": "ab92ce9671fb1b56afa38f693755b41aee9c28b0"
+    "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "remote": "https://github.com/darkapoparka/cars.git",
+    "status": "M catalog.json\n M clients/al-hamoor-al-thahabi/HANDOFF.md\n M clients/al-hamoor-al-thahabi/assets/photo-provenance.json\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/company/ContactVehicle.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/home/MobileBudget.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/home/VehicleQuickSearch.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/ListingFilters.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/QuickFilterSheet.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/VehicleDiscoveryForm.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/VehicleSearchDialog.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/vehicles/VehicleCard.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/vehicles/VehicleFinanceCalculator.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/config/brand.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/company.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/demo-content.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/editorial.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/home.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/inventory.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/listing.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/navigation.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte\n M clients/al-hamoor-al-thahabi/auto-best/static/favicon.ico\n M clients/al-hamoor-al-thahabi/business-facts.json\n M clients/al-hamoor-al-thahabi/stock.json\n M clients/excellent-cars/CLIENT.md\n M clients/excellent-cars/auto-best/src/lib/components/layout/Header.svelte\n M clients/excellent-cars/carwow/src/lib/components/home/mobile/MobileHome.svelte\n M clients/excellent-cars/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx\n M docs/WORKFLOW.md\n M templates/auto-best/.template/source-manifest.json\n M templates/auto-best/.template/template.json\n M templates/auto-best/ARCHITECTURE.md\n M templates/auto-best/ASSET_PROVENANCE.md\n M templates/auto-best/TEMPLATE.md\n M templates/auto-best/scripts/check-assets.mjs\n M templates/auto-best/scripts/journey-smoke.mjs\n M templates/auto-best/src/app.html\n M templates/auto-best/src/lib/components/company/ContactHero.svelte\n M templates/auto-best/src/lib/components/company/ContactIntent.svelte\n M templates/auto-best/src/lib/components/company/VehicleEnquiry.svelte\n M templates/auto-best/src/lib/components/home/BodyTypes.svelte\n M templates/auto-best/src/lib/components/home/BrandSection.svelte\n M templates/auto-best/src/lib/components/home/Editorial.svelte\n M templates/auto-best/src/lib/components/home/InventorySection.svelte\n M templates/auto-best/src/lib/components/home/SearchBox.svelte\n M templates/auto-best/src/lib/components/home/TrustActions.svelte\n M templates/auto-best/src/lib/components/home/VideoSection.svelte\n M templates/auto-best/src/lib/components/layout/Header.svelte\n M templates/auto-best/src/lib/components/layout/MobileMenu.svelte\n M templates/auto-best/src/lib/components/ui/HeroVehicles.svelte\n M templates/auto-best/src/lib/config/brand.ts\n M templates/auto-best/src/lib/data/editorial.ts\n M templates/auto-best/src/lib/data/home.ts\n M templates/auto-best/src/lib/data/navigation.ts\n M templates/auto-best/src/lib/data/vehicle-artwork.ts\n M templates/auto-best/src/lib/styles/composition.css\n M templates/auto-best/src/lib/styles/navigation.css\n M templates/auto-best/src/lib/styles/tokens.css\n M templates/auto-best/src/routes/+page.svelte\n M templates/auto-best/src/routes/blog-detail/[id]/detail.css\n M templates/auto-best/src/routes/contact/contact.css\n M templates/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte\n M templates/auto-best/src/routes/listing-detail-v1/[id]/detail.css\n M templates/auto-best/static/assets/images/blog/blog-1.jpg\n M templates/auto-best/static/assets/images/blog/blog-2.jpg\n M templates/auto-best/static/assets/images/blog/blog-3.jpg\n D templates/auto-best/static/assets/images/section/bg-6.jpg\n?? audits/2026-09-08/auto-best-borderless-editorial/\n?? audits/2026-09-08/auto-best-compact-menus/\n?? audits/2026-09-08/auto-best-desktop-comparison/\n?? audits/2026-09-08/auto-best-editorial-photos/\n?? audits/2026-09-08/auto-best-header-artwork/\n?? audits/2026-09-08/auto-best-header/\n?? audits/2026-09-08/auto-best-menu-balance/\n?? audits/2026-09-08/auto-best-menu-editorial/\n?? audits/2026-09-08/auto-best-menu-family/\n?? audits/2026-09-08/auto-best-menu-links/\n?? audits/2026-09-08/auto-best-menu-restored/\n?? audits/2026-09-08/auto-best-menu-scale/\n?? audits/2026-09-08/auto-best-menu-stability/\n?? audits/2026-09-08/auto-best-menu-title-cards/\n?? audits/2026-09-08/auto-best-menu-title-size/\n?? audits/2026-09-08/auto-best-service-assets/\n?? audits/2026-09-08/auto-best-showroom-palette/\n?? audits/2026-09-08/auto-best-source-refresh/\n?? audits/2026-09-08/auto-best-type-review/\n?? audits/2026-09-09/\n?? clients/al-hamoor-al-thahabi/SOURCE-PACK.json\n?? clients/al-hamoor-al-thahabi/assets/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/assets/branding.json\n?? clients/al-hamoor-al-thahabi/assets/favicon.ico\n?? clients/al-hamoor-al-thahabi/assets/favicon.png\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-4.webp\n?? clients/al-hamoor-al-thahabi/assets/logo-dark.png\n?? clients/al-hamoor-al-thahabi/assets/logo-light.png\n?? clients/al-hamoor-al-thahabi/assets/showroom.webp\n?? clients/al-hamoor-al-thahabi/auto-best/src/lib/data/dealer.ts\n?? clients/al-hamoor-al-thahabi/auto-best/static/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/auto-best/static/dealer/\n?? clients/al-hamoor-al-thahabi/carwow/static/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/carwow/static/dealer/\n?? clients/al-hamoor-al-thahabi/carwow/static/favicon.ico\n?? clients/al-hamoor-al-thahabi/evidence/brand-review.png\n?? clients/al-hamoor-al-thahabi/evidence/published-avatar.png\n?? clients/al-hamoor-al-thahabi/evidence/published-showroom.png\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/dealer/\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/favicon.ico\n?? clients/keen-auto-mall/CLIENT.md\n?? clients/keen-auto-mall/auto-best/\n?? clients/keen-auto-mall/carwow/\n?? clients/keen-auto-mall/modern/\n?? docs/lead-build/bulgaria-2026-09-09/\n?? templates/auto-best/.template/refresh-manifest.json\n?? templates/auto-best/provenance/borderless-editorial-2026-09-08.md\n?? templates/auto-best/provenance/editorial-photos-2026-09-08.md\n?? templates/auto-best/provenance/menu-service-assets-2026-09-08.md\n?? templates/auto-best/provenance/mobile-service-artwork-2026-09-06.md\n?? templates/auto-best/provenance/superseded-blog-photos/\n?? templates/auto-best/provenance/superseded-brand-banner/\n?? templates/auto-best/provenance/superseded-menu-art/\n?? templates/auto-best/scripts/home-hierarchy-smoke.mjs\n?? templates/auto-best/src/lib/components/layout/NavigationFeatureCard.svelte\n?? templates/auto-best/src/lib/components/ui/ActionLink.svelte\n?? templates/auto-best/src/lib/components/ui/ArtworkRegion.svelte\n?? templates/auto-best/src/lib/components/ui/FeatureArtwork.svelte\n?? templates/auto-best/src/lib/data/feature-artwork.ts\n?? templates/auto-best/static/assets/images/lead/day-night-mobile-import-v1.webp\n?? templates/auto-best/static/assets/images/lead/day-night-mobile-sell-v1.webp\n?? templates/auto-best/static/assets/images/template/\n?? templates/auto-best/static/auto-best-icon.svg",
+    "headAfterCopy": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca"
   },
   "files": [
     {
@@ -30,9 +30,14 @@
       "sha256": "28c742b5673ffd02fd48cfb0091c623cea98e72819496141cfdc15d7dc5dfb0c"
     },
     {
+      "path": "ARCHITECTURE.md",
+      "bytes": 4851,
+      "sha256": "16e24c4f513fa49d967a4111abee11074954f137fa6a7f75c51e10df49be6047"
+    },
+    {
       "path": "ASSET_PROVENANCE.md",
-      "bytes": 24444,
-      "sha256": "27f8a80bbde149c9374e1657a8a2c67d998ca948d2d364280cb6bfe8cbfa7b06"
+      "bytes": 30705,
+      "sha256": "abc252040deaab7b0cc12dced11b21cc0b1232e7f7f70c047dfe0b21e0f25d56"
     },
     {
       "path": "docs/architecture/.migration-marker",
@@ -51,13 +56,18 @@
     },
     {
       "path": "package.json",
-      "bytes": 1204,
-      "sha256": "23e0195643d89f623756eb984ae3e726609b131550865442cda0cbacb30eeefd"
+      "bytes": 1300,
+      "sha256": "0cdf2e599253cc4fca420460b7ac6d5fa2b39db683c695d5f9b9c97c4d2bb19a"
     },
     {
       "path": "PRODUCT.md",
       "bytes": 2128,
       "sha256": "4a671507afa97f22465acee1bc19dd863655e395b6430c743da955bc2b4a8f60"
+    },
+    {
+      "path": "provenance/borderless-editorial-2026-09-08.md",
+      "bytes": 6555,
+      "sha256": "d59abc47c03831b70abf5c41a413d1ec642679059df41267f1a9fab35d6cfe49"
     },
     {
       "path": "provenance/browse-campaign-pair-2026-09-06.md",
@@ -70,6 +80,11 @@
       "sha256": "d8c633efec6273b5be3bb1fc8d13046eb536cab5502d66a51eb4aa2fae6160ad"
     },
     {
+      "path": "provenance/editorial-photos-2026-09-08.md",
+      "bytes": 1913,
+      "sha256": "146cc58c09bf46441d7985fa4389098e40775b1cde2d4e9b45cd95c291eb9793"
+    },
+    {
       "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
       "bytes": 3314,
       "sha256": "3b6f123f61b9a941671ed29550151eb442307431b98652c98cf6ea1f8df2e1f9"
@@ -80,9 +95,19 @@
       "sha256": "50714aa0930b7ec52a08c79f608bf360841e9ef2ade5917ccc6551695570057f"
     },
     {
+      "path": "provenance/menu-service-assets-2026-09-08.md",
+      "bytes": 8346,
+      "sha256": "7667071ce3ddae39c8db3b02090b54c86c5f7350a52757b5048ddc97281fdb96"
+    },
+    {
       "path": "provenance/mirror-manifest.json",
       "bytes": 67581,
       "sha256": "4534b039345912e60ca0f634ada4882ba9e9e166f5f5b8b50bd5a0fb089f4d62"
+    },
+    {
+      "path": "provenance/mobile-service-artwork-2026-09-06.md",
+      "bytes": 2682,
+      "sha256": "c27560abf0a5c225a3960400db401fe842d3a49f04e0454688d8260973170490"
     },
     {
       "path": "provenance/phosphor-icons-LICENSE.txt",
@@ -100,6 +125,26 @@
       "sha256": "9046848b63a5c92bff14e4accca80bd987e0623b74adf9226ce5198d312b79d5"
     },
     {
+      "path": "provenance/superseded-blog-photos/blog-1.jpg",
+      "bytes": 93721,
+      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+    },
+    {
+      "path": "provenance/superseded-blog-photos/blog-2.jpg",
+      "bytes": 34864,
+      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+    },
+    {
+      "path": "provenance/superseded-blog-photos/blog-3.jpg",
+      "bytes": 94447,
+      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+    },
+    {
+      "path": "provenance/superseded-brand-banner/bg-6.jpg",
+      "bytes": 199583,
+      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
+    },
+    {
       "path": "provenance/superseded-collection-lineup/day-night-collection-lineup-v1.webp",
       "bytes": 104868,
       "sha256": "2f46252053944d55d8adaa6f235b792efabe004d6c19bb7afe13bca0bd1729e0"
@@ -113,6 +158,11 @@
       "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
       "bytes": 57966,
       "sha256": "fb1b9a24c1935e8458bee71a330cedc0766fe9d686fbfc21c1c4ac74cafae2d3"
+    },
+    {
+      "path": "provenance/superseded-menu-art/showroom-charcoal-red-v1.png",
+      "bytes": 1604234,
+      "sha256": "53f28a8e98f514aa1c7547842d2a1fe5de8107a67e5fc3e53d995fd0e8f7ab74"
     },
     {
       "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
@@ -151,13 +201,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 4992,
-      "sha256": "ecf340d0bf7999fac58132551327239a6fa9194b5874ae151d634a259034b790"
+      "bytes": 568,
+      "sha256": "7f2e7a12efa0d87c1c957acb8e43ab71d537359fb70dd48cc9b26423af2ab147"
     },
     {
       "path": "REUSE_GUIDE.md",
       "bytes": 2294,
       "sha256": "a12cc36c04621533c330e1065baeeea86f513a3f2574ea0266ce7c5a9ba0f4b6"
+    },
+    {
+      "path": "scripts/browser.mjs",
+      "bytes": 508,
+      "sha256": "8e457412485a459f3ad793fb9fbe2902d8b681e6481c40a93517d8929c5a21ba"
     },
     {
       "path": "scripts/check-architecture.mjs",
@@ -166,23 +221,38 @@
     },
     {
       "path": "scripts/check-assets.mjs",
-      "bytes": 3818,
-      "sha256": "5684df078304b3b0fd9002b1b2d544fdc371fb2384749a5d30408aa44c6ca987"
+      "bytes": 4538,
+      "sha256": "ce3c2eb5c03109b0bc126813e09cf2b63ac5f7b41befe7e98f9f51374b949f6f"
+    },
+    {
+      "path": "scripts/check-domain.mjs",
+      "bytes": 4037,
+      "sha256": "1de406ecf0ce543c3cf1ed5c7771c8ebf7a998974f81813c3ad69cbd76777778"
     },
     {
       "path": "scripts/desktop-discovery-smoke.mjs",
-      "bytes": 6471,
-      "sha256": "542418452d5144404f4a8d4b98e1722092522795e421c1769484d808e86faf75"
+      "bytes": 6705,
+      "sha256": "4c41e66ac9d3642d66666b825ea13acccb1f0e0bd2d880b7770fb2909d75fe47"
     },
     {
       "path": "scripts/enquiry-smoke.mjs",
-      "bytes": 8537,
-      "sha256": "8c721e4ba503826e52899ce3398c1e1258537fd9dfcf6a70d8e6f7e0815cc06a"
+      "bytes": 8854,
+      "sha256": "22962072bdcef2c495df37076678a87d07121ac098219682ee637bb8db7c8426"
+    },
+    {
+      "path": "scripts/home-hierarchy-smoke.mjs",
+      "bytes": 2735,
+      "sha256": "10fce39d8ce53fcf0fa26c0c918bd3edf1c8b0005ca6af2e8f98604080b38463"
+    },
+    {
+      "path": "scripts/journey-smoke.mjs",
+      "bytes": 8271,
+      "sha256": "ce24cce267c9ffa8caabd42a74dcb7cad2ebd077c5b756c5ea95793465025768"
     },
     {
       "path": "scripts/mobile-filter-smoke.mjs",
-      "bytes": 6403,
-      "sha256": "6ef2cc5ddbc378f8f049c30207790948a59862878831550d7347ad59a6814b7b"
+      "bytes": 6607,
+      "sha256": "cb5f8430b5a055a2a1e69b533d493f2c45b771bdda772af4f4f612adfd01dd7d"
     },
     {
       "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
@@ -195,9 +265,19 @@
       "sha256": "a0c8d53864bbd4fb9108be6dee3abb21be361f951f1b305c062792a93216c090"
     },
     {
+      "path": "scripts/route-smoke.mjs",
+      "bytes": 4190,
+      "sha256": "bcf566a8c744796f7a82e677115021e5e309f677859d6f04854192527c6bb47a"
+    },
+    {
+      "path": "scripts/smoke-report.mjs",
+      "bytes": 1050,
+      "sha256": "d5a437d9024c7f3e6e057d591287e172c2b0da54f83b29c3f3eae99fcdf668c3"
+    },
+    {
       "path": "scripts/sveltekit-smoke.mjs",
-      "bytes": 153314,
-      "sha256": "f006e2f2312223f6962bde636b0c7c2eba9e386d2ce4766fe5d507dba5c5abc8"
+      "bytes": 74,
+      "sha256": "d4c9caca12493734621dd9ab94de59f329cdbc537197f2bf9ef386d537bc8949"
     },
     {
       "path": "SOURCE_LICENSE.md",
@@ -206,18 +286,18 @@
     },
     {
       "path": "src/app.css",
-      "bytes": 28611,
-      "sha256": "b2a86ca5f010df5e0aa385c02ab7d4fc79c9db9712bfd67b714734afe88e872d"
+      "bytes": 253,
+      "sha256": "3efac10b0820a44cca2a4c604b1fce60f09a498ea010f55a1f5df39a23f64181"
     },
     {
       "path": "src/app.html",
-      "bytes": 404,
-      "sha256": "3bac60bfee8d1682bb7ec04e4255a070e8a327bcecc3350b6b705b9a651dc07c"
+      "bytes": 431,
+      "sha256": "1affc4ce39acc8f2db2434bc5dcb685942de47f48fea6fce2673f2235f3b4006"
     },
     {
       "path": "src/hooks.server.ts",
-      "bytes": 2243,
-      "sha256": "0317247034a0396c8a8540f6188725f7f8e4a6ffb09460e0d3f9e64fc3bb1edd"
+      "bytes": 2453,
+      "sha256": "891d19233ed1eeb1672a7c82598dfbbb36ff517866f9fa87f596fc8412a0a40b"
     },
     {
       "path": "src/lib/components/company/AboutHero.svelte",
@@ -241,18 +321,23 @@
     },
     {
       "path": "src/lib/components/company/AboutTeam.svelte",
-      "bytes": 6639,
-      "sha256": "ad243036f9079c5e1ae2c5da36a1b7457d1b1d6874707e6f9ce91f2535365a37"
+      "bytes": 5356,
+      "sha256": "911ab251f9ff28953ca3d8f3c5c4794b328f0c628492e55bcdc705f23360a08f"
     },
     {
       "path": "src/lib/components/company/ContactHero.svelte",
-      "bytes": 2961,
-      "sha256": "4e32c31b9b023438bd15c9a078a04b573117c69957c00d12f0f39365d6bb7765"
+      "bytes": 3801,
+      "sha256": "d2173b1c213d9ef2d176c41cf7dcd79dd06ea966b057200ae08d2f1ff39a463c"
     },
     {
       "path": "src/lib/components/company/ContactIntent.svelte",
-      "bytes": 10452,
-      "sha256": "476b552987e88b74cd4e2a4311064da42ef9adac96382462b7abd1ddf5c8870b"
+      "bytes": 10935,
+      "sha256": "50996251f26139427df740e6752a8518c1fd03b16ef08320106b493ebf385ede"
+    },
+    {
+      "path": "src/lib/components/company/ContactVehicle.svelte",
+      "bytes": 1513,
+      "sha256": "b58c88db3fe5f1da6d0602f5fe4818cc47f59b2183cd0bfbf8f0056639daf627"
     },
     {
       "path": "src/lib/components/company/ShowroomMap.svelte",
@@ -271,13 +356,18 @@
     },
     {
       "path": "src/lib/components/company/VehicleEnquiry.svelte",
-      "bytes": 23816,
-      "sha256": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a"
+      "bytes": 23819,
+      "sha256": "550f852c61d9ae52eac78017ea183b647bee66f8ebf2664474614fda89f6273b"
+    },
+    {
+      "path": "src/lib/components/editorial/ArticleSupport.svelte",
+      "bytes": 1530,
+      "sha256": "4ad4b16d01029d776354f15db2eaa7d585de4cb0a7a2f5cb4b313ce41c21ba16"
     },
     {
       "path": "src/lib/components/editorial/BlogCard.svelte",
-      "bytes": 3934,
-      "sha256": "488d7e18e0536a528b2544b54c878a0bea548c212787d79faaf26309ec77fa71"
+      "bytes": 4229,
+      "sha256": "789bac5705751daee1bf63610fe5594993495e1e7288c1e3394eaba40cf02dd4"
     },
     {
       "path": "src/lib/components/editorial/BlogHero.svelte",
@@ -286,13 +376,13 @@
     },
     {
       "path": "src/lib/components/home/BodyTypes.svelte",
-      "bytes": 7096,
-      "sha256": "b8602d394120d5f3a6dc4fd19380cf9ec3c31f6c485f301f8c4f31c15da2b248"
+      "bytes": 8549,
+      "sha256": "a64b1c1982a51bb722aa7ff0214e20876871a4b554bcdbb7214ca7b9fb5ad48a"
     },
     {
       "path": "src/lib/components/home/BrandSection.svelte",
-      "bytes": 10070,
-      "sha256": "f4593770ed49690ffdda7d506ac866f78ae9d9a65f9bbd1141ad899e499e7d6b"
+      "bytes": 6081,
+      "sha256": "157157fb80be97d57ae052eebfc64b6f8d69d84cbecd0cb29d4648382b406b64"
     },
     {
       "path": "src/lib/components/home/BrowseAllCard.svelte",
@@ -301,18 +391,18 @@
     },
     {
       "path": "src/lib/components/home/Editorial.svelte",
-      "bytes": 12103,
-      "sha256": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b"
+      "bytes": 11092,
+      "sha256": "5bc718352922f9d9cebe38a9eac5727115f283f7799254eea8d0e8192957c2fd"
     },
     {
       "path": "src/lib/components/home/Hero.svelte",
-      "bytes": 3084,
-      "sha256": "b0a6316fc17828b6fa5a535ca137aa10168f8e4f364f4704b0360ba802246649"
+      "bytes": 1994,
+      "sha256": "f3c078f9e80d9e936273f76113f1441968166cd825409fa90b6c312ca83eb6ff"
     },
     {
       "path": "src/lib/components/home/InventorySection.svelte",
-      "bytes": 6346,
-      "sha256": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18"
+      "bytes": 6655,
+      "sha256": "4a75a58c5e46744e0c2f97e6d4e248cf69e33b0c0c37d265167f285a80383429"
     },
     {
       "path": "src/lib/components/home/MobileBudget.svelte",
@@ -321,33 +411,38 @@
     },
     {
       "path": "src/lib/components/home/SearchBox.svelte",
-      "bytes": 10497,
-      "sha256": "7f0bfd4b6595b2e96dac50dc8ae569caa3847979b6c5aa1271f67460351e198a"
+      "bytes": 10570,
+      "sha256": "7128faddfdb6060716c114d3d38d55ff62a3ef931fd8f5751213c14d09841a7f"
     },
     {
       "path": "src/lib/components/home/TrustActions.svelte",
-      "bytes": 13637,
-      "sha256": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc"
+      "bytes": 14849,
+      "sha256": "9103c329dcc313842c20412d3af221d0213f8efec0fdc536781ddf64564c5c8e"
     },
     {
       "path": "src/lib/components/home/VehicleQuickSearch.svelte",
-      "bytes": 24152,
-      "sha256": "e2d552436161dbe509f3062aa9e587cc174242edfa50feb0ac165b1cb5d40fda"
+      "bytes": 24194,
+      "sha256": "42dc40d47ba53c8fc47448eeb5b8d2e874233cff9cc64ae9b55a9d14668ed7e6"
     },
     {
       "path": "src/lib/components/home/VideoSection.svelte",
-      "bytes": 9591,
-      "sha256": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972"
+      "bytes": 9470,
+      "sha256": "790b5b23ca8a5876faf76294f30481b963c51dc8d65d833c1e19a33beae7e69d"
     },
     {
       "path": "src/lib/components/layout/Footer.svelte",
-      "bytes": 3638,
-      "sha256": "4661ed2a2d7c2a8875e8e2adb95df6631fbdf79ce33c16c5a0a29c6f06e6a567"
+      "bytes": 3723,
+      "sha256": "c9e86ee847a49f0a5d3f6b61568c6af54669592c20e27c37f3dbfddb058dffd4"
     },
     {
       "path": "src/lib/components/layout/Header.svelte",
-      "bytes": 29984,
-      "sha256": "bc3b46d1c24f5af9eeda806bf10624e8ead7823649efa6f359a14ecc8bed7d3d"
+      "bytes": 25079,
+      "sha256": "d25aef75747062dca99ec83d69141d4290f78e9eadf554c428b3fb9070db8544"
+    },
+    {
+      "path": "src/lib/components/layout/MobileMenu.svelte",
+      "bytes": 5759,
+      "sha256": "3f630bceb8c0d923bc7ddefee34c0ac92a1bad2deb3a7287d11ac6166b5b1bee"
     },
     {
       "path": "src/lib/components/layout/MobileNavIcon.svelte",
@@ -355,14 +450,19 @@
       "sha256": "fc4711462bbbee641954eaaf01abec68d3b33664c1ab665a1c4f80cd6b763cf9"
     },
     {
+      "path": "src/lib/components/layout/NavigationFeatureCard.svelte",
+      "bytes": 3277,
+      "sha256": "cb3201e348f5866f07b582618b405c2a317780a5052b74a03d5cab5ef13df283"
+    },
+    {
       "path": "src/lib/components/layout/SiteShell.svelte",
-      "bytes": 463,
-      "sha256": "c3be99729f6e921a1e795c046776bae1c8b7faa45583a5e7dc9466ac488ecd0a"
+      "bytes": 591,
+      "sha256": "8b9b628be26d6d9d0b4a3f7832091a81a4cbd34e90c4bfa374b62aedb37696ad"
     },
     {
       "path": "src/lib/components/listing/ListingFilters.svelte",
-      "bytes": 10730,
-      "sha256": "79b6b4fb028ae29dc5772f6b2dac37b94b1b5aafa7c530d09d49d8774d75db45"
+      "bytes": 9891,
+      "sha256": "9b1cc5b06c03828ef879fe17f911caec2f8a6c2012804660f033b393cb1475f8"
     },
     {
       "path": "src/lib/components/listing/ListingHero.svelte",
@@ -371,28 +471,43 @@
     },
     {
       "path": "src/lib/components/listing/ListingResults.svelte",
-      "bytes": 10190,
-      "sha256": "dd7940a029219e5c6cbb62ffeaa6932d0d9295df193a5308dc9776bbfa89a6ec"
+      "bytes": 9451,
+      "sha256": "768b08a4913c3ba67cb5900f6da35f34e1b890180a948701d3770031fb9d9d49"
     },
     {
       "path": "src/lib/components/listing/QuickFilterSheet.svelte",
-      "bytes": 14005,
-      "sha256": "4c4ded372d764ae1d5132af28f72bc537e5b499feaa8867f95db5f9b8ae2f253"
+      "bytes": 13740,
+      "sha256": "12655b0142cb1506c6c6b674e98d54b2ab9da886e42850ddd9153da990dcb96d"
     },
     {
       "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
-      "bytes": 12175,
-      "sha256": "e402c55fda3dc0242b484c1dcb6935f9495e6db2dfeddd0fcea37df24cfa5aed"
+      "bytes": 12192,
+      "sha256": "1265b02e878b76dbd11b027fb5439c1896f0ba506ee0541a260b2a0438586c7a"
     },
     {
       "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
-      "bytes": 28082,
-      "sha256": "abc9d4bcdf15aacee47659a9efa92f859058b8f8f433d4017411d48481a93e37"
+      "bytes": 28225,
+      "sha256": "7a6593b9c6668bc6cd07b33b7dfb34fafb07ee4a311fd50e8e8ae5e27923b5ff"
+    },
+    {
+      "path": "src/lib/components/ui/ActionLink.svelte",
+      "bytes": 514,
+      "sha256": "9d392a5e4edaee0140d68b4a91dd09535e5f994618525237849b54dcfd03d181"
+    },
+    {
+      "path": "src/lib/components/ui/ArtworkRegion.svelte",
+      "bytes": 889,
+      "sha256": "5250ec0d23da23411966d7a5590584b898a6d27a2fc6b60d622618f169b6afb3"
+    },
+    {
+      "path": "src/lib/components/ui/FeatureArtwork.svelte",
+      "bytes": 790,
+      "sha256": "30bf7bb7a58a9256d29453fae484c91ad7dc5dd774a4c300dee25e77faeab6b9"
     },
     {
       "path": "src/lib/components/ui/HeroVehicles.svelte",
-      "bytes": 3133,
-      "sha256": "49ace952ea6c3e1b42f78eb8aed3c131575712080259a82a634d3170d7758842"
+      "bytes": 4683,
+      "sha256": "f0d6f15ab63513171d53d21e3b7812f9bfdfdbf1cc5839558c862eb350c10a1e"
     },
     {
       "path": "src/lib/components/ui/Icon.svelte",
@@ -411,23 +526,28 @@
     },
     {
       "path": "src/lib/components/ui/VehicleCutout.svelte",
-      "bytes": 1128,
-      "sha256": "17f681988e8df2945c3723554688c7f6fd658b56eac94193058996fc08c29369"
+      "bytes": 1312,
+      "sha256": "14fa8935f094a8e9c52e23fb6ed6f96c0043a36eaf473778bff8872ba7c2758b"
     },
     {
       "path": "src/lib/components/vehicles/VehicleCard.svelte",
-      "bytes": 9425,
-      "sha256": "9efabd72156d2d2539936a7c31cbc27900e5a31c44b6bd51b1f99f8e246ed2d5"
+      "bytes": 9792,
+      "sha256": "29218783a3bdcf81c28f0aaee13d3f79bc64c17dfd8819005b111ca7def0602f"
     },
     {
       "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
-      "bytes": 5103,
-      "sha256": "5a04ca9e0b8dae1ffaf505af48bc9a498767bfd892fc1127edd8e20cb973d9cb"
+      "bytes": 5323,
+      "sha256": "944f5233118263b8b301f01f21f7904b819c5c4c777f5ce568bd89f75ea2126c"
     },
     {
       "path": "src/lib/config/brand.ts",
-      "bytes": 704,
-      "sha256": "2d8aaf30e7a898a7022271f4d9ecc846c33719fe7cb32d84cb6d51780385db59"
+      "bytes": 1042,
+      "sha256": "48e27b9a0a864272476d756b062195aa8529355eb8e5eb1d69f5536f83e6b414"
+    },
+    {
+      "path": "src/lib/config/template.ts",
+      "bytes": 1396,
+      "sha256": "e8a3aee2bbc54c251d427f806c2a5a1ea3012ca270d7812fc14d9796233f8f04"
     },
     {
       "path": "src/lib/data/company.ts",
@@ -441,38 +561,73 @@
     },
     {
       "path": "src/lib/data/editorial.ts",
-      "bytes": 13543,
-      "sha256": "bdb313d9d89f0945fb2c5069edddefb38ae806b85edc0d3b1202533b0ad18ae1"
+      "bytes": 13619,
+      "sha256": "fef3057b11f80a03f0692dcf88458befa6904784165b83296f2b7993ed2e3b28"
+    },
+    {
+      "path": "src/lib/data/feature-artwork.ts",
+      "bytes": 1380,
+      "sha256": "0c9ac4ceb9db72158e16c06b806956644b8e59ce1c3b68a5029d191c48b23728"
     },
     {
       "path": "src/lib/data/home.ts",
-      "bytes": 3268,
-      "sha256": "e1677636876aee70b586f139014718976e2b357cd197402da00d4bdf5f098476"
+      "bytes": 3073,
+      "sha256": "80331bf89ac833b35eca73ed3fd6b483c2e191862dd64fd8d4465df83503edb8"
     },
     {
       "path": "src/lib/data/inventory.ts",
-      "bytes": 5600,
-      "sha256": "6f014cbec675c463debb411c68b46efc5a7f60ecc6f2c3139da02daa8417f466"
+      "bytes": 5644,
+      "sha256": "812ad3ab837502334f245d53d13feb5c2a99fcaeb37984a7ce33914540e72e8b"
+    },
+    {
+      "path": "src/lib/data/journeys.ts",
+      "bytes": 1172,
+      "sha256": "90335c2fa1f65537f69cb65b4c569aa1ea1f70fdec42d83400109ff005a54418"
     },
     {
       "path": "src/lib/data/listing.ts",
-      "bytes": 6038,
-      "sha256": "f1a2832e64576c14d56d98dd36f1ce3ee6aae605f3e3322dc041157d27e192d1"
+      "bytes": 7678,
+      "sha256": "f8eb93305bc1f8f23d51dbbb58658654284b37312478dced26e60d72d1f2c490"
     },
     {
       "path": "src/lib/data/navigation.ts",
-      "bytes": 7161,
-      "sha256": "6afa51239090b8a7bb7127881ae8ee57117980701bc8c9c75fd638628ea6b63f"
+      "bytes": 7561,
+      "sha256": "399acb14af21a176a681855405b1d730e03513e51b00609e56a875472d26b874"
     },
     {
       "path": "src/lib/data/vehicle-artwork.ts",
-      "bytes": 2170,
-      "sha256": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db"
+      "bytes": 3162,
+      "sha256": "595bee0e8e4d7a356401697110731a3b15a9afa1160147f3b26de33135fb70f3"
     },
     {
       "path": "src/lib/data/videos.ts",
       "bytes": 908,
       "sha256": "57217c36b4b0e67a318f44b3f64eade67ea19b1d63541b88aa96605cd1615d1e"
+    },
+    {
+      "path": "src/lib/styles/base.css",
+      "bytes": 1633,
+      "sha256": "3706c9016cc304ccd63faa545ccc5c6799e540232c046a9e04379c209eeb6fca"
+    },
+    {
+      "path": "src/lib/styles/composition.css",
+      "bytes": 20780,
+      "sha256": "4af1f842acfeed25a4131e8e2291779f3c7a0201d779951ebe6aa1ad31c7aed8"
+    },
+    {
+      "path": "src/lib/styles/navigation.css",
+      "bytes": 4690,
+      "sha256": "28fe637d2ff9e5f14206d75c355d9fc0fafa8e51b67fe117a2641e6321f748ff"
+    },
+    {
+      "path": "src/lib/styles/tokens.css",
+      "bytes": 2329,
+      "sha256": "52690974c3d80b324efd90fafc1eebd8252a11fd83370e0ec6b59a3ced7ef0e7"
+    },
+    {
+      "path": "src/lib/ui/overlay.ts",
+      "bytes": 1606,
+      "sha256": "d5a281c89331c5a3960b0ede102bbd07e74651d90dc97dd7cb37bf7ff4184658"
     },
     {
       "path": "src/routes/+error.svelte",
@@ -481,18 +636,18 @@
     },
     {
       "path": "src/routes/+layout.svelte",
-      "bytes": 693,
-      "sha256": "771aa7e400dc3d954fa8ca7902262b1dc1828cc8249fed4c23258e311d8b96fd"
+      "bytes": 945,
+      "sha256": "ea12a772f3aa109567c2f6a4fd2bcd58e8b02ae316c60d331c83df058c5c7eb4"
     },
     {
       "path": "src/routes/+page.svelte",
-      "bytes": 3793,
-      "sha256": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660"
+      "bytes": 5452,
+      "sha256": "677054a2dd7eedf6f65747f693d23fa3397c91a89484e9159e47b24cdaba80bb"
     },
     {
       "path": "src/routes/about-us/+page.svelte",
-      "bytes": 1161,
-      "sha256": "39916dbda7377aee664025c4c299707a2c9a76bd6eed3f2ca8ce5216017adb6f"
+      "bytes": 1307,
+      "sha256": "a926758dc42253c9d239a28f92c0c8d932df9b730a0812e941eeaad4831acbf8"
     },
     {
       "path": "src/routes/about-us/about.css",
@@ -501,8 +656,8 @@
     },
     {
       "path": "src/routes/blog/+page.svelte",
-      "bytes": 1456,
-      "sha256": "6600e8406ae4e9139aa959ef8e94c70108daf9a23ab6ae0da4fc5a8bb405753f"
+      "bytes": 1594,
+      "sha256": "4894cdbb91dd40adebe4edff8112f38d7ed34b666c16b4174db98672c59cc142"
     },
     {
       "path": "src/routes/blog/+page.ts",
@@ -516,48 +671,48 @@
     },
     {
       "path": "src/routes/blog-detail/[id]/+page.svelte",
-      "bytes": 5014,
-      "sha256": "5a745497bb54bcce5fe6bf4e3766f9ff67284ea1e432ffcc0e08eb32eb5121df"
+      "bytes": 2654,
+      "sha256": "05d33f9f915328737c4b5e3efc9b282a54f1b91b39f1f8549f32c34fd3d5c773"
     },
     {
       "path": "src/routes/blog-detail/[id]/+page.ts",
-      "bytes": 1016,
-      "sha256": "e6d4315fcd1ead985c50d148939747a404beb4146af681e65463f333f1be747a"
+      "bytes": 1151,
+      "sha256": "cc50e581298c156b69536cca86f524cd1892f32fb6c70d759110b6ef5e6a67e3"
     },
     {
       "path": "src/routes/blog-detail/[id]/detail.css",
       "bytes": 9353,
-      "sha256": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305"
+      "sha256": "1e3f89ae9f50938c73d90d0708bd0b14a5d482e683ae13c3a8a93acbc30d6ed0"
     },
     {
       "path": "src/routes/contact/+page.svelte",
-      "bytes": 1430,
-      "sha256": "2ba55cf3c788ed71bdc5aabd6d66e36efb4c3d29a62d326c196add4112eeb8b5"
+      "bytes": 1493,
+      "sha256": "7e72a58e9be6ced396a1e20747aed8af076d7367ad7a0268185b7ee7bf2e1046"
     },
     {
       "path": "src/routes/contact/+page.ts",
-      "bytes": 348,
-      "sha256": "38f9f4d3d8b9ec495b35880712aec6af3c017e1e6774aec8f47abfd0d46fa6be"
+      "bytes": 545,
+      "sha256": "7fdd6cfbd10441d17366074128629b8e13dd3b5c5327787992bfda533200a419"
     },
     {
       "path": "src/routes/contact/contact.css",
-      "bytes": 19232,
-      "sha256": "4aca418e7c39f6cb4d50ee3ecf5326bd73b02486825abfec0a399cbb93ce8088"
+      "bytes": 19687,
+      "sha256": "72d7b7d921a9c8975465547de24990cdfd7da97cbd619bd9004ed6d8496886c1"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
-      "bytes": 10436,
-      "sha256": "5254c56c4feac37563bacb3de2ba4661804816dd1f90ae91d541445e2829a6f7"
+      "bytes": 10607,
+      "sha256": "61569f7cd466eb19aa8fed12a50bc605e822cedaae899ea6c78c0a8e8ec21cc0"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.ts",
-      "bytes": 1064,
-      "sha256": "7a418df9ce58a5bd1b7bc9631aa3d033af90a81992d5f468867be55aa86e90fc"
+      "bytes": 1193,
+      "sha256": "e9ac96982bc24b4fa44f6692efd0c32e92ec6c9491a229bc0b63eb3fd2090c4d"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/detail.css",
-      "bytes": 15492,
-      "sha256": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b"
+      "bytes": 15510,
+      "sha256": "c539a9cd6fe09ea9974268fb9925b53b5fd0e8d238827f847d794f938e926c71"
     },
     {
       "path": "src/routes/listing-grid/+page.svelte",
@@ -576,28 +731,28 @@
     },
     {
       "path": "src/routes/robots.txt/+server.ts",
-      "bytes": 356,
-      "sha256": "fc9004659301978e40f393420ea59e6883a4639850a87a11b36f4c5f573b5ea7"
+      "bytes": 506,
+      "sha256": "9c5fc11c75f12be15652debba869867d7b233454e4b46a412c4ce3cbd3aaa330"
     },
     {
       "path": "src/routes/sitemap.xml/+server.ts",
-      "bytes": 1085,
-      "sha256": "588d606eb64a6eb49c82a32c1dd230590a6d9fe4d7766109e4a2e8fdde606574"
+      "bytes": 1269,
+      "sha256": "b9ca9b73f8529d06bd6100ec3343695d1ab3f6e6e9514603ee5a6eefc8a7f884"
     },
     {
       "path": "static/assets/images/blog/blog-1.jpg",
-      "bytes": 93721,
-      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+      "bytes": 120060,
+      "sha256": "29ec6a2981cec738233476cb87bcd78b91068861bb399a03e89ddbb9791808e3"
     },
     {
       "path": "static/assets/images/blog/blog-2.jpg",
-      "bytes": 34864,
-      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+      "bytes": 251224,
+      "sha256": "b9a5e2b334bc31ce8c618e55302a1573be632c8ae327a4738a4b4a68edb83824"
     },
     {
       "path": "static/assets/images/blog/blog-3.jpg",
-      "bytes": 94447,
-      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+      "bytes": 109943,
+      "sha256": "c038c1b2f777617ea2003e76a8a1412b9099e483d30e236317a44294879a2765"
     },
     {
       "path": "static/assets/images/blog/blog-4.jpg",
@@ -860,6 +1015,16 @@
       "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
     },
     {
+      "path": "static/assets/images/lead/day-night-mobile-import-v1.webp",
+      "bytes": 115430,
+      "sha256": "e6484f58df263c72973f2eff88bcad923dc53c6c9d75e46205a48baa4d76cd2b"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-mobile-sell-v1.webp",
+      "bytes": 121030,
+      "sha256": "bfb59bc91685cb9108afed45500a933bc6c719a6262877f310c396ec06cfe9c1"
+    },
+    {
       "path": "static/assets/images/lead/day-night-portrait-color-v1.webp",
       "bytes": 98582,
       "sha256": "a01b8fd3df9084e1b5f70d7b26396acec6136c527e263c3eeb3c9beed32d5a97"
@@ -1050,11 +1215,6 @@
       "sha256": "442c996e79c246489c92f48a1483f31dcf63a02fcee27237a86ce845540369da"
     },
     {
-      "path": "static/assets/images/section/bg-6.jpg",
-      "bytes": 199583,
-      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
-    },
-    {
       "path": "static/assets/images/section/car-slide1.png",
       "bytes": 41257,
       "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72"
@@ -1070,6 +1230,51 @@
       "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a"
     },
     {
+      "path": "static/assets/images/template/auto-best-logo.svg",
+      "bytes": 402,
+      "sha256": "bd70075fc05da638432accf7610cc7cac9056f9e46bfa450d24e100071ab4c3d"
+    },
+    {
+      "path": "static/assets/images/template/body-wagon-v1.png",
+      "bytes": 1151143,
+      "sha256": "5d70b2a70636d8700570c199589c6a7d714a7dab6021a6aefd0f8123c6da259b"
+    },
+    {
+      "path": "static/assets/images/template/menu-editorial-import-v1.png",
+      "bytes": 2010193,
+      "sha256": "682c268ab0ef50cb04dbb6dd67f02d80579ddd302d12e406f0ff184486b7924e"
+    },
+    {
+      "path": "static/assets/images/template/menu-editorial-inspection-v1.png",
+      "bytes": 1812369,
+      "sha256": "e819987d2940213f6c6ce8fa593d794532cd3d5c4e6c8d1ca82db8c0315a8a53"
+    },
+    {
+      "path": "static/assets/images/template/menu-editorial-leasing-v1.png",
+      "bytes": 1742501,
+      "sha256": "650e3eb800052a848ee24b60c2e38e0b893c389e628e48104b66fcf81de507c5"
+    },
+    {
+      "path": "static/assets/images/template/menu-import-v2.png",
+      "bytes": 1615820,
+      "sha256": "e9df6afa601a73b9529a85e87a0854afe7250ac4f6a6bc571deca084726985c6"
+    },
+    {
+      "path": "static/assets/images/template/menu-leasing-v2.png",
+      "bytes": 1618698,
+      "sha256": "038f1db5f13dfd50ad890f9cd39af2b50cf94f043f372a31650cec6b070af1bd"
+    },
+    {
+      "path": "static/assets/images/template/menu-showroom-v2.png",
+      "bytes": 1421548,
+      "sha256": "bc20ecd0e0f113acfda46197c8798386b53ac09b71c634233a00a430e35e1ec3"
+    },
+    {
+      "path": "static/auto-best-icon.svg",
+      "bytes": 203,
+      "sha256": "d1980d1ba924e291dad20f83e64964ed146504c0230608116e230caab512550b"
+    },
+    {
       "path": "static/favicon.ico",
       "bytes": 520,
       "sha256": "17479d0354ba5cede84e623dbb0ceb77b638784a9535ea829e5ac9969c5a94eb"
@@ -1078,6 +1283,11 @@
       "path": "svelte.config.js",
       "bytes": 404,
       "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+    },
+    {
+      "path": "TEMPLATE.md",
+      "bytes": 11085,
+      "sha256": "ccdccb373d5c33e9b0a34649ebad80726869daffe4a47b09f336428f83748f1f"
     },
     {
       "path": "tsconfig.json",
@@ -1096,26 +1306,13 @@
     }
   ],
   "excluded": [
-    ".agency-os",
-    ".git",
-    ".github",
     ".svelte-kit",
+    ".template",
     ".vercel",
     "AGENTS.md",
     "artifacts",
-    "node_modules",
-    "SVELTE_TASKS.md"
+    "node_modules"
   ],
   "links": [],
-  "bytes": 7822988,
-  "configurationSupplement": {
-    "at": "2026-09-06T14:52:29.899Z",
-    "files": [
-      ".gitattributes",
-      ".gitignore",
-      ".vercelignore"
-    ]
-  },
-  "refreshedAt": "2026-09-06T20:48:34.194Z",
-  "refreshEvidence": "../../audits/2026-09-06/asko96-build"
+  "bytes": 23262478
 }

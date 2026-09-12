@@ -371,7 +371,7 @@ const copyByLanguage = {
       newest: "Newest",
       price_asc: "Price low",
       price_desc: "Price high",
-      mileage_asc: "Lowest km",
+      mileage_asc: "Lowest miles",
       year_desc: "Newest year",
     },
     view: {
@@ -388,7 +388,7 @@ const countryNameFormatters = {
 } as const;
 
 const cityLabelsBg: Record<string, string> = {
-  Sofia: "София",
+  "Pompano Beach": "Pompano Beach",
   Plovdiv: "Пловдив",
   Varna: "Варна",
   Burgas: "Бургас",

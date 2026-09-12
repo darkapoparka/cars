@@ -11,15 +11,15 @@
 </script>
 
 <svelte:head>
-  <title>Полезно — {brand.name}</title>
-  <meta name="description" content={`Практични насоки от ${brand.name} за избор, оглед, внос, лизинг, бартер и следващи стъпки при покупка на автомобил.`} />
+  <title>Guides — {brand.name}</title>
+  <meta name="description" content={`Practical advice from ${brand.name} on choosing a vehicle, vehicle viewings, imports, buying options, trade-ins and the next steps in buying a vehicle.`} />
 </svelte:head>
 
 <BlogHero filters={data.filters} />
 
 <section class="dn-blog-index" aria-labelledby="blog-results-title">
   <div class="container">
-    <h2 class="dn-sr-only" id="blog-results-title">{data.posts.length} {data.posts.length === 1 ? 'статия' : 'статии'}</h2>
+    <h2 class="dn-sr-only" id="blog-results-title">{data.posts.length} {data.posts.length === 1 ? 'article' : 'articles'}</h2>
 
     {#if data.posts.length}
       <div class="dn-blog-grid">
@@ -29,9 +29,9 @@
       </div>
     {:else}
       <div class="dn-blog-empty">
-        <p class="dn-kicker">Няма съвпадения</p>
-        <h2>Опитайте с друга тема или търсене.</h2>
-        <a href={resolve('/blog')}>Покажете всички статии</a>
+        <p class="dn-kicker">No matches</p>
+        <h2>Try another topic or search.</h2>
+        <a href={resolve('/blog')}>Show all articles</a>
       </div>
     {/if}
   </div>

@@ -15,7 +15,7 @@
         "6511"
       ],
       "path": "templates/auto-best",
-      "version": "2026.09.08-polish-1",
+      "version": "2026.09.08-refresh-2",
       "family": "autodeal",
       "stack": "sveltekit",
       "sourcePort": 5173,
@@ -41,7 +41,7 @@
         "src/app.css",
         "static"
       ],
-      "note": "Audited mobile/desktop polish with vehicle context, stock-driven discovery and modular data/style ownership. Source branding and sample stock retained; preview only.",
+      "note": "Desktop/mobile source refresh with neutral Auto Best logo. Source contact/video content and sample stock retained; personalization still required.",
       "upstreamRepository": "darkapoparka/cars-template-auto-best",
       "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
     },

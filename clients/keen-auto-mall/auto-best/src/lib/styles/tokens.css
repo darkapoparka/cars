@@ -28,10 +28,33 @@
   --dn-shadow: 0 18px 50px rgba(16, 24, 40, 0.14);
   --dn-card-hover-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
   --dn-content: 1360px;
+  --dn-menu-content: 1320px;
+  --dn-menu-panel-height: 288px;
+  --dn-menu-card-height: 248px;
+  --dn-menu-art-height: 120px;
+  --dn-menu-backdrop: rgb(10 12 16 / 76%);
+  --dn-menu-heading-weight: 500;
+  --dn-home-panel: #f1f3f5;
+  --dn-home-banner-height: 234px;
+  --dn-home-banner-padding: 28px 32px;
+  --dn-home-banner-overlap: 24px;
+  --dn-home-copy-gap: 8px;
+  --dn-home-heading-size: 2rem;
+  --dn-home-heading-banner-height: 176px;
+  --dn-home-section-space: 32px;
+  --dn-home-search-surface: #202329;
+  --dn-home-search-line: #414650;
+  --dn-home-search-muted: #d4d8df;
+  --dn-home-cta-gap: 16px;
   --dn-font: 'Onest Variable', "Segoe UI", Arial, sans-serif;
   --dn-text-badge: 0.75rem;
   --dn-text-meta: 0.875rem;
   --dn-text-body: 1rem;
+  --dn-cta-size: var(--dn-text-body);
+  --dn-cta-weight: 600;
+  --dn-cta-leading: 1.3;
+  --dn-cta-tracking: 0;
+  --dn-cta-font: var(--dn-cta-weight) var(--dn-cta-size) / var(--dn-cta-leading) var(--dn-font);
   --dn-text-lead: 1.125rem;
   --dn-text-card: 1.25rem;
   --dn-text-subheading: 1.5rem;
@@ -47,4 +70,3 @@
   --dn-leading-section: 1.12;
   --dn-leading-display: 1.05;
 }
-

@@ -8,7 +8,7 @@
 
 	// Описание leads as the default tab, followed by the feature groups.
 	const navTabs = $derived([
-		{ id: DESCRIPTION_TAB_ID, label: 'Описание' },
+		{ id: DESCRIPTION_TAB_ID, label: 'Description' },
 		...tabs.map((tab) => ({ id: tab.id, label: tab.label }))
 	]);
 

@@ -23,7 +23,7 @@
 				data-daynight-image-fallback
 				use:daynightImageFallback
 			/>
-			<span>{vehicle.badges[0] ?? 'Наличен'}</span>
+			<span>{vehicle.badges[0] ?? 'Advertised'}</span>
 		</div>
 		<div class="mobile-inventory-card__body">
 			<div class="mobile-inventory-card__title">

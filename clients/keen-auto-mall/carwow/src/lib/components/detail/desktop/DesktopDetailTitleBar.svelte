@@ -87,7 +87,7 @@
 <div class="title-section pdp-title-card__main">
 	<a href={resolve('/inventory')} class="pdp-nav-button pdp-nav-button--back">
 		{@render leftArrow()}
-		<span>Назад</span>
+		<span>Back</span>
 	</a>
 	<h1 class="daynight-pdp-title">{vehicle.shortTitle} {vehicle.year}</h1>
 	<div class="pdp-title-actions flex items-center justify-end gap-12">

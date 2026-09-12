@@ -9,12 +9,12 @@
   <div class="container dn-inventory-panel">
     <div class="dn-inventory__heading dn-home-section-heading">
       <h2 id="featured-title" class="dn-home-section-title">
-        <span class="dn-heading-desktop">Избрани автомобили</span>
-        <span class="dn-heading-mobile">Избрани</span>
+        <span class="dn-heading-desktop">Featured vehicles</span>
+        <span class="dn-heading-mobile">Featured</span>
       </h2>
-      <a class="dn-inventory__all dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
-        <span class="dn-heading-desktop">Вижте всички автомобили</span>
-        <span class="dn-heading-mobile" aria-hidden="true">Всички</span>
+      <a class="dn-inventory__all dn-home-section-action" href={resolve('/listing-grid')} aria-label="View all vehicles">
+        <span class="dn-heading-desktop">View all vehicles</span>
+        <span class="dn-heading-mobile" aria-hidden="true">All</span>
       </a>
     </div>
 
@@ -22,7 +22,7 @@
       {#each featuredVehicles.slice(0, 4) as vehicle, index (vehicle.id)}
         <VehicleCard {vehicle} showPrice priority={index < 4} />
       {/each}
-      <BrowseAllCard label="Всички автомобили" detail="Разгледайте цялата колекция" />
+      <BrowseAllCard label="All vehicles" detail="Browse the full collection" />
     </div>
   </div>
 </section>

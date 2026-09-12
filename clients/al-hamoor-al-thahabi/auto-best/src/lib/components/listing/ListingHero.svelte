@@ -9,8 +9,8 @@
   <div class="dn-listing-hero__overlay" aria-hidden="true"></div>
   <div class="container dn-listing-hero__content dn-route-hero__layout">
     <div class="dn-listing-hero__copy dn-route-hero__copy">
-      <h1 id="listing-title">Намерете своя автомобил</h1>
-      <p>{count} {count === 1 ? 'автомобил' : 'автомобила'} в каталога</p>
+      <h1 id="listing-title">Find your vehicle</h1>
+      <p>{count} {count === 1 ? 'vehicle' : 'vehicles'} in the catalogue</p>
     </div>
   </div>
 </section>

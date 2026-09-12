@@ -1,0 +1,22 @@
+[
+    {
+        "exit":  0,
+        "name":  "sveltekit-smoke"
+    },
+    {
+        "exit":  0,
+        "name":  "enquiry-smoke"
+    },
+    {
+        "exit":  0,
+        "name":  "mobile-filter-smoke"
+    },
+    {
+        "exit":  0,
+        "name":  "desktop-discovery-smoke"
+    },
+    {
+        "exit":  1,
+        "name":  "home-hierarchy-smoke"
+    }
+]

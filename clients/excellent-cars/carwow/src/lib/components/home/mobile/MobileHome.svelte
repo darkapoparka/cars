@@ -1236,18 +1236,22 @@
 	.mh-hero__brand {
 		display: inline-flex;
 		min-width: 0;
-		align-items: center;
+		width: 140px;
+		height: 54px;
+		overflow: hidden;
+		align-items: flex-start;
 		color: #fff !important;
 	}
 
 	.mh-hero__logo {
 		filter: brightness(0) invert(1);
 		display: block;
-		width: 170px;
+		width: 140px;
 		height: auto;
 		object-fit: contain;
 		object-position: left center;
-		transform: translateZ(0);
+		/* Crop the source logo to the emblem/name, leaving out the tagline. */
+		transform: translateY(-7.3%);
 	}
 
 	.mh-hero__title {

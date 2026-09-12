@@ -21,7 +21,7 @@
 <div class="daynight-inventory-filter-region">
 	{#if layoutMode === 'sidebar'}
 		<div class="daynight-inventory-sidebar-panel-head">
-			<span>Филтри</span>
+			<span>Filters</span>
 		</div>
 	{/if}
 	<div class="daynight-inventory-band">

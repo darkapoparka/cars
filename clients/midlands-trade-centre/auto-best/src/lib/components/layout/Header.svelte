@@ -6,6 +6,8 @@
   import { onDestroy, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
+  import NavigationFeatureCard from './NavigationFeatureCard.svelte';
+  import ActionLink from '$components/ui/ActionLink.svelte';
   import MobileMenu from './MobileMenu.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
   import { vehicleContactHref, selectedVehicle } from '$data/journeys';
@@ -74,8 +76,8 @@
         if (node.isConnected && !node.contains(document.activeElement)) closeMega();
       });
     };
-    const handlePointerLeave = () => {
-      if (!node.contains(document.activeElement)) queueDismiss();
+    const handlePointerLeave = (event: PointerEvent) => {
+      if (event.pointerType === 'mouse') closeMega();
     };
     const handleFocusOut = (event: FocusEvent) => {
       if (!(event.relatedTarget instanceof Node) || !node.contains(event.relatedTarget)) queueDismiss();
@@ -199,7 +201,11 @@
   });
 </script>
 
-<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); }} />
+<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); if (window.innerWidth < 992) closeMega(); }} />
+
+{#if mega}
+  <button class="dn-mega-backdrop" tabindex="-1" aria-label="Close navigation" onclick={closeMega}></button>
+{/if}
 
 <div
   class="dn-header-fixed"
@@ -208,7 +214,6 @@
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
   class:dn-header-fixed--contact-overlay={page.url.pathname === '/contact'}
   class:dn-header-fixed--listing={listingHeader}
-  {@attach attachMegaDismissBoundary}
 >
   <header
     class:dn-header--mega-open={Boolean(mega)}
@@ -226,16 +231,16 @@
       </div>
     </div>
 
-    <div class="dn-header__lower">
+    <div class="dn-header__lower" {@attach attachMegaDismissBoundary}>
       <div class="container">
         <div class="dn-header__inner">
           <div class="dn-logo-box">
-            <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+            <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — home`}>
+              <picture><source media="(max-width: 991px)" srcset={homeOverlayHeader || page.url.pathname === "/contact" ? brand.logoDark : brand.logo} /><img src={brand.logo} alt={brand.name} width="990" height="250" fetchpriority="high" style="object-fit:contain;filter:none" /></picture>
             </a>
           </div>
 
-          <nav class="dn-nav" aria-label="Основна навигация">
+          <nav class="dn-nav" aria-label="Main navigation">
             <ul class="dn-nav__list">
               {#each navigation as item (item.id)}
                 <li class:dn-nav__item--current={isActive(item)}>
@@ -263,10 +268,7 @@
                       <div class="dn-mega__feature-panel">
                         <div class="dn-mega__features">
                           {#each mega.features as feature (feature.id)}
-                            <a class="dn-mega__feature" href={resolve(feature.href)}>
-                              <img src={feature.image} alt="" width="800" height="450" loading="eager" />
-                              <span><strong>{feature.title}</strong><small>{feature.detail}</small></span>
-                            </a>
+                            <NavigationFeatureCard {feature} />
                           {/each}
                         </div>
                       </div>
@@ -286,8 +288,7 @@
                           {/each}
                         </nav>
                         <div class="dn-mega__side-action">
-                          <a href={resolve(mega.cta.href)}>{mega.cta.label}</a>
-                          <p>{mega.cta.detail}</p>
+                          <ActionLink href={mega.cta.href}>{mega.cta.label}</ActionLink>
                         </div>
                       </div>
                     </div>
@@ -298,24 +299,24 @@
           </nav>
 
           <div class="dn-header-actions">
-            <a class="dn-header-action dn-header-action--secondary" href={resolve('/contact')}>
+            <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
               <Icon name="mail" size={17} strokeWidth={1.8} />
-              <span>Запитване</span>
-            </a>
-            <a class="dn-header-action dn-header-action--primary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>
+              <span>Enquiry</span>
+            </ActionLink>
+            <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
-              <span>Запазете оглед</span>
-            </a>
+              <span>Book a vehicle viewing</span>
+            </ActionLink>
           </div>
 
           <div class="dn-mobile-controls">
-            <a class="dn-mobile-control" href={resolve('/contact')} aria-label="Локация и контакти">
+            <a class="dn-mobile-control" href={resolve('/contact')} aria-label="Location and contact">
               <MobileNavIcon name="location" size={20} />
             </a>
             <a
               class="dn-mobile-control dn-mobile-control--call"
               {...phoneLinkAttributes}
-              aria-label={`Обадете се на ${brand.phone}`}
+              aria-label={`Call ${brand.phone}`}
             >
               <MobileNavIcon name="phone" size={20} />
             </a>
@@ -326,7 +327,7 @@
               {@attach attachMobileToggle}
               aria-expanded={mobileOpen}
               aria-controls="dn-mobile-menu"
-              aria-label={mobileOpen ? 'Затворете менюто' : 'Отворете менюто'}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               onclick={openMobile}
             >
               <MobileNavIcon name="menu" size={20} />
@@ -344,22 +345,22 @@
 
   <div hidden={mobileOpen}>
     {#if vehicleDetailHeader}
-      <nav class="dn-mobile-detail-bar" aria-label="Действия за автомобила">
-        <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Заявете оглед</a>
+      <nav class="dn-mobile-detail-bar" aria-label="Vehicle actions">
+        <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Request a vehicle viewing</a>
         <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes}>
           <MobileNavIcon name="phone" size={20} />
-          Обадете се
+          Call us
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" aria-label="Main actions">
         <a
           class:active={page.url.pathname === '/'}
           href={resolve('/')}
           aria-current={page.url.pathname === '/' ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
-          <span>Начало</span>
+          <span>Home</span>
         </a>
         <a
           class:active={page.url.pathname.startsWith('/listing')}
@@ -367,7 +368,7 @@
           aria-current={page.url.pathname.startsWith('/listing') ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
-          <span>Коли</span>
+          <span>Cars</span>
         </a>
         <a
           class:active={page.url.pathname === '/contact' && mobileTopic === 'trade-in'}
@@ -375,7 +376,7 @@
           aria-current={page.url.pathname === '/contact' && mobileTopic === 'trade-in' ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
-          <span>Продай</span>
+          <span>Sell</span>
         </a>
         <a
           class:active={page.url.pathname === '/contact' && mobileTopic === 'import'}
@@ -383,7 +384,7 @@
           aria-current={page.url.pathname === '/contact' && mobileTopic === 'import' ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
-          <span>Внос</span>
+          <span>Vehicle enquiry</span>
         </a>
         <button
           class:active={mobileMenuSection}
@@ -393,7 +394,7 @@
           onclick={openMobile}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="menu" /></span>
-          <span>Меню</span>
+          <span>Menu</span>
         </button>
       </nav>
     {/if}
@@ -493,7 +494,7 @@
     .dn-header-fixed--contact-overlay .dn-header__lower { background: transparent; border: 0; }
     .dn-header-fixed--contact-overlay .dn-mobile-control,
     .dn-header-fixed--contact-overlay .dn-mobile-toggle { background: rgba(15,17,20,.7); color: #fff; border: 1px solid rgba(255,255,255,.3); }
-    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-red); background: var(--dn-red); }
+    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-ink); background: var(--dn-ink); }
 
     .dn-header-fixed--compact .dn-header__inner {
       min-height: 68px;
@@ -516,7 +517,7 @@
     }
 
     .dn-mobile-control--call {
-      background: var(--dn-red);
+      background: var(--dn-ink);
       color: #fff;
     }
 
@@ -613,12 +614,12 @@
     }
 
     .dn-mobile-detail-bar__secondary {
-      background: #1f2329;
+      background: var(--dn-red);
       color: #fff;
     }
 
     .dn-mobile-detail-bar__primary {
-      background: var(--dn-red);
+      background: var(--dn-ink);
       color: #fff;
     }
   }
@@ -668,8 +669,8 @@
     }
 
     .dn-header--mobile-surface .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
 
 
@@ -694,8 +695,8 @@
     }
 
     .dn-header-fixed--home-overlay .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
   }
 

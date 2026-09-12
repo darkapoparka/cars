@@ -205,11 +205,11 @@
 			artwork={isImportMode ? 'cars' : 'contact'}
 			panel="light"
 			headingId="daynight-contact-title"
-			title={isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се с нас'}
+			title={isImportMode ? 'Заявка за внос на автомобил' : 'Contact us'}
 			copy={isImportMode
 				? 'Изпратете линк, модел или бюджет и ще Ви върнем конкретна следваща стъпка.'
 				: 'Оглед, документи, финансиране, бартер или въпрос за наличен автомобил.'}
-			primaryLabel="Изпрати запитване"
+			primaryLabel="Prepare enquiry"
 			primaryHref="/contact#contact-form"
 			secondaryLabel="Виж автомобили"
 			secondaryHref="/inventory"
@@ -261,7 +261,7 @@
 
 							<div class="daynight-contact-details" aria-label="Данни за контакт">
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Адрес</p>
+									<p class="daynight-contact-detail-label">Address</p>
 									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
 								</div>
 								<div class="daynight-contact-detail">
@@ -275,7 +275,7 @@
 									<p class="daynight-contact-detail-value">Използвайте формата за запитване</p>
 								</div>
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Работно време</p>
+									<p class="daynight-contact-detail-label">Opening hours</p>
 									<p class="daynight-contact-detail-value">
 										{daynightSite.hoursLabel}
 									</p>
@@ -320,7 +320,7 @@
 							</div>
 							<div class="md-grid-cols-1 mb-22 grid grid-cols-2 gap-x-20 gap-y-24">
 								<div class="padding-0">
-									<p class="mb-8">Име</p>
+									<p class="mb-8">Name</p>
 									<input
 										class="active input-large"
 										id="contact-name"
@@ -346,7 +346,7 @@
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Имейл</p>
+									<p class="mb-8">Email</p>
 									<input
 										class="input-large"
 										name="email"
@@ -354,11 +354,11 @@
 										type="email"
 										bind:value={email}
 										placeholder="Имейл по желание"
-										aria-label="Имейл"
+										aria-label="Email"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Телефон</p>
+									<p class="mb-8">Phone</p>
 									<input
 										placeholder="Въведете телефон"
 										class="input-large"
@@ -367,7 +367,7 @@
 										type="tel"
 										bind:value={phone}
 										required
-										aria-label="Телефон"
+										aria-label="Phone"
 									/>
 								</div>
 								{#if isImportMode}
@@ -386,7 +386,7 @@
 									</div>
 								{/if}
 								<div class="padding-0 col-span-2">
-									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Съобщение'}</p>
+									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Message'}</p>
 									<textarea
 										placeholder={isImportMode
 											? 'Марка, модел, бюджет, условия или допълнителни изисквания...'
@@ -397,7 +397,7 @@
 										id="message"
 										bind:value={message}
 										required={!isImportMode}
-										aria-label="Съобщение"
+										aria-label="Message"
 									></textarea>
 								</div>
 							</div>
@@ -410,7 +410,7 @@
 									? 'Изпращаме...'
 									: isImportMode
 										? 'Изпрати заявка'
-										: 'Изпрати запитване'}
+										: 'Prepare enquiry'}
 							</button>
 							{#if leadSubmitMessage}
 								<p

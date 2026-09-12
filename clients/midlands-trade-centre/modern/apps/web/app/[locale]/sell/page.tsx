@@ -59,7 +59,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+          "Финалната оценка се прави след оглед на място в шоурума ни в Birmingham, Birmingham.",
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -73,7 +73,7 @@ const pageCopy = {
     formLabel: "Заявете оценка на автомобил",
     makeLabel: "Марка",
     mileageLabel: "Пробег",
-    mileagePlaceholder: "62 000 км",
+    mileagePlaceholder: "62 000 miles",
     modelLabel: "Модел",
     modelPlaceholder: "напр. Octavia",
     primaryAction: "Продължи",
@@ -106,7 +106,7 @@ const pageCopy = {
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+          "The final appraisal follows an in-person inspection at our showroom in Birmingham, Birmingham.",
         question: "Can you appraise it from photos only?",
       },
       {
@@ -120,7 +120,7 @@ const pageCopy = {
     formLabel: "Request a vehicle appraisal",
     makeLabel: "Make",
     mileageLabel: "Mileage",
-    mileagePlaceholder: "62,000 km",
+    mileagePlaceholder: "62,000 miles",
     modelLabel: "Model",
     modelPlaceholder: "e.g. Octavia",
     primaryAction: "Continue",
@@ -276,7 +276,7 @@ export default async function SellPage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
+              src="/dealer/inventory/202601169196000-1.webp"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-black/15" />
 

@@ -583,3 +583,11 @@
   .dn-detail-related__list b { color: #11151c; }
   .dn-detail-location-card h2 { font-size: 22px; }
 }
+
+.dn-detail-gallery-controls { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px; font-size:14px; }
+.dn-detail-gallery-controls button { min-height:44px; padding:8px 14px; border:1px solid #ddd; border-radius:8px; background:#fff; color:#222; cursor:pointer; }
+.dn-detail-gallery-thumbs { display:flex; gap:8px; overflow-x:auto; padding:0 12px 12px; }
+.dn-detail-gallery-thumbs button { flex:0 0 84px; padding:3px; border:2px solid transparent; border-radius:6px; background:#eee; }
+.dn-detail-gallery-thumbs button[aria-pressed="true"] { border-color:var(--dn-red); }
+.dn-detail-gallery-thumbs img { display:block; width:76px; height:57px; object-fit:cover; }
+.dn-detail-gallery-controls button:focus-visible,.dn-detail-gallery-thumbs button:focus-visible { outline:3px solid var(--dn-red); outline-offset:2px; }

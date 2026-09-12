@@ -150,7 +150,7 @@
 					<button
 						type="submit"
 						class="absolute right-0 bottom-1 inline-grid size-11 cursor-pointer place-items-center rounded-sa-pill border-0 bg-sa-blue text-sa-surface transition duration-150 ease-sa hover:bg-sa-blue-strong focus-visible:bg-sa-blue-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-6 [&_svg_path]:stroke-current"
-						aria-label="Търси"
+						aria-label="Search"
 					>
 						{@render searchIcon()}
 					</button>

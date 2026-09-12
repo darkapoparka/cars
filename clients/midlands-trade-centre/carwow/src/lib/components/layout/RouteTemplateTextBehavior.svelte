@@ -3,47 +3,47 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 
 	const inferredFieldLabels: Record<string, string> = {
-		brand: 'Марка',
-		model: 'Модел',
-		price: 'Цена',
-		mileage: 'Пробег',
-		fuel: 'Гориво',
-		transmission: 'Скорости',
+		brand: 'Make',
+		model: 'Model',
+		price: 'Price',
+		mileage: 'Mileage',
+		fuel: 'Fuel',
+		transmission: 'Transmission',
 		body: 'Каросерия',
-		feature: 'Екстри',
-		condition: 'Състояние',
+		feature: 'Features',
+		condition: 'Condition',
 		Firstname: 'Вашето име',
 		Lastname: 'Тема на запитването',
 		SendInquiryname: 'Вашето име',
-		SendInquiryemail: 'Имейл',
-		SendInquiryphone: 'Телефон',
-		message: 'Съобщение',
+		SendInquiryemail: 'Email',
+		SendInquiryphone: 'Phone',
+		message: 'Message',
 		FinancingCalculatorCarPrice: 'Цена на автомобила',
 		FinancingCalculatorInterestRate: 'Лихвен процент',
 		FinancingCalculatorLoanTerm: 'Срок на лизинга',
-		FinancingCalculatorDownPayment: 'Първоначална вноска'
+		FinancingCalculatorDownPayment: 'Initial payment'
 	};
 
 	function translateTemplateLabels() {
 		const labelMap = new Map([
-			['Home', 'Начало'],
-			['Listing', 'Автомобили'],
+			['Home', 'Home'],
+			['Listing', 'Vehicles'],
 			['Pages', 'Още'],
-			['All Brand', 'Всички марки'],
-			['All Model', 'Всички модели'],
+			['All Brand', 'All makes'],
+			['All Model', 'All models'],
 			['All Miles', 'Всички пробези'],
 			['All Price', 'Всички цени'],
 			['All Fuel Type', 'Всички горива'],
 			['All Transmission', 'Всички скорости'],
 			['All Body Style', 'Всички каросерии'],
 			['All Categories', 'Всички категории'],
-			['All Branding', 'Всички марки'],
-			['Filters', 'Филтри'],
-			['Lowest Price', 'Най-ниска цена'],
+			['All Branding', 'All makes'],
+			['Filters', 'Filters'],
+			['Lowest Price', 'Lowest price'],
 			['No accidents', 'Без удари'],
 			['Great Price', 'Добра цена'],
-			['REMOVE ALL', 'Изчисти'],
-			['Remove All', 'Изчисти'],
+			['REMOVE ALL', 'Clear'],
+			['Remove All', 'Clear'],
 			['Special', 'Специално'],
 			['Compare', 'Сравни'],
 			['PREV', 'ПРЕДИШНА'],
@@ -58,8 +58,8 @@
 			['View More Reviews (98)', daynightSite.reviewLinkLabel],
 			['View more reviews', daynightSite.reviewLinkLabel],
 			['Chat via WhatsApp', 'Viber / WhatsApp'],
-			['View details', 'Виж детайли'],
-			['See Finance', 'Финансиране'],
+			['View details', 'View details'],
+			['See Finance', 'Buying options'],
 			['You might also like', 'Подобни автомобили']
 		]);
 
@@ -76,7 +76,7 @@
 				}
 
 				if (/\bVehicles\b/.test(node.textContent)) {
-					node.textContent = node.textContent.replaceAll('Vehicles', 'автомобила');
+					node.textContent = node.textContent.replaceAll('Vehicles', 'vehicles');
 				}
 			});
 		});

@@ -1,7 +1,17 @@
-# Legacy reference provenance
+# Provenance records
 
-The retired mirror payload is preserved by Git history rather than shipped with the SvelteKit application. `mirror-manifest.json` is the final metadata record retained from that payload.
+This directory contains dated image-origin notes, source capture metadata and third-party notices. It is reference material for media and source history, not a development task list.
 
-The manifest records 150 routes and 479 resource records, `https://daynight.mobile.bg/` as its observed source, and an acquisition timestamp of `2026-08-13T05:09:17.976Z`. Its SHA-256 digest after relocation is `4534B039345912E60CA0F634ADA4882BA9E9E166F5F5B8B50BD5A0FB089F4D62`. The separately preserved historical acquisition script is configured for `https://autodealnextjs.vercel.app`. Those records do not establish that the script produced this manifest, and they must not be described as matching provenance.
+Start with [Asset provenance](../ASSET_PROVENANCE.md) for the media families and origin notes. [Source notices](../SOURCE_LICENSE.md) explains the historical licensing record.
 
-The historical scripts under `scripts/provenance/` are not application build commands. The acquisition script is intentionally environment-gated because it recreates and replaces a `mirror/` directory. License evidence remains external to the repository as described in `SOURCE_LICENSE.md`.
+## Capture metadata
+
+`mirror-manifest.json` comes from the retired mirror payload. Its existing provenance record describes 150 routes and 479 resources, observed source `daynight.mobile.bg`, and acquisition timestamp `2026-08-13T05:09:17.976Z`. The separately retained acquisition script names the AutoDeal reference host. These are separate records, not proof of matching acquisition provenance.
+
+Historical acquisition tooling under `scripts/provenance/`, where retained, is not needed to build or run the SvelteKit application. The application renders its own routes rather than serving the captured mirror.
+
+## Media records
+
+Dated Markdown files record original inputs, generated outputs, conversions and usage limits. Historical paths may point to the creator machine or a superseded encoding. Current runtime paths are defined by the application source. Directories containing superseded media retain history outside public `static/`.
+
+Third-party license files are preserved as received. For new media, record the actual input and role without treating an illustration as verified stock or premises photography.

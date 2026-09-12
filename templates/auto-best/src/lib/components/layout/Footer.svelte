@@ -1,10 +1,20 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import type { Attachment } from 'svelte/attachments';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import { brand } from '$config/brand';
 
-  let { showActions = true, showMobileFooter = false }: { showActions?: boolean; showMobileFooter?: boolean } = $props();
+  let { showActions = true, showMobileFooter = false, onVisibilityChange }: { showActions?: boolean; showMobileFooter?: boolean; onVisibilityChange?: (visible: boolean) => void } = $props();
+
+  const observeVisibility: Attachment<HTMLElement> = (node) => {
+    if (!('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      onVisibilityChange?.(Boolean(entry?.isIntersecting && entry.intersectionRatio > 0.02));
+    }, { threshold: [0, 0.02, 0.2] });
+    observer.observe(node);
+    return () => { observer.disconnect(); onVisibilityChange?.(false); };
+  };
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const actions = [
@@ -53,7 +63,7 @@
   </section>
 {/if}
 
-<footer class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
+<footer {@attach observeVisibility} class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>

@@ -153,28 +153,28 @@ function injectLocalBehavior(html: string, templateFile: string) {
 	document.body.classList.add('${pageClass}');
 	const inventoryTotal = () => window.__daynightVisibleInventoryCount ?? ${daynightVehicles.length};
 	const labelMap = new Map([
-		['Home', 'Начало'],
-		['Listing', 'Автомобили'],
+		['Home', 'Home'],
+		['Listing', 'Vehicles'],
 		['Pages', 'Още'],
-		['All Brand', 'Всички марки'],
-		['All Model', 'Всички модели'],
+		['All Brand', 'All makes'],
+		['All Model', 'All models'],
 		['All Miles', 'Всички пробези'],
 		['All Price', 'Всички цени'],
-		['All Car', 'Всички'],
-		['New Car', 'Нови'],
-		['Used Car', 'Употребявани'],
+		['All Car', 'All'],
+		['New Car', 'New'],
+		['Used Car', 'Used'],
 		['Автомобили по тип', 'По тип автомобил'],
 		['Check All Car Type', 'Всички типове'],
 		['Check Всички Type', 'Виж всички типове'],
-		['View All Brand', 'Всички марки'],
+		['View All Brand', 'All makes'],
 		['View Всички марки', 'Виж всички марки'],
-		['Filters', 'Филтри'],
-		['Lowest Price', 'Най-ниска цена'],
+		['Filters', 'Filters'],
+		['Lowest Price', 'Lowest price'],
 		['No accidents', 'Без удари'],
 		['Great Price', 'Добра цена'],
 		['Black', 'Черен'],
-		['REMOVE ALL', 'Изчисти'],
-		['Remove All', 'Изчисти'],
+		['REMOVE ALL', 'Clear'],
+		['Remove All', 'Clear'],
 		['Special', 'Специално'],
 		['Compare', 'Сравни'],
 		['PREV', 'ПРЕДИШНА'],
@@ -186,8 +186,8 @@ function injectLocalBehavior(html: string, templateFile: string) {
 		['Login To Add A Review', 'Вход за добавяне на отзив'],
 		['View More Reviews (98)', '${daynightSite.reviewLinkLabel}'],
 		['Chat via WhatsApp', 'Viber / WhatsApp'],
-		['View details', 'Виж детайли'],
-		['See Finance', 'Финансиране'],
+		['View details', 'View details'],
+		['See Finance', 'Buying options'],
 		['AUDI', '${daynightVehicles[0]?.brand.toUpperCase() ?? 'CHRYSLER'}'],
 		['HYUNDAI', '${daynightVehicles[1]?.brand.toUpperCase() ?? 'BMW'}'],
 		['KIA', '${daynightVehicles[2]?.brand.toUpperCase() ?? 'BMW'}'],
@@ -205,7 +205,7 @@ function injectLocalBehavior(html: string, templateFile: string) {
 					node.textContent = node.textContent.replace(current, labelMap.get(current));
 				}
 				if (/\\bVehicles\\b/.test(node.textContent)) {
-					node.textContent = node.textContent.replaceAll('Vehicles', 'автомобила');
+					node.textContent = node.textContent.replaceAll('Vehicles', 'vehicles');
 				}
 				if (/\\b27 matches\\b/.test(node.textContent)) {
 					node.textContent = node.textContent.replaceAll('27 matches', inventoryTotal() + ' автомобила');
@@ -220,7 +220,7 @@ function injectLocalBehavior(html: string, templateFile: string) {
 			}
 			const next = matchesCount.nextSibling;
 			if (next && next.nodeType === Node.TEXT_NODE && next.textContent.includes('matches')) {
-				next.textContent = next.textContent.replace('matches', 'автомобила');
+				next.textContent = next.textContent.replace('matches', 'vehicles');
 			}
 		}
 	};

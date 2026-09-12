@@ -84,7 +84,7 @@
 	>
 		<div class="mb-8 grid grid-cols-1 gap-18">
 			<div>
-				<label class="mb-8" for="SendInquiryname">Име</label>
+				<label class="mb-8" for="SendInquiryname">Name</label>
 				<input
 					class="active input-large"
 					id="SendInquiryname"
@@ -97,7 +97,7 @@
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryemail">Имейл</label>
+				<label class="mb-8" for="SendInquiryemail">Email</label>
 				<input
 					class="input-large"
 					name="SendInquiryemail"
@@ -106,11 +106,11 @@
 					value=""
 					placeholder="Вашият имейл"
 					required
-					aria-label="Имейл"
+					aria-label="Email"
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryphone">Телефон</label>
+				<label class="mb-8" for="SendInquiryphone">Phone</label>
 				<input
 					placeholder="Телефон (по избор)"
 					class="input-large"
@@ -118,7 +118,7 @@
 					id="SendInquiryphone"
 					type="tel"
 					value=""
-					aria-label="Телефон"
+					aria-label="Phone"
 				/>
 			</div>
 
@@ -127,12 +127,12 @@
 				<select id="SendInquirysubject" name="SendInquirysubject">
 					<option>Наличност на автомобила</option>
 					<option>Цена и оглед</option>
-					<option>Финансиране</option>
+					<option>Buying options</option>
 				</select>
 			</div>
 
 			<div class="padding-0">
-				<label class="mb-6" for="message">Съобщение</label>
+				<label class="mb-6" for="message">Message</label>
 				<textarea
 					placeholder="Вашето съобщение"
 					rows="3"
@@ -140,7 +140,7 @@
 					class="message"
 					id="message"
 					required
-					aria-label="Съобщение"
+					aria-label="Message"
 				></textarea>
 			</div>
 		</div>
@@ -149,7 +149,7 @@
 			class="sa-cta sa-cta-primary mb-18 w-full"
 			disabled={inquirySubmitState === 'submitting'}
 		>
-			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}
+			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Prepare enquiry'}
 		</button>
 		{#if inquirySubmitMessage}
 			<p

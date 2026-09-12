@@ -23,7 +23,7 @@
 	type IntakeMode = 'plate' | 'vin';
 	type SellSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
-	const phoneHref: `tel:${string}` = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref: `tel:${string}` = `tel:${daynightSite.phone}`;
 	const processIcons = [ClipboardPen, Camera, BadgeEuro, KeyRound];
 
 	let valuationDialog: HTMLDialogElement | undefined = $state();
@@ -103,9 +103,9 @@
 		return [
 			['Рег. номер', plate.trim().toUpperCase()],
 			['VIN', vin.trim().toUpperCase()],
-			['Марка', make.trim()],
-			['Модел', model.trim()],
-			['Година', year.trim()],
+			['Make', make.trim()],
+			['Model', model.trim()],
+			['Year', year.trim()],
 			['Километри', mileage.trim()]
 		]
 			.filter(([, value]) => value)
@@ -163,7 +163,7 @@
 				class="sell-action desktop-primary-action"
 				href={resolve(leadPath)}
 				onclick={openValuation}
-				aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
+				aria-haspopup="dialog">Request a valuation <ArrowRight size={18} /></a
 			>
 		</div>
 	</DesktopYellowRouteHero>
@@ -179,7 +179,7 @@
 			<button
 				class="sell-modal__close"
 				type="button"
-				aria-label="Затвори"
+				aria-label="Close"
 				onclick={() => valuationDialog?.close()}><X size={22} /></button
 			>
 		</div>
@@ -235,11 +235,11 @@
 					{/if}
 				</label>
 				<label class="desktop-sell-field">
-					<span>Марка</span>
+					<span>Make</span>
 					<input name="make" type="text" bind:value={make} placeholder="BMW" autocomplete="off" />
 				</label>
 				<label class="desktop-sell-field">
-					<span>Модел</span>
+					<span>Model</span>
 					<input
 						name="model"
 						type="text"
@@ -249,7 +249,7 @@
 					/>
 				</label>
 				<label class="desktop-sell-field">
-					<span>Година</span>
+					<span>Year</span>
 					<input name="year" type="text" inputmode="numeric" bind:value={year} placeholder="2019" />
 				</label>
 				<label class="desktop-sell-field">
@@ -275,7 +275,7 @@
 				</label>
 
 				<label class="desktop-sell-honeypot" aria-hidden="true">
-					<span>Компания</span>
+					<span>Company</span>
 					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 				</label>
 			</div>
@@ -323,7 +323,7 @@
 	<section class="sell-benefits" aria-labelledby="sell-benefits-title">
 		<div class="sell-container sell-benefits__layout">
 			<div class="sell-benefits__content">
-				<h2 id="sell-benefits-title">Продажба<br />или бартер.</h2>
+				<h2 id="sell-benefits-title">Vehicle enquiry<br />или бартер.</h2>
 				<p class="sell-benefits__copy">
 					Продай автомобила си или го замени с модел от нашата наличност. Оценяваме състоянието му и
 					ти съдействаме с документите.
@@ -371,7 +371,7 @@
 					class="sell-action desktop-primary-action"
 					href={resolve(leadPath)}
 					onclick={openValuation}
-					aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
+					aria-haspopup="dialog">Request a valuation <ArrowRight size={18} /></a
 				>
 				<a class="sell-phone" href={phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
 			</div>

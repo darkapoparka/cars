@@ -95,28 +95,28 @@ const composedMiddleware = createNEMO(
   }
 );
 
-const createBulgarianLeadSiteRedirect = (
+const createEnglishLeadSiteRedirect = (
   request: NextRequest,
   headersResponse: Response
 ) => {
-  const isEnglishLeadSitePath =
+  const isBulgarianLeadSitePath =
     leadSite.staticDemoMode &&
-    (request.nextUrl.pathname === "/en" ||
-      request.nextUrl.pathname.startsWith("/en/"));
+    (request.nextUrl.pathname === "/bg" ||
+      request.nextUrl.pathname.startsWith("/bg/"));
 
   if (
-    !isEnglishLeadSitePath ||
+    !isBulgarianLeadSitePath ||
     (request.method !== "GET" && request.method !== "HEAD")
   ) {
     return;
   }
 
-  const bulgarianUrl = request.nextUrl.clone();
-  bulgarianUrl.pathname = request.nextUrl.pathname.slice(3) || "/";
-  const redirectResponse = NextResponse.redirect(bulgarianUrl, 308);
+  const englishUrl = request.nextUrl.clone();
+  englishUrl.pathname = request.nextUrl.pathname.slice(3) || "/";
+  const redirectResponse = NextResponse.redirect(englishUrl, 308);
   redirectResponse.cookies.set(
     LOCALE_COOKIE_NAME,
-    "bg",
+    "en",
     getLocaleCookieOptions()
   );
 
@@ -131,13 +131,14 @@ const createBulgarianLeadSiteRedirect = (
 
 const publicProxy: NextProxy = async (request, event) => {
   const headersResponse = await securityHeaders();
-  const bulgarianLeadSiteRedirect = createBulgarianLeadSiteRedirect(
+  if (leadSite.staticDemoMode) headersResponse.headers.set("X-Robots-Tag", "noindex, nofollow");
+  const englishLeadSiteRedirect = createEnglishLeadSiteRedirect(
     request,
     headersResponse
   );
 
-  if (bulgarianLeadSiteRedirect) {
-    return bulgarianLeadSiteRedirect;
+  if (englishLeadSiteRedirect) {
+    return englishLeadSiteRedirect;
   }
 
   const canonicalTaxonomyPathname = getCanonicalTaxonomyPathname(

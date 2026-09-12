@@ -2,6 +2,7 @@
   import '@fontsource-variable/onest';
   import { template, canIndex } from '$config/template';
   import '../app.css';
+  import { brand } from '$config/brand';
   import { page } from '$app/state';
   import SiteShell from '$components/layout/SiteShell.svelte';
   import type { Snippet } from 'svelte';
@@ -20,4 +21,5 @@
 
 <SiteShell {showFooterActions} {showMobileFooter}>
   {@render children()}
+  <aside class="dealer-preview-note" aria-label="Preview information">{brand.previewNotice} Decorative vehicle illustrations are not stock photographs. {brand.priceNotice}</aside>
 </SiteShell>

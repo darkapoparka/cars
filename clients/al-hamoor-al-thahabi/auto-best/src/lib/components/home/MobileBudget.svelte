@@ -1,38 +1,17 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
-  import { featuredVehicles } from '$data/inventory';
-
+  import { featuredVehicles, formatVehiclePrice } from '$data/inventory';
   const budgetTiles = [
-    {
-      label: 'До 60 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur <= 60000).length} автомобила`,
-      href: '/listing-grid?price_max=60000',
-      image: featuredVehicles[1].image
-    },
-    {
-      label: '60–70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 60000 && vehicle.priceEur <= 70000).length} автомобила`,
-      href: '/listing-grid?price_min=60000&price_max=70000',
-      image: featuredVehicles[0].image
-    },
-    {
-      label: 'Над 70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 70000).length} автомобила`,
-      href: '/listing-grid?price_min=70000',
-      image: featuredVehicles[6].image
-    },
-    {
-      label: 'Виж всички',
-      detail: `${featuredVehicles.length} автомобила`,
-      href: '/listing-grid',
-      image: featuredVehicles[2].image
-    }
+    { label: `Up to ${formatVehiclePrice(25000)}`, detail: `${featuredVehicles.filter(v => v.priceAmount !== null && v.priceAmount <= 25000).length} samples`, href: '/listing-grid?price_max=25000', image: featuredVehicles[6].image },
+    { label: `${formatVehiclePrice(25001)}–50,000`, detail: `${featuredVehicles.filter(v => v.priceAmount !== null && v.priceAmount > 25000 && v.priceAmount <= 50000).length} samples`, href: '/listing-grid?price_min=25001&price_max=50000', image: featuredVehicles[1].image },
+    { label: `Over ${formatVehiclePrice(50000)}`, detail: `${featuredVehicles.filter(v => v.priceAmount !== null && v.priceAmount > 50000).length} samples`, href: '/listing-grid?price_min=50001', image: featuredVehicles[0].image },
+    { label: 'View all samples', detail: `${featuredVehicles.length} listing samples`, href: '/listing-grid', image: featuredVehicles[2].image }
   ] as const;
 </script>
 
 <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">
   <div class="dn-mobile-section-heading">
-    <h2 id="mobile-budget-title">Изберете по бюджет</h2>
+    <h2 id="mobile-budget-title">Choose by budget</h2>
 
   </div>
 

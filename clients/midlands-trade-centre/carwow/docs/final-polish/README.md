@@ -1,8 +1,8 @@
 # Day & Night Spartak — Client-Demo Finalization
 
-**Client:** Day & Night Auto Group  
-**Variant:** Spartak-style full SvelteKit dealer application  
-**Approved application baseline:** `f245f31155551177104b82ecbf4e23029e697643`  
+**Client:** Day & Night Auto Group
+**Variant:** Spartak-style full SvelteKit dealer application
+**Approved application baseline:** `f245f31155551177104b82ecbf4e23029e697643`
 **Execution model:** complete master plan + small selected batches
 
 ## Purpose

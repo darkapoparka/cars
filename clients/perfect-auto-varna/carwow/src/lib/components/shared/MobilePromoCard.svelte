@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import { base } from '$lib/utils/preview-paths';
+	import { previewPath } from '$lib/utils/preview-paths';
 	let {
 		title,
 		description,
@@ -39,7 +39,7 @@
 			>{label}<ArrowRight size={16} strokeWidth={2} aria-hidden="true" /></span
 		>
 	</span>
-	<img src={`${base}${image}`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+	<img src={previewPath(image)} alt="" aria-hidden="true" loading="lazy" decoding="async" />
 </button>
 
 <style>

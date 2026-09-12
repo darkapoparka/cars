@@ -9,17 +9,17 @@
   <div class="container">
     <div class="dn-section-heading dn-body-types__heading dn-home-section-heading">
       <h2 id="body-types-title" class="dn-home-section-title">
-        <span class="dn-heading-desktop">Изберете по тип купе</span>
-        <span class="dn-heading-mobile">По тип купе</span>
+        <span class="dn-heading-desktop">Choose by body type</span>
+        <span class="dn-heading-mobile">By body type</span>
       </h2>
       <a class="dn-body-types__all dn-home-section-action" href={resolve('/listing-grid')}>
-        <span class="dn-heading-desktop">Вижте всички автомобили</span>
-        <span class="dn-heading-mobile">Всички</span>
+        <span class="dn-heading-desktop">View all vehicles</span>
+        <span class="dn-heading-mobile">All</span>
       </a>
     </div>
 
     <div class="dn-body-types__viewport">
-      <div class="dn-body-types__rail" aria-label="Автомобили по тип купе">
+      <div class="dn-body-types__rail" aria-label="Vehicles by body type">
         {#each bodyTypes as item (item.query)}
           <a class="dn-body-type" class:dn-body-type--secondary={!mobileBodyTypes.has(item.query)} href={resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`)}>
             <span class="dn-body-type__image">
@@ -34,7 +34,7 @@
             </span>
             <span class="dn-body-type__content">
               <strong class="dn-body-type__title">{item.label}</strong>
-              <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? 'автомобил' : 'автомобила'}</small>
+              <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? 'vehicle' : 'vehicles'}</small>
             </span>
           </a>
         {/each}

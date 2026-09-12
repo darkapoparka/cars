@@ -42,12 +42,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "The form is ready, but message delivery is not configured yet. Call Day & Night directly."
+          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Midlands Trade Centre.",
+          "The form is ready, but message delivery is not configured yet. Call Midlands Trade Centre directly."
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Day & Night.",
-          "Message delivery is not configured yet. Call Day & Night directly."
+          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Midlands Trade Centre.",
+          "Message delivery is not configured yet. Call Midlands Trade Centre directly."
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +59,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на Day & Night."
-        : "Запитването е изпратено до екипа на Day & Night.",
-      "Your request has been sent to the Day & Night team."
+        ? "Заявката е изпратена до екипа на Midlands Trade Centre."
+        : "Запитването е изпратено до екипа на Midlands Trade Centre.",
+      "Your request has been sent to the Midlands Trade Centre team."
     ),
   };
 };
@@ -94,7 +94,7 @@ const getImportDetailLines = (
     lines.push(`${localized("Година", "Year")}: ${request.year}`);
   }
   if (request.mileage !== undefined) {
-    lines.push(`${localized("Пробег", "Mileage")}: ${request.mileage} km`);
+    lines.push(`${localized("Пробег", "Mileage")}: ${request.mileage} miles`);
   }
   if (request.budget) {
     lines.push(`${localized("Бюджет", "Budget")}: ${request.budget}`);
@@ -168,7 +168,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Day & Night: ${topic.en}`,
+          subject: `Midlands Trade Centre: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

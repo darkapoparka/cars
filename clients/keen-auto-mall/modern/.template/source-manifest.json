@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "key": "modern",
-  "source": "M:\\leads-cars\\projects\\bulgaria\\day-night-auto-group",
-  "destination": "J:\\cars\\templates\\modern",
-  "copiedAt": "2026-09-06T14:15:20.055Z",
-  "sourceUrl": "http://127.0.0.1:6212/cars",
+  "source": "J:\\cars\\templates\\modern",
+  "destination": "J:\\cars\\clients\\keen-auto-mall\\modern",
+  "copiedAt": "2026-09-09T01:52:21.649Z",
+  "sourceUrl": null,
   "git": {
-    "root": "M:/leads-cars/projects/bulgaria/day-night-auto-group",
-    "branch": "codex/mobile-header-contact-refinement",
-    "head": "7c635fee1c8fadca317a8a65d5887c0c455b021d",
-    "remote": "https://github.com/darkapoparka/day-and-night-modern.git",
-    "status": "M DESIGN.md\n M apps/web/app/[locale]/components/mobile-about-contact.tsx\n M apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx\n M apps/web/app/[locale]/components/mobile-financing-interceptor.tsx\n M apps/web/app/[locale]/components/mobile-financing-policy.ts\n M apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx\n M apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx\n M apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx\n M apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts\n M apps/web/app/[locale]/components/mobile-service-help.tsx\n M apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx\n M apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx\n M apps/web/app/[locale]/components/public-route-loading.tsx\n M apps/web/app/[locale]/imports/components/blank-import-request-link.tsx\n M apps/web/app/[locale]/imports/components/import-origin-field.tsx\n M apps/web/app/[locale]/imports/components/import-request-fields.tsx\n M apps/web/app/[locale]/imports/components/import-request-policy.ts\n M apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx\n M apps/web/app/[locale]/imports/page.tsx\n M apps/web/app/[locale]/layout.tsx\n M apps/web/app/[locale]/lease/lease-car-selector.tsx\n M apps/web/app/[locale]/lease/lease-finance-policy.ts\n M apps/web/app/[locale]/lease/lease-mobile-selection.tsx\n M apps/web/app/[locale]/lease/lease-selected-vehicle.tsx\n M apps/web/app/[locale]/lease/lease-vehicle-selector.tsx\n M apps/web/app/[locale]/lease/page.tsx\n M apps/web/app/[locale]/styles.css\n M packages/marketplace-ui/components/dealer-bottom-nav.tsx\n M packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx\n M packages/marketplace-ui/components/dealer-social-links.tsx\n M packages/marketplace-ui/components/desktop-discovery-bar.tsx\n M packages/marketplace-ui/components/desktop-discovery-search.tsx\n M packages/marketplace-ui/components/desktop-quick-filters.tsx\n M packages/marketplace-ui/components/marketplace-masthead.tsx\n M packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx\n M packages/marketplace-ui/components/mobile-marketplace-overlay.tsx\n M packages/marketplace-ui/components/vehicle-card-content.tsx\n M packages/marketplace-ui/lib/vehicle-card-view-policy.ts\n M packages/marketplace-ui/package.json\n?? .tmp/\n?? apps/web/app/[locale]/components/mobile-sell-category-field.tsx\n?? apps/web/app/[locale]/desktop-header.css\n?? apps/web/app/[locale]/lease/lease-mobile-preferences.tsx\n?? packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx\n?? packages/marketplace-ui/components/dealer-desktop-header.tsx\n?? packages/marketplace-ui/components/dealer-desktop-toolbar.tsx\n?? packages/marketplace-ui/components/dealer-mobile-header-icon.tsx\n?? packages/marketplace-ui/components/dealer-ui-icon.tsx\n?? packages/marketplace-ui/components/dealer-vehicle-facts.tsx\n?? packages/marketplace-ui/components/mobile-pill-rail.tsx\n?? packages/marketplace-ui/lib/icons/\n?? packages/marketplace-ui/lib/mobile-form-control.ts\n?? packages/marketplace-ui/lib/mobile-header-icon-action.ts",
-    "headAfterCopy": "7c635fee1c8fadca317a8a65d5887c0c455b021d"
+    "root": "J:/cars",
+    "branch": "main",
+    "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "remote": "https://github.com/darkapoparka/cars.git",
+    "status": "M catalog.json\n M clients/al-hamoor-al-thahabi/HANDOFF.md\n M clients/al-hamoor-al-thahabi/assets/photo-provenance.json\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/company/ContactVehicle.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/home/MobileBudget.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/home/VehicleQuickSearch.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/ListingFilters.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/QuickFilterSheet.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/VehicleDiscoveryForm.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/VehicleSearchDialog.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/vehicles/VehicleCard.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/vehicles/VehicleFinanceCalculator.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/config/brand.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/company.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/demo-content.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/editorial.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/home.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/inventory.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/listing.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/navigation.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte\n M clients/al-hamoor-al-thahabi/auto-best/static/favicon.ico\n M clients/al-hamoor-al-thahabi/business-facts.json\n M clients/al-hamoor-al-thahabi/stock.json\n M clients/excellent-cars/CLIENT.md\n M clients/excellent-cars/auto-best/src/lib/components/layout/Header.svelte\n M clients/excellent-cars/carwow/src/lib/components/home/mobile/MobileHome.svelte\n M clients/excellent-cars/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx\n M docs/WORKFLOW.md\n M templates/auto-best/.template/source-manifest.json\n M templates/auto-best/.template/template.json\n M templates/auto-best/ARCHITECTURE.md\n M templates/auto-best/ASSET_PROVENANCE.md\n M templates/auto-best/TEMPLATE.md\n M templates/auto-best/scripts/check-assets.mjs\n M templates/auto-best/scripts/journey-smoke.mjs\n M templates/auto-best/src/app.html\n M templates/auto-best/src/lib/components/company/ContactHero.svelte\n M templates/auto-best/src/lib/components/company/ContactIntent.svelte\n M templates/auto-best/src/lib/components/company/VehicleEnquiry.svelte\n M templates/auto-best/src/lib/components/home/BodyTypes.svelte\n M templates/auto-best/src/lib/components/home/BrandSection.svelte\n M templates/auto-best/src/lib/components/home/Editorial.svelte\n M templates/auto-best/src/lib/components/home/InventorySection.svelte\n M templates/auto-best/src/lib/components/home/SearchBox.svelte\n M templates/auto-best/src/lib/components/home/TrustActions.svelte\n M templates/auto-best/src/lib/components/home/VideoSection.svelte\n M templates/auto-best/src/lib/components/layout/Header.svelte\n M templates/auto-best/src/lib/components/layout/MobileMenu.svelte\n M templates/auto-best/src/lib/components/ui/HeroVehicles.svelte\n M templates/auto-best/src/lib/config/brand.ts\n M templates/auto-best/src/lib/data/editorial.ts\n M templates/auto-best/src/lib/data/home.ts\n M templates/auto-best/src/lib/data/navigation.ts\n M templates/auto-best/src/lib/data/vehicle-artwork.ts\n M templates/auto-best/src/lib/styles/composition.css\n M templates/auto-best/src/lib/styles/navigation.css\n M templates/auto-best/src/lib/styles/tokens.css\n M templates/auto-best/src/routes/+page.svelte\n M templates/auto-best/src/routes/blog-detail/[id]/detail.css\n M templates/auto-best/src/routes/contact/contact.css\n M templates/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte\n M templates/auto-best/src/routes/listing-detail-v1/[id]/detail.css\n M templates/auto-best/static/assets/images/blog/blog-1.jpg\n M templates/auto-best/static/assets/images/blog/blog-2.jpg\n M templates/auto-best/static/assets/images/blog/blog-3.jpg\n D templates/auto-best/static/assets/images/section/bg-6.jpg\n?? audits/2026-09-08/auto-best-borderless-editorial/\n?? audits/2026-09-08/auto-best-compact-menus/\n?? audits/2026-09-08/auto-best-desktop-comparison/\n?? audits/2026-09-08/auto-best-editorial-photos/\n?? audits/2026-09-08/auto-best-header-artwork/\n?? audits/2026-09-08/auto-best-header/\n?? audits/2026-09-08/auto-best-menu-balance/\n?? audits/2026-09-08/auto-best-menu-editorial/\n?? audits/2026-09-08/auto-best-menu-family/\n?? audits/2026-09-08/auto-best-menu-links/\n?? audits/2026-09-08/auto-best-menu-restored/\n?? audits/2026-09-08/auto-best-menu-scale/\n?? audits/2026-09-08/auto-best-menu-stability/\n?? audits/2026-09-08/auto-best-menu-title-cards/\n?? audits/2026-09-08/auto-best-menu-title-size/\n?? audits/2026-09-08/auto-best-service-assets/\n?? audits/2026-09-08/auto-best-showroom-palette/\n?? audits/2026-09-08/auto-best-source-refresh/\n?? audits/2026-09-08/auto-best-type-review/\n?? audits/2026-09-09/\n?? clients/al-hamoor-al-thahabi/SOURCE-PACK.json\n?? clients/al-hamoor-al-thahabi/assets/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/assets/branding.json\n?? clients/al-hamoor-al-thahabi/assets/favicon.ico\n?? clients/al-hamoor-al-thahabi/assets/favicon.png\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-4.webp\n?? clients/al-hamoor-al-thahabi/assets/logo-dark.png\n?? clients/al-hamoor-al-thahabi/assets/logo-light.png\n?? clients/al-hamoor-al-thahabi/assets/showroom.webp\n?? clients/al-hamoor-al-thahabi/auto-best/src/lib/data/dealer.ts\n?? clients/al-hamoor-al-thahabi/auto-best/static/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/auto-best/static/dealer/\n?? clients/al-hamoor-al-thahabi/carwow/static/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/carwow/static/dealer/\n?? clients/al-hamoor-al-thahabi/carwow/static/favicon.ico\n?? clients/al-hamoor-al-thahabi/evidence/brand-review.png\n?? clients/al-hamoor-al-thahabi/evidence/published-avatar.png\n?? clients/al-hamoor-al-thahabi/evidence/published-showroom.png\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/dealer/\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/favicon.ico\n?? clients/keen-auto-mall/auto-best/\n?? docs/lead-build/bulgaria-2026-09-09/\n?? templates/auto-best/.template/refresh-manifest.json\n?? templates/auto-best/provenance/borderless-editorial-2026-09-08.md\n?? templates/auto-best/provenance/editorial-photos-2026-09-08.md\n?? templates/auto-best/provenance/menu-service-assets-2026-09-08.md\n?? templates/auto-best/provenance/mobile-service-artwork-2026-09-06.md\n?? templates/auto-best/provenance/superseded-blog-photos/\n?? templates/auto-best/provenance/superseded-brand-banner/\n?? templates/auto-best/provenance/superseded-menu-art/\n?? templates/auto-best/scripts/home-hierarchy-smoke.mjs\n?? templates/auto-best/src/lib/components/layout/NavigationFeatureCard.svelte\n?? templates/auto-best/src/lib/components/ui/ActionLink.svelte\n?? templates/auto-best/src/lib/components/ui/ArtworkRegion.svelte\n?? templates/auto-best/src/lib/components/ui/FeatureArtwork.svelte\n?? templates/auto-best/src/lib/data/feature-artwork.ts\n?? templates/auto-best/static/assets/images/lead/day-night-mobile-import-v1.webp\n?? templates/auto-best/static/assets/images/lead/day-night-mobile-sell-v1.webp\n?? templates/auto-best/static/assets/images/template/\n?? templates/auto-best/static/auto-best-icon.svg",
+    "headAfterCopy": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca"
   },
   "files": [
     {
@@ -3036,8 +3036,8 @@
     },
     {
       "path": "apps/web/next-env.d.ts",
-      "bytes": 253,
-      "sha256": "4e4da12aa061aac172fb1bcb48e9b6e4b293080d2f494327925fdba8f39632ac"
+      "bytes": 257,
+      "sha256": "083e23c4c5e7761db151134ea1ef7896120c86c5888cdc8a861f534f7e86d6fd"
     },
     {
       "path": "apps/web/next.config.ts",
@@ -6821,8 +6821,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3372,
-      "sha256": "f81a1d4c5f79bbea15a921dee4de2eeb19de4b624db5f27ba1f531128fe44855"
+      "bytes": 633,
+      "sha256": "12fa33c649527ca445014fae405191979a2c17058f4c11eb1713a7b9147aecce"
     },
     {
       "path": "scripts/authenticated-preview-contract.test.mjs",
@@ -6880,6 +6880,11 @@
       "sha256": "03c68b8f9257ac0f7522ffd188ed1f44f359ce6df31c5fa97aaada8fba06ed6a"
     },
     {
+      "path": "TEMPLATE.md",
+      "bytes": 3862,
+      "sha256": "eb240e3f76084d913af47b03ec9057ac52860b628dd844664db705c4c4c595ac"
+    },
+    {
       "path": "tsconfig.json",
       "bytes": 562,
       "sha256": "69e9ba33673751654d08bf74f73b624c3af61f26172270b2dce2eba9e9faa0e6"
@@ -6911,106 +6916,40 @@
     }
   ],
   "excluded": [
-    ".codex-artifacts",
-    ".codex-day-night-6212-health-recovery-20260801.err.log",
-    ".codex-day-night-6212-health-recovery-20260801.out.log",
-    ".codex-day-night-6212-red.err.log",
-    ".codex-day-night-6212-red.out.log",
-    ".codex-dev-6212.err.log",
-    ".codex-dev-6212.out.log",
-    ".git",
-    ".github",
-    ".impeccable",
-    ".tmp",
-    ".turbo",
-    ".vscode",
-    "apps/api/.env.local",
-    "apps/api/.next",
-    "apps/api/.turbo",
+    ".template",
+    "AGENTS.md",
     "apps/api/node_modules",
-    "apps/app/.next",
-    "apps/app/.turbo",
     "apps/app/node_modules",
-    "apps/artifacts",
     "apps/docs/node_modules",
-    "apps/e2e/.turbo",
-    "apps/e2e/apps/e2e/artifacts",
-    "apps/e2e/artifacts",
     "apps/e2e/node_modules",
-    "apps/e2e/playwright-report",
-    "apps/e2e/qa",
-    "apps/e2e/test-results",
     "apps/email/node_modules",
-    "apps/storybook/.turbo",
     "apps/storybook/node_modules",
-    "apps/studio/.turbo",
     "apps/studio/node_modules",
     "apps/web/.next",
-    "apps/web/.next-public-e2e-mobile-banner-preview-demo",
-    "apps/web/.turbo",
     "apps/web/node_modules",
-    "artifacts",
-    "docs/superpowers/audits",
     "node_modules",
-    "packages/ai/.turbo",
     "packages/ai/node_modules",
-    "packages/analytics/.turbo",
     "packages/analytics/node_modules",
-    "packages/auth/.turbo",
     "packages/auth/node_modules",
-    "packages/cms/.turbo",
     "packages/cms/node_modules",
-    "packages/collaboration/.turbo",
     "packages/collaboration/node_modules",
-    "packages/database/.turbo",
     "packages/database/node_modules",
-    "packages/design-system/.turbo",
     "packages/design-system/node_modules",
-    "packages/email/.turbo",
     "packages/email/node_modules",
-    "packages/feature-flags/.turbo",
     "packages/feature-flags/node_modules",
-    "packages/internationalization/.turbo",
     "packages/internationalization/node_modules",
-    "packages/marketplace/.turbo",
     "packages/marketplace/node_modules",
-    "packages/marketplace-domain/.turbo",
     "packages/marketplace-domain/node_modules",
-    "packages/marketplace-ui/.turbo",
     "packages/marketplace-ui/node_modules",
-    "packages/next-config/.turbo",
     "packages/next-config/node_modules",
-    "packages/notifications/.turbo",
     "packages/notifications/node_modules",
-    "packages/observability/.turbo",
     "packages/observability/node_modules",
-    "packages/payments/.turbo",
     "packages/payments/node_modules",
-    "packages/rate-limit/.turbo",
     "packages/rate-limit/node_modules",
-    "packages/security/.turbo",
     "packages/security/node_modules",
-    "packages/seo/.turbo",
     "packages/seo/node_modules",
-    "packages/storage/.turbo",
-    "packages/storage/node_modules",
-    "qa",
-    "skills",
-    "tmp"
+    "packages/storage/node_modules"
   ],
   "links": [],
-  "bytes": 95855002,
-  "configurationSupplement": {
-    "at": "2026-09-06T14:52:29.952Z",
-    "files": [
-      ".gitignore",
-      ".node-version",
-      ".npmrc",
-      ".nvmrc",
-      "packages/security/inventory-credentials.test.ts",
-      "packages/security/inventory-credentials.ts"
-    ]
-  },
-  "refreshedAt": "2026-09-06T20:48:34.358Z",
-  "refreshEvidence": "../../audits/2026-09-06/asko96-build"
+  "bytes": 95896408
 }

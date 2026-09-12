@@ -143,6 +143,9 @@ enum PriceType {
 enum PriceCurrency {
   BGN
   EUR
+  AED
+  USD
+  GBP
 }
 
 enum FuelType {

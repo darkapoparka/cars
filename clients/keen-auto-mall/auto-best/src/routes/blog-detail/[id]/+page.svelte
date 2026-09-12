@@ -18,15 +18,15 @@
 <article class="dn-blog-detail">
     <header class="dn-blog-detail__hero">
       <div class="dn-blog-detail__hero-inner">
-        <RouteHeroArtwork variant={data.post.category === 'Лизинг' || data.post.category === 'Бартер' ? 'keys' : data.post.category === 'Внос' ? 'cars' : 'guide'} />
+        <RouteHeroArtwork variant={data.post.category === 'Buying' || data.post.category === 'Trade-in' ? 'keys' : data.post.category === 'Documents' ? 'cars' : 'guide'} />
         <a class="dn-blog-detail__back" href={data.returnTo}>
           <Icon name="arrow-left" size={18} strokeWidth={1.9} />
-          <span>Назад към статиите</span>
+          <span>Back to articles</span>
         </a>
 
         <h1>{data.post.title}</h1>
 
-        <ul class="dn-blog-detail__meta" aria-label="Категория и тема">
+        <ul class="dn-blog-detail__meta" aria-label="Category and topic">
           <li><Icon name="file-invoice" size={16} strokeWidth={1.9} />{data.post.category}</li>
           {#if data.post.tag !== data.post.category}
             <li><Icon name="tag" size={16} strokeWidth={1.9} />{data.post.tag}</li>
@@ -41,7 +41,7 @@
     <div class="dn-blog-detail__layout">
       <div class="dn-blog-detail__sheet">
 
-        <section class="dn-blog-detail__copy" aria-label="Съдържание на статията">
+        <section class="dn-blog-detail__copy" aria-label="Article content">
           <div class="dn-blog-detail__article-sections">
             {#each data.post.sections as section (section.title)}
               <section>
@@ -55,7 +55,7 @@
         </section>
 
         <div class="dn-blog-detail__tags">
-          <span>Теми:</span>
+          <span>Topics:</span>
           <a href={resolve(`/blog?category=${encodeURIComponent(data.post.category)}`)}>{data.post.category}</a>
           {#if data.post.tag !== data.post.category}
             <a href={resolve(`/blog?q=${encodeURIComponent(data.post.tag)}`)}>{data.post.tag}</a>

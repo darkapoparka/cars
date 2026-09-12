@@ -892,4 +892,3 @@ ALTER TABLE "MarketplaceListing"
 ALTER TABLE "Lead"
   ADD CONSTRAINT "Lead_buyerCountryCode_check"
     CHECK ("buyerCountryCode" IS NULL OR "buyerCountryCode" ~ '^[A-Z]{2}$') NOT VALID;
-

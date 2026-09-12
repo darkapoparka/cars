@@ -54,7 +54,7 @@
 						onclick={() => selectPaymentMode('finance')}
 						onkeydown={(event) => handlePaymentKeydown(event, 'finance')}
 					>
-						Финансиране
+						Buying options
 					</button>
 				</li>
 			</ul>

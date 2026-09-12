@@ -4,9 +4,9 @@ const contactSubjects = {
 	video: 'Заявка за видео преглед',
 	photos: 'Заявка за още снимки',
 	review: 'Изпращане на отзив',
-	financing: 'Финансиране',
-	services: 'Услуги',
-	'sell-your-car': 'Продажба или бартер',
+	financing: 'Buying options',
+	services: 'Services',
+	'sell-your-car': 'Sell or trade in',
 	viewing: 'Заявка за оглед'
 } as const;
 

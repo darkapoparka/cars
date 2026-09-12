@@ -5,7 +5,7 @@
 
 <section class="home-videos" aria-label="Day Night Auto в YouTube">
 	<div class="daynight-home-container">
-		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="Всички видеа">
+		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="All videos">
 			{#snippet titleContent()}
 				<span class="home-videos__title">Day Night Auto в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
 			{/snippet}

@@ -7,52 +7,52 @@
 
   const actions = [
     {
-      title: 'Вижте колекцията',
+      title: 'View the collection',
       artwork: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
       vehicle: 'urus',
       tone: 'black',
-      mobileTitle: 'Автомобили',
-      mobileCta: 'Разгледай',
-      description: 'Разгледайте автомобилите с удобни филтри.',
-      bannerDescription: ['Изберете автомобил', 'с удобни филтри.'],
-      cta: 'Към автомобилите',
+      mobileTitle: 'Vehicles',
+      mobileCta: 'Browse',
+      description: 'Browse vehicles with convenient filters.',
+      bannerDescription: ['Choose a vehicle', 'with convenient filters.'],
+      cta: 'View vehicles',
       href: '/listing-grid',
       icon: 'car'
     },
     {
-      title: 'Продажба или бартер',
+      title: 'Trade-in enquiry',
       artwork: { src: '/assets/images/lead/day-night-sell-banner-v2.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
       vehicle: 'gclass',
       tone: 'red',
-      mobileTitle: 'Продай/Бартер',
-      mobileCta: 'Заяви оценка',
-      description: 'Получете оценка за продажба или бартер.',
-      bannerDescription: ['Получете оценка', 'за продажба или бартер.'],
-      cta: 'Поискайте оценка',
+      mobileTitle: 'Sell/Trade in',
+      mobileCta: 'Request a valuation',
+      description: 'Discuss a valuation for a sale or trade-in.',
+      bannerDescription: ['Discuss a valuation', 'for a sale or trade-in.'],
+      cta: 'Request a valuation',
       href: '/contact?topic=trade-in',
       icon: 'value'
     },
     {
-      title: 'Внос по заявка',
+      title: 'Vehicle enquiry',
       vehicle: 'gclass',
       tone: 'red',
-      mobileTitle: 'Внос по заявка',
-      mobileCta: 'Заяви внос',
-      description: 'Споделете модел и бюджет за внос по заявка.',
-      bannerDescription: ['Споделете своя бюджет', 'и модел за внос.'],
-      cta: 'Заявете внос',
+      mobileTitle: 'Vehicle enquiry',
+      mobileCta: 'Make a vehicle enquiry',
+      description: 'Share a model and budget for your vehicle enquiry.',
+      bannerDescription: ['Share your budget', 'and model for import.'],
+      cta: 'Make a vehicle enquiry',
       href: '/contact?topic=import',
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
+      title: 'Buying options',
       vehicle: 'urus',
       tone: 'black',
-      mobileTitle: 'Собствен лизинг',
-      mobileCta: 'Виж условия',
-      description: 'Попитайте за първоначална вноска, срок и условия.',
-      bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],
-      cta: 'Поискайте условия',
+      mobileTitle: 'Buying options',
+      mobileCta: 'View terms',
+      description: 'Ask about the deposit, duration and terms.',
+      bannerDescription: ['Ask about payments,', 'duration and terms.'],
+      cta: 'Request terms',
       href: '/contact?topic=leasing',
       icon: 'finance'
     }
@@ -60,17 +60,17 @@
   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
 </script>
 
-<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}>
+<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'How we can help' : group === 'browse' ? 'Buying and selling' : 'Imports and buying options'}>
   <div class="container">
     <div class="dn-trust-actions__panel">
       {#if variant === 'cards'}
-        <div class="dn-services-heading dn-home-section-heading">
-          <h2 class="dn-home-section-title">Как можем да помогнем</h2>
-          <p>Изберете услуга или се свържете директно с екипа.</p>
-          <a class="dn-home-section-action" href={resolve('/contact')}>Свържете се с нас</a>
+        <div class="dn-services-heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
+          <h2 class="dn-home-section-title">How we can help</h2>
+
+          <a class="dn-home-section-action" href={resolve('/contact')}>Contact us</a>
         </div>
       {/if}
-      <div class="dn-trust-actions__grid" aria-label="Следващи стъпки">
+      <div class="dn-trust-actions__grid" aria-label="Next steps">
         {#each visibleActions as action (action.href)}
           <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners' && 'artwork' in action}>
             {#if variant === 'banners'}
@@ -129,12 +129,17 @@
   .dn-trust-card__vehicle :global(img) { object-position: right center; }
   .dn-trust-card__lineup { display: block; width: 100%; height: 100%; object-fit: contain; }
   @media (min-width: 992px) {
+    .dn-trust-card { min-height: var(--dn-home-banner-height); padding: var(--dn-home-banner-padding); }
+    .dn-trust-card__content { justify-content: flex-start; }
+    .dn-trust-card h3 { margin: 0; }
+    .dn-trust-card p { margin: var(--dn-home-copy-gap) 0 0; }
+    .dn-trust-card .dn-trust-card__action { margin-top: var(--dn-home-cta-gap); }
     .dn-trust-card--campaign { container-type: inline-size; }
     .dn-trust-card--campaign .dn-trust-card__content { width: 100%; }
-    .dn-trust-card--campaign p { width: 40%; }
+    .dn-trust-card--campaign p { width: calc(40% - var(--dn-home-copy-gap)); }
     .dn-trust-card--campaign .dn-trust-card__action { width: max-content; white-space: nowrap; }
     .dn-trust-card__vehicle--campaign {
-      --car-height: min(144px, calc((100cqw + 56px) * .55 / 2.676744));
+      --car-height: min(144px, calc((100cqw + 64px) * .55 / 2.676744));
       top: calc(206px - var(--car-height) * var(--art-bottom));
       right: calc(16px - var(--car-height) * var(--art-right));
       bottom: auto;
@@ -146,22 +151,30 @@
     .dn-trust-card--campaign p { width: 50%; }
     .dn-trust-card__vehicle--campaign { --car-height: calc((100cqw - 192px) / 2.676744); }
   }
-  .dn-trust-card__action { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px; align-self: flex-start; margin-top: auto; padding: 10px 14px; border-radius: var(--dn-radius-button); background: #fff; color: #202329; font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .dn-trust-card__action { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px; align-self: flex-start; margin-top: auto; padding: 10px 14px; border-radius: var(--dn-radius-button); background: #fff; color: #202329; font: var(--dn-cta-font); letter-spacing: var(--dn-cta-tracking); }
   .dn-trust-card__action:hover { background: #eceef1; }
   .dn-trust-card a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
   .dn-home-services { padding: 32px 0 64px; background: #fff; }
   .dn-home-services .dn-trust-actions__panel { padding: 32px; border-radius: 20px; background: #f1f3f5; }
   .dn-services-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; margin-bottom: 24px; }
-  .dn-services-heading p { grid-column: 1; color: #626a75; }
+
   .dn-services-heading > a { grid-column: 2; }
   .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (min-width: 992px) {
+    .dn-home-services .dn-trust-actions__panel { padding: 0; background: var(--dn-home-panel); }
+    .dn-services-heading { margin-bottom: 0; }
+    .dn-home-services .dn-trust-actions__grid { position: relative; margin-top: calc(-1 * var(--dn-home-banner-overlap)); padding: 24px; border-radius: var(--dn-radius); background: var(--dn-home-panel); }
+    .dn-home-services .dn-service-card .dn-trust-card__action { background: var(--dn-red); color: var(--dn-white); }
+    .dn-home-services .dn-service-card .dn-trust-card__action:hover { background: var(--dn-red-hover); color: var(--dn-white); }
+    .dn-trust-card__action :global(svg) { width: 18px; height: 18px; stroke-width: 2; flex-shrink: 0; }
+  }
   .dn-service-card { display: flex; flex-direction: column; min-width: 0; min-height: 272px; padding: 24px; border-radius: 16px; background: #fff; }
   .dn-service-card .dn-trust-card__icon { display: block; width: 60px; height: 60px; margin-bottom: 20px; color: var(--dn-red); }
   .dn-service-card .dn-trust-card__content { width: 100%; }
   .dn-service-card h3 { margin: 0 0 12px; color: #24272c; font-size: 20px; line-height: 1.25; }
   .dn-service-card h3 a { color: inherit; }
   .dn-service-card p { margin: 0 0 24px; color: #696665; font-size: 16px; line-height: 1.5; }
-  .dn-service-card .dn-trust-card__action { width: 100%; padding-inline: 10px; border: 1px solid var(--dn-red); color: var(--dn-red); font-size: 14px; }
+  .dn-service-card .dn-trust-card__action { width: 100%; padding-inline: 10px; border: 1px solid var(--dn-red); color: var(--dn-red); font: var(--dn-cta-font); }
   .dn-service-card .dn-trust-card__action:hover { background: var(--dn-red); color: #fff; }
   .dn-service-card a:focus-visible { outline: 2px solid var(--dn-red); outline-offset: 3px; }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -174,7 +187,7 @@
     .dn-home-services .dn-trust-actions__panel { padding: 0; background: transparent; }
     .dn-services-heading { display: block; margin-bottom: 16px; }
     .dn-services-heading h2 { font-size: 22px; }
-    .dn-services-heading p { font-size: 14px; }
+
     .dn-services-heading > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
     .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .dn-service-card { min-height: 154px; padding: 12px; border-radius: 14px; }

@@ -17,7 +17,7 @@
 	</a>
 
 	<nav class="mobile-home-header__actions" aria-label="Бързи действия">
-		<a class="mobile-home-header__icon" href={resolve(searchHref)} aria-label="Търсене">
+		<a class="mobile-home-header__icon" href={resolve(searchHref)} aria-label="Search">
 			<Search size={19} strokeWidth={2.4} />
 		</a>
 	</nav>

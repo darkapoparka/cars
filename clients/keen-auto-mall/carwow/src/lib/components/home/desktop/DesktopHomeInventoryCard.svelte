@@ -98,7 +98,7 @@
 			<span class="daynight-card-price__meta"
 				><span class="daynight-card-price__monthly">{vehicle.monthly}</span><a
 					href={resolve('/financing')}
-					class="daynight-card-price__link">Финансиране</a
+					class="daynight-card-price__link">Buying options</a
 				></span
 			>
 		</p>

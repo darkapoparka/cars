@@ -35,3 +35,6 @@ CRM: `registered: false`, IDs unverified. Public URL: null. No deployment, commi
 ## Final verification — 2026-09-08
 
 All three local variants verified at 390/1440px; 28 route states and 6 interaction passes. Current fixes, build logs, screenshots, contact checks and remaining demo limits are recorded in [qa-final/FINAL.md](qa-final/FINAL.md). Review servers 6621/6622/6623 remain running, superseding the earlier stopped/queued runtime notes. No public deployment or message delivery is implied.
+
+## Public preview — 2026-09-08
+All three variants: https://excellent-cars.vercel.app . Published source: J:/excellent-cars; private repo: https://github.com/darkapoparka/excellent-cars . Original local copies remain independent. Hosted verification is documented in J:/excellent-cars/DEPLOYMENT.md; owner manual review remains in progress.

@@ -1,0 +1,38 @@
+[
+    {
+        "exit":  0,
+        "suite":  "mobile-resilience"
+    },
+    {
+        "exit":  0,
+        "suite":  "mobile-quality"
+    },
+    {
+        "exit":  0,
+        "suite":  "sveltekit-smoke"
+    },
+    {
+        "exit":  0,
+        "suite":  "enquiry-smoke"
+    },
+    {
+        "exit":  0,
+        "suite":  "mobile-filter-smoke"
+    },
+    {
+        "exit":  0,
+        "suite":  "desktop-discovery-smoke"
+    },
+    {
+        "exit":  0,
+        "suite":  "home-hierarchy-smoke"
+    },
+    {
+        "exit":  0,
+        "suite":  "mobile-render-check"
+    },
+    {
+        "exit":  0,
+        "suite":  "capture-mobile-changes"
+    }
+]

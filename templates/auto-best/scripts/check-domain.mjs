@@ -1,21 +1,15 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
-import { pathToFileURL } from 'node:url';
 import path from 'node:path';
-import ts from 'typescript';
-
-// Compile the real pure domain modules, with the same TypeScript compiler as the app.
+import { loadDomain } from './load-domain.mjs';
 const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
-for (const name of ['inventory', 'listing', 'journeys']) {
-  const source = await readFile(`src/lib/data/${name}.ts`, 'utf8');
-  const code = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 } }).outputText
-    .replace(/from '\.\/(inventory|listing)'/g, "from './$1.mjs'");
-  await writeFile(`${out}/${name}.mjs`, code);
-}
-const inventory = await import(pathToFileURL(`${out}/inventory.mjs`));
-const listing = await import(pathToFileURL(`${out}/listing.mjs`));
-const journeys = await import(pathToFileURL(`${out}/journeys.mjs`));
+const inventory = await loadDomain('src/lib/data/inventory.ts');
+const listing = await loadDomain('src/lib/data/listing.ts');
+const journeys = await loadDomain('src/lib/data/journeys.ts');
+const finance = await loadDomain('src/lib/data/finance.ts');
+const fields = await loadDomain('src/lib/data/filter-fields.ts');
+const yearPolicy = await loadDomain('src/lib/config/discovery.ts');
 const records = inventory.featuredVehicles;
 assert.equal(new Set(records.map(record => record.id)).size, records.length);
 for (const record of records) {
@@ -47,5 +41,47 @@ const source = await sources('src');
 const defined = new Set([...source.matchAll(/(--[\w-]+)\s*[:=]/g)].map(match => match[1]));
 const missing = [...new Set([...source.matchAll(/var\(\s*(--[\w-]+)\s*\)/g)].map(match => match[1]))].filter(name => !defined.has(name));
 assert.deepEqual(missing, [], 'Every CSS variable without a fallback needs an owner');
-await writeFile(`${out}/report.json`, JSON.stringify({ passed: true, records: records.length, checks: ['record validity', 'filter roundtrip', 'equipment deduplication', 'numeric boundaries', 'dependent reset', 'safe return destinations', 'known vehicle context', 'CSS token ownership'] }, null, 2));
 console.log(`Domain checks passed for ${records.length} records, filter/context boundaries and CSS variables.`);
+
+const discovery = await loadDomain('src/lib/data/discovery.ts');
+const enquiry = await loadDomain('src/lib/data/enquiry.ts');
+for (const threshold of discovery.budgetBands.flatMap(band => band.minimum === null ? [] : [band.minimum])) {
+  for (const priceEur of [threshold - 0.01, threshold, threshold + 0.01]) {
+    const record = { ...records[0], priceEur };
+    let total = 0;
+    for (const band of discovery.budgetBands) {
+      const count = discovery.budgetCount([record], band);
+      const params = new URL(discovery.budgetHref(band), 'https://template.invalid').searchParams;
+      assert.equal(listing.filterListingVehicles([record], listing.parseListingFilters(params)).length, count);
+      total += count;
+    }
+    assert.equal(total, 1, `Budget bands partition boundary ${priceEur} exactly once`);
+  }
+}
+for (const blank of ['', ' ', '\t\n']) {
+  assert.equal(Object.keys(enquiry.validateVehicleIdentity(blank, blank, false).errors).length, 2);
+  assert.deepEqual(enquiry.validateVehicleIdentity(blank, blank, true).errors, {});
+}
+assert.deepEqual(enquiry.validateVehicleIdentity(' Audi ', ' A6 ', false).values, { make: 'Audi', model: 'A6', year: '' });
+console.log('Budget boundary and trimmed enquiry regression checks passed.');
+
+for (const record of records) {
+  assert(record.model.trim()); assert.equal(typeof record.version, 'string');
+  assert(listing.listingModelsForMake(record.make).includes(record.model));
+}
+const context = new URL(journeys.vehicleContactHref(records[0].id, 'leasing', { downPaymentEur: 10000, termMonths: 24 }), 'https://template.invalid').searchParams;
+assert.deepEqual(finance.parseFinanceSelection(context, records[0].priceEur), { downPaymentEur: 10000, termMonths: 24 });
+for (const [amount, term] of [['-1','24'], ['Infinity','24'], ['12x','24'], ['100000000','24'], ['10000','13']]) {
+  assert.equal(finance.parseFinanceSelection(new URLSearchParams({ down_payment: amount, term }), records[0].priceEur), null);
+}
+assert.equal(finance.calculateFinance(60000, { downPaymentEur: 10000, termMonths: 24 }).principalPerMonth, 2083);
+assert.equal(finance.calculateFinance(60000, { downPaymentEur: 70000, termMonths: 24 }).financedPrincipal, 0);
+assert(enquiry.validateVehicleIdentity('Audi', 'A6', false, String(yearPolicy.maximumVehicleYear() + 1)).errors.year);
+assert(enquiry.validateVehicleIdentity('Audi', 'A6', false, '1899').errors.year);
+assert.deepEqual(enquiry.validateVehicleIdentity('Audi', 'A6', false, '2020').errors, {});
+assert.equal(fields.filtersFromDraft({ priceMax: '60000' }).priceMax, 60000);
+assert.equal(fields.filtersFromDraft({ priceMax: '60000x' }).priceMax, null);
+assert(fields.invalidRange('90000','60000'));
+assert(!fields.invalidRange('','60000'));
+await writeFile(`${out}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), passed: true, records: records.length, checks: ['records', 'filter URL roundtrip', 'numeric boundaries', 'budget partition', 'trimmed required values', 'year policy', 'finance calculation and URL validation', 'model facets', 'CSS token ownership'] }, null, 2));
+console.log('PASS finance, year and shared draft contracts.');

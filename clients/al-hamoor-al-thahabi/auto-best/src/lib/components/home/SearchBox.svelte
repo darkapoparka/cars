@@ -25,15 +25,15 @@
   function validateImport(event: SubmitEvent) {
     if (resolveImportUrl(importUrl)) return;
     event.preventDefault();
-    importError = importUrl.trim() ? 'Поставете валиден линк с https:// или http://.' : 'Поставете линк към обявата, която сте избрали.';
+    importError = importUrl.trim() ? 'Paste a valid link with https:// or http://.' : 'Paste the link to your selected listing.';
     importInput.focus();
   }
 </script>
 
-<section class="dn-search-wrap" aria-label="Търсене на автомобил">
+<section class="dn-search-wrap" aria-label="Vehicle search">
   <div class="container">
     <div class="dn-search">
-      <div class="dn-search__mobile-modes" role="tablist" aria-label="Основна цел">
+      <div class="dn-search__mobile-modes" role="tablist" aria-label="Main goal">
         <button
           bind:this={buyTab}
           id="home-buy-tab"
@@ -44,7 +44,7 @@
           tabindex={mode === 'buy' ? 0 : -1}
           onclick={() => mode = 'buy'}
           onkeydown={handleModeKey}
-        >Купи</button>
+        >Buy</button>
         <button
           bind:this={importTab}
           id="home-import-tab"
@@ -55,12 +55,12 @@
           tabindex={mode === 'import' ? 0 : -1}
           onclick={() => mode = 'import'}
           onkeydown={handleModeKey}
-        >Внос</button>
+        >Import</button>
       </div>
       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
         <VehicleQuickSearch />
         <a class="dn-search__mobile-all" href={resolve('/listing-grid')}>
-          <span>Виж всички</span>
+          <span>View all</span>
           <Icon name="arrow-right" size={17} strokeWidth={2} />
         </a>
       </div>
@@ -69,14 +69,14 @@
           <input type="hidden" name="topic" value="import" />
           <label class="dn-search__import-field">
             <Icon name="globe" size={20} strokeWidth={1.8} />
-            <span class="dn-sr-only">Линк към обява за внос</span>
+            <span class="dn-sr-only">Import listing link</span>
             <input
               bind:this={importInput}
               bind:value={importUrl}
               type="url"
               inputmode="url"
               name="vehicle_url"
-              placeholder="Поставете линк към обява"
+              placeholder="Paste a listing link"
               maxlength={2048}
               required
               autocomplete="off"
@@ -90,7 +90,7 @@
           {#if importError}
             <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
           {/if}
-          <button class="dn-search__mobile-all" type="submit">Продължи към контакт <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
+          <button class="dn-search__mobile-all" type="submit">Continue to contact <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
         </form>
       </div>
       <div class="dn-search__desktop-form">
@@ -103,8 +103,8 @@
     </div>
 
   </div>
-  <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
-    <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
+  <nav class="dn-search__mobile-shortcuts" aria-label="Quick filters">
+    <a href={resolve('/listing-grid?price_max=60000')}>Up to 60 000 €</a>
     <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
     <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
     <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>

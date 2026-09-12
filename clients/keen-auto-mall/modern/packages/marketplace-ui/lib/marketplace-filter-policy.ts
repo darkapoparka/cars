@@ -122,7 +122,7 @@ export const getMarketplaceQuickFilterLabel = (
         formatMarketplaceRangeLabel(
           undefined,
           filters.mileageMax,
-          isBulgarianMarketplaceLocale(locale) ? " км" : " km",
+          isBulgarianMarketplaceLocale(locale) ? " miles" : " miles",
           locale
         ) ?? copy.chips.mileage
       );

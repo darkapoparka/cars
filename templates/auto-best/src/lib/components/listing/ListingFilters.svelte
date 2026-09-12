@@ -76,7 +76,7 @@
 <section class="dn-listing-filter-wrap" aria-label="Филтри за автомобили">
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
+      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} keywordPlaceholder="Търси в налични" /></div>
       <QuickFilterSheet id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
       <form class="dn-listing-mobile-form" method="GET" action={resolve('/listing-grid')} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
@@ -96,7 +96,7 @@
           onclick={(event) => openFilters(event)}
         >
           <MobileNavIcon name="search" size={20} />
-          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || 'Марка или модел'}</span>
+          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || 'Търси в налични'}</span>
           <span class="dn-listing-filter__keyword-hint">Търсене по ключова дума <Icon name="arrow-right" size={16} /></span>
         </button>
         <button
@@ -174,7 +174,13 @@
           </a>
         {/each}
         {#each quickFilters as item (item.field)}
-          <button type="button" aria-haspopup="dialog" aria-controls="dn-quick-filter" aria-expanded={quickOpen} onclick={(event) => openQuick(event, item.field, item.label)}>
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="dn-quick-filter"
+            aria-expanded={quickOpen}
+            onclick={(event) => openQuick(event, item.field, item.label)}
+          >
             {item.label}<Icon name="chevron-down" size={14} />
           </button>
         {/each}

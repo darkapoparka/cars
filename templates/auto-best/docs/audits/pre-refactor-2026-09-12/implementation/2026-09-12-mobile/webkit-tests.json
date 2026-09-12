@@ -1,0 +1,12 @@
+[
+    {
+        "suite":  "mobile-resilience",
+        "engine":  "webkit",
+        "exit":  0
+    },
+    {
+        "suite":  "mobile-quality",
+        "engine":  "webkit",
+        "exit":  0
+    }
+]

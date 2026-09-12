@@ -1,3 +1,4 @@
+import { financeParams, type FinanceSelection } from './finance';
 import { featuredVehicles } from './inventory';
 
 /** Only known records can become contact context; free text is never a vehicle. */
@@ -7,8 +8,10 @@ export function selectedVehicle(value: string | null) {
     : null;
 }
 
-export function vehicleContactHref(id: number, topic: 'inspection' | 'leasing' = 'inspection'): `/contact?${string}` {
-  return `/contact?${new URLSearchParams({ topic, vehicle: String(id) })}`;
+export function vehicleContactHref(id: number, topic: 'inspection' | 'leasing' = 'inspection', finance?: FinanceSelection | null): `/contact?${string}` {
+  const params = new URLSearchParams({ topic, vehicle: String(id) });
+  if (topic === 'leasing' && finance) for (const [key, value] of financeParams(finance)) params.set(key, value);
+  return `/contact?${params}`;
 }
 
 /** Return links are confined to their own list, including its filters and anchor. */
@@ -22,5 +25,8 @@ export function listReturn(value: string | null, list: '/listing-grid' | '/blog'
 }
 
 export function withListReturn(href: string, returnTo?: string) {
-  return returnTo ? `${href}?${new URLSearchParams({ return: returnTo })}` : href;
+  if (!returnTo) return href;
+  const url = new URL(href, 'https://template.invalid');
+  url.searchParams.set('return', returnTo);
+  return `${url.pathname}${url.search}${url.hash}`;
 }

@@ -35,15 +35,15 @@
 	}
 
 	const specRows: { icon: string; label: string; value: (vehicle: Car) => string }[] = [
-		{ icon: 'mileage', label: 'Пробег', value: (vehicle) => vehicle.mileage },
-		{ icon: 'years', label: 'Година', value: (vehicle) => String(vehicle.year) },
-		{ icon: 'fuel', label: 'Гориво', value: (vehicle) => vehicle.fuel },
-		{ icon: 'transmission', label: 'Скоростна кутия', value: (vehicle) => vehicle.transmission },
+		{ icon: 'mileage', label: 'Mileage', value: (vehicle) => vehicle.mileage },
+		{ icon: 'years', label: 'Year', value: (vehicle) => String(vehicle.year) },
+		{ icon: 'fuel', label: 'Fuel', value: (vehicle) => vehicle.fuel },
+		{ icon: 'transmission', label: 'Transmission', value: (vehicle) => vehicle.transmission },
 		{ icon: 'auto', label: 'Каросерия', value: (vehicle) => vehicle.body },
-		{ icon: 'engine', label: 'Двигател', value: (vehicle) => vehicle.engine },
-		{ icon: 'icon-gauge', label: 'Мощност', value: (vehicle) => vehicle.power },
-		{ icon: 'color', label: 'Цвят', value: (vehicle) => vehicle.color },
-		{ icon: 'location', label: 'Локация', value: () => daynightSite.location },
+		{ icon: 'engine', label: 'Engine', value: (vehicle) => vehicle.engine },
+		{ icon: 'icon-gauge', label: 'Power', value: (vehicle) => vehicle.power },
+		{ icon: 'color', label: 'Color', value: (vehicle) => vehicle.color },
+		{ icon: 'location', label: 'Location', value: () => daynightSite.location },
 		{ icon: 'QrCode', label: 'Реф. номер', value: (vehicle) => vehicle.lot }
 	];
 </script>
@@ -54,7 +54,7 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
@@ -66,7 +66,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Сравнение</span>
+					<span>Compare</span>
 				</li>
 			</ul>
 		</div>
@@ -596,7 +596,7 @@
 
 	/* Label cell text: 18px / 500 / #1c1c1c, line-height 26px — the legacy baseline
 	   pinned every label to app.css's universal 26px line box (verified 26px). The
-	   wrapping "Локация" rows depend on this 26px to land at the baseline row height. */
+	   wrapping "Location" rows depend on this 26px to land at the baseline row height. */
 	.card-details--table td:nth-child(1) span {
 		font-size: 18px;
 		font-weight: 500;

@@ -137,7 +137,7 @@ export const formatMoney = (money: Money, locale?: string) =>
 
 export const formatMileage = (value: number, locale?: string) =>
   `${new Intl.NumberFormat(normalizeFormattingLocale(locale)).format(value)} ${
-    isBulgarianLocale(locale) ? "км" : "km"
+    leadSite.staticDemoMode ? (leadSite.distanceUnit === "mi" ? "miles" : "km") : (isBulgarianLocale(locale) ? "км" : "km")
   }`;
 
 export const formatFuelType = (fuelType: FuelType, locale?: string) =>

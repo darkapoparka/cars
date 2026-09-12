@@ -16,7 +16,7 @@
   {#if !indexable}<meta name="robots" content="noindex, nofollow" />{/if}
 </svelte:head>
 <SiteShell {showFooterActions} {showMobileFooter}>
-  <p class="lead-build-notice" role="status">Implementation in progress — not a finished dealer website. Eight dated Texas Drive Auto listing samples; USD and miles. Local media, remaining template copy and runtime review are unfinished. No enquiry is delivered by this preview.</p>
+  <p class="lead-build-notice" role="status">Implementation in progress — not a finished dealer website. Eight dated Texas Drive Auto listing samples; USD and miles. Five listing photos remain unavailable. Source-model illustrations are decorative, not Texas Drive Auto inventory. No inquiry is delivered by this preview; confirm vehicles, payment terms and availability directly with the dealer.</p>
   {@render children()}
 </SiteShell>
 <style>

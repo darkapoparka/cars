@@ -1,6 +1,6 @@
 # Task 00 — Repository release foundation execution log
 
-**Date:** 2026-07-11  
+**Date:** 2026-07-11
 **Scope:** Repository/toolchain/package manifests/CI/environment and deployment documentation only
 
 ## Delivered

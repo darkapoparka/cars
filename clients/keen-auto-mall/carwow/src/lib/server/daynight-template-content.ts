@@ -55,7 +55,7 @@ function replaceCommonCopy(html: string) {
 					.replaceAll('6205 Peachtree Dunwoody Rd, Atlanta, GA 30328', daynightSite.location)
 					.replaceAll('6205 Peachtree Dunwoody Rd, Atlanta, GA', daynightSite.location)
 					.replaceAll('6205 Peachtree Dunwoody Rd, Atlanta,', daynightSite.location)
-					.replaceAll('Tampa, FL', 'София')
+					.replaceAll('Tampa, FL', 'Dealer location')
 					.replaceAll('GA 30328', '')
 					.replaceAll('VIEW ON MAP', 'ВИЖ КАРТА')
 					.replaceAll('View on map', 'Виж карта')
@@ -74,10 +74,10 @@ function replaceCommonCopy(html: string) {
 					.replaceAll('@mike_hanley', '@daynightauto')
 					.replaceAll('Michael Carter', 'Клиент на Day Night Auto')
 					.replaceAll('Sophia Carter', 'Клиент от София')
-					.replaceAll('Contact', 'Контакти')
-					.replaceAll('About', 'За нас')
-					.replaceAll('News', 'Полезно')
-					.replaceAll('Контакти Us', 'Контакти')
+					.replaceAll('Contact', 'Contact')
+					.replaceAll('About', 'About')
+					.replaceAll('News', 'Guides')
+					.replaceAll('Контакти Us', 'Contact')
 					.replaceAll('Heather Dick', 'Клиент на Day Night Auto')
 					.replaceAll(
 						'Owned since 2010. Drove it through all kinds of weather, from hot summers to snowy roads, and it never let me down. A few minor repairs here and there — mostly wear and tear — but the engine just keeps going.',
@@ -207,7 +207,7 @@ const supportHeroByTemplateFile: Record<
 		primaryHref: '/inventory',
 		primaryLabel: 'Виж автомобили',
 		secondaryHref: '/contact',
-		secondaryLabel: 'Свържете се'
+		secondaryLabel: 'Get in touch'
 	},
 	'sell-your-car.html': {
 		modifier: 'sell',
@@ -222,7 +222,7 @@ const supportHeroByTemplateFile: Record<
 	},
 	'services-center.html': {
 		modifier: 'services',
-		title: 'Услуги',
+		title: 'Services',
 		description: 'Съдействие при оглед, документи, регистрация, финансиране, бартер и доставка.',
 		image: daynightPageAssets.servicesInspection,
 		primaryHref: '/services?service=inspection#services-request',
@@ -565,7 +565,7 @@ function renderDashboardAccountHeader(templateFile: string) {
 								<strong>${title}</strong>
 							</div>
 							<div class="daynight-dashboard-header__actions">
-								<a class="daynight-dashboard-header__ghost" href="/inventory">Налични автомобили</a>
+								<a class="daynight-dashboard-header__ghost" href="/inventory">Advertised samples</a>
 								<a class="daynight-dashboard-header__user" href="/admin/settings">
 									<img class="avatar" src="/assets/images/dashboard/dashbroard_avatar.png" alt="">
 									<span>Клиентски профил</span>
@@ -687,9 +687,9 @@ function replaceSharedVehicleSnippets(html: string) {
 			.replaceAll('/assets/images/card/card-5.jpg', fifth.image)
 			// Localize the demo "similar cars" strip chrome that survives on template pages.
 			.replaceAll('See Finance', 'Виж вноска')
-			.replaceAll('View details', 'Виж детайли')
-			.replaceAll('>Auto<', '>Автоматик<')
-			.replaceAll('Benzin', 'Бензин')
+			.replaceAll('View details', 'View details')
+			.replaceAll('>Auto<', '>Automatic<')
+			.replaceAll('Benzin', 'Petrol')
 			.replace(/\$(\d[\d.,]*)\s*\/mo/g, (_match, amount) => `${amount} лв./мес.`)
 			.replace(/(\d[\d ,]*)\s*miles\b/g, (_match, amount) => `${amount.trim()} км`)
 	);
@@ -790,10 +790,10 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		),
 		templateFile
 	)
-		.replaceAll('Filters', 'Филтри')
+		.replaceAll('Filters', 'Filters')
 		.replaceAll('Best Match', 'Най-подходящи')
-		.replaceAll('Lowest Price', 'Най-ниска цена')
-		.replaceAll('Highest Price', 'Най-висока цена')
+		.replaceAll('Lowest Price', 'Lowest price')
+		.replaceAll('Highest Price', 'Highest price')
 		.replaceAll('Lowest Mileage', 'Най-малък пробег')
 		.replaceAll('Highest Mileage', 'Най-голям пробег')
 		.replaceAll('Nearest Location', 'Най-близо')
@@ -802,7 +802,7 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Oldest Year', 'Най-стара година')
 		.replaceAll('Newest Listed', 'Най-нови обяви')
 		.replaceAll('Oldest Listed', 'Най-стари обяви')
-		.replaceAll('Sort Vehicles by', 'Сортиране')
+		.replaceAll('Sort Vehicles by', 'Sort')
 		.replaceAll('27 matches', `${daynightVehicles.length} автомобила`)
 		.replaceAll('183 ', `${daynightVehicles.length} `)
 		.replaceAll(' matches', ' автомобила')
@@ -813,12 +813,12 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Gray', 'Сив')
 		.replaceAll('Red', 'Червен')
 		.replaceAll('Blue', 'Син')
-		.replaceAll('REMOVE ALL', 'Изчисти')
-		.replaceAll('Remove All', 'Изчисти')
+		.replaceAll('REMOVE ALL', 'Clear')
+		.replaceAll('Remove All', 'Clear')
 		.replaceAll('Special', 'Специално')
 		.replaceAll('Compare', 'Сравни')
-		.replaceAll('View details', 'Виж детайли')
-		.replaceAll('See Finance', 'Финансиране')
+		.replaceAll('View details', 'View details')
+		.replaceAll('See Finance', 'Buying options')
 		.replaceAll(
 			'How the adventure ended will be seen soon. Aouda was anxious...',
 			first.conditionLine
@@ -828,16 +828,16 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Monthly', 'Месечно')
 		.replaceAll('Min price', 'Минимална цена')
 		.replaceAll('Max price', 'Максимална цена')
-		.replaceAll('Body Style', 'Купе')
-		.replaceAll('Sedan', 'Седан')
+		.replaceAll('Body Style', 'Body type')
+		.replaceAll('Sedan', 'Sedan')
 		.replaceAll('SUV', 'SUV')
-		.replaceAll('Hatchback', 'Хечбек')
-		.replaceAll('Fuel Type', 'Гориво')
-		.replaceAll('Electrical', 'Електрически')
-		.replaceAll('Petrol', 'Бензин')
-		.replaceAll('Diesel', 'Дизел')
-		.replaceAll('Transmission', 'Скорости')
-		.replaceAll('Automatic', 'Автоматик')
+		.replaceAll('Hatchback', 'Hatchback')
+		.replaceAll('Fuel Type', 'Fuel')
+		.replaceAll('Electrical', 'Electric')
+		.replaceAll('Petrol', 'Petrol')
+		.replaceAll('Diesel', 'Diesel')
+		.replaceAll('Transmission', 'Transmission')
+		.replaceAll('Automatic', 'Automatic')
 		.replaceAll('Manual', 'Ръчни')
 		.replaceAll('Door count', 'Брой врати')
 		.replaceAll('4 doors', '4 врати')
@@ -848,7 +848,7 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('8 cylinders', '8 цилиндъра')
 		.replaceAll('Exterior color', 'Външен цвят')
 		.replaceAll('Interior color', 'Интериорен цвят')
-		.replaceAll('Features', 'Екстри')
+		.replaceAll('Features', 'Features')
 		.replaceAll('Adaptive Control', 'Адаптивен контрол')
 		.replaceAll('Apple CarPlay', 'Apple CarPlay')
 		.replaceAll('Alloy Wheels', 'Алуминиеви джанти')
@@ -856,7 +856,7 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Tow Hitch', 'Теглич')
 		.replaceAll('Autopilot', 'Асистенти за шофиране')
 		.replaceAll('Android Auto', 'Android Auto')
-		.replaceAll('Moonroof', 'Панорамен покрив')
+		.replaceAll('Moonroof', 'Panoramic roof')
 		.replaceAll('Show 1,029 Matches', 'Виж наличните автомобили')
 		.replaceAll('Mileage:', 'Пробег:')
 		.replaceAll('Years:', 'Година:')
@@ -867,14 +867,14 @@ function replaceInventoryCopy(html: string, templateFile: string) {
 		.replaceAll('Engine:', 'Двигател:')
 		.replaceAll('VIN:', 'Реф. номер:')
 		.replaceAll('Stock Number:', 'Вътрешен номер:')
-		.replaceAll('Tampa, FL', 'София')
+		.replaceAll('Tampa, FL', 'Dealer location')
 		.replaceAll('Listing GridStyle Half Map', 'Карта на наличните автомобили')
 		.replaceAll('Listing GridStyle HalfMap', 'Карта на наличните автомобили')
 		.replaceAll('Grid Style Half Map', 'Карта на наличните автомобили')
 		.replaceAll('Автомобили GridStyle Half Map', 'Карта на наличните автомобили')
 		.replaceAll('Автомобили GridStyle HalfMap', 'Карта на наличните автомобили')
 		.replaceAll('Listing Grid 4 Columns', 'Автомобили в наличност')
-		.replaceAll('Автомобили Grid 4 Columns', 'Налични автомобили')
+		.replaceAll('Автомобили Grid 4 Columns', 'Advertised samples')
 		.replaceAll('Showing 1 – 30 of 118 Listings', `Показани ${daynightVehicles.length} автомобила`)
 		.replaceAll(
 			'Showing 1 – 30 of 118 Автомобилиs',
@@ -957,7 +957,7 @@ const supportReviews = [
 	},
 	{
 		name: 'Клиент на Day Night Auto',
-		label: 'Финансиране',
+		label: 'Buying options',
 		text: 'Екипът ми помогна да сравня няколко автомобила и да планирам бюджета с вариант за разсрочено плащане.'
 	},
 	{
@@ -1028,47 +1028,47 @@ function renderCompareVehicleTable() {
 						${[
 							renderCompareSpecRow(
 								'mileage',
-								'Пробег',
+								'Mileage',
 								vehicles.map((vehicle) => vehicle.mileage)
 							),
 							renderCompareSpecRow(
 								'years',
-								'Година',
+								'Year',
 								vehicles.map((vehicle) => String(vehicle.year))
 							),
 							renderCompareSpecRow(
 								'fuel',
-								'Гориво',
+								'Fuel',
 								vehicles.map((vehicle) => vehicle.fuel)
 							),
 							renderCompareSpecRow(
 								'transmission',
-								'Скоростна кутия',
+								'Transmission',
 								vehicles.map((vehicle) => vehicle.transmission)
 							),
 							renderCompareSpecRow(
 								'auto',
-								'Купе',
+								'Body type',
 								vehicles.map((vehicle) => vehicle.body)
 							),
 							renderCompareSpecRow(
 								'engine',
-								'Двигател',
+								'Engine',
 								vehicles.map((vehicle) => vehicle.engine)
 							),
 							renderCompareSpecRow(
 								'icon-gauge',
-								'Мощност',
+								'Power',
 								vehicles.map((vehicle) => vehicle.power)
 							),
 							renderCompareSpecRow(
 								'color',
-								'Цвят',
+								'Color',
 								vehicles.map((vehicle) => vehicle.color)
 							),
 							renderCompareSpecRow(
 								'location',
-								'Локация',
+								'Location',
 								vehicles.map(() => daynightSite.location)
 							),
 							renderCompareSpecRow(
@@ -1096,7 +1096,7 @@ function renderSupportReviewsSection() {
 	<div class="container">
 		<div class="title-section mb-30">
 			<h2>Отзиви от клиенти</h2>
-			<a href="/reviews" class="btn btn-line-style-2 effect-line-primary hover-fill-white btn-large">Виж всички</a>
+			<a href="/reviews" class="btn btn-line-style-2 effect-line-primary hover-fill-white btn-large">View all</a>
 		</div>
 		<div class="daynight-review-grid">
 			${supportReviews
@@ -1213,7 +1213,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('51600 km', vehicle.mileage)
 		.replaceAll('2022', String(vehicle.year))
 		.replaceAll('Benzin + Plin', vehicle.fuel)
-		.replaceAll('Tampa, FL', 'София')
+		.replaceAll('Tampa, FL', 'Dealer location')
 		.replaceAll('White', vehicle.color)
 		.replaceAll('Jet Black', 'Тъмен салон')
 		.replaceAll('1.5L Inline', vehicle.engine)
@@ -1250,7 +1250,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		// --- DayNight: localize the remaining template PDP chrome (labels, tabs, calculator, form) ---
 		// Cash / Finance tabs
 		.replaceAll('<li>Cash</li>', '<li>В брой</li>')
-		.replaceAll('<li class="active">Finance</li>', '<li class="active">Финансиране</li>')
+		.replaceAll('<li class="active">Finance</li>', '<li class="active">Buying options</li>')
 		// Price block
 		.replaceAll('Price:', 'Цена:')
 		.replaceAll('List price w/o taxes, fees, and accessories', 'Цена без данъци и такси')
@@ -1274,7 +1274,7 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('Transmission:', 'Скоростна кутия:')
 		.replaceAll('Stock Number:', 'Референтен №:')
 		// Description + spec tabs
-		.replaceAll('<p class="h4 mb-16">Description</p>', '<p class="h4 mb-16">Описание</p>')
+		.replaceAll('<p class="h4 mb-16">Description</p>', '<p class="h4 mb-16">Description</p>')
 		.replaceAll('Get To Know this car', 'Опознайте автомобила')
 		.replaceAll('>Exterior</span>', '>Екстериор</span>')
 		.replaceAll('>Interior</span>', '>Интериор</span>')
@@ -1292,11 +1292,11 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('Security System', 'Система за сигурност')
 		.replaceAll('Security system', 'Система за сигурност')
 		// Financing calculator
-		.replaceAll('Financing Calculator', 'Калкулатор за финансиране')
+		.replaceAll('Financing Calculator', 'Finance calculator')
 		.replaceAll('Car Price', 'Цена на автомобила')
 		.replaceAll('Interest Rate', 'Лихвен процент')
 		.replaceAll('Loan Term (months)', 'Срок (месеци)')
-		.replaceAll('Down Payment', 'Първоначална вноска')
+		.replaceAll('Down Payment', 'Initial payment')
 		.replaceAll('>Calculate</button>', '>Изчисли</button>')
 		.replaceAll('Monthly Payment:', 'Месечна вноска:')
 		.replaceAll('Total Interest Payment:', 'Лихва и такси:')
@@ -1314,18 +1314,18 @@ function replacePdpCopy(html: string, routePath: string) {
 		.replaceAll('$24.900', vehicle.priceBgn)
 		// Inquiry form
 		.replaceAll('Send Inquiry about Vehicle', 'Запитване за автомобила')
-		.replaceAll('>Name</p>', '>Име</p>')
-		.replaceAll('>Email</p>', '>Имейл</p>')
-		.replaceAll('>Phone</p>', '>Телефон</p>')
+		.replaceAll('>Name</p>', '>Name</p>')
+		.replaceAll('>Email</p>', '>Email</p>')
+		.replaceAll('>Phone</p>', '>Phone</p>')
 		.replaceAll('>Subject</p>', '>Тема</p>')
-		.replaceAll('>Message</p>', '>Съобщение</p>')
+		.replaceAll('>Message</p>', '>Message</p>')
 		.replaceAll('value="Tony Nguyen"', 'value="" placeholder="Вашето име"')
 		.replaceAll('placeholder="Phone (optional)"', 'placeholder="Телефон (по избор)"')
 		.replaceAll("This Vehicle's Availability 2", 'Цена и оглед')
-		.replaceAll("This Vehicle's Availability 3", 'Финансиране')
+		.replaceAll("This Vehicle's Availability 3", 'Buying options')
 		.replaceAll("This Vehicle's Availability", 'Наличност на автомобила')
 		.replaceAll('placeholder="Comment"', 'placeholder="Вашето съобщение"')
-		.replaceAll('Send Inquiry', 'Изпрати запитване')
+		.replaceAll('Send Inquiry', 'Prepare enquiry')
 		.replaceAll(
 			'Yes, I would like to receive price alerts on this vehicle and helpful shopping information.',
 			'Да, искам да получавам известия за цената и полезна информация за този автомобил.'
@@ -1371,7 +1371,7 @@ function blogArticleRoute(article: DayNightArticle) {
 	return `/blog/${article.slug}`;
 }
 
-const blogCategories = ['Новини', 'Съвети', 'Финансиране', 'Документи', 'Марки'] as const;
+const blogCategories = ['Новини', 'Съвети', 'Buying options', 'Documents', 'Марки'] as const;
 
 function formatArticleDate(value: string) {
 	return new Intl.DateTimeFormat('bg-BG', {
@@ -1456,7 +1456,7 @@ function renderBlogIndexCard(article: DayNightArticle) {
 }
 
 function countBlogCategory(category: string, articles: DayNightArticle[]) {
-	return category === 'Всички'
+	return category === 'All'
 		? articles.length
 		: articles.filter((article) => article.category === category).length;
 }
@@ -1494,7 +1494,7 @@ function renderBlogSearchIcon() {
 function renderBlogSidebarSearch() {
 	return `<form action="/blog" class="widget-search w-full mb-34" data-daynight-blog-search-form>
 	<input class="input-normal" type="search" name="q" id="blog-search" placeholder="Търсене в новини..." data-daynight-blog-search />
-	<button type="submit" class="widget-search-btn" aria-label="Търси">${renderBlogSearchIcon()}</button>
+	<button type="submit" class="widget-search-btn" aria-label="Search">${renderBlogSearchIcon()}</button>
 </form>`;
 }
 
@@ -1510,7 +1510,7 @@ function renderBlogCategoriesWidget(articles: DayNightArticle[]) {
 			)
 	].join('\n');
 
-	return `<p class="h4 mb-16">Категории</p>
+	return `<p class="h4 mb-16">Categories</p>
 <ul class="widget-categories mb-32">
 	${links}
 </ul>`;
@@ -1618,8 +1618,8 @@ function replaceBlogGridIndexCopy(html: string, articles: DayNightArticle[]) {
 
 	let output = html
 		.replaceAll('Blog Grid Style 1', 'Полезно и новини')
-		.replaceAll('News', 'Полезно')
-		.replaceAll('Home', 'Начало');
+		.replaceAll('News', 'Guides')
+		.replaceAll('Home', 'Home');
 
 	output = replaceDivInnerByExactClass(
 		output,
@@ -1641,8 +1641,8 @@ function replaceBlogGridIndexCopy(html: string, articles: DayNightArticle[]) {
 function replaceBlogStandardIndexCopy(html: string, articles: DayNightArticle[]) {
 	let output = html
 		.replaceAll('Blog Standard', 'Полезно и новини')
-		.replaceAll('News', 'Полезно')
-		.replaceAll('Home', 'Начало');
+		.replaceAll('News', 'Guides')
+		.replaceAll('Home', 'Home');
 
 	output = replaceDivInnerByExactClass(
 		output,
@@ -2073,7 +2073,7 @@ function replaceBlogDetailCopy(
 		.replaceAll('Luxury', 'Покупка')
 		.replaceAll('Share this post:', 'Сподели:')
 		.replaceAll('PREVIOUS', 'ПРЕДИШНА')
-		.replaceAll('Home', 'Начало')
+		.replaceAll('Home', 'Home')
 		.replaceAll(
 			'Truck vs. Minivan: Which is Better for Family Needs?',
 			articles[1]?.title ?? 'Финансиране на употребяван автомобил'
@@ -2105,9 +2105,9 @@ function replaceBlogDetailCopy(
 		.replaceAll('Your email (private)', 'Вашият имейл')
 		.replaceAll('Comment', 'Коментар')
 		.replaceAll('Post Comment', 'Изпрати коментар')
-		.replaceAll('Categories', 'Категории')
+		.replaceAll('Categories', 'Categories')
 		.replaceAll('Auto Maintenance', 'Поддръжка')
-		.replaceAll('Car Buying Tips', 'Съвети за покупка')
+		.replaceAll('Car Buying Tips', 'Buying advice')
 		.replaceAll('Car Technology', 'Технологии')
 		.replaceAll('Electric & Hybrid Cars', 'Електрически и хибридни')
 		.replaceAll('Road Trips & Travel', 'Пътуване')
@@ -2229,8 +2229,8 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Have any Question?', 'Имате въпрос?')
 			.replaceAll('License Plate', 'Регистрационен номер')
 			.replaceAll('Enter VIN Number', 'Въведете VIN номер')
-			.replaceAll('Zip Code', 'Локация')
-			.replaceAll('Get Started', 'Изпрати запитване')
+			.replaceAll('Zip Code', 'Location')
+			.replaceAll('Get Started', 'Prepare enquiry')
 			.replaceAll('Enter Your Car’s Details', 'Опишете автомобила')
 			.replaceAll(
 				'Provide your car’s information to get an instant value estimate.',
@@ -2291,7 +2291,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Add Listings', 'Заявка за оценка на автомобил')
 			.replaceAll('Add Listing', 'Заявка за оценка на автомобил')
 			.replaceAll('Нова заявка за продажбаs', 'Нова заявка за продажба')
-			.replaceAll('Продай автомобил', 'Заявка за оценка на автомобил')
+			.replaceAll('Prepare vehicle details', 'Заявка за оценка на автомобил')
 			.replaceAll('Submit Listing', 'Изпрати заявка')
 			.replaceAll('List Now', 'Изпрати заявка')
 			.replaceAll('Save & Preview', 'Преглед на заявката')
@@ -2299,26 +2299,26 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				'Lorem ipsum dolor sit amet, ',
 				'Опишете автомобила, състоянието и желаните следващи стъпки.'
 			)
-			.replaceAll('Gallery', 'Снимки на автомобила')
+			.replaceAll('Gallery', 'Vehicle photos')
 			.replaceAll('Car Preview', 'Преглед на заявката')
-			.replaceAll('Car Gallery', 'Снимки')
+			.replaceAll('Car Gallery', 'Photographs')
 			.replaceAll('Car Details', 'Данни за автомобила')
 			.replaceAll('Features', 'Особености и оборудване')
 			.replaceAll('Car Price', 'Очаквана цена')
-			.replaceAll('Location', 'Локация')
+			.replaceAll('Location', 'Location')
 			.replaceAll('Video', 'Видео')
-			.replaceAll('Attachments', 'Документи')
+			.replaceAll('Attachments', 'Documents')
 			.replaceAll('Stock Number*', 'Вътрешен номер')
 			.replaceAll('VIN Number*', 'VIN номер')
-			.replaceAll('Mileage*', 'Пробег')
-			.replaceAll('Transmission*', 'Скорости')
-			.replaceAll('Model*', 'Модел')
-			.replaceAll('Type*', 'Купе')
+			.replaceAll('Mileage*', 'Mileage')
+			.replaceAll('Transmission*', 'Transmission')
+			.replaceAll('Model*', 'Model')
+			.replaceAll('Type*', 'Body type')
 			.replaceAll('Enter number', 'Номер или бележка')
 			.replaceAll('Enter VIN', 'VIN номер')
-			.replaceAll('Enter mileage', 'Пробег')
+			.replaceAll('Enter mileage', 'Mileage')
 			.replaceAll('Vehicle Information', 'Данни за автомобила')
-			.replaceAll('Upload Photos', 'Добави снимки');
+			.replaceAll('Upload Photos', 'Add photos');
 	}
 
 	if (templateFile === 'services-center.html') {
@@ -2386,17 +2386,17 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Affordable Pricing', 'Прозрачни условия')
 			.replaceAll('Comprehensive Vehicle Care', 'Подкрепа при сделка')
 			.replaceAll('Schedule A Services', 'Изпратете запитване')
-			.replaceAll('Schedule Services', 'Изпрати запитване')
+			.replaceAll('Schedule Services', 'Prepare enquiry')
 			.replaceAll('Schedule A Service', 'Изпратете запитване')
 			.replaceAll('Opening Hours:', 'Работно време:')
 			.replaceAll('Mon-Sat:8:00am - 18:00pm', 'Огледи: с предварителна уговорка')
 			.replaceAll('Sun: Closed', 'Документи и предаване: след потвърждение')
-			.replaceAll('Name', 'Име')
-			.replaceAll('Email', 'Имейл')
-			.replaceAll('Phone', 'Телефон')
+			.replaceAll('Name', 'Name')
+			.replaceAll('Email', 'Email')
+			.replaceAll('Phone', 'Phone')
 			.replaceAll('Date', 'Дата')
-			.replaceAll('Brand', 'Марка')
-			.replaceAll('Model', 'Модел')
+			.replaceAll('Brand', 'Make')
+			.replaceAll('Model', 'Model')
 			.replaceAll(
 				'Find Your Perfect Used Car Anytime, Anywhere!',
 				'Изберете автомобил с подкрепа от Day Night Auto'
@@ -2541,11 +2541,11 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
 			.replaceAll('Write A Review', 'Добавете отзив')
 			.replaceAll('Add A Review', 'Добавете отзив')
-			.replaceAll('Location', 'Локация')
+			.replaceAll('Location', 'Location')
 			.replaceAll('Call To Dealer', daynightSite.phoneCta)
 			.replaceAll('Chat via WhatsApp', 'Чат в WhatsApp')
 			.replaceAll('Send Inquiry About Vehicle', 'Изпратете запитване')
-			.replaceAll('Изпрати запитване about Vehicle', 'Изпрати запитване')
+			.replaceAll('Изпрати запитване about Vehicle', 'Prepare enquiry')
 			.replaceAll("This Vehicle's Availability", 'Интерес за оглед')
 			.replaceAll("This Vehicle's Availability 2", 'Бартер или оценка')
 			.replaceAll("This Vehicle's Availability 3", 'Документи и финансиране')
@@ -2554,17 +2554,17 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Comment', 'Вашето съобщение')
 			.replaceAll('placeholder="Your Review"', 'placeholder="Вашият отзив"')
 			.replaceAll('Your email address will not be published', 'Имейлът няма да бъде публикуван')
-			.replaceAll('Send Inquiry', 'Изпрати запитване')
+			.replaceAll('Send Inquiry', 'Prepare enquiry')
 			.replaceAll('View More Reviews (98)', daynightSite.reviewLinkLabel)
 			.replaceAll('Login To Add A Review', 'Изпратете отзив')
 			.replaceAll('(1,968 Ratings)', `(${daynightSite.reviewCountLabel})`)
 			.replaceAll('Randynox', 'Клиент на Day Night Auto')
 			.replaceAll('Mista Nyroom', 'Клиент от София')
-			.replace(/<p class="mb-8">Name<\/p>/g, '<p class="mb-8">Име</p>')
-			.replace(/<p class="mb-8">Email<\/p>/g, '<p class="mb-8">Имейл</p>')
-			.replace(/<p class="mb-8">Phone<\/p>/g, '<p class="mb-8">Телефон</p>')
+			.replace(/<p class="mb-8">Name<\/p>/g, '<p class="mb-8">Name</p>')
+			.replace(/<p class="mb-8">Email<\/p>/g, '<p class="mb-8">Email</p>')
+			.replace(/<p class="mb-8">Phone<\/p>/g, '<p class="mb-8">Phone</p>')
 			.replace(/<p class="mb-8">Subject<\/p>/g, '<p class="mb-8">Тема</p>')
-			.replace(/<p class="mb-8">Message<\/p>/g, '<p class="mb-8">Съобщение</p>')
+			.replace(/<p class="mb-8">Message<\/p>/g, '<p class="mb-8">Message</p>')
 			.replace(/<p class="mb-8">Review<\/p>/g, '<p class="mb-8">Отзив</p>')
 			.replace(/<p class="mb-12">Rating<\/p>/g, '<p class="mb-12">Оценка</p>')
 			.replaceAll('value="Tony Nguyen"', 'value="" placeholder="Вашето име"')
@@ -2619,12 +2619,12 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Euro Workshop', 'Day Night Auto София')
 			.replaceAll('537 Orchard St, NY', daynightSite.location)
 			.replaceAll('Verified Dealer', 'Проверена автокъща')
-			.replaceAll('Dealer Inventory', 'Налични автомобили')
+			.replaceAll('Dealer Inventory', 'Advertised samples')
 			.replaceAll('About Dealer', 'За автокъщата')
 			.replaceAll('Customer Reviews', 'Отзиви от клиенти')
 			.replaceAll('Write A Review', 'Добавете отзив')
 			.replaceAll('Write a Review', 'Добавете отзив')
-			.replaceAll('Location', 'Локация')
+			.replaceAll('Location', 'Location')
 			.replaceAll('Call To Dealer', daynightSite.phoneCta)
 			.replaceAll('Chat via WhatsApp', 'Чат в WhatsApp')
 			.replaceAll('(751 review)', `(${daynightSite.reviewCountLabel})`)
@@ -2641,8 +2641,8 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				'Day Night Auto София предлага проверени употребявани автомобили, съдействие за документи, регистрация, финансиране, бартер и оглед в доверен сервиз. Екипът работи с ясна информация за цена, пробег, състояние и следващи стъпки след избора на автомобил.'
 			)
 			.replaceAll('/assets/images/pages/volvo.png', daynightPageAssets.dealerProfileMark)
-			.replace(/<p class="mb-8">Name<\/p>/g, '<p class="mb-8">Име</p>')
-			.replace(/<p class="mb-8">Email<\/p>/g, '<p class="mb-8">Имейл</p>')
+			.replace(/<p class="mb-8">Name<\/p>/g, '<p class="mb-8">Name</p>')
+			.replace(/<p class="mb-8">Email<\/p>/g, '<p class="mb-8">Email</p>')
 			.replace(/<p class="mb-8">Review<\/p>/g, '<p class="mb-8">Отзив</p>')
 			.replace(/<p class="mb-12">Rating<\/p>/g, '<p class="mb-12">Оценка</p>')
 			.replaceAll('placeholder="Your Review"', 'placeholder="Вашият отзив"')
@@ -2676,12 +2676,12 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 
 	if (templateFile === 'contact-us.html') {
 		let output = promoteContactContentBeforeMap(html)
-			.replaceAll('Contact Us', 'Контакти')
+			.replaceAll('Contact Us', 'Contact')
 			.replaceAll('Get In Touch', 'Свържете се със Day Night Auto')
 			.replaceAll('get in touch', 'Свържете се със Day Night Auto')
-			.replaceAll('<p class="mb-8">Message</p>', '<p class="mb-8">Съобщение</p>')
-			.replaceAll('<p class="mb-8">Email</p>', '<p class="mb-8">Имейл</p>')
-			.replaceAll('<p class="mb-8">First Name</p>', '<p class="mb-8">Име</p>')
+			.replaceAll('<p class="mb-8">Message</p>', '<p class="mb-8">Message</p>')
+			.replaceAll('<p class="mb-8">Email</p>', '<p class="mb-8">Email</p>')
+			.replaceAll('<p class="mb-8">First Name</p>', '<p class="mb-8">Name</p>')
 			.replaceAll('<p class="mb-8">Last Name</p>', '<p class="mb-8">Тема</p>')
 			.replaceAll('value="Tony"', 'value="" placeholder="Вашето име"')
 			.replaceAll(
@@ -2691,7 +2691,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('placeholder="Enter your phone number"', 'placeholder="Въведете телефон"')
 			.replaceAll('placeholder="Enter your email address"', 'placeholder="Въведете имейл"')
 			.replaceAll('Your Message*', 'Вашето съобщение*')
-			.replaceAll('Send Message', 'Изпрати запитване')
+			.replaceAll('Send Message', 'Prepare enquiry')
 			.replace(/<p class="h3 mb-12 capitalize">([\s\S]*?)<\/p>/g, '<p class="h3 mb-12">$1</p>')
 			.replace(
 				/name="SendInquiryphone" id="SendInquiryphone" type="number"/,
@@ -2728,7 +2728,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 
 	if (templateFile === 'faqs.html') {
 		return html
-			.replaceAll('Home', 'Начало')
+			.replaceAll('Home', 'Home')
 			.replaceAll('Pages', 'Още')
 			.replaceAll('Frequently Asked Questions', 'Често задавани въпроси')
 			.replaceAll('Do you offer financing?', 'Предлагате ли съдействие за финансиране?')
@@ -2784,7 +2784,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				'Ориентировъчна сметка за бюджет, първоначална вноска и месечна вноска.'
 			)
 			.replaceAll('Calculator FAQ', 'Често задавани въпроси')
-			.replaceAll('Calculator', 'Калкулатор')
+			.replaceAll('Calculator', 'Budget calculator')
 			.replaceAll(
 				'Loan Term <span class="text-muted">(months)</span>',
 				'Срок <span class="text-muted">(месеци)</span>'
@@ -2808,9 +2808,9 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 			.replaceAll('Other Fees', 'Други такси')
 			.replaceAll('Not Included', 'не са включени')
 			.replaceAll('Total Loan Amount', 'Обща сума за плащане')
-			.replaceAll('Monthly Payment', 'Месечна вноска')
+			.replaceAll('Monthly Payment', 'Illustrative monthly amount')
 			.replaceAll('Car Price', 'Цена на автомобила')
-			.replaceAll('Down Payment', 'Първоначална вноска')
+			.replaceAll('Down Payment', 'Initial payment')
 			.replaceAll('Browse by Price', 'Разгледай по бюджет')
 			.replaceAll('$46.300', '46 300 €')
 			.replaceAll('-$400', '−400 €')
@@ -2899,7 +2899,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 				'Compare features, performance, and pricing to choose the perfect car.',
 				'Сравнете пробег, гориво, оборудване и цена преди оглед.'
 			)
-			.replaceAll('Compare', 'Сравнение');
+			.replaceAll('Compare', 'Compare');
 
 		return replaceCompareVehicleTable(localized);
 	}
@@ -2907,7 +2907,7 @@ function replaceSupportPageCopy(html: string, templateFile: string, routePath: s
 	if (templateFile === 'terms.html') {
 		return (
 			html
-				.replaceAll('Home', 'Начало')
+				.replaceAll('Home', 'Home')
 				.replaceAll('Pages', 'Още')
 				// Section-4 heading: translate the full English phrase BEFORE the
 				// generic 'Terms Of Use' rule, otherwise it half-renders as
@@ -2997,7 +2997,7 @@ function replaceAccountPageCopy(html: string, templateFile: string) {
 			.replaceAll('My Favorites', daynightAccount.favoritesTitle)
 			.replaceAll('My Profile', daynightAccount.profileTitle)
 			.replaceAll('Add Listing', daynightAccount.newListingCta)
-			.replaceAll('Продай автомобил', daynightAccount.newListingCta)
+			.replaceAll('Prepare vehicle details', daynightAccount.newListingCta)
 			.replaceAll('Show Моят профил', 'Меню профил')
 			.replaceAll('Pending', 'В процес')
 			.replaceAll('Car Views', 'Интерес към автомобили')
@@ -3006,10 +3006,10 @@ function replaceAccountPageCopy(html: string, templateFile: string) {
 			.replaceAll('12 Month', '12 месеца')
 			.replaceAll('All Listing', 'Всички заявки')
 			.replaceAll('Sort by:', 'Сортиране:')
-			.replaceAll('Newest', 'Най-нови')
+			.replaceAll('Newest', 'Newest')
 			.replaceAll('Best Match', 'Най-подходящи')
-			.replaceAll('Lowest Price', 'Най-ниска цена')
-			.replaceAll('Highest Price', 'Най-висока цена')
+			.replaceAll('Lowest Price', 'Lowest price')
+			.replaceAll('Highest Price', 'Highest price')
 			.replaceAll('Lowest Mileage', 'Най-малък пробег')
 			.replaceAll('Highest Mileage', 'Най-голям пробег')
 			.replaceAll('Recent Reviews', 'Последни отзиви');
@@ -3035,7 +3035,7 @@ function replaceAccountPageCopy(html: string, templateFile: string) {
 			.replaceAll('My Автомобилиs', daynightAccount.listingsTitle)
 			.replaceAll('My Автомобили', daynightAccount.listingsTitle)
 			.replaceAll('Add Listing', daynightAccount.newListingCta)
-			.replaceAll('Продай автомобил', daynightAccount.newListingCta)
+			.replaceAll('Prepare vehicle details', daynightAccount.newListingCta)
 			.replaceAll('Published', 'Изпратени заявки')
 			.replaceAll('Pending', 'В процес на преглед');
 	}
@@ -3044,12 +3044,12 @@ function replaceAccountPageCopy(html: string, templateFile: string) {
 		return withAccountChrome
 			.replaceAll('Add Listings', daynightAccount.newListingCta)
 			.replaceAll('Add Listing', daynightAccount.newListingCta)
-			.replaceAll('Продай автомобил', daynightAccount.newListingCta)
+			.replaceAll('Prepare vehicle details', daynightAccount.newListingCta)
 			.replaceAll('Vehicle Information', 'Данни за автомобила')
 			.replaceAll('Your Package', 'Данни за автомобила')
 			.replaceAll('Save & Publish', 'Изпрати към Day Night Auto')
 			.replaceAll('Submit Listing', 'Изпрати към Day Night Auto')
-			.replaceAll('Upload Photos', 'Снимки на автомобила');
+			.replaceAll('Upload Photos', 'Vehicle photos');
 	}
 
 	if (templateFile === 'message.html') {
@@ -3099,10 +3099,10 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Browse By Type', 'Автомобили по тип')
 		.replaceAll('Check All Car Type', 'Виж всички типове')
 		.replaceAll('Check Всички Type', 'Виж всички типове')
-		.replaceAll('New Vehicles', 'Налични автомобили')
+		.replaceAll('New Vehicles', 'Advertised samples')
 		.replaceAll('Explore Our Brands', 'Марки в наличност')
 		.replaceAll('Clients Reviews', 'Отзиви от клиенти')
-		.replace(/\bView All\b/g, 'Виж всички')
+		.replace(/\bView All\b/g, 'View all')
 		.replaceAll('View Всички марки', 'Виж всички марки')
 		.replaceAll('Why Choose Us?', 'Защо Day Night Auto?')
 		.replaceAll('Why Choose Us', 'Защо Day Night Auto')
@@ -3196,18 +3196,18 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 			'I’ve bought several cars over the years, but this was by far the best experience. The service was honest and transparent, and the car I purchased was exactly as described. I’ll definitely be returning for my next vehicle!',
 			'Автомобилът беше представен коректно, със снимки, цена и обяснение за състоянието. Сделката мина бързо и подредено.'
 		)
-		.replaceAll('Address Business', 'Адрес')
-		.replaceAll('Contact Us', 'Контакти')
-		.replaceAll('Working Time', 'Работно време')
+		.replaceAll('Address Business', 'Address')
+		.replaceAll('Contact Us', 'Contact')
+		.replaceAll('Working Time', 'Opening hours')
 		.replaceAll('Week-Day: 8:00 - 18:00', 'Делнични дни: 9:00 - 18:00')
 		.replaceAll('Mon-Sat:8:00am - 18:00pm', 'Понеделник - събота: 9:00 - 18:00')
 		.replaceAll('Sunday: Closed', 'Неделя: по уговорка')
 		.replaceAll('Sunday: Close', 'Неделя: по уговорка')
 		.replaceAll('Sun: Closed', 'Неделя: по уговорка')
 		.replaceAll('Follow Us On social media:', 'Последвайте Day Night Auto:')
-		.replaceAll('First Name', 'Име')
+		.replaceAll('First Name', 'Name')
 		.replaceAll('Last Name', 'Фамилия')
-		.replaceAll('Phone Number', 'Телефон')
+		.replaceAll('Phone Number', 'Phone')
 		.replaceAll('Your Message*', 'Вашето съобщение*')
 		.replaceAll('Enter your last name', 'Въведете фамилия')
 		.replaceAll('Enter your email address', 'Въведете имейл')
@@ -3244,7 +3244,7 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		)
 		.replaceAll('Terms Of Use', 'Условия за ползване')
 		.replaceAll('Terms of use', 'Условия за ползване')
-		.replaceAll('Terms', 'Условия')
+		.replaceAll('Terms', 'Preview terms')
 		.replaceAll('Limitations', 'Ограничения')
 		.replaceAll('Revisions And Errata', 'Актуализации')
 		.replaceAll('Revisions and errata', 'Актуализации')
@@ -3275,9 +3275,9 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Super Admin', 'Клиентски профил')
 		.replaceAll('Or Purchase New Package', 'Заявка към Day Night Auto')
 		.replaceAll('Choose Your Package', 'Изберете услуга')
-		.replaceAll('MOST POPULAR', 'Полезно')
+		.replaceAll('MOST POPULAR', 'Guides')
 		.replaceAll('Basic Plan', 'Основна заявка')
-		.replaceAll('Starter', 'Оглед')
+		.replaceAll('Starter', 'Viewing')
 		.replaceAll('Professional', 'Пълно съдействие')
 		.replaceAll('Executive', 'Индивидуална услуга')
 		.replaceAll('Индивидуална услуга Team', 'Консултанти на Day Night Auto')
@@ -3300,9 +3300,9 @@ function replaceVisibleTemplateFiller(html: string, templateFile: string) {
 		.replaceAll('Unlimited Video Calls with Buyers', 'Допълнителни снимки при нужда')
 		.replaceAll('Unlimited Video Calls with Potential Buyers', 'Допълнителни уточнения при нужда')
 		.replaceAll('24/7 Live Chat Support', 'Отговор от екипа на Day Night Auto')
-		.replaceAll('Live Chatbot', 'Контакт с екипа')
+		.replaceAll('Live Chatbot', 'Contact the team')
 		.replaceAll('Sale Agents Detail', 'Профил на екипа')
-		.replaceAll('Sale Agents List', 'Екип')
+		.replaceAll('Sale Agents List', 'Team')
 		.replaceAll('Sale Agents', 'Екипът на Day Night Auto')
 		.replaceAll('Senior Sales Agent', salesTeam?.role ?? 'Консултанти продажби')
 		.replaceAll('Senior Dealer Partner', salesTeam?.role ?? 'Консултанти продажби')
@@ -3655,12 +3655,12 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 			)
 			.replace(
 				/<button class="btn btn-primary btn-large font-weight-600 w-full">\s*Изпрати запитване\s*<\/button>/i,
-				'<button class="btn btn-primary btn-large font-weight-600 w-full">Изпрати запитване</button>'
+				'<button class="btn btn-primary btn-large font-weight-600 w-full">Prepare enquiry</button>'
 			)
-			.replaceAll('Изпрати запитване about Vehicle', 'Изпрати запитване')
+			.replaceAll('Изпрати запитване about Vehicle', 'Prepare enquiry')
 			.replaceAll('Интерес за оглед 2', 'Бартер или оценка')
 			.replaceAll('Интерес за оглед 3', 'Документи и финансиране')
-			.replaceAll('<p class="mb-6">Message</p>', '<p class="mb-6">Съобщение</p>')
+			.replaceAll('<p class="mb-6">Message</p>', '<p class="mb-6">Message</p>')
 			.replaceAll('value="demo@getrich.local"', 'value="" placeholder="Вашият имейл"')
 			.replaceAll(
 				'Yes, I would like to receive price alerts on this vehicle and helpful shopping information.',
@@ -3682,7 +3682,7 @@ function replaceRemainingPresentationLinks(html: string, templateFile: string, r
 			.replaceAll('value="demo@getrich.local"', 'value="" placeholder="Вашият имейл"')
 			.replaceAll('value="01/23/2024"', 'value=""')
 			.replaceAll('value="2024-01-23"', 'value=""')
-			.replaceAll('Phone (optional)', 'Телефон')
+			.replaceAll('Phone (optional)', 'Phone')
 			.replaceAll('placeholder="Телефон (optional)"', 'placeholder="Телефон"')
 			.replace(
 				/<a href="tel:0877 733 110" class="text-sm text-white">0877 733 110<\/a>\s*<a href="tel:0877 733 110" class="text-sm text-white">0877 733 110<\/a>/,
@@ -3825,8 +3825,8 @@ export function applyDayNightTemplateContent(
 		output = replaceInventoryCopy(output, templateFile);
 	}
 
-	if (!output.includes('Автомобили')) {
-		output = output.replace(daynightSite.sellCarCta, 'Автомобили');
+	if (!output.includes('Vehicles')) {
+		output = output.replace(daynightSite.sellCarCta, 'Vehicles');
 	}
 
 	output = replaceSharedVehicleSnippets(output);

@@ -241,7 +241,7 @@
         <div class="dn-header__inner">
           <div class="dn-logo-box">
             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <picture><source media="(max-width: 767px)" srcset={homeOverlayHeader ? "/assets/excellent/logo-cars.jpg" : brand.logo} /><img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" /></picture>
+              <picture><source media="(max-width: 767px)" srcset={brand.logo} /><img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" /></picture>
             </a>
           </div>
 
@@ -793,6 +793,26 @@
   @media (max-width: 359px) {
     .dn-header .dn-logo img { width: 132px; max-width: 132px; height: 40px; }
     .dn-mobile-controls { gap: 6px; }
+  }
+
+  @media (max-width: 767px) {
+    .dn-header .dn-logo picture {
+      display: block;
+      width: 140px;
+      height: 54px;
+      overflow: hidden;
+    }
+    .dn-header .dn-logo picture img {
+      width: 140px;
+      max-width: 140px;
+      height: auto;
+      object-position: left center;
+      /* Keep the source emblem/name and crop the lower autocenter tagline. */
+      transform: translateY(-7.3%);
+    }
+    .dn-header-fixed--home-overlay .dn-header .dn-logo img {
+      filter: brightness(0) invert(1);
+    }
   }
 
   @media (min-width: 992px) {

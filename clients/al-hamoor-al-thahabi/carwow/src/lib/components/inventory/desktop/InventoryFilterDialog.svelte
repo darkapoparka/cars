@@ -198,11 +198,11 @@
 	onkeydown={keepFocus}
 >
 	<div class="filter-dialog-header">
-		<h2 id="inventory-filter-title">{field ? field.label : 'Търсене на автомобили'}</h2>
+		<h2 id="inventory-filter-title">{field ? field.label : 'Vehicle search'}</h2>
 		<button
 			type="button"
 			class="filter-dialog-close"
-			aria-label="Затвори филтрите"
+			aria-label="Close filters"
 			onclick={() => dialog.close()}><X size={22} /></button
 		>
 	</div>
@@ -237,8 +237,8 @@
 			<label class="filter-dialog-search"
 				><Search size={20} /><input
 					type="search"
-					aria-label="Марка, модел или ключова дума"
-					placeholder="Марка, модел или ключова дума"
+					aria-label="Make, model or keyword"
+					placeholder="Make, model or keyword"
 					bind:value={query}
 				/></label
 			>
@@ -250,7 +250,7 @@
 							>
 							<details class="filter-dialog-multiselect">
 								<summary aria-labelledby={`modal-label-${group.name}`}
-									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'Всички'}</span
+									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'All'}</span
 									><ChevronDown size={16} /></summary
 								>
 								<div class="filter-dialog-multi-options">
@@ -272,7 +272,7 @@
 								value={draft[group.name]?.[0] ?? ''}
 								onchange={(event) => setValues(group.name, [event.currentTarget.value])}
 							>
-								<option value="">Всички</option>
+								<option value="">All</option>
 								{#each options(group) as option (option.value)}<option value={option.value}
 										>{option.label}</option
 									>{/each}
@@ -281,21 +281,21 @@
 					</div>
 				{/each}
 				<div class="filter-dialog-field">
-					<label class="filter-dialog-label" for="modal-availability">Наличност</label>
+					<label class="filter-dialog-label" for="modal-availability">Listing samples</label>
 					<select
 						id="modal-availability"
 						value={draft.availability?.[0] ?? ''}
 						onchange={(event) => setValues('availability', [event.currentTarget.value])}
 					>
-						<option value="">Всички</option><option value="available">Налични</option><option
-							value="incoming">Очакван внос</option
+						<option value="">All</option><option value="available">Advertised</option><option
+							value="incoming">Awaiting confirmation</option
 						>
 					</select>
 				</div>
 			</div>
 			{#if featureField}
 				<section class="filter-dialog-features" aria-labelledby="filter-extras-title">
-					<h3 id="filter-extras-title">Екстри</h3>
+					<h3 id="filter-extras-title">Features</h3>
 					<div class="filter-dialog-feature-grid">
 						{#each displayedFeatures as option (option.value)}
 							<label

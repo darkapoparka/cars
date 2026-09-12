@@ -1,8 +1,8 @@
 # Task 08 — Durable marketplace core, Dealer Studio, and Listing Factory schema proposal
 
-**Date:** 2026-07-11  
-**Status:** Approval required; no schema or external state has been changed  
-**Scope:** Task 08 durable data model and isolated-Neon migration plan  
+**Date:** 2026-07-11
+**Status:** Approval required; no schema or external state has been changed
+**Scope:** Task 08 durable data model and isolated-Neon migration plan
 **Approval boundary:** This document is the complete Phase 1 proposal. It does not authorize editing `schema.prisma`, generating a migration, creating a Neon branch, or changing application code.
 
 ## Decision summary

@@ -3,36 +3,36 @@
   import { featuredVehicles } from '$data/inventory';
 
   const budgetTiles = [
-    {
-      label: 'До 60 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur <= 60000).length} автомобила`,
-      href: '/listing-grid?price_max=60000',
-      image: featuredVehicles[1].image
-    },
-    {
-      label: '60–70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 60000 && vehicle.priceEur <= 70000).length} автомобила`,
-      href: '/listing-grid?price_min=60000&price_max=70000',
-      image: featuredVehicles[0].image
-    },
-    {
-      label: 'Над 70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 70000).length} автомобила`,
-      href: '/listing-grid?price_min=70000',
-      image: featuredVehicles[6].image
-    },
-    {
-      label: 'Виж всички',
-      detail: `${featuredVehicles.length} автомобила`,
-      href: '/listing-grid',
-      image: featuredVehicles[2].image
-    }
-  ] as const;
+  {
+    "label": "Up to $12,000",
+    "detail": "2 samples",
+    "href": "/listing-grid?price_max=12000",
+    "image": "/dealer/inventory/6572737-1.webp"
+  },
+  {
+    "label": "$12,001–$16,000",
+    "detail": "3 samples",
+    "href": "/listing-grid?price_min=12001&price_max=16000",
+    "image": "/dealer/inventory/7027165-1.webp"
+  },
+  {
+    "label": "Over $16,000",
+    "detail": "3 samples",
+    "href": "/listing-grid?price_min=16001",
+    "image": "/dealer/inventory/7435783-1.webp"
+  },
+  {
+    "label": "All samples",
+    "detail": "8 vehicles",
+    "href": "/listing-grid",
+    "image": "/dealer/inventory/5826218-1.webp"
+  }
+] as const;
 </script>
 
 <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">
   <div class="dn-mobile-section-heading">
-    <h2 id="mobile-budget-title">Изберете по бюджет</h2>
+    <h2 id="mobile-budget-title">Choose by budget</h2>
 
   </div>
 

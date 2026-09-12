@@ -1,6 +1,12 @@
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD" | "GBP";
 
 export interface LeadSiteConfig {
+  readonly logoDarkPath: string;
+  readonly distanceUnit: string;
+  readonly previewNotice: string;
+  readonly locationNote: string;
+  readonly priceNotice: string;
+  readonly hours: string;
   readonly accent: string;
   readonly address: string;
   readonly city: string;
@@ -28,30 +34,34 @@ export interface LeadSiteConfig {
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  accent: "#c40101",
-  address: "ул. „Атанас Манчев“ 18, Студентски град",
-  city: "София",
-  contactUrl: "tel:+359877733110",
-  country: "България",
-  countryCode: "BG",
-  currency: "BGN",
-  email: "",
-  heroPath: "/lead-hero.jpg",
-  locale: "bg-BG",
-  logoPath: "/lead-logo.png",
-  mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7302.453092836291!2d23.3443286!3d42.649331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1627293157601!5m2!1sen!2s",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-  name: "Day & Night Auto Group",
-  phoneDisplay: "0877 733 110",
-  phoneHref: "tel:+359877733110",
-  shortName: "Day & Night",
-  slug: "day-night-auto-group",
-  socialLinks: {
-    instagram: "https://www.instagram.com/dayandnight_autogroup/",
+  "accent": "#e86f13",
+  "address": "2420 NW 16th Lane, Suite E, Pompano Beach, FL 33064",
+  "city": "Pompano Beach",
+  "contactUrl": "tel:+19547106047",
+  "country": "United States",
+  "countryCode": "US",
+  "currency": "USD",
+  "email": "",
+  "heroPath": "/dealer/inventory/6572737-1.webp",
+  "locale": "en-US",
+  "logoPath": "/dealer/logo-light.png",
+  "logoDarkPath": "/dealer/logo-dark.png",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Keen+Auto+Mall+2420+NW+16th+Lane+Pompano+Beach+FL+33064&output=embed",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Keen+Auto+Mall+2420+NW+16th+Lane+Pompano+Beach+FL+33064",
+  "name": "Keen Auto Mall",
+  "phoneDisplay": "(954) 710-6047",
+  "phoneHref": "tel:+19547106047",
+  "shortName": "Keen Auto Mall",
+  "slug": "keen-auto-mall",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/keenautomall/"
   },
-  staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в София.",
+  "staticDemoMode": true,
+  "tagline": "Used cars in Pompano Beach. Compare the details and discuss your next car.",
+  "distanceUnit": "mi",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live feed. Confirm availability, condition and total price directly. No dealership approval or enquiry delivery is implied.",
+  "locationNote": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+  "priceNotice": "The dealer's published terms add tax, tag and title plus a $1,298 dealer fee, $1,995 reconditioning fee, $598 electronic filing fee and $189 private tag agency fee. These are not included in the sample advertised prices. Confirm a written total for the specific vehicle. The site describes vehicles as sold as-is, with optional service contracts and finance subject to application and approval.",
+  "hours": "Contact the dealership to confirm opening hours and arrange a visit."
 };
 // LEAD_SITE_CONFIG_END

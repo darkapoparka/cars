@@ -23,6 +23,7 @@
 	import { getRouteBodyClasses, routeManagesOwnChrome } from '$lib/data/template-routes';
 	import { GarageState, setGarageContext } from '$lib/state/garage.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
+	import { dealerFacts } from '$lib/data/dealer';
 
 	let { children, data } = $props();
 	const garage = new GarageState();
@@ -57,20 +58,20 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/brand/daynight-logo-generated.png`,
-			logo: `${origin}/brand/daynight-logo-generated.png`,
+			image: `${origin}${daynightSite.logoLight}`,
+			logo: `${origin}${daynightSite.logoLight}`,
 			url: `${origin}/`,
 			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',
 				streetAddress: daynightSite.location,
-				addressLocality: 'София',
-				addressRegion: 'София',
-				addressCountry: 'BG'
+				addressLocality: dealerFacts.city,
+				addressRegion: dealerFacts.city,
+				addressCountry: dealerFacts.countryCode
 			},
-			areaServed: 'BG',
-			priceRange: '€€'
+			areaServed: dealerFacts.countryCode,
+			description: dealerFacts.previewNotice
 		}).replaceAll('<', '\\u003c')
 	);
 
@@ -80,6 +81,9 @@
 </script>
 
 <svelte:head>
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel="icon" href="/dealer/favicon.ico" />
+	<link rel="apple-touch-icon" href="/dealer/apple-touch-icon.png" />
 	<link
 		rel="preload"
 		href={geistCyrillicFont}
@@ -91,7 +95,7 @@
 	<JsonLdScript json={dealerJsonLd} />
 </svelte:head>
 
-<a class="skip-to-content" href="#main-content">Към основното съдържание</a>
+<a class="skip-to-content" href="#main-content">Skip to main content</a>
 
 <RouteBodyClassRuntime bodyClasses={routeBodyClasses} />
 
@@ -100,6 +104,7 @@
 {/if}
 
 {@render children()}
+<aside class="dealer-preview-note" aria-label="Preview information">{daynightSite.previewNotice} {daynightSite.locationNote} {daynightSite.priceNotice}</aside>
 
 {#if !hidesGlobalChrome}
 	<SiteFooter />
@@ -111,6 +116,8 @@
 {/if}
 
 <style>
+	.dealer-preview-note { padding:18px 20px 90px; background:#f4f5f7; color:#525a66; font-size:12px; line-height:1.5; }
+	@media(min-width:1024px){.dealer-preview-note{padding-bottom:18px;}}
 	:global(html) {
 		scrollbar-gutter: stable;
 	}

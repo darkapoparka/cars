@@ -11,7 +11,7 @@
         <span class="dn-hero__title-desktop">Choose your vehicle</span>
         <span class="dn-hero__title-mobile">Find a vehicle</span>
       </h1>
-      <p class="dn-hero__location">{brand.city} · Studentski Grad · Ask about viewing availability</p>
+      <p class="dn-hero__location">{brand.city} ? 10511 Olympic Drive ? Ask about viewing availability</p>
     </div>
   </div>
 </section>

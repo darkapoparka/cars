@@ -176,7 +176,7 @@ export interface BlockImage {
     thumbhash: Scalars['String']
     /**
      * This field is used to generate the image URL with the provided options. The options are passed as arguments. For example, if you want to resize the image to 200x200 pixels, you can use the following query:
-     * 
+     *
      * ```graphql
      * {
      *   imageBlock {
@@ -184,11 +184,11 @@ export interface BlockImage {
      *   }
      * }
      * ```
-     * 
+     *
      * This will return the URL with the width and height set to 200 pixels.
-     * 
+     *
      * BaseHub uses Cloudflare for image resizing. Check out [all available options in their docs](https://developers.cloudflare.com/images/transform-images/transform-via-workers/#fetch-options).
-     * 
+     *
      */
     url: Scalars['String']
     width: Scalars['Int']
@@ -360,7 +360,7 @@ export type MediaBlockUnion = (BlockAudio | BlockFile | BlockImage | BlockVideo)
 export interface Mutation {
     /**
      * Returns a signed url and an upload url so that you can upload files into your repository.
-     * 
+     *
      * Example usage with JavaScript:
      * ```js
      * async function handleUpload(file: File) {
@@ -371,15 +371,15 @@ export interface Mutation {
      *       uploadURL: true,
      *     }
      *   })
-     * 
+     *
      *   const { signedURL, uploadURL } = getUploadSignedURL
-     * 
+     *
      *   await fetch(signedURL, { method: 'PUT', body: file })
-     * 
+     *
      *   // done! do something with the uploadURL now
      * }
      * ```
-     * 
+     *
      */
     getUploadSignedURL: GetUploadSignedURL
     /** Start a job that can be awaited and the result given directly. Under the hood, it runs `transactionAsync` and polls for the result until it is available. You can pass a `timeout` argument, the default being 30_000ms. */
@@ -679,7 +679,7 @@ export interface AuthorsGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -705,7 +705,7 @@ export interface AuthorsItemGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -779,7 +779,7 @@ export interface BlockDocumentGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -848,7 +848,7 @@ export interface BlockImageGenqlSelection{
     thumbhash?: boolean | number
     /**
      * This field is used to generate the image URL with the provided options. The options are passed as arguments. For example, if you want to resize the image to 200x200 pixels, you can use the following query:
-     * 
+     *
      * ```graphql
      * {
      *   imageBlock {
@@ -856,11 +856,11 @@ export interface BlockImageGenqlSelection{
      *   }
      * }
      * ```
-     * 
+     *
      * This will return the URL with the width and height set to 200 pixels.
-     * 
+     *
      * BaseHub uses Cloudflare for image resizing. Check out [all available options in their docs](https://developers.cloudflare.com/images/transform-images/transform-via-workers/#fetch-options).
-     * 
+     *
      */
     url?: { __args: {anim?: (Scalars['String'] | null), background?: (Scalars['String'] | null), blur?: (Scalars['Int'] | null), border?: (Scalars['String'] | null), brightness?: (Scalars['Int'] | null), compression?: (Scalars['String'] | null), contrast?: (Scalars['Int'] | null), dpr?: (Scalars['Int'] | null), fit?: (Scalars['String'] | null), format?: (Scalars['String'] | null), gamma?: (Scalars['String'] | null), gravity?: (Scalars['String'] | null), height?: (Scalars['Int'] | null), metadata?: (Scalars['String'] | null), quality?: (Scalars['Int'] | null), rotate?: (Scalars['String'] | null), sharpen?: (Scalars['String'] | null), trim?: (Scalars['String'] | null), width?: (Scalars['Int'] | null)} } | boolean | number
     width?: boolean | number
@@ -872,7 +872,7 @@ export interface BlockListGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -911,7 +911,7 @@ export interface BlockOgImageGenqlSelection{
 export interface BlockRichTextGenqlSelection{
     html?: { __args: {
     /** It automatically generates a unique id for each heading present in the HTML. Enabled by default. */
-    slugs?: (Scalars['Boolean'] | null), 
+    slugs?: (Scalars['Boolean'] | null),
     /** Inserts a table of contents at the beginning of the HTML. */
     toc?: (Scalars['Boolean'] | null)} } | boolean | number
     json?: RichTextJsonGenqlSelection
@@ -945,7 +945,7 @@ export interface BlogGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -958,35 +958,35 @@ export interface BlogGenqlSelection{
     _title?: boolean | number
     authors?: (AuthorsGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (AuthorsItemFilterInput | null), 
+    filter?: (AuthorsItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (AuthorsItemOrderByEnum | null), 
+    orderBy?: (AuthorsItemOrderByEnum | null),
     /** Search configuration */
-    search?: (AuthorsItemSearchInput | null), 
+    search?: (AuthorsItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     categories?: (CategoriesGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (CategoriesItemFilterInput | null), 
+    filter?: (CategoriesItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (CategoriesItemOrderByEnum | null), 
+    orderBy?: (CategoriesItemOrderByEnum | null),
     /** Search configuration */
-    search?: (CategoriesItemSearchInput | null), 
+    search?: (CategoriesItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     posts?: (PostsGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (PostsItemFilterInput | null), 
+    filter?: (PostsItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (PostsItemOrderByEnum | null), 
+    orderBy?: (PostsItemOrderByEnum | null),
     /** Search configuration */
-    search?: (PostsItemSearchInput | null), 
+    search?: (PostsItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     __typename?: boolean | number
@@ -996,7 +996,7 @@ export interface BlogGenqlSelection{
 export interface BodyGenqlSelection{
     html?: { __args: {
     /** It automatically generates a unique id for each heading present in the HTML. Enabled by default. */
-    slugs?: (Scalars['Boolean'] | null), 
+    slugs?: (Scalars['Boolean'] | null),
     /** Inserts a table of contents at the beginning of the HTML. */
     toc?: (Scalars['Boolean'] | null)} } | boolean | number
     json?: BodyRichTextGenqlSelection
@@ -1019,7 +1019,7 @@ export interface BodyRichTextGenqlSelection{
 export interface Body_1GenqlSelection{
     html?: { __args: {
     /** It automatically generates a unique id for each heading present in the HTML. Enabled by default. */
-    slugs?: (Scalars['Boolean'] | null), 
+    slugs?: (Scalars['Boolean'] | null),
     /** Inserts a table of contents at the beginning of the HTML. */
     toc?: (Scalars['Boolean'] | null)} } | boolean | number
     json?: Body_1RichTextGenqlSelection
@@ -1043,7 +1043,7 @@ export interface CategoriesGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1069,7 +1069,7 @@ export interface CategoriesItemGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1107,7 +1107,7 @@ export interface LegalPagesGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1133,7 +1133,7 @@ export interface LegalPagesItemGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1198,7 +1198,7 @@ export interface MediaBlockUnionGenqlSelection{
 export interface MutationGenqlSelection{
     /**
      * Returns a signed url and an upload url so that you can upload files into your repository.
-     * 
+     *
      * Example usage with JavaScript:
      * ```js
      * async function handleUpload(file: File) {
@@ -1209,41 +1209,41 @@ export interface MutationGenqlSelection{
      *       uploadURL: true,
      *     }
      *   })
-     * 
+     *
      *   const { signedURL, uploadURL } = getUploadSignedURL
-     * 
+     *
      *   await fetch(signedURL, { method: 'PUT', body: file })
-     * 
+     *
      *   // done! do something with the uploadURL now
      * }
      * ```
-     * 
+     *
      */
     getUploadSignedURL?: (GetUploadSignedURLGenqlSelection & { __args: {
     /** SHA256 hash of the file. Used for reusing existing files. */
-    fileHash?: (Scalars['String'] | null), 
+    fileHash?: (Scalars['String'] | null),
     /** The file name */
     fileName: Scalars['String']} })
     /** Start a job that can be awaited and the result given directly. Under the hood, it runs `transactionAsync` and polls for the result until it is available. You can pass a `timeout` argument, the default being 30_000ms. */
     transaction?: (TransactionStatusGenqlSelection & { __args: {
     /** The ID of the author of the transaction. If not provided, the API Token will be used. */
-    authorId?: (Scalars['String'] | null), 
+    authorId?: (Scalars['String'] | null),
     /** Auto make a commit in your Repo with the specified message. */
-    autoCommit?: (Scalars['String'] | null), 
+    autoCommit?: (Scalars['String'] | null),
     /** Transaction data. */
-    data: Transaction | Scalars['String'], 
+    data: Transaction | Scalars['String'],
     /** Skip running workflows and event subscribers. Defaults to false. */
-    skipWorkflows?: (Scalars['Boolean'] | null), 
+    skipWorkflows?: (Scalars['Boolean'] | null),
     /** Timeout in milliseconds. */
     timeout?: (Scalars['Int'] | null)} })
     /** Start an asynchronous job to mutate BaseHub data. Returns a transaction ID which you can use to get the result of the job. */
     transactionAsync?: { __args: {
     /** The ID of the author of the transaction. If not provided, the API Token will be used. */
-    authorId?: (Scalars['String'] | null), 
+    authorId?: (Scalars['String'] | null),
     /** Auto make a commit in your Repo with the specified message. */
-    autoCommit?: (Scalars['String'] | null), 
+    autoCommit?: (Scalars['String'] | null),
     /** Transaction data. */
-    data: Scalars['String'], 
+    data: Scalars['String'],
     /** Skip running workflows and event subscribers. Defaults to false. */
     skipWorkflows?: (Scalars['Boolean'] | null)} }
     transactionStatus?: (TransactionStatusGenqlSelection & { __args: {
@@ -1259,7 +1259,7 @@ export interface PostsGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1285,7 +1285,7 @@ export interface PostsItemGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1336,28 +1336,28 @@ export interface QueryGenqlSelection{
     /** The structure of the repository. Used by START. */
     _structure?: { __args: {
     /** The format of the structure. */
-    format?: (_StructureFormatEnum | null), 
+    format?: (_StructureFormatEnum | null),
     /** The format of the structure. */
-    resolveTargetsWith?: (_ResolveTargetsWithEnum | null), 
+    resolveTargetsWith?: (_ResolveTargetsWithEnum | null),
     /** A target block to forcefully resolve in the schema. */
-    targetBlock?: (TargetBlock | null), 
+    targetBlock?: (TargetBlock | null),
     /** Whether to include constraints in the structure. */
-    withConstraints?: (Scalars['Boolean'] | null), 
+    withConstraints?: (Scalars['Boolean'] | null),
     /** Whether to include IDs in the structure. */
-    withIDs?: (Scalars['Boolean'] | null), 
+    withIDs?: (Scalars['Boolean'] | null),
     /** Whether to include type options in the structure. */
     withTypeOptions?: (Scalars['Boolean'] | null)} } | boolean | number
     _sys?: RepoSysGenqlSelection
     blog?: BlogGenqlSelection
     legalPages?: (LegalPagesGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (LegalPagesItemFilterInput | null), 
+    filter?: (LegalPagesItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (LegalPagesItemOrderByEnum | null), 
+    orderBy?: (LegalPagesItemOrderByEnum | null),
     /** Search configuration */
-    search?: (LegalPagesItemSearchInput | null), 
+    search?: (LegalPagesItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     __typename?: boolean | number
@@ -1431,7 +1431,7 @@ export interface _AgentStartGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1537,46 +1537,46 @@ export interface _agentsGenqlSelection{
 export interface _componentsGenqlSelection{
     authorsItem?: (authorsItem_AsListGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (AuthorsItemFilterInput | null), 
+    filter?: (AuthorsItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (AuthorsItemOrderByEnum | null), 
+    orderBy?: (AuthorsItemOrderByEnum | null),
     /** Search configuration */
-    search?: (AuthorsItemSearchInput | null), 
+    search?: (AuthorsItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     categoriesItem?: (categoriesItem_AsListGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (CategoriesItemFilterInput | null), 
+    filter?: (CategoriesItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (CategoriesItemOrderByEnum | null), 
+    orderBy?: (CategoriesItemOrderByEnum | null),
     /** Search configuration */
-    search?: (CategoriesItemSearchInput | null), 
+    search?: (CategoriesItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     legalPagesItem?: (legalPagesItem_AsListGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (LegalPagesItemFilterInput | null), 
+    filter?: (LegalPagesItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (LegalPagesItemOrderByEnum | null), 
+    orderBy?: (LegalPagesItemOrderByEnum | null),
     /** Search configuration */
-    search?: (LegalPagesItemSearchInput | null), 
+    search?: (LegalPagesItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     postsItem?: (postsItem_AsListGenqlSelection & { __args?: {
     /** Filter by a field. */
-    filter?: (PostsItemFilterInput | null), 
+    filter?: (PostsItemFilterInput | null),
     /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
+    first?: (Scalars['Int'] | null),
     /** Order by a field. */
-    orderBy?: (PostsItemOrderByEnum | null), 
+    orderBy?: (PostsItemOrderByEnum | null),
     /** Search configuration */
-    search?: (PostsItemSearchInput | null), 
+    search?: (PostsItemSearchInput | null),
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     __typename?: boolean | number
@@ -1587,7 +1587,7 @@ export interface authorsItem_AsListGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1613,7 +1613,7 @@ export interface categoriesItem_AsListGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1639,7 +1639,7 @@ export interface legalPagesItem_AsListGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
@@ -1665,7 +1665,7 @@ export interface postsItem_AsListGenqlSelection{
     _analyticsKey?: { __args: {
     /**
      * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
-     * 
+     *
      * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
      */
     scope?: (AnalyticsKeyScope | null)} } | boolean | number

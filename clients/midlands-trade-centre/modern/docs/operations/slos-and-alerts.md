@@ -44,4 +44,3 @@ Performance budgets for production-like browser runs:
 Alert thresholds must be exercised in an approved preview environment before
 production. A configured rule without a delivered and acknowledged synthetic
 alert is not verified.
-

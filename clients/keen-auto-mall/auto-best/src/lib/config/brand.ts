@@ -1,34 +1,14 @@
-export type BrandConfig = {
-  name: string;
-  shortName: string;
-  city: string;
-  addressLine: string;
-  address: string;
-  phone: string;
-  phoneHref: `tel:${string}`;
-  appointment: string;
-  logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
-};
-
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
+import { dealerFacts } from '$data/dealer';
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
-} as const satisfies BrandConfig;
+ name: dealerFacts.name, shortName: dealerFacts.shortName, city: dealerFacts.city,
+ addressLine: dealerFacts.address, address: dealerFacts.address,
+ phone: dealerFacts.phoneDisplay, phoneHref: dealerFacts.phoneHref as `tel:${string}`,
+ appointment: dealerFacts.hours, logo: '/dealer/logo-light.png' as const,
+ logoDark: '/dealer/logo-dark.png' as const, youtubeUrl: null,
+ instagramUrl: null, facebookUrl: null, mapsUrl: dealerFacts.mapsUrl,
+ mapsEmbedUrl: dealerFacts.mapsEmbedUrl, locale: dealerFacts.locale,
+ currency: dealerFacts.currency, distanceUnit: dealerFacts.distanceUnit,
+ previewNotice: dealerFacts.previewNotice, locationNote: dealerFacts.locationNote,
+ priceNotice: 'priceNotice' in dealerFacts ? String(dealerFacts.priceNotice) : 'Confirm the advertised price and final terms directly with the dealership.'
+} as const;
+export type BrandConfig = typeof brand;

@@ -23,8 +23,8 @@ export const brandLogos: Partial<Record<string, BrandLogoPath>> = {
 };
 
 export const sortOptions: { value: SortKey; label: string }[] = [
-	{ value: 'price-asc', label: 'Най-ниска цена' },
-	{ value: 'price-desc', label: 'Най-висока цена' },
+	{ value: 'price-asc', label: 'Lowest price' },
+	{ value: 'price-desc', label: 'Highest price' },
 	{ value: 'year-desc', label: 'Най-нова година' },
 	{ value: 'mileage-asc', label: 'Най-малък пробег' }
 ];

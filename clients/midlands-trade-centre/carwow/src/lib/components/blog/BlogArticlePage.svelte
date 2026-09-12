@@ -107,9 +107,9 @@
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={resolve('/')}>Home</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/blog')}>Блог</a></li>
+				<li><a href={resolve('/blog')}>Guides</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><span>{article.category}</span></li>
 			</ul>
@@ -163,7 +163,7 @@
 					</div>
 				</div>
 				<p class="h7 line-height-28">
-					Имате въпрос за конкретен автомобил? <a href={resolve('/contact')}>Свържете се с екипа</a> и посочете обявата, която ви интересува.
+					Имате въпрос за конкретен автомобил? <a href={resolve('/contact')}>Contact the team</a> и посочете обявата, която ви интересува.
 				</p>
 			</div>
 

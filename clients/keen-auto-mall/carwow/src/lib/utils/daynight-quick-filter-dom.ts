@@ -128,8 +128,8 @@ export function normalizeCondition(value: unknown) {
 }
 
 export function conditionLabel(value: string) {
-	if (value === 'new') return 'Нови';
-	if (value === 'used') return 'Употребявани';
+	if (value === 'new') return 'New';
+	if (value === 'used') return 'Used';
 	return '';
 }
 

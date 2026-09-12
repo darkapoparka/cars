@@ -75,7 +75,7 @@
 		<div class="terms-container">
 			<ol class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<img src="/assets/icons/right.svg" alt="" />

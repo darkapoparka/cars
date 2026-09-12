@@ -8,10 +8,10 @@
   <div class="container dn-hero__inner dn-route-hero__layout">
     <div class="dn-hero__copy dn-route-hero__copy">
       <h1 id="home-hero-title">
-        <span class="dn-hero__title-desktop">Изберете своя автомобил</span>
-        <span class="dn-hero__title-mobile">Намери автомобил</span>
+        <span class="dn-hero__title-desktop">Choose your vehicle</span>
+        <span class="dn-hero__title-mobile">Find a vehicle</span>
       </h1>
-      <p class="dn-hero__location">{brand.city} · Студентски град · Оглед по уговорка</p>
+      <p class="dn-hero__location">{brand.city} · Vehicle viewing by appointment</p>
     </div>
   </div>
 </section>

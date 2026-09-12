@@ -29,7 +29,7 @@
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
       <h1 id="about-title">About us</h1>
-      <p class="dn-about-hero__lead">Vehicles in {brand.city} · Import questions · No dealer financing</p>
+      <p class="dn-about-hero__lead">Used vehicles in {brand.city} ? Dated listing samples ? No dealer financing</p>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={resolve('/listing-grid')}>
       <span>Browse vehicles</span>
@@ -38,7 +38,7 @@
     <nav class="dn-about-socials" aria-label="Follow us on social media">
       <span>Follow us</span>
       <div class="dn-about-socials__links">
-        {#each socialProfiles as profile (profile.name)}
+        {#each socialProfiles.filter((profile) => profile.href) as profile (profile.name)}
           <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={`${profile.label} — opens in a new tab`}>
             <SocialBrandIcon name={profile.name} size={28} />
           </a>

@@ -11,7 +11,7 @@
 
 <div class="md-flex-col md-items-start mb-16 flex items-center justify-between gap-16">
 	<div>
-		<p class="h4 mb-12">Локация</p>
+		<p class="h4 mb-12">Location</p>
 		<p class="flex items-center gap-8">
 			<img
 				class="h-16 w-16"

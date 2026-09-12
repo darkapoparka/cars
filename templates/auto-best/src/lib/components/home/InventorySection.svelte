@@ -10,7 +10,7 @@
     <div class="dn-inventory__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
       <h2 id="featured-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">Избрани автомобили</span>
-        <span class="dn-heading-mobile">Избрани</span>
+        <span class="dn-heading-mobile">Избрани автомобили</span>
       </h2>
       <a class="dn-inventory__all dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
         <span class="dn-heading-desktop">Вижте всички автомобили</span>
@@ -136,7 +136,7 @@
 
   @media (max-width: 767px) {
     .dn-inventory {
-      padding: 24px 0 12px;
+      padding: 32px 0 12px;
       background: var(--dn-mobile-canvas);
     }
 
@@ -172,18 +172,11 @@
       display: inline;
     }
 
-    .dn-inventory__all {
-      min-height: 44px;
-      padding: 0;
-      background: transparent;
-      color: #4f5661;
-      font-size: 14px;
-      font-weight: 650;
-    }
+    .dn-inventory__all { display: none; }
 
     .dn-inventory__grid {
       display: grid;
-      grid-auto-columns: min(286px, calc(100vw - 76px));
+      grid-auto-columns: min(270px, calc(100vw - 96px));
       grid-auto-flow: column;
       grid-template-columns: none;
       gap: 10px;
@@ -200,10 +193,6 @@
 
     .dn-inventory__grid :global(.dn-vehicle-card) {
       scroll-snap-align: start;
-    }
-
-    .dn-inventory__grid :global(.dn-vehicle-card:nth-child(n + 5)) {
-      display: none;
     }
   }
 
@@ -272,7 +261,4 @@
     }
   }
 
-  @media (max-width: 767px) {
-    .dn-inventory__all { display: none; }
-  }
 </style>

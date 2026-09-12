@@ -12,7 +12,7 @@
 		'flex h-[58px] items-center gap-1.5 px-3 !text-[18px] !font-semibold !leading-sa-nav text-sa-surface no-underline transition-none hover:bg-transparent hover:text-sa-surface focus-visible:bg-transparent focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-sa-surface/50 group-focus-within/menu-item:bg-transparent group-focus-within/menu-item:text-sa-surface max-[1180px]:px-2.5 max-[1180px]:!text-sa-base';
 </script>
 
-<nav id="main-nav" class={navClasses} aria-label="Основна навигация">
+<nav id="main-nav" class={navClasses} aria-label="Main navigation">
 	<ul id="menu-primary-menu" class={menuClasses}>
 		{#each desktopNavItems as item (item.href)}
 			<li class={topItemClasses}>

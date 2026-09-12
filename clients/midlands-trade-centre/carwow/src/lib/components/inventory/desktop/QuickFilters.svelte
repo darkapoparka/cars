@@ -28,7 +28,7 @@
 			? 'Модални филтри'
 			: layoutMode === 'sidebar'
 				? 'Sidebar филтри'
-				: 'Бързи филтри'}
+				: 'Quick filters'}
 	>
 		{#if layoutMode === 'grid'}
 			<InventoryResultsQuickFilters {filters} />

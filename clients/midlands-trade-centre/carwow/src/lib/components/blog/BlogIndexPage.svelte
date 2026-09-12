@@ -31,11 +31,11 @@
 
 	const blogCategories: DayNightArticleCategory[] = [
 		'Покупка',
-		'Продажба',
+		'Vehicle enquiry',
 		'Новини',
 		'Съвети',
-		'Финансиране',
-		'Документи',
+		'Buying options',
+		'Documents',
 		'Марки'
 	];
 
@@ -263,7 +263,7 @@
 	<section class="pb-100">
 		<div class="container">
 			<div class="blog-page-title">
-				<p class="eyebrow">Блог</p>
+				<p class="eyebrow">Guides</p>
 				<h1>Съвети за покупка и продажба</h1>
 				<p class="h7 text-secondary line-height-28">
 					Огледи, сравнение на обяви и подготовка за продажба.
@@ -274,7 +274,7 @@
 				<div class="blog-empty" data-daynight-blog-empty>
 					<h2>Все още няма публикувани статии.</h2>
 					<p>Имате въпрос за покупка или продажба на автомобил?</p>
-					<a class="sa-cta sa-cta-primary" href={resolve('/contact')}>Свържете се с нас</a>
+					<a class="sa-cta sa-cta-primary" href={resolve('/contact')}>Contact us</a>
 				</div>
 			{:else}
 			<div class="innerpage-container blog-index-layout">
@@ -292,12 +292,12 @@
 						{#each searchHiddenFilters() as [name, value] (name)}
 							<input type="hidden" {name} {value} />
 						{/each}
-						<button type="submit" class="widget-search-btn" aria-label="Търси">
+						<button type="submit" class="widget-search-btn" aria-label="Search">
 							<Search size={22} />
 						</button>
 					</form>
 
-					<p class="h4 mb-16">Категории</p>
+					<p class="h4 mb-16">Categories</p>
 					<ul class="widget-categories mb-32">
 						<li>
 							<a href={resolve(filterHref({}))} class={!hasActiveFilters ? 'active' : ''}>

@@ -1,0 +1,308 @@
+
+## src/lib/components/ui/ActionLink.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import type { Snippet } from 'svelte';
+4:   import type { InternalNavigationHref } from '$data/navigation';
+5:   let { href, class: className = '', children }: {
+6:     href: InternalNavigationHref;
+7:     class?: string;
+8:     children: Snippet;
+9:   } = $props();
+10: </script>
+11: 
+12: <a class={`dn-action-link ${className}`} href={resolve(href)}>{@render children()}</a>
+13: 
+
+## src/lib/components/ui/ArtworkRegion.svelte
+1: <script lang="ts">
+2:   let { artwork }: { artwork: { src: string; width: number; height: number; crop: readonly [number, number, number, number] } } = $props();
+3: </script>
+4: 
+5: <span class="dn-artwork-region" style:aspect-ratio={`${artwork.crop[2]} / ${artwork.crop[3]}`}>
+6:   <picture><source media="(max-width: 767px)" srcset={artwork.src} /><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={artwork.width} height={artwork.height} decoding="async"
+7:     style:width={`${artwork.width / artwork.crop[2] * 100}%`}
+8:     style:left={`${-artwork.crop[0] / artwork.crop[2] * 100}%`}
+9:     style:top={`${-artwork.crop[1] / artwork.crop[3] * 100}%`} /></picture>
+10: </span>
+11: 
+
+## src/lib/components/ui/FeatureArtwork.svelte
+1: <script lang="ts">
+2:   import type { FeatureArtwork } from '$data/feature-artwork';
+3:   let { artwork }: { artwork: FeatureArtwork } = $props();
+4: </script>
+5: 
+6: <span class="feature-artwork" style:--artwork-ratio={artwork.crop[2] / artwork.crop[3]} style:aspect-ratio={`${artwork.crop[2]} / ${artwork.crop[3]}`}>
+7:   <img src={artwork.src} alt="" width={artwork.width} height={artwork.height} decoding="async"
+8:     style:width={`${artwork.width / artwork.crop[2] * 100}%`}
+9:     style:left={`${-artwork.crop[0] / artwork.crop[2] * 100}%`}
+10:     style:top={`${-artwork.crop[1] / artwork.crop[3] * 100}%`} />
+11: </span>
+12: 
+
+## src/lib/components/ui/HeroVehicles.svelte
+1: <script lang="ts">
+2:   import VehicleCutout from './VehicleCutout.svelte';
+3:   import ArtworkRegion from './ArtworkRegion.svelte';
+4:   import { heroVehiclePairs, vehicleArtwork, mobileHeroArtwork, type HeroVehiclePair, type Vehicle, type MobileHeroScene } from '$data/vehicle-artwork';
+5:   import { mobileHeroRegions } from '$data/vehicle-artwork';
+6: 
+7:   let { pair = 'home', mobile = false, mobileScene = 'car', mobileLeft = 'silver', mobileRight = 'urus' }: {
+8:     pair?: HeroVehiclePair; mobile?: boolean; mobileScene?: MobileHeroScene; mobileLeft?: Vehicle; mobileRight?: Vehicle;
+9:   } = $props();
+10:   const sides = ['left', 'right'] as const;
+11:   let vehicles = $derived(heroVehiclePairs[pair]);
+12:   const mobileArtwork = mobileHeroArtwork.car;
+13: </script>
+14: 
+15: <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
+16:   {#if mobile}
+17:     {#if pair === 'home'}
+18:       <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} /></div>
+19:     {:else}
+20:       <picture><source media="(max-width: 767px)" srcset={mobileArtwork.src} /><img class="dn-hero-vehicles__front" data-scene="car" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={mobileArtwork.width} height={mobileArtwork.height} decoding="async" /></picture>
+21:       {#if mobileScene === 'sell' || mobileScene === 'import'}
+22:         {#each sides as side (side)}
+23:           <div class="dn-hero-vehicles__support dn-hero-vehicles__support--{side}" class:dn-hero-vehicles__support--ship={mobileScene === 'import'} data-support={mobileScene}>
+24:             <ArtworkRegion artwork={mobileHeroRegions[mobileScene]} />
+25:           </div>
+26:         {/each}
+27:       {/if}
+28:     {/if}
+29:   {/if}
+30:   {#each sides as side (side)}
+31:     {@const vehicle = vehicles[side === 'left' ? 0 : 1]}
+32:     {@const artwork = vehicleArtwork[vehicle]}
+33:     {@const bodyHeight = artwork.bounds[3] - artwork.bounds[1]}
+34:     {@const mobileVehicle = side === 'left' ? mobileLeft : mobileRight}
+35:     <div class="dn-hero-vehicles__car dn-hero-vehicles__car--{side}"
+36:       class:dn-hero-vehicles__car--reverse={side === 'left' && mobileLeft === 'gclass'}
+37:       data-vehicle={vehicle} data-mobile-vehicle={mobileVehicle}
+38:       style:--art-width-ratio={artwork.width / bodyHeight}
+39:       style:--art-height-ratio={artwork.height / bodyHeight}
+40:       style:--art-bottom-ratio={artwork.bounds[3] / bodyHeight}
+41:       style:--art-front-ratio={(artwork.width - artwork.bounds[0]) / bodyHeight}>
+42:       <VehicleCutout media="(min-width: 1440px)" {vehicle} mobileVehicle={mobile ? mobileVehicle : undefined} eager />
+43:     </div>
+44:   {/each}
+45: </div>
+46: 
+
+## src/lib/components/ui/Icon.svelte
+1: <script lang="ts">
+2:   type IconName =
+3:     | 'adjustments'
+4:     | 'arrow-left'
+5:     | 'arrow-right'
+6:     | 'calendar'
+7:     | 'chevron-down'
+8:     | 'clock'
+9:     | 'file-invoice'
+10:     | 'fuel'
+11:     | 'globe'
+12:     | 'home'
+13:     | 'mail'
+14:     | 'map-pin'
+15:     | 'menu'
+16:     | 'message'
+17:     | 'phone'
+18:     | 'search'
+19:     | 'car'
+20:     | 'tag'
+21:     | 'transmission'
+22:     | 'x';
+23: 
+24:   interface Props {
+25:     name: IconName;
+26:     size?: number;
+27:     strokeWidth?: number;
+28:   }
+29: 
+30:   let { name, size = 20, strokeWidth = 1.7 }: Props = $props();
+31: </script>
+32: 
+33: <svg
+34:   class="dn-icon"
+35:   width={size}
+36:   height={size}
+37:   viewBox="0 0 24 24"
+38:   fill="none"
+39:   stroke="currentColor"
+40:   stroke-width={strokeWidth}
+41:   stroke-linecap="round"
+42:   stroke-linejoin="round"
+43:   aria-hidden="true"
+44: >
+45:   {#if name === 'adjustments'}
+46:     <path d="M4 3v5.5M4 13.5V21M12 3v1.5M12 9.5V21M20 3v9.5M20 17.5V21" />
+47:     <circle cx="4" cy="11" r="2.5" />
+48:     <circle cx="12" cy="7" r="2.5" />
+49:     <circle cx="20" cy="15" r="2.5" />
+50:   {:else if name === 'chevron-down'}
+51:     <path d="m6 9 6 6 6-6" />
+52:   {:else if name === 'map-pin'}
+53:     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+54:     <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
+55:   {:else if name === 'phone'}
+56:     <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+57:   {:else if name === 'clock'}
+58:     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+59:     <path d="M12 7v5l3 3" />
+60:   {:else if name === 'mail'}
+61:     <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+62:     <path d="M3 7l9 6l9 -6" />
+63:   {:else if name === 'calendar'}
+64:     <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2V7" />
+65:     <path d="M16 3v4M8 3v4M4 11h16M8 15h2v2H8z" />
+66:   {:else if name === 'search'}
+67:     <circle cx="10.75" cy="10.75" r="7.25" />
+68:     <path d="m16.1 16.1l4.4 4.4" />
+69:   {:else if name === 'home'}
+70:     <path d="M3 11.5L12 4l9 7.5" />
+71:     <path d="M5.5 10v10h13V10M9.5 20v-6h5v6" />
+72:   {:else if name === 'car'}
+73:     <path d="M5 17h14M6 17l-1-3l2-5h10l2 5l-1 3" />
+74:     <path d="M7 9l1.5-3h7L17 9M7 17v2M17 17v2" />
+75:     <circle cx="8" cy="14" r="1" />
+76:     <circle cx="16" cy="14" r="1" />
+77:   {:else if name === 'globe'}
+78:     <circle cx="12" cy="12" r="9" />
+79:     <path d="M3 12h18M12 3c2.4 2.45 3.5 5.45 3.5 9s-1.1 6.55-3.5 9c-2.4-2.45-3.5-5.45-3.5-9S9.6 5.45 12 3" />
+80:   {:else if name === 'menu'}
+81:     <path d="M4 7h16M4 12h16M4 17h16" />
+82:   {:else if name === 'fuel'}
+83:     <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0V9l-3 -3" />
+84:     <path d="M4 20V6a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14M3 20h12M18 7v1a1 1 0 0 0 1 1h1M4 11h10" />
+85:   {:else if name === 'transmission'}
+86:     <path d="M3 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M10 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M17 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M3 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M10 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+87:     <path d="M5 8v8M12 8v8M19 8v2a2 2 0 0 1 -2 2H5" />
+88:   {:else if name === 'tag'}
+89:     <path d="M6.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+90:     <path d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71A2 2 0 0 0 11.172 3H6a3 3 0 0 0 -3 3" />
+91:   {:else if name === 'file-invoice'}
+92:     <path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1 -2 -2V5a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2M9 7h1M9 13h6M13 17h2" />
+93:   {:else if name === 'message'}
+94:     <path d="M8 9h8M8 13h6M12 21l-3 -3H6a3 3 0 0 1 -3 -3V7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3" />
+95:   {:else if name === 'arrow-left'}
+96:     <path d="M19 12H5M11 18l-6 -6M11 6l-6 6" />
+97:   {:else if name === 'arrow-right'}
+98:     <path d="M5 12h14M13 18l6 -6M13 6l6 6" />
+99:   {:else if name === 'x'}
+100:     <path d="M18 6l-12 12M6 6l12 12" />
+101:   {/if}
+102: </svg>
+103: 
+
+## src/lib/components/ui/RouteHeroArtwork.svelte
+1: <script lang="ts">
+2:   let { variant = 'cars', theme = 'light' }: { variant?: 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell'; theme?: 'light' | 'red' | 'charcoal' | 'yellow' } = $props();
+3:   const images = {
+4:     cars: '/assets/images/lead/day-night-studio-cars-v1.webp',
+5:     keys: '/assets/images/lead/day-night-studio-keys-v1.webp',
+6:     guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
+7:     silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
+8:     graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
+9:     portrait: '/assets/images/lead/day-night-about-kristian-v1-light.webp',
+10:     phone: '/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp',
+11:     showroom: '/assets/images/lead/day-night-about-showroom-v1-light.webp',
+12:     email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
+13:   };
+14:   const pairs = {
+15:     cars: ['silver', 'graphite'],
+16:     keys: ['cars', 'keys'],
+17:     guide: ['guide', 'keys'],
+18:     about: ['showroom', 'portrait'],
+19:     contact: ['phone', 'email'],
+20:     sell: ['portrait', 'keys']
+21:   } as const;
+22:   const coloredImages: Partial<Record<keyof typeof images, string>> = {
+23:     silver: '/assets/images/lead/day-night-silver-color-v1.webp',
+24:     graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
+25:     showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
+26:     portrait: '/assets/images/lead/day-night-portrait-color-v1.webp',
+27:     guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
+28:     keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
+29:     phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
+30:     email: '/assets/images/lead/day-night-contact-email-red-v1.webp'
+31:   };
+32: </script>
+33: 
+34: {#each pairs[variant] as asset, index (asset)}
+35:   <img
+36:     class="dn-route-hero__artwork"
+37:     class:dn-route-hero__artwork--left={index === 0}
+38:     class:dn-route-hero__artwork--right={index === 1}
+39:     class:dn-route-hero__artwork--portrait={asset === 'portrait' || asset === 'phone'}
+40:     class:dn-route-hero__artwork--phone={asset === 'phone'}
+41:     class:dn-route-hero__artwork--colored={theme !== 'light'}
+42:     src={theme === 'light' ? images[asset] : coloredImages[asset] ?? images[asset]}
+43:     alt=""
+44:     width="900"
+45:     height={asset === 'portrait' || asset === 'phone' ? 1350 : 600}
+46:     decoding="async"
+47:   />
+48: {/each}
+49: 
+
+## src/lib/components/ui/VehicleCutout.svelte
+1: <script lang="ts">
+2:   import { vehicleArtwork, type Vehicle } from '$data/vehicle-artwork';
+3:   let { vehicle = 'silver', mobileVehicle, eager = false, framing = 'hero', media }: {
+4:     vehicle?: Vehicle;
+5:     mobileVehicle?: Vehicle;
+6:     eager?: boolean;
+7:     framing?: 'hero' | 'banner';
+8:     media?: string;
+9:   } = $props();
+10: 
+11: </script>
+12: 
+13: <picture>
+14:   {#if media}<source {media} srcset={vehicleArtwork[vehicle].src} />{/if}
+15:   {#if mobileVehicle && !media}<source media="(max-width: 767px)" srcset={vehicleArtwork[mobileVehicle].src} />{/if}
+16:   <img class="dn-vehicle-cutout" class:dn-vehicle-cutout--banner-gclass={framing === 'banner' && vehicle === 'gclass'} data-view="side-profile" src={media ? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' : vehicleArtwork[vehicle].src} alt="" width="1000" height="667" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+17: </picture>
+18: 
+
+## src/lib/components/ui/icons/OriginalActionIcon.svelte
+1: <script lang="ts">
+2:   type ActionIconName = 'car' | 'value' | 'finance' | 'contact';
+3: 
+4:   let { name }: { name: ActionIconName } = $props();
+5: </script>
+6: 
+7: {#if name === 'car'}
+8:   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+9:   <path d="M14.9062 19.3124L10.125 18.2812C8.8125 17.9999 7.59375 19.0312 7.59375 20.3437V22.3124C7.59375 23.9062 8.71875 24.2812 10.3125 24.2812H15.75C17.0625 24.2812 17.5312 23.7187 17.5312 22.9687V22.6874C17.625 21.0937 16.5 19.6874 14.9062 19.3124ZM9.375 22.4062V20.3437C9.375 20.1562 9.5625 19.9687 9.75 20.0624L14.5312 21.0937C15.1875 21.2812 15.6562 21.8437 15.75 22.4999C13.3125 22.4062 9.65625 22.4999 9.375 22.4062ZM21.1875 25.2187H33C33.4688 25.2187 33.9375 24.8437 33.9375 24.2812C33.9375 23.7187 33.5625 23.3437 33 23.3437H21.1875C20.7188 23.3437 20.25 23.7187 20.25 24.2812C20.25 24.8437 20.7188 25.2187 21.1875 25.2187Z" fill="currentColor">
+10:   </path>
+11:   <path d="M59.5312 55.2188L52.9688 44.7188C57.1875 40.4062 58.125 33.6562 54.75 28.4062C53.7188 26.8125 52.4062 25.4062 50.8125 24.375V19.5C50.8125 17.9062 50.3438 16.2188 49.3125 14.8125H51.6562C53.0625 14.8125 54.1875 13.6875 54.1875 12.2812V11.25C54.1875 9.84375 53.0625 8.71875 51.6562 8.71875H50.0625C48.5625 8.71875 47.25 9.46875 46.3125 10.6875L42.6562 3.1875C41.9062 1.3125 40.125 0 38.0625 0H16.125C14.0625 0 12.2812 1.21875 11.5312 3.09375L7.875 10.6875C7.03125 9.46875 5.625 8.71875 4.125 8.71875H2.53125C1.125 8.71875 0 9.84375 0 11.25V12.2812C0 13.6875 1.125 14.8125 2.53125 14.8125H4.875C3.84375 16.125 3.375 17.8125 3.375 19.5V25.125C3.375 27.2812 4.125 29.3438 5.625 31.125V35.3438C5 [long line truncated: inspect original when needed]
+12:   </path>
+13:   </svg>
+14: {:else if name === 'value'}
+15:   <svg width="58" height="60" viewBox="0 0 58 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+16:   <path d="M15.9688 39.5624L10.9062 38.4374C9.5 38.1562 8.28125 39.1874 8.28125 40.5937V42.7499C8.28125 44.4374 9.59375 44.7187 11.1875 44.8124H17C18.0312 44.8124 18.875 44.4374 18.875 43.4062V43.1249C18.7812 41.3437 17.6562 39.9374 15.9688 39.5624ZM10.0625 42.8437V40.4999C10.0625 40.2187 10.25 40.0312 10.5313 40.1249L15.6875 41.2499C16.4375 41.4374 17 42.0937 17.0937 42.8437C16.9062 42.9374 10.1563 42.9374 10.0625 42.8437ZM47.0938 38.4374L41.9375 39.5624C40.25 39.9374 39.125 41.3437 39.125 43.0312C39.125 43.1249 38.9375 44.3437 40.25 44.6249C40.9062 44.8124 45.125 44.7187 46.9062 44.7187C48.5 44.7187 49.7187 44.3437 49.7187 42.6562V40.4999C49.8125 39.1874 48.5 38.1562 47.0938 38.4374ZM47.93 [long line truncated: inspect original when needed]
+17:   </path>
+18:   <path d="M55.25 28.3125H53.5625C51.9688 28.3125 50.4688 29.0625 49.625 30.4688L47.9375 27.0938C52.8125 24.8438 56.1875 19.9688 56.1875 14.25C56.0938 6.375 49.7188 0 41.9375 0C34.1562 0 27.7812 6.375 27.7812 14.1562C27.7812 15.8438 28.0625 17.4375 28.625 18.9375H17.2812C15.125 18.9375 13.1562 20.25 12.4062 22.2188L8.46875 30.375C7.625 29.0625 6.125 28.2188 4.53125 28.2188H2.75C1.34375 28.2188 0.125 29.4375 0.125 30.8438V31.9687C0.125 33.375 1.25 34.5938 2.75 34.5938H5.46875C4.34375 36 3.78125 37.7812 3.78125 39.6562V45.6562C3.78125 47.9062 4.625 50.1562 6.21875 52.0312V56.5312C6.21875 58.5 7.8125 60 9.6875 60H13.4375C15.4062 60 16.9062 58.4062 16.9062 56.5312V54.75H41V56.5312C41 58.5 42.593 [long line truncated: inspect original when needed]
+19:   </path>
+20:   <path d="M39.125 17.9062C39.125 17.4375 38.75 16.9687 38.1875 16.9687C37.625 16.9687 37.25 17.3437 37.25 17.9062C37.25 20.1562 38.8438 22.0312 41 22.4062V23.625C41 24.0938 41.375 24.5625 41.9375 24.5625C42.5 24.5625 42.875 24.1875 42.875 23.625V22.4062C45.0312 21.9375 46.625 20.1562 46.625 17.9062C46.625 15.6562 45.0312 13.7812 42.875 13.4062V7.78125C44 8.15625 44.75 9.1875 44.75 10.4062C44.75 10.875 45.125 11.3438 45.6875 11.3438C46.25 11.3438 46.625 10.9688 46.625 10.4062C46.625 8.15625 45.0312 6.28125 42.875 5.90625V4.6875C42.875 4.21875 42.5 3.75 41.9375 3.75C41.375 3.75 41 4.125 41 4.6875V5.90625C38.8438 6.375 37.25 8.15625 37.25 10.4062C37.25 12.6562 38.8438 14.5312 41 14.9062V20.437 [long line truncated: inspect original when needed]
+21:   </path>
+22:   </svg>
+23: {:else if name === 'finance'}
+24:   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+25:   <path d="M10.2187 11.3438L10.9688 11.4375C10.5938 11.9062 10.4062 12.5625 10.5 13.2188L11.0625 22.3125C11.1563 23.1562 11.625 23.9062 12.2813 24.2812V25.7812C12.2813 27.0938 13.3125 28.125 14.625 28.125H18.5625C19.875 28.125 20.9062 27.0938 20.9062 25.7812V24.6562H36.6562V25.7812C36.6562 27.0938 37.6875 28.125 39 28.125H42.9375C44.25 28.125 45.2812 27.0938 45.2812 25.7812V24.0938C45.8438 23.625 46.2188 23.0625 46.2188 22.3125L46.7812 13.2188C46.875 12.5625 46.5938 12 46.3125 11.4375L47.1562 11.3438C48.6562 11.1562 49.875 9.84375 49.7812 8.15625C49.5937 6.75 48.375 5.71875 46.9687 5.625H44.625C43.875 5.625 43.125 5.90625 42.5625 6.46875C41.9062 4.96875 41.0625 3.5625 40.3125 2.34375C39.4688 [long line truncated: inspect original when needed]
+26:   </path>
+27:   <path d="M58.6875 26.4374C56.9062 23.9062 53.25 23.9999 51.5625 26.2499L39 39.5624C38.1562 37.7812 36.375 36.5624 34.4062 36.5624H23.25C22.2188 36.5624 21.2812 36.3749 20.3438 35.9062C15.6563 33.6562 10.0312 34.3124 6 37.6874L0.84375 41.9999C0.46875 42.2812 0.375 42.9374 0.75 43.3124C1.03125 43.6874 1.6875 43.7812 2.0625 43.4062L7.21875 39.0937C10.6875 36.1874 15.5625 35.6249 19.5938 37.5937C20.7188 38.1562 22.0312 38.4374 23.3438 38.4374H34.5C36.1875 38.4374 37.7812 39.7499 37.7812 41.7187C37.7812 43.4999 36.4688 44.9062 34.6875 44.9062H22.5938C22.125 44.9062 21.6562 45.2812 21.6562 45.8437C21.6562 46.4062 22.0312 46.7812 22.5938 46.7812H34.5C37.125 46.7812 39.375 44.7187 39.375 41.8124L5 [long line truncated: inspect original when needed]
+28:   </path>
+29:   </svg>
+30: {:else if name === 'contact'}
+31:   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+32:   <path d="M41.2502 26.3437C39.094 24.1875 35.6252 24.375 34.5002 25.125L33.094 23.7187L34.7815 22.0312C36.094 20.7187 37.8752 19.875 39.6565 19.875C44.5315 19.6875 47.9065 15 46.5002 10.3125C46.3127 9.6562 45.469 9.4687 45.0002 9.93745L41.6252 13.3125H40.8752L38.5315 10.9687V10.2187L41.9065 6.8437C42.3752 6.37495 42.1877 5.5312 41.5315 5.3437C36.844 3.93745 32.1565 7.4062 31.969 12.1875C31.8752 13.9687 31.1252 15.75 29.8127 17.0625L28.1252 18.6562L23.1565 13.6875L24.0002 12.8437C24.2815 12.5625 24.3752 12.1875 24.1877 11.8125L23.1565 9.6562C23.0627 9.4687 22.969 9.37495 22.7815 9.2812L17.4377 6.2812C17.0627 6.0937 16.6877 6.18745 16.3127 6.4687L14.719 8.06245C14.4377 8.3437 14.344 8.81245 1 [long line truncated: inspect original when needed]
+33:   </path>
+34:   <path d="M38.3438 28.875C37.9688 28.5 37.4062 28.5 37.0312 28.875C36.6563 29.25 36.6563 29.8125 37.0312 30.1875L41.4375 34.5938C41.8125 34.9688 42.375 34.9688 42.75 34.5938C43.125 34.2188 43.125 33.6563 42.75 33.2813L38.3438 28.875Z" fill="currentColor">
+35:   </path>
+36:   <path d="M51.75 3.5625L48.4688 0.28125C48.2812 0.09375 48.0938 0 47.8125 0H12.1875C11.9062 0 11.7188 0.09375 11.5313 0.28125L8.25 3.5625C8.0625 3.75 7.96875 4.03125 7.96875 4.21875V39.8438C7.96875 40.125 8.0625 40.3125 8.25 40.5L11.5313 43.7812C11.7188 43.9688 11.9062 44.0625 12.1875 44.0625H25.4062V59.0625C25.4062 59.5312 25.7812 60 26.3438 60C26.9062 60 27.2812 59.625 27.2812 59.0625V44.0625H32.8125V59.0625C32.8125 59.5312 33.1875 60 33.75 60C34.3125 60 34.6875 59.625 34.6875 59.0625V44.0625H47.8125C48.0938 44.0625 48.2812 43.9688 48.4688 43.7812L51.75 40.5C51.9375 40.3125 52.0312 40.125 52.0312 39.8438V4.21875C52.0312 4.03125 51.9375 3.75 51.75 3.5625ZM50.25 39.4688L47.5312 42.1875H12.5 [long line truncated: inspect original when needed]
+37:   </path>
+38:   </svg>
+39: {/if}
+40: 

@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-09-11T22:25:30.043Z",
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "name": "list and article return 390",
+      "passed": true,
+      "durationMs": 3286
+    },
+    {
+      "name": "vehicle context and finance 390",
+      "passed": true,
+      "durationMs": 8262
+    },
+    {
+      "name": "stock discovery 390",
+      "passed": true,
+      "durationMs": 14747
+    },
+    {
+      "name": "list and article return 1440",
+      "passed": true,
+      "durationMs": 3089
+    },
+    {
+      "name": "vehicle context and finance 1440",
+      "passed": true,
+      "durationMs": 9969
+    },
+    {
+      "name": "stock discovery 1440",
+      "passed": true,
+      "durationMs": 15654
+    },
+    {
+      "name": "mobile menu isolation, focus and resize",
+      "passed": true,
+      "durationMs": 1418
+    },
+    {
+      "name": "hero media only loads for its viewport",
+      "passed": true,
+      "evidence": [
+        {
+          "width": 390,
+          "heroSources": [
+            "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+            "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          ],
+          "homeArtwork": "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2.webp"
+        },
+        {
+          "width": 1024,
+          "heroSources": [
+            "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+            "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          ],
+          "homeArtwork": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        },
+        {
+          "width": 1440,
+          "heroSources": [
+            "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1"
+          ],
+          "homeArtwork": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        }
+      ],
+      "durationMs": 11262
+    }
+  ]
+}

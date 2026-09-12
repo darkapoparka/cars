@@ -8,13 +8,13 @@ export const load: PageLoad = ({ params, url }) => {
   const vehicleId = Number(params.id);
 
   if (!isCanonicalId || !Number.isSafeInteger(vehicleId)) {
-    error(404, 'Автомобилът не е намерен.');
+    error(404, 'Vehicle not found.');
   }
 
   const vehicle = featuredVehicles.find((item) => item.id === vehicleId);
 
   if (!vehicle) {
-    error(404, 'Автомобилът не е намерен.');
+    error(404, 'Vehicle not found.');
   }
 
   const recommendations = featuredVehicles

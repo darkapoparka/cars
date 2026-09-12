@@ -17,38 +17,38 @@ export const dealers: Dealer[] = [
 	{
 		slug: "day-night-auto-group",
 		name: daynightSite.name,
-		location: "София",
+		location: "Dealer location",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
 		logo: daynightSite.logoDark,
 		cover: '/brand/daynight-hero-search-composed.webp',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.8,
-		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Финансиране']
+		specialties: ['Проверени автомобили', 'Оглед с уговорка', 'Buying options']
 	},
 	{
 		slug: "day-night-auto-group-documents",
 		name: "Day Night Auto Документи и съдействие",
-		location: "София",
+		location: "Dealer location",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
 		logo: daynightSite.logoDark,
 		cover: '/brand/daynight-hero-mobile-search-composed.webp',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.7,
-		specialties: ['Документи', 'Регистрация', 'Съдействие']
+		specialties: ['Documents', 'Регистрация', 'Съдействие']
 	},
 	{
 		slug: "day-night-auto-group-sourcing",
 		name: "Day Night Auto Подбор на автомобил",
-		location: "София",
+		location: "Dealer location",
 		address: daynightSite.location,
 		phone: daynightSite.phoneLabel,
 		logo: '/brand/daynight-logo-generated.png',
 		cover: '/brand/daynight-logo-generated.png',
 		inventory: daynightSite.inventoryCount,
 		rating: 4.7,
-		specialties: ['Търсене по заявка', 'Оглед', 'Консултация']
+		specialties: ['Търсене по заявка', 'Viewing', 'Консултация']
 	}
 ];
 

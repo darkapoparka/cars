@@ -31,7 +31,7 @@
           <span>All videos</span>
           <Icon name="arrow-right" size={16} />
           <span class="dn-sr-only"> on YouTube (new tab)</span>
-        </a>
+        </a>{/if}
       </div>
 
       <div class="dn-videos__grid">
@@ -75,13 +75,13 @@
             </div>
           </article>
         {/each}
-        <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+        {#if brand.youtubeUrl}<a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
           <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={40} /></span>
           <strong>All videos</strong>
           <span>Watch on YouTube</span>
           <span class="dn-videos__all-arrow">Visit channel<Icon name="arrow-right" size={18} /></span>
           <span class="dn-sr-only">Opens in a new tab</span>
-        </a>
+        </a>{/if}
       </div>
     </div>
   </div>

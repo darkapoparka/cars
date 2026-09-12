@@ -55,11 +55,11 @@
 		class="daynight-inventory-filter-toggle daynight-inventory-quick-sidebar"
 		type="button"
 		data-daynight-open-sidebar
-		aria-label="Филтри"
+		aria-label="Filters"
 		onclick={openSidebar}
 	>
 		<img src="/assets/icons/filter.svg" alt="" aria-hidden="true" />
-		<span class="daynight-inventory-quick-sidebar__label">Филтри</span>
+		<span class="daynight-inventory-quick-sidebar__label">Filters</span>
 	</button>
 	{#each filters as filter (filter.name)}
 		<DropdownFilterControl {filter} {layoutMode} {filterUxMode} />

@@ -61,7 +61,7 @@
 	<button
 		type="button"
 		class="daynight-hero-search-modal__backdrop"
-		aria-label="Затвори"
+		aria-label="Close"
 		onclick={onClose}
 	></button>
 	<div class="daynight-hero-search-modal__sheet" role="dialog" aria-modal="true" aria-label={label}>
@@ -70,7 +70,7 @@
 			<button
 				type="button"
 				class="daynight-hero-search-modal__close"
-				aria-label="Затвори"
+				aria-label="Close"
 				onclick={onClose}>✕</button
 			>
 		</div>
@@ -124,7 +124,7 @@
 		{#if isMultiSelect}
 			<div class="daynight-hero-search-modal__actions">
 				<button type="button" class="daynight-hero-search-modal__clear" onclick={onClear}>
-					Изчисти
+					Clear
 				</button>
 				<button type="button" class="daynight-hero-search-modal__done" onclick={onClose}>
 					Готово

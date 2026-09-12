@@ -9,25 +9,25 @@
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
   const heroDescriptions = {
-    general: `${brand.city} · Оглед с предварителна уговорка`,
-    inspection: 'Изберете автомобил и уговорете удобен час',
-    import: 'Обсъдете автомобил, бюджет и внос с екипа',
-    leasing: 'Условия според избрания автомобил',
-    'trade-in': 'Получете оценка за своя автомобил'
+    general: `${brand.city} · Vehicle viewing by appointment`,
+    inspection: 'Choose a vehicle and arrange a convenient time',
+    import: 'Discuss a vehicle, budget and import with the team',
+    leasing: 'Terms depend on the selected vehicle',
+    'trade-in': 'Discuss a valuation for your vehicle'
   };
 </script>
 
 <section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} aria-labelledby="contact-title">
-  <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} />
+  <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
   <picture>
     {#if topic.id === 'trade-in'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/dealer/inventory/6572737-1.webp" />
     {:else if topic.id === 'import'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/dealer/inventory/7027165-1.webp" />
     {/if}
   <img
     class="dn-contact-hero__media"
-    src="/assets/images/lead/day-night-contact-hero-v2.webp"
+    src="/dealer/inventory/6572737-1.webp"
     alt=""
     width="1920"
     height="1080"
@@ -38,7 +38,7 @@
   <div class="dn-contact-hero__overlay" aria-hidden="true"></div>
   <div class="container dn-contact-hero__content dn-route-hero__layout">
     <div class="dn-contact-hero__copy dn-route-hero__copy">
-      <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? 'Свържете се с нас' : topic.id === 'trade-in' ? 'Продажба и бартер' : topic.title}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? 'Контакти' : topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</span></h1>
+      <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? 'Contact us' : topic.id === 'trade-in' ? 'Selling and trade-ins' : topic.title}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? 'Contact' : topic.id === 'trade-in' ? 'Trade-in enquiry' : topic.title}</span></h1>
       <p class="dn-contact-hero__lead">{heroDescriptions[topic.id]}</p>
     </div>
     {#if topic.id === 'leasing'}
@@ -48,13 +48,13 @@
         </div>
       {:else}
         <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href={resolve('/listing-grid')}>
-          Изберете автомобил
+          Choose a vehicle
           <Icon name="arrow-right" size={24} strokeWidth={1.8} />
         </a>
       {/if}
     {:else}
     <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href="#contact-intent">
-      <span class="dn-contact-hero__desktop-title">{topic.id === 'trade-in' ? 'Започнете с автомобила' : topic.id === 'import' ? 'Опишете какво търсите' : topic.id === 'general' ? 'Телефон и маршрут' : 'Контакти и следващи стъпки'}</span><span class="dn-contact-hero__mobile-title">Контакти и адрес</span>
+      <span class="dn-contact-hero__desktop-title">{topic.id === 'trade-in' ? 'Start with your vehicle' : topic.id === 'import' ? 'Describe what you are looking for' : topic.id === 'general' ? 'Phone and directions' : 'Contact and next steps'}</span><span class="dn-contact-hero__mobile-title">Contact and address</span>
       <Icon name="arrow-right" size={24} strokeWidth={1.8} />
     </a>
     {/if}

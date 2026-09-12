@@ -19,7 +19,7 @@
 
   let opened = $state(false);
   let field = $state('make');
-  let title = $state('Марка');
+  let title = $state('Make');
   let selected = $state('');
   let minimum = $state('');
   let maximum = $state('');
@@ -30,9 +30,9 @@
   const attachSearch: Attachment<HTMLInputElement> = node => { searchInput = node; };
   const range = $derived(field === 'price' || field === 'year');
   const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort');
-  const searchLabel = $derived(field === 'make' ? 'Търси марка' : field === 'model' ? 'Търси модел' : `Търси в ${title.toLocaleLowerCase('bg-BG')}`);
-  const optionLabel = (option: string) => field === 'body' ? bodyLabel(option) || 'Всички' : field === 'sort' ? options.sorts.find(([value]) => value === (option || 'default'))?.[1] ?? option : option === 'new' ? 'Нови' : option === 'used' ? 'Употребявани' : option || 'Всички';
-  const matchesSearch = (option: string) => search.trim().toLocaleLowerCase('bg-BG').split(/\s+/).every(term => optionLabel(option).toLocaleLowerCase('bg-BG').includes(term));
+  const searchLabel = $derived(field === 'make' ? 'Search makes' : field === 'model' ? 'Search models' : `Search in ${title.toLocaleLowerCase('en-GB')}`);
+  const optionLabel = (option: string) => field === 'body' ? bodyLabel(option) || 'All' : field === 'sort' ? options.sorts.find(([value]) => value === (option || 'default'))?.[1] ?? option : option === 'new' ? 'New' : option === 'used' ? 'Used' : option || 'All';
+  const matchesSearch = (option: string) => search.trim().toLocaleLowerCase('en-GB').split(/\s+/).every(term => optionLabel(option).toLocaleLowerCase('en-GB').includes(term));
   const invalid = $derived(range && minimum !== '' && maximum !== '' && Number(minimum) > Number(maximum));
   const choices = $derived.by((): readonly string[] => {
     switch (field) {
@@ -100,26 +100,26 @@
   <form method="GET" action={resolve('/listing-grid')} onformdata={clean} onsubmit={submit}>
     <header>
       <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
-      <button type="button" class="close" aria-label="Затвори избора" onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
+      <button type="button" class="close" aria-label="Close selection" onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
     </header>
     {#if searchable}
       <div class="search-wrap">
         <div class="search-field">
           <Icon name="search" size={20} />
           <input type="search" {@attach attachSearch} bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); if (event.key === 'Escape') { event.preventDefault(); dialog.close(); } }} />
-          {#if search}<button type="button" class="clear-search" aria-label="Изчисти търсенето" onclick={() => { search = ''; searchInput.focus(); }}><Icon name="x" size={18} /></button>{/if}
+          {#if search}<button type="button" class="clear-search" aria-label="Clear search" onclick={() => { search = ''; searchInput.focus(); }}><Icon name="x" size={18} /></button>{/if}
         </div>
       </div>
     {/if}
     <div class="content">
       {#if range}
         <div class="range">
-          <label>От{field === 'price' ? ' (€)' : ''}<input type="number" inputmode="numeric" name={`${field}_min`} bind:value={minimum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder="Без минимум" /></label>
-          <label>До{field === 'price' ? ' (€)' : ''}<input type="number" inputmode="numeric" name={`${field}_max`} bind:value={maximum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder="Без максимум" /></label>
+          <label>From{field === 'price' ? ' (£)' : ''}<input type="number" inputmode="numeric" name={`${field}_min`} bind:value={minimum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder="No minimum" /></label>
+          <label>Up to{field === 'price' ? ' (£)' : ''}<input type="number" inputmode="numeric" name={`${field}_max`} bind:value={maximum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder="No maximum" /></label>
         </div>
-        {#if invalid}<p role="alert">Началната стойност трябва да е по-ниска от крайната.</p>{/if}
+        {#if invalid}<p role="alert">The starting value must be lower than the ending value.</p>{/if}
       {:else if field === 'mileage_max'}
-        <label class="mileage">Максимален пробег (км)<input type="number" inputmode="numeric" name={field} bind:value={selected} min="0" step="1" placeholder="Без ограничение" /></label>
+        <label class="mileage">Maximum mileage (km)<input type="number" inputmode="numeric" name={field} bind:value={selected} min="0" step="1" placeholder="No limit" /></label>
       {:else}
         {#key field}
         <fieldset>
@@ -134,14 +134,14 @@
         </fieldset>
         {/key}
         {#if visibleChoices.length === 0}
-          <div class="empty" role="status"><strong>Няма съвпадения</strong><p>Опитайте с друго име или изчистете търсенето.</p></div>
+          <div class="empty" role="status"><strong>No matches</strong><p>Try another name or clear the search.</p></div>
         {/if}
       {/if}
     </div>
     {#each preserved as [name, value], index (`${name}-${index}`)}<input type="hidden" {name} {value} />{/each}
     <footer>
-      <button class="clear" type="button" onclick={clear}>Изчисти</button>
-      <button class="apply" type="submit" disabled={invalid}>Приложи<Icon name="arrow-right" size={18} /></button>
+      <button class="clear" type="button" onclick={clear}>Clear</button>
+      <button class="apply" type="submit" disabled={invalid}>Apply<Icon name="arrow-right" size={18} /></button>
     </footer>
   </form>
 </dialog>

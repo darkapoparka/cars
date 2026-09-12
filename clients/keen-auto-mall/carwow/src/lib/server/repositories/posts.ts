@@ -29,11 +29,11 @@ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
 	'Покупка',
-	'Продажба',
+	'Vehicle enquiry',
 	'Новини',
 	'Съвети',
-	'Финансиране',
-	'Документи',
+	'Buying options',
+	'Documents',
 	'Марки'
 ]);
 const cyrillicSlugMap: Record<string, string> = {
@@ -246,7 +246,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		summary: summary.length ? summary : [description],
 		sections: [
 			{
-				heading: post.category?.trim() || (post.type === 'news' ? 'Новина' : 'Полезно'),
+				heading: post.category?.trim() || (post.type === 'news' ? 'Новина' : 'Guides'),
 				paragraphs: sectionParagraphs
 			}
 		],

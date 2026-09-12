@@ -33,21 +33,21 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 		links: [
 			{ href: '/about', label: 'За Day Night Auto' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
-			{ href: '/team', label: 'Екип' },
-			{ href: '/reviews', label: 'Отзиви' },
-			{ href: '/blog', label: 'Блог' },
-			{ href: '/contact', label: 'Контакти' }
+			{ href: '/team', label: 'Team' },
+			{ href: '/reviews', label: 'Reviews' },
+			{ href: '/blog', label: 'Guides' },
+			{ href: '/contact', label: 'Contact' }
 		]
 	},
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ href: '/inventory', label: 'Налични автомобили' },
-			{ href: '/financing', label: 'Финансиране' },
-			{ href: '/calculator', label: 'Калкулатор' },
-			{ href: '/sell-your-car', label: 'Продай или замени' },
-			{ href: '/compare', label: 'Сравнение' },
-			{ href: '/faq', label: 'ЧЗВ' }
+			{ href: '/inventory', label: 'Advertised samples' },
+			{ href: '/financing', label: 'Buying options' },
+			{ href: '/calculator', label: 'Budget calculator' },
+			{ href: '/sell-your-car', label: 'Trade-in enquiry' },
+			{ href: '/compare', label: 'Compare' },
+			{ href: '/faq', label: 'FAQ' }
 		]
 	},
 	{
@@ -55,8 +55,8 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 		links: [
 			{ href: '/contact', label: 'Контакт за оглед' },
 			{ href: '/sell-your-car/request', label: 'Заявка за оценка' },
-			{ href: '/sell-your-car', label: 'Продай или замени' },
-			{ href: '/faq', label: 'ЧЗВ' }
+			{ href: '/sell-your-car', label: 'Trade-in enquiry' },
+			{ href: '/faq', label: 'FAQ' }
 		]
 	}
 ];

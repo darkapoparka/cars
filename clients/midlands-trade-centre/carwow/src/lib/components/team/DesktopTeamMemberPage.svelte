@@ -39,9 +39,9 @@
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={resolve('/')}>Home</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/team')}>Екип</a></li>
+				<li><a href={resolve('/team')}>Team</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><span>{member.name}</span></li>
 			</ul>
@@ -71,18 +71,18 @@
 					</div>
 					<div class="team-member-profile__facts">
 						<div>
-							<span>Телефон</span>
+							<span>Phone</span>
 							<a {...phoneLinkProps}>{member.phone}</a>
 						</div>
 						{#if member.email}
 							<div>
-								<span>Имейл</span>
+								<span>Email</span>
 								<a href={`mailto:${member.email}`}>{member.email}</a>
 							</div>
 						{/if}
 						<div>
-							<span>Локация</span>
-							<a {...mapLinkProps}>София</a>
+							<span>Location</span>
+							<a {...mapLinkProps}>Dealer location</a>
 						</div>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<h2>Препоръчани автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/inventory')} class="sa-cta-compact sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each recommendedVehicles as vehicle (vehicle.slug)}
@@ -118,7 +118,7 @@
 					<h2>Отзиви от клиенти</h2>
 					<p class="text-secondary">{daynightReviewDisclosure}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={resolve('/reviews')} class="sa-cta-compact sa-cta sa-cta-ghost"> View all </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}

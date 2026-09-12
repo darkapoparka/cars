@@ -55,7 +55,7 @@ export const sortOptions = [
   "year_desc",
 ] as const;
 
-export const priceCurrencies = ["BGN", "EUR"] as const;
+export const priceCurrencies = ["BGN", "EUR", "AED", "USD", "GBP"] as const;
 
 export const vehicleCategorySchema = z.enum(vehicleCategoryIds);
 export const fuelTypeSchema = z.enum(fuelTypes);

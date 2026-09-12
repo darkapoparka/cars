@@ -54,7 +54,7 @@
     margin: 0 12px;
     overflow: hidden;
     border-radius: 24px;
-    background: url('/assets/images/section/bg-6.jpg') center / cover no-repeat;
+    background: url('/office.webp') center / cover no-repeat;
     isolation: isolate;
   }
 

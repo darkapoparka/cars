@@ -1,8 +1,8 @@
 # AutoMarket responsive production and growth master plan
 
-**Date:** 2026-07-11  
-**Status:** Execution-ready; implementation tasks are created in Codex as local tasks and begin behind a readiness gate  
-**Source of truth:** [`../audits/2026-07-11-marketplace-product-audit/README.md`](../audits/2026-07-11-marketplace-product-audit/README.md)  
+**Date:** 2026-07-11
+**Status:** Execution-ready; implementation tasks are created in Codex as local tasks and begin behind a readiness gate
+**Source of truth:** [`../audits/2026-07-11-marketplace-product-audit/README.md`](../audits/2026-07-11-marketplace-product-audit/README.md)
 **Extends:** `2026-06-14-frontend-excellence-plan.md` and `2026-06-14-automarket-prototype-to-mvp.md`
 
 ## Goal

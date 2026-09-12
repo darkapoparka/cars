@@ -68,14 +68,14 @@
 			>{vehicle.meta}</span
 		>
 		<span class="flex justify-center text-sa-sm leading-[18px] font-semibold text-sa-ink">
-			Виж детайли
+			View details
 		</span>
 	</a>
 {/snippet}
 
 <li class={topItemClasses}>
 	<a class={topLinkClasses} href={resolve('/inventory')}>
-		Автомобили
+		Vehicles
 		<SiteChromeIcon name="chevron-down" class={chevronClasses} />
 	</a>
 	<div class={megaMenuClasses} data-daynight-mega-menu>

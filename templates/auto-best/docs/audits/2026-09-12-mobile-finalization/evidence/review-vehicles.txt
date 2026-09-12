@@ -1,0 +1,143 @@
+
+## src/lib/components/vehicles/VehicleCard.svelte
+1: <script lang="ts">
+2:   import { withListReturn } from '$data/journeys';
+3:   import { resolve } from '$app/paths';
+4:   import Icon from '$components/ui/Icon.svelte';
+5:   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+6: 
+7:   interface Props {
+8:     vehicle: Vehicle;
+9:     returnTo?: string;
+10:     showPrice?: boolean;
+11:     priority?: boolean;
+12:     layout?: 'default' | 'listing';
+13:   }
+14: 
+15:   let { vehicle, returnTo, showPrice = false, priority = false, layout = 'default' }: Props = $props();
+16: </script>
+17: 
+18: <article id={`vehicle-${vehicle.id}`} class:dn-vehicle-card--listing={layout === 'listing'} class="dn-vehicle-card">
+19:   <a class="dn-vehicle-card__link" href={withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo)} aria-label={`Вижте ${vehicle.title}`}>
+20:     <div class="dn-vehicle-card__visual">
+21:       <div class="dn-vehicle-card__badges">
+22:         <span class="dn-vehicle-card__badge dn-vehicle-card__badge--mileage">{vehicle.mileage}</span>
+23:         <span class="dn-vehicle-card__badge dn-vehicle-card__badge--year">{vehicle.year}</span>
+24:       </div>
+25: 
+26:       <div class="dn-vehicle-card__image">
+27:       <img
+28:         src={vehicle.image}
+29:         alt={vehicle.title}
+30:         loading={priority ? 'eager' : 'lazy'}
+31:         fetchpriority={priority ? 'high' : 'auto'}
+32:         decoding="async"
+33:         width="450"
+34:         height="300"
+35:       />
+36:       </div>
+37:     </div>
+38: 
+39:     <div class="dn-vehicle-card__content">
+40:       <div class="dn-vehicle-card__category"><p>{vehicle.category}</p></div>
+41:       <h3 class="dn-vehicle-card__name">{vehicle.title}</h3>
+42:       {#if layout === 'listing'}
+43:         <div class="dn-vehicle-card__mobile-meta" aria-label="Година и пробег">
+44:           <span>{vehicle.year}</span>
+45:           <span>{vehicle.mileage}</span>
+46:         </div>
+47:       {/if}
+48: 
+49:       <div class="dn-vehicle-card__specs" aria-label="Основни характеристики">
+50:         <span class="dn-vehicle-card__spec">
+51:           <Icon name="fuel" size={15} strokeWidth={1.7} />
+52:           {vehicle.fuel}
+53:         </span>
+54:         <span class="dn-vehicle-card__spec">
+55:           <Icon name="transmission" size={15} strokeWidth={1.7} />
+56:           {vehicle.transmission}
+57:         </span>
+58:       </div>
+59: 
+60:       {#if showPrice}
+61:         <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}</div>
+62:       {/if}
+63:     </div>
+64:   </a>
+65: </article>
+66: 
+
+## src/lib/components/vehicles/VehicleFinanceCalculator.svelte
+1: <script lang="ts">
+2:   import { vehicleContactHref } from '$data/journeys';
+3:   import { resolve } from '$app/paths';
+4:   import { formatVehiclePrice } from '$data/inventory';
+5: 
+6:   let { priceEur, vehicleId }: { priceEur: number; vehicleId: number } = $props();
+7: 
+8:   const financeTerms = [12, 24, 36, 48, 60] as const;
+9:   let downPaymentEur = $state(0);
+10:   let termMonths = $state<(typeof financeTerms)[number]>(60);
+11: 
+12:   let normalizedDownPayment = $derived(Math.min(Math.max(Number(downPaymentEur) || 0, 0), priceEur));
+13:   let financedPrincipal = $derived(Math.max(priceEur - normalizedDownPayment, 0));
+14:   let principalPerMonth = $derived(Math.round(financedPrincipal / termMonths));
+15: 
+16:   function normalizeDownPayment() {
+17:     downPaymentEur = normalizedDownPayment;
+18:   }
+19: </script>
+20: 
+21: <div class="dn-finance-calculator">
+22:   <header>
+23:     <h2>Калкулатор за финансиране</h2>
+24:     <p>Променете първоначалната вноска и срока, за да видите оставащата главница.</p>
+25:   </header>
+26: 
+27:   <div class="dn-finance-calculator__fields">
+28:     <label>
+29:       <span>Първоначална вноска</span>
+30:       <span class="dn-finance-calculator__input">
+31:         <input
+32:           type="number"
+33:           min="0"
+34:           max={priceEur}
+35:           step="500"
+36:           bind:value={downPaymentEur}
+37:           onblur={normalizeDownPayment}
+38:           aria-describedby="finance-disclaimer"
+39:         />
+40:         <b>€</b>
+41:       </span>
+42:     </label>
+43: 
+44:     <label>
+45:       <span>Срок</span>
+46:       <select bind:value={termMonths} aria-describedby="finance-disclaimer">
+47:         {#each financeTerms as term (term)}
+48:           <option value={term}>{term} месеца</option>
+49:         {/each}
+50:       </select>
+51:     </label>
+52:   </div>
+53: 
+54:   <dl class="dn-finance-calculator__result" aria-live="polite">
+55:     <div>
+56:       <dt>Оставаща главница</dt>
+57:       <dd>{formatVehiclePrice(financedPrincipal)}</dd>
+58:     </div>
+59:     <div>
+60:       <dt>Главница / месец</dt>
+61:       <dd>{formatVehiclePrice(principalPerMonth)}</dd>
+62:     </div>
+63:   </dl>
+64: 
+65:   <p id="finance-disclaimer" class="dn-finance-calculator__disclaimer">
+66:     Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
+67:   </p>
+68: 
+69:   <a href={resolve(vehicleContactHref(vehicleId, 'leasing'))}>
+70:     Обсъдете финансиране
+71:   </a>
+72: </div>
+73: 

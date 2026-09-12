@@ -29,7 +29,7 @@
 	] as const;
 	const support = [
 		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
-		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
+		{ title: 'Selling and trade-ins', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Trade-in enquiry' },
 		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
 	] as const;
 
@@ -53,7 +53,7 @@
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				<a href={`tel:${daynightSite.phone}`}
 					><Phone size={18} />{daynightSite.phoneLabel}</a
 				>
 				<div class="about-hero-socials">
@@ -151,7 +151,7 @@
 		<div class="about-container">
 			<div class="about-section-heading">
 				<h2 id="about-brands-title">Разгледай по марка</h2>
-				<DesktopBrowseLink href={resolve('/inventory')} label="Всички автомобили" />
+				<DesktopBrowseLink href={resolve('/inventory')} label="All samples" />
 			</div>
 			<div class="about-brands">
 				{#each brands as brand (brand.brand)}

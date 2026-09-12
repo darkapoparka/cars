@@ -3,10 +3,16 @@
   import { vehicleContactHref } from '$data/journeys';
   import { bodyLabel } from '$data/listing';
   import { resolve } from '$app/paths';
-  import { tick } from 'svelte';
+  import { tick, onDestroy } from 'svelte';
+  import { lockPageScroll, trapDialogTab } from '$lib/ui/overlay';
+  import { imageStatus } from '$lib/ui/image';
+  let failedImage = $state('');
+  let releaseFinance: (() => void) | undefined;
+  onDestroy(() => releaseFinance?.());
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
+  import PdpImportBanner from '$components/vehicles/PdpImportBanner.svelte';
   import { brand } from '$config/brand';
   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
   import type { PageData } from './$types';
@@ -22,6 +28,29 @@
   type DetailTab = (typeof detailTabs)[number]['id'];
   let activeTabsByVehicle = $state<Record<number, DetailTab>>({});
   let activeDetailTab = $derived(activeTabsByVehicle[data.vehicle.id] ?? 'overview');
+  let shareCopied = $state(false);
+  let financeDialog = $state<HTMLDialogElement>();
+
+  const openFinance = () => {
+    if (!financeDialog || financeDialog.open) return;
+    releaseFinance = lockPageScroll();
+    financeDialog.showModal();
+  };
+  const closeFinance = () => financeDialog?.close();
+
+  async function shareVehicle() {
+    const url = window.location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: data.vehicle.title, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      shareCopied = true;
+    } catch (error) {
+      if (!(error instanceof DOMException && error.name === 'AbortError')) shareCopied = false;
+    }
+  }
 
   const selectDetailTab = (tab: DetailTab) => {
     activeTabsByVehicle[data.vehicle.id] = tab;
@@ -38,9 +67,10 @@
     if (!nextTab) return;
 
     event.preventDefault();
+    const tablist = (event.currentTarget as HTMLElement).closest('[role="tablist"]');
     selectDetailTab(nextTab);
     await tick();
-    document.getElementById(`detail-tab-${nextTab}`)?.focus();
+    tablist?.querySelector<HTMLElement>(`#detail-tab-${nextTab}`)?.focus();
   }
 
   const conditionLabel = (condition: Vehicle['condition']) => condition === 'new' ? 'Нов' : 'Употребяван';
@@ -83,14 +113,23 @@
                 <a class="dn-detail-mobile-back" href={data.returnTo} aria-label="Назад към автомобилите">
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
+                <div class="dn-detail-mobile-actions">
+                  <a {...phoneLinkAttributes} aria-label={`Обадете се на ${brand.phone}`}><Icon name="phone" size={20} strokeWidth={1.9} /></a>
+                  <button type="button" onclick={shareVehicle} aria-label={shareCopied ? 'Линкът е копиран' : 'Споделете автомобила'}>
+                    <Icon name="share" size={20} strokeWidth={1.9} />
+                  </button>
+                </div>
                 <img
                   src={data.vehicle.image}
+                  {@attach imageStatus(failed => failedImage = failed ? data.vehicle.image : '')}
+                  style:visibility={failedImage === data.vehicle.image ? 'hidden' : undefined}
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
                   fetchpriority="high"
                   decoding="async"
                 />
+                {#if failedImage === data.vehicle.image}<span class="dn-vehicle-image-fallback" role="img" aria-label={`Снимката на ${data.vehicle.title} не е налична`}>Снимката не е налична</span>{/if}
               </figure>
             </div>
 
@@ -169,26 +208,23 @@
               </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-finance-card" aria-label="Калкулатор за финансиране">
-              {#key data.vehicle.id}
-                <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
-              {/key}
+            <section class="dn-detail-card dn-detail-finance-card" aria-label="Финансиране">
+              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label="Отворете финансирането за този автомобил">
+                <img class="dn-detail-finance-banner" src="/assets/images/lead/pdp-finance-clean-mobile.webp" alt="Финансиране за този автомобил" width="450" height="150" loading="lazy" decoding="async" />
+              </button>
+              <div class="dn-detail-finance-inline">
+                {#key data.vehicle.id}
+                  <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} initialSelection={data.financeSelection} />
+                {/key}
+              </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-dealer" aria-labelledby="seller-title">
-              <header class="dn-detail-dealer__header">
-                <img src={brand.logo} alt="" width="132" height="44" loading="lazy" decoding="async" />
-                <h2 id="seller-title">{brand.name}</h2>
-              </header>
+            <PdpImportBanner />
 
-              <div class="dn-detail-dealer__details">
-                <p><Icon name="map-pin" size={20} strokeWidth={1.7} /><span>{brand.address}</span></p>
-                <a {...phoneLinkAttributes}><Icon name="phone" size={20} strokeWidth={1.7} /><span>{brand.phone}</span></a>
-              </div>
-
-              <div class="dn-detail-dealer__actions">
-                <a class="dn-detail-button dn-detail-button--enquiry" href={resolve(vehicleContactHref(data.vehicle.id))}>Обсъдете автомобила</a>
-              </div>
+            <section class="dn-detail-card dn-detail-dealer" aria-label="Auto Best">
+              <a class="dn-detail-dealer-banner" href={resolve(vehicleContactHref(data.vehicle.id))}>
+                <img src="/assets/images/lead/pdp-seller-clean-mobile.webp" alt="Auto Best — доверен дилър. Обсъдете автомобила." width="360" height="270" loading="lazy" decoding="async" />
+              </a>
             </section>
 
           </aside>
@@ -204,7 +240,7 @@
           </div>
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}
-              <a class="dn-detail-related-card" href={resolve(vehicle.href as '/listing-detail-v1/1')}>
+              <a class="dn-detail-related-card" href={resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) })}>
                 <img src={vehicle.image} alt="" width="420" height="280" decoding="async" />
                 <span>
                   <strong>{vehicle.title}</strong>
@@ -216,4 +252,33 @@
         </section>
       </div>
     </section>
+
+  <dialog
+    class="dn-detail-finance-dialog"
+    id="dn-detail-finance-dialog"
+    bind:this={financeDialog}
+    onclose={() => releaseFinance?.()}
+    onkeydown={trapDialogTab}
+    aria-labelledby="dn-detail-finance-dialog-title"
+    onclick={(event) => { if (event.target === event.currentTarget) closeFinance(); }}
+  >
+    <div class="dn-detail-finance-sheet">
+      <header class="dn-detail-finance-sheet__header">
+        <div>
+          <span>За {data.vehicle.title}</span>
+          <h2 id="dn-detail-finance-dialog-title">Финансиране</h2>
+        </div>
+        <button type="button" onclick={closeFinance} aria-label="Затворете калкулатора">
+          <Icon name="x" size={20} strokeWidth={1.8} />
+        </button>
+      </header>
+      {#key data.vehicle.id}
+        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} initialSelection={data.financeSelection} />
+      {/key}
+    </div>
+  </dialog>
 </div>
+
+<style>
+  .dn-vehicle-image-fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; color: #626974; background: #eceff2; text-align: center; }
+</style>

@@ -11,7 +11,7 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 
 	const benefits = [
 		{
@@ -73,13 +73,13 @@
 			<a href={resolve('/')} aria-label="Day Night Auto начало">
 				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 			</a>
-			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
+			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Call">
 				<Phone size={19} strokeWidth={2.45} />
 			</a>
 		</div>
 
 		<div class="mobile-financing-hero__copy">
-			<span>Финансиране</span>
+			<span>Buying options</span>
 			<h1>Финансиране и разсрочено плащане</h1>
 			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в София.</p>
 		</div>
@@ -90,7 +90,7 @@
 				href={resolve('/contact')}
 			>
 				<Send size={18} strokeWidth={2.5} />
-				<span>Изпрати запитване</span>
+				<span>Prepare enquiry</span>
 			</a>
 			<a
 				class="mobile-financing-action mobile-financing-action--secondary"

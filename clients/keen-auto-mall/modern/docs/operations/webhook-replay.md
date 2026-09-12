@@ -18,4 +18,3 @@ Never replay a real production payload into another environment.
 
 Do not use provider dashboard “resend” controls without explicit approval: that
 changes external state and can trigger real email, payment, or account effects.
-

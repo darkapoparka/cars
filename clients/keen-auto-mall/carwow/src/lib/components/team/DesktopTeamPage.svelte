@@ -189,7 +189,7 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={resolve('/')}>Home</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />

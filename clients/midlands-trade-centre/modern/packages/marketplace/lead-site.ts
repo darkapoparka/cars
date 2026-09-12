@@ -1,6 +1,12 @@
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD" | "GBP";
 
 export interface LeadSiteConfig {
+  readonly logoDarkPath: string;
+  readonly distanceUnit: string;
+  readonly previewNotice: string;
+  readonly locationNote: string;
+  readonly priceNotice: string;
+  readonly hours: string;
   readonly accent: string;
   readonly address: string;
   readonly city: string;
@@ -28,30 +34,32 @@ export interface LeadSiteConfig {
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  accent: "#c40101",
-  address: "ул. „Атанас Манчев“ 18, Студентски град",
-  city: "София",
-  contactUrl: "tel:+359877733110",
-  country: "България",
-  countryCode: "BG",
-  currency: "BGN",
-  email: "",
-  heroPath: "/lead-hero.jpg",
-  locale: "bg-BG",
-  logoPath: "/lead-logo.png",
-  mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7302.453092836291!2d23.3443286!3d42.649331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1627293157601!5m2!1sen!2s",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-  name: "Day & Night Auto Group",
-  phoneDisplay: "0877 733 110",
-  phoneHref: "tel:+359877733110",
-  shortName: "Day & Night",
-  slug: "day-night-auto-group",
-  socialLinks: {
-    instagram: "https://www.instagram.com/dayandnight_autogroup/",
-  },
-  staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в София.",
+  "accent": "#377c58",
+  "address": "1198 Coventry Road, Yardley, Birmingham, B25 8DA",
+  "city": "Birmingham",
+  "contactUrl": "tel:+447780008222",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "currency": "GBP",
+  "email": "",
+  "heroPath": "/dealer/inventory/202601169196000-1.webp",
+  "locale": "en-GB",
+  "logoPath": "/dealer/logo-light.png",
+  "logoDarkPath": "/dealer/logo-dark.png",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA&output=embed",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA",
+  "name": "Midlands Trade Centre Limited",
+  "phoneDisplay": "07780 008222",
+  "phoneHref": "tel:+447780008222",
+  "shortName": "Midlands Trade Centre",
+  "slug": "midlands-trade-centre",
+  "socialLinks": {},
+  "staticDemoMode": true,
+  "tagline": "Used vehicles in Yardley, Birmingham. Viewings by appointment.",
+  "distanceUnit": "mi",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live stock feed. Confirm availability, condition and final terms directly. No dealership approval or message delivery is implied.",
+  "locationNote": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+  "priceNotice": "Confirm the advertised price and final terms directly with the dealership.",
+  "hours": "Monday–Friday 09:00–19:00; Saturday 10:00–18:00; Sunday by appointment. All viewings require a prior appointment."
 };
 // LEAD_SITE_CONFIG_END

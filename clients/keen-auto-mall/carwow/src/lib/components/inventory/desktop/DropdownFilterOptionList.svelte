@@ -106,7 +106,7 @@
 			data-daynight-quick-menu-clear
 			onclick={onClear}
 		>
-			Изчисти
+			Clear
 		</button>
 		<button
 			type="button"

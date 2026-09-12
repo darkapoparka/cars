@@ -15,9 +15,9 @@
 	</a>
 	<a
 		class="mobile-hero-bar__call"
-		href={`tel:+359${daynightSite.phone.slice(1)}`}
-		aria-label="Обади се"
-		title="Обади се"
+		href={`tel:${daynightSite.phone}`}
+		aria-label="Call"
+		title="Call"
 	>
 		<Phone size={22} strokeWidth={2} aria-hidden="true" />
 	</a>

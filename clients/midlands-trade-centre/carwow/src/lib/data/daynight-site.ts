@@ -1,100 +1,35 @@
-import {
-	daynightReviewCount,
-	daynightReviewCountLabel,
-	daynightReviewLinkLabel
-} from './daynight-reviews';
-
-const location = 'гр. София, Студентски град, ул. Атанас Манчев 18';
-
 export const daynightSite = {
-	name: 'DAY NIGHT AUTO GROUP',
-	shortName: 'Day Night Auto',
-	phone: '0877733110',
-	phoneLabel: '0877 733 110',
-	email: '',
-	location,
-	locationShort: 'Студентски град, София',
-	hoursLabel: 'Огледи с предварителна уговорка',
-	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
-	mapUrl:
-		'https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018',
-	mapLabel: 'Day Night Auto Group, София, България',
-	sourceInventory: 'https://daynight.mobile.bg/',
-	inventoryCount: 40,
-	logoLight: '/brand/daynight-logo-generated.png',
-	logoDark: '/brand/daynight-logo-generated.png',
-	primaryCta: 'Виж наличните автомобили',
-	sellCarCta: 'Продай автомобил',
-	accountCta: 'Свържи се с екипа',
-	phoneCta: 'Обади се за оглед',
-	heroTitle: 'DAY NIGHT AUTO GROUP',
-	heroSubtitle: 'София - Премиум автомобили в София с подреден процес за оглед и запитване',
-	reviewCount: daynightReviewCount,
-	reviewCountLabel: daynightReviewCountLabel,
-	reviewLinkLabel: daynightReviewLinkLabel
+  "name": "Midlands Trade Centre Limited",
+  "shortName": "Midlands Trade Centre",
+  "phone": "+447780008222",
+  "phoneLabel": "07780 008222",
+  "email": "",
+  "location": "1198 Coventry Road, Yardley, Birmingham, B25 8DA",
+  "locationShort": "Birmingham",
+  "hoursLabel": "Monday–Friday 09:00–19:00; Saturday 10:00–18:00; Sunday by appointment. All viewings require a prior appointment.",
+  "mapEmbedSrc": "https://maps.google.com/maps?q=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA&output=embed",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA",
+  "mapLabel": "Midlands Trade Centre Limited — address search",
+  "sourceInventory": "https://www.midlandstradecentreltd.co.uk/used-cars",
+  "inventoryCount": 8,
+  "logoLight": "/dealer/logo-light.png",
+  "logoDark": "/dealer/logo-dark.png",
+  "primaryCta": "Browse samples",
+  "sellCarCta": "Trade-in enquiry",
+  "accountCta": "Contact the dealership",
+  "phoneCta": "Call to confirm a viewing",
+  "heroTitle": "Midlands Trade Centre Limited",
+  "heroSubtitle": "Used vehicles in Yardley, Birmingham. Viewings by appointment.",
+  "reviewCount": 0,
+  "reviewCountLabel": "Reviews not verified",
+  "reviewLinkLabel": "Review information",
+  "currency": "GBP",
+  "locale": "en-GB",
+  "distanceUnit": "mi",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live stock feed. Confirm availability, condition and final terms directly. No dealership approval or message delivery is implied.",
+  "locationNote": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+  "priceNotice": "Confirm the advertised price and final terms directly."
 } as const;
-
-export const publicNavItems = [
-	{ label: 'Начало', href: '/' },
-	{ label: 'Автомобили', href: '/inventory' },
-	{ label: 'Продай', href: '/sell-your-car' },
-	{ label: 'Услуги', href: '/services' },
-	{ label: 'За нас', href: '/about' },
-	{ label: 'Блог', href: '/blog' },
-	{ label: 'Контакти', href: '/contact' }
-] as const;
-
-export const publicNavGroups = [
-	{ label: 'Начало', href: '/' },
-	{
-		label: 'Автомобили',
-		href: '/inventory',
-		children: [
-			{ label: 'Всички автомобили', href: '/inventory' },
-			{ label: 'Карта', href: '/inventory/map' },
-			{ label: 'Сравнение', href: '/compare' },
-			{ label: 'Калкулатор', href: '/calculator' }
-		]
-	},
-	{
-		label: 'Продай',
-		href: '/sell-your-car',
-		children: [
-			{ label: 'Продай или замени', href: '/sell-your-car' },
-			{ label: 'Заявка за оценка', href: '/sell-your-car/request' }
-		]
-	},
-	{
-		label: 'Услуги',
-		href: '/services',
-		children: [
-			{ label: 'Дилърски услуги', href: '/services' },
-			{ label: 'Финансиране', href: '/financing' },
-			{ label: 'ЧЗВ', href: '/faq' }
-		]
-	},
-	{
-		label: 'За нас',
-		href: '/about',
-		children: [
-			{ label: 'За Day Night Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
-			{ label: 'Екип', href: '/team' },
-			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Блог', href: '/blog' },
-			{ label: 'Условия', href: '/terms' }
-		]
-	},
-	{ label: 'Контакти', href: '/contact' }
-] as const;
-
-export const footerNavItems = [
-	{ label: 'Налични автомобили', href: '/inventory' },
-	{ label: 'Карта на автомобили', href: '/inventory/map' },
-	{ label: 'Финансиране', href: '/financing' },
-	{ label: 'Калкулатор', href: '/calculator' },
-	{ label: 'Продай или замени', href: '/sell-your-car' },
-	{ label: 'Заявка за оценка', href: '/sell-your-car/request' },
-	{ label: 'Услуги', href: '/services' },
-	{ label: 'ЧЗВ', href: '/faq' }
-] as const;
+export const publicNavItems = [{"label": "Home", "href": "/"}, {"label": "Vehicles", "href": "/inventory"}, {"label": "Trade-in enquiry", "href": "/sell-your-car"}, {"label": "Services", "href": "/services"}, {"label": "About", "href": "/about"}, {"label": "Guides", "href": "/blog"}, {"label": "Contact", "href": "/contact"}] as const;
+export const publicNavGroups = [{"label": "Home", "href": "/"}, {"label": "Vehicles", "href": "/inventory", "children": [{"label": "All samples", "href": "/inventory"}, {"label": "Location information", "href": "/inventory/map"}, {"label": "Compare", "href": "/compare"}, {"label": "Budget calculator", "href": "/calculator"}]}, {"label": "Trade-in enquiry", "href": "/sell-your-car", "children": [{"label": "Prepare vehicle details", "href": "/sell-your-car"}, {"label": "Local enquiry draft", "href": "/sell-your-car/request"}]}, {"label": "Services", "href": "/services", "children": [{"label": "Enquiry options", "href": "/services"}, {"label": "Buying options", "href": "/financing"}, {"label": "Questions and answers", "href": "/faq"}]}, {"label": "About", "href": "/about", "children": [{"label": "Dealer information", "href": "/about"}, {"label": "Team information", "href": "/team"}, {"label": "Reviews information", "href": "/reviews"}, {"label": "Guides", "href": "/blog"}, {"label": "Preview terms", "href": "/terms"}]}, {"label": "Contact", "href": "/contact"}] as const;
+export const footerNavItems = [{"label": "All samples", "href": "/inventory"}, {"label": "Location information", "href": "/inventory/map"}, {"label": "Compare", "href": "/compare"}, {"label": "Budget calculator", "href": "/calculator"}, {"label": "Prepare vehicle details", "href": "/sell-your-car"}, {"label": "Local enquiry draft", "href": "/sell-your-car/request"}, {"label": "Enquiry options", "href": "/services"}, {"label": "Buying options", "href": "/financing"}, {"label": "Questions and answers", "href": "/faq"}] as const;

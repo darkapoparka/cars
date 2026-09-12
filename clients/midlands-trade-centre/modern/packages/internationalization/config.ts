@@ -2,7 +2,7 @@ export const locales = ["en", "bg"] as const;
 
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale = "bg" satisfies Locale;
+export const defaultLocale = "en" satisfies Locale;
 
 export const marketplaceLocales = locales;
 

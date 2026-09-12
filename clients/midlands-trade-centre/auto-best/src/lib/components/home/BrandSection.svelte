@@ -1,428 +1,91 @@
 <script lang="ts">
-  import VehicleCutout from '$components/ui/VehicleCutout.svelte';
   import { resolve } from '$app/paths';
   import { brands } from '$data/home';
+  let expanded = $state(false);
 </script>
 
 <section class="dn-brand-section" aria-labelledby="brand-title">
-  <div class="dn-brand-hero">
-    <div class="dn-brand-hero__vehicle"><VehicleCutout vehicle="urus" framing="banner" /></div>
-    <div class="container dn-brand-hero__inner">
-      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--banner">
+  <div class="container dn-brand-shell">
+    <div class="dn-brand-hero">
+      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
         <h2 id="brand-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Търсене по марка</span>
-          <span class="dn-heading-mobile">По марка</span>
+          <span class="dn-heading-desktop">Choose by make</span>
+          <span class="dn-heading-mobile">By make</span>
         </h2>
-        <p>Изберете марка и разгледайте автомобилите.</p>
-        <a class="dn-brand-hero__cta dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
-          <span class="dn-heading-desktop">Вижте всички автомобили</span>
-          <span class="dn-heading-mobile" aria-hidden="true">Всички</span>
-        </a>
+        <a class="dn-brand-hero__cta dn-home-section-action" href={resolve('/listing-grid')} aria-label="View all vehicles"><span class="dn-heading-desktop">View all vehicles</span><span class="dn-heading-mobile" aria-hidden="true">All</span></a>
       </div>
     </div>
-  </div>
-
-  <div class="container">
     <div class="dn-brand-panel">
-      <div class="dn-brand-grid" aria-label="Автомобили по марка">
+      <div class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(brands.length, 6))} aria-label="Vehicles by make">
         {#each brands as brand (brand.label)}
-          <a class="dn-brand-card" href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
+          <a class="dn-brand-card" class:dn-brand-card--secondary={!expanded && brand.count === 0} data-stock-count={brand.count} href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
             <span class="dn-brand-card__image">
-              <img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width="180" height="80" />
+              <img src={brand.image} alt={`${brand.label} logo`} loading="lazy" decoding="async" width="180" height="80" />
             </span>
-            <span class="dn-brand-card__content">
-              <strong>{brand.label}</strong>
-              <small>{brand.count} {brand.count === 1 ? 'автомобил' : 'автомобила'}</small>
-            </span>
+            <strong>{brand.label}</strong>
           </a>
         {/each}
       </div>
+      <button class="dn-discovery-toggle" aria-expanded={expanded} onclick={() => expanded = !expanded}>{expanded ? 'Show less' : 'All makes'}</button>
     </div>
   </div>
 </section>
 
 <style>
-  .dn-brand-hero__vehicle { display: none; }
-  .dn-brand-section {
-    padding: 54px 0 70px;
-    background: #fff;
+  .dn-discovery-toggle { display: none; }
+  @media (max-width: 767px) {
+    .dn-discovery-toggle { display: flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; margin-top: 10px; border: 1px solid #d9dde1; border-radius: var(--dn-radius-button); background: #eceef0; color: #24272c; font: inherit; font-size: 14px; font-weight: 600; }
+    .dn-discovery-toggle:focus-visible { outline: 3px solid #8c959f; outline-offset: 3px; }
   }
 
-  .dn-brand-hero {
-    position: relative;
-    min-height: 420px;
-    margin: 0 12px;
-    overflow: hidden;
-    border-radius: 24px;
-    background: url('/assets/images/section/bg-6.jpg') center / cover no-repeat;
-    isolation: isolate;
-  }
+  .dn-brand-section { padding: 32px 0; background: #fff; }
+  .dn-brand-shell { padding: 0; border-radius: 20px; background: var(--dn-home-panel); }
+  .dn-brand-hero { padding: 32px 32px 24px; }
+  .dn-brand-hero__copy { display: flex; min-height: 44px; align-items: center; justify-content: space-between; gap: 24px; }
+  .dn-brand-hero h2 { margin: 0; color: #1f2937; font-size: 32px; font-weight: 650; line-height: 1.2; letter-spacing: -.03em; }
+  .dn-heading-mobile { display: none; }
+  .dn-brand-hero__cta { display: inline-flex; min-height: 44px; flex-shrink: 0; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid #e1e4e8; border-radius: var(--dn-radius-button); background: #fff; color: #24272c; font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .dn-brand-panel { padding: 0 32px 32px; border-radius: 0 0 20px 20px; background: var(--dn-home-panel); }
+  .dn-brand-grid { display: grid; grid-template-columns: repeat(var(--brand-columns), minmax(0, 1fr)); gap: 16px; margin-top: 0; }
+  .dn-brand-card { display: block; min-width: 0; padding: 16px 12px; border: 0; border-radius: 16px; background: #fff; color: #24272c; text-align: center; transform: none; transition: box-shadow 180ms ease-out; }
+  .dn-brand-card__image { display: flex; width: 100%; height: 52px; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .dn-brand-card__image img { width: 100%; height: 52px; object-fit: contain; }
+  .dn-brand-card strong { display: block; margin: 0; color: #24272c; font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .dn-brand-card:hover, .dn-brand-card:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
+  .dn-brand-hero__cta:hover { background: #e9edf1; }
+  a:focus-visible { outline: 3px solid #8c959f; outline-offset: 3px; }
 
-  .dn-brand-hero::before {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    content: '';
-    background: rgba(0, 0, 0, 0.55);
-  }
-
-  .dn-brand-hero__inner {
-    display: flex;
-    min-height: 420px;
-    justify-content: center;
-    padding-top: 56px;
-    text-align: center;
-  }
-
-  .dn-heading-mobile {
-    display: none;
-  }
-
-  .dn-brand-hero__copy {
-    position: relative;
-    z-index: 1;
-    width: min(618px, 100%);
-    color: #fff;
-  }
-
-  .dn-brand-hero h2 {
-    margin: 0 0 17px;
-    color: #fff;
-    font-size: clamp(36px, 3vw, 48px);
-    font-weight: 600;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
-  }
-
-  .dn-brand-hero p {
-    margin: 0 auto 34px;
-    color: rgba(255, 255, 255, 0.84);
-    font-size: 16px;
-    line-height: 1.55;
-  }
-
-  .dn-brand-hero__cta {
-    display: inline-flex;
-    min-height: 50px;
-    align-items: center;
-    justify-content: center;
-    padding: 0 28px;
-    border-radius: var(--dn-radius-button);
-    background: #c40101;
-    color: #fff;
-    font-size: var(--dn-text-lead);
-    font-weight: 600;
-    line-height: 1.3;
-    transition: background-color 0.3s ease;
-  }
-
-  .dn-brand-hero__cta:hover,
-  .dn-brand-hero__cta:focus-visible {
-    background: #24272c;
-    color: #fff;
-  }
-
-  .dn-brand-panel {
-    position: relative;
-    z-index: 3;
-    margin: -150px -30px 0;
-    padding: 30px;
-    border-radius: 16px;
-    background: #fff;
-  }
-
-  .dn-brand-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
-  }
-
-  .dn-brand-card {
-    display: block;
-    min-width: 0;
-    padding: 25px 25px 20px;
-    border: 1px solid #ededed;
-    border-radius: 16px;
-    background: #fff;
-    color: #24272c;
-    text-align: center;
-    transform: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .dn-brand-card:hover,
-  .dn-brand-card:focus-visible {
-    border-color: transparent;
-    color: #24272c;
-    transform: none;
-    box-shadow: var(--dn-card-hover-shadow);
-  }
-
-  .dn-brand-card__image {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .dn-brand-card__image img {
-    width: 100%;
-    height: 80px;
-    margin: 0;
-    object-fit: contain;
-  }
-
-  .dn-brand-card__content {
-    display: block;
-  }
-
-  .dn-brand-card strong,
-  .dn-brand-card small {
-    display: block;
-  }
-
-  .dn-brand-card strong {
-    margin-bottom: 5px;
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.35;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .dn-brand-card small {
-    max-width: 13ch;
-    margin-inline: auto;
-    color: #626a75;
-    font-size: var(--dn-text-meta);
-    line-height: var(--dn-leading-meta);
-  }
-
-  @media (min-width: 1200px) {
-    .dn-brand-hero {
-      background-attachment: fixed;
-    }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .dn-brand-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .dn-brand-hero h2 { font-size: 28px; }
   }
 
   @media (min-width: 992px) {
-    .dn-brand-section {
-      padding-block: 32px;
-    }
-
-    .dn-brand-hero {
-      width: min(var(--dn-content), calc(100% - 48px));
-      min-height: 184px;
-      margin-inline: auto;
-      border-radius: 20px;
-      background-attachment: scroll;
-    }
-
-    .dn-brand-hero__inner {
-      width: 100%;
-      min-height: 184px;
-      padding: 32px;
-      text-align: left;
-    }
-
-    .dn-brand-hero__copy {
-      display: grid;
-      width: 100%;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-content: start;
-      align-items: center;
-      column-gap: 32px;
-      row-gap: 12px;
-    }
-
-    .dn-brand-hero h2 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    .dn-brand-hero p {
-      max-width: 640px;
-      margin: 0;
-      grid-column: 1;
-    }
-
-    .dn-brand-hero__cta {
-      min-height: 44px;
-      grid-column: 2;
-      grid-row: 1 / span 2;
-      padding-inline: 20px;
-      background: #fff;
-      color: #24272c;
-      font-size: 16px;
-    }
-
-    .dn-brand-panel {
-      margin: -24px 0 0;
-      padding: 24px;
-    }
-
-    .dn-brand-grid {
-      gap: 16px;
-    }
-
-    .dn-brand-card {
-      padding: 16px 12px;
-    }
-
-    .dn-brand-card__image,
-    .dn-brand-card__image img {
-      height: 52px;
-    }
-
-    .dn-brand-card__image {
-      margin-bottom: 12px;
-    }
-
-    .dn-brand-card small {
-      display: none;
-    }
-  }
-
-  @media (min-width: 1200px) and (max-width: 1360px) {
-    .dn-brand-panel {
-      margin-inline: 0;
-    }
-  }
-
-  @media (max-width: 1199px) {
-    .dn-brand-panel {
-      margin-inline: 0;
-    }
-
-    .dn-brand-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
+    .dn-brand-hero { padding: 0; }
+    .dn-brand-panel { position: relative; margin-top: calc(-1 * var(--dn-home-banner-overlap)); padding: 24px; border-radius: var(--dn-radius); }
+    .dn-brand-card__image, .dn-brand-card__image img { height: 72px; }
+    .dn-brand-card strong { font-size: 18px; line-height: 24px; }
   }
 
   @media (max-width: 767px) {
-    .dn-brand-section {
-      padding: 24px 0 12px;
-      background: var(--dn-mobile-canvas);
-    }
-
-    .dn-brand-hero {
-      min-height: 0;
-      margin: 0;
-      overflow: visible;
-      border-radius: 0;
-      background: none;
-    }
-
-    .dn-brand-hero__inner {
-      min-height: 44px;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0;
-      text-align: left;
-    }
-
-    .dn-brand-hero::before {
-      display: none;
-    }
-
-    .dn-brand-hero__copy {
-      display: flex;
-      width: 100%;
-      min-height: 44px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      color: #171a20;
-    }
-
-    .dn-brand-hero h2 {
-      margin: 0;
-      color: #171a20;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-    }
-
-    .dn-heading-desktop {
-      display: none;
-    }
-
-    .dn-heading-mobile {
-      display: inline;
-    }
-
-    .dn-brand-hero p {
-      display: none;
-    }
-
-    .dn-brand-hero__cta {
-      min-height: 44px;
-      padding: 0;
-      background: transparent;
-      color: #4f5661;
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    .dn-brand-panel {
-      margin: 8px 0 0;
-      padding: 0;
-      border-radius: 0;
-      background: transparent;
-    }
-
-    .dn-brand-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .dn-brand-card {
-      min-height: 108px;
-      padding: 10px 6px;
-      border: 0;
-      border-radius: 14px;
-      background: var(--dn-mobile-surface);
-    }
-
-    .dn-brand-card:nth-child(n + 7) {
-      display: none;
-    }
-
-    .dn-brand-card__image {
-      height: 48px;
-      margin-bottom: 6px;
-    }
-
-    .dn-brand-card__image img {
-      width: 58px;
-      height: 44px;
-    }
-
-    .dn-brand-card strong {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.2;
-    }
-
-    .dn-brand-card small {
-      display: none;
-    }
+    .dn-brand-section { padding: 24px 0 12px; background: var(--dn-mobile-canvas); }
+    .dn-brand-shell { padding-inline: 12px; border-radius: 0; background: transparent; }
+    .dn-brand-hero { padding: 0; }
+    .dn-brand-hero__copy { gap: 16px; }
+    .dn-brand-hero h2 { color: #171a20; font-size: 22px; font-weight: 700; line-height: 1.15; letter-spacing: -.025em; }
+    .dn-heading-desktop { display: none; }
+    .dn-brand-hero__cta { min-height: 44px; padding: 0; border: 0; background: transparent; color: #4f5661; font-size: 14px; }
+    .dn-heading-mobile { display: inline; }
+    .dn-brand-panel { margin-top: 8px; padding: 0; border-radius: 0; background: transparent; }
+    .dn-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .dn-brand-card { min-height: 108px; padding: 10px 6px; border-radius: 14px; background: var(--dn-mobile-surface); }
+    .dn-brand-card__image { height: 48px; margin-bottom: 6px; }
+    .dn-brand-card__image img { width: 58px; height: 44px; }
+    .dn-brand-card--secondary { display: none; }
+    .dn-brand-card strong { font-size: 14px; line-height: 1.2; }
   }
 
-  @media (max-width: 767px) {
-    .dn-brand-hero__cta { display: inline-flex; }
-    .dn-brand-card:nth-child(n + 6) { display: none; }
-  }
-  @media (min-width: 992px) {
-    .dn-brand-hero { background: #101114; min-height: 234px; overflow: hidden; }
-    .dn-brand-hero::before { display: none; }
-    .dn-brand-hero__inner { min-height: 234px; justify-content: flex-start; }
-    .dn-brand-hero__copy { width: calc(100% - 310px); grid-template-columns: 1fr; gap: 10px; }
-    .dn-brand-hero__cta { grid-column: 1; grid-row: auto; justify-self: start; }
-    .dn-brand-hero__vehicle { display: block; position: absolute; right: -32px; bottom: 4px; width: 340px; height: 226px; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .dn-brand-card { transition: none; }
   }
 </style>

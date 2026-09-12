@@ -92,19 +92,19 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 	return [
 		{
 			name: 'brand',
-			label: 'Марка',
-			placeholder: 'Всички марки',
+			label: 'Make',
+			placeholder: 'All makes',
 			options: toOptions(vehicles.map((vehicle) => vehicle.brand))
 		},
 		{
 			name: 'model',
-			label: 'Модел',
-			placeholder: 'Всички модели',
+			label: 'Model',
+			placeholder: 'All models',
 			options: toModelOptions(vehicles)
 		},
 		{
 			name: 'price',
-			label: 'Цена',
+			label: 'Price',
 			placeholder: 'Всички цени',
 			options: [
 				{ value: 'under-10000', label: 'До 10 000 EUR' },
@@ -116,19 +116,19 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 		},
 		{
 			name: 'mileage',
-			label: 'Пробег',
+			label: 'Mileage',
 			placeholder: 'Всички пробези',
 			options: mileageOptions
 		},
 		{
 			name: 'fuel',
-			label: 'Гориво',
+			label: 'Fuel',
 			placeholder: 'Всички горива',
 			options: toOptions(vehicles.map((vehicle) => vehicle.fuel))
 		},
 		{
 			name: 'transmission',
-			label: 'Скорости',
+			label: 'Transmission',
 			placeholder: 'Всички скорости',
 			options: toOptions(vehicles.map((vehicle) => vehicle.transmission))
 		},
@@ -140,7 +140,7 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 		},
 		{
 			name: 'feature',
-			label: 'Екстри',
+			label: 'Features',
 			placeholder: 'Всички екстри',
 			options: toOptions(vehicles.flatMap((vehicle) => vehicle.features))
 		}

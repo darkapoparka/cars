@@ -65,6 +65,7 @@
 
 <section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}>
   <div class="container">
+    <h2 class="dn-sr-only">{variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}</h2>
     <div class="dn-trust-actions__panel">
       {#if variant === 'cards'}
         <div class="dn-services-heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
@@ -73,7 +74,7 @@
           <a class="dn-home-section-action" href={resolve('/contact')}>Свържете се с нас</a>
         </div>
       {/if}
-      <div class="dn-trust-actions__grid" aria-label="Следващи стъпки">
+      <div class="dn-trust-actions__grid">
         {#each visibleActions as action (action.href)}
           <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--ownership={variant === 'banners' && group === 'ownership'} class:dn-trust-card--illustrated={variant === 'banners' && group === 'browse'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners' && 'artwork' in action}>
             {#if variant === 'banners'}

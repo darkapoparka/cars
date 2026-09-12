@@ -14,7 +14,7 @@
 	const estimate = $derived(calculateFinance(inputs));
 </script>
 
-<h2 class="h4 mb-16">Калкулатор за финансиране</h2>
+<h2 class="h4 mb-16">Finance calculator</h2>
 <form action={resolve('/calculator')} method="get" class="financing-calculator mb-40">
 	<div class="financing-calculator-form mb-24">
 		<div class="xl2-grid-cols-2 md-grid-cols-1 grid grid-cols-4 gap-12">

@@ -1,0 +1,324 @@
+// Dated advertised samples, with original currency and distance units.
+export const dealerFacts = {
+  "schemaVersion": 1,
+  "leadId": "gb-birmingham-midlands-trade-centre",
+  "slug": "midlands-trade-centre",
+  "observedAt": "2026-09-09",
+  "name": "Midlands Trade Centre Limited",
+  "shortName": "Midlands Trade Centre",
+  "legalName": "MIDLANDS TRADE CENTRE LIMITED",
+  "companyNumber": "08906376",
+  "city": "Birmingham",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": "1198 Coventry Road, Yardley, Birmingham, B25 8DA",
+  "phone": "+447780008222",
+  "phoneDisplay": "07780 008222",
+  "phoneHref": "tel:+447780008222",
+  "email": "",
+  "hours": "Monday–Friday 09:00–19:00; Saturday 10:00–18:00; Sunday by appointment. All viewings require a prior appointment.",
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "accent": "#377c58",
+  "website": "https://www.midlandstradecentreltd.co.uk/",
+  "sourceProfile": "https://www.midlandstradecentreltd.co.uk/used-cars",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA&output=embed",
+  "tagline": "Used vehicles in Yardley, Birmingham. Viewings by appointment.",
+  "languages": [
+    "en"
+  ],
+  "socialLinks": {},
+  "stockCount": 8,
+  "sampleOnly": true,
+  "services": [
+    "Used-vehicle sales",
+    "Viewings by prior appointment",
+    "Part exchange enquiries"
+  ],
+  "sources": [
+    "https://www.midlandstradecentreltd.co.uk/",
+    "https://www.midlandstradecentreltd.co.uk/used-cars",
+    "https://www.midlandstradecentreltd.co.uk/used-cars?page=2",
+    "https://find-and-update.company-information.service.gov.uk/company/08906376"
+  ],
+  "locationNote": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live stock feed. Confirm availability, condition and final terms directly. No dealership approval or message delivery is implied.",
+  "opportunity": "The retrieved catalogue mixes priced advertisements with sold or buyer-held vehicles. This preview distinguishes dated samples and puts confirmation and viewing requirements beside the selected vehicle; the existing site already has search, galleries and enquiries.",
+  "qualificationNotes": [
+    "The current retrieved catalogue reports 25 results, not 25 independently verified available vehicles.",
+    "Buyer-held Hilux, Lexus CT and CR-V and the sold Audi A5 were excluded. A previously observed non-running Focus was excluded.",
+    "The old 30-ad screen is not an automatic veto under the owner's fixed assignment.",
+    "Direct browser requests encountered a verification screen. This is an environment limitation, not evidence of a broken customer website.",
+    "The first eight selected samples use actual GBP prices and miles, with no conversion or mileage relabeling."
+  ]
+};
+export const dealerStock = [
+  {
+    "id": "202601169196000",
+    "make": "BMW",
+    "model": "5 Series Gran Turismo",
+    "trim": "530d SE GT Steptronic",
+    "year": 2011,
+    "price": 4900,
+    "currency": "GBP",
+    "mileage": 149900,
+    "distanceUnit": "mi",
+    "fuel": "Diesel",
+    "transmission": "Automatic",
+    "body": "Hatchback",
+    "color": "Black",
+    "doors": 5,
+    "features": [
+      "Panoramic roof",
+      "Heated seats",
+      "Navigation"
+    ],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/bmw-5-series-gran-turismo-3-0-530d-se-gt-steptronic-euro-5-5dr-birmingham-202601169196000",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w1024h768/513c5899ca15422a99f6907bd91a6598.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2011 BMW 5 Series Gran Turismo 530d SE GT Steptronic",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202601169196000-1.webp"
+    ],
+    "image": "/dealer/inventory/202601169196000-1.webp"
+  },
+  {
+    "id": "202607073982268",
+    "make": "BMW",
+    "model": "X3",
+    "trim": "20d M Sport xDrive",
+    "year": 2015,
+    "price": 4400,
+    "currency": "GBP",
+    "mileage": 173000,
+    "distanceUnit": "mi",
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "body": "SUV",
+    "color": "Black",
+    "doors": 5,
+    "features": [
+      "Heated front seats",
+      "Navigation",
+      "Bluetooth"
+    ],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/bmw-x3-2-0-20d-m-sport-xdrive-euro-6-ss-5dr-birmingham-202607073982268",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w1024h768/74c4b93189e84053b1992f321e206c75.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2015 BMW X3 20d M Sport xDrive",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202607073982268-1.webp"
+    ],
+    "image": "/dealer/inventory/202607073982268-1.webp"
+  },
+  {
+    "id": "202607254508952",
+    "make": "Toyota",
+    "model": "Aygo",
+    "trim": "1.0 VVT-i x-play",
+    "year": 2021,
+    "price": 4000,
+    "currency": "GBP",
+    "mileage": 117000,
+    "distanceUnit": "mi",
+    "fuel": "Petrol",
+    "transmission": "Manual",
+    "body": "Hatchback",
+    "color": null,
+    "doors": 5,
+    "features": [
+      "Reverse camera",
+      "Air conditioning",
+      "Bluetooth"
+    ],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/toyota-aygo-1-0-vvt-i-x-play-euro-6-5dr-safety-sense-birmingham-202607254508952",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w1024h768/15a3a9d827474b0d96a2f8b7dc8bce9f.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2021 Toyota Aygo 1.0 VVT-i x-play",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202607254508952-1.webp"
+    ],
+    "image": "/dealer/inventory/202607254508952-1.webp"
+  },
+  {
+    "id": "202609075805069",
+    "make": "Audi",
+    "model": "Q3",
+    "trim": "2.0 TDI S line",
+    "year": 2012,
+    "price": 3900,
+    "currency": "GBP",
+    "mileage": 139900,
+    "distanceUnit": "mi",
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "body": "SUV",
+    "color": null,
+    "doors": 5,
+    "features": [
+      "Sports leather interior"
+    ],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/audi-q3-2-0-tdi-s-line-euro-5-ss-5dr-birmingham-202609075805069",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w340h255/720a41e6bcfb4cae803d7248313a7194.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2012 Audi Q3 2.0 TDI S line",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202609075805069-1.webp"
+    ],
+    "image": "/dealer/inventory/202609075805069-1.webp"
+  },
+  {
+    "id": "202608275484997",
+    "make": "Nissan",
+    "model": "Qashqai",
+    "trim": "1.6 dCi Tekna",
+    "year": 2017,
+    "price": 3900,
+    "currency": "GBP",
+    "mileage": 153000,
+    "distanceUnit": "mi",
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "body": "SUV",
+    "color": null,
+    "doors": 5,
+    "features": [],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/nissan-qashqai-1-6-dci-tekna-euro-6-ss-5dr-birmingham-202608275484997",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w340h255/76e7d8c74483442ab4dc6072f22201cc.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2017 Nissan Qashqai 1.6 dCi Tekna",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202608275484997-1.webp"
+    ],
+    "image": "/dealer/inventory/202608275484997-1.webp"
+  },
+  {
+    "id": "202609055756720",
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.0 R Sport Tourer",
+    "year": 2004,
+    "price": 3500,
+    "currency": "GBP",
+    "mileage": 124800,
+    "distanceUnit": "mi",
+    "fuel": "Petrol",
+    "transmission": "Automatic",
+    "body": "Wagon",
+    "color": "Silver",
+    "doors": 5,
+    "features": [
+      "Panoramic sunroof",
+      "Heated seats",
+      "Cruise control"
+    ],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/subaru-legacy-3-0-r-sport-tourer-5dr-birmingham-202609055756720",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w1024h768/b168e836c65f49cba4cae8da5deaf05b.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2004 Subaru Legacy 3.0 R Sport Tourer",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202609055756720-1.webp"
+    ],
+    "image": "/dealer/inventory/202609055756720-1.webp"
+  },
+  {
+    "id": "202608255427907",
+    "make": "Ford",
+    "model": "Mondeo",
+    "trim": "2.2 TDCi Titanium X Sport",
+    "year": 2012,
+    "price": 3400,
+    "currency": "GBP",
+    "mileage": 141000,
+    "distanceUnit": "mi",
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "body": "Wagon",
+    "color": null,
+    "doors": 5,
+    "features": [],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/ford-mondeo-2-2-tdci-titanium-x-sport-euro-5-5dr-birmingham-202608255427907",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w340h255/e375987070eb42bfbe2b497094c76e3f.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2012 Ford Mondeo 2.2 TDCi Titanium X Sport",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202608255427907-1.webp"
+    ],
+    "image": "/dealer/inventory/202608255427907-1.webp"
+  },
+  {
+    "id": "202604141546870",
+    "make": "Vauxhall",
+    "model": "Insignia",
+    "trim": "1.8 16V SRi",
+    "year": 2012,
+    "price": 2800,
+    "currency": "GBP",
+    "mileage": 64500,
+    "distanceUnit": "mi",
+    "fuel": "Petrol",
+    "transmission": "Manual",
+    "body": "Hatchback",
+    "color": "Black",
+    "doors": 5,
+    "features": [],
+    "sourceUrl": "https://www.midlandstradecentreltd.co.uk/used-cars/vauxhall-insignia-1-8-16v-sri-euro-5-5dr-birmingham-202604141546870",
+    "sourceImageUrls": [
+      "https://m.atcdn.co.uk/a/media/w340h255/2934b5bc52a8470597c377c6e474b11b.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2012 Vauxhall Insignia 1.8 16V SRi",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised listing sample. Confirm condition, equipment, availability and final terms directly.",
+    "viewingLocation": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+    "sourceLocation": "Yardley, Birmingham",
+    "photos": [
+      "/dealer/inventory/202604141546870-1.webp"
+    ],
+    "image": "/dealer/inventory/202604141546870-1.webp"
+  }
+];

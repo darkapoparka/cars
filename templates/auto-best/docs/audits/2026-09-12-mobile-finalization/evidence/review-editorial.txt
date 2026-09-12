@@ -1,0 +1,124 @@
+
+## src/lib/components/editorial/ArticleSupport.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import { brand } from '$config/brand';
+4:   import type { BlogPost } from '$data/editorial';
+5:   let { related }: { related: BlogPost[] } = $props();
+6:   const phoneLinkAttributes = { href: brand.phoneHref } as const;
+7: </script>
+8:       <aside class="dn-blog-detail__sidebar" aria-label="Още полезна информация">
+9: 
+10: 
+11:         <section class="dn-blog-widget dn-blog-widget--related">
+12:           <h2>Още полезно</h2>
+13:           <div class="dn-blog-widget__related-list">
+14:             {#each related as post (post.id)}
+15:               <a href={resolve('/blog-detail/[id]', { id: String(post.id) })}>
+16:                 <img src={post.image} alt="" width="176" height="132" loading="lazy" decoding="async" />
+17:                 <span>
+18:                   <small>{post.category}</small>
+19:                   <strong>{post.title}</strong>
+20:                 </span>
+21:               </a>
+22:             {/each}
+23:           </div>
+24:         </section>
+25: 
+26:         <section class="dn-blog-widget dn-blog-widget--contact">
+27:           <p class="dn-blog-widget__brand">{brand.name}</p>
+28:           <h2>Имате конкретен въпрос?</h2>
+29:           <p>{brand.address}</p>
+30:           <p>{brand.appointment}.</p>
+31:           <a class="dn-blog-widget__primary" {...phoneLinkAttributes}>Обадете се · {brand.phone}</a>
+32:           <a class="dn-blog-widget__secondary" href={resolve('/contact')}>Контакти</a>
+33:         </section>
+34: 
+35:       </aside>
+
+## src/lib/components/editorial/BlogCard.svelte
+1: <script lang="ts">
+2:   import { withListReturn } from '$data/journeys';
+3:   import { resolve } from '$app/paths';
+4:   import { brand } from '$config/brand';
+5:   import type { BlogPost } from '$data/editorial';
+6: 
+7:   let { post, returnTo, priority = false }: { post: BlogPost; returnTo?: string; priority?: boolean } = $props();
+8: </script>
+9: 
+10: <article id={`article-${post.id}`} class="dn-blog-card">
+11:   <a class="dn-blog-card__link" href={withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo)} aria-label={post.title}>
+12:     <span class="dn-blog-card__media">
+13:       <img
+14:         src={post.image}
+15:         alt=""
+16:         width="820"
+17:         height="540"
+18:         loading={priority ? 'eager' : 'lazy'}
+19:         fetchpriority={priority ? 'high' : 'auto'}
+20:         decoding="async"
+21:       />
+22:     </span>
+23:     <span class="dn-blog-card__body">
+24:       <span class="dn-blog-card__meta">
+25:         <span>{brand.name}</span>
+26:         <span class="dn-blog-card__category">{post.category}</span>
+27:       </span>
+28:       <h2>{post.title}</h2>
+29:       <span class="dn-blog-card__text">{post.text}</span>
+30:     </span>
+31:   </a>
+32: </article>
+33: 
+
+## src/lib/components/editorial/BlogHero.svelte
+1: <script lang="ts">
+2:   import { resolve } from '$app/paths';
+3:   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+4:   import { blogCategories, blogFilterHref, type BlogFilters } from '$data/editorial';
+5: 
+6:   let { filters }: { filters: BlogFilters } = $props();
+7: </script>
+8: 
+9: <section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--yellow" aria-labelledby="blog-title">
+10:   <HeroVehicles pair="blog" />
+11:   <img
+12:     class="dn-blog-hero__media"
+13:     src="/assets/images/lead/day-night-blog-hero-v2.webp"
+14:     alt=""
+15:     width="1920"
+16:     height="1080"
+17:     fetchpriority="high"
+18:     decoding="async"
+19:   />
+20:   <div class="dn-blog-hero__overlay" aria-hidden="true"></div>
+21:   <div class="container dn-blog-hero__inner dn-route-hero__layout">
+22:     <div class="dn-blog-hero__copy dn-route-hero__copy">
+23:       <h1 id="blog-title">Полезно</h1>
+24:       <p class="dn-blog-hero__lead">Съвети за избор, оглед и покупка на автомобил</p>
+25:     </div>
+26: 
+27:     <div class="dn-blog-toolbar dn-route-hero__control" aria-label="Филтри за полезни статии">
+28:       <form class="dn-blog-search" method="GET" action={resolve('/blog')}>
+29:         <label class="dn-sr-only" for="dn-blog-search">Търсете статия</label>
+30:         <svg aria-hidden="true" viewBox="0 0 24 24">
+31:           <circle cx="11" cy="11" r="7"></circle>
+32:           <path d="m16 16 4 4"></path>
+33:         </svg>
+34:         <input id="dn-blog-search" type="search" name="q" value={filters.q} placeholder="Търсете статия" />
+35:         {#if filters.category}<input type="hidden" name="category" value={filters.category} />{/if}
+36:       </form>
+37: 
+38:       <nav class="dn-blog-categories" aria-label="Категории">
+39:         <a href={resolve(blogFilterHref(filters, '') as '/blog')} class:active={!filters.category} aria-current={!filters.category ? 'page' : undefined}>Всички</a>
+40:         {#each blogCategories as category (category)}
+41:           <a
+42:             href={resolve(blogFilterHref(filters, category) as '/blog')}
+43:             class:active={filters.category === category}
+44:             aria-current={filters.category === category ? 'page' : undefined}
+45:           >{category}</a>
+46:         {/each}
+47:       </nav>
+48:     </div>
+49:   </div>
+50: </section>

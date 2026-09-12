@@ -24,7 +24,7 @@
 <section class="dn-videos" aria-labelledby="videos-title">
   <div class="container">
       <div class="dn-videos__heading dn-home-section-heading dn-home-section-heading--banner dn-home-banner-frame dn-home-banner-copy">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__intro">Гледай ни в</span><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>YouTube</span></h2>
+        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>YouTube</span></h2>
         
         <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
           <span class="dn-videos__channel-label">Към канала</span>
@@ -118,24 +118,22 @@
   }
 
   @media (max-width: 767px) {
-    .dn-videos { padding: 20px 0 12px; background: var(--dn-mobile-canvas); }
-    .dn-videos__panel { margin-top: 12px; padding: 0; border-radius: 0; background: transparent; }
-    .dn-videos__heading { min-height: 0; grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; padding: 18px; border-radius: 14px; }
+    .dn-videos { padding: 28px 0 12px; background: var(--dn-mobile-canvas); }
+    .dn-videos > .container { padding: 14px; overflow: hidden; border-radius: 18px; background: #101114; }
+    .dn-videos__panel { margin: 0; padding: 0; border-radius: 0; background: transparent; }
+    .dn-videos__heading { min-height: 0; grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; padding: 2px 2px 14px; border-radius: 0; background: transparent; }
     .dn-videos__heading h2 { gap: 6px 8px; font-size: 24px; font-weight: 700; }
     .dn-videos__brand-mark :global(svg) { width: 32px; height: 32px; }
-    
-    .dn-videos__channel { grid-column: 2; grid-row: 1; justify-self: end; align-self: start; width: 44px; padding: 0; margin: 0; border: 1px solid #55565a; border-radius: 50%; background: transparent; color: #fff; }
-    .dn-videos__intro { flex-basis: 100%; }
+    .dn-videos__channel { grid-column: 2; grid-row: 1; justify-self: end; align-self: start; width: 44px; padding: 0; margin: 0; border: 1px solid #3b3e44; border-radius: 50%; background: #181a1f; color: #fff; }
     .dn-videos__channel-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
     .dn-videos__channel :global(svg) { width: 22px; height: 22px; }
-    .dn-videos__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(82vw, 320px); gap: 10px; overflow-x: auto; margin-inline: -12px; padding: 0 12px 4px; scroll-padding-inline: 12px; scroll-snap-type: x proximity; scrollbar-width: none; }
+    .dn-videos__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(78vw, 304px); gap: 10px; overflow-x: auto; margin: 0; padding: 0 0 2px; scroll-padding-inline: 0; scroll-snap-type: x proximity; scrollbar-width: none; }
     .dn-videos__grid::-webkit-scrollbar { display: none; }
-    .dn-video-card { border-radius: 14px; scroll-snap-align: start; }
-    .dn-videos__all-card { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px; border: 1px solid #dce0e5; border-radius: 14px; background: #fff; color: #202329; text-align: center; scroll-snap-align: start; }
+    .dn-video-card { border-radius: 12px; background: #17191d; scroll-snap-align: start; }
+    .dn-videos__all-card { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px; border: 1px solid #34383f; border-radius: 12px; background: #181a1f; color: #fff; text-align: center; scroll-snap-align: start; }
     .dn-videos__all-icon { color: #ff0033; }
     .dn-videos__all-card strong { font-size: 18px; line-height: 1.3; }
-    .dn-videos__all-arrow { display: flex; min-height: 44px; align-items: center; gap: 8px; padding: 8px 18px; margin-top: 4px; border-radius: var(--dn-pill); background: var(--dn-red); color: #fff; font-size: 14px; font-weight: 600; }
-    .dn-videos__all-card:hover { border-color: #aab0b8; background: #fafafa; }
+    .dn-videos__all-arrow { display: flex; min-height: 40px; align-items: center; gap: 8px; padding: 7px 16px; margin-top: 4px; border-radius: var(--dn-pill); background: var(--dn-red); color: #fff; font-size: 14px; font-weight: 600; }
+    .dn-videos__all-card:hover { border-color: #4c5159; background: #202329; }
   }
-  .dn-videos__intro { font-size: .85em; font-weight: 600; letter-spacing: -.02em; }
 </style>

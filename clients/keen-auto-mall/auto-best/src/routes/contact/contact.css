@@ -56,6 +56,9 @@
   background: var(--dn-red-hover);
 }
 
+.dn-contact-button--call { background: var(--dn-ink); color: var(--dn-white); }
+.dn-contact-button--call:is(:hover, :focus-visible) { background: var(--dn-ink-hover); }
+
 .dn-contact-hero__action {
   min-width: 286px;
   min-height: 58px;
@@ -150,13 +153,13 @@
   min-height: 52px;
   margin-top: 24px;
   padding-inline: 26px;
-  background: #202329;
+  background: var(--dn-ink);
   font-size: 17px;
 }
 
 .dn-contact-intent__main > .dn-contact-button:hover,
 .dn-contact-intent__main > .dn-contact-button:focus-visible {
-  background: var(--dn-red);
+  background: var(--dn-ink-hover);
 }
 
 .dn-contact-social {
@@ -339,8 +342,8 @@
 }
 
 .dn-contact-card__actions .dn-contact-card__call {
-  border-color: var(--dn-red);
-  background: var(--dn-red);
+  border-color: var(--dn-ink);
+  background: var(--dn-ink);
   color: #fff;
 }
 
@@ -352,8 +355,8 @@
 
 .dn-contact-card__actions .dn-contact-card__call:hover,
 .dn-contact-card__actions .dn-contact-card__call:focus-visible {
-  border-color: var(--dn-red-hover);
-  background: var(--dn-red-hover);
+  border-color: var(--dn-ink-hover);
+  background: var(--dn-ink-hover);
   color: #fff;
 }
 
@@ -517,7 +520,7 @@
     width: 100%;
     margin-top: 24px;
     padding-inline: 12px;
-    background: var(--dn-red);
+    background: var(--dn-ink);
     font-size: 16px;
   }
 

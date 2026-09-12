@@ -10,19 +10,19 @@ export interface FeaturedVideo {
 export const featuredVideos: readonly FeaturedVideo[] = [
   {
     id: '6S3dLIgeAT8',
-    title: 'Най-желаната кола в България | Lamborghini Urus',
+    title: 'The most wanted car in Bulgaria | Lamborghini Urus',
     duration: '23:19',
     thumbnail: '/assets/images/lead/day-night-video-urus.jpg'
   },
   {
     id: 'zG6rjLpT4u8',
-    title: 'Продадох най-новата Панамера',
+    title: 'I sold the latest Panamera',
     duration: '14:33',
     thumbnail: '/assets/images/lead/day-night-video-panamera.jpg'
   },
   {
     id: 'w_XaGmIWJFM',
-    title: 'Каква е разликата в G-класите',
+    title: 'What is the difference between the G-Class models',
     duration: '23:03',
     thumbnail: '/assets/images/lead/day-night-video-g-class.jpg'
   }

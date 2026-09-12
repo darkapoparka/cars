@@ -22,8 +22,8 @@ export type DesktopSortOption = {
 
 export const desktopSortOptions: DesktopSortOption[] = [
 	{ value: 'best-match', label: 'Най-подходящи' },
-	{ value: 'lowest-price', label: 'Най-ниска цена' },
-	{ value: 'highest-price', label: 'Най-висока цена' },
+	{ value: 'lowest-price', label: 'Lowest price' },
+	{ value: 'highest-price', label: 'Highest price' },
 	{ value: 'lowest-mileage', label: 'Най-малък пробег' },
 	{ value: 'highest-mileage', label: 'Най-голям пробег' },
 	{ value: 'newest-year', label: 'Най-нова година' },

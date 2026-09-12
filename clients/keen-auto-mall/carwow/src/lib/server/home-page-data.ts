@@ -133,7 +133,7 @@ function buildBudgetTiles(vehicles: Car[]) {
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 		},
 		{
-			label: 'Без бюджет',
+			label: 'Any budget',
 			value: 'all',
 			image: '/assets/images/budget/open-budget-supercar-v2.webp',
 			caption: `Всички ${vehicles.length} коли`,

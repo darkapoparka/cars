@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  let { href = '/listing-grid', label = 'Виж всички', detail = '', action = 'Виж всички', compact = false, image }: {
+  let { href = '/listing-grid', label = 'View all', detail = '', action = 'View all', compact = false, image }: {
     href?: '/listing-grid' | '/blog'; label?: string; detail?: string; action?: string; compact?: boolean; image?: string;
   } = $props();
 </script>

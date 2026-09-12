@@ -10,7 +10,7 @@
       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
-          <span class="dn-heading-mobile">Полезно</span>
+          <span class="dn-heading-mobile">Полезно при избора</span>
         </h2>
         
         <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
@@ -298,7 +298,7 @@
 
   @media (max-width: 767px) {
     .dn-editorial {
-      padding: 24px 0 12px;
+      padding: 24px 0 18px;
       background: var(--dn-mobile-canvas);
     }
 
@@ -343,14 +343,7 @@
 
     
 
-    .dn-editorial__cta {
-      min-height: 44px;
-      padding: 0;
-      background: transparent;
-      color: #4f5661;
-      font-size: 14px;
-      font-weight: 650;
-    }
+    .dn-editorial__cta { display: none; }
 
     .dn-editorial__layout {
       display: grid;

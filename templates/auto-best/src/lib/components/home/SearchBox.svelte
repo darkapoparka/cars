@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { budgetBands, budgetHref } from '$data/discovery';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
@@ -96,7 +97,7 @@
       <div class="dn-search__desktop-form">
         <VehicleSearchDialog filters={desktopFilters}>
           {#snippet children(openFilters, filtersOpen)}
-            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} />
+            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} enableSticky={false} />
           {/snippet}
         </VehicleSearchDialog>
       </div>
@@ -104,8 +105,8 @@
 
   </div>
   <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
-    <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
-    <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
+    <a href={resolve(budgetHref(budgetBands[0]))}>До 60 000 €</a>
+    <a href={resolve(budgetHref(budgetBands[1]))}>60–70 000 €</a>
     <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
     <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
     <a href={resolve('/listing-grid?make=BMW')}>BMW</a>

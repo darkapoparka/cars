@@ -27,14 +27,14 @@
 		},
 		{
 			id: 'financing',
-			title: 'Финансиране',
+			title: 'Buying options',
 			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'trade-in',
-			title: 'Бартер и оценка',
+			title: 'Trade-in and valuation',
 			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
 			imagePosition: 'center bottom'
@@ -98,8 +98,8 @@
 	function buildServiceNotes() {
 		return [
 			['Услуга', selectedServiceItem.title],
-			['Автомобил', vehicle.trim()],
-			['Съобщение', message.trim()]
+			['Vehicle', vehicle.trim()],
+			['Message', message.trim()]
 		]
 			.filter(([, value]) => value)
 			.map(([label, value]) => `${label}: ${value}`)
@@ -163,7 +163,7 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
+				Не знаеш коя услуга ти трябва? <a href={`tel:${daynightSite.phone}`}
 					>Обади ни се</a
 				>
 			</p>
@@ -220,17 +220,17 @@
 			>
 				<input type="hidden" name="intent" value="services" />
 				<label class="desktop-services-honeypot" aria-hidden="true">
-					<span>Компания</span>
+					<span>Company</span>
 					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 				</label>
 
 				<div class="desktop-services-form__grid">
 					<label class="desktop-services-field">
-						<span>Име</span>
+						<span>Name</span>
 						<input name="name" type="text" bind:value={name} placeholder="Име и фамилия" />
 					</label>
 					<label class="desktop-services-field">
-						<span>Телефон</span>
+						<span>Phone</span>
 						<input
 							name="phone"
 							type="tel"
@@ -249,7 +249,7 @@
 						</select>
 					</label>
 					<label class="desktop-services-field">
-						<span>Автомобил</span>
+						<span>Vehicle</span>
 						<input
 							name="vehicle"
 							type="text"
@@ -258,7 +258,7 @@
 						/>
 					</label>
 					<label class="desktop-services-field desktop-services-field--wide">
-						<span>Съобщение</span>
+						<span>Message</span>
 						<textarea
 							name="message"
 							bind:value={message}
@@ -284,7 +284,7 @@
 					type="submit"
 					disabled={serviceSubmitState === 'submitting'}
 				>
-					<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}</span>
+					<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : 'Prepare enquiry'}</span>
 				</button>
 			</form>
 		</div>

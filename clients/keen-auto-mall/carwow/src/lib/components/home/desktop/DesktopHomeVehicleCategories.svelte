@@ -18,44 +18,44 @@
 	const allVehicleCategories = [
 		{
 			id: 'electric',
-			title: 'Електрически',
+			title: 'Electric',
 			query: `fuel=${encodeURIComponent('Електрически')}`,
-			count: cars.filter((car) => car.fuel === 'Електрически').length,
+			count: cars.filter((car) => car.fuel === 'Electric').length,
 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp'
 		},
 		{
 			id: 'suv',
-			title: 'Джип',
+			title: 'SUV',
 			query: 'body=SUV',
 			count: bodyCount('SUV'),
 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 		},
 		{
 			id: 'wagon',
-			title: 'Комби',
+			title: 'Wagon',
 			query: `body=${encodeURIComponent('Комби')}`,
-			count: bodyCount('Комби'),
+			count: bodyCount('Wagon'),
 			image: '/assets/images/body-type/generated/body-wagon-studio-card-v1.webp'
 		},
 		{
 			id: 'hatchback',
-			title: 'Хечбек',
+			title: 'Hatchback',
 			query: `body=${encodeURIComponent('Хечбек')}`,
-			count: bodyCount('Хечбек'),
+			count: bodyCount('Hatchback'),
 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 		},
 		{
 			id: 'sedan',
-			title: 'Седан',
+			title: 'Sedan',
 			query: `body=${encodeURIComponent('Седан')}`,
-			count: bodyCount('Седан'),
+			count: bodyCount('Sedan'),
 			image: '/assets/images/body-type/generated/body-sedan-studio-card-v1.webp'
 		},
 		{
 			id: 'coupe',
-			title: 'Купе',
+			title: 'Body type',
 			query: `body=${encodeURIComponent('Купе')}`,
-			count: bodyCount('Купе'),
+			count: bodyCount('Body type'),
 			image: '/assets/images/body-type/generated/body-coupe-studio-card-v1.webp'
 		},
 		{
@@ -67,7 +67,7 @@
 		},
 		{
 			id: 'convertible',
-			title: 'Кабриолет',
+			title: 'Convertible',
 			query: `body=${encodeURIComponent('Кабрио')}`,
 			count: bodyCount('Кабрио'),
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'

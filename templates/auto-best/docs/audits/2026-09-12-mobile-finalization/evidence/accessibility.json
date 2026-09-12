@@ -1,0 +1,1318 @@
+{
+  "engine": "axe-core 4.13.0",
+  "notes": "Chromium emulation; third-party iframe contents excluded. Not a manual WCAG certification.",
+  "results": [
+    {
+      "name": "/",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 6
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "name": "/listing-grid",
+      "url": "http://127.0.0.1:6461/listing-grid",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-listing-filter__keyword-value"
+              ],
+              "html": "<span class=\"dn-listing-filter__keyword-value dn-listing-filter__keyword-value--empty\">Марка или модел</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #737984, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 14
+        }
+      ]
+    },
+    {
+      "name": "/contact",
+      "url": "http://127.0.0.1:6461/contact",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/contact?topic=trade-in",
+      "url": "http://127.0.0.1:6461/contact?topic=trade-in",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/contact?topic=import",
+      "url": "http://127.0.0.1:6461/contact?topic=import",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/contact?topic=leasing&vehicle=4",
+      "url": "http://127.0.0.1:6461/contact?topic=leasing&vehicle=4",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/contact?topic=inspection&vehicle=1",
+      "url": "http://127.0.0.1:6461/contact?topic=inspection&vehicle=1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/about-us",
+      "url": "http://127.0.0.1:6461/about-us",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/blog",
+      "url": "http://127.0.0.1:6461/blog",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/1",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/2",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/3",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/3",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/4",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/4",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/5",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/6",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/6",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/7",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/7",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/listing-detail-v1/8",
+      "url": "http://127.0.0.1:6461/listing-detail-v1/8",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Марка</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dn-detail-overview > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Категория</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(3) > dt"
+              ],
+              "html": "<dt>Състояние</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(4) > dt"
+              ],
+              "html": "<dt>Година</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(5) > dt"
+              ],
+              "html": "<dt>Пробег</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(6) > dt"
+              ],
+              "html": "<dt>Гориво</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(7) > dt"
+              ],
+              "html": "<dt>Скоростна кутия</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "div:nth-child(8) > dt"
+              ],
+              "html": "<dt>Локация</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #7a8089, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(1) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Оставаща главница</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".svelte-4agow:nth-child(2) > dt"
+              ],
+              "html": "<dt class=\"svelte-4agow\">Главница / месец</dt>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #707680, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#finance-disclaimer"
+              ],
+              "html": "<p id=\"finance-disclaimer\" class=\"dn-finance-calculator__disclaimer svelte-4agow\">Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #747a83, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "name": "/blog-detail/1",
+      "url": "http://127.0.0.1:6461/blog-detail/1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/2",
+      "url": "http://127.0.0.1:6461/blog-detail/2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/3",
+      "url": "http://127.0.0.1:6461/blog-detail/3",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/4",
+      "url": "http://127.0.0.1:6461/blog-detail/4",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/5",
+      "url": "http://127.0.0.1:6461/blog-detail/5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/6",
+      "url": "http://127.0.0.1:6461/blog-detail/6",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/7",
+      "url": "http://127.0.0.1:6461/blog-detail/7",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/8",
+      "url": "http://127.0.0.1:6461/blog-detail/8",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "/blog-detail/9",
+      "url": "http://127.0.0.1:6461/blog-detail/9",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "name": "menu-320",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 6
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "name": "home-search-320",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "listing-filters-320",
+      "url": "http://127.0.0.1:6461/listing-grid",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-listing-filter__keyword-value"
+              ],
+              "html": "<span class=\"dn-listing-filter__keyword-value dn-listing-filter__keyword-value--empty\">Марка или модел</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #737984, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 14
+        }
+      ]
+    },
+    {
+      "name": "states-320",
+      "error": "locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.dn-mobile-filter-fields button').filter({ has: getByText('Марка', { exact: true }) })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-expanded=\"false\" aria-haspopup=\"dialog\" class=\"svelte-1p0aidb\" aria-controls=\"dn-dialog-choice\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    16 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "menu-390",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 6
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "name": "home-search-390",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "listing-filters-390",
+      "url": "http://127.0.0.1:6461/listing-grid",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-listing-filter__keyword-value"
+              ],
+              "html": "<span class=\"dn-listing-filter__keyword-value dn-listing-filter__keyword-value--empty\">Марка или модел</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #737984, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 14
+        }
+      ]
+    },
+    {
+      "name": "states-390",
+      "error": "locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.dn-mobile-filter-fields button').filter({ has: getByText('Марка', { exact: true }) })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-expanded=\"false\" aria-haspopup=\"dialog\" class=\"svelte-1p0aidb\" aria-controls=\"dn-dialog-choice\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    16 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "menu-430",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 430,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 6
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "name": "home-search-430",
+      "url": "http://127.0.0.1:6461/",
+      "viewport": {
+        "width": 430,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "name": "listing-filters-430",
+      "url": "http://127.0.0.1:6461/listing-grid",
+      "viewport": {
+        "width": 430,
+        "height": 844
+      },
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".dn-listing-filter__keyword-value"
+              ],
+              "html": "<span class=\"dn-listing-filter__keyword-value dn-listing-filter__keyword-value--empty\">Марка или модел</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #737984, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 14
+        }
+      ]
+    },
+    {
+      "name": "states-430",
+      "error": "locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.dn-mobile-filter-fields button').filter({ has: getByText('Марка', { exact: true }) })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-expanded=\"false\" aria-haspopup=\"dialog\" class=\"svelte-1p0aidb\" aria-controls=\"dn-dialog-choice\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    15 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    }
+  ]
+}

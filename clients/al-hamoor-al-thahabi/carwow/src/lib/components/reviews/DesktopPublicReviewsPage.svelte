@@ -41,7 +41,7 @@
 	<div class="container">
 		<ul class="breadcrumb">
 			<li>
-				<a href={resolve('/')}>Начало</a>
+				<a href={resolve('/')}>Home</a>
 			</li>
 			<li>
 				<img src={asset('/assets/icons/right.svg')} alt="chevron-right" />

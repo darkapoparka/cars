@@ -27,29 +27,29 @@
 		detailDrawerOpen = true;
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
 	let activePhoto = $state(0);
 	const photos = $derived(vehicle.gallery.length > 0 ? vehicle.gallery : [vehicle.image]);
 	const activePhotoSrc = $derived(photos[activePhoto] ?? photos[0] ?? vehicle.image);
 	const visiblePhotos = $derived(photos.slice(0, 6));
 	const specs = $derived<{ icon: DayNightSpecIconName; label: string; value: string }[]>([
-		{ icon: 'year', label: 'Година', value: String(vehicle.year) },
-		{ icon: 'mileage', label: 'Пробег', value: vehicle.mileage },
-		{ icon: 'fuel', label: 'Гориво', value: vehicle.fuel },
-		{ icon: 'transmission', label: 'Скорости', value: vehicle.transmission }
+		{ icon: 'year', label: 'Year', value: String(vehicle.year) },
+		{ icon: 'mileage', label: 'Mileage', value: vehicle.mileage },
+		{ icon: 'fuel', label: 'Fuel', value: vehicle.fuel },
+		{ icon: 'transmission', label: 'Transmission', value: vehicle.transmission }
 	]);
 	const detailSpecs = $derived([
 		['Каросерия', vehicle.body],
-		['Двигател', vehicle.engine],
-		['Мощност', vehicle.power],
-		['Цвят', vehicle.color],
+		['Engine', vehicle.engine],
+		['Power', vehicle.power],
+		['Color', vehicle.color],
 		['Лот', vehicle.lot]
 	]);
 	const tabs = [
 		{ key: 'info', label: 'Инфо' },
-		{ key: 'data', label: 'Данни' },
-		{ key: 'extras', label: 'Екстри' }
+		{ key: 'data', label: 'Specifications' },
+		{ key: 'extras', label: 'Features' }
 	] as const;
 	const COLLAPSED_SNAP_RATIO = 0.58;
 	const FULL_SNAP_OFFSET = 52;
@@ -205,7 +205,7 @@
 					class:is-saved={isSaved}
 					type="button"
 					aria-pressed={isSaved}
-					aria-label={isSaved ? 'Премахни от запазени' : 'Запази'}
+					aria-label={isSaved ? 'Премахни от запазени' : 'Save locally'}
 					onclick={() => garage.toggleFavorite(vehicle.slug)}
 				>
 					<Heart size={19} strokeWidth={2.15} />
@@ -223,7 +223,7 @@
 				<button
 					class="mobile-detail__nav-button mobile-detail__nav-button--share"
 					type="button"
-					aria-label="Сподели"
+					aria-label="Share draft"
 					onclick={shareVehicle}
 				>
 					<Share size={19} strokeWidth={2.15} />
@@ -232,7 +232,7 @@
 		</div>
 
 		{#if photos.length > 1}
-			<div class="mobile-detail__thumbs" aria-label="Снимки">
+			<div class="mobile-detail__thumbs" aria-label="Photographs">
 				{#each visiblePhotos as photo, index (photo)}
 					<button
 						type="button"
@@ -271,7 +271,7 @@
 	>
 		<Drawer.Content
 			class="mobile-detail-sheet"
-			aria-label="Информация за автомобила"
+			aria-label="Vehicle information"
 			data-expanded={sheetExpanded}
 			data-full={sheetFull}
 		>
@@ -292,7 +292,7 @@
 			<div class="mobile-detail-sheet__actions">
 				<a class="is-primary" href={phoneHref}>
 					<PhoneCall size={18} strokeWidth={2.4} />
-					Обади се
+					Call
 				</a>
 				<a class="is-viber" href={viberHref}>
 					<svg
@@ -337,7 +337,7 @@
 			<div
 				class="mobile-detail-tabs"
 				role="tablist"
-				aria-label="Детайли"
+				aria-label="Details"
 				data-active-tab={activeTab}
 			>
 				{#each tabs as tab (tab.key)}
@@ -365,7 +365,7 @@
 			>
 				{#if activeTab === 'info'}
 					<section class="mobile-detail__section">
-						<h2>Описание</h2>
+						<h2>Description</h2>
 						<p class="mobile-detail__section-lead">{vehicle.conditionLine}</p>
 						<p>{vehicle.description}</p>
 					</section>
@@ -383,7 +383,7 @@
 					</div>
 
 					<section class="mobile-detail__section">
-						<h2>Детайли</h2>
+						<h2>Details</h2>
 						<dl>
 							{#each detailSpecs as [label, value] (label)}
 								<div>
@@ -395,7 +395,7 @@
 					</section>
 				{:else if activeTab === 'extras'}
 					<section class="mobile-detail__section">
-						<h2>Екстри</h2>
+						<h2>Features</h2>
 						<ul>
 							{#each vehicle.features as feature (feature)}
 								<li>{feature}</li>

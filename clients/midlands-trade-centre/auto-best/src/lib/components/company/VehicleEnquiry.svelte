@@ -7,7 +7,7 @@
 
   let { kind, importUrl = null }: { kind: 'trade-in' | 'import'; importUrl?: string | null } = $props();
   const selling = $derived(kind === 'trade-in');
-  const title = $derived(selling ? 'Предложи автомобил' : 'Запитване за внос');
+  const title = $derived(selling ? 'Offer your vehicle' : 'Vehicle enquiry');
   let dialog: HTMLDialogElement;
   let form: HTMLFormElement;
   let heading: HTMLHeadingElement;
@@ -25,7 +25,7 @@
   let year = $state('');
   let mileage = $state('');
   let budget = $state('');
-  let purpose = $state('Продажба');
+  let purpose = $state('Sale');
   let name = $state('');
   let phone = $state('');
   let notes = $state('');
@@ -33,18 +33,18 @@
   let photoError = $state('');
   let feedback = $state('');
   let sharing = $state(false);
-  const steps = ['Автомобил', 'Детайли', 'Преглед'];
+  const steps = ['Vehicle', 'Details', 'Review'];
   const summary = $derived([
-    selling ? `Автомобил за ${purpose.toLowerCase()}` : 'Запитване за внос',
-    selectedLink ? `Обява: ${selectedLink}` : '',
-    `Автомобил: ${[make.trim(), model.trim()].filter(Boolean).join(' ') || 'По избраната обява'}`,
-    year ? `${selling ? 'Година' : 'Година от'}: ${year}` : '',
-    mileage ? `Пробег: ${mileage} км` : '',
-    budget ? `${selling ? 'Желана цена' : 'Бюджет'}: ${budget} EUR` : '',
-    notes.trim() ? `Допълнително: ${notes.trim()}` : '',
-    name.trim() ? `Име: ${name.trim()}` : '',
-    phone.trim() ? `Телефон: ${phone.trim()}` : '',
-    photos.length ? `Избрани снимки: ${photos.length}` : ''
+    selling ? `Vehicle for ${purpose.toLowerCase()}` : 'Vehicle enquiry',
+    selectedLink ? `Listing: ${selectedLink}` : '',
+    `Vehicle: ${[make.trim(), model.trim()].filter(Boolean).join(' ') || 'As shown in the selected listing'}`,
+    year ? `${selling ? 'Year' : 'Year from'}: ${year}` : '',
+    mileage ? `Mileage: ${mileage} miles` : '',
+    budget ? `${selling ? 'Asking price' : 'Budget'}: ${budget} GBP` : '',
+    notes.trim() ? `Additional information: ${notes.trim()}` : '',
+    name.trim() ? `Name: ${name.trim()}` : '',
+    phone.trim() ? `Phone: ${phone.trim()}` : '',
+    photos.length ? `Selected photos: ${photos.length}` : ''
   ].filter(Boolean).join('\n'));
 
   const attachDialog: Attachment<HTMLDialogElement> = (node) => {
@@ -56,7 +56,7 @@
 
   async function open(event: MouseEvent, withoutLink = false) {
     if (!selling && !withoutLink && !resolveImportUrl(link)) {
-      linkError = link.trim() ? 'Въведете валиден линк с https:// или http://.' : 'Поставете линк или изберете „Нямам обява“.';
+      linkError = link.trim() ? 'Enter a valid link with https:// or http://.' : 'Paste a link or select “I have no listing”.';
       linkInput?.focus();
       return;
     }
@@ -94,15 +94,15 @@
     photoError = '';
     for (const file of Array.from(input.files || [])) {
       if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-        photoError = 'Изберете JPG, PNG или WebP снимки.';
+        photoError = 'Choose JPG, PNG or WebP photos.';
         continue;
       }
       if (file.size > 10 * 1024 * 1024) {
-        photoError = 'Всяка снимка трябва да е до 10 MB.';
+        photoError = 'Each photo must be no larger than 10 MB.';
         continue;
       }
       if (photos.some((photo) => photo.file.name === file.name && photo.file.size === file.size && photo.file.lastModified === file.lastModified)) continue;
-      if (photos.length >= 6) { photoError = 'Можете да добавите до 6 снимки.'; break; }
+      if (photos.length >= 6) { photoError = 'You can add up to 6 photos.'; break; }
       photos = [...photos, { file, url: URL.createObjectURL(file) }];
     }
     input.value = '';
@@ -117,9 +117,9 @@
   async function copy() {
     try {
       await navigator.clipboard.writeText(summary);
-      feedback = 'Текстът е копиран. Снимките не са включени.';
+      feedback = 'Text copied. Photos are not included.';
     } catch {
-      feedback = 'Копирането не е достъпно. Маркирайте текста от прегледа.';
+      feedback = 'Copying is unavailable. Select the text in the review.';
     }
   }
 
@@ -129,7 +129,7 @@
     try {
       const files = photos.map((photo) => photo.file);
       if (files.length && !navigator.canShare?.({ files })) {
-        feedback = 'Този браузър не може да споделя снимки. Копирайте текста и добавете снимките в избраното приложение.';
+        feedback = 'This browser cannot share photos. Copy the text and add the photos in your chosen app.';
         return;
       }
       if (!navigator.share) {
@@ -137,9 +137,9 @@
         return;
       }
       await navigator.share({ title, text: summary, ...(files.length ? { files } : {}) });
-      feedback = 'Споделянето е приключено. Потвърдете получаването с екипа.';
+      feedback = 'Sharing is complete. Confirm receipt with the team.';
     } catch (error) {
-      if (!(error instanceof Error && error.name === 'AbortError')) feedback = 'Споделянето не успя. Можете да копирате текста и да опитате отново.';
+      if (!(error instanceof Error && error.name === 'AbortError')) feedback = 'Sharing failed. You can copy the text and try again.';
     } finally { sharing = false; }
   }
 
@@ -149,27 +149,27 @@
 <div class="dn-enquiry-entry">
   {#if selling}
     <button class="dn-enquiry-primary" type="button" onclick={open} aria-haspopup="dialog">
-      Предложи автомобил <Icon name="arrow-right" size={20} />
+      Offer your vehicle <Icon name="arrow-right" size={20} />
     </button>
-    <p>Данни, снимки и преглед.</p>
+    <p>Details, photos and review.</p>
   {:else}
-    <label class="dn-sr-only" for="enquiry-listing-link">Линк към обявата</label>
+    <label class="dn-sr-only" for="enquiry-listing-link">Listing link</label>
     <div class="dn-enquiry-link-row">
-      <input id="enquiry-listing-link" bind:this={linkInput} value={link} oninput={(event) => { linkDraft = event.currentTarget.value; linkError = ''; }} type="url" inputmode="url" maxlength={2048} placeholder="Поставете линк към обявата" autocomplete="off" autocapitalize="none" spellcheck={false} aria-invalid={linkError ? true : undefined} aria-describedby={linkError ? 'enquiry-link-error' : undefined} />
-      <button type="button" class="dn-enquiry-link-go" onclick={open} aria-label="Продължи с обявата" aria-haspopup="dialog"><Icon name="arrow-right" size={22} /></button>
+      <input id="enquiry-listing-link" bind:this={linkInput} value={link} oninput={(event) => { linkDraft = event.currentTarget.value; linkError = ''; }} type="url" inputmode="url" maxlength={2048} placeholder="Paste the listing link" autocomplete="off" autocapitalize="none" spellcheck={false} aria-invalid={linkError ? true : undefined} aria-describedby={linkError ? 'enquiry-link-error' : undefined} />
+      <button type="button" class="dn-enquiry-link-go" onclick={open} aria-label="Continue with the listing" aria-haspopup="dialog"><Icon name="arrow-right" size={22} /></button>
     </div>
     {#if linkError}<p class="dn-enquiry-error" id="enquiry-link-error" role="alert">{linkError}</p>{/if}
-    <button class="dn-enquiry-alternative dn-action--dark" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">Нямам обява — опиши търсенето <Icon name="arrow-right" size={17} /></button>
+    <button class="dn-enquiry-alternative dn-action--enquiry" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">No listing — describe your search <Icon name="arrow-right" size={17} /></button>
   {/if}
 </div>
 
 <dialog class="dn-enquiry" aria-labelledby="enquiry-title" {@attach attachDialog} onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <div class="dn-enquiry-panel">
     <header class="dn-enquiry-header">
-      <div><h2 id="enquiry-title" tabindex="-1" bind:this={heading}>{step === 0 ? title : step === 1 ? 'Още няколко детайла' : 'Преглед на запитването'}</h2></div>
-      <button class="dn-enquiry-close" type="button" aria-label="Затвори запитването" onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
+      <div><h2 id="enquiry-title" tabindex="-1" bind:this={heading}>{step === 0 ? title : step === 1 ? 'A few more details' : 'Review your enquiry'}</h2></div>
+      <button class="dn-enquiry-close" type="button" aria-label="Close enquiry" onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
     </header>
-    <ol class="dn-enquiry-steps" aria-label="Стъпки на запитването">
+    <ol class="dn-enquiry-steps" aria-label="Enquiry steps">
       {#each steps as label, index (label)}<li class:current={step === index} class:complete={step > index} aria-current={step === index ? 'step' : undefined}><span>{index + 1}</span>{label}</li>{/each}
     </ol>
 
@@ -177,46 +177,46 @@
       {#if step === 0}
         {#if selectedLink}<div class="dn-enquiry-selected-link"><Icon name="globe" size={20} /><span>{selectedLink}</span></div>{/if}
         {#if selling}
-          <fieldset class="dn-enquiry-purpose"><legend>Какво предпочитате?</legend>{#each ['Продажба', 'Бартер'] as option (option)}<label><input type="radio" bind:group={purpose} value={option} />{option}</label>{/each}</fieldset>
+          <fieldset class="dn-enquiry-purpose"><legend>What would you prefer?</legend>{#each ['Sale', 'Trade-in'] as option (option)}<label><input type="radio" bind:group={purpose} value={option} />{option}</label>{/each}</fieldset>
         {/if}
         <div class="dn-enquiry-fields">
-          <label>Марка{#if !selectedLink}<span aria-hidden="true"> *</span>{/if}<input bind:value={make} name="make" required={!selectedLink} maxlength={60} placeholder="Напр. Audi" autocomplete="off" /></label>
-          <label>Модел{#if !selectedLink}<span aria-hidden="true"> *</span>{/if}<input bind:value={model} name="model" required={!selectedLink} maxlength={80} placeholder="Напр. A6 Avant" autocomplete="off" /></label>
-          <label>{selling ? 'Година' : 'Година от'}<input bind:value={year} name="year" type="text" inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="Напр. 2020" /></label>
-          {#if selling}<label>Пробег, км<input bind:value={mileage} name="mileage" inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="Напр. 85000" /></label>{/if}
-          <label class:wide={!selling}>{selling ? 'Желана цена, €' : 'Бюджет, €'} <span class="dn-enquiry-optional">по желание</span><input bind:value={budget} name="budget" inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder="Напр. 35000" /></label>
+          <label>Make{#if !selectedLink}<span aria-hidden="true"> *</span>{/if}<input bind:value={make} name="make" required={!selectedLink} maxlength={60} placeholder="E.g. Audi" autocomplete="off" /></label>
+          <label>Model{#if !selectedLink}<span aria-hidden="true"> *</span>{/if}<input bind:value={model} name="model" required={!selectedLink} maxlength={80} placeholder="E.g. A6 Avant" autocomplete="off" /></label>
+          <label>{selling ? 'Year' : 'Year from'}<input bind:value={year} name="year" type="text" inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="E.g. 2020" /></label>
+          {#if selling}<label>Mileage, miles<input bind:value={mileage} name="mileage" inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="E.g. 85000" /></label>{/if}
+          <label class:wide={!selling}>{selling ? 'Asking price, £' : 'Budget, £'} <span class="dn-enquiry-optional">optional</span><input bind:value={budget} name="budget" inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder="E.g. 35000" /></label>
         </div>
-        <p class="dn-enquiry-note">{selectedLink ? 'Добавете предпочитания, ако се различават от обявата.' : '* Задължителни полета.'} Данните остават в тази страница до споделяне.</p>
+        <p class="dn-enquiry-note">{selectedLink ? 'Add preferences if they differ from the listing.' : '* Required fields.'} Your details stay on this page until shared.</p>
       {:else if step === 1}
         {#if selling}
           <div class="dn-enquiry-photos">
-            <div class="dn-enquiry-photo-heading"><h3>Снимки на автомобила</h3><span>{photos.length}/6</span></div>
-            <p>Екстериор, интериор и важни детайли.</p>
-            <label class="dn-enquiry-upload"><Icon name="car" size={24} /><span>Добави снимки<small>JPG, PNG, WebP · до 10 MB всяка</small></span><input type="file" accept="image/jpeg,image/png,image/webp" multiple onchange={addPhotos} aria-label="Добави снимки на автомобила" /></label>
+            <div class="dn-enquiry-photo-heading"><h3>Vehicle photos</h3><span>{photos.length}/6</span></div>
+            <p>Exterior, interior and important details.</p>
+            <label class="dn-enquiry-upload"><Icon name="car" size={24} /><span>Add photos<small>JPG, PNG, WebP · up to 10 MB each</small></span><input type="file" accept="image/jpeg,image/png,image/webp" multiple onchange={addPhotos} aria-label="Add vehicle photos" /></label>
             {#if photoError}<p class="dn-enquiry-error" role="alert">{photoError}</p>{/if}
-            {#if photos.length}<ul class="dn-enquiry-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} onerror={() => { removePhoto(photo.url); photoError = 'Снимката не може да се отвори. Изберете друг файл.'; }} /><button type="button" aria-label={`Премахни ${photo.file.name}`} onclick={() => removePhoto(photo.url)}><Icon name="x" size={16} /></button></li>{/each}</ul>{/if}
-            <p class="dn-enquiry-note">Снимките са само за преглед на устройството. Не са качени или изпратени.</p>
+            {#if photos.length}<ul class="dn-enquiry-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} onerror={() => { removePhoto(photo.url); photoError = 'The photo cannot be opened. Choose another file.'; }} /><button type="button" aria-label={`Remove ${photo.file.name}`} onclick={() => removePhoto(photo.url)}><Icon name="x" size={16} /></button></li>{/each}</ul>{/if}
+            <p class="dn-enquiry-note">Photos are only previewed on your device. They have not been uploaded or sent.</p>
           </div>
         {/if}
-        <label class="dn-enquiry-notes">{selling ? 'Състояние и допълнителна информация' : 'Предпочитания и допълнителна информация'}<textarea bind:value={notes} maxlength={1500} rows="3" placeholder={selling ? 'Обслужване, оборудване, забележки…' : 'Двигател, оборудване, държава, срок…'}></textarea></label>
+        <label class="dn-enquiry-notes">{selling ? 'Condition and additional information' : 'Preferences and additional information'}<textarea bind:value={notes} maxlength={1500} rows="3" placeholder={selling ? 'Service history, equipment, issues…' : 'Engine, equipment, country, timeframe…'}></textarea></label>
         <div class="dn-enquiry-fields dn-enquiry-contact-fields">
-          <label>Име <span class="dn-enquiry-optional">по желание</span><input bind:value={name} maxlength={80} autocomplete="name" /></label>
-          <label>Телефон <span class="dn-enquiry-optional">по желание</span><input bind:value={phone} type="tel" maxlength={25} autocomplete="tel" /></label>
+          <label>Name <span class="dn-enquiry-optional">optional</span><input bind:value={name} maxlength={80} autocomplete="name" /></label>
+          <label>Phone <span class="dn-enquiry-optional">optional</span><input bind:value={phone} type="tel" maxlength={25} autocomplete="tel" /></label>
         </div>
       {:else}
-        <div class="dn-enquiry-review-heading"><h3>Всичко на едно място</h3><button class="dn-enquiry-text-button" type="button" onclick={() => move(0)}>Редактирай</button></div>
+        <div class="dn-enquiry-review-heading"><h3>Everything in one place</h3><button class="dn-enquiry-text-button" type="button" onclick={() => move(0)}>Edit</button></div>
         <pre class="dn-enquiry-summary">{summary}</pre>
         {#if photos.length}<div class="dn-enquiry-review-photos">{#each photos as photo (photo.url)}<img src={photo.url} alt={photo.file.name} />{/each}</div>{/if}
-        <div class="dn-enquiry-review-notice"><strong>Запитването още не е изпратено.</strong><p>Споделете го през приложение на устройството или копирайте текста. За директен разговор: <a href={brand.phoneHref}>{brand.phone}</a>.</p></div>
-        <button class="dn-enquiry-copy" type="button" onclick={copy}>Копирай текста</button>
+        <div class="dn-enquiry-review-notice"><strong>Your enquiry has not been sent yet.</strong><p>Share it through an app on your device or copy the text. To speak directly: <a href={brand.phoneHref}>{brand.phone}</a>.</p></div>
+        <button class="dn-enquiry-copy" type="button" onclick={copy}>Copy text</button>
       {/if}
       {#if feedback}<p class="dn-enquiry-feedback" role="status">{feedback}</p>{/if}
     </form>
 
     <footer class="dn-enquiry-footer">
-      {#if step > 0}<button class="dn-enquiry-back" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={18} />Назад</button>{/if}
-      {#if step < 2}<button class="dn-enquiry-primary" type="button" onclick={() => move(step + 1)}>{step === 0 ? 'Продължи' : 'Прегледай запитването'}<Icon name="arrow-right" size={18} /></button>
-      {:else}<button class="dn-enquiry-primary" type="button" disabled={sharing} onclick={share}>{sharing ? 'Отваряне…' : 'Сподели запитването'}<Icon name="arrow-right" size={18} /></button>{/if}
+      {#if step > 0}<button class="dn-enquiry-back" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={18} />Back</button>{/if}
+      {#if step < 2}<button class="dn-enquiry-primary" type="button" onclick={() => move(step + 1)}>{step === 0 ? 'Continue' : 'Review enquiry'}<Icon name="arrow-right" size={18} /></button>
+      {:else}<button class="dn-enquiry-primary" type="button" disabled={sharing} onclick={share}>{sharing ? 'Opening…' : 'Share enquiry'}<Icon name="arrow-right" size={18} /></button>{/if}
     </footer>
   </div>
 </dialog>

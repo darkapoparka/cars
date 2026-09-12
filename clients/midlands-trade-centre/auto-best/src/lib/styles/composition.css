@@ -8,6 +8,9 @@
 .dn-action--dark { background: var(--dn-ink); color: var(--dn-white); }
 .dn-action--dark:hover { background: var(--dn-ink-hover); }
 .dn-action--dark:focus-visible { outline: 2px solid var(--dn-ink); outline-offset: 3px; }
+.dn-action--enquiry { background: var(--dn-red); color: var(--dn-white); }
+.dn-action--enquiry:hover { background: var(--dn-red-hover); }
+.dn-action--enquiry:focus-visible { outline: 2px solid var(--dn-red); outline-offset: 3px; }
 
 .dn-route-hero {
   position: relative;
@@ -270,7 +273,7 @@
   .dn-logo img { max-width: 190px; }
   .dn-nav__list { gap: 2px; }
   .dn-nav__list > li > a { padding-inline: 8px; font-size: 16px; white-space: nowrap; }
-  .dn-header-actions .dn-header-action { padding-inline: 14px; font-size: 16px; white-space: nowrap; }
+  .dn-header-actions .dn-header-action { padding-inline: 14px; white-space: nowrap; }
 }
 
 @media (max-width: 991px) {

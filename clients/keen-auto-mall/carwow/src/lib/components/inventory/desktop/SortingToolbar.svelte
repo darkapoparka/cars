@@ -32,7 +32,7 @@
 	<div class="daynight-inventory-results-toolbar">
 		<div class="daynight-inventory-results-count-cell">
 			<p class="daynight-inventory-result-count">
-				<span id="filterMatchesCount">{count}</span> автомобила
+				<span id="filterMatchesCount">{count}</span> vehicles
 			</p>
 		</div>
 		<div class="inventory-toolbar-actions">
@@ -102,7 +102,7 @@
 		style:display={hasTags ? '' : 'none'}
 		onclick={clearAll}
 	>
-		Изчисти
+		Clear
 		<img src="/assets/icons/X-White.svg" alt="" aria-hidden="true" />
 	</button>
 </div>

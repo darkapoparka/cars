@@ -14,7 +14,7 @@
 		onOpenSearch: () => void;
 	} = $props();
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
 	const searchLabel = $derived(query.trim() ? `Търсене: ${query.trim()}` : 'Отвори търсене');
 </script>
@@ -36,7 +36,7 @@
 				</a>
 				<a href={phoneHref}>
 					<PhoneCall size={17} strokeWidth={2.4} />
-					Обади се
+					Call
 				</a>
 				<a href={viberHref}>
 					<MessageCircle size={17} strokeWidth={2.4} />

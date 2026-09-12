@@ -81,7 +81,7 @@
 												fill="#1C1C1C"
 											/>
 										</svg>
-										Филтри</button
+										Filters</button
 									>
 									<p class="md-hidden">
 										Карта на наличните автомобили · {filters.resultCount} автомобила
@@ -155,7 +155,7 @@
 							</div>
 							<div class="inventory-map-toolbar__cell inventory-map-toolbar__cell--sort">
 								<div class="flex h-full items-center justify-end gap-[8px]">
-									<p class="md-hidden">Сортиране</p>
+									<p class="md-hidden">Sort</p>
 									<SortDropdown />
 								</div>
 							</div>
@@ -167,7 +167,7 @@
 								data-show="false"
 							>
 								<p class="inline gap-[4px]">
-									<span id="filterMatchesCount">{filters.resultCount} </span> автомобила
+									<span id="filterMatchesCount">{filters.resultCount} </span> vehicles
 								</p>
 								<div
 									class="divider-vertical-style2 inline-block h-[16px] align-middle"
@@ -177,7 +177,7 @@
 								<div id="filterTags" class="inline gap-[8px]"></div>
 
 								<button class="btn-clear-items" id="btnClearAll">
-									Изчисти
+									Clear
 									<img src="/assets/icons/X-White.svg" alt="X" />
 								</button>
 							</div>

@@ -32,7 +32,7 @@
 	type LeadSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 	type ImportInfo = 'process' | 'coverage';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const initialSearchParams = appPage.url.searchParams;
 	const contactContext = readContactIntent(initialSearchParams);
@@ -47,7 +47,7 @@
 	const contactCards = [
 		{
 			id: 'phone',
-			title: 'Телефон',
+			title: 'Phone',
 			value: daynightSite.phoneLabel,
 			icon: PhoneCall
 		},
@@ -59,13 +59,13 @@
 		},
 		{
 			id: 'address',
-			title: 'Адрес',
+			title: 'Address',
 			value: daynightSite.location,
 			icon: MapPin
 		},
 		{
 			id: 'hours',
-			title: 'Работно време',
+			title: 'Opening hours',
 			value: daynightSite.hoursLabel,
 			href: null,
 			icon: Clock
@@ -255,13 +255,13 @@
 				<a href={resolve('/')} aria-label="Day Night Auto начало">
 					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 				</a>
-				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
+				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Call">
 					<Phone size={19} strokeWidth={2.35} />
 				</a>
 			</div>{/if}
 
 		<div class="mobile-contact-hero__copy">
-			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
+			{#if !isImportMode}<span class="mobile-contact-hero__label">Contact</span>{/if}
 			<h1>
 				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
 			</h1>
@@ -284,12 +284,12 @@
 						bind:value={sourceUrl}
 						type="url"
 						inputmode="url"
-						placeholder="Поставете линк към обява"
+						placeholder="Paste a listing link"
 						autocomplete="url"
-						aria-label="Линк към обява за внос"
+						aria-label="Import listing link"
 					/>
 				</label>
-				<button type="submit" aria-label="Продължи">
+				<button type="submit" aria-label="Continue">
 					<ChevronRight size={22} strokeWidth={2.7} aria-hidden="true" />
 				</button>
 			</form>
@@ -301,7 +301,7 @@
 			<div class="mobile-contact-actions">
 				<a class="mobile-contact-action mobile-contact-action--call" href={phoneHref}>
 					<PhoneCall size={20} strokeWidth={2.5} />
-					<span>Обади се</span>
+					<span>Call</span>
 				</a>
 				<button
 					class="mobile-contact-action mobile-contact-action--map"
@@ -347,7 +347,7 @@
 				tabindex="-1"
 			>
 				<div class="mobile-contact-heading">
-					<span>{isImportMode ? 'Стъпка 2' : 'Запитване'}</span>
+					<span>{isImportMode ? 'Стъпка 2' : 'Enquiry'}</span>
 					<h2 id="mobile-contact-form-title">
 						{isImportMode ? 'Уточнете търсенето' : contactContext.subject || 'Пишете ни за автомобил'}
 					</h2>
@@ -389,7 +389,7 @@
 							/>
 						</div>
 						{#if !isImportMode}<label>
-								<span>Име</span>
+								<span>Name</span>
 								<input
 									bind:value={name}
 									name="name"
@@ -412,7 +412,7 @@
 							</label>
 							<div class="mobile-contact-form__grid">
 								<label>
-									<span>Година от</span>
+									<span>Year from</span>
 									<input
 										bind:value={importYear}
 										name="year"
@@ -422,7 +422,7 @@
 									/>
 								</label>
 								<label>
-									<span>Бюджет</span>
+									<span>Budget</span>
 									<input
 										bind:value={importBudget}
 										name="budget"
@@ -446,7 +446,7 @@
 							/>
 						</label>
 						<label>
-							<span>{isImportMode ? 'Допълнителни условия' : 'Съобщение'}</span>
+							<span>{isImportMode ? 'Допълнителни условия' : 'Message'}</span>
 							<textarea
 								bind:value={message}
 								name="message"
@@ -464,7 +464,7 @@
 									? 'Изпращаме...'
 									: isImportMode
 										? 'Изпрати заявка'
-										: 'Изпрати запитване'}
+										: 'Prepare enquiry'}
 							</span>
 						</button>
 						{#if leadSubmitMessage}
@@ -504,7 +504,7 @@
 				</span>
 				<a href={phoneHref}>
 					<Phone size={18} strokeWidth={2.45} aria-hidden="true" />
-					<span>Обади се</span>
+					<span>Call</span>
 				</a>
 			</section>
 		{/if}
@@ -512,12 +512,12 @@
 		<section class="mobile-contact-map" aria-label="Карта">
 			<div class="mobile-contact-map__head">
 				<div>
-					<span>Локация</span>
+					<span>Location</span>
 					<h2>Шоурум в София</h2>
 				</div>
 				<a href={resolve('/inventory')}>
 					<CarFront size={18} strokeWidth={2.45} />
-					<span>Коли</span>
+					<span>Cars</span>
 				</a>
 			</div>
 			<iframe
@@ -573,7 +573,7 @@
 								: 'Практическа помощ до предаването на автомобила'}
 						</p>
 					</div>
-					<button type="button" onclick={closeImportInfo} aria-label="Затвори">
+					<button type="button" onclick={closeImportInfo} aria-label="Close">
 						<X size={20} strokeWidth={2.45} aria-hidden="true" />
 					</button>
 				</header>

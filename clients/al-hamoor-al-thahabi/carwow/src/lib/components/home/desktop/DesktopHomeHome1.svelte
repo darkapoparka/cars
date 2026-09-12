@@ -22,7 +22,7 @@
 			<DesktopHomeBrandStrip
 				brands={brandStrip.slice(0, 12)}
 				title="Избери марка"
-				ctaLabel="Всички марки"
+				ctaLabel="All makes"
 			/>
 			<DesktopHomeVehicleCategories title="Тип каросерия" ctaLabel="Всички типове" />
 			<DesktopHomeWhyDayNight showMetrics={false} />

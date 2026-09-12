@@ -204,7 +204,7 @@
 									class="inline-flex min-h-11 items-center justify-center rounded-sa-xs border border-sa-surface/20 px-3.5 text-sa-base leading-none font-semibold text-sa-surface/75 no-underline transition duration-150 ease-sa hover:border-sa-blue hover:bg-sa-blue hover:text-sa-surface focus-visible:border-sa-blue focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue"
 									title="Свържете се със Day Night Auto."
 								>
-									Свържете се
+									Get in touch
 								</a>
 							</div>
 						</div>

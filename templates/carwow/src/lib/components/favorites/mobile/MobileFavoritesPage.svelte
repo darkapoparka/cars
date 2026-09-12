@@ -5,6 +5,7 @@
 	import { shortFuel } from '$lib/utils/format';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 	import { getDayNightVehicleBySlug, type DayNightVehicle } from '$lib/data/daynight-vehicles';
+	import MobileHeader from '$lib/components/home/mobile/MobileHeader.svelte';
 	import MobileBottomDock from '$lib/components/home/mobile/MobileBottomDock.svelte';
 	import {
 		enhanceDayNightImageFallbacks,
@@ -33,10 +34,11 @@
 </script>
 
 <div class="mobile-favorites" aria-label="Запазени автомобили">
+	<MobileHeader banner />
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-favorites-top">
 			<a class="mobile-favorites-top__back" href={resolve('/')}>← Към сайта</a>
-			<span>Любими</span>
+
 			<h1>Запазени</h1>
 			<p>{vehicles.length ? countLabel : 'Запазвайте автомобили, за да ги намерите тук.'}</p>
 		</section>
@@ -147,15 +149,6 @@
 		background: var(--sa-blue);
 		padding: calc(env(safe-area-inset-top) + 18px) var(--sa-mobile-gutter) 20px;
 		color: #fff;
-	}
-
-	.mobile-favorites-top span {
-		color: rgba(255, 255, 255, 0.74);
-		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		letter-spacing: 0.09em;
-		line-height: 1;
-		text-transform: uppercase;
 	}
 
 	.mobile-favorites-top h1 {
@@ -461,6 +454,28 @@
 		}
 	}
 
+	@media (max-width: 575px) {
+		.mobile-favorites main {
+			padding-top: calc(62px + env(safe-area-inset-top));
+		}
+		.mobile-favorites-top {
+			background: #08090b;
+			color: #fff;
+			gap: 8px;
+			padding: 20px 16px 24px;
+		}
+		.mobile-favorites-top h1 {
+			color: #fff;
+			font-size: 26px;
+			font-weight: 700;
+		}
+		.mobile-favorites-top p {
+			color: #c9cdd3;
+			font-size: 14px;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+	}
 	@media (max-width: 370px) {
 		.mobile-favorites-card__link {
 			grid-template-columns: 122px minmax(0, 1fr);

@@ -1,5 +1,3 @@
-# Auto Best template instructions
+# Client demo: keen-auto-mall / auto-best
 
-Read J:/cars/AGENTS.md, this TEMPLATE.md and .template/template.json first. This is a reusable source baseline. Preserve the current UI/UX. For a lead, clone into J:/cars/clients/<client>/auto-best before changing identity, colors, assets or copy. Historic source-client instructions and task ledgers do not authorize work in this copy. Use the Cars startup helper with a free port rather than old source-specific launch commands. No sending, deployment or CRM state change is implied.
-
-For shared improvements, follow [ARCHITECTURE.md](ARCHITECTURE.md) for component, data, styling, content verification and QA ownership.
+Read J:/cars/AGENTS.md, J:/cars/docs/WORKFLOW.md, the client brief and .client/project.json. This independent copy needs personalization. Do not edit the master or resume its historical source-client tasks. Use the selected template's existing UI/UX and current TEMPLATE.md. Carry verified facts into the existing brand/data files; this metadata is not wired to the application. Never inherit deployment or CRM identity from the source. Record actual QA and public URL before marking ready.

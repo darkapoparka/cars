@@ -1,0 +1,1019 @@
+
+## src/lib/data/company.ts
+1: import { brand } from '$config/brand';
+2: 
+3: export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
+4: 
+5: type CompanyService = {
+6:   index: string;
+7:   icon: CompanyServiceIcon;
+8:   title: string;
+9:   description: string;
+10:   href: string;
+11:   cta: string;
+12: };
+13: 
+14: type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+15: 
+16: export type ContactTopic = {
+17:   id: ContactTopicId;
+18:   label: string;
+19:   title: string;
+20:   description: string;
+21:   mobileDescription?: string;
+22: };
+23: 
+24: /** Conversation prompts, not a promise of service or a submitted enquiry. */
+25: export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
+26:   'trade-in': {
+27:     title: 'Подгответе за разговора',
+28:     items: ['Марка, модел и година', 'Пробег и състояние', 'Снимки или линк към обява']
+29:   },
+30:   import: {
+31:     title: 'Какъв автомобил търсите?',
+32:     items: ['Марка, модел и предпочитания', 'Бюджет за покупката и вноса', 'Линк към обява, ако вече сте избрали']
+33:   },
+34:   leasing: {
+35:     title: 'Обсъдете с екипа',
+36:     items: ['Автомобилът, който сте избрали', 'Първоначална вноска и срок', 'Актуални условия за конкретната сделка']
+37:   },
+38:   inspection: {
+39:     title: 'Уговорете посещението',
+40:     items: ['Автомобилът, който искате да видите', 'Удобен ден и час', 'Потвърждение от екипа по телефона']
+41:   }
+42: };
+43: 
+44: /** Validate a user-provided listing link without fetching or inspecting its destination. */
+45: export function resolveImportUrl(value: string | null): string | null {
+46:   const candidate = value?.trim();
+47:   if (!candidate || candidate.length > 2048) return null;
+48:   try {
+49:     const url = new URL(candidate);
+50:     if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) return null;
+51:     return url.href;
+52:   } catch {
+53:     return null;
+54:   }
+55: }
+56: 
+57: export const companyServices: CompanyService[] = [
+58:   {
+59:     index: '01',
+60:     icon: 'inspection',
+61:     title: `Оглед в ${brand.city}`,
+62:     description: `Посещение в ${brand.city} с предварителна уговорка.`,
+63:     href: '/contact?topic=inspection',
+64:     cta: 'Запазете оглед'
+65:   },
+66:   {
+67:     index: '02',
+68:     icon: 'import',
+69:     title: 'Внос по заявка',
+70:     description: 'Обсъдете автомобил, бюджет и внос с екипа.',
+71:     href: '/contact?topic=import',
+72:     cta: 'Попитайте за внос'
+73:   },
+74:   {
+75:     index: '03',
+76:     icon: 'leasing',
+77:     title: 'Собствен лизинг',
+78:     description: 'Условия според избрания автомобил.',
+79:     href: '/contact?topic=leasing',
+80:     cta: 'Обсъдете лизинг'
+81:   },
+82:   {
+83:     index: '04',
+84:     icon: 'trade-in',
+85:     title: 'Оценка за бартер',
+86:     description: 'Предложете своя автомобил за индивидуална оценка.',
+87:     href: '/contact?topic=trade-in',
+88:     cta: 'Поискайте оценка'
+89:   }
+90: ];
+91: 
+92: export const contactTopics: ContactTopic[] = [
+93:   {
+94:     id: 'general',
+95:     label: 'Общ въпрос',
+96:     title: 'Разговор с екипа',
+97:     description: `За наличност, следващи стъпки или друг въпрос за ${brand.name}.`
+98:   },
+99:   {
+100:     id: 'inspection',
+101:     label: 'Оглед',
+102:     title: `Оглед в ${brand.city}`,
+103:     description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
+104:   },
+105:   {
+106:     id: 'import',
+107:     label: 'Внос',
+108:     title: 'Внос по заявка',
+109:     description: 'Обсъдете критериите си за автомобил, бюджет и предпочитания за внос с екипа.',
+110:     mobileDescription: 'Добавете обява или опишете какво търсите.'
+111:   },
+112:   {
+113:     id: 'leasing',
+114:     label: 'Лизинг',
+115:     title: 'Собствен лизинг',
+116:     description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
+117:   },
+118:   {
+119:     id: 'trade-in',
+120:     label: 'Бартер',
+121:     title: 'Бартер и оценка',
+122:     description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
+123:     mobileDescription: 'Поискайте оценка за продажба или бартер.'
+124:   }
+125: ];
+126: 
+127: export const resolveContactTopic = (value: string | null) =>
+128:   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
+129: 
+130: export const showroomCoordinates = {
+131:   latitude: 42.648551,
+132:   longitude: 23.341905
+133: } as const;
+
+## src/lib/data/demo-content.ts
+1: type DemoTeamMember = {
+2:   id: string;
+3:   name: string;
+4:   role: string;
+5:   image: string;
+6: };
+7: 
+8: type DemoPartner = {
+9:   id: string;
+10:   name: string;
+11:   image: string;
+12: };
+13: 
+14: export const demoContentLabel = 'Демо съдържание';
+15: 
+16: export const demoTeamIntro =
+17:   'Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.';
+18: 
+19: export const demoPartnerIntro =
+20:   'Примерни автомобилни марки за визуален преглед. Те не представят потвърдени партньорства.';
+21: 
+22: export const demoTeamMembers: DemoTeamMember[] = [
+23:   {
+24:     id: 'arlene-mccoy',
+25:     name: 'Arlene McCoy',
+26:     role: 'Консултант · демо',
+27:     image: '/assets/images/img-box/team1.jpg'
+28:   },
+29:   {
+30:     id: 'ronald-richards',
+31:     name: 'Ronald Richards',
+32:     role: 'Консултант · демо',
+33:     image: '/assets/images/img-box/team2.jpg'
+34:   },
+35:   {
+36:     id: 'leslie-alexander',
+37:     name: 'Leslie Alexander',
+38:     role: 'Консултант · демо',
+39:     image: '/assets/images/img-box/team3.jpg'
+40:   },
+41:   {
+42:     id: 'cody-fisher',
+43:     name: 'Cody Fisher',
+44:     role: 'Консултант · демо',
+45:     image: '/assets/images/img-box/team4.jpg'
+46:   }
+47: ];
+48: 
+49: export const demoPartners: DemoPartner[] = [
+50:   { id: 'carlogo', name: 'CARLOGO', image: '/assets/images/partner/par1.png' },
+51:   { id: 'topcars', name: 'TOPCARS', image: '/assets/images/partner/par2.png' },
+52:   { id: 'vehicle-store', name: 'VEHICLE STORE', image: '/assets/images/partner/par3.png' },
+53:   { id: 'speedcare', name: 'SPEEDCARE', image: '/assets/images/partner/par4.png' },
+54:   { id: 'carservice', name: 'CARSERVICE', image: '/assets/images/partner/par5.png' },
+55:   { id: 'cartrade', name: 'CARTRADE', image: '/assets/images/partner/par6.png' }
+56: ];
+
+## src/lib/data/editorial.ts
+1: import { brand } from '$config/brand';
+2: 
+3: export type BlogCategory = 'Оглед' | 'Внос' | 'Лизинг' | 'Насоки' | 'Бартер';
+4: 
+5: export type BlogPost = {
+6:   id: number;
+7:   title: string;
+8:   text: string;
+9:   category: BlogCategory;
+10:   tag: string;
+11:   image: string;
+12:   sections: Array<{
+13:     title: string;
+14:     paragraphs: string[];
+15:   }>;
+16: };
+17: 
+18: export type BlogFilters = {
+19:   q: string;
+20:   category: BlogCategory | '';
+21: };
+22: 
+23: export const blogPosts: BlogPost[] = [
+24:   {
+25:     id: 1,
+26:     title: 'Какво да проверите преди покупка?',
+27:     text: 'История, документи и техническо състояние се потвърждават директно с екипа.',
+28:     category: 'Оглед',
+29:     tag: 'Оглед',
+30:     image: '/assets/images/blog/blog-1.jpg',
+31:     sections: [
+32:       {
+33:         title: 'Започнете с историята и документите',
+34:         paragraphs: [
+35:           'Преди срещата поискайте основните данни за автомобила и наличната сервизна история. Сравнете идентификационните данни в документите с тези върху автомобила и отбележете всичко, което трябва да бъде изяснено на място.'
+36:         ]
+37:       },
+38:       {
+39:         title: 'Огледайте автомобила последователно',
+40:         paragraphs: [
+41:           'Проверете каросерията, гумите, интериора и работата на основните системи, след което направете пробно шофиране. Ако не сте сигурни в техническото състояние, включете независим специалист преди решение за покупка.'
+42:         ]
+43:       }
+44:     ]
+45:   },
+46:   {
+47:     id: 2,
+48:     title: 'Как протича вносът на автомобил?',
+49:     text: 'Обсъдете търсене, транспорт и подготовката за регистрация в България.',
+50:     category: 'Внос',
+51:     tag: 'Документи',
+52:     image: '/assets/images/blog/blog-2.jpg',
+53:     sections: [
+54:       {
+55:         title: 'Определете точни критерии за търсенето',
+56:         paragraphs: [
+57:           'Марка и модел не са достатъчни. Уточнете година, двигател, оборудване, допустим пробег и общ бюджет, включително транспорт и подготовка за регистрация.'
+58:         ]
+59:       },
+60:       {
+61:         title: 'Поискайте ясна следа на всяка стъпка',
+62:         paragraphs: [
+63:           'Преди ангажимент потвърдете кой е конкретният автомобил, какво е известно за състоянието му, кои документи го придружават и как ще бъде организиран транспортът. Финалните изисквания за регистрация трябва да се сверят с актуалните официални правила.'
+64:         ]
+65:       }
+66:     ]
+67:   },
+68:   {
+69:     id: 3,
+70:     title: 'Как да сравните лизингови оферти?',
+71:     text: 'Попитайте за актуалните условия според избрания автомобил.',
+72:     category: 'Лизинг',
+73:     tag: 'Лизинг',
+74:     image: '/assets/images/blog/blog-3.jpg',
+75:     sections: [
+76:       {
+77:         title: 'Сравнявайте цялата оферта',
+78:         paragraphs: [
+79:           'Гледайте не само месечната вноска, а срока, първоначалното плащане, общата дължима сума, таксите, застраховките и условията за собственост в края на договора.'
+80:         ]
+81:       },
+82:       {
+83:         title: 'Подгответе реалистичен бюджет',
+84:         paragraphs: [
+85:           'Оставете място за регистрация, обслужване и текущи разходи. Поискайте писмена индивидуална оферта за конкретния автомобил, преди да сравнявате различни варианти.'
+86:         ]
+87:       }
+88:     ]
+89:   },
+90:   {
+91:     id: 4,
+92:     title: 'Как да изберете автомобил',
+93:     text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
+94:     category: 'Насоки',
+95:     tag: 'Избор',
+96:     image: '/assets/images/blog/blog-4.jpg',
+97:     sections: [
+98:       {
+99:         title: 'Започнете от ежедневната употреба',
+100:         paragraphs: [
+101:           'Помислете къде ще се движи автомобилът, колко хора и багаж обичайно превозвате и кои удобства са наистина важни. Така списъкът с подходящи модели става по-кратък и смислен.'
+102:         ]
+103:       },
+104:       {
+105:         title: 'Сравнете повече от покупната цена',
+106:         paragraphs: [
+107:           'Разходът, обслужването, гумите, застраховката и очакваният пробег влияят върху реалната цена на притежание. Изберете най-добрия баланс за вашия начин на използване, а не просто най-дългия списък с екстри.'
+108:         ]
+109:       }
+110:     ]
+111:   },
+112:   {
+113:     id: 5,
+114:     title: `Оглед в ${brand.city}`,
+115:     text: `Уговорете посещение на ${brand.addressLine}.`,
+116:     category: 'Оглед',
+117:     tag: brand.city,
+118:     image: '/assets/images/blog/blog-5.jpg',
+119:     sections: [
+120:       {
+121:         title: 'Запазете удобно време предварително',
+122:         paragraphs: [
+123:           'Посещенията в шоурума са с предварителна уговорка. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.'
+124:         ]
+125:       },
+126:       {
+127:         title: 'Дайте си време за спокоен оглед',
+128:         paragraphs: [
+129:           'Прегледайте автомобила на дневна светлина, седнете на всички места, проверете практичните детайли и запишете въпросите си. Не е необходимо да вземате решение преди да сте изяснили състоянието и документите.'
+130:         ]
+131:       }
+132:     ]
+133:   },
+134:   {
+135:     id: 6,
+136:     title: 'Бартер и оценка',
+137:     text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
+138:     category: 'Бартер',
+139:     tag: 'Бартер',
+140:     image: '/assets/images/blog/blog-6.jpg',
+141:     sections: [
+142:       {
+143:         title: 'Подгответе точна информация за автомобила',
+144:         paragraphs: [
+145:           'Модел, година, пробег, оборудване, сервизна история и известни забележки дават добра начална картина. Снимките помагат за предварителен разговор, но не заменят огледа на място.'
+146:         ]
+147:       },
+148:       {
+149:         title: 'Разглеждайте оценката като част от цялата сделка',
+150:         paragraphs: [
+151:           'Крайната стойност зависи от състоянието, документите и текущото пазарно търсене. Сравнете не само оценката на стария автомобил, а и условията по автомобила, който искате да придобиете.'
+152:         ]
+153:       }
+154:     ]
+155:   },
+156:   {
+157:     id: 7,
+158:     title: 'Регистрация след внос',
+159:     text: 'Екипът ориентира за следващите стъпки след пристигане на автомобила.',
+160:     category: 'Внос',
+161:     tag: 'Документи',
+162:     image: '/assets/images/blog/blog-7.jpg',
+163:     sections: [
+164:       {
+165:         title: 'Подредете наличните документи',
+166:         paragraphs: [
+167:           'Съберете документите за произход и придобиване на автомобила, както и всичко получено при транспорта. Проверете имената, идентификационните данни и датите за разминавания още преди започване на регистрацията.'
+168:         ]
+169:       },
+170:       {
+171:         title: 'Проверете актуалната процедура',
+172:         paragraphs: [
+173:           'Изискванията зависят от произхода и конкретния автомобил. Потвърдете текущите стъпки и необходимите оригинали с компетентните институции или избран доставчик, вместо да разчитате на стар списък от интернет.'
+174:         ]
+175:       }
+176:     ]
+177:   },
+178:   {
+179:     id: 8,
+180:     title: 'Какво да попитате при оглед',
+181:     text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
+182:     category: 'Оглед',
+183:     tag: 'Оглед',
+184:     image: '/assets/images/blog/blog-8.jpg',
+185:     sections: [
+186:       {
+187:         title: 'Попитайте за историята и текущото състояние',
+188:         paragraphs: [
+189:           'Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.'
+190:         ]
+191:       },
+192:       {
+193:         title: 'Проверете оборудването и следващите разходи',
+194:         paragraphs: [
+195:           'Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.'
+196:         ]
+197:       }
+198:     ]
+199:   },
+200:   {
+201:     id: 9,
+202:     title: 'След покупката',
+203:     text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
+204:     category: 'Насоки',
+205:     tag: 'Сервиз',
+206:     image: '/assets/images/blog/blog-9.jpg',
+207:     sections: [
+208:       {
+209:         title: 'Съхранете документите и планирайте сроковете',
+210:         paragraphs: [
+211:           'Подредете договора, платежните документи, сервизната информация и всичко предадено с автомобила. Проверете актуалните срокове за регистрация и застраховане по официален източник.'
+212:         ]
+213:       },
+214:       {
+215:         title: 'Направете добра отправна точка за поддръжката',
+216:         paragraphs: [
+217:           'Запишете текущия пробег и планирайте първоначален технически преглед според наличната история. Така следващото обслужване се основава на ясна информация, а не на предположения.'
+218:         ]
+219:       }
+220:     ]
+221:   }
+222: ];
+223: 
+224: export const blogCategories: BlogCategory[] = ['Оглед', 'Внос', 'Лизинг', 'Насоки', 'Бартер'];
+225: 
+226: const isBlogCategory = (value: string | null): value is BlogCategory =>
+227:   Boolean(value && blogCategories.includes(value as BlogCategory));
+228: 
+229: export const parseBlogFilters = (params: URLSearchParams): BlogFilters => ({
+230:   q: params.get('q')?.trim() ?? '',
+231:   category: isBlogCategory(params.get('category')) ? params.get('category') as BlogCategory : ''
+232: });
+233: 
+234: const normalize = (value: string) => value.trim().toLocaleLowerCase('bg-BG');
+235: 
+236: export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters) => {
+237:   const query = normalize(filters.q);
+238:   return posts.filter((post) => {
+239:     if (filters.category && post.category !== filters.category) return false;
+240:     if (!query) return true;
+241:     return normalize(`${post.title} ${post.text} ${post.category} ${post.tag}`).includes(query);
+242:   });
+243: };
+244: 
+245: export const blogFilterHref = (filters: BlogFilters, category: BlogCategory | '') => {
+246:   const params = new URLSearchParams();
+247:   if (filters.q) params.set('q', filters.q);
+248:   if (category) params.set('category', category);
+249:   const query = params.toString();
+250:   return query ? `/blog?${query}` : '/blog';
+251: };
+
+## src/lib/data/feature-artwork.ts
+1: export type FeatureArtwork = {
+2:   src: string;
+3:   width: number;
+4:   height: number;
+5:   crop: readonly [number, number, number, number];
+6: };
+7: 
+8: // Service artwork uses a common landscape frame; inspection remains the owner's reference.
+9: export const featureArtwork = {
+10:   showroom: { src: '/assets/images/template/menu-showroom-v2.png', width: 1536, height: 1024, crop: [-150, -65, 1836, 1020] },
+11:   import: { src: '/assets/images/template/menu-import-v2.png', width: 1536, height: 1024, crop: [0, 80, 1536, 853] },
+12:   finance: { src: '/assets/images/template/menu-leasing-v2.png', width: 1610, height: 977, crop: [0, 35, 1610, 894] },
+13:   inspection: { src: '/assets/images/lead/day-night-studio-guide-v1.webp', width: 1200, height: 800, crop: [0, 30, 1200, 667] },
+14: } as const satisfies Record<string, FeatureArtwork>;
+15: 
+16: // Photo-derived menu vignettes are separate from both service art and blog-listing photos.
+17: export const editorialArtwork = {
+18:   inspection: { src: '/assets/images/template/menu-editorial-inspection-v1.png', width: 1536, height: 1024, crop: [0, 0, 1536, 1024] },
+19:   import: { src: '/assets/images/template/menu-editorial-import-v1.png', width: 1536, height: 1024, crop: [0, 0, 1536, 1024] },
+20:   finance: { src: '/assets/images/template/menu-editorial-leasing-v1.png', width: 1536, height: 1024, crop: [0, 0, 1536, 1024] },
+21: } as const satisfies Record<string, FeatureArtwork>;
+
+## src/lib/data/home.ts
+1: import { featuredVehicles } from './inventory';
+2: import { bodyLabel } from './listing';
+3: import { blogPosts } from './editorial';
+4: 
+5: // Visible vehicle bounds align mobile artwork; the opaque wagon uses its visible silhouette.
+6: const bodyArtwork = [
+7:   { label: 'Седан', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 180, height: 80, bounds: [9, 11, 171, 70] },
+8:   { label: 'Хечбек', query: 'Hatchback', image: '/assets/images/icon-box/car-list2.png', width: 180, height: 80, bounds: [12, 8, 168, 71] },
+9:   { label: 'Пикап', query: 'Pickup Truck', image: '/assets/images/icon-box/car-list3.png', width: 180, height: 80, bounds: [11, 13, 170, 71] },
+10:   { label: 'SUV', query: 'SUV', image: '/assets/images/lead/day-night-cutout-urus-v1.webp', width: 1000, height: 667, bounds: [18, 156, 983, 495] },
+11:   { label: 'Кросоувър', query: 'Crossover', image: '/assets/images/icon-box/car-list5.png', width: 206, height: 95, bounds: [0, 0, 206, 95] },
+12:   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80, bounds: [0, 0, 140, 80] },
+13:   { label: 'Комби', query: 'Wagon', image: '/assets/images/template/body-wagon-v1.png', width: 1832, height: 858, bounds: [22, 138, 1800, 716] },
+14:   { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 180, height: 80, bounds: [11, 15, 170, 63] },
+15:   { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667, bounds: [12, 169, 987, 480] },
+16:   { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667, bounds: [14, 169, 980, 473] }
+17: ] as const;
+18: 
+19: const brandArtwork = [
+20:   { label: 'Land Rover', image: '/assets/images/partner/partner1.png', width: 210, height: 183, bounds: [13, 43, 197, 140] },
+21:   { label: 'Kia', image: '/assets/images/partner/partner2.png', width: 210, height: 120, bounds: [3, 36, 207, 85] },
+22:   { label: 'Toyota', image: '/assets/images/partner/partner3.png', width: 160, height: 80, bounds: [8, 20, 152, 59] },
+23:   { label: 'Jeep', image: '/assets/images/partner/partner4.png', width: 210, height: 120, bounds: [20, 27, 190, 95] },
+24:   { label: 'Nissan', image: '/assets/images/partner/partner5.png', width: 216, height: 156, bounds: [36, 20, 177, 138] },
+25:   { label: 'Ford', image: '/assets/images/partner/partner6.png', width: 210, height: 120, bounds: [3, 24, 207, 96] },
+26:   { label: 'Foton', image: '/assets/images/partner/parner7.png', width: 184, height: 104, bounds: [42, 23, 142, 81] },
+27:   { label: 'Mercedes-Benz', image: '/assets/images/partner/parner8.png', width: 140, height: 80, bounds: [33, 3, 107, 77] },
+28:   { label: 'Dongfeng', image: '/assets/images/partner/parner9.png', width: 140, height: 80, bounds: [12, 10, 128, 70] },
+29:   { label: 'Isuzu', image: '/assets/images/partner/parner10.png', width: 140, height: 80, bounds: [11, 10, 129, 70] },
+30:   { label: 'Audi', image: '/assets/images/partner/parner11.png', width: 140, height: 80, bounds: [8, 18, 132, 62] },
+31:   { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
+32: ] as const;
+33: 
+34: // Template discovery is independent of the current sample inventory.
+35: const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
+36: export const bodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({
+37:   ...item, label: bodyLabel(item.query), count: featuredVehicles.filter(vehicle => vehicle.body === item.query).length
+38: }));
+39: export const brands = brandArtwork.map(item => ({
+40:   ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length
+41: }));
+42: 
+43: export const editorial = blogPosts.slice(0, 3).map(post => ({
+44:   title: post.title, text: post.text, image: post.image,
+45:   href: `/blog-detail/${post.id}`, meta: 'Полезно', category: post.category
+46: }));
+
+## src/lib/data/inventory.ts
+1: export type VehicleCondition = 'new' | 'used';
+2: export type VehicleEquipment =
+3:   | '4x4'
+4:   | '360° камера'
+5:   | 'Панорамен покрив'
+6:   | 'Подгряване на седалки'
+7:   | 'Навигация'
+8:   | 'Парктроник'
+9:   | 'Безключов достъп'
+10:   | 'Адаптивен круиз контрол';
+11: 
+12: export type Vehicle = {
+13:   id: number;
+14:   verification: 'sample' | 'verified';
+15:   evidenceUrl?: string;
+16:   image: string;
+17:   category: string;
+18:   body: string;
+19:   make: string;
+20:   title: string;
+21:   year: string;
+22:   yearNumber: number;
+23:   mileage: string;
+24:   mileageKm: number;
+25:   fuel: string;
+26:   transmission: string;
+27:   equipment: readonly VehicleEquipment[];
+28:   condition: VehicleCondition;
+29:   priceEur: number;
+30:   href: `/listing-detail-v1/${number}`;
+31: };
+32: 
+33: // Equipment facets are limited to recurring features published in Day & Night's
+34: // current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
+35: const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
+36:   { id: 1, image: '/assets/images/lead/day-night-stock-04.webp', category: 'Комби', body: 'Wagon', make: 'Audi', title: 'Audi RS 6 Avant', yearNumber: 2024, mileageKm: 99701, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 68804 },
+37:   { id: 2, image: '/assets/images/lead/day-night-stock-01.webp', category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
+38:   { id: 3, image: '/assets/images/lead/day-night-stock-06.webp', category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
+39:   { id: 4, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
+40:   { id: 5, image: '/assets/images/lead/day-night-stock-05.webp', category: 'SUV', body: 'SUV', make: 'Land Rover', title: 'Range Rover Sport', yearNumber: 2019, mileageKm: 84426, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 68313 },
+41:   { id: 6, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
+42:   { id: 7, image: '/assets/images/lead/day-night-stock-02.webp', category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
+43:   { id: 8, image: '/assets/images/lead/day-night-stock-03.webp', category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
+44: ];
+45: 
+46: // Imported master fixtures are not VIN-verified stock. Preserve source media;
+47: // client promotion requires replacing and verifying each record, including reused photos.
+48: export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
+49:   ...record,
+50:   verification: 'sample',
+51:   year: String(record.yearNumber),
+52:   mileage: `${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км`,
+53:   href: `/listing-detail-v1/${record.id}`
+54: }));
+55: 
+56: export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+
+## src/lib/data/journeys.ts
+1: import { featuredVehicles } from './inventory';
+2: 
+3: /** Only known records can become contact context; free text is never a vehicle. */
+4: export function selectedVehicle(value: string | null) {
+5:   return value && /^[1-9]\d*$/.test(value)
+6:     ? featuredVehicles.find(vehicle => vehicle.id === Number(value)) ?? null
+7:     : null;
+8: }
+9: 
+10: export function vehicleContactHref(id: number, topic: 'inspection' | 'leasing' = 'inspection'): `/contact?${string}` {
+11:   return `/contact?${new URLSearchParams({ topic, vehicle: String(id) })}`;
+12: }
+13: 
+14: /** Return links are confined to their own list, including its filters and anchor. */
+15: export function listReturn(value: string | null, list: '/listing-grid' | '/blog'): string {
+16:   if (!value || /[\\\u0000-\u001f]/.test(value)) return list;
+17:   try {
+18:     const url = new URL(value, 'https://template.invalid');
+19:     return value.startsWith('/') && url.origin === 'https://template.invalid' && url.pathname === list
+20:       ? `${url.pathname}${url.search}${url.hash}` : list;
+21:   } catch { return list; }
+22: }
+23: 
+24: export function withListReturn(href: string, returnTo?: string) {
+25:   return returnTo ? `${href}?${new URLSearchParams({ return: returnTo })}` : href;
+26: }
+
+## src/lib/data/listing.ts
+1: import { featuredVehicles, type Vehicle, type VehicleCondition, type VehicleEquipment } from './inventory';
+2: 
+3: export type ListingSort = 'default' | 'newest' | 'price-asc' | 'price-desc' | 'mileage-asc';
+4: 
+5: export type ListingFilters = {
+6:   q: string;
+7:   make: string;
+8:   model: string;
+9:   body: string;
+10:   fuel: string;
+11:   transmission: string;
+12:   version: string;
+13:   equipment: VehicleEquipment[];
+14:   condition: '' | VehicleCondition;
+15:   yearMin: number | null;
+16:   yearMax: number | null;
+17:   priceMin: number | null;
+18:   priceMax: number | null;
+19:   mileageMax: number | null;
+20:   sort: ListingSort;
+21: };
+22: 
+23: const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Купе', Wagon: 'Комби', Sportback: 'Спортбек', Sedan: 'Седан', Crossover: 'Кросоувър', Hatchback: 'Хечбек', 'Pickup Truck': 'Пикап', Minivan: 'Миниван', Convertible: 'Кабриолет' };
+24: export const bodyLabel = (body: string) => bodyLabels[body] ?? body;
+25: const availableValues = (key: 'make' | 'body' | 'fuel' | 'transmission') => ['', ...new Set(featuredVehicles.map(vehicle => vehicle[key]))];
+26: 
+27: /** URL keys are the shared contract for forms, chips, return links and dialogs. */
+28: export const listingParams = (filters: ListingFilters): URLSearchParams => {
+29:   const params = new URLSearchParams();
+30:   for (const [key, value] of Object.entries(filters)) {
+31:     const name = key.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+32:     if (Array.isArray(value)) [...new Set(value)].forEach(item => params.append(name, item));
+33:     else if (value !== null && value !== '' && !(key === 'sort' && value === 'default')) params.set(name, String(value));
+34:   }
+35:   return params;
+36: };
+37: 
+38: export const listingHiddenFields = (filters: ListingFilters, exclude: readonly string[] = []) =>
+39:   [...listingParams(filters)].filter(([key]) => !exclude.includes(key));
+40: 
+41: export const activeFilterCount = (filters: ListingFilters) => listingHiddenFields(filters, ['q', 'sort']).length;
+42: 
+43: export function removeListingFilter(filters: ListingFilters, key: string, value: string) {
+44:   const params = listingParams(filters);
+45:   params.delete(key, value);
+46:   if (key === 'make') params.delete('model');
+47:   return params;
+48: }
+49: 
+50: export const listingFilterOptions = {
+51:   makes: availableValues('make'),
+52:   bodies: availableValues('body'),
+53:   fuels: availableValues('fuel'),
+54:   transmissions: availableValues('transmission'),
+55:   versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
+56:   equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
+57:   years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
+58:   prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
+59:   mileages: ['', '50000', '75000', '100000'],
+60:   sorts: [
+61:     ['default', 'Препоръчани'],
+62:     ['newest', 'Най-нови'],
+63:     ['price-asc', 'Цена: ниска към висока'],
+64:     ['price-desc', 'Цена: висока към ниска'],
+65:     ['mileage-asc', 'Най-нисък пробег']
+66:   ] as const
+67: } as const;
+68: 
+69: const integerParam = (params: URLSearchParams, key: string) => {
+70:   const raw = params.get(key) ?? '';
+71:   const value = Number(raw);
+72:   return /^\d+$/.test(raw) && Number.isSafeInteger(value) ? value : null;
+73: };
+74: 
+75: const sortValues = new Set<ListingSort>(listingFilterOptions.sorts.map(([value]) => value));
+76: const equipmentValues = new Set<VehicleEquipment>(listingFilterOptions.equipment);
+77: 
+78: export const parseListingFilters = (params: URLSearchParams): ListingFilters => {
+79:   const requestedSort = params.get('sort') as ListingSort | null;
+80:   const requestedCondition = params.get('condition');
+81: 
+82:   return {
+83:     q: params.get('q')?.trim() ?? '',
+84:     make: params.get('make')?.trim() ?? '',
+85:     model: params.get('model')?.trim() ?? '',
+86:     body: params.get('body')?.trim() ?? '',
+87:     fuel: params.get('fuel')?.trim() ?? '',
+88:     transmission: params.get('transmission')?.trim() ?? '',
+89:     version: params.get('version')?.trim() ?? '',
+90:     equipment: [...new Set(params.getAll('equipment'))].filter((value): value is VehicleEquipment => equipmentValues.has(value as VehicleEquipment)),
+91:     condition: requestedCondition === 'new' || requestedCondition === 'used' ? requestedCondition : '',
+92:     yearMin: integerParam(params, 'year_min'),
+93:     yearMax: integerParam(params, 'year_max'),
+94:     priceMin: integerParam(params, 'price_min'),
+95:     priceMax: integerParam(params, 'price_max'),
+96:     mileageMax: integerParam(params, 'mileage_max'),
+97:     sort: requestedSort && sortValues.has(requestedSort) ? requestedSort : 'default'
+98:   };
+99: };
+100: 
+101: const normalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
+102: 
+103: export const listingModelsForMake = (make: string) => {
+104:   const normalizedMake = normalize(make);
+105:   const models = featuredVehicles
+106:     .filter((vehicle) => !normalizedMake || normalize(vehicle.make) === normalizedMake)
+107:     .map((vehicle) => vehicle.title.replace(`${vehicle.make} `, ''));
+108: 
+109:   return ['', ...new Set(models)];
+110: };
+111: 
+112: export const vehicleMatchesQuery = (vehicle: Vehicle, query: string) => {
+113:   const normalizedQuery = normalize(query);
+114:   if (!normalizedQuery) return true;
+115: 
+116:   return normalize([
+117:     vehicle.title,
+118:     vehicle.make,
+119:     vehicle.category,
+120:     vehicle.body,
+121:     vehicle.year,
+122:     vehicle.mileage,
+123:     vehicle.fuel,
+124:     vehicle.transmission,
+125:     ...vehicle.equipment
+126:   ].join(' ')).includes(normalizedQuery);
+127: };
+128: 
+129: export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: ListingFilters) => {
+130:   const query = normalize(filters.q);
+131:   const model = normalize(filters.model);
+132:   const make = normalize(filters.make);
+133:   const body = normalize(filters.body);
+134:   const fuel = normalize(filters.fuel);
+135:   const transmission = normalize(filters.transmission);
+136:   const version = normalize(filters.version);
+137: 
+138:   const filtered = vehicles.filter((vehicle) => {
+139:     if (query && !vehicleMatchesQuery(vehicle, query)) return false;
+140:     if (make && normalize(vehicle.make) !== make) return false;
+141:     if (model && !normalize(vehicle.title).includes(model)) return false;
+142:     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;
+143:     if (fuel && normalize(vehicle.fuel) !== fuel) return false;
+144:     if (transmission && normalize(vehicle.transmission) !== transmission) return false;
+145:     if (version && !normalize(vehicle.title).includes(version)) return false;
+146:     if (filters.equipment.length > 0 && !filters.equipment.every((item) => vehicle.equipment.includes(item))) return false;
+147:     if (filters.condition && vehicle.condition !== filters.condition) return false;
+148:     if (filters.yearMin !== null && vehicle.yearNumber < filters.yearMin) return false;
+149:     if (filters.yearMax !== null && vehicle.yearNumber > filters.yearMax) return false;
+150:     if (filters.priceMin !== null && vehicle.priceEur < filters.priceMin) return false;
+151:     if (filters.priceMax !== null && vehicle.priceEur > filters.priceMax) return false;
+152:     if (filters.mileageMax !== null && vehicle.mileageKm > filters.mileageMax) return false;
+153:     return true;
+154:   });
+155: 
+156:   return [...filtered].sort((a, b) => {
+157:     if (filters.sort === 'newest') return b.yearNumber - a.yearNumber;
+158:     if (filters.sort === 'price-asc') return a.priceEur - b.priceEur;
+159:     if (filters.sort === 'price-desc') return b.priceEur - a.priceEur;
+160:     if (filters.sort === 'mileage-asc') return a.mileageKm - b.mileageKm;
+161:     return a.id - b.id;
+162:   });
+163: };
+164: 
+165: export const listingVehicles = featuredVehicles;
+
+## src/lib/data/navigation.ts
+1: import { brand } from '$config/brand';
+2: import type { Vehicle } from '$data/vehicle-artwork';
+3: import { editorialArtwork, featureArtwork, type FeatureArtwork } from '$data/feature-artwork';
+4: 
+5: export type NavigationHref =
+6:   | '/'
+7:   | '/about-us'
+8:   | `/about-us#${string}`
+9:   | `/blog-detail/${number}`
+10:   | '/blog'
+11:   | `/blog?${string}`
+12:   | '/contact'
+13:   | `/contact?${string}`
+14:   | '/listing-grid'
+15:   | `/listing-grid?${string}`
+16:   | `tel:${string}`;
+17: 
+18: export type InternalNavigationHref = Exclude<NavigationHref, `tel:${string}`>;
+19: 
+20: export type NavigationLink = {
+21:   id: string;
+22:   label: string;
+23:   href: NavigationHref;
+24: };
+25: 
+26: export type NavigationGroup = {
+27:   id: string;
+28:   title: string;
+29:   links: NavigationLink[];
+30: };
+31: 
+32: export type NavigationFeature = {
+33:   id: string;
+34:   title: string;
+35:   detail: string;
+36:   tone?: 'red' | 'ink';
+37:   media?: 'photo';
+38:   href: InternalNavigationHref;
+39: } & ({ vehicle: Vehicle; artwork?: never } | { artwork: FeatureArtwork; vehicle?: never });
+40: 
+41: export type MegaMenu = {
+42:   title: string;
+43:   description: string;
+44:   features: NavigationFeature[];
+45:   groups: NavigationGroup[];
+46:   cta: Omit<NavigationLink, 'href'> & { href: InternalNavigationHref; detail: string };
+47: };
+48: 
+49: export type NavigationItem = Omit<NavigationLink, 'href'> & {
+50:   href: InternalNavigationHref;
+51:   menu?: MegaMenu;
+52: };
+53: 
+54: export const navigation: NavigationItem[] = [
+55:   { id: 'home', label: 'Начало', href: '/' },
+56:   {
+57:     id: 'vehicles',
+58:     label: 'Автомобили',
+59:     href: '/listing-grid',
+60:     menu: {
+61:       title: 'Автомобили',
+62:       description: 'Разгледайте наличностите по състояние, тип купе или марка.',
+63:       features: [
+64:         { id: 'vehicles-suv', vehicle: 'gclass', title: 'SUV', detail: 'Простор и комфорт', href: '/listing-grid?body=SUV' },
+65:         { id: 'vehicles-wagon', vehicle: 'graphite', title: 'Комби', detail: 'Място за всеки ден', href: '/listing-grid?body=Wagon' },
+66:         { id: 'vehicles-coupe', vehicle: 'porsche', title: 'Купе', detail: 'Спортен характер', href: '/listing-grid?body=Coupe' }
+67:       ],
+68:       groups: [
+69:         {
+70:           id: 'vehicles-browse',
+71:           title: 'Разгледайте',
+72:           links: [
+73:             { id: 'vehicles-all', label: 'Всички автомобили', href: '/listing-grid' },
+74:             { id: 'vehicles-new', label: 'Най-нови предложения', href: '/listing-grid?sort=newest' },
+75:             { id: 'vehicles-used', label: 'Употребявани', href: '/listing-grid?condition=used' }
+76:           ]
+77:         },
+78:         {
+79:           id: 'vehicles-body',
+80:           title: 'По тип купе',
+81:           links: [
+82:             { id: 'vehicles-body-suv', label: 'SUV', href: '/listing-grid?body=SUV' },
+83:             { id: 'vehicles-body-sedan', label: 'Комби', href: '/listing-grid?body=Wagon' },
+84:             { id: 'vehicles-body-coupe', label: 'Купе', href: '/listing-grid?body=Coupe' }
+85:           ]
+86:         }
+87:       ],
+88:       cta: { id: 'vehicles-cta', label: 'Вижте всички автомобили', href: '/listing-grid', detail: 'Филтрирайте по тип, гориво и състояние.' }
+89:     }
+90:   },
+91:   {
+92:     id: 'about',
+93:     label: 'За нас',
+94:     href: '/about-us',
+95:     menu: {
+96:       title: brand.name,
+97:       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
+98:       features: [
+99:         { id: 'about-showroom', tone: 'ink', artwork: featureArtwork.showroom, title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, href: '/about-us' },
+100:         { id: 'about-import', artwork: featureArtwork.import, tone: 'red', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', href: '/contact?topic=import' },
+101:         { id: 'about-leasing', tone: 'ink', artwork: featureArtwork.finance, title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
+102:       ],
+103:       groups: [
+104:         {
+105:           id: 'about-company',
+106:           title: 'Компания',
+107:           links: [
+108:             { id: 'about-company-overview', label: `За ${brand.shortName}`, href: '/about-us' },
+109:             { id: 'about-company-process', label: 'Как работим', href: '/about-us#process' },
+110:             { id: 'about-company-contact', label: 'Контакти', href: '/contact' }
+111:           ]
+112:         },
+113:         {
+114:           id: 'about-contact',
+115:           title: 'Свържете се',
+116:           links: [
+117:             { id: 'about-contact-inspection', label: 'Запазете оглед', href: '/contact?topic=inspection' },
+118:             { id: 'about-contact-address', label: 'Адрес и посещение', href: '/contact' },
+119:             { id: 'about-contact-phone', label: brand.phone, href: brand.phoneHref }
+120:           ]
+121:         }
+122:       ],
+123:       cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
+124:     }
+125:   },
+126:   {
+127:     id: 'guides',
+128:     label: 'Полезно',
+129:     href: '/blog',
+130:     menu: {
+131:       title: 'Статии и съвети',
+132:       description: 'Практична информация за избора, проверката и финансирането на автомобил.',
+133:       features: [
+134:         { id: 'guides-inspection', media: 'photo', artwork: editorialArtwork.inspection, title: 'Какво да проверите преди покупка?', detail: 'История, документи и състояние.', href: '/blog-detail/1' },
+135:         { id: 'guides-import', media: 'photo', artwork: editorialArtwork.import, tone: 'red', title: 'Как протича вносът на автомобил?', detail: 'Основните стъпки преди регистрация.', href: '/blog-detail/2' },
+136:         { id: 'guides-leasing', media: 'photo', tone: 'ink', artwork: editorialArtwork.finance, title: 'Как да сравните лизингови оферти?', detail: 'Какво да уточните преди финансиране.', href: '/blog-detail/3' }
+137:       ],
+138:       groups: [
+139:         {
+140:           id: 'guides-library',
+141:           title: 'Статии',
+142:           links: [
+143:             { id: 'guides-all', label: 'Всички статии', href: '/blog' },
+144:             { id: 'guides-choice', label: 'Избор на автомобил', href: '/blog?q=избор' },
+145:             { id: 'guides-finance', label: 'Лизинг и условия', href: '/blog?category=Лизинг' }
+146:           ]
+147:         },
+148:         {
+149:           id: 'guides-help',
+150:           title: 'Помощ',
+151:           links: [
+152:             { id: 'guides-import-help', label: 'Внос в България', href: '/blog?category=Внос' },
+153:             { id: 'guides-contact', label: 'Контакти', href: '/contact' },
+154:             { id: 'guides-ask', label: 'Попитайте екипа', href: '/contact' }
+155:           ]
+156:         }
+157:       ],
+158:       cta: { id: 'guides-cta', label: 'Вижте всички статии', href: '/blog', detail: 'Насоки за избор, покупка, лизинг и внос.' }
+159:     }
+160:   },
+161:   { id: 'contact', label: 'Контакти', href: '/contact' }
+162: ];
+
+## src/lib/data/service-artwork.ts
+1: // Generated decorative service art; not inventory photography. See provenance/service-cards-2026-09-10.md.
+2: export const serviceArtwork = {
+3:   car: { src: '/assets/images/template/service-car-v1.png', width: 1536, height: 1024, crop: [65, 160, 1390, 720] },
+4:   value: { src: '/assets/images/template/service-sell-euros-v1.png', width: 1536, height: 1024, crop: [40, 50, 1420, 880] },
+5:   contact: { src: '/assets/images/template/service-import-v1.png', width: 1536, height: 1024, crop: [45, -10, 1350, 980] },
+6:   finance: { src: '/assets/images/template/service-leasing-v1.png', width: 1536, height: 1024, crop: [100, 30, 1360, 994] }
+7: } as const;
+
+## src/lib/data/vehicle-artwork.ts
+1: // Alpha bounds measured at opacity > 128; preserve natural proportions when aligning artwork.
+2: export const vehicleArtwork = {
+3:   silver: { src: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 154, 989, 516] },
+4:   graphite: { src: '/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [17, 162, 984, 476] },
+5:   gclass: { src: '/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 112, 995, 542] },
+6:   urus: { src: '/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [18, 156, 983, 495] },
+7:   golf: { src: '/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [15, 150, 984, 507] },
+8:   a45: { src: '/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [13, 146, 987, 511] },
+9:   porsche: { src: '/assets/images/lead/day-night-cutout-porsche-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 169, 987, 480] },
+10:   amggt: { src: '/assets/images/lead/day-night-cutout-amggt-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [14, 169, 980, 473] },
+11:   m5: { src: '/assets/images/lead/day-night-cutout-m5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [10, 165, 990, 482] },
+12:   e63: { src: '/assets/images/lead/day-night-cutout-e63-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [12, 168, 990, 482] },
+13:   m4: { src: '/assets/images/lead/day-night-cutout-m4-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [16, 161, 983, 484] },
+14:   rs5: { src: '/assets/images/lead/day-night-cutout-rs5-v1.webp?v=profile-1', width: 1000, height: 667, bounds: [7, 166, 994, 488] },
+15: } as const;
+16: 
+17: export type Vehicle = keyof typeof vehicleArtwork;
+18: 
+19: export const heroVehiclePairs = {
+20:   home: ['gclass', 'urus'],
+21:   inventory: ['golf', 'a45'],
+22:   about: ['porsche', 'amggt'],
+23:   blog: ['m5', 'e63'],
+24:   contact: ['m4', 'rs5']
+25: } as const satisfies Record<string, readonly [Vehicle, Vehicle]>;
+26: 
+27: export type HeroVehiclePair = keyof typeof heroVehiclePairs;
+28: 
+29: // Center the car itself; supporting objects can make the full composition asymmetric.
+30: export const mobileHeroArtwork = {
+31:   car: { src: '/assets/images/lead/day-night-urus-front-v1.webp', width: 600, height: 600, carCenter: 300 },
+32:   sell: { src: '/assets/images/lead/day-night-mobile-sell-v1.webp', width: 1200, height: 438, carCenter: 641.5 },
+33:   import: { src: '/assets/images/lead/day-night-mobile-import-v1.webp', width: 1200, height: 450, carCenter: 598 }
+34: } as const;
+35: 
+36: export type MobileHeroScene = keyof typeof mobileHeroArtwork;
+37: 
+38: // Viewports into the existing transparent artwork; no duplicate raster assets.
+39: export const mobileHeroRegions = {
+40:   sell: { src: mobileHeroArtwork.sell.src, width: 1200, height: 438, crop: [927, 140, 267, 291] },
+41:   import: { src: mobileHeroArtwork.import.src, width: 1200, height: 450, crop: [0, 152, 354, 259] },
+42:   home: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 660, crop: [8, 110, 1170, 443] }
+43: } as const;
+
+## src/lib/data/videos.ts
+1: export interface FeaturedVideo {
+2:   id: string;
+3:   title: string;
+4:   duration: string;
+5:   thumbnail: string;
+6: }
+7: 
+8: // Selected automotive videos from the owner-supplied channel, verified 2026-09-05.
+9: // This is a curated selection, not an automatically refreshed channel feed.
+10: export const featuredVideos: readonly FeaturedVideo[] = [
+11:   {
+12:     id: '6S3dLIgeAT8',
+13:     title: 'Най-желаната кола в България | Lamborghini Urus',
+14:     duration: '23:19',
+15:     thumbnail: '/assets/images/lead/day-night-video-urus.jpg'
+16:   },
+17:   {
+18:     id: 'zG6rjLpT4u8',
+19:     title: 'Продадох най-новата Панамера',
+20:     duration: '14:33',
+21:     thumbnail: '/assets/images/lead/day-night-video-panamera.jpg'
+22:   },
+23:   {
+24:     id: 'w_XaGmIWJFM',
+25:     title: 'Каква е разликата в G-класите',
+26:     duration: '23:03',
+27:     thumbnail: '/assets/images/lead/day-night-video-g-class.jpg'
+28:   }
+29: ];

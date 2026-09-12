@@ -12,8 +12,8 @@ try {
   await page.goto(previewUrl(), { waitUntil: 'networkidle' });
   await page.locator('.dn-body-types').scrollIntoViewIfNeeded();
   const types = page.locator('.dn-body-type:visible'), brands = page.locator('.dn-brand-card:visible');
-  assert.equal(await types.count(), width < 768 ? 4 : 8);
-  assert.equal(await brands.count(), width < 768 ? 4 : 12);
+  assert.equal(await types.count(), Number(await page.locator('#body-types-grid').getAttribute(width < 768 ? 'data-initial-count' : 'data-total-count')));
+  assert.equal(await brands.count(), Number(await page.locator('#brands-grid').getAttribute(width < 768 ? 'data-initial-count' : 'data-total-count')));
   if (width === 1440) {
    for (const [cards, columns] of [[types,4],[brands,6]]) {
     const rows = await cards.evaluateAll(els => [...new Set(els.map(el => Math.round(el.getBoundingClientRect().top)))]);
@@ -21,7 +21,8 @@ try {
    }
   }
   if (width < 768) {
-   for (const [section,count] of [['.dn-body-types',8],['.dn-brand-section',12]]) {
+   for (const [section,grid] of [['.dn-body-types','#body-types-grid'],['.dn-brand-section','#brands-grid']]) {
+    const count = Number(await page.locator(grid).getAttribute('data-total-count'));
     const toggle=page.locator(`${section} .dn-discovery-toggle`);
     await toggle.click(); assert.equal(await toggle.getAttribute('aria-expanded'),'true');
     assert.equal(await page.locator(`${section} a[data-stock-count]:visible`).count(),count);

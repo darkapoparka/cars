@@ -49,111 +49,260 @@ export type NavigationItem = Omit<NavigationLink, 'href'> & {
 };
 
 export const navigation: NavigationItem[] = [
-  { id: 'home', label: 'Начало', href: '/' },
   {
-    id: 'vehicles',
-    label: 'Автомобили',
-    href: '/listing-grid',
-    menu: {
-      title: 'Автомобили',
-      description: 'Разгледайте наличностите по състояние, тип купе или марка.',
-      features: [
-        { id: 'vehicles-suv', title: 'SUV', detail: 'Простор и комфорт', image: '/assets/images/section/car-slide1.png', href: '/listing-grid?body=SUV' },
-        { id: 'vehicles-crossover', title: 'Комби', detail: 'Място за всеки ден', image: '/assets/images/section/car-slide2.png', href: '/listing-grid?body=Wagon' },
-        { id: 'vehicles-premium-suv', title: 'Премиум SUV', detail: 'Премиум изпълнение', image: '/assets/images/section/car-slide3.png', href: '/listing-grid?body=SUV' }
-      ],
-      groups: [
+    "id": "home",
+    "label": "Home",
+    "href": "/"
+  },
+  {
+    "id": "vehicles",
+    "label": "Cars",
+    "href": "/listing-grid",
+    "menu": {
+      "title": "Explore the listings",
+      "description": "Dated samples. Confirm current availability directly.",
+      "features": [
         {
-          id: 'vehicles-browse',
-          title: 'Разгледайте',
-          links: [
-            { id: 'vehicles-all', label: 'Всички автомобили', href: '/listing-grid' },
-            { id: 'vehicles-new', label: 'Най-нови предложения', href: '/listing-grid?sort=newest' },
-            { id: 'vehicles-used', label: 'Употребявани', href: '/listing-grid?condition=used' }
+          "id": "vehicle-sedan",
+          "title": "Sedans",
+          "detail": "Compare the advertised details.",
+          "image": "/dealer/inventory/965722-1.webp",
+          "href": "/listing-grid?body=Sedan"
+        },
+        {
+          "id": "vehicle-suv",
+          "title": "SUVs",
+          "detail": "Compare the advertised details.",
+          "image": "/dealer/inventory/1005647-1.webp",
+          "href": "/listing-grid?body=SUV"
+        },
+        {
+          "id": "vehicle-all",
+          "title": "All listing samples",
+          "detail": "Eight source-backed examples.",
+          "image": "/dealer/inventory/1010924-1.webp",
+          "href": "/listing-grid"
+        }
+      ],
+      "groups": [
+        {
+          "id": "browse",
+          "title": "Browse",
+          "links": [
+            {
+              "id": "all",
+              "label": "All samples",
+              "href": "/listing-grid"
+            },
+            {
+              "id": "newest",
+              "label": "Newest model year",
+              "href": "/listing-grid?sort=newest"
+            },
+            {
+              "id": "used",
+              "label": "Used cars",
+              "href": "/listing-grid?condition=used"
+            }
           ]
         },
         {
-          id: 'vehicles-body',
-          title: 'По тип купе',
-          links: [
-            { id: 'vehicles-body-suv', label: 'SUV', href: '/listing-grid?body=SUV' },
-            { id: 'vehicles-body-sedan', label: 'Комби', href: '/listing-grid?body=Wagon' },
-            { id: 'vehicles-body-coupe', label: 'Купе', href: '/listing-grid?body=Coupe' }
+          "id": "body",
+          "title": "Body style",
+          "links": [
+            {
+              "id": "sedan",
+              "label": "Sedans",
+              "href": "/listing-grid?body=Sedan"
+            },
+            {
+              "id": "suv",
+              "label": "SUVs",
+              "href": "/listing-grid?body=SUV"
+            },
+            {
+              "id": "low-mileage",
+              "label": "Lowest mileage",
+              "href": "/listing-grid?sort=mileage-asc"
+            }
           ]
         }
       ],
-      cta: { id: 'vehicles-cta', label: 'Вижте всички автомобили', href: '/listing-grid', detail: 'Филтрирайте по тип, гориво и състояние.' }
+      "cta": {
+        "id": "stock-cta",
+        "label": "Browse the cars",
+        "href": "/listing-grid",
+        "detail": "Filter by model, specification and advertised price."
+      }
     }
   },
   {
-    id: 'about',
-    label: 'За нас',
-    href: '/about-us',
-    menu: {
-      title: brand.name,
-      description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
-      features: [
-        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
-        { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
-      ],
-      groups: [
+    "id": "about",
+    "label": "Dealership",
+    "href": "/about-us",
+    "menu": {
+      "title": "Al Hamoor Al Thahabi Used Cars",
+      "description": "Published showroom details and direct contact.",
+      "features": [
         {
-          id: 'about-company',
-          title: 'Компания',
-          links: [
-            { id: 'about-company-overview', label: `За ${brand.shortName}`, href: '/about-us' },
-            { id: 'about-company-process', label: 'Как работим', href: '/about-us#process' },
-            { id: 'about-company-contact', label: 'Контакти', href: '/contact' }
+          "id": "showroom",
+          "title": "Sharjah showroom",
+          "detail": "Souk Al Haraj, showroom 353, Sharjah",
+          "image": "/dealer/showroom.webp",
+          "href": "/about-us"
+        },
+        {
+          "id": "viewing",
+          "title": "Arrange a viewing",
+          "detail": "Confirm the car and location first.",
+          "image": "/dealer/inventory/965722-1.webp",
+          "href": "/contact?topic=inspection"
+        },
+        {
+          "id": "purchase",
+          "title": "Purchase questions",
+          "detail": "Ask about current price and terms.",
+          "image": "/dealer/inventory/1018774-1.webp",
+          "href": "/contact?topic=leasing"
+        }
+      ],
+      "groups": [
+        {
+          "id": "company",
+          "title": "Dealership",
+          "links": [
+            {
+              "id": "about",
+              "label": "About the dealership",
+              "href": "/about-us"
+            },
+            {
+              "id": "process",
+              "label": "Your next steps",
+              "href": "/about-us#process"
+            },
+            {
+              "id": "contact",
+              "label": "Contact details",
+              "href": "/contact"
+            }
           ]
         },
         {
-          id: 'about-contact',
-          title: 'Свържете се',
-          links: [
-            { id: 'about-contact-inspection', label: 'Запазете оглед', href: '/contact?topic=inspection' },
-            { id: 'about-contact-address', label: 'Адрес и посещение', href: '/contact' },
-            { id: 'about-contact-phone', label: brand.phone, href: brand.phoneHref }
+          "id": "talk",
+          "title": "Before visiting",
+          "links": [
+            {
+              "id": "arrange",
+              "label": "Viewing enquiry",
+              "href": "/contact?topic=inspection"
+            },
+            {
+              "id": "address",
+              "label": "Address and directions",
+              "href": "/contact"
+            },
+            {
+              "id": "phone",
+              "label": "+971 54 555 5204",
+              "href": "tel:+971545555204"
+            }
           ]
         }
       ],
-      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
+      "cta": {
+        "id": "contact-cta",
+        "label": "Contact details",
+        "href": "/contact",
+        "detail": "Availability and the actual viewing location need confirmation."
+      }
     }
   },
   {
-    id: 'guides',
-    label: 'Полезно',
-    href: '/blog',
-    menu: {
-      title: 'Полезно',
-      description: 'Практична информация за избора, проверката и финансирането на автомобил.',
-      features: [
-        { id: 'guides-inspection', title: 'Проверка преди покупка', detail: 'История, документи и състояние.', image: '/assets/images/lead/day-night-guide-inspection.webp', href: '/blog-detail/1' },
-        { id: 'guides-import', title: 'Внос и документи', detail: 'Основните стъпки преди регистрация.', image: '/assets/images/lead/day-night-guide-import.webp', href: '/blog-detail/2' },
-        { id: 'guides-leasing', title: 'Лизинг и условия', detail: 'Какво да уточните преди финансиране.', image: '/assets/images/lead/day-night-guide-leasing.webp', href: '/blog-detail/3' }
-      ],
-      groups: [
+    "id": "guides",
+    "label": "Guides",
+    "href": "/blog",
+    "menu": {
+      "title": "Before you buy",
+      "description": "Questions to prepare for a conversation about the actual car.",
+      "features": [
         {
-          id: 'guides-library',
-          title: 'Ръководства',
-          links: [
-            { id: 'guides-all', label: 'Всички статии', href: '/blog' },
-            { id: 'guides-choice', label: 'Избор на автомобил', href: '/blog?q=избор' },
-            { id: 'guides-finance', label: 'Лизинг и условия', href: '/blog?category=Лизинг' }
+          "id": "guide-1",
+          "title": "Plan your viewing",
+          "detail": "Confirm the car and the viewing location before travelling.",
+          "image": "/dealer/showroom.webp",
+          "href": "/blog-detail/1"
+        },
+        {
+          "id": "guide-2",
+          "title": "Understand the advertised specification",
+          "detail": "Check the regional specification and the documents for the actual car.",
+          "image": "/dealer/inventory/965722-2.webp",
+          "href": "/blog-detail/2"
+        },
+        {
+          "id": "guide-3",
+          "title": "Price and purchase questions",
+          "detail": "Ask what is included in the current advertised price.",
+          "image": "/dealer/inventory/965722-3.webp",
+          "href": "/blog-detail/3"
+        }
+      ],
+      "groups": [
+        {
+          "id": "read",
+          "title": "Read the guides",
+          "links": [
+            {
+              "id": "all",
+              "label": "All guides",
+              "href": "/blog"
+            },
+            {
+              "id": "viewing",
+              "label": "Viewing",
+              "href": "/blog?category=Viewing"
+            },
+            {
+              "id": "buying",
+              "label": "Purchase questions",
+              "href": "/blog?category=Buying"
+            }
           ]
         },
         {
-          id: 'guides-help',
-          title: 'Помощ',
-          links: [
-            { id: 'guides-import-help', label: 'Внос в България', href: '/blog?category=Внос' },
-            { id: 'guides-contact', label: 'Контакти', href: '/contact' },
-            { id: 'guides-ask', label: 'Попитайте екипа', href: '/contact' }
+          "id": "help",
+          "title": "Prepare",
+          "links": [
+            {
+              "id": "docs",
+              "label": "Vehicle documents",
+              "href": "/blog?category=Documents"
+            },
+            {
+              "id": "contact",
+              "label": "Contact details",
+              "href": "/contact"
+            },
+            {
+              "id": "questions",
+              "label": "Prepare a question",
+              "href": "/contact?topic=general"
+            }
           ]
         }
       ],
-      cta: { id: 'guides-cta', label: 'Вижте всички статии', href: '/blog', detail: 'Насоки за избор, покупка, лизинг и внос.' }
+      "cta": {
+        "id": "guides-cta",
+        "label": "Read the guides",
+        "href": "/blog",
+        "detail": "Independent preview information, not a dealer guarantee."
+      }
     }
   },
-  { id: 'contact', label: 'Контакти', href: '/contact' }
+  {
+    "id": "contact",
+    "label": "Contact",
+    "href": "/contact"
+  }
 ];

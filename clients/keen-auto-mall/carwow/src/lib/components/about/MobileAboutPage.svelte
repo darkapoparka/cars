@@ -13,7 +13,7 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = `tel:${daynightSite.phone}`;
 	const teamMembers = daynightTeam.slice(0, 3);
 
 	const trustPoints = [
@@ -25,13 +25,13 @@
 		},
 		{
 			id: 'documents',
-			title: 'Документи',
+			title: 'Documents',
 			copy: 'Съдействие при договор, регистрация и предаване.',
 			icon: ClipboardCheck
 		},
 		{
 			id: 'trade',
-			title: 'Бартер',
+			title: 'Trade-in',
 			copy: 'Оценка, замяна или директно изкупуване на автомобил.',
 			icon: Repeat
 		}
@@ -68,13 +68,13 @@
 			<a href={resolve('/')} aria-label="Day Night Auto начало">
 				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
 			</a>
-			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Обади се">
+			<a class="mobile-about-hero__phone" href={phoneHref} aria-label="Call">
 				<Phone size={19} strokeWidth={2.45} />
 			</a>
 		</div>
 
 		<div class="mobile-about-hero__copy">
-			<span>За нас</span>
+			<span>About</span>
 			<h1>Проверени автомобили и ясен процес</h1>
 			<p>Day Night Auto в София помага с избор, оглед, документи, финансиране и бартер.</p>
 		</div>
@@ -90,7 +90,7 @@
 				onclick={openMap}
 			>
 				<MapPin size={19} strokeWidth={2.5} />
-				<span>Локация</span>
+				<span>Location</span>
 			</button>
 		</div>
 	</header>
@@ -129,7 +129,7 @@
 				<p>{daynightSite.location}</p>
 				<button type="button" onclick={openMap}>
 					<MapPin size={18} strokeWidth={2.45} />
-					<span>Отвори карта</span>
+					<span>Open map</span>
 				</button>
 			</div>
 		</section>
@@ -154,11 +154,11 @@
 		<section class="mobile-about-section" aria-labelledby="mobile-about-team-title">
 			<div class="mobile-about-heading mobile-about-heading--row">
 				<div>
-					<span>Екип</span>
+					<span>Team</span>
 					<h2 id="mobile-about-team-title">Кой помага</h2>
 				</div>
 				<a href={resolve('/team')}>
-					<span>Всички</span>
+					<span>All</span>
 					<ChevronRight size={16} strokeWidth={2.45} />
 				</a>
 			</div>

@@ -16,7 +16,7 @@
 </script>
 
 <article id={`vehicle-${vehicle.id}`} class:dn-vehicle-card--listing={layout === 'listing'} class="dn-vehicle-card">
-  <a class="dn-vehicle-card__link" href={withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo)} aria-label={`Вижте ${vehicle.title}`}>
+  <a class="dn-vehicle-card__link" href={withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo)} aria-label={`View ${vehicle.title}`}>
     <div class="dn-vehicle-card__visual">
       <div class="dn-vehicle-card__badges">
         <span class="dn-vehicle-card__badge dn-vehicle-card__badge--mileage">{vehicle.mileage}</span>
@@ -40,13 +40,13 @@
       <div class="dn-vehicle-card__category"><p>{vehicle.category}</p></div>
       <h3 class="dn-vehicle-card__name">{vehicle.title}</h3>
       {#if layout === 'listing'}
-        <div class="dn-vehicle-card__mobile-meta" aria-label="Година и пробег">
+        <div class="dn-vehicle-card__mobile-meta" aria-label="Year and mileage">
           <span>{vehicle.year}</span>
           <span>{vehicle.mileage}</span>
         </div>
       {/if}
 
-      <div class="dn-vehicle-card__specs" aria-label="Основни характеристики">
+      <div class="dn-vehicle-card__specs" aria-label="Key specifications">
         <span class="dn-vehicle-card__spec">
           <Icon name="fuel" size={15} strokeWidth={1.7} />
           {vehicle.fuel}
@@ -58,7 +58,7 @@
       </div>
 
       {#if showPrice}
-        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}</div>
+        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceAmount)}</div>
       {/if}
     </div>
   </a>

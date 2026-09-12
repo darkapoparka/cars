@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "key": "carwow",
-  "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\spartak-style",
-  "destination": "J:\\cars\\templates\\carwow",
-  "copiedAt": "2026-09-06T14:14:53.566Z",
-  "sourceUrl": "http://127.0.0.1:6517/",
+  "source": "J:\\cars\\templates\\carwow",
+  "destination": "J:\\cars\\clients\\midlands-trade-centre\\carwow",
+  "copiedAt": "2026-09-09T01:53:15.061Z",
+  "sourceUrl": null,
   "git": {
-    "root": "M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/spartak-style",
-    "branch": "codex/6517-canonical",
-    "head": "9f05da01000d9177226b19f6d5dd8e5531964948",
-    "remote": "https://github.com/darkapoparka/day-and-night-spartak.git",
-    "status": "M .gitignore\n M AGENTS.md\n M package.json\n M src/lib/components/about/DesktopAboutPage.svelte\n M src/lib/components/blog/BlogArticlePage.svelte\n M src/lib/components/blog/BlogIndexPage.svelte\n M src/lib/components/calculator/CalculatorContent.svelte\n M src/lib/components/compare/CompareContent.svelte\n M src/lib/components/contact/DesktopContactPage.svelte\n M src/lib/components/contact/MobileContactPage.svelte\n M src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte\n M src/lib/components/detail/desktop/DesktopDetailFinanceCalculator.svelte\n M src/lib/components/detail/desktop/DesktopDetailGallery.svelte\n M src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte\n M src/lib/components/detail/desktop/DesktopDetailReviews.svelte\n M src/lib/components/faq/FaqContent.svelte\n M src/lib/components/favorites/desktop/DesktopFavoritesPage.svelte\n M src/lib/components/financing/DesktopFinancingPage.svelte\n M src/lib/components/home/HomePage.svelte\n M src/lib/components/home/HomeQuickFilterModalStyles.svelte\n M src/lib/components/home/desktop/DesktopHome.svelte\n M src/lib/components/home/desktop/DesktopHomeBrandStrip.svelte\n M src/lib/components/home/desktop/DesktopHomeFooter.svelte\n M src/lib/components/home/desktop/DesktopHomeHero.svelte\n M src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte\n M src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte\n M src/lib/components/home/desktop/DesktopHomeInventoryTabs.svelte\n M src/lib/components/home/desktop/DesktopHomeReviews.svelte\n M src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte\n M src/lib/components/home/desktop/DesktopHomeVehicleCategories.svelte\n M src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte\n M src/lib/components/home/desktop/desktop-home-inventory-data.ts\n M src/lib/components/home/mobile/MobileHome.svelte\n M src/lib/components/inventory/desktop/InventoryDesktopPage.svelte\n M src/lib/components/inventory/desktop/InventoryListingsPanel.svelte\n M src/lib/components/inventory/desktop/InventoryPageShell.svelte\n M src/lib/components/inventory/desktop/InventoryResultsQuickFilters.svelte\n M src/lib/components/inventory/desktop/InventoryTypePills.svelte\n M src/lib/components/inventory/desktop/QuickFilters.svelte\n M src/lib/components/inventory/desktop/SearchBar.svelte\n M src/lib/components/inventory/desktop/SortingToolbar.svelte\n M src/lib/components/inventory/desktop/VehicleCard.svelte\n M src/lib/components/inventory/desktop/desktop-inventory-context.svelte.ts\n M src/lib/components/inventory/desktop/inventory-desktop-layout.css\n M src/lib/components/inventory/mobile/MobileInventoryPage.svelte\n M src/lib/components/inventory/mobile/MobileInventoryResults.svelte\n M src/lib/components/inventory/mobile/MobileInventoryVehicleCard.svelte\n M src/lib/components/inventory/mobile/mobileInventory.css\n M src/lib/components/layout/DayNightFooter.svelte\n M src/lib/components/layout/RouteImageBehavior.svelte\n M src/lib/components/layout/SiteChrome.svelte\n M src/lib/components/layout/SiteChromeCtaButtons.svelte\n M src/lib/components/layout/SiteChromeIcon.svelte\n M src/lib/components/layout/SiteChromeNavRow.svelte\n M src/lib/components/layout/SiteChromePrimaryRow.svelte\n M src/lib/components/layout/SiteChromeTopBar.svelte\n M src/lib/components/layout/SiteFooter.svelte\n M src/lib/components/layout/SiteNavigation.svelte\n M src/lib/components/sell/DesktopSellYourCarPage.svelte\n M src/lib/components/sell/MobileSellYourCarPage.svelte\n M src/lib/components/sell/desktop-sell-page-data.ts\n M src/lib/components/services/DesktopServicesPage.svelte\n M src/lib/components/team/DesktopTeamMemberPage.svelte\n M src/lib/components/team/DesktopTeamPage.svelte\n M src/lib/data/daynight-site.ts\n M src/lib/data/daynight-team.ts\n M src/lib/state/inventory-filters.svelte.ts\n M src/lib/styles/daynight-detail-desktop.css\n M src/lib/styles/daynight-home-base.css\n M src/lib/styles/daynight-home-desktop.css\n M src/lib/styles/daynight-mobile.css\n M src/lib/styles/storefront.css\n M src/lib/styles/tokens.css\n M src/routes/+layout.svelte\n M tasks.md\n M vite.config.ts\n?? .impeccable/\n?? DESKTOP_STYLE_GUIDE.md\n?? artifacts/\n?? scripts/dev-local.mjs\n?? src/lib/components/home/desktop/DesktopHomeVideos.svelte\n?? src/lib/components/inventory/desktop/InventoryFilterDialog.svelte\n?? src/lib/components/inventory/desktop/InventoryFilterTriggers.svelte\n?? src/lib/components/inventory/desktop/InventoryShortcutShelf.svelte\n?? src/lib/components/layout/DesktopDealerFooter.svelte\n?? src/lib/components/layout/DesktopYellowRouteHero.svelte\n?? src/lib/components/shared/DesktopBrowseLink.svelte\n?? src/lib/components/shared/DesktopSectionHeading.svelte\n?? src/lib/components/shared/DesktopVehicleActions.svelte\n?? src/lib/components/shared/MobileHeroBar.svelte\n?? src/lib/components/shared/MobilePromoCard.svelte\n?? src/lib/data/daynight-videos.ts\n?? src/lib/styles/desktop-controls.css\n?? src/lib/styles/desktop-discovery.css\n?? static/assets/brands/\n?? static/assets/daynight-contact/\n?? static/assets/icons/youtube-footer.svg\n?? static/assets/images/home-promos/campaign-collection-v3.webp\n?? static/assets/images/home-promos/campaign-financing-v3.webp\n?? static/assets/images/home-promos/campaign-financing-v4.webp\n?? static/assets/images/home-promos/campaign-viewing-v3.webp\n?? static/assets/images/home-promos/campaign-viewing-v4.webp\n?? static/assets/images/home-promos/finance-documents-cutout-v5.webp\n?? static/assets/images/home-promos/gclass-urus-pair-v4.webp\n?? static/assets/images/home-promos/kristian-original-instagram-DNyKbke2D83.jpg\n?? static/assets/images/home-promos/kristian-phone-cutout-v5.webp\n?? static/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.png\n?? static/assets/images/home-promos/kristian-real-white-shirt-cutout-v6.webp\n?? static/assets/images/home-promos/leasing-calculator-cutout-v7.webp\n?? static/assets/images/home-promos/phone-portrait-generated-v7.png\n?? static/assets/images/home-promos/phone-portrait-generated-v7.webp\n?? static/assets/images/home-promos/urus-rear-v4.webp\n?? static/assets/images/services/service-card-delivery-daynight-v2.webp\n?? static/assets/images/services/service-card-documents-daynight-v2.webp\n?? static/assets/images/services/service-card-financing-daynight-v2.webp\n?? static/assets/images/services/service-card-inspection-daynight-v2.webp\n?? static/assets/images/services/service-card-sourcing-daynight-v2.webp\n?? static/assets/images/services/service-card-trade-in-daynight-v2.webp\n?? tests/desktop-discovery.e2e.ts\n?? tests/home-hero.e2e.ts\n?? tests/mobile-inventory-cards.e2e.ts",
-    "headAfterCopy": "9f05da01000d9177226b19f6d5dd8e5531964948"
+    "root": "J:/cars",
+    "branch": "main",
+    "head": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "remote": "https://github.com/darkapoparka/cars.git",
+    "status": "M catalog.json\n M clients/al-hamoor-al-thahabi/HANDOFF.md\n M clients/al-hamoor-al-thahabi/assets/photo-provenance.json\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/company/ContactVehicle.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/home/MobileBudget.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/home/VehicleQuickSearch.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/ListingFilters.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/QuickFilterSheet.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/VehicleDiscoveryForm.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/listing/VehicleSearchDialog.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/vehicles/VehicleCard.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/components/vehicles/VehicleFinanceCalculator.svelte\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/config/brand.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/company.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/demo-content.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/editorial.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/home.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/inventory.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/listing.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/lib/data/navigation.ts\n M clients/al-hamoor-al-thahabi/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte\n M clients/al-hamoor-al-thahabi/auto-best/static/favicon.ico\n M clients/al-hamoor-al-thahabi/business-facts.json\n M clients/al-hamoor-al-thahabi/stock.json\n M clients/excellent-cars/CLIENT.md\n M clients/excellent-cars/auto-best/src/lib/components/layout/Header.svelte\n M clients/excellent-cars/carwow/src/lib/components/home/mobile/MobileHome.svelte\n M clients/excellent-cars/modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx\n M docs/WORKFLOW.md\n M templates/auto-best/.template/source-manifest.json\n M templates/auto-best/.template/template.json\n M templates/auto-best/ARCHITECTURE.md\n M templates/auto-best/ASSET_PROVENANCE.md\n M templates/auto-best/TEMPLATE.md\n M templates/auto-best/scripts/check-assets.mjs\n M templates/auto-best/scripts/journey-smoke.mjs\n M templates/auto-best/src/app.html\n M templates/auto-best/src/lib/components/company/ContactHero.svelte\n M templates/auto-best/src/lib/components/company/ContactIntent.svelte\n M templates/auto-best/src/lib/components/company/VehicleEnquiry.svelte\n M templates/auto-best/src/lib/components/home/BodyTypes.svelte\n M templates/auto-best/src/lib/components/home/BrandSection.svelte\n M templates/auto-best/src/lib/components/home/Editorial.svelte\n M templates/auto-best/src/lib/components/home/InventorySection.svelte\n M templates/auto-best/src/lib/components/home/SearchBox.svelte\n M templates/auto-best/src/lib/components/home/TrustActions.svelte\n M templates/auto-best/src/lib/components/home/VideoSection.svelte\n M templates/auto-best/src/lib/components/layout/Header.svelte\n M templates/auto-best/src/lib/components/layout/MobileMenu.svelte\n M templates/auto-best/src/lib/components/ui/HeroVehicles.svelte\n M templates/auto-best/src/lib/config/brand.ts\n M templates/auto-best/src/lib/data/editorial.ts\n M templates/auto-best/src/lib/data/home.ts\n M templates/auto-best/src/lib/data/navigation.ts\n M templates/auto-best/src/lib/data/vehicle-artwork.ts\n M templates/auto-best/src/lib/styles/composition.css\n M templates/auto-best/src/lib/styles/navigation.css\n M templates/auto-best/src/lib/styles/tokens.css\n M templates/auto-best/src/routes/+page.svelte\n M templates/auto-best/src/routes/blog-detail/[id]/detail.css\n M templates/auto-best/src/routes/contact/contact.css\n M templates/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte\n M templates/auto-best/src/routes/listing-detail-v1/[id]/detail.css\n M templates/auto-best/static/assets/images/blog/blog-1.jpg\n M templates/auto-best/static/assets/images/blog/blog-2.jpg\n M templates/auto-best/static/assets/images/blog/blog-3.jpg\n D templates/auto-best/static/assets/images/section/bg-6.jpg\n?? audits/2026-09-08/auto-best-borderless-editorial/\n?? audits/2026-09-08/auto-best-compact-menus/\n?? audits/2026-09-08/auto-best-desktop-comparison/\n?? audits/2026-09-08/auto-best-editorial-photos/\n?? audits/2026-09-08/auto-best-header-artwork/\n?? audits/2026-09-08/auto-best-header/\n?? audits/2026-09-08/auto-best-menu-balance/\n?? audits/2026-09-08/auto-best-menu-editorial/\n?? audits/2026-09-08/auto-best-menu-family/\n?? audits/2026-09-08/auto-best-menu-links/\n?? audits/2026-09-08/auto-best-menu-restored/\n?? audits/2026-09-08/auto-best-menu-scale/\n?? audits/2026-09-08/auto-best-menu-stability/\n?? audits/2026-09-08/auto-best-menu-title-cards/\n?? audits/2026-09-08/auto-best-menu-title-size/\n?? audits/2026-09-08/auto-best-service-assets/\n?? audits/2026-09-08/auto-best-showroom-palette/\n?? audits/2026-09-08/auto-best-source-refresh/\n?? audits/2026-09-08/auto-best-type-review/\n?? audits/2026-09-09/\n?? clients/al-hamoor-al-thahabi/SOURCE-PACK.json\n?? clients/al-hamoor-al-thahabi/assets/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/assets/branding.json\n?? clients/al-hamoor-al-thahabi/assets/favicon.ico\n?? clients/al-hamoor-al-thahabi/assets/favicon.png\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1005647-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1010924-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1017078-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/1018774-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/906007-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/916417-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/965722-4.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-1.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-2.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-3.webp\n?? clients/al-hamoor-al-thahabi/assets/inventory/969234-4.webp\n?? clients/al-hamoor-al-thahabi/assets/logo-dark.png\n?? clients/al-hamoor-al-thahabi/assets/logo-light.png\n?? clients/al-hamoor-al-thahabi/assets/showroom.webp\n?? clients/al-hamoor-al-thahabi/auto-best/src/lib/data/dealer.ts\n?? clients/al-hamoor-al-thahabi/auto-best/static/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/auto-best/static/dealer/\n?? clients/al-hamoor-al-thahabi/carwow/static/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/carwow/static/dealer/\n?? clients/al-hamoor-al-thahabi/carwow/static/favicon.ico\n?? clients/al-hamoor-al-thahabi/evidence/brand-review.png\n?? clients/al-hamoor-al-thahabi/evidence/published-avatar.png\n?? clients/al-hamoor-al-thahabi/evidence/published-showroom.png\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/apple-touch-icon.png\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/dealer/\n?? clients/al-hamoor-al-thahabi/modern/apps/web/public/favicon.ico\n?? clients/keen-auto-mall/CLIENT.md\n?? clients/keen-auto-mall/auto-best/\n?? clients/keen-auto-mall/carwow/\n?? clients/keen-auto-mall/modern/\n?? clients/midlands-trade-centre/auto-best/\n?? clients/midlands-trade-centre/modern/\n?? docs/lead-build/bulgaria-2026-09-09/\n?? templates/auto-best/.template/refresh-manifest.json\n?? templates/auto-best/provenance/borderless-editorial-2026-09-08.md\n?? templates/auto-best/provenance/editorial-photos-2026-09-08.md\n?? templates/auto-best/provenance/menu-service-assets-2026-09-08.md\n?? templates/auto-best/provenance/mobile-service-artwork-2026-09-06.md\n?? templates/auto-best/provenance/superseded-blog-photos/\n?? templates/auto-best/provenance/superseded-brand-banner/\n?? templates/auto-best/provenance/superseded-menu-art/\n?? templates/auto-best/scripts/home-hierarchy-smoke.mjs\n?? templates/auto-best/src/lib/components/layout/NavigationFeatureCard.svelte\n?? templates/auto-best/src/lib/components/ui/ActionLink.svelte\n?? templates/auto-best/src/lib/components/ui/ArtworkRegion.svelte\n?? templates/auto-best/src/lib/components/ui/FeatureArtwork.svelte\n?? templates/auto-best/src/lib/data/feature-artwork.ts\n?? templates/auto-best/static/assets/images/lead/day-night-mobile-import-v1.webp\n?? templates/auto-best/static/assets/images/lead/day-night-mobile-sell-v1.webp\n?? templates/auto-best/static/assets/images/template/\n?? templates/auto-best/static/auto-best-icon.svg",
+    "headAfterCopy": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca"
   },
   "files": [
     {
@@ -131,8 +131,8 @@
     },
     {
       "path": ".template-ref/listing-gridstyle-halfmap.html",
-      "bytes": 100616,
-      "sha256": "cf99b72f4622e4f6d08c563664e21f0b96656336660e8a4ba232a7230ab69ef1"
+      "bytes": 100609,
+      "sha256": "a1213ab3e8ffe8e6668dcdba1b72645b82194a3bf2853f6c82e412cdc9a38f2c"
     },
     {
       "path": ".template-ref/message.html",
@@ -220,6 +220,21 @@
       "sha256": "c0f21dc4d0051e7d1ea8d7fa1f31ef1cd2b9d5d01d7501f8bc416d11e7a4eeef"
     },
     {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 3684,
+      "sha256": "5a2608d99d76d5e6aa5754dd29dc47bcade69ad1a7b5f6f4a0225711c9cdc872"
+    },
+    {
+      "path": "docs/COMPONENT-PATTERNS.md",
+      "bytes": 7385,
+      "sha256": "e1d9b5deaea60b9e2bcbb5a91aaedacd0842f3d909592932b8a0650ed6737360"
+    },
+    {
+      "path": "docs/CONTENT-CONTRACT.md",
+      "bytes": 5182,
+      "sha256": "54a46f542de6f26a4b900c9554f83ce5615531dba3767b4b64aca091ccb8cd68"
+    },
+    {
       "path": "docs/final-polish/AUDIT.md",
       "bytes": 3187,
       "sha256": "768b01c85065f686d10f85047459475d6b9076d1d79c91f147ad790ee4e9c3fd"
@@ -281,8 +296,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3709,
-      "sha256": "26b77a239de72334318d7ca89bd22588fd2234f7a3d1ab0c275f57355f516b8d"
+      "bytes": 612,
+      "sha256": "c9ced6c892d7e704524d146f84cce369a1ac655cf1689622907e8b501eb8353a"
     },
     {
       "path": "scripts/backend-env-preflight.mjs",
@@ -441,18 +456,18 @@
     },
     {
       "path": "src/lib/components/about/DesktopAboutPage.svelte",
-      "bytes": 18310,
-      "sha256": "851fe4c78b1b46779b006a20512ebbd610937425ef46d393a73122974f9e2856"
+      "bytes": 18304,
+      "sha256": "4390429949c0ab072de1f34a1db8fffa2324e0923b5021c221224bf12b7946aa"
     },
     {
       "path": "src/lib/components/about/DesktopDealerProfilePage.svelte",
-      "bytes": 11234,
-      "sha256": "dbf92097e175be070b8552fcc68b0ae1db304de6c913ded53fa83c0d97dd1463"
+      "bytes": 12039,
+      "sha256": "8034e7f746e8c8ce1c7862a4b37d2da00486c751d59eeb67df7d2a9ecd90df83"
     },
     {
       "path": "src/lib/components/about/MobileAboutPage.svelte",
-      "bytes": 12874,
-      "sha256": "725d13e5f009b04dbc62d475bb9b1d3f470854ca271843d19a25986e66b69665"
+      "bytes": 12919,
+      "sha256": "ead37df9f304f0fd3ae02a0c1b0e9e5508ae22176a534de5aa3cbaafc4379c0d"
     },
     {
       "path": "src/lib/components/admin/AdminEmptyState.svelte",
@@ -546,38 +561,38 @@
     },
     {
       "path": "src/lib/components/blog/BlogArticlePage.svelte",
-      "bytes": 16957,
-      "sha256": "5fb53de3e567d27c8ff1bf167e741f97a5601bfb8126f49152c89210cb9a7331"
+      "bytes": 15308,
+      "sha256": "418d5d76d0930e15dc9d7eeb3519e7279cfec59137552dd78ebb4d88f5ef76b6"
     },
     {
       "path": "src/lib/components/blog/BlogIndexPage.svelte",
-      "bytes": 21361,
-      "sha256": "8232e0a2bdc7c92752cd603f21170067fae00c7adc1da48ba3bf2054e83e6fe5"
+      "bytes": 21066,
+      "sha256": "63d1b0ebd30c26c4db94cd5ea0171f5202f7a0043fc81c66fee34138b7a5ad1d"
     },
     {
       "path": "src/lib/components/calculator/CalculatorContent.svelte",
-      "bytes": 21691,
-      "sha256": "53b7474992f85f93db9e552f4956720301b9c03627168f8149642af354c49024"
+      "bytes": 22690,
+      "sha256": "d183e65db0f24873d4b4cb199f596779b3e19f53a9b325c49794cacde8ea73c6"
     },
     {
       "path": "src/lib/components/chat/ChatLauncher.svelte",
-      "bytes": 1901,
-      "sha256": "e5ab26792675a68a78b554369b63cf831e0cd51d18c28d9ebed7063da925a31d"
+      "bytes": 1902,
+      "sha256": "9868b67eed417475e40a33e6a9a21733f752bed57e88a48f291c330d09c85682"
     },
     {
       "path": "src/lib/components/chat/ChatThread.svelte",
-      "bytes": 6802,
-      "sha256": "3ef319602818878739aade11d8530cb58ef6c6be49e03d05d0d273d8c8e45eaf"
+      "bytes": 6876,
+      "sha256": "3157cd52f63b94f2adbdabd505a825e5c9cb24a91cdae184f9b092607f5f4dcb"
     },
     {
       "path": "src/lib/components/chat/ChatWidget.svelte",
-      "bytes": 5567,
-      "sha256": "5a4b036612d8c431a92a784f3390b41d3181a31ce885f3c5648449119c449ab0"
+      "bytes": 7125,
+      "sha256": "9a5e79dc30c335fc9424c20061cba72db3ed9b1eedf152c66f7c9bef49b15dcb"
     },
     {
       "path": "src/lib/components/compare/CompareContent.svelte",
-      "bytes": 15685,
-      "sha256": "23586ee29d17640d0ebf89d402eef75d9822d32b5bb83ca7f39b4e2797839fad"
+      "bytes": 18323,
+      "sha256": "a591b67c048a6b6c76e4e8377bcf4c08797caf6a525d0c15f61ca538cf03e9d7"
     },
     {
       "path": "src/lib/components/contact/deferred-map-frame.ts",
@@ -586,18 +601,18 @@
     },
     {
       "path": "src/lib/components/contact/DesktopContactPage.svelte",
-      "bytes": 31504,
-      "sha256": "5b15cf03a0735c60e3c9e2066d8ee0b24743d27092f0d8f2c44f91b569faea50"
+      "bytes": 32370,
+      "sha256": "6156fa0cd3e54c1568e8d6679ab1fa540e45f0cb6c0d2a0447941f720ec74cca"
     },
     {
       "path": "src/lib/components/contact/MobileContactPage.svelte",
-      "bytes": 38012,
-      "sha256": "cf1651c9e183232a07c8432e7a663e81d0c276e2dda70c627e1be79931edfb8b"
+      "bytes": 39655,
+      "sha256": "45972f808c2ef3ca80ec03bbd020b5378e29bc6465afbd3b4d5e637b12870dca"
     },
     {
       "path": "src/lib/components/detail/desktop/desktop-detail-reviews-data.ts",
-      "bytes": 1699,
-      "sha256": "cbb613b645f9355a86ec83005d4557c4bf12101232f9f6878694ebdd6047d0c2"
+      "bytes": 294,
+      "sha256": "cd384a99004ed85018b2465caca84fecbf74dd92546755c6a946fce981d9e860"
     },
     {
       "path": "src/lib/components/detail/desktop/DesktopDetailDealerPanel.svelte",
@@ -611,13 +626,13 @@
     },
     {
       "path": "src/lib/components/detail/desktop/DesktopDetailFinanceCalculator.svelte",
-      "bytes": 2369,
-      "sha256": "dc126a8cacab0551a91de47aa03fcc12f2a810b9c9a7b6627d8d54f9d6a01691"
+      "bytes": 3599,
+      "sha256": "650719ad867ec69814efcd2b884157b2b0656427248cdbfd6f9f8b5276100ac5"
     },
     {
       "path": "src/lib/components/detail/desktop/DesktopDetailGallery.svelte",
-      "bytes": 6859,
-      "sha256": "a186084ba29a4192b9339799036061c458ff88a21cdc2d0b0f2579b53bdadad8"
+      "bytes": 6997,
+      "sha256": "f804f4ac564e44e486a01f6952f4f14be2fb42c863000583ed6bddec5bbf8907"
     },
     {
       "path": "src/lib/components/detail/desktop/DesktopDetailInquiryPanel.svelte",
@@ -651,8 +666,8 @@
     },
     {
       "path": "src/lib/components/detail/desktop/DesktopDetailReviews.svelte",
-      "bytes": 3546,
-      "sha256": "b3a143e44806f7f0b1e07864e9b7a5e482c0cd2c479332e293e92e7e1f9b5f82"
+      "bytes": 3755,
+      "sha256": "085c6fd088dc0460269df2b802e806fbd254a6b6757e98c39ad833ee81796de6"
     },
     {
       "path": "src/lib/components/detail/desktop/DesktopDetailSidebar.svelte",
@@ -666,8 +681,8 @@
     },
     {
       "path": "src/lib/components/detail/desktop/DetailPageShell.svelte",
-      "bytes": 5564,
-      "sha256": "1f46b94086e5080e2d27d630e931ba7c246832d6462b2e6520a1c9f69b369c8a"
+      "bytes": 5590,
+      "sha256": "5c64978bc530915582135095f96a851521458085f594b22845f5ab67a0c99df2"
     },
     {
       "path": "src/lib/components/detail/mobile/MobileDetailPage.svelte",
@@ -676,13 +691,13 @@
     },
     {
       "path": "src/lib/components/faq/FaqContent.svelte",
-      "bytes": 11758,
-      "sha256": "218c81b936fb1a4974f1a9cd31b327cd3ae94cc581c370b12962df8d4d6a2598"
+      "bytes": 11369,
+      "sha256": "8cb24c186b417b7cab05468dcd634e1567f58db01576ead2fec6c7da4c93f830"
     },
     {
       "path": "src/lib/components/favorites/desktop/DesktopFavoritesPage.svelte",
-      "bytes": 9410,
-      "sha256": "a88263da2a0757efb14e410489637fbd08dbc7a22aae8b1fa161dc0171d8b1c2"
+      "bytes": 8533,
+      "sha256": "05f6397c2400de0d658254af2f39096000024f42486fa2b63f25212db415d96c"
     },
     {
       "path": "src/lib/components/favorites/mobile/MobileFavoritesPage.svelte",
@@ -691,13 +706,13 @@
     },
     {
       "path": "src/lib/components/financing/DesktopFinancingPage.svelte",
-      "bytes": 23537,
-      "sha256": "a39f2035251cb1a5f4a3adce9abe0103956b34389ad7298da637295b0ce80740"
+      "bytes": 23249,
+      "sha256": "7a28a863b408e13a27767f82e5d22809cd7a278e418c4ff043390bdb91ce6798"
     },
     {
       "path": "src/lib/components/financing/MobileFinancingPage.svelte",
-      "bytes": 12746,
-      "sha256": "e25cd81e8b6be970d1f0eed6de4e9348df7be1836fb96992098a22bdafa4a2c3"
+      "bytes": 12966,
+      "sha256": "b426aba839f92c5e9fc18ceeb9696e4a2f41c1e4b783414af417f7a1c0627ad9"
     },
     {
       "path": "src/lib/components/home/desktop/desktop-home-inventory-data.ts",
@@ -751,8 +766,8 @@
     },
     {
       "path": "src/lib/components/home/desktop/DesktopHomeReviews.svelte",
-      "bytes": 14227,
-      "sha256": "e2e7c3d9a26db4411def12ca42e09daa1cf28e416eeca1bf97bff9ee1925854b"
+      "bytes": 13740,
+      "sha256": "47aed4a141482de3195da9c21164d8c6627c9b5aac6a57f6754e82c462bdc341"
     },
     {
       "path": "src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte",
@@ -801,8 +816,8 @@
     },
     {
       "path": "src/lib/components/home/mobile/MobileBottomDock.svelte",
-      "bytes": 17439,
-      "sha256": "94b710004d260644531ed8502122cdfce5e4d2235d54d6980de6720707809e20"
+      "bytes": 17472,
+      "sha256": "c0d71bbbe2beafd9cbf46c0e6b8e2f3ebcea835853b3af8c0eb6f2061c003b8c"
     },
     {
       "path": "src/lib/components/home/mobile/MobileHeader.svelte",
@@ -811,13 +826,13 @@
     },
     {
       "path": "src/lib/components/home/mobile/MobileHome.svelte",
-      "bytes": 79539,
-      "sha256": "d49ef42555c5b5dc0d6a1518a5d980d22119c1c8f9eada6e1dafc40f64681c4e"
+      "bytes": 79512,
+      "sha256": "1bd3a23fb8e9ec98d1d3da74bd1745a49a1c2eb103ae7157c544a4744722d0f1"
     },
     {
       "path": "src/lib/components/inventory/desktop/desktop-inventory-context.svelte.ts",
-      "bytes": 13289,
-      "sha256": "a43935d0f10d76df8bcadbcaec25c01f0dbef5127b645ed81fec213475612231"
+      "bytes": 12201,
+      "sha256": "c21d1c1ee9b8c6f5b3f34c8d3ef5eaf118ee2365125586055664f2e8d70bfbb8"
     },
     {
       "path": "src/lib/components/inventory/desktop/desktop-inventory-sort.ts",
@@ -1006,8 +1021,8 @@
     },
     {
       "path": "src/lib/components/inventory/mobile/MobileFilterSheet.svelte",
-      "bytes": 17066,
-      "sha256": "5e3cc7d7786279e51b5c7b44e919cc237782a1133984c269e7dc92a9126730e3"
+      "bytes": 17104,
+      "sha256": "805bbeb5950a05fbd651f10c94dff923815e139385220f12d3651eddc10074b8"
     },
     {
       "path": "src/lib/components/inventory/mobile/mobileInventory.css",
@@ -1016,13 +1031,13 @@
     },
     {
       "path": "src/lib/components/inventory/mobile/MobileInventoryPage.svelte",
-      "bytes": 17879,
-      "sha256": "3bb60e0b80fe0780d5396c35854c7d5a34d65a8ac19e3e705b755f466fe97af6"
+      "bytes": 17845,
+      "sha256": "27bf4ae6f22237b07ac0d7f728eecce5d72e9fab10cd676a1b3de1f235f90a14"
     },
     {
       "path": "src/lib/components/inventory/mobile/MobileInventoryQuickFilters.svelte",
-      "bytes": 4320,
-      "sha256": "d1dd54eecf547139781ac079e94492e6ae8e5dc612878987d91c5d6f3c8124a2"
+      "bytes": 4679,
+      "sha256": "f00c5606eed057ce4f8b18150c79319e751a4e37d60829bbedf981e6970922d6"
     },
     {
       "path": "src/lib/components/inventory/mobile/MobileInventoryResults.svelte",
@@ -1046,13 +1061,13 @@
     },
     {
       "path": "src/lib/components/layout/daynight-footer-data.ts",
-      "bytes": 1998,
-      "sha256": "090b56191e94ea06249cfce12895e9dd70c05758c89f5bfe6005bc485ec4f04e"
+      "bytes": 1818,
+      "sha256": "6183f90925d41ceb710f75f1b5fc52127217c31a912a7787f7859ed118312ac1"
     },
     {
       "path": "src/lib/components/layout/DayNightFooter.svelte",
-      "bytes": 10750,
-      "sha256": "79e1ba5321fb6f13a40cf00d8fb560c960b16743884f3ff954ebf168a831c732"
+      "bytes": 10923,
+      "sha256": "15f059b739023d3dbfda4438df91e3d7385f8f4561c3ab62a1b79a226ed99c05"
     },
     {
       "path": "src/lib/components/layout/DayNightFooterIcon.svelte",
@@ -1061,8 +1076,8 @@
     },
     {
       "path": "src/lib/components/layout/DesktopDealerFooter.svelte",
-      "bytes": 7387,
-      "sha256": "eb90e95f45727c209a622ada3435933fe5098e92689b1dc9394953b503e2ce11"
+      "bytes": 7404,
+      "sha256": "ee61bdc1cf7ba0f8e49d1a5f0f0cd4106ad5b39cc2606221e20e7130fcff3ddd"
     },
     {
       "path": "src/lib/components/layout/DesktopYellowRouteHero.svelte",
@@ -1121,8 +1136,8 @@
     },
     {
       "path": "src/lib/components/layout/site-navigation-data.ts",
-      "bytes": 3757,
-      "sha256": "ec60c719aa6fc1407c48389717baefa5b28d8a21e7cbc2f11bb0886c6152dd76"
+      "bytes": 3685,
+      "sha256": "db2458d155e2b46ab89c5322fb99293d895f843f385bfa861ea4c4424a7bc612"
     },
     {
       "path": "src/lib/components/layout/SiteChrome.svelte",
@@ -1156,8 +1171,8 @@
     },
     {
       "path": "src/lib/components/layout/SiteChromePrimaryRow.svelte",
-      "bytes": 3882,
-      "sha256": "546928f10e3805f9b2452a85f4958ff40371eb8ed4126a40b1ed6683c1043e4a"
+      "bytes": 3983,
+      "sha256": "30e4bb91f7b5d9737f8f6e0f07d485dd5a0670ce4a6e412d62e065f92ab7e509"
     },
     {
       "path": "src/lib/components/layout/SiteChromeTopBar.svelte",
@@ -1181,8 +1196,8 @@
     },
     {
       "path": "src/lib/components/layout/SiteNavigation.svelte",
-      "bytes": 1249,
-      "sha256": "c47bf9a080477205e6feb3532a137c21660c561509c25d3d1cc71b6849e7c42b"
+      "bytes": 1582,
+      "sha256": "f810426e1a69b7e0e3f1dae80ecfc5834381f962ecdda1b0ee0b84dfca25e94f"
     },
     {
       "path": "src/lib/components/layout/SiteSearchDialog.svelte",
@@ -1206,8 +1221,8 @@
     },
     {
       "path": "src/lib/components/reviews/ReviewsContent.svelte",
-      "bytes": 9031,
-      "sha256": "7495607ccc78420d683343156dce4c15975eb584def4042887bf18b132cc22f0"
+      "bytes": 8928,
+      "sha256": "9dc5dc42e794e79bd1e8b22b614004c49097cc21827ccea0b1ecc9705e05755b"
     },
     {
       "path": "src/lib/components/sell/desktop-sell-page-data.ts",
@@ -1221,8 +1236,8 @@
     },
     {
       "path": "src/lib/components/sell/MobileSellYourCarPage.svelte",
-      "bytes": 35969,
-      "sha256": "bfc8da7144bf5797afd2f44038a4defee463205fe18bb878da9457188a262a8d"
+      "bytes": 34862,
+      "sha256": "45f946f2ea3023ae7e10093c66f30d21c409ee9798576f254dacb495809130fd"
     },
     {
       "path": "src/lib/components/seo/JsonLdScript.svelte",
@@ -1286,8 +1301,8 @@
     },
     {
       "path": "src/lib/components/shared/mobile/MobileFullSheet.svelte",
-      "bytes": 2713,
-      "sha256": "c169a86ec19150e6fb64085ebcfba80f715534e2a81405fb4a1e64ea77660106"
+      "bytes": 3708,
+      "sha256": "5ed619fa89485bd1b7460920c2bde139cc38d4ab6eb09c84e79a9aabbd1ac761"
     },
     {
       "path": "src/lib/components/shared/MobileHeroBar.svelte",
@@ -1301,13 +1316,13 @@
     },
     {
       "path": "src/lib/components/team/DesktopTeamMemberPage.svelte",
-      "bytes": 12850,
-      "sha256": "4677eb0801fba898ce583623893ea521c68cb902ab0abaca013d2619fee083b8"
+      "bytes": 13491,
+      "sha256": "5baec62edb524b075b61593a2984f3cb6a42cdca629d8660e410fc41ec7a0acd"
     },
     {
       "path": "src/lib/components/team/DesktopTeamPage.svelte",
-      "bytes": 12018,
-      "sha256": "82b57eb073661f6704dc0794eee161a945f3462cbdd3d7e6c0d1e1ec6b82138d"
+      "bytes": 12489,
+      "sha256": "9c929e3d29ce60554bc83f43b249eee40271816409635a6bba56aa7c13790cb6"
     },
     {
       "path": "src/lib/components/template/RawTemplatePage.svelte",
@@ -1326,8 +1341,8 @@
     },
     {
       "path": "src/lib/components/terms/TermsContent.svelte",
-      "bytes": 9185,
-      "sha256": "683586326c694652787912c924ba9034e25e845e85be07aece074b7c38149281"
+      "bytes": 8864,
+      "sha256": "f374216d1ae7c22e2dcee06957779edb694a9fb2cb473946a7857d171cd83f21"
     },
     {
       "path": "src/lib/components/trusted-html/TrustedMutableTemplateHtml.svelte",
@@ -2031,8 +2046,8 @@
     },
     {
       "path": "src/lib/data/daynight-blog.ts",
-      "bytes": 20067,
-      "sha256": "ec91a6078a1c9bd79dde641c33c14febc9c3d72c0b4a32977c06824a6db46905"
+      "bytes": 19862,
+      "sha256": "156dd479aee64b64654e4d622f88dbc72eab65caef59fc9a92da8182a2d0aac6"
     },
     {
       "path": "src/lib/data/daynight-current-inventory.ts",
@@ -2046,23 +2061,23 @@
     },
     {
       "path": "src/lib/data/daynight-reviews.ts",
-      "bytes": 3665,
-      "sha256": "5a526c4d7612f99116437a3a051e53b7cb8e71180a09e9a296113127df3da484"
+      "bytes": 4634,
+      "sha256": "5042359e6974da59814d2c5735e1fb7a244f1f5b0af0ed5c466caab4389569b3"
     },
     {
       "path": "src/lib/data/daynight-site.ts",
-      "bytes": 3808,
-      "sha256": "731f5fd84966fc8ca02850485a77491d457d45a62ad828fa6ef44c1600e861e5"
+      "bytes": 3991,
+      "sha256": "f2bee2ff79d5f49b66b10a7448237aa6b14ddf8ef7ddd30f63664b6434e91698"
     },
     {
       "path": "src/lib/data/daynight-team.ts",
-      "bytes": 3422,
-      "sha256": "239837da42319b38c4b7ba358cb2305da60ecb67e2f050476bac1348f9b67a6e"
+      "bytes": 3607,
+      "sha256": "cb81bb9d4064c8c85bef0d1c17dcde49ebf0384b1fe3019135895a4dd9ef0069"
     },
     {
       "path": "src/lib/data/daynight-vehicles.ts",
-      "bytes": 5444,
-      "sha256": "e39dd7241f9c95eac3b4818658d7cce05f588300821d172ff68481bda5577661"
+      "bytes": 5400,
+      "sha256": "d84bc41ad30ce6a204ddb61060da28a0235480377b7c337c70b226ac612d485d"
     },
     {
       "path": "src/lib/data/daynight-videos.ts",
@@ -2073,6 +2088,11 @@
       "path": "src/lib/data/dealers.ts",
       "bytes": 1714,
       "sha256": "87ea7364b0f8e344127ddd14caf4b0b2bfa9be0b23c92b27eb34f5a3b50a4dcf"
+    },
+    {
+      "path": "src/lib/data/editorial-guides.ts",
+      "bytes": 16307,
+      "sha256": "951a3d7c9d85e9977f0b42da778180f6c41e5c0e3138588bb1f6b4f408b3a21c"
     },
     {
       "path": "src/lib/data/home-brand-strip.ts",
@@ -2120,9 +2140,14 @@
       "sha256": "f317f57dc693fd22b215b2d0995a0290130e1aec960877313be5600dccf269d7"
     },
     {
+      "path": "src/lib/server/blog-articles.test.ts",
+      "bytes": 2009,
+      "sha256": "8de550f263ea7be081337de767b52fd5d7d0bd67755eb82696444515be502a6b"
+    },
+    {
       "path": "src/lib/server/blog-articles.ts",
-      "bytes": 744,
-      "sha256": "e4aac0670af9f2465dd4e6486cadbc3ce751c6b1eb4e76ea6d025097aa44ed1a"
+      "bytes": 931,
+      "sha256": "d3f5585aba70873bb15fec9a9640bda7f2942624a488efe58f40f06c0aaa1364"
     },
     {
       "path": "src/lib/server/cms/schemas.ts",
@@ -2216,8 +2241,8 @@
     },
     {
       "path": "src/lib/server/public-routes.ts",
-      "bytes": 6245,
-      "sha256": "a582fc33b69e9cfffeb06ef94626bb419603829d0ca821a77f1feb063f7f7d92"
+      "bytes": 6246,
+      "sha256": "32e6023664a5e667d96b8fff59f7e2a386a3510a27f2e8916a1fa7b4c12c4a58"
     },
     {
       "path": "src/lib/server/rate-limit.ts",
@@ -2266,8 +2291,8 @@
     },
     {
       "path": "src/lib/server/repositories/posts.ts",
-      "bytes": 10315,
-      "sha256": "7e2ae6cc388e911fba45b0c3d7fb3722369035a1f57906152f6f49b4c99302b1"
+      "bytes": 10355,
+      "sha256": "cef52812f6ceb5d1037c0b1ddeff79e8e1f371d81c5273486338b40cfb457299"
     },
     {
       "path": "src/lib/server/repositories/public-inventory.ts",
@@ -2321,8 +2346,8 @@
     },
     {
       "path": "src/lib/state/inventory-filters.svelte.ts",
-      "bytes": 8716,
-      "sha256": "8685e94c1fa8ee2db3280313415c9acd91982e80beadbec31d49fb04e024acf8"
+      "bytes": 7187,
+      "sha256": "7212d7783fa200922ce7638aa8c1a3c822b9c0cf21004d927b2e6b1ac91ba2b9"
     },
     {
       "path": "src/lib/styles/base.css",
@@ -2415,6 +2440,16 @@
       "sha256": "4024d9ec99d056b9d240b1d895ca0eef068740fa1b5353be4d7280d89e072887"
     },
     {
+      "path": "src/lib/utils/contact-intent.test.ts",
+      "bytes": 1683,
+      "sha256": "91d3e4a5e1e314871594484994acb5777ca812e4cdf378ef6abfda45d3b41882"
+    },
+    {
+      "path": "src/lib/utils/contact-intent.ts",
+      "bytes": 1975,
+      "sha256": "0396187a7e5d814ba3150c5f8d55c9d14c4fed24fd8d554ed073809a1a2d3def"
+    },
+    {
       "path": "src/lib/utils/daynight-image-fallback.ts",
       "bytes": 2621,
       "sha256": "8456cb8ba4eca337a849539a21ea1d5b1a03f20abdd3a67e7cb3703dfcc7bf46"
@@ -2430,6 +2465,16 @@
       "sha256": "d0be1096f184e9b51f78b02f9139f06a0a9219323b99b2298c404c167f8a4c93"
     },
     {
+      "path": "src/lib/utils/finance-estimate.test.ts",
+      "bytes": 2116,
+      "sha256": "99ede6065b77b8582e10d3967adba818e1b231af2026eea75850ff4a6673ab34"
+    },
+    {
+      "path": "src/lib/utils/finance-estimate.ts",
+      "bytes": 3252,
+      "sha256": "74e01bfbecaa86665331d3a033340aa1f403f22a44133a94f7e7143d50748f9b"
+    },
+    {
       "path": "src/lib/utils/format.ts",
       "bytes": 1469,
       "sha256": "0e10c5f0521137bd6c7707e3f8f4f8f3e70d918f753e11fb6522f4f8729eec2b"
@@ -2443,6 +2488,21 @@
       "path": "src/lib/utils/inventory-filter-utils.ts",
       "bytes": 2292,
       "sha256": "a3882f4ee87b3207c4ef4b529a30b8615aab752b171776c627cf45f295f421cd"
+    },
+    {
+      "path": "src/lib/utils/inventory-url.test.ts",
+      "bytes": 1671,
+      "sha256": "c096c62a220fa0cd6ffffceea6f924093a7df713b4a344223bd00573a91cdfaf"
+    },
+    {
+      "path": "src/lib/utils/inventory-url.ts",
+      "bytes": 3284,
+      "sha256": "b4464c59fdb7623e0057bc730455ab23f9e0588705540ad6859ae0111757214a"
+    },
+    {
+      "path": "src/lib/utils/modal-focus.ts",
+      "bytes": 1393,
+      "sha256": "846b7d9d7319a647c1efde6721b1873e4844c387d3aa4581b24a95ca888f702e"
     },
     {
       "path": "src/lib/utils.ts",
@@ -2471,8 +2531,8 @@
     },
     {
       "path": "src/routes/+layout.svelte",
-      "bytes": 5180,
-      "sha256": "bbb8723ae79f18a2a94ca58acbe4a0c4c4277cc5c5de1e4f42064e5c0fd0da17"
+      "bytes": 5122,
+      "sha256": "b7b7d95127fc0685d237d97cee1c4aecc5ff4912297f0edda709a0f5191b0c28"
     },
     {
       "path": "src/routes/+page.server.ts",
@@ -2721,8 +2781,8 @@
     },
     {
       "path": "src/routes/blog/+page.server.ts",
-      "bytes": 712,
-      "sha256": "7ada934d4d8909fa2a84d094b231a49424e5c1baf2067b5c4b1cfb77bb87e135"
+      "bytes": 619,
+      "sha256": "2683866c1e1a1aa5a2b0d4d8bd7ffae082e2d13362c5e8c543b1e360da2debfc"
     },
     {
       "path": "src/routes/blog/+page.svelte",
@@ -2731,8 +2791,8 @@
     },
     {
       "path": "src/routes/blog/[slug]/+page.server.ts",
-      "bytes": 799,
-      "sha256": "6498571e7fce25b9cbee64fcdd1d96fef6626244b90ef3bbc5af0e9d783c32c6"
+      "bytes": 596,
+      "sha256": "10426b54566098a670acdec76f77982a146e8b8f571aad883b36a45df579077d"
     },
     {
       "path": "src/routes/blog/[slug]/+page.svelte",
@@ -2741,8 +2801,8 @@
     },
     {
       "path": "src/routes/calculator/+page.server.ts",
-      "bytes": 212,
-      "sha256": "8bbd572cd1b2ae90f221f093d5e0dbc4928af99dff3f8b7af78e1ff7d7894051"
+      "bytes": 284,
+      "sha256": "a93a94f7d3f4311f00363112818bd2a5c6fbf90395024f1fe8f67d146b894dd8"
     },
     {
       "path": "src/routes/calculator/+page.svelte",
@@ -2761,13 +2821,13 @@
     },
     {
       "path": "src/routes/contact/+page.server.ts",
-      "bytes": 209,
-      "sha256": "c76465039bc3df779e27367bbd9635df040f330c80d263a6fb372fe3aa7040a7"
+      "bytes": 285,
+      "sha256": "e693aa1d4b596f57eefc2895ee8e3e26b4f876af840a3512ecc88c857cb9fd3b"
     },
     {
       "path": "src/routes/contact/+page.svelte",
-      "bytes": 2002,
-      "sha256": "430475aebf7ddcbd6f7d904530cfc20e2ce17806968bb0a4c03f9851976cebbd"
+      "bytes": 2074,
+      "sha256": "124bb4dc987c33ecabdeb6427ae1dd576acdca498aee957ba0c9ae593d3fad6a"
     },
     {
       "path": "src/routes/faq/+page.server.ts",
@@ -2861,8 +2921,8 @@
     },
     {
       "path": "src/routes/presentation/home2/+page.svelte",
-      "bytes": 33353,
-      "sha256": "1a01b4abeb5ba6c8d88e2b459469cd7749959d9772abb2ee042974b18702e56d"
+      "bytes": 33317,
+      "sha256": "32675307db1931307262a7de9dd6de5a2cc4104b1ba2a1bd52c4257e180cefe3"
     },
     {
       "path": "src/routes/presentation/home3/+page.server.ts",
@@ -2921,8 +2981,8 @@
     },
     {
       "path": "src/routes/sitemap.xml/+server.ts",
-      "bytes": 463,
-      "sha256": "8817512d9644dbcc58913f1084dbe0b2cd434770091a0e7e1d314fdb0d1a9b20"
+      "bytes": 694,
+      "sha256": "775be95307e57e6e155ce2c9d85f9c5c147bbaa05e9e49a3eea8ffe5549ea60d"
     },
     {
       "path": "src/routes/team/+page.server.ts",
@@ -6640,6 +6700,11 @@
       "sha256": "6f9f2e467afe235ca6bdcf14bdef6260b0b7060d92aa311dbff09445e0912bc8"
     },
     {
+      "path": "TEMPLATE.md",
+      "bytes": 3739,
+      "sha256": "2a3575d2439bcc798f4e9dfc44ae63cd74413d331a55cf5df119549b20f1a39c"
+    },
+    {
       "path": "tests/desktop-discovery.e2e.ts",
       "bytes": 9561,
       "sha256": "158f01316870935814c13498405ee0c660e58c60ecc89b5d7010e47247e9a676"
@@ -6711,40 +6776,12 @@
     }
   ],
   "excluded": [
-    ".agency-os",
-    ".audit",
-    ".codex-vite-6517.err.log",
-    ".codex-vite-6517.out.log",
-    ".git",
-    ".github",
-    ".impeccable",
     ".svelte-kit",
-    ".tmp",
+    ".template",
     ".vercel",
-    ".vscode",
-    "AGENCY_BRIEF.md",
     "AGENTS.md",
-    "artifacts",
-    "build",
-    "node_modules",
-    "OUTREACH_DRAFT.md",
-    "PROJECT_PLAN.md",
-    "QA.md",
-    "tasks.md",
-    "test-results"
+    "node_modules"
   ],
   "links": [],
-  "bytes": 141242552,
-  "configurationSupplement": {
-    "at": "2026-09-06T14:52:29.954Z",
-    "files": [
-      ".gitignore",
-      ".npmrc",
-      ".nvmrc",
-      ".prettierignore",
-      ".prettierrc"
-    ]
-  },
-  "refreshedAt": "2026-09-06T20:48:34.538Z",
-  "refreshEvidence": "../../audits/2026-09-06/asko96-build"
+  "bytes": 141309005
 }

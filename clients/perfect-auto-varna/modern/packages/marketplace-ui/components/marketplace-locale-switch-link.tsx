@@ -32,7 +32,7 @@ const ResolvedLocaleSwitchLink = ({
     <a
       aria-label={label}
       className={className}
-      href={href}
+      href={`/variant-2${href}`}
       hrefLang={targetLocale}
       title={label}
     >
@@ -56,7 +56,7 @@ export const MarketplaceLocaleSwitchLink = ({
     <a
       aria-label={label}
       className={className}
-      href={targetPath}
+      href={`/variant-2${targetPath}`}
       hrefLang={targetLocale}
       title={label}
     >

@@ -36,8 +36,8 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-favorites-top">
 			<a class="mobile-favorites-top__back" href={resolve('/')}>← Към сайта</a>
-			<span>Любими</span>
-			<h1>Запазени</h1>
+			<span>Favorites</span>
+			<h1>Saved locally</h1>
 			<p>{vehicles.length ? countLabel : 'Запазвайте автомобили, за да ги намерите тук.'}</p>
 		</section>
 
@@ -59,7 +59,7 @@
 										data-daynight-image-fallback
 										use:daynightImageFallback
 									/>
-									<span>{vehicle.badges[0] ?? 'Наличен'}</span>
+									<span>{vehicle.badges[0] ?? 'Advertised'}</span>
 								</div>
 								<div class="mobile-favorites-card__body">
 									<div class="mobile-favorites-card__title">

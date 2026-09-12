@@ -88,19 +88,19 @@
     draftMileageMax = current.mileageMax !== null ? String(current.mileageMax) : '';
   };
 
-  const rangeSummary = (min: string, max: string, suffix: string) => min || max ? `${min || '—'} – ${max || '—'}${suffix}` : 'Без ограничение';
+  const rangeSummary = (min: string, max: string, suffix: string) => min || max ? `${min || '—'} – ${max || '—'}${suffix}` : 'No limit';
   const mobileFields = $derived([
-    { field: 'make', label: 'Марка', value: draftMake || 'Всички марки' },
-    { field: 'model', label: 'Модел', value: draftModel || 'Всички модели' },
-    { field: 'body', label: 'Купе', value: bodyLabel(draftBody) || 'Всички купета' },
-    { field: 'price', label: 'Бюджет', value: rangeSummary(draftPriceMin, draftPriceMax, ' €') },
-    { field: 'year', label: 'Година', value: rangeSummary(draftYearMin, draftYearMax, '') },
-    { field: 'fuel', label: 'Гориво', value: draftFuel || 'Всяко гориво' },
-    { field: 'mileage_max', label: 'Пробег', value: draftMileageMax ? `До ${draftMileageMax} км` : 'Без ограничение' },
-    { field: 'transmission', label: 'Скорости', value: draftTransmission || 'Всички' },
-    { field: 'version', label: 'Версия', value: draftVersion || 'Всички' },
-    { field: 'condition', label: 'Състояние', value: draftCondition === 'new' ? 'Нови' : draftCondition === 'used' ? 'Употребявани' : 'Всички' },
-    { field: 'equipment', label: 'Екстри', value: draftEquipment.length ? `${draftEquipment.length} избрани` : 'Без предпочитания' }
+    { field: 'make', label: 'Make', value: draftMake || 'All makes' },
+    { field: 'model', label: 'Model', value: draftModel || 'All models' },
+    { field: 'body', label: 'Body type', value: bodyLabel(draftBody) || 'All body types' },
+    { field: 'price', label: 'Budget', value: rangeSummary(draftPriceMin, draftPriceMax, ' £') },
+    { field: 'year', label: 'Year', value: rangeSummary(draftYearMin, draftYearMax, '') },
+    { field: 'fuel', label: 'Fuel', value: draftFuel || 'Any fuel' },
+    { field: 'mileage_max', label: 'Mileage', value: draftMileageMax ? `Up to ${draftMileageMax} miles` : 'No limit' },
+    { field: 'transmission', label: 'Transmission', value: draftTransmission || 'All' },
+    { field: 'version', label: 'Version', value: draftVersion || 'All' },
+    { field: 'condition', label: 'Condition', value: draftCondition === 'new' ? 'New' : draftCondition === 'used' ? 'Used' : 'All' },
+    { field: 'equipment', label: 'Features', value: draftEquipment.length ? `${draftEquipment.length} selected` : 'No preference' }
   ]);
 
   const resetDraft = () => {
@@ -196,24 +196,24 @@
     onformdata={cleanFormData}
   >
     <header class="dn-listing-filter__dialog-header">
-      <h2 id="dn-listing-filter-title">Търсене на автомобили</h2>
-      <button class="dn-listing-filter__close" type="button" aria-label="Затвори филтрите" onclick={closeFilters}>
+      <h2 id="dn-listing-filter-title">Vehicle search</h2>
+      <button class="dn-listing-filter__close" type="button" aria-label="Close filters" onclick={closeFilters}>
         <Icon name="x" size={22} />
       </button>
     </header>
 
     <div class="dn-listing-filter__dialog-content">
       <div class="dn-listing-filter__dialog-search" role="search">
-        <label class="dn-sr-only" for="dn-listing-dialog-query">Търсене на автомобил</label>
+        <label class="dn-sr-only" for="dn-listing-dialog-query">Vehicle search</label>
         <Icon name="search" size={20} />
-        <input id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draftQuery} onkeydown={handleSearchKeydown} type="search" name="q" placeholder="Марка или модел" autocomplete="off" />
+        <input id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draftQuery} onkeydown={handleSearchKeydown} type="search" name="q" placeholder="Make or model" autocomplete="off" />
         <button
           class="dn-listing-filter__inline-submit"
           type="submit"
           disabled={matchingVehicles.length === 0 || hasInvalidRange}
-          aria-label={matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}
+          aria-label={matchingVehicles.length === 1 ? 'Show 1 vehicle' : `Show ${matchingVehicles.length} vehicles`}
         >
-          Покажи {matchingVehicles.length}
+          Show {matchingVehicles.length}
           <Icon name="arrow-right" size={17} strokeWidth={2} />
         </button>
       </div>
@@ -226,110 +226,110 @@
       <div class="dn-listing-filter__filter-groups">
         <div class="dn-listing-filter__core-grid">
           <label>
-            <span class="dn-listing-filter__field-label">Марка</span>
-            <select name="make" aria-label="Марка" bind:value={draftMake} onchange={() => { draftModel = ''; }}>
+            <span class="dn-listing-filter__field-label">Make</span>
+            <select name="make" aria-label="Make" bind:value={draftMake} onchange={() => { draftModel = ''; }}>
               {#each listingFilterOptions.makes as option (option)}
-                <option value={option}>{option || 'Марка'}</option>
+                <option value={option}>{option || 'Make'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Модел</span>
-            <select name="model" aria-label="Модел" bind:value={draftModel}>
+            <span class="dn-listing-filter__field-label">Model</span>
+            <select name="model" aria-label="Model" bind:value={draftModel}>
               {#each draftModelOptions as option (option)}
-                <option value={option}>{option || 'Модел'}</option>
+                <option value={option}>{option || 'Model'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Купе</span>
-            <select name="body" aria-label="Купе" bind:value={draftBody}>
+            <span class="dn-listing-filter__field-label">Body type</span>
+            <select name="body" aria-label="Body type" bind:value={draftBody}>
               {#each listingFilterOptions.bodies as option (option)}
-                <option value={option}>{bodyLabel(option) || 'Купе'}</option>
+                <option value={option}>{bodyLabel(option) || 'Body type'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Състояние</span>
-            <select name="condition" aria-label="Състояние" bind:value={draftCondition}>
-              <option value="">Състояние</option>
-              <option value="new">Нови</option>
-              <option value="used">Употребявани</option>
+            <span class="dn-listing-filter__field-label">Condition</span>
+            <select name="condition" aria-label="Condition" bind:value={draftCondition}>
+              <option value="">Condition</option>
+              <option value="new">New</option>
+              <option value="used">Used</option>
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Цена от</span>
-            <select name="price_min" aria-label="Цена от" bind:value={draftPriceMin}>
+            <span class="dn-listing-filter__field-label">Price from</span>
+            <select name="price_min" aria-label="Price from" bind:value={draftPriceMin}>
               {#if draftPriceMin && !listingFilterOptions.prices.some(value => value === draftPriceMin)}<option value={draftPriceMin}>{draftPriceMin}</option>{/if}
               {#each listingFilterOptions.prices as option (option)}
-                <option value={option}>{option ? `От ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена от'}</option>
+                <option value={option}>{option ? `From ${new Intl.NumberFormat('en-GB').format(Number(option))} £` : 'Price from'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Цена до</span>
-            <select name="price_max" aria-label="Цена до" bind:value={draftPriceMax}>
+            <span class="dn-listing-filter__field-label">Price up to</span>
+            <select name="price_max" aria-label="Price up to" bind:value={draftPriceMax}>
               {#if draftPriceMax && !listingFilterOptions.prices.some(value => value === draftPriceMax)}<option value={draftPriceMax}>{draftPriceMax}</option>{/if}
               {#each listingFilterOptions.prices as option (option)}
-                <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена до'}</option>
+                <option value={option}>{option ? `Up to ${new Intl.NumberFormat('en-GB').format(Number(option))} £` : 'Price up to'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Година от</span>
-            <select name="year_min" aria-label="Година от" bind:value={draftYearMin}>
+            <span class="dn-listing-filter__field-label">Year from</span>
+            <select name="year_min" aria-label="Year from" bind:value={draftYearMin}>
               {#if draftYearMin && !listingFilterOptions.years.some(value => value === draftYearMin)}<option value={draftYearMin}>{draftYearMin}</option>{/if}
               {#each listingFilterOptions.years as option (option)}
-                <option value={option}>{option || 'Година от'}</option>
+                <option value={option}>{option || 'Year from'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Година до</span>
-            <select name="year_max" aria-label="Година до" bind:value={draftYearMax}>
+            <span class="dn-listing-filter__field-label">Year up to</span>
+            <select name="year_max" aria-label="Year up to" bind:value={draftYearMax}>
               {#if draftYearMax && !listingFilterOptions.years.some(value => value === draftYearMax)}<option value={draftYearMax}>{draftYearMax}</option>{/if}
               {#each listingFilterOptions.years as option (option)}
-                <option value={option}>{option || 'Година до'}</option>
+                <option value={option}>{option || 'Year up to'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Пробег до</span>
-            <select name="mileage_max" aria-label="Пробег до" bind:value={draftMileageMax}>
+            <span class="dn-listing-filter__field-label">Mileage up to</span>
+            <select name="mileage_max" aria-label="Mileage up to" bind:value={draftMileageMax}>
               {#if draftMileageMax && !listingFilterOptions.mileages.some(value => value === draftMileageMax)}<option value={draftMileageMax}>{draftMileageMax}</option>{/if}
               {#each listingFilterOptions.mileages as option (option)}
-                <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} км` : 'Пробег до'}</option>
+                <option value={option}>{option ? `Up to ${new Intl.NumberFormat('en-GB').format(Number(option))} miles` : 'Mileage up to'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Гориво</span>
-            <select name="fuel" aria-label="Гориво" bind:value={draftFuel}>
+            <span class="dn-listing-filter__field-label">Fuel</span>
+            <select name="fuel" aria-label="Fuel" bind:value={draftFuel}>
               {#each listingFilterOptions.fuels as option (option)}
-                <option value={option}>{option || 'Гориво'}</option>
+                <option value={option}>{option || 'Fuel'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Скоростна кутия</span>
-            <select name="transmission" aria-label="Скоростна кутия" bind:value={draftTransmission}>
+            <span class="dn-listing-filter__field-label">Transmission</span>
+            <select name="transmission" aria-label="Transmission" bind:value={draftTransmission}>
               {#each listingFilterOptions.transmissions as option (option)}
-                <option value={option}>{option || 'Скорости'}</option>
+                <option value={option}>{option || 'Transmission'}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Пакет или версия</span>
-            <select name="version" aria-label="Пакет или версия" bind:value={draftVersion}>
+            <span class="dn-listing-filter__field-label">Package or version</span>
+            <select name="version" aria-label="Package or version" bind:value={draftVersion}>
               {#each listingFilterOptions.versions as option (option)}
-                <option value={option}>{option || 'Версия'}</option>
+                <option value={option}>{option || 'Version'}</option>
               {/each}
             </select>
           </label>
         </div>
 
         <section class="dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment" aria-labelledby="dn-listing-filter-equipment-title">
-          <h3 id="dn-listing-filter-equipment-title">Екстри</h3>
+          <h3 id="dn-listing-filter-equipment-title">Features</h3>
           <div class="dn-listing-filter__equipment-grid">
             {#each listingFilterOptions.equipment as option (option)}
               <label class="dn-listing-filter__equipment-option">
@@ -345,12 +345,12 @@
     <footer class="dn-listing-filter__dialog-footer">
       {#if hasInvalidRange}
         <p class="dn-listing-filter__range-error" role="alert">
-          {hasInvalidPriceRange ? 'Минималната цена трябва да е по-ниска от максималната.' : 'Началната година трябва да е преди крайната.'}
+          {hasInvalidPriceRange ? 'The minimum price must be lower than the maximum price.' : 'The starting year must be before the ending year.'}
         </p>
       {/if}
-      {#if hasLiveFilters}<a class="dn-listing-filter__clear" href={resolve('/listing-grid')} onclick={handleClear}>Изчисти</a>{/if}
+      {#if hasLiveFilters}<a class="dn-listing-filter__clear" href={resolve('/listing-grid')} onclick={handleClear}>Clear</a>{/if}
       <button class="dn-listing-filter__dialog-submit" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite">
-        <span>{matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}</span>
+        <span>{matchingVehicles.length === 1 ? 'Show 1 vehicle' : `Show ${matchingVehicles.length} vehicles`}</span>
         <Icon name="search" size={18} />
       </button>
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />

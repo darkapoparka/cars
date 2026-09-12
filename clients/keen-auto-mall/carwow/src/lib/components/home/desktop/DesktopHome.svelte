@@ -29,7 +29,7 @@
 			<DesktopHomeBrandStrip
 				brands={brandStrip.slice(0, 12)}
 				title="Избери марка"
-				ctaLabel="Всички марки"
+				ctaLabel="All makes"
 			/>
 			<DesktopHomeWhyDayNight showMetrics={false} variant="campaign-grid" />
 			<DesktopHomeVideos />

@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="dn-brand-panel">
-      <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(brands.length, 6))} aria-label="Автомобили по марка">
+      <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(brands.length, 6))}>
         {#each brands as brand (brand.label)}
           <a class="dn-brand-card" class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
             <span class="dn-brand-card__image">
@@ -26,7 +26,12 @@
             <strong>{brand.label}</strong>
           </a>
         {/each}
-      <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}><span class="dn-brand-card__image" aria-hidden="true"><svg class:expanded width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span><strong>{expanded ? 'Покажи по-малко' : 'Всички марки'}</strong></button>
+      <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}>
+        <span class="dn-brand-all-glyph" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <strong>{expanded ? 'Покажи по-малко' : 'Всички марки'}</strong>
+      </button>
       </div>
 
     </div>
@@ -71,7 +76,7 @@
   }
 
   @media (max-width: 767px) {
-    .dn-brand-section { padding: 16px 0 12px; background: var(--dn-mobile-canvas); }
+    .dn-brand-section { padding: 12px 0 12px; background: var(--dn-mobile-canvas); }
     .dn-brand-shell { padding-inline: 0; border-radius: 0; background: transparent; }
     .dn-brand-hero { padding: 0; }
     .dn-brand-hero__copy { gap: 16px; }
@@ -85,14 +90,14 @@
     .dn-brand-card__image { height: 48px; margin-bottom: 6px; }
     .dn-brand-card__frame { display: block; position: relative; width: var(--logo-width); aspect-ratio: var(--logo-ratio); overflow: hidden; }
     .dn-brand-card__image img { position: absolute; width: var(--logo-image-width); max-width: none; height: auto; left: var(--logo-left); top: var(--logo-top); }
-    .dn-discovery-toggle svg { padding: 8px; border-radius: 50%; background: var(--dn-mobile-canvas); color: var(--dn-red); }
-    .dn-discovery-toggle svg.expanded { transform: rotate(180deg); }
+    .dn-brand-all-glyph { display: grid; width: 54px; height: 54px; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto 7px; padding: 9px; border-radius: 16px; background: #f1f3f5; }
+    .dn-brand-all-glyph span { border-radius: 50%; background: #cdd2d8; }
+    .dn-brand-all-glyph span:first-child { background: var(--dn-red); }
     .dn-brand-card--secondary { display: none; }
     .dn-brand-card strong { font-size: 15px; line-height: 1.2; }
     .dn-brand-card--additional { order: 2; }
     .dn-discovery-toggle { order: 1; display: block; min-height: 108px; margin: 0; padding: 10px 6px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: 15px; }
-    .dn-discovery-toggle .dn-brand-card__image { color: var(--dn-muted); }
-    .dn-discovery-toggle strong { display: block; line-height: 1.2; font-weight: 600; }
+    .dn-discovery-toggle strong { display: block; line-height: 1.2; font-weight: 700; }
   }
 
   @media (prefers-reduced-motion: reduce) {

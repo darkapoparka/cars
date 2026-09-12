@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Native 1:1 rebuild of the localized /financing (financing.html) desktop main
 	// content: breadcrumb + hero (advantages) + "Как работи" process steps + the
-	// "Полезно" blog cards + the FAQ accordion. The copy and data are kept verbatim;
+	// "Guides" blog cards + the FAQ accordion. The copy and data are kept verbatim;
 	// the look that used to come from app.css + StorefrontTemplateContent's :global
 	// stylesheet is now reproduced as a SELF-CONTAINED scoped style block below,
 	// confirmed against getComputedStyle at 1440px (see the comments per section for
@@ -98,14 +98,14 @@
 			image: '/assets/images/blog/post-31.jpg',
 			href: '/calculator',
 			category: 'ФИНАНСИРАНЕ',
-			title: 'Калкулатор за финансиране',
+			title: 'Finance calculator',
 			copy: 'Ориентировъчна сметка според цена, първоначална вноска и срок.'
 		},
 		{
 			image: '/assets/images/blog/post-23.jpg',
 			href: '/sell-your-car',
 			category: 'ПОЛЕЗНО',
-			title: 'Продажба или бартер',
+			title: 'Sell or trade in',
 			copy: 'Изпратете данни за вашия автомобил и обсъдете възможностите с екипа.'
 		}
 	];
@@ -159,9 +159,9 @@
 	<main id="main-content" tabindex="-1" aria-labelledby="daynight-financing-title">
 		<DesktopYellowRouteHero
 			headingId="daynight-financing-title"
-			title="Финансиране"
+			title="Buying options"
 			copy="Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед."
-			primaryLabel="Изпрати запитване"
+			primaryLabel="Prepare enquiry"
 			primaryHref="/contact"
 			secondaryLabel="Виж автомобили"
 			secondaryHref="/inventory"
@@ -198,11 +198,11 @@
 
 						<div class="hero-actions">
 							<a href={resolve('/contact')} class="btn-large-3 sa-cta sa-cta-primary">
-								Изпрати запитване
+								Prepare enquiry
 							</a>
 							<p class="hero-actions__call">
 								<span>Предпочитате разговор?</span>
-								<a class="text-underline" href={`tel:${daynightSite.phone}`}>Обадете се</a>
+								<a class="text-underline" href={`tel:${daynightSite.phone}`}>Call the dealership</a>
 							</p>
 						</div>
 					</div>

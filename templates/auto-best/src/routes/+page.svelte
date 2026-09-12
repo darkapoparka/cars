@@ -1,7 +1,7 @@
 <script lang="ts">
   import Hero from '$components/home/Hero.svelte';
   import SearchBox from '$components/home/SearchBox.svelte';
-  import MobileBudget from '$components/home/MobileBudget.svelte';
+  import MobileCoreActions from '$components/home/MobileCoreActions.svelte';
   import BodyTypes from '$components/home/BodyTypes.svelte';
   import InventorySection from '$components/home/InventorySection.svelte';
   import BrandSection from '$components/home/BrandSection.svelte';
@@ -20,15 +20,14 @@
 <div class="dn-home-page">
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
+  <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
   <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" /></div>
-  <div class="dn-home-slot dn-home-slot--budget"><MobileBudget /></div>
   <div class="dn-home-slot dn-home-slot--inventory"><InventorySection /></div>
   <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands"><BrandSection /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" /></div>
   <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
-  <div class="dn-home-slot dn-home-slot--services"><TrustActions group="all" variant="cards" /></div>
 </div>
 
 <style>
@@ -152,6 +151,11 @@
 
     .dn-home-slot {
       display: contents;
+    }
+
+    .dn-home-slot--browse-actions,
+    .dn-home-slot--ownership-actions {
+      display: none;
     }
   }
 </style>

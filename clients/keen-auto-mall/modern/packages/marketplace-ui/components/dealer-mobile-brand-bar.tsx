@@ -50,44 +50,13 @@ export const DealerMobileBrandBar = ({
         aria-label={isBg ? "Начало" : "Home"}
         className={cn(
           "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2",
-          light && "h-10 bg-black px-2.5"
+          light && "h-10 px-2.5"
         )}
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
       >
-        <span
-          className={cn("relative block aspect-[1780/512]", logoWidthClassName)}
-        >
-          <Image
-            alt={leadSite.name}
-            className="h-full w-full object-contain"
-            height={512}
-            priority
-            sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            style={
-              wordmarkTone === "original"
-                ? undefined
-                : { clipPath: "inset(0 68% 0 0)" }
-            }
-            width={1780}
-          />
-          {wordmarkTone === "original" ? null : (
-            <Image
-              alt=""
-              aria-hidden="true"
-              className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-                wordmarkTone === "light"
-                  ? "brightness-0 invert"
-                  : "brightness-0"
-              )}
-              fill
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={leadSite.logoPath}
-            />
-          )}
+        <span className={cn("relative flex h-11 items-center", logoWidthClassName)}>
+          <Image alt={leadSite.name} className="h-11 w-full object-contain" width={1200} height={340} priority sizes="144px" src={tone === "dark" || wordmarkTone === "light" ? leadSite.logoDarkPath : leadSite.logoPath} />
         </span>
       </Link>
 

@@ -123,16 +123,16 @@
 		sort === 'price-asc' ? '' : (sortOptions.find((option) => option.value === sort)?.label ?? '')
 	);
 	const filterSheetEyebrow = $derived.by(() => {
-		if (filterSheetMode === 'search') return 'Търсене';
-		if (filterSheetMode === 'brand') return 'Марка';
-		if (filterSheetMode === 'model') return 'Модел';
+		if (filterSheetMode === 'search') return 'Search';
+		if (filterSheetMode === 'brand') return 'Make';
+		if (filterSheetMode === 'model') return 'Model';
 		if (filterSheetMode === 'sort') return 'Подредба';
-		if (filterSheetMode === 'fuel') return 'Гориво';
-		if (filterSheetMode === 'mileage') return 'Пробег';
+		if (filterSheetMode === 'fuel') return 'Fuel';
+		if (filterSheetMode === 'mileage') return 'Mileage';
 		if (filterSheetMode === 'body') return 'Каросерия';
-		if (filterSheetMode === 'price') return 'Цена';
-		if (filterSheetMode === 'transmission') return 'Скорости';
-		return 'Филтри';
+		if (filterSheetMode === 'price') return 'Price';
+		if (filterSheetMode === 'transmission') return 'Transmission';
+		return 'Filters';
 	});
 	const filterSheetClearLabel = $derived.by(() => {
 		if (filterSheetMode === 'search') return 'Изчисти търсене';
@@ -144,7 +144,7 @@
 		if (filterSheetMode === 'body') return 'Изчисти каросерия';
 		if (filterSheetMode === 'price') return 'Изчисти цена';
 		if (filterSheetMode === 'transmission') return 'Изчисти скорости';
-		return 'Изчисти';
+		return 'Clear';
 	});
 	const hasActiveFilters = $derived(
 		Boolean(
