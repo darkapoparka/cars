@@ -36,3 +36,4 @@ Repository skills under `.agents/skills/` route to these procedures. Each standa
 The full file inventory and original index snapshots for this migration are local evidence under `runtime/workflow-overhaul-20260912/`. No owner-wide configuration, private CRM, application API model or dependency upgrade is part of the instruction cleanup.
 
 Workflow changes update their authoritative document and relevant tests in the same commit. Run `node scripts/check-workflow.mjs` and the focused Node workflow tests.
+Current source/branch disposition: [main consolidation, 13 September 2026](MAIN-CONSOLIDATION-2026-09-13.md). All active source branches have been consolidated into main; older migration descriptions are dated evidence.

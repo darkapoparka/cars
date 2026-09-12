@@ -6,7 +6,11 @@
       "slug": "al-aayan-used-cars",
       "name": "Al Aayan Used Cars",
       "path": "clients/al-aayan-used-cars",
-      "variants": [],
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
       "sourceState": "source-present",
       "reviewState": "unknown",
       "leadId": "ae-sharjah-al-aayan-used-cars"
@@ -28,7 +32,11 @@
       "slug": "al-fareed-used-cars",
       "name": "Al Fareed Used Cars",
       "path": "clients/al-fareed-used-cars",
-      "variants": [],
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
       "sourceState": "source-present",
       "reviewState": "unknown",
       "leadId": "ae-sharjah-al-fareed-used-cars"
@@ -45,6 +53,30 @@
       "sourceState": "source-present",
       "reviewState": "unknown",
       "leadId": "ae-sharjah-al-hamoor-al-thahabi"
+    },
+    {
+      "slug": "amh-cars-bhm",
+      "name": "amh-cars-bhm",
+      "path": "clients/amh-cars-bhm",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "amt-auto-sales",
+      "name": "amt-auto-sales",
+      "path": "clients/amt-auto-sales",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
     },
     {
       "slug": "asko-96",
@@ -71,6 +103,42 @@
       "reviewState": "unknown"
     },
     {
+      "slug": "autobedrijf-spinder",
+      "name": "autobedrijf-spinder",
+      "path": "clients/autobedrijf-spinder",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "autobedrijf-wester",
+      "name": "autobedrijf-wester",
+      "path": "clients/autobedrijf-wester",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "autohandel-winter",
+      "name": "autohandel-winter",
+      "path": "clients/autohandel-winter",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
       "slug": "autohof",
       "name": "autohof",
       "path": "clients/autohof",
@@ -79,7 +147,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -120,14 +188,26 @@
     },
     {
       "slug": "avtoborsa-mania",
-      "name": "avtoborsa-mania",
+      "name": "АВТОБОРСА МАНИЯ",
       "path": "clients/avtoborsa-mania",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "car-finder-360",
+      "name": "car-finder-360",
+      "path": "clients/car-finder-360",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -139,14 +219,18 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
       "slug": "cfo-auto-group",
       "name": "CFO Auto Group",
       "path": "clients/cfo-auto-group",
-      "variants": [],
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
       "sourceState": "source-present",
       "reviewState": "unknown",
       "leadId": "us-fl-orlando-cfo-auto-group"
@@ -165,14 +249,14 @@
     },
     {
       "slug": "chernomore-varna",
-      "name": "chernomore-varna",
+      "name": "Автосалон Черно море",
       "path": "clients/chernomore-varna",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -184,7 +268,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -195,6 +279,18 @@
         "rencar"
       ],
       "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "depue-auto-sales",
+      "name": "depue-auto-sales",
+      "path": "clients/depue-auto-sales",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -230,7 +326,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -242,7 +338,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -259,26 +355,26 @@
     },
     {
       "slug": "exclusive-auto-varna",
-      "name": "exclusive-auto-varna",
+      "name": "Exclusive Auto",
       "path": "clients/exclusive-auto-varna",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
       "slug": "extra-car-sm",
-      "name": "extra-car-sm",
+      "name": "ЕКСТРА КАР-СМ",
       "path": "clients/extra-car-sm",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -290,7 +386,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -314,7 +410,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -338,7 +434,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -350,7 +446,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -362,7 +458,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -374,7 +470,19 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "good-wheels-auto-sales",
+      "name": "good-wheels-auto-sales",
+      "path": "clients/good-wheels-auto-sales",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -386,7 +494,19 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "heartlands-motor-group",
+      "name": "heartlands-motor-group",
+      "path": "clients/heartlands-motor-group",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -415,14 +535,14 @@
     },
     {
       "slug": "kapitol-varna",
-      "name": "kapitol-varna",
+      "name": "КАПИТОЛ",
       "path": "clients/kapitol-varna",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -460,7 +580,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -472,7 +592,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -496,7 +616,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -508,19 +628,19 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
       "slug": "martin-auto-dobrich",
-      "name": "martin-auto-dobrich",
+      "name": "MARTIN AUTO",
       "path": "clients/martin-auto-dobrich",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -532,14 +652,18 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
       "slug": "mg7-group",
       "name": "MG7 Group",
       "path": "clients/mg7-group",
-      "variants": [],
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
       "sourceState": "source-present",
       "reviewState": "unknown",
       "leadId": "bg-burgas-mg7-group"
@@ -558,6 +682,18 @@
       "leadId": "gb-birmingham-midlands-trade-centre"
     },
     {
+      "slug": "my-car-outlet",
+      "name": "my-car-outlet",
+      "path": "clients/my-car-outlet",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
       "slug": "navara-car",
       "name": "Навара кар",
       "path": "clients/navara-car",
@@ -573,7 +709,11 @@
       "slug": "neuhoff-auto-sales",
       "name": "Neuhoff Auto Sales",
       "path": "clients/neuhoff-auto-sales",
-      "variants": [],
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
       "sourceState": "source-present",
       "reviewState": "unknown",
       "leadId": "us-in-evansville-neuhoff-auto-sales"
@@ -587,7 +727,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -599,7 +739,19 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "nicky-ds",
+      "name": "nicky-ds",
+      "path": "clients/nicky-ds",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -611,7 +763,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -620,8 +772,8 @@
       "path": "clients/outletcars-varna",
       "variants": [
         "auto-best",
-        "import",
-        "carwow"
+        "carwow",
+        "import"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -647,19 +799,19 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
       "slug": "prestige-varna",
-      "name": "prestige-varna",
+      "name": "Автосалон ПРЕСТИЖ",
       "path": "clients/prestige-varna",
       "variants": [
         "auto-best",
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -680,8 +832,8 @@
       "path": "clients/promosale-varna",
       "variants": [
         "auto-best",
-        "import",
-        "carwow"
+        "carwow",
+        "import"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -695,7 +847,19 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "sevierville-import-truck-center",
+      "name": "sevierville-import-truck-center",
+      "path": "clients/sevierville-import-truck-center",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -707,7 +871,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -719,7 +883,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -731,7 +895,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -743,7 +907,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -755,7 +919,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -767,7 +931,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -816,7 +980,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -828,7 +992,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -840,7 +1004,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -852,7 +1016,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -864,7 +1028,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-not-local",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     }
   ],

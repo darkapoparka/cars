@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T18:27:08.850Z",
+  "updatedAt": "2026-09-12T21:04:17.825Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
@@ -14,7 +14,26 @@
       "name": "Al Aayan Used Cars",
       "localPath": "clients/al-aayan-used-cars",
       "localPresent": true,
-      "variants": [],
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
       "branchSources": [],
       "delivery": {
         "state": "unknown",
@@ -27,8 +46,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "research-only",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -54,7 +73,9 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "ae-sharjah-al-aayan-used-cars"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "al-basma-motors",
@@ -102,8 +123,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -133,14 +154,35 @@
         "sourceState": "recovered-unfinished",
         "reviewState": "pending-owner-review",
         "leadId": "ae-sharjah-al-basma-motors"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "al-fareed-used-cars",
       "name": "Al Fareed Used Cars",
       "localPath": "clients/al-fareed-used-cars",
       "localPresent": true,
-      "variants": [],
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
       "branchSources": [],
       "delivery": {
         "state": "unknown",
@@ -153,8 +195,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "research-only",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -180,7 +222,9 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "ae-sharjah-al-fareed-used-cars"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "al-hamoor-al-thahabi",
@@ -228,8 +272,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -259,7 +303,115 @@
         "sourceState": "recovered-unfinished",
         "reviewState": "pending-owner-review",
         "leadId": "ae-sharjah-al-hamoor-al-thahabi"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "amh-cars-bhm",
+      "name": "amh-cars-bhm",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/amh-cars-bhm",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "amt-auto-sales",
+      "name": "amt-auto-sales",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/amt-auto-sales",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "asko-96",
@@ -307,8 +459,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -337,7 +489,9 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "astracar",
@@ -385,8 +539,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -415,7 +569,168 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "autobedrijf-spinder",
+      "name": "autobedrijf-spinder",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/autobedrijf-spinder",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "autobedrijf-wester",
+      "name": "autobedrijf-wester",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/autobedrijf-wester",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "autohandel-winter",
+      "name": "autohandel-winter",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/autohandel-winter",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "autohof",
@@ -426,20 +741,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-08",
           "commit": "3756e01ee1781508720b81a98b8b3810bd929704",
@@ -461,11 +783,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -514,8 +842,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -544,7 +872,9 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "automarket-varna",
@@ -592,8 +922,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -622,7 +952,9 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "avangard-auto",
@@ -670,8 +1002,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -700,31 +1032,40 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "avtoborsa-mania",
-      "name": "avtoborsa-mania",
+      "name": "АВТОБОРСА МАНИЯ",
       "localPath": "clients/avtoborsa-mania",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-02",
           "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
@@ -746,12 +1087,71 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
+        }
+      ],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      }
+    },
+    {
+      "slug": "car-finder-360",
+      "name": "car-finder-360",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
         }
       ],
       "delivery": {
-        "state": "source-review-required"
-      }
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/car-finder-360",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "car-max-sofia",
@@ -762,20 +1162,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-09",
           "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
@@ -797,11 +1204,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -809,7 +1222,26 @@
       "name": "CFO Auto Group",
       "localPath": "clients/cfo-auto-group",
       "localPresent": true,
-      "variants": [],
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
       "branchSources": [],
       "delivery": {
         "state": "unknown",
@@ -822,8 +1254,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "research-only",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -849,7 +1281,9 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "us-fl-orlando-cfo-auto-group"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "champion-auto-pro",
@@ -897,8 +1331,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -927,31 +1361,40 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "chernomore-varna",
-      "name": "chernomore-varna",
+      "name": "Автосалон Черно море",
       "localPath": "clients/chernomore-varna",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-02",
           "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
@@ -973,11 +1416,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -989,20 +1438,27 @@
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-08",
           "commit": "3756e01ee1781508720b81a98b8b3810bd929704",
@@ -1024,11 +1480,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1067,8 +1529,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -1095,7 +1557,62 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "depue-auto-sales",
+      "name": "depue-auto-sales",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/depue-auto-sales",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "eliqauto",
@@ -1143,8 +1660,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -1173,7 +1690,9 @@
         ],
         "sourceState": "recovered-unfinished",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "elit-auto-import",
@@ -1221,8 +1740,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -1251,7 +1770,9 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "europa-varna",
@@ -1262,20 +1783,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-03",
           "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
@@ -1297,11 +1825,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1313,20 +1847,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-03",
           "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
@@ -1348,11 +1889,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1405,8 +1952,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -1435,31 +1982,40 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "exclusive-auto-varna",
-      "name": "exclusive-auto-varna",
+      "name": "Exclusive Auto",
       "localPath": "clients/exclusive-auto-varna",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-04",
           "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
@@ -1481,36 +2037,49 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
       "slug": "extra-car-sm",
-      "name": "extra-car-sm",
+      "name": "ЕКСТРА КАР-СМ",
       "localPath": "clients/extra-car-sm",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-02",
           "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
@@ -1532,11 +2101,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1548,20 +2123,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-10",
           "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
@@ -1583,11 +2165,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1636,8 +2224,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -1654,7 +2242,9 @@
         "ownerReview": {
           "state": "unknown"
         }
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "fadi-cars",
@@ -1665,20 +2255,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-07",
           "commit": "4e98d7639bdbf4b357510248563cae886263f422",
@@ -1700,11 +2297,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1741,7 +2344,39 @@
           "localPresent": true
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-04",
           "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
@@ -1763,40 +2398,12 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "unknown",
-        "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
-      },
-      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
-      "id": null,
-      "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
-      "evidence": {
-        "source": {
-          "state": "present",
-          "commit": null
-        },
-        "personalization": {
-          "state": "unknown"
-        },
-        "build": {
-          "state": "unknown"
-        },
-        "deployment": {
-          "state": "unknown"
-        },
-        "browser": {
-          "state": "unknown"
-        },
-        "ownerReview": {
-          "state": "unknown"
-        }
-      }
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "fresh-auto-ruse",
@@ -1807,20 +2414,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-10",
           "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
@@ -1842,11 +2456,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1858,20 +2478,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-06",
           "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
@@ -1893,11 +2520,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1909,20 +2542,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-06",
           "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
@@ -1944,11 +2584,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -1960,20 +2606,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-06",
           "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
@@ -1995,12 +2648,71 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
+        }
+      ],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      }
+    },
+    {
+      "slug": "good-wheels-auto-sales",
+      "name": "good-wheels-auto-sales",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
         }
       ],
       "delivery": {
-        "state": "source-review-required"
-      }
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/good-wheels-auto-sales",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "haskovo-cars-bg",
@@ -2011,20 +2723,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-10",
           "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
@@ -2046,12 +2765,71 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
+        }
+      ],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      }
+    },
+    {
+      "slug": "heartlands-motor-group",
+      "name": "heartlands-motor-group",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
         }
       ],
       "delivery": {
-        "state": "source-review-required"
-      }
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/heartlands-motor-group",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "icars-plovdiv",
@@ -2087,7 +2865,39 @@
           "localPresent": true
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-05",
           "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
@@ -2109,40 +2919,12 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "unknown",
-        "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
-      },
-      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
-      "id": null,
-      "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
-      "evidence": {
-        "source": {
-          "state": "present",
-          "commit": null
-        },
-        "personalization": {
-          "state": "unknown"
-        },
-        "build": {
-          "state": "unknown"
-        },
-        "deployment": {
-          "state": "unknown"
-        },
-        "browser": {
-          "state": "unknown"
-        },
-        "ownerReview": {
-          "state": "unknown"
-        }
-      }
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "ivo-auto",
@@ -2190,8 +2972,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -2220,31 +3002,40 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "kapitol-varna",
-      "name": "kapitol-varna",
+      "name": "КАПИТОЛ",
       "localPath": "clients/kapitol-varna",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-02",
           "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
@@ -2266,11 +3057,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -2319,8 +3116,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -2346,7 +3143,9 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "us-fl-pompano-beach-keen-auto-mall"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "kg-team-auto",
@@ -2394,8 +3193,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -2425,7 +3224,9 @@
         "sourceState": "recovered-unfinished",
         "reviewState": "pending-owner-review",
         "leadId": "bg-plovdiv-kg-team-auto"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "kris-car-plovdiv",
@@ -2436,20 +3237,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-06",
           "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
@@ -2471,11 +3279,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -2487,20 +3301,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-10",
           "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
@@ -2522,11 +3343,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -2575,8 +3402,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -2605,7 +3432,9 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "lux-auto-bg",
@@ -2616,20 +3445,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-09",
           "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
@@ -2651,11 +3487,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -2667,20 +3509,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-08",
           "commit": "3756e01ee1781508720b81a98b8b3810bd929704",
@@ -2702,36 +3551,49 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
       "slug": "martin-auto-dobrich",
-      "name": "martin-auto-dobrich",
+      "name": "MARTIN AUTO",
       "localPath": "clients/martin-auto-dobrich",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-04",
           "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
@@ -2753,11 +3615,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -2769,20 +3637,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-07",
           "commit": "4e98d7639bdbf4b357510248563cae886263f422",
@@ -2804,11 +3679,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -2816,32 +3697,27 @@
       "name": "MG7 Group",
       "localPath": "clients/mg7-group",
       "localPresent": true,
-      "variants": [],
-      "branchSources": [
+      "variants": [
         {
-          "ref": "origin/codex/astra-bg-05",
-          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
-          "slug": "mg7-group",
-          "path": "clients/mg7-group",
-          "variants": [
-            {
-              "key": "auto-best",
-              "state": "implemented-unverified",
-              "qaRecorded": false
-            },
-            {
-              "key": "modern",
-              "state": "implemented-unverified",
-              "qaRecorded": false
-            },
-            {
-              "key": "carwow",
-              "state": "implemented-unverified",
-              "qaRecorded": false
-            }
-          ]
+          "key": "auto-best",
+          "state": "implemented-unverified",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "implemented-unverified",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "implemented-unverified",
+          "localPresent": false,
+          "qaRecorded": false
         }
       ],
+      "branchSources": [],
       "delivery": {
         "state": "unknown",
         "legacyState": "research-only",
@@ -2854,8 +3730,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "research-only",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -2881,7 +3757,35 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "bg-burgas-mg7-group"
-      }
+      },
+      "sourceHistory": [
+        {
+          "ref": "origin/codex/astra-bg-05",
+          "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
+          "slug": "mg7-group",
+          "path": "clients/mg7-group",
+          "variants": [
+            {
+              "key": "auto-best",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "modern",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            },
+            {
+              "key": "carwow",
+              "state": "implemented-unverified",
+              "qaRecorded": false
+            }
+          ],
+          "disposition": "merged into main; old ref removed"
+        }
+      ],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "midlands-trade-centre",
@@ -2929,8 +3833,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -2956,7 +3860,62 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "gb-birmingham-midlands-trade-centre"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+    },
+    {
+      "slug": "my-car-outlet",
+      "name": "my-car-outlet",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/my-car-outlet",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "navara-car",
@@ -3004,8 +3963,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -3034,14 +3993,35 @@
         ],
         "sourceState": "recovered-unfinished",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "neuhoff-auto-sales",
       "name": "Neuhoff Auto Sales",
       "localPath": "clients/neuhoff-auto-sales",
       "localPresent": true,
-      "variants": [],
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        }
+      ],
       "branchSources": [],
       "delivery": {
         "state": "unknown",
@@ -3054,8 +4034,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "research-only",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -3081,7 +4061,9 @@
         "sourceState": "research-or-brief-only",
         "reviewState": "pending-owner-review",
         "leadId": "us-in-evansville-neuhoff-auto-sales"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "next-auto-pernik",
@@ -3092,20 +4074,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-09",
           "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
@@ -3127,11 +4116,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3143,20 +4138,27 @@
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-04",
           "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
@@ -3178,12 +4180,71 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
+        }
+      ],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      }
+    },
+    {
+      "slug": "nicky-ds",
+      "name": "nicky-ds",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
         }
       ],
       "delivery": {
-        "state": "source-review-required"
-      }
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/nicky-ds",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "nova-cars-sofia",
@@ -3194,20 +4255,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-09",
           "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
@@ -3229,11 +4297,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3252,21 +4326,21 @@
           "localPresent": true
         },
         {
-          "key": "import",
-          "state": "ready-for-local-review",
-          "entry": null,
-          "publicUrl": null,
-          "templateSource": null,
-          "qaRecorded": true,
-          "localPresent": true
-        },
-        {
           "key": "carwow",
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
           "entry": null,
           "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "import",
+          "state": "ready-for-local-review",
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null,
+          "qaRecorded": true,
           "localPresent": true
         }
       ],
@@ -3282,8 +4356,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -3300,7 +4374,9 @@
         "ownerReview": {
           "state": "unknown"
         }
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "perfect-auto-varna",
@@ -3348,8 +4424,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -3366,7 +4442,9 @@
         "ownerReview": {
           "state": "unknown"
         }
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "plus-auto-ruse",
@@ -3377,20 +4455,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-10",
           "commit": "f7726f6f0ac5148024188ef5fd5ebee233cfeef3",
@@ -3412,36 +4497,49 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
       "slug": "prestige-varna",
-      "name": "prestige-varna",
+      "name": "Автосалон ПРЕСТИЖ",
       "localPath": "clients/prestige-varna",
       "localPresent": false,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-02",
           "commit": "a5db06db5d919bd11550a4aa246163463cf294fc",
@@ -3463,11 +4561,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3516,8 +4620,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -3546,7 +4650,9 @@
         ],
         "sourceState": "existing-apps",
         "reviewState": "pending-owner-review"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "promosale-varna",
@@ -3564,21 +4670,21 @@
           "localPresent": true
         },
         {
-          "key": "import",
-          "state": "ready-for-local-review",
-          "entry": "/variant-2/",
-          "publicUrl": null,
-          "templateSource": null,
-          "qaRecorded": true,
-          "localPresent": true
-        },
-        {
           "key": "carwow",
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
           "entry": "/variant-3/",
           "templateSource": null,
+          "localPresent": true
+        },
+        {
+          "key": "import",
+          "state": "ready-for-local-review",
+          "entry": "/variant-2/",
+          "publicUrl": null,
+          "templateSource": null,
+          "qaRecorded": true,
           "localPresent": true
         }
       ],
@@ -3603,8 +4709,8 @@
       "packagingVersion": "1",
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
           "canonicalPath": "clients/promosale-varna",
           "payloadDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7"
         },
@@ -3671,7 +4777,7 @@
           "note": "Historical source inventory; hosting has not been refreshed by indexing."
         }
       ],
-      "canonicalSourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
       "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
       "vercel": {
         "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
@@ -3686,7 +4792,8 @@
         "state": "READY",
         "browserState": "not-rechecked-by-this-pilot",
         "unchangedByPilot": true
-      }
+      },
+      "canonicalSourceRef": "main"
     },
     {
       "slug": "rqs-auto-team",
@@ -3697,20 +4804,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-03",
           "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
@@ -3732,12 +4846,71 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
+        }
+      ],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      }
+    },
+    {
+      "slug": "sevierville-import-truck-center",
+      "name": "sevierville-import-truck-center",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false
         }
       ],
       "delivery": {
-        "state": "source-review-required"
-      }
+        "state": "unknown"
+      },
+      "evidence": {
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        },
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
+      },
+      "localPath": "clients/sevierville-import-truck-center",
+      "localPresent": false,
+      "branchSources": [],
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "slavi-cars",
@@ -3748,20 +4921,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-06",
           "commit": "3632c8d3a92dabe0c0f81868da28af0acb2fb2fd",
@@ -3783,11 +4963,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3799,20 +4985,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-03",
           "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
@@ -3834,11 +5027,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3850,20 +5049,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-09",
           "commit": "4883ba24e70aff5a2fc8cfeb338344330d15bedb",
@@ -3885,11 +5091,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3901,20 +5113,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-05",
           "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
@@ -3936,11 +5155,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -3952,20 +5177,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-03",
           "commit": "dc0504e68bce1da550bfd4d4b5e27be94ebdc1d0",
@@ -3987,11 +5219,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -4003,20 +5241,27 @@
         {
           "key": "auto-best",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "in-progress",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-04",
           "commit": "2ffa586537dfe37e76a578437a0c8ff021c3646a",
@@ -4038,11 +5283,17 @@
               "state": "in-progress",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -4079,7 +5330,39 @@
           "localPresent": true
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "unknown",
+        "legacyState": "not-deployed",
+        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+      },
+      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-01",
           "commit": "14ac68d2db91ea0ae6749f204e95de0915d36925",
@@ -4101,40 +5384,12 @@
               "state": "needs-personalization",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "unknown",
-        "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
-      },
-      "sourceReconciliation": "Local source retained; branch source is separately preserved for comparison.",
-      "id": null,
-      "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
-      "evidence": {
-        "source": {
-          "state": "present",
-          "commit": null
-        },
-        "personalization": {
-          "state": "unknown"
-        },
-        "build": {
-          "state": "unknown"
-        },
-        "deployment": {
-          "state": "unknown"
-        },
-        "browser": {
-          "state": "unknown"
-        },
-        "ownerReview": {
-          "state": "unknown"
-        }
-      }
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "texas-drive-auto",
@@ -4182,8 +5437,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -4213,7 +5468,9 @@
         "sourceState": "recovered-unfinished",
         "reviewState": "pending-owner-review",
         "leadId": "us-tx-dallas-texas-drive-auto"
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "the-dealers-point",
@@ -4261,8 +5518,8 @@
       "packagingVersion": null,
       "evidence": {
         "source": {
-          "state": "present",
-          "commit": null
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         },
         "personalization": {
           "state": "unknown"
@@ -4279,7 +5536,9 @@
         "ownerReview": {
           "state": "unknown"
         }
-      }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
       "slug": "todorov-auto",
@@ -4290,20 +5549,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-05",
           "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
@@ -4325,11 +5591,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -4341,20 +5613,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-07",
           "commit": "4e98d7639bdbf4b357510248563cae886263f422",
@@ -4376,11 +5655,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -4392,20 +5677,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-07",
           "commit": "4e98d7639bdbf4b357510248563cae886263f422",
@@ -4427,11 +5719,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -4443,20 +5741,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-05",
           "commit": "5232347ab3933d5ea9301a675928ccb5aba6ece1",
@@ -4478,11 +5783,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     },
     {
@@ -4494,20 +5805,27 @@
         {
           "key": "auto-best",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
-          "qaRecorded": false
+          "qaRecorded": false,
+          "localPresent": false
         }
       ],
-      "branchSources": [
+      "branchSources": [],
+      "delivery": {
+        "state": "source-review-required"
+      },
+      "sourceHistory": [
         {
           "ref": "origin/codex/astra-bg-07",
           "commit": "4e98d7639bdbf4b357510248563cae886263f422",
@@ -4529,11 +5847,17 @@
               "state": "implemented-unverified",
               "qaRecorded": false
             }
-          ]
+          ],
+          "disposition": "merged into main; old ref removed"
         }
       ],
-      "delivery": {
-        "state": "source-review-required"
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        }
       }
     }
   ],

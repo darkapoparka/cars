@@ -1,5 +1,7 @@
 # Cars
 
+**Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+
 Open **Cars** for a new dealer, dealer fixes, research, the project registry or publication. Open the appropriate **cars-template-…** project to improve reusable frontend UI or code.
 
 Keep the five projects. A reviewed template commit is promoted into Cars; new leads use that pinned release. Existing dealers stay independent until you request an update. You do not need to remember a manual copy step: the lead workflow checks releases and refuses unapproved or changed snapshots.

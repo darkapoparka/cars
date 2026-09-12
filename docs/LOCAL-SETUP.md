@@ -21,3 +21,19 @@ Use this short project instruction in a GitHub-connected web conversation:
 > For Cars work, read current darkapoparka/cars AGENTS.md and docs/README.md through GitHub, then the relevant workflow or template reference. Preserve exact repository, branch and commit identity. Local uncommitted files and local Codex skills are not automatically available here. Pass completed work back through committed repository state with owned paths, checks, deployment identity and remaining gaps.
 
 No plugin installation is required to establish repository-scoped local skills. A shared distributable plugin can be added later if actually needed.
+## Dealer folders in the single main checkout
+
+Cars uses a sparse checkout on this space-constrained machine. Every canonical dealer is on GitHub main even when its application folder is not expanded locally. The registry links to main; archived branch names are never required to find source.
+
+Before working on a dealer that is absent locally, verify free disk space and run from Cars:
+
+```powershell
+git fetch origin
+git status --short --branch
+git sparse-checkout list
+git sparse-checkout add clients/<existing-slug>
+```
+
+Use the existing slug from the registry; do not clone or create a replacement. Then run the documented start-client preparation and refresh local presence with `node scripts/index-deployments.mjs --write`. When sufficient space is available, `git sparse-checkout disable` materializes the complete main tree. It required about 13 GB of additional file content at consolidation, plus working space for dependencies/builds.
+
+Current default: routine Cars/template tasks use main in their saved checkout. See [coordination](COORDINATION.md) for one-writer and completion rules.

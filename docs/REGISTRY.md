@@ -15,3 +15,6 @@ node scripts/index-deployments.mjs --check
 The default previews the local indexing result; `--write` updates the registry and generated readable/index views, retaining prior fields and evidence. `--check` validates identities, variants and consistency without fetching Vercel or writing. The dashboard reads this same registry. Updating provider evidence is a deliberate exact-deployment observation, not a side effect of indexing.
 
 Do not store tokens, environment values, private notes, contact history, deal values or suppression records here. Dashboard private local notes remain in ignored runtime storage and do not become CRM truth.
+## Consolidated source
+
+`canonicalSourceRef: "main"` and `canonicalSourceCommit` identify preserved source. Old branch evidence moves to `sourceHistory` with its immutable commit; it is not an active work location. `localPresent` is a separate machine observation and may be false in a sparse checkout. Generated views link absent local source to GitHub main.
