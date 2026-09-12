@@ -1,3 +1,25 @@
-# Client demo: promosale-varna / carwow
+# Dealer project: promosale-varna / carwow
 
-Read J:/cars/AGENTS.md, J:/cars/docs/WORKFLOW.md, the client brief and .client/project.json. This independent copy needs personalization. Do not edit the master or resume its historical source-client tasks. Use the selected template's existing UI/UX and current TEMPLATE.md. Carry verified facts into the existing brand/data files; this metadata is not wired to the application. Never inherit deployment or CRM identity from the source. Record actual QA and public URL before marking ready.
+This is an independent personalized dealer copy. Canonical editable source is Cars clients/promosale-varna/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
+
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/a2f2975a0aa362dce2c66472f202dd0548dc8b1b/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/a2f2975a0aa362dce2c66472f202dd0548dc8b1b/docs/LEAD-PUBLISHING.md).
+
+Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
+
+## Variant commands
+
+### carwow
+
+Run from this variant directory. Use the locked Node runtime; npm/package-lock.json. Use an explicitly free port and verify its owner.
+
+```sh
+npm ci
+npm exec vite dev -- --host 127.0.0.1 --port 6603 --strictPort
+npm run check && npm run build
+```
+
+Published entry: /variant-3/. Exact template identity is in .client/project.json.
+
+## Verification
+
+For affected designs check entry, inventory, a real detail, contact/enquiry destination, navigation/filter and menu dismissal at 390 and 1440 px. In a mounted preview test the actual design switcher, deep links, assets, back navigation and console; include 320 px for the switcher. Do not submit external test messages. Record exact commit, deployment, date and evidence; owner review remains separate from agent QA.

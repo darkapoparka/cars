@@ -1,4 +1,5 @@
 import http from 'node:http';
+import {registryProjects} from './registry.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import { spawn, spawnSync } from 'node:child_process';
@@ -10,7 +11,7 @@ const runtime = path.join(root, 'runtime', 'lead-dashboard');
 const statePath = path.join(runtime, 'state.json');
 const recordPath = path.join(runtime, 'server.json');
 const regions = ['bulgaria.json', 'uae.json', 'usa.json', 'europe.json'];
-const designs = ['auto-best', 'modern', 'carwow'];
+const designs = ['auto-best', 'modern', 'import', 'carwow'];
 const stages = ['research','qualified','building','qa','ready','contacted','replied','won','lost','archived'];
 const portArg = process.argv.indexOf('--port');
 const port = Number(portArg >= 0 ? process.argv[portArg + 1] : process.env.PORT || 6620);
@@ -48,77 +49,11 @@ const sourceUrl = (ref, slug, design = '') => {
   return `https://github.com/darkapoparka/cars/tree/${sourceSha(ref) || encodeURIComponent(sourceBranch(ref))}/${tail}`;
 };
 
-let gitCache = { at: 0, projects: new Map(), refs: [], mainSha: '' };
-function trackedRefs() {
-  const refs = gitMaybe(['for-each-ref', '--format=%(refname:short)', 'refs/remotes/origin']);
-  return refs.split(/\r?\n/).filter((r) => r === 'origin/main' || r === 'origin/astra' || /^origin\/codex\/astra-bg-\d+$/.test(r));
-}
-function readQa(metaByDesign) {
-  const values = Object.values(metaByDesign).flatMap((meta) => Object.values(meta?.qa || {}).filter((v) => typeof v === 'boolean'));
-  const checked = values.length;
-  const passed = values.filter(Boolean).length;
-  return { checked, passed, state: checked === 0 ? 'missing' : passed === checked ? 'passed' : 'pending' };
-}
-function gitInventory(force = false) {
-  if (!force && gitCache.projects.size && Date.now() - gitCache.at < 120000) return gitCache;
-  const refs = trackedRefs();
-  const projects = new Map();
-  for (const ref of refs) {
-    const tree = gitMaybe(['ls-tree', '-r', '--name-only', ref, '--', 'clients']);
-    for (const line of tree.split(/\r?\n/)) {
-      const match = line.match(/^clients\/([^/]+)\/(auto-best|modern|carwow)\/package\.json$/);
-      if (!match) continue;
-      const [, slug, design] = match;
-      const record = projects.get(slug) || { slug, refs: new Map() };
-      const refRecord = record.refs.get(ref) || { variants: new Set() };
-      refRecord.variants.add(design);
-      record.refs.set(ref, refRecord);
-      projects.set(slug, record);
-    }
-  }
-  for (const record of projects.values()) {
-    const choices = [...record.refs.entries()].map(([ref, info]) => ({ ref, variants: [...info.variants].sort(), count: info.variants.size }));
-    const main = choices.find((x) => x.ref === 'origin/main');
-    const fullBranches = choices.filter((x) => x.count === 3 && x.ref !== 'origin/main').sort((a, b) => a.ref.localeCompare(b.ref));
-    const best = main?.count === 3 ? main : fullBranches[0] || choices.sort((a, b) => b.count - a.count)[0];
-    record.onMain = main?.count === 3;
-    record.location = record.onMain ? 'main' : best?.count === 3 ? 'branch-only' : 'partial';
-    record.ref = best?.ref || 'origin/main';
-    record.branch = sourceBranch(record.ref);
-    record.sha = sourceSha(record.ref);
-    record.variants = best?.variants || [];
-    record.variantCount = record.variants.length;
-    record.meta = {};
-    for (const design of record.variants) {
-      const meta = gitJson(record.ref, `clients/${record.slug}/${design}/.client/project.json`) || {};
-      record.meta[design] = {
-        state: meta.state || null,
-        templateVersion: meta.templateVersion || null,
-        selectedHome: meta.selectedHome || null,
-        publicUrl: meta.publicUrl || null,
-        qa: meta.qa || {}
-      };
-    }
-    const qa = readQa(record.meta);
-    record.qaState = qa.state;
-    record.qaChecked = qa.checked;
-    record.qaPassed = qa.passed;
-    const facts = gitJson(record.ref, `clients/${record.slug}/FACTS-AND-INVENTORY.json`) || {};
-    record.business = facts.business || null;
-    record.stockCount = Array.isArray(facts.stock) ? facts.stock.length : null;
-    record.githubUrl = sourceUrl(record.ref, record.slug);
-    record.designUrls = Object.fromEntries(record.variants.map((d) => [d, sourceUrl(record.ref, record.slug, d)]));
-    record.refsList = choices.filter((x) => x.count).map((x) => ({ ref: x.ref, branch: sourceBranch(x.ref), variants: x.variants }));
-  }
-  gitCache = { at: Date.now(), projects, refs, mainSha: sourceSha('origin/main') };
-  return gitCache;
-}
-
+function gitInventory() {return {...registryProjects(root),mainSha:sourceSha('origin/main')};}
 async function fetchGithub() {
-  const result = spawnSync('git', ['-C', root, 'fetch', 'origin', '--prune'], { encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 });
-  if (result.status !== 0) throw new Error((result.stderr || result.stdout || 'git fetch failed').trim());
-  gitInventory(true);
-  return { ok: true, mainSha: gitCache.mainSha };
+  const result=spawnSync(process.execPath,[path.join(root,'scripts/index-deployments.mjs'),'--write'],{encoding:'utf8',windowsHide:true});
+  if(result.status!==0)throw new Error(result.stderr||'Registry refresh failed');
+  return {ok:true,source:'docs/DEPLOYMENT-INVENTORY.json'};
 }
 
 async function leads() {
@@ -160,12 +95,14 @@ async function localProject(slug, indexEntry = {}) {
   const present = await isDir(base);
   const variants = [];
   if (present) for (const d of designs) if (await exists(path.join(base, d, 'package.json'))) variants.push(d);
-  const facts = present ? await readJson(path.join(base, 'FACTS-AND-INVENTORY.json'), {}) : {};
-  const stockCount = Array.isArray(facts.stock) ? facts.stock.length : null;
+  const facts = present ? await readJson(path.join(base, 'FACTS-AND-INVENTORY.json'), null) || await readJson(path.join(base,'business-facts.json'),{}) : {};
+  const stock = present ? await readJson(path.join(base,'stock.json'),null) : null;
+  const stockCount = Array.isArray(facts.stock) ? facts.stock.length : Array.isArray(stock) ? stock.length : null;
   const logos = [
     path.join(base, 'auto-best', 'static', 'dealer', 'logo-light.png'),
     path.join(base, 'modern', 'apps', 'web', 'public', 'dealer', 'logo-light.png'),
     path.join(base, 'carwow', 'static', 'dealer', 'logo-light.png'),
+    path.join(base, 'import', 'static', 'dealer', 'logo-light.png'),
     path.join(base, 'auto-best', 'static', 'dealer', 'logo-light.svg')
   ];
   let logoPath = null;
@@ -173,7 +110,9 @@ async function localProject(slug, indexEntry = {}) {
   const stockDirs = [
     path.join(base, 'auto-best', 'static', 'dealer', 'stock'),
     path.join(base, 'modern', 'apps', 'web', 'public', 'dealer', 'stock'),
-    path.join(base, 'carwow', 'static', 'dealer', 'stock')
+    path.join(base, 'carwow', 'static', 'dealer', 'stock'),
+    path.join(base, 'import', 'static', 'dealer', 'stock'),
+    path.join(base, 'assets', 'stock')
   ];
   let heroPath = null, mediaCount = 0;
   for (const dir of stockDirs) {
@@ -193,7 +132,7 @@ async function localProject(slug, indexEntry = {}) {
   })) : [];
   return {
     slug, exists: present, variants, variantCount: variants.length,
-    stockCount, mediaCount, business: facts.business || null,
+    stockCount, mediaCount, business: facts.business || (facts.name ? facts : null),
     logoPath, heroPath, indexSynced, runtime: runtimeRows,
     path: `clients/${slug}`
   };
@@ -209,24 +148,22 @@ function repoInfo() {
 }
 function pipelineStage(gitProject, lead, localState) {
   if (stages.includes(localState?.stage)) return localState.stage;
-  if (!gitProject) return lead?.buildApproved ? 'qualified' : 'research';
+  if (!gitProject?.variantCount) return lead?.buildApproved ? 'qualified' : 'research';
   if (gitProject.variantCount < 3) return 'building';
-  return gitProject.qaState === 'passed' ? 'ready' : 'qa';
+  return gitProject.qaState === 'passed' && gitProject.evidence?.ownerReview?.state === 'passed' ? 'ready' : 'qa';
 }
 function qaLabel(gitProject) {
-  if (!gitProject) return { label: 'Not built', tone: 'muted' };
-  if (gitProject.variantCount < 3) return { label: 'Partial build', tone: 'blue' };
-  if (gitProject.qaState === 'passed') return { label: 'QA passed', tone: 'green' };
+  if (!gitProject) return { label: 'Source unknown', tone: 'muted' };
+  if (gitProject.variantCount < 3) return { label: 'Partial source', tone: 'blue' };
+  if (gitProject.qaState === 'passed') return { label: 'Browser QA passed', tone: 'green' };
   if (gitProject.qaState === 'pending') return { label: 'QA pending', tone: 'amber' };
   return { label: 'QA evidence missing', tone: 'muted' };
 }
-function buildLabel(gitProject) {
-  if (!gitProject) return { label: 'No GitHub build', tone: 'muted' };
-  if (gitProject.variantCount < 3) return { label: `${gitProject.variantCount}/3 built`, tone: 'blue' };
-  return gitProject.location === 'main'
-    ? { label: '3/3 on main', tone: 'green' }
-    : { label: '3/3 branch-only', tone: 'violet' };
+function buildLabel(project) {
+  if(!project?.variantCount)return {label:'No app source',tone:'muted'};
+  return {label:project.variantCount+'/3 source present',tone:project.variantCount===3?'blue':'amber'};
 }
+
 function mergeProject(gitProject, local, indexEntry = {}) {
   if (!gitProject && !local?.exists) return null;
   const variants = gitProject?.variants || [];
@@ -236,12 +173,13 @@ function mergeProject(gitProject, local, indexEntry = {}) {
     variants,
     variantCount: variants.length,
     variantMeta: gitProject?.meta || {},
+    evidence:gitProject?.evidence||{}, delivery:gitProject?.delivery||{},
     stockCount: gitProject?.stockCount ?? local?.stockCount ?? null,
     mediaCount: local?.mediaCount ?? 0,
     business: gitProject?.business || local?.business || null,
     logoPath: local?.logoPath || null,
     heroPath: local?.heroPath || null,
-    github: gitProject ? {
+    github: gitProject?.variantCount ? {
       location: gitProject.location, ref: gitProject.ref, branch: gitProject.branch,
       sha: gitProject.sha, url: gitProject.githubUrl, designUrls: gitProject.designUrls,
       refs: gitProject.refsList
@@ -357,7 +295,7 @@ async function overview() {
     summary: {
       rows: rows.length,
       githubTrios: trios.length,
-      mainTrios: trios.filter((p) => p.location === 'main').length,
+      mainTrios: trios.filter((p) => p.sha).length,
       branchTrios: trios.filter((p) => p.location === 'branch-only').length,
       qaPassed: trios.filter((p) => p.qaState === 'passed').length,
       qaPending: trios.filter((p) => p.qaState !== 'passed').length,
@@ -390,7 +328,7 @@ function action(slug, kind, local) {
   if (!['prepare', 'start'].includes(kind)) throw new Error('Unknown action');
   const args = ['-NoProfile','-ExecutionPolicy','Bypass','-File',path.join(root,'scripts','start-client.ps1'),'-Client',slug];
   if (kind === 'prepare') args.push('-Prepare');
-  const child = spawn('powershell.exe', args, { cwd: root, detached: true, stdio: 'ignore' });
+  const child = spawn('powershell.exe', args, { cwd: root, detached: true, stdio: 'ignore', windowsHide: true });
   child.unref();
   return { ok: true, started: true };
 }

@@ -2,11 +2,11 @@
 
 Owner-requested standard, 8 September 2026. Read this with the root `AGENTS.md`, `docs/WORKFLOW.md`, `catalog.json` and the selected masters' `TEMPLATE.md` files before any lead implementation. Current explicit owner instructions determine scope. These rules are acceptance requirements, not an automated QA system.
 
-For the multi-session campaign, also read [the execution contract](lead-build/README.md) and [fixed assignments](lead-build/assignments.json). A research record is evidence to verify, not application data, a sale, a contact event or a passed check.
+The old multi-session campaign is closed; its execution contract and assignments remain historical evidence. [WORKFLOW](WORKFLOW.md) owns current implementation and [LEAD-PUBLISHING](LEAD-PUBLISHING.md) owns publication. A research record is not application data, a sale, a contact event or a passed check.
 
 ## 1. Deliver applications, not promises
 
-A three-design assignment means independent, personalized applications at `clients/<slug>/auto-best/`, `clients/<slug>/modern/` and `clients/<slug>/carwow/`, with their own permitted assets. Keep Modern's full workspace. The owner must be able to pull, install and inspect without collecting assets, running a personalization generator or finishing a content sweep.
+A three-design assignment means independent personalized applications under `clients/<slug>/`, selected by `dealer.json`: Auto Best / Modern / Carwow or Auto Best / Import / Carwow, with their own permitted assets. Keep Modern's full workspace. The owner must be able to pull, install and inspect without collecting assets, running a personalization generator or finishing a content sweep.
 
 Use Navara's [logo integration notes](../clients/navara-car/BRANDING.md) at commit `e12a37997e09fbcacce5d0a19350880d67b174bb` as an example of generated-artwork integration and explicit provenance, NOT as a fully verified application baseline. That patch documented isolated logo checks, not complete app builds. Copy the template masters, never Navara or another dealer's applications, facts or assets.
 
@@ -14,7 +14,7 @@ Before reporting a capability limitation, discover and attempt the relevant conn
 
 ## 2. Resolve identity before copying
 
-Read both current `main` and `astra`, all relevant research branches, client folders and project metadata. Compare trading names, transliterations, legal names where published, domains, marketplace accounts, normalized business phones and showroom locations. Same-name businesses and shared addresses require investigation; neither alone proves common ownership.
+Read current canonical source, relevant preserved branch evidence, registry aliases, client folders and project metadata. Compare trading names, transliterations, legal names where published, domains, marketplace accounts, normalized business phones and showroom locations. Same-name businesses and shared addresses require investigation; neither alone proves common ownership.
 
 Do not recreate ELIQ, Navara or any existing account under an alias. An occupied variant directory is not permission to replace it. Resume only an explicitly assigned in-progress build, preserving its edits; otherwise record the existing location for reuse. Missing private contact history remains unresolved, never 'never contacted'. Do not read or publish private mail/CRM records for this technical campaign.
 
@@ -84,7 +84,7 @@ Record each command, working directory, runtime, outcome and relevant log/screen
 
 ## 8. Publish safely and give a reproducible handoff
 
-Only publish to the owner's requested branch (`astra` for this campaign). Inspect its current head before every write; preserve concurrent work. Never force-push, reset another checkout, replace the root with an old snapshot or merge into `main`. Follow the execution contract's fresh-head protocol; an early copy commit is in-progress evidence, not completion.
+Follow [LEAD-PUBLISHING](LEAD-PUBLISHING.md): scope canonical source commits, compare the actual dedicated remote head, preserve publishing-only fixes and push without force. The historical campaign branch is not the current delivery target. An early copy commit is in-progress evidence, not completion.
 
 Each new dealer gets one concise `HANDOFF.md` containing selected business, public sources and stock observation dates; template versions/source commits; actual data/asset consumers changed; runtime/package-manager versions from retained manifests; exact install/check/launch commands and working directories; distinct proposed ports checked for availability; real results, limitations and commit references. Include a safe local-agent pull/start/inspect prompt, not instructions to regenerate/personalize the apps.
 
@@ -92,6 +92,6 @@ Use `scripts/start-preview.ps1` where applicable to avoid source-specific fixed-
 
 ### Completion gate
 
-All three apps contain real independent files, coherent source-backed content and local permitted assets, and every necessary content/brand fix is implemented. Their final commits are reachable from remote `astra`; the changed-path allowlist was checked. The handoff and per-variant evidence distinguish executed and unavailable checks. Outstanding essential branding/content/assets or known functional defects mean incomplete; unavailable full runtime QA means committed but not runtime-verified. Neither is 'finished and tested'.
+All three apps contain real independent files, coherent source-backed content and local permitted assets, and every necessary content/brand fix is implemented. Their final canonical and publishing commits match the requested delivery scope; the changed-path allowlist was checked. The handoff and per-variant evidence distinguish executed and unavailable checks. Outstanding essential branding/content/assets or known functional defects mean incomplete; unavailable full runtime QA means committed but not runtime-verified. Neither is 'finished and tested'.
 
 The owner asked for working demos, not a polished explanation of missing work. Deliver the implementation and precise evidence; never promise unattended/background completion.

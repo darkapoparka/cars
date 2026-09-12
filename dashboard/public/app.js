@@ -15,6 +15,7 @@ const api = async (url, opt = {}) => {
   return j;
 };
 const asset = (p) => p ? `/api/asset?path=${encodeURIComponent(p)}` : '';
+const offered = (row) => row.project?.variants?.length ? row.project.variants : ['auto-best','modern','carwow'];
 const designName = (d) => d === 'auto-best' ? 'Auto Best' : d[0].toUpperCase() + d.slice(1);
 
 function toast(text, bad = false) {
@@ -25,6 +26,7 @@ function toast(text, bad = false) {
   setTimeout(() => n.remove(), 4500);
 }
 function variantCell(row, design) {
+  if(!design)return '<td><span class="muted">—</span></td>';
   const p = row.project;
   const built = p?.variants?.includes(design);
   const localBuilt = p?.local?.variants?.includes(design);
@@ -32,7 +34,7 @@ function variantCell(row, design) {
   const hero = p?.heroPath ? `style="--hero:url('${asset(p.heroPath)}')"` : '';
   return `<td><button class="design ${built ? 'built' : 'missing'}" data-open="${esc(row.id)}" data-tab="designs" ${hero}>
     <span class="shade"></span><span class="design-copy"><b>${designName(design)}</b>
-    <span>${running ? 'Running locally' : built ? (localBuilt ? 'Built / local' : 'Built on GitHub') : 'Not built'}</span>
+    <span>${running ? 'Running locally' : built ? (localBuilt ? 'Source / local' : 'Source recorded') : 'Source missing'}</span>
     ${running?.url ? '<em>Preview available</em>' : ''}</span></button></td>`;
 }
 function checks(row) {
@@ -57,12 +59,12 @@ function logo(row, cls = 'logo') {
 }
 function buildCell(row) {
   const p = row.project;
-  if (!p?.github) return `<span class="status muted">No GitHub build</span><small>Research / local only</small>`;
+  if (!p?.github) return `<span class="status muted">No recorded source</span><small>Research / local only</small>`;
   return `<span class="status ${row.build.tone}">${esc(row.build.label)}</span><small>${esc(p.github.branch)} / ${esc((p.github.sha || '').slice(0, 10))}</small>`;
 }
 function qaCell(row) {
   const p = row.project;
-  const count = p ? `${p.qaPassed}/${p.qaChecked} flags` : '';
+  const count = p ? `${p.qaPassed}/${p.qaChecked} evidence states` : '';
   return `<span class="status ${row.qa.tone}">${esc(row.qa.label)}</span><small>${esc(count)}</small>`;
 }
 function rowHtml(row, i) {
@@ -70,7 +72,7 @@ function rowHtml(row, i) {
     <td class="num"><button class="star" data-fav="${esc(row.id)}" aria-label="Favorite">${row.local.favorite ? '&#9733;' : '&#9734;'}</button><span>${i + 1}</span></td>
     <td><button class="dealer" data-open="${esc(row.id)}" data-tab="overview"><b>${esc(row.name)}</b><span>${esc([row.city, row.market].filter(Boolean).join(' / '))}</span><small>${esc(row.id)}</small></button></td>
     <td class="brand">${logo(row)}</td>
-    ${['auto-best', 'modern', 'carwow'].map((d) => variantCell(row, d)).join('')}
+    ${Array.from({length:3},(_,i)=>variantCell(row,offered(row)[i])).join('')}
     <td>${checks(row)}</td>
     <td>${buildCell(row)}</td>
     <td>${qaCell(row)}</td>
@@ -97,7 +99,7 @@ function drawerOverview(r) {
     ? `${r.inventoryCount ?? 0} source-backed demo listings`
     : `${r.inventoryCount ?? 0} research advertisements`;
   const github = p?.github
-    ? `${p.github.location === 'main' ? 'On main' : 'Branch only'} / ${p.github.branch}`
+    ? `${p.github.location} / ${p.github.branch}`
     : 'No GitHub trio found';
   const local = p?.local?.exists ? `${p.local.variantCount}/3 designs present locally` : 'Not present in local checkout';
   return `<div class="drawer-grid">
@@ -105,8 +107,9 @@ function drawerOverview(r) {
       <dl><div><dt>Market</dt><dd>${esc(r.market || '-')}</dd></div><div><dt>Priority</dt><dd>${esc(r.priority || '-')}</dd></div><div><dt>Inventory</dt><dd>${esc(inventoryText)}</dd></div><div><dt>Lead ID</dt><dd>${esc(r.id)}</dd></div></dl>
       <div class="link-row">${r.sourceUrl ? `<a href="${esc(r.sourceUrl)}" target="_blank">Open source</a>` : ''}${r.website?.url ? `<a href="${esc(r.website.url)}" target="_blank">Open website</a>` : ''}</div>
     </section>
-    <section class="panel"><h3>Build truth</h3><p><b>${esc(github)}</b></p><p>${esc(local)}</p>
-      <div class="metric-grid"><div><b>${p?.variantCount ?? 0}/3</b><span>GitHub designs</span></div><div><b>${p?.qaPassed ?? 0}/${p?.qaChecked ?? 0}</b><span>QA flags</span></div><div><b>${p?.local?.variantCount ?? 0}/3</b><span>local designs</span></div></div>
+    <section class="panel"><h3>Technical evidence</h3><p><b>${esc(github)}</b></p><p>${esc(local)}</p>
+      <div class="metric-grid"><div><b>${p?.variantCount ?? 0}/3</b><span>Source designs</span></div><div><b>${p?.qaPassed ?? 0}/${p?.qaChecked ?? 0}</b><span>Evidence states</span></div><div><b>${p?.local?.variantCount ?? 0}/3</b><span>local designs</span></div></div>
+      <dl>${Object.entries(p?.evidence||{}).map(([key,value])=>`<div><dt>${esc(key)}</dt><dd>${esc(value.state||'unknown')}</dd></div>`).join('')}</dl>
       <div class="link-row">${p?.github?.url ? `<a href="${esc(p.github.url)}" target="_blank">Open GitHub project</a>` : ''}</div>
     </section>
     <section class="panel wide"><h3>Next action</h3><p>${esc(r.local.nextAction || r.nextAction || 'No next action recorded.')}</p></section>
@@ -114,16 +117,16 @@ function drawerOverview(r) {
 }
 function drawerDesigns(r) {
   const p = r.project;
-  return `<div class="drawer-designs">${['auto-best','modern','carwow'].map((d) => {
+  return `<div class="drawer-designs">${offered(r).map((d) => {
     const built = p?.variants?.includes(d);
     const localBuilt = p?.local?.variants?.includes(d);
     const running = p?.local?.runtime?.find((x) => x.template === d && x.alive);
     const meta = p?.variantMeta?.[d] || {};
-    const state = meta.state || (built ? 'No project metadata' : 'Not built');
+    const state = meta.state || (built ? 'No project metadata' : 'Source missing');
     return `<article class="drawer-design ${built ? 'built' : 'missing'}">
       <div class="drawer-design-media" ${p?.heroPath ? `style="--hero:url('${asset(p.heroPath)}')"` : ''}></div>
-      <div><span class="eyebrow">${designName(d)}</span><h3>${built ? 'Built on GitHub' : 'Not built'}</h3>
-      <p>Source state: ${esc(state)}</p><p>${localBuilt ? 'Present in local checkout.' : built ? 'GitHub build is not present locally.' : 'No application source found.'}</p>
+      <div><span class="eyebrow">${designName(d)}</span><h3>${built ? 'Source recorded' : 'Source missing'}</h3>
+      <p>Source state: ${esc(state)}</p><p>${localBuilt ? 'Present in local checkout.' : built ? 'Recorded source is not present locally.' : 'No application source found.'}</p>
       <div class="link-row">${p?.github?.designUrls?.[d] ? `<a href="${esc(p.github.designUrls[d])}" target="_blank">Open on GitHub</a>` : ''}${running?.url ? `<a href="${esc(running.url)}" target="_blank">Open local preview</a>` : ''}</div></div>
     </article>`;
   }).join('')}</div>`;
@@ -142,7 +145,7 @@ function drawerControls(r) {
   const launchable = p?.local?.exists && p.local.variantCount === 3 && p.local.indexSynced;
   const disabled = launchable ? '' : 'disabled';
   return `<div class="drawer-grid"><section class="panel wide"><h3>Local project controls</h3>
-    <p class="muted">GitHub build state is informational. Controls only operate on the local J:/cars checkout.</p>
+    <p class="muted">Recorded source state is informational. Controls only operate on the local J:/cars checkout.</p>
     <div class="control-grid"><button data-act="open" data-slug="${esc(p.slug)}" ${p?.local?.exists ? '' : 'disabled'}>Open client folder</button><button data-act="prepare" data-slug="${esc(p.slug)}" ${disabled}>Prepare dependencies</button><button class="primary" data-act="start" data-slug="${esc(p.slug)}" ${disabled}>Start 3 designs</button><button class="danger" data-act="stop" data-slug="${esc(p.slug)}" ${p?.local?.runtime?.some((x) => x.alive) ? '' : 'disabled'}>Stop recorded previews</button></div>
     ${p?.github?.url ? `<div class="link-row"><a href="${esc(p.github.url)}" target="_blank">Open GitHub source</a></div>` : ''}
     ${launchable ? '' : `<p class="warning">${p?.local?.exists ? 'Local design folders or clients/index.json are not ready for the launcher.' : 'This build exists on GitHub but is not present in the local checkout yet.'}</p>`}
@@ -221,9 +224,9 @@ async function refreshGithub() {
     $('#refresh').textContent = 'Refreshing...';
     await api('/api/github-refresh', { method: 'POST', body: '{}' });
     await load(true);
-    toast('GitHub refs refreshed');
+    toast('Technical registry refreshed');
   } catch (e) { toast(e.message, true); }
-  finally { $('#refresh').disabled = false; $('#refresh').textContent = 'Refresh GitHub'; }
+  finally { $('#refresh').disabled = false; $('#refresh').textContent = 'Refresh registry'; }
 }
 async function load(quiet = false) {
   try {
@@ -231,8 +234,8 @@ async function load(quiet = false) {
     const dirty = data.repo.dirtyFiles ? 'Local checkout has uncommitted changes' : 'Local checkout clean';
     $('#repo').innerHTML = `<b>GitHub main ${esc(data.repo.remoteMainSha)}</b><span>Local ${esc(data.repo.localBranch)} / ${esc(data.repo.localSha)} / ${dirty}</span>`;
     const cards = [
-      ['GitHub trios', data.summary.githubTrios],
-      ['On main', data.summary.mainTrios],
+      ['Recorded trios', data.summary.githubTrios],
+      ['Commit recorded', data.summary.mainTrios],
       ['Branch only', data.summary.branchTrios],
       ['QA passed', data.summary.qaPassed],
       ['Need QA evidence', data.summary.qaPending],

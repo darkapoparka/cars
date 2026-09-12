@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "slug": "promosale-varna",
+  "dealerId": null,
+  "repository": "darkapoparka/cars-promosalevarna",
+  "defaultBranch": "main",
+  "language": "bg",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "import",
+      "base": "/variant-2",
+      "entry": "/variant-2/"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "extraAssets": [
+    "assets",
+    "verify-content.mjs"
+  ],
+  "packaging": {
+    "version": "1"
+  },
+  "switcher": {
+    "language": "bg",
+    "accent": "#2563eb"
+  }
+}

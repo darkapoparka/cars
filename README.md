@@ -1,54 +1,48 @@
-# Cars template library
+# Cars
 
-Ten source baselines, stable names and independent client copies. Start with **Auto Best**, and use Modern or Carwow when a different sales direction helps. Shared polishing happens once in a master; client work stays focused on logo, colors, assets and verified copy.
+Open **Cars** for a new dealer, dealer fixes, research, the project registry or publication. Open the appropriate **cars-template-…** project to improve reusable frontend UI or code.
 
-Read [the full browser audit](./audits/2026-09-06/REPORT.md), [the build workflow](./docs/WORKFLOW.md), [agent instructions](./AGENTS.md), or [the machine-readable catalog](./catalog.json).
+Keep the five projects. A reviewed template commit is promoted into Cars; new leads use that pinned release. Existing dealers stay independent until you request an update. You do not need to remember a manual copy step: the lead workflow checks releases and refuses unapproved or changed snapshots.
 
-For the current local projects and three-design launcher, start with [Cars projects](./docs/PROJECTS.md). All active work is now in `J:\cars` on `main`; session worktrees are retired. For an external code review, see [the repository audit guide](./docs/REPOSITORY-AUDIT.md). Its 8 September snapshot and older setup notes below describe earlier milestones.
+## Everyday requests
 
-## Dealer research and three-design offers
+- In `cars-template-carwow`: “Polish the mobile inventory in this template. Preserve unrelated work and show the result.”
+- In Cars: “Review the latest Carwow release and promote it when the checks pass.”
+- In Cars: “Build [dealer] with the standard three designs using verified facts.”
+- In Cars: “Continue Promosale Varna; keep its Auto Best, Import and Carwow designs.”
+- In Cars: “Audit [dealer] only.” This does not publish or contact anyone.
 
-The [lead research index](./leads/README.md) contains an initial **40 company records** across Bulgaria, the UAE, the USA, the UK, Germany and the Netherlands: ten existing Varna accounts plus thirty additional research candidates, including reserves. Source dates, inventory-count caveats, website findings and existing project paths are retained. This is not exhaustive market coverage or a declaration that every candidate has a poor website.
+Each dealer has **one source folder, three applications, one publishing repository, one Vercel project and one public origin**. The design button switches applications. New names use `cars-<dealerkey>`; recorded exceptions such as `excellent-cars` keep their identity.
 
-The [three-design workflow](./docs/THREE-DESIGN-WORKFLOW.md) describes the owner's offer: qualify a dealer, reuse or prepare **Auto Best, Modern and Carwow**, then seek approval for the exact preview and outreach. Research, build completion and actual sales state remain separate. Public research is not a private contact ledger; no new demos, deployment, outreach or CRM migration was performed by adding the list. See [coverage and next research steps](./leads/COVERAGE.md).
+## Start here
 
-## Current catalog
+[Workflow](docs/WORKFLOW.md) · [Template releases](docs/TEMPLATE-PROMOTION.md) · [Publishing](docs/LEAD-PUBLISHING.md) · [Projects and evidence](docs/DEPLOYMENTS.md) · [Documentation index](docs/README.md)
 
-Scores are comparative visual/UX judgement out of 10, not a production certification.
-
-| Template | Original port | Desktop | Mobile | Real homes | Recommended use |
-|---|---:|---:|---:|---:|---|
-| [Auto Best](./templates/auto-best/TEMPLATE.md) | 5173 | 8.5 | 8.5 | 1 | use-first |
-| [Modern](./templates/modern/TEMPLATE.md) | 6212 | 7.0 | 8.5 | 1 | shortlist |
-| [Carwow](./templates/carwow/TEMPLATE.md) | 6517 | 8.0 | 8.0 | 1 | shortlist |
-| [Import](./templates/import/TEMPLATE.md) | 6518 | 7.5 | 8.0 | 1 | reserve |
-| [Showroom](./templates/showroom/TEMPLATE.md) | 6404 | 7.5 | 8.0 | 1 | reserve |
-| [AutoDeal Full](./templates/autodeal/TEMPLATE.md) | full library | 8.0 | 7.0 | 10 | variant-library |
-| [Boxcar](./templates/boxcar/TEMPLATE.md) | 6450 | 8.0 | 6.5 | 1 | polish-next |
-| [Rencar](./templates/rencar/TEMPLATE.md) | 6430 | 7.5 | 5.5 | 5 | polish-next |
-| [Motoria (Motors source)](./templates/motoria/TEMPLATE.md) | 6440 | 6.5 | 5.0 | 1 | hold |
-| [Nusavo](./templates/nusavo/TEMPLATE.md) | 6420 | 6.5 | 6.0 | 1 | hold |
-
-## Available previews
-
-- [AutoDeal full library](http://127.0.0.1:6460/) — all ten homepages.
-- [Auto Best library copy](http://127.0.0.1:6461/) — independent of original 5173.
-- [Modern library copy](http://127.0.0.1:6462/cars) — public static demo mode.
-- [Carwow library copy](http://127.0.0.1:6463/), [Import library copy](http://127.0.0.1:6464/), [Showroom library copy](http://127.0.0.1:6465/inventory).
-- [Boxcar](http://127.0.0.1:6450/), [Rencar](http://127.0.0.1:6430/), [Nusavo](http://127.0.0.1:6420/), [Motors alias Motoria](http://127.0.0.1:6440/) — moved sources, original ports retained.
-
-All ten local library previews were rendered during this setup. Runtime identities and verification scope are in the audit. The original M: previews remain separate and available.
-
-## Client work
-
-[Day & Night](./clients/dayandnight/CLIENT.md) has a [strict Rencar branding preview](./clients/dayandnight/rencar/README.md) at [port 6601](http://127.0.0.1:6601/), using the original five home layouts and Home menu. The initial custom rebuild was rejected and archived. [ELIQ](./clients/eliqauto/CLIENT.md) and [ASKO96](./clients/asko96/CLIENT.md) remain prospect folder scaffolds. No outreach has been sent.
-
-Example: “Build ASKO96 using auto-best, carwow and modern; keep their layouts and change branding, assets and copy.”
+Use Node 22.22+ or Node 24 for Cars tooling. Each app retains its own documented Node version and lockfile. Git, GitHub CLI (or a connected GitHub plugin), PowerShell for local launchers, and authorized Vercel access are needed for their respective operations. See [local setup](docs/LOCAL-SETUP.md).
 
 ```powershell
-node scripts/new-client.mjs --client asko96 --templates auto-best,carwow,modern --dry-run
+node scripts/template-release.mjs status
+node scripts/template-release.mjs discover
+node scripts/index-deployments.mjs --check
+node scripts/check-workflow.mjs
+node --test scripts/*.test.mjs
 ```
 
-Remove --dry-run only when that build is requested. The helper preserves every real homepage variant, rejects occupied destinations and records source/version lineage. It creates source copies that still need personalization and QA.
+Before creating a new approved dealer, substitute its verified identity:
 
-The library intentionally preserves source-branded layouts for the next discussion. Captured-page templates still need shared brand-data extraction or dealer adaptation before every lead can be a quick config-only reskin.
+```powershell
+node scripts/new-client.mjs --client example-dealer --repository darkapoparka/cars-exampledealer --preset standard --dry-run
+```
+
+The dry run checks identity, destinations and release integrity. Remove `--dry-run` only for the requested new dealer. Use `--preset import` for the intentional Import trio. A refusal for an unreconciled template is a release hold, not a request to overwrite local work.
+
+For existing local source:
+
+```powershell
+./scripts/start-client.ps1 -List
+./scripts/start-client.ps1 -Client promosale-varna -Plan
+```
+
+Progress belongs in the dealer's `dealer.json`, per-variant `.client/project.json`, client brief and technical registry. QA records exact commits, routes and dates. Owner review remains in [MANUAL-REVIEW](docs/MANUAL-REVIEW.md).
+
+The three repository skills live in [.agents/skills](.agents/skills/): `cars-lead-build`, `cars-template-release`, `cars-publish`. [Web collaboration](docs/LOCAL-SETUP.md#web-collaboration) has the short GitHub read-entry instruction. See [migration evidence](docs/WORKFLOW-MIGRATION-2026-09-12.md) for the preservation record and remaining release holds.

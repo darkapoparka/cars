@@ -22,4 +22,8 @@ All three Svelte checks and production builds passed. Each application passed 18
 
 ## Remaining limits
 
-Local demo review only: no public deployment, dealer approval, independently established media-reuse permission, outreach, or real message delivery is claimed. Forms and provider integrations remain unverified demos. The browser checks do not establish every secondary interaction, all alternate routes, or full visual parity. This dealer batch does not mean the remaining Varna lead queue is complete. Existing CRM/contact history was not modified.
+Historical QA above predates publication. The existing cars-promosalevarna publishing repository and Vercel project now serve this dealer; current deployment/browser evidence is recorded separately in the Cars technical registry. Dealer approval, independently established media-reuse permission, outreach, and real message delivery remain unverified. Forms and provider integrations remain unverified demos. The browser checks do not establish every secondary interaction, all alternate routes, or full visual parity. This dealer batch does not mean the remaining Varna lead queue is complete. Existing CRM/contact history was not modified.
+
+## Current integration
+
+Canonical source: clients/promosale-varna in Cars. Publishing identity: darkapoparka/cars-promosalevarna. See dealer.json for the ordered Auto Best / Import / Carwow mounts. The workflow pilot uses a preview branch in the existing project; it does not promote production or contact the dealer.

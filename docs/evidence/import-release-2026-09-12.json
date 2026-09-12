@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-import",
+  "commit": "b13436590d8128231f396a46e8dfe6ba0f2c755b",
+  "release": "workflow-pilot-2026-09-12",
+  "approved": true,
+  "reviewedBy": "Codex technical workflow pilot",
+  "verifiedAt": "2026-09-12T17:44:37.232Z",
+  "digest": "37c5171ef25513c27094ce3c2e53f8fd61b11825c83b43a1cd9ed5801fa872db",
+  "runtime": {
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "lockfile": "package-lock.json"
+  },
+  "modes": {
+    "standalone": "verified bounded route matrix",
+    "mounted": "requires-dealer-QA"
+  },
+  "checks": [
+    {
+      "command": "npm ci",
+      "status": "passed"
+    },
+    {
+      "command": "npm run check",
+      "status": "passed",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "command": "npm run build",
+      "status": "passed"
+    },
+    {
+      "command": "retained candidate tree equals committed upstream tree",
+      "status": "passed"
+    },
+    {
+      "command": "14 route/viewport checks",
+      "status": "passed"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      390,
+      1440
+    ],
+    "routes": [
+      {
+        "width": 390,
+        "routes": [
+          {
+            "route": "/",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/inventory",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/inventory/21764342419542174",
+            "status": 200,
+            "overflow": 0,
+            "broken": []
+          },
+          {
+            "route": "/contact",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/import",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/sell-your-car",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/financing",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          }
+        ],
+        "pageAndConsoleErrors": []
+      },
+      {
+        "width": 1440,
+        "routes": [
+          {
+            "route": "/",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/inventory",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/inventory/21764342419542174",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/contact",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/import",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/sell-your-car",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          },
+          {
+            "route": "/financing",
+            "status": 200,
+            "overflow": -8,
+            "broken": []
+          }
+        ],
+        "pageAndConsoleErrors": []
+      }
+    ],
+    "interactions": [
+      "Mobile menu opens and dismisses",
+      "BMW brand drawer selection applies /inventory?brand=BMW",
+      "Inventory-to-detail navigation",
+      "Contact telephone destination inspected without calling"
+    ]
+  },
+  "limits": [
+    "Template retains source identity and illustrative fixture media. New dealers require the sourced fact/asset pack.",
+    "Forms, stock availability, secondary providers, all alternate homepages and owner design approval are not covered by this bounded technical release.",
+    "One dead Audi listing photo uses the existing illustrative A7 cutout. It is not a new dealer stock photograph."
+  ],
+  "localEvidence": "runtime/workflow-overhaul-20260912/import-final-{check,build}.log and import-browser.json; rendered screenshots retained locally."
+}

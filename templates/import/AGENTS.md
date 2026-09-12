@@ -1,3 +1,3 @@
-# Import template instructions
+# Managed import snapshot
 
-Read J:/cars/AGENTS.md, this TEMPLATE.md and .template/template.json first. This is a reusable source baseline. Preserve the current UI/UX. For a lead, clone into J:/cars/clients/<client>/import before changing identity, colors, assets or copy. Historic source-client instructions and task ledgers do not authorize work in this copy. Use the Cars startup helper with a free port rather than old source-specific launch commands. No sending, deployment or CRM state change is implied.
+Reusable source belongs to [darkapoparka/cars-template-import](https://github.com/darkapoparka/cars-template-import). This copy is pinned to b13436590d8128231f396a46e8dfe6ba0f2c755b by [templates.lock.json](../../templates.lock.json). Follow [Cars instructions](../../AGENTS.md). Shared polish belongs upstream; use [template release](../../docs/TEMPLATE-PROMOTION.md) to update this snapshot. Dealer work belongs under clients/. Technical references in this copy retain source context and are not new task orders.

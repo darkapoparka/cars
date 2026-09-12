@@ -41,7 +41,9 @@
         "src/app.css",
         "static"
       ],
-      "note": "Audited mobile/desktop polish with vehicle context, stock-driven discovery and modular data/style ownership. Source branding and sample stock retained; preview only."
+      "note": "Audited mobile/desktop polish with vehicle context, stock-driven discovery and modular data/style ownership. Source branding and sample stock retained; preview only.",
+      "upstreamRepository": "darkapoparka/cars-template-auto-best",
+      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
     },
     {
       "key": "modern",
@@ -73,7 +75,9 @@
         "apps/web/public",
         "apps/web/app"
       ],
-      "note": "Compact stock-first storefront. Full workspace retained, independently installed and verified on 6462 in existing static demo mode. Prisma generation and web typecheck passed; provider services remain unconfigured."
+      "note": "Compact stock-first storefront. Full workspace retained, independently installed and verified on 6462 in existing static demo mode. Prisma generation and web typecheck passed; provider services remain unconfigured.",
+      "upstreamRepository": "darkapoparka/cars-template-modern",
+      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
     },
     {
       "key": "carwow",
@@ -108,7 +112,9 @@
         "src/lib/styles",
         "static"
       ],
-      "note": "Internal inspiration nickname, not Carwow affiliation. Yellow desktop and compact mobile compositions are intentional. Use the Cars launcher to avoid the inherited dev script's fixed port 6517."
+      "note": "Internal inspiration nickname, not Carwow affiliation. Yellow desktop and compact mobile compositions are intentional. Use the Cars launcher to avoid the inherited dev script's fixed port 6517.",
+      "upstreamRepository": "darkapoparka/cars-template-carwow",
+      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
     },
     {
       "key": "import",
@@ -143,7 +149,9 @@
         "src/lib/styles",
         "static"
       ],
-      "note": "Dark Day & Night source baseline with buy/import/sell journeys. Related to showroom; not an entirely independent template family."
+      "note": "Dark Day & Night source baseline with buy/import/sell journeys. Related to showroom; not an entirely independent template family.",
+      "upstreamRepository": "darkapoparka/cars-template-import",
+      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
     },
     {
       "key": "showroom",
@@ -396,5 +404,7 @@
       ],
       "note": "Rental storefront with local cart/checkout flows. Remote CSS mask fails CORS in the live audit. Useful for rental leads; lower priority for stock-selling showrooms."
     }
-  ]
+  ],
+  "releaseAuthority": "templates.lock.json",
+  "ownership": "Standalone cars-template repositories own reusable source; Cars templates are approved managed snapshots or preserved reconciliation holdings."
 }
