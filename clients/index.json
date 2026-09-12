@@ -11,7 +11,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-present",
+      "sourceState": "source-on-main",
       "reviewState": "unknown",
       "leadId": "ae-sharjah-al-aayan-used-cars"
     },
@@ -37,7 +37,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-present",
+      "sourceState": "source-on-main",
       "reviewState": "unknown",
       "leadId": "ae-sharjah-al-fareed-used-cars"
     },
@@ -231,7 +231,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-present",
+      "sourceState": "source-on-main",
       "reviewState": "unknown",
       "leadId": "us-fl-orlando-cfo-auto-group"
     },
@@ -664,7 +664,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-present",
+      "sourceState": "source-on-main",
       "reviewState": "unknown",
       "leadId": "bg-burgas-mg7-group"
     },
@@ -714,7 +714,7 @@
         "modern",
         "carwow"
       ],
-      "sourceState": "source-present",
+      "sourceState": "source-on-main",
       "reviewState": "unknown",
       "leadId": "us-in-evansville-neuhoff-auto-sales"
     },
@@ -772,8 +772,8 @@
       "path": "clients/outletcars-varna",
       "variants": [
         "auto-best",
-        "carwow",
-        "import"
+        "import",
+        "carwow"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -832,8 +832,8 @@
       "path": "clients/promosale-varna",
       "variants": [
         "auto-best",
-        "carwow",
-        "import"
+        "import",
+        "carwow"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"

@@ -31,7 +31,7 @@ Before working on a dealer that is absent locally, verify free disk space and ru
 git fetch origin
 git status --short --branch
 git sparse-checkout list
-git sparse-checkout add clients/<existing-slug>
+git sparse-checkout add /clients/<existing-slug>/
 ```
 
 Use the existing slug from the registry; do not clone or create a replacement. Then run the documented start-client preparation and refresh local presence with `node scripts/index-deployments.mjs --write`. When sufficient space is available, `git sparse-checkout disable` materializes the complete main tree. It required about 13 GB of additional file content at consolidation, plus working space for dependencies/builds.

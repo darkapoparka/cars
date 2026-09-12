@@ -19,19 +19,28 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -85,7 +94,7 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -94,7 +103,7 @@
         },
         {
           "key": "modern",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -103,7 +112,7 @@
         },
         {
           "key": "carwow",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -168,19 +177,28 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -315,25 +333,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -348,17 +379,17 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/amh-cars-bhm",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "amt-auto-sales",
@@ -368,25 +399,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -401,17 +445,17 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/amt-auto-sales",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "asko-96",
@@ -581,25 +625,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -614,17 +671,17 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/autobedrijf-spinder",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "autobedrijf-wester",
@@ -634,25 +691,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -667,17 +737,17 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/autobedrijf-wester",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "autohandel-winter",
@@ -687,25 +757,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -720,41 +803,50 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/autohandel-winter",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "autohof",
       "name": "autohof",
       "localPath": "clients/autohof",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -793,8 +885,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "autolife",
@@ -1040,25 +1151,34 @@
       "slug": "avtoborsa-mania",
       "name": "АВТОБОРСА МАНИЯ",
       "localPath": "clients/avtoborsa-mania",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1097,36 +1217,7 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
-        }
-      }
-    },
-    {
-      "slug": "car-finder-360",
-      "name": "car-finder-360",
-      "variants": [
-        {
-          "key": "auto-best",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
         },
-        {
-          "key": "modern",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        },
-        {
-          "key": "carwow",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        }
-      ],
-      "delivery": {
-        "state": "unknown"
-      },
-      "evidence": {
         "personalization": {
           "state": "unknown"
         },
@@ -1141,41 +1232,111 @@
         },
         "ownerReview": {
           "state": "unknown"
+        }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
+    },
+    {
+      "slug": "car-finder-360",
+      "name": "car-finder-360",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
       },
       "localPath": "clients/car-finder-360",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "car-max-sofia",
       "name": "car-max-sofia",
       "localPath": "clients/car-max-sofia",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1214,8 +1375,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "cfo-auto-group",
@@ -1227,19 +1407,28 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1369,25 +1558,34 @@
       "slug": "chernomore-varna",
       "name": "Автосалон Черно море",
       "localPath": "clients/chernomore-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1426,32 +1624,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "danger-auto",
       "name": "danger-auto",
       "localPath": "clients/danger-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1490,8 +1716,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "dayandnight",
@@ -1569,25 +1814,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -1602,17 +1860,17 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/depue-auto-sales",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "eliqauto",
@@ -1778,25 +2036,34 @@
       "slug": "europa-varna",
       "name": "europa-varna",
       "localPath": "clients/europa-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1835,32 +2102,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "evrocar-varna-09",
       "name": "evrocar-varna-09",
       "localPath": "clients/evrocar-varna-09",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -1899,8 +2194,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "excellent-cars",
@@ -1990,25 +2304,34 @@
       "slug": "exclusive-auto-varna",
       "name": "Exclusive Auto",
       "localPath": "clients/exclusive-auto-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2047,32 +2370,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "extra-car-sm",
       "name": "ЕКСТРА КАР-СМ",
       "localPath": "clients/extra-car-sm",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2111,32 +2462,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "f1-auto-vratsa",
       "name": "f1-auto-vratsa",
       "localPath": "clients/f1-auto-vratsa",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2175,8 +2554,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "f1rst-motors",
@@ -2186,7 +2584,7 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2195,7 +2593,7 @@
         },
         {
           "key": "modern",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2204,7 +2602,7 @@
         },
         {
           "key": "carwow",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2250,25 +2648,34 @@
       "slug": "fadi-cars",
       "name": "fadi-cars",
       "localPath": "clients/fadi-cars",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2307,8 +2714,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "five-auto",
@@ -2318,7 +2744,7 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "unrecorded",
+          "state": "implemented-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2327,7 +2753,7 @@
         },
         {
           "key": "modern",
-          "state": "unrecorded",
+          "state": "implemented-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2336,7 +2762,7 @@
         },
         {
           "key": "carwow",
-          "state": "unrecorded",
+          "state": "implemented-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2409,25 +2835,34 @@
       "slug": "fresh-auto-ruse",
       "name": "fresh-auto-ruse",
       "localPath": "clients/fresh-auto-ruse",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2466,32 +2901,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "fresh-motors-sheremetya",
       "name": "fresh-motors-sheremetya",
       "localPath": "clients/fresh-motors-sheremetya",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2530,32 +2993,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "g-auto",
       "name": "g-auto",
       "localPath": "clients/g-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2594,32 +3085,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "golden-dreams-auto",
       "name": "golden-dreams-auto",
       "localPath": "clients/golden-dreams-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2658,36 +3177,7 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
-        }
-      }
-    },
-    {
-      "slug": "good-wheels-auto-sales",
-      "name": "good-wheels-auto-sales",
-      "variants": [
-        {
-          "key": "auto-best",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
         },
-        {
-          "key": "modern",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        },
-        {
-          "key": "carwow",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        }
-      ],
-      "delivery": {
-        "state": "unknown"
-      },
-      "evidence": {
         "personalization": {
           "state": "unknown"
         },
@@ -2702,41 +3192,111 @@
         },
         "ownerReview": {
           "state": "unknown"
+        }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
+    },
+    {
+      "slug": "good-wheels-auto-sales",
+      "name": "good-wheels-auto-sales",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
       },
       "localPath": "clients/good-wheels-auto-sales",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "haskovo-cars-bg",
       "name": "haskovo-cars-bg",
       "localPath": "clients/haskovo-cars-bg",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -2775,36 +3335,7 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
-        }
-      }
-    },
-    {
-      "slug": "heartlands-motor-group",
-      "name": "heartlands-motor-group",
-      "variants": [
-        {
-          "key": "auto-best",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
         },
-        {
-          "key": "modern",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        },
-        {
-          "key": "carwow",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        }
-      ],
-      "delivery": {
-        "state": "unknown"
-      },
-      "evidence": {
         "personalization": {
           "state": "unknown"
         },
@@ -2819,17 +3350,78 @@
         },
         "ownerReview": {
           "state": "unknown"
+        }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
+    },
+    {
+      "slug": "heartlands-motor-group",
+      "name": "heartlands-motor-group",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
       },
       "localPath": "clients/heartlands-motor-group",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "icars-plovdiv",
@@ -2839,7 +3431,7 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "unrecorded",
+          "state": "implemented-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2848,7 +3440,7 @@
         },
         {
           "key": "modern",
-          "state": "unrecorded",
+          "state": "implemented-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -2857,7 +3449,7 @@
         },
         {
           "key": "carwow",
-          "state": "unrecorded",
+          "state": "implemented-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -3010,25 +3602,34 @@
       "slug": "kapitol-varna",
       "name": "КАПИТОЛ",
       "localPath": "clients/kapitol-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3067,8 +3668,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "keen-auto-mall",
@@ -3232,25 +3852,34 @@
       "slug": "kris-car-plovdiv",
       "name": "kris-car-plovdiv",
       "localPath": "clients/kris-car-plovdiv",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3289,32 +3918,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "kunchev-auto",
       "name": "kunchev-auto",
       "localPath": "clients/kunchev-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3353,8 +4010,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "legend-auto",
@@ -3440,25 +4116,34 @@
       "slug": "lux-auto-bg",
       "name": "lux-auto-bg",
       "localPath": "clients/lux-auto-bg",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3497,32 +4182,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "lyubo-car",
       "name": "lyubo-car",
       "localPath": "clients/lyubo-car",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3561,32 +4274,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "martin-auto-dobrich",
       "name": "MARTIN AUTO",
       "localPath": "clients/martin-auto-dobrich",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3625,32 +4366,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "maverik-sofia",
       "name": "maverik-sofia",
       "localPath": "clients/maverik-sofia",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3689,8 +4458,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "mg7-group",
@@ -3702,19 +4490,28 @@
           "key": "auto-best",
           "state": "implemented-unverified",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -3872,25 +4669,38 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "delivery": {
         "state": "unknown"
       },
       "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
         "personalization": {
           "state": "unknown"
         },
@@ -3905,17 +4715,17 @@
         },
         "ownerReview": {
           "state": "unknown"
-        },
-        "source": {
-          "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
         }
       },
       "localPath": "clients/my-car-outlet",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "navara-car",
@@ -4007,19 +4817,28 @@
           "key": "auto-best",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "needs-personalization",
           "localPresent": false,
-          "qaRecorded": false
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4069,25 +4888,34 @@
       "slug": "next-auto-pernik",
       "name": "next-auto-pernik",
       "localPath": "clients/next-auto-pernik",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4126,32 +4954,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "next-car-banovo",
       "name": "next-car-banovo",
       "localPath": "clients/next-car-banovo",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4190,36 +5046,7 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
-        }
-      }
-    },
-    {
-      "slug": "nicky-ds",
-      "name": "nicky-ds",
-      "variants": [
-        {
-          "key": "auto-best",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
         },
-        {
-          "key": "modern",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        },
-        {
-          "key": "carwow",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        }
-      ],
-      "delivery": {
-        "state": "unknown"
-      },
-      "evidence": {
         "personalization": {
           "state": "unknown"
         },
@@ -4234,41 +5061,111 @@
         },
         "ownerReview": {
           "state": "unknown"
+        }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
+    },
+    {
+      "slug": "nicky-ds",
+      "name": "nicky-ds",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
       },
       "localPath": "clients/nicky-ds",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "nova-cars-sofia",
       "name": "nova-cars-sofia",
       "localPath": "clients/nova-cars-sofia",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4307,8 +5204,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "outletcars-varna",
@@ -4326,21 +5242,21 @@
           "localPresent": true
         },
         {
-          "key": "carwow",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
-          "entry": null,
-          "templateSource": null,
-          "localPresent": true
-        },
-        {
           "key": "import",
           "state": "ready-for-local-review",
           "entry": null,
           "publicUrl": null,
           "templateSource": null,
           "qaRecorded": true,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
           "localPresent": true
         }
       ],
@@ -4450,25 +5366,34 @@
       "slug": "plus-auto-ruse",
       "name": "plus-auto-ruse",
       "localPath": "clients/plus-auto-ruse",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4507,32 +5432,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "prestige-varna",
       "name": "Автосалон ПРЕСТИЖ",
       "localPath": "clients/prestige-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4571,8 +5524,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "priselci",
@@ -4670,21 +5642,21 @@
           "localPresent": true
         },
         {
-          "key": "carwow",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
-          "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
-        },
-        {
           "key": "import",
           "state": "ready-for-local-review",
           "entry": "/variant-2/",
           "publicUrl": null,
           "templateSource": null,
           "qaRecorded": true,
+          "localPresent": true
+        },
+        {
+          "key": "carwow",
+          "state": "ready-for-local-review",
+          "qaRecorded": true,
+          "publicUrl": null,
+          "entry": "/variant-3/",
+          "templateSource": null,
           "localPresent": true
         }
       ],
@@ -4799,25 +5771,34 @@
       "slug": "rqs-auto-team",
       "name": "rqs-auto-team",
       "localPath": "clients/rqs-auto-team",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4856,36 +5837,7 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
-        }
-      }
-    },
-    {
-      "slug": "sevierville-import-truck-center",
-      "name": "sevierville-import-truck-center",
-      "variants": [
-        {
-          "key": "auto-best",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
         },
-        {
-          "key": "modern",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        },
-        {
-          "key": "carwow",
-          "state": "needs-personalization",
-          "localPresent": false,
-          "qaRecorded": false
-        }
-      ],
-      "delivery": {
-        "state": "unknown"
-      },
-      "evidence": {
         "personalization": {
           "state": "unknown"
         },
@@ -4900,41 +5852,111 @@
         },
         "ownerReview": {
           "state": "unknown"
+        }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
+    },
+    {
+      "slug": "sevierville-import-truck-center",
+      "name": "sevierville-import-truck-center",
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
+        {
+          "key": "modern",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        },
+        {
+          "key": "carwow",
+          "state": "needs-personalization",
+          "localPresent": false,
+          "qaRecorded": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
+        }
+      ],
+      "delivery": {
+        "state": "unknown"
+      },
+      "evidence": {
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
       },
       "localPath": "clients/sevierville-import-truck-center",
-      "localPresent": false,
+      "localPresent": true,
       "branchSources": [],
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "slavi-cars",
       "name": "slavi-cars",
       "localPath": "clients/slavi-cars",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -4973,32 +5995,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "sprint-auto-varna",
       "name": "sprint-auto-varna",
       "localPath": "clients/sprint-auto-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5037,32 +6087,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "stenli-car",
       "name": "stenli-car",
       "localPath": "clients/stenli-car",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5101,32 +6179,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "success-automobile",
       "name": "success-automobile",
       "localPath": "clients/success-automobile",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5165,32 +6271,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "sunny-varna",
       "name": "sunny-varna",
       "localPath": "clients/sunny-varna",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5229,32 +6363,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "swiss-auto-43",
       "name": "swiss-auto-43",
       "localPath": "clients/swiss-auto-43",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "in-progress",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5293,8 +6455,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "tesi-car-varna",
@@ -5480,7 +6661,7 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -5489,7 +6670,7 @@
         },
         {
           "key": "modern",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -5498,7 +6679,7 @@
         },
         {
           "key": "carwow",
-          "state": "needs-personalization",
+          "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
           "entry": null,
@@ -5544,25 +6725,34 @@
       "slug": "todorov-auto",
       "name": "todorov-auto",
       "localPath": "clients/todorov-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5601,32 +6791,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "troya-auto",
       "name": "troya-auto",
       "localPath": "clients/troya-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5665,32 +6883,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "valentino-auto-house",
       "name": "valentino-auto-house",
       "localPath": "clients/valentino-auto-house",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5729,32 +6975,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "voivodov-auto-antonio",
       "name": "voivodov-auto-antonio",
       "localPath": "clients/voivodov-auto-antonio",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5793,32 +7067,60 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     },
     {
       "slug": "vvc-auto",
       "name": "vvc-auto",
       "localPath": "clients/vvc-auto",
-      "localPresent": false,
+      "localPresent": true,
       "variants": [
         {
           "key": "auto-best",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "modern",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         },
         {
           "key": "carwow",
           "state": "implemented-unverified",
           "qaRecorded": false,
-          "localPresent": false
+          "localPresent": false,
+          "entry": null,
+          "publicUrl": null,
+          "templateSource": null
         }
       ],
       "branchSources": [],
@@ -5857,8 +7159,27 @@
         "source": {
           "state": "committed",
           "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
         }
-      }
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null
     }
   ],
   "campaignCandidatesWithoutFolders": [

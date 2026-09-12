@@ -27,3 +27,11 @@ J: had about 1.3 GB free; expanding missing dealer applications required about 1
 | cars-template-import | `3c24db073b0b1a3bf26c64ed5336921117658e29` | `35d5a592bb3e08d790da98901fe9029bcfb3e270` | `b01a165ec52c0eb575ce041ae2adf6ba65371143` | `2e08979c432a435934ff6159c86a5c0556196180` |
 
 The final handoff records the published main heads, deletion results and actual checks. No source checkpoint or old branch tip may be deleted from reachability before verifying it is an ancestor of the new main.
+
+## Verification and concurrent work
+
+- `node scripts/check-workflow.mjs` passed. All 19 tests in `node --test scripts/*.test.mjs` passed. `node scripts/index-deployments.mjs --check` passed for 85 dealer records and 253 application entries.
+- Every original local/remote branch tip and the staged/working checkpoints is an ancestor of its consolidated main. The resolved application source contains no conflict markers or synthetic merge output; selected source versions are preserved intact.
+- A syntax scan of 5,425 unique changed Cars source blobs and the four standalone source candidates found one inherited failure: `clients/golden-dreams-auto/auto-best/src/lib/data/company.ts` contains an unquoted `trade-in` object key (17 cascading parser diagnostics). The four standalone candidates had no syntax errors. This is source preservation, not release or browser acceptance; the inherited defect remains recorded for a scoped correction.
+- New Auto Best, Carwow and Import edits arrived from other active tasks after the source checkpoints. They remain in their original checkouts as working changes over main, with a recovery patch and copies of new files under each archive's `live-delta/` directory. Their continued work is separate from the completed branch consolidation. Modern's development-server metadata remains local.
+- The sparse registry now distinguishes dealer metadata on disk from application folders stored only on main. It does not upgrade deployment, browser or owner-review evidence.
