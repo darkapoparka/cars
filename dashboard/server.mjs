@@ -113,7 +113,7 @@ async function localProject(slug, indexEntry = {}) {
     path.join(base, 'carwow', 'static', 'dealer', 'stock'),
     path.join(base, 'import', 'static', 'dealer', 'stock'),
     path.join(base, 'assets', 'stock')
-  ];
+  ].flatMap(dir=>[dir,path.join(path.dirname(dir),'inventory')]);
   let heroPath = null, mediaCount = 0;
   for (const dir of stockDirs) {
     try {
@@ -155,7 +155,7 @@ function pipelineStage(gitProject, lead, localState) {
 function qaLabel(gitProject) {
   if (!gitProject) return { label: 'Source unknown', tone: 'muted' };
   if (gitProject.variantCount < 3) return { label: 'Partial source', tone: 'blue' };
-  if (gitProject.qaState === 'passed') return { label: 'Browser QA passed', tone: 'green' };
+  if (gitProject.qaState === 'passed') return { label: gitProject.evidence?.browser?.accessMode==='temporary-share-link'?'Shared preview QA':'Browser QA passed', tone: 'green' };
   if (gitProject.qaState === 'pending') return { label: 'QA pending', tone: 'amber' };
   return { label: 'QA evidence missing', tone: 'muted' };
 }

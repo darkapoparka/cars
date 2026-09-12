@@ -54,4 +54,6 @@ Verify the current account/team, existing project and Git binding. Configure one
 
 Inspect the deployment whose Git commit equals the exported commit. READY is build/provider evidence. Confirm its actual URL, public access without login, every offered entry/journey, and the deployed switcher at mobile and desktop according to [QA](QA.md). Never send external test enquiries. Only then record public browser verification; agent QA does not mark owner review complete.
 
+A protected review pilot may use a Vercel temporary share link for scoped browser verification. Record its expiry and `temporary-share-link` access separately; it does not establish a permanently public lead-delivery URL. Do not weaken unrelated project protection to make a QA status appear public. See the [Promosale pilot evidence](WORKFLOW-MIGRATION-2026-09-12.md).
+
 Update the technical registry with canonical source SHA, template SHAs, export SHA, packaging version, project/team, deployment ID, exact URL, timestamp and evidence. Regenerate the readable list/dashboard views using `node scripts/index-deployments.mjs --write`. Keep old verification as dated history.

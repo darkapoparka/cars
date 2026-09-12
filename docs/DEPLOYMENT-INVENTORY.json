@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-10T20:13:32.045Z",
+  "updatedAt": "2026-09-12T18:27:08.850Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
@@ -3559,14 +3559,14 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
         {
           "key": "import",
           "state": "ready-for-local-review",
-          "entry": null,
+          "entry": "/variant-2/",
           "publicUrl": null,
           "templateSource": null,
           "qaRecorded": true,
@@ -3577,41 +3577,115 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
-        "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "state": "preview-verified-with-temporary-share",
+        "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+        "deploymentId": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+        "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+        "branch": "codex/workflow-pilot-20260912",
+        "access": {
+          "mode": "temporary-share-link",
+          "publicWithoutShareLink": false,
+          "expiresAt": "2026-09-13T17:20:37Z",
+          "note": "Direct deployment URL redirects to Vercel login. Temporary sharing was verified in new browser contexts without account login. Protection settings and production were not changed; the token stays in ignored runtime only."
+        },
+        "verifiedAt": "2026-09-12T18:22:31.486Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-promosalevarna",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "present",
-          "commit": null
+          "commit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+          "canonicalPath": "clients/promosale-varna",
+          "payloadDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7"
         },
         "personalization": {
-          "state": "unknown"
+          "state": "checked",
+          "scope": "Existing source pack preserved; six listings and 54 image checks passed; inventory was not requalified live."
         },
         "build": {
-          "state": "unknown"
+          "state": "passed",
+          "sourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+          "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+          "variants": [
+            {
+              "key": "auto-best",
+              "node": "22.23.2",
+              "check": "0 errors / 0 warnings",
+              "build": "passed; final package app inputs equal tested candidate after LF normalization"
+            },
+            {
+              "key": "import",
+              "node": "24.21.0",
+              "check": "0 errors / 0 warnings",
+              "build": "passed; final package app inputs equal tested candidate after LF normalization"
+            },
+            {
+              "key": "carwow",
+              "node": "24.21.0",
+              "check": "0 errors / 4 existing CSS warnings",
+              "build": "final package build passed"
+            }
+          ],
+          "providerBuild": "READY for the exact exported commit"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "ready",
+          "id": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+          "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+          "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+          "target": "preview"
         },
         "browser": {
-          "state": "unknown"
+          "state": "passed",
+          "accessMode": "temporary-share-link",
+          "publicWithoutShareLink": false,
+          "verifiedAt": "2026-09-12T18:22:31.486Z",
+          "evidence": "docs/evidence/promosale-browser-2026-09-12.json",
+          "routes": 24,
+          "widths": [
+            390,
+            1440
+          ],
+          "switcherWidth": 320
         },
         "ownerReview": {
           "state": "unknown"
         }
+      },
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-10T20:13:32.045Z",
+          "state": "unknown",
+          "legacyState": "not-deployed",
+          "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        }
+      ],
+      "canonicalSourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+      "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+      "vercel": {
+        "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+        "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+        "teamSlug": "tyj5",
+        "primaryDomain": "cars-promosalevarna.vercel.app"
+      },
+      "production": {
+        "deploymentId": "dpl_6rsHE8wbWoWnP8Q2W42hcC6W89ex",
+        "gitCommit": "61552221b9f791fc57a40602643ae3d3915d3da1",
+        "url": "https://cars-promosalevarna.vercel.app",
+        "state": "READY",
+        "browserState": "not-rechecked-by-this-pilot",
+        "unchangedByPilot": true
       }
     },
     {

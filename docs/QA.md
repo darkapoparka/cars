@@ -14,6 +14,10 @@ Test actual mounted routes and assets on the combined origin. Check CSS/backgrou
 
 Use `node scripts/verify-dealer-preview.mjs --help` for the manifest-driven automated smoke. Browser inspection of the rendered results and relevant interactions completes the evidence; a static scan or injected switcher does not.
 
+Set `dealer.json` → `qa.forbiddenIdentity` to source-specific stale business names when useful. The harness does not blacklist a real dealer globally. Complete the fact-pack/content sweep separately. Its search check only proves that an available text input accepts and clears text; verify actual filtering and custom drawers in the browser.
+
+For an explicitly scoped protected preview, Vercel can issue a temporary share link. Keep its returned JSON in ignored `runtime/` and pass `--share-file runtime/<file>.json`. The harness permits only the exact preview origin and records temporary sharing separately from anonymous public access; it never writes the share token into QA metadata. Record expiry and protection limits. This is suitable for a bounded review pilot, not proof of a permanently public lead link. New dealer delivery still requires anonymous access to its final public origin.
+
 ## Record separate facts
 
 - Source: canonical path, source commit, dirty limitations, template pins.

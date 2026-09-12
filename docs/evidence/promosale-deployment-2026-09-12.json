@@ -1,0 +1,22 @@
+{
+  "id": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+  "state": "READY",
+  "createdAt": 1789236998871,
+  "buildingAt": 1789237000485,
+  "ready": 1789237125399,
+  "readyState": "READY",
+  "target": null,
+  "source": "git",
+  "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+  "project": {
+    "id": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+    "name": "cars-promosalevarna",
+    "framework": "services"
+  },
+  "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+  "teamSlug": "tyj5",
+  "branch": "codex/workflow-pilot-20260912",
+  "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+  "repository": "darkapoparka/cars-promosalevarna",
+  "verifiedAt": "2026-09-12T18:19:26.487Z"
+}

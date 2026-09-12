@@ -10,16 +10,24 @@ export const journeys = {
   carwow: {inventory:'/inventory', detail:'/inventory/', contact:'/contact'},
 };
 
-export async function verifyPreview({slug, origin, output, manifest, chromium, expectedCommit=null, widths=[390,1440]}) {
+export function previewAccess(origin, shareUrl=null) {
+  const site=new URL(origin);
+  if(!['http:','https:'].includes(site.protocol)||site.pathname!=='/'||site.search||site.hash||site.username||site.password)throw new Error('Use the origin without a path, query, fragment or credentials.');
+  if(shareUrl){const shared=new URL(shareUrl);if(shared.origin!==site.origin||!shared.searchParams.get('_vercel_share')||shared.username||shared.password)throw new Error('Share access must target this exact origin and contain the Vercel share parameter.');}
+  return {site,access:{mode:shareUrl?'temporary-share-link':'anonymous',publicWithoutShareLink:shareUrl?false:null}};
+}
+
+export async function verifyPreview({slug, origin, output, manifest, chromium, expectedCommit=null, widths=[390,1440], shareUrl=null}) {
   validateManifest(manifest);
   if(manifest.slug!==slug)throw new Error('Manifest does not match the requested dealer.');
-  const site=new URL(origin);
-  if(!['http:','https:'].includes(site.protocol)||site.pathname!=='/'||site.search||site.hash)throw new Error('Use the origin without a path, query or fragment.');
+  const {site,access}=previewAccess(origin,shareUrl);
   const language=manifest.switcher?.language||manifest.language||'bg';
   const labels=manifest.switcher?.labels|| (language.startsWith('bg')?{design:'Дизайн',choose:'Избор на дизайн'}:{design:'Design',choose:'Choose a design'});
-  const staleTerms=manifest.qa?.forbiddenIdentity||['Excellent Cars','Day Night Auto','Дей енд Найт'];
+  // Dealer-specific identity checks belong to the fact pack; a real dealer may
+  // legitimately be Excellent Cars or Day & Night. Never blacklist it globally.
+  const staleTerms=manifest.qa?.forbiddenIdentity||[];
   const results=[];
-  const evidence={schemaVersion:1,slug,origin:site.origin,expectedCommit,commitVerification:'Confirm separately against the provider deployment record.',startedAt:new Date().toISOString(),variants:manifest.variants,results};
+  const evidence={schemaVersion:1,slug,origin:site.origin,access,expectedCommit,commitVerification:'Confirm separately against the provider deployment record.',startedAt:new Date().toISOString(),variants:manifest.variants,results};
   fs.mkdirSync(output,{recursive:true});
   const save=()=>writeJson(path.join(output,'results.json'),evidence);
   const browser=await chromium.launch({channel:'chrome',headless:true});
@@ -31,6 +39,7 @@ export async function verifyPreview({slug, origin, output, manifest, chromium, e
       page.on('console',m=>{if(m.type()==='error')consoleErrors.push(m.text());});
       const record={key:variant.key,width,routes:[],errors,consoleErrors}; results.push(record);
       try {
+        if(shareUrl){await page.goto(shareUrl,{waitUntil:'domcontentloaded',timeout:60000});if(new URL(page.url()).origin!==site.origin)throw new Error('Temporary preview share access did not reach the intended origin.');}
         const inspect=async (href,label)=>{
           const response=await page.goto(new URL(href,site).href,{waitUntil:'domcontentloaded',timeout:60000});
           if(new URL(page.url()).origin!==site.origin)throw new Error('Unexpected redirect: '+page.url());
@@ -83,20 +92,20 @@ export async function verifyPreview({slug, origin, output, manifest, chromium, e
       save();console.log(JSON.stringify({key:record.key,width,passed:record.passed,failure:record.failure,routes:record.routes.length,errors:errors.length,consoleErrors:consoleErrors.length}));
       await page.close();
     }
-  } finally {await browser.close();evidence.finishedAt=new Date().toISOString();evidence.passed=results.length===widths.length*3&&results.every(r=>r.passed);save();}
+  } finally {await browser.close();evidence.finishedAt=new Date().toISOString();evidence.passed=results.length===widths.length*3&&results.every(r=>r.passed);evidence.access.publicWithoutShareLink=evidence.passed&&!shareUrl;save();}
   return evidence;
 }
 
 async function main() {
-  if(process.argv.includes('--help')) {console.log('Usage: node scripts/verify-dealer-preview.mjs SLUG ORIGIN [OUTPUT] [--manifest PATH] [--commit SHA] [--playwright PATH]\nChecks the actual manifest trio at 390/1440 px and the deployed FAB at 320 px. No external enquiries are sent.');return;}
+  if(process.argv.includes('--help')) {console.log('Usage: node scripts/verify-dealer-preview.mjs SLUG ORIGIN [OUTPUT] [--manifest PATH] [--commit SHA] [--playwright PATH] [--share-file runtime/FILE.json]\nOptional share-file contains shareableUrl from Vercel; keep it untracked. Shared preview QA is recorded separately from anonymous public access. Checks 390/1440 px and the FAB at 320 px. No external enquiries are sent.');return;}
   const argv=process.argv.slice(2),slug=argv.shift(),origin=argv.shift();
   if(!/^[a-z0-9][a-z0-9-]*$/.test(slug||'')||!origin)throw new Error('Use --help for usage.');
   const output=argv[0]&&!argv[0].startsWith('--')?path.resolve(argv.shift()):path.join(ROOT,'runtime/dealer-qa',slug);
-  const options={};while(argv.length){const key=argv.shift();if(!['--manifest','--commit','--playwright'].includes(key)||!argv[0])throw new Error('Unknown or incomplete option: '+key);options[key]=argv.shift();}
+  const options={};while(argv.length){const key=argv.shift();if(!['--manifest','--commit','--playwright','--share-file'].includes(key)||!argv[0])throw new Error('Unknown or incomplete option: '+key);options[key]=argv.shift();}
   const module=options['--playwright']||path.join(ROOT,'clients',slug,'auto-best/node_modules/playwright/index.mjs');
   const {chromium}=await import(pathToFileURL(path.resolve(module)));
   const manifest=json(options['--manifest']||path.join(ROOT,'clients',slug,'dealer.json'));
-  const result=await verifyPreview({slug,origin,output,manifest,chromium,expectedCommit:options['--commit']||null});
+  const result=await verifyPreview({slug,origin,output,manifest,chromium,expectedCommit:options['--commit']||null,shareUrl:options['--share-file']?json(options['--share-file']).shareableUrl:null});
   process.exitCode=result.passed?0:1;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});

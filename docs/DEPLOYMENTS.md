@@ -61,7 +61,7 @@ Generated from [DEPLOYMENT-INVENTORY.json](DEPLOYMENT-INVENTORY.json). Source, b
 | plus-auto-ruse | Preserved branch evidence | auto-best (entry unrecorded) / modern (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
 | prestige-varna | Preserved branch evidence | auto-best (entry unrecorded) / modern (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
 | Автокъща Приселци | [Local source](../clients/priselci/) | auto-best (entry unrecorded) / modern (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
-| Promosale Varna | [Local source](../clients/promosale-varna/) | auto-best (entry unrecorded) / import (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
+| Promosale Varna | [Local source](../clients/promosale-varna/) | auto-best / / import /variant-2/ / carwow /variant-3/ | [preview-verified-with-temporary-share](https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app) | passed / unknown |
 | rqs-auto-team | Preserved branch evidence | auto-best (entry unrecorded) / modern (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
 | slavi-cars | Preserved branch evidence | auto-best (entry unrecorded) / modern (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
 | sprint-auto-varna | Preserved branch evidence | auto-best (entry unrecorded) / modern (entry unrecorded) / carwow (entry unrecorded) | unknown | unknown / unknown |
