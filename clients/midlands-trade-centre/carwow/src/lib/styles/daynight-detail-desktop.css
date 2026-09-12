@@ -1,0 +1,1058 @@
+/*
+  daynight-detail-desktop.css -- desktop car-detail (PDP) styles.
+
+  Reproduces the look the PDP used to inherit from the legacy Auxero stack
+  [static/assets/app.css + daynight-template-head.css + swiper-bundle.min.css],
+  now scoped under `.daynight-detail` so /inventory/[slug] can ship ZERO legacy
+  CSS. Loaded desktop-only via a matchMedia bootstrap in DetailPageShell,
+  mirroring daynight-home-desktop.css -- phones render MobileDetailPage and never
+  download this file.
+
+  Conventions: brand colours come from --sa-* tokens. The template's bright blue
+  [#B00000] is unified onto --sa-blue and its red [#e11c2a] onto --sa-red, to
+  match the already-converted storefront [03-conventions section 6.1]. Neutral
+  greys stay as hex -- they are not brand tokens.
+
+  The image gallery is a native Svelte carousel [Swiper JS is stripped in
+  DetailPageShell]; these rules reproduce only its visual chrome.
+*/
+
+/* --- Scope reset + base type --------------------------------------------------
+   app.css applied a universal `* { margin: 0 }` + border-box reset and body
+   typography. Reproduce it scoped, or default heading/paragraph margins drift
+   the vertical rhythm [the same 40px-drift class of bug seen on /about]. */
+.daynight-detail,
+.daynight-detail * {
+	box-sizing: border-box;
+}
+
+.daynight-detail * {
+	margin: 0;
+}
+
+.daynight-detail {
+	background: #f4f6fa;
+	color: #1c1c1c;
+	font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+.daynight-detail a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.daynight-detail img {
+	display: block;
+	max-width: 100%;
+}
+
+.daynight-detail ul {
+	list-style: none;
+	padding: 0;
+}
+
+.daynight-detail button {
+	font: inherit;
+	color: inherit;
+}
+
+/* --- Container --------------------------------------------------------------- */
+.daynight-detail .container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* --- Headings --------------------------------------------------------------- */
+.daynight-detail .h3,
+.daynight-detail .h4,
+.daynight-detail .h5,
+.daynight-detail .h6,
+.daynight-detail .h7 {
+	font-weight: 600;
+}
+
+.daynight-detail .h3 {
+	font-size: 32px;
+	line-height: 1.25;
+}
+
+.daynight-detail .h4 {
+	font-size: 24px;
+	line-height: 1.333;
+}
+
+.daynight-detail .h5 {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.daynight-detail .h6 {
+	font-size: 20px;
+	line-height: 1.6;
+}
+
+.daynight-detail .h7 {
+	font-size: 18px;
+	line-height: 1.44;
+}
+
+/* --- Utilities [px scale] ----------------------------------------------------
+   Auxero utilities are px-valued [mb-40 = 40px], unlike Tailwind's rem scale.
+   Reproduce the ones the PDP uses, scoped so they out-specify both the reset
+   above and any same-named Tailwind utility. Real Tailwind utilities the PDP
+   uses [flex, grid, grid-cols-N, items/justify helpers, relative, overflow,
+   w-full, text-sm, text-xs, capitalize] are left to Tailwind. */
+.daynight-detail .mb-2 {
+	margin-bottom: 2px;
+}
+.daynight-detail .mb-4 {
+	margin-bottom: 4px;
+}
+.daynight-detail .mb-6 {
+	margin-bottom: 6px;
+}
+.daynight-detail .mb-8 {
+	margin-bottom: 8px;
+}
+.daynight-detail .mb-10 {
+	margin-bottom: 10px;
+}
+.daynight-detail .mb-12 {
+	margin-bottom: 12px;
+}
+.daynight-detail .mb-15 {
+	margin-bottom: 15px;
+}
+.daynight-detail .mb-16 {
+	margin-bottom: 16px;
+}
+.daynight-detail .mb-18 {
+	margin-bottom: 18px;
+}
+.daynight-detail .mb-20 {
+	margin-bottom: 20px;
+}
+.daynight-detail .mb-24 {
+	margin-bottom: 24px;
+}
+.daynight-detail .mb-28 {
+	margin-bottom: 28px;
+}
+.daynight-detail .mb-40 {
+	margin-bottom: 40px;
+}
+
+.daynight-detail .gap-4 {
+	gap: 4px;
+}
+.daynight-detail .gap-5 {
+	gap: 5px;
+}
+.daynight-detail .gap-8 {
+	gap: 8px;
+}
+.daynight-detail .gap-12 {
+	gap: 12px;
+}
+.daynight-detail .gap-16 {
+	gap: 16px;
+}
+.daynight-detail .gap-18 {
+	gap: 18px;
+}
+.daynight-detail .gap-24 {
+	gap: 24px;
+}
+.daynight-detail .gap-x-30 {
+	column-gap: 30px;
+}
+
+.daynight-detail .pl-28 {
+	padding-left: 28px;
+}
+.daynight-detail .py-100 {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.daynight-detail .pb-60 {
+	padding-bottom: 60px;
+}
+.daynight-detail .pb-100 {
+	padding-bottom: 100px;
+}
+.daynight-detail .padding-0 {
+	padding: 0;
+}
+
+.daynight-detail .w-16 {
+	width: 16px;
+}
+.daynight-detail .h-16 {
+	height: 16px;
+}
+.daynight-detail .w-28 {
+	width: 28px;
+}
+.daynight-detail .h-28 {
+	height: 28px;
+}
+
+.daynight-detail .font-weight-500 {
+	font-weight: 500;
+}
+.daynight-detail .font-weight-600 {
+	font-weight: 600;
+}
+
+.daynight-detail .line-height-28 {
+	line-height: 28px;
+}
+.daynight-detail .radius-16 {
+	border-radius: 16px;
+}
+.daynight-detail .text-underline {
+	text-decoration: underline;
+}
+.daynight-detail .text-secondary {
+	color: #4b4b4b;
+}
+.daynight-detail .text-sm {
+	font-size: 16px;
+	line-height: 1.45;
+}
+.daynight-detail .text-xs {
+	font-size: 14px;
+	line-height: 1.45;
+}
+.daynight-detail .text-highlight {
+	color: var(--sa-blue);
+}
+.daynight-detail .background-light {
+	background: #f5f7fb;
+}
+/* The legacy PDP rendered these headings sentence-case despite their `.capitalize`
+   hooks (a template override that vanished with app.css). Preserve that: Bulgarian
+   Title Case would wrongly capitalise prepositions, e.g. "Преглед На Автомобила". */
+.daynight-detail .capitalize {
+	text-transform: none;
+}
+
+/* --- Buttons -----------------------------------------------------------------
+   .btn keeps the template's slide-fill animation. At rest [what the visual gate
+   captures]: primary = ink #1c1c1c, primary-3 = blue, primary-4 = viber purple. */
+.daynight-detail .btn {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	min-width: max-content;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	overflow: hidden;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.daynight-detail .btn::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -2px;
+	z-index: -2;
+	width: 102%;
+	height: 100%;
+	background-color: #1c1c1c;
+	transform: translateX(-103%);
+	transition: 0.3s;
+}
+
+.daynight-detail .btn-medium {
+	font-size: 18px;
+	height: 48px;
+	padding: 12px 24px;
+}
+
+.daynight-detail .btn-large {
+	height: 52px;
+	font-size: 18px;
+	padding: 8px 28px;
+}
+
+.daynight-detail .btn-primary {
+	background-color: #1c1c1c;
+	color: #fff;
+}
+.daynight-detail .btn-primary:hover {
+	background: var(--sa-blue);
+}
+
+.daynight-detail .btn-primary-3 {
+	background-color: var(--sa-blue);
+	color: #fff;
+}
+.daynight-detail .btn-primary-3:hover {
+	background: #1c1c1c;
+}
+
+.daynight-detail .btn-primary-4 {
+	background-color: #4518cc;
+	color: #fff;
+}
+.daynight-detail .btn-primary-4:hover {
+	background-color: #1c1c1c;
+}
+
+/* --- Title bar -------------------------------------------------------------- */
+.daynight-detail .title-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+.daynight-detail .btn-icon-circle {
+	display: flex;
+	width: 48px;
+	height: 48px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #e7e7e7;
+	border-radius: 50%;
+	background-color: #e7e7e7;
+}
+.daynight-detail .btn-icon-circle:hover {
+	border-color: #1c1c1c;
+	background-color: #1c1c1c;
+	color: #fff;
+}
+.daynight-detail .hover-stroke-white:hover svg path {
+	stroke: #fff;
+}
+.daynight-detail .hover-fill-white:hover {
+	background-color: #1c1c1c;
+	color: #1c1c1c;
+}
+.daynight-detail .hover-fill-white:hover svg path {
+	fill: #fff;
+}
+
+/* --- Detail layout [2-column] ----------------------------------------------- */
+.daynight-detail .listing-details {
+	display: flex;
+	gap: 80px;
+}
+.daynight-detail .listing-details--sidebar {
+	width: 400px;
+}
+.daynight-detail .listing-details--content {
+	width: calc(100% - 480px);
+}
+
+@media (max-width: 1199px) {
+	.daynight-detail .listing-details {
+		gap: 30px;
+	}
+	.daynight-detail .listing-details--sidebar {
+		width: 360px;
+	}
+	.daynight-detail .listing-details--content {
+		width: calc(100% - 430px);
+	}
+}
+
+/* --- Info tabs [style4] ------------------------------------------------------
+   Base only; DesktopDetailFeatureTabs scopes its larger-size tweaks on top. */
+.daynight-detail .flat-tabs .menu-tab-style4,
+.daynight-detail .menu-tab-style4 {
+	display: flex;
+	width: min-content;
+	border-bottom: 2px solid #e7e7e7;
+}
+.daynight-detail .menu-tab-style4 li {
+	position: relative;
+	display: block;
+	min-width: max-content;
+	padding-bottom: 7px;
+	cursor: pointer;
+}
+.daynight-detail .menu-tab-style4 li span {
+	color: #4b4b4b;
+}
+.daynight-detail .menu-tab-style4 li::before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--sa-blue);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.daynight-detail .menu-tab-style4 li.active span {
+	color: #1c1c1c;
+	font-weight: 600;
+}
+.daynight-detail .menu-tab-style4 li.active::before {
+	width: 100%;
+	opacity: 1;
+}
+.daynight-detail .menu-tab-style4 li:not(:last-child) {
+	margin-right: 22px;
+}
+
+/* Tab-panel crossfade [feature tabs + the cash/finance toggle]. */
+.daynight-detail .content-tab {
+	position: relative;
+}
+.daynight-detail .content-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	transform: scale(0.9) translate(0, 0%);
+	opacity: 0;
+	visibility: hidden;
+}
+.daynight-detail .content-inner.active {
+	position: relative;
+	z-index: 1;
+	transform: scale(1) translate(0, 0%);
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s ease;
+}
+
+/* --- Image gallery [native carousel] ----------------------------------------
+   DesktopDetailGallery scopes slide show/hide, thumb strip flex + opacity, and
+   button reset. These rules add the visual framing app.css used to supply. */
+.daynight-detail .swiper-listing-details-main {
+	border-radius: 16px;
+	margin-bottom: 12px;
+}
+.daynight-detail .swiper-listing-details-main .listing-details-item {
+	position: relative;
+	width: 100%;
+	height: 600px;
+}
+.daynight-detail .swiper-listing-details-main .listing-details-item .img-main {
+	width: 100%;
+	height: 100%;
+	border-radius: 16px;
+	object-fit: cover;
+}
+
+/* Prev/next arrows */
+.daynight-detail .swiper-listing-details-main .swiper-button {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	display: flex;
+	width: 40px;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 52px;
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+}
+.daynight-detail .swiper-listing-details-main .swiper-button svg {
+	width: 24px;
+	height: 24px;
+}
+.daynight-detail .swiper-listing-details-main .swiper-button:hover {
+	background: #fff;
+}
+.daynight-detail .swiper-listing-details-main .swiper-button:hover svg path {
+	fill: #1c1c1c;
+}
+.daynight-detail .swiper-listing-details-main .swiper-button.navigation-next {
+	right: 24px;
+}
+.daynight-detail .swiper-listing-details-main .swiper-button.navigation-prev {
+	left: 24px;
+}
+
+/* Slide overlay [video / all-photos actions], revealed on the active slide */
+.daynight-detail .listing-details-item .listing-details-item--content {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease;
+}
+.daynight-detail .swiper-slide-active .listing-details-item .listing-details-item--content {
+	opacity: 1;
+	visibility: visible;
+}
+.daynight-detail .listing-details-item--button {
+	display: flex;
+	height: 48px;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	padding: 4px 16px;
+	border: 1px solid var(--sa-ink, #050505);
+	border-radius: 8px;
+	background-color: var(--sa-ink, #050505);
+	color: #fff;
+	font-size: var(--sa-text-desktop-action, 18px);
+	font-weight: 600;
+	line-height: 1.15;
+}
+.daynight-detail .listing-details-item--button:first-child {
+	border-color: var(--sa-red, #d71920);
+	background-color: var(--sa-red, #d71920);
+}
+.daynight-detail .listing-details-item--button:hover,
+.daynight-detail .listing-details-item--button:focus-visible {
+	border-color: var(--sa-red-strong, #b51219);
+	background-color: var(--sa-red-strong, #b51219);
+	color: #fff;
+}
+.daynight-detail .listing-details-item--button:first-child:hover,
+.daynight-detail .listing-details-item--button:first-child:focus-visible {
+	border-color: var(--sa-red-strong, #b51219);
+	background-color: var(--sa-red-strong, #b51219);
+}
+
+/* Thumbnails */
+.daynight-detail .swiper-listing-details-thumbs .listing-details-thumb {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+.daynight-detail .swiper-listing-details-thumbs .listing-details-thumb::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	max-width: 100px;
+	height: 100%;
+	border: 2px solid transparent;
+	border-radius: 12px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+}
+.daynight-detail .swiper-listing-details-thumbs .listing-details-thumb img {
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	object-fit: cover;
+}
+.daynight-detail
+	.swiper-listing-details-thumbs
+	.swiper-slide-thumb-active
+	.listing-details-thumb::before {
+	border-color: var(--sa-blue);
+}
+
+/* --- Sidebar widget box ------------------------------------------------------
+   DesktopDetailPrimarySection supplies the white-card chrome [bg/border/radius/
+   shadow] via :global; these add the inner padding + control spacing app.css
+   used to own. */
+.daynight-detail .listing-details--sidebar-box {
+	padding: 22px;
+}
+.daynight-detail .listing-details--sidebar-box .filter-checkbox span {
+	padding-left: 22px;
+}
+.daynight-detail .listing-details--sidebar-box select {
+	padding: 13px 16px;
+}
+.daynight-detail .listing-details--sidebar-box .core-dropdown__item {
+	padding: 8px 0;
+}
+.daynight-detail .listing-details--sidebar-box .core-dropdown__item:not(:last-child) {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+/* --- Vehicle overview list [sidebar] ---------------------------------------- */
+.daynight-detail .car-overview-list-style2 > li {
+	padding-top: 12px;
+}
+.daynight-detail .car-overview-list-style2 > li:not(:last-child) {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+/* --- Cash / finance toggle [menu-tab-style5] -------------------------------- */
+.daynight-detail .flat-tabs .menu-tab-style5,
+.daynight-detail .menu-tab-style5 {
+	display: grid;
+	padding: 4px;
+	border: 1px solid #e7e7e7;
+	border-radius: 88px;
+}
+.daynight-detail .menu-tab-style5.grid-cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+.daynight-detail .menu-tab-style5 li:not(.item) {
+	display: flex;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	border-radius: 88px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.daynight-detail .menu-tab-style5 li:not(.item):hover,
+.daynight-detail .menu-tab-style5 li:not(.item).active {
+	background-color: #1c1c1c;
+	color: #fff;
+}
+
+/* --- VAT dropdown ----------------------------------------------------------- */
+.daynight-detail .core-dropdown {
+	position: relative;
+	min-width: 180px;
+}
+.daynight-detail .core-dropdown__menu {
+	position: absolute;
+	top: calc(100% + 2px);
+	right: 0;
+	z-index: 8;
+	min-width: 100%;
+	overflow: hidden;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+}
+.daynight-detail .core-dropdown.active .core-dropdown__menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.daynight-detail .core-dropdown__list {
+	margin: 0;
+	padding: 8px 16px;
+	list-style: none;
+}
+
+/* --- Dealer contact card [sidebar] ------------------------------------------ */
+.daynight-detail .listing-details--contact-dealer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.daynight-detail .listing-details--contact-dealer img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.daynight-detail .listing-details--contact .contact-info li {
+	display: flex;
+	gap: 12px;
+}
+.daynight-detail .listing-details--contact .contact-info li .icon {
+	display: flex;
+	min-width: 40px;
+	min-height: 40px;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #e7e7e7;
+	border-radius: 50%;
+}
+.daynight-detail .listing-details--contact .contact-info li .icon img {
+	width: 24px;
+	height: 24px;
+}
+.daynight-detail .verify {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	padding: 4px 12px;
+	border-radius: 100px;
+	background: rgba(230, 75, 24, 0.1);
+}
+.daynight-detail .verify img {
+	width: 16px;
+	height: 16px;
+}
+
+/* --- Form controls [sidebar + calculator] -----------------------------------
+   Template inputs are borderless with a box-shadow "border". */
+.daynight-detail input[type='text'],
+.daynight-detail input[type='email'],
+.daynight-detail input[type='tel'],
+.daynight-detail input[type='number'],
+.daynight-detail input[type='search'],
+.daynight-detail textarea {
+	width: 100%;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 8px;
+	background: transparent;
+	box-shadow: 0 0 0 1px #e7e7e7;
+	font-size: 16px;
+	line-height: 26px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+.daynight-detail input[type='text']::placeholder,
+.daynight-detail input[type='email']::placeholder,
+.daynight-detail input[type='tel']::placeholder,
+.daynight-detail input[type='number']::placeholder,
+.daynight-detail input[type='search']::placeholder,
+.daynight-detail textarea::placeholder {
+	color: #9fa1a4;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
+}
+.daynight-detail input.active,
+.daynight-detail input:focus,
+.daynight-detail textarea:focus {
+	box-shadow: 0 0 0 2px var(--sa-blue);
+}
+.daynight-detail .input-large {
+	height: 50px;
+	border-radius: 12px;
+}
+.daynight-detail .send-inquiry textarea,
+.daynight-detail textarea.message {
+	height: 100px;
+	padding: 10px 16px;
+	border-radius: 12px;
+}
+
+.daynight-detail select {
+	width: 100%;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 12px;
+	background-color: #fff;
+	background-image: url('/assets/icons/chevron-down-black.svg');
+	background-repeat: no-repeat;
+	background-position: right 14px center;
+	box-shadow: 0 0 0 1px #e7e7e7;
+	color: #1c1c1c;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	transition: all 0.3s ease;
+}
+.daynight-detail select:focus,
+.daynight-detail select.active {
+	box-shadow: 0 0 0 2px var(--sa-blue);
+}
+
+/* Custom checkbox [price-updates opt-in] */
+.daynight-detail .filter-checkbox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #1c1c1c;
+	font-size: 16px;
+	cursor: pointer;
+}
+.daynight-detail .filter-checkbox input[type='checkbox'] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.daynight-detail .filter-checkbox span {
+	position: relative;
+	display: inline-block;
+	padding-left: 28px;
+	line-height: 20px;
+	user-select: none;
+}
+.daynight-detail .filter-checkbox span::before {
+	content: '';
+	position: absolute;
+	left: 2px;
+	top: 3px;
+	width: 15px;
+	height: 15px;
+	background-image: url('/assets/icons/checkbox-2.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.daynight-detail .filter-checkbox.style-2 input[type='checkbox']:checked + span::before {
+	background-image: url('/assets/icons/checked.svg');
+}
+.daynight-detail .filter-checkbox input[type='checkbox']:checked + span::before {
+	background-image: url('/assets/icons/checked-2.svg');
+}
+
+/* --- Finance calculator form -------------------------------------------------
+   The card chrome is flattened by PrimarySection's .pdp-card; only the inner
+   form row layout is needed. */
+.daynight-detail .financing-calculator .financing-calculator-form {
+	display: flex;
+	align-items: end;
+	gap: 12px;
+}
+.daynight-detail .financing-calculator .financing-calculator-form > div {
+	width: calc(100% - 130px);
+}
+.daynight-detail .financing-calculator .financing-calculator-form .btn {
+	width: 130px;
+	min-width: 130px;
+}
+
+/* --- Reviews [rating box] --------------------------------------------------- */
+.daynight-detail .rating-box {
+	padding: 26px;
+	border: 2px solid #e7e7e7;
+	border-radius: 16px;
+	background-color: #fff;
+}
+.daynight-detail .rating-box__content {
+	display: flex;
+	gap: 64px;
+}
+.daynight-detail .rating-box__overview {
+	flex-shrink: 0;
+}
+.daynight-detail .rating-box__average {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 4px;
+}
+.daynight-detail .rating-box__score {
+	color: #1c1c1c;
+	font-size: 68px;
+	line-height: 76px;
+	font-weight: 600;
+}
+.daynight-detail .rating-box__stars {
+	display: flex;
+	align-items: center;
+}
+.daynight-detail .rating-box__stars img {
+	width: 20px;
+	height: 20px;
+}
+.daynight-detail .rating-box__count {
+	margin: 0;
+	color: #4b4b4b;
+	font-size: 14px;
+}
+.daynight-detail .rating-box__distribution {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+.daynight-detail .rating-box__button {
+	display: flex;
+	align-items: center;
+}
+.daynight-detail .rating-box__bar-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.daynight-detail .rating-box__bar-label {
+	display: flex;
+	gap: 6px;
+}
+.daynight-detail .rating-box__bar-label .text {
+	display: flex;
+	width: 12px;
+}
+.daynight-detail .rating-box__bar-wrapper {
+	flex: 1;
+	height: 12px;
+	overflow: hidden;
+	border-radius: 1px;
+	background-color: #e9e9e9;
+}
+.daynight-detail .rating-box__bar {
+	height: 100%;
+	border-radius: 1px;
+	background-color: var(--sa-blue);
+	transition: width 0.3s ease;
+}
+.daynight-detail .rating-box__bar-percent {
+	min-width: 38px;
+}
+
+/* Comments */
+.daynight-detail .comment-box {
+	margin-bottom: 28px;
+	padding-bottom: 19px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.daynight-detail .comment-box__header {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.daynight-detail .comment-box__avatar {
+	min-width: 60px;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.daynight-detail .comment-box__avatar.guest {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e7e7e7;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 600;
+}
+
+/* --- Map -------------------------------------------------------------------- */
+.daynight-detail .widget-gg-map {
+	width: 100%;
+}
+
+/* --- Related vehicles [VehicleCard] -----------------------------------------
+   The shared VehicleCard's base look comes from legacy app.css/head-css, gated
+   off the inventory body class that the PDP lacks. Reproduce the card chrome
+   here, scoped to the PDP, so we never touch the shared component [merge-safe
+   vs. the inventory-grid migration]. Component-scoped bits [meta chips, price
+   __value sizing, title clamp, compare/heart buttons] survive on their own. */
+.daynight-detail .pdp-related .card-box {
+	position: relative;
+	height: fit-content;
+	border-radius: 16px;
+	transition: all 0.3s ease;
+}
+.daynight-detail .pdp-related .card-box .image {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	border-radius: 16px 16px 0 0;
+}
+.daynight-detail .pdp-related .card-box .image > a {
+	width: 100%;
+	height: 100%;
+}
+.daynight-detail .pdp-related .card-box .card--img {
+	width: 100%;
+	height: 100%;
+	border-radius: 16px 16px 0 0;
+	object-fit: cover;
+}
+.daynight-detail .pdp-related .card-box .top {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	right: 8px;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.daynight-detail .pdp-related .card-box .top .highlight {
+	display: flex;
+	height: 28px;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 12px;
+	border-radius: 8px;
+	font-size: 13px;
+	line-height: 1.35;
+	font-weight: 600;
+}
+.daynight-detail .pdp-related .card-box .top .bg-primary-2.highlight,
+.daynight-detail .pdp-related .card-box .top .bg-primary-2.text-white {
+	background: var(--sa-red);
+	color: #fff;
+}
+.daynight-detail .pdp-related .card-box .bottom {
+	position: absolute;
+	top: -36px;
+	left: 6px;
+	display: flex;
+	justify-content: space-between;
+	width: calc(100% - 12px);
+}
+.daynight-detail .pdp-related .card-box .bottom .category {
+	display: flex;
+	height: 28px;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	padding: 4px 8px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	font-size: 13px;
+	line-height: 1.35;
+}
+.daynight-detail .pdp-related .card-box .bottom .category > a {
+	font-size: 13px;
+	line-height: 1.35;
+}
+.daynight-detail .pdp-related .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
+.daynight-detail .pdp-related .card-box:has(.card--img.daynight-img-fallback) .bottom .category a {
+	color: #233044;
+}
+.daynight-detail .pdp-related .card-box .content {
+	position: relative;
+	padding: 16px;
+	border-radius: 0 0 16px 16px;
+}
+.daynight-detail .pdp-related .card-box .content .card-box__title,
+.daynight-detail .pdp-related .card-box .content .card-box__title > a {
+	font-size: 20px;
+	line-height: 1.36;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+.daynight-detail .pdp-related .card-box .content .tag {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/* Price value/meta sizing [head-css, ungated -> reproduce since head-css drops] */
+.daynight-detail .pdp-related .daynight-card-price__value {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.05;
+}
+.daynight-detail .pdp-related .daynight-card-price__monthly {
+	font-size: 16px;
+	line-height: 20px;
+}
+.daynight-detail .pdp-related .daynight-card-price__link {
+	color: #475569;
+	font-size: 16px;
+	line-height: 20px;
+}

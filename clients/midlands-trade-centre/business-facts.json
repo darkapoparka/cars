@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1, "leadId": "gb-birmingham-midlands-trade-centre", "slug": "midlands-trade-centre", "observedAt": "2026-09-09",
+  "name": "Midlands Trade Centre Limited", "shortName": "Midlands Trade Centre", "legalName": "MIDLANDS TRADE CENTRE LIMITED", "companyNumber": "08906376",
+  "city": "Birmingham", "country": "United Kingdom", "countryCode": "GB", "address": "1198 Coventry Road, Yardley, Birmingham, B25 8DA",
+  "phone": "+447780008222", "phoneDisplay": "07780 008222", "phoneHref": "tel:+447780008222", "email": "",
+  "hours": "Monday–Friday 09:00–19:00; Saturday 10:00–18:00; Sunday by appointment. All viewings require a prior appointment.",
+  "currency": "GBP", "distanceUnit": "mi", "locale": "en-GB", "accent": "#377c58",
+  "website": "https://www.midlandstradecentreltd.co.uk/", "sourceProfile": "https://www.midlandstradecentreltd.co.uk/used-cars",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA&output=embed",
+  "tagline": "Used vehicles in Yardley, Birmingham. Viewings by appointment.", "languages": ["en"], "socialLinks": {}, "stockCount": 8, "sampleOnly": true,
+  "services": ["Used-vehicle sales", "Viewings by prior appointment", "Part exchange enquiries"],
+  "sources": ["https://www.midlandstradecentreltd.co.uk/", "https://www.midlandstradecentreltd.co.uk/used-cars", "https://www.midlandstradecentreltd.co.uk/used-cars?page=2", "https://find-and-update.company-information.service.gov.uk/company/08906376"],
+  "locationNote": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live stock feed. Confirm availability, condition and final terms directly. No dealership approval or message delivery is implied.",
+  "opportunity": "The retrieved catalogue mixes priced advertisements with sold or buyer-held vehicles. This preview distinguishes dated samples and puts confirmation and viewing requirements beside the selected vehicle; the existing site already has search, galleries and enquiries.",
+  "qualificationNotes": ["The current retrieved catalogue reports 25 results, not 25 independently verified available vehicles.", "Buyer-held Hilux, Lexus CT and CR-V and the sold Audi A5 were excluded. A previously observed non-running Focus was excluded.", "The old 30-ad screen is not an automatic veto under the owner's fixed assignment.", "Direct browser requests encountered a verification screen. This is an environment limitation, not evidence of a broken customer website.", "The first eight selected samples use actual GBP prices and miles, with no conversion or mileage relabeling."]
+}

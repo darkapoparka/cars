@@ -10,9 +10,9 @@
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
+      <p>Browse the dated vehicle samples, confirm the selected car and arrange a viewing with the dealership in {brand.city}. Services and purchase terms must be confirmed directly.</p>
       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
-        Вижте автомобилите <Icon name="arrow-right" size={18} />
+        View vehicles <Icon name="arrow-right" size={18} />
       </a>
     </div>
 

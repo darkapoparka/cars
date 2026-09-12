@@ -1,6 +1,6 @@
 import { brand } from '$config/brand';
 
-export type BlogCategory = 'Оглед' | 'Внос' | 'Лизинг' | 'Насоки' | 'Бартер';
+export type BlogCategory = 'Viewing' | 'Documents' | 'Buying' | 'Guides' | 'Trade-in';
 
 export type BlogPost = {
   id: number;
@@ -22,206 +22,205 @@ export type BlogFilters = {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 1,
-    title: 'Проверка преди покупка',
-    text: 'История, документи и техническо състояние се потвърждават директно с екипа.',
-    category: 'Оглед',
-    tag: 'Оглед',
-    image: '/assets/images/blog/blog-1.jpg',
-    sections: [
+    "id": 1,
+    "title": "Plan your viewing",
+    "text": "Confirm the car and the viewing location before travelling.",
+    "category": "Viewing",
+    "tag": "Viewing",
+    "image": "/dealer/showroom.webp",
+    "sections": [
       {
-        title: 'Започнете с историята и документите',
-        paragraphs: [
-          'Преди срещата поискайте основните данни за автомобила и наличната сервизна история. Сравнете идентификационните данни в документите с тези върху автомобила и отбележете всичко, което трябва да бъде изяснено на място.'
+        "title": "Start with the selected listing",
+        "paragraphs": [
+          "Keep the listing reference and the details that matter to you. Ask the dealership to confirm that the car can still be viewed."
         ]
       },
       {
-        title: 'Огледайте автомобила последователно',
-        paragraphs: [
-          'Проверете каросерията, гумите, интериора и работата на основните системи, след което направете пробно шофиране. Ако не сте сигурни в техническото състояние, включете независим специалист преди решение за покупка.'
+        "title": "Confirm the address",
+        "paragraphs": [
+          "The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted."
         ]
       }
     ]
   },
   {
-    id: 2,
-    title: 'Внос и документи',
-    text: 'Обсъдете търсене, транспорт и подготовката за регистрация в България.',
-    category: 'Внос',
-    tag: 'Документи',
-    image: '/assets/images/blog/blog-2.jpg',
-    sections: [
+    "id": 2,
+    "title": "Understand the advertised specification",
+    "text": "Check the regional specification and the documents for the actual car.",
+    "category": "Documents",
+    "tag": "Documents",
+    "image": "/dealer/inventory/965722-2.webp",
+    "sections": [
       {
-        title: 'Определете точни критерии за търсенето',
-        paragraphs: [
-          'Марка и модел не са достатъчни. Уточнете година, двигател, оборудване, допустим пробег и общ бюджет, включително транспорт и подготовка за регистрация.'
+        "title": "Read the listing carefully",
+        "paragraphs": [
+          "The sample records include the regional specification stated in the advertisement. It is not a guarantee of condition, service history or registration eligibility."
         ]
       },
       {
-        title: 'Поискайте ясна следа на всяка стъпка',
-        paragraphs: [
-          'Преди ангажимент потвърдете кой е конкретният автомобил, какво е известно за състоянието му, кои документи го придружават и как ще бъде организиран транспортът. Финалните изисквания за регистрация трябва да се сверят с актуалните официални правила.'
+        "title": "Ask vehicle-specific questions",
+        "paragraphs": [
+          "Discuss the available documents, recorded mileage, service information and any known damage. Do not assume that a model-level feature list proves the equipment on a particular car."
         ]
       }
     ]
   },
   {
-    id: 3,
-    title: 'Лизинг и условия',
-    text: 'Попитайте за актуалните условия според избрания автомобил.',
-    category: 'Лизинг',
-    tag: 'Лизинг',
-    image: '/assets/images/blog/blog-3.jpg',
-    sections: [
+    "id": 3,
+    "title": "Price and purchase questions",
+    "text": "Ask what is included in the current advertised price.",
+    "category": "Buying",
+    "tag": "Buying",
+    "image": "/dealer/inventory/965722-3.webp",
+    "sections": [
       {
-        title: 'Сравнявайте цялата оферта',
-        paragraphs: [
-          'Гледайте не само месечната вноска, а срока, първоначалното плащане, общата дължима сума, таксите, застраховките и условията за собственост в края на договора.'
+        "title": "Request current written terms",
+        "paragraphs": [
+          "Prices in this preview are dated listing samples, not a binding offer or a finance quotation. Confirm the amount and any additional charges directly."
         ]
       },
       {
-        title: 'Подгответе реалистичен бюджет',
-        paragraphs: [
-          'Оставете място за регистрация, обслужване и текущи разходи. Поискайте писмена индивидуална оферта за конкретния автомобил, преди да сравнявате различни варианти.'
+        "title": "Separate price from finance",
+        "paragraphs": [
+          "A monthly figure or down payment is not the full purchase price. This preview does not provide a dealer finance product, interest rate or approval."
         ]
       }
     ]
   },
   {
-    id: 4,
-    title: 'Как да изберете автомобил',
-    text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
-    category: 'Насоки',
-    tag: 'Избор',
-    image: '/assets/images/blog/blog-4.jpg',
-    sections: [
+    "id": 4,
+    "title": "Choose a car for everyday use",
+    "text": "Compare the body style, mileage and features you actually need.",
+    "category": "Guides",
+    "tag": "Guides",
+    "image": "/dealer/inventory/1005647-1.webp",
+    "sections": [
       {
-        title: 'Започнете от ежедневната употреба',
-        paragraphs: [
-          'Помислете къде ще се движи автомобилът, колко хора и багаж обичайно превозвате и кои удобства са наистина важни. Така списъкът с подходящи модели става по-кратък и смислен.'
+        "title": "Start with your use case",
+        "paragraphs": [
+          "Think about passenger space, luggage and the journeys you make. Use the filters to compare relevant samples instead of relying on a single photograph."
         ]
       },
       {
-        title: 'Сравнете повече от покупната цена',
-        paragraphs: [
-          'Разходът, обслужването, гумите, застраховката и очакваният пробег влияят върху реалната цена на притежание. Изберете най-добрия баланс за вашия начин на използване, а не просто най-дългия списък с екстри.'
+        "title": "Check the actual car",
+        "paragraphs": [
+          "A listing is a starting point. Inspect the vehicle and confirm its condition and equipment before making a decision."
         ]
       }
     ]
   },
   {
-    id: 5,
-    title: `Оглед в ${brand.city}`,
-    text: `Уговорете посещение на ${brand.addressLine}.`,
-    category: 'Оглед',
-    tag: brand.city,
-    image: '/assets/images/blog/blog-5.jpg',
-    sections: [
+    "id": 5,
+    "title": "Visit the Sharjah showroom",
+    "text": "The published dealer address is showroom 353, Souk Al Haraj, Sharjah.",
+    "category": "Viewing",
+    "tag": "Viewing",
+    "image": "/dealer/showroom.webp",
+    "sections": [
       {
-        title: 'Запазете удобно време предварително',
-        paragraphs: [
-          'Посещенията в шоурума са с предварителна уговорка. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.'
+        "title": "Arrange a convenient time",
+        "paragraphs": [
+          "Opening hours are not verified in this preview. Contact the dealership to arrange a time and confirm the selected vehicle is at the location you intend to visit."
         ]
       },
       {
-        title: 'Дайте си време за спокоен оглед',
-        paragraphs: [
-          'Прегледайте автомобила на дневна светлина, седнете на всички места, проверете практичните детайли и запишете въпросите си. Не е необходимо да вземате решение преди да сте изяснили състоянието и документите.'
+        "title": "Keep the listing reference",
+        "paragraphs": [
+          "The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted."
         ]
       }
     ]
   },
   {
-    id: 6,
-    title: 'Бартер и оценка',
-    text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
-    category: 'Бартер',
-    tag: 'Бартер',
-    image: '/assets/images/blog/blog-6.jpg',
-    sections: [
+    "id": 6,
+    "title": "Prepare a trade-in enquiry",
+    "text": "Prepare details for a conversation, not an automatic valuation.",
+    "category": "Trade-in",
+    "tag": "Trade-in",
+    "image": "/dealer/inventory/1010924-1.webp",
+    "sections": [
       {
-        title: 'Подгответе точна информация за автомобила',
-        paragraphs: [
-          'Модел, година, пробег, оборудване, сервизна история и известни забележки дават добра начална картина. Снимките помагат за предварителен разговор, но не заменят огледа на място.'
+        "title": "Describe your current vehicle",
+        "paragraphs": [
+          "Make, model, year, mileage and condition help frame a conversation. Include known faults and the documents available."
         ]
       },
       {
-        title: 'Разглеждайте оценката като част от цялата сделка',
-        paragraphs: [
-          'Крайната стойност зависи от състоянието, документите и текущото пазарно търсене. Сравнете не само оценката на стария автомобил, а и условията по автомобила, който искате да придобиете.'
+        "title": "Confirm the next step",
+        "paragraphs": [
+          "The source profile advertises trade-in enquiries. This preview does not value a vehicle, accept an exchange or submit a request; confirm arrangements directly."
         ]
       }
     ]
   },
   {
-    id: 7,
-    title: 'Регистрация след внос',
-    text: 'Екипът ориентира за следващите стъпки след пристигане на автомобила.',
-    category: 'Внос',
-    tag: 'Документи',
-    image: '/assets/images/blog/blog-7.jpg',
-    sections: [
+    "id": 7,
+    "title": "Questions about vehicle documents",
+    "text": "Ask what documentation is available for the specific listing.",
+    "category": "Documents",
+    "tag": "Documents",
+    "image": "/dealer/inventory/1018774-1.webp",
+    "sections": [
       {
-        title: 'Подредете наличните документи',
-        paragraphs: [
-          'Съберете документите за произход и придобиване на автомобила, както и всичко получено при транспорта. Проверете имената, идентификационните данни и датите за разминавания още преди започване на регистрацията.'
+        "title": "Match the vehicle to its records",
+        "paragraphs": [
+          "Compare the advertised vehicle identity with the records shown at the viewing. Ask the dealership to explain missing or conflicting information."
         ]
       },
       {
-        title: 'Проверете актуалната процедура',
-        paragraphs: [
-          'Изискванията зависят от произхода и конкретния автомобил. Потвърдете текущите стъпки и необходимите оригинали с компетентните институции или избран доставчик, вместо да разчитате на стар списък от интернет.'
+        "title": "Use current official guidance",
+        "paragraphs": [
+          "Registration or import requirements depend on the vehicle and destination. Consult the relevant authority for current requirements; this preview does not provide legal or registration advice."
         ]
       }
     ]
   },
   {
-    id: 8,
-    title: 'Какво да попитате при оглед',
-    text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
-    category: 'Оглед',
-    tag: 'Оглед',
-    image: '/assets/images/blog/blog-8.jpg',
-    sections: [
+    "id": 8,
+    "title": "Use the photo gallery",
+    "text": "Compare the original listing photographs before arranging a visit.",
+    "category": "Viewing",
+    "tag": "Viewing",
+    "image": "/dealer/inventory/965722-1.webp",
+    "sections": [
       {
-        title: 'Попитайте за историята и текущото състояние',
-        paragraphs: [
-          'Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.'
+        "title": "Look beyond the first image",
+        "paragraphs": [
+          "Open the gallery and inspect the views supplied with the advertisement. Photographs can help you prepare questions but do not replace inspection."
         ]
       },
       {
-        title: 'Проверете оборудването и следващите разходи',
-        paragraphs: [
-          'Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.'
+        "title": "Treat image quality honestly",
+        "paragraphs": [
+          "These are recovered source photographs. Some originals are thumbnail-resolution; this preview does not invent detail through upscaling or generated vehicle images."
         ]
       }
     ]
   },
   {
-    id: 9,
-    title: 'След покупката',
-    text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
-    category: 'Насоки',
-    tag: 'Сервиз',
-    image: '/assets/images/blog/blog-9.jpg',
-    sections: [
+    "id": 9,
+    "title": "What a dated sample means",
+    "text": "This is a design preview, not a live stock feed.",
+    "category": "Guides",
+    "tag": "Guides",
+    "image": "/dealer/inventory/916417-1.webp",
+    "sections": [
       {
-        title: 'Съхранете документите и планирайте сроковете',
-        paragraphs: [
-          'Подредете договора, платежните документи, сервизната информация и всичко предадено с автомобила. Проверете актуалните срокове за регистрация и застраховане по официален източник.'
+        "title": "Check the observation date",
+        "paragraphs": [
+          "The cars, prices and specifications were recorded from the linked advertisements on 9 September 2026. They can change or become unavailable."
         ]
       },
       {
-        title: 'Направете добра отправна точка за поддръжката',
-        paragraphs: [
-          'Запишете текущия пробег и планирайте първоначален технически преглед според наличната история. Така следващото обслужване се основава на ясна информация, а не на предположения.'
+        "title": "Confirm before committing",
+        "paragraphs": [
+          "Ask the dealership for current availability, the actual viewing location, condition and purchase terms. No reservation, payment or enquiry delivery is made by this preview."
         ]
       }
     ]
   }
 ];
-
-export const blogCategories: BlogCategory[] = ['Оглед', 'Внос', 'Лизинг', 'Насоки', 'Бартер'];
+export const blogCategories: BlogCategory[] = ['Viewing', 'Documents', 'Buying', 'Guides', 'Trade-in'];
 
 const isBlogCategory = (value: string | null): value is BlogCategory =>
   Boolean(value && blogCategories.includes(value as BlogCategory));
@@ -231,7 +230,7 @@ export const parseBlogFilters = (params: URLSearchParams): BlogFilters => ({
   category: isBlogCategory(params.get('category')) ? params.get('category') as BlogCategory : ''
 });
 
-const normalize = (value: string) => value.trim().toLocaleLowerCase('bg-BG');
+const normalize = (value: string) => value.trim().toLocaleLowerCase('en-AE');
 
 export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters) => {
   const query = normalize(filters.q);

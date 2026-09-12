@@ -1,34 +1,18 @@
+import { dealerFacts } from '$data/dealer';
 export type BrandConfig = {
-  name: string;
-  shortName: string;
-  city: string;
-  addressLine: string;
-  address: string;
-  phone: string;
-  phoneHref: `tel:${string}`;
-  appointment: string;
-  logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  name: string; shortName: string; city: string; addressLine: string; address: string;
+  phone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`;
+  logoDark: `/${string}`; mapsUrl: string; mapsEmbedUrl: string; currency: string;
+  locale: string; distanceUnit: string; previewNotice: string; locationNote: string;
+  youtubeUrl: string | null; instagramUrl: string | null; facebookUrl: string | null;
 };
-
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
-export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
-} as const satisfies BrandConfig;
+export const brand: BrandConfig = {
+  name: dealerFacts.name, shortName: dealerFacts.shortName, city: dealerFacts.city,
+  addressLine: dealerFacts.address, address: dealerFacts.address,
+  phone: dealerFacts.phoneDisplay, phoneHref: dealerFacts.phoneHref as `tel:${string}`,
+  appointment: dealerFacts.hours, logo: '/dealer/logo-light.png', logoDark: '/dealer/logo-dark.png',
+  youtubeUrl: null, instagramUrl: null, facebookUrl: null,
+  mapsUrl: dealerFacts.mapsUrl, mapsEmbedUrl: dealerFacts.mapsEmbedUrl,
+  currency: dealerFacts.currency, locale: dealerFacts.locale, distanceUnit: dealerFacts.distanceUnit,
+  previewNotice: dealerFacts.previewNotice, locationNote: dealerFacts.locationNote
+};

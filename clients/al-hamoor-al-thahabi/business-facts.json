@@ -5,7 +5,10 @@
   "name": "Al Hamoor Al Thahabi Used Cars",
   "shortName": "Al Hamoor Al Thahabi",
   "legalName": null,
-  "aliases": ["AL HAMOOR AL THAHABI", "AL Hamoor AL Thahabi Used Car TR"],
+  "aliases": [
+    "AL HAMOOR AL THAHABI",
+    "AL Hamoor AL Thahabi Used Car TR"
+  ],
   "slug": "al-hamoor-al-thahabi",
   "city": "Sharjah",
   "country": "United Arab Emirates",
@@ -19,7 +22,35 @@
   "currency": "AED",
   "distanceUnit": "km",
   "locale": "en-AE",
-  "sources": ["https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414", "https://auto.ae/alhamooralthahabi/", "https://uae.yallamotor.com/auto-companies/red-line-used-cars-tr-9099"],
+  "sources": [
+    "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
+    "https://auto.ae/alhamooralthahabi/",
+    "https://uae.yallamotor.com/auto-companies/red-line-used-cars-tr-9099"
+  ],
   "locationNote": "The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.",
-  "previewNotice": "Independent design preview. Dated listing samples, not a live stock feed. Confirm availability, price, vehicle condition and location directly. No dealership approval or form delivery is implied."
+  "previewNotice": "Independent design preview. Dated listing samples, not a live stock feed. Confirm availability, price, vehicle condition and location directly. No dealership approval or form delivery is implied.",
+  "sourceProfile": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
+  "tagline": "Used cars in Sharjah. Clear details. A direct conversation.",
+  "accent": "#c13f38",
+  "website": null,
+  "languages": [
+    "en"
+  ],
+  "services": [
+    "Vehicle sales",
+    "Viewings by arrangement",
+    "Trade-in enquiries: confirm terms directly"
+  ],
+  "serviceEvidence": "https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html",
+  "stockCount": 8,
+  "sampleOnly": true,
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah&output=embed",
+  "primaryPhoneSource": "https://uae.yallamotor.com/auto-companies/red-line-used-cars-tr-9099",
+  "notes": [
+    "YallaMotor account 9099 uses a historical red-line URL but now displays this dealership name, the same telephone and showroom 353.",
+    "Business showroom in Sharjah is corroborated; individual DubiCars advertisements use Dubai labels. Every detail must show the viewing-location caveat.",
+    "This English preview does not claim Arabic/RTL interface support. Arabic is retained only in original brand artwork.",
+    "Hours, warranties, finance products/rates, reviews and staff are not verified and must not be fabricated."
+  ]
 }

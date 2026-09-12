@@ -1,0 +1,35 @@
+export const daynightSite = {
+  "name": "Midlands Trade Centre Limited",
+  "shortName": "Midlands Trade Centre",
+  "phone": "+447780008222",
+  "phoneLabel": "07780 008222",
+  "email": "",
+  "location": "1198 Coventry Road, Yardley, Birmingham, B25 8DA",
+  "locationShort": "Birmingham",
+  "hoursLabel": "Monday–Friday 09:00–19:00; Saturday 10:00–18:00; Sunday by appointment. All viewings require a prior appointment.",
+  "mapEmbedSrc": "https://maps.google.com/maps?q=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA&output=embed",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=Midlands+Trade+Centre+1198+Coventry+Road+Birmingham+B25+8DA",
+  "mapLabel": "Midlands Trade Centre Limited — address search",
+  "sourceInventory": "https://www.midlandstradecentreltd.co.uk/used-cars",
+  "inventoryCount": 8,
+  "logoLight": "/dealer/logo-light.png",
+  "logoDark": "/dealer/logo-dark.png",
+  "primaryCta": "Browse samples",
+  "sellCarCta": "Trade-in enquiry",
+  "accountCta": "Contact the dealership",
+  "phoneCta": "Call to confirm a viewing",
+  "heroTitle": "Midlands Trade Centre Limited",
+  "heroSubtitle": "Used vehicles in Yardley, Birmingham. Viewings by appointment.",
+  "reviewCount": 0,
+  "reviewCountLabel": "Reviews not verified",
+  "reviewLinkLabel": "Review information",
+  "currency": "GBP",
+  "locale": "en-GB",
+  "distanceUnit": "mi",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live stock feed. Confirm availability, condition and final terms directly. No dealership approval or message delivery is implied.",
+  "locationNote": "All viewings are by prior appointment. Call or text to confirm the selected vehicle and the time of arrival before travelling.",
+  "priceNotice": "Confirm the advertised price and final terms directly."
+} as const;
+export const publicNavItems = [{"label": "Home", "href": "/"}, {"label": "Vehicles", "href": "/inventory"}, {"label": "Trade-in enquiry", "href": "/sell-your-car"}, {"label": "Services", "href": "/services"}, {"label": "About", "href": "/about"}, {"label": "Guides", "href": "/blog"}, {"label": "Contact", "href": "/contact"}] as const;
+export const publicNavGroups = [{"label": "Home", "href": "/"}, {"label": "Vehicles", "href": "/inventory", "children": [{"label": "All samples", "href": "/inventory"}, {"label": "Location information", "href": "/inventory/map"}, {"label": "Compare", "href": "/compare"}, {"label": "Budget calculator", "href": "/calculator"}]}, {"label": "Trade-in enquiry", "href": "/sell-your-car", "children": [{"label": "Prepare vehicle details", "href": "/sell-your-car"}, {"label": "Local enquiry draft", "href": "/sell-your-car/request"}]}, {"label": "Services", "href": "/services", "children": [{"label": "Enquiry options", "href": "/services"}, {"label": "Buying options", "href": "/financing"}, {"label": "Questions and answers", "href": "/faq"}]}, {"label": "About", "href": "/about", "children": [{"label": "Dealer information", "href": "/about"}, {"label": "Team information", "href": "/team"}, {"label": "Reviews information", "href": "/reviews"}, {"label": "Guides", "href": "/blog"}, {"label": "Preview terms", "href": "/terms"}]}, {"label": "Contact", "href": "/contact"}] as const;
+export const footerNavItems = [{"label": "All samples", "href": "/inventory"}, {"label": "Location information", "href": "/inventory/map"}, {"label": "Compare", "href": "/compare"}, {"label": "Budget calculator", "href": "/calculator"}, {"label": "Prepare vehicle details", "href": "/sell-your-car"}, {"label": "Local enquiry draft", "href": "/sell-your-car/request"}, {"label": "Enquiry options", "href": "/services"}, {"label": "Buying options", "href": "/financing"}, {"label": "Questions and answers", "href": "/faq"}] as const;

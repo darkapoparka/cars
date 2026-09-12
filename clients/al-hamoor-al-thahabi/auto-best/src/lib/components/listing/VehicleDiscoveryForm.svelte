@@ -36,8 +36,8 @@
   let model = $derived(filters.model);
   let models = $derived(listingModelsForMake(make));
   let activeCount = $derived(activeFilterCount(pending));
-  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || 'Марка, модел или ключова дума');
-  const number = (value: string) => Number(value).toLocaleString('bg-BG');
+  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || 'Make, model or keyword');
+  const number = (value: string) => Number(value).toLocaleString('en-AE');
   const withCurrent = (options: readonly string[], current: number | null) => {
     const value = current?.toString();
     return value && !options.includes(value) ? [...options, value] : options;
@@ -70,25 +70,25 @@
 <form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={resolve('/listing-grid')} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
-      <button class="dn-discovery__keyword" type="button" aria-label="Търсете марка, модел или ключова дума" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+      <button class="dn-discovery__keyword" type="button" aria-label="Search for a make, model or keyword" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
         <Icon name="search" size={20} />
-        <span>{filters.q || 'Марка, модел или ключова дума'}</span>
+        <span>{filters.q || 'Make, model or keyword'}</span>
       </button>
-      <button class="dn-discovery__submit" type="submit" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
+      <button class="dn-discovery__submit" type="submit" aria-label="Search" title="Search"><Icon name="search" size={21} /></button>
     </div>
 
   </div>
   <div class="dn-discovery__facets">
-    <label><span>Марка</span><select name="make" bind:value={make} onchange={() => model = ''}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
-    <label><span>Модел</span><select name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
-    <label><span>Купе</span><select name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{bodyLabel(value) || 'Всички'}</option>{/each}</select></label>
-    <label><span>Цена до</span><select name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? `${number(value)} €` : 'Без лимит'}</option>{/each}</select></label>
-    <label><span>Година от</span><select name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
-    <label><span>Пробег до</span><select name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? `${number(value)} км` : 'Без лимит'}</option>{/each}</select></label>
+    <label><span>Make</span><select name="make" bind:value={make} onchange={() => model = ''}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || 'All'}</option>{/each}</select></label>
+    <label><span>Model</span><select name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || 'All'}</option>{/each}</select></label>
+    <label><span>Body type</span><select name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{bodyLabel(value) || 'All'}</option>{/each}</select></label>
+    <label><span>Price up to</span><select name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? `${number(value)} €` : 'No limit'}</option>{/each}</select></label>
+    <label><span>Year from</span><select name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || 'All'}</option>{/each}</select></label>
+    <label><span>Mileage up to</span><select name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? `${number(value)} km` : 'No limit'}</option>{/each}</select></label>
   </div>
   {#if showFilterAction}<div class="dn-discovery__actions">
-    <button class="dn-discovery__filters" type="button" title="Всички филтри" aria-label={activeCount ? `Всички филтри: ${activeCount} активни` : 'Всички филтри'} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
-      <Icon name="adjustments" size={20} strokeWidth={1.8} /><span>Всички филтри</span>
+    <button class="dn-discovery__filters" type="button" title="All filters" aria-label={activeCount ? `All filters: ${activeCount} active` : 'All filters'} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+      <Icon name="adjustments" size={20} strokeWidth={1.8} /><span>All filters</span>
       {#if activeCount}<span class="dn-discovery__count" aria-hidden="true">{activeCount}</span>{/if}
     </button>
   </div>{/if}
@@ -96,14 +96,14 @@
   {#each filters.equipment as value (value)}<input type="hidden" name="equipment" {value} />{/each}
 </form>
 
-<div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label="Бързо търсене на автомобили">
-  <button class="dn-discovery-sticky__keyword" type="button" aria-label="Отвори търсенето на автомобили" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+<div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label="Quick vehicle search">
+  <button class="dn-discovery-sticky__keyword" type="button" aria-label="Open vehicle search" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
     <Icon name="search" size={20} /><span>{summary}</span>
   </button>
   <button class="dn-discovery-sticky__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
-    <Icon name="adjustments" size={20} /><span>Филтри</span>{#if activeCount}<span class="dn-discovery-sticky__count">{activeCount}</span>{/if}
+    <Icon name="adjustments" size={20} /><span>Filters</span>{#if activeCount}<span class="dn-discovery-sticky__count">{activeCount}</span>{/if}
   </button>
-  <button class="dn-discovery-sticky__submit" type="submit" form="dn-desktop-discovery" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
+  <button class="dn-discovery-sticky__submit" type="submit" form="dn-desktop-discovery" aria-label="Search" title="Search"><Icon name="search" size={21} /></button>
 </div>
 
 <style>

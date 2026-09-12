@@ -25,3 +25,7 @@ Auto-best, full-workspace modern and carwow are all **not implemented / not comm
 Masters inspected at astra commit `4ef7edfe4c1566dcc0688bc78b87f812de1223c4`: auto-best `2026.09.08-polish-1`, modern `2026.09.06-refresh-1`, carwow `2026.09.08-repair-1`. They were not copied. Proposed ports 7494/7495/7496 were not bound or checked. There are no runnable install/check/start commands here. Any subsequent implementation must retain USD, miles, null request prices and source-qualified purchase conditions.
 
 The session report records branch inspection, checks and publication commits. Resolve permitted photography and finished branding before building. Resume this evidence record; do not mistake it for an app. No finance application, external enquiry, deployment, CRM write or dealer contact occurred.
+
+## GitHub implementation checkpoint ? 2026-09-09
+
+All three requested application source trees now exist in the canonical `J:/cars/clients/keen-auto-mall/` folder with the dealer fact/stock/asset pack integrated into active application consumers. Automated/local visual QA is intentionally left pending for the owner's local review. `.client/project.json` keeps all QA flags false.

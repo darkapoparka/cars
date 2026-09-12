@@ -6,6 +6,7 @@
   import { contactPreparation, type ContactTopic } from '$data/company';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
   import VehicleEnquiry from './VehicleEnquiry.svelte';
+  import VehicleDraft from './VehicleDraft.svelte';
 
   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
   const preparation = $derived(contactPreparation[topic.id]);
@@ -20,15 +21,17 @@
 <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
-      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</h1>
+      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Trade-in enquiry' : topic.title}</h1>
     {/if}
     <div class="dn-contact-intent__heading">
-      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
+      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Contact the team</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Call the team</span>{/if}</h2>
     </div>
 
     {#if vehicle && topic.id !== 'leasing'}
       <ContactVehicle {vehicle} />
     {/if}
+    {#if vehicle}<VehicleDraft {vehicle} />{/if}
+    <p>{brand.locationNote}</p>
     <div class="dn-contact-selected">
       {#if topic.id !== 'general'}
         <h3>{topic.title}</h3>
@@ -50,22 +53,22 @@
     {/if}
 
     {#if topic.id === 'import' && importUrl}
-      <div class="dn-contact-import" aria-label="Избрана обява за внос">
-        <strong>Обява за внос</strong>
+      <div class="dn-contact-import" aria-label="Selected import listing">
+        <strong>Import listing</strong>
         <a href={importUrl} target="_blank" rel="noopener noreferrer">{importUrl}<Icon name="arrow-right" size={18} /></a>
-        <p>Линкът не е изпратен. Свържете се с нас, за да обсъдим обявата и възможностите за внос.</p>
+        <p>The link has not been sent. Contact us to discuss the listing and import options.</p>
       </div>
     {/if}
 
     <a class="dn-contact-button dn-contact-button--primary" href={brand.phoneHref}>
-      <span class="dn-contact-call-label">Обадете се · </span>{brand.phone}
+      <span class="dn-contact-call-label">Call us · </span>{brand.phone}
     </a>
 
     {#if topic.id !== 'trade-in' && topic.id !== 'import'}
-    <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
-      <span>Социални мрежи</span>
+    <div class="dn-contact-social" role="group" aria-label="Social media">
+      <span>Social channels are not configured in this preview.</span>
       <div>
-        {#each socialPlatforms as platform (platform.name)}
+        {#each socialPlatforms.filter(platform => platform.href) as platform (platform.name)}
           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
             <SocialBrandIcon name={platform.name} />
           </a>
@@ -78,72 +81,72 @@
   {#if topic.id === 'trade-in' || topic.id === 'import'}
     <a class="dn-contact-workflow-call dn-action--dark" href={brand.phoneHref}>
       <Icon name="phone" size={18} strokeWidth={1.8} />
-      Обадете се · {brand.phone}
+      Call us · {brand.phone}
     </a>
   {/if}
 
-  <aside class="dn-contact-card" aria-label="Контакти на шоурума">
+  <aside class="dn-contact-card" aria-label="Showroom contact details">
     <div class="dn-contact-card__heading">
-      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Контакти</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Посетете шоурума</span>{/if}</h2>
-      <p class:dn-contact-mobile-copy={topic.id === 'general'}>Изберете адрес, посещение или директно обаждане.</p>
+      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Contact</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Visit the showroom</span>{/if}</h2>
+      <p class:dn-contact-mobile-copy={topic.id === 'general'}>View the address, arrange a visit or call directly.</p>
     </div>
 
     {#if topic.id === 'general'}
       <div class="dn-contact-visit">
         <p><Icon name="map-pin" size={24} /><span>{brand.address}</span></p>
-        <p><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
-        <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Маршрут<Icon name="arrow-right" size={20} /></a>
+        <p><Icon name="clock" size={24} /><span>{brand.appointment}. Arrange a day and time by phone.</span></p>
+        <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Directions<Icon name="arrow-right" size={20} /></a>
       </div>
     {/if}
 
-    <nav class="dn-contact-card__links" aria-label="Бързи действия за контакт">
+    <nav class="dn-contact-card__links" aria-label="Quick contact actions">
       <a
         class="dn-contact-card__link"
         href={directionsUrl}
         target="_blank"
         rel="noreferrer"
-        aria-label={`Отворете адреса в Google Maps: ${brand.address}`}
+        aria-label={`Open the address in Google Maps: ${brand.address}`}
       >
         <span class="dn-contact-card__icon"><Icon name="map-pin" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
-          <strong>Адрес</strong>
+          <strong>Address</strong>
           <span>{brand.address}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
-          <span role="tooltip">Отвори карта</span>
+          <span role="tooltip">Open map</span>
         </span>
       </a>
 
       <a
         class="dn-contact-card__link"
         href={brand.phoneHref}
-        aria-label={`Обадете се, за да уговорите посещение. ${brand.appointment}`}
+        aria-label={`Call to arrange a visit. ${brand.appointment}`}
       >
         <span class="dn-contact-card__icon"><Icon name="clock" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
-          <strong>Посещения</strong>
+          <strong>Visits</strong>
           <span>{brand.appointment}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
-          <span role="tooltip">Уговори посещение</span>
+          <span role="tooltip">Arrange a visit</span>
         </span>
       </a>
 
       <a
         class="dn-contact-card__link dn-contact-card__link--phone"
         href={brand.phoneHref}
-        aria-label={`Обадете се на ${brand.phone}`}
+        aria-label={`Call ${brand.phone}`}
       >
         <span class="dn-contact-card__icon"><Icon name="phone" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
-          <strong>Телефон</strong>
+          <strong>Phone</strong>
           <span>{brand.phone}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
-          <span role="tooltip">Позвъни сега</span>
+          <span role="tooltip">Call now</span>
         </span>
       </a>
     </nav>
@@ -151,11 +154,11 @@
     <div class="dn-contact-card__actions">
       <a class="dn-contact-card__call" href={brand.phoneHref}>
         <Icon name="phone" size={19} strokeWidth={1.8} />
-        Обадете се
+        Call us
       </a>
       <a class="dn-contact-card__route" href={directionsUrl} target="_blank" rel="noreferrer">
         <Icon name="map-pin" size={19} strokeWidth={1.8} />
-        Маршрут
+        Directions
       </a>
     </div>
   </aside>

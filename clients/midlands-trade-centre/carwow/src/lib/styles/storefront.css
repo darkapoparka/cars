@@ -1,0 +1,353 @@
+@import 'tailwindcss';
+
+@source '../../routes/**/*.{svelte,ts}';
+@source '../components/**/*.{svelte,ts}';
+@source '../data/**/*.{ts}';
+
+@theme inline {
+	--font-sa: var(--sa-font);
+
+	--color-sa-red: var(--sa-red);
+	--color-sa-red-strong: var(--sa-red-strong);
+	--color-sa-red-soft: var(--sa-red-soft);
+	--color-sa-red-tint: var(--sa-red-tint);
+	--color-sa-blue: var(--sa-blue);
+	--color-sa-blue-strong: var(--sa-blue-strong);
+	--color-sa-blue-soft: var(--sa-blue-soft);
+	--color-sa-ink: var(--sa-ink);
+	--color-sa-ink-soft: var(--sa-ink-soft);
+	--color-sa-muted: var(--sa-muted);
+	--color-sa-faint: var(--sa-faint);
+	--color-sa-line: var(--sa-line);
+	--color-sa-line-strong: var(--sa-line-strong);
+	--color-sa-price: var(--sa-price);
+	--color-sa-surface: var(--sa-surface);
+	--color-sa-bg: var(--sa-bg);
+	--color-sa-fill: var(--sa-fill);
+	--color-sa-fill-2: var(--sa-fill-2);
+	--color-sa-dark: var(--sa-dark);
+	--color-sa-dark-2: var(--sa-dark-2);
+
+	--radius-sa-xs: var(--sa-r-xs);
+	--radius-sa-sm: var(--sa-r-sm);
+	--radius-sa-md: var(--sa-r-md);
+	--radius-sa-lg: var(--sa-r-lg);
+	--radius-sa-xl: var(--sa-r-xl);
+	--radius-sa-pill: var(--sa-r-pill);
+
+	--text-sa-xs: var(--sa-text-xs);
+	--text-sa-caption: var(--sa-text-caption);
+	--text-sa-card-eyebrow: var(--sa-text-card-eyebrow);
+	--text-sa-eyebrow: var(--sa-text-eyebrow);
+	--text-sa-sm: var(--sa-text-sm);
+	--text-sa-body-sm: var(--sa-text-body-sm);
+	--text-sa-base: var(--sa-text-base);
+	--text-sa-nav: var(--sa-text-nav);
+	--text-sa-nav-sub: var(--sa-text-nav-sub);
+	--text-sa-chrome-top: var(--sa-text-chrome-top);
+	--text-sa-chrome-meta: var(--sa-text-chrome-meta);
+	--text-sa-chrome-contact: var(--sa-text-chrome-contact);
+	--text-sa-chrome-badge: var(--sa-text-chrome-badge);
+	--text-sa-chrome-cta: var(--sa-text-chrome-cta);
+	--text-sa-hero-control: var(--sa-text-hero-control);
+	--text-sa-hero-tab: var(--sa-text-hero-tab);
+	--text-sa-control: var(--sa-text-control);
+	--text-sa-lg: var(--sa-text-lg);
+	--text-sa-lead: var(--sa-text-lead);
+	--text-sa-xl: var(--sa-text-xl);
+	--text-sa-card-title: var(--sa-text-card-title);
+	--text-sa-panel-title: var(--sa-text-panel-title);
+	--text-sa-2xl: var(--sa-text-2xl);
+	--text-sa-stat: var(--sa-text-stat);
+	--spacing-sa-heading-eyebrow: var(--sa-heading-eyebrow-gap);
+	--spacing-sa-heading-copy: var(--sa-heading-copy-gap);
+	--spacing-sa-card-copy: var(--sa-card-heading-copy-gap);
+	--spacing-sa-desktop-grid: var(--sa-desktop-grid-gap);
+	--spacing-sa-desktop-card: var(--sa-desktop-card-pad);
+	--text-sa-heading-hero: var(--sa-heading-hero);
+	--text-sa-heading-section: var(--sa-heading-section);
+	--text-sa-heading-page: var(--sa-heading-page);
+	--leading-sa-nav: var(--sa-leading-nav);
+	--leading-sa-nav-sub: var(--sa-leading-nav-sub);
+
+	--shadow-sa-sm: var(--sa-shadow-sm);
+	--shadow-sa-md: var(--sa-shadow-md);
+	--shadow-sa-lg: var(--sa-shadow-lg);
+	--shadow-sa-red: var(--sa-shadow-red);
+	--shadow-sa-blue: var(--sa-shadow-blue);
+
+	--ease-sa: var(--sa-ease);
+	--ease-sa-out: var(--sa-ease-out);
+}
+
+/*
+ * Storefront CTA grammar.
+ * Use `sa-cta` with exactly one intent:
+ * - `sa-cta-primary`: red commerce/conversion action.
+ * - `sa-cta-secondary`: blue browse/navigation action.
+ * - `sa-cta-ghost`: neutral secondary action on light surfaces.
+ */
+@utility sa-cta {
+	display: inline-flex;
+	min-height: var(--sa-cta-height, 54px);
+	max-width: 100%;
+	align-items: center;
+	justify-content: center;
+	gap: var(--sa-cta-gap, 10px);
+	padding-inline: var(--sa-cta-pad-x, 24px);
+	border: 1px solid transparent;
+	border-radius: var(--sa-r-xs);
+	appearance: none;
+	font-family: var(--sa-font);
+	font-size: var(--sa-cta-font-size, var(--sa-button-font-size));
+	font-weight: var(--sa-button-font-weight);
+	line-height: var(--sa-button-line-height);
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		background-color 160ms var(--sa-ease),
+		border-color 160ms var(--sa-ease),
+		color 160ms var(--sa-ease),
+		box-shadow 160ms var(--sa-ease),
+		transform 160ms var(--sa-ease);
+
+	&:focus-visible {
+		outline: 3px solid color-mix(in srgb, currentColor 24%, transparent);
+		outline-offset: 3px;
+	}
+
+	&:disabled,
+	&[aria-disabled='true'] {
+		cursor: not-allowed;
+		opacity: 0.58;
+	}
+
+	& :where(span) {
+		color: inherit;
+	}
+
+	& :where(svg) {
+		flex: none;
+		color: inherit;
+	}
+
+	& :where(svg [stroke]:not([stroke='none'])) {
+		stroke: currentColor;
+	}
+
+	& :where(svg [fill]:not([fill='none'])) {
+		fill: currentColor;
+	}
+}
+
+@utility sa-cta-primary {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	color: var(--sa-surface);
+	box-shadow: none;
+
+	&:hover,
+	&:focus-visible {
+		border-color: var(--sa-red-strong);
+		background: var(--sa-red-strong);
+		color: var(--sa-surface);
+	}
+}
+
+@utility sa-cta-secondary {
+	border-color: var(--sa-blue);
+	background: var(--sa-blue);
+	color: var(--sa-surface);
+	box-shadow: none;
+
+	&:hover,
+	&:focus-visible {
+		border-color: var(--sa-red);
+		background: var(--sa-red);
+		color: var(--sa-surface);
+	}
+}
+
+@utility sa-cta-ghost {
+	border-color: var(--sa-line-strong);
+	background: transparent;
+	color: var(--sa-ink);
+	box-shadow: none;
+
+	&:hover,
+	&:focus-visible {
+		border-color: var(--sa-red);
+		background: var(--sa-red);
+		color: var(--sa-surface);
+	}
+}
+
+@utility sa-cta-red-hover {
+	&:hover,
+	&:focus-visible {
+		border-color: var(--sa-red);
+		background: var(--sa-red);
+		box-shadow: none;
+		color: var(--sa-surface);
+	}
+}
+
+@utility sa-cta-on-dark {
+	border-color: color-mix(in srgb, var(--sa-surface) 34%, transparent);
+	background: color-mix(in srgb, var(--sa-surface) 12%, transparent);
+	color: var(--sa-surface);
+	box-shadow: none;
+
+	&:hover,
+	&:focus-visible {
+		border-color: var(--sa-red);
+		background: var(--sa-red);
+		color: var(--sa-surface);
+	}
+}
+
+/*
+ * Svelte component styles are emitted unlayered, so route-level inherited color can
+ * otherwise beat Tailwind-layer `@utility` colors. Keep CTA intent colors unlayered.
+ */
+.sa-cta {
+	display: inline-flex;
+	min-height: var(--sa-cta-height, 54px);
+	max-width: 100%;
+	align-items: center;
+	justify-content: center;
+	gap: var(--sa-cta-gap, 10px);
+	padding-inline: var(--sa-cta-pad-x, 24px);
+	border: 1px solid transparent;
+	border-radius: var(--sa-r-xs, 8px);
+	appearance: none;
+	font-family: var(--sa-font);
+	font-size: var(--sa-cta-font-size, var(--sa-button-font-size, 1rem));
+	font-weight: var(--sa-button-font-weight, 600);
+	line-height: var(--sa-button-line-height, 1.15);
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		background-color 160ms var(--sa-ease),
+		border-color 160ms var(--sa-ease),
+		color 160ms var(--sa-ease),
+		box-shadow 160ms var(--sa-ease),
+		transform 160ms var(--sa-ease);
+}
+
+.sa-cta:focus-visible {
+	outline: 3px solid color-mix(in srgb, currentColor 24%, transparent);
+	outline-offset: 3px;
+}
+
+.sa-cta:disabled,
+.sa-cta[aria-disabled='true'] {
+	cursor: not-allowed;
+	opacity: 0.58;
+}
+
+@media (min-width: 992px) {
+	.sa-cta {
+		--sa-cta-font-size: var(--sa-text-desktop-action-sm, 1rem);
+		--sa-cta-height: 48px;
+		--sa-cta-pad-x: 20px;
+	}
+
+	.sa-cta.sa-cta-compact {
+		--sa-cta-font-size: var(--sa-text-desktop-action-sm);
+		--sa-cta-height: 44px;
+		--sa-cta-pad-x: 18px;
+	}
+
+	.sa-cta.sa-cta-large {
+		--sa-cta-font-size: var(--sa-text-desktop-action-lg);
+		--sa-cta-height: 54px;
+		--sa-cta-pad-x: 24px;
+	}
+}
+
+.sa-cta :where(span, svg, svg *) {
+	color: inherit !important;
+	stroke: currentColor !important;
+}
+
+.sa-cta :where(svg [fill]:not([fill='none'])) {
+	fill: currentColor !important;
+}
+
+.sa-cta.sa-cta-primary {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-primary:hover,
+.sa-cta.sa-cta-primary:focus-visible {
+	border-color: var(--sa-red-strong);
+	background: var(--sa-red-strong);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-secondary {
+	border-color: var(--sa-blue);
+	background: var(--sa-blue);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-secondary:hover,
+.sa-cta.sa-cta-secondary:focus-visible {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-ghost {
+	border-color: var(--sa-line-strong);
+	background: transparent;
+	color: var(--sa-ink);
+}
+
+.sa-cta.sa-cta-ghost:hover,
+.sa-cta.sa-cta-ghost:focus-visible {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-red-hover:hover,
+.sa-cta.sa-cta-red-hover:focus-visible {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-secondary.sa-cta-red-hover:hover,
+.sa-cta.sa-cta-secondary.sa-cta-red-hover:focus-visible {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-on-dark {
+	border-color: color-mix(in srgb, var(--sa-surface) 34%, transparent);
+	background: color-mix(in srgb, var(--sa-surface) 12%, transparent);
+	box-shadow: none;
+	color: var(--sa-surface);
+}
+
+.sa-cta.sa-cta-on-dark:hover,
+.sa-cta.sa-cta-on-dark:focus-visible {
+	border-color: var(--sa-red);
+	background: var(--sa-red);
+	box-shadow: none;
+	color: var(--sa-surface);
+}

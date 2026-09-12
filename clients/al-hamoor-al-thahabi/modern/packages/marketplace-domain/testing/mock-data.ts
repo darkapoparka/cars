@@ -1,648 +1,544 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
+// Dated advertised snapshots. publishedAt carries observation time, not a verified first-advertised date.
 export const mockListings: VehicleListing[] = [
   {
-    id: "am-1001",
-    slug: "bmw-x5-m50d-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 BMW X5 M50d",
-    description:
-      "Очакван внос от Day & Night Auto Group. M50d с 360 камери, панорама, HUD и обдухване. Премиум SUV за оглед в София - Студентски град.",
-    price: { amount: 89_379, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1360, currency: "BGN" },
-    images: [
+    "id": "listing-965722",
+    "slug": "mercedes-benz-cla250-2025-965722",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2025 Mercedes-Benz CLA250 Premium + 2.0L",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2025-mercedes-benz-cla250-premium-20l-965722.html Observed 2026-09-09.",
+    "price": {
+      "amount": 95000,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "Бял BMW X5 SUV",
+        "url": "/dealer/inventory/965722-1.webp",
+        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/965722-2.webp",
+        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/965722-3.webp",
+        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/965722-4.webp",
+        "alt": "2025 Mercedes-Benz CLA250 Premium + 2.0L — source photograph 4"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    features: [
-      { bg: "360° камери", en: "360° cameras" },
-      { bg: "Панорамен покрив", en: "Panoramic roof" },
-      { bg: "Head-up display", en: "Head-up display" },
-      { bg: "Обдухване на седалките", en: "Ventilated seats" },
+    "badges": [
+      "used"
     ],
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "M50d",
-      year: 2020,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 167_000,
-      mileageUnit: "km",
-      enginePowerHp: 400,
-      colorExterior: "Черен металик",
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "American specification",
+        "en": "American specification"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "CLA250",
+      "trim": "Premium + 2.0L",
+      "year": 2025,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 22000,
+      "mileageUnit": "km",
+      "colorExterior": "Brown"
     },
-    publishedAt: "2026-07-28T09:00:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1010",
-    slug: "mercedes-benz-gls-400d-4matic-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
-    description:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    price: { amount: 122_629, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1870, currency: "BGN" },
-    images: [
+    "id": "listing-1005647",
+    "slug": "nissan-rogue-2023-1005647",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2023 Nissan Rogue Platinum",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2023-nissan-rogue-1005647.html Observed 2026-09-09.",
+    "price": {
+      "amount": 45000,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes SUV GLS",
+        "url": "/dealer/inventory/1005647-1.webp",
+        "alt": "2023 Nissan Rogue Platinum — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/1005647-2.webp",
+        "alt": "2023 Nissan Rogue Platinum — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/1005647-3.webp",
+        "alt": "2023 Nissan Rogue Platinum — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/1005647-4.webp",
+        "alt": "2023 Nissan Rogue Platinum — source photograph 4"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "American specification",
+        "en": "American specification"
+      }
+    ],
+    "spec": {
+      "make": "Nissan",
+      "model": "Rogue",
+      "trim": "Platinum",
+      "year": 2023,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 56000,
+      "mileageUnit": "km",
+      "colorExterior": "Grey"
     },
-    publishedAt: "2026-07-27T10:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1011",
-    slug: "bmw-750e-xdrive-m-sport-sofia-2024",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2024 BMW 750e xDrive M Sport",
-    description:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    price: { amount: 175_436, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2680, currency: "BGN" },
-    images: [
+    "id": "listing-1010924",
+    "slug": "toyota-prado-2011-1010924",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2011 Toyota Prado TX-L",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2011-toyota-prado-1010924.html Observed 2026-09-09.",
+    "price": {
+      "amount": 56000,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80",
-        alt: "BMW 7 Series",
+        "url": "/dealer/inventory/1010924-1.webp",
+        "alt": "2011 Toyota Prado TX-L — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/1010924-2.webp",
+        "alt": "2011 Toyota Prado TX-L — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/1010924-3.webp",
+        "alt": "2011 Toyota Prado TX-L — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/1010924-4.webp",
+        "alt": "2011 Toyota Prado TX-L — source photograph 4"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "7 Series",
-      trim: "750e xDrive M Sport",
-      year: 2024,
-      bodyType: "sedan",
-      fuelType: "plug_in_hybrid",
-      transmission: "automatic",
-      mileageValue: 40_000,
-      mileageUnit: "km",
-      enginePowerHp: 489,
-      colorExterior: "Черен сапфир",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "GCC specification",
+        "en": "GCC specification"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Prado",
+      "trim": "TX-L",
+      "year": 2011,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 212000,
+      "mileageUnit": "km",
+      "colorExterior": "White"
     },
-    publishedAt: "2026-07-26T08:40:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1012",
-    slug: "mercedes-benz-e-63-s-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz E 63 S AMG",
-    description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    price: { amount: 165_657, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2530, currency: "BGN" },
-    images: [
+    "id": "listing-1018774",
+    "slug": "chevrolet-malibu-2022-1018774",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2022 Chevrolet Malibu LT",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2022-chevrolet-malibu-1018774.html Observed 2026-09-09.",
+    "price": {
+      "amount": 32000,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1609703048009-d3576872b32c?w=1200&q=80",
-        alt: "Mercedes-Benz E-Class sedan",
+        "url": "/dealer/inventory/1018774-1.webp",
+        "alt": "2022 Chevrolet Malibu LT — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/1018774-2.webp",
+        "alt": "2022 Chevrolet Malibu LT — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/1018774-3.webp",
+        "alt": "2022 Chevrolet Malibu LT — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/1018774-4.webp",
+        "alt": "2022 Chevrolet Malibu LT — source photograph 4"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "E-Class",
-      trim: "E 63 S AMG",
-      year: 2021,
-      bodyType: "sedan",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 96_000,
-      mileageUnit: "km",
-      enginePowerHp: 612,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "GCC specification",
+        "en": "GCC specification"
+      }
+    ],
+    "spec": {
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "trim": "LT",
+      "year": 2022,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 95000,
+      "mileageUnit": "km",
+      "colorExterior": "Silver"
     },
-    publishedAt: "2026-07-25T13:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1013",
-    slug: "mercedes-benz-cls-400d-4matic-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 Mercedes-Benz CLS 400d 4MATIC",
-    description:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    price: { amount: 73_733, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1125, currency: "BGN" },
-    images: [
+    "id": "listing-916417",
+    "slug": "toyota-rush-2023-916417",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2023 Toyota Rush EX 1.5L",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2023-toyota-rush-15l-ex-916417.html Observed 2026-09-09.",
+    "price": {
+      "amount": 43000,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1624085568108-36410cfe4d24?w=1200&q=80",
-        alt: "Mercedes CLS",
+        "url": "/dealer/inventory/916417-1.webp",
+        "alt": "2023 Toyota Rush EX 1.5L — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/916417-2.webp",
+        "alt": "2023 Toyota Rush EX 1.5L — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/916417-3.webp",
+        "alt": "2023 Toyota Rush EX 1.5L — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/916417-4.webp",
+        "alt": "2023 Toyota Rush EX 1.5L — source photograph 4"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "CLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2020,
-      bodyType: "coupe",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 171_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Сив металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "GCC specification",
+        "en": "GCC specification"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Rush",
+      "trim": "EX 1.5L",
+      "year": 2023,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 121000,
+      "mileageUnit": "km",
+      "colorExterior": "White"
     },
-    publishedAt: "2026-07-24T15:05:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1014",
-    slug: "audi-q8-50-tdi-quattro-s-line-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Audi Q8 50 TDI quattro S line",
-    description:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    price: { amount: 99_159, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1515, currency: "BGN" },
-    images: [
+    "id": "listing-906007",
+    "slug": "chevrolet-trax-2020-906007",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2020 Chevrolet Trax LT 1.8L AWD",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2020-chevrolet-trax-lt-18l-awd-906007.html Observed 2026-09-09.",
+    "price": {
+      "amount": 14500,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
-        alt: "Audi Q8",
+        "url": "/dealer/inventory/906007-1.webp",
+        "alt": "2020 Chevrolet Trax LT 1.8L AWD — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/906007-2.webp",
+        "alt": "2020 Chevrolet Trax LT 1.8L AWD — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/906007-3.webp",
+        "alt": "2020 Chevrolet Trax LT 1.8L AWD — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/906007-4.webp",
+        "alt": "2020 Chevrolet Trax LT 1.8L AWD — source photograph 4"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Audi",
-      model: "Q8",
-      trim: "50 TDI quattro S line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 163_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "American specification",
+        "en": "American specification"
+      }
+    ],
+    "spec": {
+      "make": "Chevrolet",
+      "model": "Trax",
+      "trim": "LT 1.8L AWD",
+      "year": 2020,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 106000,
+      "mileageUnit": "km",
+      "colorExterior": "Black"
     },
-    publishedAt: "2026-07-23T09:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1002",
-    slug: "mercedes-benz-gle-400d-coupe-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLE 400d Coupe",
-    description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    price: { amount: 124_584, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1900, currency: "BGN" },
-    images: [
+    "id": "listing-1017078",
+    "slug": "ford-figo-2019-1017078",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2019 Ford Figo Ambiente",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2019-ford-figo-1017078.html Observed 2026-09-09.",
+    "price": {
+      "amount": 13500,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE SUV",
+        "url": "/dealer/inventory/1017078-1.webp",
+        "alt": "2019 Ford Figo Ambiente — source photograph 1"
       },
+      {
+        "url": "/dealer/inventory/1017078-2.webp",
+        "alt": "2019 Ford Figo Ambiente — source photograph 2"
+      },
+      {
+        "url": "/dealer/inventory/1017078-3.webp",
+        "alt": "2019 Ford Figo Ambiente — source photograph 3"
+      },
+      {
+        "url": "/dealer/inventory/1017078-4.webp",
+        "alt": "2019 Ford Figo Ambiente — source photograph 4"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "400d Coupe 4MATIC AMG",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "GCC specification",
+        "en": "GCC specification"
+      }
+    ],
+    "spec": {
+      "make": "Ford",
+      "model": "Figo",
+      "trim": "Ambiente",
+      "year": 2019,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 185000,
+      "mileageUnit": "km",
+      "colorExterior": "White"
     },
-    publishedAt: "2026-07-22T11:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
+    },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1003",
-    slug: "mercedes-benz-gle-53-amg-coupe-sofia-2022",
-    category: "lease",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    description:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    price: { amount: 140_231, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2140, currency: "BGN" },
-    images: [
+    "id": "listing-969234",
+    "slug": "nissan-sentra-2021-969234",
+    "category": "car",
+    "dealerOrgId": "dealer-al-hamoor-al-thahabi",
+    "status": "active",
+    "title": "2021 Nissan Sentra SV 1.6L",
+    "description": "Dated advertised listing sample. Confirm the vehicle condition, availability and viewing location with the dealership. The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.  Source listing: https://www.dubicars.com/2021-nissan-sentra-sv-16l-113-hp-969234.html Observed 2026-09-09.",
+    "price": {
+      "amount": 23000,
+      "currency": "AED"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE 53 AMG SUV",
+        "url": "/dealer/inventory/969234-1.webp",
+        "alt": "2021 Nissan Sentra SV 1.6L — source photograph 1"
       },
-    ],
-    badges: ["used", "lease"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "53 AMG Coupe 4MATIC",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 105_000,
-      mileageUnit: "km",
-      enginePowerHp: 435,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-21T08:15:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1004",
-    slug: "mercedes-benz-s-350d-long-amg-sofia-2019",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2019 Mercedes-Benz S 350d Long AMG",
-    description:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    price: { amount: 83_512, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1275, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?w=1200&q=80",
-        alt: "Mercedes-Benz S-Class sedan",
+        "url": "/dealer/inventory/969234-2.webp",
+        "alt": "2021 Nissan Sentra SV 1.6L — source photograph 2"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "S-Class",
-      trim: "S 350d Long AMG Optic",
-      year: 2019,
-      bodyType: "sedan",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 145_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-20T14:45:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1005",
-    slug: "mercedes-benz-v-250d-vip-business-sofia-2018",
-    category: "van",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2018 Mercedes-Benz V 250d VIP Business",
-    description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
       {
-        url: "/lead-sell-van-v1.png",
-        alt: "V-Class van",
+        "url": "/dealer/inventory/969234-3.webp",
+        "alt": "2021 Nissan Sentra SV 1.6L — source photograph 3"
       },
-    ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "V-Class",
-      trim: "V 250d VIP Business",
-      year: 2018,
-      bodyType: "van",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 44_500,
-      mileageUnit: "km",
-      enginePowerHp: 190,
-      colorExterior: "Черен",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-19T10:20:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1006",
-    slug: "range-rover-sport-svr-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Range Rover Sport SVR",
-    description:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
       {
-        url: "https://images.unsplash.com/photo-1679506640590-f0152786dff0?w=1200&q=80",
-        alt: "Range Rover Sport",
-      },
+        "url": "/dealer/inventory/969234-4.webp",
+        "alt": "2021 Nissan Sentra SV 1.6L — source photograph 4"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Land Rover",
-      model: "Range Rover Sport",
-      trim: "SVR",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 155_000,
-      mileageUnit: "km",
-      enginePowerHp: 600,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dubai (advertised location)",
+      "country": "United Arab Emirates"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-18T12:10:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1007",
-    slug: "bmw-430i-xdrive-gran-coupe-sofia-2023",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2023 BMW 430i xDrive Gran Coupe",
-    description:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    price: { amount: 81_556, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1245, currency: "BGN" },
-    images: [
+    "features": [
       {
-        url: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=1200&q=80",
-        alt: "BMW 4 Series",
-      },
+        "bg": "American specification",
+        "en": "American specification"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "4 Series",
-      trim: "430i xDrive Gran Coupe M Sport",
-      year: 2023,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 35_000,
-      mileageUnit: "km",
-      enginePowerHp: 245,
-      colorExterior: "Син металик",
+    "spec": {
+      "make": "Nissan",
+      "model": "Sentra",
+      "trim": "SV 1.6L",
+      "year": 2021,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 116000,
+      "mileageUnit": "km",
+      "colorExterior": "Blue"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "seller": {
+      "id": "dealer-al-hamoor-al-thahabi",
+      "type": "dealer",
+      "displayName": "Al Hamoor Al Thahabi Used Cars",
+      "verificationStatus": "unverified",
+      "city": "Sharjah",
+      "logoUrl": "/dealer/logo-light.png"
     },
-    publishedAt: "2026-07-17T16:00:00.000Z",
-    promoted: false,
-  },
-  {
-    id: "am-1008",
-    slug: "bmw-m4-competition-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 BMW M4 Competition",
-    description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    price: { amount: 128_496, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1960, currency: "BGN" },
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80",
-        alt: "Червено BMW M4 Competition пред модерен шоурум",
-      },
-    ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "M4",
-      trim: "Competition",
-      year: 2021,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 165_000,
-      mileageUnit: "km",
-      enginePowerHp: 510,
-      colorExterior: "Червен металик",
-    },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
-    },
-    publishedAt: "2026-07-16T07:40:00.000Z",
-    promoted: true,
-  },
-  {
-    id: "am-1009",
-    slug: "bmw-x5-xdrive40d-berlin-2022",
-    category: "car",
-    status: "active",
-    title: "2022 BMW X5 xDrive40d",
-    description:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    price: { amount: 112_456, currency: "BGN" },
-    priceType: "fixed",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "BMW X5 SUV в градска среда",
-      },
-    ],
-    badges: ["used"],
-    location: { city: "Berlin", region: "Berlin", country: "Germany" },
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "xDrive40d",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 28_531,
-      mileageUnit: "km",
-      enginePowerHp: 340,
-      colorExterior: "Carbon Black",
-    },
-    seller: {
-      id: "import-demo-supplier",
-      type: "dealer",
-      displayName: "AutoMarket Import Demo",
-      verificationStatus: "verified",
-      city: "Hamburg",
-    },
-    supply: {
-      convertedPrice: { amount: 112_456, currency: "BGN" },
-      delivery: {
-        destinationCountryCode: "BG",
-        eligibleCountryCodes: ["BG", "DE", "RO"],
-        status: "quote_required",
-      },
-      documentCount: 4,
-      landedCostStatus: "quote_required",
-      nativePrice: { amount: 57_499, currency: "EUR" },
-      origin: {
-        city: "Berlin",
-        country: "Germany",
-        countryCode: "DE",
-        region: "Berlin",
-      },
-      priceConversion: {
-        convertedAt: "2026-07-12T18:00:00.000Z",
-        status: "converted_estimate",
-      },
-      provenance: {
-        externalReference: "DEMO-1009",
-        freshUntil: "2026-07-14T18:00:00.000Z",
-        freshnessStatus: "fresh",
-        lastConfirmedAt: "2026-07-12T18:00:00.000Z",
-        sourceDisplayName: "Authorized demo feed",
-        sourceKind: "https_feed",
-      },
-      supplier: {
-        kybStatus: "verified",
-        orgType: "importer",
-        trustStatus: "verified",
-        verifiedImporter: true,
-      },
-    },
-    publishedAt: "2026-07-12T18:00:00.000Z",
-    promoted: false,
-  },
+    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "promoted": false
+  }
 ];
 
 const matchesText = (listing: VehicleListing, query: string) => {
@@ -677,15 +573,15 @@ const createListingPredicates = (
   (listing) =>
     !filters.origin ||
     listing.supply?.origin.countryCode === filters.origin ||
-    (filters.origin === "BG" &&
-      (listing.location.country === "Bulgaria" ||
-        listing.location.country === "България")),
+    (filters.origin === "AE" &&
+      (listing.location.country === "United Arab Emirates" ||
+        listing.location.country === "United Arab Emirates")),
   (listing) =>
     !filters.deliverTo ||
     listing.supply?.delivery.eligibleCountryCodes.includes(filters.deliverTo) ||
-    (filters.deliverTo === "BG" &&
-      (listing.location.country === "Bulgaria" ||
-        listing.location.country === "България")),
+    (filters.deliverTo === "AE" &&
+      (listing.location.country === "United Arab Emirates" ||
+        listing.location.country === "United Arab Emirates")),
   (listing) => !filters.currency || listing.price.currency === filters.currency,
   (listing) =>
     filters.priceMin === undefined || listing.price.amount >= filters.priceMin,
@@ -726,9 +622,7 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {
-  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
-};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
 
 export const getMockListingBySlug = (slug: string) => {
   const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
@@ -760,7 +654,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
+export const mockSavedListingIds: string[] = [];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -775,48 +669,7 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [
-  {
-    id: "saved-search-premium-suv",
-    title: "Premium SUVs under 100k",
-    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
-    filters: {
-      body: "suv",
-      category: "car",
-      priceMax: 100_000,
-      seller: "dealer",
-    },
-    cadence: "daily",
-    newMatches: 3,
-    lastRunAt: "2026-06-06T07:00:00.000Z",
-  },
-  {
-    id: "saved-search-lease-ev",
-    title: "Lease-ready EVs",
-    description: "Electric lease offers with automatic transmission.",
-    filters: {
-      category: "lease",
-      fuel: "electric",
-      transmission: "automatic",
-    },
-    cadence: "instant",
-    newMatches: 1,
-    lastRunAt: "2026-06-07T06:30:00.000Z",
-  },
-  {
-    id: "saved-search-family-varna",
-    title: "Family cars near Varna",
-    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
-    filters: {
-      category: "car",
-      location: "Varna",
-      mileageMax: 90_000,
-    },
-    cadence: "weekly",
-    newMatches: 0,
-    lastRunAt: "2026-06-03T08:00:00.000Z",
-  },
-];
+export const mockSavedSearches: MockSavedSearch[] = [];
 
 const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
   "am-1001": "active",
@@ -851,48 +704,7 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [
-  {
-    buyerName: "Nikolay Petrov",
-    id: "lead-1001",
-    intent: "finance",
-    listingId: "am-1001",
-    listingTitle: "2020 BMW X5 M50d",
-    receivedAt: "2026-06-07T07:30:00.000Z",
-    source: "listing",
-    status: "new",
-  },
-  {
-    buyerName: "Elena Dimitrova",
-    id: "lead-1002",
-    intent: "test_drive",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    receivedAt: "2026-06-06T15:20:00.000Z",
-    source: "saved_search",
-    status: "contacted",
-  },
-  {
-    buyerName: "Martin Georgiev",
-    id: "lead-1003",
-    intent: "availability",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    receivedAt: "2026-06-05T12:10:00.000Z",
-    source: "dealer_profile",
-    status: "qualified",
-  },
-  {
-    buyerName: "Iva Marinova",
-    id: "lead-1004",
-    intent: "trade_in",
-    listingId: "am-1005",
-    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
-    receivedAt: "2026-06-04T09:45:00.000Z",
-    source: "listing",
-    status: "closed",
-  },
-];
+export const mockDealerLeads: MockDealerLead[] = [];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -930,64 +742,7 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [
-  {
-    id: "report-1001",
-    listingId: "am-1003",
-    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    reason: "incorrect_details",
-    details:
-      "Buyer says lease terms in the message thread do not match the listing price.",
-    reporter: "Elena Dimitrova",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
-    createdAt: "2026-06-07T09:20:00.000Z",
-  },
-  {
-    id: "report-1002",
-    listingId: "am-1006",
-    listingTitle: "2021 Range Rover Sport SVR",
-    reason: "duplicate",
-    details:
-      "System found matching photos and mileage on another active dealer listing.",
-    reporter: "System",
-    source: "system_flag",
-    status: "reviewing",
-    severity: "medium",
-    flags: ["Photo reuse", "Similar VIN pattern"],
-    createdAt: "2026-06-07T06:45:00.000Z",
-  },
-  {
-    id: "report-1003",
-    listingId: "am-1002",
-    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
-    reason: "seller_behavior",
-    details:
-      "Reporter says seller asked to move payment to an unverified channel.",
-    reporter: "Nikolay Petrov",
-    source: "buyer_report",
-    status: "new",
-    severity: "high",
-    flags: ["Payment risk", "Private seller"],
-    createdAt: "2026-06-06T17:30:00.000Z",
-  },
-  {
-    id: "report-1004",
-    listingId: "am-1008",
-    listingTitle: "2020 Mercedes-Benz AMG GT 43",
-    reason: "prohibited_content",
-    details:
-      "Admin review flagged promotional copy that may overstate warranty coverage.",
-    reporter: "Admin review",
-    source: "admin_review",
-    status: "dismissed",
-    severity: "low",
-    flags: ["Copy review"],
-    createdAt: "2026-06-05T12:10:00.000Z",
-  },
-];
+export const mockModerationReports: MockModerationReport[] = [];
 
 export interface MockTrustReview {
   city: string;
@@ -1001,52 +756,7 @@ export interface MockTrustReview {
   submittedAt: string;
 }
 
-export const mockTrustReviews: MockTrustReview[] = [
-  {
-    entityId: "dealer-black-sea-ev",
-    entityName: "Black Sea EV",
-    entityType: "dealer",
-    city: "Varna",
-    status: "pending",
-    riskLevel: "medium",
-    linkedListings: 1,
-    documents: ["Business registration", "VAT certificate", "Dealer address"],
-    submittedAt: "2026-06-07T08:00:00.000Z",
-  },
-  {
-    entityId: "seller-124",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Plovdiv",
-    status: "pending",
-    riskLevel: "high",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-06T16:15:00.000Z",
-  },
-  {
-    entityId: "dealer-trakia-auto",
-    entityName: "Trakia Auto",
-    entityType: "dealer",
-    city: "Stara Zagora",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["Business registration", "Dealer address"],
-    submittedAt: "2026-06-05T10:30:00.000Z",
-  },
-  {
-    entityId: "seller-882",
-    entityName: "Private seller",
-    entityType: "seller",
-    city: "Varna",
-    status: "verified",
-    riskLevel: "low",
-    linkedListings: 1,
-    documents: ["ID check", "Phone verification"],
-    submittedAt: "2026-06-04T14:40:00.000Z",
-  },
-];
+export const mockTrustReviews: MockTrustReview[] = [];
 
 export interface MockAuditLogEntry {
   action: string;

@@ -1,0 +1,7 @@
+/* Order is intentional: tokens, native defaults, navigation, then shared responsive composition. */
+@import "./lib/styles/tokens.css";
+@import "./lib/styles/base.css";
+@import "./lib/styles/navigation.css";
+@import "./lib/styles/composition.css";
+
+.dealer-preview-note{padding:18px max(16px,calc((100% - 1160px)/2));background:#f3f4f6;color:#525a66;font-size:12px;line-height:1.5}.dn-logo img,.dn-footer__logo img,.dn-mobile-menu__brand img{object-fit:contain!important;filter:none!important}@media(max-width:991px){.dealer-preview-note{padding-bottom:90px}}

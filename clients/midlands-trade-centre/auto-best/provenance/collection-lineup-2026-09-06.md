@@ -1,0 +1,13 @@
+# Collection lineup — 2026-09-06
+
+Owner requested a front-facing collection image to reduce repetition with the side-profile Home hero. Built-in ImageGen produced a three-car decorative lineup (Porsche coupe, Audi SUV and BMW sedan). These are concept illustrations, not verified inventory.
+
+Final source: C:/Users/radev/.codex/generated_images/01a0765b-ad08-7212-87fc-26d994a95432/exec-0a5e6b09-8b0a-403b-a498-db8999c78025.png, RGBA2172x724. Converted to1200x400 WebP quality92/method6 with alpha retained; no content edits or cropping during conversion. Runtime: static/assets/images/lead/day-night-collection-lineup-v1.webp. All originals remain intact.
+
+Initial prompt:
+
+Create one transparent-background photorealistic automotive collection cutout for a premium car dealership website banner. EXACTLY THREE cars in a compact symmetrical lineup, all facing the viewer. Center: pearl-white Audi Q8 SUV, straight-on front view, slightly forward. Left: dark graphite Porsche 911 coupe, straight-on front view, slightly behind the SUV. Right: silver BMW 5 Series sedan, straight-on front view, slightly behind the SUV. Three clearly distinct front ends with all headlights visible; modest overlap at inner edges only, each car remains identifiable. Cars fill one low, wide composition approximately 2.25:1, all roofs, side mirrors and tyres fully inside the frame with clean transparent margin. Realistic natural proportions, coherent scale, neutral soft studio light, crisp clean automotive photography, subtle tight contact shadows below tyres. Transparent alpha background: no wall, floor plane, scenery, platform or colored backdrop. No text, people, collage panels, captions or graphic effects. Avoid dramatic perspective, side profile and excessive depth. The asset must remain legible when displayed about 330px wide on a nearly black background. Output landscape 1536x1024 PNG with the wide lineup vertically centered.
+
+First output exec-4af7d2d7-4deb-4600-a4ba-eef2d663db55.png had an opaque backdrop and excessive overlap. ImageGen edit reduced overlap and center-car scale; exec-de9ca01f-893b-421d-bdee-1683218367c0.png had a baked checkerboard. Final edit used: "Remove the background from this image. Keep the three cars exactly as they are. Deliver a transparent background cutout of the three cars. Remove the checkerboard pattern completely; it is unwanted background. Crop canvas tightly around the complete three-car lineup with small transparent margin. No other changes."
+
+The final asset has true transparency (alpha range0–255). Only the desktop collection banner selects it. Existing service banners, mobile icon cards, hero pairs and link destinations remain unchanged. Strict media count increases96 to97 with all checks retained.

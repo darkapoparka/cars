@@ -230,12 +230,12 @@
       <div class="container">
         <div class="dn-header__inner">
           <div class="dn-logo-box">
-            <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+            <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — home`}>
+              <picture><source media="(max-width: 991px)" srcset={homeOverlayHeader || page.url.pathname === "/contact" ? brand.logoDark : brand.logo} /><img src={brand.logo} alt={brand.name} width="1192" height="335" fetchpriority="high" style="object-fit:contain;filter:none" /></picture>
             </a>
           </div>
 
-          <nav class="dn-nav" aria-label="Основна навигация">
+          <nav class="dn-nav" aria-label="Main navigation">
             <ul class="dn-nav__list">
               {#each navigation as item (item.id)}
                 <li class:dn-nav__item--current={isActive(item)}>
@@ -300,22 +300,22 @@
           <div class="dn-header-actions">
             <a class="dn-header-action dn-header-action--secondary" href={resolve('/contact')}>
               <Icon name="mail" size={17} strokeWidth={1.8} />
-              <span>Запитване</span>
+              <span>Enquiry</span>
             </a>
             <a class="dn-header-action dn-header-action--primary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
-              <span>Запазете оглед</span>
+              <span>Book a vehicle viewing</span>
             </a>
           </div>
 
           <div class="dn-mobile-controls">
-            <a class="dn-mobile-control" href={resolve('/contact')} aria-label="Локация и контакти">
+            <a class="dn-mobile-control" href={resolve('/contact')} aria-label="Location and contact">
               <MobileNavIcon name="location" size={20} />
             </a>
             <a
               class="dn-mobile-control dn-mobile-control--call"
               {...phoneLinkAttributes}
-              aria-label={`Обадете се на ${brand.phone}`}
+              aria-label={`Call ${brand.phone}`}
             >
               <MobileNavIcon name="phone" size={20} />
             </a>
@@ -326,7 +326,7 @@
               {@attach attachMobileToggle}
               aria-expanded={mobileOpen}
               aria-controls="dn-mobile-menu"
-              aria-label={mobileOpen ? 'Затворете менюто' : 'Отворете менюто'}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               onclick={openMobile}
             >
               <MobileNavIcon name="menu" size={20} />
@@ -344,22 +344,22 @@
 
   <div hidden={mobileOpen}>
     {#if vehicleDetailHeader}
-      <nav class="dn-mobile-detail-bar" aria-label="Действия за автомобила">
-        <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Заявете оглед</a>
+      <nav class="dn-mobile-detail-bar" aria-label="Vehicle actions">
+        <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Request a vehicle viewing</a>
         <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes}>
           <MobileNavIcon name="phone" size={20} />
-          Обадете се
+          Call us
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" aria-label="Main actions">
         <a
           class:active={page.url.pathname === '/'}
           href={resolve('/')}
           aria-current={page.url.pathname === '/' ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
-          <span>Начало</span>
+          <span>Home</span>
         </a>
         <a
           class:active={page.url.pathname.startsWith('/listing')}
@@ -367,7 +367,7 @@
           aria-current={page.url.pathname.startsWith('/listing') ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
-          <span>Коли</span>
+          <span>Cars</span>
         </a>
         <a
           class:active={page.url.pathname === '/contact' && mobileTopic === 'trade-in'}
@@ -375,7 +375,7 @@
           aria-current={page.url.pathname === '/contact' && mobileTopic === 'trade-in' ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
-          <span>Продай</span>
+          <span>Sell</span>
         </a>
         <a
           class:active={page.url.pathname === '/contact' && mobileTopic === 'import'}
@@ -383,7 +383,7 @@
           aria-current={page.url.pathname === '/contact' && mobileTopic === 'import' ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
-          <span>Внос</span>
+          <span>Vehicle enquiry</span>
         </a>
         <button
           class:active={mobileMenuSection}
@@ -393,7 +393,7 @@
           onclick={openMobile}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="menu" /></span>
-          <span>Меню</span>
+          <span>Menu</span>
         </button>
       </nav>
     {/if}

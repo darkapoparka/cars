@@ -59,7 +59,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+          "Финалната оценка се прави след оглед на място в шоурума ни в Sharjah, Sharjah.",
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -106,7 +106,7 @@ const pageCopy = {
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+          "The final appraisal follows an in-person inspection at our showroom in Sharjah, Sharjah.",
         question: "Can you appraise it from photos only?",
       },
       {
@@ -276,7 +276,7 @@ export default async function SellPage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
+              src="/dealer/showroom.webp"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-black/15" />
 

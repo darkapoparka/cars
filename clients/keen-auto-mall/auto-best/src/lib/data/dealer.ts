@@ -1,0 +1,334 @@
+// Dated, public-source dealer snapshot. Not a live inventory feed.
+export const dealerFacts = {
+  "schemaVersion": 1,
+  "leadId": "us-fl-pompano-beach-keen-auto-mall",
+  "slug": "keen-auto-mall",
+  "observedAt": "2026-09-09",
+  "name": "Keen Auto Mall",
+  "shortName": "Keen Auto Mall",
+  "legalName": null,
+  "aliases": [
+    "Keen Auto Mall LLC"
+  ],
+  "city": "Pompano Beach",
+  "country": "United States",
+  "countryCode": "US",
+  "address": "2420 NW 16th Lane, Suite E, Pompano Beach, FL 33064",
+  "phone": "+19547106047",
+  "phoneDisplay": "(954) 710-6047",
+  "phoneHref": "tel:+19547106047",
+  "email": "",
+  "hours": "Contact the dealership to confirm opening hours and arrange a visit.",
+  "currency": "USD",
+  "distanceUnit": "mi",
+  "locale": "en-US",
+  "accent": "#e86f13",
+  "website": "https://www.keenautomall.com/",
+  "sourceProfile": "https://www.keenautomall.com/cars-for-sale",
+  "languages": [
+    "en"
+  ],
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/keenautomall/"
+  },
+  "tagline": "Used cars in Pompano Beach. Compare the details and discuss your next car.",
+  "stockCount": 8,
+  "sampleOnly": true,
+  "services": [
+    "Used-vehicle sales",
+    "Viewing and test-drive enquiries",
+    "Finance and trade-in enquiries, subject to confirmation and approval"
+  ],
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Keen+Auto+Mall+2420+NW+16th+Lane+Pompano+Beach+FL+33064",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Keen+Auto+Mall+2420+NW+16th+Lane+Pompano+Beach+FL+33064&output=embed",
+  "locationNote": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+  "previewNotice": "Independent design preview with dated advertised samples, not a live feed. Confirm availability, condition and total price directly. No dealership approval or enquiry delivery is implied.",
+  "priceNotice": "The dealer's published terms add tax, tag and title plus a $1,298 dealer fee, $1,995 reconditioning fee, $598 electronic filing fee and $189 private tag agency fee. These are not included in the sample advertised prices. Confirm a written total for the specific vehicle. The site describes vehicles as sold as-is, with optional service contracts and finance subject to application and approval.",
+  "sources": [
+    "https://www.keenautomall.com/",
+    "https://www.keenautomall.com/cars-for-sale",
+    "https://www.mynextride.com/dealers/375/keen-auto-mall-llc-pompano-beach-fl/inventory",
+    "https://linktr.ee/keenautomall"
+  ],
+  "opportunity": "Reconcile conflicting published phone numbers and keep the selected vehicle, advertised price and additional price conditions together. The existing website already has search, galleries and vehicle enquiries.",
+  "notes": [
+    "The current owned-site header supplies (954) 710-6047. About copy also shows 954-532-9699 and 954-932-9699; no assumption that either is a typo or tracking number.",
+    "114 results is the retrieved catalogue total, not independently verified unique available stock.",
+    "The linked marketplace refreshed today and corroborates the selected price/mileage pairs. Record-specific stock samples remain subject to confirmation.",
+    "2014 Audi A4 was excluded after secondary source mechanical/TMU caveats. No inherited warranty or five-star claim is repeated.",
+    "English preview only; the dealer publishes some Spanish copy but no full Spanish interface is claimed.",
+    "Public media reuse permission and dealership approval remain unverified; this work is not deployed."
+  ]
+};
+export const dealerStock = [
+  {
+    "id": "6572737",
+    "make": "Audi",
+    "model": "S5",
+    "trim": "4.2 quattro Premium Plus",
+    "year": 2012,
+    "price": 24900,
+    "currency": "USD",
+    "mileage": 124154,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "body": "Coupe",
+    "doors": 2,
+    "color": "Blue",
+    "features": [
+      "All-wheel drive"
+    ],
+    "sourceUrl": "https://www.keenautomall.com/details/used-2012-audi-s5/115534047",
+    "catalogueUrl": "https://www.keenautomall.com/cars-for-sale",
+    "sourceImageUrls": [
+      "https://cdn05.carsforsale.com/4ff5f682564371db050bf471d2fc3662/800x600/2012-audi-s5-4-2-quattro-premium-plus-awd-2dr-coupe-6a.jpg"
+    ],
+    "sourceNote": "Current owned catalogue and marketplace show $24,900; an older detail snapshot showed $16,900. Current catalogue used, not the older price.",
+    "observedAt": "2026-09-09",
+    "title": "2012 Audi S5 4.2 quattro Premium Plus",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/6572737-1.webp"
+    ],
+    "image": "/dealer/inventory/6572737-1.webp"
+  },
+  {
+    "id": "7027165",
+    "make": "BMW",
+    "model": "3 Series",
+    "trim": "335i",
+    "year": 2014,
+    "price": 19990,
+    "currency": "USD",
+    "mileage": 91542,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "body": "Sedan",
+    "doors": 4,
+    "color": "Gray",
+    "features": [
+      "Six-speed manual transmission"
+    ],
+    "sourceUrl": "https://www.keenautomall.com/details/used-2014-bmw-3-series/119193560",
+    "sourceImageUrls": [
+      "https://cdn05.carsforsale.com/00e89e58c4020ccfdc74ac9c6de2e131da/800x600/2014-bmw-3-series-335i-4dr-sedan.jpg"
+    ],
+    "sourceNote": "Structured mileage and I6 specification used; older sales prose has conflicting mileage/engine wording.",
+    "observedAt": "2026-09-09",
+    "title": "2014 BMW 3 Series 335i",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/7027165-1.webp"
+    ],
+    "image": "/dealer/inventory/7027165-1.webp"
+  },
+  {
+    "id": "7435783",
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "trim": "LT Crew Cab",
+    "year": 2011,
+    "price": 17995,
+    "currency": "USD",
+    "mileage": 132301,
+    "distanceUnit": "mi",
+    "fuel": "Flex fuel",
+    "transmission": "Automatic",
+    "body": "Pickup Truck",
+    "doors": 4,
+    "color": null,
+    "features": [
+      "Crew cab",
+      "4x2"
+    ],
+    "sourceUrl": "https://www.keenautomall.com/details/used-2011-chevrolet-silverado-1500/125725588",
+    "sourceImageUrls": [
+      "https://img.mynextride.com/375/7435783_6a11fed0cb3cc_sm.jpg"
+    ],
+    "observedAt": "2026-09-09",
+    "title": "2011 Chevrolet Silverado 1500 LT Crew Cab",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/7435783-1.webp"
+    ],
+    "image": "/dealer/inventory/7435783-1.webp"
+  },
+  {
+    "id": "5826218",
+    "make": "BMW",
+    "model": "3 Series",
+    "trim": "328i Convertible",
+    "year": 2011,
+    "price": 13980,
+    "currency": "USD",
+    "mileage": 105567,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "body": "Convertible",
+    "doors": 2,
+    "color": "White",
+    "features": [],
+    "sourceUrl": "https://www.keenautomall.com/details/used-2011-bmw-3-series/115534075",
+    "secondaryUrl": "https://www.mynextride.com/cars-for-sale/5826218/2011-bmw-3-series-pompano-beach-fl",
+    "sourceImageUrls": [
+      "https://img.mynextride.com/375/5826218_66d35d02050e5_sm.jpg"
+    ],
+    "vin": "WBADW3C50BE539200",
+    "observedAt": "2026-09-09",
+    "title": "2011 BMW 3 Series 328i Convertible",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/5826218-1.webp"
+    ],
+    "image": "/dealer/inventory/5826218-1.webp"
+  },
+  {
+    "id": "4972128",
+    "make": "Audi",
+    "model": "A4",
+    "trim": "2.0T CVT",
+    "year": 2007,
+    "price": 11995,
+    "currency": "USD",
+    "mileage": 89100,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "body": "Sedan",
+    "doors": 4,
+    "color": "Gray",
+    "features": [
+      "CVT transmission"
+    ],
+    "sourceUrl": "https://www.keenautomall.com/details/used-2007-audi-a4/115534077",
+    "secondaryUrl": "https://www.mynextride.com/cars-for-sale/4972128/2007-audi-a4-pompano-beach-fl",
+    "sourceImageUrls": [
+      "https://img.mynextride.com/375/4972128_655792510ad14_sm.jpg"
+    ],
+    "vin": "WAUAF78E97A278277",
+    "observedAt": "2026-09-09",
+    "title": "2007 Audi A4 2.0T CVT",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/4972128-1.webp"
+    ],
+    "image": "/dealer/inventory/4972128-1.webp"
+  },
+  {
+    "id": "6602792",
+    "make": "Chevrolet",
+    "model": "Colorado",
+    "trim": "LT Regular Cab",
+    "year": 2008,
+    "price": 8995,
+    "currency": "USD",
+    "mileage": 222891,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "body": "Pickup Truck",
+    "doors": 2,
+    "color": "Black",
+    "features": [
+      "4x2"
+    ],
+    "sourceUrl": "https://www.keenautomall.com/details/used-2008-chevrolet-colorado/118003301",
+    "secondaryUrl": "https://www.mynextride.com/cars-for-sale/6602792/2008-chevrolet-colorado-pompano-beach-fl",
+    "sourceImageUrls": [
+      "https://img.mynextride.com/375/6602792_68f2d7da55a8d_sm.jpg"
+    ],
+    "vin": "1GCCS149088128967",
+    "observedAt": "2026-09-09",
+    "title": "2008 Chevrolet Colorado LT Regular Cab",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/6602792-1.webp"
+    ],
+    "image": "/dealer/inventory/6602792-1.webp"
+  },
+  {
+    "id": "7043071",
+    "make": "Chevrolet",
+    "model": "Trax",
+    "trim": "LS",
+    "year": 2016,
+    "price": 14995,
+    "currency": "USD",
+    "mileage": 137286,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "body": "SUV",
+    "doors": null,
+    "color": null,
+    "features": [],
+    "sourceUrl": "https://www.mynextride.com/dealers/375/keen-auto-mall-llc-pompano-beach-fl/inventory",
+    "sourceImageUrls": [
+      "https://img.mynextride.com/375/7043071_6a320334b4f26_sm.jpg"
+    ],
+    "sourceNote": "Record ID7043071 in the dealer's retrieved current marketplace inventory. No vehicle-specific detail URL or unknown specifications invented.",
+    "observedAt": "2026-09-09",
+    "title": "2016 Chevrolet Trax LS",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/7043071-1.webp"
+    ],
+    "image": "/dealer/inventory/7043071-1.webp"
+  },
+  {
+    "id": "7146154",
+    "make": "Toyota",
+    "model": "Corolla",
+    "trim": "S Plus",
+    "year": 2014,
+    "price": 14995,
+    "currency": "USD",
+    "mileage": 142634,
+    "distanceUnit": "mi",
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "body": "Sedan",
+    "doors": null,
+    "color": null,
+    "features": [],
+    "sourceUrl": "https://www.mynextride.com/dealers/375/keen-auto-mall-llc-pompano-beach-fl/inventory",
+    "sourceImageUrls": [
+      "https://img.mynextride.com/375/7146154_6a2e0e4297af7_sm.jpg"
+    ],
+    "sourceNote": "Record ID7146154 in the dealer's retrieved current marketplace inventory. No vehicle-specific detail URL or unknown specifications invented.",
+    "observedAt": "2026-09-09",
+    "title": "2014 Toyota Corolla S Plus",
+    "availability": "Advertised; confirmation required",
+    "description": "Dated advertised sample. Confirm condition, availability, equipment and total purchase price directly.",
+    "viewingLocation": "Confirm the selected vehicle, opening hours and your viewing appointment directly before travelling.",
+    "sourceLocation": "Pompano Beach, Florida",
+    "photos": [
+      "/dealer/inventory/7146154-1.webp"
+    ],
+    "image": "/dealer/inventory/7146154-1.webp"
+  }
+];

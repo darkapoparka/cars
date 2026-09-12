@@ -25,3 +25,7 @@ Auto-best, full-workspace modern and carwow are all **not implemented / not comm
 Masters inspected at astra commit `4ef7edfe4c1566dcc0688bc78b87f812de1223c4`: auto-best `2026.09.08-polish-1`, modern `2026.09.06-refresh-1`, carwow `2026.09.08-repair-1`. They were not copied. Proposed ports 7497/7498/7499 were not bound or checked. No runnable install/check/start commands exist here. Any later implementation must retain GBP and miles, appointment requirements and genuine availability labels, without inventing finance rates or guarantees.
 
 The session report records branch inspection, checks and publication commits. The missing licensed media pack and finished branding are unresolved build inputs. Resume this evidence record; folder presence is not implementation. No dealer contact, reservation, payment, deployment or CRM write occurred.
+
+## GitHub implementation checkpoint ? 2026-09-09
+
+All three requested application source trees now exist in the canonical `J:/cars/clients/midlands-trade-centre/` folder with the dealer fact/stock/asset pack integrated into active application consumers. Automated/local visual QA is intentionally left pending for the owner's local review. `.client/project.json` keeps all QA flags false.

@@ -1,0 +1,85 @@
+node_modules/
+
+# Output
+.output/
+.vercel/
+.netlify/
+.wrangler/
+/.svelte-kit
+/artifacts/retired-6537-svelte-kit-20260905/
+/build/
+/coverage/
+.tmp/
+.vite/
+*.tsbuildinfo
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
+# Agent/debug output
+/.codex-*.log
+/.codex-*.out.log
+/.codex-*.err.log
+/.codex-*.png
+/_review-shot.mjs
+.playwright-mcp/
+tmp/
+.audit/
+audit/
+.codex-logs/
+.codex/
+.claude/
+.superpowers/brainstorm/
+/review-shots/
+static/offer-shots/
+/*.err.log
+/*.out.log
+/*.log
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.html
+/*.txt
+.audit-shots/
+.qa-shots/
+static/_originals/
+# Image-source archives kept on disk but never served/deployed (out of static/)
+/_originals/
+design-source/
+
+# Generated hero/banner asset suites from agent sessions (kept on disk, not served)
+codex/
+
+# Spartak v3 asset suite: commit the web-weight deliverables that the site
+# serves (transparent-png 1x, flat-jpg, banners jpg/webp). Heavy source archives
+# and QA artifacts live under ignored design-source/spartak-auto-v3/ so they are
+# never served. Keep print-res @2x cutouts on disk only -- never in git history.
+static/assets/spartak-auto-v3/class-a-cutouts/transparent-png/*-2x-*.png
+
+.vercel
+
+# Unused image-generation iterations retained locally for review
+static/assets/images/daynight-premium-banners/*.png
+static/assets/images/daynight-premium-banners/webp/*-clean-v1.webp
+static/assets/images/daynight-premium-banners/webp/*-spartak-v*.webp

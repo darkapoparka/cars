@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--dn-ink); background: #fff; font-family: var(--dn-font); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+/* Keep native select behavior, with a consistent inset and centered chevron. */
+.dn-app-shell select:not([multiple]):not([size]):where(:not(#listing-sort)) {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23565e69' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px 18px;
+  cursor: pointer;
+}
+@media (forced-colors: active) {
+  .dn-app-shell select:not([multiple]):not([size]):where(:not(#listing-sort)) {
+    appearance: auto;
+    background-image: none;
+  }
+}
+
+img { display: block; max-width: 100%; }
+.container, .dn-container { width: min(var(--dn-content), calc(100% - 48px)); margin-inline: auto; }
+.dn-sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+.dn-app-shell :focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }

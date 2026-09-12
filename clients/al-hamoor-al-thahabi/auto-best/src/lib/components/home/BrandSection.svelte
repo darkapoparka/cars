@@ -10,13 +10,13 @@
     <div class="container dn-brand-hero__inner">
       <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--banner">
         <h2 id="brand-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Търсене по марка</span>
-          <span class="dn-heading-mobile">По марка</span>
+          <span class="dn-heading-desktop">Search by make</span>
+          <span class="dn-heading-mobile">By make</span>
         </h2>
-        <p>Изберете марка и разгледайте автомобилите.</p>
-        <a class="dn-brand-hero__cta dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
-          <span class="dn-heading-desktop">Вижте всички автомобили</span>
-          <span class="dn-heading-mobile" aria-hidden="true">Всички</span>
+        <p>Choose a make and browse the vehicles.</p>
+        <a class="dn-brand-hero__cta dn-home-section-action" href={resolve('/listing-grid')} aria-label="View all vehicles">
+          <span class="dn-heading-desktop">View all vehicles</span>
+          <span class="dn-heading-mobile" aria-hidden="true">All</span>
         </a>
       </div>
     </div>
@@ -24,15 +24,15 @@
 
   <div class="container">
     <div class="dn-brand-panel">
-      <div class="dn-brand-grid" aria-label="Автомобили по марка">
+      <div class="dn-brand-grid" aria-label="Vehicles by make">
         {#each brands as brand (brand.label)}
           <a class="dn-brand-card" href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
             <span class="dn-brand-card__image">
-              <img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width="180" height="80" />
+              <img src={brand.image} alt={`${brand.label} logo`} loading="lazy" decoding="async" width="180" height="80" />
             </span>
             <span class="dn-brand-card__content">
               <strong>{brand.label}</strong>
-              <small>{brand.count} {brand.count === 1 ? 'автомобил' : 'автомобила'}</small>
+              <small>{brand.count} {brand.count === 1 ? 'vehicle' : 'vehicles'}</small>
             </span>
           </a>
         {/each}
