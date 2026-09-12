@@ -1,0 +1,46 @@
+export type AdminVehicleRow = {
+	slug: string;
+	title: string;
+	short_title: string | null;
+	brand: string;
+	model: string;
+	year: number;
+	status: string;
+	condition: string;
+	price: number;
+	price_eur: string | null;
+	price_bgn: string | null;
+	monthly: string | null;
+	mileage_value: number;
+	mileage_text: string | null;
+	fuel: string;
+	transmission: string;
+	body: string;
+	doors: number | null;
+	engine: string | null;
+	power: string | null;
+	drive: string | null;
+	color: string | null;
+	image: string | null;
+	lot: string | null;
+	source_url: string | null;
+	condition_line: string | null;
+	description: string | null;
+	features: string[] | null;
+	highlights: string[] | null;
+	badges: string[] | null;
+};
+
+export type AdminPostRow = {
+	slug: string;
+	type: string;
+	status: string;
+	title: string;
+	excerpt: string | null;
+	body: string | null;
+	cover_url: string | null;
+	category: string | null;
+	tags: string[] | null;
+	author: string | null;
+	read_minutes: number | null;
+};

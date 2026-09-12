@@ -1,0 +1,54 @@
+{
+  "method": "Manual geometric vector proposal with outlined lettering; no font dependencies or embedded raster content. Not Image Gen and not dealer-approved artwork.",
+  "sourceReview": "Published visual references documented in the dealer research report; no source photograph copied into this proposal.",
+  "lightDarkSameGeometry": true,
+  "wordmarkSvgNoTextOrImage": true,
+  "visualReview": "Actual independently rasterized contact sheet visually reviewed; isolated asset review, not app browser QA.",
+  "hashes": {
+    "logo-dark.svg": "28e19800bfe699ccb42a9dbdf3098d014811e0a5e277cb0903230b6cc66e0b96",
+    "logo-light.svg": "f4b72bda4095a873cd00bc1c3c4f651d69bd2f7130bbe05401143c871f85066a",
+    "favicon.svg": "125db71fdc25b9e56f447ee54660e988f2fe01f2c28b51f3ce0a6b41d8900137",
+    "logo.png": "22edb590f5bd81f10a5d0713e0e65d1a24021836ea604eb463e25c8d24e558a6",
+    "apple-touch-icon.png": "54bfa966d6e53d22261770b5ef3529a666e4ddb48a33ce96c79cbd11bdb44a11",
+    "favicon-32x32.png": "c807f59f4d255ef86a034fd76e35506f5e6b5ded28804512c72ff6074e69b011",
+    "favicon-16x16.png": "8b9f2b269e1093287c85bb6e3443f87676d22555580f1edec60ec070317e3b22",
+    "opengraph.png": "0f6384365b68cb04e50c085123a706cecfea3cc8a316d1f4fcd39217f198b184"
+  },
+  "rasterExports": {
+    "logo.png": {
+      "width": 1024,
+      "height": 279,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 18752
+    },
+    "apple-touch-icon.png": {
+      "width": 180,
+      "height": 180,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 2985
+    },
+    "favicon-32x32.png": {
+      "width": 32,
+      "height": 32,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 667
+    },
+    "favicon-16x16.png": {
+      "width": 16,
+      "height": 16,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 418
+    },
+    "opengraph.png": {
+      "width": 1200,
+      "height": 630,
+      "format": "png",
+      "hasAlpha": true,
+      "bytes": 32070
+    }
+  }
+}

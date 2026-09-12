@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "client": "prestige-varna",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09",
+  "state": "in-progress",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    "main"
+  ],
+  "publicUrl": null,
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "deliveryBranch": "codex/astra-bg-02",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "Real matched stock photos not integrated: authorization/provenance remains unresolved.",
+    "Complete supporting-page acceptance sweep remains in progress, including FAQ/article service wording.",
+    "Manual outlined logo proposals need owner/dealer approval; Image Gen never started.",
+    "Runtime/build/browser tests were not executed; see VERIFICATION.json."
+  ],
+  "implemented": [
+    "Independent retained master source, not a wrapper.",
+    "Same source-backed eight-record stock snapshot consumed by primary catalogue/detail adapters.",
+    "Dealer identity, phone/address, source-status distinctions, EUR and km.",
+    "Noindex; unsupported public reviews/team/video selection removed from data.",
+    "Outlined proposal logos and PNG/icon/OG exports integrated locally.",
+    "Known Modern directory fixture and Carwow E164 telephone-link defects corrected.",
+    "Explicit static-preview form guards prevent message delivery and record creation."
+  ],
+  "branding": {
+    "method": "manual-outlined-vector-demo-proposal",
+    "approvalStatus": "pending",
+    "logo": "/dealer/logo-dark.svg",
+    "logoLight": "/dealer/logo-light.svg",
+    "favicon": "/dealer/favicon.svg",
+    "imageGeneration": "attempted-not-started"
+  },
+  "verificationEvidence": "../VERIFICATION.json",
+  "lastSourceRepair": {
+    "date": "2026-09-09",
+    "kind": "supporting-content-and-favicon",
+    "evidence": "../../CONTENT-VERIFICATION.json",
+    "frameworkBuildVerified": false,
+    "browserVerified": false,
+    "scope": "dealer editorial data/adapters, Modern contact copy and favicon ICO; not the complete content sweep"
+  }
+}
