@@ -1,0 +1,18 @@
+{
+  "observedAt": "2026-09-09",
+  "scope": "TypeScript syntax stripping and data-module execution only; not typecheck, framework build, or browser QA",
+  "command": "node clients/danger-auto/checks/stock-contract.mjs",
+  "workingDirectory": "/mnt/data/session08-work",
+  "runtime": "Node v22.16.0",
+  "exitCode": 0,
+  "passed": 22,
+  "failed": 0,
+  "inputGitBlobs": {
+    "auto-best/src/lib/data/dealer-stock.json": "fbf0d1f69482533e186ada8418c60c055c82d0ea",
+    "auto-best/src/lib/data/inventory.ts": "1db5ef405316d43df7f1bcc392ca02b08ef3d165",
+    "auto-best/src/lib/data/listing.ts": "0fef7fbf8bc74945381003d0321caf15107e7270",
+    "auto-best/static/assets/images/lead/stock-photo-pending.svg": "fdc1589fe56e3b2e6a060f9a087e89078bbabc3d"
+  },
+  "notExecuted": ["npm ci", "npm run validate", "Svelte typecheck", "production build", "browser review at 320, 390 and 1440 pixels"],
+  "knownGaps": ["Temporary missing-photo illustration is not real stock imagery", "Full identity/content sweep is unfinished", "Source asset checker still expects the master's fixed media count", "Existing domain checker needs JSON snapshot loading support", "The existing finance calculator shares the vehicle-price formatter; its zero-principal display needs a separate amount formatter"]
+}

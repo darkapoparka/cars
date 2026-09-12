@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "method": "independent retained Git tree copy",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourcePath": "templates/auto-best",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "destination": "clients/danger-auto/auto-best",
+  "excluded": ["inherited .template metadata", "inherited AGENTS.md instructions"],
+  "retained": "Application source, styles, assets, lockfile, package manifest, framework configuration, scripts and license/provenance records are copied from the published source tree. Source template content is not yet accepted as dealer content.",
+  "qaInherited": false
+}

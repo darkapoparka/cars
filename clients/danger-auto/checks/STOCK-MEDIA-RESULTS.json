@@ -1,0 +1,18 @@
+{
+  "scope": "TypeScript syntax and fixture-based adapter tests; not framework, actual media, browser, or full inventory QA",
+  "command": "NODE_PATH=\"$(npm root -g)\" node clients/danger-auto/checks/stock-media-contract.cjs",
+  "workingRoot": "/mnt/data/session08-build",
+  "node": "v22.16.0",
+  "typescript": "5.8.3",
+  "exitCode": 0,
+  "passed": 18,
+  "failed": 0,
+  "inputGitBlobs": {
+    "dealer-stock-media.ts": "2ec1b0da01a0b810a8e27fffba14409d5f351b94",
+    "daynight-vehicles.ts": "a29129a2c2c3ed40f5bc792da497669af0731839",
+    "daynight-current-inventory.ts": "690c355e769e58d7840a624d79cdf1709371dd28"
+  },
+  "actualVehiclePhotographsObtained": 0,
+  "fullApplicationBuild": "not-run",
+  "browserChecks": "not-run"
+}

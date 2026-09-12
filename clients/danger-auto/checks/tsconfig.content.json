@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": "../carwow",
+    "paths": { "$lib/*": ["src/lib/*"] }
+  },
+  "files": [
+    "../carwow/src/lib/data/daynight-site.ts",
+    "../carwow/src/lib/data/daynight-team.ts",
+    "../carwow/src/lib/data/daynight-vehicles.ts",
+    "../carwow/src/lib/data/daynight-faq.ts",
+    "../carwow/src/lib/data/daynight-reviews.ts",
+    "../carwow/src/lib/server/public-routes.ts",
+    "../carwow/src/lib/server/daynight-seo.ts"
+  ]
+}
