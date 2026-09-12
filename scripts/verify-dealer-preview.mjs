@@ -55,7 +55,7 @@ export async function verifyPreview({slug, origin, output, manifest, chromium, e
         if(JSON.stringify(record.designChoices)!==JSON.stringify(manifest.variants.map(v=>v.entry)))throw new Error('FAB choices differ from the dealer manifest.');
         await page.keyboard.press('Escape');
         record.switcherDismissed=await button.getAttribute('aria-expanded')==='false';
-        record.focusReturned=await button.evaluate(e=>e===document.activeElement);
+        record.focusReturned=await button.evaluate(e=>e===(e.getRootNode().activeElement||document.activeElement));
         await button.click();const next=(index+1)%3;await menu.getByRole('link').nth(next).click();
         await page.getByRole('button',{name:`${labels.design} ${next+1} / 3`,exact:true}).waitFor({state:'visible',timeout:60000});
         record.switchedTo=page.url();

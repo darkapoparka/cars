@@ -8,6 +8,8 @@ import { spawnSync } from 'node:child_process';
 import test from 'node:test';
 import { packageDealer, planDealerPackage } from './package-dealer.mjs';
 import { fixSvelteServiceOutput } from './publishing/fix-svelte-service-output.mjs';
+import {verifyPackage} from './export-dealer.mjs';
+import {normalized} from './lib/workflow.mjs';
 
 const sourceCommit = 'a'.repeat(40);
 const manifestFor = (middle = 'modern') => ({
@@ -46,6 +48,8 @@ async function fixture(t, middle = 'modern') {
     'auto-best/.client/private-notes.md': 'not public',
     'carwow/package.json': '{"type":"module","engines":{"node":"24.x"}}\n',
     'carwow/package-lock.json': '{"lockfileVersion":3}\r\n',
+    'carwow/.env.example': 'DATABASE_URL=\n',
+    'carwow/src/lib/seo.ts': 'const image = `${origin}/dealer/logo.png`;\n',
     'carwow/svelte.config.js': svelteConfig,
     'carwow/src/app.html': appHtml,
     'carwow/src/routes/+layout.svelte': `<script lang="ts">
@@ -160,9 +164,9 @@ for (const middle of ['modern', 'import']) {
     assert.ok(first.files.includes('assets/reference.jpg'));
     assert.ok(first.files.includes('carwow/.template-ref/contact.html'));
     assert.ok(first.files.includes('auto-best/.client/project.json'));
-    assert.ok(!first.files.some((name) => /node_modules|\.git\/|\.env|\.vercel\/|\.next\/|private-notes/.test(name)));
+    assert.ok(!first.files.some((name) => /node_modules|\.git\/|\.env(?!\.(?:example|sample|template)$)|\.vercel\/|\.next\/|private-notes/.test(name)));
     assert.ok(!first.files.includes('auto-best/AGENTS.md'));
-    assert.deepEqual(await fs.readFile(path.join(first.destination, 'auto-best/package-lock.json')), await fs.readFile(path.join(options.source, 'auto-best/package-lock.json')));
+    assert.deepEqual(await fs.readFile(path.join(first.destination, 'auto-best/package-lock.json')), normalized(await fs.readFile(path.join(options.source, 'auto-best/package-lock.json'))));
     const identity = JSON.parse(await fs.readFile(path.join(first.destination, '.cars-package.json'), 'utf8'));
     assert.equal(identity.sourceCommit, sourceCommit);
     assert.deepEqual(identity.manifest, options.manifest);
@@ -278,4 +282,16 @@ test('both packaging CLIs expose portable --help', () => {
     assert.equal(result.status, 0, result.stderr);
     assert.match(result.stdout, /Usage:/);
   }
+});
+
+test('package text is normalized, origin-qualified assets stay mounted and tampering is rejected', async t => {
+  const options=await fixture(t,'import');
+  await packageDealer(options);
+  const lock=await fs.readFile(path.join(options.destination,'carwow/package-lock.json'),'utf8');
+  assert.ok(!lock.includes('\r'));
+  assert.equal(await fs.readFile(path.join(options.destination,'carwow/.env.example'),'utf8'),'DATABASE_URL=\n');
+  assert.match(await fs.readFile(path.join(options.destination,'carwow/src/lib/seo.ts'),'utf8'),/\$\{origin\}\/variant-3\/dealer\/logo.png/);
+  assert.ok(verifyPackage(options.destination).digest);
+  await put(options.destination,'carwow/src/lib/seo.ts','tampered');
+  assert.throws(()=>verifyPackage(options.destination),/Package payload changed/);
 });

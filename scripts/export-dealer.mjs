@@ -3,8 +3,8 @@ import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
 
 export function packageFiles(directory) {
-  const omit = new Set(['.git','node_modules','.vercel','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.svelte-kit','.next','.turbo','.cache','.pnpm-store','build','dist','runtime','audits','artifacts','evidence','qa','qa-final','test-results','playwright-report']);
-  return filesAt(directory,{filter:relative => !relative.split('/').some(p => omit.has(p) || p.startsWith('.env') || p.startsWith('.next-')) && !/\.(pem|key|pfx|log|pid|tsbuildinfo)$/i.test(relative) && !/(?:credentials|service-account|purchase-code|license-certificate)/i.test(path.basename(relative)) && relative !== '.cars-publish.json'});
+  const omit = new Set(['.git','node_modules','.vercel','.netlify','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.svelte-kit','.next','.turbo','.cache','.pnpm-store','build','dist','runtime','audits','artifacts','evidence','qa','qa-final','test-results','playwright-report','coverage']);
+  return filesAt(directory,{filter:relative => !relative.split('/').some(p => omit.has(p) || (p.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(p)) || p.startsWith('.next-')) && !/\.(pem|key|pfx|p12|log|pid|tsbuildinfo)$/i.test(relative) && (!/(?:credentials|service-account|purchase-code|license-certificate)/i.test(path.basename(relative)) || /\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(relative)) && relative !== '.cars-publish.json'});
 }
 export function packageDigest(directory) {
   const files = packageFiles(directory).map(p => ({path:p,sha256:sha256(normalized(fs.readFileSync(path.join(directory,p))))}));

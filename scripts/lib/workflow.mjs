@@ -55,7 +55,7 @@ export function validateManifest(m){
  if(![standard,imported].some(a=>JSON.stringify(a)===JSON.stringify(keys)))throw new Error('Supported trios: auto-best,modern,carwow or auto-best,import,carwow (ordered).');
  const routes=keys[1]==='modern'?['/','/variant-2/cars','/variant-3/']:['/','/variant-2/','/variant-3/'];
  m.variants.forEach((v,i)=>{if(v.entry!==routes[i]||v.base!==['','/variant-2','/variant-3'][i])throw new Error(`Unexpected route for ${v.key}`);});
- for(const asset of m.extraAssets||[])if(!/^[\w-]+(?:\/[\w.-]+)*$/.test(asset)||asset.split('/').includes('..'))throw new Error('Invalid extra asset path.');
+ for(const asset of m.extraAssets||[])if(!/^[\w.-]+(?:\/[\w.-]+)*$/.test(asset)||asset.split('/').some(p=>p==='..'||p==='.'))throw new Error('Invalid extra asset path.');
  if(!/^[\w][\w/.-]*$/.test(m.defaultBranch||'main')||m.defaultBranch?.includes('..'))throw new Error('Invalid branch name.');return m;
 }
 export function resolveIdentity(root,slug,requestedId=null){

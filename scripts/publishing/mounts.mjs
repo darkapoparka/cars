@@ -40,6 +40,7 @@ const sourceCode = (name, key) => name.startsWith(`${key}/src/`) && codeExtensio
 function mountSourceUrls(text, base) {
   // Only URL contexts: do not rewrite route IDs, comparison strings or type unions.
   let result = text.replace(/(["'`])\/(assets|brand|dealer|fonts|_previews|api)\//g, `$1${base}/$2/`);
+  result = result.replace(/(\$\{(?:origin|siteOrigin)\})\/(assets|brand|dealer|fonts|_previews)\//g, `$1${base}/$2/`);
   result = result.replace(/\b(href|src|action|content)=(['"])\/(?!\/|preview-switcher\.js|variant-[23](?:\/|[?'"#]))/g, `$1=$2${base}/`);
   result = result.replace(/(["'`])\/(favicon\.(?:ico|png|svg)|apple-touch-icon\.png|robots\.txt)(?=["'`?#])/g, `$1${base}/$2`);
   result = result.replace(/url\(\s*(['"]?)\/(assets|brand|dealer|fonts|_previews)\//g, `url($1${base}/$2/`);

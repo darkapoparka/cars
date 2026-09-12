@@ -9,7 +9,7 @@ import { dealerGuidance } from './lib/dealer-guidance.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
-const OMITTED = new Set(['node_modules', '.git', '.vercel', '.agency-os', '.codex', '.claude', '.agents', '.auth', '.template', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
+const OMITTED = new Set(['node_modules', '.git', '.vercel', '.netlify', '.agency-os', '.codex', '.claude', '.agents', '.openai', '.auth', '.template', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
 const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json']);
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
@@ -57,7 +57,7 @@ export function validatePackagingManifest(manifest) {
 }
 
 function omitted(name, relative) {
-  if (OMITTED.has(name) || name.startsWith('.next') || name.startsWith('.env')) return true;
+  if (OMITTED.has(name) || name.startsWith('.next') || (name.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(name))) return true;
   if (/\.(?:log|tsbuildinfo|pem|key|pfx|p12|pid)$/i.test(name)) return true;
   if (/(?:credentials|service-account|license-certificate|purchase-code)/i.test(name) && !/\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(name)) return true;
   if (/^(?:AGENTS(?:\.override)?|CLAUDE)\.md$/i.test(name) && relative !== 'AGENTS.md') return true;
@@ -142,12 +142,16 @@ function fallbackGuidance(manifest) {
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll three designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ source, manifest, sourceCommit, guidance }) {
+async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles }) {
   validatePackagingManifest(manifest);
   if (!/^[a-f\d]{40}(?:[a-f\d]{24})?$/i.test(sourceCommit ?? '')) throw new Error('sourceCommit must be the full source Git commit SHA');
   const resolvedSource = await fs.realpath(path.resolve(source));
-  const files = await collectSource(resolvedSource, manifest);
+  const files = canonicalFiles ? new Map(canonicalFiles) : await collectSource(resolvedSource, manifest);
+  for(const [name,content] of files)files.set(name,normalized(content));
   await applyMounts(files, manifest);
+  const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
+  const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
+  files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));
   files.set('vercel.json', Buffer.from(json(vercelConfiguration(manifest))));
   files.set('.vercelignore', Buffer.from('.git\n**/node_modules\n**/.next*\n**/.svelte-kit\n**/.vercel\n**/.turbo\n**/.env*\n**/*.log\n**/*.tsbuildinfo\n**/build\n**/dist\nruntime\nqa\nqa-final\nevidence\n'));
   files.set('scripts/fix-svelte-service-output.mjs', await fs.readFile(new URL('./publishing/fix-svelte-service-output.mjs', import.meta.url)));
@@ -224,6 +228,9 @@ async function main(args) {
   const sourceCommit = options['source-commit'] || revision.stdout.trim();
   const retained = await collectSource(source, manifest);
   const tracked = new Map(gitFiles(ROOT, sourceCommit, {prefix:`clients/${options.client}`, filter:p=>retainedAtCommit(p,manifest)}).map(f=>[f.path,f]));
+  const untrackedExcluded=[...retained.keys()].filter(name=>!tracked.has(name));
+  for(const name of untrackedExcluded)retained.delete(name);
+  for(const extra of manifest.extraAssets ?? [])if(![...tracked.keys()].some(p=>p===extra||p.startsWith(extra+'/')))throw new Error(`Declared extra path is not committed: ${extra}`);
   const mismatches=[];
   for (const [name,content] of [...retained,['dealer.json',Buffer.from(json(manifest))]]) {
     const entry=tracked.get(name);
@@ -236,8 +243,8 @@ async function main(args) {
   }
   for (const name of tracked.keys()) if (name !== 'dealer.json' && !retained.has(name)) mismatches.push(name + ' (deleted)');
   if(mismatches.length)throw new Error(`Retained canonical source differs from ${sourceCommit}: ${mismatches.slice(0,8).join(', ')} (${mismatches.length} paths). Commit the scoped source first or select its exact --source-commit.`);
-  const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, guidance:dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
-  console.log(json({ mode: write ? 'write' : 'dry-run', ...result, fileCount: result.files.length, files: undefined }).trim());
+  const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, canonicalFiles:retained, guidance:dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
+  console.log(json({ mode: write ? 'write' : 'dry-run', ...result, fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {

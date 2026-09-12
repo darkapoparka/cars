@@ -27,6 +27,8 @@ node scripts/package-dealer.mjs --client promosale-varna --out runtime/dealer-pa
 
 The package helper owns supported mount transformations, Services configuration, Svelte output correction and the shared switcher. It never transforms canonical source in place. An existing output or unknown/hybrid mount requires review; create another explicitly named derived output instead of overwriting it. Explicit `extraAssets` in the manifest retain required shared assets; unknown folders are not silently included.
 
+The CLI includes only retained files tracked by the selected source commit and reports excluded untracked files. Modified or deleted committed input is rejected. Additional assets and helper files declared by the manifest must also be committed. Use `--source-commit SHA` when the reviewed source commit was created with a separate index and the occupied local checkout remains on an older HEAD.
+
 Use the app runtimes/lockfiles. Modern static-demo mode may generate Prisma for the build but must not add a live database dependency or weaken unrelated production modes. Verify mounted links, locale rewrites, asset/CSS URLs, API/fetch paths, redirects and deep links. [Excellent reference](reference/EXCELLENT-CARS-MOUNTING.md) retains the original integration evidence.
 
 ## Compare and preserve the remote
