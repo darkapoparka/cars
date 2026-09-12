@@ -1,0 +1,111 @@
+/* Keep discovery actions consistent across the separate desktop route themes. */
+.desktop-discovery-theme,
+.daynight-home-shell--original,
+.inventory-refined,
+.desktop-discovery-chip,
+.hero-intent,
+.inventory-hero,
+.inventory-filter-triggers,
+.desktop-vehicle-actions {
+	--sa-red: #d50028;
+	--sa-red-strong: #b70022;
+	--discovery-search-height: 54px;
+	--discovery-search-action-size: 44px;
+	--discovery-control-border: #d9dde1;
+	--discovery-border-hover: #9ca3af;
+	--discovery-canvas: #f4f6fa;
+	--discovery-panel: #ffffff;
+	--discovery-surface: #fff;
+	--discovery-muted-surface: #f3f4f6;
+	--discovery-ink: #171b1e;
+	--discovery-muted: #62676e;
+	--discovery-panel-radius: 12px;
+	--discovery-chip-height: 36px;
+	--discovery-control-radius: 8px;
+	--discovery-action: var(--desktop-action, #171b1e);
+	--discovery-action-hover: var(--desktop-action-hover, #343a3e);
+	--discovery-focus: var(--desktop-focus, #171b1e);
+	--discovery-filter-background: #f3f4f6;
+	--discovery-filter-border: #d9dde1;
+	--discovery-light-hover: var(--desktop-secondary-hover, var(--sa-yellow));
+	--discovery-filter-hover: var(--discovery-light-hover);
+	--discovery-filter-foreground: #171b1e;
+}
+
+/* Shared discovery chips. Route adapters below outrank the legacy theme only
+   for these migrated controls; mobile and unrelated templates remain isolated. */
+.desktop-discovery-theme .desktop-discovery-chip,
+body.daynight-home-page
+	.daynight-home-shell--original
+	.daynight-home-inventory
+	a.desktop-discovery-chip,
+.inventory-template-shell .inventory-refined .inventory-results-shortcuts a.desktop-discovery-chip {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 8px !important;
+	height: var(--discovery-chip-height) !important;
+	min-height: var(--discovery-chip-height) !important;
+	width: auto !important;
+	padding: 0 12px !important;
+	border: 1px solid var(--discovery-control-border) !important;
+	border-radius: var(--discovery-control-radius) !important;
+	background: var(--discovery-surface) !important;
+	background-image: none !important;
+	color: var(--discovery-ink) !important;
+	font: 500 14px/1.2 var(--sa-font, Arial, sans-serif) !important;
+	box-shadow: none !important;
+	transform: none !important;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+.desktop-discovery-chip span {
+	color: inherit !important;
+	font: inherit !important;
+}
+.desktop-discovery-theme .desktop-discovery-chip:hover,
+body.daynight-home-page
+	.daynight-home-shell--original
+	.daynight-home-inventory
+	a.desktop-discovery-chip:hover,
+.inventory-template-shell
+	.inventory-refined
+	.inventory-results-shortcuts
+	a.desktop-discovery-chip:hover {
+	background: var(--discovery-light-hover) !important;
+	border-color: var(--discovery-light-hover) !important;
+}
+.desktop-discovery-theme .desktop-discovery-chip.is-active,
+body.daynight-home-page
+	.daynight-home-shell--original
+	.daynight-home-inventory
+	a.desktop-discovery-chip.is-active,
+.inventory-template-shell
+	.inventory-refined
+	.inventory-results-shortcuts
+	a.desktop-discovery-chip.is-active {
+	background: var(--discovery-action) !important;
+	border-color: var(--discovery-action) !important;
+	color: #fff !important;
+}
+.desktop-discovery-theme .desktop-discovery-chip.is-active:hover,
+body.daynight-home-page
+	.daynight-home-shell--original
+	.daynight-home-inventory
+	a.desktop-discovery-chip.is-active:hover,
+.inventory-template-shell
+	.inventory-refined
+	.inventory-results-shortcuts
+	a.desktop-discovery-chip.is-active:hover {
+	background: var(--discovery-action-hover) !important;
+	border-color: var(--discovery-action-hover) !important;
+}
+.desktop-discovery-chip:focus-visible {
+	outline: 2px solid var(--discovery-action) !important;
+	outline-offset: 3px !important;
+}
+@media (pointer: coarse) {
+	.desktop-discovery-chip {
+		--discovery-chip-height: 44px;
+	}
+}

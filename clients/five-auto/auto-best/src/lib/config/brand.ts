@@ -8,27 +8,28 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl: `https://${string}`;
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  logoLight: `/${string}`;
+  logoDark: `/${string}`;
+  sourceUrl: `https://${string}`;
+  youtubeUrl: `https://${string}` | null;
+  instagramUrl: `https://${string}` | null;
+  facebookUrl: `https://${string}` | null;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
-
 export const brand = {
-  name,
-  shortName,
-  city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '087 982 4625',
-  phoneHref: 'tel:+359879824625',
-  addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/lead/day-night-logo.png'
+  name: 'FIVE AUTO',
+  shortName: 'FIVE AUTO',
+  city: 'Бургас',
+  addressLine: 'ул. „Сребърна“ 6, Промишлена зона Север',
+  address: 'ул. „Сребърна“ 6, Промишлена зона Север, Бургас',
+  phone: '0887 555 255',
+  phoneHref: 'tel:+359887555255',
+  appointment: 'Понеделник–петък 08:30–17:00; събота и неделя — почивни дни.',
+  logo: '/brand/logo.png',
+  logoLight: '/brand/logo.png',
+  logoDark: '/brand/logo.png',
+  youtubeUrl: null,
+  instagramUrl: null,
+  facebookUrl: null,
+  sourceUrl: 'https://fiveauto.mobile.bg/'
 } as const satisfies BrandConfig;

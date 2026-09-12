@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientSlug": "five-auto",
+  "clientName": "FIVE AUTO",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "status": "implemented-unverified",
+  "entry": "/",
+  "personalized": true,
+  "implementation": {"masterCopied":true,"localMediaFiles":32,"catalogueConnected":true,"brandConsumersConnected":true,"logoConfigConnected":true,"commonDealerPack":true},
+  "verification": {"install":false,"typecheck":false,"build":false,"browser":false,"ownerReview":"pending","sourceDataChecks":"pending"},
+  "note": "Dealer facts, eight-record sourced catalogue, local FIVE AUTO logo and 24 matched stock photographs are connected. Runtime/browser QA is still pending; this is an implemented but unverified branch handoff."
+}

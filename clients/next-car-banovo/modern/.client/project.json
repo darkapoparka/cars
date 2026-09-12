@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientSlug": "next-car-banovo",
+  "clientName": "NEXT CAR",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "status": "in-progress",
+  "entry": "/cars",
+  "selectedHomepage": "main",
+  "personalized": false,
+  "verification": { "install": false, "prismaGeneration": false, "typecheck": false, "build": false, "browser": false, "ownerReview": "pending" },
+  "note": "Full independent Modern workspace, including apps, packages, lockfile and workspace manifests. Personalization is in progress; not an accepted dealer demo."
+}
