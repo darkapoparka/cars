@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-09",
+  "sourceBase": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "applicationCommit": "689d2a7380f97120dbb46a58b0edeb2da8c6f1b3",
+  "applicationsImplemented": 3,
+  "requestedApplications": 15,
+  "dealerStates": {
+    "golden-dreams-auto": "blocked",
+    "g-auto": "implemented-unverified",
+    "kris-car-plovdiv": "pending",
+    "slavi-cars": "pending",
+    "fresh-motors-sheremetya": "pending"
+  },
+  "gAutoSourceEvidence": "clients/g-auto/checks/source-verification.json",
+  "gAutoRemoteByteVerification": {
+    "passed": true,
+    "method": "Compare every intended application path with its published recursive Git-tree blob hash",
+    "files": {"auto-best": 274, "modern": 1264, "carwow": 1367},
+    "binaryAssetsPerApp": 38
+  },
+  "fullBuildsRun": false,
+  "browserChecksRun": false,
+  "ownerReviewComplete": false,
+  "deployed": false,
+  "unrelatedGeneratedImageUsed": false,
+  "rejectedImageGenerationId": "e13a97b1-0536-48d2-bc45-4fc83951084d"
+}

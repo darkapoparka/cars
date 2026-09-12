@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "client": "g-auto",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09T01:57:41.234Z",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "Full framework checks/build, lockfile installation and browser review not executed.",
+    "Dated seller advertisement sample, not a live inventory feed.",
+    "Generic template illustrations are not dealer premises or employees.",
+    "Not a deployed or owner-approved dealer website."
+  ],
+  "updatedAt": "2026-09-09T02:41:56.355Z",
+  "evidence": {
+    "sourceCheck": "../../checks/source-verification.json",
+    "svelteServerCompile": {
+      "passed": true,
+      "files": 53
+    },
+    "typescriptTranspile": {
+      "passed": true,
+      "files": 22
+    },
+    "runtimeBuild": false,
+    "browser": false
+  }
+}

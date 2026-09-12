@@ -1,0 +1,4900 @@
+{
+  "schemaVersion": 1,
+  "key": "modern",
+  "source": "templates/modern",
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "method": "Independent retained master Git paths with explicitly applied client-local integration fixes and freshly sourced dealer data. No master, external client tree, symlink or local checkout overwritten.",
+  "exclusions": "scripts/copy-source.mjs plus inherited rendered E2E/QA exports and unlinked proposal/concept artifacts",
+  "qaInherited": false,
+  "files": [
+    {
+      "path": ".cursorrules.example",
+      "gitBlobSha": "21030ba2ee2a23ad42ee6693773a8fe1fa8af862"
+    },
+    {
+      "path": ".gitignore",
+      "gitBlobSha": "53f2374a226cfa7964689d4be53f3390cf6a2d5b"
+    },
+    {
+      "path": ".node-version",
+      "gitBlobSha": "85e502778f623f5950dd0115cb1f9c501d0a76ab"
+    },
+    {
+      "path": ".npmrc",
+      "gitBlobSha": "b6f27f135954640c8cc5bfd7b8c9922ca6eb2aad"
+    },
+    {
+      "path": ".nvmrc",
+      "gitBlobSha": "85e502778f623f5950dd0115cb1f9c501d0a76ab"
+    },
+    {
+      "path": "DATABASE-PRODUCTION-CUTOVER.md",
+      "gitBlobSha": "7d3a0ccb82403f4d253485d2c988c7791f958879"
+    },
+    {
+      "path": "DESIGN.md",
+      "gitBlobSha": "6f702fcc7be1f6e43a570a9956f5f61a9302c7a4"
+    },
+    {
+      "path": "LEAD-SUPPORT-DELIVERY-RUNBOOK.md",
+      "gitBlobSha": "3d64b805f58c214d87bca8853f72453b3924f7dc"
+    },
+    {
+      "path": "LEAD_SITE.md",
+      "gitBlobSha": "29b6221b98ac400bd7d8f6119f8f18901262601b"
+    },
+    {
+      "path": "README.md",
+      "gitBlobSha": "fe765e223f8688deb69489306304c3b70cdb50a7"
+    },
+    {
+      "path": "SOURCE_SNAPSHOT.json",
+      "gitBlobSha": "727cb906530fdc47c3a2441be509b76e1d0de3be"
+    },
+    {
+      "path": "TEMPLATE.md",
+      "gitBlobSha": "3b30ab7ac0d81956182d8d68b99cafcf37b0c107"
+    },
+    {
+      "path": "apps/api/.env.example",
+      "gitBlobSha": "e5c9e2560fddd41d7c6d6f73ff636bf631408d87"
+    },
+    {
+      "path": "apps/api/.gitignore",
+      "gitBlobSha": "e985853ed84acf10f62f639a4733083229c5a55d"
+    },
+    {
+      "path": "apps/api/WORKERS.md",
+      "gitBlobSha": "7491fd9e78a99daaf120cafeebea0d8ec6340dab"
+    },
+    {
+      "path": "apps/api/__tests__/auth-recovery.test.ts",
+      "gitBlobSha": "b180e1ff49999f35b5d80304979efff1108d635b"
+    },
+    {
+      "path": "apps/api/__tests__/cron-feed-security.test.ts",
+      "gitBlobSha": "0e5ebdb890951f8bdd56abb972f42c0a995dd543"
+    },
+    {
+      "path": "apps/api/__tests__/env-schema.test.ts",
+      "gitBlobSha": "5bba438b1a07c8cfe1b51006ac3cd1f6966d5de5"
+    },
+    {
+      "path": "apps/api/__tests__/environment-contract.test.ts",
+      "gitBlobSha": "91ec2244f125de21aa87f0eed01f7c2be221b6ce"
+    },
+    {
+      "path": "apps/api/__tests__/external-inventory-provider.test.ts",
+      "gitBlobSha": "54e4c4caef1c744464d1a7a3ae5ecfb8d4cb51af"
+    },
+    {
+      "path": "apps/api/__tests__/external-inventory-route.test.ts",
+      "gitBlobSha": "02a67a6dc729fb0ba1f2071e5809f54c94246bb3"
+    },
+    {
+      "path": "apps/api/__tests__/health.test.ts",
+      "gitBlobSha": "21cbc8ba4ee20f5a6cc556851b28464e5bf22211"
+    },
+    {
+      "path": "apps/api/__tests__/idempotency.test.ts",
+      "gitBlobSha": "ceb1aaa3a8c29ac0efbcc35d111ff11443e16a09"
+    },
+    {
+      "path": "apps/api/__tests__/inventory-import-workers.test.ts",
+      "gitBlobSha": "a146e205c33b854d37126440e4d259f725dd3a11"
+    },
+    {
+      "path": "apps/api/__tests__/inventory-ingestion.test.ts",
+      "gitBlobSha": "17b4c89224bfc268bd8c7c16fb6f26c06cc5c482"
+    },
+    {
+      "path": "apps/api/__tests__/inventory-rate-limit.test.ts",
+      "gitBlobSha": "d187697e94621bce0e194537acb87def072461e9"
+    },
+    {
+      "path": "apps/api/__tests__/kyb-callbacks.test.ts",
+      "gitBlobSha": "a65253ad12cc7fcac8abc378e679ebd58a1e171d"
+    },
+    {
+      "path": "apps/api/__tests__/kyb-workers.test.ts",
+      "gitBlobSha": "f0d8f2deb0f9c7e661325fc1627b32501b5130f2"
+    },
+    {
+      "path": "apps/api/__tests__/listing-media-cleanup.test.ts",
+      "gitBlobSha": "c89c4fd8b16a43b6229bc8345af0bce0ae512408"
+    },
+    {
+      "path": "apps/api/__tests__/readiness.test.ts",
+      "gitBlobSha": "09b55ba10c3f939bad48b6ddeb530f37b4e83a74"
+    },
+    {
+      "path": "apps/api/__tests__/server-only-stub.ts",
+      "gitBlobSha": "c3c49fe053f6529be1ac1dfa9742fb10b5d83161"
+    },
+    {
+      "path": "apps/api/__tests__/service-boundaries.test.ts",
+      "gitBlobSha": "15035f3dc9aedf936c4c2092cf150347e37f6dc1"
+    },
+    {
+      "path": "apps/api/__tests__/webhook-body.test.ts",
+      "gitBlobSha": "e97842ca94de7f22df3f2f6a31c17a1290659241"
+    },
+    {
+      "path": "apps/api/__tests__/webhook-config.test.ts",
+      "gitBlobSha": "37c5e24c44e32cb2b942e2f0ddab8b1b96047b19"
+    },
+    {
+      "path": "apps/api/__tests__/webhook-security.test.ts",
+      "gitBlobSha": "4f63d3c43cb8f5f45d52f19a82a1a7b80552f422"
+    },
+    {
+      "path": "apps/api/app/apple-icon.png",
+      "gitBlobSha": "d185929cc52a90e65492c5e3ee719b48f1775c2a"
+    },
+    {
+      "path": "apps/api/app/cron/auth-recovery/route.ts",
+      "gitBlobSha": "cf1b25cba3702b9bc900f97c969bdaee84fae3ed"
+    },
+    {
+      "path": "apps/api/app/cron/inventory-import-retention/route.ts",
+      "gitBlobSha": "d01cfa53ce2cf58ab8c053fcf45a92080ba15e8b"
+    },
+    {
+      "path": "apps/api/app/cron/inventory-import-scans/route.ts",
+      "gitBlobSha": "27a68896f3088a9a8c4ef7a6857280fb230c4a1b"
+    },
+    {
+      "path": "apps/api/app/cron/inventory-imports/route.ts",
+      "gitBlobSha": "17faafda9c112a4c3f033a58de84ef5cf6b11d22"
+    },
+    {
+      "path": "apps/api/app/cron/inventory-reconciliation/route.ts",
+      "gitBlobSha": "36edf8804f5e6cf947bddac9d40bd1009e20f972"
+    },
+    {
+      "path": "apps/api/app/cron/keep-alive/route.ts",
+      "gitBlobSha": "db8a17d670305180f25c315c7916582539391b92"
+    },
+    {
+      "path": "apps/api/app/cron/kyb-retention/route.ts",
+      "gitBlobSha": "9b07a1163a008f813e6962831c88cadeef6bb550"
+    },
+    {
+      "path": "apps/api/app/cron/listing-media-cleanup/route.ts",
+      "gitBlobSha": "dcac545e37c873f4db69125b54a2fc9a838500a5"
+    },
+    {
+      "path": "apps/api/app/cron/verification-expiry/route.ts",
+      "gitBlobSha": "33abe3c95276edd7329383f64986551d74c2fd38"
+    },
+    {
+      "path": "apps/api/app/feed/dealer/[...slug]/route.ts",
+      "gitBlobSha": "923ef43e2a443a89ed52407afd525240745033d4"
+    },
+    {
+      "path": "apps/api/app/global-error.tsx",
+      "gitBlobSha": "20a3ca12155fb9e1658faff5602e973734df474c"
+    },
+    {
+      "path": "apps/api/app/health/route.ts",
+      "gitBlobSha": "d1b8f803c509318e3a994d3bf54f4df92d9ce11b"
+    },
+    {
+      "path": "apps/api/app/icon.png",
+      "gitBlobSha": "d79828515a04ae36e18cadffe4892aa5b5df2331"
+    },
+    {
+      "path": "apps/api/app/inventory/v1/sources/[sourceKey]/batches/route.ts",
+      "gitBlobSha": "07b262445ed9770b47a41757060b86300d0fbdc6"
+    },
+    {
+      "path": "apps/api/app/inventory/v1/sources/[sourceKey]/imports/route.ts",
+      "gitBlobSha": "694abbb70e33b9392c1a0fb77f06a968ee98aabc"
+    },
+    {
+      "path": "apps/api/app/layout.tsx",
+      "gitBlobSha": "baadd01cee3ab02371c224756e693338a48283ac"
+    },
+    {
+      "path": "apps/api/app/opengraph-image.png",
+      "gitBlobSha": "c79169f1eb2db58b5b35e1688f3149fba622d167"
+    },
+    {
+      "path": "apps/api/app/public/inventory/external/route.ts",
+      "gitBlobSha": "268f29cab57ef80afb68de8771e02c7884474963"
+    },
+    {
+      "path": "apps/api/app/ready/readiness.ts",
+      "gitBlobSha": "3804e25b8c3f4c91635d127cf5824c10bc6acaa1"
+    },
+    {
+      "path": "apps/api/app/ready/route.ts",
+      "gitBlobSha": "9cfca0c0ac0cee6a500a281a1a573b28b514d23b"
+    },
+    {
+      "path": "apps/api/app/webhooks/auth/route.ts",
+      "gitBlobSha": "6f438dfffd56c0951f35371d64ae5fd5d9600fc5"
+    },
+    {
+      "path": "apps/api/app/webhooks/inventory/scanner/route.ts",
+      "gitBlobSha": "b932b2ded9b328ac6edf225cd1d6d91542967613"
+    },
+    {
+      "path": "apps/api/app/webhooks/payments/route.ts",
+      "gitBlobSha": "8a56312e7ef0d7d6d88449c9f7dfabc0ac74c83c"
+    },
+    {
+      "path": "apps/api/app/webhooks/verification/provider/route.ts",
+      "gitBlobSha": "a771319feeb067cd6ee24d859085279b459d3509"
+    },
+    {
+      "path": "apps/api/app/webhooks/verification/scanner/route.ts",
+      "gitBlobSha": "0f51ac5a19b0148326ba01cd314f3e111c16985f"
+    },
+    {
+      "path": "apps/api/env.ts",
+      "gitBlobSha": "e8b01afe3ab95acf45822ce6007e04f607e0f715"
+    },
+    {
+      "path": "apps/api/instrumentation-client.ts",
+      "gitBlobSha": "722774d90424ac50a4bc18fa5561ea2faab3023f"
+    },
+    {
+      "path": "apps/api/instrumentation.ts",
+      "gitBlobSha": "e4bdd87f02d0ed529e78b2d6ef4212ee4735f8b0"
+    },
+    {
+      "path": "apps/api/lib/analytics.ts",
+      "gitBlobSha": "109c6570923c4536cc4ca7db78f629e610987d3a"
+    },
+    {
+      "path": "apps/api/lib/auth-recovery.ts",
+      "gitBlobSha": "c5dbd7ad979545f200e22b7d6c48b279b933cd89"
+    },
+    {
+      "path": "apps/api/lib/capabilities.ts",
+      "gitBlobSha": "f0203685188a6d2ec73c26f26ea86eda575189ea"
+    },
+    {
+      "path": "apps/api/lib/external-inventory-provider.ts",
+      "gitBlobSha": "96ef55ea98324c4a3fb8f51095b023c162d3b35b"
+    },
+    {
+      "path": "apps/api/lib/idempotent-webhook.ts",
+      "gitBlobSha": "23eda67c106892c0c10fd24c73557c2c2d70ead5"
+    },
+    {
+      "path": "apps/api/lib/inventory-csv.ts",
+      "gitBlobSha": "dd5283b9bc1382162d44f5ad434c0fa37e8eafe6"
+    },
+    {
+      "path": "apps/api/lib/inventory-http.ts",
+      "gitBlobSha": "a872fbb3793491b09b4dd13d5dab3f59228eae2e"
+    },
+    {
+      "path": "apps/api/lib/inventory-import-workers.ts",
+      "gitBlobSha": "ca60f953b7a8c37d5ea6bcd8aa6b9de3d4bda72f"
+    },
+    {
+      "path": "apps/api/lib/kyb-workers.ts",
+      "gitBlobSha": "1727baf60ffa36dbcc6ddde17fe48d6d93d6d8b8"
+    },
+    {
+      "path": "apps/api/lib/provider-adapters.ts",
+      "gitBlobSha": "845f91011be90d9a4cef3dc41ae6296fd8ad6db4"
+    },
+    {
+      "path": "apps/api/lib/service-auth.ts",
+      "gitBlobSha": "5c39dff312a073ea86a76c45de75afa196077616"
+    },
+    {
+      "path": "apps/api/lib/signed-callback.ts",
+      "gitBlobSha": "7e65d3cb999f65c66287e559d0effd5e4d360aca"
+    },
+    {
+      "path": "apps/api/lib/webhook-body.ts",
+      "gitBlobSha": "1936217155fecf3111caf24d919b3b8e9b18c957"
+    },
+    {
+      "path": "apps/api/next.config.ts",
+      "gitBlobSha": "193fa2564c65304982954b7a82e8c5b18bfd83f0"
+    },
+    {
+      "path": "apps/api/package.json",
+      "gitBlobSha": "94d88f75ab4f8a3016c8943fb159cf96313604d4"
+    },
+    {
+      "path": "apps/api/proxy.ts",
+      "gitBlobSha": "5f306a6a65548f19e475e812a11eb5075647e342"
+    },
+    {
+      "path": "apps/api/required-workers.mts",
+      "gitBlobSha": "bf0054a1fc58130171c5fab1e23e2f37554b39a7"
+    },
+    {
+      "path": "apps/api/sentry.edge.config.ts",
+      "gitBlobSha": "7ffd1e9f103f3df654e63ee6b1770d22c478f22b"
+    },
+    {
+      "path": "apps/api/sentry.server.config.ts",
+      "gitBlobSha": "14f2a78bb2c90f9fbd721d1adb7a41e28390de81"
+    },
+    {
+      "path": "apps/api/tsconfig.json",
+      "gitBlobSha": "f5a1e79be2ab0d281a8df9f47126e98c69ae3d62"
+    },
+    {
+      "path": "apps/api/turbo.json",
+      "gitBlobSha": "37e94075ec23b1b1a2fbd3d8a762131dce605f29"
+    },
+    {
+      "path": "apps/api/vercel.json",
+      "gitBlobSha": "0811ad160b6ffcc5ae5028eec7849593dfc53af6"
+    },
+    {
+      "path": "apps/api/vitest.config.mts",
+      "gitBlobSha": "0d4885853b3dd6dd2c02d0cb76e6d04ba926c04f"
+    },
+    {
+      "path": "apps/app/.env.example",
+      "gitBlobSha": "a1e01bb000f780ab68ed99193d5d06ae6446e400"
+    },
+    {
+      "path": "apps/app/.gitignore",
+      "gitBlobSha": "5dccd89bf15a004656952d80e810de845740776a"
+    },
+    {
+      "path": "apps/app/__tests__/admin-trust-actions.test.ts",
+      "gitBlobSha": "48e8642e39923deb519cdded945056dd32ef90a2"
+    },
+    {
+      "path": "apps/app/__tests__/admin-trust-authorization.test.ts",
+      "gitBlobSha": "fa1e38662fff7d385ee944084d6bd9429f422111"
+    },
+    {
+      "path": "apps/app/__tests__/admin-trust-pages.test.tsx",
+      "gitBlobSha": "435acc700adf0f178e7c4499ec843256a555f339"
+    },
+    {
+      "path": "apps/app/__tests__/auth-provider-fallback.test.tsx",
+      "gitBlobSha": "381a31b363da3ad18a5f2d0e99c924db75c119b0"
+    },
+    {
+      "path": "apps/app/__tests__/authenticated-account-boundary.test.tsx",
+      "gitBlobSha": "6d998863ad971a0560c86f555034788e75c598e4"
+    },
+    {
+      "path": "apps/app/__tests__/authenticated-heading-hierarchy.test.ts",
+      "gitBlobSha": "d29b988bfa7228590531dec6c5fdcf2e0ec26b9d"
+    },
+    {
+      "path": "apps/app/__tests__/authenticated-not-found.test.tsx",
+      "gitBlobSha": "e9d229c93aa8069b4a04fdf704d93f84e5643060"
+    },
+    {
+      "path": "apps/app/__tests__/authorization.test.ts",
+      "gitBlobSha": "e1994f4df138c633554c6632050fc89ed8898cb4"
+    },
+    {
+      "path": "apps/app/__tests__/buyer-data-bounds.test.ts",
+      "gitBlobSha": "337d278a06b5a6fc9a1dbe43a497a93324aa5cfb"
+    },
+    {
+      "path": "apps/app/__tests__/buyer-listing-card.test.tsx",
+      "gitBlobSha": "b931bcf50be88a14a68561e60a22827d285c1b54"
+    },
+    {
+      "path": "apps/app/__tests__/buyer-workspace.test.ts",
+      "gitBlobSha": "82a3534b4d31fa5f857b2f09d52f5a2635be2b65"
+    },
+    {
+      "path": "apps/app/__tests__/collaboration-auth.test.ts",
+      "gitBlobSha": "cbf62022ae2f984468380c94825ab071d55e55a1"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-commerce-capability.test.ts",
+      "gitBlobSha": "9c0e114442cf8109d0812e5c688232f0b908e321"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-import-workflow.test.ts",
+      "gitBlobSha": "be14049e0d0167d73d5469028099ac0a599d033c"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-inventory-actions.test.ts",
+      "gitBlobSha": "576c86741bfd55195759ed76416fad29e77897a4"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-inventory-list.test.tsx",
+      "gitBlobSha": "4b5e7601eb4cfb95d4e8c20115ad8e93ff564efc"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-lead-labels.test.ts",
+      "gitBlobSha": "106bc5dd7ec5bc4082c1501be4942632a408d535"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-listing-create-action.test.ts",
+      "gitBlobSha": "636089d8dee7cee4e97d56833b27fb2b4b2dc268"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-live-pages.test.tsx",
+      "gitBlobSha": "3e199bd249b5f627e159872144f4027e3f846e36"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-profile-actions.test.ts",
+      "gitBlobSha": "94814f86337fae52e536beee65d9c415007934a9"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-profile-claim-actions.test.ts",
+      "gitBlobSha": "ea5e701e55a676a859e86846245b91b2b27c3fb6"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-profile-image-fields.test.tsx",
+      "gitBlobSha": "2b2f85dc67b675fcc2c7b5ace331b93c2079b185"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-profile-media-route.test.ts",
+      "gitBlobSha": "011fb442ae5ffad18c7a91a8ff1fd53ae44ff598"
+    },
+    {
+      "path": "apps/app/__tests__/dealer-settings-actions.test.ts",
+      "gitBlobSha": "846431f60748919e7b025fa7aab328e19f5b4ad1"
+    },
+    {
+      "path": "apps/app/__tests__/env-schema.test.ts",
+      "gitBlobSha": "9808c2a77f46d93b807983302ee2e6eb7acda266"
+    },
+    {
+      "path": "apps/app/__tests__/importer-workspace.test.ts",
+      "gitBlobSha": "36c4babcf6c05287596cabfc42f62ddaa8cc4941"
+    },
+    {
+      "path": "apps/app/__tests__/indexing-boundary.test.ts",
+      "gitBlobSha": "c4d29c6c6cccc9c95c77884188736a0c48f53a55"
+    },
+    {
+      "path": "apps/app/__tests__/listing-actor-authorization.test.ts",
+      "gitBlobSha": "41fa0922714bb9ccb996ca6563144939cc863248"
+    },
+    {
+      "path": "apps/app/__tests__/listing-factory.test.ts",
+      "gitBlobSha": "d450f430580a6fcb4681ef7c886c19d69e3dc30d"
+    },
+    {
+      "path": "apps/app/__tests__/listing-form.test.tsx",
+      "gitBlobSha": "27746d6bfb30a899c05618d2169bdfd943d8fd92"
+    },
+    {
+      "path": "apps/app/__tests__/listing-media-auth-route.test.ts",
+      "gitBlobSha": "0716376c678304cc50cf9880e9e0d061328a12dc"
+    },
+    {
+      "path": "apps/app/__tests__/listing-return-context.test.ts",
+      "gitBlobSha": "4ea2924e57e00a344d8238b01f2b7bf52a459fb0"
+    },
+    {
+      "path": "apps/app/__tests__/marketplace-url.test.ts",
+      "gitBlobSha": "3b4672173a421b751edcf8e7cd274feaf0b306bd"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-admin-actions.test.ts",
+      "gitBlobSha": "4901bb7060c4cf1001fd43c25a85c393ba49bceb"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-admin-authorization.test.ts",
+      "gitBlobSha": "fbd82a2a5a9bdc16324b5fb00d2e8ed34af24979"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-listing-visibility.test.ts",
+      "gitBlobSha": "aed9d3bafaeb87af5b58809efaec518a3f3884c0"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-pagination.test.ts",
+      "gitBlobSha": "0afb33dc4121ca2e698b46e7696dda29b74f1657"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-report-actions.test.ts",
+      "gitBlobSha": "bd73bd76aef8ba5ada2765234cf207e23871fd9e"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-report-page.test.tsx",
+      "gitBlobSha": "a3ad79a52f5d084fcfa0d89a7a349810824a323f"
+    },
+    {
+      "path": "apps/app/__tests__/moderation-transition-controls.test.tsx",
+      "gitBlobSha": "90695a742ca53056f94adaaf96d25da39c75087f"
+    },
+    {
+      "path": "apps/app/__tests__/root-error-boundary.test.tsx",
+      "gitBlobSha": "ac9a40ec588f671f2a3edac64514c4a4253583d7"
+    },
+    {
+      "path": "apps/app/__tests__/search-ownership.test.tsx",
+      "gitBlobSha": "c5fa266da79d0e906e1b7d6a82484ae901d7dbca"
+    },
+    {
+      "path": "apps/app/__tests__/security-policy.test.ts",
+      "gitBlobSha": "a8223d51d8f2aa8c0f0de47faa1e591feec53556"
+    },
+    {
+      "path": "apps/app/__tests__/sell-start-actions.test.ts",
+      "gitBlobSha": "4fbb676bb9df616e3d920f5a8f8a6dcaa0125551"
+    },
+    {
+      "path": "apps/app/__tests__/seller-listing-actions.test.ts",
+      "gitBlobSha": "4abf92697e5a6e211fdde5f8ab7d75e78d21554e"
+    },
+    {
+      "path": "apps/app/__tests__/seller-listing-start-form.test.tsx",
+      "gitBlobSha": "1efdf7026296d426975b918329b6c756385daab8"
+    },
+    {
+      "path": "apps/app/__tests__/server-only-stub.ts",
+      "gitBlobSha": "cb0ff5c3b541f646105198ee23ac0fc3d805023e"
+    },
+    {
+      "path": "apps/app/__tests__/sign-in.test.tsx",
+      "gitBlobSha": "7f8b7c53b88d15f4d981385e71cf72a12859c9ce"
+    },
+    {
+      "path": "apps/app/__tests__/sign-up.test.tsx",
+      "gitBlobSha": "a9d7f8d972219962deb59a65db6f4bd4117a8307"
+    },
+    {
+      "path": "apps/app/__tests__/workspace-route-states.test.tsx",
+      "gitBlobSha": "bcccf47e5b9d652a23aff8a4a09631f15ba91b5b"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/account/page.tsx",
+      "gitBlobSha": "964bec708c2903fd0da241739d7979fb2dba7bc0"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/error.tsx",
+      "gitBlobSha": "019972d3692b4930d4657686cc830f0d4ce68682"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/layout.tsx",
+      "gitBlobSha": "a5c0488e9ecabc6223e1908a83fca6e169624fd4"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/loading.tsx",
+      "gitBlobSha": "001e37cae0fafc1c1abb030eb753ca675f1b6bf2"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/actions.ts",
+      "gitBlobSha": "4d34a99e57948d01f557faf237e0ff41ebd632be"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/authorization.ts",
+      "gitBlobSha": "0715722cb1aaba4a9a8a1ffcf37c1c92b802469b"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/moderation-listing-visibility.ts",
+      "gitBlobSha": "39b3427830bf422c65e8cfc2188270d595117f9c"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/moderation-pagination.ts",
+      "gitBlobSha": "adec57d6a3ec8ed683a0aa615927a5b51622aeed"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/moderation-transition-controls.tsx",
+      "gitBlobSha": "06e06a292f9a56ad6dd093553dc19535e5baac32"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/moderation-transition-options.ts",
+      "gitBlobSha": "6c15b37c9a4df1273095b5eb0f998cf817965c9b"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/moderation/page.tsx",
+      "gitBlobSha": "33b5814e33740da6766d7d1c5dc7408d1911c9e5"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/profile-claims/[claimId]/page.tsx",
+      "gitBlobSha": "3aa76d5f4c78f5ff2e44d101448cc74af64fc790"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/profile-claims/actions.ts",
+      "gitBlobSha": "aff7b01d40a412e72164352a7342e99fb071d437"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/profile-claims/authorization.ts",
+      "gitBlobSha": "50592227aa67262167520c8007c58fb5e3f6003d"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/profile-claims/page.tsx",
+      "gitBlobSha": "c5476ac6a09b7a82758d9934e29c49502eb4691a"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/trust/[caseId]/page.tsx",
+      "gitBlobSha": "04a0a81098fc3ce35844b5ad7e364f3f3b020abe"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/trust/actions.ts",
+      "gitBlobSha": "f96c94829e8768c4aaad3e218f60d8533cbc8fab"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/trust/authorization.ts",
+      "gitBlobSha": "655594becd6c9e46956bbf1bd5a6b0cd484afe78"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/admin/trust/page.tsx",
+      "gitBlobSha": "4352edec73bd212a9f881e69a68438023eeb3305"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/buyer-authorization.ts",
+      "gitBlobSha": "3cffb7552e04f61a2bd16161db5b1af91e4ec65a"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/buyer-data.ts",
+      "gitBlobSha": "1ae2f8b71e9773fef28143c950b3448ff8718818"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/components/buyer-listing-card.tsx",
+      "gitBlobSha": "3bd801284b5175209f7cd55c984a7c95fa597521"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/components/header.tsx",
+      "gitBlobSha": "8536bb239808893fc346526604552bdf42d9e7a5"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/components/search.tsx",
+      "gitBlobSha": "7396bf59fd8787c9aaa7354abae60bcbbedd109f"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/components/segment-error.tsx",
+      "gitBlobSha": "129254db8b00f22f507db5d393ab01bf051e78a4"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/components/segment-loading.tsx",
+      "gitBlobSha": "4c756de3d9647ff222db39a2763b13345d4e6efc"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/components/sidebar.tsx",
+      "gitBlobSha": "4ee3fd4163b6a4b51234333c8c8be9878dccae76"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/actor.ts",
+      "gitBlobSha": "9adfb1d63a3b379fa628e0db54aacc4005161404"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/analytics/page.tsx",
+      "gitBlobSha": "80a8f53b5324c1e535bbcbe9a1d0f5cf17e0a0b0"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/billing/page.tsx",
+      "gitBlobSha": "dd16dda2265fafb0cdeadbf4cb9024f050612d91"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/commerce-capability.ts",
+      "gitBlobSha": "d2928cec4bcfc76e147ed1ec5c2c8a7059bf2e34"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/entitlements/inventory-quota-alert.tsx",
+      "gitBlobSha": "67cc6ea1ff062b70e761ecb1d45103150b9dc9df"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/error.tsx",
+      "gitBlobSha": "061b4803686982d1fbb781a90959f606304304cd"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/actions.ts",
+      "gitBlobSha": "313cc4d35ec592fa1356176cd3e2419fc5a543a7"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/components/dealer-inventory-list.tsx",
+      "gitBlobSha": "defbe466329f6546def83af21626443d7898ef75"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/components/import-run-list.tsx",
+      "gitBlobSha": "29d034b14da83746c5e966dfe3bb950fe31dbe47"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/components/import-session-list.tsx",
+      "gitBlobSha": "756563fe036a4a69ee331c0dc6083bf0a7b74504"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/components/importer-page-header.tsx",
+      "gitBlobSha": "ad52220f2983d26cad9ef7d466b42146541f7434"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/components/importer-workspace-chrome.tsx",
+      "gitBlobSha": "d99a6cd8327fa8e5c569b4d8dd9c08fb35e43071"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/components/source-management-list.tsx",
+      "gitBlobSha": "ffb9114955f4d6deac27764c018301aeb6f2aac9"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/importer-data.ts",
+      "gitBlobSha": "b75d43d0b2f6e47b17daa3cf3d9763ecbcee3253"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/importer-view-state.ts",
+      "gitBlobSha": "2696d7101aec105cd496f49e3fedb35cffc00f2e"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/imports/[sessionId]/page.tsx",
+      "gitBlobSha": "42245e05f8e05eea44ca10bf7535dabef8642f2c"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/imports/new/page.tsx",
+      "gitBlobSha": "60a998e08bd36800d2e2c5fb2513b12ee5ceefde"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/new/actions.ts",
+      "gitBlobSha": "ca497bb9e6a0c8c88852600176aef9da8676acc7"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/new/page.tsx",
+      "gitBlobSha": "85fbab0805a05f3b6f1bbe6f5a4d2ee6994433b2"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/page.tsx",
+      "gitBlobSha": "728fb3b87729180ccebd8f3d1281f5ba31c1bde2"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/runs/page.tsx",
+      "gitBlobSha": "6564bc3d90974112248dc96cd29c767e7a99ca8a"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/inventory/sources/page.tsx",
+      "gitBlobSha": "c632a89d4dfa0c0849cbb29849229a7f116c003c"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/layout.tsx",
+      "gitBlobSha": "b29be4a385b212acd0e637d3a8f90ecd1a3c0f47"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/leads/dealer-lead-labels.ts",
+      "gitBlobSha": "e641cdbd906aacfd462e817c26bfbb3c0e132bd1"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/leads/page.tsx",
+      "gitBlobSha": "f27a60c9347ed19e0d5cfb0397e404e202065fe6"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/loading.tsx",
+      "gitBlobSha": "a8216e274ff0c6b050186e451ba6686c43410d71"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/profile/actions.ts",
+      "gitBlobSha": "4e03073ce19a12cb08bdde3b71389bb89b4484d0"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/profile/page.tsx",
+      "gitBlobSha": "dd260e8d097b7d253fe63e3f59d54083c99b1dd2"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/profile/preview/page.tsx",
+      "gitBlobSha": "a8099caa37f4c1225e76024d53aa3adfc07a1e3f"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/profile/profile-image-fields.tsx",
+      "gitBlobSha": "14e533de348895eb2e338d35a9c7a661e178069f"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/profile/public-profile-preview.tsx",
+      "gitBlobSha": "ab9614fce57a008de00a45fb6fbd4481c5c37669"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/promotions/checkout/page.tsx",
+      "gitBlobSha": "ce4df0d1931fff61cf1adee5e4eca59f700fc551"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/promotions/page.tsx",
+      "gitBlobSha": "f2d809455cc0891637ead8cdce646190709d6e02"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/promotions/promotion-presentation.ts",
+      "gitBlobSha": "de8147ad54e1b4558e31763d7c826155c2b8bc0e"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/provider-adapters.ts",
+      "gitBlobSha": "02876da5bf86ecb270a026352d3096bd634758c8"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/settings/actions.ts",
+      "gitBlobSha": "15e372dded31c0f5e7618654f0c8ad71e6345c38"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/dealer/settings/page.tsx",
+      "gitBlobSha": "a6f482af495e05fb564e263feaf029db9d2b0f71"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/error.tsx",
+      "gitBlobSha": "0085c6918dcb4caa16cde305091e6cb6b7f2d631"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/layout.tsx",
+      "gitBlobSha": "9bcd27d7736487ac0901604cc3783b7acfea8a66"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/loading.tsx",
+      "gitBlobSha": "50420737f0139e6233c970013acedb79cfb196f0"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/marketplace-url.ts",
+      "gitBlobSha": "f01b955aeedc07104a3aa2a0149ed7d6fe7b0a23"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/messages/actions.ts",
+      "gitBlobSha": "e791038c156e1aa97d5af653935cdb4df516b63e"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/messages/error.tsx",
+      "gitBlobSha": "df0fa4ea5c71a2fcfe272a51857cc30d9455166f"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/messages/loading.tsx",
+      "gitBlobSha": "7ce6ad9a6e44d75e7670b1e6405005d911598935"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/messages/page.tsx",
+      "gitBlobSha": "d2e29dadead34d8dc67a0dd54607c6408c634199"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/not-found.tsx",
+      "gitBlobSha": "84d6c0e4bd27fee681a89c9ab02edf3c7952186e"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/onboarding/dealer/claim/[slug]/actions.ts",
+      "gitBlobSha": "a7203d0dc1e8c7ec45cbed6aff8caa19fe3f19eb"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/onboarding/dealer/claim/[slug]/page.tsx",
+      "gitBlobSha": "9b0224f1dde66f5c5d6ab544d00c6311abc3dcf1"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/page.tsx",
+      "gitBlobSha": "f774667a20b4c1171754ffb7b74202672008d49b"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/reports/new/actions.ts",
+      "gitBlobSha": "cba2528029fa879653f616f77a9d42d25c57257e"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/reports/new/page.tsx",
+      "gitBlobSha": "194766f81b8801edaf32660eb07a41cab1df07b2"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/reports/new/report-options.ts",
+      "gitBlobSha": "20e25847a6e62f3deec87c21cafe44f48b76d267"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/saved/actions.ts",
+      "gitBlobSha": "6e17afdafc03a06250c6abb226f166ba7026e59d"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/saved/page.tsx",
+      "gitBlobSha": "770df7bb9a5f53c4bfe0c890074ba56ffdb5ac19"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/saved/searches/page.tsx",
+      "gitBlobSha": "dbb205c4a9a50995dcf7b1c5307fed0b6d1f230b"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/search/page.tsx",
+      "gitBlobSha": "cf24514f91e960c698b68290128d005654a1cac4"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/actions.ts",
+      "gitBlobSha": "8153294ffd49d17a08f3c46430d2ebd2a6624e50"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/actor.ts",
+      "gitBlobSha": "e5952c9ce1035b2011367c14c524636dd53c1946"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/components/listing-ai-suggestions.tsx",
+      "gitBlobSha": "bdec8bd228f351a75a4ff0ce72682f0f17a9d850"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/components/listing-form-summary.tsx",
+      "gitBlobSha": "438dbac51a6767a42471bcda7d73ebe173585eb7"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/components/listing-form.tsx",
+      "gitBlobSha": "ebec9f4a3ad30de1a7ca68dcbdd616c275f25f1d"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/components/media-uploader.tsx",
+      "gitBlobSha": "69e354574081643bb9804eb7747b05ccb8ac10b8"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/components/sell-funnel-steps.tsx",
+      "gitBlobSha": "1fa1a3123c9a9be84dc6e584e6f02c128c468fec"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/components/seller-listing-start-form.tsx",
+      "gitBlobSha": "efb88e5183a2f2a949ff2cb068f8e7005e7ac5b3"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/factory-actions.ts",
+      "gitBlobSha": "655e74c23b062134059f45edd167fff5febb9711"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/listing-return-context.ts",
+      "gitBlobSha": "ee83cb74ea76a519fa9c680ece2f352a04239c67"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/listings/[id]/edit/page.tsx",
+      "gitBlobSha": "29af677327c80385aa56c3dc8ed26366db1938b4"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/listings/page.tsx",
+      "gitBlobSha": "590a2d737d0385fc2581161153a7c244b850cb34"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/new/page.tsx",
+      "gitBlobSha": "713bbc42cd1428f36b1059dd5e4c414d23d737d8"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/start-actions.ts",
+      "gitBlobSha": "52af4695a6457992b9cd557fd84e2a26f87cb169"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/sell/start-contract.ts",
+      "gitBlobSha": "4063c2d88e95701a256dde78257fd7b15ecadeeb"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/webhooks/page.tsx",
+      "gitBlobSha": "655ff88e37d8a579aebcc1554ac52ddb913c4d2d"
+    },
+    {
+      "path": "apps/app/app/(authenticated)/workspace-capabilities.ts",
+      "gitBlobSha": "4bb430dca7216edacc14514648d0ef78b913e9e3"
+    },
+    {
+      "path": "apps/app/app/(unauthenticated)/auth-provider-loading.tsx",
+      "gitBlobSha": "1b8a5286f01dd981abb2f7b2893e752e41e235be"
+    },
+    {
+      "path": "apps/app/app/(unauthenticated)/error.tsx",
+      "gitBlobSha": "1f71dab525cb71dcbe23b6feaf976726873948bc"
+    },
+    {
+      "path": "apps/app/app/(unauthenticated)/layout.tsx",
+      "gitBlobSha": "e30d1893ccc1b4d01900b8576b65b07202d604c8"
+    },
+    {
+      "path": "apps/app/app/(unauthenticated)/loading.tsx",
+      "gitBlobSha": "a3cb498db32ec4d9163d97bb8ff5cfbe96020321"
+    },
+    {
+      "path": "apps/app/app/(unauthenticated)/sign-in/[[...sign-in]]/page.tsx",
+      "gitBlobSha": "71c53966a36183b7a8a9726463adb9276d6c5270"
+    },
+    {
+      "path": "apps/app/app/(unauthenticated)/sign-up/[[...sign-up]]/page.tsx",
+      "gitBlobSha": "a98a7ca53f460419873c20c162e23e7584512ddb"
+    },
+    {
+      "path": "apps/app/app/.well-known/vercel/flags/route.ts",
+      "gitBlobSha": "fc37fc3f0e3859d6952d361604dcae8c70740c66"
+    },
+    {
+      "path": "apps/app/app/api/collaboration/auth/route.ts",
+      "gitBlobSha": "02c0980df221cc893cddec6e8a0e3aeb08b3d09b"
+    },
+    {
+      "path": "apps/app/app/api/dealer-profile-media/upload/route.ts",
+      "gitBlobSha": "663d39b182f5c735281882a420231c2b23bbc6e4"
+    },
+    {
+      "path": "apps/app/app/api/listing-media/upload/route.ts",
+      "gitBlobSha": "5cafe4383eccefd2441c54fa13ad734149cda20d"
+    },
+    {
+      "path": "apps/app/app/apple-icon.png",
+      "gitBlobSha": "d185929cc52a90e65492c5e3ee719b48f1775c2a"
+    },
+    {
+      "path": "apps/app/app/error.tsx",
+      "gitBlobSha": "bd3c184a2671dcbb21435f30f02fb0a2fa990af7"
+    },
+    {
+      "path": "apps/app/app/global-error.tsx",
+      "gitBlobSha": "0a4aced2733299fab5f2ba60bf6884af498219c6"
+    },
+    {
+      "path": "apps/app/app/icon.png",
+      "gitBlobSha": "d79828515a04ae36e18cadffe4892aa5b5df2331"
+    },
+    {
+      "path": "apps/app/app/indexing-policy.ts",
+      "gitBlobSha": "f18be62254b2c438ac573ee58bf7453dc17b6737"
+    },
+    {
+      "path": "apps/app/app/layout.tsx",
+      "gitBlobSha": "5e4ca38158ba1a3b09c37c2ebced49cfa38661dd"
+    },
+    {
+      "path": "apps/app/app/opengraph-image.png",
+      "gitBlobSha": "c79169f1eb2db58b5b35e1688f3149fba622d167"
+    },
+    {
+      "path": "apps/app/app/robots.ts",
+      "gitBlobSha": "0ce499c5add22541f285ac4bd00f174f878566af"
+    },
+    {
+      "path": "apps/app/app/styles.css",
+      "gitBlobSha": "d071a7c5972f2f8dda0844951288ce57079d4931"
+    },
+    {
+      "path": "apps/app/env.ts",
+      "gitBlobSha": "e1b68ee439daebb489b09881c0a486efecb53d47"
+    },
+    {
+      "path": "apps/app/instrumentation-client.ts",
+      "gitBlobSha": "722774d90424ac50a4bc18fa5561ea2faab3023f"
+    },
+    {
+      "path": "apps/app/instrumentation.ts",
+      "gitBlobSha": "e4bdd87f02d0ed529e78b2d6ef4212ee4735f8b0"
+    },
+    {
+      "path": "apps/app/lib/bounded-json-body.ts",
+      "gitBlobSha": "0ad5b0ef9808ebdc979d9cdf8857ffe5d5c7d193"
+    },
+    {
+      "path": "apps/app/liveblocks.config.ts",
+      "gitBlobSha": "22c312a28b43c9fe4db4852be7532aae7ad4eb24"
+    },
+    {
+      "path": "apps/app/next.config.ts",
+      "gitBlobSha": "7141b5d1a45e1c5f422b8b5d06233d7fe4dcb1da"
+    },
+    {
+      "path": "apps/app/package.json",
+      "gitBlobSha": "7cff1836db0869d230a347c2aff1998a83db09b2"
+    },
+    {
+      "path": "apps/app/postcss.config.mjs",
+      "gitBlobSha": "8faf34e7ef65fdaeefcdadaf1a52873043f75bb8"
+    },
+    {
+      "path": "apps/app/proxy.ts",
+      "gitBlobSha": "5452a3ca80842086c303921e4a8052d3e1075e18"
+    },
+    {
+      "path": "apps/app/security-policy.ts",
+      "gitBlobSha": "d79f7e537c46f8650b5b1906777f548762f18200"
+    },
+    {
+      "path": "apps/app/sentry.edge.config.ts",
+      "gitBlobSha": "7ffd1e9f103f3df654e63ee6b1770d22c478f22b"
+    },
+    {
+      "path": "apps/app/sentry.server.config.ts",
+      "gitBlobSha": "14f2a78bb2c90f9fbd721d1adb7a41e28390de81"
+    },
+    {
+      "path": "apps/app/tsconfig.json",
+      "gitBlobSha": "d6241400449515123793f9d656b5771aee15a2e3"
+    },
+    {
+      "path": "apps/app/turbo.json",
+      "gitBlobSha": "f262411c11a76509b992d2cb0dd4c553528ae6ba"
+    },
+    {
+      "path": "apps/app/vercel.json",
+      "gitBlobSha": "a667db8cdaad0d862c4173ec447d8fbf9f64fcb1"
+    },
+    {
+      "path": "apps/app/vitest.config.mts",
+      "gitBlobSha": "0d4885853b3dd6dd2c02d0cb76e6d04ba926c04f"
+    },
+    {
+      "path": "apps/docs/api-reference/endpoint/create.mdx",
+      "gitBlobSha": "5689f1b659555c57cd7832b52c94acf4695bb180"
+    },
+    {
+      "path": "apps/docs/api-reference/endpoint/delete.mdx",
+      "gitBlobSha": "657dfc871c8195fca167dde0e5b6cb1af1f551cd"
+    },
+    {
+      "path": "apps/docs/api-reference/endpoint/get.mdx",
+      "gitBlobSha": "56aa09ec1f6ee49424c640574b948d37da653e85"
+    },
+    {
+      "path": "apps/docs/api-reference/introduction.mdx",
+      "gitBlobSha": "c835b78b549235aaae94fccc2f3a06db7ae74091"
+    },
+    {
+      "path": "apps/docs/api-reference/openapi.json",
+      "gitBlobSha": "b1509be045a024fb9de97cc24351137d11921f24"
+    },
+    {
+      "path": "apps/docs/development.mdx",
+      "gitBlobSha": "878300893ce8f46f216463f5710c010feaa67786"
+    },
+    {
+      "path": "apps/docs/essentials/code.mdx",
+      "gitBlobSha": "d2a462a7a286341c85fccb4760e72051f66b62b1"
+    },
+    {
+      "path": "apps/docs/essentials/images.mdx",
+      "gitBlobSha": "60ad42d38b8e30a2bcb615861c8111e94091dae1"
+    },
+    {
+      "path": "apps/docs/essentials/markdown.mdx",
+      "gitBlobSha": "c8ad9c1f3dd190f2760fa4db9e786dd6a6498753"
+    },
+    {
+      "path": "apps/docs/essentials/navigation.mdx",
+      "gitBlobSha": "ca44bb64524dea18f85883f51bbbf9064e0c4428"
+    },
+    {
+      "path": "apps/docs/essentials/reusable-snippets.mdx",
+      "gitBlobSha": "a0a55297ab56d27c02b6b2a961024d29f39228ef"
+    },
+    {
+      "path": "apps/docs/essentials/settings.mdx",
+      "gitBlobSha": "d9dd2d7e1d393333eea33d850a0331900c3939ce"
+    },
+    {
+      "path": "apps/docs/favicon.svg",
+      "gitBlobSha": "6a3233265c1f787e19c4adaab8554241b5526766"
+    },
+    {
+      "path": "apps/docs/images/checks-passed.png",
+      "gitBlobSha": "3303c773646ca12fb6852356663540e3ed048115"
+    },
+    {
+      "path": "apps/docs/images/hero-dark.svg",
+      "gitBlobSha": "c6a30e88ba7461b29ce28f9b43c2abfbbc94be87"
+    },
+    {
+      "path": "apps/docs/images/hero-light.svg",
+      "gitBlobSha": "297d68fb9bf31625beb18bf820e3760d6ea9c149"
+    },
+    {
+      "path": "apps/docs/introduction.mdx",
+      "gitBlobSha": "2589c0b937c6fccf7ae27bd74ac271b31ea03022"
+    },
+    {
+      "path": "apps/docs/logo/dark.svg",
+      "gitBlobSha": "a6283786c770ab533a828bfbf735151f1994d313"
+    },
+    {
+      "path": "apps/docs/logo/light.svg",
+      "gitBlobSha": "582b3b95f5d4ec32266a7300cbeb7183c97332c2"
+    },
+    {
+      "path": "apps/docs/mint.json",
+      "gitBlobSha": "f32f763714dbe7f52f3fc617e1d3dd6a0d18080e"
+    },
+    {
+      "path": "apps/docs/package.json",
+      "gitBlobSha": "8361a371066e156fbf180b2d1271246e341a9603"
+    },
+    {
+      "path": "apps/docs/quickstart.mdx",
+      "gitBlobSha": "d7f348678b20b49db584045d1b84a81a3bf58e7f"
+    },
+    {
+      "path": "apps/docs/snippets/snippet-intro.mdx",
+      "gitBlobSha": "c57e7c756477da11be3899f7eabc2ba4c85cf888"
+    },
+    {
+      "path": "apps/e2e/.gitignore",
+      "gitBlobSha": "e4de5c12da1feb290d370695a838dbf8344b5862"
+    },
+    {
+      "path": "apps/e2e/fixtures/authenticated-preview-contract.mts",
+      "gitBlobSha": "27a576db60dd631c365303f677cd847c71733e04"
+    },
+    {
+      "path": "apps/e2e/fixtures/authenticated-preview-data.mts",
+      "gitBlobSha": "cc8ab12f74208a18dca524b57c8d2e1cbba0e313"
+    },
+    {
+      "path": "apps/e2e/fixtures/authenticated-preview-journeys.mts",
+      "gitBlobSha": "edc2bdc29885e9ffcb722feb24cfe00265cf67bb"
+    },
+    {
+      "path": "apps/e2e/fixtures/authenticated-preview-vercel.mts",
+      "gitBlobSha": "9504ee4c8c613fc4421d81a17d89b83ca60da53f"
+    },
+    {
+      "path": "apps/e2e/fixtures/personas.ts",
+      "gitBlobSha": "642f798104b564dff30febf6a63f05caf772e7c0"
+    },
+    {
+      "path": "apps/e2e/fixtures/public-page-health.ts",
+      "gitBlobSha": "65a78f94f72eacf9a2492019c3d205d91a91cb8f"
+    },
+    {
+      "path": "apps/e2e/fixtures/urls.ts",
+      "gitBlobSha": "22a95059e2923c2c93c22ed7a7d12dfa9c10c2ca"
+    },
+    {
+      "path": "apps/e2e/package.json",
+      "gitBlobSha": "2d247aa4ace9c638b3a9e7b4929ed8f4a747c03c"
+    },
+    {
+      "path": "apps/e2e/playwright.config.ts",
+      "gitBlobSha": "ff08f033fc105f704b22e188d744dd9d080139c2"
+    },
+    {
+      "path": "apps/e2e/playwright.public.config.ts",
+      "gitBlobSha": "bb04f4294137c98b0e0c8e8f26890e05338f2067"
+    },
+    {
+      "path": "apps/e2e/playwright.release.config.ts",
+      "gitBlobSha": "3506005a7e9dd808eccc43cb9c03b7447c0827b7"
+    },
+    {
+      "path": "apps/e2e/run-public-gate.mjs",
+      "gitBlobSha": "209061a149468ddbf7003ba00049ba4cc6f442d1"
+    },
+    {
+      "path": "apps/e2e/run-public-web-server.mjs",
+      "gitBlobSha": "d238add93ac08ba24d06f208f828439af6157f90"
+    },
+    {
+      "path": "apps/e2e/specs/accessibility.spec.ts",
+      "gitBlobSha": "1f342a9d2da9eb87d0eb412de0e472c1d9ef05cd"
+    },
+    {
+      "path": "apps/e2e/specs/ai-sell-search.spec.ts",
+      "gitBlobSha": "48e99788baad745462bf969ae288226ce3184f49"
+    },
+    {
+      "path": "apps/e2e/specs/authenticated-preview.setup.ts",
+      "gitBlobSha": "4a72df229a69c86f0e709d4ba211017c2b28066b"
+    },
+    {
+      "path": "apps/e2e/specs/authenticated-preview.spec.ts",
+      "gitBlobSha": "b2a63e3999b941a19612de4c7825d125fd453a9a"
+    },
+    {
+      "path": "apps/e2e/specs/authorization.spec.ts",
+      "gitBlobSha": "2980eb670f78385c37d688639cdf9f37c7f3fc09"
+    },
+    {
+      "path": "apps/e2e/specs/critical-api.spec.ts",
+      "gitBlobSha": "48c29c2fb408a2bf832332e1e055942325fa2500"
+    },
+    {
+      "path": "apps/e2e/specs/day-night-client-identity.spec.ts",
+      "gitBlobSha": "0004ba0f53278c4c9342897e15acd0067d995acd"
+    },
+    {
+      "path": "apps/e2e/specs/day-night-import-selector.spec.ts",
+      "gitBlobSha": "003ba893f00ad7c5898dada81553aeec9e302376"
+    },
+    {
+      "path": "apps/e2e/specs/mobile-chrome.spec.ts",
+      "gitBlobSha": "3d0a784f8b3b3384413f7c961e6e62161b17d2d6"
+    },
+    {
+      "path": "apps/e2e/specs/mobile-keyboard.spec.ts",
+      "gitBlobSha": "7849ae1a4bea34306507c9b9ef0e8d37ff27595c"
+    },
+    {
+      "path": "apps/e2e/specs/mobile-service-navigation.spec.ts",
+      "gitBlobSha": "8770b7d0690325816158cd66d4f95b22fde172f7"
+    },
+    {
+      "path": "apps/e2e/specs/performance.spec.ts",
+      "gitBlobSha": "2f97d9cc0ddf591f9281ded68cd609f40b52215f"
+    },
+    {
+      "path": "apps/e2e/specs/personas.spec.ts",
+      "gitBlobSha": "fd88cd09268bec9526fc7e511a6594feec1f17ad"
+    },
+    {
+      "path": "apps/e2e/specs/public-consent-i18n.spec.ts",
+      "gitBlobSha": "959e03022a5af5387ab92186710391e735d738de"
+    },
+    {
+      "path": "apps/e2e/specs/public-marketplace.spec.ts",
+      "gitBlobSha": "c4c2b5b8d555d594f62b086b2a9124af0cd18ab6"
+    },
+    {
+      "path": "apps/e2e/specs/public-shell.spec.ts",
+      "gitBlobSha": "06696c8a5917644ca20e5c567f9ebc6d7776a5e6"
+    },
+    {
+      "path": "apps/e2e/specs/public-unavailable.spec.ts",
+      "gitBlobSha": "27c8fefab65eb70726a70090dbab4c2710bdbbc8"
+    },
+    {
+      "path": "apps/e2e/specs/seo.spec.ts",
+      "gitBlobSha": "e629ee9dacf20280199065b1bf079194d4adf8ad"
+    },
+    {
+      "path": "apps/e2e/tsconfig.json",
+      "gitBlobSha": "d21f49c5dd0262c360d4ede1edd7f16372920a86"
+    },
+    {
+      "path": "apps/e2e/turbo.json",
+      "gitBlobSha": "df8027b9d62e8a1aa97584b494de645590586d70"
+    },
+    {
+      "path": "apps/email/package.json",
+      "gitBlobSha": "543901eb10cf67a02258b1921e157c5774a96e65"
+    },
+    {
+      "path": "apps/email/tsconfig.json",
+      "gitBlobSha": "9352a57dcf60769bdb7fdc08cc96f829691c4694"
+    },
+    {
+      "path": "apps/storybook/.storybook/main.ts",
+      "gitBlobSha": "42752cc5ffa861d0ee50e5b80ea85b7f15e0ffb7"
+    },
+    {
+      "path": "apps/storybook/.storybook/preview-head.html",
+      "gitBlobSha": "f2c699cfb067eb38a2571316b43dd6ba6dfbdb12"
+    },
+    {
+      "path": "apps/storybook/.storybook/preview.tsx",
+      "gitBlobSha": "8e13bc993f6b7f5f3f563f9cdba5778c77150134"
+    },
+    {
+      "path": "apps/storybook/README.md",
+      "gitBlobSha": "5292c5262aef4037e67e2c39babb7b37e116385e"
+    },
+    {
+      "path": "apps/storybook/next.config.ts",
+      "gitBlobSha": "2f6491cfba10ee06776b2acad06b2a5e440360b1"
+    },
+    {
+      "path": "apps/storybook/package.json",
+      "gitBlobSha": "585201eb3ce77028cefa57b18f1950655afd7ff4"
+    },
+    {
+      "path": "apps/storybook/postcss.config.mjs",
+      "gitBlobSha": "1a69fd2a450afc3bf47e08b22c149190df0ffdb4"
+    },
+    {
+      "path": "apps/storybook/public/favicon.ico",
+      "gitBlobSha": "718d6fea4835ec2d246af9800eddb7ffb276240c"
+    },
+    {
+      "path": "apps/storybook/stories/accordion.stories.tsx",
+      "gitBlobSha": "5059ef475659d894a9bc22d21d1205b6979f7535"
+    },
+    {
+      "path": "apps/storybook/stories/alert-dialog.stories.tsx",
+      "gitBlobSha": "8a8a777f3de016d4577d839a2bf3c94722cab1f2"
+    },
+    {
+      "path": "apps/storybook/stories/alert.stories.tsx",
+      "gitBlobSha": "c0a924d28095284e4148c0431cf2853e3d13d7cc"
+    },
+    {
+      "path": "apps/storybook/stories/aspect-ratio.stories.tsx",
+      "gitBlobSha": "cde297e5e13e40e9cf6fd1a628b93350b8fee06d"
+    },
+    {
+      "path": "apps/storybook/stories/automarket-marketplace.stories.tsx",
+      "gitBlobSha": "92094686606559d306f422ead2bf2a94c2339a55"
+    },
+    {
+      "path": "apps/storybook/stories/avatar.stories.tsx",
+      "gitBlobSha": "59ebf7b91aa08bb91e3bd25f0f23251caa12b8f4"
+    },
+    {
+      "path": "apps/storybook/stories/badge.stories.tsx",
+      "gitBlobSha": "40c6dda1973b6c5f60ce515c229f6b407aa5af05"
+    },
+    {
+      "path": "apps/storybook/stories/breadcrumb.stories.tsx",
+      "gitBlobSha": "e9982af318fc20254390a02cb08bc68e1d6c82fe"
+    },
+    {
+      "path": "apps/storybook/stories/button.stories.tsx",
+      "gitBlobSha": "4281633af197a2d4ad72c88416d32f30a0fac1ca"
+    },
+    {
+      "path": "apps/storybook/stories/calendar.stories.tsx",
+      "gitBlobSha": "95b146dfeaea167eadc08fef46e944b3012176c4"
+    },
+    {
+      "path": "apps/storybook/stories/card.stories.tsx",
+      "gitBlobSha": "0d2dda12e147425eb83a55b1eb663f46f1491824"
+    },
+    {
+      "path": "apps/storybook/stories/carousel.stories.tsx",
+      "gitBlobSha": "b1eacff9f80c5b6d8d6c7819222108870c134d55"
+    },
+    {
+      "path": "apps/storybook/stories/chart.stories.tsx",
+      "gitBlobSha": "31551103108761f2b515612631af4c9870e61c2c"
+    },
+    {
+      "path": "apps/storybook/stories/checkbox.stories.tsx",
+      "gitBlobSha": "9176775b2f61bf8fca79d392ac0cd4f92a1f3f44"
+    },
+    {
+      "path": "apps/storybook/stories/collapsible.stories.tsx",
+      "gitBlobSha": "52d5d132074acb3d22cca3512f141cff55b7135d"
+    },
+    {
+      "path": "apps/storybook/stories/command.stories.tsx",
+      "gitBlobSha": "688889e6a3d836f61caad5ca67ad9392ec93fd63"
+    },
+    {
+      "path": "apps/storybook/stories/context-menu.stories.tsx",
+      "gitBlobSha": "9ac8acf17810fc4d2172ce05545ff7719a158bc1"
+    },
+    {
+      "path": "apps/storybook/stories/design-foundation.stories.tsx",
+      "gitBlobSha": "216fe198dbeb8487030bcb63c8d03d47216cac66"
+    },
+    {
+      "path": "apps/storybook/stories/dialog.stories.tsx",
+      "gitBlobSha": "67545794d9429014a41c62dc51617fc4e633da9e"
+    },
+    {
+      "path": "apps/storybook/stories/drawer.stories.tsx",
+      "gitBlobSha": "d7d89eeac2141d3e0da380cd41fde0acee198405"
+    },
+    {
+      "path": "apps/storybook/stories/dropdown-menu.stories.tsx",
+      "gitBlobSha": "e1789119fe16a562fd6031f49affaf446bbf81e9"
+    },
+    {
+      "path": "apps/storybook/stories/form.stories.tsx",
+      "gitBlobSha": "31f42e64ebde05ae56d0090fbc921abc2f21d6d7"
+    },
+    {
+      "path": "apps/storybook/stories/hover-card.stories.tsx",
+      "gitBlobSha": "1fa7343c4800202a7e5fd8fc9f0b6afcd45ffecb"
+    },
+    {
+      "path": "apps/storybook/stories/input-otp.stories.tsx",
+      "gitBlobSha": "8b723f992f0e6d27bcde9622e76f30c8692747c0"
+    },
+    {
+      "path": "apps/storybook/stories/input.stories.tsx",
+      "gitBlobSha": "7f9c1da0006e8f2b055f46e10dc5f88d6a546545"
+    },
+    {
+      "path": "apps/storybook/stories/label.stories.tsx",
+      "gitBlobSha": "876c8c5bf0c58a89564af84a3c67c5f58e8d2dac"
+    },
+    {
+      "path": "apps/storybook/stories/menubar.stories.tsx",
+      "gitBlobSha": "de18c97fc5785f6facb2ff6e28203cdb89d13cbb"
+    },
+    {
+      "path": "apps/storybook/stories/navigation-menu.stories.tsx",
+      "gitBlobSha": "8c9e4b2c8dd0a68b2e42b2c3d497568912d4b47e"
+    },
+    {
+      "path": "apps/storybook/stories/pagination.stories.tsx",
+      "gitBlobSha": "4a64c16487a646120c0aee0d2e92706685a0b7ba"
+    },
+    {
+      "path": "apps/storybook/stories/popover.stories.tsx",
+      "gitBlobSha": "0b17976671fae80afd279c3f778fc1152e40bf40"
+    },
+    {
+      "path": "apps/storybook/stories/progress.stories.tsx",
+      "gitBlobSha": "3dfda3dab571889224bebb595a9e01796db38406"
+    },
+    {
+      "path": "apps/storybook/stories/radio-group.stories.tsx",
+      "gitBlobSha": "12a1a8e422bcf515d0e0312d1b7912d581f7fbf1"
+    },
+    {
+      "path": "apps/storybook/stories/resizable.stories.tsx",
+      "gitBlobSha": "8fd22a075ea650769bf4f2d787e8bf7c6b28e79c"
+    },
+    {
+      "path": "apps/storybook/stories/scroll-area.stories.tsx",
+      "gitBlobSha": "9912d47339bb7f0293887af1bb7211cb0612b4de"
+    },
+    {
+      "path": "apps/storybook/stories/select.stories.tsx",
+      "gitBlobSha": "c13f9cf1340c70b4da86d1baf4b80b8ff3a5bf74"
+    },
+    {
+      "path": "apps/storybook/stories/separator.stories.tsx",
+      "gitBlobSha": "9575860ccf24e92f0d4632006b5b8373c3c6fe74"
+    },
+    {
+      "path": "apps/storybook/stories/sheet.stories.tsx",
+      "gitBlobSha": "14c0f16ed6c6d15551069e9acdfdf016c2b605ef"
+    },
+    {
+      "path": "apps/storybook/stories/sidebar.stories.tsx",
+      "gitBlobSha": "56ec778b48b6ffda4190afdea7d3ff16bbd6e2c6"
+    },
+    {
+      "path": "apps/storybook/stories/skeleton.stories.tsx",
+      "gitBlobSha": "d3cfdc796e19372e0b429b6302b91d21a5650338"
+    },
+    {
+      "path": "apps/storybook/stories/slider.stories.tsx",
+      "gitBlobSha": "9f49a218785029513b0cdf75dc7a37afe085b6a3"
+    },
+    {
+      "path": "apps/storybook/stories/sonner.stories.tsx",
+      "gitBlobSha": "c9fbd5ef5e723cf8f8fb3323ad72eece278b2fbc"
+    },
+    {
+      "path": "apps/storybook/stories/switch.stories.tsx",
+      "gitBlobSha": "687ccec2a138cb5cb1d05171a05e14bca0ba3672"
+    },
+    {
+      "path": "apps/storybook/stories/table.stories.tsx",
+      "gitBlobSha": "525b04c6594c95320eb156b7cef97b3201f1b930"
+    },
+    {
+      "path": "apps/storybook/stories/tabs.stories.tsx",
+      "gitBlobSha": "cbeccb0028077a2cbdaebf36be2b65a66665964a"
+    },
+    {
+      "path": "apps/storybook/stories/textarea.stories.tsx",
+      "gitBlobSha": "dd3b01a421fc2471cdf957ff68be274f660d2546"
+    },
+    {
+      "path": "apps/storybook/stories/toggle-group.stories.tsx",
+      "gitBlobSha": "02290886f6d23ca0b86833782a8961baef4cf69a"
+    },
+    {
+      "path": "apps/storybook/stories/toggle.stories.tsx",
+      "gitBlobSha": "a3981097e4ce4adfabb6c5b3664245ddd3721a50"
+    },
+    {
+      "path": "apps/storybook/stories/tooltip.stories.tsx",
+      "gitBlobSha": "89fda8585355606a127e48af27a2b6fa5ef228eb"
+    },
+    {
+      "path": "apps/storybook/tsconfig.json",
+      "gitBlobSha": "4011f32e08fb0af65143813e86e2839eba95f1b9"
+    },
+    {
+      "path": "apps/studio/.env.example",
+      "gitBlobSha": "5ba850682a179a407c08aeb3e98d0ef41885ccb3"
+    },
+    {
+      "path": "apps/studio/README.md",
+      "gitBlobSha": "a028dc4dcf9c287b22e6effac24a1e4b8a358952"
+    },
+    {
+      "path": "apps/studio/package.json",
+      "gitBlobSha": "3853a10486470d4e404e3cbf94d475a713a66606"
+    },
+    {
+      "path": "apps/studio/studio.mjs",
+      "gitBlobSha": "6501844002b2ba5591f54962e0f13b6cbbf3d3e9"
+    },
+    {
+      "path": "apps/studio/studio.test.mjs",
+      "gitBlobSha": "6f65ff2c2d4a51f08b6844d2e9667571f6da62fe"
+    },
+    {
+      "path": "apps/studio/tsconfig.json",
+      "gitBlobSha": "9352a57dcf60769bdb7fdc08cc96f829691c4694"
+    },
+    {
+      "path": "apps/web/.env.example",
+      "gitBlobSha": "4b1a922f966b03f80548dd02eb51d13c4e5a6676"
+    },
+    {
+      "path": "apps/web/.gitignore",
+      "gitBlobSha": "4a3a98ad007cef5b7ca8ad7e71970008c9884982"
+    },
+    {
+      "path": "apps/web/app/-/apple-icon.png",
+      "gitBlobSha": "d185929cc52a90e65492c5e3ee719b48f1775c2a"
+    },
+    {
+      "path": "apps/web/app/-/icon.png",
+      "gitBlobSha": "d79828515a04ae36e18cadffe4892aa5b5df2331"
+    },
+    {
+      "path": "apps/web/app/-/opengraph-image.png",
+      "gitBlobSha": "c79169f1eb2db58b5b35e1688f3149fba622d167"
+    },
+    {
+      "path": "apps/web/app/.well-known/vercel/flags/route.ts",
+      "gitBlobSha": "fc37fc3f0e3859d6952d361604dcae8c70740c66"
+    },
+    {
+      "path": "apps/web/app/[locale]/(home)/page.tsx",
+      "gitBlobSha": "345cfe634d4a0fd532d9e28875267ff04d1a546b"
+    },
+    {
+      "path": "apps/web/app/[locale]/[...notFound]/page.tsx",
+      "gitBlobSha": "b9bb6f88f145d8d0b60808ae472b1b28ce5f97b7"
+    },
+    {
+      "path": "apps/web/app/[locale]/blog/page.tsx",
+      "gitBlobSha": "e485b9d724929aa75b44e837d3ced1ec69c213ac"
+    },
+    {
+      "path": "apps/web/app/[locale]/cars/[make]/[model]/page.tsx",
+      "gitBlobSha": "0d0049c6635efca6e0863346c53ad423732eefb2"
+    },
+    {
+      "path": "apps/web/app/[locale]/cars/[make]/page.tsx",
+      "gitBlobSha": "d540f5d5b553aad4da98318450e3571073162193"
+    },
+    {
+      "path": "apps/web/app/[locale]/cars/loading.tsx",
+      "gitBlobSha": "111b7ac8dae9b696b2d69f07a83b13d124916533"
+    },
+    {
+      "path": "apps/web/app/[locale]/cars/page.tsx",
+      "gitBlobSha": "ccbdb2648d0ea0bc2ec939e5311225867c38f7f1"
+    },
+    {
+      "path": "apps/web/app/[locale]/collections/chinese-ev-hybrids/page.tsx",
+      "gitBlobSha": "7957d341f520353a0c06ba99bbc4a1cbe286cddd"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/assisted-search-panel.tsx",
+      "gitBlobSha": "f7ec11e2a8d55970aaeff7e33c1b0a2697c2e376"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/category-marketplace-page.tsx",
+      "gitBlobSha": "a09def56e5001cbd06db227b5e36dcf1f7dd02af"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/footer.tsx",
+      "gitBlobSha": "b31076a07473787b5557e134c1207a1c2cc8630d"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/inventory-states.tsx",
+      "gitBlobSha": "ac6ea0334eb3c0ff0e5af52acab5007d2dad69a8"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/make-model-marketplace-page.tsx",
+      "gitBlobSha": "498dc6b32e3fc29ab8f5549caac2dced5501d110"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-about-contact.tsx",
+      "gitBlobSha": "ae942e5c727650414dc73e86349342dc49eba3c4"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-dealer-quick-actions.tsx",
+      "gitBlobSha": "8957c985bf182c93cc98ad815470c01e4f0c1abb"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx",
+      "gitBlobSha": "37cd4a27fed0fbba497c9727966948cf17bb547f"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-financing-interceptor.tsx",
+      "gitBlobSha": "e12982e86d3948aa892b8b687bf33a7aa873b2f0"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-financing-policy.test.ts",
+      "gitBlobSha": "e72151f72fcc6ef279975be7398f320048d79960"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-financing-policy.ts",
+      "gitBlobSha": "c0c4e8b18005d53165a7a4f2ae72ce1118c656ac"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-form-draft.ts",
+      "gitBlobSha": "5a52ec06e6d77d97cc87a90c9d40ebd7a13e0a3c"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-category-field.tsx",
+      "gitBlobSha": "5c6562ac9ee2cc194806bb72ff4b2677265405c2"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-how-it-works-drawer.tsx",
+      "gitBlobSha": "0b6d712c507a564b3acb7511fc01dc19009400b1"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx",
+      "gitBlobSha": "bce2a0fa748971ea403a0f6d8b8b672b8e06a871"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx",
+      "gitBlobSha": "0c798ba4c546ddb2327425182aa94d14fa8db482"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx",
+      "gitBlobSha": "e5598fe6b6a7362d3ddd2ebf20e049fe402c428f"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-policy.test.ts",
+      "gitBlobSha": "377a9dcd297597287f6bef44d62368914c3a6f76"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts",
+      "gitBlobSha": "19d19e68970f7ca2abb5e171cb0ae72c04e5134b"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-service-help.tsx",
+      "gitBlobSha": "97814dcd7061b1c1990fa281101aba4656a7d4c2"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx",
+      "gitBlobSha": "23d989a46b547fe343d1db692ea6ebff903ab2b9"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx",
+      "gitBlobSha": "6bebeee31b4b60e110195187e71362092391d599"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-policy.test.ts",
+      "gitBlobSha": "057ebaec3bfed539b0ff8da719d74e06ebd55bdc"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-policy.ts",
+      "gitBlobSha": "ec256e45771a7917963897a5bb48c8a78ae091d5"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/mobile-visible-viewport.tsx",
+      "gitBlobSha": "5c4c46c3860aff12d26af1bf072598828862cb7b"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/public-inventory-list.tsx",
+      "gitBlobSha": "36445a82ab0fbbe92b05786b278879d8f38734a1"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/public-marketplace-frame.tsx",
+      "gitBlobSha": "349a995a6a3e20a2877e9438c939ce0b4a01a6bd"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/public-route-loading.tsx",
+      "gitBlobSha": "e389a808654ddb126623ee18859fcd17f8ecc330"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/support-route-image.tsx",
+      "gitBlobSha": "fc81e125b7c5ae8bcfcc81f843e343cb7c24e5a4"
+    },
+    {
+      "path": "apps/web/app/[locale]/contact/actions/contact.tsx",
+      "gitBlobSha": "ca19b80f347703c2da008644a3cbe7c6a06f0e78"
+    },
+    {
+      "path": "apps/web/app/[locale]/contact/page.tsx",
+      "gitBlobSha": "789dc2863b61d2d77eadb99801e352f507143ae0"
+    },
+    {
+      "path": "apps/web/app/[locale]/desktop-header.css",
+      "gitBlobSha": "980cdd4064d955aa571db6831176de03bebfd5b2"
+    },
+    {
+      "path": "apps/web/app/[locale]/error.tsx",
+      "gitBlobSha": "257d81077401639187ee9c8b1a8babf5a769ab0f"
+    },
+    {
+      "path": "apps/web/app/[locale]/guides/[slug]/page.tsx",
+      "gitBlobSha": "59f72ae850403ab2a0d673b9895f7ab6af81ff6a"
+    },
+    {
+      "path": "apps/web/app/[locale]/guides/page.tsx",
+      "gitBlobSha": "a9a0a5f3bd8971ada917cbd0d74040f84bb75f1d"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/china/page.tsx",
+      "gitBlobSha": "55aabb5d755925078582d998205ca198f7184ebf"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/blank-import-request-link.tsx",
+      "gitBlobSha": "d3d3f0484aa435469716624fc9364a93ea041603"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/external-import-listings.tsx",
+      "gitBlobSha": "017285f78a72c4f7d94202186671383b0835178f"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/import-origin-field.tsx",
+      "gitBlobSha": "b1c8b2f11c3497e407ed347f50297a6c12e66163"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/import-request-fields.tsx",
+      "gitBlobSha": "c2d38ad48f26c0e8df64732c6ec97bee24c707e7"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/import-request-form.tsx",
+      "gitBlobSha": "372e8c186d8515d43c4db21800fb22b85cb821ad"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/import-request-policy.ts",
+      "gitBlobSha": "8b14f4d557a4c4bf1e02bb551005041eb86a37f6"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx",
+      "gitBlobSha": "b0519eb0ed10d4be12509e5a9a1ee792c276cfed"
+    },
+    {
+      "path": "apps/web/app/[locale]/imports/page.tsx",
+      "gitBlobSha": "b8fde5bef1f53c7d1abea23eb6bb2b08f3fc6e6a"
+    },
+    {
+      "path": "apps/web/app/[locale]/layout.tsx",
+      "gitBlobSha": "a37451bbc34ef1e3b8257fcc9a8ad17966763fd7"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-car-selector.tsx",
+      "gitBlobSha": "80f52cf596ab18a071c851745f24dcb37e2cd0d7"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-desktop-controls.tsx",
+      "gitBlobSha": "009bae8cc6b9f7fb1fcd2f85350a3f1e372d6327"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-finance-policy.test.ts",
+      "gitBlobSha": "13c5abb69db8e3c177d07832f6453728c07c9293"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-finance-policy.ts",
+      "gitBlobSha": "e8d7d13d844d7027d7db4c22df1592ee3cafe542"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-information-drawer.tsx",
+      "gitBlobSha": "13bd73c31da794de72a519aac44a89254333eefc"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-mobile-preferences.tsx",
+      "gitBlobSha": "c97776da1fcd9503466df3f923a9be8a4337b100"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-mobile-selection.tsx",
+      "gitBlobSha": "80cbe6db00a1abf2dd675573d8956aeab5589c40"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-selected-vehicle.tsx",
+      "gitBlobSha": "d582a56eb8ece4450dcb431344fdc5760744a174"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/lease-vehicle-selector.tsx",
+      "gitBlobSha": "e0b4754354f01a03f8e2b0d6a3cab1af2c39563e"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/loading.tsx",
+      "gitBlobSha": "951b88044c956b248a3064a45bc0c55b04f8fe90"
+    },
+    {
+      "path": "apps/web/app/[locale]/lease/page.tsx",
+      "gitBlobSha": "b8a338fb6c35a5f427e0b393ad3aab7578136671"
+    },
+    {
+      "path": "apps/web/app/[locale]/legal/[slug]/page.tsx",
+      "gitBlobSha": "d9cbb1c9bb590c074f1971e10dbdbe51cb057f2c"
+    },
+    {
+      "path": "apps/web/app/[locale]/legal/layout.tsx",
+      "gitBlobSha": "a8f948f64237d639d95764e0af7d3a38e5cc00c9"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/contact/actions.ts",
+      "gitBlobSha": "a7f08b5d6bcc8dfcfc12d22ff578d769a917372c"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/contact/contact-honeypot.test.ts",
+      "gitBlobSha": "516c48e1f9abd365879a82b596389c927f599c43"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/contact/contact-honeypot.ts",
+      "gitBlobSha": "e1f075709fd00a4884a7f6f9c484845f0f905558"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/contact/contact-submit-button.tsx",
+      "gitBlobSha": "b09f6fee34e76c6b1825ed3cee057cfa968c33fc"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/contact/loading.tsx",
+      "gitBlobSha": "6b60c5f5399639857f3794c98301952f2653a1c5"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/contact/page.tsx",
+      "gitBlobSha": "3a7ec25a7e4a18612c7556b6aac98af8ae8368e1"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/loading.tsx",
+      "gitBlobSha": "d6e76221c0dc86d98551b94e85381aaea5531ba7"
+    },
+    {
+      "path": "apps/web/app/[locale]/listing/[slug]/page.tsx",
+      "gitBlobSha": "5ef96058a593ac21e0d318143f5f1c10a0722d0f"
+    },
+    {
+      "path": "apps/web/app/[locale]/mobile-final-polish.css",
+      "gitBlobSha": "fe9bc773957c64b7e4080041afe690916aab3764"
+    },
+    {
+      "path": "apps/web/app/[locale]/motorbikes/loading.tsx",
+      "gitBlobSha": "714e10705782b332d7de42a0923ab97c4dd6a5b8"
+    },
+    {
+      "path": "apps/web/app/[locale]/motorbikes/page.tsx",
+      "gitBlobSha": "586ed9c0bf0eb4873c1c02b8a7468bb9e6b45979"
+    },
+    {
+      "path": "apps/web/app/[locale]/not-found.tsx",
+      "gitBlobSha": "701200ba695d5c602e2b7f4993592a753ae52fbe"
+    },
+    {
+      "path": "apps/web/app/[locale]/sell/page.tsx",
+      "gitBlobSha": "b5c5640692fe6925bd63485578f63ff4786d8c53"
+    },
+    {
+      "path": "apps/web/app/[locale]/styles.css",
+      "gitBlobSha": "6025799c69d4e8c0e140c0a42aed929a5d6f8d0e"
+    },
+    {
+      "path": "apps/web/app/[locale]/trucks/loading.tsx",
+      "gitBlobSha": "3e03bccf04d8d6428a1d8fd1ff9e5da5ce7ade3e"
+    },
+    {
+      "path": "apps/web/app/[locale]/trucks/page.tsx",
+      "gitBlobSha": "49e02664aca121ceed17ffbcb44bd0f9560ccbc6"
+    },
+    {
+      "path": "apps/web/app/[locale]/vans/loading.tsx",
+      "gitBlobSha": "47204154527dcfe472d33eefdf29797701bc8732"
+    },
+    {
+      "path": "apps/web/app/[locale]/vans/page.tsx",
+      "gitBlobSha": "c00065dc93cd402ea145ba4e6770156735302775"
+    },
+    {
+      "path": "apps/web/app/api/ai/search/route.test.ts",
+      "gitBlobSha": "6cbeb4b4e5bfa645410e606e142ad74e6558065b"
+    },
+    {
+      "path": "apps/web/app/api/ai/search/route.ts",
+      "gitBlobSha": "8043cbfd1a1b9f0fcc8b51c23854567a718720f8"
+    },
+    {
+      "path": "apps/web/app/global-error.tsx",
+      "gitBlobSha": "7423de7012a53931491e9246300d4d90e8e0940a"
+    },
+    {
+      "path": "apps/web/app/not-found.tsx",
+      "gitBlobSha": "a8b28abdf6677679a90b519b44634dbb82d16822"
+    },
+    {
+      "path": "apps/web/app/robots.ts",
+      "gitBlobSha": "2adfc13f46067ddf00ac6609ffb38ce73e0517c5"
+    },
+    {
+      "path": "apps/web/app/sitemap.test.ts",
+      "gitBlobSha": "e84844e84354ef8bac01c2d735213483b6558812"
+    },
+    {
+      "path": "apps/web/app/sitemap.ts",
+      "gitBlobSha": "da3b71896f8e750f92b8102d27b56c4f46d163e4"
+    },
+    {
+      "path": "apps/web/components/public-error-state.tsx",
+      "gitBlobSha": "bbc8699c40c5833766e93272b7c3b267566baf44"
+    },
+    {
+      "path": "apps/web/env.ts",
+      "gitBlobSha": "85fa070fd5703b8cb6d95d09e8983a6957696735"
+    },
+    {
+      "path": "apps/web/instrumentation-client.ts",
+      "gitBlobSha": "722774d90424ac50a4bc18fa5561ea2faab3023f"
+    },
+    {
+      "path": "apps/web/instrumentation.ts",
+      "gitBlobSha": "e4bdd87f02d0ed529e78b2d6ef4212ee4735f8b0"
+    },
+    {
+      "path": "apps/web/lib/assisted-search.test.ts",
+      "gitBlobSha": "079a72773169e224c4f77740e1d3858d9a72b39a"
+    },
+    {
+      "path": "apps/web/lib/assisted-search.ts",
+      "gitBlobSha": "2f025c07709c7ae393e95e16b35bf714f3451c8a"
+    },
+    {
+      "path": "apps/web/lib/email-delivery.test.ts",
+      "gitBlobSha": "78344b71974579c39dff7a2896df9ef7162ae0e6"
+    },
+    {
+      "path": "apps/web/lib/public-app-url.test.ts",
+      "gitBlobSha": "e81de6b52aa0bd6f437b039c7c623c52adb8b97e"
+    },
+    {
+      "path": "apps/web/lib/public-app-url.ts",
+      "gitBlobSha": "b578eb3606f8282d412c837ef9148c6549ffcebb"
+    },
+    {
+      "path": "apps/web/lib/public-contact-context.test.ts",
+      "gitBlobSha": "0d0c32d4b97a867509c75af02c76ea7df84b5660"
+    },
+    {
+      "path": "apps/web/lib/public-contact-context.ts",
+      "gitBlobSha": "d0b4d2e519acfef5454f60f88312ceb1ad2f8d46"
+    },
+    {
+      "path": "apps/web/lib/public-contact-readiness.test.ts",
+      "gitBlobSha": "abed78da20af12e82f649698cfe5299bdec45ce0"
+    },
+    {
+      "path": "apps/web/lib/public-contact-readiness.ts",
+      "gitBlobSha": "e739f21b084e31573e60f0d6fee91f7bdc52075b"
+    },
+    {
+      "path": "apps/web/lib/public-data-policy.test.ts",
+      "gitBlobSha": "08f658e020204d9dd655a19e5b879d9d383748a9"
+    },
+    {
+      "path": "apps/web/lib/public-data-policy.ts",
+      "gitBlobSha": "90dff20258d2f9e0e8ea81e9ed7ad58aa18651c4"
+    },
+    {
+      "path": "apps/web/lib/public-external-inventory.ts",
+      "gitBlobSha": "ef5d682f11f1c6ef35e5d0dda61d538405ddcb4f"
+    },
+    {
+      "path": "apps/web/lib/public-form-rate-limit.ts",
+      "gitBlobSha": "9bb37272844e7b6330fda46243169df6d13fc70c"
+    },
+    {
+      "path": "apps/web/lib/public-form-security.test.ts",
+      "gitBlobSha": "d30445672a5485c5145077740c93adc0e8b36e19"
+    },
+    {
+      "path": "apps/web/lib/public-form-security.ts",
+      "gitBlobSha": "957ac9938f16c8862da215c0fd3fe21281fcba1c"
+    },
+    {
+      "path": "apps/web/lib/public-global-error.test.ts",
+      "gitBlobSha": "78052efce50d14acf6a0fd104b518f478366e544"
+    },
+    {
+      "path": "apps/web/lib/public-global-error.ts",
+      "gitBlobSha": "e4e7d1cd4190d9f02150c9449ea4b59e9b703b69"
+    },
+    {
+      "path": "apps/web/lib/public-lead-rate-limit.test.ts",
+      "gitBlobSha": "c3d57864f6689bc6d663620f781d8f38934c64e8"
+    },
+    {
+      "path": "apps/web/lib/public-lead-rate-limit.ts",
+      "gitBlobSha": "7c14a9dfb3355e640b2a616971afe3043a15e947"
+    },
+    {
+      "path": "apps/web/lib/public-listing-contact.test.ts",
+      "gitBlobSha": "bb987d5a360fab582ce5208af98dbbba16b04000"
+    },
+    {
+      "path": "apps/web/lib/public-listing-contact.ts",
+      "gitBlobSha": "e5cbaf615db47701ace84169334e1dfb2e6f6f8e"
+    },
+    {
+      "path": "apps/web/lib/public-listing-lead-integration.test.ts",
+      "gitBlobSha": "7d8af1298a6323e19fafc3bf5ccf4d76f9ac632d"
+    },
+    {
+      "path": "apps/web/lib/public-listing-lead-submission.test.ts",
+      "gitBlobSha": "e860c878dfed79f41b9e27afe580739ca26b1951"
+    },
+    {
+      "path": "apps/web/lib/public-listing-lead-submission.ts",
+      "gitBlobSha": "c198a543ddf5323f8857b8bbbcf7e15361d64f54"
+    },
+    {
+      "path": "apps/web/lib/public-listing-read.test.ts",
+      "gitBlobSha": "05a699e2650e80c76dfdca104f5360a87fb766ce"
+    },
+    {
+      "path": "apps/web/lib/public-listing-read.ts",
+      "gitBlobSha": "26a95bbe95c255a5cf0e00563fe69b5a7201b18c"
+    },
+    {
+      "path": "apps/web/lib/public-marketplace-data.ts",
+      "gitBlobSha": "9f7780a1f3d9201dc05cd1b6ff5982c945a0d741"
+    },
+    {
+      "path": "apps/web/lib/public-marketplace-pagination.test.ts",
+      "gitBlobSha": "e46c20114048f22989192035f2a0e98ba3cacb40"
+    },
+    {
+      "path": "apps/web/lib/public-marketplace-pagination.ts",
+      "gitBlobSha": "132dfea76b39ff1e748a73304f00354a50bee9f6"
+    },
+    {
+      "path": "apps/web/lib/public-metadata.test.ts",
+      "gitBlobSha": "7e4cec22566f8026edc1b896f1348032ea7f2887"
+    },
+    {
+      "path": "apps/web/lib/public-metadata.ts",
+      "gitBlobSha": "2967ec403cfc64bafcb436c22a69ce6ae36f70b3"
+    },
+    {
+      "path": "apps/web/lib/public-proxy-policy.test.ts",
+      "gitBlobSha": "371052f1df984019fb59afcb22b88e95896e6480"
+    },
+    {
+      "path": "apps/web/lib/public-proxy-policy.ts",
+      "gitBlobSha": "74a684e315d02614c4c7bb77366967db2d2a541e"
+    },
+    {
+      "path": "apps/web/lib/public-route-metadata.ts",
+      "gitBlobSha": "14b2a1c62dfe2e1d22b0a7547e65ff0097680de7"
+    },
+    {
+      "path": "apps/web/lib/public-route-normalization.test.ts",
+      "gitBlobSha": "8d78606f8079e7031cec4c0c8834f0e3f6ff3a82"
+    },
+    {
+      "path": "apps/web/lib/public-route-normalization.ts",
+      "gitBlobSha": "74435ffbd2879cd708be41b722efb6cbb9623d70"
+    },
+    {
+      "path": "apps/web/lib/public-structured-data.test.ts",
+      "gitBlobSha": "a2bf30dd05e7573e0e4cd8bb1535d3a367dd828d"
+    },
+    {
+      "path": "apps/web/lib/public-structured-data.ts",
+      "gitBlobSha": "b1094a63854e6cc1784334b6df37e5f03f920f67"
+    },
+    {
+      "path": "apps/web/lib/public-support-rate-limit.test.ts",
+      "gitBlobSha": "ffe17fd8071f6892e3f0cf52657cdee2c2af158f"
+    },
+    {
+      "path": "apps/web/lib/public-support-rate-limit.ts",
+      "gitBlobSha": "3c51bf9e5ae856f5369cc84ac8631aac387e551f"
+    },
+    {
+      "path": "apps/web/lib/public-support-submission.test.ts",
+      "gitBlobSha": "e0dbb73f44bfab60b4ebf58d8169cb00216fcd8e"
+    },
+    {
+      "path": "apps/web/lib/public-support-submission.ts",
+      "gitBlobSha": "274efb6902f99810f1744bc5f7cd791b5700b041"
+    },
+    {
+      "path": "apps/web/lib/public-url.ts",
+      "gitBlobSha": "ecf15394e104df21204fbd4daf39a5e4c50af2be"
+    },
+    {
+      "path": "apps/web/lib/vehicle-guides.ts",
+      "gitBlobSha": "f5779a91f4d4217a8c573de3e1c2ffd6b2fad919"
+    },
+    {
+      "path": "apps/web/next.config.ts",
+      "gitBlobSha": "8a28b6db3109c8255b6ea68d7c0b191389d0bb5e"
+    },
+    {
+      "path": "apps/web/package.json",
+      "gitBlobSha": "1f68272ca80024b01cd1f67f6495efd00681de28"
+    },
+    {
+      "path": "apps/web/postcss.config.mjs",
+      "gitBlobSha": "8faf34e7ef65fdaeefcdadaf1a52873043f75bb8"
+    },
+    {
+      "path": "apps/web/proxy.ts",
+      "gitBlobSha": "d00218e366968b84ed2096ea8c5923c7b98da68f"
+    },
+    {
+      "path": "apps/web/public/day-night-contact-hero-v1.png",
+      "gitBlobSha": "1d8f685c677be292dd0fbd331415d983589af62e"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-01.webp",
+      "gitBlobSha": "de991a237d00140ba1c6f932907022a0fc8593cf"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-02.webp",
+      "gitBlobSha": "3cae75526fb955c5e8bd7cb59d3446866861e05c"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-03.webp",
+      "gitBlobSha": "eb4fd194ca8099c9f003e1771fe2b9702eca671a"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-04.webp",
+      "gitBlobSha": "81eb92446c35a561fc14c64394f3f6b24096e139"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-05.webp",
+      "gitBlobSha": "6d5b1af58c6585d85b34d403b9182f6dce35a126"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-06.webp",
+      "gitBlobSha": "49a753fca55c39f76529cb5e3edcdda3a5bf4e24"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-07.webp",
+      "gitBlobSha": "5ed9cc1e145cfb8a1cdd6e7bca49c0c4cb053982"
+    },
+    {
+      "path": "apps/web/public/images/avatars/organization-08.webp",
+      "gitBlobSha": "58ec72f6efe703c204bfb74796fd7f0a51e403b4"
+    },
+    {
+      "path": "apps/web/public/images/categories/day-night-category-car-v1.png",
+      "gitBlobSha": "a74448c946d02378b95b5288343c0d0fd2029fba"
+    },
+    {
+      "path": "apps/web/public/images/categories/day-night-category-car-v2.png",
+      "gitBlobSha": "429eefd91fa539d4545454ebc635d37783adedc8"
+    },
+    {
+      "path": "apps/web/public/images/categories/day-night-category-motorbike-v1.png",
+      "gitBlobSha": "90692d96bc643f52e39409767289e1e64aabb20a"
+    },
+    {
+      "path": "apps/web/public/images/categories/day-night-category-truck-v1.png",
+      "gitBlobSha": "0bd1ed47f45e6f8356f1acf9afdc8c781c24c9d2"
+    },
+    {
+      "path": "apps/web/public/images/categories/day-night-category-van-v1.png",
+      "gitBlobSha": "64c6befbdc49880c4ce0afa51eecf85036b387f9"
+    },
+    {
+      "path": "apps/web/public/images/directory/black-sea-ev-profile.webp",
+      "gitBlobSha": "27f08f99c7bca9732d4f7d04ce18641980049b5e"
+    },
+    {
+      "path": "apps/web/public/images/directory/china-ev-importer-profile.webp",
+      "gitBlobSha": "d823d4690a8fdbd63e535a099b68561c6254b803"
+    },
+    {
+      "path": "apps/web/public/images/directory/hamburg-importer-profile.webp",
+      "gitBlobSha": "e40b3e88612aac3c7d8ca3e0d34094727fc2e815"
+    },
+    {
+      "path": "apps/web/public/images/directory/sofia-premium-cars-profile.webp",
+      "gitBlobSha": "b00a2bb89016e11185b3cc302d2e096598f1089e"
+    },
+    {
+      "path": "apps/web/public/images/flags/cn.svg",
+      "gitBlobSha": "b1d9799d95176d965fc10b520311ff9f16a09a36"
+    },
+    {
+      "path": "apps/web/public/images/flags/de.svg",
+      "gitBlobSha": "5f68d392080bf8c51911bf1e9212706228d2523b"
+    },
+    {
+      "path": "apps/web/public/images/flags/jp.svg",
+      "gitBlobSha": "c8db49ea24c983d7bfc90da3fc5a2f34ca78460c"
+    },
+    {
+      "path": "apps/web/public/images/flags/kr.svg",
+      "gitBlobSha": "84dc7560ea8ca2699d220ae0eb31ae81d07a10e7"
+    },
+    {
+      "path": "apps/web/public/images/flags/us.svg",
+      "gitBlobSha": "9bc8f313e3f2d4768732fe95a01c6f1bf121b3a8"
+    },
+    {
+      "path": "apps/web/public/images/import/day-night-mobile-premium-suv-banner-v1.png",
+      "gitBlobSha": "fc0a45ba1d366c20dff19ce08c777e4eb460feb6"
+    },
+    {
+      "path": "apps/web/public/images/import/day-night-mobile-premium-suv-banner-v1.prompt.md",
+      "gitBlobSha": "15984acf26cd1771620ed20f3f6553ddaf03c067"
+    },
+    {
+      "path": "apps/web/public/images/import/day-night-mobile-terminal-v2.webp",
+      "gitBlobSha": "f5fa8e73c1969c21bc5a0211ed95315723d7683d"
+    },
+    {
+      "path": "apps/web/public/images/import/day-night-mobile-v2.prompt.md",
+      "gitBlobSha": "61099822636d0aef25ed92677f3a25097110b3e5"
+    },
+    {
+      "path": "apps/web/public/images/lease/day-night-financing-hero-v1.webp",
+      "gitBlobSha": "60cf2b1a5987b23e04fbbb86ea97790a017b4ed8"
+    },
+    {
+      "path": "apps/web/public/images/lease/day-night-mobile-black-suv-banner-v1.png",
+      "gitBlobSha": "0908c726756ed507980217f92f9a6b6f8493dbee"
+    },
+    {
+      "path": "apps/web/public/images/lease/day-night-mobile-black-suv-banner-v1.prompt.md",
+      "gitBlobSha": "9b84801ba836061d9ce833306c83b06b01ff8149"
+    },
+    {
+      "path": "apps/web/public/images/lease/day-night-mobile-studio-v2.webp",
+      "gitBlobSha": "ea74517d73aaae785d83b5f2b759a0c3779e2d9e"
+    },
+    {
+      "path": "apps/web/public/images/lease/day-night-mobile-v2.prompt.md",
+      "gitBlobSha": "a6dc6e902c16bc61a4c6d094b8a35323e09fdaaf"
+    },
+    {
+      "path": "apps/web/public/images/mobile/day-night-import-hero-v2.webp",
+      "gitBlobSha": "193344bac6f9759fbbf04a6d482e4fa8a49552b4"
+    },
+    {
+      "path": "apps/web/public/images/mobile/day-night-lease-hero-v2.webp",
+      "gitBlobSha": "c64692fc585a00fa0ff71e4ee164b308c57039fa"
+    },
+    {
+      "path": "apps/web/public/images/sell/day-night-mobile-studio-v1.png",
+      "gitBlobSha": "ed013ed14355b4c6bbc8c8a66b8d4003eb72202c"
+    },
+    {
+      "path": "apps/web/public/images/sell/day-night-mobile-studio-v1.prompt.md",
+      "gitBlobSha": "9b9b73187b5bf9df098de7367af668fad7abe815"
+    },
+    {
+      "path": "apps/web/public/images/sell/day-night-sell-centered-hero-v2.webp",
+      "gitBlobSha": "212c0792b57855e1fc12890b0e36fbed6528f4e7"
+    },
+    {
+      "path": "apps/web/public/images/services/import-shipping-yellow-v1.png",
+      "gitBlobSha": "8c9b5d4b5174f3f3318fa79ba84138d1b46bd777"
+    },
+    {
+      "path": "apps/web/public/images/services/leasing-keys-red-v1.png",
+      "gitBlobSha": "591c07aa85ff0dad036cd0055f9023683a827ab3"
+    },
+    {
+      "path": "apps/web/public/images/social/README.md",
+      "gitBlobSha": "25a8576dce0cba9d72eca8bda3440bd85c663c4a"
+    },
+    {
+      "path": "apps/web/public/images/social/facebook.png",
+      "gitBlobSha": "03056266f8bb9d259bddcda6ad4fe5bf7aaf6316"
+    },
+    {
+      "path": "apps/web/public/images/social/instagram-white.svg",
+      "gitBlobSha": "d9823da63e971fcbc3ea6b8f12e89b53b462ea29"
+    },
+    {
+      "path": "apps/web/public/images/social/youtube.png",
+      "gitBlobSha": "36cdc3adb67601a415ac245d3a784b2f0d685fe6"
+    },
+    {
+      "path": "apps/web/public/lead-car-left-v2.webp",
+      "gitBlobSha": "f0681b64614cc4a5e0be66ea1f9efd34fd2c0999"
+    },
+    {
+      "path": "apps/web/public/lead-car-left-v3.webp",
+      "gitBlobSha": "41208d15dbe58a26f1b8bbb1a962785bc32f369d"
+    },
+    {
+      "path": "apps/web/public/lead-car-left-v4.webp",
+      "gitBlobSha": "ddbcef405434fe1041f2e8dd14d73e4dc9d6106c"
+    },
+    {
+      "path": "apps/web/public/lead-car-left.webp",
+      "gitBlobSha": "990a034152564b183113cf3da00c00d9a8de6df5"
+    },
+    {
+      "path": "apps/web/public/lead-car-right-v2.webp",
+      "gitBlobSha": "a0948340cadcdada52aefe328ba6e5f7c4eaedb8"
+    },
+    {
+      "path": "apps/web/public/lead-car-right-v3.webp",
+      "gitBlobSha": "0fcc67f57dfa469ba1d80f46f63d12e3a690bbed"
+    },
+    {
+      "path": "apps/web/public/lead-car-right-v4.webp",
+      "gitBlobSha": "63ce36f452c292327bc4e481b0ff0a9b399f1859"
+    },
+    {
+      "path": "apps/web/public/lead-car-right-v5.webp",
+      "gitBlobSha": "e98483519b993122392afb0a9f607e3d3c2940ec"
+    },
+    {
+      "path": "apps/web/public/lead-car-right.webp",
+      "gitBlobSha": "6d95f3c9853a95544cf91399ba81271b65cf1a4b"
+    },
+    {
+      "path": "apps/web/public/lead-hero.jpg",
+      "gitBlobSha": "7d6c8ca552273bbd814517f756cf9a15fb0c72d8"
+    },
+    {
+      "path": "apps/web/public/lead-hero.svg",
+      "gitBlobSha": "ba9136c5a5fc4857f76cb963affe40e4a9b56e77"
+    },
+    {
+      "path": "apps/web/public/lead-import-hero-v1.png",
+      "gitBlobSha": "c0f693752c73f9c6bb0c6656f1ee8e33f7ee3551"
+    },
+    {
+      "path": "apps/web/public/lead-logo.jpg",
+      "gitBlobSha": "1033bc0fa77195b587580de69e619f05d20ab183"
+    },
+    {
+      "path": "apps/web/public/lead-logo.png",
+      "gitBlobSha": "79c6b4eb937b90c5e0ec3ffd97cd5918084d8172"
+    },
+    {
+      "path": "apps/web/public/lead-logo.svg",
+      "gitBlobSha": "60fd96e4db0a969f684a6d8431eb4b7827fec81d"
+    },
+    {
+      "path": "apps/web/public/lead-nav-finance-v1.png",
+      "gitBlobSha": "7b4265ef061f80085203e036f84941b25192102e"
+    },
+    {
+      "path": "apps/web/public/lead-nav-finance-v2.png",
+      "gitBlobSha": "f767472c8c3a73cc41d79bd6c48243408d12b3c6"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v1.png",
+      "gitBlobSha": "42302758230caf71e44498d3ba12b1032965e66e"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v2.png",
+      "gitBlobSha": "c32b24e3b38e83d7feccfa194f275512a150509c"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v3.png",
+      "gitBlobSha": "27faf5dc5d8e0ebe6e3e9cd2d05ec3fad3a48632"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v4.png",
+      "gitBlobSha": "19df34b003da986f0ba79ad124dbe9636092a140"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v5.png",
+      "gitBlobSha": "be9d56a0a099fa3c8dda4fdec0d33f6713749dd2"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v6-source.png",
+      "gitBlobSha": "3bd1dfb05e57677bb2f25793c9d2d4fee160d203"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v6.png",
+      "gitBlobSha": "e63c150fcdc74562cd5d0c9a300ffd2d76a19091"
+    },
+    {
+      "path": "apps/web/public/lead-nav-import-v7.png",
+      "gitBlobSha": "8d96cbd5b194a872107edc32b33ad328ae3968dd"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v2.png",
+      "gitBlobSha": "3355b51e1e0725a335c8819f70279cac3ecc97fb"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v3.png",
+      "gitBlobSha": "a983733877f4b1a6d281bc4f911ab80feeb1a4fe"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v4.png",
+      "gitBlobSha": "795765488b1376c8557924df73e2c62f29de0b96"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v5.png",
+      "gitBlobSha": "3cbb4a4a81711a2d26b6887a19e34ae06b0d2697"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v6-source.png",
+      "gitBlobSha": "ad7fd1da68dcbf725572bb7db4183c00f9b49f60"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v6.png",
+      "gitBlobSha": "d17c6ed9cbed1ccac158eab43bf58ee122982c70"
+    },
+    {
+      "path": "apps/web/public/lead-nav-inventory-v7.png",
+      "gitBlobSha": "061be796fd2e121a272efa617ea36cf8b01e2da2"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v1.png",
+      "gitBlobSha": "5018e32e5244c491dd7a47f461fb73dbfd3df61c"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v2.png",
+      "gitBlobSha": "5a2f9e459115e157627123aa220ededdcb521dd2"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v3.png",
+      "gitBlobSha": "626952e770791ae6809c0510896f2dcd72760dd6"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v4.png",
+      "gitBlobSha": "d625060342d65f3f0486f122b842fca8ac6e726f"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v5.png",
+      "gitBlobSha": "b73f5220720f1c9002e14531ccba8419e78bb133"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v6-source.png",
+      "gitBlobSha": "fe6f68d44daace2d217eeef8692d6230e9c3814c"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v6.png",
+      "gitBlobSha": "10aba7ef53abfb758e286d7e7c881d00d83be90b"
+    },
+    {
+      "path": "apps/web/public/lead-nav-sell-v7.png",
+      "gitBlobSha": "4d9dc7b71605a23dbdf5831a4b4f611747d3835e"
+    },
+    {
+      "path": "apps/web/public/lead-sell-car-v1.png",
+      "gitBlobSha": "92e72c3c28e1f3fda581c64340ae9461ff474d85"
+    },
+    {
+      "path": "apps/web/public/lead-sell-motorcycle-v1.png",
+      "gitBlobSha": "74b4ae0c6ab5053651ed30e93936575b2c3d254f"
+    },
+    {
+      "path": "apps/web/public/lead-sell-truck-v1.png",
+      "gitBlobSha": "6f3e6c98e7f9a7e458fdbdca90d889497600cd79"
+    },
+    {
+      "path": "apps/web/public/lead-sell-van-v1.png",
+      "gitBlobSha": "9bae2817e2084426e0d872591831ec20ec291eef"
+    },
+    {
+      "path": "apps/web/sentry.edge.config.ts",
+      "gitBlobSha": "7ffd1e9f103f3df654e63ee6b1770d22c478f22b"
+    },
+    {
+      "path": "apps/web/sentry.server.config.ts",
+      "gitBlobSha": "14f2a78bb2c90f9fbd721d1adb7a41e28390de81"
+    },
+    {
+      "path": "apps/web/test/server-only-stub.ts",
+      "gitBlobSha": "cb0ff5c3b541f646105198ee23ac0fc3d805023e"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "gitBlobSha": "5d70911cd09409e07755eda40f7822e01988e275"
+    },
+    {
+      "path": "apps/web/turbo.json",
+      "gitBlobSha": "2693b3775d7ce263de08d3ca0892459a187d59fd"
+    },
+    {
+      "path": "apps/web/vercel.json",
+      "gitBlobSha": "b158ea286a0770a11745393dd735d54ffb99b50f"
+    },
+    {
+      "path": "apps/web/vitest.config.mts",
+      "gitBlobSha": "8c73d17a901da4f9d2f1385593132923ff91ad6a"
+    },
+    {
+      "path": "biome.jsonc",
+      "gitBlobSha": "27ab3f01ebfc8ccd1b05f3b731c90beefa13508f"
+    },
+    {
+      "path": "docs/MOBILE_DRAWER_CONTRACT.md",
+      "gitBlobSha": "9ce2ecc4b0b4666540cd6c59b10052a374635a43"
+    },
+    {
+      "path": "docs/README.md",
+      "gitBlobSha": "d32f11a161bf900ee210ac8e565661115789cc89"
+    },
+    {
+      "path": "docs/architecture.md",
+      "gitBlobSha": "560b9c86efa86843f2fb69d90532e98af3b3cf20"
+    },
+    {
+      "path": "docs/codex-phase1-prompt.md",
+      "gitBlobSha": "5d451b7bbbdf2cf08bc6e8986ad975125edb9acf"
+    },
+    {
+      "path": "docs/data-model.md",
+      "gitBlobSha": "9418610ca91f04c9da2ff8e11ca9c2c7e6e763d9"
+    },
+    {
+      "path": "docs/dealer-os-plan.md",
+      "gitBlobSha": "fd4136727618f5e59f49015af1edb93cb3f61f0f"
+    },
+    {
+      "path": "docs/decisions/0001-next-forge-app-split.md",
+      "gitBlobSha": "febee7cf309a7179145c5ed5b24e844a2e14deb0"
+    },
+    {
+      "path": "docs/decisions/0002-mobile-search-filter-pattern.md",
+      "gitBlobSha": "9a742ccbd22a1b357862dee1850e1b75ae89763f"
+    },
+    {
+      "path": "docs/decisions/0003-dealer-studio-supply-wedge.md",
+      "gitBlobSha": "9cca8d8c6ca948fa3cd6d31d6a3cb987d8cd8f1b"
+    },
+    {
+      "path": "docs/decisions/0004-marketplace-domain-layering.md",
+      "gitBlobSha": "8888ffc5a9b9776b1cde22b7d8f322e2e66f4641"
+    },
+    {
+      "path": "docs/decisions/0005-seller-identity-and-public-verification.md",
+      "gitBlobSha": "f1950a72050328396b481be0650369264ae4f7bb"
+    },
+    {
+      "path": "docs/deployment.md",
+      "gitBlobSha": "a32cdad2e36803bfc8376d29760944ad5f51ec08"
+    },
+    {
+      "path": "docs/engineering-standards.md",
+      "gitBlobSha": "74a57b101d345094449bc87892bc495aa6806033"
+    },
+    {
+      "path": "docs/environment.md",
+      "gitBlobSha": "57825ddcd6e7b0882ac8c23bafa28661407f2531"
+    },
+    {
+      "path": "docs/frontend-ux.md",
+      "gitBlobSha": "716f6e43c845c388186e9c25623a53af94a1b092"
+    },
+    {
+      "path": "docs/mobile-ui-audit-2026-09-04.md",
+      "gitBlobSha": "52f0aef2c172a05b66b0348113a187eea7a41140"
+    },
+    {
+      "path": "docs/operations/README.md",
+      "gitBlobSha": "9dd6517f0a6f13dfd920cb33e9b55c20f3a53886"
+    },
+    {
+      "path": "docs/operations/incident-response.md",
+      "gitBlobSha": "486ffcf5c611553280e3b222b3a880c53fa6aa7f"
+    },
+    {
+      "path": "docs/operations/launch-audit-2026-07-12.md",
+      "gitBlobSha": "b9c96a3f431df80275978a93cc61bafe97d23c77"
+    },
+    {
+      "path": "docs/operations/launch-audit-2026-07-16.md",
+      "gitBlobSha": "e634067b2d70688e4aaff9dcbf37c2c35cd300de"
+    },
+    {
+      "path": "docs/operations/neon-recovery.md",
+      "gitBlobSha": "335578a36c2e462c29e51d19c3422ff60fbbb50a"
+    },
+    {
+      "path": "docs/operations/preview-deployment.md",
+      "gitBlobSha": "23a19e2d0e37bac97c0a61bbcd93f36bf8d6ff9c"
+    },
+    {
+      "path": "docs/operations/privacy-and-security.md",
+      "gitBlobSha": "d59922a4b055dc904a68f3275220b0b2c27c1ce0"
+    },
+    {
+      "path": "docs/operations/release-readiness.md",
+      "gitBlobSha": "12cf9a8a76157d40b13c518c785bbeb8bbb8ac71"
+    },
+    {
+      "path": "docs/operations/slos-and-alerts.md",
+      "gitBlobSha": "fb7ea77816b27b3ef385f82d32765484305b3d51"
+    },
+    {
+      "path": "docs/operations/upload-abuse-drill.md",
+      "gitBlobSha": "1fe6b09d44f5dadc94f7ecf8a957f5ae4a3627e3"
+    },
+    {
+      "path": "docs/operations/webhook-replay.md",
+      "gitBlobSha": "b01ae51a7a3db8c86a762d7cdbf69cac7613211f"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/README.md",
+      "gitBlobSha": "d57a8f67c27dcc965e2b4f4d7c426ecd3b950d56"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/campaign-asset-brief.md",
+      "gitBlobSha": "b9c244eb186fed12ff08df271fb66f7b9180c797"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/founding-partner-offer.md",
+      "gitBlobSha": "a64bcf260af7d1f6b4fdedaceb9e394141a62ffd"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/onboarding-and-feed.md",
+      "gitBlobSha": "f8561f2f521911392d78807a9424418f207df01e"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/outreach-drafts-bg-en.md",
+      "gitBlobSha": "04d418f82b4cea8ff0429f2ab70297e358520298"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/partner-profiles.md",
+      "gitBlobSha": "95b98790c6915da63527ab01017c958d61cdab08"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/pilot-metrics.md",
+      "gitBlobSha": "cb47fef0004fa26690a38cea1ca83630d6cd9e04"
+    },
+    {
+      "path": "docs/partner-programs/2026-07-11-chinese-ev-hybrid-bulgaria/sources.md",
+      "gitBlobSha": "d620df783561dbc04309caac3ce15f994f041523"
+    },
+    {
+      "path": "docs/product-prd.md",
+      "gitBlobSha": "7dd1c84ee322cd7dbfb7eb7991c8b8484cd31d4f"
+    },
+    {
+      "path": "docs/refactor/AUDIT.md",
+      "gitBlobSha": "db6fca44247b9c5c09ff63620c02ba4c5730b580"
+    },
+    {
+      "path": "docs/refactor/IMPLEMENTATION_STATUS.md",
+      "gitBlobSha": "c59cdc651d700b2472850e151649d785e1f09cbe"
+    },
+    {
+      "path": "docs/refactor/PLAN.md",
+      "gitBlobSha": "6ae183c0e0dd0e97f09bcb3a4919e05c137fd27b"
+    },
+    {
+      "path": "docs/refactor/QA_AND_MIGRATION.md",
+      "gitBlobSha": "6f1e80a467fdea3a544155855d5e6ea046f2b47f"
+    },
+    {
+      "path": "docs/refactor/README.md",
+      "gitBlobSha": "0ec7a2bfde124052972ba97d89617c69cfa93dcc"
+    },
+    {
+      "path": "docs/refactor/TARGET_ARCHITECTURE.md",
+      "gitBlobSha": "23c4952b2ad13679ad3a4617f43e97f5171894f7"
+    },
+    {
+      "path": "docs/roadmap.md",
+      "gitBlobSha": "66b46aecd5fb04036f23690654051daa10193a7f"
+    },
+    {
+      "path": "docs/service-artwork-2026-09-05.md",
+      "gitBlobSha": "55edca61f8c9776481b5ae7fceae77d908c0b57d"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-11-task-00-repository-release-foundation.md",
+      "gitBlobSha": "f9919e27de4808f99dc798cfb88d014cbe97c271"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-11-task-08/README.md",
+      "gitBlobSha": "c436335629c08846af50940c483736376b2e5bda"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-11-task-08/dealer-auth-gate.png",
+      "gitBlobSha": "bc092778e16d4adbcc0c6bb14353a618f60ff304"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-11-task-08/migration-verification.sql",
+      "gitBlobSha": "7c767c16c207088f5fc66425f3b76d421e5d40e3"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-11-task-08/public-listing-desktop.png",
+      "gitBlobSha": "cd0cca80dfc3789849c53371dcbda7a061737477"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-11-task-08/public-listing-mobile.png",
+      "gitBlobSha": "85a1ec09652550314b8f75014eafed896da8ef68"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-12-task-09/browser/cars-desktop.png",
+      "gitBlobSha": "b00bda30235b3e06512332ff58dc205d97235ccc"
+    },
+    {
+      "path": "docs/superpowers/execution-logs/2026-07-12-task-09/browser/public-mobile.png",
+      "gitBlobSha": "121c52cd0ce147982f5fc6b84d7da35a801070e2"
+    },
+    {
+      "path": "docs/superpowers/execution-proposals/2026-07-11-task-08-durable-marketplace-schema-and-migration-proposal.md",
+      "gitBlobSha": "b4504b64e6f33729231a6bbb77c4e474d4a7941e"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-06-14-automarket-prototype-to-mvp.md",
+      "gitBlobSha": "012369b1e4e20ea3b8d24a7dae79999636559b26"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-06-14-frontend-excellence-plan.md",
+      "gitBlobSha": "ba16e8c05e076d6c2c688f6be477f59f518b73d8"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-07-11-responsive-production-and-growth-master-plan.md",
+      "gitBlobSha": "e6ff9364e0bf9c2224a9409bf620aefea1f830df"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-06-07-automarket-platform-design.md",
+      "gitBlobSha": "f1942d7e45ba9c138932be4d53cfa41a75a50ed1"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-06-14-frontend-excellence-design.md",
+      "gitBlobSha": "f544e465bcc746525d4dbbcbbc216a612e778b0d"
+    },
+    {
+      "path": "package.json",
+      "gitBlobSha": "7f55bd9f1af59c4272c2a58f7394178b040447fa"
+    },
+    {
+      "path": "packages/ai/index.ts",
+      "gitBlobSha": "51afc07b1fa45deb6e221974d95d6df9117bfe94"
+    },
+    {
+      "path": "packages/ai/keys.ts",
+      "gitBlobSha": "c6980805b7bf83ce57f467a0e9d10ead5b5d8798"
+    },
+    {
+      "path": "packages/ai/lib/models.ts",
+      "gitBlobSha": "3535f2b5b4b084131468ba4a6419232356ad7c20"
+    },
+    {
+      "path": "packages/ai/listing-copy.test.ts",
+      "gitBlobSha": "61435c0aee4420b42d4a17ddf6f6095f16eb115d"
+    },
+    {
+      "path": "packages/ai/listing-copy.ts",
+      "gitBlobSha": "198e686053b80306cf6c15ab22ab3fd9a14cffa7"
+    },
+    {
+      "path": "packages/ai/package.json",
+      "gitBlobSha": "355de9a8788d0a23eeaf259feeba13a563659c3f"
+    },
+    {
+      "path": "packages/ai/runtime.ts",
+      "gitBlobSha": "1dabdf25dab6e1627d7167ad140bbd44abb8679d"
+    },
+    {
+      "path": "packages/ai/safety.ts",
+      "gitBlobSha": "8c01fa8ed0d5b2fd338557bee79e9fc15da9ae23"
+    },
+    {
+      "path": "packages/ai/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/analytics/consent-bootstrap.ts",
+      "gitBlobSha": "fc3e6d6f53731a844ba287fbf4f7c56c74f14e05"
+    },
+    {
+      "path": "packages/analytics/consent-copy.test.ts",
+      "gitBlobSha": "29d4b61220210d1af9a1db62ff1c85e0bd8134f8"
+    },
+    {
+      "path": "packages/analytics/consent-copy.ts",
+      "gitBlobSha": "47c79d1033628d09207e5738fa8ead9153b5078f"
+    },
+    {
+      "path": "packages/analytics/consent.test.ts",
+      "gitBlobSha": "eded17d8ebb4fa851ceeb5f7fc2e6a081a7ef72c"
+    },
+    {
+      "path": "packages/analytics/consent.ts",
+      "gitBlobSha": "13870f62991e51afb63dc7ed60e2b21111920400"
+    },
+    {
+      "path": "packages/analytics/index.ts",
+      "gitBlobSha": "0ac2700fbd7be17ae61f2852dc1b8ce59cd5c744"
+    },
+    {
+      "path": "packages/analytics/instrumentation-client.test.ts",
+      "gitBlobSha": "ca80bf775e943c97b8bd752921b21395fce56a89"
+    },
+    {
+      "path": "packages/analytics/instrumentation-client.ts",
+      "gitBlobSha": "414e0daa964c634d56985672d49510e6bf93c4bf"
+    },
+    {
+      "path": "packages/analytics/keys.ts",
+      "gitBlobSha": "2250dba0ccacf79cfc768f3bb68f8ede8189a610"
+    },
+    {
+      "path": "packages/analytics/package.json",
+      "gitBlobSha": "c81d790646f0ee5b04d43c9e3e78360b0d15d864"
+    },
+    {
+      "path": "packages/analytics/provider-layout.test.ts",
+      "gitBlobSha": "b40257980d246e780167c591bbedb4465fda27a5"
+    },
+    {
+      "path": "packages/analytics/provider.module.css",
+      "gitBlobSha": "ef7008e640b1be0714b58636b49e19cbc8ca2313"
+    },
+    {
+      "path": "packages/analytics/provider.module.css.d.ts",
+      "gitBlobSha": "117cee136ed472cc7a05d01733130cdf85306bce"
+    },
+    {
+      "path": "packages/analytics/provider.tsx",
+      "gitBlobSha": "8af3971302853ba1f187efdff1b3fa990b8f1152"
+    },
+    {
+      "path": "packages/analytics/server.ts",
+      "gitBlobSha": "2d06239324145969ab7845f3aa8726bb17f8fb17"
+    },
+    {
+      "path": "packages/analytics/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/analytics/turbo.json",
+      "gitBlobSha": "a01e9a4663ba64f6dae596e90a5ba1b4809b651d"
+    },
+    {
+      "path": "packages/auth/authorization.ts",
+      "gitBlobSha": "6fd4392ac0bbdc2e78133c767880a918d826a632"
+    },
+    {
+      "path": "packages/auth/client.ts",
+      "gitBlobSha": "c70b8177c71400e3da965c7a393765afadf948cf"
+    },
+    {
+      "path": "packages/auth/components/sign-in.tsx",
+      "gitBlobSha": "8c5432e882bff62706bc3f55805cb1341879ed57"
+    },
+    {
+      "path": "packages/auth/components/sign-up.tsx",
+      "gitBlobSha": "864aea52e458a659f24e0a6857ad1fb9f4d00afb"
+    },
+    {
+      "path": "packages/auth/keys.ts",
+      "gitBlobSha": "21f03fa7e52e76e05930791cb3e8be83b1bd7270"
+    },
+    {
+      "path": "packages/auth/organization-roles.test.ts",
+      "gitBlobSha": "50c66d5a5ee6976f33f90be5e9715a50fa8e7b15"
+    },
+    {
+      "path": "packages/auth/organization-roles.ts",
+      "gitBlobSha": "86dcacd37e4e3544f633d53aa9457615a6737ef3"
+    },
+    {
+      "path": "packages/auth/package.json",
+      "gitBlobSha": "cf2562aae6e791ab6bd9807d9d7bd8052f9b818d"
+    },
+    {
+      "path": "packages/auth/provider.tsx",
+      "gitBlobSha": "f3a3dfa60c1198a77466b34bc1c61e1166e856d1"
+    },
+    {
+      "path": "packages/auth/proxy.ts",
+      "gitBlobSha": "e0ca0648b4985b61fb067c1d694368879c34d0ce"
+    },
+    {
+      "path": "packages/auth/schema.ts",
+      "gitBlobSha": "b2b5f32c76cdd5949bfab8a208489b95159f8e77"
+    },
+    {
+      "path": "packages/auth/server-keys.ts",
+      "gitBlobSha": "f7c6380251a15c771415dfe533d7a2ca75a6a345"
+    },
+    {
+      "path": "packages/auth/server.ts",
+      "gitBlobSha": "d87997f53c43abdb2d23b90d0e100e620981f29d"
+    },
+    {
+      "path": "packages/auth/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/auth/turbo.json",
+      "gitBlobSha": "7a8c0b538ea4c1f55f32d61698444c89b36030c3"
+    },
+    {
+      "path": "packages/cms/.env.example",
+      "gitBlobSha": "c55c743766a70f54f52746be37903f10d8ee4ffb"
+    },
+    {
+      "path": "packages/cms/basehub-types.d.ts",
+      "gitBlobSha": "d90cde6155c91e0275f324093fda75d18198fa85"
+    },
+    {
+      "path": "packages/cms/basehub.config.ts",
+      "gitBlobSha": "f769f3294db26c2fe160c3e44ac27a57c266156f"
+    },
+    {
+      "path": "packages/cms/components/body.tsx",
+      "gitBlobSha": "cac87ef71c5169255baf9b9a684275d33128c501"
+    },
+    {
+      "path": "packages/cms/components/code-block.tsx",
+      "gitBlobSha": "b9fbe750a3df81c7101ecf4688ff2a0221bd7201"
+    },
+    {
+      "path": "packages/cms/components/feed.tsx",
+      "gitBlobSha": "73b6ed64af5b880fe7ecb91ff847cc6cbeae705b"
+    },
+    {
+      "path": "packages/cms/components/image.tsx",
+      "gitBlobSha": "0f360acaa40f6a5b7201c3fc86861ca2a93df98b"
+    },
+    {
+      "path": "packages/cms/components/toc.tsx",
+      "gitBlobSha": "4d95a6df3c6d5f7f9ed3aed912f9f9866d2f1002"
+    },
+    {
+      "path": "packages/cms/components/toolbar.tsx",
+      "gitBlobSha": "6f52ee35c4aef8b7febea2159f41728e13d919a3"
+    },
+    {
+      "path": "packages/cms/index.ts",
+      "gitBlobSha": "79edf3245abf88881447cc7da1c7b50c65b3d2f6"
+    },
+    {
+      "path": "packages/cms/keys.ts",
+      "gitBlobSha": "a5b0f4683ab68f231bef112419839f4ef142b930"
+    },
+    {
+      "path": "packages/cms/next-config.ts",
+      "gitBlobSha": "8f803cdc2bfe48fa733f8f5a689b93e020dfdd58"
+    },
+    {
+      "path": "packages/cms/package.json",
+      "gitBlobSha": "c61816ccc4968360f2b821fe300919b9cab53b38"
+    },
+    {
+      "path": "packages/cms/tsconfig.json",
+      "gitBlobSha": "31d0d156c68065a90ae39b6cf6fa26e68eded3db"
+    },
+    {
+      "path": "packages/cms/turbo.json",
+      "gitBlobSha": "bca2b015b6af1ca641cfd62fd5e3b01e97e3acd9"
+    },
+    {
+      "path": "packages/cms/typescript-config.json",
+      "gitBlobSha": "0967ef424bce6791893e9a57bb952f80fd536e93"
+    },
+    {
+      "path": "packages/collaboration/auth.ts",
+      "gitBlobSha": "ec244391ae928bfec6730aaad439be0af6c7a0bf"
+    },
+    {
+      "path": "packages/collaboration/config.ts",
+      "gitBlobSha": "1671bb099aefc5a62dea4eade80b4b22096d2cdb"
+    },
+    {
+      "path": "packages/collaboration/hooks.ts",
+      "gitBlobSha": "84b8c3bdfc6fdc130a999b570fceacb0556af0e7"
+    },
+    {
+      "path": "packages/collaboration/keys.ts",
+      "gitBlobSha": "98e4ab121f4ce9b5163bed92df7fc1ca7b44198b"
+    },
+    {
+      "path": "packages/collaboration/package.json",
+      "gitBlobSha": "721e8145c5480c045795a4fff5cb630f671fd86c"
+    },
+    {
+      "path": "packages/collaboration/room.tsx",
+      "gitBlobSha": "d7cb7a60883b14002f107aa6787eba5569a0db59"
+    },
+    {
+      "path": "packages/collaboration/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/database/.env.example",
+      "gitBlobSha": "f808ed60ee3506cbada34d275a4294d5a6fc7419"
+    },
+    {
+      "path": "packages/database/accounts.test.ts",
+      "gitBlobSha": "664a2ee4b45d6b27cf3d6f8dc0d77a05f2c8729a"
+    },
+    {
+      "path": "packages/database/accounts.ts",
+      "gitBlobSha": "68146372ef4c9513735adc7b039ac65b814f00ae"
+    },
+    {
+      "path": "packages/database/auth-sync.test.ts",
+      "gitBlobSha": "cf0814abf0eda7345e60f482201b6e85ce2ca153"
+    },
+    {
+      "path": "packages/database/auth-sync.ts",
+      "gitBlobSha": "8b32670239e86c2780f664592fd25ddea1acfeda"
+    },
+    {
+      "path": "packages/database/clerk-provisioning.test.ts",
+      "gitBlobSha": "b4f4620eb8d7506479733ab383d11b1313241ebf"
+    },
+    {
+      "path": "packages/database/clerk-provisioning.ts",
+      "gitBlobSha": "dbe37f08a227d11dda6d549324153ac36b104f3b"
+    },
+    {
+      "path": "packages/database/commerce.test.ts",
+      "gitBlobSha": "467e87a8e1ef13499fe470e17a724b395e6fc9db"
+    },
+    {
+      "path": "packages/database/commerce.ts",
+      "gitBlobSha": "f86b54814dc0dca36fb219119179aed52933b4bd"
+    },
+    {
+      "path": "packages/database/dealer-studio.test.ts",
+      "gitBlobSha": "6677237235c2d074448c6cf3f5ca50380bf5bf92"
+    },
+    {
+      "path": "packages/database/dealer-studio.ts",
+      "gitBlobSha": "d9d0d589cbf103bbfd2fd922dcced3389cb84a40"
+    },
+    {
+      "path": "packages/database/index.ts",
+      "gitBlobSha": "bae77bbc62873bc061df83b8860bf8c09621a368"
+    },
+    {
+      "path": "packages/database/inventory-authority.test.ts",
+      "gitBlobSha": "e531cc84f273da6cfaade4ece9f3c1d9b77a4afb"
+    },
+    {
+      "path": "packages/database/inventory-health.ts",
+      "gitBlobSha": "4bdbc651369a9d13e9f46a5061e11f0396a699f3"
+    },
+    {
+      "path": "packages/database/inventory-imports.test.ts",
+      "gitBlobSha": "08ac9f936b35bc21fedccd60e3f9d56063ac6036"
+    },
+    {
+      "path": "packages/database/inventory-imports.ts",
+      "gitBlobSha": "0ee5663742f04651eaf72661a15ad9aee801c3cc"
+    },
+    {
+      "path": "packages/database/inventory-ingestion.integration.test.ts",
+      "gitBlobSha": "869bf3239c5ec83fd3f09774c7a9a96b79883dba"
+    },
+    {
+      "path": "packages/database/inventory-ingestion.ts",
+      "gitBlobSha": "d2ccdce41dc17bcf9a330973de8af92134953290"
+    },
+    {
+      "path": "packages/database/inventory-ordering.integration.test.ts",
+      "gitBlobSha": "38e3691a9e94b20c0d0780f86a1a26b49de47e1d"
+    },
+    {
+      "path": "packages/database/inventory-ordering.test.ts",
+      "gitBlobSha": "b9f8db9718f7d164a3f02bccd579674e766d5078"
+    },
+    {
+      "path": "packages/database/inventory-ordering.ts",
+      "gitBlobSha": "fbbb5f988fc7ee2c3402514fc1efa34999a4d68b"
+    },
+    {
+      "path": "packages/database/inventory-sources.test.ts",
+      "gitBlobSha": "52b561aacfef7410275c24bda11f7a34bbb37b36"
+    },
+    {
+      "path": "packages/database/inventory-sources.ts",
+      "gitBlobSha": "4482d8832a93e7eb98933270d60d2034a4f663ed"
+    },
+    {
+      "path": "packages/database/keys.ts",
+      "gitBlobSha": "f191ae4d5530456c470fa5930c5636481226b5aa"
+    },
+    {
+      "path": "packages/database/kyb-documents.test.ts",
+      "gitBlobSha": "b4416624a3f83e77f2b0625c566cc4242b178bfa"
+    },
+    {
+      "path": "packages/database/kyb-documents.ts",
+      "gitBlobSha": "6760bcbf5bc513aa5e25690ad60c88a442926cd4"
+    },
+    {
+      "path": "packages/database/leads-create.test.ts",
+      "gitBlobSha": "3dcee5c414a423c2f04d01f3121b86458dfe29a8"
+    },
+    {
+      "path": "packages/database/leads.test.ts",
+      "gitBlobSha": "8c89b9d54bae6200175378ddf129799d7f67ca40"
+    },
+    {
+      "path": "packages/database/leads.ts",
+      "gitBlobSha": "fb68fb57f0466abbb36a8f85443149e5daa0331a"
+    },
+    {
+      "path": "packages/database/listings.test.ts",
+      "gitBlobSha": "e87a43dfb3b5b20228f808f16ef08ad01dcbedf9"
+    },
+    {
+      "path": "packages/database/listings.ts",
+      "gitBlobSha": "407bd74be9460987fd5f84f8b4773070d4131d75"
+    },
+    {
+      "path": "packages/database/m1-lineage.integration.test.ts",
+      "gitBlobSha": "739206642e679f44a790e8a15874041c34a869ab"
+    },
+    {
+      "path": "packages/database/marketplace.test.ts",
+      "gitBlobSha": "7b78d019c092203a5d8c6e00e972017d44202563"
+    },
+    {
+      "path": "packages/database/marketplace.ts",
+      "gitBlobSha": "de68382f2a5fb0a30f1d0da2ef3926ac94956ac3"
+    },
+    {
+      "path": "packages/database/media.test.ts",
+      "gitBlobSha": "935ac83d1064e4112db16189bf520d0e6cf33345"
+    },
+    {
+      "path": "packages/database/media.ts",
+      "gitBlobSha": "bc67f5d9adac7d3aceb19ed9a62412dd7e2ca94b"
+    },
+    {
+      "path": "packages/database/migration-release.test.ts",
+      "gitBlobSha": "ac7be00262ebff6faa72404c9ea1dbae30bf8883"
+    },
+    {
+      "path": "packages/database/organization-access.ts",
+      "gitBlobSha": "7f3bc400f056eb4d150125817bea402ce52d0344"
+    },
+    {
+      "path": "packages/database/organization-directory.ts",
+      "gitBlobSha": "efaac91e7eaac4c43c4bf148ee769211a494257b"
+    },
+    {
+      "path": "packages/database/organization-profile-claims.test.ts",
+      "gitBlobSha": "fa2c5ed4e115e97d07bec0b7f6509117a7ce1467"
+    },
+    {
+      "path": "packages/database/organization-profile-claims.ts",
+      "gitBlobSha": "7fcea432d3cf19dbc8b894f02b235c0218f7264f"
+    },
+    {
+      "path": "packages/database/organization-profile.test.ts",
+      "gitBlobSha": "65a4e418ae62d733f47cbb792529ef85fe3d49a4"
+    },
+    {
+      "path": "packages/database/organization-profile.ts",
+      "gitBlobSha": "9a7dfcef9e0cdd0ee3628f66d312f0c846742328"
+    },
+    {
+      "path": "packages/database/organization-verification.test.ts",
+      "gitBlobSha": "9939eaafa6781df8995dc50c461ca077aaf2c820"
+    },
+    {
+      "path": "packages/database/organization-verification.ts",
+      "gitBlobSha": "e91c0368d75b4d60946fae8efb728b64f0f60e07"
+    },
+    {
+      "path": "packages/database/organizations.integration.test.ts",
+      "gitBlobSha": "1b554fe18e246cee4966d926655732c88262f93c"
+    },
+    {
+      "path": "packages/database/organizations.test.ts",
+      "gitBlobSha": "e20d923ac1c9ba3b1d3930097ad2b2ee86db4c58"
+    },
+    {
+      "path": "packages/database/organizations.ts",
+      "gitBlobSha": "e54bb9d0b8183c087bfa089db3b64d816c59569a"
+    },
+    {
+      "path": "packages/database/package.json",
+      "gitBlobSha": "c047734ec9606910b9b62ae9b3fb6626aa044180"
+    },
+    {
+      "path": "packages/database/prisma.config.ts",
+      "gitBlobSha": "e2ac166b8cfc0f18001db8eb9fb308c742926e34"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260607223000_initial_marketplace/migration.sql",
+      "gitBlobSha": "c959eefee7d9064c493deca5d6165f93bc16bea8"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260609090000_dealer_studio_phase_1a/migration.sql",
+      "gitBlobSha": "2b0a3a19aec79947c4222446e087d74f7e03dd72"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260711185900_task08_01_expand_snapshot/migration.sql",
+      "gitBlobSha": "cfc7da967076b5aae698aeb9d2bfa69dd3c23f47"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260711190000_task08_02_expand/migration.sql",
+      "gitBlobSha": "b56f151190e940d71d13f421cb2ec3d223221549"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260711190100_task08_03_backfill_constraints/migration.sql",
+      "gitBlobSha": "199716cd831d074c696831514346b3d1aac42a49"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260711190200_task08_04_contract/migration.sql",
+      "gitBlobSha": "ab49f055e3c2ffd8afacfc19855afea8dd98f57d"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260712213000_global_inventory_m1_foundation/migration.sql",
+      "gitBlobSha": "22ae336b567e111de7e0055fab496d1237f8b70d"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260712220000_global_inventory_m1_hardening/migration.sql",
+      "gitBlobSha": "37193ebe03ade196e1cf8b8714eee483b8ee89c9"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260712221000_global_inventory_m1_vin_contract/migration.sql",
+      "gitBlobSha": "ae9b652b1e0135aaf03443ba520909b11d4f0e4a"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260712222000_global_inventory_m1_security/migration.sql",
+      "gitBlobSha": "187a8920144bd1e4ea549bb471eb52d0a0e6888f"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260713003000_global_inventory_m1_integrity/migration.sql",
+      "gitBlobSha": "dda64652951e918655371947d4bb462494ba55a5"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260713040000_m2_kyb_inventory_workflows/migration.sql",
+      "gitBlobSha": "747fd671c24cbe8bdf6754b737d86057031c6dc8"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260713050000_m2_inventory_import_orchestration/migration.sql",
+      "gitBlobSha": "16f0aac4c9c82c064e4321acc9308d0ded7274db"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260715090000_public_organization_directory/migration.sql",
+      "gitBlobSha": "10f5bb98eb140e873dbf1525b1c533ef237eaee8"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260715143000_dealer_profile_claiming/migration.sql",
+      "gitBlobSha": "692974e5c7d6394952aa9cf1516d6fa82a7c45f1"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260718110000_revoke_inactive_dealer_conversations/migration.sql",
+      "gitBlobSha": "bdfe28bd6e17faaa9abe1eb1916f84bc4d4e1da6"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260722133000_drop_inventory_import_attempt_lease_default/migration.sql",
+      "gitBlobSha": "3ec759c45f738d4b7bffa896d74bb473247a01f1"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260723160000_vehicle_taxonomy_foundation/migration.sql",
+      "gitBlobSha": "ac0781c9250adb4dedca3de73a4204326e739262"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260723203000_seller_profile_verification_default/migration.sql",
+      "gitBlobSha": "67e74a2ff4c3d7fba63980ce14c17c756bd2ab13"
+    },
+    {
+      "path": "packages/database/prisma/migrations/20260726090000_monetization_entitlements_foundation/migration.sql",
+      "gitBlobSha": "b3bdfb6939878d90d753a7fb165e0009bea66c2d"
+    },
+    {
+      "path": "packages/database/prisma/migrations/migration_lock.toml",
+      "gitBlobSha": "044d57cdb0d5b5bff3475112359a4ee70439bf78"
+    },
+    {
+      "path": "packages/database/prisma/schema.prisma",
+      "gitBlobSha": "98595cf643b1e8f170045498f269ff0503ec32e4"
+    },
+    {
+      "path": "packages/database/prisma/seed.ts",
+      "gitBlobSha": "a24f2a40f83fe721ffbb7b9c4536298dfa3781af"
+    },
+    {
+      "path": "packages/database/production-readiness.sql",
+      "gitBlobSha": "aa6d28bd836f643bcd0980b5e5db990af2c78d8c"
+    },
+    {
+      "path": "packages/database/scripts/database-release.ts",
+      "gitBlobSha": "a6d259bc40321a4178f7927821ba2cb1ebd5bed4"
+    },
+    {
+      "path": "packages/database/scripts/migration-contract.ts",
+      "gitBlobSha": "136bdd3a11b5edfa992d49bca7761f1502c0c5af"
+    },
+    {
+      "path": "packages/database/scripts/postgres-bin.ts",
+      "gitBlobSha": "5f43e519eb0a7b900b492386be8cad323cb39476"
+    },
+    {
+      "path": "packages/database/scripts/tool-environment.ts",
+      "gitBlobSha": "f5c5945ecd7e1f793294b5236f93ae459073b8ca"
+    },
+    {
+      "path": "packages/database/test/server-only.ts",
+      "gitBlobSha": "cb0ff5c3b541f646105198ee23ac0fc3d805023e"
+    },
+    {
+      "path": "packages/database/trusted-admin.ts",
+      "gitBlobSha": "e8a42749639cc4f8051853e9a89d24f34a4a4a03"
+    },
+    {
+      "path": "packages/database/trusted-directory-admin.ts",
+      "gitBlobSha": "4ca6d0f3eb5367c1e8af748d5f0bff67553b72a8"
+    },
+    {
+      "path": "packages/database/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/database/turbo.json",
+      "gitBlobSha": "46cb186477f96292c2f6feb161e1d3e350efa959"
+    },
+    {
+      "path": "packages/database/vehicle-taxonomy.ts",
+      "gitBlobSha": "f617e1c55ddc32a24b83805cd906088ff4c4d3cb"
+    },
+    {
+      "path": "packages/database/vitest.config.ts",
+      "gitBlobSha": "bbb7180df5be614a3e2ae9b5ac624bdf68ac7644"
+    },
+    {
+      "path": "packages/design-system/components.json",
+      "gitBlobSha": "3cd4d5d8523672da77a20c29ce231ea55c0b2af8"
+    },
+    {
+      "path": "packages/design-system/components/mode-toggle.tsx",
+      "gitBlobSha": "c5d5081c5d84d26ed7fa99dfe4a59bfe9fedfe1f"
+    },
+    {
+      "path": "packages/design-system/components/ui/accordion.tsx",
+      "gitBlobSha": "f852e3acab20d5d3d83b2f343871742892f452e1"
+    },
+    {
+      "path": "packages/design-system/components/ui/alert-dialog.tsx",
+      "gitBlobSha": "a24346138fe1d825e3fa2bdaaeccefb2312c11fb"
+    },
+    {
+      "path": "packages/design-system/components/ui/alert.tsx",
+      "gitBlobSha": "30d02277d68cab131b5ae1b6559be38fc24ea1c1"
+    },
+    {
+      "path": "packages/design-system/components/ui/aspect-ratio.tsx",
+      "gitBlobSha": "57e38fa96f9c0cb767d7b8de0d6dbc171d1b921a"
+    },
+    {
+      "path": "packages/design-system/components/ui/avatar.tsx",
+      "gitBlobSha": "4cbe2f0c60af7fab8bd22ab8d6fab418d6c292c3"
+    },
+    {
+      "path": "packages/design-system/components/ui/badge.tsx",
+      "gitBlobSha": "62e4679a734770f31db65cbe94dad10cfc7a29c9"
+    },
+    {
+      "path": "packages/design-system/components/ui/breadcrumb.tsx",
+      "gitBlobSha": "a74e15f1cc2dc6e2e934ab75dad9216fd698cd65"
+    },
+    {
+      "path": "packages/design-system/components/ui/button-group.tsx",
+      "gitBlobSha": "b6781b4f6166cf67aa272f7f2dc9223c795e9b70"
+    },
+    {
+      "path": "packages/design-system/components/ui/button.tsx",
+      "gitBlobSha": "f12e64197dac84f7defd0f6d1da47285accef8f5"
+    },
+    {
+      "path": "packages/design-system/components/ui/calendar.tsx",
+      "gitBlobSha": "4d73c028948621ae7876d3de3b7fef876c566611"
+    },
+    {
+      "path": "packages/design-system/components/ui/card.tsx",
+      "gitBlobSha": "6476f55c5e9af0e300332d54752e2f61349dbb90"
+    },
+    {
+      "path": "packages/design-system/components/ui/carousel.tsx",
+      "gitBlobSha": "efea64e29623932cc7a93c76a05fb4b2ac615085"
+    },
+    {
+      "path": "packages/design-system/components/ui/chart.tsx",
+      "gitBlobSha": "152750ccec70b2b21590075f4fc3fbfd87f1939c"
+    },
+    {
+      "path": "packages/design-system/components/ui/checkbox.tsx",
+      "gitBlobSha": "9b97b0ff9a2113ec741a9cb987fabf58814a3350"
+    },
+    {
+      "path": "packages/design-system/components/ui/collapsible.tsx",
+      "gitBlobSha": "2f7a4e7fc64a8874373c1584646a63f28cd63c47"
+    },
+    {
+      "path": "packages/design-system/components/ui/command.tsx",
+      "gitBlobSha": "b6bb32ef52b091b2c9719348b6a323a6c7e515fd"
+    },
+    {
+      "path": "packages/design-system/components/ui/context-menu.tsx",
+      "gitBlobSha": "bc27d5f6537bb138169c6b432cf962722062080f"
+    },
+    {
+      "path": "packages/design-system/components/ui/dialog.tsx",
+      "gitBlobSha": "95fdc64ef354dabab57c39269d6bb6e7168e5f18"
+    },
+    {
+      "path": "packages/design-system/components/ui/drawer.tsx",
+      "gitBlobSha": "201fd8c34e2f26d0c96c4ff8026879ca1c232a89"
+    },
+    {
+      "path": "packages/design-system/components/ui/dropdown-menu.tsx",
+      "gitBlobSha": "129bac6d46d9b750e6578d8ab8018cb54df3659a"
+    },
+    {
+      "path": "packages/design-system/components/ui/empty.tsx",
+      "gitBlobSha": "fce2cbf28c6b780a542d520d5bad0b80f3170556"
+    },
+    {
+      "path": "packages/design-system/components/ui/field.tsx",
+      "gitBlobSha": "d2bdc020fcd762e1dbee1f79e506a9d9d6139e8f"
+    },
+    {
+      "path": "packages/design-system/components/ui/form.tsx",
+      "gitBlobSha": "107a00d1c75568c0fdbea5d3d3ed716199200648"
+    },
+    {
+      "path": "packages/design-system/components/ui/hover-card.tsx",
+      "gitBlobSha": "139aef495cb7795ac3526567a72815af4a3e6c6c"
+    },
+    {
+      "path": "packages/design-system/components/ui/input-group.tsx",
+      "gitBlobSha": "732147333b43a97e1af66215080f84bb32abef07"
+    },
+    {
+      "path": "packages/design-system/components/ui/input-otp.tsx",
+      "gitBlobSha": "b3fd8887495e1908c5830b42d5fe45a4aa554539"
+    },
+    {
+      "path": "packages/design-system/components/ui/input.tsx",
+      "gitBlobSha": "8d8afef754825436f53d875f710cd1424a78bc45"
+    },
+    {
+      "path": "packages/design-system/components/ui/item.tsx",
+      "gitBlobSha": "dcb6eab59cb3ac7a57b8c1c12dca9ac673fabecc"
+    },
+    {
+      "path": "packages/design-system/components/ui/kbd.tsx",
+      "gitBlobSha": "59450ca672483d7a94c6d25d17205a61af4a5762"
+    },
+    {
+      "path": "packages/design-system/components/ui/label.tsx",
+      "gitBlobSha": "c9b1d87e67968225b4a9c078d86e65902647855b"
+    },
+    {
+      "path": "packages/design-system/components/ui/menubar.tsx",
+      "gitBlobSha": "34e6ebea6ab53fe36b3d5729a727c4f71a54ad3f"
+    },
+    {
+      "path": "packages/design-system/components/ui/navigation-menu.tsx",
+      "gitBlobSha": "6ca5f7903c4601ede8f88f9892dfba85edf35488"
+    },
+    {
+      "path": "packages/design-system/components/ui/pagination.tsx",
+      "gitBlobSha": "918b27a30a8e9228cbe4c3b7821fece669e43987"
+    },
+    {
+      "path": "packages/design-system/components/ui/popover.tsx",
+      "gitBlobSha": "159131b424abc779881f29efcbff8b34d98979c7"
+    },
+    {
+      "path": "packages/design-system/components/ui/progress.tsx",
+      "gitBlobSha": "0d87fb230603c9cb59eb0580d660cabf2e64b08c"
+    },
+    {
+      "path": "packages/design-system/components/ui/radio-group.tsx",
+      "gitBlobSha": "2b5f2c86f46224174ac76195a150bdc5193f0776"
+    },
+    {
+      "path": "packages/design-system/components/ui/resizable.tsx",
+      "gitBlobSha": "fc448607e08884adb08c388d561ab3179c3b68dd"
+    },
+    {
+      "path": "packages/design-system/components/ui/scroll-area.tsx",
+      "gitBlobSha": "0b6901a02663ae7b71b9a806105b411ea5163e2d"
+    },
+    {
+      "path": "packages/design-system/components/ui/select.tsx",
+      "gitBlobSha": "7985873558bdd4011f31929c178adc8703c7f914"
+    },
+    {
+      "path": "packages/design-system/components/ui/separator.tsx",
+      "gitBlobSha": "51a9ca908cafe0deff91cb46d001062be9d003f5"
+    },
+    {
+      "path": "packages/design-system/components/ui/sheet.tsx",
+      "gitBlobSha": "00947f5a4ddb0aa289e4743547cfd7d72b6eb0b5"
+    },
+    {
+      "path": "packages/design-system/components/ui/sidebar.tsx",
+      "gitBlobSha": "2b7bcdc61c38cc1358ec956fba305e357a39459e"
+    },
+    {
+      "path": "packages/design-system/components/ui/skeleton.tsx",
+      "gitBlobSha": "76b42e5f8ef16f39006c17822f8552402182faf7"
+    },
+    {
+      "path": "packages/design-system/components/ui/slider.tsx",
+      "gitBlobSha": "2ea78d52b6d9a49f978f7a77a7226691828ac54e"
+    },
+    {
+      "path": "packages/design-system/components/ui/sonner.tsx",
+      "gitBlobSha": "9b20afe2e10fd9b94d1abc1ae732054b2fb9821c"
+    },
+    {
+      "path": "packages/design-system/components/ui/spinner.tsx",
+      "gitBlobSha": "7c6f1aa3ca1c032fc5a9bf944dcbfb5d49938ea3"
+    },
+    {
+      "path": "packages/design-system/components/ui/switch.tsx",
+      "gitBlobSha": "3ed90418013c32e7ded8a00715b317623cb837c4"
+    },
+    {
+      "path": "packages/design-system/components/ui/table.tsx",
+      "gitBlobSha": "0552fd823f50eb9134f9ef863da28a8122763bb7"
+    },
+    {
+      "path": "packages/design-system/components/ui/tabs.tsx",
+      "gitBlobSha": "6623d596afc5ffb1e7ee808a15625e6b70b6cad0"
+    },
+    {
+      "path": "packages/design-system/components/ui/textarea.tsx",
+      "gitBlobSha": "0b7d2f6c57ed27daaeba4b2ec96abfb3ffd07328"
+    },
+    {
+      "path": "packages/design-system/components/ui/toggle-group.tsx",
+      "gitBlobSha": "57edfa086a41a3b55d6c6a57486e6ed7b010ab8e"
+    },
+    {
+      "path": "packages/design-system/components/ui/toggle.tsx",
+      "gitBlobSha": "9a62b2cf91cd822b8c8921ee30a902c1e74bed17"
+    },
+    {
+      "path": "packages/design-system/components/ui/tooltip.tsx",
+      "gitBlobSha": "12a77ed4e74ed447d9fbe4828ebd3fa9f312926e"
+    },
+    {
+      "path": "packages/design-system/hooks/use-mobile.ts",
+      "gitBlobSha": "2b0fe1dfef3b17850bbac040665f514a8ffd0f15"
+    },
+    {
+      "path": "packages/design-system/lib/fonts.ts",
+      "gitBlobSha": "84345a4198e6707c9fa16931096ff6269ae32427"
+    },
+    {
+      "path": "packages/design-system/lib/public-fonts.ts",
+      "gitBlobSha": "0cff93167b09600171eef0fbc4fb500904f2ee5d"
+    },
+    {
+      "path": "packages/design-system/lib/utils.ts",
+      "gitBlobSha": "136516587608a6a34e9174e7cc2cb671dc029df8"
+    },
+    {
+      "path": "packages/design-system/package.json",
+      "gitBlobSha": "330a5893ec0e94da87260f789c8251ecfaad8ecd"
+    },
+    {
+      "path": "packages/design-system/postcss.config.mjs",
+      "gitBlobSha": "79bcf135dc4391e8ff691d471c1fe46d10ff8329"
+    },
+    {
+      "path": "packages/design-system/providers/theme.tsx",
+      "gitBlobSha": "f994c0df3912c48c22bb5de51173a0d32d7da248"
+    },
+    {
+      "path": "packages/design-system/styles/globals.css",
+      "gitBlobSha": "dfd92a2fa5962f40376f9831439ce986b8511a0f"
+    },
+    {
+      "path": "packages/design-system/tsconfig.json",
+      "gitBlobSha": "910a8b951e9dd548ebed1168489e5ee3e00f8e1f"
+    },
+    {
+      "path": "packages/email/delivery.ts",
+      "gitBlobSha": "c1c966d18f2543fd6ef82dc50fcc016c6d52d3ec"
+    },
+    {
+      "path": "packages/email/index.ts",
+      "gitBlobSha": "c3c1f84f39b328acdcf3fae15354d4bb9f7a2376"
+    },
+    {
+      "path": "packages/email/keys.ts",
+      "gitBlobSha": "f07fb619a84da328609f68ab568deaee1483eebb"
+    },
+    {
+      "path": "packages/email/package.json",
+      "gitBlobSha": "dd9bc36bdfeed0eb28c4c4117d1554f82469ceea"
+    },
+    {
+      "path": "packages/email/preview-smoke-policy.mjs",
+      "gitBlobSha": "5d96a009b9e3e4375f0f3360930b04a323aacb71"
+    },
+    {
+      "path": "packages/email/preview-smoke.mjs",
+      "gitBlobSha": "778dcd5721c8f4807a42c2271c08f009d411f272"
+    },
+    {
+      "path": "packages/email/preview-smoke.test.mjs",
+      "gitBlobSha": "0554c14932b0077efd305a91c9e9552e6abe1beb"
+    },
+    {
+      "path": "packages/email/templates/contact.tsx",
+      "gitBlobSha": "a5102703935ad16e5358f552266f462d84a85809"
+    },
+    {
+      "path": "packages/email/tsconfig.json",
+      "gitBlobSha": "e0668b1897f01c53012bf1ea26493ab4755e606c"
+    },
+    {
+      "path": "packages/email/turbo.json",
+      "gitBlobSha": "a225684483bfcf6ae6d5a69e8e7a8cd934caf347"
+    },
+    {
+      "path": "packages/feature-flags/access.ts",
+      "gitBlobSha": "bca635ef215658de975dfc062c98041c511e6dc6"
+    },
+    {
+      "path": "packages/feature-flags/components/toolbar.tsx",
+      "gitBlobSha": "8cf3d7371d8708e722de040ab806b37dbbb2d3b8"
+    },
+    {
+      "path": "packages/feature-flags/index.ts",
+      "gitBlobSha": "e59b43ecbfc86c25a39be5c1e0c1724e177f9c01"
+    },
+    {
+      "path": "packages/feature-flags/keys.ts",
+      "gitBlobSha": "a39e5e39927319a70875f6b464b1415c214e607d"
+    },
+    {
+      "path": "packages/feature-flags/lib/create-flag.ts",
+      "gitBlobSha": "796334601aa4ef9d057ce5adf2594fd7445a0079"
+    },
+    {
+      "path": "packages/feature-flags/lib/toolbar.ts",
+      "gitBlobSha": "a690a1fbd8f375392431853b2167df903baa7a98"
+    },
+    {
+      "path": "packages/feature-flags/package.json",
+      "gitBlobSha": "dcb9842f0108d1dd752b13be37666e6ae894ea66"
+    },
+    {
+      "path": "packages/feature-flags/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/internationalization/config.test.ts",
+      "gitBlobSha": "a7c5e88e671354164e6904577d45a01736616a09"
+    },
+    {
+      "path": "packages/internationalization/config.ts",
+      "gitBlobSha": "bec3edbe7014450ea6ee5c91ebf94763dd02530e"
+    },
+    {
+      "path": "packages/internationalization/format.ts",
+      "gitBlobSha": "990c14cd21242156bfd0f654fcfb38374e5e5d97"
+    },
+    {
+      "path": "packages/internationalization/index.ts",
+      "gitBlobSha": "54c08d1689aa896bcf6307befa9dd41da703e99c"
+    },
+    {
+      "path": "packages/internationalization/package.json",
+      "gitBlobSha": "3780680151c0a65cda1db6e1dd5ec3075913307b"
+    },
+    {
+      "path": "packages/internationalization/proxy.test.ts",
+      "gitBlobSha": "d30d1ec7a9427604da1b34f49dca9dad3056e971"
+    },
+    {
+      "path": "packages/internationalization/proxy.ts",
+      "gitBlobSha": "f265f14eecae3bc572e8e6cb6806402affa90001"
+    },
+    {
+      "path": "packages/internationalization/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/marketplace-domain/commerce.test.ts",
+      "gitBlobSha": "52a8255ae96e202bb8466aa94c7aed9dd183e613"
+    },
+    {
+      "path": "packages/marketplace-domain/commerce.ts",
+      "gitBlobSha": "7212b14a7a83a168443fc3f676e030b6ea591e00"
+    },
+    {
+      "path": "packages/marketplace-domain/dealer.ts",
+      "gitBlobSha": "461b0c8eb6ec77399d5e8e88ed40c696d3b630a3"
+    },
+    {
+      "path": "packages/marketplace-domain/directory.ts",
+      "gitBlobSha": "dcafc978e3f1bee115b4c042bc57ea502d6e232f"
+    },
+    {
+      "path": "packages/marketplace-domain/external-inventory.ts",
+      "gitBlobSha": "284cfc35579f8d77a35cd3bab44c14ce96768c9c"
+    },
+    {
+      "path": "packages/marketplace-domain/global-registry.ts",
+      "gitBlobSha": "79ae0084166d33b88e2208de30c85d7281a58671"
+    },
+    {
+      "path": "packages/marketplace-domain/index.ts",
+      "gitBlobSha": "ad394ec5234cb7334923f32ce277576e93ef128a"
+    },
+    {
+      "path": "packages/marketplace-domain/inventory-contract.ts",
+      "gitBlobSha": "19b0e3fc79584df1c6ce2145f79753d5b9530765"
+    },
+    {
+      "path": "packages/marketplace-domain/inventory-csv.ts",
+      "gitBlobSha": "f8557e7d4dc4648931e02416a6f9461dbc5d1215"
+    },
+    {
+      "path": "packages/marketplace-domain/inventory-policy.ts",
+      "gitBlobSha": "9f92a04b2eb25db71e79f54efe0ad0f9194d9887"
+    },
+    {
+      "path": "packages/marketplace-domain/lead-input.ts",
+      "gitBlobSha": "aec4b16f8b9ff1403208d331b39166f373148916"
+    },
+    {
+      "path": "packages/marketplace-domain/listing-input.ts",
+      "gitBlobSha": "585d5180615d82e65ac3d46d05ed7ab6185e1d6f"
+    },
+    {
+      "path": "packages/marketplace-domain/listing-lifecycle.ts",
+      "gitBlobSha": "8c1bce5ecfbc582a4312b1ba0111e4e89134b3fe"
+    },
+    {
+      "path": "packages/marketplace-domain/listing-routes.ts",
+      "gitBlobSha": "4c7a701a5754c29b5ee21edd911e483f404c2920"
+    },
+    {
+      "path": "packages/marketplace-domain/organization-verification.ts",
+      "gitBlobSha": "a89e36775efd5ac057deb0e1d31b6fc688a7c144"
+    },
+    {
+      "path": "packages/marketplace-domain/package.json",
+      "gitBlobSha": "a804e79cb6fbc11bdc00784edb16f88d90c40b8c"
+    },
+    {
+      "path": "packages/marketplace-domain/private-artifacts.ts",
+      "gitBlobSha": "67edcd6ec4757753d2aacd5c980deed79ea55ba7"
+    },
+    {
+      "path": "packages/marketplace-domain/provider-ports.ts",
+      "gitBlobSha": "1a86c2e7741648abfdac4590436c4790cec580b7"
+    },
+    {
+      "path": "packages/marketplace-domain/search.ts",
+      "gitBlobSha": "f62607338ac3567e88d2f9c342174c386fa33b2d"
+    },
+    {
+      "path": "packages/marketplace-domain/taxonomy.ts",
+      "gitBlobSha": "88901625ee9ff49fe8747f3324b415b122dc4e78"
+    },
+    {
+      "path": "packages/marketplace-domain/testing/mock-data.ts",
+      "gitBlobSha": "cdb4fb7485f687832fc5307ee738f05bf5e4292b"
+    },
+    {
+      "path": "packages/marketplace-domain/tsconfig.json",
+      "gitBlobSha": "f812de12f193a63ba436ac5a9a315fb967406b19"
+    },
+    {
+      "path": "packages/marketplace-domain/types.ts",
+      "gitBlobSha": "b328323314cf72e0abcd2f75c151cc99023074ff"
+    },
+    {
+      "path": "packages/marketplace-domain/vehicle-catalog.ts",
+      "gitBlobSha": "e7ce46fb99338f09e27aff9aa3388cdfb21cb7df"
+    },
+    {
+      "path": "packages/marketplace-domain/vehicle-taxonomy.test.ts",
+      "gitBlobSha": "34d63432774185f2880a3ea5911b55d6032f7f04"
+    },
+    {
+      "path": "packages/marketplace-domain/vehicle-taxonomy.ts",
+      "gitBlobSha": "b9fca06b88c510c87ef3da4dfc37db0c17f9be67"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx",
+      "gitBlobSha": "c4e3e07e4bffdf214518ec1b560d8bc7083570a2"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+      "gitBlobSha": "dbeef543e9e712905c202e0d1fe8fba25be662ab"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-header.tsx",
+      "gitBlobSha": "57d77790ed4f3d0d1a0efdb2b9f7f35209c70c86"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+      "gitBlobSha": "4567202ef4c5f95a5e7348d90ef76206b58ba23a"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+      "gitBlobSha": "9cff8f812d74753e04fad0b04d7d3c137ac2e0bd"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
+      "gitBlobSha": "67099cc9420ee63c8e55ebddba537aa98fb6cbc5"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-navigation-icons.tsx",
+      "gitBlobSha": "1799bb4ad4c25c7315937248c1c60050938e91b6"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-social-links.tsx",
+      "gitBlobSha": "1ce9f5162888823c5a5e7109b3d3da28fb39dfda"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-ui-icon.tsx",
+      "gitBlobSha": "f8996702e98001931518218cd53f5ac481bb4ceb"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-vehicle-facts.tsx",
+      "gitBlobSha": "b79659fea8d26499e72b06b80cad74b8dbd5178b"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-discovery-bar.tsx",
+      "gitBlobSha": "5713c62bfa81af6e4e50af055926491df791991e"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-discovery-search.tsx",
+      "gitBlobSha": "34a28b14c994f724149130669e59d2add69f4b2f"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-filter-controls.tsx",
+      "gitBlobSha": "13f5555da76a2191417da51f60ba26dbe9ceb42f"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-filter-rail-ranges.tsx",
+      "gitBlobSha": "8c33fee6501469f72cb313a889effff54a9fb9b2"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-lead-services.tsx",
+      "gitBlobSha": "5b2fbd171bfc653e3697c987c7c9aef5086aa388"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-marketplace-controls.tsx",
+      "gitBlobSha": "650b3f2835644d561f8e67a242037520171ed605"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-quick-filters.tsx",
+      "gitBlobSha": "1381e29cfd2ffee3139e21c21e1336f3e031934a"
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-search-assistant.tsx",
+      "gitBlobSha": "be888760cadd867da8b713ece540bd883035dddd"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-actions.tsx",
+      "gitBlobSha": "00ab0c53cf89e1a7c5b5608e3834ec80bbc79bfd"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail-content.tsx",
+      "gitBlobSha": "9ace54871eb71fbe3586588881be9446d14e0a14"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail-summary.tsx",
+      "gitBlobSha": "3cccd8862ad7c9034324e4b0f9b6aacb616cb2ca"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail.tsx",
+      "gitBlobSha": "763cf916ccaf97e19c38c10c5dfc39b8eb4ab4e8"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-details-tabs.tsx",
+      "gitBlobSha": "3e4308682aabf49240962fbf799667f56267aa0c"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-equipment.tsx",
+      "gitBlobSha": "3ac690d69c308adb52e663196d61d86ac054c4b7"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-gallery-lightbox.tsx",
+      "gitBlobSha": "259008a7b30d9772928a24e0d7dd8641ee2297d4"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-gallery-primitives.tsx",
+      "gitBlobSha": "9ce384ce1cc081d448270334852ed9dee7f42460"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-gallery.tsx",
+      "gitBlobSha": "373d14a5e301c0b7f4b369c155aeb3b1a34e8b4c"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-location.tsx",
+      "gitBlobSha": "dd5b539fac111346badbb2fe3a8c193195eecc2e"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-price-intelligence.tsx",
+      "gitBlobSha": "97462cb0cb29312e10bb9e0e953d3f0a1cf18afa"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-public-truth.tsx",
+      "gitBlobSha": "fd71bac1d6f80bb5acd75fae38f3cd746a3a188e"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-specs.tsx",
+      "gitBlobSha": "bf374c5f396a8f3ce856da8d3bba6790607c0656"
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-trust-panel.tsx",
+      "gitBlobSha": "8f9e299958b52083cb226beb3b8c241fc27d9324"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-category-options.tsx",
+      "gitBlobSha": "b09f2e2928ea46a14ac3ef09ed919ffbe26763ff"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-category-picker.tsx",
+      "gitBlobSha": "84b94c353c0839e252e3d5c1a2221aa2501d3716"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-discovery-filter-body.tsx",
+      "gitBlobSha": "70a053498f31945b9e0f6ed0c142db653f658b0f"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-filter-options.tsx",
+      "gitBlobSha": "cd800b177e32e556f52970341f41a8100d5eee94"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-full-filter-overlay.tsx",
+      "gitBlobSha": "c1e35c58a6fa4c2198608099dbca6c3c5e784e42"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-locale-switch-link.tsx",
+      "gitBlobSha": "2273a0ba05aada5a128ea32113ebdb17a5c2bd54"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-masthead.tsx",
+      "gitBlobSha": "5879c101b9ea6f2dda2fc65266fe96791cf31909"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-model-picker-options.tsx",
+      "gitBlobSha": "15eece51846e2f35a19bd8db497ee5a17fdde75f"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-model-picker.tsx",
+      "gitBlobSha": "6dfff0e5628258de801886b736d876b15d8e1d15"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-pagination.tsx",
+      "gitBlobSha": "cb74d302233dbda0c2dd039dea44c6227cc7fa8d"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-quick-filter-drawer.tsx",
+      "gitBlobSha": "ddffb52b69ea373ad6722c0b1997bf20863acbde"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-results-empty-state.tsx",
+      "gitBlobSha": "ab4f67825c2708ce31f5c231318ab72969e70631"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-results.tsx",
+      "gitBlobSha": "bcb6eeadd0b757ad9dc8cff200e45c67a52d0de1"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-shell.tsx",
+      "gitBlobSha": "6b752899bf68ea83a63a336674d33c64656d6cdc"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-contact-bar.tsx",
+      "gitBlobSha": "58c8df1d59b5605bdb517b6cf2addfa632c5c4d1"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-dealer-chrome.tsx",
+      "gitBlobSha": "bf9d20ba7667ac71f00b62645d19d111f7dcb359"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
+      "gitBlobSha": "17a41ebe23ea8c12005e81fc2b03b0442ef3e835"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-inventory-search.tsx",
+      "gitBlobSha": "bc9cf32952ec15db4f09251ce9432175751757ed"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-marketplace-drawer.ts",
+      "gitBlobSha": "af402e8d5f9f95d184e0f31eaf159b8b7a5d1e36"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-marketplace-overlay.tsx",
+      "gitBlobSha": "c71160f4c1fceba41d353364f860ebdcb1054b44"
+    },
+    {
+      "path": "packages/marketplace-ui/components/mobile-pill-rail.tsx",
+      "gitBlobSha": "489c6e0542856c4d9cbb0fb2ba24343f13b081a1"
+    },
+    {
+      "path": "packages/marketplace-ui/components/numeric-range-filter.tsx",
+      "gitBlobSha": "b8cfa726ab8e9f595ee74a36606684c92ade36b1"
+    },
+    {
+      "path": "packages/marketplace-ui/components/organization-directory-card-layouts.tsx",
+      "gitBlobSha": "c8dc68400c7d391e01740e10a65c3b92be57b299"
+    },
+    {
+      "path": "packages/marketplace-ui/components/organization-directory-card-primitives.tsx",
+      "gitBlobSha": "9dcc8695ddaac9be2c02818e506ce6e1b496f879"
+    },
+    {
+      "path": "packages/marketplace-ui/components/organization-directory-card.tsx",
+      "gitBlobSha": "4eb4e1c1364948c9e564e03bb5415a9a045b7bf2"
+    },
+    {
+      "path": "packages/marketplace-ui/components/organization-directory-rail.tsx",
+      "gitBlobSha": "677dd264f8747e471bc44e531d0881a11b5386e6"
+    },
+    {
+      "path": "packages/marketplace-ui/components/related-listing-card.tsx",
+      "gitBlobSha": "7afc2d85a3b00d493bd2d3f3994109bd10987f8a"
+    },
+    {
+      "path": "packages/marketplace-ui/components/seller-contact-panel.tsx",
+      "gitBlobSha": "3adc29f7f863138fe6a6c99e523e702c9f5b60fe"
+    },
+    {
+      "path": "packages/marketplace-ui/components/seller-identity-card.tsx",
+      "gitBlobSha": "ab0cc98bbee4041123879f71ec92d1af969fa59c"
+    },
+    {
+      "path": "packages/marketplace-ui/components/seller-transaction-card.tsx",
+      "gitBlobSha": "4bbdca57b2f8e474503f14aaed076ec53dc55758"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card-content.tsx",
+      "gitBlobSha": "1caf9a51f353c5cbc7e1cb68501be0f59deefa80"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card.tsx",
+      "gitBlobSha": "91bf51de7e04c4089960ebe5f1ca9d1ee9781d51"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-category-artwork.tsx",
+      "gitBlobSha": "51018139a5eb6516f38fd5d0482feb9a832d8b22"
+    },
+    {
+      "path": "packages/marketplace-ui/hooks/use-desktop-marketplace-viewport.ts",
+      "gitBlobSha": "99a0a8eaa2a6e3f22cd531c8dd86a5fb2e646936"
+    },
+    {
+      "path": "packages/marketplace-ui/hooks/use-marketplace-overlay-coordinator.ts",
+      "gitBlobSha": "44957f68bc73f2eac5b5f1b8ffa9c50ddaca25ed"
+    },
+    {
+      "path": "packages/marketplace-ui/hooks/use-marketplace-shell-state.ts",
+      "gitBlobSha": "a561915b5dcab9bc12e8a37786c72154257ab868"
+    },
+    {
+      "path": "packages/marketplace-ui/index.ts",
+      "gitBlobSha": "894a69f620a627fedd3c57481d97f575f04c8426"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/account-save-flow.test.ts",
+      "gitBlobSha": "030cd2a8eb1a48265c50842969adc237c79944c0"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/account-save-flow.ts",
+      "gitBlobSha": "b1ac5d825c6e80369f133edb6e2f1e55bb8399a6"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/desktop-filter-policy.ts",
+      "gitBlobSha": "6ecd95229711c65cf5486301e7b3d5fe3308ecf7"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/desktop-search-policy.test.ts",
+      "gitBlobSha": "6a029ad340cd5139dbad63b82b1cca3107c2bb0e"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/desktop-search-policy.ts",
+      "gitBlobSha": "fd5ec444a5123c5b5fac5d4d35508b0f171a73f7"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/icons/hugeicons-LICENSE.txt",
+      "gitBlobSha": "df8bd19ce770b4fcf36aa581fa2a665ecad240ad"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/icons/hugeicons-controls.ts",
+      "gitBlobSha": "2ca8ebb68cf5ac6eb159e0b21e50eec8f482ee70"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/icons/hugeicons-header.ts",
+      "gitBlobSha": "5e99efa060755ca4ca884b9b912285f938781e52"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/icons/hugeicons-navigation.ts",
+      "gitBlobSha": "c2a5cb787e05b16ee55d8f07a537ef3aa2c53342"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/inventory-search-suggestions.test.ts",
+      "gitBlobSha": "575946050c9a1e020f9d3323eb896d08eb0a349f"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/inventory-search-suggestions.ts",
+      "gitBlobSha": "696e5af29f636b34dd2242468e7668d340f28862"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-action-policy.test.ts",
+      "gitBlobSha": "2829925725d64c25e672e0978e8f7d5f1779adb1"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-action-policy.ts",
+      "gitBlobSha": "f2116d23ca33eaf1dc3e2b3e756ef9d8c06356aa"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-detail-policy.ts",
+      "gitBlobSha": "828c790617362c94a65769a320b0a0a89ba4e290"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-gallery-policy.test.ts",
+      "gitBlobSha": "89035bee4241fd3a8b496c28f7324dbd2b23c078"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-gallery-policy.ts",
+      "gitBlobSha": "dea63ccd9447adc0fa00680d543ecebb62fbfab2"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-truth.test.ts",
+      "gitBlobSha": "c133d1ade7ed7265b7599592a5c3e0e606bbae73"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/listing-truth.ts",
+      "gitBlobSha": "1b4f7f527f6626a8017ada007b47ecd2bafff56e"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-control-copy.test.ts",
+      "gitBlobSha": "0c81acbe81c50773756184bc2f0c3db7b828ceb0"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+      "gitBlobSha": "ada49be54edfb199768c1a732140213e7fbcb5a1"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-filter-config.ts",
+      "gitBlobSha": "3492bb8e1ab812a4c1f59a3c3e9850ca742dd469"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-filter-policy.test.ts",
+      "gitBlobSha": "a666ffa009001fb68c59acd5b912701c9e6bb7da"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-filter-policy.ts",
+      "gitBlobSha": "c3d6ae2168ff73b718187cbcb66e572d82381bc8"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-filter-summary.test.ts",
+      "gitBlobSha": "adf7c3a8a58c9f04eb1d8216be447375ff12ccc6"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-filter-summary.ts",
+      "gitBlobSha": "ca175f7de9c3621084be363576f9a7a399f6239a"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-layout.ts",
+      "gitBlobSha": "0b89ef1a0b0d72b100179b62dcf501de8728766f"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-navigation.test.ts",
+      "gitBlobSha": "8e85e64b2970db799a47671da6f19ab71e6a5862"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-navigation.ts",
+      "gitBlobSha": "32f5a56cfe3793fbd058140981ad6ce809a9f01b"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-results-policy.ts",
+      "gitBlobSha": "20d7584dd26819442aef3cb0f733bb79755eb420"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-results-toolbar-policy.test.ts",
+      "gitBlobSha": "b2c14dfd44f2ddc22eb33a37a4b758a974ac99d5"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/marketplace-results-toolbar-policy.ts",
+      "gitBlobSha": "d638cac151a2e38580ce4c904e35eebcf5b9179d"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/mobile-form-control.ts",
+      "gitBlobSha": "ce3e183d7d8a60b318d018b482501d7aa760ac47"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/mobile-header-icon-action.ts",
+      "gitBlobSha": "4674d5d886a4fe110885e76cf9640c3c2da0a725"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/mobile-quick-pill.ts",
+      "gitBlobSha": "6ab88cfce1bb1ae8e88b6d97780c7e9ee357440d"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/model-picker-options.test.ts",
+      "gitBlobSha": "45e6e5792ce33395fea13827d528d33f72ea3c09"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/model-picker-options.ts",
+      "gitBlobSha": "599077202737f7a9ac7212237ffe538709a81cdc"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/organization-directory-card-policy.test.ts",
+      "gitBlobSha": "a94dec4d9a61b84355dd33c4a0c60a2e94d00650"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/organization-directory-card-policy.ts",
+      "gitBlobSha": "103cf8fabb4686f5a41b060341fc150c05674a88"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/organization-directory-card-types.ts",
+      "gitBlobSha": "36af438abe6531c2b7fa5af4d9f237d5c0fd8ba8"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/public-path.test.ts",
+      "gitBlobSha": "bc3e5f7a4894282c931408616d1706cc5becc551"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/public-path.ts",
+      "gitBlobSha": "f3a5ea157fde0e735b49a16f0caebc40167d5cb8"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/quick-filter-state.test.ts",
+      "gitBlobSha": "88b6b0a9291b33a6d0bed92032821ea0654d6a39"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/quick-filter-state.ts",
+      "gitBlobSha": "81d922403953d656d61b2d9ab06a057d0af5a105"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/seller-contact-policy.ts",
+      "gitBlobSha": "b688f68cb48bd1854ef50eca36cfbd9affb9622c"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/vehicle-card-policy.test.ts",
+      "gitBlobSha": "f79940ee3f6fc90395a67e54edbbff4fbd3941a2"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/vehicle-card-policy.ts",
+      "gitBlobSha": "74beadba4bb5dfa361d00e7813452835f33508ef"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/vehicle-card-types.ts",
+      "gitBlobSha": "82a162f376b822d803a76f711dbe523f76fe8cbe"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/vehicle-card-view-policy.test.ts",
+      "gitBlobSha": "37444040c132f3901384751726cbdc3f43e8a37d"
+    },
+    {
+      "path": "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+      "gitBlobSha": "5e521245e7f1ab4efcf4abf6ef728aa411892b8f"
+    },
+    {
+      "path": "packages/marketplace-ui/package.json",
+      "gitBlobSha": "cf62c45dbe124e5b10945a55d9c4b75d8db6740a"
+    },
+    {
+      "path": "packages/marketplace-ui/tsconfig.json",
+      "gitBlobSha": "454d64d332d9101113ccf54e1cc0204201cecb5b"
+    },
+    {
+      "path": "packages/marketplace/categories.ts",
+      "gitBlobSha": "dab0b3f63f90064a8fab6bd0d823361105088753"
+    },
+    {
+      "path": "packages/marketplace/commerce.ts",
+      "gitBlobSha": "a72e1c824f5e881f64fcd95d2f7a3ddff55b2611"
+    },
+    {
+      "path": "packages/marketplace/dealer.test.ts",
+      "gitBlobSha": "fc01ee85f5685a6cbe5800513761b702dd373d16"
+    },
+    {
+      "path": "packages/marketplace/dealer.ts",
+      "gitBlobSha": "aada33e414f41b2090bd40611c65e256f4fe8d51"
+    },
+    {
+      "path": "packages/marketplace/directory.test.ts",
+      "gitBlobSha": "81d9b891148f4fb8d50149302073adf441da392b"
+    },
+    {
+      "path": "packages/marketplace/directory.ts",
+      "gitBlobSha": "01498dc6c1785963bc6300007c4f7d5ee3485c2a"
+    },
+    {
+      "path": "packages/marketplace/domain-compatibility.test.ts",
+      "gitBlobSha": "586f4ab8fcd244e40a15ca9127a168d12137d49f"
+    },
+    {
+      "path": "packages/marketplace/external-inventory.ts",
+      "gitBlobSha": "a60b9a263836301ba2ada691339933fb5588d769"
+    },
+    {
+      "path": "packages/marketplace/filters.ts",
+      "gitBlobSha": "47ab5b5bd20c9ac73913d570a456f7699ea99790"
+    },
+    {
+      "path": "packages/marketplace/format.test.ts",
+      "gitBlobSha": "e606fc0965e8ab2f0ee623c1ec65a28989fb3665"
+    },
+    {
+      "path": "packages/marketplace/format.ts",
+      "gitBlobSha": "f2dadb18554607f8497574ed61163cadbff8db8b"
+    },
+    {
+      "path": "packages/marketplace/index.ts",
+      "gitBlobSha": "0570376ec11489575ba88e81ef394bb6fd9f078b"
+    },
+    {
+      "path": "packages/marketplace/inventory-contract.test.ts",
+      "gitBlobSha": "9cb037dcd0a4f91f4ea8de04d5cfe2b4dd354159"
+    },
+    {
+      "path": "packages/marketplace/inventory-contract.ts",
+      "gitBlobSha": "e8bddf76df31015d5f0e3860dec1ff33716f3557"
+    },
+    {
+      "path": "packages/marketplace/inventory-csv.test.ts",
+      "gitBlobSha": "d71795b79a9de16029faee1f2f76b8ce531b5c8e"
+    },
+    {
+      "path": "packages/marketplace/inventory-csv.ts",
+      "gitBlobSha": "bfcbe9a5c2fa3a1465213540a8ca306f01be0cbf"
+    },
+    {
+      "path": "packages/marketplace/inventory-policy.test.ts",
+      "gitBlobSha": "303e9ded463bfacd1edf7742ea5a776ff2ca2dd8"
+    },
+    {
+      "path": "packages/marketplace/inventory-policy.ts",
+      "gitBlobSha": "8d29319a9045454cba761dbd329889936fa578b0"
+    },
+    {
+      "path": "packages/marketplace/lead-input.test.ts",
+      "gitBlobSha": "1ca2036928a4eeec167e35d8f77e19956c9650a2"
+    },
+    {
+      "path": "packages/marketplace/lead-input.ts",
+      "gitBlobSha": "e39d30d4bf81877831e22c35e4612f8e2810bcba"
+    },
+    {
+      "path": "packages/marketplace/lead-site.ts",
+      "gitBlobSha": "015115e3686cc4b89b755ea677abf15667c20319"
+    },
+    {
+      "path": "packages/marketplace/listing-core.test.ts",
+      "gitBlobSha": "6b70a8a296588721cb6824ae3796cb56a1332585"
+    },
+    {
+      "path": "packages/marketplace/listing-input.ts",
+      "gitBlobSha": "3936d70be41bcd9e83854880604b9af6c6a21305"
+    },
+    {
+      "path": "packages/marketplace/listing-lifecycle.ts",
+      "gitBlobSha": "afa4abf126a13ed767c094350e5bb46894bcea84"
+    },
+    {
+      "path": "packages/marketplace/mock-data.ts",
+      "gitBlobSha": "01e9f6c12381a22da54348d938500c0632cb3997"
+    },
+    {
+      "path": "packages/marketplace/mock-directory.ts",
+      "gitBlobSha": "d801660416abbbc791031028d00277a8bb68c36d"
+    },
+    {
+      "path": "packages/marketplace/organization-verification.test.ts",
+      "gitBlobSha": "3d69f9942f38b74b3940720858bd0230e77878a6"
+    },
+    {
+      "path": "packages/marketplace/organization-verification.ts",
+      "gitBlobSha": "caf34a7b492f2c2b6d3601f31b3fa8a92a98dcfd"
+    },
+    {
+      "path": "packages/marketplace/package.json",
+      "gitBlobSha": "270b5ae94050fbd57aae7ae5ae1f5ee5f3f11a2f"
+    },
+    {
+      "path": "packages/marketplace/providers.ts",
+      "gitBlobSha": "315a234831919bbe2f323a389ff87bf1fefe1ab3"
+    },
+    {
+      "path": "packages/marketplace/registry.test.ts",
+      "gitBlobSha": "0a625a63954e8829c3e8477ebfbc8c88b8489ddf"
+    },
+    {
+      "path": "packages/marketplace/registry.ts",
+      "gitBlobSha": "83abd9ff44b57e7d654882251699e8acc4106ea3"
+    },
+    {
+      "path": "packages/marketplace/routes.test.ts",
+      "gitBlobSha": "40aedf6e284dd321fcabd2e83b330e1c7ff160c9"
+    },
+    {
+      "path": "packages/marketplace/routes.ts",
+      "gitBlobSha": "7dfae26ca4a93336f2f205b2fac9f34ecb86b24e"
+    },
+    {
+      "path": "packages/marketplace/search-params.test.ts",
+      "gitBlobSha": "38e71ac6f78ee08c1c4dc5ca7206f1d5cd40b011"
+    },
+    {
+      "path": "packages/marketplace/search-params.ts",
+      "gitBlobSha": "1c55ce1c0d1259fa307d5bd408d685fee7c822e8"
+    },
+    {
+      "path": "packages/marketplace/tsconfig.json",
+      "gitBlobSha": "f5f4b78e9f41fbcfa6a89ec01f0ad725f878fbc2"
+    },
+    {
+      "path": "packages/marketplace/types.ts",
+      "gitBlobSha": "fae789cf9ead166efcadd0e5678a49971955e233"
+    },
+    {
+      "path": "packages/next-config/environment-contract.ts",
+      "gitBlobSha": "db10f6f1bdad25bab892412b6ce8ec56a87cbf6f"
+    },
+    {
+      "path": "packages/next-config/index.ts",
+      "gitBlobSha": "69270736eb061b1011cf5fa03f609c7646af7a3b"
+    },
+    {
+      "path": "packages/next-config/keys.ts",
+      "gitBlobSha": "b174fdbf80c3db404be5b9ccb62949b89473f3df"
+    },
+    {
+      "path": "packages/next-config/package.json",
+      "gitBlobSha": "be301377cd64c741f41164cbfcc5a001e9948682"
+    },
+    {
+      "path": "packages/next-config/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/notifications/components/provider.tsx",
+      "gitBlobSha": "9b344b78dd8b0a2faed3bde464192d3c99b0ee5b"
+    },
+    {
+      "path": "packages/notifications/components/trigger.tsx",
+      "gitBlobSha": "b2e97fa5734c589f445d553ae182aab535a08637"
+    },
+    {
+      "path": "packages/notifications/index.ts",
+      "gitBlobSha": "9986da7b102ec13c8c3490b168d6e71c6adca163"
+    },
+    {
+      "path": "packages/notifications/keys.ts",
+      "gitBlobSha": "494055053df892cf28b150ac4f166ab18c598b1a"
+    },
+    {
+      "path": "packages/notifications/package.json",
+      "gitBlobSha": "999713679ca8c454365cd0db8e461bc1e3d9dc91"
+    },
+    {
+      "path": "packages/notifications/styles.css",
+      "gitBlobSha": "539d5b86303ab2a5911645a06d9b631cdef09e38"
+    },
+    {
+      "path": "packages/notifications/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/observability/better-stack.test.ts",
+      "gitBlobSha": "3dd3db4eb651912e0dfa60249875d351b8f4e7d8"
+    },
+    {
+      "path": "packages/observability/better-stack.ts",
+      "gitBlobSha": "e2d7e2b66d719b4a58856fd57f7b971e21b82250"
+    },
+    {
+      "path": "packages/observability/client.ts",
+      "gitBlobSha": "d9eccf776af241f3dc2ecc003a6bfe34f198c040"
+    },
+    {
+      "path": "packages/observability/edge.ts",
+      "gitBlobSha": "8f456f7289b8a1c06bd66e34c6bc5d1013c7ef54"
+    },
+    {
+      "path": "packages/observability/error.test.ts",
+      "gitBlobSha": "fb0cb32a9fd287d5055b8caf056415a4f4a2c58b"
+    },
+    {
+      "path": "packages/observability/error.ts",
+      "gitBlobSha": "3a4403c020976e90497393ed379096856f5d9d86"
+    },
+    {
+      "path": "packages/observability/instrumentation.ts",
+      "gitBlobSha": "10192bcd4c4da2120959c4f0f8217b6907c6710a"
+    },
+    {
+      "path": "packages/observability/keys.test.ts",
+      "gitBlobSha": "1675eabf34718d7b18fd40f9a93c9ecce9825ed6"
+    },
+    {
+      "path": "packages/observability/keys.ts",
+      "gitBlobSha": "b6b2ea1b9e987b24a8fc151633125f403b704197"
+    },
+    {
+      "path": "packages/observability/log.ts",
+      "gitBlobSha": "7f4794ab20c6fe5f2f8df9be5f659f8488c70082"
+    },
+    {
+      "path": "packages/observability/next-config.ts",
+      "gitBlobSha": "e5e1b20cfc5fcaa55dc21948b2171b4736ba5f30"
+    },
+    {
+      "path": "packages/observability/package.json",
+      "gitBlobSha": "04a20a386060bebf0a3ed30fbb7f3918e744b9d1"
+    },
+    {
+      "path": "packages/observability/redaction.test.ts",
+      "gitBlobSha": "dc0937badd35b522db3a882cf26c96864c8f085f"
+    },
+    {
+      "path": "packages/observability/redaction.ts",
+      "gitBlobSha": "8b2a05350a31a1f7dac96c426cf01e91b2dd7e78"
+    },
+    {
+      "path": "packages/observability/request-context.test.ts",
+      "gitBlobSha": "214abc92324b8b674e89c3a3f2d1fcbc4471e616"
+    },
+    {
+      "path": "packages/observability/request-context.ts",
+      "gitBlobSha": "408ca4a1c144c1e48feb3de27093255d1fe4d03e"
+    },
+    {
+      "path": "packages/observability/server.ts",
+      "gitBlobSha": "ae28fb8c2d9765ac4c547a1ed7eafa295e4e3b9c"
+    },
+    {
+      "path": "packages/observability/status/index.tsx",
+      "gitBlobSha": "12048b47147487bbee9e420873229b11728fd8b4"
+    },
+    {
+      "path": "packages/observability/status/types.ts",
+      "gitBlobSha": "fc9e70666797268a37d6645d9df58b2a692157df"
+    },
+    {
+      "path": "packages/observability/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/observability/turbo.json",
+      "gitBlobSha": "64b4e59fd0382cb18e8fab116abf4f26d06ebf18"
+    },
+    {
+      "path": "packages/payments/ai.ts",
+      "gitBlobSha": "d3f44dd08d55abdf2862cdd81aaa2c587821671d"
+    },
+    {
+      "path": "packages/payments/index.ts",
+      "gitBlobSha": "083a9b0a3081391fb1c8218875e7e82939868397"
+    },
+    {
+      "path": "packages/payments/keys.ts",
+      "gitBlobSha": "2b9f7e4cc494831e376f629068985fda4fdcfb24"
+    },
+    {
+      "path": "packages/payments/package.json",
+      "gitBlobSha": "4417f0846de450ea6ceacecb660e8fd4eb0b2906"
+    },
+    {
+      "path": "packages/payments/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/rate-limit/idempotency.ts",
+      "gitBlobSha": "81fce447e2c7d1e1197c892e2aaef9e6839e1951"
+    },
+    {
+      "path": "packages/rate-limit/index.ts",
+      "gitBlobSha": "c1ba2144d93bbfd71d7bcafff7a89c181179bb69"
+    },
+    {
+      "path": "packages/rate-limit/keys.ts",
+      "gitBlobSha": "0196a4d8c8fca978bf72eeaea9ded57dedd6efe0"
+    },
+    {
+      "path": "packages/rate-limit/package.json",
+      "gitBlobSha": "2abac68e4fb8f943a23248358aa91cdbdc70b608"
+    },
+    {
+      "path": "packages/rate-limit/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/security/index.ts",
+      "gitBlobSha": "67391d228100184c4392194d76d4b0cdbb324999"
+    },
+    {
+      "path": "packages/security/inventory-credentials.test.ts",
+      "gitBlobSha": "f54ac92c914feb1cb56df45d69052f30e4da5582"
+    },
+    {
+      "path": "packages/security/inventory-credentials.ts",
+      "gitBlobSha": "770eceab2e963dd1baf65c316debdf5e885f2566"
+    },
+    {
+      "path": "packages/security/keys.ts",
+      "gitBlobSha": "c4f15d193b0a8bece37f7c2d75ebee688a8ba599"
+    },
+    {
+      "path": "packages/security/package.json",
+      "gitBlobSha": "d2ed94286ae8ce552015360bf2c4e8e9bde81bdf"
+    },
+    {
+      "path": "packages/security/proxy.test.ts",
+      "gitBlobSha": "9873c54e7d65bfa47c3957343de780600938769e"
+    },
+    {
+      "path": "packages/security/proxy.ts",
+      "gitBlobSha": "97454d7ba4885fb1c88115d228e68e20d5ef0bd5"
+    },
+    {
+      "path": "packages/security/request-auth.ts",
+      "gitBlobSha": "032dbb22ad44cbe6be44ed095db11a426f5d19c9"
+    },
+    {
+      "path": "packages/security/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/security/turbo.json",
+      "gitBlobSha": "0141d6e23aae9a8f6c1b347f6358627830a6d80f"
+    },
+    {
+      "path": "packages/seo/json-ld.tsx",
+      "gitBlobSha": "d1a111bbb56d64c0b911242955c57ffcef6a0d99"
+    },
+    {
+      "path": "packages/seo/metadata.test.ts",
+      "gitBlobSha": "e6653516c9ec6403bb6d9db2271ef269904e58aa"
+    },
+    {
+      "path": "packages/seo/metadata.ts",
+      "gitBlobSha": "0b34b51ffad7fd29a7cb7182a96d1e2bdde14410"
+    },
+    {
+      "path": "packages/seo/package.json",
+      "gitBlobSha": "702abfb825fdf7619151a4f2494000c8caf7826c"
+    },
+    {
+      "path": "packages/seo/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/seo/turbo.json",
+      "gitBlobSha": "4c57adda3fa5885a62343c747cc9c5e5918add0f"
+    },
+    {
+      "path": "packages/seo/urls.test.ts",
+      "gitBlobSha": "88f729ea801b8663d9f5c7dba6e3ba419c300908"
+    },
+    {
+      "path": "packages/seo/urls.ts",
+      "gitBlobSha": "7c3f75901ffaf7ecff5c88f870345630f898994b"
+    },
+    {
+      "path": "packages/storage/client.ts",
+      "gitBlobSha": "f1939417cf081df3eebf8a0ab0be48dde3c1dad3"
+    },
+    {
+      "path": "packages/storage/index.ts",
+      "gitBlobSha": "4b887d402d4448784baf74bbd24981a50e9936b8"
+    },
+    {
+      "path": "packages/storage/inventory-imports.test.ts",
+      "gitBlobSha": "8e0c500818ddb04c545713f769ab599480ae85d2"
+    },
+    {
+      "path": "packages/storage/inventory-imports.ts",
+      "gitBlobSha": "c50928be807fc79679a7d81d82e26b7093f68fd3"
+    },
+    {
+      "path": "packages/storage/keys.ts",
+      "gitBlobSha": "9df5d28a81fcb6c180f38178fa7481d61a380b46"
+    },
+    {
+      "path": "packages/storage/package.json",
+      "gitBlobSha": "67a0e99e882fae171cac8d33a5c3fe062be792ed"
+    },
+    {
+      "path": "packages/storage/photo-processing.test.ts",
+      "gitBlobSha": "501e74440a3f71ed9fce4931258f95be1ce85fc6"
+    },
+    {
+      "path": "packages/storage/photo-processing.ts",
+      "gitBlobSha": "f0b4aebc6f89eaf53e842d0fa2745fdbca9ad08c"
+    },
+    {
+      "path": "packages/storage/private-documents.test.ts",
+      "gitBlobSha": "7a95c5352df706863475a6a8f5b4ff6184253bf2"
+    },
+    {
+      "path": "packages/storage/private-documents.ts",
+      "gitBlobSha": "dd4693915d99dd1a662b2c780b5fb69a829809f9"
+    },
+    {
+      "path": "packages/storage/provider.ts",
+      "gitBlobSha": "89ae9c955fc18acd37e02b7f96d17acdc6fad81b"
+    },
+    {
+      "path": "packages/storage/test/server-only.ts",
+      "gitBlobSha": "cb0ff5c3b541f646105198ee23ac0fc3d805023e"
+    },
+    {
+      "path": "packages/storage/tsconfig.json",
+      "gitBlobSha": "9fbe407a9aaf2b54fdc3e7cd54e1c0c71c44bb28"
+    },
+    {
+      "path": "packages/storage/turbo.json",
+      "gitBlobSha": "eefb8dc858d45f03836227ae1e873f639eaf0117"
+    },
+    {
+      "path": "packages/storage/upload-policy.test.ts",
+      "gitBlobSha": "db4b7ded05225587003a12c57de8954ab6df9031"
+    },
+    {
+      "path": "packages/storage/upload-policy.ts",
+      "gitBlobSha": "2e9fefd3d7309d0b165d7321d2b7374524084056"
+    },
+    {
+      "path": "packages/storage/vitest.config.ts",
+      "gitBlobSha": "8085de7d5c8c9dc31912722f3c654c9049ee662b"
+    },
+    {
+      "path": "packages/typescript-config/base.json",
+      "gitBlobSha": "1d05686d18e420240a64fcaa0e1fafd3d5f185d0"
+    },
+    {
+      "path": "packages/typescript-config/nextjs.json",
+      "gitBlobSha": "527e210458dab807cfcc2bfdd9fe98a1823b8c0b"
+    },
+    {
+      "path": "packages/typescript-config/package.json",
+      "gitBlobSha": "91344c837b82152620e0c19bbba0365635598eae"
+    },
+    {
+      "path": "packages/typescript-config/react-library.json",
+      "gitBlobSha": "44924d9ed8778b33fa1953743fccbd1854a2be4d"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "gitBlobSha": "1bca0592953c94363ab9d3f0c1c7c994a6701ecc"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "gitBlobSha": "767fd51496d466533326c692fdf471ea50179a30"
+    },
+    {
+      "path": "scripts/authenticated-preview-contract.test.mjs",
+      "gitBlobSha": "e60703f716a86bb8b8e4c596866e1a33493ab627"
+    },
+    {
+      "path": "scripts/materialize-release-states.mjs",
+      "gitBlobSha": "5600261eaff63b3da62e86c6dbbac1e29e83750d"
+    },
+    {
+      "path": "scripts/next-typegen.mjs",
+      "gitBlobSha": "0c25caa661651e04cdc3154a06c3b1bc4673b258"
+    },
+    {
+      "path": "scripts/next-typegen.test.mjs",
+      "gitBlobSha": "be56b05f2df2761e4437db0cb1b0ec61f76ef2ec"
+    },
+    {
+      "path": "scripts/package-architecture.test.mjs",
+      "gitBlobSha": "ce14bf7900e2c9e22340d07248b1533abf03054e"
+    },
+    {
+      "path": "scripts/provision-authenticated-preview-fixtures.mjs",
+      "gitBlobSha": "7e98ea021acd61bd64059d02fbff948bfae20355"
+    },
+    {
+      "path": "scripts/redact-authenticated-preview-artifacts.mjs",
+      "gitBlobSha": "94319edc63e4ea87b8a030618d3feaefa97b5da6"
+    },
+    {
+      "path": "scripts/release-preflight.mjs",
+      "gitBlobSha": "c619b2787fcf59ca12399067bcad483e834eb495"
+    },
+    {
+      "path": "scripts/release-preflight.test.mjs",
+      "gitBlobSha": "206cf55721829db367121bef52bb25a5c7ba064f"
+    },
+    {
+      "path": "scripts/run-authenticated-preview.mjs",
+      "gitBlobSha": "ba3c27ac2afe25d8f5e132e8b6e9648e4fcde549"
+    },
+    {
+      "path": "tsconfig.json",
+      "gitBlobSha": "1d05686d18e420240a64fcaa0e1fafd3d5f185d0"
+    },
+    {
+      "path": "turbo.json",
+      "gitBlobSha": "eb4ac7478b6f2e167a4cd97372fb218aec8da813"
+    },
+    {
+      "path": "turbo/generators/config.ts",
+      "gitBlobSha": "faf1d60aa71959b525e6f81520c1abe2c7dbc90c"
+    },
+    {
+      "path": "turbo/generators/package.json",
+      "gitBlobSha": "5bbefffbabee392d1855491b84dc0a716b6a3bf2"
+    },
+    {
+      "path": "turbo/generators/templates/package.json.hbs",
+      "gitBlobSha": "7715b244bacdcb7d1784465f2e09c469058565cd"
+    },
+    {
+      "path": "turbo/generators/templates/tsconfig.json.hbs",
+      "gitBlobSha": "1e3a534e92bdf81e788b38c51e9205011133fe07"
+    }
+  ]
+}

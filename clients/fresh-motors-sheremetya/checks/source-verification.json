@@ -1,0 +1,94 @@
+{
+  "observedAt": "2026-09-09T03:31:34.180Z",
+  "dealer": "fresh-motors-sheremetya",
+  "node": "v24.18.0",
+  "typescriptVersion": "5.9.3",
+  "svelte": [
+    {
+      "key": "auto-best",
+      "files": 53,
+      "warnings": [
+        {
+          "path": "src/lib/components/home/VideoSection.svelte",
+          "code": "css_unused_selector"
+        },
+        {
+          "path": "src/lib/components/home/VideoSection.svelte",
+          "code": "css_unused_selector"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "files": 0,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "key": "carwow",
+      "files": 321,
+      "warnings": [
+        {
+          "path": "src/lib/components/about/DesktopAboutPage.svelte",
+          "code": "css_unused_selector"
+        },
+        {
+          "path": "src/lib/components/about/DesktopAboutPage.svelte",
+          "code": "css_unused_selector"
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+          "code": "css_unused_selector"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "typescriptSyntax": [
+    {
+      "key": "auto-best",
+      "files": 22,
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "files": 877,
+      "errors": []
+    },
+    {
+      "key": "carwow",
+      "files": 189,
+      "errors": []
+    }
+  ],
+  "dataAssertions": {
+    "passed": true,
+    "vehicles": 8,
+    "imagesPerVehicle": 4,
+    "prices": [
+      19999,
+      10799,
+      8199,
+      8999,
+      29999,
+      12999,
+      8999,
+      7290
+    ],
+    "under10000": [
+      7290,
+      8199,
+      8999,
+      8999
+    ],
+    "allFourConsumersMatch": true
+  },
+  "fullBuild": false,
+  "browser": false,
+  "binaryAssetsPerApp": 38,
+  "targetedSemanticTypecheck": {
+    "auto": [],
+    "carwow": []
+  }
+}

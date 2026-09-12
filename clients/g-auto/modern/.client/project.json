@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "client": "g-auto",
+  "templateKey": "modern",
+  "templateVersion": "2026.09.06-refresh-1",
+  "createdAt": "2026-09-09T01:57:41.235Z",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "Full framework checks/build, lockfile installation and browser review not executed.",
+    "Dated seller advertisement sample, not a live inventory feed.",
+    "Generic template illustrations are not dealer premises or employees.",
+    "Not a deployed or owner-approved dealer website."
+  ],
+  "updatedAt": "2026-09-09T02:41:56.355Z",
+  "evidence": {
+    "sourceCheck": "../../checks/source-verification.json",
+    "svelteServerCompile": null,
+    "typescriptTranspile": {
+      "passed": true,
+      "files": 877
+    },
+    "runtimeBuild": false,
+    "browser": false
+  }
+}

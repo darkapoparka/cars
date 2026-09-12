@@ -1,0 +1,21 @@
+{
+  "name": "Крис Кар",
+  "short_name": "Крис Кар",
+  "lang": "bg",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d62220",
+  "icons": [
+    {
+      "src": "/dealer/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dealer/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

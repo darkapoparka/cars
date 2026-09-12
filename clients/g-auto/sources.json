@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "clientSlug": "g-auto",
+  "status": "implemented-unverified",
+  "canonicalSource": "https://g-auto.mobile.bg/",
+  "identity": {
+    "tradingName": "G Auto",
+    "publishedRegion": "гр. Благоевград, Струмско",
+    "publishedPhone": "+359896645757",
+    "contactSource": "https://g-auto.mobile.bg/contacts",
+    "mapSource": "https://maps.app.goo.gl/gBXD96zNkDfLdaTi7",
+    "openingHours": null,
+    "evidenceLevel": "current public dealer contact panel; no contact attempt made",
+    "confirmedFacebookPage": null,
+    "facebookReview": "No matching page established by bounded searches for dealer name, exact phone and source domain. This does not establish absence."
+  },
+  "advertisements": {
+    "retrievedCategoryTotal": 111,
+    "verifiedAvailableStockCount": null,
+    "containsReservedSold": true,
+    "source": "https://g-auto.mobile.bg/"
+  },
+  "candidateVehicle": {
+    "sourceUrl": "https://www.mobile.bg/obiava-11788689271506791-mercedes-benz-c-200-2-0-t-184-ks-sobstven-lizing",
+    "sourceId": "11788689271506791",
+    "title": "Mercedes-Benz C 200 2.0 T 184 ks",
+    "manufactured": "2018-08",
+    "fuel": "petrol",
+    "powerHp": 184,
+    "engineCc": 2000,
+    "euroStandard": 6,
+    "transmission": "automatic",
+    "body": "convertible",
+    "mileageKm": 123000,
+    "colour": "black",
+    "advertisedPrice": 22999,
+    "currency": "EUR",
+    "taxText": "Не се начислява ДДС",
+    "publishedSourceDate": "2026-09-06 13:07",
+    "availability": "advertised; not independently verified",
+    "evidenceLevel": "individual listing and dealer catalogue",
+    "approvedForApp": false,
+    "reasonNotApproved": "No established image reuse basis or local gallery set",
+    "galleryReference": {
+      "imageUrl": "https://mobistatic4.focus.bg/mobile/photosorg/791/1/big1/11788689271506791_zN.webp",
+      "sourceUrl": "https://www.mobile.bg/obiava-11788689271506791-mercedes-benz-c-200-2-0-t-184-ks-sobstven-lizing",
+      "observedAt": "2026-09-09",
+      "retrieval": "Initial web image open returned Cache miss; subsequent Desktop Commander read_file(isUrl:true) rendered the image successfully",
+      "visuallyInspected": true,
+      "visualNotes": "Black Mercedes cabriolet, front three-quarter view outside a building with large G-AUTO lettering and a G AUTO display plate. This is the current listing reference, distinct from the legacy sedan photograph.",
+      "localPath": null,
+      "reuseScope": "not established"
+    }
+  },
+  "catalogueConflicts": [
+    {
+      "vehicle": "Opel Zafira 1.6",
+      "issue": "Structured year 2008; description year 2012",
+      "action": "exclude until resolved"
+    },
+    {
+      "vehicle": "Porsche Panamera 3.0",
+      "issue": "Headline 39999 EUR; description labels the same number BGN",
+      "action": "do not select or silently convert"
+    },
+    {
+      "vehicle": "BMW 530",
+      "issue": "Structured January 2013 / 220000 km; description October 2012 / 230000 km",
+      "action": "exclude until resolved"
+    },
+    {
+      "vehicle": "BMW 320",
+      "issue": "3999 EUR full price and 1200 down payment are distinct; seller promises unconditional approval",
+      "action": "never use the deposit as price or repeat approval promise"
+    },
+    {
+      "vehicle": "BMW X3",
+      "issue": "Explicit reserved/sold flag despite selling and leasing language",
+      "action": "not available inventory"
+    }
+  ],
+  "legacy": {
+    "root": "M:/codex/agency/projects/leads/automotive/g-auto/autodeal",
+    "manifestSource": "https://g-auto.mobile.bg/",
+    "filesVisuallyInspected": [
+      "mirror/public/assets/images/lead/g-auto-logo-dark-v1.png",
+      "mirror/public/assets/images/lead/g-auto-logo-light-v1.png",
+      "mirror/public/assets/images/lead/g-auto-stock-01.webp",
+      "static/assets/vehicle-hero.jpg",
+      "static/assets/vehicle-sedan.jpg",
+      "static/assets/vehicle-suv.jpg"
+    ],
+    "provenanceFilesRead": [
+      "ASSET_PROVENANCE.md",
+      "SOURCE_LICENSE.md",
+      "README.md",
+      "PRODUCT.md"
+    ],
+    "scopeFinding": "Inspected authorization names the AutoDeal reference and generic template assets, not the dealer-specific legacy/current stock galleries.",
+    "modified": false
+  },
+  "publishedCover": {
+    "url": "https://cdn2.focus.bg/mobile/images/housespicts/h13348248550783149.pic",
+    "visuallyInspected": false,
+    "attempts": [
+      "web: unsupported application/octet-stream",
+      "read-only remote URL read: binary rendered as text, not usable visual evidence",
+      "cloud download: failed"
+    ]
+  },
+  "publishedSignage": {
+    "visuallyInspected": true,
+    "reference": "candidateVehicle.galleryReference",
+    "finding": "Current listing photo contains G-AUTO building lettering; no replacement or official logo-file extraction performed"
+  },
+  "relatedDomain": {
+    "url": "https://g-auto.bg/",
+    "basis": "same published phone",
+    "scope": "truck parking and restaurant; do not import services, hours or metrics into dealership"
+  },
+  "mediaReuseCleared": false,
+  "applicationsCreated": [
+    "auto-best",
+    "modern",
+    "carwow"
+  ],
+  "ownerManualReviewComplete": false,
+  "currentInventoryRecord": "stock-source.json",
+  "currentImplementation": "CLIENT.md",
+  "qualificationNotesStatus": "Historical observations retained; implementation supersedes the former blocked state."
+}

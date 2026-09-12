@@ -1,0 +1,26 @@
+export type BrandConfig = {name:string;shortName:string;city:string;addressLine:string;address:string;phone:string;phoneHref:`tel:${string}`;appointment:string;logo:`/${string}`;youtubeUrl:string;instagramUrl:string;facebookUrl:string;sourceInventory:string;slug:string;district:string;phoneRaw:string;secondaryPhone:string;latitude:number;longitude:number;mapUrl:string;mapEmbedUrl:string;hours:string;disclosure:string;};
+export const brand = {
+  "name": "Крис Кар",
+  "shortName": "Крис Кар",
+  "slug": "kris-car-plovdiv",
+  "city": "Пловдив",
+  "district": "Индустриална зона - Изток",
+  "address": "Цариградско шосе, до бензиностанция Алпи, Индустриална зона - Изток, Пловдив",
+  "addressLine": "Цариградско шосе, до бензиностанция Алпи",
+  "phone": "0885 232 858",
+  "phoneRaw": "0885232858",
+  "phoneHref": "tel:+359885232858",
+  "secondaryPhone": "+359884541828",
+  "latitude": 42.1485358,
+  "longitude": 24.8280636,
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=42.1485358%2C24.8280636",
+  "mapEmbedUrl": "https://www.google.com/maps?q=42.1485358,24.8280636&z=16&output=embed",
+  "sourceInventory": "https://kris_car.mobile.bg/",
+  "hours": "Пон–Пет 09:00–19:00 · Съб 09:30–19:00 · Нед 10:00–16:00",
+  "disclosure": "Демонстрационен каталог с 8 обяви към 09.09.2026 г. Наличността и условията се потвърждават с автокъщата.",
+  "appointment": "Пон–Пет 09:00–19:00 · Съб 09:30–19:00 · Нед 10:00–16:00",
+  "logo": "/dealer/brand/logo-light.png",
+  "youtubeUrl": "",
+  "instagramUrl": "",
+  "facebookUrl": ""
+} as const satisfies BrandConfig;

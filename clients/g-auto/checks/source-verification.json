@@ -1,0 +1,118 @@
+{
+  "observedAt": "2026-09-09T02:40:47.925Z",
+  "svelte": [
+    {
+      "key": "auto-best",
+      "count": 53,
+      "errors": [],
+      "warnings": [
+        {
+          "path": "src/lib/components/home/VideoSection.svelte",
+          "code": "css_unused_selector"
+        },
+        {
+          "path": "src/lib/components/home/VideoSection.svelte",
+          "code": "css_unused_selector"
+        }
+      ]
+    },
+    {
+      "key": "modern",
+      "count": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "key": "carwow",
+      "count": 321,
+      "errors": [],
+      "warnings": [
+        {
+          "path": "src/lib/components/about/DesktopAboutPage.svelte",
+          "code": "css_unused_selector"
+        },
+        {
+          "path": "src/lib/components/about/DesktopAboutPage.svelte",
+          "code": "css_unused_selector"
+        },
+        {
+          "path": "src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+          "code": "css_unused_selector"
+        }
+      ]
+    }
+  ],
+  "typescript": [
+    {
+      "key": "auto-best",
+      "count": 22,
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "count": 877,
+      "errors": []
+    },
+    {
+      "key": "carwow",
+      "count": 189,
+      "errors": []
+    }
+  ],
+  "json": [
+    {
+      "key": "auto-best",
+      "validChangedFiles": 3
+    },
+    {
+      "key": "modern",
+      "validChangedFiles": 3
+    },
+    {
+      "key": "carwow",
+      "validChangedFiles": 3
+    }
+  ],
+  "assetCheck": {
+    "copies": [
+      {
+        "key": "auto-best",
+        "matchingBinaryFiles": 38
+      },
+      {
+        "key": "modern",
+        "matchingBinaryFiles": 38
+      },
+      {
+        "key": "carwow",
+        "matchingBinaryFiles": 38
+      }
+    ],
+    "count": 38
+  },
+  "limitations": [
+    "In-memory compiler and data checks only. Not SvelteKit/Next production builds, installation, typecheck or browser review."
+  ],
+  "dataAssertions": {
+    "passed": true,
+    "vehicles": 8,
+    "imagesPerVehicle": 4,
+    "allPricesMatch": true,
+    "carwowMileageParsing": true,
+    "autoBmwFilter": 5,
+    "autoPriceUnder10000": [
+      3999,
+      6999,
+      8999
+    ],
+    "carwowUnder10000": 3,
+    "modernUnverifiedSeller": true
+  },
+  "runtime": {
+    "node": "v24.18.0",
+    "typescript": "5.9.3"
+  },
+  "fullApplicationBuild": false,
+  "browserVerified": false,
+  "remoteInitialCheckpoint": "5311c5e37a4fe324b57a01c22645cf023a709ffe"
+}

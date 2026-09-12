@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "client": "kris-car-plovdiv",
+  "checkedAt": "2026-09-09T04:19:54.447Z",
+  "scope": "Source compilation, targeted semantic checks, isolated data execution and asset bytes only. Not full application QA.",
+  "syntax": {
+    "checkedAt": "2026-09-09T04:16:49.305Z",
+    "runtime": "v24.18.0",
+    "svelteCompiler": "5.57.0",
+    "typescript": "5.9.3",
+    "variants": {
+      "auto-best": {
+        "svelteFiles": 53,
+        "typescriptFiles": 22,
+        "errors": [],
+        "warnings": [
+          {
+            "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".dn-videos__brand-mark\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".dn-video-card iframe\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".dn-video-card__actions button\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".dn-video-card__actions button:hover\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \"button:focus-visible\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "auto-best/src/lib/components/home/VideoSection.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \"iframe:focus-visible\"\nhttps://svelte.dev/e/css_unused_selector"
+          }
+        ]
+      },
+      "modern": {
+        "svelteFiles": 0,
+        "typescriptFiles": 869,
+        "errors": [],
+        "warnings": []
+      },
+      "carwow": {
+        "svelteFiles": 321,
+        "typescriptFiles": 189,
+        "errors": [],
+        "warnings": [
+          {
+            "file": "carwow/src/lib/components/about/DesktopAboutPage.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".about-hero-socials a\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "carwow/src/lib/components/about/DesktopAboutPage.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".about-hero-socials img\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "carwow/src/lib/components/home/desktop/DesktopHomeVideos.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".home-videos__title img\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "carwow/src/routes/presentation/home3/+page.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".home3-logo span\"\nhttps://svelte.dev/e/css_unused_selector"
+          },
+          {
+            "file": "carwow/src/routes/presentation/home3/+page.svelte",
+            "code": "css_unused_selector",
+            "message": "Unused CSS selector \".home3-logo strong\"\nhttps://svelte.dev/e/css_unused_selector"
+          }
+        ]
+      }
+    }
+  },
+  "targetedSemantic": {
+    "roots": [
+      "auto-best/src/lib/config/brand.ts",
+      "auto-best/src/lib/data/inventory.ts",
+      "auto-best/src/lib/data/listing.ts",
+      "modern/packages/marketplace-domain/testing/mock-data.ts",
+      "modern/packages/marketplace/lead-site.ts",
+      "carwow/src/lib/data/daynight-vehicles.ts",
+      "carwow/src/lib/data/vehicles.ts"
+    ],
+    "diagnostics": [],
+    "result": "passed",
+    "dependencySource": "Existing readonly published-template dependencies; no install or generation"
+  },
+  "dataExecution": {
+    "assertions": [
+      "price-parity-11788863173361582",
+      "km-parity-11788863173361582",
+      "gallery-parity-11788863173361582",
+      "detail-lookup-11788863173361582",
+      "availability-11788863173361582",
+      "price-parity-21788856265448667",
+      "km-parity-21788856265448667",
+      "gallery-parity-21788856265448667",
+      "detail-lookup-21788856265448667",
+      "availability-21788856265448667",
+      "price-parity-21781080017250424",
+      "km-parity-21781080017250424",
+      "gallery-parity-21781080017250424",
+      "detail-lookup-21781080017250424",
+      "availability-21781080017250424",
+      "price-parity-11780494813207389",
+      "km-parity-11780494813207389",
+      "gallery-parity-11780494813207389",
+      "detail-lookup-11780494813207389",
+      "availability-11780494813207389",
+      "price-parity-11788352260592650",
+      "km-parity-11788352260592650",
+      "gallery-parity-11788352260592650",
+      "detail-lookup-11788352260592650",
+      "availability-11788352260592650",
+      "price-parity-11760713901930244",
+      "km-parity-11760713901930244",
+      "gallery-parity-11760713901930244",
+      "detail-lookup-11760713901930244",
+      "availability-11760713901930244",
+      "price-parity-11762013228736167",
+      "km-parity-11762013228736167",
+      "gallery-parity-11762013228736167",
+      "detail-lookup-11762013228736167",
+      "availability-11762013228736167",
+      "price-parity-11744304007224639",
+      "km-parity-11744304007224639",
+      "gallery-parity-11744304007224639",
+      "detail-lookup-11744304007224639",
+      "availability-11744304007224639",
+      "Toyota-under-20000-filter",
+      "filter-reset-eight-cars",
+      "32-image-byte-hashes",
+      "no-zero-or-deposit-prices",
+      "ascending-price-sort",
+      "no-inherited-saved-vehicles"
+    ],
+    "result": "passed",
+    "directorySchema": {
+      "zodVersion": "4.3.6",
+      "result": "passed"
+    },
+    "harnessCorrection": "First price-filter harness used priceMax, which the template ignores. Reran with the existing price_max contract; two matching Toyota records, reset and sorting passed."
+  },
+  "assets": {
+    "filesPerApp": 38,
+    "photosPerCar": 4,
+    "vehicleCount": 8,
+    "manifest": [
+      {
+        "path": "dealer/stock/11788863173361582-1.webp",
+        "bytes": 125596,
+        "sha256": "5d4488f9d28aab0dd639c0d690187fb6fef5e7a940815091f7431658b4248c1f",
+        "gitBlob": "2e1abf7394f542ba7107601f09faffc44cc94cb7"
+      },
+      {
+        "path": "dealer/stock/11788863173361582-4.webp",
+        "bytes": 127230,
+        "sha256": "859bf06de595d416307d24e396eca62ff6d8a037cfc998e6a4bced11b71c9a44",
+        "gitBlob": "123f87769b3eb0ce272abb6a6137db570fcccba7"
+      },
+      {
+        "path": "dealer/stock/11788863173361582-3.webp",
+        "bytes": 135912,
+        "sha256": "342002164a6b2828bf88b8ed0f5df13c14cf989572bc60d8ff3cac0a34295e83",
+        "gitBlob": "bf82efedcdff38e45bc5421f999c4a7b17177549"
+      },
+      {
+        "path": "dealer/stock/11788863173361582-2.webp",
+        "bytes": 140396,
+        "sha256": "90f444f33870272d46bc3e1200f888e36486c3a5cd0714659f72fc186b8738bc",
+        "gitBlob": "0ab6b1cefcced8531d39d3e963fc865266355a83"
+      },
+      {
+        "path": "dealer/stock/21788856265448667-2.webp",
+        "bytes": 146844,
+        "sha256": "9e49b96318380a0129ab9628f3819205de43e1bd913d91ce0fae8db2c4600055",
+        "gitBlob": "0cc235ac5213237c86de1a346cb64d1ee2b5f9eb"
+      },
+      {
+        "path": "dealer/stock/21788856265448667-4.webp",
+        "bytes": 154950,
+        "sha256": "de2601a45666022367cb1c4877f787f3dbf2d6db164c8a5bad11615ec486f5b5",
+        "gitBlob": "191cd36e0b120fe0408d646b8580c131a3f716ae"
+      },
+      {
+        "path": "dealer/stock/21788856265448667-1.webp",
+        "bytes": 230592,
+        "sha256": "13063e0760bf7be6fe195d8f51d8f552aa49f25b20c6023621ec4ba7d73a5fab",
+        "gitBlob": "27bcbab078f04b5d05a8244d21cc90c07e2700c5"
+      },
+      {
+        "path": "dealer/stock/21788856265448667-3.webp",
+        "bytes": 169430,
+        "sha256": "adef51257b21129fcc62455078442e043a024921b24cc40cce8d901b739eb729",
+        "gitBlob": "24e3dbe27ec3061f2773270ecc0856ed8b378560"
+      },
+      {
+        "path": "dealer/stock/21781080017250424-4.webp",
+        "bytes": 120836,
+        "sha256": "b2fdc9fc6e9ad5b36d41ce39d860ef9ba3b5bd36c1cc2d89599637d967e6827c",
+        "gitBlob": "d6e9fc2e9b4065d2225c0cf23a1a2ce8cf411d86"
+      },
+      {
+        "path": "dealer/stock/21781080017250424-1.webp",
+        "bytes": 196528,
+        "sha256": "3667238950d66eec41d6c0c98d81eaea2ace136823c63b771e8f7747c6e26e4f",
+        "gitBlob": "1e869bad033689a8f4bee8ef0b847f1149b3a974"
+      },
+      {
+        "path": "dealer/stock/21781080017250424-2.webp",
+        "bytes": 196032,
+        "sha256": "51922d994beae7b5adac72208ca2e3d6e025cabac3840adfb724b082b78fab49",
+        "gitBlob": "c6d8cbf4c51b21aadf84527cbe0371bdd1822f9b"
+      },
+      {
+        "path": "dealer/stock/21781080017250424-3.webp",
+        "bytes": 242816,
+        "sha256": "2571ff714641ec9a86426aefc7944aaa00fbb22befb791a3e5a541aeb5afc870",
+        "gitBlob": "15d4a4180ce5d016b0f0f2273efee90126f2526e"
+      },
+      {
+        "path": "dealer/stock/11780494813207389-1.webp",
+        "bytes": 251668,
+        "sha256": "978f0ced25a111843b5be966a228c89b4e0563dfba51470491279be89c85e427",
+        "gitBlob": "5f8b957334ff29a531f17919fadc6dbc9859e8a7"
+      },
+      {
+        "path": "dealer/stock/11780494813207389-2.webp",
+        "bytes": 226846,
+        "sha256": "adbd0ede23a7ac549c7ade46356d9a9b46913e307244ca4f488cd8ec6519a7ec",
+        "gitBlob": "42de8c14c7c85fff29e71afab76c66a3d3cebf31"
+      },
+      {
+        "path": "dealer/stock/11780494813207389-4.webp",
+        "bytes": 176922,
+        "sha256": "3bfacb0745c1210c23a6b232500ed0aef2f06586612a98af4de5dfa67689aaa6",
+        "gitBlob": "b7361c091bf1aa2e1e9c0fe3f573c85c1f2bbdac"
+      },
+      {
+        "path": "dealer/stock/11780494813207389-3.webp",
+        "bytes": 253170,
+        "sha256": "1a2cad50f05211d9f261c8055ae4525117057bfe15786aaa174fad9df0780493",
+        "gitBlob": "e53a99a330b4e7d5efe874c7736f6d5645caeff1"
+      },
+      {
+        "path": "dealer/stock/11788352260592650-1.webp",
+        "bytes": 109450,
+        "sha256": "7769e805a3bbe83c492c625d740b03f420605d048ab772c8c552c899605cf1d9",
+        "gitBlob": "9d04bc09d9b87756b524caf2014b5ff01002a807"
+      },
+      {
+        "path": "dealer/stock/11788352260592650-2.webp",
+        "bytes": 87576,
+        "sha256": "4ae7fce66904551ada1c8a682a435f35cde0ee2b61d43057faf1c4e521d4245d",
+        "gitBlob": "52ebb460f566eb3765ba237ec62aa00ad8c23514"
+      },
+      {
+        "path": "dealer/stock/11788352260592650-4.webp",
+        "bytes": 116626,
+        "sha256": "153d891d6f0876289a5b571163006220692db5b5d06a0b019832852e64181033",
+        "gitBlob": "68777fa4838cc6cca618a1af7d84164be4ac90bd"
+      },
+      {
+        "path": "dealer/stock/11788352260592650-3.webp",
+        "bytes": 121538,
+        "sha256": "de57525efd847ded0493847c8e9ee2cf1e8b761b7d241a5ac1ed66fb2160b514",
+        "gitBlob": "3c6afecaf6648d05611cfec56c457eb0496b73b4"
+      },
+      {
+        "path": "dealer/stock/11760713901930244-2.webp",
+        "bytes": 125336,
+        "sha256": "365dee714897f8bb09808323e9d20d48f674881b5fe16620fdeaea90ac81b438",
+        "gitBlob": "d0ad2b4b681953416024833401c40f849a61a9a6"
+      },
+      {
+        "path": "dealer/stock/11760713901930244-1.webp",
+        "bytes": 119716,
+        "sha256": "e8423fe09e528767309ed3f180368991955f617d32639a8bce7e57631b7d4ace",
+        "gitBlob": "585e079a055def6b5bb1d4f1889f5c2d1e49a5c0"
+      },
+      {
+        "path": "dealer/stock/11760713901930244-3.webp",
+        "bytes": 118492,
+        "sha256": "75b201f6a1f5f49c08754fab550a64dc1c9d953bcee1b3f7f1b700e65b65bd4e",
+        "gitBlob": "0a260143489a7d460123aa50d0d70c1b2ef7f96d"
+      },
+      {
+        "path": "dealer/stock/11760713901930244-4.webp",
+        "bytes": 148296,
+        "sha256": "52ab22c0355d9ea1e65710da1d6a9ed56d58736640b5c6cf2b5827d22b996219",
+        "gitBlob": "79e48323d4bca3cf78573e6369f538bef4f189c9"
+      },
+      {
+        "path": "dealer/stock/11762013228736167-1.webp",
+        "bytes": 103280,
+        "sha256": "cf81cdcf64007ccf8dd3867168019e5eaabd10d5b15ce6552f7310804e33489f",
+        "gitBlob": "aed829589c9ed772079677395dcb877894a86933"
+      },
+      {
+        "path": "dealer/stock/11762013228736167-3.webp",
+        "bytes": 88402,
+        "sha256": "aa70827c02a16cb5ab7dde6e20cbd237446224ec93c19569eae25ae1a01546dd",
+        "gitBlob": "637edb2d03b9c21d57bdbce78b7110a3f69007b9"
+      },
+      {
+        "path": "dealer/stock/11762013228736167-4.webp",
+        "bytes": 100958,
+        "sha256": "89766f12e9dde2d2bd819f1ebec95dc656eb9c5d6e3a9456d302d20cf21f317b",
+        "gitBlob": "eadc21781bc8dc161e79d2dece97207c383d4b8e"
+      },
+      {
+        "path": "dealer/stock/11762013228736167-2.webp",
+        "bytes": 110882,
+        "sha256": "3e5e6ffde394a596869e1ae4fdb7805eb96ef69bd63a67a940759c48321ba443",
+        "gitBlob": "adab629e35fb881c196f125ba2b797415616b57e"
+      },
+      {
+        "path": "dealer/stock/11744304007224639-1.webp",
+        "bytes": 220890,
+        "sha256": "ac7704ffd6aee4924a61485954b1844590d77f27c2f3e238c158da789429911a",
+        "gitBlob": "0f389908384f9adbb8cf1e0cb502c1b7c1a0f806"
+      },
+      {
+        "path": "dealer/stock/11744304007224639-2.webp",
+        "bytes": 261990,
+        "sha256": "9a37ec4181daa133543684e74e623b37471c90fc7c1460dcbfe4099cbcc731c2",
+        "gitBlob": "6f1919a02c8bb79f5b510f87de092323d0d2369c"
+      },
+      {
+        "path": "dealer/stock/11744304007224639-4.webp",
+        "bytes": 169696,
+        "sha256": "1599116d6e16bb438f3a1e7c475bd6f2f0b8e0937069c98dcb692352603e6b6b",
+        "gitBlob": "ffb8a108dffc201633f52d001789a65964e5d01c"
+      },
+      {
+        "path": "dealer/stock/11744304007224639-3.webp",
+        "bytes": 230698,
+        "sha256": "4e7319d6df776618d0381087436e9cf5e7d254d808367bc20750ebd1686427f4",
+        "gitBlob": "0f8f64f0217eaac252055285e25ba143e670729e"
+      },
+      {
+        "path": "dealer/brand/logo-light.png",
+        "bytes": 43520,
+        "sha256": "a16cb09994ccf5060eded20a14eb7957b0cd25a4e518c821c0aace556a90dc2c",
+        "gitBlob": "b52b376965509d90129966bc0c2764d1a5205e53"
+      },
+      {
+        "path": "dealer/brand/logo-dark.png",
+        "bytes": 43520,
+        "sha256": "a16cb09994ccf5060eded20a14eb7957b0cd25a4e518c821c0aace556a90dc2c",
+        "gitBlob": "b52b376965509d90129966bc0c2764d1a5205e53"
+      },
+      {
+        "path": "dealer/brand/favicon.png",
+        "bytes": 3009,
+        "sha256": "6cd6d83b22e124daae131b787f4fc7e718bffa596a024b73cc51aad863382108",
+        "gitBlob": "6725cfa5af3bd84a6540681b1e410e56a1d31b7c"
+      },
+      {
+        "path": "dealer/brand/apple-touch-icon.png",
+        "bytes": 28777,
+        "sha256": "3d600e685c7b081894fea69d62dd8d351cc93a585953cd4823177a3dd6101238",
+        "gitBlob": "dab4d96157fb9cdba36c5b9fd39413b3f3747a83"
+      },
+      {
+        "path": "dealer/brand/icon-192.png",
+        "bytes": 32380,
+        "sha256": "43ad80a670dd562928a0159f9d8d1dca2e035c3e21a94c2b5e7168cbc31d9139",
+        "gitBlob": "e715722b257c1ea2f4b54e82895229cf55d4ece2"
+      },
+      {
+        "path": "dealer/brand/icon-512.png",
+        "bytes": 171505,
+        "sha256": "b189d1d8b6701ba14e10f59809adbe12d58e1e93620214a3a6cce10a2471b53f",
+        "gitBlob": "4f360af62e5caba0e2ea5c57bdbc12ce76175a30"
+      }
+    ]
+  },
+  "notRun": [
+    "lockfile installation",
+    "Prisma generation",
+    "full framework typecheck",
+    "Auto Best npm run validate",
+    "Modern web build",
+    "Carwow npm run check and build",
+    "full application rendering",
+    "browser navigation and form interactions",
+    "390/1440 px master versus client comparison",
+    "320 px header review"
+  ],
+  "ownerReviewComplete": false
+}

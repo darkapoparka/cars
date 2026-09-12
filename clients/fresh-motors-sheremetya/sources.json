@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-09",
+  "clientSlug": "fresh-motors-sheremetya",
+  "status": "blocked",
+  "canonicalSource": "https://fresh-motors.mobile.bg/",
+  "identity": {
+    "name": "FRESH MOTORS",
+    "showroomLocality": "с. Шереметя",
+    "directoryRegionNotShowroomAddress": "гр. Велико Търново, Център",
+    "phone": "+359879975969",
+    "contactSource": "https://fresh-motors.mobile.bg/contacts",
+    "openingHours": null,
+    "officialFacebook": null,
+    "independentWebsite": null,
+    "boundedSearch": "Exact dealer name, Sheremetya, phone 0879975969 and English transliteration; no matching official social page or independent website established, not an absence finding"
+  },
+  "catalogue": {"source": "https://fresh-motors.mobile.bg/", "openedAdvertisementTotal": 60, "verifiedAvailableStockCount": null},
+  "candidateVehiclesNotApprovedForApps": [
+    {
+      "name": "Hyundai Ioniq 1.6 Hybrid Facelift",
+      "sourceUrl": "https://www.auto.bg/obiava/59375679/hyundai-ioniq-1-6i-141k-c-hybrid-facelift-avtomat-navi",
+      "sourceId": "59375679",
+      "publishedSourceDate": "2026-08-31 08:50",
+      "evidenceLevel": "Individual seller listing opened; contains usable detail text despite an inline site-error banner",
+      "price": 10799,
+      "currency": "EUR",
+      "taxText": "Не се начислява ДДС",
+      "manufactured": "2020-05",
+      "mileageKm": 234000,
+      "fuel": "hybrid",
+      "powerHp": 141,
+      "transmission": "automatic",
+      "euroStandard": 6,
+      "body": "hatchback",
+      "colour": "white",
+      "availability": "advertised; not independently confirmed",
+      "batteryHealthVerified": false,
+      "sellerFinanceTextExcluded": "Down payment and unconditional approval language are not a cash price or verified credit offer",
+      "approvedForApp": false,
+      "gallery": [
+        {
+          "url": "https://mobistatic3.focus.bg/mobile/photosorg/148/1/big1/11788155451115148_7r.webp",
+          "sourceUrl": "https://www.auto.bg/obiava/59375679/hyundai-ioniq-1-6i-141k-c-hybrid-facelift-avtomat-navi",
+          "observedAt": "2026-09-09",
+          "visuallyInspected": true,
+          "retrieval": "Research-browser Cache miss; subsequent Desktop Commander read_file(isUrl:true) rendered the photograph",
+          "visualNotes": "White Hyundai, front three-quarter view, car lot, FRESH MOTORS plate frame; primary plate-frame phone matches published contact",
+          "localPath": null,
+          "reuseScope": "not established"
+        }
+      ]
+    },
+    {
+      "name": "Hyundai Kona 204 hp 64 kWh",
+      "sourceUrl": "https://fresh-motors.mobile.bg/obiava-21785176725815752-hyundai-kona-204-k-s-64-kw-57000-km-blu-link",
+      "evidenceSource": "https://fresh-motors.mobile.bg/",
+      "evidenceLevel": "Catalogue text only; individual detail open returned Cache miss",
+      "manufactured": "2021-06",
+      "mileageKm": 57000,
+      "fuel": "electric",
+      "powerHp": 204,
+      "advertisedBatteryCapacityKWh": 64,
+      "transmission": "automatic",
+      "price": 19999,
+      "currency": "EUR",
+      "taxText": "Не се начислява ДДС",
+      "batteryHealthVerified": false,
+      "availability": "advertised; not independently confirmed",
+      "approvedForApp": false
+    }
+  ],
+  "branding": {
+    "partialSignageVisuallyInspected": true,
+    "fullLogoKitVisuallyInspected": false,
+    "coverUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h14877872664044398.pic",
+    "coverAttempts": ["Web renderer: unsupported application/octet-stream", "Read-only URL reader: binary text, not a visual result"],
+    "creationMethod": "none",
+    "generatedAssets": []
+  },
+  "mediaReuseCleared": false,
+  "mediaBasisFinding": "No dealer-stock-photo authorization established in the inspected supplied/repository records; successful viewing is not recorded as permission",
+  "termsSource": "https://www.auto.bg/gc",
+  "localAssets": [],
+  "applicationsCreated": [],
+  "ownerManualReviewComplete": false
+}

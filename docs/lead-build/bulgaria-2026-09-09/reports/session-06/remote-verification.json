@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-09",
+  "observedHead": "be40c74965d6103f7e0c2aa0b99d4a8a42b5489f",
+  "baseCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "baseTree": "d674ef10a5d21d492e46c264640920944542b32a",
+  "comparison": {"status": "ahead", "aheadBy": 10, "behindBy": 0, "totalCommits": 10, "returnedFiles": 300},
+  "comparisonLimit": "GitHub compare returns only 300 files; this was not treated as an exhaustive changed-path list.",
+  "allowlistVerification": {
+    "method": "Recursively compare base/head Git trees outside the six allowed subtrees; require all unrelated entries to retain identical Git object hashes.",
+    "passed": true,
+    "allowedChangedSubtrees": [
+      "clients/fresh-motors-sheremetya",
+      "clients/g-auto",
+      "clients/golden-dreams-auto",
+      "clients/kris-car-plovdiv",
+      "clients/slavi-cars",
+      "docs/lead-build/bulgaria-2026-09-09/reports/session-06"
+    ],
+    "unexpectedChanges": []
+  },
+  "gAutoByteVerification": {
+    "applicationCommit": "689d2a7380f97120dbb46a58b0edeb2da8c6f1b3",
+    "method": "Every intended app path compared with published recursive-tree blob hash; all matched.",
+    "passed": true,
+    "files": {"auto-best": 274, "modern": 1264, "carwow": 1367},
+    "binaryAssetsPerApplication": 38
+  },
+  "sourceChecks": "clients/g-auto/checks/source-verification.json",
+  "fullApplicationBuild": false,
+  "browserVerified": false,
+  "deployed": false,
+  "ownerReviewComplete": false
+}

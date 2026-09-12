@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Илюстративна карта за Mercedes-Benz CLA 180">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111214"/><stop offset="1" stop-color="#303238"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#g)"/>
+<text x="120" y="150" fill="white" font-size="78" font-family="Arial, sans-serif" font-weight="700">Mercedes-Benz CLA 180</text>
+<text x="120" y="235" fill="#D4AF37" font-size="42" font-family="Arial, sans-serif">2013 · 96 000 км · 12 500 €</text>
+<g fill="none" stroke="#D4AF37" stroke-linecap="round" stroke-linejoin="round">
+<path d="M250 660 C350 645 430 545 560 500 C760 430 1045 470 1260 620 C1310 654 1350 664 1400 670" stroke-width="20"/>
+<path d="M275 695 H460 L555 610 H1110 L1215 695 H1390" stroke-width="14"/>
+<circle cx="525" cy="705" r="65" stroke-width="18"/><circle cx="1195" cy="705" r="65" stroke-width="18"/>
+</g>
+<text x="120" y="900" fill="#D1D5DB" font-size="34" font-family="Arial, sans-serif">Илюстративна карта — реалните снимки са в публичната обява.</text>
+</svg>

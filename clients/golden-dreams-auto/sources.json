@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "observedAt": "2026-09-09",
+  "clientSlug": "golden-dreams-auto",
+  "status": "implemented-unverified",
+  "canonicalSource": "https://www.facebook.com/people/GoldenDreams-AUTO/61592803643776/",
+  "currentPublicListing": "https://bazar.bg/obiava-55965789/mercedes-benz-cla-180-96000km",
+  "tradingName": "GoldenDreams AUTO",
+  "city": "Пловдив",
+  "showroomAddress": null,
+  "phones": ["+359878979712", "+359895735255"],
+  "instagram": "https://www.instagram.com/goldendreamsauto/",
+  "listingEvidence": {
+    "source": "Bazar.bg",
+    "id": "55965789",
+    "updated": "2026-09-09",
+    "title": "Mercedes-Benz CLA 180",
+    "year": 2013,
+    "mileageKm": 96000,
+    "powerHp": 121,
+    "fuel": "petrol",
+    "transmission": "manual",
+    "body": "sedan",
+    "priceEur": 12500,
+    "taxText": "Не се начислява ДДС",
+    "sellerTextContainsTradingName": true,
+    "availability": "advertised-current; confirm with seller"
+  },
+  "branding": {
+    "legacyFilesKnown": [
+      "mirror/public/assets/images/lead/golden-dreams-logo-on-dark-v2.png",
+      "mirror/public/assets/images/lead/golden-dreams-logo-on-light-v2.png"
+    ],
+    "legacyVisualIdentity": "gold five-star arch and car silhouette over GOLDEN DREAMS AUTOGROUP",
+    "legacyBytesAvailableThisPass": false,
+    "creationMethod": "client-local vector concept refresh based on the inspected legacy identity",
+    "approvalStatus": "concept; not dealer-approved"
+  },
+  "applicationsCreated": ["auto-best", "modern", "carwow"],
+  "ownerManualReviewComplete": false
+}

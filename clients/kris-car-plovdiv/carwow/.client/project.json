@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "client": "kris-car-plovdiv",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09T03:54:29.736Z",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "deliveryBranch": "codex/astra-bg-06",
+  "verificationScope": "Source compiler and data checks only; installation, full typecheck, build and browser review not executed.",
+  "verification": {
+    "sourceEvidence": "../../checks/source-verification.json",
+    "syntaxOnly": true,
+    "targetedDataSemantic": true,
+    "fullTypecheck": false,
+    "build": false,
+    "browser": false
+  }
+}

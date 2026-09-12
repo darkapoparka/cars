@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "client": "golden-dreams-auto",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09T15:04:00+03:00",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "fastSkinBaseTree": "265c423b0b8e4da9801c3da20b7a06a826cc4651",
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "limitations": [
+    "Fast skin cloned from the retained template composition; no full framework build or browser review was run.",
+    "One current Bazar.bg listing drives the dealer inventory consumer in this quick pass.",
+    "Exact showroom address is not established; confirm by phone.",
+    "Client-local logo is a restrained concept based on the inspected legacy five-star/car silhouette treatment because the legacy source bytes were unavailable to this session.",
+    "Not deployed and not owner-approved."
+  ],
+  "updatedAt": "2026-09-09T15:04:00+03:00",
+  "evidence": {"sourceCheck":null,"runtimeBuild":false,"browser":false}
+}

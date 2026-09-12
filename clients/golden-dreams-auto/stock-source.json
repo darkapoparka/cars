@@ -1,0 +1,39 @@
+{
+  "observedAt": "2026-09-09",
+  "business": {
+    "name": "GoldenDreams AUTO",
+    "city": "Пловдив",
+    "address": "точен адрес при потвърждение",
+    "phone": "0878 979 712",
+    "secondaryPhone": "0895 735 255",
+    "sourceInventory": "https://bazar.bg/obiava-55965789/mercedes-benz-cla-180-96000km",
+    "disclosure": "Бърз демо skin с една текуща публична обява; наличността и точният адрес се потвърждават по телефона."
+  },
+  "records": [
+    {
+      "id": 1,
+      "sourceId": "55965789",
+      "sourceUrl": "https://bazar.bg/obiava-55965789/mercedes-benz-cla-180-96000km",
+      "title": "Mercedes-Benz CLA 180",
+      "make": "Mercedes-Benz",
+      "model": "CLA 180",
+      "year": 2013,
+      "mileageKm": 96000,
+      "fuel": "Бензин",
+      "transmission": "Ръчна",
+      "powerHp": 121,
+      "body": "Sedan",
+      "bodyLabel": "Седан",
+      "priceEur": 12500,
+      "taxText": "Не се начислява ДДС",
+      "availability": "advertised-current; confirm with seller",
+      "images": [
+        {
+          "path": "/dealer/stock/cla-demo.svg",
+          "kind": "illustrative-card",
+          "note": "not a vehicle photograph; source page contains the real photos"
+        }
+      ]
+    }
+  ]
+}

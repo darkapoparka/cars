@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "client": "golden-dreams-auto",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09T15:04:00+03:00",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "97833980ab127f6de8f675ac1a188e4b7f717976",
+  "fastSkinBaseTree": "39e7c90e47831334ad5dbc51f39a27f2aa38205c",
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "limitations": [
+    "Fast skin cloned from the retained template composition; no full framework build or browser review was run.",
+    "Only one current publicly indexed Bazar.bg listing is used as dealer stock.",
+    "Exact showroom address is not established; confirm by phone.",
+    "Client-local logo is a restrained concept based on the inspected legacy five-star/car silhouette treatment because the legacy source bytes were unavailable to this session.",
+    "Not deployed and not owner-approved."
+  ],
+  "updatedAt": "2026-09-09T15:04:00+03:00",
+  "evidence": {"sourceCheck":null,"runtimeBuild":false,"browser":false}
+}
