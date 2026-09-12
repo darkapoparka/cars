@@ -1,0 +1,59 @@
+{
+  "observedAt": "2026-09-09T02:40:58.695Z",
+  "runtime": "v24.18.0",
+  "sourceOnly": true,
+  "checks": {
+    "svelteParsers": {
+      "autoBest": "5.57.0",
+      "carwow": "5.55.9"
+    },
+    "typescriptParser": "5.9.3",
+    "changedSourceSyntaxErrors": [],
+    "executedDataModels": {
+      "counts": [8, 8, 8],
+      "samePrices": true,
+      "sameGallery": true,
+      "localBytes": true,
+      "uniqueIds": true
+    }
+  },
+  "followUpFilterChecks": {
+    "observedAt": "2026-09-09",
+    "baseCommit": "52b6495cac62bea42c930bbb0f35ef8c475385c1",
+    "sourceFile": "auto-best/src/lib/data/listing.ts",
+    "baselineBlob": "b3025d705e731add83bfd4005bda6a667bfd96ef",
+    "baselineBytesMatchedRemoteBlob": true,
+    "fixedBlob": "9af284a00472afb845dfeeba529a205b4d00606b",
+    "command": "node --test scripts/dealer-facets.test.mjs",
+    "workingDirectory": "/mnt/data/plus-auto-filter-check",
+    "runtime": "v22.16.0",
+    "typescriptTranspiler": "5.8.3",
+    "scope": "Actual fetched filter module, transpiled and executed with explicit synthetic inventory fixtures. Not the full application or current dealer dataset.",
+    "baselineResult": {"tests": 8, "passed": 4, "failed": 4, "exitCode": 1},
+    "fixedResult": {"tests": 8, "passed": 8, "failed": 0, "exitCode": 0},
+    "fixes": [
+      "Derive equipment and supported trim choices from the imported inventory.",
+      "Match trim tokens rather than arbitrary substrings: RS does not match Corsa, while RS6 remains supported."
+    ],
+    "logPaths": [
+      "/mnt/data/plus-auto-filter-check/baseline-tests.tap",
+      "/mnt/data/plus-auto-filter-check/fixed-tests.tap"
+    ],
+    "localReviewCommand": "From clients/plus-auto-ruse/auto-best after the retained dependency install: node --test scripts/dealer-facets.test.mjs",
+    "fullAppTypecheck": false,
+    "fullAppBuild": false,
+    "browserVerification": false
+  },
+  "notRun": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review"
+  ],
+  "limits": [
+    "Full application build/browser verification remains unexecuted. The filter follow-up used the isolated conversation container, not the owner Windows checkout.",
+    "Public-source media commercial reuse and dealer approval are not established; this is branch-only owner evaluation."
+  ]
+}

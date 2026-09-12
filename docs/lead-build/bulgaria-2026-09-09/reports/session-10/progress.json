@@ -1,0 +1,117 @@
+{
+  "base": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "branch": "codex/astra-bg-10",
+  "inspectedMain": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "templateShas": {
+    "auto-best": "97833980ab127f6de8f675ac1a188e4b7f717976",
+    "modern": "66bfb8196bbce18832ada6b34b02dda97baba25b",
+    "carwow": "d4a08817e87cf84d08c4db1c08a515937245f2dd"
+  },
+  "duplicateRoots": [
+    {
+      "branch": "codex/astra-bg-10",
+      "commit": "3cdee98c99a6b93b926a5b6182b939df77411df2",
+      "folders": [
+        "plus-auto-ruse"
+      ]
+    }
+  ],
+  "completedCheckpoints": [
+    {
+      "slug": "plus-auto-ruse",
+      "name": "Plus Auto",
+      "commit": "52b6495cac62bea42c930bbb0f35ef8c475385c1",
+      "state": "implemented-unverified",
+      "vehicles": 8,
+      "localMediaAssets": 32,
+      "appTrees": {
+        "auto-best": "25a8023ee493850336143dfd5176f371a0fda27e",
+        "modern": "f0a9d54103bc68f9499f9acbf46b231d5df7c6d1",
+        "carwow": "e47e2586bbf9056d3ea835573822d9c8ece45ef2"
+      },
+      "dataChecks": {
+        "counts": [
+          8,
+          8,
+          8
+        ],
+        "samePrices": true,
+        "sameGallery": true,
+        "localBytes": true,
+        "uniqueIds": true
+      }
+    },
+    {
+      "slug": "fresh-auto-ruse",
+      "name": "Фреш Ауто",
+      "commit": "d74c1f9ad6ce8096176d681aa767067e9378a61d",
+      "state": "implemented-unverified",
+      "vehicles": 8,
+      "localMediaAssets": 33,
+      "appTrees": {
+        "auto-best": "40a48d167b45c93df2cf7000ab43d89ec2ce143b",
+        "modern": "9d82cba63a275da48b2623d55e98781400d5e2bd",
+        "carwow": "1fc6a7494cb75f3a33b078b2dc83dff6bb6279df"
+      },
+      "dataChecks": {
+        "counts": [
+          8,
+          8,
+          8
+        ],
+        "samePrices": true,
+        "sameMileages": true,
+        "sameGallery": true,
+        "localBytes": true,
+        "uniqueIds": true
+      }
+    },
+    {
+      "slug": "fresh-auto-ruse",
+      "name": "Фреш Ауто",
+      "commit": "10d860e92a37e0e8cf89eaad766ecb1c62402640",
+      "state": "implemented-unverified",
+      "vehicles": 8,
+      "localMediaAssets": 33,
+      "appTrees": {
+        "auto-best": "387e3911d29ec475a57714be33c4d21866edc090",
+        "modern": "37baa7dcee585e6b0ed48c7248c91ff0fc38fd9a",
+        "carwow": "96ae4b97cfe4a0d8fe6db107c892f68a4ffd5fb3"
+      },
+      "dataChecks": {
+        "counts": [
+          8,
+          8,
+          8
+        ],
+        "samePrices": true,
+        "sameMileages": true,
+        "sameGallery": true,
+        "localBytes": true,
+        "uniqueIds": true
+      }
+    }
+  ],
+  "currentDealer": {
+    "slug": "f1-auto-vratsa",
+    "state": "implemented-unverified",
+    "sourceCount": 8,
+    "appTrees": {
+      "auto-best": "9a96ebfa81e9409ac6416dab8047c169dd50a94b",
+      "modern": "db5fd60267ecf45a096ae2802101bada7674d9ff",
+      "carwow": "4702bf6ff93e9185aebab32a73dd19c91e0957af"
+    }
+  },
+  "pending": [
+    "kunchev-auto",
+    "haskovo-cars-bg"
+  ],
+  "qaLimits": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review"
+  ]
+}

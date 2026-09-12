@@ -1,0 +1,22 @@
+:root {
+  --dn-red: #d71920;
+  --dn-red-dark: #a90f15;
+  --dn-ink: #16191d;
+  --dn-muted: #666b73;
+  --dn-border: #e3e5e8;
+  --dn-soft: #f5f6f7;
+  --dn-soft-blue: #eef2f5;
+  --dn-page: #ffffff;
+  --dn-surface: #ffffff;
+  --dn-dark: #17191d;
+  --dn-dark-soft: #22262b;
+  --dn-yellow: #f5cf43;
+  --dn-radius-panel: 22px;
+  --dn-radius-card: 18px;
+  --dn-radius-control: 14px;
+  --dn-radius-button: 999px;
+  --dn-container: 1180px;
+  --dn-header-height: 74px;
+  --dn-shadow: 0 12px 35px rgba(15, 23, 42, .08);
+  --dn-shadow-strong: 0 18px 55px rgba(15, 23, 42, .16);
+}

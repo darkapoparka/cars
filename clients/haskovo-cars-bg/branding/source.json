@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ХАСКОВО КАРС БГ",
+  "publishedBranding": "A marketplace cover identity was visible during public review, but a suitable reusable logo file was not established in the GitHub-only runner.",
+  "sourceProfile": "https://haskovocarsbg.mobile.bg/",
+  "workingLogoPath": "branding/haskovo-cars-bg-logo.webp",
+  "creationMethod": "Image-generation-assisted professional demo concept based only on the published dealer name; black/charcoal automotive silhouette with restrained red accent and Cyrillic wordmark.",
+  "approvalStatus": "Unapproved demo concept; not represented as an official historical dealership logo.",
+  "generation": {
+    "id": "0c10d61e-40c0-4891-b97f-d044ef78be47",
+    "originalFile": "a_clean_vector_style_logo_graphic_on_a_transparent.png",
+    "originalSha256": "465f385ea56c8a130cdade56e2eee57ccc15b83ad732c3b30e99ba9691f430ae",
+    "optimizedSha256": "69b25b16a1410d027d17f50dbe9e64c3ab128729affdc06c2b48442e6b3bafe4",
+    "repositoryBlobSha": "3de651911e2fd24747ece0e2df4877b1dd805e76",
+    "changes": "Transparent artwork resized to 800 x 269 and WebP-compressed for header/footer use."
+  }
+}

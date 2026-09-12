@@ -1,0 +1,13 @@
+{
+  "name": "Plus Auto",
+  "short_name": "Plus Auto",
+  "start_url": "/",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/dealer/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

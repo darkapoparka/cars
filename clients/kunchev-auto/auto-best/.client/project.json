@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "client": "kunchev-auto",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [{"id":"main","route":"/"}],
+  "offeredHomes": [{"id":"main","route":"/"}],
+  "publicUrl": null,
+  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
+  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "source": {"repository":"darkapoparka/cars","commit":"faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca","path":"templates/auto-best","tree":"97833980ab127f6de8f675ac1a188e4b7f717976"},
+  "notes": ["Published KUNCHEV logo reference integrated.","Business identity/contact localized for Pleven.","Representative dated listing sample integrated; marketplace counts are not asserted as live stock.","No generic barter service is advertised; several current listings explicitly decline barter.","Vehicle card media still uses retained template automotive imagery because source-photo bytes were not available to the GitHub-only runner; coordinator should replace with cleared matched listing photos before publication.","Install/build/browser checks not executed in this connector-only handoff."]
+}

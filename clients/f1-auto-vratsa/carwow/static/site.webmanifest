@@ -1,0 +1,13 @@
+{
+  "name": "F1 - AUTO",
+  "short_name": "F1 AUTO",
+  "start_url": "/",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/dealer/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

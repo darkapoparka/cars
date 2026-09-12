@@ -1,0 +1,13 @@
+{
+  "name": "Фреш Ауто",
+  "short_name": "Фреш Ауто",
+  "start_url": "/",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/dealer/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "client": "f1-auto-vratsa",
+  "templateKey": "auto-best",
+  "templateVersion": "2026.09.08-polish-1",
+  "createdAt": "2026-09-09",
+  "updatedAt": "2026-09-09T03:14:12.888Z",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    "main"
+  ],
+  "publicUrl": null,
+  "handoffBranch": "codex/astra-bg-10",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+    "path": "templates/auto-best",
+    "tree": "97833980ab127f6de8f675ac1a188e4b7f717976"
+  },
+  "fullWorkspaceRetained": false,
+  "sourceChecks": {
+    "syntax": true,
+    "dataModels": true,
+    "localAssetBytes": true
+  },
+  "verificationEvidence": "../source-checks.json",
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "limitations": [
+    "lockfile dependency installations",
+    "Prisma generation",
+    "framework typechecks",
+    "production builds",
+    "390px/1440px browser route and interaction tests",
+    "320px header visual review",
+    "Application runtime/browser checks need the coordinator isolated review environment. The Windows source checkout was not modified.",
+    "Commercial media reuse permission and dealer approval are not established; no deployment or outreach was performed."
+  ],
+  "publicOriginIntegration": false
+}
