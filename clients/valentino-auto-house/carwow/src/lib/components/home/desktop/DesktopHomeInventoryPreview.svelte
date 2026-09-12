@@ -32,7 +32,7 @@
 			href={showHeaderCta ? resolve('/inventory') : undefined}
 			label={`Виж всички ${inventoryCount} автомобила`}
 			copy={showHeaderSubtitle
-				? 'Последно добавени предложения от наличността на Day Night Auto.'
+				? 'Последно добавени предложения от наличността на Valentino.'
 				: undefined}
 		/>
 	</div>

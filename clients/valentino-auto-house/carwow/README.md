@@ -1,7 +1,9 @@
-# Carwow
+# VALENTINO AUTO HOUSE — Carwow
 
-Read [TEMPLATE.md](./TEMPLATE.md) for current source lineage, run commands, real homepage variants, personalization files and limitations. This template belongs to the J:/cars library; the original source README is retained privately in .template/source-readme.md.
+Independent copy of published master 2026.09.08-repair-1. Carwow is the internal design nickname, not a business affiliation. This checkpoint is in progress: source copying is complete; dealer personalization and verification are not yet complete.
 
-Internal inspiration nickname, not Carwow affiliation. Yellow desktop and compact mobile compositions are intentional. Use the Cars launcher to avoid the inherited dev script's fixed port 6517.
+Source commit: faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca. Source tree: d4a08817e87cf84d08c4db1c08a515937245f2dd.
 
-For lead work, copy first using J:/cars/scripts/new-client.mjs. Preserve the template layout and change branding/content in the client copy.
+Use the retained Node 24 requirement and lockfile: `npm ci`, `npm run check`, `npm run build`. Coordinator entry `/`. Use the Cars coordinator launcher rather than the source-specific fixed-port dev wrapper. No server or public preview is claimed.
+
+See `.client/project.json`, `../CLIENT.md` and final `../REVIEW.md` when present. The retained reference material and tests are source evidence, not passed client QA or dealer approval.

@@ -1,0 +1,9 @@
+export type DayNightReview={id:string;text:string;avatar:`/assets/${string}`;name:string;label:string;rating:number};
+// No verified public customer-review set is attributed to this dealer in this branch handoff.
+export const daynightReviews:DayNightReview[]=[];
+export const daynightReviewDisclosure='Няма добавени непотвърдени клиентски отзиви.';
+export const daynightReviewCount=0;
+export const daynightReviewCountLabel='0 потвърдени отзива';
+export const daynightReviewLinkLabel='Отзиви';
+export const daynightReviewAverage=0;
+export const daynightReviewDistribution=[5,4,3,2,1].map((rating)=>({id:`${rating}-star`,label:String(rating),count:0,percent:'0%'}));

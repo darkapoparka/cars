@@ -3,3 +3,8 @@
 @import "./lib/styles/base.css";
 @import "./lib/styles/navigation.css";
 @import "./lib/styles/composition.css";
+
+/* Source-logo presentation fixes only; template dimensions and layouts remain authoritative. */
+img[src^="/brand/"] { object-fit:contain; filter:none; clip-path:none; max-width:100%; }
+.dn-map-source-note { margin:8px 12px; color:#626a75; font-size:12px; line-height:1.5; }
+.dn-vehicle-cutout[data-view="source-photo"] { object-fit:contain; border-radius:10px; }

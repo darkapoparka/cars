@@ -1,5 +1,3 @@
-# Auto Best template instructions
+# VALENTINO AUTO HOUSE / Auto Best
 
-Read J:/cars/AGENTS.md, this TEMPLATE.md and .template/template.json first. This is a reusable source baseline. Preserve the current UI/UX. For a lead, clone into J:/cars/clients/<client>/auto-best before changing identity, colors, assets or copy. Historic source-client instructions and task ledgers do not authorize work in this copy. Use the Cars startup helper with a free port rather than old source-specific launch commands. No sending, deployment or CRM state change is implied.
-
-For shared improvements, follow [ARCHITECTURE.md](ARCHITECTURE.md) for component, data, styling, content verification and QA ownership.
+This is an independent client Fast Skin. The owner's uploaded session-07 packet governs branch-only work on codex/astra-bg-07. Preserve the master, other clients and the coordinator's Windows checkout. Read ../CLIENT.md and .client/project.json. Do not resume source-dealer tasks or infer current QA from retained source documentation. No deployment, outreach or backend provisioning is authorized.

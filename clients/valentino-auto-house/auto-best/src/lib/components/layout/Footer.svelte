@@ -8,31 +8,31 @@
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const actions = [
-    {
-      title: 'Подбрани автомобили',
-      description: 'Разгледайте актуалната селекция',
-      href: '/listing-grid',
-      icon: 'car'
-    },
-    {
-      title: `Оглед в ${brand.city}`,
-      description: 'С предварителна уговорка',
-      href: '/contact?topic=inspection',
-      icon: 'contact'
-    },
-    {
-      title: 'Собствен лизинг',
-      description: 'Попитайте за актуалните условия',
-      href: '/contact?topic=leasing',
-      icon: 'finance'
-    },
-    {
-      title: 'Внос по заявка',
-      description: 'Уточнете критериите с екипа',
-      href: '/contact?topic=import',
-      icon: 'value'
-    }
-  ] as const;
+  {
+    "title": "Публикувани автомобили",
+    "description": "Датирана демо селекция",
+    "href": "/listing-grid",
+    "icon": "car"
+  },
+  {
+    "title": "Оглед в София",
+    "description": "Потвърдете автомобил и час",
+    "href": "/contact?topic=inspection",
+    "icon": "contact"
+  },
+  {
+    "title": "Финансиране по запитване",
+    "description": "Индивидуални външни условия",
+    "href": "/contact?topic=leasing",
+    "icon": "finance"
+  },
+  {
+    "title": "Документи и регистрация",
+    "description": "Уточнете обхвата и разходите",
+    "href": "/contact?topic=import",
+    "icon": "value"
+  }
+] as const;
 </script>
 
 {#if showActions}
@@ -56,8 +56,8 @@
 <footer class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
-      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logoDark} alt={brand.name} width="220" height="58" /></a>
+      <p>{brand.stockNotice}</p>
     </div>
     <nav aria-label="Автомобили">
       <strong>Автомобили</strong>
@@ -82,8 +82,8 @@
         <span>{brand.address}</span>
         <Icon name="arrow-right" size={16} />
       </a>
-      <p class="dn-footer__appointment">{brand.appointment}</p>
+      <p class="dn-footer__appointment">{brand.hoursLabel}. {brand.appointment}.</p>
     </div>
   </div>
-  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
+  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Неофициален демопроект · данни към 09.09.2026</span></div>
 </footer>

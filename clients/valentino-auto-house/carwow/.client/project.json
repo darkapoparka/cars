@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "client": "valentino-auto-house",
+  "templateKey": "carwow",
+  "templateVersion": "2026.09.08-repair-1",
+  "createdAt": "2026-09-09",
+  "state": "implemented-unverified",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "sourceCommit": "faf76e81c96a4e6dbe18e8ffcaf0a249df47b7ca",
+  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
+  "branch": "codex/astra-bg-07",
+  "copyMethod": "independent Git tree/blob replication",
+  "personalizationComplete": true,
+  "runtimeVerified": false,
+  "ownerReview": "pending",
+  "researchLeadId": "bg-sofia-valentino-auto-house",
+  "contactHistory": "not_checked",
+  "sourceContentIntegrated": true,
+  "inventorySampleCount": 8,
+  "galleryPhotoCount": 24,
+  "assetClearance": "unconfirmed",
+  "notes": [
+    "Retained master application with dealer-pack consumers, integrated local branding and photographs; no replacement screens.",
+    "Framework dependency install, build/typecheck and browser/viewport comparison have NOT run.",
+    "Source-adapter checks only: 87 assertions passed for Modern and Carwow at 5e8a3851463bf967dc4adf48bcd9d642286ff806.",
+    "Publication requires source-media clearance and owner review."
+  ]
+}

@@ -42,9 +42,9 @@
 	} = $props();
 
 	const leftCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
+		'/media/stock/11785220779595617-1.webp';
 	const rightCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
+		'/media/stock/11768394188936705-1.webp';
 </script>
 
 <section
@@ -66,7 +66,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							resolve('/assets/daynight-contact/contact-support-cutouts.webp'),
+							resolve('/media/stock/11785220779595617-1.webp'),
 							1536
 						)}
 						sizes={desktopOnlySizes('48vw')}

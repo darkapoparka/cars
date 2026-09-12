@@ -4,23 +4,18 @@
   import Icon from '$components/ui/Icon.svelte';
   import { brand } from '$config/brand';
   import { contactPreparation, type ContactTopic } from '$data/company';
-  import SocialBrandIcon from './SocialBrandIcon.svelte';
   import VehicleEnquiry from './VehicleEnquiry.svelte';
 
   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
   const preparation = $derived(contactPreparation[topic.id]);
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
-  const socialPlatforms = [
-    { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
-    { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
-    { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
-  ] as const;
+  const socialPlatforms = brand.profiles.map(profile => ({ name: profile.label, label: profile.label, href: profile.url }));
 </script>
 
 <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
-      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</h1>
+      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Въпрос за автомобил' : topic.title}</h1>
     {/if}
     <div class="dn-contact-intent__heading">
       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
@@ -50,10 +45,10 @@
     {/if}
 
     {#if topic.id === 'import' && importUrl}
-      <div class="dn-contact-import" aria-label="Избрана обява за внос">
-        <strong>Обява за внос</strong>
+      <div class="dn-contact-import" aria-label="Избрана обява">
+        <strong>Обява за въпроса</strong>
         <a href={importUrl} target="_blank" rel="noopener noreferrer">{importUrl}<Icon name="arrow-right" size={18} /></a>
-        <p>Линкът не е изпратен. Свържете се с нас, за да обсъдим обявата и възможностите за внос.</p>
+        <p>Линкът не е изпратен. Обадете се, за да уточните конкретния въпрос и наличните услуги.</p>
       </div>
     {/if}
 
@@ -62,12 +57,12 @@
     </a>
 
     {#if topic.id !== 'trade-in' && topic.id !== 'import'}
-    <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
-      <span>Социални мрежи</span>
+    <div class="dn-contact-social" role="group" aria-label="Публикувани обяви">
+      <span>Публикувани обяви</span>
       <div>
         {#each socialPlatforms as platform (platform.name)}
           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
-            <SocialBrandIcon name={platform.name} />
+            <Icon name="globe" size={24} />
           </a>
         {/each}
       </div>
@@ -91,7 +86,7 @@
     {#if topic.id === 'general'}
       <div class="dn-contact-visit">
         <p><Icon name="map-pin" size={24} /><span>{brand.address}</span></p>
-        <p><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
+        <p><Icon name="clock" size={24} /><span>{brand.hoursLabel}. {brand.appointment}.</span></p>
         <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Маршрут<Icon name="arrow-right" size={20} /></a>
       </div>
     {/if}

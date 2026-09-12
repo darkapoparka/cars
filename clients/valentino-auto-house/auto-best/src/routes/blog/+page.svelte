@@ -12,7 +12,7 @@
 
 <svelte:head>
   <title>Полезно — {brand.name}</title>
-  <meta name="description" content={`Практични насоки от ${brand.name} за избор, оглед, внос, лизинг, бартер и следващи стъпки при покупка на автомобил.`} />
+  <meta name="description" content={`Редакционни демо насоки за избор и оглед на автомобил. Не са статии, одобрени или написани от ${brand.name}.`} />
 </svelte:head>
 
 <BlogHero filters={data.filters} />

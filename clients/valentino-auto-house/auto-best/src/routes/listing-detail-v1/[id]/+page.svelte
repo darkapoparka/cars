@@ -13,6 +13,10 @@
 
   let { data }: { data: PageData } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
+  let galleryIndexes = $state<Record<number, number>>({});
+  const gallery = $derived(data.vehicle.images);
+  const imageIndex = $derived(Math.min(galleryIndexes[data.vehicle.id] ?? 0, gallery.length - 1));
+  function selectImage(index: number) { galleryIndexes[data.vehicle.id] = (index + gallery.length) % gallery.length; }
 
   const detailTabs = [
     { id: 'overview', label: 'Данни' },
@@ -53,6 +57,9 @@
     { label: 'Пробег', value: data.vehicle.mileage },
     { label: 'Гориво', value: data.vehicle.fuel },
     { label: 'Скоростна кутия', value: data.vehicle.transmission },
+    { label: 'Мощност', value: data.vehicle.powerHp === null ? 'Не е посочена' : data.vehicle.powerHp + ' к.с.' },
+    { label: 'Работен обем', value: data.vehicle.engineCc === null ? 'Не е посочен' : data.vehicle.engineCc + ' см³' },
+    { label: 'Екостандарт', value: data.vehicle.euro },
     { label: 'Локация', value: brand.city }
   ]);
 </script>
@@ -61,7 +68,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Публикувана обява от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -84,14 +91,20 @@
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
                 <img
-                  src={data.vehicle.image}
-                  alt={data.vehicle.title}
-                  width="1245"
-                  height="988"
+                  src={gallery[imageIndex]}
+                  alt={data.vehicle.title + " — снимка " + (imageIndex + 1)}
+                  width="1600"
+                  height="900"
                   fetchpriority="high"
                   decoding="async"
                 />
               </figure>
+              <div class="dn-source-gallery" role="group" aria-label="Снимки на автомобила">
+                <button type="button" onclick={() => selectImage(imageIndex - 1)} aria-label="Предишна снимка"><Icon name="arrow-left" size={18} /></button>
+                {#each gallery as image, index (image)}<button type="button" class:active={imageIndex === index} aria-pressed={imageIndex === index} aria-label={"Снимка " + (index + 1) + " от " + gallery.length} onclick={() => selectImage(index)}><img src={image} alt="" width="80" height="48" loading="lazy" decoding="async" /></button>{/each}
+                <button type="button" onclick={() => selectImage(imageIndex + 1)} aria-label="Следваща снимка"><Icon name="arrow-right" size={18} /></button>
+                <span aria-live="polite">{imageIndex + 1} / {gallery.length}</span>
+              </div>
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label="Информация за автомобила">
@@ -130,9 +143,10 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
-                    екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
+                    {data.vehicle.title} е част от демо селекцията по обяви на {brand.name}. Свържете се с
+                    продавача за потвърждение на състоянието, наличността и следващите стъпки. Данните са записани на 09.09.2026 г., а не от жива складова система.
                   </p>
+                  <p><a href={data.vehicle.evidenceUrl} target="_blank" rel="noopener noreferrer">Оригинална обява · {data.vehicle.sourceId}</a></p>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
                     <Icon name="message" size={22} strokeWidth={1.7} />
                     Поискайте информация
@@ -140,6 +154,7 @@
                 </div>
               {:else}
                 <div id="detail-panel-equipment" role="tabpanel" aria-labelledby="detail-tab-equipment">
+                  {#if data.vehicle.equipment.length === 0}<p class="dn-detail-description">Не са добавени непотвърдени екстри. Уточнете оборудването по оригиналната обява.</p>{/if}
                   <ul class="dn-detail-equipment">
                     {#each data.vehicle.equipment as feature (feature)}
                       <li><span aria-hidden="true"></span>{feature}</li>
@@ -162,7 +177,7 @@
             <section class="dn-detail-card dn-detail-summary">
               <p class="dn-detail-summary__label">Цена</p>
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
-              <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
+              <p class="dn-detail-summary__availability">{data.vehicle.vatLabel}. {data.vehicle.availability}. Данни към 09.09.2026 г.</p>
               <div class="dn-detail-summary__actions">
                 <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
                 <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
@@ -198,7 +213,7 @@
           <div class="dn-detail-related__header">
             <div>
               <h2 id="related-title">Подбрани автомобили</h2>
-              <p>Още предложения от актуалната селекция</p>
+              <p>Още предложения от демо селекцията по обяви</p>
             </div>
             <a class="dn-detail-related__all" href={resolve('/listing-grid')}>Вижте всички автомобили</a>
           </div>

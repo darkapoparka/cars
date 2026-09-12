@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@repo/design-system/components/ui/accordion";
 import { cn } from "@repo/design-system/lib/utils";
+import { leadSite } from "@repo/marketplace";
 import {
   getMobileQuickPillClassName,
   marketplaceDiscoveryFrameClassName,
@@ -76,44 +77,44 @@ const importFaqs = {
   bg: [
     {
       answer:
-        "Можете да изпратите линк към конкретна обява или само марка, модел и основни изисквания. Не е необходимо да имате готова оферта.",
+        "Подгответе линк към конкретна обява или марка, модел и основни изисквания за разговор. Демото не изпраща заявка.",
       question: "Как да започна?",
     },
     {
       answer:
-        "Изпратете ни линка, ако имате такъв, и добавете държава, година, пробег и бюджет, когато са известни. Останалото ще уточним по телефона.",
+        "Запишете линка, държавата, годината, пробега и бюджета, когато са известни. Обадете се на продавача, за да обсъдите дали може да помогне.",
       question: "Каква информация е полезна?",
     },
     {
       answer:
-        "Доставката до България е фиксираната дестинация на заявката. Крайната цена и срокът се потвърждават за конкретния автомобил, маршрут и документи.",
+        "България е желаната дестинация в тази демо форма. Внос, транспорт, крайна цена и срок не са потвърдени услуги или оферти.",
       question: "Какво означава доставка до България?",
     },
     {
       answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на Day & Night ще се свърже с вас, за да уточни следващата стъпка.",
+        "Не е нужен акаунт. Няма автоматично изпращане или обещано обаждане. Използвайте публикувания телефон за директен разговор.",
       question: "Трябва ли да се регистрирам?",
     },
   ],
   en: [
     {
       answer:
-        "Send a link to a specific listing or just the make, model, and main requirements. You do not need a completed offer.",
+        "Prepare a listing link or the make, model and requirements for a conversation. This demo does not send a request.",
       question: "How do I start?",
     },
     {
       answer:
-        "Send the link if you have one, and add the origin, year, mileage, and budget when known. We will clarify the rest by phone.",
+        "Note the link, origin, year, mileage and budget where known. Call the seller to discuss whether they can help.",
       question: "What information helps?",
     },
     {
       answer:
-        "Bulgaria is the fixed destination for this request. Final price and timing are confirmed for the specific vehicle, route, and documents.",
+        "Bulgaria is the requested destination in this demonstration form. Import, transport, final price and timing are not confirmed services or offers.",
       question: "What does delivery to Bulgaria mean?",
     },
     {
       answer:
-        "No account is required. Leave a phone number and the Day & Night team will contact you about the next step.",
+        "No account is required. Nothing is automatically sent and no callback is promised. Use the published phone number to speak directly with the seller.",
       question: "Do I need to register?",
     },
   ],
@@ -122,39 +123,39 @@ const importFaqs = {
 const pageCopy = {
   bg: {
     deliveryDestination: "България",
-    deliveryPrefix: "Внос и доставка до ",
+    deliveryPrefix: "Желана дестинация: ",
     desktopDescription:
-      "Разгледайте актуални оферти от свързани източници или поставете линк към автомобил, който вече сте намерили.",
-    desktopTitle: "Реални обяви за внос",
+      "Няма свързан външен инвентарен канал в това демо. Подгответе линк или критерии и проверете възможностите с продавача.",
+    desktopTitle: "Търсите друг автомобил?",
     faqDescription: "Най-важното за заявката и доставката до България.",
     faqTitle: "Често задавани въпроси",
     heroAlt: "Автомобил за международен внос",
-    mobileTitle: "Внос на автомобил",
+    mobileTitle: "Търсене на автомобил",
     routesLabel: "Бързи маршрути за внос",
     routesTitle: "Маршрути за внос",
     sourceLabel: "Линк към обявата",
     sourcePlaceholder: "Поставете линк към обявата",
     sourcePlaceholderLong: "Поставете линк към конкретна обява",
-    submitLabel: "Изпратете линка",
-    submitText: "Поискай оферта",
+    submitLabel: "Подгответе линка",
+    submitText: "Подгответе запитване",
   },
   en: {
     deliveryDestination: "Bulgaria",
-    deliveryPrefix: "Import and delivery to ",
+    deliveryPrefix: "Requested destination: ",
     desktopDescription:
-      "Browse current offers from connected sources or paste a vehicle listing you have already found.",
-    desktopTitle: "Real vehicles available for import",
+      "No external inventory provider is connected in this demo. Prepare a listing link or requirements and confirm the possibilities with the seller.",
+    desktopTitle: "Looking for another vehicle?",
     faqDescription: "The essentials about requests and delivery to Bulgaria.",
     faqTitle: "Frequently asked questions",
     heroAlt: "Vehicle prepared for international import",
-    mobileTitle: "Import a vehicle",
+    mobileTitle: "Vehicle search",
     routesLabel: "Quick import routes",
     routesTitle: "Import routes",
     sourceLabel: "Vehicle listing link",
     sourcePlaceholder: "Paste listing link",
     sourcePlaceholderLong: "Paste a specific listing link",
-    submitLabel: "Submit the link",
-    submitText: "Request a quote",
+    submitLabel: "Prepare the link",
+    submitText: "Prepare an enquiry",
   },
 } as const;
 
@@ -186,13 +187,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. Day & Night ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. Day & Night will discuss the import request and delivery to Bulgaria.",
+      ? `${leadSite.name}: подгответе критерии за автомобил и потвърдете възможностите за внос по телефона.`
+      : `${leadSite.name}: prepare vehicle requirements and confirm any import arrangement by phone.`,
     locale,
     path,
     title: isBg
-      ? "Внос на автомобил по заявка | Day & Night"
-      : "Vehicle import request | Day & Night",
+      ? `Търсене на автомобил | ${leadSite.name}`
+      : `Vehicle search | ${leadSite.name}`,
   });
 };
 
@@ -374,7 +375,7 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/lead-import-hero-v1.png"
+                src={leadSite.heroPath}
               />
               <div
                 aria-hidden="true"

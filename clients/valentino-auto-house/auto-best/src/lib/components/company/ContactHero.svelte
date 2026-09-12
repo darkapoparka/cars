@@ -21,13 +21,13 @@
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} />
   <picture>
     {#if topic.id === 'trade-in'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/media/stock/11709149044159957-card.webp" />
     {:else if topic.id === 'import'}
-      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
+      <source media="(max-width: 991px)" srcset="/media/stock/11768394188936705-card.webp" />
     {/if}
   <img
     class="dn-contact-hero__media"
-    src="/assets/images/lead/day-night-contact-hero-v2.webp"
+    src="/media/stock/21724767264834325-card.webp"
     alt=""
     width="1920"
     height="1080"
@@ -38,7 +38,7 @@
   <div class="dn-contact-hero__overlay" aria-hidden="true"></div>
   <div class="container dn-contact-hero__content dn-route-hero__layout">
     <div class="dn-contact-hero__copy dn-route-hero__copy">
-      <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? 'Свържете се с нас' : topic.id === 'trade-in' ? 'Продажба и бартер' : topic.title}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? 'Контакти' : topic.id === 'trade-in' ? 'Продажба или бартер' : topic.title}</span></h1>
+      <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? 'Свържете се с нас' : topic.id === 'trade-in' ? 'Въпрос за автомобил' : topic.title}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? 'Контакти' : topic.id === 'trade-in' ? 'Въпрос за автомобил' : topic.title}</span></h1>
       <p class="dn-contact-hero__lead">{heroDescriptions[topic.id]}</p>
     </div>
     {#if topic.id === 'leasing'}

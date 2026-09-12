@@ -3,13 +3,14 @@
 	import { homeVideos, youtubeChannelUrl } from '$lib/data/daynight-videos';
 </script>
 
-<section class="home-videos" aria-label="Day Night Auto в YouTube">
+<section class="home-videos" aria-label="Valentino в YouTube">
 	<div class="daynight-home-container">
-		<DesktopSectionHeading title="Day Night Auto в YouTube" href={youtubeChannelUrl} label="Всички видеа">
+		<DesktopSectionHeading title="Снимки и видео" href="/inventory" label="Вижте обявите">
 			{#snippet titleContent()}
-				<span class="home-videos__title">Day Night Auto в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
+				<span class="home-videos__title">Valentino в <img src="/assets/brands/youtube-logo.png" alt="YouTube" width="186" height="62" /></span>
 			{/snippet}
 		</DesktopSectionHeading>
+	{#if homeVideos.length === 0}<p>Няма включен потвърден видеоканал на автокъщата. Разгледайте снимките в обявите.</p>{/if}
 		<div class="home-videos__grid">
 			{#each homeVideos as video (video.id)}
 				<article class="home-video">

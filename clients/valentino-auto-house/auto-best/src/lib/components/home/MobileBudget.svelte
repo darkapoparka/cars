@@ -1,33 +1,32 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
-  import { featuredVehicles } from '$data/inventory';
 
   const budgetTiles = [
-    {
-      label: 'До 60 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur <= 60000).length} автомобила`,
-      href: '/listing-grid?price_max=60000',
-      image: featuredVehicles[1].image
-    },
-    {
-      label: '60–70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 60000 && vehicle.priceEur <= 70000).length} автомобила`,
-      href: '/listing-grid?price_min=60000&price_max=70000',
-      image: featuredVehicles[0].image
-    },
-    {
-      label: 'Над 70 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 70000).length} автомобила`,
-      href: '/listing-grid?price_min=70000',
-      image: featuredVehicles[6].image
-    },
-    {
-      label: 'Виж всички',
-      detail: `${featuredVehicles.length} автомобила`,
-      href: '/listing-grid',
-      image: featuredVehicles[2].image
-    }
-  ] as const;
+  {
+    "label": "До 5 000 €",
+    "detail": "2 обяви",
+    "href": "/listing-grid?price_max=5000",
+    "image": "/media/stock/11732307740792726-card.webp"
+  },
+  {
+    "label": "5 000–10 000 €",
+    "detail": "4 обяви",
+    "href": "/listing-grid?price_min=5001&price_max=10000",
+    "image": "/media/stock/11780736224961272-card.webp"
+  },
+  {
+    "label": "Над 10 000 €",
+    "detail": "2 обяви",
+    "href": "/listing-grid?price_min=10001",
+    "image": "/media/stock/11785220779595617-card.webp"
+  },
+  {
+    "label": "Виж всички",
+    "detail": "8 обяви",
+    "href": "/listing-grid",
+    "image": "/media/stock/21724767264834325-card.webp"
+  }
+] as const;
 </script>
 
 <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">

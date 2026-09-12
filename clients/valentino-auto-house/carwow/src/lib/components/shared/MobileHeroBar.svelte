@@ -5,7 +5,7 @@
 </script>
 
 <div class="mobile-hero-bar">
-	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
+	<a class="mobile-hero-bar__brand" href={resolve('/')} aria-label="Valentino начало">
 		<img
 			src={resolve('/brand/daynight-logo-generated.png')}
 			alt={daynightSite.shortName}

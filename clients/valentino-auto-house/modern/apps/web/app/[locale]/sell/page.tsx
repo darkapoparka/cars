@@ -44,12 +44,12 @@ const pageCopy = {
     detailsPlaceholder:
       "Състояние, сервизна история, екстри или нещо важно за автомобила.",
     description:
-      "Дайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.",
-    faqTitle: "Как протича оценката",
+      "Подгответе основните данни за разговор. Демото не изпраща заявка и не потвърждава оферта за изкупуване.",
+    faqTitle: "Как да подготвите запитване",
     faqs: [
       {
         answer:
-          "Не. Можете да предложите автомобила за директно изкупуване, без да купувате друг.",
+          "Попитайте продавача дали разглежда предложения за изкупуване или бартер. Нито една от тези услуги не е гарантирана от демото.",
         question: "Задължителен ли е бартерът?",
       },
       {
@@ -59,7 +59,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+          "Само продавачът може да потвърди дали предлага оценка и каква информация или оглед е необходим.",
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -69,8 +69,8 @@ const pageCopy = {
       },
     ],
     formDescription:
-      "Без регистрация. Започнете с основните данни, а ние ще уточним следващата стъпка.",
-    formLabel: "Заявете оценка на автомобил",
+      "Без регистрация. Данните остават подготовка за разговор и не се изпращат автоматично.",
+    formLabel: "Подгответе данни за автомобил",
     makeLabel: "Марка",
     mileageLabel: "Пробег",
     mileagePlaceholder: "62 000 км",
@@ -79,7 +79,7 @@ const pageCopy = {
     primaryAction: "Продължи",
     changeVehicle: "Променете автомобила",
     selectedVehicleLabel: "Избран автомобил",
-    title: "Продайте ни автомобила си",
+    title: "Предложете своя автомобил",
     yearLabel: "Година",
     yearPlaceholder: "2022",
   },
@@ -91,12 +91,12 @@ const pageCopy = {
     detailsPlaceholder:
       "Condition, service history, extras, or anything important about the vehicle.",
     description:
-      "Give us the essentials about your vehicle. Our team will contact you to arrange an inspection and a concrete offer.",
-    faqTitle: "How the appraisal works",
+      "Prepare the basic details for a conversation. This demo does not send a request or confirm a purchase offer.",
+    faqTitle: "How to prepare an enquiry",
     faqs: [
       {
         answer:
-          "No. You can offer the vehicle for direct purchase without buying another car.",
+          "Ask the seller whether they consider purchase or trade-in proposals. Neither service is guaranteed by this demo.",
         question: "Is a trade-in required?",
       },
       {
@@ -106,7 +106,7 @@ const pageCopy = {
       },
       {
         answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+          "Only the seller can confirm whether an appraisal is offered and what information or inspection is required.",
         question: "Can you appraise it from photos only?",
       },
       {
@@ -116,8 +116,8 @@ const pageCopy = {
       },
     ],
     formDescription:
-      "No account required. Start with the essentials and we will agree the next step with you.",
-    formLabel: "Request a vehicle appraisal",
+      "No account required. These details are preparation for a conversation and are not automatically sent.",
+    formLabel: "Prepare vehicle details",
     makeLabel: "Make",
     mileageLabel: "Mileage",
     mileagePlaceholder: "62,000 km",
@@ -126,7 +126,7 @@ const pageCopy = {
     primaryAction: "Continue",
     changeVehicle: "Change vehicle",
     selectedVehicleLabel: "Selected vehicle",
-    title: "Sell us your vehicle",
+    title: "Propose your vehicle",
     yearLabel: "Year",
     yearPlaceholder: "2022",
   },
@@ -181,11 +181,11 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Предложете автомобила си за изкупуване или бартер на ${leadSite.name}.`
-      : `Offer your vehicle to ${leadSite.name} for purchase or trade-in.`,
+      ? `Подгответе данни за автомобила си за разговор с ${leadSite.name}.`
+      : `Prepare details about your vehicle for a conversation with ${leadSite.name}.`,
     locale,
     path: "/sell",
-    title: isBg ? "Продайте ни автомобил" : "Sell us your vehicle",
+    title: isBg ? "Предложете автомобил" : "Propose your vehicle",
   });
 };
 
@@ -249,8 +249,8 @@ export default async function SellPage({
             ) : (
               <p className="py-6 text-center text-sm text-zinc-600">
                 {normalizedLocale === "bg"
-                  ? "В момента няма налични автомобили."
-                  : "No cars are currently available."}
+                  ? "В тази селекция няма автомобили."
+                  : "No cars are included in this selection."}
               </p>
             )
           }
@@ -269,14 +269,14 @@ export default async function SellPage({
             <Image
               alt={
                 normalizedLocale === "bg"
-                  ? "Автомобили пред модерен шоурум"
-                  : "Vehicles outside a modern showroom"
+                  ? "Автомобил от публикуваната селекция"
+                  : "Vehicle from the published listing selection"
               }
               className="object-cover object-center"
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
+              src={leadSite.heroPath}
             />
             <div aria-hidden="true" className="absolute inset-0 bg-black/15" />
 
@@ -294,8 +294,8 @@ export default async function SellPage({
                 <p className="mx-auto mt-3 max-w-[17rem] text-center text-muted-foreground text-sm leading-6 lg:max-w-2xl lg:text-body">
                   <span className="lg:hidden">
                     {normalizedLocale === "bg"
-                      ? "Започнете с основните данни. Ще се свържем с вас за оглед и оферта."
-                      : "Start with the essentials. We will contact you to arrange an inspection and offer."}
+                      ? "Подгответе данните и продължете към телефона за връзка. Нищо не е изпратено."
+                      : "Prepare the details and continue to the contact phone number. Nothing has been sent."}
                   </span>
                   <span className="hidden lg:inline">{copy.description}</span>
                 </p>

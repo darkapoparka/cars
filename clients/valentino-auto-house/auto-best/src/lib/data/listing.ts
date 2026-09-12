@@ -20,7 +20,7 @@ export type ListingFilters = {
   sort: ListingSort;
 };
 
-const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Купе', Wagon: 'Комби', Sportback: 'Спортбек', Sedan: 'Седан', Crossover: 'Кросоувър', Hatchback: 'Хечбек', 'Pickup Truck': 'Пикап', Minivan: 'Миниван', Convertible: 'Кабриолет' };
+const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Купе', Wagon: 'Комби', Sportback: 'Спортбек', Sedan: 'Седан', Crossover: 'Кросоувър', Hatchback: 'Хечбек', 'Pickup Truck': 'Пикап', Minivan: 'Ван / миниван', Convertible: 'Кабриолет' };
 export const bodyLabel = (body: string) => bodyLabels[body] ?? body;
 const availableValues = (key: 'make' | 'body' | 'fuel' | 'transmission') => ['', ...new Set(featuredVehicles.map(vehicle => vehicle[key]))];
 
@@ -52,11 +52,11 @@ export const listingFilterOptions = {
   bodies: availableValues('body'),
   fuels: availableValues('fuel'),
   transmissions: availableValues('transmission'),
-  versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
-  equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
-  years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
-  prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
-  mileages: ['', '50000', '75000', '100000'],
+  versions: ['', '4x4', 'BiTDI', 'dCi', 'TCe'],
+  equipment: [...new Set(featuredVehicles.flatMap(vehicle => vehicle.equipment))],
+  years: ['', ...new Set(featuredVehicles.map(vehicle => vehicle.year))].sort(),
+  prices: ['', '5000', '7500', '10000', '15000', '20000'],
+  mileages: ['', '75000', '100000', '150000', '200000', '250000'],
   sorts: [
     ['default', 'Препоръчани'],
     ['newest', 'Най-нови'],

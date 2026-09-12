@@ -1,5 +1,3 @@
-# Carwow template instructions
+# VALENTINO AUTO HOUSE / Carwow
 
-Read J:/cars/AGENTS.md, this TEMPLATE.md and .template/template.json first. This is a reusable source baseline. Preserve the current UI/UX. For a lead, clone into J:/cars/clients/<client>/carwow before changing identity, colors, assets or copy. Historic source-client instructions and task ledgers do not authorize work in this copy. Use the Cars startup helper with a free port rather than old source-specific launch commands. No sending, deployment or CRM state change is implied.
-
-For shared repairs, follow docs/ARCHITECTURE.md, docs/COMPONENT-PATTERNS.md and docs/CONTENT-CONTRACT.md alongside DESKTOP_STYLE_GUIDE.md. Keep the separate desktop/mobile layouts and shared calculation, URL, modal and business-data owners. Current repair evidence and unresolved public-delivery prerequisites: J:/cars/audits/2026-09-08/carwow-finalization/REPORT.md.
+This is an independent client Fast Skin. The owner's uploaded session-07 packet governs branch-only work on codex/astra-bg-07. Preserve the master, other clients and the coordinator's Windows checkout. Read ../CLIENT.md and .client/project.json. Keep the separate desktop/mobile compositions. Do not resume source-dealer tasks or infer current QA from retained reference documentation or snapshots. No deployment, outreach, database migration or backend provisioning is authorized.

@@ -252,8 +252,8 @@
 			aria-hidden="true"
 		/>
 		{#if isImportMode}<MobileHeroBar />{:else}<div class="mobile-contact-hero__bar">
-				<a href={resolve('/')} aria-label="Day Night Auto начало">
-					<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
+				<a href={resolve('/')} aria-label="Valentino начало">
+					<img src={resolve('/brand/logo.webp')} alt={daynightSite.shortName} />
 				</a>
 				<a class="mobile-contact-hero__phone" href={phoneHref} aria-label="Обади се">
 					<Phone size={19} strokeWidth={2.35} />
@@ -263,12 +263,12 @@
 		<div class="mobile-contact-hero__copy">
 			{#if !isImportMode}<span class="mobile-contact-hero__label">Контакти</span>{/if}
 			<h1>
-				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Day Night Auto'}
+				{isImportMode ? 'Намерете автомобила. Ние ще го внесем.' : 'Свържете се със Valentino'}
 			</h1>
 			<p>
 				{isImportMode
 					? 'Поставете линк — ние поемаме оттам.'
-					: 'Огледи, въпроси за налични автомобили, бартер, документи и посещение на място.'}
+					: 'Огледи, въпроси за обяви за автомобили, бартер, документи и посещение на място.'}
 			</p>
 		</div>
 
@@ -522,7 +522,7 @@
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title="Карта до Day Night Auto София"
+				title="Карта до Valentino София"
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -558,7 +558,7 @@
 					/>
 					<img
 						class="mobile-import-sheet__brand"
-						src={resolve('/brand/daynight-logo-generated.png')}
+						src={resolve('/brand/logo.webp')}
 						alt=""
 						aria-hidden="true"
 					/>

@@ -35,14 +35,14 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Финансиране от Day & Night",
+    badge: "Финансиране по запитване",
     description:
-      "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
+      "Изберете автомобил от селекцията и потвърдете наличността и възможностите за финансиране по телефона. Това демо не е кредитна оферта.",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
         answer:
-          "Изберете автомобил от наличностите и изпратете заявка с предпочитания срок и първоначална вноска. Екипът ще се свърже с вас, за да уточни възможността за финансиране и конкретните условия.",
+          "Изберете автомобил и подгответе предпочитан срок и първоначална вноска. Демото не изпраща заявка; обадете се за актуалните възможности и условия.",
         question: "Как да започна?",
       },
       {
@@ -52,7 +52,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на Day & Night ще ви даде точен списък още при първия разговор.",
+          "Поискайте актуален списък с документи за конкретния финансов продукт. В това демо няма предварително одобрение.",
         question: "Какви документи ще са ми нужни?",
       },
       {
@@ -64,14 +64,14 @@ const pageCopy = {
     title: "Финансиране за следващия ви автомобил",
   },
   en: {
-    badge: "Financing from Day & Night",
+    badge: "Ask about financing",
     description:
-      "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
+      "Choose a vehicle from the selection and confirm availability and financing possibilities by phone. This demonstration is not a credit offer.",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
         answer:
-          "Choose a vehicle from the inventory and send a request with your preferred term and initial payment. The team will contact you to confirm financing availability and the specific terms.",
+          "Choose a vehicle and prepare your preferred term and initial payment. This demo does not send a request; call to confirm available options and terms.",
         question: "How do I get started?",
       },
       {
@@ -81,7 +81,7 @@ const pageCopy = {
       },
       {
         answer:
-          "Required documents depend on the individual case. The Day & Night team will give you an exact list during the first conversation.",
+          "Ask for the current document requirements for the specific finance product. No approval is provided by this demo.",
         question: "Which documents will I need?",
       },
       {
@@ -103,8 +103,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от Day & Night Auto Group."
-      : "A tailored vehicle financing offer from Day & Night Auto Group.",
+      ? `${leadSite.name}: въпроси за финансиране по конкретна обява; без обещано одобрение.`
+      : `${leadSite.name}: discuss financing for a specific advertisement; no approval is promised.`,
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",
@@ -137,7 +137,7 @@ export default async function LeasePage({
     fuelLabel: formatFuelType(listing.spec.fuelType, normalizedLocale),
     id: listing.id,
     imageAlt: listing.images[0]?.alt || listing.title,
-    imageUrl: listing.images[0]?.url || "/lead-hero.jpg",
+    imageUrl: listing.images[0]?.url || leadSite.heroPath,
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
     ...(listing.monthlyEstimate
       ? {
@@ -186,7 +186,7 @@ export default async function LeasePage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/lease/day-night-financing-hero-v1.webp"
+              src={leadSite.heroPath}
             />
             <div
               aria-hidden="true"

@@ -1,0 +1,14 @@
+import { daynightSite } from './daynight-site';
+export type FaqAnswerParagraph={readonly class:string;readonly text:string};
+export type FaqItem={readonly id:string;readonly question:string;readonly toggleClass:string;readonly answer:readonly FaqAnswerParagraph[]};
+export type FaqGroup={readonly id:string;readonly containerClass:string;readonly headingClass:string;readonly heading:string;readonly items:readonly FaqItem[]};
+const answer=(text:string):readonly FaqAnswerParagraph[]=>[{class:'h7 text-secondary line-height-28',text}];
+export const daynightFaqGroups:readonly FaqGroup[]=[
+{id:'vehicle',containerClass:'container mb-60',headingClass:'h3 mb-20 text-center capitalize',heading:'Автомобили и оглед',items:[
+{id:'availability',question:'Как да проверя дали автомобилът е наличен?',toggleClass:'flat-toggle bg-white',answer:answer(`Обадете се на ${daynightSite.phoneLabel} за конкретната обява. Демо селекцията не е live складова система.`)},
+{id:'viewing',question:'Как да организирам оглед?',toggleClass:'flat-toggle',answer:answer(`Потвърдете автомобила, актуалната му локация и удобен час с ${daynightSite.shortName} преди посещение.`)},
+{id:'price',question:'Цените окончателни ли са?',toggleClass:'flat-toggle bg-white',answer:answer('Показваме публикуваните цени от източника. Актуалната цена, данъчният режим и условията се потвърждават за конкретната обява.')}]},
+{id:'terms',containerClass:'container mb-60',headingClass:'h3 mb-20 text-center capitalize',heading:'Условия и документи',items:[
+{id:'finance',question:'Предлага ли се финансиране?',toggleClass:'flat-toggle bg-white',answer:answer('Когато конкретна обява посочва финансиране или лизинг, условията се уточняват индивидуално. Този демо сайт не обещава одобрение или универсални проценти.')},
+{id:'trade',question:'Може ли бартер или изкупуване?',toggleClass:'flat-toggle',answer:answer('Потвърдете директно с дилъра дали такава възможност е приложима за вашия автомобил. Нищо не се приема автоматично през демото.')},
+{id:'documents',question:'Какви документи да проверя?',toggleClass:'flat-toggle bg-white',answer:answer('Поискайте информация за произхода, регистрационните документи, сервизната история и всички разходи, приложими за конкретния автомобил.')}]}] as const;

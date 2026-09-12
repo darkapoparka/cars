@@ -1,6 +1,5 @@
 import { featuredVehicles } from './inventory';
 import { bodyLabel } from './listing';
-import { brand } from '$config/brand';
 
 const bodyArtwork = [
   { label: 'Седан', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 150, height: 80 },
@@ -11,55 +10,46 @@ const bodyArtwork = [
   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
   { label: 'Комби', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
   { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
-  { label: 'Купе', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
-  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
+  { label: 'Купе', query: 'Coupe', image: '/media/stock/11785220779595617-card.webp', width: 1000, height: 667 },
+  { label: 'Спортбек', query: 'Sportback', image: '/media/stock/11785220779595617-card.webp', width: 1000, height: 667 }
 ] as const;
 
-const brandArtwork = [
-  { label: 'Land Rover', image: '/assets/images/partner/partner1.png' },
-  { label: 'Kia', image: '/assets/images/partner/partner2.png' },
-  { label: 'Toyota', image: '/assets/images/partner/partner3.png' },
-  { label: 'Jeep', image: '/assets/images/partner/partner4.png' },
-  { label: 'Nissan', image: '/assets/images/partner/partner5.png' },
-  { label: 'Ford', image: '/assets/images/partner/partner6.png' },
-  { label: 'Foton', image: '/assets/images/partner/parner7.png' },
-  { label: 'Mercedes-Benz', image: '/assets/images/partner/parner8.png' },
-  { label: 'Dongfeng', image: '/assets/images/partner/parner9.png' },
-  { label: 'Isuzu', image: '/assets/images/partner/parner10.png' },
-  { label: 'Audi', image: '/assets/images/partner/parner11.png' },
-  { label: 'BMW', image: '/assets/images/partner/parner12.png' }
-] as const;
 
 export const bodyTypes = [...new Set(featuredVehicles.map(vehicle => vehicle.body))].map(query => {
   const artwork = bodyArtwork.find(item => item.query === query) ?? bodyArtwork[0];
   return { ...artwork, query, label: bodyLabel(query), count: featuredVehicles.filter(vehicle => vehicle.body === query).length };
 });
-export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle => vehicle.make === item.label))
-  .map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
+
+export const brands = [...new Set(featuredVehicles.map(vehicle => vehicle.make))].map(label => ({
+  label,
+  image: featuredVehicles.find(vehicle => vehicle.make === label)!.image,
+  isLogo: false,
+  count: featuredVehicles.filter(vehicle => vehicle.make === label).length
+}));
 
 export const editorial = [
   {
-    title: `Има ли офис в ${brand.city} и как се посещава?`,
-    text: `Да — офисът е в ${brand.city}. Свържете се с нас предварително, за да потвърдим удобен час за посещение.`,
-    image: '/assets/images/lead/day-night-guide-inspection.webp',
-    href: '/contact',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    "title": "Как да потвърдя наличността?",
+    "text": "Селекцията е записана по публикувани обяви. Обадете се за актуална наличност и цена.",
+    "image": "/media/stock/11785220779595617-card.webp",
+    "href": "/contact?topic=inspection",
+    "meta": "Преди оглед",
+    "category": "Насоки"
   },
   {
-    title: 'Какво можем да проверим преди покупка?',
-    text: 'Можем да съдействаме с проверка на история, документи и техническо състояние преди финално решение.',
-    image: '/assets/images/lead/day-night-guide-import.webp',
-    href: '/blog-detail/1',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    "title": "Какво да уточня за автомобила?",
+    "text": "Сравнете документите, пробега, оборудването и състоянието с конкретната обява.",
+    "image": "/media/stock/21724767264834325-card.webp",
+    "href": "/blog-detail/1",
+    "meta": "Преди покупка",
+    "category": "Насоки"
   },
   {
-    title: 'Може ли автомобил да се внесе по поръчка?',
-    text: 'Да — можем да обсъдим внос по поръчка според критерии за модел, бюджет и оборудване.',
-    image: '/assets/images/lead/day-night-guide-leasing.webp',
-    href: '/blog-detail/2',
-    meta: 'Полезно',
-    category: 'Ръководство'
+    "title": "Къде се намира автокъщата?",
+    "text": "гр. София, Горубляне, ул. „Самоковско шосе“ 1. Потвърдете точния вход и часа за посещение.",
+    "image": "/media/stock/11768394188936705-card.webp",
+    "href": "/contact",
+    "meta": "София",
+    "category": "Посещение"
   }
 ] as const;

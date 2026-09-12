@@ -1,0 +1,20 @@
+# МАВЕРИК — local review
+
+State: **implemented-unverified**. The three folders are independent Fast Skin copies of the published masters. No deployment exists.
+
+## Auto Best
+Path: `clients/maverik-sofia/auto-best`
+Node 22; `npm ci`; `npm run validate`; then `npm run dev -- --host 127.0.0.1 --port 5173`.
+Review entry: `/` · inventory: `/listing-grid`.
+
+## Modern
+Path: `clients/maverik-sofia/modern` (full workspace).
+Node 22 / pnpm 11.4.0; `pnpm install --frozen-lockfile`; `pnpm --filter @repo/database build`; `pnpm --filter web typecheck`; `pnpm --filter web build`.
+Use the retained static demo mode with no live DB or migrations. Review entry: `/cars`.
+
+## Carwow
+Path: `clients/maverik-sofia/carwow`
+Node 24; `npm ci`; `npm run check`; `npm run build`; then `npm run dev -- --host 127.0.0.1 --port 5174`.
+Review entry: `/` · inventory: `/inventory`.
+
+The ports above are examples only; no server was started in this GitHub-only handoff. Branding, phone/address, representative stock and inherited testimonial/staff/video cleanup are committed. Published finance percentages are not represented as universal terms, and records with different locations are not automatically described as Sofia stock. Runtime/browser checks remain for the local coordinator.

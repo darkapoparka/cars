@@ -30,110 +30,61 @@ interface ContactPageProps {
 
 const pageCopy = {
   bg: {
-    heroImageAlt: "Нощен автомобилен шоурум",
-    title: "Премиум автомобили. Внос. Лизинг.",
-    description:
-      "Вижте автомобилите в наличност или говорете директно с Day & Night за следващия си автомобил.",
-    inventoryAction: "Вижте наличностите",
+    heroImageAlt: "Автомобил от представителната селекция",
+    title: "Вашият следващ автомобил.",
+    description: leadSite.stockNotice,
+    inventoryAction: "Разгледайте автомобилите",
     phoneAction: "Обадете се",
-    contactTitle: "Говорете директно с нас.",
-    contactDescription:
-      "Един телефон за автомобил, внос или финансиране. Шоурум в Студентски град.",
-    locationLabel: "Шоурум · Студентски град",
+    contactTitle: "Говорете директно с продавача.",
+    contactDescription: leadSite.hoursLabel,
+    locationLabel: "София · оглед след уговорка",
     mapAction: "Отворете картата",
-    servicesTitle: "Изберете правилната посока.",
-    servicesDescription:
-      "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
-    sellHandoffAction: "Обадете се за оферта",
-    sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Day & Night, за да уточним оглед и конкретна оферта.",
+    servicesTitle: "Подгответе следващата стъпка.",
+    servicesDescription: "Потвърдете наличността, цената и условията за избрания автомобил по телефона.",
+    sellHandoffAction: "Обадете се за разговор",
+    sellHandoffDescription: "Данните са подготвени само в това демо и не са изпратени. Обадете се, за да обсъдите възможностите с продавача.",
     sellHandoffEditAction: "Редактирайте данните",
-    sellHandoffTitle: "Заявете оценка за автомобила",
+    sellHandoffTitle: "Данни за разговор за автомобила",
     sellCategoryLabel: "Категория",
     sellDetailsLabel: "Екстри и бележки",
     sellMileageLabel: "Пробег",
     sellVehicleLabel: "Автомобил",
     sellYearLabel: "Година",
-    sellLocationLabel: "Шоурум · Студентски град",
+    sellLocationLabel: "София · оглед след уговорка",
     services: [
-      {
-        title: "Автомобили в наличност",
-        description: "Разгледайте предложенията и планирайте оглед.",
-        href: "/cars",
-        icon: CarFront,
-      },
-      {
-        title: "Внос по заявка",
-        description: "Кажете какво търсите и започнете разговор.",
-        href: "/imports",
-        icon: Ship,
-      },
-      {
-        title: "Собствен лизинг",
-        description: "Обсъдете вариант според автомобила и бюджета ви.",
-        href: "/lease",
-        icon: Landmark,
-      },
-      {
-        title: "Продайте автомобила си",
-        description: "Изпратете данни за автомобила и заявете оценка.",
-        href: "/sell",
-        icon: Tag,
-      },
+      { title: "Обяви за автомобили", description: "Датирана селекция; наличността се потвърждава от продавача.", href: "/cars", icon: CarFront },
+      { title: "Търсите друг автомобил?", description: "Уточнете търсенето си. Възможността за внос се потвърждава индивидуално.", href: "/imports", icon: Ship },
+      { title: "Финансиране по запитване", description: "Попитайте за актуалните условия по конкретната сделка.", href: "/lease", icon: Landmark },
+      { title: "Предложете автомобил", description: "Подгответе данни за разговор; няма обещана оценка или изкупуване.", href: "/sell", icon: Tag },
     ],
   },
   en: {
-    heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
-    description:
-      "Browse the vehicles in stock or speak directly with Day & Night about your next vehicle.",
-    inventoryAction: "View available vehicles",
-    phoneAction: "Call us",
-    contactTitle: "Speak directly with us.",
-    contactDescription:
-      "One phone number for vehicles, imports, or finance. Showroom in Studentski grad.",
-    locationLabel: "Showroom · Studentski grad",
+    heroImageAlt: "Vehicle from the representative listing selection",
+    title: "Your next vehicle.",
+    description: "A demonstration selection recorded from published advertisements on 9 September 2026. Confirm price, specifications and availability with the seller.",
+    inventoryAction: "Browse vehicles",
+    phoneAction: "Call the seller",
+    contactTitle: "Speak directly with the seller.",
+    contactDescription: "Published hours: Mon–Fri 07:00–19:00, Saturday 07:00–17:00, Sunday closed. Confirm your visit by phone.",
+    locationLabel: "Sofia · viewing by arrangement",
     mapAction: "Open the map",
-    servicesTitle: "Choose the right direction.",
-    servicesDescription:
-      "From a vehicle in stock to an import on request, our team is one call away.",
-    sellHandoffAction: "Call for an offer",
-    sellHandoffDescription:
-      "Your vehicle details are ready. Call Day & Night to arrange an inspection and a concrete offer.",
+    servicesTitle: "Prepare your next step.",
+    servicesDescription: "Confirm the selected vehicle's availability, cash price and transaction terms by phone.",
+    sellHandoffAction: "Call to discuss",
+    sellHandoffDescription: "Your details are prepared only in this demo and have not been sent. Call the seller to discuss the possibilities.",
     sellHandoffEditAction: "Edit vehicle details",
-    sellHandoffTitle: "Request a vehicle appraisal",
+    sellHandoffTitle: "Details for a vehicle conversation",
     sellCategoryLabel: "Category",
     sellDetailsLabel: "Extras and notes",
     sellMileageLabel: "Mileage",
     sellVehicleLabel: "Vehicle",
     sellYearLabel: "Year",
-    sellLocationLabel: "Showroom · Studentski grad",
+    sellLocationLabel: "Sofia · viewing by arrangement",
     services: [
-      {
-        title: "Vehicles in stock",
-        description: "Browse the offers and plan an inspection.",
-        href: "/cars",
-        icon: CarFront,
-      },
-      {
-        title: "Import on request",
-        description:
-          "Tell us what you are looking for and start a conversation.",
-        href: "/imports",
-        icon: Ship,
-      },
-      {
-        title: "In-house leasing",
-        description: "Discuss an option for the vehicle and your budget.",
-        href: "/lease",
-        icon: Landmark,
-      },
-      {
-        title: "Sell your car",
-        description: "Share your vehicle details and request an appraisal.",
-        href: "/sell",
-        icon: Tag,
-      },
+      { title: "Vehicle advertisements", description: "A dated selection; confirm physical availability with the seller.", href: "/cars", icon: CarFront },
+      { title: "Looking for another vehicle?", description: "Prepare your requirements. Any import arrangement must be confirmed individually.", href: "/imports", icon: Ship },
+      { title: "Ask about financing", description: "Ask for the current terms for the specific transaction.", href: "/lease", icon: Landmark },
+      { title: "Propose your vehicle", description: "Prepare details for a conversation; no valuation or purchase is guaranteed.", href: "/sell", icon: Tag },
     ],
   },
 } as const;
@@ -184,14 +135,14 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? `${leadSite.name} — публикувани обяви, контакти и оглед в ${leadSite.city}.`
+      : `${leadSite.name} — published vehicle advertisements, contact details and viewing by arrangement.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
     title: isBg
-      ? "За нас и контакти | Day & Night"
-      : "About and contact | Day & Night",
+      ? `За нас и контакти | ${leadSite.name}`
+      : `About and contact | ${leadSite.name}`,
   });
 };
 
@@ -251,7 +202,7 @@ export default async function ContactPage({
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/images/sell/day-night-sell-centered-hero-v2.webp"
+                src={leadSite.heroPath}
               />
               <div
                 aria-hidden="true"
@@ -370,7 +321,7 @@ export default async function ContactPage({
               fill
               priority
               sizes="100vw"
-              src="/day-night-contact-hero-v1.png"
+              src={leadSite.heroPath}
             />
           </div>
           <div

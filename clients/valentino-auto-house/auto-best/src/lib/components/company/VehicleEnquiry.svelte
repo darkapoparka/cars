@@ -7,7 +7,7 @@
 
   let { kind, importUrl = null }: { kind: 'trade-in' | 'import'; importUrl?: string | null } = $props();
   const selling = $derived(kind === 'trade-in');
-  const title = $derived(selling ? 'Предложи автомобил' : 'Запитване за внос');
+  const title = $derived(selling ? 'Подготви въпрос' : 'Въпрос по обява');
   let dialog: HTMLDialogElement;
   let form: HTMLFormElement;
   let heading: HTMLHeadingElement;
@@ -35,7 +35,7 @@
   let sharing = $state(false);
   const steps = ['Автомобил', 'Детайли', 'Преглед'];
   const summary = $derived([
-    selling ? `Автомобил за ${purpose.toLowerCase()}` : 'Запитване за внос',
+    selling ? `Автомобил за ${purpose.toLowerCase()}` : 'Въпрос по обява',
     selectedLink ? `Обява: ${selectedLink}` : '',
     `Автомобил: ${[make.trim(), model.trim()].filter(Boolean).join(' ') || 'По избраната обява'}`,
     year ? `${selling ? 'Година' : 'Година от'}: ${year}` : '',
@@ -137,7 +137,7 @@
         return;
       }
       await navigator.share({ title, text: summary, ...(files.length ? { files } : {}) });
-      feedback = 'Споделянето е приключено. Потвърдете получаването с екипа.';
+      feedback = 'Системното споделяне е приключено. Доставка до дилъра не е потвърдена.';
     } catch (error) {
       if (!(error instanceof Error && error.name === 'AbortError')) feedback = 'Споделянето не успя. Можете да копирате текста и да опитате отново.';
     } finally { sharing = false; }
@@ -149,9 +149,9 @@
 <div class="dn-enquiry-entry">
   {#if selling}
     <button class="dn-enquiry-primary" type="button" onclick={open} aria-haspopup="dialog">
-      Предложи автомобил <Icon name="arrow-right" size={20} />
+      Подготви въпрос <Icon name="arrow-right" size={20} />
     </button>
-    <p>Данни, снимки и преглед.</p>
+    <p>Само лична чернова. Непотвърдените услуги се уточняват по телефона.</p>
   {:else}
     <label class="dn-sr-only" for="enquiry-listing-link">Линк към обявата</label>
     <div class="dn-enquiry-link-row">
@@ -159,7 +159,7 @@
       <button type="button" class="dn-enquiry-link-go" onclick={open} aria-label="Продължи с обявата" aria-haspopup="dialog"><Icon name="arrow-right" size={22} /></button>
     </div>
     {#if linkError}<p class="dn-enquiry-error" id="enquiry-link-error" role="alert">{linkError}</p>{/if}
-    <button class="dn-enquiry-alternative dn-action--dark" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">Нямам обява — опиши търсенето <Icon name="arrow-right" size={17} /></button>
+    <button class="dn-enquiry-alternative dn-action--dark" type="button" onclick={(event) => open(event, true)} aria-haspopup="dialog">Нямам обява — опиши въпроса <Icon name="arrow-right" size={17} /></button>
   {/if}
 </div>
 
@@ -198,7 +198,7 @@
             <p class="dn-enquiry-note">Снимките са само за преглед на устройството. Не са качени или изпратени.</p>
           </div>
         {/if}
-        <label class="dn-enquiry-notes">{selling ? 'Състояние и допълнителна информация' : 'Предпочитания и допълнителна информация'}<textarea bind:value={notes} maxlength={1500} rows="3" placeholder={selling ? 'Обслужване, оборудване, забележки…' : 'Двигател, оборудване, държава, срок…'}></textarea></label>
+        <label class="dn-enquiry-notes">{selling ? 'Състояние и допълнителна информация' : 'Предпочитания и допълнителна информация'}<textarea bind:value={notes} maxlength={1500} rows="3" placeholder={selling ? 'Обслужване, оборудване, забележки…' : 'Кой автомобил и какво искате да уточните…'}></textarea></label>
         <div class="dn-enquiry-fields dn-enquiry-contact-fields">
           <label>Име <span class="dn-enquiry-optional">по желание</span><input bind:value={name} maxlength={80} autocomplete="name" /></label>
           <label>Телефон <span class="dn-enquiry-optional">по желание</span><input bind:value={phone} type="tel" maxlength={25} autocomplete="tel" /></label>

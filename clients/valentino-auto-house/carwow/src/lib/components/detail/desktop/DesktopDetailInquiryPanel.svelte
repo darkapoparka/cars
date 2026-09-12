@@ -62,7 +62,7 @@
 
 		if (result.ok) {
 			inquirySubmitState = 'success';
-			inquirySubmitMessage = 'Благодарим! Ще се свържем с вас за този автомобил.';
+			inquirySubmitMessage = 'Благодарим! Обадете се на публикувания телефон за този автомобил.';
 			form.reset();
 			return;
 		}

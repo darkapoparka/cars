@@ -1,4 +1,5 @@
 "use client";
+import { leadSite } from "@repo/marketplace";
 
 import {
   getMobileQuickPillClassName,
@@ -37,7 +38,7 @@ export const MobileSellVehicleHero = ({
             title={content.howTitle}
           />
         }
-        imageSrc="/images/sell/day-night-mobile-studio-v1.png"
+        imageSrc={leadSite.heroPath}
         locale={locale}
         tone="sell"
       >

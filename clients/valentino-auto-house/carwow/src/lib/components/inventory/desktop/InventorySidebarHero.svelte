@@ -12,7 +12,7 @@
 {#if layoutMode === 'sidebar'}
 	<div class="daynight-inventory-sidebar-hero">
 		<div class="daynight-inventory-sidebar-hero__copy">
-			<h1>Налични автомобили</h1>
+			<h1>Обяви за автомобили</h1>
 			<p>{vehicleCount} автомобила</p>
 		</div>
 		<SearchBar {layoutMode} searchId="daynight-inventory-sidebar-search" />

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
 
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
+  const mapEmbedUrl = 'https://maps.google.com/maps?q=' + encodeURIComponent(brand.address) + '&z=16&hl=bg&output=embed';
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
@@ -14,7 +13,8 @@
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете адреса в Google Maps</a>
+  <p class="dn-map-source-note">Картата търси по публикувания адрес. Потвърдете точния вход по телефона.</p>
 </div>
 
 <style>
