@@ -39,7 +39,7 @@ const articleParagraphs = (post: BlogPost): AuxeroBlogDetailParagraph[] =>
 		text
 	}));
 
-const blogSidebarConsultantImage = agents[1]?.image ?? daynightConsultants[1]?.image ?? '/dealer/logo.png';
+const blogSidebarConsultantImage = agents[1]?.image ?? daynightConsultants[1]?.image ?? daynightConsultants[0]?.image ?? '';
 
 export const auxeroBlogDetailFromState = ({
 	post,
@@ -57,15 +57,15 @@ export const auxeroBlogDetailFromState = ({
 	relatedTitle: 'Свързани публикации',
 	secondRelated: related[1] ?? post,
 	sidebar: {
-		consultantHref: '/contact',
+		consultantHref: '/agents/daynight-import',
 		consultantImage: blogSidebarConsultantImage,
 		consultantNote:
-			'Изпрати VIN, линк към обява, бюджет или срок и Promosale Varna ще прегледа конкретния случай.',
+			'Изпрати VIN, линк към обява, бюджет или срок и Day Night Auto ще прегледа конкретния случай.',
 		consultantSubtitle: 'Подбор, транспорт и крайни разходи',
 		consultantTitle: 'Подбрани автомобили',
 		newsletterPlaceholder: 'Имейл адрес',
 		newsletterTitle: 'Абонамент за новини',
 		recentTitle: 'Последни публикации',
-		searchPlaceholder: 'Търси в съветите на Promosale Varna'
+		searchPlaceholder: 'Търси в съветите на Day Night Auto'
 	}
 });

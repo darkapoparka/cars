@@ -30,10 +30,10 @@
 
 <header class={cn('site-header', variant === 'home' && 'site-header--home')}>
 	<div class="site-header__inner">
-		<a class="site-header__logo" href={resolve('/')} aria-label="Promosale Varna начало">
+		<a class="site-header__logo" href={resolve('/')} aria-label="Day Night Auto начало">
 			<img
 				src={variant === 'home' ? daynightAssets.logoDark : daynightAssets.logoLight}
-				alt="Promosale Varna"
+				alt="Day Night Auto"
 			/>
 		</a>
 

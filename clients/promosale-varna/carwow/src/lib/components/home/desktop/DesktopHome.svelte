@@ -131,7 +131,7 @@
 		:global(
 			body.daynight-home-page .daynight-home-shell--original .daynight-home-section-banner__copy h2
 		) {
-			font-size: clamp(28px, 2.35vw, 36px) !important;
+			font-size: var(--sa-heading-section) !important;
 			line-height: 1.05 !important;
 			text-align: center !important;
 		}
@@ -361,7 +361,7 @@
 		) {
 			color: #111827 !important;
 			font-size: var(--sa-text-desktop-section-title) !important;
-			font-weight: 700 !important;
+			font-weight: var(--sa-weight-heading) !important;
 			letter-spacing: -0.025em !important;
 			line-height: 1.1 !important;
 			margin: 0 !important;
@@ -418,8 +418,8 @@
 			box-sizing: border-box !important;
 			color: #fff !important;
 			display: inline-flex !important;
-			font-size: 15px !important;
-			font-weight: 700 !important;
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight) !important;
 			justify-content: center !important;
 			line-height: 1.2 !important;
 			min-height: 42px !important;
@@ -470,8 +470,8 @@
 			box-shadow: none !important;
 			color: #fff !important;
 			display: inline-flex !important;
-			font-size: 16px !important;
-			font-weight: 700 !important;
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight) !important;
 			justify-content: center !important;
 			min-height: 44px !important;
 			padding: 0 20px !important;
@@ -621,8 +621,8 @@
 		:global(body.daynight-home-page .daynight-home-hero--cutouts .daynight-home-hero__title) {
 			background: transparent !important;
 			color: var(--sa-ink) !important;
-			font-size: clamp(46px, 4.6vw, 72px) !important;
-			font-weight: 800 !important;
+			font-size: var(--sa-text-desktop-hero-title) !important;
+			font-weight: var(--sa-weight-heading) !important;
 			letter-spacing: -0.055em !important;
 			line-height: 0.96 !important;
 			margin: 0 0 24px !important;
@@ -671,8 +671,8 @@
 			align-items: center;
 			color: #b7bac1;
 			display: inline-flex;
-			font-size: 14px;
-			font-weight: 700;
+			font-size: var(--sa-text-caption);
+			font-weight: var(--sa-button-font-weight);
 			height: 28px;
 			position: relative;
 			text-decoration: none;
@@ -787,8 +787,8 @@
 			border-radius: 10px !important;
 			box-shadow: none !important;
 			flex-direction: row !important;
-			font-size: 14px !important;
-			font-weight: 700 !important;
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight) !important;
 			gap: 0 !important;
 			grid-column: auto !important;
 			height: 48px !important;
@@ -843,8 +843,8 @@
 			align-items: center !important;
 			color: #f3f4f6 !important;
 			display: flex !important;
-			font-size: 14px !important;
-			font-weight: 600 !important;
+			font-size: var(--sa-text-caption) !important;
+			font-weight: var(--sa-weight-semibold) !important;
 			height: 40px !important;
 			padding: 0 30px 0 12px !important;
 		}
@@ -860,8 +860,8 @@
 			background: transparent;
 			border: 0;
 			color: #111827;
-			font-size: 16px;
-			font-weight: 600;
+			font-size: var(--sa-text-base);
+			font-weight: var(--sa-weight-semibold);
 			height: 50px;
 			min-width: 0;
 			outline: none;
@@ -873,7 +873,7 @@
 			body.daynight-home-page .daynight-home-hero--cutouts .daynight-home-hero__query::placeholder
 		) {
 			color: #6b7280;
-			font-weight: 500;
+			font-weight: var(--sa-weight-medium);
 		}
 	}
 
@@ -931,7 +931,7 @@
 
 		:global(body.daynight-home-page .daynight-home-shell--original .daynight-home-why__title) {
 			color: #111827 !important;
-			font-size: clamp(26px, 2.1vw, 32px) !important;
+			font-size: var(--sa-type-page) !important;
 			letter-spacing: -0.025em !important;
 		}
 
@@ -955,7 +955,7 @@
 			border-color: #c91620 !important;
 			box-shadow: none !important;
 			color: #fff !important;
-			font-size: 15px !important;
+			font-size: var(--sa-button-font-size) !important;
 			height: 44px !important;
 		}
 
@@ -1130,7 +1130,7 @@
 				.daynight-home-hero__title
 		) {
 			font-size: var(--sa-text-desktop-hero-title) !important;
-			font-weight: 800 !important;
+			font-weight: var(--sa-weight-heading) !important;
 			letter-spacing: var(--sa-tracking-desktop-hero-title) !important;
 			line-height: var(--sa-leading-desktop-hero-title) !important;
 			max-width: 1180px !important;
@@ -1326,7 +1326,7 @@
 
 		:global(body.daynight-home-page .daynight-home-shell--original .daynight-home-why__title) {
 			color: #fff !important;
-			font-size: clamp(28px, 2.15vw, 34px) !important;
+			font-size: var(--sa-type-page) !important;
 			letter-spacing: -0.03em !important;
 			line-height: 1.08 !important;
 			margin: 0 0 8px !important;
@@ -1334,7 +1334,7 @@
 
 		:global(body.daynight-home-page .daynight-home-shell--original .daynight-home-why__copy) {
 			color: #d6dae1 !important;
-			font-size: 16px !important;
+			font-size: var(--sa-type-body) !important;
 			line-height: 1.55 !important;
 			margin: 0 0 20px !important;
 			max-width: 400px !important;
@@ -1347,8 +1347,8 @@
 
 		:global(body.daynight-home-page .daynight-home-shell--original .daynight-home-why__reason) {
 			color: #fff !important;
-			font-size: 15px !important;
-			font-weight: 600 !important;
+			font-size: var(--sa-text-base) !important;
+			font-weight: var(--sa-weight-semibold) !important;
 			gap: 10px !important;
 			line-height: 1.35 !important;
 			margin-bottom: 7px !important;
@@ -1371,8 +1371,8 @@
 			border-radius: 8px !important;
 			box-shadow: none !important;
 			color: #111827 !important;
-			font-size: 15px !important;
-			font-weight: 750 !important;
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight) !important;
 			gap: 8px !important;
 			height: 44px !important;
 			padding: 0 18px !important;

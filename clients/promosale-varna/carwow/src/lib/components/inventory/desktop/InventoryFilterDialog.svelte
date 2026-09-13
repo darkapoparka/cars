@@ -366,7 +366,7 @@
 		flex-shrink: 0;
 	}
 	h2 {
-		font: 750 26px/1.2 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-2xl)/1.2 var(--sa-font);
 		letter-spacing: -0.6px;
 		margin: 0;
 	}
@@ -415,7 +415,7 @@
 		flex: 1;
 		height: 52px;
 		padding: 0;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		color: #141719;
 		box-shadow: none;
 	}
@@ -442,9 +442,9 @@
 	}
 	.filter-dialog-label {
 		display: block;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		color: #606871;
 		margin-bottom: 7px;
 	}
@@ -456,8 +456,8 @@
 		border: 1px solid var(--discovery-control-border);
 		border-radius: var(--discovery-control-radius);
 		padding: 0 12px;
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		color: #141719;
 	}
 	summary {
@@ -489,7 +489,7 @@
 		align-items: center;
 		gap: 10px;
 		min-height: 38px;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		cursor: pointer;
 	}
 	.filter-dialog-features {
@@ -499,7 +499,7 @@
 		margin-top: 24px;
 	}
 	h3 {
-		font: 700 18px/1.3 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
 		margin: 0 0 14px;
 	}
 	.filter-dialog-feature-grid {
@@ -521,8 +521,8 @@
 		background: #fff;
 		border: 1px solid var(--discovery-control-border);
 		border-radius: var(--discovery-control-radius);
-		font-size: 14px;
-		font-weight: 500;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.4;
 		cursor: pointer;
 	}
@@ -551,8 +551,8 @@
 		background: transparent;
 		border: 0;
 		padding: 12px 0;
-		font-size: 15px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		text-decoration: underline;
 		text-underline-offset: 4px;
 	}
@@ -567,8 +567,8 @@
 		border-radius: var(--discovery-control-radius);
 		background: var(--discovery-action);
 		color: #fff;
-		font-size: 16px;
-		font-weight: 700;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-strong);
 	}
 	.filter-dialog-apply:hover {
 		background: var(--discovery-action-hover);
@@ -592,7 +592,7 @@
 		min-height: 36px;
 		padding: 12px 0 0;
 		color: #31383e;
-		font-size: 14px;
-		font-weight: 600;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-semibold);
 	}
 </style>

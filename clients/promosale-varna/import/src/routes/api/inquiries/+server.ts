@@ -1,6 +1,7 @@
 import {
 	createInquiry,
 	listInquiriesForRole,
+	listStoredInquiriesForAdmin,
 	normalizeInquiryStatus,
 	updateInquiry
 } from '$lib/server/inquiries';
@@ -8,6 +9,21 @@ import { errorJson, okJson, payloadString, readApiPayload } from '$lib/server/ap
 import { requireDayNightApiAccess } from '$lib/server/api-auth';
 import { normalizeDayNightRole } from '$lib/server/roles';
 import type { ApiPayload } from '$lib/server/api';
+import { z } from 'zod';
+import { hasInquiryDatabase } from '$lib/server/inquiry-config';
+
+const submissionSchema = z
+	.object({
+		agentSlug: z.string().max(160).optional(),
+		email: z.email().max(254).optional(),
+		name: z.string().min(2).max(160),
+		phone: z.string().min(5).max(60).optional(),
+		message: z.string().max(5000).optional(),
+		routePath: z.string().max(500).optional(),
+		source: z.string().max(100).optional(),
+		vehicleSlug: z.string().max(160).optional()
+	})
+	.refine((value) => Boolean(value.email || value.phone), 'Email or phone is required');
 
 const contactName = (payload: ApiPayload) => {
 	const directName = payloadString(payload, 'name', 'SendInquiryname');
@@ -44,9 +60,10 @@ const inquiryMessage = (payload: ApiPayload) => {
 		.join(' | ');
 };
 
-export function GET({ request, url }: { request: Request; url: URL }) {
+export async function GET({ request, url }: { request: Request; url: URL }) {
 	const role = normalizeDayNightRole(url.searchParams.get('role'));
 	const access = requireDayNightApiAccess({
+		allowedRoles: hasInquiryDatabase() ? ['admin'] : undefined,
 		fallbackRole: role,
 		request,
 		routePath: role === 'customer' ? 'account/messages' : 'admin/inquiries'
@@ -54,12 +71,20 @@ export function GET({ request, url }: { request: Request; url: URL }) {
 
 	if (access.response) return access.response;
 
-	return okJson({ inquiries: listInquiriesForRole(role ?? access.session.role) });
+	try {
+		return okJson({
+			inquiries: hasInquiryDatabase()
+				? await listStoredInquiriesForAdmin()
+				: listInquiriesForRole(role ?? access.session.role)
+		});
+	} catch {
+		return errorJson('Inquiries are temporarily unavailable.', 503);
+	}
 }
 
 export async function POST({ request }: { request: Request }) {
 	const payload = await readApiPayload(request);
-	const inquiry = createInquiry({
+	const parsed = submissionSchema.safeParse({
 		agentSlug: payloadString(payload, 'agentSlug', 'assignedAgentSlug'),
 		email: payloadString(payload, 'email', 'SendInquiryemail'),
 		message: inquiryMessage(payload),
@@ -67,17 +92,28 @@ export async function POST({ request }: { request: Request }) {
 		phone: payloadString(payload, 'phone', 'SendInquiryphone'),
 		routePath: payloadString(payload, 'routePath'),
 		source: payloadString(payload, 'source'),
-		userRole: payloadString(payload, 'role', 'userRole'),
 		vehicleSlug: payloadString(payload, 'vehicleSlug')
 	});
-
-	return okJson({ inquiry }, { status: 201 });
+	if (!parsed.success)
+		return errorJson(
+			'Please provide your name and a valid email or phone. Keep the message under 5000 characters.',
+			400
+		);
+	try {
+		const inquiry = await createInquiry({ ...parsed.data, userRole: 'customer' });
+		return okJson(
+			{ inquiry, storage: hasInquiryDatabase() ? 'database' : 'demo' },
+			{ status: 201 }
+		);
+	} catch {
+		return errorJson('Your inquiry could not be saved. Please try again.', 503);
+	}
 }
 
 export async function PATCH({ request }: { request: Request }) {
 	const payload = await readApiPayload(request);
 	const access = requireDayNightApiAccess({
-		allowedRoles: ['admin', 'agent'],
+		allowedRoles: hasInquiryDatabase() ? ['admin'] : ['admin', 'agent'],
 		fallbackRole: payloadString(payload, 'actorRole', 'role', 'userRole'),
 		request,
 		routePath: 'admin/inquiries'
@@ -91,16 +127,24 @@ export async function PATCH({ request }: { request: Request }) {
 		return errorJson('Inquiry id is required', 400);
 	}
 
-	const inquiry = updateInquiry({
-		assignedAgentSlug: payloadString(payload, 'assignedAgentSlug', 'agentSlug'),
-		id,
-		message: payloadString(payload, 'message', 'note'),
-		status: normalizeInquiryStatus(payloadString(payload, 'status'))
-	});
+	const rawStatus = payloadString(payload, 'status');
+	const note = payloadString(payload, 'message', 'note');
+	if ((rawStatus && !normalizeInquiryStatus(rawStatus)) || (note && note.length > 5000))
+		return errorJson('Invalid inquiry update.', 400);
+	try {
+		const inquiry = await updateInquiry({
+			assignedAgentSlug: payloadString(payload, 'assignedAgentSlug', 'agentSlug'),
+			id,
+			message: payloadString(payload, 'message', 'note'),
+			status: normalizeInquiryStatus(payloadString(payload, 'status'))
+		});
 
-	if (!inquiry) {
-		return errorJson('Promosale Varna inquiry not found', 404);
+		if (!inquiry) {
+			return errorJson('Day Night Auto inquiry not found', 404);
+		}
+
+		return okJson({ inquiry });
+	} catch {
+		return errorJson('The inquiry could not be updated. Please try again.', 503);
 	}
-
-	return okJson({ inquiry });
 }

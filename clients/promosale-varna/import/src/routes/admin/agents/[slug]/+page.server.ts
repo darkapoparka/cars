@@ -10,7 +10,7 @@ import { requireDayNightPageSession } from '$lib/server/auth';
 
 const value = (formData: FormData, key: string) => String(formData.get(key) ?? '').trim();
 
-export const load: PageServerLoad = ({ params, request, url }) => {
+export const load: PageServerLoad = async ({ params, request, url }) => {
 	const routePath = `admin/agents/${params.slug}`;
 	const session = requireDayNightPageSession(request, routePath, url.searchParams);
 	const agent = listManagedAgents().find((candidate) => candidate.slug === params.slug);
@@ -22,7 +22,7 @@ export const load: PageServerLoad = ({ params, request, url }) => {
 	return {
 		agent,
 		auxeroFullPage: true,
-		cms: getAdminCmsOverview(),
+		cms: await getAdminCmsOverview(),
 		session
 	};
 };

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import { resolve } from '$app/paths';
 	import BarChart3 from '@lucide/svelte/icons/bar-chart-3';
 	import Activity from '@lucide/svelte/icons/activity';
@@ -85,12 +86,12 @@
 									>
 										<img
 											class="h-7 w-auto object-contain"
-											src={resolve('/dealer/logo.png')}
+											src={resolve(daynightSite.logoLight)}
 											alt=""
 										/>
 									</span>
 									<span class="grid flex-1 text-left text-sm leading-tight">
-										<span class="truncate font-semibold">Promosale Varna</span>
+										<span class="truncate font-semibold">Day Night Auto</span>
 										<span class="text-sidebar-foreground/60 truncate text-xs">CMS workspace</span>
 									</span>
 								</a>
@@ -169,7 +170,7 @@
 				<Separator orientation="vertical" class="me-2 data-[orientation=vertical]:h-4" />
 				<div class="min-w-0 flex-1">
 					<p class="text-muted-foreground flex items-center gap-1 truncate text-xs font-medium">
-						<span>Promosale Varna</span>
+						<span>Day Night Auto</span>
 						<ChevronRight aria-hidden="true" />
 						<span>{eyebrow}</span>
 					</p>

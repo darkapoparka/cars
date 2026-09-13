@@ -12,14 +12,14 @@ const readNotice = (url: URL) => {
 	return '';
 };
 
-export const load: PageServerLoad = ({ params, request, url }) => {
+export const load: PageServerLoad = async ({ params, request, url }) => {
 	const routePath = `admin/inventory/edit/${params.id}`;
 	const session = requireDayNightPageSession(request, routePath, url.searchParams);
 	const listing = getAdminInventoryRow(params.id);
 
 	return {
 		auxeroFullPage: true,
-		cms: getAdminCmsOverview(),
+		cms: await getAdminCmsOverview(),
 		listing,
 		missingListingId: listing ? '' : params.id,
 		notice: readNotice(url),

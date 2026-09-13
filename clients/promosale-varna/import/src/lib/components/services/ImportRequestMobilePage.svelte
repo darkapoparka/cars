@@ -1,14 +1,16 @@
 <script lang="ts">
 	import type { HomeFiveVehicleCardData } from '$lib/auxero/home-five';
 	import { page } from '$app/state';
+	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import { importCriteriaFromParams } from '$lib/data/import-criteria';
-	import ImportBrowseControls from './ImportBrowseControls.svelte';
 	import type { AuxeroServiceFormData } from '$lib/auxero/services';
 	import { importRequestMobileCopy, importRequestSteps } from '$lib/auxero/services';
 	import MobileAppbar from '$lib/components/layout/MobileAppbar.svelte';
 	import MobileServiceEntry from '$lib/components/services/MobileServiceEntry.svelte';
-	import { ArrowRight, Link2, Search } from '@lucide/svelte';
+	import MobileServiceManualEntry from '$lib/components/services/MobileServiceManualEntry.svelte';
+	import { ArrowRight, Link2 } from '@lucide/svelte';
 	import { Drawer } from 'vaul-svelte';
+	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 	import ImportRequestWizard from './ImportRequestWizard.svelte';
 
 	type ImportIntent = 'listing' | 'source';
@@ -18,9 +20,8 @@
 		serviceVehicles
 	}: { form: AuxeroServiceFormData; serviceVehicles: HomeFiveVehicleCardData[] } = $props();
 
-	// The route supplies the initial listing value once; the user owns it after hydration.
-	// svelte-ignore state_referenced_locally
-	let vehicle = $state(form.vehicleField.value ?? '');
+	const vehicle = $derived(form.vehicleField.value ?? '');
+	let entryMode = $state<ImportIntent>('listing');
 	let wizardOpen = $state(false);
 	let wizardIntent = $state<ImportIntent>('listing');
 	let wizardSession = $state(0);
@@ -32,10 +33,10 @@
 		wizardOpen = true;
 	};
 
-	const handleVehicleSubmit = (event: SubmitEvent) => {
-		event.preventDefault();
-		openWizard('listing');
-	};
+	$effect(() => {
+		if (!wizardOpen) return;
+		return trackKeyboardInset();
+	});
 </script>
 
 <div class="daynight-import-mobile">
@@ -43,52 +44,59 @@
 
 	<MobileServiceEntry
 		{serviceVehicles}
-		inventoryTitle="Налични в България"
+		showTitle={false}
 		title={importRequestMobileCopy.title}
 		intro={importRequestMobileCopy.intro}
 		meta="3 стъпки · Без ангажимент"
-		response="Отговор до 24 ч."
+		response={templateInquiryCopy.response}
 		steps={importRequestSteps.map((step, index) =>
 			index === 0 ? { ...step, text: 'Изпращаш линк към обявата или директно VIN номера.' } : step
 		)}
 	>
-		{#snippet browseControls()}<ImportBrowseControls />{/snippet}
-		{#snippet entry()}
-			<form onsubmit={handleVehicleSubmit}>
-				<label for="import-mobile-vehicle">Линк към обява или VIN</label>
-				<div class="service-input">
-					<Link2 size={21} strokeWidth={2.15} aria-hidden="true" />
-					<input
-						id="import-mobile-vehicle"
-						name={form.vehicleField.name}
-						type={form.vehicleField.type}
-						placeholder="Линк към обява или VIN"
-						required
-						bind:value={vehicle}
-					/>
-					<button type="submit" aria-label="Провери автомобила">
-						<ArrowRight size={21} strokeWidth={2.35} aria-hidden="true" />
-					</button>
-				</div>
-			</form>
+		{#snippet modes()}
+			<div class="import-mode-tabs" role="tablist" aria-label="Начин за заявка">
+				<button
+					type="button"
+					class:active={entryMode === 'listing'}
+					role="tab"
+					aria-selected={entryMode === 'listing'}
+					onclick={() => (entryMode = 'listing')}>LINK / VIN</button
+				>
+				<button
+					type="button"
+					class:active={entryMode === 'source'}
+					role="tab"
+					aria-selected={entryMode === 'source'}
+					onclick={() => (entryMode = 'source')}>Нямам линк</button
+				>
+			</div>
 		{/snippet}
-		{#snippet alternative()}
-			<button type="button" onclick={() => openWizard('source')}>
-				<Search size={18} strokeWidth={2.2} aria-hidden="true" />
-				<span>
-					<strong>Заяви търсене</strong>
-				</span>
-				<ArrowRight size={18} strokeWidth={2.3} aria-hidden="true" />
-			</button>
+		{#snippet entry()}
+			{#if entryMode === 'listing'}
+				<button
+					type="button"
+					class="service-input service-manual-entry"
+					aria-haspopup="dialog"
+					aria-expanded={wizardOpen && wizardIntent === 'listing'}
+					onclick={() => openWizard('listing')}
+				>
+					<Link2 size={21} strokeWidth={2.15} aria-hidden="true" />
+					<span class="service-input__text">{vehicle || 'Линк към обява или VIN'}</span>
+					<span class="service-input__go" aria-hidden="true">
+						<ArrowRight size={21} strokeWidth={2.35} />
+					</span>
+				</button>
+			{:else}
+				<MobileServiceManualEntry onclick={() => openWizard('source')} />
+			{/if}
 		{/snippet}
 	</MobileServiceEntry>
 
-	<Drawer.Root bind:open={wizardOpen} direction="bottom" fixed={true}>
+	<Drawer.Root bind:open={wizardOpen} direction="bottom" fixed={true} repositionInputs={false}>
 		<Drawer.Overlay class="daynight-import-wizard-drawer__backdrop">
 			<span>Затвори</span>
 		</Drawer.Overlay>
 		<Drawer.Content class="daynight-import-wizard-drawer__sheet">
-			<Drawer.Handle class="daynight-import-wizard-drawer__handle" />
 			<Drawer.Title class="daynight-import-wizard-drawer__title">Заявка за внос</Drawer.Title>
 			{#key wizardSession}
 				<ImportRequestWizard
@@ -105,9 +113,70 @@
 <style>
 	.daynight-import-mobile {
 		position: relative;
-		min-height: calc(100dvh - 70px - env(safe-area-inset-bottom));
-		background: var(--bc-bg);
-		color: #111111;
+		min-height: calc(100dvh - var(--bc-mobile-nav-height) - env(safe-area-inset-bottom));
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+	}
+
+	.daynight-import-mobile :global(a) {
+		text-decoration: none !important;
+	}
+
+	.import-mode-tabs {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0;
+		min-height: 0;
+		border: 0;
+		border-bottom: 1px solid rgb(255 255 255 / 0.2);
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		padding: 0;
+	}
+
+	.import-mode-tabs button {
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 44px;
+		min-height: 44px;
+		align-items: flex-end;
+		justify-content: center;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: rgb(255 255 255 / 0.72);
+		font-family: var(--bc-font-body);
+		font-size: var(--bc-text-h5);
+		font-weight: var(--bc-weight-control);
+		letter-spacing: 0;
+		line-height: 24px;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
+		padding: 0 0 6px;
+	}
+
+	.import-mode-tabs button.active {
+		background: transparent;
+		box-shadow: none;
+		color: var(--bc-white);
+		font-weight: var(--bc-weight-heading);
+	}
+
+	.import-mode-tabs button.active::after {
+		position: absolute;
+		inset: auto 0 -1px;
+		height: 2px;
+		background: var(--bc-white);
+		content: '';
+	}
+
+	.import-mode-tabs button:focus-visible {
+		outline: 2px solid rgb(255 255 255 / 0.72);
+		outline-offset: -3px;
 	}
 
 	:global(.daynight-import-wizard-drawer__backdrop) {
@@ -115,7 +184,7 @@
 		inset: 0;
 		z-index: 1200;
 		border: 0;
-		background: rgba(17, 17, 17, 0.42);
+		background: transparent;
 		cursor: pointer;
 		padding: 0;
 	}
@@ -135,14 +204,13 @@
 		inset: 0;
 		z-index: 1201;
 		display: block;
-		height: 100dvh;
-		overflow-x: hidden;
-		overflow-y: auto;
+		height: calc(100dvh - var(--bc-kb-inset, 0px));
+		overflow: hidden;
 		overscroll-behavior: contain;
 		border-radius: 0;
-		background: var(--bc-bg);
+		background: var(--bc-bg-strong);
 		outline: 0;
-		padding: max(8px, env(safe-area-inset-top)) 14px max(20px, env(safe-area-inset-bottom));
+		padding: 0;
 		scrollbar-width: none;
 	}
 
@@ -155,6 +223,7 @@
 	}
 
 	:global(.daynight-import-wizard-drawer__handle) {
+		display: none !important;
 		position: relative;
 		display: block;
 		width: 56px;
@@ -172,7 +241,7 @@
 		width: 42px;
 		height: 4px;
 		transform: translate(-50%, -50%);
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-border);
 		content: '';
 	}

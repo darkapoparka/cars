@@ -16,10 +16,21 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 </script>
 
 <div class="reviews-page">
+	<DesktopYellowRouteHero
+		headingId="reviews-route-title"
+		title="Отзиви от клиенти"
+		copy={daynightReviewDisclosure}
+		panel="light"
+		primaryLabel="Виж автомобилите"
+		primaryHref="/inventory"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+	/>
 	<!-- breadcrumb -->
 	<section class="background-light mb-32">
 		<div class="container">
@@ -56,6 +67,7 @@
 					<div class="testimonior-box">
 						<div
 							class="mb-16 flex items-center gap-4"
+							role="img"
 							aria-label={`${review.rating} от 5 — примерна оценка`}
 						>
 							{#each Array.from({ length: review.rating }, (_, i) => i) as star (star)}
@@ -81,6 +93,19 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.reviews-page > .background-light,
+		.reviews-page > .pb-100 > .container > h1,
+		.review-disclosure,
+		.reviews-page > .pb-100 > .container > .tf-spacing-style3 {
+			display: none;
+		}
+
+		.reviews-page > .pb-100 {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.review-disclosure {
 		color: var(--sa-muted);
 		margin-top: 12px;
@@ -103,7 +128,7 @@
 	   card desc/label, breadcrumb spans) override it below. */
 	.reviews-page {
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
+		font-family: var(--sa-font);
 		letter-spacing: 0;
 	}
 
@@ -197,8 +222,8 @@
 	.reviews-page h1 {
 		margin-bottom: 0;
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.08;
 	}
@@ -213,8 +238,8 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
@@ -224,8 +249,8 @@
 	   line-height 22px comes from app.css's `.breadcrumb a, .breadcrumb span`. */
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -267,7 +292,7 @@
 	   18px / 1.65 blend via matched-rule inspection of the baseline. */
 	.testimonior-box--desc {
 		color: #374151;
-		font-size: 18px;
+		font-size: var(--sa-text-lg);
 		line-height: 1.65;
 	}
 
@@ -304,8 +329,8 @@
 
 	/* Card name. */
 	.h5 {
-		font-size: 18px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
@@ -315,7 +340,7 @@
 	   shrinks. Colour #667085 from StorefrontTemplateContent's `.desc`. */
 	.desc {
 		color: #667085;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 26px;
 	}
 

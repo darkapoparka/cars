@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
@@ -32,7 +33,7 @@
 			href={showHeaderCta ? resolve('/inventory') : undefined}
 			label={`Виж всички ${inventoryCount} автомобила`}
 			copy={showHeaderSubtitle
-				? 'Последно добавени предложения от наличността на Promosale Varna.'
+				? `Последно добавени предложения от наличността на ${daynightSite.shortName}.`
 				: undefined}
 		/>
 	</div>

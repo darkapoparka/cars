@@ -1,5 +1,5 @@
 // Prod page-weight probe: transfer size by resource type per route (mobile).
-import { chromium } from 'playwright';
+import { chromium } from '@playwright/test';
 
 const BASE = process.env.AUDIT_BASE || 'http://localhost:4399';
 const ROUTES = ['/', '/inventory', '/inventory/mercedes-benz-150i-2010-15437', '/sell-your-car'];

@@ -6,8 +6,8 @@ export async function POST({ request }: { request: Request }) {
 	const email = payloadString(payload, 'email', 'username', 'email-forgot-password');
 	const message = createMessage({
 		email,
-		message: 'Password recovery request from the preserved Promosale Varna auth modal.',
-		name: 'Promosale Varna password recovery',
+		message: 'Password recovery request from the preserved Day Night Auto auth modal.',
+		name: 'Day Night Auto password recovery',
 		routePath: '/account/password',
 		threadId: 'daynight-auth'
 	});

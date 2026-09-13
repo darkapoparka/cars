@@ -3,7 +3,7 @@
 	import type { HomeFiveHeroAction, HomeFiveHeroData } from '$lib/auxero/home-five';
 	import { ChevronDown, Search } from '@lucide/svelte';
 
-	// Clean Svelte 5 + Tailwind v4 rebuild of the Promosale Varna homepage hero, migrating
+	// Clean Svelte 5 + Tailwind v4 rebuild of the Day Night Auto homepage hero, migrating
 	// off the legacy Auxero theme + swiper. Premium dark-green band (no photo wash, so
 	// nothing competes with the cutout cars) with:
 	//   • a centred white heading + one-line muted subtitle (from the active text slide)

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import Check from '@lucide/svelte/icons/check';
 	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
@@ -78,7 +79,7 @@
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на Promosale Varna.',
+				`Получете обратна връзка от екипа на ${daynightSite.shortName}.`,
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -195,7 +196,11 @@
 </section>
 
 <style>
-	.home-reviews-disclosure { margin: 12px 0 0; color: var(--sa-ink-soft); font: 500 var(--sa-text-sm)/1.5 var(--sa-font); }
+	.home-reviews-disclosure {
+		margin: 12px 0 0;
+		color: var(--sa-ink-soft);
+		font: var(--sa-weight-medium) var(--sa-text-sm)/1.5 var(--sa-font);
+	}
 	.home-action-button {
 		margin-top: 22px;
 		display: flex;
@@ -266,8 +271,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__title {
 		color: var(--banner-foreground) !important;
-		font-size: clamp(23px, 1.8vw, 28px);
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.12;
 	}
@@ -278,8 +283,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__list li {
 		color: var(--banner-foreground);
-		font-size: 14px;
-		font-weight: 550;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		line-height: 1.35;
 	}
@@ -308,8 +313,8 @@
 		box-shadow: none !important;
 		color: #fff !important;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		height: 44px;
 		justify-content: center;
 		margin-top: auto;
@@ -369,14 +374,14 @@
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__title) {
-		font-size: clamp(25px, 2.1vw, 29px);
+		font-size: var(--sa-text-panel-title);
 	}
 
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__list li) {
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.4;
 	}
 
@@ -389,7 +394,7 @@
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__cta) {
 		align-self: flex-start;
-		font-size: 16px;
+		font-size: var(--sa-button-font-size);
 		justify-self: start;
 		margin: auto 0 0;
 	}
@@ -408,8 +413,8 @@
 		box-sizing: border-box;
 		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;

@@ -11,9 +11,9 @@ import { requireDayNightPageSession } from '$lib/server/auth';
 const modelName = () => env.OPENAI_MODEL || 'gpt-5.5';
 const hasOpenAiKey = () => Boolean(env.OPENAI_API_KEY?.trim());
 
-export const load: PageServerLoad = ({ request, url }) => {
+export const load: PageServerLoad = async ({ request, url }) => {
 	const session = requireDayNightPageSession(request, 'admin/copilot', url.searchParams);
-	const cms = buildCopilotContext();
+	const cms = await buildCopilotContext();
 
 	return {
 		auxeroFullPage: true,

@@ -12,7 +12,7 @@
 	<title>Admin Login</title>
 </svelte:head>
 
-<main class="admin-login-shell">
+<main id="main-content" tabindex="-1" class="admin-login-shell">
 	<section class="admin-login-panel" aria-labelledby="admin-login-title">
 		<div class="admin-login-context">
 			<img

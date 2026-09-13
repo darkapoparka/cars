@@ -18,18 +18,15 @@
 		{ href: '/calculator', label: 'Калкулатор' },
 		{ href: '/agents', label: 'Консултанти' },
 		{ href: '/blog', label: 'Съвети' },
-		{ href: '/about', label: 'За Promosale Varna' }
+		{ href: '/about', label: 'За Day Night Auto' }
 	] as const;
 </script>
 
 {#if header}
 	<header class="home2-header">
 		<div class="home2-header__inner">
-			<a class="home2-header__logo" href={resolve('/home2')} aria-label="Promosale Varna Home2">
-				<img
-					src="/dealer/logo.png"
-					alt={header.logo.alt}
-				/>
+			<a class="home2-header__logo" href={resolve('/home2')} aria-label="Day Night Auto Home2">
+				<img src="/brand/daynight-wordmark.svg" alt={header.logo.alt} />
 			</a>
 
 			<nav class="home2-header__nav" aria-label="Основна навигация">
@@ -131,7 +128,7 @@
 
 	.home2-header__nav a:hover,
 	.home2-header__nav a:focus-visible {
-		color: #E3062F;
+		color: #e3062f;
 	}
 
 	.home2-header__actions {
@@ -252,7 +249,7 @@
 
 	.home2-header__menu-panel a:hover {
 		background: rgb(255 255 255 / 0.08);
-		color: #E3062F;
+		color: #e3062f;
 	}
 
 	@media (max-width: 1199px) {

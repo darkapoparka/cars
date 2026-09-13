@@ -1,0 +1,45 @@
+{
+	"key": "carwow",
+	"name": "Carwow",
+	"aliases": ["6517", "spartak", "spartak-style"],
+	"path": "templates/carwow",
+	"version": "2026.09.08-repair-1",
+	"family": "showroom-carwow",
+	"stack": "sveltekit",
+	"sourcePort": 6517,
+	"libraryPort": 6463,
+	"entry": "/",
+	"homes": [
+		{
+			"id": "main",
+			"route": "/"
+		}
+	],
+	"desktop": 8,
+	"mobile": 8,
+	"priority": "shortlist",
+	"readiness": "source-branded-candidate",
+	"reskinEffort": "medium",
+	"brandFiles": [
+		"src/lib/data/daynight-site.ts",
+		"src/lib/data/daynight-current-inventory.ts",
+		"src/lib/data/daynight-vehicles.ts",
+		"src/lib/styles",
+		"static"
+	],
+	"note": "Independent native Svelte storefront master. Desktop/mobile compositions remain separate. npm run dev defaults to 6463 and accepts Vite flags. Source identity and provider readiness still require verification.",
+	"sourceSnapshot": {
+		"source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\spartak-style",
+		"head": "9f05da01000d9177226b19f6d5dd8e5531964948",
+		"branch": "codex/6517-canonical",
+		"includesDirtyFiles": true,
+		"files": 1335,
+		"bytes": 141242552
+	},
+	"personalizationRequired": true,
+	"crmRegistration": "not-performed",
+	"refreshedAt": "2026-09-06T20:48:34.551Z",
+	"refreshEvidence": "J:/cars/audits/2026-09-06/asko96-build/refresh-complete.json",
+	"repairEvidence": "J:/cars/audits/2026-09-08/carwow-finalization/REPORT.md",
+	"publicDeliveryVerified": false
+}

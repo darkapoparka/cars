@@ -26,7 +26,7 @@
 			aria-hidden="true"
 		/>
 
-		<h1 id="home2-title">Сменяш автомобила? Promosale Varna помага</h1>
+		<h1 id="home2-title">Сменяш автомобила? Day Night Auto помага</h1>
 
 		<form
 			class="home2-search"
@@ -225,7 +225,7 @@
 
 	.home2-search__input button {
 		align-items: center;
-		background: #E3062F;
+		background: #e3062f;
 		border: 0;
 		border-radius: 50%;
 		color: #101514;

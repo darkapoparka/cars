@@ -7,7 +7,7 @@
 	let {
 		actionsLabel = 'Контакт',
 		children,
-		logoAlt = 'Promosale Varna',
+		logoAlt = 'Day Night Auto',
 		surface = 'transparent',
 		onMap
 	}: {
@@ -22,10 +22,10 @@
 <!-- Keep contact actions in a fixed order across routes. The map callback
      preserves existing location drawers without changing the button geometry. -->
 <header class:bc-mobile-appbar--dark={surface === 'dark'} class="bc-mobile-appbar">
-	<a class="bc-mobile-appbar__brand" href={resolve('/')} aria-label="Promosale Varna начало">
+	<a class="bc-mobile-appbar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
 		<img src={daynightAssets.logoLight} alt={logoAlt} width="1744" height="512" />
 	</a>
-	<div class="bc-mobile-appbar__actions" aria-label={actionsLabel}>
+	<div class="bc-mobile-appbar__actions" role="group" aria-label={actionsLabel}>
 		{#if children}{@render children()}{:else}
 			{#if onMap}<button type="button" onclick={onMap} aria-label="Карта" aria-haspopup="dialog"
 					><MapPin size={18} strokeWidth={2.35} aria-hidden="true" /></button
@@ -55,17 +55,17 @@
 		left: 0;
 		z-index: 20;
 		display: flex;
-		height: calc(56px + env(safe-area-inset-top));
+		height: calc(var(--bc-mobile-appbar-height) + env(safe-area-inset-top));
 		align-items: center;
 		justify-content: space-between;
-		gap: 10px;
+		gap: var(--bc-space-2);
 		background: transparent;
-		padding: env(safe-area-inset-top) 12px 0 16px;
+		padding: env(safe-area-inset-top) var(--bc-space-3) 0 var(--bc-space-4);
 	}
 
 	.bc-mobile-appbar--dark {
 		position: relative;
-		background: #090a0b;
+		background: var(--bc-mobile-dark);
 	}
 
 	.bc-mobile-appbar__brand {
@@ -104,7 +104,7 @@
 		display: flex;
 		flex: 0 0 auto;
 		align-items: center;
-		gap: 8px;
+		gap: var(--bc-space-2);
 	}
 
 	.bc-mobile-appbar__actions :global(a),
@@ -112,15 +112,15 @@
 	.bc-mobile-appbar__actions :global(button) {
 		position: relative;
 		display: flex;
-		width: 44px;
-		height: 44px;
+		width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
 		align-items: center;
 		justify-content: center;
 		border: 0;
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: transparent;
 		box-shadow: none;
-		color: #1c1c1c;
+		color: var(--bc-ink);
 		cursor: pointer;
 		isolation: isolate;
 		padding: 0;
@@ -133,10 +133,10 @@
 	.bc-mobile-appbar__actions :global(button::before) {
 		position: absolute;
 		z-index: -1;
-		width: 40px;
-		height: 40px;
-		border-radius: 999px;
-		background: #ffffff;
+		width: var(--bc-control-height-secondary);
+		height: var(--bc-control-height-secondary);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
 		box-shadow: inset 0 0 0 1px rgba(28, 28, 28, 0.12);
 		content: '';
 		transition: background-color 0.18s ease;
@@ -150,13 +150,13 @@
 	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(a),
 	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(label),
 	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(button) {
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(a::before),
 	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(label::before),
 	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(button::before) {
-		background: #17191b;
+		background: var(--bc-ink);
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
 	}
 
@@ -181,7 +181,7 @@
 
 	@media (max-width: 374px) {
 		.bc-mobile-appbar__actions {
-			gap: 6px;
+			gap: var(--bc-space-1);
 		}
 	}
 

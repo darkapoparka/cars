@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import { ArrowRight } from '@lucide/svelte';
 	import CleanSiteFooter from '$lib/components/layout/CleanSiteFooter.svelte';
 	import CleanSiteHeader from '$lib/components/layout/CleanSiteHeader.svelte';
@@ -79,7 +78,7 @@
 				href={reviewsPage.facebookHref}
 				target="_blank"
 				rel="noreferrer"
-				class="bc-calm-hover inline-flex h-11 items-center gap-2 rounded-bc-md border border-bc-border bg-white px-5 font-semibold text-bc-ink hover:text-bc-accent-contrast bc-press"
+				class="bc-calm-hover bc-press inline-flex h-11 items-center gap-2 rounded-bc-md border border-bc-border bg-white px-5 font-semibold text-bc-ink hover:text-bc-accent-contrast"
 			>
 				{reviewsPage.facebookLabel}
 				<ArrowRight class="h-4 w-4" aria-hidden="true" />

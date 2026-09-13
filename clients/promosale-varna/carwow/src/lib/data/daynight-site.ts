@@ -1,19 +1,30 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359892020208";
+const city = "Варна";
 const location = "Морска гара Варна, Варна, България";
 
 export const daynightSite = {
 	name: "Promosale Varna",
 	shortName: "Promosale Varna",
-	phone: "+359892020208",
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "0892020208",
 	phoneLabel: "0892 020 208",
 	email: "",
 	location,
 	locationShort: "Морска гара Варна, Варна",
+	locationLandmark: "Морска гара Варна",
 	hoursLabel: "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден",
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: "https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",

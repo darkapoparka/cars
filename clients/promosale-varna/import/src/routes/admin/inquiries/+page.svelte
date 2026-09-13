@@ -56,7 +56,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Inquiries</title>
+	<title>Day Night Auto Admin - Inquiries</title>
 </svelte:head>
 
 <AdminShell title="Inquiries" activePath="/admin/inquiries">

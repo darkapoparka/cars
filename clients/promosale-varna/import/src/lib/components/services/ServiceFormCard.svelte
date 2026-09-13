@@ -31,7 +31,6 @@
 		formClass="send-inquiry daynight-service-form"
 		gridClass="lg-grid-cols-1 mb-22 grid grid-cols-2 gap-x-12 gap-y-24"
 		novalidate
-		statusMessage="Заявката за услуга е подготвена локално за Promosale Varna"
 		submitLabel={form.submitLabel}
 	/>
 </div>

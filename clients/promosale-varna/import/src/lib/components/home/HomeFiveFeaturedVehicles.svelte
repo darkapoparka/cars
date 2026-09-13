@@ -119,7 +119,7 @@
 					>
 						<span class="daynight-mobile-view-all-card__logo" aria-hidden="true">
 							<img
-								src="/dealer/logo.png"
+								src="/brand/daynight-wordmark.svg"
 								loading="lazy"
 								decoding="async"
 								width="220"
@@ -1010,7 +1010,7 @@
 
 	@media (max-width: 767px) {
 		.daynight-featured-vehicles {
-			background: var(--bc-bg);
+			background: var(--bc-bg-strong);
 			padding-top: 0;
 			padding-bottom: 8px;
 		}
@@ -1155,7 +1155,7 @@
 			padding: 14px;
 			border-radius: 8px;
 			border: 1px solid var(--bc-border);
-			background: var(--bc-surface);
+			background: var(--bc-card-bg);
 			color: #1c1c1c;
 			font-size: 18px;
 			font-weight: 600;

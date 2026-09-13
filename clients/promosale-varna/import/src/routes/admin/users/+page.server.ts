@@ -7,12 +7,12 @@ import { normalizeManagedUserStatus, updateManagedUser } from '$lib/server/users
 const allowedUserRoles = new Set(['all', 'admin', 'agent', 'customer', 'lead']);
 const value = (formData: FormData, key: string) => String(formData.get(key) ?? '').trim();
 
-export const load: PageServerLoad = ({ request, url }) => {
+export const load: PageServerLoad = async ({ request, url }) => {
 	const session = requireDayNightPageSession(request, 'admin/users', url.searchParams);
 	const searchQuery = (url.searchParams.get('q') ?? '').trim();
 	const requestedUserRole = (url.searchParams.get('userRole') ?? 'all').toLowerCase();
 	const selectedUserRole = allowedUserRoles.has(requestedUserRole) ? requestedUserRole : 'all';
-	const cms = getAdminCmsOverview();
+	const cms = await getAdminCmsOverview();
 	const searchNeedle = searchQuery.toLowerCase();
 	const users = cms.users.filter((user) => {
 		const rowRole = user.role.toLowerCase();

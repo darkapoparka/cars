@@ -23,7 +23,7 @@
 	type IntakeMode = 'plate' | 'vin';
 	type SellSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
-	const phoneHref: `tel:${string}` = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref: `tel:${string}` = daynightSite.phoneHref;
 	const processIcons = [ClipboardPen, Camera, BadgeEuro, KeyRound];
 
 	let valuationDialog: HTMLDialogElement | undefined = $state();
@@ -388,7 +388,7 @@
 		margin: 0 auto 20px;
 		max-width: 52ch;
 		color: var(--sa-ink);
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 	}
 	.sell-modal {
 		width: min(640px, calc(100vw - 48px));
@@ -412,7 +412,7 @@
 		margin-bottom: 18px;
 	}
 	.desktop-sell .sell-modal__heading h2 {
-		font: 700 28px/1.2 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-panel-title)/1.2 var(--sa-font);
 		letter-spacing: -0.025em;
 		margin: 0;
 	}
@@ -491,8 +491,8 @@
 		background: transparent;
 		color: #59616c;
 		cursor: pointer;
-		font-size: var(--sa-text-body-sm);
-		font-weight: var(--sa-weight-label);
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		letter-spacing: var(--sa-tracking-tight);
 	}
 
@@ -541,7 +541,7 @@
 
 	.desktop-sell-field span {
 		color: #677283;
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		font-weight: var(--sa-weight-label);
 		letter-spacing: 0;
 		line-height: var(--sa-leading-tight);
@@ -555,7 +555,7 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: var(--sa-ink) !important;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		font-weight: var(--sa-weight-semibold);
 		line-height: var(--sa-leading-snug);
 		outline: 0 !important;
@@ -619,7 +619,7 @@
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-section-title);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.1;
 		letter-spacing: -0.025em;
 		margin: 0;
@@ -659,7 +659,7 @@
 		margin: 0 0 10px;
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-card-title);
-		font-weight: 700;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.3;
 		letter-spacing: var(--sa-tracking-tight);
 	}
@@ -667,8 +667,8 @@
 		color: var(--sa-ink);
 		margin: 0 auto;
 		font-family: var(--sa-font);
-		font-size: var(--sa-text-desktop-dense);
-		font-weight: 400;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
 		line-height: 1.5;
 		max-width: 26ch;
 	}
@@ -692,8 +692,8 @@
 	}
 	.desktop-sell .sell-benefits h2 {
 		font-family: var(--sa-font);
-		font-size: clamp(40px, 3.4vw, 56px);
-		font-weight: 800;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.04;
 		letter-spacing: -0.04em;
 		margin: 0 0 16px;
@@ -706,7 +706,7 @@
 		flex-wrap: wrap;
 	}
 	.desktop-sell .sell-benefits__copy {
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 		color: var(--sa-ink);
 		max-width: 440px;
 		margin: 0 0 24px;
@@ -744,7 +744,7 @@
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.4;
 	}
 	.sell-faq summary::-webkit-details-marker {
@@ -762,8 +762,8 @@
 		padding: 0 40px 22px 0;
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
 		line-height: 1.6;
 	}
 	.sell-faq summary:hover {
@@ -780,7 +780,7 @@
 		gap: 32px;
 	}
 	.desktop-sell .sell-final .sell-section-title {
-		font-size: 30px;
+		font-size: var(--sa-text-panel-title);
 	}
 	.sell-final__actions {
 		display: flex;
@@ -797,8 +797,8 @@
 		background: var(--sa-red);
 		border-radius: 8px;
 		color: #fff;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		white-space: nowrap;
 	}
 	.sell-action:hover {
@@ -809,8 +809,8 @@
 		align-items: center;
 		gap: 10px;
 		color: var(--sa-ink);
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		white-space: nowrap;
 	}
 	.desktop-sell :is(a, summary):focus-visible {

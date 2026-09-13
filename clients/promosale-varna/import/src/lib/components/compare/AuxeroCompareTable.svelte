@@ -356,9 +356,9 @@
 		<a
 			class="daynight-compare-mobile__brand"
 			href={resolve('/')}
-			aria-label="Promosale Varna начало"
+			aria-label="Day Night Auto начало"
 		>
-			<img src={daynightAssets.logoLight} alt="Promosale Varna" width="1285" height="235" />
+			<img src={daynightAssets.logoLight} alt="Day Night Auto" width="1285" height="235" />
 		</a>
 		<button
 			class="daynight-compare-mobile__appbar-add"
@@ -577,8 +577,8 @@
 			</header>
 			<Drawer.Description class="daynight-compare-mobile-drawer__description">
 				{locale === 'bg'
-					? 'Избери автомобил от наличните модели на Promosale Varna.'
-					: 'Choose from available Promosale Varna models.'}
+					? 'Избери автомобил от наличните модели на Day Night Auto.'
+					: 'Choose from available Day Night Auto models.'}
 			</Drawer.Description>
 
 			<label class="daynight-compare-mobile-drawer__search" data-vaul-no-drag>

@@ -143,8 +143,8 @@ body .animated {
 	align-items: center;
 	color: #fff !important;
 	display: flex;
-	font-size: 13px;
-	font-weight: 600;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 18px;
 	margin: 0;
 	text-decoration: none !important;
@@ -237,8 +237,8 @@ body .animated {
 }
 
 .daynight-home-language__label {
-	font-size: 13px;
-	font-weight: 700;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-strong);
 	line-height: 18px;
 }
 
@@ -292,8 +292,8 @@ body .animated {
 	border-radius: 8px;
 	color: #1c1c1c;
 	cursor: pointer;
-	font-size: 13px;
-	font-weight: 600;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 18px;
 	padding: 7px 9px;
 }
@@ -391,8 +391,8 @@ body .animated {
 	border-radius: 999px;
 	color: rgba(255, 255, 255, 0.9);
 	display: flex;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-button-font-weight);
 	gap: 5px;
 	height: 58px;
 	line-height: 22px;
@@ -444,8 +444,8 @@ body .animated {
 .daynight-home-nav__submenu-link,
 .daynight-home-nav__submenu a {
 	color: #4b5563;
-	font-size: 16px;
-	font-weight: 500;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-button-font-weight);
 	line-height: 22px;
 	text-decoration: none;
 }
@@ -493,8 +493,8 @@ body .animated {
 	color: #fff;
 	content: attr(data-badge);
 	display: flex;
-	font-size: 10px;
-	font-weight: 700;
+	font-size: var(--sa-text-xs);
+	font-weight: var(--sa-weight-strong);
 	height: 16px;
 	justify-content: center;
 	line-height: 1;
@@ -648,8 +648,8 @@ body .animated {
 
 .daynight-home-header__contacts li .daynight-header-contact__primary {
 	color: #374151;
-	font-size: 16px !important;
-	font-weight: 500;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-medium);
 	letter-spacing: 0;
 	line-height: 21px !important;
 	white-space: nowrap;
@@ -663,7 +663,7 @@ body .animated {
 .daynight-home-header__contacts li .daynight-header-contact__subtext {
 	color: #64748b;
 	display: inline-flex;
-	font-size: 11px !important;
+	font-size: var(--sa-text-xs) !important;
 	letter-spacing: 0.02em;
 	line-height: 12px !important;
 	margin-top: 0;
@@ -738,14 +738,14 @@ body .animated {
 
 .daynight-contact-popover strong {
 	color: #111827;
-	font-size: 16px;
-	font-weight: 700;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-heading);
 	line-height: 21px;
 }
 
 .daynight-contact-popover span {
 	color: #64748b;
-	font-size: 12px;
+	font-size: var(--sa-text-caption);
 	line-height: 17px;
 }
 
@@ -762,8 +762,8 @@ body .animated {
 	border-radius: 999px;
 	color: #172033;
 	display: inline-flex;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-button-font-weight);
 	justify-content: center;
 	line-height: 1;
 	min-height: 36px;
@@ -852,22 +852,22 @@ body .animated {
 
 .daynight-map-preview__body strong {
 	color: #111827;
-	font-size: 16px;
-	font-weight: 700;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-heading);
 	line-height: 21px;
 }
 
 .daynight-map-preview__body span {
 	color: #64748b;
-	font-size: 12px;
+	font-size: var(--sa-text-caption);
 	line-height: 17px;
 }
 
 .daynight-map-preview__body em {
 	color: #111827;
-	font-size: 12px;
+	font-size: var(--sa-text-caption);
 	font-style: normal;
-	font-weight: 700;
+	font-weight: var(--sa-weight-strong);
 	line-height: 17px;
 	margin-top: 4px;
 }
@@ -945,8 +945,8 @@ body .animated {
 
 .daynight-header-search__title {
 	color: #1c1c1c;
-	font-size: 32px;
-	font-weight: 700;
+	font-size: var(--sa-type-page);
+	font-weight: var(--sa-weight-heading);
 	line-height: 1.15;
 	margin: 0 48px 34px 0;
 }
@@ -965,7 +965,7 @@ body .animated {
 	border-bottom: 2px solid #e7e7e7 !important;
 	border-radius: 0 !important;
 	box-shadow: none !important;
-	font-size: 18px !important;
+	font-size: var(--sa-text-lg) !important;
 	line-height: 28px !important;
 	padding: 8px 60px 8px 0 !important;
 	width: 100%;
@@ -973,7 +973,7 @@ body .animated {
 
 .daynight-header-search__input::placeholder {
 	color: #999;
-	font-size: 18px;
+	font-size: var(--sa-text-lg);
 	line-height: 28px;
 	opacity: 1;
 }
@@ -1018,7 +1018,7 @@ body .animated {
 	box-shadow: none;
 	color: #fff !important;
 	display: inline-flex;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 	gap: 10px;
 	height: 50px;
 	justify-content: center;
@@ -1039,7 +1039,7 @@ body .animated {
 	box-shadow: none;
 	color: #fff !important;
 	display: inline-flex;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 	gap: 10px;
 	height: 50px;
 	justify-content: center;
@@ -1141,7 +1141,7 @@ body.daynight-home-page .daynight-home-footer__bottom-inner {
 
 body.daynight-home-page .daynight-home-footer__copyright {
 	color: #9fa1a4;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 22px;
 }
 
@@ -1174,7 +1174,7 @@ body.daynight-home-page .daynight-home-footer__bottom-links > li:not(:first-chil
 
 body.daynight-home-page .daynight-home-footer__bottom-links > li > a {
 	color: #9fa1a4;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 22px;
 }
 
@@ -1189,8 +1189,8 @@ body.daynight-home-page .daynight-home-footer__logo {
 
 body.daynight-home-page .daynight-home-footer__eyebrow {
 	color: #9fa1a4;
-	font-size: 14px;
-	font-weight: 500;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-medium);
 	line-height: 20px;
 	margin-bottom: 8px;
 	text-transform: uppercase;
@@ -1224,7 +1224,7 @@ body.daynight-home-page .daynight-home-footer-links {
 body.daynight-home-page .daynight-home-footer-link-group__title {
 	color: #fff;
 	display: flex;
-	font-weight: 600;
+	font-weight: var(--sa-weight-heading);
 	justify-content: space-between;
 	margin: 0 0 14px;
 }
@@ -1240,8 +1240,8 @@ body.daynight-home-page .daynight-home-footer-link-group__list li:not(:last-chil
 
 body.daynight-home-page .daynight-home-footer-link-group__list li a {
 	color: #9fa1a4;
-	font-size: 16px;
-	font-weight: 500;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-button-font-weight);
 	line-height: 24px;
 	position: relative;
 	text-decoration: none;
@@ -1266,7 +1266,7 @@ body.daynight-home-page .daynight-home-footer-contact {
 
 body.daynight-home-page .daynight-home-footer-contact__phone {
 	color: #fff;
-	font-weight: 500;
+	font-weight: var(--sa-weight-medium);
 	margin-bottom: 8px;
 }
 
@@ -1274,8 +1274,8 @@ body.daynight-home-page .daynight-home-footer-contact__phone-link,
 body.daynight-home-page .daynight-home-footer-contact__address {
 	color: #fff;
 	display: flex;
-	font-size: 18px;
-	font-weight: 500;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-weight-medium);
 	line-height: 26px;
 }
 
@@ -1290,15 +1290,15 @@ body.daynight-home-page .daynight-home-footer-contact__address {
 
 body.daynight-home-page .daynight-home-footer-contact__note {
 	color: #9fa1a4;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 22px;
 	margin-bottom: 16px;
 }
 
 body.daynight-home-page .daynight-home-footer-contact__heading {
 	color: #fff;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-heading);
 	line-height: 24px;
 	margin-bottom: 8px;
 }
@@ -1394,8 +1394,8 @@ body.daynight-home-page .daynight-home-footer-contact__cta {
 	border-radius: 8px;
 	color: #fff;
 	display: inline-flex;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	line-height: 1.2;
 	justify-content: center;
 	min-height: 52px;
@@ -1464,8 +1464,8 @@ body.daynight-home-page .daynight-vehicle-type-card:hover {
 	align-items: center;
 	border-radius: 12px;
 	display: inline-flex;
-	font-size: 14px !important;
-	font-weight: 600;
+	font-size: var(--sa-text-caption) !important;
+	font-weight: var(--sa-weight-semibold);
 	gap: 10px;
 	height: 44px;
 	justify-content: center;
@@ -1792,7 +1792,7 @@ body.daynight-home-page .daynight-home-hero,
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title {
 		background: transparent;
-		font-size: clamp(48px, 4.2vw, 66px) !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
 		line-height: 1.03 !important;
 		margin-bottom: 10px !important;
 		padding: 0;
@@ -1801,8 +1801,8 @@ body.daynight-home-page .daynight-home-hero,
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__subtitle,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__subtitle {
 		color: #fff;
-		font-size: clamp(18px, 1.55vw, 24px);
-		font-weight: 600;
+		font-size: var(--sa-text-2xl);
+		font-weight: var(--sa-weight-semibold);
 		letter-spacing: 0 !important;
 		line-height: 1.2;
 		margin: 0 0 22px !important;
@@ -1836,8 +1836,8 @@ body.daynight-home-page .daynight-home-hero,
 		border-radius: 999px;
 		color: #fff !important;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		letter-spacing: 0 !important;
 		line-height: 1.15;
@@ -1932,8 +1932,8 @@ body.daynight-home-page .daynight-home-hero,
 		background: transparent;
 		box-decoration-break: clone;
 		display: inline-block;
-		font-size: 18px;
-		font-weight: 600;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-semibold);
 		margin-bottom: 26px !important;
 		padding: 0;
 	}
@@ -2095,7 +2095,7 @@ body.daynight-home-page .daynight-home-hero,
 		display: block;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		font-weight: 700 !important;
+		font-weight: var(--sa-weight-strong) !important;
 		white-space: nowrap;
 	}
 
@@ -2155,8 +2155,8 @@ body.daynight-home-page .daynight-home-hero,
 		clip: auto !important;
 		color: #667085 !important;
 		display: block;
-		font-size: 12px !important;
-		font-weight: 600 !important;
+		font-size: var(--sa-text-caption) !important;
+		font-weight: var(--sa-weight-semibold) !important;
 		height: auto !important;
 		line-height: 1.1;
 		margin: 0 0 3px;
@@ -2169,8 +2169,8 @@ body.daynight-home-page .daynight-home-hero,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__quick-trigger strong {
 		color: #111827;
 		display: block;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.18;
 		min-width: 0;
 		overflow: hidden;
@@ -2262,8 +2262,8 @@ body.daynight-home-page .daynight-home-hero,
 		color: #475467;
 		cursor: pointer;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 700;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-strong);
 		height: 34px;
 		justify-content: center;
 		letter-spacing: 0 !important;
@@ -2343,8 +2343,8 @@ body.daynight-home-page .daynight-home-hero,
 		border-radius: 999px;
 		color: #fff !important;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		letter-spacing: 0 !important;
 		line-height: 1.15;
@@ -2456,8 +2456,8 @@ body.daynight-home-page .daynight-home-hero,
 		color: #475467;
 		cursor: pointer;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 700;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-strong);
 		height: 34px;
 		justify-content: center;
 		letter-spacing: 0 !important;
@@ -2679,8 +2679,8 @@ body.daynight-home-page
 		border-radius: 999px;
 		color: rgba(255, 255, 255, 0.94);
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		gap: 7px;
 		line-height: 1;
 		margin: 0 0 14px;
@@ -2730,8 +2730,8 @@ body.daynight-home-page
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__subtitle,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__subtitle {
 		color: rgba(255, 255, 255, 0.94);
-		font-size: clamp(16px, 1.12vw, 18px);
-		font-weight: 700;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 		margin: 0 !important;
 		max-width: 920px;
@@ -2754,8 +2754,8 @@ body.daynight-home-page
 		border: 1px solid rgba(255, 255, 255, 0.78);
 		border-radius: 8px;
 		color: #111827;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1;
 		padding: 10px 14px;
 		text-decoration: none;
@@ -2831,8 +2831,8 @@ body.daynight-home-page
 		border-radius: 999px;
 		color: #536174;
 		cursor: pointer;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1;
 		min-height: 32px;
 		padding: 0 17px;
@@ -2952,8 +2952,8 @@ body.daynight-home-page
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit {
 		color: #fff !important;
 		cursor: pointer;
-		font-size: 20px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1;
 		text-decoration: none;
 	}
@@ -3272,8 +3272,8 @@ body.daynight-home-page
 	.daynight-home-nav__submenu.daynight-mega--vehicles
 	.daynight-mega__link-title {
 	color: #1c1c1c;
-	font-size: 16px;
-	font-weight: 700;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-strong);
 	line-height: 24px;
 	margin-bottom: 12px;
 }
@@ -3297,7 +3297,7 @@ body.daynight-home-page
 	.daynight-mega__link-list
 	a {
 	color: #5c5e62;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 22px;
 }
 
@@ -3337,8 +3337,8 @@ body.daynight-home-page
 .daynight-mega-car__title {
 	color: #1c1c1c;
 	display: block;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-weight-heading);
 	line-height: 25px;
 	margin-bottom: 2px;
 	white-space: nowrap;
@@ -3347,7 +3347,7 @@ body.daynight-home-page
 .daynight-mega-car__meta {
 	color: #5c5e62;
 	display: block;
-	font-size: 13px;
+	font-size: var(--sa-text-caption);
 	line-height: 18px;
 	margin-bottom: 8px;
 	white-space: nowrap;
@@ -3361,7 +3361,7 @@ body.daynight-home-page
 
 .daynight-mega-car__actions span {
 	color: #111827;
-	font-size: 13px;
+	font-size: var(--sa-text-caption);
 	line-height: 18px;
 	text-decoration: underline;
 	text-underline-offset: 3px;
@@ -3386,8 +3386,8 @@ body.daynight-home-page
 	border-radius: 8px;
 	color: #fff !important;
 	display: inline-flex;
-	font-size: 18px;
-	font-weight: 700;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	height: 48px;
 	justify-content: center;
 	line-height: 22px;
@@ -3410,13 +3410,13 @@ body.daynight-home-page
 
 .daynight-mega__footer-copy strong {
 	color: #111827;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 24px;
 }
 
 .daynight-mega__footer-copy span {
 	color: #667085;
-	font-size: 13px;
+	font-size: var(--sa-text-caption);
 	line-height: 20px;
 }
 
@@ -3446,13 +3446,13 @@ body.daynight-home-page
 	}
 
 	.daynight-header-search__title {
-		font-size: 22px;
+		font-size: var(--sa-text-card-title);
 		margin-bottom: 24px;
 	}
 
 	.daynight-header-search__input,
 	.daynight-header-search__input::placeholder {
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		line-height: 24px;
 	}
 }
@@ -3529,7 +3529,7 @@ body.daynight-home-page
 		.daynight-mega__link-list
 		a {
 		color: #cfd2d8;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		padding-left: 40px;
 	}
@@ -3545,7 +3545,7 @@ body.daynight-home-page
 
 	#daynight-home-mobile-nav .daynight-mega-car__title {
 		color: #fff;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		white-space: normal;
 	}
@@ -3580,13 +3580,13 @@ body.daynight-home-page
 
 	#daynight-home-mobile-nav .daynight-mega__footer-copy strong {
 		color: #fff;
-		font-size: 13px;
+		font-size: var(--sa-text-caption);
 		line-height: 18px;
 	}
 
 	#daynight-home-mobile-nav .daynight-mega__footer-copy span {
 		color: #cfd2d8;
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		line-height: 17px;
 	}
 }
@@ -3839,8 +3839,8 @@ body.daynight-home-page .daynight-home-inventory__title {
 body.daynight-home-page .daynight-home-inventory__title h2 {
 	color: #fff;
 	font-family: var(--sa-font) !important;
-	font-size: clamp(31px, 2.7vw, 40px);
-	font-weight: var(--sa-home-weight-strong);
+	font-size: var(--sa-heading-section);
+	font-weight: var(--sa-weight-heading);
 	letter-spacing: 0 !important;
 	line-height: 1.28;
 	margin: 0;
@@ -3850,8 +3850,8 @@ body.daynight-home-page .daynight-home-inventory__title h2 {
 
 body.daynight-home-page .daynight-home-inventory__title p {
 	color: rgba(255, 255, 255, 0.86);
-	font-size: 16px;
-	font-weight: 500;
+	font-size: var(--sa-type-body);
+	font-weight: var(--sa-weight-medium);
 	line-height: 1.45;
 	margin: 0;
 	max-width: 620px;
@@ -3878,8 +3878,8 @@ body.daynight-home-page .daynight-home-inventory__header-cta {
 	color: #111827 !important;
 	display: inline-flex;
 	font-family: var(--sa-font) !important;
-	font-size: var(--sa-text-desktop-action, 18px);
-	font-weight: var(--sa-home-weight-medium);
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	gap: 8px;
 	justify-content: center;
 	line-height: 1;
@@ -3979,8 +3979,8 @@ body.daynight-home-page .daynight-home-inventory__header-cta:active {
 	body.daynight-home-page .daynight-home-section-banner h2,
 	body.daynight-home-page .daynight-home-section-heading--vehicle-types h2 {
 		color: #fff !important;
-		font-size: clamp(31px, 2.7vw, 40px);
-		font-weight: 600;
+		font-size: var(--sa-heading-section);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0 !important;
 		line-height: 1.08;
 		margin: 0;
@@ -3996,8 +3996,8 @@ body.daynight-home-page .daynight-home-inventory__header-cta:active {
 		box-shadow: none !important;
 		color: #111827 !important;
 		display: inline-flex;
-		font-size: var(--sa-text-desktop-action, 18px);
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		justify-content: center;
 		line-height: 1;
@@ -4077,8 +4077,8 @@ body.daynight-home-page .daynight-home-inventory__pill {
 	background: #fff !important;
 	color: #111827 !important;
 	padding: 0 14px;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 1;
 	text-decoration: none;
 	white-space: nowrap;
@@ -4146,8 +4146,8 @@ body.daynight-home-page .daynight-home-inventory__footer a.daynight-home-invento
 	box-shadow: none;
 	color: #fff !important;
 	display: inline-flex;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	gap: 8px;
 	justify-content: center;
 	line-height: 1;
@@ -4217,11 +4217,11 @@ body.daynight-home-page
 	}
 
 	body.daynight-home-page .daynight-home-inventory__title h2 {
-		font-size: clamp(30px, 9vw, 40px);
+		font-size: var(--sa-heading-section);
 	}
 
 	body.daynight-home-page .daynight-home-inventory__title p {
-		font-size: 18px;
+		font-size: var(--sa-type-body);
 	}
 
 	body.daynight-home-page .daynight-home-inventory__header-actions {
@@ -4348,8 +4348,8 @@ body.daynight-home-page .daynight-home-inventory-card__status {
 	border-radius: 8px;
 	color: #fff !important;
 	display: flex;
-	font-size: 14px;
-	font-weight: 700;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-strong);
 	justify-content: center;
 	line-height: 1;
 	min-height: 32px;
@@ -4452,7 +4452,7 @@ body.daynight-home-page .daynight-home-inventory-card__badge {
 	box-shadow: 0 10px 22px rgba(15, 23, 42, 0.16);
 	color: #fff;
 	display: flex;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	gap: 4px;
 	justify-content: center;
 	line-height: 1;
@@ -4471,7 +4471,7 @@ body.daynight-home-page .daynight-home-inventory-card__badge > img {
 
 body.daynight-home-page .daynight-home-inventory-card__badge-link {
 	color: #fff;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 1;
 	pointer-events: auto;
 }
@@ -4506,8 +4506,8 @@ body.daynight-home-page
 
 body.daynight-home-page .daynight-home-inventory-card__title {
 	display: -webkit-box;
-	font-size: 18px;
-	font-weight: 500;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-weight-heading);
 	height: 52px;
 	line-height: 1.44;
 	max-height: 52px;
@@ -4532,8 +4532,8 @@ body.daynight-home-page .daynight-home-inventory-card__price {
 	align-items: center !important;
 	column-gap: 18px;
 	display: grid !important;
-	font-size: 20px;
-	font-weight: 600;
+	font-size: var(--sa-text-xl);
+	font-weight: var(--sa-weight-semibold);
 	grid-template-columns: minmax(0, 1fr) auto;
 	line-height: 1.44;
 	margin-bottom: 8px !important;
@@ -4599,8 +4599,8 @@ body .daynight-card-price__value {
 	align-self: start;
 	display: inline-flex;
 	flex: 0 0 auto;
-	font-size: 24px;
-	font-weight: 700;
+	font-size: var(--sa-text-2xl);
+	font-weight: var(--sa-weight-strong);
 	justify-self: start;
 	letter-spacing: 0;
 	line-height: 1.05;
@@ -4627,7 +4627,7 @@ body .daynight-card-price__link {
 }
 
 body .daynight-card-price__monthly {
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 20px;
 }
 
@@ -4635,7 +4635,7 @@ body .daynight-card-price__link {
 	align-items: center;
 	color: #475569 !important;
 	display: inline-flex;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 20px;
 	min-height: 20px;
 	text-decoration-color: currentColor !important;
@@ -4676,7 +4676,7 @@ body.daynight-home-page .daynight-home-inventory-card__specs li img {
 
 body.daynight-home-page .daynight-home-inventory-card__specs li span {
 	color: #344054;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -4748,8 +4748,8 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 
 .daynight-inner-hero h1 {
 	color: #fff;
-	font-size: clamp(42px, 5vw, 74px);
-	font-weight: 600;
+	font-size: var(--sa-text-desktop-hero-title);
+	font-weight: var(--sa-weight-heading);
 	letter-spacing: 0;
 	line-height: 1.02;
 	margin: 0 0 16px;
@@ -4758,7 +4758,7 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 
 .daynight-inner-hero p {
 	color: rgba(255, 255, 255, 0.86);
-	font-size: 19px;
+	font-size: var(--sa-type-body);
 	line-height: 1.55;
 	margin: 0;
 	max-width: 650px;
@@ -4791,7 +4791,7 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 
 .daynight-about-location__content h2 {
 	color: #111827;
-	font-size: clamp(34px, 3vw, 52px);
+	font-size: var(--sa-text-desktop-hero-title);
 	letter-spacing: 0;
 	line-height: 1.08;
 	margin: 0 0 18px;
@@ -4799,8 +4799,8 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 
 .daynight-about-location__content .eyebrow {
 	color: #111827;
-	font-size: 13px;
-	font-weight: 700;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-strong);
 	letter-spacing: 0;
 	margin-bottom: 12px;
 	text-transform: uppercase;
@@ -4816,8 +4816,8 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 	align-items: flex-start;
 	color: #111827;
 	display: flex;
-	font-size: 18px;
-	font-weight: 500;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-weight-medium);
 	gap: 10px;
 	line-height: 1.42;
 }
@@ -4907,7 +4907,7 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 .daynight-review-card__text {
 	color: #344054;
 	flex: 1 1 auto;
-	font-size: 18px;
+	font-size: var(--sa-text-lg);
 	line-height: 1.58;
 	margin: 0 0 22px;
 }
@@ -4919,13 +4919,13 @@ body.daynight-home-page .daynight-vehicle-type-card__count {
 
 .daynight-review-card__person strong {
 	color: #111827;
-	font-size: 16px;
-	font-weight: 700;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-heading);
 }
 
 .daynight-review-card__person span {
 	color: #667085;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 }
 
 .daynight-brand-card {
@@ -5052,7 +5052,7 @@ body.daynight-home-page .daynight-home-section-panel--reviews .daynight-home-rev
 }
 
 .daynight-home-review-card__description {
-	font-size: 18px;
+	font-size: var(--sa-type-body);
 	line-height: 28px;
 	margin: 0 0 16px;
 }
@@ -5080,15 +5080,15 @@ body.daynight-home-page .daynight-home-section-panel--reviews .daynight-home-rev
 }
 
 .daynight-home-review-card__name {
-	font-size: 20px;
-	font-weight: 600;
+	font-size: var(--sa-text-xl);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 28px;
 	margin: 0 0 2px;
 }
 
 .daynight-home-review-card__meta {
 	color: #4b4b4b;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	margin: 0;
 }
 
@@ -5122,28 +5122,28 @@ body.daynight-home-page .daynight-home-section-panel--reviews .daynight-home-rev
 
 .daynight-vehicle-type-card__title {
 	color: #1c1c1c;
-	font-size: 26px;
-	font-weight: 600;
+	font-size: var(--sa-text-2xl);
+	font-weight: var(--sa-weight-heading);
 	line-height: 34px;
 	margin: 0 0 4px;
 }
 
 .daynight-vehicle-type-card__count {
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 22px;
 	margin: 0;
 }
 
 .daynight-brand-card__name {
 	color: #1c1c1c;
-	font-size: 20px;
-	font-weight: 600;
+	font-size: var(--sa-text-xl);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 28px;
 	margin: 0 0 2px;
 }
 
 .daynight-brand-card__count {
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 22px;
 	margin: 0;
 }
@@ -5224,8 +5224,8 @@ body.daynight-home-page .daynight-home-why__reason {
 	align-items: center;
 	color: #fff;
 	display: flex;
-	font-size: 18px;
-	font-weight: 500;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-weight-medium);
 	gap: 12px;
 	line-height: 1.35;
 	margin-bottom: 8px;
@@ -5252,8 +5252,8 @@ body.daynight-home-page .daynight-home-why__cta {
 	box-shadow: 0 14px 28px rgba(2, 6, 23, 0.22) !important;
 	color: #111827 !important;
 	display: inline-flex;
-	font-size: var(--sa-text-desktop-action, 18px);
-	font-weight: 600;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	height: 52px;
 	justify-content: center;
 	max-width: fit-content;
@@ -5304,8 +5304,8 @@ body.daynight-home-page .daynight-home-metric__counter {
 body.daynight-home-page .daynight-home-metric__number,
 body.daynight-home-page .daynight-home-metric__value {
 	color: #fff !important;
-	font-size: 44px;
-	font-weight: 600;
+	font-size: var(--sa-heading-section);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 50px;
 	margin-bottom: 4px;
 	text-shadow: 0 12px 28px rgba(17, 24, 39, 0.22);
@@ -5313,8 +5313,8 @@ body.daynight-home-page .daynight-home-metric__value {
 
 body.daynight-home-page .daynight-home-metric__label {
 	color: #fee2e2;
-	font-size: 18px;
-	font-weight: 500;
+	font-size: var(--sa-text-lg);
+	font-weight: var(--sa-weight-medium);
 	line-height: 1.2;
 	margin: 0;
 	text-align: center;
@@ -5399,8 +5399,8 @@ body.daynight-home-page .daynight-home-metric__label {
 
 .daynight-home-action-card__title {
 	color: #fff !important;
-	font-size: clamp(23px, 1.8vw, 29px);
-	font-weight: 600;
+	font-size: var(--sa-text-panel-title);
+	font-weight: var(--sa-weight-heading);
 	line-height: 1.18;
 	text-decoration: none;
 }
@@ -5430,8 +5430,8 @@ body.daynight-home-page .daynight-home-metric__label {
 	border-radius: 12px;
 	color: #111827 !important;
 	display: inline-flex;
-	font-size: var(--sa-text-desktop-action, 18px);
-	font-weight: 600;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	height: 52px;
 	justify-content: center;
 	max-width: fit-content;
@@ -5461,8 +5461,8 @@ body.daynight-home-page .daynight-home-section-heading__cta {
 	box-shadow: none !important;
 	color: #fff !important;
 	display: inline-flex;
-	font-size: var(--sa-text-desktop-action, 18px);
-	font-weight: 600;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	gap: 8px;
 	justify-content: center;
 	line-height: 1;
@@ -5581,12 +5581,12 @@ body.daynight-home-page .progress-wrap {
 	}
 
 	.daynight-inner-hero h1 {
-		font-size: clamp(36px, 9vw, 58px);
+		font-size: var(--sa-text-desktop-hero-title);
 		max-width: 680px;
 	}
 
 	.daynight-inner-hero p {
-		font-size: 18px;
+		font-size: var(--sa-type-body);
 		max-width: 560px;
 	}
 
@@ -5621,13 +5621,13 @@ body.daynight-home-page .progress-wrap {
 	}
 
 	.daynight-inner-hero h1 {
-		font-size: 34px;
+		font-size: var(--sa-type-page);
 		line-height: 1.08;
 		margin-bottom: 12px;
 	}
 
 	.daynight-inner-hero p {
-		font-size: 15px;
+		font-size: var(--sa-type-body);
 		line-height: 1.45;
 	}
 
@@ -5649,7 +5649,7 @@ body.daynight-home-page .progress-wrap {
 	}
 
 	.daynight-about-location__content h2 {
-		font-size: 32px;
+		font-size: var(--sa-type-page);
 	}
 
 	.daynight-about-location__images {
@@ -5727,7 +5727,7 @@ body.daynight-home-page .daynight-vehicle-type-card__image img {
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title {
-		font-size: 36px !important;
+		font-size: var(--sa-heading-section) !important;
 		letter-spacing: 0 !important;
 		line-height: 1.12 !important;
 		margin-bottom: 14px !important;
@@ -5735,7 +5735,7 @@ body.daynight-home-page .daynight-vehicle-type-card__image img {
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__content > p {
-		font-size: 16px !important;
+		font-size: var(--sa-type-body) !important;
 		line-height: 1.42 !important;
 		margin-bottom: 20px !important;
 		max-width: 360px;
@@ -5764,7 +5764,7 @@ body.daynight-home-page .daynight-vehicle-type-card__image img {
 	}
 
 	body.daynight-home-page .daynight-home-section-heading h2 {
-		font-size: 29px !important;
+		font-size: var(--sa-text-panel-title) !important;
 		line-height: 1.16 !important;
 	}
 
@@ -5835,7 +5835,7 @@ body.daynight-home-page .daynight-vehicle-type-card__image img {
 
 	body.daynight-home-page .daynight-home-inventory-card__title,
 	body.daynight-home-page .daynight-home-inventory-card__title a {
-		font-size: 20px !important;
+		font-size: var(--sa-text-xl) !important;
 		line-height: 1.35 !important;
 	}
 
@@ -5917,19 +5917,19 @@ body.daynight-home-page .daynight-vehicle-type-card__image img {
 	}
 
 	body.daynight-home-page .daynight-home-why__title {
-		font-size: 30px !important;
+		font-size: var(--sa-text-panel-title) !important;
 		line-height: 1.16 !important;
 	}
 
 	body.daynight-home-page .daynight-home-why__copy {
 		color: #d1d5db !important;
-		font-size: 16px !important;
+		font-size: var(--sa-type-body) !important;
 		line-height: 1.55 !important;
 	}
 
 	body.daynight-home-page .daynight-home-why__reason {
 		align-items: flex-start !important;
-		font-size: 17px !important;
+		font-size: var(--sa-text-control) !important;
 		line-height: 1.35 !important;
 	}
 
@@ -5945,12 +5945,12 @@ body.daynight-home-page .daynight-vehicle-type-card__image img {
 
 	body.daynight-home-page .daynight-home-metric__number,
 	body.daynight-home-page .daynight-home-metric__value {
-		font-size: 38px !important;
+		font-size: var(--sa-heading-section) !important;
 		line-height: 1 !important;
 	}
 
 	body.daynight-home-page .daynight-home-metric__label {
-		font-size: 14px !important;
+		font-size: var(--sa-text-caption) !important;
 		line-height: 1.35 !important;
 	}
 
@@ -6054,7 +6054,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location,
 	color: #fff !important;
 	cursor: pointer !important;
 	font: inherit !important;
-	font-weight: 700 !important;
+	font-weight: var(--sa-weight-strong) !important;
 	text-decoration: none !important;
 	transform: none !important;
 	transition:
@@ -6217,8 +6217,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location-map-la
 	border-radius: 4px !important;
 	bottom: 7px !important;
 	color: #111827 !important;
-	font-size: 10px !important;
-	font-weight: 700 !important;
+	font-size: var(--sa-text-xs) !important;
+	font-weight: var(--sa-weight-strong) !important;
 	left: 8px !important;
 	letter-spacing: 0.03em !important;
 	line-height: 1 !important;
@@ -6239,8 +6239,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location-previe
 body.daynight-home-page .daynight-home-hero .daynight-home-hero__location-preview-copy strong,
 .daynight-home-shell .daynight-home-hero .daynight-home-hero__location-preview-copy strong {
 	color: #101828 !important;
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-heading) !important;
 	letter-spacing: 0 !important;
 	line-height: 20px !important;
 	white-space: nowrap !important;
@@ -6249,8 +6249,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location-previe
 body.daynight-home-page .daynight-home-hero .daynight-home-hero__location-preview-copy span,
 .daynight-home-shell .daynight-home-hero .daynight-home-hero__location-preview-copy span {
 	color: #667085 !important;
-	font-size: 12px !important;
-	font-weight: 500 !important;
+	font-size: var(--sa-text-caption) !important;
+	font-weight: var(--sa-weight-medium) !important;
 	line-height: 16px !important;
 	white-space: nowrap !important;
 }
@@ -6261,8 +6261,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location-previe
 	background: #111827 !important;
 	border-radius: 6px !important;
 	color: #fff !important;
-	font-size: 12px !important;
-	font-weight: 600 !important;
+	font-size: var(--sa-text-caption) !important;
+	font-weight: var(--sa-weight-semibold) !important;
 	line-height: 1 !important;
 	margin-top: 4px !important;
 	padding: 9px 11px !important;
@@ -6362,15 +6362,15 @@ body.daynight-home-page .daynight-home-header .daynight-header-logo__sub {
 }
 
 body.daynight-home-page .daynight-home-header .daynight-header-logo__word {
-	font-size: 29px !important;
-	font-weight: 800 !important;
+	font-size: var(--sa-text-panel-title) !important;
+	font-weight: var(--sa-weight-strong) !important;
 	line-height: 0.94 !important;
 }
 
 body.daynight-home-page .daynight-home-header .daynight-header-logo__sub {
 	color: #111827 !important;
-	font-size: 16px !important;
-	font-weight: 800 !important;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-strong) !important;
 	line-height: 1 !important;
 	margin-top: 4px !important;
 }
@@ -6432,8 +6432,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 .daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
 	background: transparent !important;
 	color: #fff !important;
-	font-size: 88px !important;
-	font-weight: var(--sa-home-weight-display) !important;
+	font-size: var(--sa-text-desktop-hero-title) !important;
+	font-weight: var(--sa-weight-heading) !important;
 	line-height: 1.16 !important;
 	margin: 0 0 18px !important;
 	max-width: 1180px !important;
@@ -6456,7 +6456,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__subtitle,
 	background: transparent !important;
 	color: rgba(255, 255, 255, 0.94) !important;
 	font-family: var(--sa-font) !important;
-	font-size: clamp(18px, 1.35vw, 22px) !important;
+	font-size: var(--sa-text-card-title) !important;
 	font-weight: var(--sa-home-weight-medium) !important;
 	line-height: 1.35 !important;
 	margin: 0 0 20px !important;
@@ -6491,8 +6491,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location,
 	box-shadow: 0 10px 28px rgba(3, 7, 15, 0.26) !important;
 	color: #fff !important;
 	display: inline-flex !important;
-	font-size: 16px !important;
-	font-weight: 600 !important;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-semibold) !important;
 	gap: 8px !important;
 	line-height: 1.25 !important;
 	padding: 10px 14px !important;
@@ -6670,8 +6670,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 	box-shadow: none !important;
 	color: #fff !important;
 	display: inline-flex !important;
-	font-size: var(--sa-home-control-text) !important;
-	font-weight: var(--sa-home-weight-semibold) !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
 	gap: 0 !important;
 	justify-content: center !important;
 	min-height: 56px !important;
@@ -6724,8 +6724,8 @@ body.daynight-home-page .daynight-home-inventory__heading {
 
 	body.daynight-home-page .daynight-home-inventory-card__title,
 	body.daynight-home-page .daynight-home-inventory-card__title a {
-		font-size: 20px !important;
-		font-weight: 600 !important;
+		font-size: var(--sa-text-xl) !important;
+		font-weight: var(--sa-weight-semibold) !important;
 		height: 54px !important;
 		line-height: 1.35 !important;
 		max-height: 54px !important;
@@ -6738,7 +6738,7 @@ body.daynight-home-page .daynight-home-inventory__heading {
 
 	body.daynight-home-page .daynight-home-inventory-card__price {
 		column-gap: 8px !important;
-		font-size: 18px !important;
+		font-size: var(--sa-text-lg) !important;
 		line-height: 1.25 !important;
 		min-height: 34px !important;
 	}
@@ -6754,7 +6754,7 @@ body.daynight-home-page .daynight-home-inventory__heading {
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
-		font-size: 68px !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__filters,
@@ -6776,13 +6776,13 @@ body.daynight-home-page .daynight-home-inventory__heading {
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
-		font-size: 46px !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
 		line-height: 1 !important;
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__subtitle,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__subtitle {
-		font-size: 17px !important;
+		font-size: var(--sa-text-control) !important;
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__filters,
@@ -6837,8 +6837,8 @@ body.daynight-home-page
 	.daynight-home-header__logo-mobile
 	.daynight-header-logo__sub {
 	font-family: var(--sa-font) !important;
-	font-size: 32px !important;
-	font-weight: 800 !important;
+	font-size: var(--sa-type-page) !important;
+	font-weight: var(--sa-weight-strong) !important;
 	letter-spacing: 0 !important;
 	line-height: 1 !important;
 	margin: 0 !important;
@@ -6878,8 +6878,8 @@ body.daynight-home-page
 	.daynight-sticky-logo
 	.daynight-header-logo__sub {
 	font-family: var(--sa-font) !important;
-	font-size: 20px !important;
-	font-weight: 800 !important;
+	font-size: var(--sa-text-xl) !important;
+	font-weight: var(--sa-weight-strong) !important;
 	letter-spacing: 0 !important;
 	line-height: 1 !important;
 	margin: 0 !important;
@@ -6905,15 +6905,15 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__filters,
 body.daynight-home-page .daynight-home-hero .filter-select-dropdown__text,
 .daynight-home-shell .daynight-home-hero .filter-select-dropdown__text {
 	font-family: var(--sa-font) !important;
-	font-size: 20px !important;
-	font-weight: 600 !important;
+	font-size: var(--sa-text-xl) !important;
+	font-weight: var(--sa-weight-semibold) !important;
 }
 
 body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 .daynight-home-shell .daynight-home-hero .daynight-home-hero__submit {
 	font-family: var(--sa-font) !important;
-	font-size: 20px !important;
-	font-weight: 600 !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
 	min-width: 146px !important;
 	padding: 0 24px !important;
 }
@@ -6934,14 +6934,14 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 
 	body.daynight-home-page .daynight-home-inventory-card__title,
 	body.daynight-home-page .daynight-home-inventory-card__title a {
-		font-size: 19px !important;
+		font-size: var(--sa-text-xl) !important;
 		height: 52px !important;
 		line-height: 1.35 !important;
 		max-height: 52px !important;
 	}
 
 	body.daynight-home-page .daynight-home-inventory-card__price {
-		font-size: 20px !important;
+		font-size: var(--sa-text-xl) !important;
 		min-height: 40px !important;
 	}
 }
@@ -7056,8 +7056,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 	border-radius: 8px !important;
 	color: #fff !important;
 	font-family: var(--sa-font) !important;
-	font-size: var(--sa-home-control-text) !important;
-	font-weight: var(--sa-home-weight-semibold) !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
 	height: 60px !important;
 	min-height: 60px !important;
 	min-width: 260px !important;
@@ -7090,7 +7090,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__location,
 	border-radius: 8px !important;
 	box-shadow: none !important;
 	font-family: var(--sa-font) !important;
-	font-size: 16px !important;
+	font-size: var(--sa-text-base) !important;
 	font-weight: var(--sa-home-weight-semibold) !important;
 	line-height: 1.25 !important;
 	padding: 9px 13px !important;
@@ -7105,8 +7105,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	display: flex !important;
 	flex-direction: column !important;
 	font-family: var(--sa-font) !important;
-	font-size: clamp(60px, 4.2vw, 76px) !important;
-	font-weight: var(--sa-home-weight-display) !important;
+	font-size: var(--sa-text-desktop-hero-title) !important;
+	font-weight: var(--sa-weight-heading) !important;
 	height: auto !important;
 	justify-content: center !important;
 	line-height: 1.16 !important;
@@ -7241,8 +7241,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 	box-shadow: none !important;
 	color: #111827 !important;
 	font-family: var(--sa-font) !important;
-	font-size: var(--sa-home-control-text) !important;
-	font-weight: var(--sa-home-weight-semibold) !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
 	height: 58px !important;
 	letter-spacing: 0 !important;
 	min-height: 58px !important;
@@ -7268,7 +7268,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit:focus-vi
 @media (max-width: 1199px) {
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
-		font-size: 62px !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
 		min-height: 62px !important;
 	}
 
@@ -7282,7 +7282,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit:focus-vi
 @media (max-width: 767px) {
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
-		font-size: 42px !important;
+		font-size: var(--sa-heading-section) !important;
 		min-height: 46px !important;
 		white-space: normal !important;
 	}
@@ -7468,8 +7468,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 	box-shadow: none !important;
 	color: #fff !important;
 	font-family: var(--sa-font) !important;
-	font-size: var(--sa-home-control-text) !important;
-	font-weight: var(--sa-home-weight-semibold) !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
 	height: 60px !important;
 	letter-spacing: 0 !important;
 	min-height: 60px !important;
@@ -7496,8 +7496,8 @@ body.daynight-home-page .daynight-home-hero .filter-select-dropdown__text,
 
 body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 .daynight-home-shell .daynight-home-hero .daynight-home-hero__submit {
-	font-size: var(--sa-home-control-text) !important;
-	font-weight: var(--sa-home-weight-cta) !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
 	letter-spacing: 0 !important;
 }
 
@@ -7511,17 +7511,17 @@ body.daynight-home-page .daynight-brand-grid .daynight-brand-card__name,
 body.daynight-home-page .daynight-vehicle-type-card__title {
 	color: #151923 !important;
 	font-family: var(--sa-font) !important;
-	font-weight: var(--sa-home-card-title-weight) !important;
+	font-weight: var(--sa-weight-heading) !important;
 	letter-spacing: 0 !important;
 }
 
 body.daynight-home-page .daynight-brand-grid .daynight-brand-card__name {
-	font-size: 21px !important;
+	font-size: var(--sa-text-card-title) !important;
 	line-height: 1.24 !important;
 }
 
 body.daynight-home-page .daynight-vehicle-type-card__title {
-	font-size: 26px !important;
+	font-size: var(--sa-text-2xl) !important;
 	line-height: 1.24 !important;
 }
 
@@ -7529,7 +7529,7 @@ body.daynight-home-page .daynight-brand-grid .daynight-brand-card__count,
 body.daynight-home-page .daynight-vehicle-type-card__count {
 	color: #475569 !important;
 	font-family: var(--sa-font) !important;
-	font-size: 14px !important;
+	font-size: var(--sa-text-caption) !important;
 	font-weight: var(--sa-home-weight-regular) !important;
 	line-height: 1.35 !important;
 }
@@ -7620,8 +7620,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__submit,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__submit {
-		font-size: var(--sa-text-hero-control) !important;
-		font-weight: var(--sa-weight-semibold) !important;
+		font-size: var(--sa-button-font-size) !important;
+		font-weight: var(--sa-button-font-weight) !important;
 	}
 }
 
@@ -7679,7 +7679,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
-		font-size: clamp(56px, 4.45vw, 82px) !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
 		letter-spacing: -0.035em !important;
 		line-height: 0.92 !important;
 		margin: 0 0 16px !important;
@@ -7700,7 +7700,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		color: #fff !important;
 		display: inline !important;
 		font: inherit !important;
-		font-weight: 850 !important;
+		font-weight: var(--sa-weight-strong) !important;
 		letter-spacing: inherit !important;
 		line-height: inherit !important;
 		-webkit-text-fill-color: #fff !important;
@@ -7710,14 +7710,14 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title-text strong {
 		color: #e10d22 !important;
 		font: inherit !important;
-		font-weight: 850 !important;
+		font-weight: var(--sa-weight-heading) !important;
 		-webkit-text-fill-color: #e10d22 !important;
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__subtitle,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__subtitle {
-		font-size: clamp(20px, 1.55vw, 27px) !important;
-		font-weight: 500 !important;
+		font-size: var(--sa-text-panel-title) !important;
+		font-weight: var(--sa-weight-medium) !important;
 		margin-bottom: 24px !important;
 		max-width: 760px !important;
 	}
@@ -7759,8 +7759,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__search-copy strong,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__search-copy strong {
 		color: #fff !important;
-		font-size: 22px !important;
-		font-weight: 750 !important;
+		font-size: var(--sa-text-card-title) !important;
+		font-weight: var(--sa-weight-heading) !important;
 		letter-spacing: -0.02em !important;
 		line-height: 1.2 !important;
 		white-space: nowrap !important;
@@ -7769,7 +7769,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__search-copy span,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__search-copy span {
 		color: #b8bec7 !important;
-		font-size: 14px !important;
+		font-size: var(--sa-text-caption) !important;
 		line-height: 1.35 !important;
 		white-space: nowrap !important;
 	}
@@ -7825,8 +7825,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__label {
 		color: #6b7280 !important;
 		display: block !important;
-		font-size: 11px !important;
-		font-weight: 700 !important;
+		font-size: var(--sa-text-xs) !important;
+		font-weight: var(--sa-weight-strong) !important;
 		left: 15px !important;
 		letter-spacing: 0.06em !important;
 		line-height: 1 !important;
@@ -7867,7 +7867,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		color: #fff !important;
 		display: inline-flex !important;
 		flex-direction: row-reverse !important;
-		font-size: 16px !important;
+		font-size: var(--sa-button-font-size) !important;
 		gap: 10px !important;
 		height: 64px !important;
 		justify-content: center !important;
@@ -7937,7 +7937,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-inventory__title h2 {
 		color: #111827 !important;
-		font-size: clamp(30px, 2.4vw, 36px) !important;
+		font-size: var(--sa-heading-section) !important;
 		line-height: 1.16 !important;
 		padding: 0 !important;
 	}
@@ -8067,7 +8067,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title,
 	.daynight-home-shell .daynight-home-hero .daynight-home-hero__title {
-		font-size: 54px !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__filters,
@@ -8223,7 +8223,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-option {
 		align-items: center !important;
-		font-size: 16px !important;
+		font-size: var(--sa-text-base) !important;
 		justify-content: center !important;
 		min-width: 0 !important;
 		padding-left: 6px !important;
@@ -8332,8 +8332,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title {
-		font-size: clamp(44px, 3.25vw, 60px) !important;
-		font-weight: 780 !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
+		font-weight: var(--sa-weight-heading) !important;
 		letter-spacing: -0.035em !important;
 		line-height: 1.02 !important;
 		margin: 0 0 14px !important;
@@ -8355,7 +8355,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		color: #fff !important;
 		display: block !important;
 		font: inherit !important;
-		font-weight: inherit !important;
+		font-weight: var(--sa-weight-heading) !important;
 		-webkit-text-fill-color: #fff !important;
 	}
 
@@ -8366,8 +8366,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__subtitle {
 		color: #e1e5e8 !important;
-		font-size: 18px !important;
-		font-weight: 450 !important;
+		font-size: var(--sa-text-lg) !important;
+		font-weight: var(--sa-weight-medium) !important;
 		line-height: 1.45 !important;
 		margin: 0 !important;
 		max-width: 640px !important;
@@ -8437,8 +8437,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__search-copy strong {
 		color: #f7f8f9 !important;
-		font-size: 21px !important;
-		font-weight: 720 !important;
+		font-size: var(--sa-text-card-title) !important;
+		font-weight: var(--sa-weight-heading) !important;
 		letter-spacing: -0.02em !important;
 		white-space: nowrap !important;
 	}
@@ -8446,7 +8446,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__search-copy span {
 		color: #c5cbd1 !important;
 		display: inline !important;
-		font-size: 14px !important;
+		font-size: var(--sa-text-caption) !important;
 		white-space: nowrap !important;
 	}
 
@@ -8466,8 +8466,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	body.daynight-home-page .daynight-home-hero .filter-select-dropdown__text {
 		align-items: center !important;
 		display: flex !important;
-		font-size: 18px !important;
-		font-weight: 520 !important;
+		font-size: var(--sa-text-lg) !important;
+		font-weight: var(--sa-weight-medium) !important;
 		height: 60px !important;
 		line-height: 1.2 !important;
 		padding: 0 40px 0 16px !important;
@@ -8482,8 +8482,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		color: #fff !important;
 		display: inline-flex !important;
 		flex-direction: row-reverse !important;
-		font-size: 16px !important;
-		font-weight: 700 !important;
+		font-size: var(--sa-button-font-size) !important;
+		font-weight: var(--sa-button-font-weight) !important;
 		gap: 10px !important;
 		height: 62px !important;
 		justify-content: center !important;
@@ -8550,7 +8550,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__title {
-		font-size: 44px !important;
+		font-size: var(--sa-heading-section) !important;
 		line-height: 1.04 !important;
 		margin-bottom: 12px !important;
 		min-height: 0 !important;
@@ -8607,7 +8607,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading::before {
-		background: url('/dealer/logo.png') center / contain no-repeat !important;
+		background: url('/brand/daynight-logo-generated.png') center / contain no-repeat !important;
 		content: '' !important;
 		height: 104px !important;
 		opacity: 0.96 !important;
@@ -8721,7 +8721,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-option {
 		align-items: center !important;
 		color: #e4e7ea !important;
-		font-size: 16px !important;
+		font-size: var(--sa-text-base) !important;
 		justify-content: center !important;
 		min-width: 0 !important;
 		padding-left: 6px !important;
@@ -8773,7 +8773,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 	}
 
 	body.daynight-home-page .daynight-home-inventory__heading::before {
-		background: url('/dealer/logo.png') center / contain no-repeat !important;
+		background: url('/brand/daynight-logo-generated.png') center / contain no-repeat !important;
 		content: '' !important;
 		height: 72px !important;
 		opacity: 0.94 !important;
@@ -8992,8 +8992,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		.daynight-home-hero__title {
 		background: transparent !important;
 		color: var(--sa-ink) !important;
-		font-size: clamp(46px, 4.6vw, 72px) !important;
-		font-weight: 900 !important;
+		font-size: var(--sa-text-desktop-hero-title) !important;
+		font-weight: var(--sa-weight-heading) !important;
 		letter-spacing: -0.055em !important;
 		line-height: 0.96 !important;
 		margin: 0 0 24px !important;
@@ -9129,8 +9129,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		border-radius: 10px !important;
 		box-shadow: none !important;
 		flex-direction: row !important;
-		font-size: 14px !important;
-		font-weight: 700 !important;
+		font-size: var(--sa-button-font-size) !important;
+		font-weight: var(--sa-button-font-weight) !important;
 		gap: 0 !important;
 		grid-column: auto !important;
 		height: 48px !important;
@@ -9166,8 +9166,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		align-items: center !important;
 		color: #111827 !important;
 		display: flex !important;
-		font-size: 14px !important;
-		font-weight: 600 !important;
+		font-size: var(--sa-text-caption) !important;
+		font-weight: var(--sa-weight-semibold) !important;
 		height: 46px !important;
 		line-height: 1.2 !important;
 		padding: 0 34px 0 14px !important;
@@ -9195,8 +9195,8 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		background: transparent;
 		border: 0;
 		color: #111827;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		height: 50px;
 		min-width: 0;
 		outline: none;
@@ -9209,7 +9209,7 @@ body.daynight-home-page .daynight-home-hero .daynight-home-hero__condition-optio
 		.daynight-home-hero--cutouts
 		.daynight-home-hero__query::placeholder {
 		color: #6b7280;
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 	}
 
 	body.daynight-home-page

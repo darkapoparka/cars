@@ -202,7 +202,7 @@ const replaceHero = (html: string) => {
 	const models = vehicles.map((vehicle) => vehicle.model).slice(0, 8);
 	const priceOptions = ['30000', '50000', '80000', '120000'].map((value) => `${value} EUR`);
 	const heroSearch = `<div class="search-cars container margin-top-auto wow fadeInUp" data-wow-delay="0.1s">
-	<h1 class="search-cars__title">Find Your Next Promosale Varna Vehicle</h1>
+	<h1 class="search-cars__title">Find Your Next Day Night Auto Vehicle</h1>
 	<p class="search-cars__subtitle text-white mb-20">${escapeHtml(daynightBrand.tagline)}</p>
 
 	<div class="flat-tabs mb-16">
@@ -257,7 +257,7 @@ const replaceHero = (html: string) => {
 			<div class="divider mt-28 mb-24"></div>
 			<div class="search-cars__features">
 				<p class="h3 search-cars__features-title flex items-center gap-8">
-					Promosale Varna Checks
+					Day Night Auto Checks
 					<img src="/assets/icons/minus.svg" alt="minus">
 				</p>
 				<div class="search-cars__features-grid">
@@ -388,7 +388,7 @@ const homeVehicleCard = (vehicle: Vehicle, index: number) => {
 };
 
 const home05HeroSlide = () => `<div class="swiper-slide">
-	<h1 class="search-cars__title text-center effect-item effect-up delay-3">Browse, Compare, Drive <br class="lg-hide"> With Promosale Varna!</h1>
+	<h1 class="search-cars__title text-center effect-item effect-up delay-3">Browse, Compare, Drive <br class="lg-hide"> With Day Night Auto!</h1>
 	<p class="h7 text-white mb-36 text-center effect-item effect-up delay-4">${escapeHtml(daynightBrand.tagline)} and clear appointment support.</p>
 	<a href="/inventory" class="btn btn-white text-primary btn-large-2 font-weight-600 max-w-min capitalize mx-auto effect-item effect-up delay-5">
 		View Inventory
@@ -481,7 +481,7 @@ ${backgrounds}
 			<div class="divider mt-28 mb-24"></div>
 			<div class="search-cars__features">
 				<p class="h3 search-cars__features-title flex items-center gap-8">
-					Promosale Varna Checks
+					Day Night Auto Checks
 					<img src="/assets/icons/minus.svg" alt="minus">
 				</p>
 				<div class="search-cars__features-grid">
@@ -593,7 +593,7 @@ const home05FeaturedInventory = () => `<!-- New Vehicles -->
 <section class="py-100 background-light">
 	<div class="container">
 		<div class="title-section mb-40 wow fadeInUp" data-wow-delay="0.1s">
-			<h2 class="capitalize">Promosale Varna Vehicles</h2>
+			<h2 class="capitalize">Day Night Auto Vehicles</h2>
 			${sectionButton('/inventory?view=4', 'View All')}
 		</div>
 		<div class="daynight-vehicle-pills wow fadeIn mb-40 flex items-center justify-center gap-8 overflow-x-auto" data-wow-delay="0.1s">
@@ -733,7 +733,7 @@ const home05BudgetSection = () => `<!-- Used Cars by Budget -->
 <section class="py-100 flat-tabs">
 	<div class="container">
 		<div class="flex items-center justify-center mb-40 wow fadeInUp">
-			<h2>Promosale Varna by Budget</h2>
+			<h2>Day Night Auto by Budget</h2>
 		</div>
 		<div class="flex items-center justify-center overflow-x-auto mb-40 gap-8 wow fadeIn" data-wow-delay="0.1s">
 			<ul class="menu-tab menu-tab-style2 margin-auto gap-10">
@@ -800,7 +800,7 @@ const home05NewsSection = () => {
 <section class="py-100">
 	<div class="container wow fadeIn" data-wow-delay="0.1s">
 		<div class="title-section mb-30 wow fadeInDown" data-wow-delay="0.1s">
-			<h2 class="capitalize">Promosale Varna notes</h2>
+			<h2 class="capitalize">Day Night Auto notes</h2>
 			${sectionButton('/blog', 'View All')}
 		</div>
 		<div class="row">
@@ -810,7 +810,7 @@ const home05NewsSection = () => {
 					<div class="content">
 						<p class="h5 text-white mb-8 title">${escapeHtml(featured.title)}</p>
 						<div class=" flex gap-8 justify-start">
-							<span class="text-white text-xs">by Promosale Varna</span>
+							<span class="text-white text-xs">by Day Night Auto</span>
 							<span class="text-white text-xs">${escapeHtml(featured.date)}</span>
 							<span class="text-xs text-highlight uppercase text-underline">${escapeHtml(featured.category)}</span>
 						</div>
@@ -830,7 +830,7 @@ const home05NewsSection = () => {
 					<div class="content">
 						<p class="h5 mb-8 title">${escapeHtml(post.title)}</p>
 						<div class=" flex gap-8 justify-start">
-							<span class="text-xs">by Promosale Varna</span>
+							<span class="text-xs">by Day Night Auto</span>
 							<span class="text-xs">${escapeHtml(post.date)}</span>
 							<span class="text-xs text-highlight uppercase text-underline">${escapeHtml(post.category)}</span>
 						</div>
@@ -852,7 +852,7 @@ const featuredInventory = () => {
 <section class="py-100 flat-tabs background-light radius-40">
 	<div class="container">
 		<div class="flex items-center justify-center mb-40 wow fadeInUp" data-wow-delay="0.1s">
-			<h2>New Promosale Varna Vehicles</h2>
+			<h2>New Day Night Auto Vehicles</h2>
 		</div>
 		<div class="overflow-x-auto flex items-center justify-center mb-40 gap-8">
 			<ul class="menu-tab menu-tab-style2 margin-auto gap-10">
@@ -870,7 +870,7 @@ const featuredInventory = () => {
 			</div>
 		</div>
 		<div class="flex justify-center mt-40">
-			<a href="/inventory" class="btn btn-primary btn-large font-weight-600">View Promosale Varna Inventory</a>
+			<a href="/inventory" class="btn btn-primary btn-large font-weight-600">View Day Night Auto Inventory</a>
 		</div>
 	</div>
 </section>
@@ -916,11 +916,11 @@ const whyChoose = () => {
 	<div class="container">
 		<div class="why-choose-us style2">
 			<div class="wow fadeIn" data-wow-delay="0.1s">
-				<img class="move5" src="/assets/daynight/proof-studio-import-handoff.webp" alt="Promosale Varna vehicle handoff">
+				<img class="move5" src="/assets/daynight/proof-studio-import-handoff.webp" alt="Day Night Auto vehicle handoff">
 			</div>
 			<div class="wow fadeIn" data-wow-delay="0.2s">
-				<h2 class="mb-15">Why Choose Promosale Varna?</h2>
-				<p class="text-muted mb-20">Promosale Varna keeps each purchase grounded in source checks, practical import guidance, document review, and viewing appointments before the next commitment.</p>
+				<h2 class="mb-15">Why Choose Day Night Auto?</h2>
+				<p class="text-muted mb-20">Day Night Auto keeps each purchase grounded in source checks, practical import guidance, document review, and viewing appointments before the next commitment.</p>
 				<ul class="list mb-32">
 					<li class="flex items-center gap-12 mb-8 font-weight-500 h7 md-items-start"><img src="/assets/icons/check.svg" alt="check">Europe-sourced vehicles reviewed before approval.</li>
 					<li class="flex items-center gap-12 mb-8 font-weight-500 h7 md-items-start"><img src="/assets/icons/check.svg" alt="check">Mileage, history, and document trail discussed clearly.</li>
@@ -932,7 +932,7 @@ const whyChoose = () => {
 		</div>
 		<div class="grid grid-cols-4 gap-30 md-grid-cols-2 counter-spacing">
 			${[
-				[String(vehicles.length), 'Promosale Varna Listings'],
+				[String(vehicles.length), 'Day Night Auto Listings'],
 				[String(brands.length), 'Active Brands'],
 				[String(clientVehicles), 'Client Vehicles'],
 				['4.9', 'Client Rating']
@@ -1048,7 +1048,7 @@ const trendingSection = () => `<!-- Trending searches near you -->
 <section class="py-100 bg-primary radius-40">
 	<div class="container">
 		<div class="title-section mb-40 wow fadeInUp" data-wow-delay="0.1s">
-			<h2 class="text-white capitalize">Featured Promosale Varna Searches</h2>
+			<h2 class="text-white capitalize">Featured Day Night Auto Searches</h2>
 			${sectionButton('/inventory?view=4', 'View All', 'btn btn-line-blur effect-line-white hover-fill-primary font-weight-600 btn-large')}
 		</div>
 		<div class="swiper-container swiper-card wow fadeIn" data-wow-delay="0.2s">
@@ -1090,7 +1090,7 @@ const calculatorSection = () => {
 								<p class="mb-8">Duty + VAT Basis</p>
 								<select name="basis">
 									<option>Standard import estimate</option>
-									<option>Confirm with Promosale Varna</option>
+									<option>Confirm with Day Night Auto</option>
 								</select>
 							</div>
 							<div>
@@ -1117,7 +1117,7 @@ const calculatorSection = () => {
 				</div>
 			</div>
 			<div class="col-lg-6 text-center wow fadeInUp">
-				<img class="max-w-628 ml-60 move3" src="/assets/daynight/cta/premium-cars-banner-v2.webp" alt="Promosale Varna import calculator">
+				<img class="max-w-628 ml-60 move3" src="/assets/daynight/cta/premium-cars-banner-v2.webp" alt="Day Night Auto import calculator">
 			</div>
 		</div>
 	</div>
@@ -1168,7 +1168,7 @@ const ctaSection = () => `<!-- Find Your Perfect Used Car -->
 	<div class="container">
 		<div class="cta-box radius-16" style="background-image: url('${daynightAssets.footerImage}')">
 			<div class="content">
-				<p class="h2 text-white mb-16">Find your next Promosale Varna vehicle</p>
+				<p class="h2 text-white mb-16">Find your next Day Night Auto vehicle</p>
 				<p class="text-white mb-24">Browse current inventory, request a Europe import review, or send details for a client vehicle sale.</p>
 				<div class="flex gap-12 flex-wrap">
 					<a href="/inventory" class="btn btn-primary btn-large font-weight-600">View Inventory</a>
@@ -1187,7 +1187,7 @@ const routeFooterCopy = (html: string) =>
 			/Monday–Friday from 8 AM to 8 PM\s*<br>\s*Saturday from 9 AM to 6 PM EST/g,
 			'Monday-Friday 9:00 - 18:00 <br>Weekend viewings by appointment'
 		)
-		.replaceAll('Buying a car', 'Buying With Promosale Varna')
+		.replaceAll('Buying a car', 'Buying With Day Night Auto')
 		.replaceAll('Selling a car', 'Sell Your Car')
 		.replaceAll('Investor Relations', 'Services')
 		.replaceAll('Careers', 'FAQ')
@@ -1196,7 +1196,7 @@ const routeFooterCopy = (html: string) =>
 		.replaceAll('Certified Pre-Owned', 'Verified Listings')
 		.replaceAll('Car Payment Calculators', 'Import Calculator')
 		.replaceAll('Car Reviews & Ratings', 'Client Reviews')
-		.replaceAll('Download App', 'Promosale Varna Online');
+		.replaceAll('Download App', 'Day Night Auto Online');
 
 const homeBlogTeaser = () => {
 	const latest = posts[0];
@@ -1205,7 +1205,7 @@ const homeBlogTeaser = () => {
 	return `<section class="bg-white py-100 daynight-home-news">
 	<div class="container">
 		<div class="title-section mb-38 wow fadeInDown" data-wow-delay="0.1s">
-			<h2>Latest Promosale Varna Notes</h2>
+			<h2>Latest Day Night Auto Notes</h2>
 			${sectionButton('/blog', 'Read Blog')}
 		</div>
 		<div class="grid grid-cols-2 lg-grid-cols-1 gap-30">
@@ -1227,8 +1227,8 @@ const homeBlogTeaser = () => {
 						<p class="text-secondary text-sm">${escapeHtml(agent.title)}</p>
 					</div>
 					<ul class="contact">
-						<li><a href="${daynightContact.primaryPhoneHref}" aria-label="Call Promosale Varna"><img src="/assets/icons/PhoneCall.svg" alt="phone"></a></li>
-						<li><a href="${daynightContact.emailHref}" aria-label="Email Promosale Varna"><img src="/assets/icons/input-telegram.svg" alt="email"></a></li>
+						<li><a href="${daynightContact.primaryPhoneHref}" aria-label="Call Day Night Auto"><img src="/assets/icons/PhoneCall.svg" alt="phone"></a></li>
+						<li><a href="${daynightContact.emailHref}" aria-label="Email Day Night Auto"><img src="/assets/icons/input-telegram.svg" alt="email"></a></li>
 					</ul>
 				</div>
 			</div>

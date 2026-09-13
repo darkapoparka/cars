@@ -150,11 +150,11 @@
 	}
 
 	.daynight-dashboard-summary-item.is-attention .daynight-dashboard-summary-item__value {
-		color: #E3062F;
+		color: #e3062f;
 	}
 
 	.daynight-dashboard-summary-item.is-calm .daynight-dashboard-summary-item__value {
-		color: #1C1C1C;
+		color: #1c1c1c;
 	}
 
 	.daynight-dashboard-summary-item.is-label-value .daynight-dashboard-summary-item__value {
@@ -303,7 +303,7 @@
 		width: 46px;
 		min-width: 46px;
 		height: 46px;
-		background: #FEE2E2;
+		background: #fee2e2;
 	}
 
 	.daynight-dashboard-recent-card :global(.comment-box__avatar img) {

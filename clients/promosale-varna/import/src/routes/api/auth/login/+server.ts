@@ -9,7 +9,7 @@ export async function POST({ request }: { request: Request }) {
 	const session = authenticateDayNightUser({ email, password, role });
 
 	if (!session) {
-		return errorJson('Invalid Promosale Varna account credentials', 401);
+		return errorJson('Invalid Day Night Auto account credentials', 401);
 	}
 
 	const cookie = sessionCookieForDayNightSession(session);

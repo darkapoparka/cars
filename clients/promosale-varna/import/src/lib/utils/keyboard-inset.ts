@@ -14,9 +14,7 @@ import type { Attachment } from 'svelte/attachments';
  * `document.documentElement` (the default) when the consumer is portaled out of the
  * component tree (e.g. a vaul drawer) so the variable still cascades to it.
  */
-export function trackKeyboardInset(
-	target: HTMLElement = document.documentElement
-): () => void {
+export function trackKeyboardInset(target: HTMLElement = document.documentElement): () => void {
 	const viewport = window.visualViewport;
 	if (!viewport) return () => {};
 

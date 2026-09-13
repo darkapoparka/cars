@@ -36,7 +36,7 @@
 
 	const banner = {
 		description: 'Изпрати линк или VIN. Проверяваме автомобила преди да поемеш ангажимент.',
-		eyebrow: 'Promosale Varna внос',
+		eyebrow: 'Day Night Auto внос',
 		image: '/assets/daynight/services/premium-cars-banner-generated.webp',
 		title: 'Подбрани автомобили'
 	};
@@ -50,7 +50,7 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Подбрани автомобили — Promosale Varna"
+		title="Подбрани автомобили — Day Night Auto"
 	>
 		<div class="daynight-import-page" data-daynight-import>
 			<PageBanner {banner} />

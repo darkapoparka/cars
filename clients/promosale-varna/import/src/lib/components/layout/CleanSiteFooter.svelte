@@ -81,7 +81,7 @@
 				<a href={resolve(footer.logo.href as '/')} class="inline-block">
 					<img src={footer.logo.src} alt={footer.logo.alt} class="h-[54px] w-auto" />
 				</a>
-				<p class="mt-6 mb-2 text-xs font-medium uppercase text-[#9fa1a4]">
+				<p class="mt-6 mb-2 text-xs font-medium text-[#9fa1a4] uppercase">
 					{footer.labels.openingHours}
 				</p>
 				<p class="mb-7 leading-6 text-white">
@@ -92,7 +92,7 @@
 						type="text"
 						name="footer-email"
 						placeholder={footer.labels.emailPlaceholder}
-						class="h-14 w-full rounded-full border border-[#9fa1a4] bg-white/10 pr-16 pl-5 text-sm text-white outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-[#9fa1a4] hover:border-white/60 focus:border-bc-accent focus:shadow-[0_0_0_3px_rgba(227, 6, 47, 0.35)]"
+						class="focus:shadow-[0_0_0_3px_rgba(227, 6, 47, 0.35)] h-14 w-full rounded-full border border-[#9fa1a4] bg-white/10 pr-16 pl-5 text-sm text-white transition-[border-color,box-shadow] duration-200 outline-none placeholder:text-[#9fa1a4] hover:border-white/60 focus:border-bc-accent"
 						required
 					/>
 					<button

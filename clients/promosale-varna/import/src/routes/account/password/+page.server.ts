@@ -35,7 +35,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		auxeroFullPage: true,
 		beforePasswordHtml: passwordSlot.beforeHtml,
 		dashboard: getAccountDashboardPageData('change-password.html', renderOptions, {
-			subtitle: 'Update account credentials for this Promosale Varna workspace.',
+			subtitle: 'Update account credentials for this Day Night Auto workspace.',
 			title: 'Profile Security'
 		}),
 		pageDocument: removeAuxeroPageDocumentBodyHtml(pageDocument),

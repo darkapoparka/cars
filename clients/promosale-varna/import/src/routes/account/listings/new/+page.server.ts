@@ -38,7 +38,8 @@ export const load: PageServerLoad = ({ request, url }) => {
 		auxeroFullPage: true,
 		beforeFormHtml: formSlot.beforeHtml,
 		dashboard: getAccountDashboardPageData('add-listings-2.html', renderOptions, {
-			subtitle: 'Submit a vehicle for Promosale Varna review without leaving your account workspace.',
+			subtitle:
+				'Submit a vehicle for Day Night Auto review without leaving your account workspace.',
 			title: 'Submit Vehicle'
 		}),
 		form: getAccountListingFormData('add-listings-2.html', renderOptions),

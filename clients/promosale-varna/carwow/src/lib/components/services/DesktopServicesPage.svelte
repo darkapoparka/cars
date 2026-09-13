@@ -145,7 +145,12 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Услуги Promosale Varna">
+<main
+	id="main-content"
+	tabindex="-1"
+	class="desktop-services"
+	aria-label={`Услуги ${daynightSite.shortName}`}
+>
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
 		title="Услуги за твоя автомобил"
@@ -163,16 +168,14 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
-					>Обади ни се</a
-				>
+				Не знаеш коя услуга ти трябва? <a href={daynightSite.phoneHref}>Обади ни се</a>
 			</p>
 		</div>
 	</DesktopYellowRouteHero>
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от Promosale Varna</h2>
+			<h2 class="desktop-services-sr-only">Конкретни услуги от {daynightSite.shortName}</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}
@@ -308,19 +311,19 @@
 		border-radius: 8px;
 		background: var(--desktop-field);
 		color: var(--sa-ink);
-		font: 500 14px/1.35 var(--sa-font);
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
 	}
 	.services-shortcuts a:hover {
 		background: var(--desktop-secondary-hover);
 		border-color: var(--desktop-secondary-hover);
 	}
 	.desktop-services .services-help {
-		font: 400 14px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 		margin: 14px 0 0;
 		color: var(--sa-ink);
 	}
 	.desktop-services .services-help a {
-		font-weight: 600;
+		font-weight: var(--sa-button-font-weight);
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
@@ -347,7 +350,7 @@
 		text-align: center;
 	}
 	.desktop-services .services-chooser h2 {
-		font: 600 18px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
 		color: var(--sa-ink);
 		margin: 0;
 		letter-spacing: 0;
@@ -398,13 +401,13 @@
 		flex: 1;
 	}
 	.desktop-services-card h3 {
-		font: 700 var(--sa-text-desktop-card-title)/1.25 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-desktop-card-title)/1.25 var(--sa-font);
 		letter-spacing: 0;
 		margin: 0 0 8px;
 		color: #fff;
 	}
 	.desktop-services-card p {
-		font: 400 15px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
 		color: #d9dcde;
 		margin: 0;
 	}
@@ -416,7 +419,8 @@
 		color: #15191b;
 		background: #fff;
 		border-radius: 8px;
-		font: 600 14px/1.4 var(--sa-font);
+		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
+			var(--sa-font);
 		padding: 10px 16px;
 		margin-top: 20px;
 		min-height: 44px;
@@ -448,13 +452,13 @@
 		border-radius: 16px;
 	}
 	.desktop-services-request__copy h2 {
-		font: 800 clamp(36px, 3.4vw, 52px)/1.06 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-desktop-hero-title)/1.06 var(--sa-font);
 		letter-spacing: -0.04em;
 		margin: 0 0 20px;
 		color: var(--sa-ink);
 	}
 	.desktop-services-request__copy p {
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 		color: var(--sa-ink);
 		margin: 0;
 		max-width: 34ch;
@@ -480,7 +484,7 @@
 		grid-column: span 2;
 	}
 	.desktop-services-field span {
-		font: 600 14px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.4 var(--sa-font);
 		color: var(--sa-ink);
 	}
 	.desktop-services-field :is(input, select, textarea) {
@@ -490,7 +494,7 @@
 		border-radius: 8px;
 		background: #f7f8fa !important;
 		color: var(--sa-ink) !important;
-		font: 400 16px/1.4 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
 		box-shadow: none !important;
 	}
 	.desktop-services-field :is(input, select) {
@@ -513,7 +517,7 @@
 		justify-self: end;
 		border: 0;
 		--sa-cta-height: 46px;
-		--sa-cta-font-size: 16px;
+		--sa-cta-font-size: var(--sa-button-font-size);
 		padding-inline: 24px;
 	}
 	.desktop-services-form__message {
@@ -522,7 +526,7 @@
 		border-radius: 8px;
 		background: #fff1f1;
 		color: #b42318;
-		font: 400 16px/1.4 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
 	}
 	.desktop-services-form__message[data-state='success'] {
 		background: #ecfdf3;

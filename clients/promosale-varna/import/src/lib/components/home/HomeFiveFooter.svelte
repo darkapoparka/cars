@@ -1,22 +1,15 @@
 <script lang="ts">
-	import { Phone, Mail, MapPin, ArrowUpRight } from '@lucide/svelte';
+	import { Phone, Mail, MapPin, ArrowUpRight, Plus } from '@lucide/svelte';
 	import { daynightContact } from '$lib/data/daynight';
 	import { resolve } from '$app/paths';
 	import type { HomeFiveFooterData, HomeFiveFooterSocial } from '$lib/auxero/home-five';
 
 	let { footer }: { footer?: HomeFiveFooterData } = $props();
 
+	const socialLinks = $derived(footer?.socialLinks.filter((social) => social.href.trim()) ?? []);
+
 	const externalHref = (href: string) => ({ href });
 </script>
-
-{#snippet submitArrow()}
-	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path
-			d="M19.1279 6V15.75C19.1279 16.0484 19.0094 16.3345 18.7984 16.5455C18.5874 16.7565 18.3013 16.875 18.0029 16.875C17.7045 16.875 17.4184 16.7565 17.2074 16.5455C16.9964 16.3345 16.8779 16.0484 16.8779 15.75V8.71875L6.79883 18.7959C6.58748 19.0073 6.30084 19.126 6.00195 19.126C5.70307 19.126 5.41642 19.0073 5.20508 18.7959C4.99373 18.5846 4.875 18.2979 4.875 17.9991C4.875 17.7002 4.99373 17.4135 5.20508 17.2022L15.2841 7.125H8.25289C7.95452 7.125 7.66837 7.00647 7.45739 6.7955C7.24642 6.58452 7.12789 6.29837 7.12789 6C7.12789 5.70163 7.24642 5.41548 7.45739 5.2045C7.66837 4.99353 7.95452 4.875 8.25289 4.875H18.0029C18.3013 4.875 18.5874 4.99353 18.7984 5.2045C19.0094 5.41548 19.1279 5.70163 19.1279 6Z"
-			fill="#1C1C1C"
-		/>
-	</svg>
-{/snippet}
 
 {#snippet socialIcon(icon: HomeFiveFooterSocial['icon'])}
 	{#if icon === 'facebook'}
@@ -100,7 +93,7 @@
 					><MapPin size={18} /><span>{footer.contact.address}</span><ArrowUpRight size={15} /></a
 				>
 				<div class="dn-footer__socials">
-					{#each footer.socialLinks.filter(social => social.href) as social (social.label)}
+					{#each socialLinks as social (social.label)}
 						<a
 							{...externalHref(social.href)}
 							target="_blank"
@@ -121,118 +114,56 @@
 		</div>
 	</footer>
 
-	<footer class="bg-primary footer">
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="footer-top-inner">
-							<div>
-								<a href={resolve(footer.logo.href as '/')}>
-									<img class="logo" src={footer.logo.src} alt={footer.logo.alt} />
-								</a>
-
-								<p class="text-muted font-weight-500 mb-8 text-xs uppercase">
-									{footer.labels.openingHours}
-								</p>
-
-								<p class="mb-28 text-white">
-									{footer.hours[0]} <br />
-									{footer.hours[1]}
-								</p>
-							</div>
-
-							<form class="form-footer relative" action="#">
-								<input
-									type="text"
-									placeholder={footer.labels.emailPlaceholder}
-									name="footer-email"
-									id="footer-email"
-									required
-								/>
-								<button type="submit" class="btn-submit" aria-label={footer.labels.subscribe}>
-									{@render submitArrow()}
-								</button>
-							</form>
-						</div>
-					</div>
-
-					<div class="col-lg-4">
-						<div class="footer-links flex justify-between gap-8">
-							<div class="collapse">
-								<p
-									class="collapse-title font-weight-600 mb-14 justify-between text-white"
-									data-breakpoint="mobile"
-								>
-									{footer.labels.quickLinks}
-									<span class="icon md-block hidden text-white">+</span>
-								</p>
-								<ul class="widget-links collapse-content md-hidden">
-									{#each footer.quickLinks as link (link.href)}
-										<li><a href={resolve(link.href as '/')}>{link.label}</a></li>
-									{/each}
-								</ul>
-							</div>
-							<div class="collapse">
-								<p
-									class="collapse-title font-weight-600 mb-14 justify-between text-white"
-									data-breakpoint="mobile"
-								>
-									{footer.labels.buyingSelling}
-									<span class="icon md-block hidden text-white">+</span>
-								</p>
-								<ul class="widget-links collapse-content md-hidden">
-									{#each footer.buyingLinks as link (link.href)}
-										<li><a href={resolve(link.href as '/')}>{link.label}</a></li>
-									{/each}
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4">
-						<div class="footer-contact">
-							<div>
-								<p class="font-weight-500 mb-8 text-white">
-									<a {...externalHref(footer.contact.phoneHref)} class="h7 flex items-start">
-										{footer.contact.phoneLabel}
-									</a>
-								</p>
-								<a href={resolve('/contact')} class="h7 font-weight-500 mb-20 block text-white">
-									{footer.contact.address}
-								</a>
-
-								<ul class="widget-socical mb-12">
-									{#each footer.socialLinks.filter(social => social.href) as social (social.label)}
-										<li>
-											<a
-												{...externalHref(social.href)}
-												target="_blank"
-												rel="noopener noreferrer"
-												aria-label={social.label}
-											>
-												{@render socialIcon(social.icon)}
-											</a>
-										</li>
-									{/each}
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<footer class="dn-footer-mobile">
+		<a class="dn-footer-mobile__brand" href={resolve(footer.logo.href as '/')}>
+			<img src={footer.logo.src} alt={footer.logo.alt} width="180" height="48" loading="lazy" />
+		</a>
+		<div class="dn-footer-mobile__contact">
+			<a class="dn-footer-mobile__phone" {...externalHref(daynightContact.primaryPhoneHref)}>
+				<Phone size={19} aria-hidden="true" />
+				<span>{daynightContact.primaryPhoneLabel}</span>
+			</a>
+			<a class="dn-footer-mobile__address" href={resolve('/contact')}>
+				<MapPin size={18} aria-hidden="true" />
+				<span>{footer.contact.address}</span>
+			</a>
 		</div>
-		<div class="divider divider-blur"></div>
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="md-flex-col flex justify-between">
-					<p class="text-muted text-sm">{footer.copyright}</p>
-					<ul class="footer-bottom-links">
-						{#each footer.legalLinks as link (link.label)}
-							<li><a href={resolve(link.href as '/')}>{link.label}</a></li>
+		<div class="dn-footer-mobile__hours">
+			<p>{footer.labels.openingHours}</p>
+			{#each footer.hours as hours (hours)}<p>{hours}</p>{/each}
+		</div>
+		<div class="dn-footer-mobile__links">
+			{#each [{ title: footer.labels.quickLinks, links: footer.quickLinks }, { title: footer.labels.buyingSelling, links: footer.buyingLinks }] as group (group.title)}
+				<details>
+					<summary>{group.title}<Plus size={18} aria-hidden="true" /></summary>
+					<nav aria-label={group.title}>
+						{#each group.links as link (link.href)}
+							<a href={resolve(link.href as '/')}>{link.label}</a>
 						{/each}
-					</ul>
-				</div>
+					</nav>
+				</details>
+			{/each}
+		</div>
+		{#if socialLinks.length}
+			<div class="dn-footer-mobile__socials">
+				{#each socialLinks as social (social.label)}
+					<a
+						{...externalHref(social.href)}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={social.label}
+					>
+						{@render socialIcon(social.icon)}
+					</a>
+				{/each}
+			</div>
+		{/if}
+		<div class="dn-footer-mobile__bottom">
+			<p>{footer.copyright}</p>
+			<div>
+				{#each footer.legalLinks as link (link.label)}
+					<a href={resolve(link.href as '/')}>{link.label}</a>
+				{/each}
 			</div>
 		</div>
 	</footer>
@@ -243,13 +174,13 @@
 		display: none;
 	}
 	@media (min-width: 768px) {
-		.footer {
-			display: none !important;
+		.dn-footer-mobile {
+			display: none;
 		}
 		.dn-footer {
 			display: block;
-			background: #1c1c1c;
-			color: #f7f7f7;
+			background: var(--bc-footer-bg);
+			color: var(--bc-footer-ink);
 			border-radius: 30px 30px 0 0;
 			padding: 40px 32px 24px;
 		}
@@ -262,7 +193,7 @@
 			align-items: start;
 		}
 		.dn-footer a {
-			color: #ccd0d5;
+			color: var(--bc-footer-link);
 			text-decoration: none;
 		}
 		.dn-footer a:hover {
@@ -287,7 +218,7 @@
 			line-height: 1.65;
 		}
 		.dn-footer .dn-footer__muted {
-			color: #b5bac2;
+			color: var(--bc-footer-muted);
 			margin-bottom: 8px;
 		}
 		.dn-footer h2 {
@@ -309,9 +240,9 @@
 			font-size: 15px;
 		}
 		.dn-footer__contact {
-			border: 1px solid #3b3b3e;
+			border: 1px solid var(--bc-footer-border);
 			border-radius: 16px;
-			background: #242426;
+			background: var(--bc-footer-panel);
 			padding: 16px;
 		}
 		.dn-footer__contact > a {
@@ -335,14 +266,14 @@
 			display: flex;
 			flex-wrap: wrap;
 			gap: 8px;
-			border-top: 1px solid #3b3b3e;
+			border-top: 1px solid var(--bc-footer-border);
 			padding-top: 12px;
 			margin-top: 12px;
 		}
 		.dn-footer__socials a {
 			width: 40px;
 			height: 40px;
-			border: 1px solid #49494e;
+			border: 1px solid var(--bc-footer-icon-border);
 			border-radius: 8px;
 			display: grid;
 			place-items: center;
@@ -350,12 +281,12 @@
 		.dn-footer__bottom {
 			max-width: 1320px;
 			margin: 32px auto 0;
-			border-top: 1px solid #3b3b3e;
+			border-top: 1px solid var(--bc-footer-border);
 			padding-top: 22px;
 			display: flex;
 			justify-content: space-between;
 			gap: 20px;
-			color: #b5bac2;
+			color: var(--bc-footer-muted);
 		}
 		.dn-footer__bottom p,
 		.dn-footer__bottom a {
@@ -378,86 +309,177 @@
 	}
 
 	@media (max-width: 767px) {
-		.footer :global(.footer-top) {
-			padding-top: 44px !important;
-			padding-bottom: 38px !important;
+		.dn-footer-mobile {
+			background: var(--bc-footer-bg);
+			color: var(--bc-footer-ink);
+			padding: 28px 16px 16px;
 		}
 
-		.footer :global(.logo) {
+		.dn-footer-mobile a,
+		.dn-footer-mobile span {
+			color: inherit;
+		}
+
+		.dn-footer-mobile a:focus-visible,
+		.dn-footer-mobile summary:focus-visible {
+			outline: 2px solid var(--bc-focus-contrast);
+			outline-offset: 3px;
+			border-radius: 4px;
+		}
+
+		.dn-footer-mobile a:hover {
+			color: var(--bc-white);
+		}
+
+		.dn-footer-mobile__brand {
+			display: inline-flex;
+			margin-bottom: 16px;
+		}
+
+		.dn-footer-mobile__brand img {
+			width: 180px;
 			height: 48px;
-			margin-bottom: 24px;
+			object-fit: contain;
+			object-position: left;
 		}
 
-		.footer :global(.footer-top-inner) {
-			margin-bottom: 24px;
-		}
-
-		.footer :global(.form-footer) {
-			margin-top: 4px;
-		}
-
-		.footer :global(.footer-links) {
-			gap: 0 !important;
-			margin-top: 20px;
-			margin-bottom: 22px;
-		}
-
-		.footer :global(.footer-links .collapse) {
-			border-top: 1px solid rgb(255 255 255 / 0.12);
-			padding: 14px 0;
-		}
-
-		.footer :global(.footer-links .collapse:last-child) {
-			border-bottom: 1px solid rgb(255 255 255 / 0.12);
-		}
-
-		.footer :global(.footer-contact) {
-			margin-top: 4px;
-		}
-
-		.footer :global(.widget-socical) {
-			gap: 10px;
-			margin-top: 16px;
-		}
-
-		.footer :global(.widget-socical li:not(:last-child)) {
-			margin-bottom: 0;
-		}
-
-		.footer :global(.widget-socical li a) {
-			border-color: rgb(255 255 255 / 0.24);
-			background: rgb(255 255 255 / 0.06);
-		}
-
-		.footer :global(.widget-socical li a svg) {
-			width: 18px;
-			height: 18px;
-		}
-
-		.footer :global(.widget-socical li a svg path) {
-			fill: #ffffff;
-		}
-
-		.footer :global(.footer-bottom) {
-			padding: 18px 0 22px !important;
-		}
-
-		.footer :global(.footer-bottom .md-flex-col) {
+		.dn-footer-mobile__contact {
+			display: grid;
 			gap: 8px;
 		}
 
-		.footer :global(.footer-bottom-links) {
-			flex-wrap: wrap;
-			justify-content: center;
-			row-gap: 4px;
+		.dn-footer-mobile__contact a {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			min-height: 48px;
+			padding: 12px 16px;
+			border-radius: var(--bc-radius-control);
 		}
 
-		/* Give the legal links a comfortable touch target (was ~22px tall). */
-		.footer :global(.footer-bottom-links li a) {
+		.dn-footer-mobile__contact :global(svg) {
+			flex-shrink: 0;
+			color: inherit;
+		}
+
+		.dn-footer-mobile__phone {
+			justify-content: center;
+			background: var(--bc-accent);
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 24px;
+		}
+
+		.dn-footer-mobile__address {
+			font-size: var(--bc-mobile-body);
+			line-height: var(--bc-mobile-body-leading);
+			background: var(--bc-footer-panel);
+			font-weight: var(--bc-weight-body);
+		}
+
+		.dn-footer-mobile__hours {
+			margin: 16px 0 20px;
+		}
+
+		.dn-footer-mobile__hours p {
+			margin: 0;
+			font-size: var(--bc-mobile-body);
+			line-height: var(--bc-mobile-body-leading);
+			font-weight: var(--bc-weight-body);
+		}
+
+		.dn-footer-mobile__hours p:first-child {
+			color: var(--bc-footer-muted);
+			margin-bottom: 4px;
+		}
+
+		.dn-footer-mobile__links {
+			display: grid;
+			gap: 8px;
+		}
+
+		.dn-footer-mobile__links details {
+			background: var(--bc-footer-panel);
+			border-radius: var(--bc-radius-control);
+		}
+
+		.dn-footer-mobile__links summary {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			min-height: 48px;
+			padding: 12px 16px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-heading);
+			list-style: none;
+			cursor: pointer;
+			line-height: var(--bc-leading-control);
+		}
+
+		.dn-footer-mobile__links summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.dn-footer-mobile__links details[open] summary :global(svg) {
+			transform: rotate(45deg);
+		}
+
+		.dn-footer-mobile__links nav {
+			display: grid;
+			padding: 0 16px 12px;
+		}
+
+		.dn-footer-mobile__links nav a {
+			display: flex;
+			align-items: center;
+			min-height: 44px;
+			color: var(--bc-footer-link);
+			font-size: var(--bc-mobile-body);
+			line-height: var(--bc-mobile-body-leading);
+			font-weight: var(--bc-weight-body);
+		}
+
+		.dn-footer-mobile__socials {
+			display: flex;
+			gap: 12px;
+			margin: 16px 0;
+		}
+
+		.dn-footer-mobile__socials a {
+			display: grid;
+			place-items: center;
+			width: 44px;
+			height: 44px;
+			border: 1px solid var(--bc-footer-icon-border);
+			border-radius: 50%;
+		}
+
+		.dn-footer-mobile__bottom {
+			padding-top: 8px;
+			color: var(--bc-footer-muted);
+		}
+
+		.dn-footer-mobile__bottom p {
+			margin: 0 0 4px;
+			font-size: var(--bc-mobile-meta);
+			line-height: var(--bc-mobile-meta-leading);
+			font-weight: var(--bc-weight-body);
+		}
+
+		.dn-footer-mobile__bottom > div {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 16px;
+		}
+
+		.dn-footer-mobile__bottom a {
 			display: inline-flex;
 			align-items: center;
 			min-height: 44px;
+			font-size: var(--bc-mobile-meta);
+			line-height: var(--bc-mobile-meta-leading);
+			font-weight: var(--bc-weight-body);
 		}
 	}
 </style>
-

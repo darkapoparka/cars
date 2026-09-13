@@ -69,7 +69,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!message) {
-		return errorJson('Promosale Varna message thread not found', 404);
+		return errorJson('Day Night Auto message thread not found', 404);
 	}
 
 	return okJson({ message });

@@ -3,9 +3,11 @@
 	import { resolve } from '$app/paths';
 	import type { AuxeroVehicleDetailData } from '$lib/auxero/detail';
 	import AuxeroVehicleOverview from './AuxeroVehicleOverview.svelte';
+	import { templateInquiryCopy } from '$lib/data/template-settings';
 
 	let { detail }: { detail: AuxeroVehicleDetailData } = $props();
 	let inquiryStatus = $state('');
+	let inquirySubmitting = $state(false);
 	let paymentMode = $state<'cash' | 'finance'>('cash');
 	let buyboxTablistEl = $state<HTMLUListElement>();
 
@@ -23,6 +25,9 @@
 		else return;
 
 		event.preventDefault();
+		if (inquirySubmitting) return;
+		inquirySubmitting = true;
+		inquiryStatus = '';
 		paymentMode = buyboxModes[next];
 		await tick();
 		buyboxTablistEl?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next]?.focus();
@@ -40,7 +45,7 @@
 		const payload = Object.fromEntries(new FormData(form).entries());
 
 		try {
-			await fetch('/api/inquiries', {
+			const response = await fetch(resolve('/api/inquiries'), {
 				body: JSON.stringify({
 					...payload,
 					source: 'vehicle-detail',
@@ -49,12 +54,15 @@
 				headers: { 'content-type': 'application/json' },
 				method: 'POST'
 			});
+			const result = await response.json();
+			if (!response.ok || !result.ok || !result.data?.inquiry?.id) throw new Error('Not saved');
+			inquiryStatus = templateInquiryCopy.success;
+			form.reset();
 		} catch {
-			// The prototype still confirms local capture if the API is unavailable.
+			inquiryStatus = 'Заявката не е запазена. Провери данните и опитай отново.';
+		} finally {
+			inquirySubmitting = false;
 		}
-
-		inquiryStatus = detail.copy.inquirySuccess;
-		form.reset();
 	};
 </script>
 
@@ -78,7 +86,7 @@
 {/snippet}
 
 <div class="listing-details--sidebar">
-	<div class="listing-details--sidebar-box mb-40">
+	<div class="listing-details--sidebar-box daynight-buybox-card mb-40">
 		<div class="flat-tabs">
 			<div class="mb-15 overflow-x-auto">
 				<ul
@@ -235,7 +243,7 @@
 
 			<a
 				{...directHref(detail.contact.viberHref)}
-				class="btn btn-medium btn-primary-4 font-weight-600 gap-5"
+				class="btn btn-medium btn-primary-4 daynight-viber-action font-weight-600 gap-5"
 				rel="noreferrer"
 			>
 				<img src="/assets/icons/ChatCircleDots.svg" alt="" aria-hidden="true" />
@@ -254,7 +262,7 @@
 					<input
 						aria-label={detail.copy.name}
 						autocomplete="name"
-						class="active input-large"
+						class="input-large"
 						id="SendInquiryname"
 						name="SendInquiryname"
 						type="text"
@@ -271,7 +279,7 @@
 						name="SendInquiryemail"
 						id="SendInquiryemail"
 						type="email"
-						value={detail.contact.email}
+						value=""
 						required
 					/>
 				</div>
@@ -316,7 +324,10 @@
 					></textarea>
 				</div>
 			</div>
-			<button class="btn btn-primary btn-large font-weight-600 mb-18 w-full"
+			<p class="text-secondary text-sm">{templateInquiryCopy.notice}</p>
+			<button
+				disabled={inquirySubmitting}
+				class="btn btn-primary btn-large font-weight-600 mb-18 w-full"
 				>{detail.copy.sendInquiry}</button
 			>
 			<p class="auxero-form-status text-highlight font-weight-600 mt-12" aria-live="polite">

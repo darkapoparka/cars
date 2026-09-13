@@ -63,13 +63,13 @@ export const load: PageServerLoad = ({ request, url }) => {
 		searchParams: url.searchParams,
 		view
 	};
-	const seoTitle = locale === 'bg' ? 'Автомобили — Promosale Varna' : 'Cars — Promosale Varna';
+	const seoTitle = locale === 'bg' ? 'Автомобили — Day Night Auto' : 'Cars — Day Night Auto';
 	const pageDocument = inventoryPageDocument(templateFile, seoTitle);
 	pageDocument.headAssets = ensureDescriptionMeta(
 		pageDocument.headAssets,
 		locale === 'bg'
-			? 'Разгледай наличните автомобили на Promosale Varna — филтрирай по марка, тип, цена и пробег. Подбрани автомобили и съдействие при регистрация.'
-			: 'Browse Promosale Varna inventory — filter by brand, type, price and mileage. Europe import and registration support.'
+			? 'Разгледай наличните автомобили на Day Night Auto — филтрирай по марка, тип, цена и пробег. Подбрани автомобили и съдействие при регистрация.'
+			: 'Browse Day Night Auto inventory — filter by brand, type, price and mileage. Europe import and registration support.'
 	);
 	const inventoryState = getInventoryState(templateFile, renderOptions);
 

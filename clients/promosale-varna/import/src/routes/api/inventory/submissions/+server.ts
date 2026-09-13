@@ -86,7 +86,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!submission) {
-		return errorJson('Promosale Varna vehicle submission not found', 404);
+		return errorJson('Day Night Auto vehicle submission not found', 404);
 	}
 
 	return okJson({ submission });

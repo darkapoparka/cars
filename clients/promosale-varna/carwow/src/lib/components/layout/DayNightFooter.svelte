@@ -5,15 +5,15 @@
 	import { daynightFooterBottomLinks, daynightFooterLinkGroups } from './daynight-footer-data';
 	import DayNightFooterIcon from './DayNightFooterIcon.svelte';
 
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: '',
+		href: 'https://www.facebook.com/61566304063141/',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: '',
+		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
@@ -30,12 +30,25 @@
 
 	const containerClasses = 'mx-auto w-full max-w-[1440px] px-[15px] max-[767px]:px-4';
 	const footerLinkClasses =
-		'relative inline-block !text-[16px] font-medium !leading-6 text-sa-surface/68 no-underline transition duration-150 ease-sa hover:text-sa-surface focus-visible:text-sa-surface';
+		'relative inline-block !text-[length:var(--sa-text-base)] font-medium !leading-6 text-sa-surface/68 no-underline transition duration-150 ease-sa hover:text-sa-surface focus-visible:text-sa-surface';
 	const socialLinkClasses =
 		'flex size-11 items-center justify-center rounded-sa-pill border border-sa-surface/20 text-sa-surface/70 no-underline transition duration-150 ease-sa hover:border-sa-surface hover:bg-sa-surface hover:text-sa-ink focus-visible:border-sa-surface focus-visible:bg-sa-surface focus-visible:text-sa-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-5 [&_svg_circle]:stroke-current [&_svg_path]:stroke-current';
 </script>
 
 <DesktopDealerFooter />
+
+<footer class="compact-mobile-footer">
+	<img src={daynightSite.logoLight} alt={daynightSite.name} />
+	<a class="compact-mobile-footer__phone" href={phoneHref}>{daynightSite.phoneLabel}</a>
+	<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer">{daynightSite.location}</a
+	>
+	<nav aria-label="Връзки в долната част">
+		<a href={resolve('/inventory')}>Автомобили</a>
+		<a href={resolve('/contact')}>Контакти</a>
+		<a href={resolve('/terms')}>Условия</a>
+	</nav>
+	<small>© {new Date().getFullYear()} {daynightSite.shortName}</small>
+</footer>
 
 <footer
 	class="daynight-legacy-footer relative bg-sa-dark font-sa leading-[26px] tracking-normal text-sa-surface"
@@ -52,7 +65,7 @@
 							<a
 								href={resolve('/')}
 								class="inline-block no-underline"
-								aria-label="Promosale Varna начална страница"
+								aria-label={`${daynightSite.shortName} начална страница`}
 							>
 								<img
 									class="mb-[22px] block h-[54px] w-[190px] object-contain"
@@ -136,15 +149,29 @@
 								{daynightSite.location}
 							</a>
 							<p class="m-0 mb-4 text-sa-sm leading-[22px] text-sa-surface/60">
-								Promosale Varna предлага актуална дигитална витрина с наличност, запитвания и ясни
-								следващи стъпки.
+								{daynightSite.shortName} предлага актуална дигитална витрина с наличност, запитвания и
+								ясни следващи стъпки.
 							</p>
 							<ul class="m-0 mb-3 flex list-none flex-wrap gap-2 p-0">
 								<li>
-									
+									<a
+										{...facebookLinkProps}
+										title="Facebook"
+										aria-label="Facebook"
+										class={socialLinkClasses}
+									>
+										<DayNightFooterIcon name="facebook" />
+									</a>
 								</li>
 								<li>
-									
+									<a
+										{...instagramLinkProps}
+										title="Instagram"
+										aria-label="Instagram"
+										class={socialLinkClasses}
+									>
+										<DayNightFooterIcon name="instagram" />
+									</a>
 								</li>
 								<li>
 									<a
@@ -169,8 +196,8 @@
 								<li>
 									<a
 										{...mapLinkProps}
-										title="Отвори локацията на Promosale Varna в Google Maps"
-										aria-label="Отвори локацията на Promosale Varna в Google Maps"
+										title={`Отвори локацията на ${daynightSite.shortName} в Google Maps`}
+										aria-label={`Отвори локацията на ${daynightSite.shortName} в Google Maps`}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="location" />
@@ -188,7 +215,7 @@
 								<a
 									href={resolve(contactHref)}
 									class="inline-flex min-h-11 items-center justify-center rounded-sa-xs border border-sa-surface/20 px-3.5 text-sa-base leading-none font-semibold text-sa-surface/75 no-underline transition duration-150 ease-sa hover:border-sa-blue hover:bg-sa-blue hover:text-sa-surface focus-visible:border-sa-blue focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue"
-									title="Свържете се със Promosale Varna."
+									title={`Свържете се със ${daynightSite.shortName}.`}
 								>
 									Свържете се
 								</a>
@@ -208,7 +235,7 @@
 				<p class="m-0 text-sa-sm leading-[22px] text-sa-surface/60">
 					©2026 <a
 						class="text-sa-sm leading-[22px] text-sa-surface no-underline"
-						href={resolve('/')}>Promosale Varna</a
+						href={resolve('/')}>{daynightSite.shortName}</a
 					>. Всички права запазени.
 				</p>
 				<ul
@@ -233,6 +260,52 @@
 </footer>
 
 <style>
+	.compact-mobile-footer {
+		display: none;
+	}
+	@media (max-width: 991px) {
+		:global(#wrapper:has(> .compact-mobile-footer)) {
+			padding-bottom: 0 !important;
+		}
+		.daynight-legacy-footer {
+			display: none;
+		}
+		.compact-mobile-footer {
+			display: grid;
+			gap: 12px;
+			background: var(--sa-dark);
+			color: #fff;
+			padding: 24px 16px calc(84px + env(safe-area-inset-bottom));
+		}
+		.compact-mobile-footer img {
+			width: 160px;
+			height: auto;
+		}
+		.compact-mobile-footer a {
+			color: inherit;
+			font-size: var(--sa-text-caption);
+			line-height: 1.5;
+		}
+		.compact-mobile-footer__phone {
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight);
+		}
+		.compact-mobile-footer nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+		.compact-mobile-footer nav a {
+			display: inline-flex;
+			align-items: center;
+			min-height: 44px;
+		}
+		.compact-mobile-footer small {
+			color: #b5bbc3;
+			font-size: var(--sa-text-caption);
+		}
+	}
+
 	.footer-link-group summary {
 		min-height: 44px;
 		cursor: pointer;

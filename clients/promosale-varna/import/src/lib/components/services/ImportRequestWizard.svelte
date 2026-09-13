@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ArrowRight, Check, ChevronLeft, Link2, Search, X } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
+	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import {
 		emptyImportCriteria,
 		importCountries,
@@ -68,7 +69,6 @@
 		transmission
 	});
 	const criteriaSummary = $derived(importCriteriaSummary(requestCriteria));
-	const years = Array.from({ length: 37 }, (_, index) => String(new Date().getFullYear() - index));
 
 	let canContinue = $derived(
 		step === 0
@@ -76,7 +76,7 @@
 				? vehicle.trim().length > 3
 				: Boolean(origin) || make.trim().length > 1 || model.trim().length > 1
 			: step === 2
-				? phone.trim().length >= 6
+				? name.trim().length >= 2 && phone.trim().length >= 6
 				: true
 	);
 
@@ -126,16 +126,15 @@
 			<span><Check size={25} strokeWidth={2.4} aria-hidden="true" /></span>
 			<h2>Заявката е получена</h2>
 			<p>
-				Запазихме данните за Promosale Varna. Екипът ще прегледа заявката и ще се свърже с теб до 24
-				часа.
+				{templateInquiryCopy.success}
 			</p>
 			<button type="button" onclick={onclose}>Затвори</button>
 		</div>
 	{:else}
 		<header class="bc-import-wizard__header">
 			<div>
-				<h2>Заявка за внос</h2>
-				<p><strong>{step + 1}</strong> от {stepLabels.length} · {stepLabels[step]}</p>
+				<p>Етап {step + 1} от {stepLabels.length}</p>
+				<h2>{stepLabels[step]}</h2>
 			</div>
 			<button type="button" aria-label="Затвори" onclick={onclose}>
 				<X size={20} strokeWidth={2.3} aria-hidden="true" />
@@ -177,13 +176,6 @@
 				</div>
 
 				<div class="bc-import-wizard__fields">
-					<label class="bc-import-wizard__field--wide" for="import-wizard-origin"
-						><span>Държава</span><select id="import-wizard-origin" bind:value={origin}
-							>{#each importCountries as country (country.value)}<option value={country.value}
-									>{country.value ? country.label : 'Без значение'}</option
-								>{/each}</select
-						></label
-					>
 					{#if intent === 'listing'}
 						<label class="bc-import-wizard__field--wide" for="import-wizard-vehicle">
 							<span>Линк към обява или VIN *</span>
@@ -195,7 +187,29 @@
 								bind:value={vehicle}
 							/>
 						</label>
-					{:else}
+					{/if}
+					<fieldset class="bc-import-wizard__field--wide">
+						<legend>Пазар за покупка</legend>
+						<div class="bc-import-wizard__country-grid">
+							{#each importCountries as country (country.value)}
+								<button
+									type="button"
+									class:active={origin === country.value}
+									aria-pressed={origin === country.value}
+									onclick={() => (origin = country.value)}
+								>
+									<img
+										src={country.flagSrc}
+										alt=""
+										aria-hidden="true"
+										width="24"
+										height="18"
+									/><strong>{country.label}</strong>
+								</button>
+							{/each}
+						</div>
+					</fieldset>
+					{#if intent === 'source'}
 						<label for="import-wizard-make">
 							<span>Марка</span>
 							<input
@@ -222,13 +236,17 @@
 					<p>Бюджетът и срокът помагат да върнем реалистична следваща стъпка.</p>
 				</div>
 				<div class="bc-import-wizard__fields">
-					<label for="import-wizard-year"
-						><span>Година от</span><select id="import-wizard-year" bind:value={minYear}
-							><option value="">Без значение</option>{#each years as year (year)}<option
-									value={year}>{year}</option
-								>{/each}</select
-						></label
-					>
+					<label for="import-wizard-year">
+						<span>Година от</span>
+						<input
+							id="import-wizard-year"
+							type="text"
+							inputmode="numeric"
+							maxlength="4"
+							placeholder="2021"
+							bind:value={minYear}
+						/>
+					</label>
 					<label for="import-wizard-budget">
 						<span>Бюджет до</span>
 						<input
@@ -239,27 +257,46 @@
 							bind:value={budget}
 						/>
 					</label>
-					<label for="import-wizard-timeframe">
-						<span>Желан срок</span>
-						<select id="import-wizard-timeframe" bind:value={timeframe}>
-							{#each timeframeOptions as option (option)}<option value={option}>{option}</option
-								>{/each}
-						</select>
-					</label>
-					<label for="import-wizard-fuel"
-						><span>Гориво</span><select id="import-wizard-fuel" bind:value={fuel}
-							><option value="">Всички</option>{#each importFuels as option (option)}<option
-									value={option}>{option}</option
-								>{/each}</select
-						></label
-					>
-					<label for="import-wizard-transmission"
-						><span>Скорости</span><select id="import-wizard-transmission" bind:value={transmission}
-							><option value="">Всички</option>{#each importTransmissions as option (option)}<option
-									value={option}>{option}</option
-								>{/each}</select
-						></label
-					>
+					<fieldset class="bc-import-wizard__field--wide">
+						<legend>Желан срок</legend>
+						<div class="bc-import-wizard__chips">
+							{#each timeframeOptions as option (option)}
+								<button
+									type="button"
+									class:active={timeframe === option}
+									aria-pressed={timeframe === option}
+									onclick={() => (timeframe = option)}>{option}</button
+								>
+							{/each}
+						</div>
+					</fieldset>
+					<fieldset class="bc-import-wizard__field--wide">
+						<legend>Гориво</legend>
+						<div class="bc-import-wizard__chips">
+							{#each importFuels as option (option)}
+								<button
+									type="button"
+									class:active={fuel === option}
+									aria-pressed={fuel === option}
+									onclick={() => (fuel = fuel === option ? '' : option)}>{option}</button
+								>
+							{/each}
+						</div>
+					</fieldset>
+					<fieldset class="bc-import-wizard__field--wide">
+						<legend>Скорости</legend>
+						<div class="bc-import-wizard__chips">
+							{#each importTransmissions as option (option)}
+								<button
+									type="button"
+									class:active={transmission === option}
+									aria-pressed={transmission === option}
+									onclick={() => (transmission = transmission === option ? '' : option)}
+									>{option}</button
+								>
+							{/each}
+						</div>
+					</fieldset>
 					<label class="bc-import-wizard__field--wide" for="import-wizard-notes">
 						<span>Предпочитания</span>
 						<textarea
@@ -272,8 +309,8 @@
 				</div>
 			{:else}
 				<div class="bc-import-wizard__intro">
-					<h3>Къде да изпратим проверката?</h3>
-					<p>Телефонът е необходим. Името и имейлът са по желание.</p>
+					<h3>Данни за контакт</h3>
+					<p>Името и телефонът са необходими. Имейлът е по желание.</p>
 					{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
 				</div>
 				<div class="bc-import-wizard__fields">
@@ -290,8 +327,15 @@
 						/>
 					</label>
 					<label for="import-wizard-name">
-						<span>Име</span>
-						<input id="import-wizard-name" type="text" autocomplete="name" bind:value={name} />
+						<span>Име *</span>
+						<input
+							id="import-wizard-name"
+							type="text"
+							autocomplete="name"
+							required
+							minlength="2"
+							bind:value={name}
+						/>
 					</label>
 					<label for="import-wizard-email">
 						<span>Имейл</span>
@@ -304,7 +348,7 @@
 						/>
 					</label>
 				</div>
-				<p class="bc-import-wizard__promise">Отговор до 24 ч · Без ангажимент</p>
+				<p class="bc-import-wizard__promise">{templateInquiryCopy.notice}</p>
 			{/if}
 		</div>
 
@@ -331,22 +375,27 @@
 
 <style>
 	.bc-import-wizard__error {
-		color: #9f1117;
-		font-size: 14px;
-		line-height: 20px;
+		color: var(--bc-accent-hover);
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
 		margin: 0;
+		font-weight: var(--bc-weight-body);
 	}
 	.bc-import-wizard__intro .bc-import-wizard__summary {
 		margin-top: 8px;
-		color: #17191c;
+		color: var(--bc-ink);
 		overflow-wrap: anywhere;
 	}
 	.bc-import-wizard {
 		display: grid;
-		min-height: 100%;
-		align-content: start;
-		gap: 14px;
-		color: #111111;
+		grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
+		height: calc(100dvh - var(--bc-kb-inset, 0px));
+		min-height: 0;
+		gap: var(--bc-space-3);
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+		padding: max(var(--bc-space-3), env(safe-area-inset-top)) var(--bc-mobile-gutter)
+			max(var(--bc-space-3), env(safe-area-inset-bottom));
 	}
 
 	.bc-import-wizard__header {
@@ -367,21 +416,17 @@
 	}
 
 	.bc-import-wizard__header h2 {
-		font-size: 23px;
-		font-weight: 700;
+		font-size: var(--bc-mobile-section-title);
+		font-weight: var(--bc-weight-heading);
 		letter-spacing: -0.02em;
-		line-height: 28px;
+		line-height: var(--bc-mobile-section-title-leading);
 	}
 
 	.bc-import-wizard__header p {
-		color: #59636f;
-		font-size: 13px;
-		font-weight: 500;
-		line-height: 17px;
-	}
-
-	.bc-import-wizard__header p strong {
-		color: #111111;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-meta-leading);
 	}
 
 	.bc-import-wizard__header > button {
@@ -394,7 +439,7 @@
 		border: 0;
 		border-radius: 999px;
 		background: var(--bc-surface-soft);
-		color: #111111;
+		color: var(--bc-ink);
 		cursor: pointer;
 		padding: 0;
 	}
@@ -417,8 +462,15 @@
 
 	.bc-import-wizard__body {
 		display: grid;
-		gap: 16px;
-		padding: 2px 1px 8px;
+		min-height: 0;
+		gap: var(--bc-space-4);
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		padding: var(--bc-space-1) 1px var(--bc-space-6);
+		scrollbar-width: none;
+	}
+	.bc-import-wizard__body::-webkit-scrollbar {
+		display: none;
 	}
 
 	.bc-import-wizard__intro {
@@ -432,18 +484,18 @@
 	}
 
 	.bc-import-wizard__intro h3 {
-		font-size: 20px;
-		font-weight: 700;
+		font-size: var(--bc-mobile-section-title);
+		font-weight: var(--bc-weight-heading);
 		letter-spacing: -0.015em;
-		line-height: 25px;
+		line-height: var(--bc-mobile-section-title-leading);
 	}
 
 	.bc-import-wizard__intro p {
 		max-width: 52ch;
-		color: #59636f;
-		font-size: 13.5px;
-		font-weight: 500;
-		line-height: 19px;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-body);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-body-leading);
 	}
 
 	.bc-import-wizard__intent {
@@ -460,19 +512,19 @@
 		gap: 7px;
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-control);
-		background: #ffffff;
-		color: #111111;
+		background: var(--bc-white);
+		color: var(--bc-ink);
 		cursor: pointer;
-		font-size: 13px;
-		font-weight: 650;
-		line-height: 17px;
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
 		padding: 0 9px;
 	}
 
 	.bc-import-wizard__intent button.active {
 		border-color: var(--bc-accent);
 		background: rgba(196, 1, 1, 0.08);
-		color: #9f1117;
+		color: var(--bc-accent-hover);
 	}
 
 	.bc-import-wizard__fields {
@@ -492,30 +544,28 @@
 	}
 
 	.bc-import-wizard__fields span {
-		color: #4f5d57;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 15px;
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
 	}
 
 	.bc-import-wizard__fields input,
-	.bc-import-wizard__fields select,
 	.bc-import-wizard__fields textarea {
 		display: block;
 		width: 100%;
 		border: 1px solid var(--bc-border) !important;
 		border-radius: var(--bc-radius-control) !important;
-		background: var(--bc-surface-soft) !important;
+		background: var(--bc-white) !important;
 		box-shadow: none !important;
-		color: #111111;
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 22px;
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
 		outline: 0;
 	}
 
-	.bc-import-wizard__fields input,
-	.bc-import-wizard__fields select {
+	.bc-import-wizard__fields input {
 		height: 48px !important;
 		padding: 0 12px !important;
 	}
@@ -526,70 +576,142 @@
 		padding: 11px 12px !important;
 	}
 
-	.bc-import-wizard__fields select {
-		appearance: auto;
-	}
-
 	.bc-import-wizard__fields input::placeholder,
 	.bc-import-wizard__fields textarea::placeholder {
-		color: #7c8794;
+		color: var(--bc-muted);
 		opacity: 1;
 	}
 
-	.bc-import-wizard__fields input:focus-visible,
-	.bc-import-wizard__fields select:focus-visible,
+	.bc-import-wizard__fields input:focus-visible:focus-visible,
 	.bc-import-wizard__fields textarea:focus-visible {
 		border-color: var(--bc-accent) !important;
-		background: #ffffff !important;
+		background: var(--bc-white) !important;
+	}
+
+	.bc-import-wizard__fields fieldset {
+		display: grid;
+		min-width: 0;
+		gap: var(--bc-space-2);
+		margin: 0;
+		border: 0;
+		padding: 0;
+	}
+	.bc-import-wizard__fields legend {
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
+		padding: 0;
+	}
+	.bc-import-wizard__country-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--bc-space-2);
+	}
+	.bc-import-wizard__country-grid button {
+		display: grid;
+		min-height: 64px;
+		place-items: center;
+		gap: var(--bc-space-1);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		cursor: pointer;
+		padding: var(--bc-space-2);
+	}
+	.bc-import-wizard__country-grid button > img {
+		display: block;
+		width: 24px;
+		height: 18px;
+		border-radius: 3px;
+		object-fit: cover;
+	}
+	.bc-import-wizard__country-grid button strong {
+		font-size: var(--bc-text-control);
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
+	}
+	.bc-import-wizard__country-grid button.active {
+		border-color: var(--bc-accent);
+		background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
+		color: var(--bc-accent-hover);
+	}
+
+	.bc-import-wizard__chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--bc-space-2);
+	}
+	.bc-import-wizard__chips button {
+		display: inline-flex;
+		min-height: var(--bc-control-height-standard);
+		align-items: center;
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		cursor: pointer;
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		padding: 0 var(--bc-space-3);
+		line-height: var(--bc-leading-control);
+	}
+	.bc-import-wizard__chips button.active {
+		border-color: var(--bc-accent);
+		background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
+		color: var(--bc-accent-hover);
 	}
 
 	.bc-import-wizard__promise {
 		margin: -4px 0 0;
-		color: #9f1117;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 17px;
+		color: var(--bc-accent-hover);
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-meta-leading);
 	}
 
 	.bc-import-wizard__nav {
 		display: flex;
-		gap: 8px;
-		padding-top: 0;
+		gap: var(--bc-space-2);
+		border-top: 1px solid var(--bc-border);
+		background: var(--bc-bg-strong);
+		padding-top: var(--bc-space-3);
 	}
 
 	.bc-import-wizard__back,
 	.bc-import-wizard__next {
 		display: inline-flex;
-		min-height: 46px;
+		min-height: var(--bc-control-height-primary);
 		align-items: center;
 		justify-content: center;
 		gap: 6px;
 		border-radius: var(--bc-radius-control);
 		cursor: pointer;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 18px;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-leading-cta);
 	}
 
 	.bc-import-wizard__back {
 		flex: 0 0 auto;
 		border: 1px solid var(--bc-border);
-		background: #ffffff;
-		color: #111111;
+		background: var(--bc-white);
+		color: var(--bc-ink);
 		padding: 0 13px;
 	}
 
 	.bc-import-wizard__next {
 		flex: 1 1 auto;
 		border: 0;
-		background: #1c1c1c;
-		color: #ffffff;
+		background: var(--bc-ink);
+		color: var(--bc-white);
 		padding: 0 16px;
 	}
 
 	.bc-import-wizard__next:disabled {
-		background: #d4d9de;
-		color: #67727e;
+		background: var(--bc-border);
+		color: var(--bc-muted);
 		cursor: not-allowed;
 	}
 
@@ -608,7 +730,7 @@
 		justify-content: center;
 		border-radius: 999px;
 		background: rgba(196, 1, 1, 0.1);
-		color: #9f1117;
+		color: var(--bc-accent-hover);
 	}
 
 	.bc-import-wizard__success h2,
@@ -624,23 +746,23 @@
 
 	.bc-import-wizard__success p {
 		max-width: 52ch;
-		color: #59636f;
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-body);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-body-leading);
 	}
 
 	.bc-import-wizard__success button {
 		display: flex;
 		width: 100%;
-		min-height: 46px;
+		min-height: var(--bc-control-height-primary);
 		align-items: center;
 		justify-content: center;
 		margin-top: 4px;
 		border: 0;
 		border-radius: var(--bc-radius-control);
-		background: #1c1c1c;
-		color: #ffffff;
+		background: var(--bc-ink);
+		color: var(--bc-white);
 		cursor: pointer;
 		font-size: 15px;
 		font-weight: 700;
@@ -652,5 +774,200 @@
 	.bc-import-wizard__success :global(svg) {
 		color: currentColor;
 		stroke: currentColor;
+	}
+
+	/* overlay-polish-v2: full-screen, compact import flow */
+	.bc-import-wizard {
+		gap: 0;
+		background: var(--bc-bg-strong);
+		padding: 0;
+		grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
+	}
+	.bc-import-wizard__header {
+		display: grid;
+		grid-template-columns: 40px minmax(0, 1fr) 40px;
+		align-items: center;
+		gap: 8px;
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+		padding: max(8px, env(safe-area-inset-top)) var(--bc-mobile-gutter) 7px;
+	}
+	.bc-import-wizard__header > div {
+		grid-column: 2;
+		grid-row: 1;
+		gap: 1px;
+		text-align: center;
+	}
+	.bc-import-wizard__header > button {
+		grid-column: 1;
+		grid-row: 1;
+		width: 40px;
+		height: 40px;
+		background: var(--bc-white);
+		color: var(--bc-ink);
+	}
+	.bc-import-wizard__header::after {
+		content: '';
+		grid-column: 3;
+		grid-row: 1;
+		width: 40px;
+		height: 40px;
+	}
+	.bc-import-wizard__header h2 {
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.bc-import-wizard__header p {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
+		line-height: var(--bc-mobile-meta-leading);
+		font-weight: var(--bc-weight-body);
+	}
+	.bc-import-wizard__progress {
+		gap: 4px;
+		padding: 0 var(--bc-mobile-gutter) 8px;
+	}
+	.bc-import-wizard__progress span {
+		height: 3px;
+		background: var(--bc-border);
+	}
+
+	.bc-import-wizard__body {
+		gap: 10px;
+		align-content: start;
+		grid-auto-rows: max-content;
+		background: var(--bc-bg-strong);
+		padding: 8px var(--bc-mobile-gutter) 18px;
+	}
+	.bc-import-wizard__intro {
+		gap: 2px;
+	}
+	.bc-import-wizard__intro h3 {
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.bc-import-wizard__intro p {
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
+		font-weight: var(--bc-weight-body);
+	}
+	.bc-import-wizard__intent {
+		gap: 6px;
+	}
+	.bc-import-wizard__intent button {
+		min-height: 42px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		font-size: var(--bc-text-control);
+		padding: 0 10px;
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
+	}
+	.bc-import-wizard__intent button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.bc-import-wizard__fields {
+		gap: 10px 8px;
+	}
+	.bc-import-wizard__fields label,
+	.bc-import-wizard__fields fieldset {
+		gap: 5px;
+	}
+	.bc-import-wizard__fields span,
+	.bc-import-wizard__fields legend {
+		font-size: var(--bc-mobile-label);
+		line-height: var(--bc-mobile-label-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields textarea {
+		border: 0 !important;
+		border-radius: 10px !important;
+		background: var(--bc-white) !important;
+	}
+	.bc-import-wizard__fields input {
+		height: 44px !important;
+		padding: 0 11px !important;
+	}
+	.bc-import-wizard__fields textarea {
+		min-height: 70px;
+		padding: 9px 11px !important;
+	}
+	.bc-import-wizard__fields input:focus,
+	.bc-import-wizard__fields textarea:focus {
+		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent) !important;
+	}
+
+	.bc-import-wizard__country-grid {
+		display: flex;
+		gap: 6px;
+		overflow-x: auto;
+		padding: 1px 0 3px;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
+	}
+	.bc-import-wizard__country-grid::-webkit-scrollbar {
+		display: none;
+	}
+	.bc-import-wizard__country-grid button {
+		display: inline-flex;
+		min-height: 40px;
+		flex: 0 0 auto;
+		align-items: center;
+		justify-content: center;
+		gap: 7px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		padding: 0 12px;
+	}
+	.bc-import-wizard__country-grid button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.bc-import-wizard__country-grid button > img {
+		width: 20px;
+		height: 14px;
+	}
+	.bc-import-wizard__chips {
+		gap: 6px;
+	}
+	.bc-import-wizard__chips button {
+		min-height: 38px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		padding: 0 12px;
+	}
+	.bc-import-wizard__chips button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.bc-import-wizard__nav {
+		gap: 8px;
+		border-top: 1px solid var(--bc-border);
+		background: var(--bc-bg-strong);
+		padding: 9px var(--bc-mobile-gutter) calc(9px + env(safe-area-inset-bottom));
+	}
+	.bc-import-wizard__back,
+	.bc-import-wizard__next {
+		min-height: 46px;
+		border-radius: 11px;
+	}
+	.bc-import-wizard__back {
+		border: 0;
+		background: var(--bc-white);
+	}
+	.bc-import-wizard__next {
+		background: var(--bc-accent);
+	}
+	.bc-import-wizard__next:disabled {
+		background: var(--bc-border);
+		color: var(--bc-muted);
 	}
 </style>

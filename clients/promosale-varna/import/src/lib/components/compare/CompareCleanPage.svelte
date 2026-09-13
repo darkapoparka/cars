@@ -57,7 +57,7 @@
 				{t('Сравнение', 'Compare')}
 			</p>
 			<h1 class="m-0 mb-3 max-w-xl text-bc-h2 font-semibold text-white">
-				{t('Сравни автомобили от Promosale Varna', 'Compare Promosale Varna vehicles')}
+				{t('Сравни автомобили от Day Night Auto', 'Compare Day Night Auto vehicles')}
 			</h1>
 			<p class="m-0 max-w-xl text-base leading-6 font-medium text-white/75">
 				{t(

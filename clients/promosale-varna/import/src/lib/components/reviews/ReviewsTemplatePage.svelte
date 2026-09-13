@@ -41,7 +41,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Отзиви — Promosale Varna"
+	title="Отзиви — Day Night Auto"
 >
 	<section class="pb-100" data-daynight-reviews-page>
 		<div class="container">

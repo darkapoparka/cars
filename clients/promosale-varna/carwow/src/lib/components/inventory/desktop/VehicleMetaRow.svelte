@@ -50,7 +50,7 @@
 	}
 
 	.tag.style2 li span {
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		min-width: 0;
 		overflow: hidden;
@@ -76,7 +76,7 @@
 		}
 
 		.tag.style2 li span {
-			font-size: 14px;
+			font-size: var(--sa-text-caption);
 			line-height: 20px;
 		}
 	}

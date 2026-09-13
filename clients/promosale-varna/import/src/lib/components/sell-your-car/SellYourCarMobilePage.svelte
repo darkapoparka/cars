@@ -10,6 +10,7 @@
 	import { Drawer } from 'vaul-svelte';
 	import MobileAppbar from '$lib/components/layout/MobileAppbar.svelte';
 	import MobileServiceEntry from '$lib/components/services/MobileServiceEntry.svelte';
+	import MobileServiceManualEntry from '$lib/components/services/MobileServiceManualEntry.svelte';
 	import SellCarWizard from './SellCarWizard.svelte';
 
 	let {
@@ -23,35 +24,17 @@
 	} = $props();
 
 	let wizardOpen = $state(false);
-	let manualMake = $state('');
-	let manualModel = $state('');
-	let manualYear = $state('');
-	let manualMileage = $state('');
-	const manualYears = Array.from({ length: 37 }, (_, index) =>
-		String(new Date().getFullYear() - index)
-	);
-	const manualMakes = [
-		'BMW',
-		'Mercedes-Benz',
-		'Audi',
-		'Volkswagen',
-		'Toyota',
-		'Volvo',
-		'Ford',
-		'Porsche',
-		'Honda',
-		'Друга'
-	];
-	const submitManual = (event: SubmitEvent) => {
-		event.preventDefault();
-		openWizard(true);
-	};
+	let entryMode = $state<'vin' | 'manual'>('vin');
 	let manualEntry = $state(false);
 	let wizardSession = $state(0);
-	const vinField = $derived(form.fields.find((field) => field.name === 'vin')!);
-	/* Editable copies let the hero VIN carry into the detailed valuation. */
-	// svelte-ignore state_referenced_locally
-	let fieldValues = $state(
+	const guideSteps = $derived(
+		steps.map((step, index) =>
+			index === 0
+				? { ...step, text: 'Добави VIN или марка и модел, пробег и телефон за контакт.' }
+				: step
+		)
+	);
+	const fieldValues = $derived(
 		Object.fromEntries(form.fields.map((field) => [field.name, field.value ?? ''])) as Record<
 			string,
 			string
@@ -70,9 +53,20 @@
 		wizardSession += 1;
 		wizardOpen = true;
 	};
-	const handleVinSubmit = (event: SubmitEvent) => {
+	const handleModeKeydown = (event: KeyboardEvent) => {
+		if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
 		event.preventDefault();
-		openWizard(false);
+		entryMode =
+			event.key === 'Home'
+				? 'vin'
+				: event.key === 'End'
+					? 'manual'
+					: entryMode === 'vin'
+						? 'manual'
+						: 'vin';
+		(event.currentTarget as HTMLElement).parentElement
+			?.querySelector<HTMLButtonElement>(`[data-mode="${entryMode}"]`)
+			?.focus();
 	};
 	const setLocationSheetOpen = (open: boolean) => {
 		const toggle = document.getElementById(
@@ -100,75 +94,65 @@
 	/>
 
 	<MobileServiceEntry
+		showTitle={false}
 		title={copy.title}
-		intro="Въведи VIN, добави основните данни и ще се свържем с оценка до 24 ч."
-		meta="5 стъпки · Снимки по желание"
-		response="Оценка до 24 ч."
+		intro="Въведи VIN или опиши автомобила с марка, модел, година и пробег."
+		meta="2 стъпки · Автомобил и контакт"
+		response="Демонстрационна оценка"
 		stepsTitle={copy.stepsTitle}
-		{steps}
+		steps={guideSteps}
 	>
+		{#snippet modes()}
+			<div class="sell-mode-tabs" role="tablist" aria-label="Данни за автомобила">
+				{#each [{ value: 'vin', label: 'VIN' }, { value: 'manual', label: 'Нямам VIN' }] as mode (mode.value)}
+					<button
+						type="button"
+						id={`sell-mode-${mode.value}`}
+						data-mode={mode.value}
+						role="tab"
+						class:active={entryMode === mode.value}
+						aria-selected={entryMode === mode.value}
+						aria-controls="sell-entry-panel"
+						tabindex={entryMode === mode.value ? 0 : -1}
+						onkeydown={handleModeKeydown}
+						onclick={() => (entryMode = mode.value as 'vin' | 'manual')}>{mode.label}</button
+					>
+				{/each}
+			</div>
+		{/snippet}
 		{#snippet entry()}
-			<form onsubmit={handleVinSubmit}>
-				<label for="sell-mobile-vin">VIN номер</label>
-				<div class="service-input">
-					<ScanLine size={21} strokeWidth={2.15} aria-hidden="true" />
-					<input
-						id="sell-mobile-vin"
-						name={vinField.name}
-						type={vinField.type}
-						placeholder="Въведи VIN номер"
-						required={vinField.required}
-						autocomplete={vinField.autocomplete}
-						bind:value={fieldValues.vin}
-					/>
-					<button type="submit" aria-label="Продължи с VIN">
-						<ArrowRight size={21} strokeWidth={2.35} aria-hidden="true" />
+			<div id="sell-entry-panel" role="tabpanel" aria-labelledby={`sell-mode-${entryMode}`}>
+				{#if entryMode === 'vin'}
+					<button
+						type="button"
+						class="service-input service-manual-entry"
+						aria-haspopup="dialog"
+						aria-expanded={wizardOpen && !manualEntry}
+						onclick={() => openWizard(false)}
+					>
+						<ScanLine size={21} strokeWidth={2.15} aria-hidden="true" />
+						<span class="service-input__text">{fieldValues.vin || 'Въведи VIN номер'}</span>
+						<span class="service-input__go" aria-hidden="true">
+							<ArrowRight size={21} strokeWidth={2.35} />
+						</span>
 					</button>
-				</div>
-			</form>
+				{:else}
+					<MobileServiceManualEntry onclick={() => openWizard(true)} />
+				{/if}
+			</div>
 		{/snippet}
 		{#snippet content()}
-			<form class="sell-manual-entry" onsubmit={submitManual}>
-				<h2>Нямаш VIN?</h2>
-				<div class="sell-manual-entry__fields">
-					<label for="sell-entry-make"
-						>Марка<select id="sell-entry-make" required bind:value={manualMake}
-							><option value="">Избери марка</option>{#each manualMakes as make (make)}<option
-									value={make}>{make}</option
-								>{/each}</select
-						></label
-					>
-					<label for="sell-entry-model"
-						>Модел<input
-							id="sell-entry-model"
-							required
-							minlength="2"
-							maxlength="80"
-							placeholder="Напр. X5"
-							bind:value={manualModel}
-						/></label
-					>
-					<label for="sell-entry-year"
-						>Година<select id="sell-entry-year" bind:value={manualYear}
-							><option value="">Избери година</option>{#each manualYears as year (year)}<option
-									value={year}>{year}</option
-								>{/each}</select
-						></label
-					>
-					<label for="sell-entry-mileage"
-						>Пробег (км)<input
-							id="sell-entry-mileage"
-							inputmode="numeric"
-							pattern="[0-9]*"
-							maxlength="8"
-							placeholder="125000"
-							bind:value={manualMileage}
-						/></label
-					>
-				</div>
-				<button type="submit">Продължи с данните <ArrowRight size={20} aria-hidden="true" /></button
-				>
-			</form>
+			<section class="sell-guide" aria-label="Стъпки за продажба">
+				<ol class="sell-guide__steps">
+					{#each guideSteps as step, index (step.title)}
+						<li>
+							<span class="sell-guide__number" aria-hidden="true">{index + 1}</span>
+							<h3>{step.title}</h3>
+							<p>{step.text}</p>
+						</li>
+					{/each}
+				</ol>
+			</section>
 		{/snippet}
 	</MobileServiceEntry>
 
@@ -189,7 +173,7 @@
 			<span class="daynight-sell-mobile-sheet__handle" aria-hidden="true"></span>
 			<header class="daynight-sell-mobile-sheet__header">
 				<div>
-					<p>Promosale Varna шоурум</p>
+					<p>Day Night Auto шоурум</p>
 					<h2 id="sell-mobile-location-title">{daynightContact.addressLabel}</h2>
 				</div>
 				<button type="button" aria-label="Затвори" onclick={() => setLocationSheetOpen(false)}>
@@ -201,7 +185,7 @@
 				<span class="road road-b"></span>
 				<span class="road road-c"></span>
 				<span class="pin"><MapPin size={24} strokeWidth={2.4} /></span>
-				<span class="badge">Promosale Varna</span>
+				<span class="badge">Day Night Auto</span>
 			</div>
 			<div class="daynight-sell-mobile__location-copy">
 				<span>{daynightContact.appointmentNote}</span>
@@ -226,15 +210,14 @@
 			<span>Затвори</span>
 		</Drawer.Overlay>
 		<Drawer.Content class="daynight-sell-wizard-drawer__sheet">
-			<Drawer.Handle class="daynight-sell-wizard-drawer__handle" />
 			<Drawer.Title class="daynight-sell-wizard-drawer__title">Оценка на автомобила</Drawer.Title>
 			{#key wizardSession}
 				<SellCarWizard
 					initial={{
-						make: manualEntry ? manualMake : '',
-						model: manualEntry ? manualModel : '',
-						year: manualEntry ? manualYear : '',
-						mileage: manualEntry ? manualMileage : fieldValues.mileage,
+						make: '',
+						model: '',
+						year: '',
+						mileage: fieldValues.mileage,
 						phone: fieldValues.phone,
 						price: fieldValues.price,
 						vin: manualEntry ? '' : fieldValues.vin
@@ -248,79 +231,111 @@
 </div>
 
 <style>
-	.sell-manual-entry {
-		padding: 4px 2px 12px;
-	}
-	.sell-manual-entry h2 {
-		margin: 0 0 12px;
-		color: #17191c;
-		font-size: 23px;
-		font-weight: 700;
-		line-height: 28px;
-	}
-	.sell-manual-entry__fields {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 12px;
-	}
-	.sell-manual-entry label {
-		display: grid;
-		gap: 6px;
-		min-width: 0;
-		color: #34383d;
-		font-size: 13px;
-		font-weight: 600;
-	}
-	.sell-manual-entry input,
-	.sell-manual-entry select {
-		width: 100%;
-		min-width: 0;
-		height: 48px !important;
-		padding: 0 12px !important;
-		border: 1px solid var(--bc-border) !important;
-		border-radius: var(--bc-radius-control) !important;
-		background: #ffffff !important;
-		color: #17191c;
-		box-shadow: none !important;
-		font-size: 16px;
-	}
-	.sell-manual-entry input::placeholder {
-		color: #626973;
-	}
-	.sell-manual-entry button {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 12px;
-		width: 100%;
-		min-height: 50px;
-		margin-top: 12px;
-		padding: 0 18px;
-		border: 0;
-		border-radius: 999px;
-		background: var(--bc-accent);
-		color: #ffffff;
-		font-size: 15px;
-		font-weight: 600;
-		cursor: pointer;
-	}
-	.sell-manual-entry input:focus-visible,
-	.sell-manual-entry select:focus-visible,
-	.sell-manual-entry button:focus-visible {
-		outline: 2px solid var(--bc-accent);
-		outline-offset: 2px;
-	}
-	@media (max-height: 620px) {
-		.sell-manual-entry h2 {
-			margin-bottom: 8px;
-		}
-	}
-
 	.daynight-sell-mobile {
 		position: relative;
-		min-height: calc(100dvh - 70px - env(safe-area-inset-bottom));
-		background: var(--bc-bg);
-		color: #111111;
+		min-height: calc(100dvh - var(--bc-mobile-nav-height) - env(safe-area-inset-bottom));
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+	}
+
+	.daynight-sell-mobile :global(a) {
+		text-decoration: none !important;
+	}
+
+	.sell-guide {
+		padding: var(--bc-space-4);
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-white);
+	}
+	.sell-guide__steps {
+		display: grid;
+		gap: var(--bc-space-6);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.sell-guide__steps li {
+		display: grid;
+		grid-template-columns: max-content minmax(0, 1fr);
+		align-items: center;
+		gap: var(--bc-space-1);
+	}
+	.sell-guide__number {
+		color: var(--bc-accent);
+		font-size: var(--bc-mobile-card-title);
+		line-height: var(--bc-mobile-card-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.sell-guide h3 {
+		margin: 0;
+		font-size: var(--bc-mobile-card-title);
+		line-height: var(--bc-mobile-card-title-leading);
+		font-weight: var(--bc-weight-heading);
+		color: var(--bc-ink);
+	}
+	.sell-guide__steps p {
+		grid-column: 1 / -1;
+		margin: 0;
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
+		color: var(--bc-copy);
+		font-weight: var(--bc-weight-body);
+	}
+	.sell-mode-tabs {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0;
+		min-height: 0;
+		border: 0;
+		border-bottom: 1px solid rgb(255 255 255 / 0.2);
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		padding: 0;
+	}
+
+	.sell-mode-tabs button {
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 44px;
+		min-height: 44px;
+		align-items: flex-end;
+		justify-content: center;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: rgb(255 255 255 / 0.72);
+		font-family: var(--bc-font-body);
+		font-size: var(--bc-text-h5);
+		font-weight: var(--bc-weight-control);
+		letter-spacing: 0;
+		line-height: 24px;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
+		padding: 0 0 6px;
+	}
+
+	.sell-mode-tabs button.active {
+		background: transparent;
+		box-shadow: none;
+		color: var(--bc-white);
+		font-weight: var(--bc-weight-heading);
+	}
+
+	.sell-mode-tabs button.active::after {
+		position: absolute;
+		inset: auto 0 -1px;
+		height: 2px;
+		background: var(--bc-white);
+		content: '';
+	}
+
+	.sell-mode-tabs button:focus-visible {
+		outline: 2px solid rgb(255 255 255 / 0.72);
+		outline-offset: -3px;
 	}
 
 	.daynight-sell-mobile__sheet-toggle {
@@ -334,11 +349,11 @@
 
 	.daynight-sell-mobile-sheet__header p {
 		margin: 0;
-		color: var(--bc-accent-bright-soft);
-		font-size: 12px;
+		color: var(--bc-accent);
+		font-size: var(--bc-mobile-meta);
 		font-weight: 600;
 		letter-spacing: 0.04em;
-		line-height: 16px;
+		line-height: var(--bc-mobile-meta-leading);
 		text-transform: uppercase;
 	}
 
@@ -347,7 +362,7 @@
 		inset: 0;
 		z-index: 1200;
 		border: 0;
-		background: rgba(17, 17, 17, 0.38);
+		background: transparent;
 		cursor: pointer;
 		padding: 0;
 	}
@@ -367,23 +382,22 @@
 		inset: 0;
 		z-index: 1201;
 		display: block;
+		width: 100%;
 		height: 100dvh;
 		max-height: none;
-		overflow-x: hidden;
-		overflow-y: auto;
+		overflow: hidden;
 		overscroll-behavior: contain;
 		border-radius: 0;
-		background: var(--bc-bg);
+		background: var(--bc-bg-strong);
+		box-shadow: none;
 		outline: 0;
-		padding: max(8px, env(safe-area-inset-top)) 14px max(20px, env(safe-area-inset-bottom));
+		padding: 0;
 		scrollbar-width: none;
 	}
 
-	:global(.daynight-sell-wizard-drawer__sheet .bc-sell-wizard) {
-		height: auto;
-		min-height: calc(100dvh - 38px - max(28px, env(safe-area-inset-top)));
-		overflow: visible;
-		padding-bottom: 4px;
+	:global(.daynight-sell-wizard-drawer__sheet .sell-flow) {
+		height: 100%;
+		min-height: 0;
 	}
 
 	:global(.daynight-sell-wizard-drawer__sheet::-webkit-scrollbar) {
@@ -397,26 +411,17 @@
 	}
 
 	:global(.daynight-sell-wizard-drawer__handle) {
-		position: relative;
-		display: block;
-		width: 56px;
-		height: 22px;
-		justify-self: center;
-		border-radius: 0;
-		background: transparent;
-		opacity: 1;
-	}
-
-	:global(.daynight-sell-wizard-drawer__handle)::after {
 		position: absolute;
-		top: 50%;
+		top: 7px;
 		left: 50%;
-		width: 42px;
+		z-index: 5;
+		display: block !important;
+		width: 40px;
 		height: 4px;
-		transform: translate(-50%, -50%);
 		border-radius: 999px;
-		background: var(--bc-border);
-		content: '';
+		background: rgba(255, 255, 255, 0.34);
+		transform: translateX(-50%);
+		opacity: 1;
 	}
 
 	.daynight-sell-mobile-sheet {
@@ -456,15 +461,16 @@
 		bottom: var(--bc-kb-inset, 0px);
 		left: 0;
 		display: grid;
-		gap: 12px;
+		gap: var(--bc-space-3);
 		max-height: min(calc(88dvh - var(--bc-kb-inset, 0px)), 720px);
 		overflow-y: auto;
 		border: 0;
 		border-top: 1px solid var(--bc-border);
-		border-radius: 22px 22px 0 0;
-		background: var(--bc-bg);
-		box-shadow: 0 -18px 42px rgba(28, 28, 28, 0.18);
-		padding: 10px 14px calc(18px + env(safe-area-inset-bottom));
+		border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
+		background: var(--bc-bg-strong);
+		box-shadow: var(--bc-shadow-panel);
+		padding: var(--bc-space-2) var(--bc-mobile-gutter)
+			calc(var(--bc-space-4) + env(safe-area-inset-bottom));
 		transform: translateY(100%);
 		transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
 	}
@@ -480,7 +486,7 @@
 		width: 42px;
 		height: 5px;
 		justify-self: center;
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-border);
 	}
 
@@ -488,7 +494,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 12px;
+		gap: var(--bc-space-3);
 	}
 
 	.daynight-sell-mobile-sheet__header div {
@@ -498,16 +504,16 @@
 	}
 
 	.daynight-sell-mobile-sheet__header p {
-		color: #626d7c;
+		color: var(--bc-muted);
 	}
 
 	.daynight-sell-mobile-sheet__header h2 {
 		margin: 0;
-		color: #111111;
-		font-size: 22px;
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-section-title);
 		font-weight: 700;
 		letter-spacing: 0;
-		line-height: 27px;
+		line-height: var(--bc-mobile-section-title-leading);
 	}
 
 	.daynight-sell-mobile-sheet__header button {
@@ -518,9 +524,9 @@
 		align-items: center;
 		justify-content: center;
 		border: 0;
-		border-radius: 999px;
-		background: #ffffff;
-		color: #111111;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-surface-hover);
+		color: var(--bc-ink);
 		cursor: pointer;
 		padding: 0;
 	}
@@ -529,9 +535,10 @@
 		position: relative;
 		height: 132px;
 		overflow: hidden;
-		border-radius: 8px;
+		border-radius: var(--bc-radius-card);
 		background:
-			linear-gradient(135deg, rgba(254, 226, 226, 0.22), rgba(255, 255, 255, 0.74)), #ffffff;
+			linear-gradient(135deg, rgba(216, 221, 227, 0.72), rgba(248, 250, 252, 0.92)),
+			var(--bc-bg-strong);
 	}
 
 	.daynight-sell-mobile__map-preview::before,
@@ -553,7 +560,7 @@
 
 	.daynight-sell-mobile__map-preview .road {
 		position: absolute;
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: rgba(28, 28, 28, 0.1);
 	}
 
@@ -590,10 +597,11 @@
 		height: 48px;
 		align-items: center;
 		justify-content: center;
-		border: 4px solid #ffffff;
-		border-radius: 999px;
-		background: var(--bc-accent-bright-soft);
-		color: #111111;
+		border: 4px solid var(--bc-white);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-accent);
+		color: var(--bc-white);
+		color: var(--bc-ink);
 		transform: translateX(-50%);
 	}
 
@@ -601,21 +609,21 @@
 		position: absolute;
 		right: 15px;
 		bottom: 14px;
-		border-radius: 999px;
-		background: #1c1c1c;
-		color: #ffffff;
-		font-size: 12px;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-ink);
+		color: var(--bc-white);
+		font-size: var(--bc-mobile-meta);
 		font-weight: 700;
-		line-height: 16px;
+		line-height: var(--bc-mobile-meta-leading);
 		padding: 7px 10px;
 	}
 
 	.daynight-sell-mobile__location-copy {
 		display: grid;
 		gap: 4px;
-		border-radius: 8px;
-		background: #ffffff;
-		padding: 13px 14px;
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-white);
+		padding: var(--bc-space-3) var(--bc-mobile-gutter);
 	}
 
 	.daynight-sell-mobile__location-copy span,
@@ -626,48 +634,49 @@
 	}
 
 	.daynight-sell-mobile__location-copy span {
-		color: #626d7c;
-		font-size: 12px;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
 		font-weight: 700;
-		line-height: 16px;
+		line-height: var(--bc-mobile-meta-leading);
 		text-transform: uppercase;
 	}
 
 	.daynight-sell-mobile__location-copy strong {
-		color: #111111;
-		font-size: 17px;
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-card-title);
 		font-weight: 700;
-		line-height: 22px;
+		line-height: var(--bc-mobile-card-title-leading);
 	}
 
 	.daynight-sell-mobile__location-copy p {
-		color: #56635a;
-		font-size: 14px;
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-body);
 		font-weight: 500;
-		line-height: 18px;
+		line-height: var(--bc-mobile-label-leading);
 	}
 
 	.daynight-sell-mobile-sheet__actions {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 10px;
+		gap: var(--bc-space-3);
 	}
 
 	.daynight-sell-mobile-sheet__actions a {
 		display: flex;
-		min-height: 48px;
+		min-height: var(--bc-control-height-primary);
 		align-items: center;
 		justify-content: center;
-		gap: 8px;
+		gap: var(--bc-space-2);
 		border-radius: var(--bc-radius-control);
-		background: #ffffff;
-		color: #1c1c1c;
-		font-size: 14px;
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-body);
 		font-weight: 700;
-		line-height: 18px;
+		line-height: var(--bc-mobile-label-leading);
 	}
 
 	.daynight-sell-mobile-sheet__actions a:first-child {
-		background: var(--bc-accent-bright-soft);
+		background: var(--bc-accent);
+		color: var(--bc-white);
 	}
 </style>

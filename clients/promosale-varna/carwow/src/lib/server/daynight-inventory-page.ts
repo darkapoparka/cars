@@ -1,11 +1,11 @@
-import { daynightVehicles, type Car } from '$lib/data/daynight-vehicles';
+import type { Car } from '$lib/data/daynight-vehicles';
 import type {
 	InventoryGridDefinition,
 	InventoryListVehicle,
 	InventoryQuickFilterGroup,
 	InventoryQuickFilterOption
 } from '$lib/types/inventory';
-import type { InventoryTemplatePage, MapInventoryTemplatePage } from '$lib/types/template-page';
+import type { InventoryPageData, MapInventoryPageData } from '$lib/types/storefront-page';
 import { routeSeo } from './daynight-seo';
 
 export function toInventoryListVehicle(vehicle: Car): InventoryListVehicle {
@@ -150,30 +150,24 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 // The grid is fully native (the reactive DesktopInventoryFilters store drives
 // every control) and ships no template scripts, so the payload is built purely
 // from Car data + route SEO.
-export async function loadInventoryTemplatePage(vehicles?: Car[]): Promise<InventoryTemplatePage> {
-	const publicVehicles = vehicles ?? daynightVehicles;
-
+export function buildInventoryPageData(vehicles: Car[]): InventoryPageData {
 	return {
 		kind: 'inventory',
 		...routeSeo('inventory'),
-		scriptSrcs: [],
 		gridDefinitions,
-		quickFilters: buildQuickFilters(publicVehicles),
-		vehicles: publicVehicles.map(toInventoryListVehicle)
+		quickFilters: buildQuickFilters(vehicles),
+		vehicles: vehicles.map(toInventoryListVehicle)
 	};
 }
 
 // Native half-map payload — the same quick filters + vehicles the grid carries
 // (they drive the shared reactive store), minus the grid layout definitions. The
 // map embed itself is masked in the visual gate.
-export async function loadInventoryMapPage(vehicles?: Car[]): Promise<MapInventoryTemplatePage> {
-	const publicVehicles = vehicles ?? daynightVehicles;
-
+export function buildInventoryMapPageData(vehicles: Car[]): MapInventoryPageData {
 	return {
 		kind: 'inventory-map',
 		...routeSeo('inventory/map'),
-		scriptSrcs: [],
-		quickFilters: buildQuickFilters(publicVehicles),
-		vehicles: publicVehicles.map(toInventoryListVehicle)
+		quickFilters: buildQuickFilters(vehicles),
+		vehicles: vehicles.map(toInventoryListVehicle)
 	};
 }

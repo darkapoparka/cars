@@ -46,7 +46,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!user) {
-		return errorJson('Promosale Varna user not found', 404);
+		return errorJson('Day Night Auto user not found', 404);
 	}
 
 	return okJson({ user });

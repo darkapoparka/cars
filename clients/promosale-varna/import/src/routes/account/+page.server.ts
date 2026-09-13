@@ -38,7 +38,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		auxeroFullPage: true,
 		beforeRecentHtml: recentSlot.beforeHtml,
 		dashboard: getAccountDashboardPageData('dashboard.html', renderOptions, {
-			subtitle: 'Запазени автомобили, подадени обяви и активни разговори с Promosale Varna.',
+			subtitle: 'Запазени автомобили, подадени обяви и активни разговори с Day Night Auto.',
 			title: 'Табло на акаунта'
 		}),
 		pageDocument: removeAuxeroPageDocumentBodyHtml(pageDocument)

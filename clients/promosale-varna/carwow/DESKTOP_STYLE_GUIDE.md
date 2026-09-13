@@ -18,7 +18,7 @@ The previous mismatch was measurable: home and inventory shortcuts used differen
 - Shared desktop discovery roles and chip states: `src/lib/styles/desktop-discovery.css`.
 - Existing brand yellow, Geist font and responsive heading scale: `src/lib/styles/tokens.css`.
 - Do not change global/mobile tokens to solve a desktop-only issue.
-- [Visual specimen](artifacts/desktop-style-guide.html) uses the shared token stylesheet and chip classes. The site components remain the implementation authority for complete controls.
+- The former generated visual specimen is not shipped. Review the live Home and Inventory routes; their components and shared styles are the implementation authority for complete controls.
 
 ## Palette
 

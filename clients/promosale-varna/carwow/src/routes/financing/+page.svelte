@@ -6,36 +6,37 @@
 	import DesktopFinancingPage from '$lib/components/financing/DesktopFinancingPage.svelte';
 	import MobileFinancingPage from '$lib/components/financing/MobileFinancingPage.svelte';
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
-	import RouteAccordionBehavior from '$lib/components/layout/RouteAccordionBehavior.svelte';
 	import DayNightFooter from '$lib/components/layout/DayNightFooter.svelte';
 	import RouteImageBehavior from '$lib/components/layout/RouteImageBehavior.svelte';
-	import { isDesktopOrServerViewport, isPhoneViewport } from '$lib/hooks/is-mobile.svelte';
+	import { getViewportContext } from '$lib/hooks/viewport.svelte';
+	const viewport = getViewportContext();
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 
-	const showMobileShell = $derived(isPhoneViewport());
-	const showDesktopShell = $derived(isDesktopOrServerViewport());
+	const showMobileShell = $derived(viewport.mobile);
+	const showDesktopShell = $derived(!viewport.mobile);
 </script>
 
 <RouteSeo title={data.seo.title} description={data.seo.description} />
 
 {#if showDesktopShell}
 	<RouteImageBehavior />
-	<RouteAccordionBehavior />
 {/if}
 
 {#if showMobileShell}
 	<MobileFinancingPage />
 {/if}
 
-<StorefrontShell mobileReplaced>
-	<SiteChrome />
-	<DesktopFinancingPage />
-	<DayNightFooter />
-</StorefrontShell>
+{#if showDesktopShell}
+	<StorefrontShell mobileReplaced>
+		<SiteChrome />
+		<DesktopFinancingPage />
+		<DayNightFooter />
+	</StorefrontShell>
 
-<DesktopHomeTrailingChrome />
+	<DesktopHomeTrailingChrome />
+{/if}
 
 {#if showMobileShell}
 	<MobileBottomDock />

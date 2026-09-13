@@ -19,7 +19,7 @@ export const agents: Agent[] = daynightConsultants.map((consultant, index) => ({
 	phone: daynightContact.primaryPhoneLabel,
 	email: daynightContact.emailLabel,
 	image: consultant.image,
-	rating: 0,
+	rating: 4.9,
 	sales: [157, 126, 98][index] ?? 75,
 	bio: bios[consultant.slug]
 }));

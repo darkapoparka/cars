@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import {
@@ -80,7 +81,7 @@
 			href: '/financing'
 		},
 		{
-			title: 'Sell or part exchange with Promosale Varna',
+			title: 'Sell or part exchange with Day Night Auto',
 			image: '/assets/images/sell/trade-in-promo-v1.webp',
 			href: '/sell-your-car'
 		}
@@ -96,26 +97,26 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Marketplace | Home2</title>
+	<title>Day Night Auto Marketplace | Home2</title>
 	<meta
 		name="description"
-		content="Browse, buy, sell and review verified cars from Promosale Varna Варна."
+		content="Browse, buy, sell and review verified cars from Day Night Auto София."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>
 
-<main class="home2-shell">
+<main id="main-content" tabindex="-1" class="home2-shell">
 	<section class="home2-hero" aria-labelledby="home2-title">
 		<img
 			class="home2-hero__cars"
-			src="/dealer/showroom.webp"
+			src="/assets/images/home2/daynight-hero-showroom-v2.webp"
 			alt=""
 			aria-hidden="true"
 		/>
 
 		<header class="home2-nav" aria-label="Home2 navigation">
-			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Promosale Varna Home2">
-				<img src="/dealer/logo.png" alt="Promosale Varna" />
+			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Day Night Auto Home2">
+				<img src={daynightSite.logoLight} alt="Day Night Auto" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">
@@ -140,7 +141,7 @@
 
 		<h1 id="home2-title">
 			<span>Changing your car?</span>
-			<span>Promosale Varna can help</span>
+			<span>Day Night Auto can help</span>
 		</h1>
 
 		<form class="home2-search" onsubmit={submitSearch} aria-label="Find your next car">
@@ -217,7 +218,7 @@
 				<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 				<div>
 					<h2 id="trending-title">Premium is trending</h2>
-					<p>Popular Promosale Varna picks, ready to compare side by side</p>
+					<p>Popular Day Night Auto picks, ready to compare side by side</p>
 				</div>
 			</div>
 
@@ -262,7 +263,7 @@
 				<Star size={55} fill="currentColor" strokeWidth={1.8} />
 				<div>
 					<h2 id="reviews-title">This is how it should feel</h2>
-					<p>Customers rate Promosale Varna as excellent for buying, selling and support</p>
+					<p>Customers rate Day Night Auto as excellent for buying, selling and support</p>
 				</div>
 			</div>
 
@@ -289,7 +290,7 @@
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/dealer/logo.png" alt="Promosale Varna consultant" />
+			<img src="/brand/daynight-team-placeholder.svg" alt="Day Night Auto consultant" />
 			<div>
 				<h2 id="easy-title">We make car changing easy</h2>
 				<p>
@@ -315,7 +316,7 @@
 			<HeartHandshake size={58} fill="currentColor" strokeWidth={2.3} />
 			<div>
 				<h2 id="explore-title">Explore cars</h2>
-				<p>Browse Promosale Varna stock by the brands and body styles customers ask for most.</p>
+				<p>Browse Day Night Auto stock by the brands and body styles customers ask for most.</p>
 			</div>
 		</div>
 
@@ -386,14 +387,7 @@
 		overflow: clip;
 		background: var(--paper);
 		color: var(--ink);
-		font-family:
-			Inter,
-			ui-sans-serif,
-			system-ui,
-			-apple-system,
-			BlinkMacSystemFont,
-			'Segoe UI',
-			sans-serif;
+		font-family: var(--sa-font);
 	}
 
 	.home2-shell :where(a, button) {
@@ -474,8 +468,8 @@
 		border-radius: 0;
 		background: transparent;
 		color: white;
-		font-size: 16px;
-		font-weight: 900;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 	}
 
@@ -520,8 +514,8 @@
 		border-radius: 999px;
 		background: transparent;
 		color: white;
-		font-size: 12px;
-		font-weight: 950;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1;
 		text-shadow: 0 3px 14px rgb(0 0 0 / 0.75);
 		cursor: pointer;
@@ -550,8 +544,8 @@
 	.home2-section-title h2,
 	.home2-dark h2 {
 		margin: 0;
-		font-family: 'Arial Black', Impact, Inter, ui-sans-serif, system-ui, sans-serif;
-		font-weight: 1000;
+		font-family: var(--sa-font);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		text-transform: uppercase;
 	}
@@ -568,7 +562,7 @@
 		display: grid;
 		gap: 2px;
 		text-align: center;
-		font-size: clamp(42px, 4.4vw, 68px);
+		font-size: var(--sa-text-desktop-hero-title);
 		line-height: 0.9;
 		text-shadow: 0 14px 34px rgb(0 0 0 / 0.45);
 		white-space: normal;
@@ -610,8 +604,8 @@
 		border: 0;
 		background: transparent;
 		color: white;
-		font-size: 18px;
-		font-weight: 950;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		cursor: pointer;
 	}
 
@@ -628,7 +622,7 @@
 	}
 
 	.home2-search__tabs .home2-search__tab--active::after {
-		width: 88px;
+		width: 100%;
 	}
 
 	.home2-search__input {
@@ -649,8 +643,8 @@
 		outline: 0;
 		padding: 0 20px;
 		color: var(--ink);
-		font-size: 19px;
-		font-weight: 650;
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.home2-search__input input::placeholder {
@@ -674,8 +668,8 @@
 		margin: 4px 0 15px;
 		color: white;
 		text-align: center;
-		font-size: 14px;
-		font-weight: 850;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-search p a {
@@ -715,8 +709,8 @@
 		padding: 0 17px;
 		border-radius: 8px;
 		background: white;
-		font-size: 16px;
-		font-weight: 850;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-button-font-weight);
 		box-shadow:
 			0 12px 28px rgb(15 23 42 / 0.06),
 			inset 0 -1px 0 rgb(0 0 0 / 0.04);
@@ -747,7 +741,7 @@
 	.home2-sell-card h2 {
 		max-width: 720px;
 		color: white;
-		font-size: clamp(30px, 2.3vw, 36px);
+		font-size: var(--sa-heading-section);
 		line-height: 1.05;
 		white-space: normal;
 	}
@@ -756,8 +750,8 @@
 		max-width: 680px;
 		margin: 22px 0 0;
 		color: rgb(255 255 255 / 0.9);
-		font-size: 18px;
-		font-weight: 760;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.42;
 	}
 
@@ -772,8 +766,8 @@
 		background: var(--daynight-red);
 		color: white;
 		box-shadow: 0 12px 24px rgb(236 28 46 / 0.25);
-		font-size: 18px;
-		font-weight: 950;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-button-font-weight);
 		transition:
 			transform 160ms ease,
 			box-shadow 160ms ease,
@@ -822,8 +816,8 @@
 		border-radius: 8px;
 		background: var(--daynight-red);
 		color: white;
-		font-family: 'Arial Black', Impact, sans-serif;
-		font-size: 28px;
+		font-family: var(--sa-font);
+		font-size: var(--sa-text-panel-title);
 		line-height: 1;
 	}
 
@@ -834,7 +828,7 @@
 
 	.home2-budget h2 {
 		text-align: center;
-		font-size: clamp(40px, 4vw, 60px);
+		font-size: var(--sa-text-desktop-hero-title);
 		line-height: 1;
 	}
 
@@ -871,15 +865,15 @@
 	}
 
 	.home2-budget-tile span {
-		font-size: 18px;
-		font-weight: 950;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-budget-tile small {
 		margin-top: 6px;
 		color: #5d5b61;
-		font-size: 13px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-trending,
@@ -903,7 +897,7 @@
 
 	.home2-section-title h2 {
 		color: var(--ink);
-		font-size: clamp(29px, 3vw, 42px);
+		font-size: var(--sa-heading-section);
 		line-height: 1.05;
 		text-transform: none;
 	}
@@ -911,8 +905,8 @@
 	.home2-section-title p {
 		margin: 8px 0 0;
 		color: #3f3f46;
-		font-size: 18px;
-		font-weight: 600;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.home2-cars {
@@ -947,8 +941,8 @@
 	.home2-car-card h3 {
 		margin: 0;
 		color: #0f1115;
-		font-size: clamp(23px, 1.8vw, 28px);
-		font-weight: 1000;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.02;
 	}
 
@@ -956,8 +950,8 @@
 		margin: 8px 0 0;
 		max-width: 300px;
 		color: #17181d;
-		font-size: 14px;
-		font-weight: 720;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.22;
 	}
 
@@ -965,8 +959,8 @@
 		display: block;
 		margin-top: 7px;
 		color: #44464c;
-		font-size: 12px;
-		font-weight: 820;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.2;
 	}
 
@@ -977,8 +971,8 @@
 		border-radius: 5px;
 		background: var(--daynight-blue);
 		color: white;
-		font-size: 11px;
-		font-weight: 1000;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0;
 		text-align: center;
 		text-transform: uppercase;
@@ -995,8 +989,8 @@
 		border-radius: 4px;
 		background: #121316;
 		color: white;
-		font-size: 13px;
-		font-weight: 950;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.05;
 	}
 
@@ -1061,27 +1055,27 @@
 		background: white;
 		color: #101115;
 		box-shadow: 0 1px 0 rgb(0 0 0 / 0.04);
-		font-size: 14px;
-		font-weight: 760;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		white-space: nowrap;
 	}
 
 	.home2-car-card__cash b {
 		color: #111318;
-		font-size: 14px;
-		font-weight: 1000;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 	}
 
 	.home2-car-card__cash em {
 		font-style: normal;
-		font-weight: 720;
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-car-card__finance {
-		font-size: 13px;
-		font-weight: 900;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-car-card__price a {
@@ -1136,7 +1130,7 @@
 		width: 18px;
 		height: 18px;
 		background: #02b67a;
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		line-height: 1;
 	}
 
@@ -1146,34 +1140,34 @@
 		gap: 3px;
 		margin-left: 5px;
 		color: #55545a;
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 	}
 
 	.home2-review h3 {
 		margin: 13px 0 7px;
-		font-size: 16px;
-		font-weight: 950;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-heading);
 	}
 
 	.home2-review p {
 		margin: 0;
 		color: #24242a;
-		font-size: 14px;
+		font-size: var(--sa-type-body);
 		line-height: 1.35;
 	}
 
 	.home2-review footer {
 		margin-top: 22px;
 		color: #59585f;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-rating {
 		margin: 13px 0 0;
 		text-align: center;
-		font-size: 14px;
-		font-weight: 600;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.home2-dark {
@@ -1205,7 +1199,7 @@
 
 	.home2-dark h2 {
 		color: white;
-		font-size: clamp(27px, 2.9vw, 40px);
+		font-size: var(--sa-heading-section);
 		line-height: 1.05;
 	}
 
@@ -1213,8 +1207,8 @@
 		max-width: 830px;
 		margin: 22px 0 0;
 		color: #f3f3f3;
-		font-size: 18px;
-		font-weight: 700;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.5;
 	}
 
@@ -1229,8 +1223,8 @@
 		display: grid;
 		gap: 15px;
 		color: white;
-		font-size: 19px;
-		font-weight: 950;
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.18;
 		transition: transform 160ms ease;
 	}
@@ -1264,8 +1258,8 @@
 	.home2-browse-block h3 {
 		margin: 0 0 16px;
 		color: var(--ink);
-		font-size: clamp(24px, 2vw, 32px);
-		font-weight: 1000;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.05;
 	}
 
@@ -1301,8 +1295,8 @@
 		border-radius: 8px;
 		background: #f0f1f3;
 		color: var(--daynight-blue);
-		font-size: 28px;
-		font-weight: 1000;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-brand-card__mark img {
@@ -1321,8 +1315,8 @@
 	.home2-brand-card__copy strong,
 	.home2-type-card strong {
 		color: #111318;
-		font-size: 20px;
-		font-weight: 950;
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.1;
 	}
 
@@ -1333,8 +1327,8 @@
 	.home2-brand-card__copy small,
 	.home2-type-card small {
 		color: #5d5b61;
-		font-size: 14px;
-		font-weight: 850;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home2-brand-card :global(svg) {
@@ -1425,7 +1419,7 @@
 		.home2-shortcuts a {
 			min-height: 44px;
 			padding: 0 13px;
-			font-size: 16px;
+			font-size: var(--sa-text-base);
 		}
 
 		.home2-brand-card {
@@ -1437,7 +1431,7 @@
 		.home2-brand-card__mark {
 			width: 58px;
 			height: 58px;
-			font-size: 26px;
+			font-size: var(--sa-text-2xl);
 		}
 
 		.home2-brand-card__mark img {
@@ -1446,7 +1440,7 @@
 		}
 
 		.home2-brand-card__copy strong {
-			font-size: 18px;
+			font-size: var(--sa-text-lg);
 		}
 	}
 
@@ -1547,7 +1541,7 @@
 			left: auto;
 			width: auto;
 			transform: none;
-			font-size: 39px;
+			font-size: var(--sa-heading-section);
 			white-space: normal;
 		}
 
@@ -1560,7 +1554,7 @@
 		}
 
 		.home2-search__tabs button {
-			font-size: 15px;
+			font-size: var(--sa-button-font-size);
 		}
 
 		.home2-search__input {
@@ -1584,7 +1578,7 @@
 		}
 
 		.home2-budget h2 {
-			font-size: 39px;
+			font-size: var(--sa-heading-section);
 		}
 
 		.home2-budget__grid,
@@ -1617,7 +1611,7 @@
 		}
 
 		.home2-section-title h2 {
-			font-size: 31px;
+			font-size: var(--sa-type-page);
 		}
 
 		.home2-dark {
@@ -1629,7 +1623,7 @@
 		}
 
 		.home2-dark p {
-			font-size: 16px;
+			font-size: var(--sa-type-body);
 		}
 	}
 </style>

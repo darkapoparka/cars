@@ -197,7 +197,7 @@ const text = (locale: Locale) =>
 				clearFilters: 'Изчисти филтрите',
 				controlsLabel: 'Контроли за изглед и филтри',
 				emptyMap:
-					'Няма автомобили по тези филтри. Изчисти филтрите или се свържи с Promosale Varna за входящи автомобили.',
+					'Няма автомобили по тези филтри. Изчисти филтрите или се свържи с Day Night Auto за входящи автомобили.',
 				extras: 'Екстри',
 				filterButton: 'Филтри',
 				filterPresentation: 'Тип филтри',
@@ -234,13 +234,13 @@ const text = (locale: Locale) =>
 				inventoryTitle: 'Налични автомобили',
 				fuel: 'Гориво',
 				gearbox: 'Скорости',
-				mapTitle: 'Зона за огледи Promosale Varna',
+				mapTitle: 'Зона за огледи Day Night Auto',
 				matchingVehicleLabel: (count: number) =>
 					`${count} ${count === 1 ? 'съвпадащ автомобил' : 'съвпадащи автомобила'}`,
 				mileage: 'Пробег',
 				model: 'Модел',
 				price: 'Цена',
-				searchAria: 'Търси в Promosale Varna',
+				searchAria: 'Търси в Day Night Auto',
 				searchPlaceholder: 'Търси по марка, модел, година, гориво, екстри...',
 				searchSubmit: 'Търси',
 				selected: (count: number) => `${count} избрани`,
@@ -280,7 +280,7 @@ const text = (locale: Locale) =>
 				clearFilters: 'Clear filters',
 				controlsLabel: 'View and filter controls',
 				emptyMap:
-					'No cars match these filters. Clear filters or contact Promosale Varna for incoming vehicles.',
+					'No cars match these filters. Clear filters or contact Day Night Auto for incoming vehicles.',
 				extras: 'Extras',
 				filterButton: 'Filters',
 				filterPresentation: 'Filter style',
@@ -317,23 +317,23 @@ const text = (locale: Locale) =>
 				inventoryTitle: 'Available vehicles',
 				fuel: 'Fuel',
 				gearbox: 'Gearbox',
-				mapTitle: 'Promosale Varna viewing area',
+				mapTitle: 'Day Night Auto viewing area',
 				matchingVehicleLabel: (count: number) =>
 					`${count} ${count === 1 ? 'matching vehicle' : 'matching vehicles'}`,
 				mileage: 'Mileage',
 				model: 'Model',
 				price: 'Price',
-				searchAria: 'Search Promosale Varna inventory',
+				searchAria: 'Search Day Night Auto inventory',
 				searchPlaceholder: 'Search make, model, year, fuel, extras...',
 				searchSubmit: 'Search',
 				selected: (count: number) => `${count} selected`,
 				showCount: (count: number) => `Show ${count}`,
 				showing: (count: number, hasFilters: boolean) =>
 					count === 0
-						? `Showing 0 of ${vehicles.length} Promosale Varna Listings`
+						? `Showing 0 of ${vehicles.length} Day Night Auto Listings`
 						: hasFilters
-							? `Showing 1 - ${count} of ${count} matching Promosale Varna Listings`
-							: `Showing 1 - ${count} of ${count} Promosale Varna Listings`,
+							? `Showing 1 - ${count} of ${count} matching Day Night Auto Listings`
+							: `Showing 1 - ${count} of ${count} Day Night Auto Listings`,
 				sort: 'Sort Vehicles by',
 				sortOptions: {
 					'best-match': 'Best Match',
@@ -637,7 +637,7 @@ const brandOptions = (): AuxeroInventoryFilterOption[] => {
 	return brands
 		.map((brand) => ({
 			count: counts.get(brand) ?? 0,
-			image: brandLogos[brand] ?? '/dealer/logo.png',
+			image: brandLogos[brand] ?? '/brand/daynight-wordmark.svg',
 			label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 			value: brand
 		}))
@@ -1052,7 +1052,7 @@ export const inventoryDesktopDataFromState = (
 	return {
 		activeFilters: activeFilters(state, locale, options),
 		ariaLabel:
-			locale === 'bg' ? 'Налични автомобили от Promosale Varna' : 'Promosale Varna inventory',
+			locale === 'bg' ? 'Налични автомобили от Day Night Auto' : 'Day Night Auto inventory',
 		controlsLabel: labels.controlsLabel,
 		filterButtonLabel: labels.filterButton,
 		filterPresentation: state.filterPresentation,

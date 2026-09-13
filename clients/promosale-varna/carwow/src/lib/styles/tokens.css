@@ -1,5 +1,5 @@
 @font-face {
-	font-display: block;
+	font-display: swap;
 	font-family: 'DayNight Geist';
 	font-style: normal;
 	font-weight: 100 900;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-	font-display: block;
+	font-display: swap;
 	font-family: 'DayNight Geist';
 	font-style: normal;
 	font-weight: 100 900;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-	font-display: block;
+	font-display: swap;
 	font-family: 'DayNight Geist';
 	font-style: normal;
 	font-weight: 100 900;
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-	font-display: block;
+	font-display: swap;
 	font-family: 'DayNight Geist';
 	font-style: normal;
 	font-weight: 100 900;
@@ -44,7 +44,7 @@
 }
 
 /*
- * Promosale Varna — design tokens (single source of truth).
+ * Day Night Auto — design tokens (single source of truth).
  * Relocated verbatim from daynight-mobile.css (Phase 1.1). Imported FIRST in
  * src/routes/+layout.svelte (before daynight-mobile.css) so values also reach
  * vaul drawers, which portal to <body> outside the page wrappers.
@@ -52,7 +52,7 @@
  * aliasing are deferred to Phase 6 (deliberate colour decisions, not 1:1).
  */
 :root {
-	/* Brand — Promosale Varna uses black/graphite for structure and red for action.
+	/* Brand — Day & Night uses black/graphite for structure and red for action.
 	 * The legacy --sa-blue aliases remain for compatibility, but resolve to ink. */
 	--sa-red: #d71920;
 	--sa-red-strong: #a50f15;
@@ -104,6 +104,9 @@
 	 * are compressed without dropping input text below iOS-safe 16px. */
 	--sa-mobile-gutter: 14px;
 	--sa-mobile-gutter-wide: 16px;
+	--sa-mobile-hero-gap: 9px;
+	--sa-mobile-hero-bottom: 32px;
+	--sa-mobile-panel-overlap: 14px;
 	--sa-mobile-gap-xs: 6px;
 	--sa-mobile-gap-sm: 8px;
 	--sa-mobile-gap-md: 12px;
@@ -160,11 +163,11 @@
 	/* Type scale — primitives plus role tokens for the desktop storefront rhythm.
 	 * Roles separate by size + weight + colour, never arbitrary one-off values. */
 	--sa-text-xs: 0.75rem; /* 12px — counts, tiny badges, trust metadata */
-	--sa-text-caption: 0.8125rem; /* 13px — supporting card/meta text */
+	--sa-text-caption: 0.875rem; /* 14px — supporting card/meta text */
 	--sa-text-card-eyebrow: var(--sa-text-body-sm); /* 15px — repeated card eyebrow labels */
 	--sa-text-eyebrow: 1.25rem; /* 20px — desktop section eyebrows/kickers */
 	--sa-text-sm: 0.875rem; /* 14px — car specs, brand names, button labels */
-	--sa-text-body-sm: 0.9375rem; /* 15px — compact card/body copy */
+	--sa-text-body-sm: 1rem; /* 16px — compact card/body copy */
 	--sa-text-desktop-meta: 0.875rem; /* 14px — tiny metadata, badges, counters */
 	--sa-text-desktop-dense: 1rem; /* 16px — dense desktop UI and compact copy */
 	--sa-text-desktop-body: 1.125rem; /* 18px — important desktop body and CTAs */
@@ -186,7 +189,7 @@
 	--sa-text-chrome-badge: 0.6875rem; /* 11px — desktop icon badge */
 	--sa-text-chrome-cta: 1.0625rem; /* 17px base; desktop overrides to 18px */
 	--sa-text-hero-control: 1.25rem; /* 20px — desktop hero controls */
-	--sa-text-hero-tab: 1.125rem; /* 18px — desktop hero segmented tabs */
+	--sa-text-hero-tab: 1.25rem; /* 20px — desktop hero segmented tabs */
 	--sa-text-hero-lead: clamp(1.375rem, 1.45vw, 1.5625rem); /* 22–25px */
 	--sa-text-desktop-hero-title: clamp(3rem, 3vw, 3.75rem); /* 48–60px — shared desktop route hero */
 	--sa-leading-desktop-hero-title: 0.98;
@@ -205,6 +208,25 @@
 	--sa-heading-panel: var(--sa-text-panel-title);
 	--sa-heading-card: var(--sa-text-card-title);
 
+	/* Mobile typography roles. Mobile components should use these semantic roles
+	 * instead of inventing one-off sizes/weights per page. */
+	--sa-mobile-type-micro: var(--sa-text-xs); /* 12px */
+	--sa-mobile-type-meta: var(--sa-text-caption); /* 14px */
+	--sa-mobile-type-control-sm: var(--sa-text-control); /* 17px */
+	--sa-mobile-type-body: var(--sa-text-base); /* 16px */
+	--sa-mobile-type-input: var(--sa-text-base); /* 16px */
+	--sa-mobile-type-filter: 1.0625rem; /* 17px — quick-filter labels */
+	--sa-mobile-type-card-title: var(--sa-text-lg); /* 18px */
+	--sa-mobile-type-feature-title: var(--sa-text-lg); /* 18px */
+	--sa-mobile-type-primary-tab: var(--sa-text-xl); /* 20px */
+	--sa-mobile-type-section-title: var(--sa-text-xl); /* 20px */
+	--sa-mobile-type-page-title: var(--sa-text-2xl); /* 24px */
+	--sa-mobile-type-price: var(--sa-text-xl); /* 20px */
+	--sa-mobile-type-price-lg: var(--sa-text-2xl); /* 24px */
+	--sa-mobile-leading-heading: 1.12;
+	--sa-mobile-leading-body: 1.5;
+	--sa-mobile-leading-meta: 1.35;
+
 	/* Weight scale — the only allowed storefront weights. The rule: display (800)
 	 * is for large numerals/logotype emphasis only; small text never exceeds
 	 * semibold (600), so Cyrillic does not read as a heavy block. */
@@ -220,7 +242,7 @@
 	--sa-weight-heading-strong: var(--sa-weight-strong);
 	--sa-weight-card-eyebrow: var(--sa-weight-medium);
 	--sa-weight-eyebrow: var(--sa-weight-medium);
-	--sa-button-font-weight: var(--sa-weight-semibold);
+	--sa-button-font-weight: var(--sa-weight-medium);
 
 	/* Line-height scale — none = single-line chips/numerals, tight = titles &
 	 * prices, snug = tab labels & rows, normal/body = readable copy. */
@@ -251,8 +273,10 @@
 	--sa-heading-eyebrow-gap: 0.125rem;
 
 	/* Buttons — shared CTA typography lives here, not in page CSS. */
-	--sa-button-font-size: var(--sa-text-body-sm);
+	--sa-button-font-size: var(--sa-text-control);
 	--sa-button-line-height: var(--sa-leading-button);
+	--sa-type-body: var(--sa-text-base);
+	--sa-type-page: 2rem;
 
 	/* Pill / chip geometry — single source of truth for filter pills & selectable
 	 * chips across home + inventory (height = --sa-mobile-pill-h, fill = --sa-fill,

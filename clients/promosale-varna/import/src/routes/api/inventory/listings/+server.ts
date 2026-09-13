@@ -27,9 +27,7 @@ export function GET({ request, url }: { request: Request; url: URL }) {
 	});
 }
 
-const inventoryStatus = (
-	value: string | undefined
-): DayNightInventoryListingStatus | undefined => {
+const inventoryStatus = (value: string | undefined): DayNightInventoryListingStatus | undefined => {
 	if (value === 'draft' || value === 'published' || value === 'archived') return value;
 
 	return undefined;
@@ -185,7 +183,7 @@ export async function PATCH({ request }: { request: Request }) {
 	const listing = updateInventoryListing(id, listingPayload(payload));
 
 	if (!listing) {
-		return errorJson('Promosale Varna inventory listing not found', 404);
+		return errorJson('Day Night Auto inventory listing not found', 404);
 	}
 
 	return okJson({ listing });
@@ -211,7 +209,7 @@ export async function DELETE({ request }: { request: Request }) {
 	const listing = archiveInventoryListing(id);
 
 	if (!listing) {
-		return errorJson('Promosale Varna inventory listing not found', 404);
+		return errorJson('Day Night Auto inventory listing not found', 404);
 	}
 
 	return okJson({ listing });

@@ -340,8 +340,44 @@ export const imageForHomeFiveVehicle = (vehicle: Vehicle) =>
 	cardImageOverrides[vehicle.slug] ??
 	(brokenHomeImageSlugs.has(vehicle.slug) ? daynightAssets.hero : vehicle.image);
 
-// Each menu card uses a real record, including its unique detail destination.
-const inventoryMegaMenuFeaturedVehicles: HomeFiveHeaderMegaMenuVehicle[] = inventoryVehicles.slice(0, 4).map(vehicle => ({ href: `/inventory/${encodeURIComponent(vehicle.slug)}`, image: vehicle.image, label: vehicle.title, meta: `${vehicle.priceLabel} · ${vehicle.fuel}` }));
+const inventoryMegaMenuVehicles = [
+	{
+		image: '/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp',
+		label: 'BMW X5 40i',
+		slug: '21764342419542174'
+	},
+	{
+		image: '/assets/daynight/megamenu/inventory-bmw-x4m-cutout-v2.webp',
+		label: 'BMW X4 M Competition',
+		slug: '21778068579001193'
+	},
+	{
+		image: '/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp',
+		label: 'Audi SQ5 Black Optic',
+		slug: '21778067767337633'
+	},
+	{
+		image: '/assets/daynight/megamenu/inventory-audi-a7-cutout.webp',
+		label: 'Audi A7 Black Optic',
+		slug: '11774283016080050'
+	}
+] as const satisfies Array<{
+	image: string;
+	label: string;
+	slug: string;
+}>;
+
+const inventoryMegaMenuFeaturedVehicles: HomeFiveHeaderMegaMenuVehicle[] =
+	inventoryMegaMenuVehicles.map((entry) => {
+		const vehicle = inventoryVehicles.find((candidate) => candidate.slug === entry.slug);
+
+		return {
+			href: vehicle ? `/inventory/${encodeURIComponent(vehicle.slug)}` : '/inventory',
+			image: entry.image,
+			label: entry.label,
+			meta: vehicle ? `${vehicle.priceLabel} · ${vehicle.fuel}` : 'Available now'
+		};
+	});
 
 const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 	variant: 'inventory',
@@ -375,7 +411,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 			]
 		},
 		{
-			title: 'Promosale Varna Support',
+			title: 'Day Night Auto Support',
 			links: [
 				{ href: '/services', label: 'Import & Buying Services' },
 				{ href: '/calculator', label: 'Import Cost Calculator' },
@@ -388,7 +424,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 		copy: 'Filter by body, fuel, price, and mileage before you book a viewing.',
 		ctaHref: '/inventory',
 		ctaLabel: 'View All Inventory',
-		title: `${inventoryVehicles.length} vehicles in the Promosale Varna stock feed`
+		title: `${inventoryVehicles.length} vehicles in the Day Night Auto stock feed`
 	}
 };
 
@@ -411,7 +447,7 @@ const aboutMegaMenu: HomeFiveHeaderContainerMenu = {
 		{ href: '/agents', label: 'Meet Our Consultants' },
 		{ href: '/reviews', label: 'Client Reviews' },
 		{ href: '/faqs', label: 'Frequently Asked Questions' },
-		{ href: '/blog', label: 'Promosale Varna Notes' },
+		{ href: '/blog', label: 'Day Night Auto Notes' },
 		{ href: '/contact', label: 'Visit The Office' }
 	]
 };
@@ -475,7 +511,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 				]
 			},
 			{
-				title: locale === 'bg' ? 'Съдействие от Promosale Varna' : 'Promosale Varna Support',
+				title: locale === 'bg' ? 'Съдействие от Day Night Auto' : 'Day Night Auto Support',
 				links: [
 					{
 						href: '/services',
@@ -506,7 +542,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 			title:
 				locale === 'bg'
 					? `${inventoryVehicles.length} автомобила в наличност`
-					: `${inventoryVehicles.length} vehicles in the Promosale Varna stock feed`
+					: `${inventoryVehicles.length} vehicles in the Day Night Auto stock feed`
 		}
 	};
 };
@@ -535,7 +571,7 @@ const aboutMegaMenuForLocale = (locale: Locale): HomeFiveHeaderContainerMenu => 
 					{ href: '/agents', label: 'Нашите консултанти' },
 					{ href: '/reviews', label: 'Отзиви от клиенти' },
 					{ href: '/faqs', label: 'Често задавани въпроси' },
-					{ href: '/blog', label: 'Съвети от Promosale Varna' },
+					{ href: '/blog', label: 'Съвети от Day Night Auto' },
 					{ href: '/contact', label: 'Посети офиса' }
 				]
 			: aboutMegaMenu.links
@@ -554,61 +590,21 @@ const brandInventoryCounts = countBy(inventoryVehicles.map((vehicle) => vehicle.
 // "import on request" cards that route to the import flow instead of an
 // empty inventory result.
 const homeFiveBrandShowcase = [
-  {
-    "image": "/dealer/oem/mercedes-benz.webp",
-    "name": "Mercedes",
-    "query": "Mercedes-Benz"
-  },
-  {
-    "image": "/dealer/oem/peugeot.svg",
-    "name": "Peugeot",
-    "query": "Peugeot"
-  },
-  {
-    "image": "/dealer/oem/bmw.webp",
-    "name": "BMW",
-    "query": "BMW"
-  },
-  {
-    "image": "/dealer/oem/porsche.webp",
-    "name": "Porsche",
-    "query": "Porsche"
-  },
-  {
-    "image": "/dealer/oem/audi.png",
-    "name": "Audi",
-    "query": "Audi"
-  },
-  {
-    "image": "/dealer/oem/mazda.png",
-    "name": "Mazda",
-    "query": "Mazda"
-  },
-  {
-    "image": "/dealer/oem/honda.svg",
-    "name": "Honda",
-    "query": "Honda"
-  },
-  {
-    "image": "/dealer/oem/toyota.webp",
-    "name": "Toyota",
-    "query": "Toyota"
-  },
-  {
-    "image": "/dealer/oem/volvo.svg",
-    "name": "Volvo",
-    "query": "Volvo"
-  },
-  {
-    "image": "/dealer/oem/ford.svg",
-    "name": "Ford",
-    "query": "Ford"
-  },
-  {
-    "image": "/dealer/oem/hyundai.png",
-    "name": "Hyundai",
-    "query": "Hyundai"
-  }
+	{ image: '/assets/images/brand/brand-1.webp', name: 'BMW', query: 'BMW' },
+	{
+		image: '/assets/images/brand/brand-2.webp',
+		name: 'Mercedes',
+		query: 'Mercedes-Benz'
+	},
+	{ image: '/assets/images/brand/brand-3.webp', name: 'Audi', query: 'Audi' },
+	{ image: '/assets/daynight/brands/porsche.webp', name: 'Porsche', query: 'Porsche' },
+	{ image: '/assets/images/brand/brand-10.webp', name: 'Mazda', query: 'Mazda' },
+	{ image: '/assets/images/brand/brand-4.webp', name: 'Honda', query: 'Honda' },
+	{ image: '/assets/images/brand/brand-5.webp', name: 'Toyota', query: 'Toyota' },
+	{ image: '/assets/images/brand/brand-6.webp', name: 'Volvo', query: 'Volvo' },
+	{ image: '/assets/images/brand/brand-7.webp', name: 'Ford', query: 'Ford' },
+	{ image: '/assets/images/brand/brand-8.webp', name: 'Hyundai', query: 'Hyundai' },
+	{ image: '/assets/images/brand/brand-12.webp', name: 'Tesla', query: 'Tesla' }
 ] as const;
 
 const showcaseBrandCountLabel = (locale: Locale, count: number) => {
@@ -626,8 +622,8 @@ const showcaseBrandCard = (
 	if (stockCount === 0) {
 		return {
 			...brand,
-			count: locale === 'bg' ? '0 обяви' : '0 listings',
-			href: `/inventory?brand=${encodeURIComponent(brand.query)}`
+			count: locale === 'bg' ? 'Внос по заявка' : 'Import on request',
+			href: '/import'
 		};
 	}
 
@@ -723,7 +719,26 @@ export const homeFiveHeaderDataForLocale = (
 
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
-export const homeFiveReviewItems: HomeFiveReview[] = [];
+export const homeFiveReviewItems: HomeFiveReview[] = [
+	{
+		name: 'Aleksandar Vytev',
+		role: 'Клиент на Day Night Auto',
+		avatar: '/assets/images/avatar/avatar-1.webp',
+		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
+	},
+	{
+		name: 'Krasimir Georgiev',
+		role: 'Клиент с внос',
+		avatar: '/assets/images/avatar/avatar-2.webp',
+		text: 'Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
+	},
+	{
+		name: 'Iliyan Petrov',
+		role: 'Продава клиентски автомобил',
+		avatar: '/assets/images/avatar/avatar-3.webp',
+		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
+	}
+];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>
 	posts.slice(0, 3).map((post) => ({
@@ -750,7 +765,7 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 		phoneLabel: daynightContact.primaryPhoneLabel
 	},
 	copyright: `©2026 ${daynightBrand.name}. All Rights Reserved.`,
-	hours: [daynightContact.appointmentNote],
+	hours: ['Monday-Friday 9:00 - 18:00', 'Weekend viewings by appointment'],
 	labels: {
 		buyingSelling: 'BUYING & SELLING',
 		emailPlaceholder: 'Enter your e-mail',
@@ -760,8 +775,8 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	},
 	legalLinks: [
 		{ href: '/terms', label: 'Terms Of Services' },
-		{ href: '/terms', label: 'Privacy Policy' },
-		{ href: '/terms', label: 'Cookie Policy' }
+		{ href: '/privacy', label: 'Privacy Policy' },
+		{ href: '/cookies', label: 'Cookie Policy' }
 	],
 	logo: {
 		alt: daynightBrand.name,
@@ -770,12 +785,12 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	},
 	quickLinks: [
 		{ href: '/about', label: 'About Us' },
-		{ href: '/inventory?view=4', label: 'Buying With Promosale Varna' },
+		{ href: '/inventory?view=4', label: 'Buying With Day Night Auto' },
 		{ href: '/sell-your-car', label: 'Sell Your Car' },
 		{ href: '/services', label: 'Services' },
 		{ href: '/faqs', label: 'FAQ' },
 		{ href: '/blog', label: 'News' },
-		{ href: '/contact', label: 'Contact Promosale Varna' }
+		{ href: '/contact', label: 'Contact Day Night Auto' }
 	],
 	socialLinks: [
 		{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -799,7 +814,7 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 			{ href: '/reviews', label: 'Отзиви от клиенти' }
 		],
 		copyright: `©2026 ${daynightBrand.name}. Всички права запазени.`,
-		hours: [daynightContact.appointmentNote],
+		hours: ['Понеделник-петък 9:00 - 18:00', 'Огледи през уикенда с уговорка'],
 		labels: {
 			buyingSelling: 'ПОКУПКА И ПРОДАЖБА',
 			emailPlaceholder: 'Въведете имейл',
@@ -809,17 +824,17 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 		},
 		legalLinks: [
 			{ href: '/terms', label: 'Общи условия' },
-			{ href: '/terms', label: 'Поверителност' },
-			{ href: '/terms', label: 'Бисквитки' }
+			{ href: '/privacy', label: 'Поверителност' },
+			{ href: '/cookies', label: 'Бисквитки' }
 		],
 		quickLinks: [
 			{ href: '/about', label: 'За нас' },
-			{ href: '/inventory?view=4', label: 'Покупка с Promosale Varna' },
+			{ href: '/inventory?view=4', label: 'Покупка с Day Night Auto' },
 			{ href: '/sell-your-car', label: 'Продай автомобила си' },
 			{ href: '/services', label: 'Услуги' },
 			{ href: '/faqs', label: 'FAQ' },
 			{ href: '/blog', label: 'Новини' },
-			{ href: '/contact', label: 'Контакт с Promosale Varna' }
+			{ href: '/contact', label: 'Контакт с Day Night Auto' }
 		],
 		socialLinks: [
 			{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -1182,7 +1197,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Подбрани автомобили',
 					drawerTitle: 'Изпрати линк за проверка',
 					helper:
-						'Постави линк към обява от Европа или VIN. Promosale Varna ще провери история, снимки, пробег и ориентировъчна крайна цена.',
+						'Постави линк към обява от Европа или VIN. Day Night Auto ще провери история, снимки, пробег и ориентировъчна крайна цена.',
 					inputName: 'vehicle',
 					label: 'Внос',
 					mobileHeading: 'Внеси автомобил от Европа.',
@@ -1231,7 +1246,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Import from Europe',
 					drawerTitle: 'Send a listing link',
 					helper:
-						'Paste a Canadian listing URL or VIN. Promosale Varna will review history, photos, mileage, and estimated landed cost.',
+						'Paste a Canadian listing URL or VIN. Day Night Auto will review history, photos, mileage, and estimated landed cost.',
 					inputName: 'vehicle',
 					label: 'Import',
 					mobileHeading: 'Import from Europe.',
@@ -1395,7 +1410,7 @@ const compareVehicleFrom = (vehicle: Vehicle): HomeFiveCompareVehicle => ({
 const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
 
 const formatMonthly = (value: number, locale: Locale) =>
-	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? 'EUR/мес.' : 'EUR/mo'}`;
+	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`;
 
 const compactFuelLabel = (fuel: string, locale: Locale) => {
 	const normalizedFuel = fuel.toLowerCase();

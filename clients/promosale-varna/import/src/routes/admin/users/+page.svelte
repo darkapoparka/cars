@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Users</title>
+	<title>Day Night Auto Admin - Users</title>
 </svelte:head>
 
 <AdminShell title="Users" activePath="/admin/users">
@@ -50,7 +50,7 @@
 				<div>
 					<Card.Title>Accounts and leads</Card.Title>
 					<Card.Description
-						>Admin, agent, customer, and lead records visible to Promosale Varna.</Card.Description
+						>Admin, agent, customer, and lead records visible to Day Night Auto.</Card.Description
 					>
 				</div>
 			</Card.Header>

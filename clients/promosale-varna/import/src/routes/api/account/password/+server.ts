@@ -18,7 +18,7 @@ export async function POST({ request }: { request: Request }) {
 	const user = session ? findDayNightUserByEmail(session.email) : undefined;
 
 	if (!session) {
-		return errorJson('Promosale Varna account session is required', 401);
+		return errorJson('Day Night Auto account session is required', 401);
 	}
 
 	if (!nextPassword || nextPassword.length < 8) {
@@ -30,7 +30,7 @@ export async function POST({ request }: { request: Request }) {
 	}
 
 	if (!user) {
-		return errorJson('Promosale Varna account not found', 404);
+		return errorJson('Day Night Auto account not found', 404);
 	}
 
 	const passwordChange = createDayNightPasswordChangeRecord(user);

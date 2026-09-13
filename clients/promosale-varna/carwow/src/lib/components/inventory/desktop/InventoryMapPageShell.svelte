@@ -2,11 +2,11 @@
 	import { page as appPage } from '$app/state';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
-	import StorefrontPageHead from '$lib/components/seo/StorefrontPageHead.svelte';
+	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	import DayNightFooter from '$lib/components/layout/DayNightFooter.svelte';
 	import DesktopHomeTrailingChrome from '$lib/components/home/desktop/DesktopHomeTrailingChrome.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
-	import type { MapInventoryTemplatePage } from '$lib/types/template-page';
+	import type { MapInventoryPageData } from '$lib/types/storefront-page';
 	import { provideDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import MapVehicleCard from './MapVehicleCard.svelte';
 	import SortDropdown from './SortDropdown.svelte';
@@ -14,12 +14,11 @@
 	// Native half-map styling: shared Auxero card/control bases + the inventory grid
 	// overrides extracted from the legacy template head CSS, re-rooted onto
 	// `.inventory-map-template-shell`. The half-map page layout itself is scoped below.
-	import './inventory-desktop-base.css';
-	import './inventory-desktop-template-head.css';
+	import './inventory-desktop.css';
 
 	type MapPanel = 'list' | 'grid';
 
-	let { page }: { page: MapInventoryTemplatePage } = $props();
+	let { page }: { page: MapInventoryPageData } = $props();
 
 	// Shared reactive source of truth for the listing side (search/sort/filters),
 	// hydrated from the deep-link query exactly like the grid page. Provided via
@@ -50,11 +49,7 @@
 	}
 </script>
 
-<StorefrontPageHead
-	title={page.title}
-	scriptSrcs={page.scriptSrcs}
-	description={page.description}
-/>
+<RouteSeo title={page.title} description={page.description} />
 <div id="wrapper" class="daynight-raw-template-shell inventory-map-template-shell">
 	<SiteChrome />
 
@@ -206,7 +201,7 @@
 					id="map"
 					class="daynight-inventory-map-panel"
 					iframeClass="daynight-inventory-map-panel__iframe"
-					title="Карта до Promosale Varna Варна"
+					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
 					src={mapEmbedSrc}
 					width="100%"
 					height="100%"
@@ -225,7 +220,7 @@
 						></span>
 						<span class="daynight-inventory-map-panel__pin"></span>
 						<div class="daynight-inventory-map-panel__card">
-							<strong>Promosale Varna Варна</strong>
+							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
 							<span>{daynightSite.location}</span>
 						</div>
 					</div>
@@ -247,7 +242,7 @@
 <style>
 	/* Half-map layout (replaces the legacy Bootstrap row/col grid). The listing card
 	   shell, sort dropdown, filter button, tab panels and applied-filter chips are
-	   styled by inventory-desktop-base.css + the extracted template-head rules. */
+	   styled by the canonical inventory-desktop.css family stylesheet. */
 	.inventory-map-section {
 		margin-inline: auto;
 		max-width: 1920px;
@@ -402,14 +397,14 @@
 	}
 
 	.daynight-inventory-map-panel__card strong {
-		font-size: 20px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 	}
 
 	.daynight-inventory-map-panel__card span {
 		color: #536176;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		line-height: 1.45;
 	}
 
@@ -420,8 +415,8 @@
 		box-shadow: 0 16px 40px rgba(25, 100, 216, 0.22);
 		color: #fff;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		gap: 8px;
 		padding: 13px 18px;
 		position: absolute;

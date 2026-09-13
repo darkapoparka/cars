@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Messages</title>
+	<title>Day Night Auto Admin - Messages</title>
 </svelte:head>
 
 <AdminShell title="Messages" activePath="/admin/messages">

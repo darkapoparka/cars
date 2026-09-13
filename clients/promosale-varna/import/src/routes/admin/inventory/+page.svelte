@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Inventory</title>
+	<title>Day Night Auto Admin - Inventory</title>
 </svelte:head>
 
 <AdminShell
@@ -68,7 +68,8 @@
 			<Card.Header class="border-b">
 				<div>
 					<Card.Title>Listings</Card.Title>
-					<Card.Description>Inventory records available to the Promosale Varna CMS.</Card.Description>
+					<Card.Description>Inventory records available to the Day Night Auto CMS.</Card.Description
+					>
 				</div>
 			</Card.Header>
 			<Card.Content class="grid gap-4 p-4">

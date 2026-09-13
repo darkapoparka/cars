@@ -144,7 +144,7 @@
 				</Card.Title>
 				<Card.Description>
 					{mode === 'create'
-						? 'Create a durable local Promosale Varna CMS record.'
+						? 'Create a durable local Day Night Auto CMS record.'
 						: 'Edit the full local CMS listing record.'}
 				</Card.Description>
 			</div>

@@ -12,21 +12,21 @@
 		{ href: '/services', label: 'Услуги' },
 		{ href: '/sell-your-car', label: 'Продай автомобил' },
 		{ href: '/agents', label: 'Консултанти' },
-		{ href: '/contact', label: 'Контакт с Promosale Varna' }
+		{ href: '/contact', label: 'Контакт с Day Night Auto' }
 	] as const;
 </script>
 
 <footer class="site-footer">
 	<div class="site-footer__top container">
 		<div class="site-footer__brand">
-			<img src={daynightAssets.logoDark} alt="Promosale Varna" />
+			<img src={daynightAssets.logoDark} alt="Day Night Auto" />
 			<p>
-				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили
-				и огледи с уговорка.
+				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили и
+				огледи с уговорка.
 			</p>
 		</div>
 		<div>
-			<p class="footer-title">Покупка с Promosale Varna</p>
+			<p class="footer-title">Покупка с Day Night Auto</p>
 			<ul>
 				{#each buyingLinks as link (link)}
 					<li><a href={resolve(link.href)}>{link.label}</a></li>
@@ -42,7 +42,7 @@
 			</ul>
 		</div>
 		<div>
-			<p class="footer-title">Promosale Varna онлайн</p>
+			<p class="footer-title">Day Night Auto онлайн</p>
 			<div class="app-buttons">
 				<a href={resolve('/contact')}>{daynightContact.primaryPhoneLabel}</a>
 				<a href={resolve('/contact')}>Viber</a>
@@ -54,8 +54,8 @@
 			<span>©2026 {daynightBrand.name}. Всички права запазени.</span>
 			<div>
 				<a href={resolve('/terms')}>Общи условия</a>
-				<a href={resolve('/terms')}>Поверителност</a>
-				<a href={resolve('/terms')}>Бисквитки</a>
+				<a href={resolve('/privacy')}>Поверителност</a>
+				<a href={resolve('/cookies')}>Бисквитки</a>
 			</div>
 		</div>
 	</div>

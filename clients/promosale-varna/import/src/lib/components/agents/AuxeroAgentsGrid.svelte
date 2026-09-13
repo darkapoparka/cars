@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="sm-grid-cols-1 lg-grid-cols-2 xl-gap-16 daynight-agent-grid grid grid-cols-4 gap-30"
+	class="sm-grid-cols-1 lg-grid-cols-2 xl-gap-16 daynight-agent-grid grid grid-cols-3 gap-24"
 	data-daynight-agent-management={management ? 'true' : 'false'}
 >
 	{#each cards as card (card.slug)}

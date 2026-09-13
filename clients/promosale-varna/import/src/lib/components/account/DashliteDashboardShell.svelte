@@ -149,7 +149,7 @@
 </script>
 
 <svelte:head>
-	<title>{dashboard.title} - Promosale Varna</title>
+	<title>{dashboard.title} - Day Night Auto</title>
 </svelte:head>
 
 <div class="dash-shell" data-daynight-dashboard>

@@ -218,7 +218,7 @@ html[lang='bg'] .error-page .title {
 }
 
 /* Desktop sell-your-car: keep the Auxero page, but rebalance the heavier
-   Promosale Varna intake content so the first viewport feels intentional. */
+   Day Night Auto intake content so the first viewport feels intentional. */
 @media (min-width: 992px) {
 	body.auxero-template-sell-your-car-html .daynight-sell-hero {
 		background: #ffffff;
@@ -458,7 +458,7 @@ html[lang='bg'] .error-page .title {
 	display: block;
 	width: 168px;
 	height: 34px;
-	background: url('/dealer/logo.png') left center / contain no-repeat;
+	background: url('/brand/daynight-wordmark.svg') left center / contain no-repeat;
 }
 
 /* Comfortable >=44px touch targets for the compact header controls

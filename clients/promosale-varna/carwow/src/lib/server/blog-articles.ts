@@ -5,9 +5,7 @@ import { getDefaultDealerSlug } from '$lib/server/app-config';
 import { getDealerBySlug } from '$lib/server/repositories/dealers';
 import { getPublishedPostArticles } from '$lib/server/repositories/posts';
 
-export async function loadPublishedBlogArticles(
-	locals: App.Locals
-): Promise<DayNightArticle[]> {
+export async function loadPublishedBlogArticles(locals: App.Locals): Promise<DayNightArticle[]> {
 	if (!locals.db) {
 		return editorialGuides;
 	}

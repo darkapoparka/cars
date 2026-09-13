@@ -131,15 +131,15 @@ const faqAccordion = (items: AuxeroFaq[], forceWhite = false) =>
 const contactCtaSection = () => `<section class="relative py-100">
 	<div class="overlay-parallax"></div>
 	<div class="overlay image">
-		<img class="lazyload parallax" data-src="${escapeHtml(daynightAssets.hero)}" src="${escapeHtml(daynightAssets.hero)}" alt="Promosale Varna">
+		<img class="lazyload parallax" data-src="${escapeHtml(daynightAssets.hero)}" src="${escapeHtml(daynightAssets.hero)}" alt="Day Night Auto">
 	</div>
 	<div class="container relative index-10">
-		<h2 class="mb-12 text-white capitalize">Говори с Promosale Varna</h2>
+		<h2 class="mb-12 text-white capitalize">Говори с Day Night Auto</h2>
 		<p class="h7 line-height-28 text-white mb-20">Изпрати автомобил, бюджет, VIN или снимки и екипът ще подготви следващата стъпка.</p>
 		<p class="mb-4 text-white">${escapeHtml(daynightContact.appointmentNote)}</p>
 		<p class="mb-20 text-white">${escapeHtml(daynightContact.addressLabel)}</p>
 		<div class="flex">
-			<a href="/contact" class="btn btn-white text-primary btn-large-3 font-weight-600">Свържи се с Promosale Varna</a>
+			<a href="/contact" class="btn btn-white text-primary btn-large-3 font-weight-600">Свържи се с Day Night Auto</a>
 		</div>
 	</div>
 </section>`;
@@ -205,7 +205,7 @@ const consultantGrid =
 const applySellYourCarData = (html: string) => {
 	const body = `<section class="pb-100 daynight-sell-hero">
 	<div class="container">
-		<h1 class="h2 daynight-sell-page-title">Продай автомобила си с Promosale Varna</h1>
+		<h1 class="h2 daynight-sell-page-title">Продай автомобила си с Day Night Auto</h1>
 		<div class="tf-spacing-style3"></div>
 		<div class="row daynight-sell-hero-grid">
 			<div class="col-lg-6 lg-mb-40 daynight-sell-copy">
@@ -227,7 +227,7 @@ const applySellYourCarData = (html: string) => {
 						.join('\n')}
 				</ul>
 				<div class="flex gap-28 items-center sm-flex-col sm-items-start sm-gap-16 daynight-sell-actions">
-					<a href="/contact" class="btn btn-primary btn-large-3 font-weight-600">Свържи се с Promosale Varna</a>
+					<a href="/contact" class="btn btn-primary btn-large-3 font-weight-600">Свържи се с Day Night Auto</a>
 					<a href="${daynightContact.primaryPhoneHref}" class="flex gap-12 daynight-sell-phone">
 						<img src="/assets/icons/PhoneCall-3.svg" alt="PhoneCall">
 						<div class="mt2">
@@ -297,10 +297,10 @@ const applySellYourCarData = (html: string) => {
 	<div class="container">
 		<div class="why-choose-us style2 style3">
 			<div class="wow fadeIn" data-wow-delay="0.1s">
-				<img class="move5" src="/assets/daynight/cta/sell-car-banner-v2.webp" alt="Продай автомобила си с Promosale Varna">
+				<img class="move5" src="/assets/daynight/cta/sell-car-banner-v2.webp" alt="Продай автомобила си с Day Night Auto">
 			</div>
 			<div class="wow fadeIn" data-wow-delay="0.2s">
-				<h2 class="mb-12">Защо Promosale Varna?</h2>
+				<h2 class="mb-12">Защо Day Night Auto?</h2>
 				<p class="text-muted mb-20">Екипът държи решенията за клиентски автомобили върху документи, състояние, пазарна позиция и реалистичен срок.</p>
 				${checkList([
 					'Преглед според VIN, снимки, сервизна история и документи',
@@ -335,7 +335,7 @@ const applyServicesData = (html: string) => {
 		<div class="tf-spacing-style3"></div>
 		<div class="grid grid-cols-2 xl-grid-cols-2 lg-grid-cols-1 gap-30">
 			<div class="flex justify-center flex-col wow fadeInUp">
-				<h2 class="mb-12 capitalize">Услуги от Promosale Varna</h2>
+				<h2 class="mb-12 capitalize">Услуги от Day Night Auto</h2>
 				<p class="mb-40 h7 line-height-28 text-secondary">Съдействие за подбор на автомобили, проверка на обяви, документи, подготовка за регистрация, клиентски автомобили и огледи с уговорка.</p>
 				<p class="h4 mb-20 capitalize">Какво включват услугите</p>
 				<ul class="grid grid-cols-2 sm-grid-cols-1 gap-x-60 gap-y-8 mb-40">
@@ -359,10 +359,10 @@ const applyServicesData = (html: string) => {
 						)
 						.join('\n')}
 				</ul>
-				<div class="flex"><a href="/contact" class="btn btn-primary btn-large-3 font-weight-600">Свържи се с Promosale Varna</a></div>
+				<div class="flex"><a href="/contact" class="btn btn-primary btn-large-3 font-weight-600">Свържи се с Day Night Auto</a></div>
 			</div>
 			<div class="ml-24 flex lg-ml-0 wow fadeInUp radius-20 overflow-hidden">
-				<img class="w-full" src="/assets/daynight/services/premium-cars-banner-generated.webp" alt="Promosale Varna services">
+				<img class="w-full" src="/assets/daynight/services/premium-cars-banner-generated.webp" alt="Day Night Auto services">
 			</div>
 		</div>
 	</div>
@@ -379,7 +379,7 @@ const applyServicesData = (html: string) => {
 <section class="relative py-100">
 	<div class="overlay-parallax"></div>
 	<div class="overlay image">
-		<img class="lazyload parallax" data-src="/assets/daynight/proof-studio-import-handoff.webp" src="/assets/daynight/proof-studio-import-handoff.webp" alt="Promosale Varna service support">
+		<img class="lazyload parallax" data-src="/assets/daynight/proof-studio-import-handoff.webp" src="/assets/daynight/proof-studio-import-handoff.webp" alt="Day Night Auto service support">
 	</div>
 	<div class="container relative index-10">
 		<div class="grid grid-cols-2 lg-grid-cols-1 gap-30">
@@ -400,7 +400,7 @@ const applyServicesData = (html: string) => {
 					<li class="contact gap-12">
 						<div class="icon"><img src="/assets/icons/PhoneCall-2.svg" alt="phone"></div>
 						<div class="flex flex-col gap-4">
-							<p class="text-sm text-muted">Контакт с Promosale Varna</p>
+							<p class="text-sm text-muted">Контакт с Day Night Auto</p>
 							<a href="${daynightContact.primaryPhoneHref}" class="text-sm text-white">${escapeHtml(daynightContact.primaryPhoneLabel)}</a>
 							${secondaryPhoneLink}
 						</div>
@@ -478,7 +478,7 @@ const applyAboutData = (html: string) => {
 							.join('\n')}
 					</ul>
 					<div class="flex gap-28 items-center">
-						<a href="/contact" class="btn btn-primary btn-large font-weight-600">Свържи се с Promosale Varna</a>
+						<a href="/contact" class="btn btn-primary btn-large font-weight-600">Свържи се с Day Night Auto</a>
 						<a href="${auxeroAboutContent.contact.primaryPhoneHref}" class="flex gap-16">
 							<img src="/assets/icons/PhoneCall-3.svg" alt="PhoneCall">
 							<div class="mt2"><span class="text-sm text-secondary">Имаш въпрос?</span><p class="h4">${escapeHtml(auxeroAboutContent.contact.primaryPhoneLabel)}</p></div>
@@ -551,7 +551,7 @@ const applyFaqData = (html: string) => {
 	<div class="container mb-60">
 		<h1 class="h2">Често задавани въпроси</h1>
 		<div class="tf-spacing-style3"></div>
-		<p class="h3 mb-20 text-center capitalize">Promosale Varna помощ</p>
+		<p class="h3 mb-20 text-center capitalize">Day Night Auto помощ</p>
 		<div class="max-width-850 mx-auto w-full">${faqAccordion(supportFaqs.slice(0, 3), true)}</div>
 	</div>
 	${auxeroFaqGroups
@@ -585,7 +585,7 @@ const applyTermsData = (html: string) => {
 		.join('\n');
 	const body = `<section class="bg-white pb-100" data-daynight-terms-page>
 	<div class="container">
-		<h1 class="h2 capitalize">Условия за използване на Promosale Varna</h1>
+		<h1 class="h2 capitalize">Условия за използване на Day Night Auto</h1>
 		<div class="tf-spacing-style3"></div>
 		<div class="term-page" id="scrollContainer" data-daynight-terms>
 			<div class="term-page--nav-container">
@@ -616,7 +616,7 @@ const applyCalculatorData = (html: string) => {
 	<div class="tf-spacing-style3"></div>
 	<div class="container">
 		<h1 class="h2 text-center mb-12">Калкулатор за внос</h1>
-		<p class="mb-40 text-center text-secondary h7 line-height-28">Изчисли ориентировъчна крайна цена за автомобил от Европа преди точна разбивка от Promosale Varna.</p>
+		<p class="mb-40 text-center text-secondary h7 line-height-28">Изчисли ориентировъчна крайна цена за автомобил от Европа преди точна разбивка от Day Night Auto.</p>
 		<div class="grid grid-cols-2 gap-40 lg-grid-cols-1" data-daynight-calculator>
 			<div class="border-box">
 				<p class="h3 mb-28">Изчисли ориентировъчна крайна цена</p>
@@ -682,7 +682,7 @@ const blogCard = (
 	<div class="image"><img class="post--img flex" src="${escapeHtml(post.image)}" alt="${escapeHtml(post.title)}"></div>
 	<div class="content">
 		<div class="flex gap-12 justify-start mb-12">
-			<span class="text-sm">от Promosale Varna</span>
+			<span class="text-sm">от Day Night Auto</span>
 			<span class="text-sm">${escapeHtml(post.date)}</span>
 			<span class="text-sm text-highlight uppercase text-underline">${escapeHtml(post.category)}</span>
 		</div>
@@ -694,7 +694,7 @@ const blogCard = (
 const applyBlogListData = (html: string) => {
 	const posts = listBlogPosts();
 	const body = `<section class="pb-100" data-daynight-blog-page>
-	<div class="container"><h1 class="h2">Съвети от Promosale Varna</h1></div>
+	<div class="container"><h1 class="h2">Съвети от Day Night Auto</h1></div>
 	<div class="tf-spacing-style3"></div>
 	<div class="container">
 		<div class="grid grid-cols-3 md-grid-cols-1 gap-y-40 gap-x-30 mb-40" data-daynight-blog-grid>
@@ -733,7 +733,7 @@ const applyBlogDetailData = (html: string, options: AuxeroRenderOptions = {}) =>
 		<div class="container">
 			<h1 class="mb-20 text-white letter-spacing-1">${escapeHtml(post.title)}</h1>
 			<ul class="flex items-center flex-wrap gap-20">
-				<li><a class="text-white" href="/agents">от Promosale Varna</a></li>
+				<li><a class="text-white" href="/agents">от Day Night Auto</a></li>
 				<li><a class="text-white" href="/blog">${escapeHtml(post.date)}</a></li>
 				<li><a class="uppercase text-underline text-highlight" href="/blog">${escapeHtml(post.category)}</a></li>
 			</ul>
@@ -751,7 +751,7 @@ const applyBlogDetailData = (html: string, options: AuxeroRenderOptions = {}) =>
 						? `<div class="quote mb-28">
 							<div class="content">
 								<p class="h4 mb-14 capitalize">"Доброто решение за внос започва с документи, снимки, история и ясна следваща стъпка."</p>
-								<p class="h7 flex items-center gap-8"><img src="/assets/icons/line.svg" alt="quote">Promosale Varna</p>
+								<p class="h7 flex items-center gap-8"><img src="/assets/icons/line.svg" alt="quote">Day Night Auto</p>
 							</div>
 							<img class="icon-quote" src="/assets/icons/quote.svg" alt="quote">
 						</div><p class="text-secondary mb-40 h7 line-height-28">${sentence(paragraph)}</p>`
@@ -764,7 +764,7 @@ const applyBlogDetailData = (html: string, options: AuxeroRenderOptions = {}) =>
 				<ul class="blog-detail-tags flex gap-12">
 					<li><p>Таг:</p></li>
 					<li><a href="/blog">${escapeHtml(post.category)}</a></li>
-					<li><a href="/services">Promosale Varna</a></li>
+					<li><a href="/services">Day Night Auto</a></li>
 				</ul>
 				<ul class="blog-detail-social flex gap-12">
 					<li><p>Сподели:</p></li>
@@ -797,15 +797,15 @@ const applyBlogDetailData = (html: string, options: AuxeroRenderOptions = {}) =>
 		</div>
 		<div class="innerpage__sidebar">
 			<form action="/blog" class="widget-search w-full mb-34">
-				<input class="input-normal" type="text" name="q" placeholder="Търси в съветите на Promosale Varna">
+				<input class="input-normal" type="text" name="q" placeholder="Търси в съветите на Day Night Auto">
 				<button type="submit" class="widget-search-btn"><img src="/assets/icons/search.svg" alt="Search"></button>
 			</form>
 			<div class="mb-32">
 				<div class="listing-details--contact-dealer style-3 mb-20">
-					<img src="${escapeHtml(agents[1]?.image ?? daynightConsultants[1].image)}" alt="Promosale Varna consultant">
+					<img src="${escapeHtml(agents[1]?.image ?? daynightConsultants[1].image)}" alt="Day Night Auto consultant">
 					<div class="content"><a href="/agents/daynight-import" class="h4 mb-8 font-weight-600">Подбрани автомобили</a><p class="text-secondary">Подбор, транспорт и крайни разходи</p></div>
 				</div>
-				<p class="mb-16">Изпрати VIN, линк към обява, бюджет или срок и Promosale Varna ще прегледа конкретния случай.</p>
+				<p class="mb-16">Изпрати VIN, линк към обява, бюджет или срок и Day Night Auto ще прегледа конкретния случай.</p>
 			</div>
 			<div class="divider mb-32 w-full"></div>
 			<p class="h4 mb-16 capitalize">Последни публикации</p>
@@ -817,7 +817,7 @@ const applyBlogDetailData = (html: string, options: AuxeroRenderOptions = {}) =>
 						) => `<a href="/blog/${escapeHtml(item.slug)}" class="recent-post overflow-hidden mb-16">
 							<div class="image"><img class="post--img flex" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}"></div>
 							<div class="content">
-								<div class="flex gap-12 md-gap-6 justify-start mb-6"><span class="text-xs">от Promosale Varna</span><span class="text-xs">${escapeHtml(item.date)}</span></div>
+								<div class="flex gap-12 md-gap-6 justify-start mb-6"><span class="text-xs">от Day Night Auto</span><span class="text-xs">${escapeHtml(item.date)}</span></div>
 								<p class="title h7">${escapeHtml(item.title)}</p>
 							</div>
 						</a><div class="divider mb-16 w-full"></div>`

@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+import { chromium, devices } from '@playwright/test';
 
 const BASE = process.env.AUDIT_BASE || 'http://localhost:4399';
 const DEFAULT_PDP_PATH = '/inventory/mercedes-benz-gla-45-amg-405323';
@@ -57,6 +57,7 @@ let failed = false;
 
 for (const route of ROUTES) {
 	const ctx = await browser.newContext({
+		...devices['iPhone 13'],
 		viewport: { width: 390, height: 844 },
 		deviceScaleFactor: 2,
 		isMobile: true,

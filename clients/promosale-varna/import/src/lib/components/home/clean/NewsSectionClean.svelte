@@ -5,10 +5,10 @@
 	import type { HomePageCopy } from '$lib/i18n/messages';
 	import { ArrowRight } from '@lucide/svelte';
 
-	// Clean Svelte 5 + Tailwind v4 rebuild of the "Съвети от Promosale Varna" news band:
+	// Clean Svelte 5 + Tailwind v4 rebuild of the "Съвети от Day Night Auto" news band:
 	//   • Dark-green band header (title left, green "Виж всички" pill right). The title
 	//     reproduces the live composition — when copy.newsTitle contains "daynight",
-	//     the brand word is swapped for the Promosale Varna wordmark image (a <picture> that
+	//     the brand word is swapped for the DAY NIGHT AUTO GROUP wordmark image (a <picture> that
 	//     serves the light logo on mobile, dark-template logo on desktop), and the
 	//     remaining text renders as a plain span. Otherwise the title prints verbatim.
 	//   • Three overlay cards: cover photo fills the card, a dark gradient sits on top,
@@ -23,7 +23,7 @@
 
 	// Mirror the live header composition: split the brand word out of the title so the
 	// wordmark logo can stand in for it, and remember whether the brand leads the phrase
-	// ("Promosale Varna notes" → logo first) or trails it ("Съвети от Promosale Varna" → logo last).
+	// ("Day Night Auto notes" → logo first) or trails it ("Съвети от Day Night Auto" → logo last).
 	const brandedNewsTitle = $derived(/daynight/i.test(copy.newsTitle));
 	const brandFirstNewsTitle = $derived(copy.newsTitle.toLowerCase().startsWith('daynight'));
 	const newsTitleWithoutBrand = $derived(copy.newsTitle.replace(/daynight/i, '').trim());
@@ -45,7 +45,7 @@
 								<img
 									class="block h-auto w-full"
 									src={daynightAssets.logoDark}
-									alt="Promosale Varna"
+									alt="Day Night Auto"
 									width="220"
 									height="58"
 									loading="lazy"
@@ -64,7 +64,7 @@
 								<img
 									class="block h-auto w-full"
 									src={daynightAssets.logoDark}
-									alt="Promosale Varna"
+									alt="Day Night Auto"
 									width="220"
 									height="58"
 									loading="lazy"

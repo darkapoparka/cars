@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import { page } from '$app/state';
 
-	const DEFAULT_DESCRIPTION =
-		'Promosale Varna предлага проверени автомобили, финансиране и съдействие при покупка във Варна.';
+	const DEFAULT_DESCRIPTION = `${daynightSite.shortName} предлага проверени автомобили, финансиране и съдействие при покупка в ${daynightSite.city}.`;
 	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
 
 	let {
@@ -41,7 +41,7 @@
 	{/if}
 
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Promosale Varna Варна" />
+	<meta property="og:site_name" content={`${daynightSite.shortName} ${daynightSite.city}`} />
 	<meta property="og:locale" content="bg_BG" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
@@ -52,7 +52,7 @@
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:alt" content="Promosale Varna Варна" />
+	<meta property="og:image:alt" content={`${daynightSite.shortName} ${daynightSite.city}`} />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />

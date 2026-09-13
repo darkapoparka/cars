@@ -15,11 +15,14 @@
 		Wrench,
 		X
 	} from '@lucide/svelte';
-	import CarFilled from '@tabler/icons-svelte/icons/car-filled';
-	import HomeFilled from '@tabler/icons-svelte/icons/home-filled';
-	import Menu2 from '@tabler/icons-svelte/icons/menu-2';
-	import TagFilled from '@tabler/icons-svelte/icons/tag-filled';
-	import World from '@tabler/icons-svelte/icons/world';
+	import { HugeiconsIcon } from '@hugeicons/svelte';
+	import {
+		Car01Icon,
+		Home03Icon,
+		Menu01Icon,
+		SaleTag01Icon,
+		Globe02Icon
+	} from '@hugeicons/core-free-icons';
 
 	let { pathname = '/' }: { pathname?: string } = $props();
 
@@ -27,27 +30,27 @@
 		{
 			href: '/',
 			label: 'Начало',
-			icon: HomeFilled,
+			icon: Home03Icon,
 			exact: true
 		},
 		{
 			href: '/inventory',
 			label: 'Коли',
-			icon: CarFilled,
+			icon: Car01Icon,
 			exact: false,
 			tone: 'commerce'
 		},
 		{
 			href: '/sell-your-car',
 			label: 'Продай',
-			icon: TagFilled,
+			icon: SaleTag01Icon,
 			exact: false,
 			tone: 'commerce'
 		},
 		{
 			href: '/import',
 			label: 'Внос',
-			icon: World,
+			icon: Globe02Icon,
 			exact: false,
 			tone: 'commerce'
 		}
@@ -65,7 +68,7 @@
 			]
 		},
 		{
-			title: 'Promosale Varna',
+			title: 'Day Night Auto',
 			links: [
 				{ href: '/about', label: 'За нас', icon: Info },
 				{ href: '/contact', label: 'Контакти', icon: PhoneCall },
@@ -116,24 +119,22 @@
 			.join(' ');
 </script>
 
-<input
-	id="mobile-bottom-menu-toggle"
-	class="mobile-menu-toggle"
-	type="checkbox"
-	bind:checked={menuOpen}
-	aria-label="Отвори меню"
-	aria-controls="mobile-bottom-menu"
-	aria-expanded={menuOpen}
-/>
-
 <nav
 	class="mobile-bottom-nav"
 	aria-label="Мобилна навигация"
 	data-daynight-stylekit-nav-ready={navigationReady ? 'true' : undefined}
 >
+	<input
+		id="mobile-bottom-menu-toggle"
+		class="mobile-menu-toggle"
+		type="checkbox"
+		bind:checked={menuOpen}
+		aria-label="Отвори меню"
+		aria-controls="mobile-bottom-menu"
+		aria-expanded={menuOpen}
+	/>
 	<div class="mobile-bottom-nav__inner">
 		{#each mainItems as item (item.href)}
-			{@const Icon = item.icon}
 			<a
 				class={itemClass(item)}
 				href={resolve(item.href as '/')}
@@ -141,7 +142,7 @@
 				onclick={(event) => handleNavigationClick(event, item.href)}
 			>
 				<span class="mobile-bottom-nav__icon" aria-hidden="true">
-					<Icon size={26} color="currentColor" stroke={2.4} />
+					<HugeiconsIcon icon={item.icon} size={24} color="currentColor" strokeWidth={1.8} />
 				</span>
 				<span class="mobile-bottom-nav__label">{item.label}</span>
 			</a>
@@ -150,7 +151,7 @@
 		     aria-controls/expanded/haspopup state; a <label> must not (invalid ARIA). -->
 		<label for="mobile-bottom-menu-toggle" class="mobile-bottom-nav__menu-trigger">
 			<span class="mobile-bottom-nav__icon mobile-bottom-nav__icon--menu" aria-hidden="true">
-				<Menu2 size={27} color="currentColor" stroke={2.6} />
+				<HugeiconsIcon icon={Menu01Icon} size={24} color="currentColor" strokeWidth={1.8} />
 			</span>
 			<span class="mobile-bottom-nav__label">Меню</span>
 		</label>
@@ -174,7 +175,7 @@
 
 		<div class="mobile-menu-sheet__header">
 			<div>
-				<p>Promosale Varna</p>
+				<p>Day Night Auto</p>
 				<strong id="mobile-bottom-menu-title">Меню</strong>
 			</div>
 			<label
@@ -251,7 +252,7 @@
 
 	@media (max-width: 767.98px) {
 		:global(body) {
-			padding-bottom: calc(70px + env(safe-area-inset-bottom));
+			padding-bottom: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
 		}
 
 		.mobile-bottom-nav,
@@ -271,12 +272,12 @@
 
 		.mobile-menu-toggle {
 			position: fixed;
-			right: max(4px, calc((100vw - 480px) / 2 + 4px));
+			right: max(var(--bc-space-1), calc((100vw - 480px) / 2 + var(--bc-space-1)));
 			bottom: calc(5px + env(safe-area-inset-bottom));
 			z-index: 1001;
 			display: block;
 			width: calc((min(100vw, 480px) - 8px) / 5);
-			height: 54px;
+			height: var(--bc-control-height-hero);
 			margin: 0;
 			border: 0;
 			opacity: 0;
@@ -292,8 +293,8 @@
 			left: 0;
 			z-index: 999;
 			display: block;
-			padding: 5px 0 calc(5px + env(safe-area-inset-bottom));
-			background: #ffffff;
+			padding: var(--bc-space-1) 0 calc(var(--bc-space-1) + env(safe-area-inset-bottom));
+			background: var(--bc-white);
 			border-top: 1px solid rgba(28, 28, 28, 0.16);
 			box-shadow: none;
 		}
@@ -304,7 +305,7 @@
 			gap: 0;
 			max-width: 480px;
 			margin: 0 auto;
-			padding: 0 4px;
+			padding: 0 var(--bc-space-1);
 		}
 
 		.mobile-bottom-nav a,
@@ -312,19 +313,19 @@
 			position: relative;
 			display: flex;
 			min-width: 0;
-			min-height: 56px;
+			min-height: var(--bc-control-height-hero);
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: 2px;
+			gap: 4px;
 			border: 0;
 			border-radius: 0;
 			background: transparent;
 			appearance: none;
 			color: var(--bc-muted);
-			font-size: 11px;
+			font-size: var(--bc-mobile-stat);
 			font-weight: 600;
-			line-height: 14px;
+			line-height: var(--bc-mobile-stat-leading);
 			cursor: pointer;
 			padding: 4px 0;
 			text-align: center;
@@ -336,11 +337,11 @@
 
 		.mobile-bottom-nav__icon {
 			display: flex;
-			width: 38px;
-			height: 30px;
+			width: 28px;
+			height: 28px;
 			align-items: center;
 			justify-content: center;
-			border-radius: 999px;
+			border-radius: var(--bc-radius-pill);
 			color: inherit;
 			line-height: 0;
 			transition:
@@ -350,9 +351,9 @@
 
 		.mobile-bottom-nav__label {
 			color: inherit;
-			font-size: 12px;
-			font-weight: 600;
-			line-height: 14px;
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 		}
 
 		.mobile-bottom-nav a.mobile-bottom-nav__item--commerce {
@@ -364,14 +365,13 @@
 		}
 
 		.mobile-bottom-nav a.active,
-		#mobile-bottom-menu-toggle:checked ~ .mobile-bottom-nav .mobile-bottom-nav__menu-trigger {
+		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked) .mobile-bottom-nav__menu-trigger {
 			background: transparent;
 			color: var(--bc-accent);
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__icon,
-		#mobile-bottom-menu-toggle:checked
-			~ .mobile-bottom-nav
+		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
 			.mobile-bottom-nav__menu-trigger
 			.mobile-bottom-nav__icon {
 			background: transparent;
@@ -379,18 +379,18 @@
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__label,
-		#mobile-bottom-menu-toggle:checked
-			~ .mobile-bottom-nav
+		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
 			.mobile-bottom-nav__menu-trigger
 			.mobile-bottom-nav__label {
 			font-weight: 700;
 		}
 
 		.mobile-bottom-nav a:focus-visible,
-		#mobile-bottom-menu-toggle:focus-visible ~ .mobile-bottom-nav .mobile-bottom-nav__menu-trigger {
+		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:focus-visible)
+			.mobile-bottom-nav__menu-trigger {
 			background: var(--bc-surface);
-			color: #1c1c1c;
-			outline: 2px solid #1c1c1c;
+			color: var(--bc-ink);
+			outline: 2px solid var(--bc-ink);
 			outline-offset: -2px;
 		}
 
@@ -402,7 +402,7 @@
 			.mobile-bottom-nav a:hover,
 			.mobile-bottom-nav__menu-trigger:hover {
 				background: transparent;
-				color: #1c1c1c;
+				color: var(--bc-ink);
 			}
 
 			.mobile-bottom-nav a:hover .mobile-bottom-nav__icon,
@@ -412,8 +412,7 @@
 			}
 
 			.mobile-bottom-nav a.active:hover .mobile-bottom-nav__icon,
-			#mobile-bottom-menu-toggle:checked
-				~ .mobile-bottom-nav
+			.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
 				.mobile-bottom-nav__menu-trigger:hover
 				.mobile-bottom-nav__icon {
 				background: transparent;
@@ -438,7 +437,7 @@
 			pointer-events: none;
 		}
 
-		#mobile-bottom-menu-toggle:checked ~ .mobile-menu-sheet {
+		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked) ~ .mobile-menu-sheet {
 			--mobile-menu-backdrop-opacity: 1;
 			--mobile-menu-panel-y: 0;
 
@@ -464,22 +463,31 @@
 			bottom: 0;
 			left: 0;
 			display: grid;
-			gap: 12px;
+			gap: var(--bc-space-3);
 			width: 100%;
 			max-height: min(90dvh, 760px);
 			overflow-y: auto;
+			scrollbar-width: none;
+			overscroll-behavior: contain;
 			margin: 0;
-			padding: 10px 14px calc(18px + env(safe-area-inset-bottom));
+			padding: var(--bc-space-2) var(--bc-mobile-gutter)
+				calc(var(--bc-space-4) + env(safe-area-inset-bottom));
 			border: 0;
 			border-top: 1px solid var(--bc-border);
-			border-radius: 22px 22px 0 0;
+			border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
 			background: var(--bc-bg);
 			box-shadow: none;
 			transform: translateY(var(--mobile-menu-panel-y));
 			transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
 		}
 
-		#mobile-bottom-menu-toggle:checked ~ .mobile-menu-sheet .mobile-menu-sheet__panel {
+		.mobile-menu-sheet__panel::-webkit-scrollbar {
+			display: none;
+		}
+
+		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
+			~ .mobile-menu-sheet
+			.mobile-menu-sheet__panel {
 			transform: translateY(0) !important;
 		}
 
@@ -488,7 +496,7 @@
 			width: 42px;
 			height: 5px;
 			justify-self: center;
-			border-radius: 999px;
+			border-radius: var(--bc-radius-pill);
 			background: var(--bc-border);
 		}
 
@@ -496,42 +504,42 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			gap: 12px;
+			gap: var(--bc-space-3);
 		}
 
 		.mobile-menu-sheet__header p,
 		.mobile-menu-sheet__header strong {
 			margin: 0;
-			color: #1c1c1c;
+			color: var(--bc-ink);
 			letter-spacing: 0;
 		}
 
 		.mobile-menu-sheet__header p {
-			color: #6f766d;
-			font-size: 12px;
-			font-weight: 700;
-			line-height: 16px;
+			color: var(--bc-muted);
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 			text-transform: uppercase;
 		}
 
 		.mobile-menu-sheet__header strong {
 			display: block;
-			font-size: 22px;
-			font-weight: 700;
-			line-height: 27px;
+			font-size: var(--bc-mobile-section-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-section-title-leading);
 		}
 
 		.mobile-menu-sheet__close {
 			display: flex;
-			width: 44px;
-			height: 44px;
+			width: var(--bc-control-height-standard);
+			height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			border: 0;
-			border-radius: 999px;
+			border-radius: var(--bc-radius-pill);
 			background: var(--bc-surface);
 			appearance: none;
-			color: #1c1c1c;
+			color: var(--bc-ink);
 			cursor: pointer;
 			padding: 0;
 		}
@@ -546,9 +554,9 @@
 			gap: 14px;
 			overflow: hidden;
 			border-radius: var(--bc-radius-control);
-			background: #1c1c1c;
+			background: var(--bc-ink);
 			padding: 12px 128px 12px 14px;
-			color: #ffffff;
+			color: var(--bc-white);
 			transition:
 				background-color 0.18s ease,
 				color 0.18s ease;
@@ -563,14 +571,14 @@
 		}
 
 		.mobile-menu-sheet__sell:focus-visible {
-			background: #111111;
-			color: #ffffff;
+			background: var(--bc-ink);
+			color: var(--bc-white);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.mobile-menu-sheet__sell:hover {
-				background: #111111;
-				color: #ffffff;
+				background: var(--bc-ink);
+				color: var(--bc-white);
 			}
 		}
 
@@ -590,17 +598,17 @@
 		}
 
 		.mobile-menu-sheet__sell strong {
-			color: #ffffff;
-			font-size: 16px;
-			font-weight: 700;
-			line-height: 20px;
+			color: var(--bc-white);
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+			line-height: var(--bc-leading-control);
 		}
 
 		.mobile-menu-sheet__sell small {
 			color: rgba(255, 255, 255, 0.8);
-			font-size: 12px;
-			font-weight: 700;
-			line-height: 15px;
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 		}
 
 		.mobile-menu-sheet__sell-arrow {
@@ -613,9 +621,9 @@
 			height: 30px;
 			align-items: center;
 			justify-content: center;
-			border-radius: 999px;
-			background: #ffffff;
-			color: #111111;
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-white);
+			color: var(--bc-ink);
 			transform: translateY(-50%);
 		}
 
@@ -643,22 +651,22 @@
 		.mobile-menu-sheet__actions {
 			display: grid;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 10px;
+			gap: var(--bc-space-3);
 		}
 
 		.mobile-menu-sheet__actions a {
 			display: flex;
-			min-height: 48px;
+			min-height: var(--bc-control-height-primary);
 			align-items: center;
 			justify-content: center;
-			gap: 8px;
+			gap: var(--bc-space-2);
 			border: 1px solid var(--bc-border);
 			border-radius: var(--bc-radius-control);
-			background: #ffffff;
-			color: #1c1c1c;
-			font-size: 16px;
-			font-weight: 700;
-			line-height: 20px;
+			background: var(--bc-white);
+			color: var(--bc-ink);
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+			line-height: var(--bc-leading-control);
 		}
 
 		.mobile-menu-sheet__actions a:first-child {
@@ -668,14 +676,14 @@
 		}
 
 		.mobile-menu-sheet__actions a:focus-visible {
-			background: #1c1c1c;
-			color: #ffffff;
+			background: var(--bc-ink);
+			color: var(--bc-white);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.mobile-menu-sheet__actions a:hover {
-				background: #1c1c1c;
-				color: #ffffff;
+				background: var(--bc-ink);
+				color: var(--bc-white);
 			}
 		}
 
@@ -686,48 +694,48 @@
 
 		.mobile-menu-sheet__sections section {
 			display: grid;
-			gap: 8px;
+			gap: var(--bc-space-2);
 		}
 
 		.mobile-menu-sheet__sections h2 {
 			margin: 0;
-			color: #626d7c;
-			font-size: 12px;
-			font-weight: 700;
+			color: var(--bc-muted);
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
 			letter-spacing: 0;
-			line-height: 16px;
+			line-height: var(--bc-mobile-meta-leading);
 			text-transform: uppercase;
 		}
 
 		.mobile-menu-sheet__links {
 			display: grid;
-			gap: 8px;
+			gap: var(--bc-space-2);
 		}
 
 		.mobile-menu-sheet__links a {
 			display: flex;
-			min-height: 48px;
+			min-height: var(--bc-control-height-primary);
 			align-items: center;
-			gap: 10px;
+			gap: var(--bc-space-3);
 			border-radius: var(--bc-radius-control);
-			background: var(--bc-surface);
+			background: var(--bc-card-bg);
 			padding: 0 13px;
-			color: #1c1c1c;
-			font-size: 15px;
-			font-weight: 700;
-			line-height: 20px;
+			color: var(--bc-ink);
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+			line-height: var(--bc-leading-control);
 		}
 
 		.mobile-menu-sheet__links a.active,
 		.mobile-menu-sheet__links a:focus-visible {
 			background: var(--bc-surface-hover);
-			color: #1c1c1c;
+			color: var(--bc-ink);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.mobile-menu-sheet__links a:hover {
 				background: var(--bc-surface-hover);
-				color: #1c1c1c;
+				color: var(--bc-ink);
 			}
 		}
 	}

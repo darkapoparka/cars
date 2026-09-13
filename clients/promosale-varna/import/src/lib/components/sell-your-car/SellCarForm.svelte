@@ -19,6 +19,7 @@
 	gridClass="mb-28 grid grid-cols-1 gap-15"
 	novalidate
 	showEmptyStatus={false}
-	statusMessage="Заявката е подготвена. Promosale Varna ще се свърже с вас."
+	endpoint="/api/inventory/submissions"
+	statusMessage="Демо заявката е запазена временно. Не е изпратено съобщение до търговец."
 	submitLabel={form.submitLabel}
 />

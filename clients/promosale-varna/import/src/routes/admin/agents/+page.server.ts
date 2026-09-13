@@ -6,12 +6,12 @@ import { requireDayNightPageSession } from '$lib/server/auth';
 
 const value = (formData: FormData, key: string) => String(formData.get(key) ?? '').trim();
 
-export const load: PageServerLoad = ({ request, url }) => {
+export const load: PageServerLoad = async ({ request, url }) => {
 	const session = requireDayNightPageSession(request, 'admin/agents', url.searchParams);
 
 	return {
 		auxeroFullPage: true,
-		cms: getAdminCmsOverview(),
+		cms: await getAdminCmsOverview(),
 		session
 	};
 };

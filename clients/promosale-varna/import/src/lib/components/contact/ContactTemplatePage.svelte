@@ -53,13 +53,13 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Контакти — Promosale Varna"
+		title="Контакти — Day Night Auto"
 	>
 		<div class="daynight-contact-page">
 			<CenteredRouteHero
 				supportText="Огледи и посещения с предварителна уговорка."
 				image={contactHeroImage}
-				leftImage="/dealer/logo.png"
+				leftImage="/assets/daynight/banners/contact-kristian-phone-v1.png"
 				rightImage="/assets/daynight/banners/contact-email-v1.png"
 				portraitSide="left"
 				labelledby="contact-page-title"
@@ -111,8 +111,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="contact-socials" aria-label="Promosale Varna в социалните мрежи">
-								{#each [{ label: 'Facebook', href: daynightContact.facebookHref, icon: 'facebook' }, { label: 'Instagram', href: daynightContact.instagramHref, icon: 'instagram' }, { label: 'TikTok', href: daynightContact.tiktokHref, icon: 'tiktok' }].filter(social => social.href) as social (social.label)}
+							<div class="contact-socials" aria-label="Day Night Auto в социалните мрежи">
+								{#each [{ label: 'Facebook', href: daynightContact.facebookHref, icon: 'facebook' }, { label: 'Instagram', href: daynightContact.instagramHref, icon: 'instagram' }, { label: 'TikTok', href: daynightContact.tiktokHref, icon: 'tiktok' }] as social (social.label)}
 									<a {...hrefAttributes(social.href)}
 										><img src={`/assets/icons/brands/${social.icon}.svg`} alt="" />{social.label}</a
 									>

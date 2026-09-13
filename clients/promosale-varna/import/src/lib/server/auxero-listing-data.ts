@@ -1,4 +1,4 @@
-import { daynightBrand, daynightConsultants, daynightContact, daynightFetchedAt } from '$lib/data/daynight';
+import { daynightConsultants, daynightContact, daynightFetchedAt } from '$lib/data/daynight';
 import type { Agent } from '$lib/data/agents';
 import { listManagedAgents, type ManagedAgent } from './agents';
 import {
@@ -137,7 +137,7 @@ for (const vehicle of vehicles) {
 const inventoryBrandPills = brands
 	.map((brand) => ({
 		count: brandCounts.get(brand) ?? 0,
-		image: brandLogos[brand] ?? '/dealer/logo.png',
+		image: brandLogos[brand] ?? '/brand/daynight-wordmark.svg',
 		label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 		value: brand
 	}))
@@ -639,13 +639,13 @@ const inventoryShowingText = (state: InventoryState) => {
 	const hasFilters = Object.keys(state.filters).length > 0;
 	const selectedCount = state.selected.length;
 
-	if (selectedCount === 0) return `Showing 0 of ${vehicles.length} Promosale Varna Listings`;
+	if (selectedCount === 0) return `Showing 0 of ${vehicles.length} Day Night Auto Listings`;
 
 	if (hasFilters) {
-		return `Showing 1 - ${selectedCount} of ${selectedCount} matching Promosale Varna Listings`;
+		return `Showing 1 - ${selectedCount} of ${selectedCount} matching Day Night Auto Listings`;
 	}
 
-	return `Showing 1 - ${selectedCount} of ${selectedCount} Promosale Varna Listings`;
+	return `Showing 1 - ${selectedCount} of ${selectedCount} Day Night Auto Listings`;
 };
 
 const inventoryLayoutToggle = (state: InventoryState) => {
@@ -696,7 +696,7 @@ const inventoryUtilityToolbar = (state: InventoryState) => {
 const inventoryHeroSearchSurface = (state: InventoryState) => {
 	const searchQuery = selectedSearchQuery(state);
 
-	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search Promosale Varna inventory" data-daynight-search-form="inventory">
+	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search Day Night Auto inventory" data-daynight-search-form="inventory">
 		${inventorySearchHiddenInputs(state)}
 		<div class="daynight-inventory-searchbar__row">
 			<div class="daynight-inventory-searchbar__primary">
@@ -714,7 +714,7 @@ const inventoryHeroSearchSurface = (state: InventoryState) => {
 const inventorySearchSurface = (state: InventoryState) => {
 	const searchQuery = selectedSearchQuery(state);
 
-	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search Promosale Varna inventory" data-daynight-search-form="inventory">
+	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search Day Night Auto inventory" data-daynight-search-form="inventory">
 		${inventorySearchHiddenInputs(state)}
 		<div class="daynight-inventory-searchbar__row">
 			<div class="daynight-inventory-searchbar__primary">
@@ -884,10 +884,10 @@ const inventorySidebarRail = (state: InventoryState) => {
 };
 
 const inventoryBanner = (state: InventoryState) =>
-	`<section class="daynight-inventory-banner" aria-label="Promosale Varna inventory showcase">
+	`<section class="daynight-inventory-banner" aria-label="Day Night Auto inventory showcase">
 	<div class="container">
 		<div class="daynight-inventory-banner__copy">
-			<h1 id="daynight-inventory-title" class="daynight-sr-only">Promosale Varna Inventory</h1>
+			<h1 id="daynight-inventory-title" class="daynight-sr-only">Day Night Auto Inventory</h1>
 		</div>
 		<div class="daynight-inventory-banner__cars" aria-hidden="true">
 			<img class="daynight-inventory-banner__car daynight-inventory-banner__car--x5" src="/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp" alt="" loading="eager" decoding="async">
@@ -1044,8 +1044,8 @@ const inventoryContent = (state: InventoryState) => {
 		.join('\n');
 	const empty = `<div class="card-box card-box-style-1 daynight-empty-state">
 		<div class="content border-light">
-			<p class="h6 card-box__title mb-8">No Promosale Varna vehicles match these filters</p>
-			<p class="text-secondary mb-15">Clear filters or contact Promosale Varna for a Europe import request.</p>
+			<p class="h6 card-box__title mb-8">No Day Night Auto vehicles match these filters</p>
+			<p class="text-secondary mb-15">Clear filters or contact Day Night Auto for a Europe import request.</p>
 			<a href="/inventory" class="view-details">Reset inventory <img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="reset"></a>
 		</div>
 	</div>`;
@@ -1111,7 +1111,7 @@ const inventoryDashboard = (
 
 const inventoryMainSection = (
 	state: InventoryState
-) => `<section class="daynight-inventory-main pb-100" aria-label="Promosale Varna inventory results">
+) => `<section class="daynight-inventory-main pb-100" aria-label="Day Night Auto inventory results">
 	<div class="container">
 		${inventoryDashboard(state)}
 	</div>
@@ -1327,17 +1327,17 @@ export const applyCompareData = (html: string, options: AuxeroRenderOptions = {}
 		html
 			.replaceAll(
 				'<h2>Compare Cars Side-by-Side</h2>',
-				'<h1 class="h2">Сравни автомобили от Promosale Varna</h1>'
+				'<h1 class="h2">Сравни автомобили от Day Night Auto</h1>'
 			)
 			.replaceAll(
 				'<h2 class="text-center mb-12 capitalize">Compare Cars Side-by-Side</h2>',
-				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от Promosale Varna</h1>'
+				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от Day Night Auto</h1>'
 			)
 			.replaceAll(
-				'<h2 class="text-center mb-12 capitalize">Сравни автомобили от Promosale Varna</h2>',
-				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от Promosale Varna</h1>'
+				'<h2 class="text-center mb-12 capitalize">Сравни автомобили от Day Night Auto</h2>',
+				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от Day Night Auto</h1>'
 			)
-			.replaceAll('Compare Cars Side-by-Side', 'Сравни автомобили от Promosale Varna')
+			.replaceAll('Compare Cars Side-by-Side', 'Сравни автомобили от Day Night Auto')
 			.replaceAll(
 				'Compare features, performance, and pricing to choose the perfect car.',
 				'Сравни цена, пробег, източник и спецификации преди да запазиш оглед.'
@@ -1427,17 +1427,17 @@ export const applyAgentsData = (html: string, options: AuxeroRenderOptions = {})
 	const next = html
 		.replaceAll('Find a Dealer', 'Намери консултант')
 		.replace(
-			'<h2>Promosale Varna Consultants</h2>',
+			'<h2>Day Night Auto Consultants</h2>',
 			adminMode
 				? '<h1 class="h2">Управление на консултанти</h1>'
-				: '<h1 class="h2">Консултанти на Promosale Varna</h1>'
+				: '<h1 class="h2">Консултанти на Day Night Auto</h1>'
 		);
 
 	return replaceFirstDivAfter(
 		next,
 		adminMode
 			? '<h1 class="h2">Управление на консултанти</h1>'
-			: '<h1 class="h2">Консултанти на Promosale Varna</h1>',
+			: '<h1 class="h2">Консултанти на Day Night Auto</h1>',
 		'<div class="grid grid-cols-4',
 		agentGrid(adminMode)
 	);
@@ -1468,7 +1468,7 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 	const inventoryState = getAgentInventoryState(agent, 3);
 	let next = html
 		.replaceAll('Mike Hanley', escapeHtml(agent.name))
-		.replaceAll('Verified Dealer', 'Verified Promosale Varna Consultant')
+		.replaceAll('Verified Dealer', 'Verified Day Night Auto Consultant')
 		.replace('/assets/images/pages/sale-agent-9.jpg', escapeHtml(agent.image))
 		.replace(
 			/<p class="text-secondary mb-4">\s*Darrell Steward[\s\S]*?<\/p>/,
@@ -1476,9 +1476,9 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 		)
 		.replace(
 			/<p class="text-secondary mb-40">\s*His passion[\s\S]*?<\/p>/,
-			`<p class="text-secondary mb-40">Promosale Varna keeps every conversation practical: source details, inspection context, import or registration steps, and viewing appointments are confirmed before the next commitment.</p>`
+			`<p class="text-secondary mb-40">Day Night Auto keeps every conversation practical: source details, inspection context, import or registration steps, and viewing appointments are confirmed before the next commitment.</p>`
 		)
-		.replace(/Dealer Inventory \(3\)/g, `Promosale Varna Inventory (${inventoryState.count})`)
+		.replace(/Dealer Inventory \(3\)/g, `Day Night Auto Inventory (${inventoryState.count})`)
 		.replace(
 			/<iframe src="https:\/\/www\.google\.com\/maps\/embed\?pb=[^"]*"/g,
 			`<iframe src="${daynightMapEmbedSrc}"`
@@ -1492,7 +1492,7 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 		.replaceAll('1-555-678-9999', escapeHtml(daynightContact.marketplacePhoneLabel))
 		.replaceAll('tel:1-555-678-8888', daynightContact.primaryPhoneHref)
 		.replaceAll('tel:1-555-678-9999', daynightContact.marketplacePhoneHref)
-		.replaceAll('Call To Dealer', 'Call Promosale Varna')
+		.replaceAll('Call To Dealer', 'Call Day Night Auto')
 		.replaceAll('Chat via WhatsApp', 'Chat on Viber')
 		.replaceAll('value="Tony Nguyen"', 'value=""')
 		.replaceAll(`value="${daynightContact.emailLabel}"`, 'value=""')
@@ -1511,7 +1511,7 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 	);
 	next = replaceFirstDivAfter(
 		next,
-		'Promosale Varna Inventory',
+		'Day Night Auto Inventory',
 		'<div class="grid grid-cols-1',
 		agentInventoryGrid(agent)
 	);
@@ -1538,15 +1538,15 @@ export const applyContactData = (html: string) => {
 		)
 		.replace(
 			'<p class="h3 mb-12 capitalize">Reach Out to Us</p>',
-			'<h1 class="h3 mb-12 capitalize">Свържете се с Promosale Varna</h1>'
+			'<h1 class="h3 mb-12 capitalize">Свържете се с Day Night Auto</h1>'
 		)
-		.replaceAll('Reach Out to Us', 'Свържете се с Promosale Varna')
+		.replaceAll('Reach Out to Us', 'Свържете се с Day Night Auto')
 		.replaceAll(
 			'We’re here to assist with any questions, concerns, or inquiries—contact us today!',
 			'Пишете за наличен автомобил, подбор на автомобили, оглед, документи или продажба.'
 		)
-		.replaceAll('Address Business', 'Офис Promosale Varna')
-		.replaceAll('Contact Promosale Varna', 'Контакт с Promosale Varna')
+		.replaceAll('Address Business', 'Офис Day Night Auto')
+		.replaceAll('Contact Day Night Auto', 'Контакт с Day Night Auto')
 		.replaceAll(
 			'6205 Peachtree Dunwoody Rd, Atlanta, GA 30328',
 			escapeHtml(daynightContact.addressLabel)
@@ -1554,7 +1554,7 @@ export const applyContactData = (html: string) => {
 		.replaceAll('Week-Day: 8:00 - 18:00', 'Понеделник-петък: 9:00 - 18:00')
 		.replaceAll('Sunday: Closed', 'Уикенд: с уговорка')
 		.replaceAll('Working Time', 'Работно време')
-		.replaceAll('Follow Us On social media:', 'Последвайте Promosale Varna:')
+		.replaceAll('Follow Us On social media:', 'Последвайте Day Night Auto:')
 		.replaceAll(
 			"We'd love to hear from you! If you have any questions",
 			daynightContact.appointmentNote
@@ -1566,17 +1566,17 @@ export const applyContactData = (html: string) => {
 		.replaceAll('value="Tony"', 'value=""')
 		.replaceAll('placeholder="Enter your last name"', 'placeholder="Enter your last name"');
 
-	const contactInfoStart = next.indexOf('Офис Promosale Varna');
-	const contactInfoLabelStart = next.indexOf('Контакт с Promosale Varna', contactInfoStart);
+	const contactInfoStart = next.indexOf('Офис Day Night Auto');
+	const contactInfoLabelStart = next.indexOf('Контакт с Day Night Auto', contactInfoStart);
 
 	if (contactInfoLabelStart >= 0) {
-		next = `${next.slice(0, contactInfoLabelStart)}Телефон Promosale Varna${next.slice(
-			contactInfoLabelStart + 'Контакт с Promosale Varna'.length
+		next = `${next.slice(0, contactInfoLabelStart)}Телефон Day Night Auto${next.slice(
+			contactInfoLabelStart + 'Контакт с Day Night Auto'.length
 		)}`;
 	}
 
 	const contactMapOverlay = `<div class="daynight-contact-map__overlay">
-		<p class="daynight-contact-map__eyebrow">Promosale Varna Plovdiv</p>
+		<p class="daynight-contact-map__eyebrow">Day Night Auto Plovdiv</p>
 		<h1>Огледи и консултации с уговорка</h1>
 		<p>${escapeHtml(daynightContact.addressLabel)}</p>
 		<div class="daynight-contact-map__actions">
@@ -1680,7 +1680,7 @@ const matchingVehicleLabel = (count: number) =>
 
 const mapLocationList = (groups: MapLocationGroup[]) => {
 	if (!groups.length) {
-		return `<p class="text-secondary mb-16" data-daynight-map-empty="true">Няма автомобили по тези филтри. Изчисти филтрите или се свържи с Promosale Varna за входящи автомобили.</p>`;
+		return `<p class="text-secondary mb-16" data-daynight-map-empty="true">Няма автомобили по тези филтри. Изчисти филтрите или се свържи с Day Night Auto за входящи автомобили.</p>`;
 	}
 
 	return `<ul class="daynight-map-fallback__locations">
@@ -1703,7 +1703,7 @@ const inventoryMapFallback = (state: InventoryState) => {
 
 	return `<div id="map" class="daynight-map-fallback" data-map-zoom="16" data-map-scroll="true" data-daynight-map-selected="${state.selected.length}">
 				<div class="daynight-map-fallback__inner">
-					<p class="h4 mb-12">Зона за огледи Promosale Varna</p>
+					<p class="h4 mb-12">Зона за огледи Day Night Auto</p>
 					<p class="text-secondary mb-8">${escapeHtml(daynightContact.addressLabel)}</p>
 					<p class="text-secondary mb-12" data-daynight-map-summary="${escapeHtml(matchingVehicleLabel(state.selected.length))}">${escapeHtml(matchingVehicleLabel(state.selected.length))}, групирани по локация за оглед.</p>
 					${mapLocationList(groups)}
@@ -1745,9 +1745,9 @@ export const applyInventoryData = (
 	}
 
 	return replaceDemoVehicleCopy(next)
-		.replaceAll('Listing Grid 4 Columns', 'Promosale Varna Inventory')
-		.replaceAll('Listing Grid 3 Columns', 'Promosale Varna Inventory')
-		.replaceAll('Listing Grid Half Map', 'Promosale Varna Inventory Map')
+		.replaceAll('Listing Grid 4 Columns', 'Day Night Auto Inventory')
+		.replaceAll('Listing Grid 3 Columns', 'Day Night Auto Inventory')
+		.replaceAll('Listing Grid Half Map', 'Day Night Auto Inventory Map')
 		.replaceAll('$120', '0 EUR')
 		.replaceAll('$750', '150 000 EUR');
 };
@@ -1789,7 +1789,7 @@ const featureTabs = (vehicle: Vehicle) => {
 			daynightContact.appointmentNote,
 			daynightFetchedAt
 				? `Inventory refreshed ${daynightFetchedAt}`
-				: 'Inventory refreshed from Promosale Varna source data'
+				: 'Inventory refreshed from Day Night Auto source data'
 		]
 	];
 
@@ -1856,7 +1856,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 	const vehicle = getVehicleDetailOrFallback(options.slug);
 	const monthly = `${vehicle.monthly.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} EUR/mo`;
 	const consultant =
-		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0] ?? { image: '/dealer/logo.png', name: daynightBrand.name, slug: 'showroom-contact', title: 'Контакт с автокъщата' };
+		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0];
 	let next = html
 		// Lead with the actual price, not the financing estimate: make the Cash tab
 		// active by default so the headline shows the car price; Finance is one tab away.
@@ -1887,7 +1887,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 			/The 2024 - 2025 Honda HR-V is offered[\s\S]*?RM 141,900\./,
 			escapeHtml(
 				vehicle.description ||
-					`${vehicle.title} is available through Promosale Varna with source review and viewing by appointment.`
+					`${vehicle.title} is available through Day Night Auto with source review and viewing by appointment.`
 			)
 		)
 		.replaceAll('$44.900', escapeHtml(vehicle.priceLabel))
@@ -1895,7 +1895,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 		.replaceAll('$46.300|', escapeHtml(vehicle.priceLabel))
 		.replaceAll(
 			'$1,560 due at signing · 72 mo · 7.89% APR',
-			'Estimated over 72 months. Final terms confirmed by Promosale Varna.'
+			'Estimated over 72 months. Final terms confirmed by Day Night Auto.'
 		)
 		.replaceAll(
 			'List price w/o taxes, fees, and accessories',
@@ -1921,12 +1921,12 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 			'/assets/images/avatar/coment-avatar-2.png',
 			'/assets/images/avatar/coment-avatar-2.webp'
 		)
-		.replaceAll('Verified Dealer', 'Promosale Varna Consultant')
+		.replaceAll('Verified Dealer', 'Day Night Auto Consultant')
 		.replaceAll('1-555-678-8888', escapeHtml(daynightContact.primaryPhoneLabel))
 		.replaceAll('1-555-678-9999', escapeHtml(daynightContact.marketplacePhoneLabel))
 		.replaceAll('tel:1-555-678-8888', daynightContact.primaryPhoneHref)
 		.replaceAll('tel:1-555-678-9999', daynightContact.marketplacePhoneHref)
-		.replaceAll('Call To Dealer', 'Call Promosale Varna')
+		.replaceAll('Call To Dealer', 'Call Day Night Auto')
 		.replaceAll('Chat via WhatsApp', 'Chat on Viber')
 		.replaceAll('Tony Nguyen', '')
 		.replaceAll('This Vehicle&#39;s Availability 2', 'Registration and documents')
@@ -1952,15 +1952,15 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 		.replaceAll('Customer Reviews', 'Отзиви от клиенти')
 		.replaceAll('(1,968 Ratings)', '(1 968 оценки)')
 		.replaceAll('Write a review', 'Напиши отзив')
-		.replaceAll('Randynox', 'Клиент от Варна')
-		.replaceAll('Mista Nyroom', 'Купувач от Варна')
+		.replaceAll('Randynox', 'Клиент от Пловдив')
+		.replaceAll('Mista Nyroom', 'Купувач от София')
 		.replaceAll('Heather Dick', 'Собственик от Варна')
 		.replaceAll('August 13, 2025', '13 август 2025')
 		.replaceAll('August 22, 2025', '22 август 2025')
 		.replaceAll('August 18, 2025', '18 август 2025')
 		.replaceAll(
 			'Bought new in 2012, and it’s still running strong at over 180,000 miles. I’ve only had to replace the battery and brakes once. The ride is smooth, the interior still feels solid, and the fuel economy hasn’t dropped much.',
-			'Promosale Varna ни помогна да изберем автомобил с ясна история и реален пробег. Огледът беше организиран спокойно, а документите бяха обяснени предварително.'
+			'Day Night Auto ни помогна да изберем автомобил с ясна история и реален пробег. Огледът беше организиран спокойно, а документите бяха обяснени предварително.'
 		)
 		.replaceAll(
 			'Picked this car up used about five years ago with 90k miles. It’s now at 160k and still starts every morning without hesitation. Maintenance is simple, parts are cheap, and it’s surprisingly comfortable on long drives.',

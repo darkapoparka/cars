@@ -189,7 +189,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-contact-form')) {
 			return {
 				source: 'daynight-contact-form',
-				status: 'Съобщението е подготвено локално за Promosale Varna',
+				status: 'Съобщението е подготвено локално за Day Night Auto',
 				url: '/api/inquiries'
 			};
 		}
@@ -197,7 +197,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-blog-comment-form')) {
 			return {
 				source: 'daynight-blog-comment-form',
-				status: 'Коментарът е запазен локално за преглед от Promosale Varna',
+				status: 'Коментарът е запазен локално за преглед от Day Night Auto',
 				url: '/api/messages'
 			};
 		}
@@ -205,7 +205,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-sell-form')) {
 			return {
 				source: 'sell-your-car',
-				status: 'Заявката е подготвена. Promosale Varna ще се свърже с вас.',
+				status: 'Заявката е подготвена. Day Night Auto ще се свърже с вас.',
 				url: '/api/inventory/submissions'
 			};
 		}
@@ -213,16 +213,17 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-service-form')) {
 			return {
 				source: 'daynight-service-form',
-				status: 'Заявката за услуга е подготвена локално за Promosale Varna',
+				status: 'Заявката за услуга е подготвена локално за Day Night Auto',
 				url: '/api/inquiries'
 			};
 		}
 
 		return undefined;
 	};
-	document.addEventListener('submit', (event) => {
+	document.addEventListener('submit', async (event) => {
 		const form = event.target;
 		if (!(form instanceof HTMLFormElement)) return;
+		if (form.hasAttribute('data-managed-inquiry')) return;
 
 		const config = daynightEarlyFormConfig(form);
 		if (!config) return;
@@ -234,7 +235,7 @@ export const extractAuxeroRuntimeHtml = (
 				key,
 				typeof value === 'string' ? value : value.name
 			]));
-			fetch(config.url, {
+			const response = await fetch(config.url, {
 				body: JSON.stringify({
 					...payload,
 					routePath: window.location.pathname,
@@ -243,9 +244,15 @@ export const extractAuxeroRuntimeHtml = (
 				credentials: 'same-origin',
 				headers: { 'content-type': 'application/json' },
 				method: 'POST'
-			}).catch(() => undefined);
-		} catch (_error) {}
-		setDayNightEarlyFormStatus(form, config.status);
+			});
+			const result = await response.json();
+			if (!response.ok || !result.ok) throw new Error('Not saved');
+			setDayNightEarlyFormStatus(form, config.url === '/api/inquiries'
+				? 'Демонстрационната заявка е запазена. Не е изпратено съобщение до търговец.'
+				: config.status);
+		} catch (_error) {
+			setDayNightEarlyFormStatus(form, 'Заявката не е запазена. Провери данните и опитай отново.');
+		}
 	}, true);
 	let daynightRuntimeStarted = false;
 	const daynightRuntimeWaitsForBodyScripts = ${JSON.stringify(waitForBodyScripts)};

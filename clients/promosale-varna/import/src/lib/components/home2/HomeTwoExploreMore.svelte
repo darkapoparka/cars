@@ -48,7 +48,7 @@
 			{/each}
 		</div>
 
-		<div class="home2-browse-cta-grid" aria-label="Бързи Promosale Varna действия">
+		<div class="home2-browse-cta-grid" aria-label="Бързи Day Night Auto действия">
 			<a class="home2-browse-cta home2-browse-cta--inventory" href={resolve('/inventory')}>
 				<img
 					src="/assets/daynight/home2/home2-cta-browse-generated-v1.webp"
@@ -59,7 +59,7 @@
 				<span class="home2-browse-cta__copy">
 					<small>Налични сега</small>
 					<strong>Автомобили за оглед и сравнение</strong>
-					<em>Попитайте за историята, ясни разходи и конкретна следваща стъпка.</em>
+					<em>Проверена история, ясни разходи и конкретна следваща стъпка.</em>
 				</span>
 				<span class="home2-browse-cta__arrow" aria-hidden="true">
 					<ArrowRight size={18} strokeWidth={2.8} />
@@ -293,7 +293,7 @@
 	}
 
 	.home2-browse-cta__copy small {
-		color: #E3062F;
+		color: #e3062f;
 		font-size: 12px;
 		font-weight: 1000;
 		line-height: 1;

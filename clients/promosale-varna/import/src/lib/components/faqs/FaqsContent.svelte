@@ -15,7 +15,7 @@
 	<div class="container mb-60">
 		<h1 class="h2">Често задавани въпроси</h1>
 		<div class="tf-spacing-style3"></div>
-		<p class="h3 mb-20 text-center capitalize">Съдействие от Promosale Varna</p>
+		<p class="h3 mb-20 text-center capitalize">Съдействие от Day Night Auto</p>
 		<div class="max-width-850 mx-auto w-full">
 			<FaqAccordion items={featured} forceWhite />
 		</div>

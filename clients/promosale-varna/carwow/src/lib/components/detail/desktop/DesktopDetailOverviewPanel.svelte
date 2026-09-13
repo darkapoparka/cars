@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
@@ -32,7 +33,7 @@
 			id: 'location',
 			icon: '/assets/icons/MapPin.svg',
 			label: 'Локация:',
-			value: 'Варна'
+			value: `${daynightSite.city}`
 		},
 		{
 			id: 'interior',
@@ -92,12 +93,12 @@
 
 <style>
 	.car-overview-list-style2 :global(.h7) {
-		font-size: 16px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.45;
 	}
 
 	.car-overview-list-style2 > li > span {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 </style>

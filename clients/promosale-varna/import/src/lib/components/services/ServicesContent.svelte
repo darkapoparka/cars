@@ -132,7 +132,7 @@
 				class="lazyload parallax"
 				data-src="/assets/daynight/proof-studio-import-handoff.webp"
 				src="/assets/daynight/proof-studio-import-handoff.webp"
-				alt="Promosale Varna service support"
+				alt="Day Night Auto service support"
 			/>
 		</div>
 		<div class="index-10 relative container">
@@ -157,7 +157,7 @@
 						<li class="contact gap-12">
 							<div class="icon"><img src="/assets/icons/PhoneCall-2.svg" alt="phone" /></div>
 							<div class="flex flex-col gap-4">
-								<p class="text-muted text-sm">Promosale Varna</p>
+								<p class="text-muted text-sm">Day Night Auto</p>
 								<a
 									{...externalHref(services.contact.phoneHref)}
 									class="inline-flex min-h-8 items-center text-sm text-white"

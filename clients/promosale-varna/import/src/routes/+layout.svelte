@@ -71,11 +71,10 @@
 </script>
 
 <svelte:head>
-<meta name="robots" content="noindex,nofollow" />
 	<link rel="stylesheet" href="/fonts/sofia-sans/fonts.css" data-daynight-fonts />
-	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="/dealer/logo.png" />
+	<link rel="icon" href="/brand/daynight-favicon.svg" type="image/svg+xml" />
+	<link rel="shortcut icon" href="/brand/daynight-favicon.svg" type="image/svg+xml" />
+	<link rel="apple-touch-icon" href="/assets/daynight/brand/daynight-logo-generated.png" />
 	{#each auxeroStableStylesheetHrefs as href (href)}
 		<link
 			rel="stylesheet"

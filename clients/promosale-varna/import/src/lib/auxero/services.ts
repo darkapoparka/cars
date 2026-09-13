@@ -104,7 +104,7 @@ export const auxeroServicesContent: AuxeroServicesContent = {
 			'Съдействие от заявка до предаване'
 		],
 		description:
-			'Изпрати линк, VIN, бюджет, срок или заявка за продажба и Promosale Varna ще подготви правилната следваща стъпка.',
+			'Изпрати линк, VIN, бюджет, срок или заявка за продажба и Day Night Auto ще подготви правилната следваща стъпка.',
 		emailLabel: daynightContact.emailLabel,
 		phoneHref: daynightContact.primaryPhoneHref,
 		phoneLabel: daynightContact.primaryPhoneLabel,
@@ -116,7 +116,7 @@ export const auxeroServicesContent: AuxeroServicesContent = {
 	hero: {
 		description:
 			'Подбор, проверка, документи и реалистична крайна цена за автомобили от Европа, преди да стигнем до оглед.',
-		eyebrow: 'Promosale Varna услуги',
+		eyebrow: 'Day Night Auto услуги',
 		image: '/assets/daynight/services/premium-cars-banner-generated.webp',
 		title: 'Услуги за покупка и внос'
 	}

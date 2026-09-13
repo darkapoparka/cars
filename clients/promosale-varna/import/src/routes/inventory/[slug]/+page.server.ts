@@ -27,8 +27,8 @@ export const load: PageServerLoad = ({ params, request, url }) => {
 
 	const metaDescription =
 		locale === 'bg'
-			? `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Цена ${vehicle.priceLabel}. Провери история, оборудване и снимки в Promosale Varna.`
-			: `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Price ${vehicle.priceLabel}. Check history, equipment and photos at Promosale Varna.`;
+			? `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Цена ${vehicle.priceLabel}. Провери история, оборудване и снимки в Day Night Auto.`
+			: `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Price ${vehicle.priceLabel}. Check history, equipment and photos at Day Night Auto.`;
 
 	return {
 		auxeroFullPage: true,

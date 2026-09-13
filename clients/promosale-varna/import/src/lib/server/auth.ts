@@ -1,4 +1,6 @@
-import { error } from '@sveltejs/kit';
+import { createHash, timingSafeEqual } from 'node:crypto';
+import { error, redirect } from '@sveltejs/kit';
+import { hasInquiryDatabase, templateAdminCredentials } from './inquiry-config';
 import {
 	canRoleAccessDayNightRoute,
 	defaultRoleForDayNightRoute,
@@ -21,17 +23,17 @@ export { daynightRoleLabel } from './roles';
 export const daynightDemoSessions: Record<DayNightRole, DayNightSession> = {
 	admin: {
 		email: 'admin@daynight.local',
-		name: 'Promosale Varna Admin',
+		name: 'Day Night Auto Admin',
 		role: 'admin'
 	},
 	agent: {
 		email: 'agent@daynight.local',
-		name: 'Promosale Varna Agent',
+		name: 'Day Night Auto Agent',
 		role: 'agent'
 	},
 	customer: {
 		email: 'customer@daynight.local',
-		name: 'Promosale Varna Customer',
+		name: 'Day Night Auto Customer',
 		role: 'customer'
 	}
 };
@@ -72,9 +74,7 @@ const cookieToken = (request: Request) => {
 };
 
 const sessionTokenFromRequest = (request: Request) =>
-	request.headers.get('x-daynight-session')?.trim() ??
-	bearerToken(request) ??
-	cookieToken(request);
+	request.headers.get('x-daynight-session')?.trim() ?? bearerToken(request) ?? cookieToken(request);
 
 const roleFromRequestSearch = (request: Request): DayNightRole | undefined => {
 	try {
@@ -120,11 +120,25 @@ export const resolveDayNightApiSession = (
 	fallbackRole?: DayNightRole | string
 ): DayNightSession | undefined => {
 	const token = sessionTokenFromRequest(request);
-	const record = token ? findDayNightSessionByToken(decodeURIComponent(token)) : undefined;
+	let decodedToken;
+	try {
+		decodedToken = token ? decodeURIComponent(token) : undefined;
+	} catch {
+		return undefined;
+	}
+	const record = decodedToken ? findDayNightSessionByToken(decodedToken) : undefined;
 
 	if (record && new Date(record.expiresAt).getTime() > Date.now()) {
+		if (
+			hasInquiryDatabase() &&
+			(record.userId !== 'template-configured-admin' ||
+				record.role !== 'admin' ||
+				record.email !== templateAdminCredentials().email)
+		)
+			return undefined;
 		return sessionFromRecord(record);
 	}
+	if (hasInquiryDatabase()) return undefined;
 
 	const role = normalizeDayNightRole(fallbackRole);
 	const user =
@@ -148,6 +162,7 @@ export const resolveDayNightPageSession = (
 	const authenticated = resolveDayNightApiSession(request);
 
 	if (authenticated) return authenticated;
+	if (hasInquiryDatabase() && routePath.replace(/^\/+/, '').startsWith('admin')) return undefined;
 
 	return resolveDayNightSession(routePath, searchParams);
 };
@@ -160,11 +175,12 @@ export const requireDayNightPageSession = (
 	const session = resolveDayNightPageSession(request, routePath, searchParams);
 
 	if (!session) {
-		error(401, 'Promosale Varna account session is required');
+		if (hasInquiryDatabase() && request.method === 'GET') redirect(303, '/admin/login');
+		error(401, 'Day Night Auto account session is required');
 	}
 
 	if (!canAccessDayNightRoute(session, routePath)) {
-		error(403, 'Promosale Varna account role cannot access this route');
+		error(403, 'Day Night Auto account role cannot access this route');
 	}
 
 	return session;
@@ -185,6 +201,29 @@ export const authenticateDayNightUser = ({
 	password: string;
 	role?: DayNightRole | string;
 }): DayNightSession | undefined => {
+	if (hasInquiryDatabase()) {
+		const configured = templateAdminCredentials();
+		if (
+			!configured.email ||
+			!configured.password ||
+			configured.password.length < 16 ||
+			email.trim().toLowerCase() !== configured.email ||
+			(role && role !== 'admin')
+		)
+			return undefined;
+		const digest = (value: string) => createHash('sha256').update(value).digest();
+		if (!timingSafeEqual(digest(password), digest(configured.password))) return undefined;
+		return sessionFromRecord(
+			createDayNightSessionRecord({
+				id: 'template-configured-admin',
+				email: configured.email,
+				name: 'Template Admin',
+				phone: '',
+				role: 'admin',
+				status: 'active'
+			})
+		);
+	}
 	const user = findDayNightUserByEmail(email);
 	const requestedRole = normalizeDayNightRole(role);
 	const passwordLooksIntentional = password.trim().length >= 8;
@@ -214,6 +253,7 @@ export const registerDayNightCustomer = ({
 	password: string;
 	phone?: string;
 }): DayNightSession | undefined => {
+	if (hasInquiryDatabase()) return undefined;
 	const normalizedEmail = email.trim().toLowerCase();
 	const passwordLooksIntentional = password.trim().length >= 8;
 

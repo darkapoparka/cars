@@ -17,7 +17,7 @@
 		onSearchToggle: () => void;
 	} = $props();
 
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 
 	const headerToolClasses =
 		'relative inline-grid size-11 cursor-pointer place-items-center rounded-sa-pill border border-[#dbe4ef] bg-[#f5f7fb] p-0 text-[#172642] no-underline transition-colors duration-150 ease-sa hover:border-[#b9cce5] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue/45 [&_svg]:size-[22px]';
@@ -64,7 +64,10 @@
 							title="Отвори търсене"
 							aria-expanded={searchOpen}
 							aria-controls="searchForm"
-							onclick={onSearchToggle}
+							onclick={(event) => {
+								event.currentTarget.focus({ preventScroll: true });
+								onSearchToggle();
+							}}
 						>
 							<SiteChromeIcon name="search" />
 						</button>

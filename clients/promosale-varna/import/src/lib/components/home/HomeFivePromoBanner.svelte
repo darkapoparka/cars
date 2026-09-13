@@ -35,10 +35,10 @@
 						class="btn btn-small btn-line-style-2 daynight-promo__ghost">Калкулатор за внос</a
 					>
 				</div>
-				<ul class="daynight-promo__proof" aria-label="Promosale Varna предимства">
+				<ul class="daynight-promo__proof" aria-label="Day Night Auto предимства">
 					<li><strong>4.8</strong> · 157 отзива</li>
 					<li>Карфакс + история</li>
-					<li>Оглед във Варна</li>
+					<li>Оглед в Пловдив</li>
 				</ul>
 			</div>
 		</div>

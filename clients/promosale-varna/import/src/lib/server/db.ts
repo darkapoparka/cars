@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto';
 import { agents } from '$lib/data/agents';
 import { daynightContact } from '$lib/data/daynight';
 import { getVehicleBySlug, vehicles } from '$lib/data/vehicles';
@@ -40,7 +41,7 @@ const prototypeUsers: DayNightUser[] = [
 	{
 		email: 'admin@daynight.local',
 		id: 'user-admin',
-		name: 'Promosale Varna Admin',
+		name: 'Day Night Auto Admin',
 		phone: daynightContact.primaryPhoneLabel,
 		role: 'admin',
 		status: 'active'
@@ -48,7 +49,7 @@ const prototypeUsers: DayNightUser[] = [
 	{
 		email: 'agent@daynight.local',
 		id: 'user-agent',
-		name: 'Promosale Varna Agent',
+		name: 'Day Night Auto Agent',
 		phone: daynightContact.primaryPhoneLabel,
 		role: 'agent',
 		status: 'active'
@@ -56,7 +57,7 @@ const prototypeUsers: DayNightUser[] = [
 	{
 		email: 'customer@daynight.local',
 		id: 'user-customer',
-		name: 'Promosale Varna Customer',
+		name: 'Day Night Auto Customer',
 		phone: daynightContact.marketplacePhoneLabel,
 		role: 'customer',
 		status: 'active'
@@ -88,7 +89,7 @@ const inquiries: DayNightInquiryRecord[] = [...seededInquiries];
 const messages: DayNightMessageRecord[] = [
 	{
 		authorEmail: 'customer@daynight.local',
-		authorName: 'Promosale Varna Customer',
+		authorName: 'Day Night Auto Customer',
 		createdAt: '2026-05-22T10:00:00.000Z',
 		id: 'message-seed-1',
 		message: 'Please send appointment options and inspection notes.',
@@ -121,7 +122,7 @@ const seededVehicleSubmissions: DayNightVehicleSubmissionRecord[] = [
 		createdAt: '2026-05-24T14:30:00.000Z',
 		expectedPrice: 'On request',
 		id: 'submission-seed-2',
-		message: 'Customer asked whether Promosale Varna can prepare a direct offer or client listing.',
+		message: 'Customer asked whether Day Night Auto can prepare a direct offer or client listing.',
 		mileage: '98 000 km',
 		routePath: '/account/listings',
 		source: 'customer-listing',
@@ -160,7 +161,7 @@ export const createDayNightUserRecord = ({
 	const user: DayNightUser = {
 		email: email.trim().toLowerCase(),
 		id: nextId('user'),
-		name: name?.trim() || 'Promosale Varna Customer',
+		name: name?.trim() || 'Day Night Auto Customer',
 		phone: phone?.trim() || daynightContact.marketplacePhoneLabel,
 		role,
 		status
@@ -237,7 +238,7 @@ export const createDayNightSessionRecord = (user: DayNightUser): DayNightSession
 		expiresAt,
 		name: user.name,
 		role: user.role,
-		token: nextId('session'),
+		token: randomUUID(),
 		userId: user.id
 	};
 
@@ -283,7 +284,7 @@ const normalizeAgentSlug = (slug?: string) => {
 	return agents.some((agent) => agent.slug === normalized) ? normalized : undefined;
 };
 
-export const createDayNightInquiryRecord = (
+export const buildDayNightInquiryRecord = (
 	input: Partial<DayNightInquiryRecord>
 ): DayNightInquiryRecord => {
 	const routePath = input.routePath ?? '/contact';
@@ -297,11 +298,11 @@ export const createDayNightInquiryRecord = (
 			agentSlugFromRoute(routePath) ??
 			fallbackAgent,
 		contactEmail: input.contactEmail?.trim() || daynightContact.emailLabel,
-		contactName: input.contactName?.trim() || 'Promosale Varna website lead',
+		contactName: input.contactName?.trim() || 'Day Night Auto website lead',
 		contactPhone: input.contactPhone?.trim() || daynightContact.primaryPhoneLabel,
 		createdAt: stamp(),
-		id: nextId('inquiry'),
-		message: input.message?.trim() || 'Website inquiry queued for Promosale Varna follow-up.',
+		id: randomUUID(),
+		message: input.message?.trim() || 'Website inquiry queued for Day Night Auto follow-up.',
 		routePath,
 		source: input.source ?? 'website',
 		status: input.status ?? 'new',
@@ -310,8 +311,12 @@ export const createDayNightInquiryRecord = (
 		vehicleTitle: vehicle?.title ?? input.vehicleTitle
 	};
 
-	inquiries.unshift(record);
+	return record;
+};
 
+export const createDayNightInquiryRecord = (input: Partial<DayNightInquiryRecord>) => {
+	const record = buildDayNightInquiryRecord(input);
+	inquiries.unshift(record);
 	return record;
 };
 
@@ -340,10 +345,10 @@ export const createDayNightMessageRecord = (
 ): DayNightMessageRecord => {
 	const record: DayNightMessageRecord = {
 		authorEmail: input.authorEmail?.trim() || daynightContact.emailLabel,
-		authorName: input.authorName?.trim() || 'Promosale Varna website visitor',
+		authorName: input.authorName?.trim() || 'Day Night Auto website visitor',
 		createdAt: stamp(),
 		id: nextId('message'),
-		message: input.message?.trim() || 'Message queued for Promosale Varna.',
+		message: input.message?.trim() || 'Message queued for Day Night Auto.',
 		routePath: input.routePath ?? '/account/messages',
 		status: input.status ?? 'open',
 		threadId: input.threadId?.trim() || 'daynight-sales',
@@ -467,7 +472,7 @@ const normalizeListingRecord = (
 ): DayNightInventoryListingRecord => {
 	const createdAt = existing?.createdAt ?? input.createdAt ?? stamp();
 	const id = existing?.id ?? (trimmedValue(input.id) || nextId('listing'));
-	const title = trimmedValue(input.title) || existing?.title || 'Promosale Varna inventory draft';
+	const title = trimmedValue(input.title) || existing?.title || 'Day Night Auto inventory draft';
 	const price = numberFromValue(input.price, existing?.price ?? numberFromValue(input.priceLabel));
 	const slug =
 		existing && !input.slug
@@ -476,13 +481,14 @@ const normalizeListingRecord = (
 
 	return {
 		bodyType: trimmedValue(input.bodyType) || existing?.bodyType || 'On request',
-		brand: trimmedValue(input.brand) || existing?.brand || title.split(/\s+/)[0] || 'Promosale Varna',
+		brand:
+			trimmedValue(input.brand) || existing?.brand || title.split(/\s+/)[0] || 'Day Night Auto',
 		color: trimmedValue(input.color) || existing?.color || 'On request',
 		createdAt,
 		description:
 			trimmedValue(input.description) ||
 			existing?.description ||
-			`${title} is queued in the Promosale Varna CMS for review.`,
+			`${title} is queued in the Day Night Auto CMS for review.`,
 		documents: input.documents ?? existing?.documents ?? [],
 		doors: integerFromValue(input.doors, existing?.doors ?? 0),
 		engine: trimmedValue(input.engine) || existing?.engine || 'On request',
@@ -558,7 +564,7 @@ export const createDayNightVehicleSubmissionRecord = (
 	const records = persistedVehicleSubmissions();
 	const record: DayNightVehicleSubmissionRecord = {
 		contactEmail: input.contactEmail?.trim() || daynightContact.emailLabel,
-		contactName: input.contactName?.trim() || 'Promosale Varna customer',
+		contactName: input.contactName?.trim() || 'Day Night Auto customer',
 		contactPhone: input.contactPhone?.trim() || daynightContact.primaryPhoneLabel,
 		createdAt: stamp(),
 		documents: input.documents ?? [],

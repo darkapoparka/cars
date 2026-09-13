@@ -130,7 +130,7 @@
 									<img
 										class="daynight-review-more-card__brand"
 										src={daynightAssets.logoLight}
-										alt="Promosale Varna"
+										alt="Day Night Auto"
 										width="220"
 										height="58"
 										loading="lazy"
@@ -424,7 +424,7 @@
 
 		.daynight-home-reviews :global(.testimonior-box) {
 			min-height: 224px;
-			background: var(--bc-surface);
+			background: var(--bc-card-bg);
 			padding: 18px !important;
 		}
 

@@ -10,6 +10,12 @@
 	const accountFavoritesHref = resolve('/account');
 	const compareHref = resolve('/compare');
 	const contactHref = resolve('/contact');
+	const headlineMeta = $derived(
+		detail.overviewItems
+			.slice(0, 4)
+			.map((item) => item.value)
+			.join(' · ')
+	);
 </script>
 
 {#snippet compareIcon()}
@@ -62,7 +68,10 @@
 <div class="listing-details" data-daynight-slug={detail.slug} data-daynight-detail="true">
 	<div class="listing-details--content">
 		<div class="title-section mb-40">
-			<h1 class="h2 capitalize">{detail.title}</h1>
+			<div class="daynight-pdp-heading">
+				<h1 class="h2 capitalize">{detail.title}</h1>
+				<p class="daynight-pdp-headline-meta">{headlineMeta}</p>
+			</div>
 			<div class="flex items-center justify-end gap-12">
 				<a
 					href={compareHref}
@@ -88,7 +97,7 @@
 				<a
 					href={contactHref}
 					class="btn-icon-circle hover-fill-white"
-					aria-label={`Попитай Promosale Varna за ${detail.title}`}
+					aria-label={`Попитай Day Night Auto за ${detail.title}`}
 				>
 					{@render shareIcon()}
 				</a>
@@ -122,7 +131,7 @@
 	<div class="daynight-pdp-closing__copy">
 		<p class="daynight-pdp-closing__title">Искаш оглед?</p>
 		<p class="daynight-pdp-closing__text">
-			Изпрати запитване и Promosale Varna ще върне конкретен отговор за {detail.title}.
+			Изпрати запитване и Day Night Auto ще върне конкретен отговор за {detail.title}.
 		</p>
 	</div>
 	<a href={contactHref} class="daynight-pdp-closing__btn">Попитай за автомобила</a>

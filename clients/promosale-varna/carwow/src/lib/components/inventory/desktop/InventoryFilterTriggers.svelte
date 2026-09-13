@@ -24,6 +24,11 @@
 			(field) => sidebar || ['brand', 'model', 'price', 'mileage', 'fuel'].includes(field.name)
 		)
 	);
+	function openFromTrigger(event: MouseEvent, name?: string) {
+		if (event.currentTarget instanceof HTMLElement)
+			event.currentTarget.focus({ preventScroll: true });
+		onOpen(name);
+	}
 </script>
 
 <div class="inventory-filter-triggers" class:inventory-filter-triggers--sidebar={sidebar}>
@@ -35,7 +40,7 @@
 			disabled={!hydrated}
 			class:has-selection={selected.length > 0}
 			aria-haspopup="dialog"
-			onclick={() => onOpen(field.name)}
+			onclick={(event) => openFromTrigger(event, field.name)}
 		>
 			<span
 				>{selected.length === 1
@@ -51,7 +56,7 @@
 		disabled={!hydrated}
 		class="all-filters"
 		aria-haspopup="dialog"
-		onclick={() => onOpen()}
+		onclick={(event) => openFromTrigger(event)}
 		><SlidersHorizontal size={18} /><span>{sidebar ? 'Всички филтри' : 'Още филтри'}</span></button
 	>
 </div>
@@ -77,7 +82,8 @@
 		border-radius: 8px;
 		color: var(--discovery-filter-foreground);
 		background: var(--discovery-filter-background);
-		font: 500 15px/1.3 var(--sa-font);
+		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
+			var(--sa-font);
 		cursor: pointer;
 	}
 	button span {
@@ -120,7 +126,7 @@
 		align-self: start;
 	}
 	h2 {
-		font: 700 22px/1.2 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-card-title)/1.2 var(--sa-font);
 		margin: 0 0 8px;
 	}
 </style>

@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 
 async function clearGarage(page: Page) {
-	await page.goto('/', { waitUntil: 'domcontentloaded' });
+	await page.goto('/', { waitUntil: 'networkidle' });
 	await page.evaluate(() => {
 		localStorage.clear();
 		sessionStorage.clear();
@@ -9,58 +9,48 @@ async function clearGarage(page: Page) {
 }
 
 test.describe('final polish public journeys', () => {
-	test('mobile listing actions stay in sync with favorites and compare', async ({ page }) => {
+	test('mobile detail actions persist into favorites and compare', async ({ page }) => {
 		await page.setViewportSize({ width: 390, height: 844 });
 		await clearGarage(page);
 		await page.goto('/inventory', { waitUntil: 'networkidle' });
-
-		expect(await page.locator('#main-content').count()).toBe(1);
-		const firstCard = page.locator('.mobile-inventory-card').first();
-		await expect(firstCard).toBeVisible();
-
-		const compareButton = firstCard.getByRole('button', { name: /сравнение/ });
-		const favoriteButton = firstCard.getByRole('button', { name: /любими/ });
-		await compareButton.click();
-		await favoriteButton.click();
-		await expect(compareButton).toHaveAttribute('aria-pressed', 'true');
-		await expect(favoriteButton).toHaveAttribute('aria-pressed', 'true');
-		await expect(page.locator('[data-compare-tray]')).toBeVisible();
-
+		const card = page.locator('.mobile-inventory-card').first();
+		await expect(card.locator('button')).toHaveCount(0);
+		await card.getByRole('link').click();
+		const save = page.locator('.mobile-detail__nav-button--save');
+		const compare = page.locator('.mobile-detail__nav-button--compare');
+		await save.click();
+		await compare.click();
+		await expect(save).toHaveAttribute('aria-pressed', 'true');
+		await expect(compare).toHaveAttribute('aria-pressed', 'true');
 		await page.goto('/favorites', { waitUntil: 'networkidle' });
 		await expect(page.locator('.mobile-favorites-card')).toHaveCount(1);
-
+		await page.reload({ waitUntil: 'networkidle' });
+		await expect(page.locator('.mobile-favorites-card')).toHaveCount(1);
 		await page.goto('/compare', { waitUntil: 'networkidle' });
-		await expect(page.locator('.card-details')).toBeVisible();
-		await expect(page.locator('.compare-empty')).toHaveCount(0);
+		await expect(
+			page.getByRole('region', { name: 'Избрани автомобили за сравнение' }).locator('article')
+		).toHaveCount(1);
 	});
 
-	test('compare keeps the first three selections and exposes its limit', async ({ page }) => {
+	test('compare refuses the fourth selection and announces the limit', async ({ page }) => {
 		await page.setViewportSize({ width: 390, height: 844 });
 		await clearGarage(page);
 		await page.goto('/inventory', { waitUntil: 'networkidle' });
-
-		const cards = page.locator('.mobile-inventory-card');
-		for (let index = 0; index < 4; index += 1) {
-			await cards
-				.nth(index)
-				.getByRole('button', { name: /сравнение/ })
-				.click();
+		const paths = await page
+			.locator('.mobile-inventory-card__link')
+			.evaluateAll((links) => links.slice(0, 4).map((link) => link.getAttribute('href')!));
+		for (const [index, path] of paths.entries()) {
+			await page.goto(path, { waitUntil: 'networkidle' });
+			const compare = page.locator('.mobile-detail__nav-button--compare');
+			await compare.click();
+			await expect(compare).toHaveAttribute('aria-pressed', index < 3 ? 'true' : 'false');
 		}
-
-		for (let index = 0; index < 3; index += 1) {
-			await expect(cards.nth(index).getByRole('button', { name: /сравнение/ })).toHaveAttribute(
-				'aria-pressed',
-				'true'
-			);
-		}
-		await expect(cards.nth(3).getByRole('button', { name: /сравнение/ })).toHaveAttribute(
-			'aria-pressed',
-			'false'
-		);
 		await expect(page.getByRole('alert')).toContainText('до 3 автомобила');
-
-		await page.locator('[data-compare-tray]').getByRole('button', { name: 'Изчисти' }).click();
-		await expect(page.locator('[data-compare-tray]')).toHaveCount(0);
+		await page.goto('/compare', { waitUntil: 'networkidle' });
+		await expect(page.locator('.mobile-compare .cars article')).toHaveCount(3);
+		while (await page.locator('.mobile-compare .photo button').count())
+			await page.locator('.mobile-compare .photo button').first().click();
+		await expect(page.locator('.mobile-compare .empty')).toBeVisible();
 	});
 
 	test('mobile sheets restore scroll locking and close on Escape', async ({ page }) => {
@@ -87,7 +77,18 @@ test.describe('final polish public journeys', () => {
 		await page.setViewportSize({ width: 390, height: 844 });
 		await clearGarage(page);
 
-		for (const pathname of ['/contact', '/services', '/sell-your-car', '/about', '/favorites']) {
+		for (const pathname of [
+			'/contact',
+			'/services',
+			'/sell-your-car',
+			'/about',
+			'/favorites',
+			'/financing',
+			'/sell-your-car/request',
+			'/blog/kak-da-kupim-upotrebyavan-avtomobil',
+			'/reviews',
+			'/faq'
+		]) {
 			await page.goto(pathname, { waitUntil: 'networkidle' });
 			expect(await page.locator('#main-content').count(), pathname).toBe(1);
 		}

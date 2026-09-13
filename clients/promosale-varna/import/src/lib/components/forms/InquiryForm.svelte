@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { InquiryFormField, InquiryInputField } from './types';
+	import { resolve } from '$app/paths';
+	import { templateInquiryCopy } from '$lib/data/template-settings';
 
 	type Props = {
 		buttonClass?: string;
@@ -11,6 +13,7 @@
 		showEmptyStatus?: boolean;
 		statusClass?: string;
 		statusMessage?: string;
+		endpoint?: '/api/inquiries' | '/api/inventory/submissions';
 		submitLabel: string;
 	};
 
@@ -23,11 +26,13 @@
 		novalidate = false,
 		showEmptyStatus = true,
 		statusClass = 'auxero-form-status text-highlight font-weight-600 mt-12',
-		statusMessage = 'Заявката е получена. Promosale Varna ще се свърже с вас скоро.',
+		statusMessage = templateInquiryCopy.success,
+		endpoint = '/api/inquiries',
 		submitLabel
 	}: Props = $props();
 
 	let status = $state('');
+	let submitting = $state(false);
 
 	const inputClass = (field: InquiryInputField) => `${field.active ? 'active ' : ''}input-large`;
 	const fieldId = (id: string | undefined) => (id && idPrefix ? `${idPrefix}-${id}` : id);
@@ -39,13 +44,40 @@
 		return undefined;
 	};
 
-	function submitInquiry(event: SubmitEvent) {
+	async function submitInquiry(event: SubmitEvent) {
 		event.preventDefault();
-		status = statusMessage;
+		event.stopPropagation();
+		if (submitting) return;
+		const form = event.currentTarget as HTMLFormElement;
+		submitting = true;
+		status = '';
+		try {
+			const response = await fetch(resolve(endpoint), {
+				method: 'POST',
+				headers: { 'content-type': 'application/json' },
+				body: JSON.stringify({
+					...Object.fromEntries(new FormData(form)),
+					source: formClass.includes('service')
+						? 'service-request'
+						: formClass.includes('sell')
+							? 'sell-your-car'
+							: 'contact',
+					routePath: window.location.pathname
+				})
+			});
+			const result = await response.json();
+			if (!response.ok || !result.ok || !(result.data?.inquiry?.id || result.data?.submission?.id))
+				throw new Error('Not saved');
+			status = statusMessage;
+		} catch {
+			status = 'Заявката не е запазена. Провери данните и опитай отново.';
+		} finally {
+			submitting = false;
+		}
 	}
 </script>
 
-<form action="#" class={formClass} {novalidate} onsubmit={submitInquiry}>
+<form action="#" class={formClass} data-managed-inquiry {novalidate} onsubmit={submitInquiry}>
 	<div class={gridClass}>
 		{#each fields as field (`${field.kind}-${field.name}-${field.id ?? field.label}`)}
 			<div class={field.wrapperClass}>
@@ -90,7 +122,8 @@
 		{/each}
 	</div>
 
-	<button type="submit" class={buttonClass}>
+	<p>{templateInquiryCopy.notice}</p>
+	<button type="submit" class={buttonClass} disabled={submitting}>
 		{submitLabel}
 	</button>
 

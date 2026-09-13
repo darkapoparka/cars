@@ -12,7 +12,7 @@
 	}: { copy: DetailCopy; hasVideo?: boolean; images: string[]; title: string } = $props();
 	const contactHref = resolve('/contact');
 	const denseInventoryHref = resolve('/inventory?view=4');
-	const initialSlide = $derived(images.length > 1 ? 1 : 0);
+	const initialSlide = $derived(0);
 
 	let galleryHydrated = $state(false);
 

@@ -1,3 +1,3 @@
 <svelte:head>
-	<title>Сравни автомобили — Promosale Varna</title>
+	<title>Сравни автомобили — Day Night Auto</title>
 </svelte:head>

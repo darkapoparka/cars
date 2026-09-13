@@ -45,7 +45,7 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Калкулатор за внос — Promosale Varna"
+		title="Калкулатор за внос — Day Night Auto"
 	>
 		<div data-daynight-calculator-page>
 			<section class="pb-100">
@@ -53,8 +53,8 @@
 				<div class="container">
 					<h1 class="h2 mb-12 text-center">Калкулатор за внос</h1>
 					<p class="h7 line-height-28 text-secondary mb-40 text-center">
-						Изчисли ориентировъчна крайна цена за автомобил от Европа преди точна разбивка от
-						Promosale Varna.
+						Изчисли ориентировъчна крайна цена за автомобил от Европа преди точна разбивка от Day
+						Night Auto.
 					</p>
 					<CalculatorEstimator {calculator} />
 				</div>

@@ -8,6 +8,7 @@ export const brand = {
   "phoneHref": "tel:+359892020208",
   "appointment": "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден",
   "logo": "/dealer/logo.png",
+  "logoOnDark": "/dealer/logo-light.png",
   "youtubeUrl": "",
   "instagramUrl": "",
   "facebookUrl": ""

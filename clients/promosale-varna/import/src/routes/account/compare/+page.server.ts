@@ -40,7 +40,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		beforeCompareHtml: compareSlot.beforeHtml,
 		dashboardShell: true,
 		dashboard: getAccountDashboardPageData('dashboard.html', renderOptions, {
-			subtitle: 'Compare saved vehicles side by side before contacting Promosale Varna.',
+			subtitle: 'Compare saved vehicles side by side before contacting Day Night Auto.',
 			title: 'My Compare'
 		}),
 		locale,

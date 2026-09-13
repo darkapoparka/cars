@@ -10,7 +10,7 @@
 			<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 			<div>
 				<h2 id="home2-deals-title">Премиум изборът е актуален</h2>
-				<p>Популярни Promosale Varna предложения, готови за сравнение и оглед.</p>
+				<p>Популярни Day Night Auto предложения, готови за сравнение и оглед.</p>
 			</div>
 		</div>
 
@@ -94,16 +94,16 @@
 
 	.home2-section-title {
 		align-items: center;
-		color: #E3062F;
+		color: #e3062f;
 		display: flex;
 		gap: 14px;
 		margin-bottom: 31px;
 	}
 
 	.home2-section-title :global(svg) {
-		color: #E3062F !important;
-		fill: #E3062F !important;
-		stroke: #E3062F !important;
+		color: #e3062f !important;
+		fill: #e3062f !important;
+		stroke: #e3062f !important;
 	}
 
 	.home2-section-title h2 {
@@ -203,7 +203,7 @@
 	}
 
 	.home2-deal-card__badge {
-		background: #E3062F;
+		background: #e3062f;
 		border-radius: 5px;
 		color: #111513;
 		flex: 0 0 auto;
@@ -234,7 +234,7 @@
 	}
 
 	.home2-deal-card__saving :global(svg) {
-		color: #E3062F;
+		color: #e3062f;
 		stroke: currentColor !important;
 	}
 
@@ -253,7 +253,7 @@
 	}
 
 	.home2-deal-card__stock :global(svg) {
-		color: #E3062F;
+		color: #e3062f;
 		stroke: currentColor !important;
 	}
 
@@ -359,7 +359,7 @@
 	}
 
 	.home2-deal-card:hover .home2-deal-card__arrow {
-		background: #E3062F;
+		background: #e3062f;
 		color: #121214;
 	}
 

@@ -239,7 +239,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Promosale Varna listing location"
+						title="Day Night Auto listing location"
 					></iframe>
 				</div>
 			</div>

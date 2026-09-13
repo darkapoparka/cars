@@ -8,7 +8,7 @@ export async function POST({ request }: { request: Request }) {
 	const confirmPassword = payloadString(payload, 'confirmPassword', 'ConfirmPassword-SignUp');
 
 	if (confirmPassword && confirmPassword !== password) {
-		return errorJson('Promosale Varna account passwords do not match', 400);
+		return errorJson('Day Night Auto account passwords do not match', 400);
 	}
 
 	const session = registerDayNightCustomer({
@@ -19,7 +19,7 @@ export async function POST({ request }: { request: Request }) {
 	});
 
 	if (!session) {
-		return errorJson('Promosale Varna customer account could not be created', 400);
+		return errorJson('Day Night Auto customer account could not be created', 400);
 	}
 
 	const cookie = sessionCookieForDayNightSession(session);

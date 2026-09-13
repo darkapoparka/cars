@@ -1,3 +1,3 @@
 <svelte:head>
-	<title>Promosale Varna Admin - Redirecting</title>
+	<title>Day Night Auto Admin - Redirecting</title>
 </svelte:head>

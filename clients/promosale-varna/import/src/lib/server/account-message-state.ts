@@ -51,7 +51,7 @@ const conversations = (context: AccountContext): Conversation[] => {
 				badge: message.status === 'open' ? 1 : undefined,
 				email: daynightContact.emailLabel,
 				id: `${message.threadId}-${message.id}`,
-				name: message.threadId === 'daynight-sales' ? 'Екип продажби' : 'Екип Promosale Varna',
+				name: message.threadId === 'daynight-sales' ? 'Екип продажби' : 'Екип Day Night Auto',
 				preview: customerMessageText(message.message),
 				time: index === 0 ? '16:24' : 'Вчера'
 			}));
@@ -64,10 +64,10 @@ const fallbackConversation = (context: AccountContext): Conversation => ({
 	badge: context.isAdmin ? 1 : undefined,
 	email: daynightContact.emailLabel,
 	id: context.isAdmin ? 'daynight-lead-queue' : 'daynight-sales',
-	name: context.isAdmin ? 'Promosale Varna Lead Queue' : 'Екип продажби',
+	name: context.isAdmin ? 'Day Night Auto Lead Queue' : 'Екип продажби',
 	preview: context.isAdmin
-		? 'New Promosale Varna inquiries will appear here.'
-		: 'Разговорите ви с Promosale Varna ще се показват тук.',
+		? 'New Day Night Auto inquiries will appear here.'
+		: 'Разговорите ви с Day Night Auto ще се показват тук.',
 	time: context.isAdmin ? 'Today' : 'Днес'
 });
 
@@ -105,8 +105,8 @@ export const accountMessageThreadData = (context: AccountContext): AuxeroMessage
 		id: context.isAdmin ? 'daynight-lead-queue-empty' : 'daynight-sales-empty',
 		sent: false,
 		text: context.isAdmin
-			? 'New Promosale Varna inquiries will appear here for triage.'
-			: 'Историята на разговорите ви с Promosale Varna ще се показва тук.',
+			? 'New Day Night Auto inquiries will appear here for triage.'
+			: 'Историята на разговорите ви с Day Night Auto ще се показва тук.',
 		time: context.isAdmin ? 'Today' : 'Днес'
 	};
 
@@ -121,7 +121,7 @@ export const accountMessageThreadData = (context: AccountContext): AuxeroMessage
 				id: 'daynight-thread-response',
 				sent: true,
 				text: context.isAdmin
-					? 'Thanks. Promosale Varna can review source history, viewing availability, documents, and import timing before you commit.'
+					? 'Thanks. Day Night Auto can review source history, viewing availability, documents, and import timing before you commit.'
 					: 'Благодарим. Можем да проверим историята, документите, наличността за оглед и срока за внос преди решение.',
 				time: context.isAdmin ? 'Today, 10:12' : 'Днес, 10:12'
 			}

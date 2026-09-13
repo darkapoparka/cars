@@ -71,6 +71,8 @@ test('all filters support brand selection, extras, reset and keyboard search', a
 	expect(await page.locator('[data-daynight-vehicle-card]:visible').count()).toBeGreaterThan(0);
 	await page.locator('#daynight-inventory-hero-search').click();
 	await expect(input).toHaveValue('BMW');
+	await page.keyboard.press('Escape');
+	await expect(page.getByRole('dialog')).not.toBeVisible();
 });
 
 test('home filters contain keyboard focus and return it on close and selection', async ({

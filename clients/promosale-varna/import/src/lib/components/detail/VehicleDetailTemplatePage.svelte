@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import type {
 		HomeFiveFooterData,
 		HomeFiveHeaderData,
@@ -38,25 +37,8 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title={`${detail.title} — Promosale Varna`}
+	title={`${detail.title} — Day Night Auto`}
 >
-	<section class="daynight-pdp-desktop-breadcrumb background-light mb-22">
-		<div class="container">
-			<div class="flex items-center justify-between">
-				<ul class="breadcrumb">
-					<li><a href={resolve('/')}>Начало</a></li>
-					<li><img src="/assets/icons/right.svg" alt="chevron-right" /></li>
-					<li><span>{detail.title}</span></li>
-				</ul>
-
-				<div class="swiper-listing-details-navigation">
-					<p class="swiper-listing-details-prev cursor-pointer">Предишна</p>
-					<p class="swiper-listing-details-next cursor-pointer">Следваща</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section class="daynight-pdp-desktop pb-100">
 		<div class="tf-spacing-style4"></div>
 		<div class="container">
@@ -71,37 +53,19 @@
 
 <style>
 	:global(.daynight-pdp-desktop) {
-		background: #fbfcfa;
+		background: var(--bc-bg);
 	}
 
 	:global(.daynight-pdp-desktop .tf-spacing-style4) {
 		height: 32px;
 	}
 
-	:global(.daynight-pdp-desktop-breadcrumb) {
-		background: #f2f4ef;
-		border-bottom: 1px solid #e8ebe3;
-		margin-bottom: 0;
-	}
-
-	:global(.daynight-pdp-desktop-breadcrumb .container) {
-		padding-bottom: 12px;
-		padding-top: 12px;
-	}
-
-	:global(.daynight-pdp-desktop-breadcrumb .swiper-listing-details-navigation p) {
-		color: #4b4b4b;
-		font-size: 12px;
-		font-weight: 600;
-		text-transform: uppercase;
-	}
-
 	@media (min-width: 768px) {
 		:global(.daynight-pdp-desktop .listing-details) {
 			align-items: start;
 			display: grid;
-			gap: 60px;
-			grid-template-columns: minmax(0, 1fr) 400px;
+			gap: 32px;
+			grid-template-columns: minmax(0, 1fr) minmax(360px, 370px);
 		}
 
 		:global(.daynight-pdp-desktop .listing-details--content),
@@ -111,18 +75,23 @@
 		}
 
 		:global(.daynight-pdp-desktop .listing-details--sidebar) {
+			position: static;
+		}
+
+		:global(.daynight-pdp-desktop .daynight-buybox-card) {
 			position: sticky;
-			top: 104px;
+			top: 110px;
+			z-index: 4;
 		}
 	}
 
 	:global(.daynight-pdp-desktop .title-section) {
 		align-items: center;
-		background: #f3f5f2;
-		border: 1px solid #dfe8d4;
-		border-radius: 8px;
+		background: var(--bc-surface-raised);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
 		margin-bottom: 24px;
-		padding: 30px 32px;
+		padding: 24px;
 	}
 
 	:global(.daynight-pdp-desktop .title-section h1) {
@@ -137,13 +106,26 @@
 		min-width: 0;
 	}
 
-	:global(.daynight-pdp-desktop .title-section > div) {
+	:global(.daynight-pdp-desktop .title-section .daynight-pdp-heading) {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	:global(.daynight-pdp-desktop .title-section .daynight-pdp-heading + div) {
 		flex: 0 0 auto;
 	}
 
+	:global(.daynight-pdp-desktop .daynight-pdp-headline-meta) {
+		margin: 8px 0 0;
+		color: var(--bc-muted);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.45;
+	}
+
 	:global(.daynight-pdp-desktop .title-section .btn-icon-circle) {
-		background: #eef1ed;
-		border: 1px solid #dce4d4;
+		background: var(--bc-surface);
+		border: 1px solid var(--bc-border);
 		box-sizing: border-box;
 		color: #1c1c1c;
 		flex: 0 0 48px;
@@ -154,8 +136,8 @@
 	}
 
 	:global(.daynight-pdp-desktop .title-section .daynight-pdp-compare) {
-		background: #f3f4f6;
-		border-color: var(--bc-accent);
+		background: var(--bc-surface);
+		border-color: var(--bc-border);
 	}
 
 	:global(.daynight-pdp-desktop .title-section .daynight-pdp-compare svg path) {
@@ -211,14 +193,14 @@
 	}
 
 	:global(.daynight-pdp-desktop .daynight-pdp-gallery-main) {
-		background: #eef1ed;
+		background: var(--bc-surface);
 		border-radius: 8px;
-		height: clamp(520px, 44vw, 600px);
+		height: clamp(480px, 38vw, 540px);
 		margin-bottom: 14px;
 	}
 
 	:global(.daynight-pdp-desktop .listing-details-item) {
-		background: #eef1ed;
+		background: var(--bc-surface);
 		border-radius: 8px;
 	}
 
@@ -228,7 +210,7 @@
 	}
 
 	:global(.daynight-pdp-desktop .listing-details-thumb) {
-		background: #eef1ed;
+		background: var(--bc-surface);
 		border-radius: 8px;
 	}
 
@@ -237,11 +219,26 @@
 	}
 
 	:global(.daynight-pdp-desktop .swiper-listing-details-thumbs) {
-		padding-bottom: 46px;
+		padding-bottom: 32px;
+	}
+
+	:global(.daynight-pdp-desktop .swiper-listing-details-thumbs .swiper-slide) {
+		width: 104px !important;
+	}
+
+	:global(.daynight-pdp-desktop .listing-details-thumb) {
+		height: 68px;
+		overflow: hidden;
+	}
+
+	:global(.daynight-pdp-desktop .listing-details-thumb img) {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
 	}
 
 	:global(.daynight-pdp-desktop .listing-details-item--button) {
-		background: rgba(19, 36, 20, 0.78);
+		background: rgba(28, 28, 28, 0.8);
 		border: 1px solid rgba(255, 255, 255, 0.18);
 		border-radius: var(--bc-radius-control) !important;
 	}
@@ -404,7 +401,7 @@
 
 	:global(.daynight-pdp-desktop .daynight-buybox-actions .daynight-buybox-action:last-child) {
 		background: #ffffff;
-		border-color: #d2dac9;
+		border-color: var(--bc-border);
 		color: #1c1c1c;
 	}
 
@@ -426,23 +423,27 @@
 		}
 	}
 
-	:global(.daynight-pdp-desktop .listing-details--sidebar-box),
-	:global(.daynight-pdp-desktop .financing-calculator),
-	:global(.daynight-pdp-desktop .rating-box),
-	:global(.daynight-pdp-desktop .comment-box) {
-		background: #eef1ed;
-		border: 1px solid #dde0e4;
-		border-radius: 8px;
-		box-shadow: none;
-	}
-
 	:global(.daynight-pdp-desktop .listing-details--sidebar-box) {
+		background: var(--bc-surface-raised);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
+		box-shadow: none;
 		margin-bottom: 28px;
 		padding: 24px;
 	}
 
-	:global(.daynight-pdp-desktop .listing-details--sidebar-box:first-child) {
-		background: #f1f2f3;
+	:global(.daynight-pdp-desktop .rating-box) {
+		background: var(--bc-surface-raised);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
+		box-shadow: none;
+	}
+
+	:global(.daynight-pdp-desktop .comment-box) {
+		background: var(--bc-surface-soft);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
+		box-shadow: none;
 	}
 
 	:global(.daynight-pdp-desktop .listing-details--sidebar-box .menu-tab-style5) {
@@ -462,7 +463,7 @@
 	}
 
 	:global(.daynight-pdp-desktop .car-overview-list-style2 li) {
-		border-color: #dde3d6;
+		border-color: var(--bc-border);
 		grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
 	}
 
@@ -486,10 +487,15 @@
 	}
 
 	:global(.daynight-pdp-desktop .listing-details--contact .verify) {
-		background: #edf5cf;
+		background: var(--bc-accent-tint);
+		border: 1px solid rgb(185 22 28 / 0.18);
 		border-radius: 999px;
 		padding: 4px 10px;
 		width: max-content;
+	}
+
+	:global(.daynight-pdp-desktop .listing-details--contact .verify .text-highlight) {
+		color: var(--bc-accent) !important;
 	}
 
 	:global(.daynight-pdp-desktop .listing-details--contact .btn-primary-3) {
@@ -504,9 +510,26 @@
 		}
 	}
 
+	:global(.daynight-pdp-desktop .listing-details--contact .daynight-viber-action) {
+		background: #ffffff !important;
+		border: 1px solid var(--bc-border) !important;
+		color: var(--bc-ink) !important;
+	}
+
+	:global(.daynight-pdp-desktop .listing-details--contact .daynight-viber-action img) {
+		filter: brightness(0) saturate(100%);
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		:global(.daynight-pdp-desktop .listing-details--contact .daynight-viber-action:hover) {
+			background: var(--bc-surface) !important;
+			border-color: var(--bc-border-strong) !important;
+		}
+	}
+
 	:global(.daynight-pdp-desktop .flat-tabs .menu-tab-style4) {
 		align-items: stretch;
-		background: #eef1ed;
+		background: var(--bc-surface);
 		border: 1px solid #dde0e4;
 		border-radius: 8px;
 		border-bottom: 1px solid #dde0e4;
@@ -583,7 +606,7 @@
 	:global(.daynight-pdp-desktop .send-inquiry select),
 	:global(.daynight-pdp-desktop .send-inquiry textarea) {
 		background: rgba(255, 255, 255, 0.86);
-		border-color: #dce2d5;
+		border-color: var(--bc-border);
 		border-radius: 8px;
 	}
 

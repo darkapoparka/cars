@@ -8,13 +8,14 @@
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	import DayNightFooter from '$lib/components/layout/DayNightFooter.svelte';
 	import RouteImageBehavior from '$lib/components/layout/RouteImageBehavior.svelte';
-	import { isDesktopOrServerViewport, isPhoneViewport } from '$lib/hooks/is-mobile.svelte';
+	import { getViewportContext } from '$lib/hooks/viewport.svelte';
+	const viewport = getViewportContext();
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 
-	const showMobileShell = $derived(isPhoneViewport());
-	const showDesktopShell = $derived(isDesktopOrServerViewport());
+	const showMobileShell = $derived(viewport.mobile);
+	const showDesktopShell = $derived(!viewport.mobile);
 </script>
 
 <RouteSeo title={data.seo.title} description={data.seo.description} />
@@ -29,7 +30,6 @@
 
 {#if showDesktopShell}
 	<StorefrontShell mobileReplaced>
-		<span id="main-content" tabindex="-1" class="sr-only"></span>
 		<SiteChrome />
 		<DesktopAboutPage />
 		<DayNightFooter />

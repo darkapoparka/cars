@@ -17,7 +17,7 @@
 	</div>
 {:else}
 	<div class="dashboard-box bg-white" data-daynight-favorites-empty="true">
-		<p class="h4 mb-8">No saved Promosale Varna vehicles yet</p>
+		<p class="h4 mb-8">No saved Day Night Auto vehicles yet</p>
 		<p class="text-secondary">Use the heart action on inventory cards to build your saved list.</p>
 	</div>
 {/if}

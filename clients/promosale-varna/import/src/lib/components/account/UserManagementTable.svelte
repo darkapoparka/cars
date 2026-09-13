@@ -240,7 +240,7 @@
 		border: 1px solid #dfe9d3;
 		border-radius: 999px;
 		background: #f3f8e9;
-		color: #B9161C;
+		color: #b9161c;
 		padding: 0 13px;
 		font-size: 13px;
 		font-weight: 800;
@@ -299,7 +299,7 @@
 		min-height: 38px;
 		align-items: center;
 		gap: 9px;
-		border: 1px solid #FEE2E2;
+		border: 1px solid #fee2e2;
 		border-radius: 8px;
 		background: #ffffff;
 		color: #687064;
@@ -330,7 +330,7 @@
 		border: 0;
 		border-radius: 7px;
 		background: #fee2e2;
-		color: #B9161C;
+		color: #b9161c;
 		cursor: pointer;
 	}
 
@@ -354,10 +354,10 @@
 		display: inline-flex;
 		min-height: 34px;
 		align-items: center;
-		border: 1px solid #FEE2E2;
+		border: 1px solid #fee2e2;
 		border-radius: 8px;
 		background: #ffffff;
-		color: #1C1C1C;
+		color: #1c1c1c;
 		padding: 0 12px;
 		font-size: 12px;
 		font-weight: 800;
@@ -369,9 +369,9 @@
 	.daynight-users-filters button:hover,
 	.daynight-users-filters button:focus-visible,
 	.daynight-users-filters .state-active {
-		border-color: #E3062F;
+		border-color: #e3062f;
 		background: #fee2e2;
-		color: #B9161C;
+		color: #b9161c;
 	}
 
 	.daynight-users-table-wrap {
@@ -486,12 +486,12 @@
 
 	.daynight-users-role {
 		background: #eef3e7;
-		color: #1C1C1C;
+		color: #1c1c1c;
 	}
 
 	.daynight-users-role.is-admin {
 		background: #fee2e2;
-		color: #B9161C;
+		color: #b9161c;
 	}
 
 	.daynight-users-role.is-agent {
@@ -506,7 +506,7 @@
 
 	.daynight-users-status {
 		background: #f3f8e9;
-		color: #B9161C;
+		color: #b9161c;
 	}
 
 	.daynight-users-actions {
@@ -522,7 +522,7 @@
 		height: 36px;
 		align-items: center;
 		justify-content: center;
-		border: 1px solid #FEE2E2;
+		border: 1px solid #fee2e2;
 		border-radius: 8px;
 		background: #ffffff;
 		color: #8caf24;
@@ -534,9 +534,9 @@
 
 	.daynight-users-action:hover,
 	.daynight-users-action:focus-visible {
-		border-color: #E3062F;
+		border-color: #e3062f;
 		background: #fee2e2;
-		color: #B9161C;
+		color: #b9161c;
 	}
 
 	.daynight-users-empty {

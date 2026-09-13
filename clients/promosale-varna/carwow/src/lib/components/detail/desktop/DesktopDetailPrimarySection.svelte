@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
-	import type { DetailFeatureTab } from '$lib/types/template-page';
+	import type { DetailFeatureTab } from '$lib/types/storefront-page';
 	import DesktopDetailFeatureTabs from './DesktopDetailFeatureTabs.svelte';
 	import DesktopDetailFinanceCalculator from './DesktopDetailFinanceCalculator.svelte';
 	import DesktopDetailGallery from './DesktopDetailGallery.svelte';
@@ -22,7 +22,7 @@
 	let { vehicle, featureTabs, similarVehicles }: Props = $props();
 </script>
 
-<section id="main-content" tabindex="-1" class="pdp-canvas pb-100">
+<section class="pdp-canvas pb-100">
 	<div class="pdp-primary-gap"></div>
 	<div class="container">
 		<div class="listing-details">

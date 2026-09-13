@@ -1,6 +1,14 @@
 <script lang="ts">
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
-	import { ArrowRight, Phone, MapPin, CarFront, ArrowLeftRight, FileCheck2, Clock3 } from '@lucide/svelte';
+	import {
+		ArrowRight,
+		Phone,
+		MapPin,
+		CarFront,
+		ArrowLeftRight,
+		FileCheck2,
+		Clock3
+	} from '@lucide/svelte';
 	import SiteChromeIcon from '$lib/components/layout/SiteChromeIcon.svelte';
 	import { resolve } from '$app/paths';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
@@ -28,9 +36,29 @@
 		{ brand: 'Volvo', image: 'volvo' }
 	] as const;
 	const support = [
-		{ title: 'Избор и оглед', icon: CarFront, description: 'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.', href: '/inventory', action: 'Виж автомобилите' },
-		{ title: 'Продажба и бартер', icon: ArrowLeftRight, description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.', href: '/sell-your-car', action: 'Продай или замени' },
-		{ title: 'Документи и финансиране', icon: FileCheck2, description: 'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.', href: '/services', action: 'Разгледай услугите' }
+		{
+			title: 'Избор и оглед',
+			icon: CarFront,
+			description:
+				'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.',
+			href: '/inventory',
+			action: 'Виж автомобилите'
+		},
+		{
+			title: 'Продажба и бартер',
+			icon: ArrowLeftRight,
+			description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.',
+			href: '/sell-your-car',
+			action: 'Продай или замени'
+		},
+		{
+			title: 'Документи и финансиране',
+			icon: FileCheck2,
+			description:
+				'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.',
+			href: '/services',
+			action: 'Разгледай услугите'
+		}
 	] as const;
 
 	const teamMembers = daynightTeam.slice(0, 4);
@@ -44,25 +72,43 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title="За Promosale Varna"
+		title={`За ${daynightSite.shortName}`}
 		panel="light"
 		compact
 	>
-		{#snippet afterPanel()}
+		<div class="about-hero-panel">
+			<div class="about-hero-primary">
+				<strong>Намери следващия си автомобил</strong>
+				<a class="sa-cta sa-cta-primary" href={resolve('/inventory')}>Виж автомобилите</a>
+			</div>
 			<nav class="about-hero-contact" aria-label="Контакти и социални мрежи">
 				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
-				<a href={`tel:+359${daynightSite.phone.slice(1)}`}
-					><Phone size={18} />{daynightSite.phoneLabel}</a
-				>
+				<a href={daynightSite.phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
 				<div class="about-hero-socials">
-					
+					<a
+						href="https://www.facebook.com/61566304063141/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
+					>
+					<a
+						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
+					>
+					<a
+						href={youtubeChannelUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="YouTube"
+					>
+						<img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
+					</a>
 				</div>
 			</nav>
-		{/snippet}
-		<div class="about-hero-strip">
-			<span>Намери следващия си автомобил</span><DesktopBrowseLink href={resolve('/inventory')} label="Виж автомобилите" tone="dark" />
 		</div>
 	</DesktopYellowRouteHero>
 
@@ -92,8 +138,7 @@
 								<a
 									class="about-seller-contact"
 									href={`tel:${member.phone}`}
-									aria-label={`Свържи се с екипа: ${member.role}`}
-									><Phone size={18} /></a
+									aria-label={`Свържи се с екипа: ${member.role}`}><Phone size={18} /></a
 								>
 							</div>
 						</div>
@@ -113,7 +158,7 @@
 			<img
 				class="about-story__image"
 				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt="Илюстративна визия на Promosale Varna: Mercedes-Benz и Lamborghini с ключове за бартер"
+				alt={`Илюстративна визия на ${daynightSite.shortName}: Mercedes-Benz и Lamborghini с ключове за бартер`}
 				width="1200"
 				height="800"
 				loading="lazy"
@@ -121,11 +166,12 @@
 			<div>
 				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
 				<p>
-					Promosale Varna е автокъща във Варна. При нас можеш да разгледаш наличните автомобили, да
-					уговориш оглед и да обсъдиш продажба или бартер на твоя автомобил.
+					{daynightSite.shortName} е автокъща в {daynightSite.city}. При нас можеш да разгледаш
+					наличните автомобили, да уговориш оглед и да обсъдиш продажба или бартер на твоя
+					автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети във Варна. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -142,7 +188,13 @@
 			<div class="about-brands">
 				{#each brands as brand (brand.brand)}
 					<a href={resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`)}>
-						<img src={resolve(`/assets/images/brand/mobile/${brand.image}.svg`)} alt="" width="36" height="28" loading="lazy" />
+						<img
+							src={resolve(`/assets/images/brand/mobile/${brand.image}.svg`)}
+							alt=""
+							width="36"
+							height="28"
+							loading="lazy"
+						/>
 						<span>{brand.brand}</span>
 					</a>
 				{/each}
@@ -152,14 +204,18 @@
 
 	<section class="about-section about-support" aria-labelledby="about-support-title">
 		<div class="about-container">
-			<div class="about-section-heading"><h2 id="about-support-title">С какво можем да помогнем</h2></div>
+			<div class="about-section-heading">
+				<h2 id="about-support-title">С какво можем да помогнем</h2>
+			</div>
 			<div class="about-support-grid">
 				{#each support as item (item.href)}
 					<a class="about-support-card" href={resolve(item.href)}>
 						<item.icon size={28} strokeWidth={1.8} aria-hidden="true" />
 						<h3>{item.title}</h3>
 						<p>{item.description}</p>
-						<span class="about-support-action">{item.action}<ArrowRight size={18} aria-hidden="true" /></span>
+						<span class="about-support-action"
+							>{item.action}<ArrowRight size={18} aria-hidden="true" /></span
+						>
 					</a>
 				{/each}
 			</div>
@@ -170,27 +226,33 @@
 		<div class="about-container about-visit__banner">
 			<div class="about-visit__copy">
 				<h2 id="about-visit-title">Ела да го видиш<br />на живо.</h2>
-				<address class="about-visit-address"><MapPin size={20} aria-hidden="true" /><span>{daynightSite.location}</span></address>
-				<div class="about-visit-hours"><Clock3 size={20} aria-hidden="true" /><div><strong>{daynightSite.hoursLabel}</strong></div></div>
+				<address class="about-visit-address">
+					<MapPin size={20} aria-hidden="true" /><span>{daynightSite.location}</span>
+				</address>
+				<div class="about-visit-hours">
+					<Clock3 size={20} aria-hidden="true" />
+					<div><strong>{daynightSite.hoursLabel}</strong></div>
+				</div>
 				<a class="sa-cta sa-cta-primary" href={resolve('/contact')}
 					>Уговори оглед <ArrowRight size={18} /></a
 				>
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
-					<LazyMapEmbed src={mapEmbedSrc} title="Карта до Promosale Varna Варна" height="280" />
+					<LazyMapEmbed
+						src={mapEmbedSrc}
+						title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+						height="280"
+					/>
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Варна, Варна</strong>
+						<strong>Студентски град, {daynightSite.city}</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}
-				<a
-					href={daynightSite.mapUrl}
-					target="_blank"
-					rel="noopener"
-					class="about-map-link"><MapPin size={18} />Отвори маршрута <ArrowRight size={18} /></a
+				<a href={daynightSite.mapUrl} target="_blank" rel="noopener" class="about-map-link"
+					><MapPin size={18} />Отвори маршрута <ArrowRight size={18} /></a
 				>
 			</div>
 		</div>
@@ -198,45 +260,69 @@
 </main>
 
 <style>
+	.about-hero-panel {
+		display: grid;
+		gap: 12px;
+		padding: 14px;
+	}
+
+	.about-hero-primary {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.about-hero-primary strong {
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.35 var(--sa-font);
+		text-align: left;
+	}
+
+	.about-hero-primary .sa-cta {
+		min-width: 190px;
+	}
+
 	.about-hero-contact {
 		display: grid;
-		grid-template-columns: repeat(2, 200px);
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
 		align-items: center;
-		justify-content: center;
-		gap: 12px;
-		margin-top: 18px;
+		gap: 10px;
 	}
+
 	.about-hero-contact a {
 		display: inline-flex;
-		align-items: center;
-		gap: 8px;
 		min-height: 44px;
-		font: 500 15px/1.4 var(--sa-font);
-		color: var(--sa-ink);
-	}
-	.about-hero-contact > a {
+		align-items: center;
 		justify-content: center;
-		min-height: 48px;
-		padding: 0 20px;
+		gap: 8px;
+		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
-		background: #fff;
-		font-weight: 600;
+		background: var(--desktop-field);
+		color: var(--sa-ink);
+		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.35 var(--sa-font);
+		padding: 0 12px;
 	}
-	.about-hero-contact > a:hover {
-		background: #f7f8fa;
+
+	.about-hero-contact > a:hover,
+	.about-hero-contact > a:focus-visible,
+	.about-hero-socials a:hover,
+	.about-hero-socials a:focus-visible {
+		border-color: var(--desktop-secondary-hover);
+		background: var(--desktop-secondary-hover);
 	}
+
 	.about-hero-socials {
 		display: flex;
-		grid-column: 1 / -1;
-		justify-content: center;
 		gap: 8px;
 	}
+
 	.about-hero-socials a {
-		justify-content: center;
 		width: 44px;
+		padding: 0;
 		border-radius: 50%;
-		background: rgb(255 255 255 / 45%);
+		background: #fff;
 	}
+
 	.about-hero-socials img {
 		filter: brightness(0);
 	}
@@ -269,35 +355,22 @@
 		padding: 40px 0;
 	}
 	.about-page h2 {
-		font: 700 var(--sa-text-desktop-section-title)/1.1 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-desktop-section-title)/1.1 var(--sa-font);
 		letter-spacing: -0.025em;
 		color: var(--sa-ink);
 		margin: 0;
 	}
 	.about-page p {
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 		color: var(--sa-ink);
 		margin: 20px 0 0;
 	}
 	.about-page .sa-cta-primary {
 		color: #fff;
 		--sa-cta-height: 48px;
-		--sa-cta-font-size: 16px;
+		--sa-cta-font-size: var(--sa-button-font-size);
 		gap: 12px;
 		padding-inline: 22px;
-	}
-	.about-hero-strip {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 16px 20px;
-	}
-	.about-hero-strip span {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		font: 500 18px/1.4 var(--sa-font);
 	}
 	.about-story {
 		display: grid;
@@ -320,7 +393,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 12px;
-		font: 600 16px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		min-height: 44px;
 	}
 	.about-story :global(.desktop-browse-link) {
@@ -334,7 +407,7 @@
 	}
 	.about-story p {
 		color: #d9dcde;
-		font-size: 17px;
+		font-size: var(--sa-type-body);
 		margin-top: 16px;
 	}
 	.about-section-heading {
@@ -382,7 +455,7 @@
 		align-content: start;
 	}
 	.about-team-card h3 {
-		font: 700 18px/1.3 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
 		color: #fff;
 		margin: 0;
 	}
@@ -399,7 +472,7 @@
 		min-height: 44px;
 		width: 100%;
 		justify-content: center;
-		font: 600 15px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		color: var(--sa-ink);
 		background: #fff;
 		border-radius: 8px;
@@ -413,12 +486,12 @@
 	}
 	.about-page .about-team-card__role {
 		grid-column: 1;
-		font: 400 14px/1.4 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 		margin: 6px 0 0;
 		color: #d9dcde;
 	}
 	.about-page .about-demo-label {
-		font: 400 14px/1.4 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 		color: #59616c;
 		margin: -20px 0 24px;
 	}
@@ -444,7 +517,7 @@
 		background: #e9ecee;
 		padding: 12px 8px;
 		min-height: 64px;
-		font: 600 14px/1.4 var(--sa-font);
+		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
 	.about-brands img {
 		width: 36px;
@@ -463,12 +536,12 @@
 		padding: 28px;
 	}
 	.about-support-card h3 {
-		font: 700 21px/1.3 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-card-title)/1.3 var(--sa-font);
 		color: var(--sa-ink);
 		margin: 20px 0 0;
 	}
 	.about-support-card p {
-		font: 400 16px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
 		color: #444c52;
 		margin: 10px 0 24px;
 		flex: 1;
@@ -477,7 +550,8 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 12px;
-		font: 600 15px/1.4 var(--sa-font);
+		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
+			var(--sa-font);
 		margin-top: auto;
 		color: var(--sa-ink);
 	}
@@ -524,7 +598,7 @@
 		display: flex;
 		align-items: flex-start;
 		gap: 12px;
-		font: 400 16px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
 		margin-top: 24px;
 	}
 	.about-visit-address :global(svg),
@@ -540,7 +614,7 @@
 		font: inherit;
 	}
 	.about-visit-hours strong {
-		font-weight: 600;
+		font-weight: var(--sa-weight-heading);
 	}
 	.about-visit__map {
 		padding: 24px 24px 24px 0;
@@ -565,7 +639,7 @@
 		background: #25292b;
 		color: #fff;
 		cursor: pointer;
-		font: 600 18px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
 	}
 	.about-map-preview strong {
 		font: inherit;
@@ -576,7 +650,7 @@
 		align-items: center;
 		gap: 8px;
 		color: var(--sa-yellow);
-		font: 600 15px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 	}
 	.about-map-preview:hover {
 		background: #343a3d;
@@ -588,7 +662,7 @@
 		gap: 10px;
 		background: #fff;
 		min-height: 48px;
-		font: 600 16px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		border-radius: 0 0 10px 10px;
 	}
 	@media (max-width: 1199px) {

@@ -51,8 +51,8 @@ const submissionMessageBg: Record<string, string> = {
 	'Vehicle submission queued for review.': 'Заявката е в опашка за преглед.',
 	'Client vehicle submitted with VIN, photos, and service history for review.':
 		'Клиентският автомобил е подаден с VIN, снимки и сервизна история за преглед.',
-	'Customer asked whether Promosale Varna can prepare a direct offer or client listing.':
-		'Клиентът пита дали Promosale Varna може да подготви директна оферта или обява.'
+	'Customer asked whether Day Night Auto can prepare a direct offer or client listing.':
+		'Клиентът пита дали Day Night Auto може да подготви директна оферта или обява.'
 };
 
 const localizeSubmissionMessage = (message: string) => submissionMessageBg[message] ?? message;
@@ -73,7 +73,7 @@ export const accountSubmissionListingRows = (): AuxeroAccountListingRow[] =>
 				label: 'Редактирай'
 			},
 			{
-				ariaLabel: 'Съобщение до Promosale Varna',
+				ariaLabel: 'Съобщение до Day Night Auto',
 				href: '/account/messages',
 				icon: '/assets/images/dashboard/Messages.svg',
 				kind: 'message',
@@ -100,7 +100,7 @@ export const accountListingsData = (
 ): AuxeroAccountListingsData =>
 	context.isAdmin
 		? {
-				footerText: `Showing ${source.length} of ${vehicles.length} Promosale Varna entries`,
+				footerText: `Showing ${source.length} of ${vehicles.length} Day Night Auto entries`,
 				headers: ['Car', 'Brand', 'Year', 'Transmission', 'Fuel Type', 'Action'],
 				isSubmissions: false,
 				pagination: ['1', '2', '3'],

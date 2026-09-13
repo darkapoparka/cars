@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { DEFAULT_IMPORT_ORIGIN } from '$lib/data/lead-content';
 
 const text = (max = 500) => z.string().trim().min(1).max(max);
 const optionalText = (max = 500) => z.string().trim().max(max).optional().nullable();
@@ -49,7 +50,7 @@ export const importRequestSchema = z
 		contact: text(180),
 		email: optionalEmail,
 		phone: optionalText(80),
-		originCountry: z.string().trim().length(2).default('CA'),
+		originCountry: z.string().trim().length(2).default(DEFAULT_IMPORT_ORIGIN),
 		destinationCountry: z.string().trim().length(2).default('BG'),
 		desiredMake: optionalText(120),
 		desiredModel: optionalText(120),

@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import { resolve } from '$app/paths';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 
 	type TermsParagraph = { readonly text: string; readonly spaced?: boolean };
 
@@ -12,22 +14,19 @@
 		readonly closing?: string;
 	};
 
-	const intro =
-		'Информацията в този сайт има информативен характер. Актуалните цени, наличност и условия за финансиране се потвърждават директно със Promosale Varna преди сделка.';
+	const intro = `Информацията в този сайт има информативен характер. Актуалните цени, наличност и условия за финансиране се потвърждават директно със ${daynightSite.shortName} преди сделка.`;
 	const usageNotice =
 		'Използвайки сайта, потребителят приема, че обявите и описанията подлежат на проверка на място и не представляват публична оферта.';
 	const photosNotice =
 		'Снимките и описанията илюстрират конкретния автомобил, а състоянието и оборудването се потвърждават при оглед.';
-	const accuracyNotice =
-		'Promosale Varna полага усилия съдържанието да е точно и актуално, но не носи отговорност за непълноти или технически грешки в обявите.';
+	const accuracyNotice = `${daynightSite.shortName} полага усилия съдържанието да е точно и актуално, но не носи отговорност за непълноти или технически грешки в обявите.`;
 	const stockNotice =
 		'Възможно е автомобил да бъде продаден или резервиран, преди обявата да бъде обновена, затова препоръчваме предварително потвърждение на наличността.';
-	const updatesNotice =
-		'Promosale Varna може да актуализира услугите и условията по всяко време, като валидна е версията, публикувана към момента на ползване на сайта. ';
+	const updatesNotice = `${daynightSite.shortName} може да актуализира услугите и условията по всяко време, като валидна е версията, публикувана към момента на ползване на сайта. `;
 
 	const sharedListItems = [
 		'Финансиране, разсрочено плащане и бартер се предлагат при условия, договорени индивидуално за всеки клиент.',
-		'Огледът и тестът се организират предварително по уговорка във Варна.',
+		`Огледът и тестът се организират предварително по уговорка в ${daynightSite.city}.`,
 		'Техническите характеристики са по данни на производителя и предходния собственик и подлежат на проверка при оглед.'
 	];
 
@@ -71,6 +70,16 @@
 </script>
 
 <div class="terms-page">
+	<DesktopYellowRouteHero
+		headingId="terms-route-title"
+		title="Условия за ползване"
+		copy={`Информация за ползването на сайта, обявите, наличността и условията на ${daynightSite.shortName}.`}
+		panel="light"
+		primaryLabel="Свържете се"
+		primaryHref="/contact"
+		secondaryLabel="Виж автомобилите"
+		secondaryHref="/inventory"
+	/>
 	<section class="breadcrumb-band" aria-label="Навигационна пътека">
 		<div class="terms-container">
 			<ol class="breadcrumb">
@@ -142,6 +151,18 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.terms-page > .breadcrumb-band,
+		.terms-main h1,
+		.heading-spacer {
+			display: none;
+		}
+
+		.terms-main {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.terms-page,
 	.terms-page * {
 		box-sizing: border-box;
@@ -209,14 +230,14 @@
 		gap: 10px;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 22px;
 	}
 
@@ -245,8 +266,8 @@
 	.terms-main h1 {
 		margin-bottom: 0;
 		color: #1c1c1c;
-		font-size: 68px;
-		font-weight: 600;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 76px;
 	}
 
@@ -280,8 +301,8 @@
 		border-left: 3px solid transparent;
 		padding-left: 12px;
 		color: #1c1c1c;
-		font-size: 20px;
-		font-weight: 600;
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 28px;
 		transition:
 			border-color 0.3s ease,
@@ -309,15 +330,15 @@
 	.terms-section h2 {
 		margin-bottom: 12px;
 		color: #1c1c1c;
-		font-size: 24px;
-		font-weight: 600;
+		font-size: var(--sa-text-2xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.333;
 	}
 
 	.terms-body {
 		color: #4b4b4b;
-		font-size: 18px;
-		font-weight: 400;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-regular);
 		line-height: 28px;
 	}
 
@@ -357,29 +378,61 @@
 		}
 	}
 
-	@media (max-width: 767px) {
-		.terms-main {
-			padding-bottom: 70px;
+	@media (max-width: 991px) {
+		.terms-page .terms-container,
+		.terms-page .breadcrumb-band .terms-container {
+			width: calc(100% - 2 * var(--sa-mobile-gutter-wide));
+			padding: 0;
 		}
-
-		.heading-spacer {
-			height: 24px;
+		.terms-page .breadcrumb {
+			min-height: var(--sa-mobile-action-h);
+			padding-block: var(--sa-mobile-gap-xs);
+			gap: var(--sa-mobile-gap-sm);
 		}
-
-		.terms-layout {
+		.terms-page .breadcrumb-band {
+			margin-bottom: var(--sa-mobile-page-gap);
+		}
+		.terms-page .terms-main {
+			padding-bottom: var(--sa-space-8);
+		}
+		.terms-page .terms-main h1 {
+			font-size: var(--sa-mobile-type-page-title);
+			line-height: var(--sa-mobile-leading-heading);
+		}
+		.terms-page .heading-spacer {
+			height: var(--sa-mobile-page-gap);
+		}
+		.terms-page .terms-layout {
 			flex-direction: column;
-			gap: 40px;
+			gap: var(--sa-mobile-page-gap);
 		}
-
-		.terms-content,
-		.terms-nav-container,
-		.terms-nav {
+		.terms-page .terms-content,
+		.terms-page .terms-nav-container,
+		.terms-page .terms-nav {
 			width: 100%;
 		}
-
-		.terms-main h1 {
-			font-size: 40px;
-			line-height: 1.2;
+		.terms-page .terms-nav {
+			gap: 0;
+			padding-top: 0;
+		}
+		.terms-page .terms-nav a {
+			display: flex;
+			align-items: center;
+			min-height: var(--sa-mobile-action-h);
+			font-size: var(--sa-mobile-type-input);
+			line-height: 1.4;
+		}
+		.terms-page .terms-section h2 {
+			font-size: var(--sa-mobile-type-section-title);
+			line-height: 1.25;
+		}
+		.terms-page .terms-body {
+			font-size: var(--sa-mobile-type-input);
+			line-height: var(--sa-leading-body);
+			color: var(--sa-ink-soft);
+		}
+		.terms-page .terms-section {
+			scroll-margin-top: var(--sa-mobile-gap-lg);
 		}
 	}
 </style>

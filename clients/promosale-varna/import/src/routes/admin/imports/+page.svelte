@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Imports</title>
+	<title>Day Night Auto Admin - Imports</title>
 </svelte:head>
 
 <AdminShell title="Imports" activePath="/admin/imports">

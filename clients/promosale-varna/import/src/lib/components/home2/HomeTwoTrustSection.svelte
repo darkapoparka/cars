@@ -69,16 +69,16 @@
 
 	.home2-section-title {
 		align-items: center;
-		color: #E3062F;
+		color: #e3062f;
 		display: flex;
 		gap: 14px;
 		min-width: 0;
 	}
 
 	.home2-section-title :global(svg) {
-		color: #E3062F !important;
-		fill: #E3062F !important;
-		stroke: #E3062F !important;
+		color: #e3062f !important;
+		fill: #e3062f !important;
+		stroke: #e3062f !important;
 	}
 
 	.home2-section-title span {

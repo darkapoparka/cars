@@ -59,9 +59,9 @@
 
 	:global(body.dashboard .daynight-dashboard-context-links .menu-item-main > a),
 	:global(body.dashboard .daynight-dashboard-context-links .current-menu-item > a) {
-		background-color: #E3062F !important;
-		border-color: #E3062F !important;
-		color: #1C1C1C !important;
+		background-color: #e3062f !important;
+		border-color: #e3062f !important;
+		color: #1c1c1c !important;
 	}
 
 	:global(body.dashboard .dashboard-content--details > .grid:first-of-type) {

@@ -1,0 +1,3811 @@
+/* Canonical inventory-family cascade. Keep these layers in one module so Vite
+ * cannot reorder shared CSS chunks differently between dev and production.
+ * Native route overrides deliberately follow the retained card/layout rules. */
+/* BASE: retained native card/layout contracts. */
+/* App.css (Auxero) + generic template-head base styles the native inventory
+   cards and controls used to sit on, reproduced and scoped to the native shells
+   (`.inventory-template-shell` = grid, `.inventory-map-template-shell` = half-map)
+   so the look survives `app.css` + the template head CSS being dropped from the
+   route. Values mirror the legacy cascade 1:1. The grid card overlays + sizing live
+   in inventory-desktop-template-head.css; this file is the shared listing-card shell
+   and the controls (sort dropdown, tabs, applied-filter chips). */
+
+/* ============================ Card shell ============================ */
+/* shared by the grid card (.card-box-style-1) and map card (.card-box-style-9) */
+.inventory-template-shell .card-box,
+.inventory-map-template-shell .card-box {
+	border-radius: 16px;
+	height: fit-content;
+	position: relative;
+}
+
+.inventory-template-shell .card-box .image,
+.inventory-map-template-shell .card-box .image {
+	border-radius: 16px 16px 0 0;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.inventory-template-shell .card-box .image > a,
+.inventory-map-template-shell .card-box .image > a {
+	height: 100%;
+	width: 100%;
+}
+
+.inventory-template-shell .card-box .image .card--img,
+.inventory-map-template-shell .card-box .image .card--img {
+	border-radius: 16px 16px 0 0;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.inventory-template-shell .card-box .top,
+.inventory-map-template-shell .card-box .top {
+	display: flex;
+	justify-content: space-between;
+	left: 8px;
+	overflow: hidden;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	z-index: 1;
+}
+
+/* Badge pill (`.highlight`). Colour comes from `.bg-primary-2` (red) / `.bg-green`. */
+.inventory-template-shell .card-box .top .highlight,
+.inventory-map-template-shell .card-box .top .highlight {
+	align-items: center;
+	border-radius: 8px;
+	display: flex;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-semibold);
+	min-height: 30px;
+	justify-content: center;
+	line-height: 20px;
+	padding: 4px 12px;
+}
+
+.inventory-template-shell .card-box .top .heart,
+.inventory-map-template-shell .card-box .top .heart {
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	display: flex;
+	height: 28px;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	width: 28px;
+}
+
+.inventory-template-shell .card-box .bottom,
+.inventory-map-template-shell .card-box .bottom {
+	display: flex;
+	justify-content: space-between;
+	left: 6px;
+	position: absolute;
+	top: -36px;
+	width: calc(100% - 12px);
+}
+
+.inventory-template-shell .card-box .bottom .category,
+.inventory-map-template-shell .card-box .bottom .category {
+	align-items: center;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	display: flex;
+	font-size: var(--sa-text-caption);
+	gap: 4px;
+	min-height: 30px;
+	justify-content: center;
+	padding: 5px 9px;
+}
+
+.inventory-template-shell .card-box .bottom .category > a,
+.inventory-map-template-shell .card-box .bottom .category > a {
+	font-size: var(--sa-text-caption);
+	line-height: 20px;
+}
+
+/* Placeholder/SVG fallback photos are light — flip the overlay chips to dark ink
+   so they stay readable (legacy template-head `:has()` rule). */
+.inventory-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
+.inventory-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category a,
+.inventory-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category,
+.inventory-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category a,
+.inventory-map-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
+.inventory-map-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category a,
+.inventory-map-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category,
+.inventory-map-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category a {
+	color: #233044 !important;
+}
+
+.inventory-template-shell .card-box .content,
+.inventory-map-template-shell .card-box .content {
+	border-radius: 0 0 16px 16px;
+	padding: 16px;
+	position: relative;
+}
+
+.inventory-template-shell .card-box .content .card-box__title,
+.inventory-template-shell .card-box .content .card-box__title > a,
+.inventory-map-template-shell .card-box .content .card-box__title,
+.inventory-map-template-shell .card-box .content .card-box__title > a {
+	font-size: var(--sa-text-desktop-lead, var(--sa-text-xl));
+	font-weight: var(--sa-weight-semibold);
+	line-height: 1.3;
+}
+
+.inventory-template-shell .card-box .content .tag,
+.inventory-map-template-shell .card-box .content .tag {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.inventory-template-shell .card-box .content .tag.style3,
+.inventory-map-template-shell .card-box .content .tag.style3 {
+	gap: 28px;
+	justify-content: start;
+}
+
+.inventory-template-shell .card-box .content .tag li,
+.inventory-map-template-shell .card-box .content .tag li {
+	align-items: center;
+	display: flex;
+}
+
+.inventory-template-shell .card-box .content .tag li img,
+.inventory-map-template-shell .card-box .content .tag li img {
+	margin-right: 4px;
+}
+
+.inventory-template-shell .card-box .content .tag li span,
+.inventory-map-template-shell .card-box .content .tag li span {
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-regular);
+	line-height: 20px;
+}
+
+.inventory-template-shell .card-box__price,
+.inventory-map-template-shell .card-box__price {
+	font-size: var(--sa-text-xl);
+	font-weight: var(--sa-weight-semibold);
+	line-height: 1.25;
+}
+
+.inventory-template-shell .card-box__price .daynight-card-price__value,
+.inventory-map-template-shell .card-box__price .daynight-card-price__value {
+	font-size: var(--sa-text-2xl);
+	font-weight: var(--sa-weight-strong);
+	line-height: 1.1;
+}
+
+/* ---- Map card horizontal layout (.card-box-style-9) ---- */
+.inventory-map-template-shell .card-box-style-9.card-box {
+	display: flex;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .image {
+	border-radius: 16px 0 0 16px;
+	max-width: 299px;
+	min-height: 225px;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .image .card--img {
+	border-radius: 16px 0 0 16px;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .bottom {
+	bottom: 8px;
+	top: auto;
+	width: 283px;
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .content {
+	border: 1px solid #e7e7e7;
+	border-radius: 0 16px 16px 0;
+	padding: 24px 24px 0;
+	width: calc(100% - 299px);
+}
+
+.inventory-map-template-shell .card-box-style-9.card-box .content .bottom {
+	bottom: 8px;
+	top: auto;
+}
+
+.inventory-map-template-shell .card-box-style-9 .content .tag li span {
+	color: #4b4b4b;
+}
+
+/* ============================ Badge colours ============================ */
+.inventory-template-shell .text-white,
+.inventory-map-template-shell .text-white {
+	color: #fff;
+}
+
+.inventory-template-shell .bg-green,
+.inventory-map-template-shell .bg-green {
+	background-color: #4518cc;
+}
+
+/* Real-listing badge — DayNight red (legacy template-head override of `.bg-primary-2`). */
+.inventory-template-shell .card-box .top .bg-primary-2.highlight,
+.inventory-template-shell .card-box .top .bg-primary-2.text-white,
+.inventory-map-template-shell .card-box .top .bg-primary-2.highlight,
+.inventory-map-template-shell .card-box .top .bg-primary-2.text-white {
+	background: #e11c2a;
+	color: #fff;
+}
+
+/* ======================= Card text utilities ======================= */
+.inventory-template-shell .card-box .text-secondary,
+.inventory-map-template-shell .card-box .text-secondary {
+	color: #4b4b4b;
+}
+
+.inventory-template-shell .card-box .text-muted,
+.inventory-map-template-shell .card-box .text-muted {
+	color: #9fa1a4;
+}
+
+.inventory-template-shell .card-box .text-underline,
+.inventory-map-template-shell .card-box .text-underline {
+	text-decoration: underline;
+}
+
+.inventory-template-shell .card-box .text-xs,
+.inventory-map-template-shell .card-box .text-xs {
+	font-size: var(--sa-text-caption);
+	line-height: 20px;
+}
+
+.inventory-template-shell .card-box .text-sm,
+.inventory-map-template-shell .card-box .text-sm {
+	font-size: var(--sa-text-base);
+	line-height: 22px;
+}
+
+.inventory-template-shell .card-box .clamp,
+.inventory-map-template-shell .card-box .clamp {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.inventory-template-shell .card-box .clamp-1,
+.inventory-map-template-shell .card-box .clamp-1 {
+	-webkit-line-clamp: 1;
+}
+
+/* The grid card (VehicleCard) + price row are shared with the un-converted PDP, so
+   their markup keeps the Auxero spacing classes (read from app.css on the PDP).
+   app.css is gone on the native inventory, so reproduce the intended px here,
+   scoped to the shell — otherwise Tailwind would reinterpret e.g. `mb-10` as 2.5rem. */
+.inventory-template-shell .card-box .mb-8 {
+	margin-bottom: 8px;
+}
+
+.inventory-template-shell .card-box .mb-10 {
+	margin-bottom: 10px;
+}
+
+.inventory-template-shell .card-box .mb-15 {
+	margin-bottom: 15px;
+}
+
+.inventory-template-shell .card-box .gap-8 {
+	gap: 8px;
+}
+
+/* ============== Card price (generic template-head layout) ============== */
+.inventory-template-shell .card-box.card-box-style-1 .card-box__price {
+	align-items: start;
+	column-gap: 18px;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	min-height: 40px;
+}
+
+.inventory-template-shell .daynight-card-price__value,
+.inventory-map-template-shell .daynight-card-price__value {
+	align-items: flex-start;
+	align-self: start;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-size: var(--sa-text-2xl);
+	font-weight: var(--sa-weight-strong);
+	justify-self: start;
+	letter-spacing: 0;
+	line-height: 1.05;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-card-price__meta {
+	align-items: flex-end;
+	display: inline-flex;
+	flex-direction: column;
+	gap: 0;
+	justify-content: flex-start;
+	justify-self: end;
+	line-height: 1;
+	min-width: 0;
+	text-align: right;
+}
+
+.inventory-template-shell .daynight-card-price__monthly {
+	font-size: var(--sa-text-base);
+	line-height: 20px;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-card-price__link {
+	align-items: center;
+	color: #475569 !important;
+	display: inline-flex;
+	font-size: var(--sa-text-base);
+	line-height: 20px;
+	min-height: 20px;
+	text-decoration-color: currentColor !important;
+	white-space: nowrap;
+}
+
+/* ===================== Sort dropdown (.core-dropdown) ===================== */
+.inventory-template-shell .core-dropdown,
+.inventory-map-template-shell .core-dropdown {
+	min-width: 180px;
+	position: relative;
+}
+
+.inventory-template-shell .core-dropdown__button,
+.inventory-map-template-shell .core-dropdown__button {
+	align-items: center;
+	background: #fff;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 0 0 1px #e7e7e7;
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	justify-content: space-between;
+	padding: 8px 16px;
+	transition: box-shadow 0.12s ease-out;
+	width: 100%;
+}
+
+.inventory-template-shell .core-dropdown__button:hover,
+.inventory-template-shell .core-dropdown__button:focus,
+.inventory-map-template-shell .core-dropdown__button:hover,
+.inventory-map-template-shell .core-dropdown__button:focus {
+	box-shadow: 0 0 0 2px #b00000;
+	outline: none;
+}
+
+.inventory-template-shell .core-dropdown__selected,
+.inventory-map-template-shell .core-dropdown__selected {
+	color: #1c1c1c;
+	flex: 1;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-medium);
+	line-height: 24px;
+	text-align: left;
+}
+
+.inventory-template-shell .core-dropdown__icon,
+.inventory-map-template-shell .core-dropdown__icon {
+	height: 20px;
+	width: 20px;
+}
+
+.inventory-template-shell .core-dropdown__list,
+.inventory-map-template-shell .core-dropdown__list {
+	list-style: none;
+	margin: 0;
+	padding: 8px 16px;
+}
+
+.inventory-template-shell .core-dropdown__item:not(:last-child) .core-dropdown__option,
+.inventory-map-template-shell .core-dropdown__item:not(:last-child) .core-dropdown__option {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.inventory-template-shell .core-dropdown__option,
+.inventory-map-template-shell .core-dropdown__option {
+	color: #1c1c1c;
+	cursor: pointer;
+	display: block;
+	font-size: var(--sa-text-base);
+	line-height: 24px;
+	padding: 8px 0;
+	text-decoration: none;
+	transition: background-color 0.12s ease-out;
+}
+
+.inventory-template-shell .core-dropdown__option:hover,
+.inventory-template-shell .core-dropdown__option.active,
+.inventory-map-template-shell .core-dropdown__option:hover,
+.inventory-map-template-shell .core-dropdown__option.active {
+	background-color: #f7f7f7;
+}
+
+/* ===================== Tab panels (map list/grid) ===================== */
+.inventory-map-template-shell .content-inner {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transform: scale(0.9);
+	visibility: hidden;
+	width: 100%;
+	z-index: -1;
+}
+
+.inventory-map-template-shell .content-inner.active {
+	opacity: 1;
+	position: relative;
+	transform: scale(1);
+	visibility: visible;
+	z-index: 1;
+}
+
+/* ===================== Applied-filter chips ===================== */
+.inventory-template-shell .select-item,
+.inventory-map-template-shell .select-item {
+	border: 1px solid #e7e7e7;
+	border-radius: 40px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-medium);
+	height: 30px;
+	line-height: 28px;
+	margin: 4px 6px 4px 0;
+	padding: 0 12px;
+	transition: border-color 0.12s ease-out;
+	vertical-align: middle;
+}
+
+.inventory-template-shell .select-item.active,
+.inventory-template-shell .select-item:hover,
+.inventory-map-template-shell .select-item.active,
+.inventory-map-template-shell .select-item:hover {
+	border-color: #1c1c1c;
+}
+
+.inventory-template-shell .select-item img,
+.inventory-map-template-shell .select-item img {
+	height: 16px;
+	margin-left: 4px;
+	margin-top: -2px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.inventory-template-shell .btn-clear-items,
+.inventory-map-template-shell .btn-clear-items {
+	background-color: #1c1c1c;
+	border-radius: 40px;
+	color: #fff;
+	display: inline-block;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-semibold);
+	height: 34px;
+	line-height: 34px;
+	margin: 4px 0;
+	padding: 0 14px;
+	text-transform: none;
+	transition: background-color 0.12s ease-out;
+}
+
+.inventory-template-shell .btn-clear-items:hover,
+.inventory-map-template-shell .btn-clear-items:hover {
+	background-color: #b00000;
+}
+
+.inventory-template-shell .btn-clear-items img,
+.inventory-map-template-shell .btn-clear-items img {
+	margin-top: -2px;
+	vertical-align: middle;
+}
+
+.inventory-map-template-shell .divider-vertical-style2 {
+	background: #d9d9d9;
+	width: 1px;
+}
+
+/* LAYOUT: retained native card/layout contracts. */
+@media (max-width: 991px) {
+	.inventory-template-shell,
+	.inventory-template-mobile-hidden {
+		display: none;
+	}
+}
+
+/* Native desktop inventory layout. Re-rooted from the legacy
+   `body.daynight-template-listing-grid4-columns-html` body class onto the
+   `.inventory-template-shell` wrapper, so it survives `app.css` + the template head
+   CSS being dropped from the route. The values are the proven 1:1 desktop look.
+   (The legacy `#filterSidebar` overlay no longer exists in the native DOM, so its
+   rules were removed.) The `.daynight-inventory-top-spacer` (.tf-spacing-style3) is
+   intentionally collapsed to 0 by the template-head extract, matching the legacy
+   render, so no spacer height is set here. */
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar {
+	align-items: start;
+	border-top: 1px solid rgba(176, 0, 0, 0.14);
+	display: grid;
+	grid-template-columns: 280px minmax(0, 1fr);
+	gap: 24px;
+	margin: 28px auto 42px;
+	max-width: 1560px;
+	padding-top: 26px;
+	width: calc(100% - 48px);
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filter-region {
+	min-width: 0;
+	position: relative;
+	z-index: 30;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-band {
+	background: transparent;
+	box-shadow: none;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	position: relative;
+	top: auto;
+	z-index: 30;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-band::before {
+	display: none;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-controls-shell.container {
+	max-width: none !important;
+	padding: 0;
+	width: 100%;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-controls-shell
+	.row {
+	display: block;
+	margin: 0;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-controls {
+	max-width: none;
+	padding: 0;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-heading {
+	color: #101828;
+	font-size: var(--sa-text-xl);
+	font-weight: var(--sa-weight-semibold);
+	letter-spacing: 0;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-quick-form {
+	background: #fff;
+	border: 1px solid #d8e6fb;
+	border-radius: 8px;
+	box-shadow: none;
+	display: grid;
+	gap: 14px;
+	overflow: visible;
+	padding: 14px;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-searchbar,
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filterbar {
+	display: grid !important;
+	gap: 18px;
+	grid-template-columns: 1fr !important;
+	overflow: visible;
+	padding: 0;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-search,
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-quick-field {
+	min-width: 0;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-search {
+	background: #fff;
+	border: 1px solid #d8e6fb;
+	border-radius: 12px;
+	box-shadow: none;
+	display: block;
+	height: 60px;
+	min-height: 60px;
+	overflow: hidden;
+	position: relative;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__label {
+	block-size: auto !important;
+	clip: auto !important;
+	clip-path: none !important;
+	color: #6f737b;
+	display: block;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-medium);
+	inline-size: auto !important;
+	line-height: 1.2;
+	margin: 0;
+	overflow: visible !important;
+	pointer-events: none;
+	position: absolute !important;
+	left: 16px;
+	top: 10px;
+	white-space: nowrap !important;
+	z-index: 2;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit {
+	background: #fff1f2 !important;
+	border: 0 !important;
+	border-radius: 10px;
+	bottom: 9px;
+	height: 40px;
+	min-height: 40px;
+	min-width: 40px !important;
+	padding: 0 !important;
+	position: absolute;
+	right: 8px;
+	width: 40px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit
+	img {
+	filter: brightness(0) saturate(100%) invert(12%) sepia(95%) saturate(4728%) hue-rotate(358deg)
+		brightness(82%) contrast(118%);
+	height: 17px;
+	opacity: 1;
+	width: 17px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit
+	span {
+	display: none;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-search
+	.daynight-inventory-search__input {
+	border: 0 !important;
+	box-shadow: none !important;
+	font-size: var(--sa-text-inventory-control) !important;
+	font-weight: var(--sa-weight-regular) !important;
+	height: 100% !important;
+	min-height: 100% !important;
+	padding: 24px 52px 9px 16px !important;
+	width: 100%;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-search
+	.daynight-inventory-search__input {
+	background: #fff !important;
+	border-color: #d8e6fb !important;
+	border-radius: 12px !important;
+	box-shadow: none !important;
+	color: #1c1c1c !important;
+	height: 60px !important;
+	min-height: 60px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown {
+	background: #edf3fa !important;
+	border-color: #cbd8e8 !important;
+	border-radius: 12px !important;
+	box-shadow: none !important;
+	color: #1c1c1c !important;
+	height: 60px !important;
+	min-height: 60px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.daynight-inventory-filter-dropdown__label {
+	block-size: auto !important;
+	clip: auto !important;
+	clip-path: none !important;
+	color: #6f737b;
+	display: block;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-medium);
+	inline-size: auto !important;
+	left: 16px;
+	line-height: 1.2;
+	margin: 0;
+	overflow: visible !important;
+	pointer-events: none;
+	position: absolute !important;
+	top: 10px;
+	white-space: nowrap !important;
+	z-index: 3;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.filter-select-dropdown__text {
+	align-items: flex-end !important;
+	color: #1c1c1c !important;
+	display: flex !important;
+	font-size: var(--sa-text-inventory-control) !important;
+	font-weight: var(--sa-weight-regular) !important;
+	line-height: 1.2 !important;
+	padding: 24px 42px 9px 16px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	.filter-select-dropdown__text {
+	color: #fff !important;
+	padding-right: 56px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	[data-daynight-quick-value] {
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__clear {
+	height: 30px;
+	right: 10px;
+	width: 30px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.filter-select-dropdown__text::after {
+	right: 18px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__menu {
+	left: 0 !important;
+	max-width: 100% !important;
+	min-width: 100% !important;
+	right: auto !important;
+	width: 100% !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-quick-sidebar {
+	display: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pills {
+	align-items: center;
+	background: transparent;
+	border-top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 0;
+	padding: 0;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pill {
+	background: #fff;
+	border: 1px solid #d8e6fb;
+	border-radius: 999px;
+	color: #1c1c1c;
+	justify-content: center;
+	flex: 0 1 auto;
+	min-height: 38px;
+	min-width: 0;
+	padding: 8px 14px;
+	white-space: normal;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-type-pill.is-active {
+	background: #b00000;
+	border-color: #b00000;
+	color: #fff;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pill svg {
+	display: none;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pill span {
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-semibold);
+	line-height: 1.25;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-listings-shell {
+	margin: 0 0 40px;
+	max-width: none !important;
+	padding-bottom: 0;
+	width: 100%;
+}
+
+/* Sidebar grid spacing: the card grid ships with Auxero gap utilities
+   (gap-x-30 = 120px, gap-y-41 = 164px). The --grid layout overrides those, but
+   that override is scoped to --grid, so the sidebar grid was left with the raw
+   164px row gap — huge empty bands between rows. Pin a sane gap here. */
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	[data-daynight-grid-panel].active
+	> .grid {
+	gap: 32px 24px !important;
+}
+
+/* Sidebar: the column toggles pick the density; the active grid index drives the
+   count (2/3/4) and the min-width queries cap it down on narrower desktops so the
+   cards never cramp next to the ~270px filter panel. Capped at 4 (index 2). */
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	[data-daynight-grid-panel='0'].active
+	> .grid,
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	[data-daynight-grid-panel='1'].active
+	> .grid,
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	[data-daynight-grid-panel='2'].active
+	> .grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (min-width: 1320px) {
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		[data-daynight-grid-panel='1'].active
+		> .grid,
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		[data-daynight-grid-panel='2'].active
+		> .grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+
+@media (min-width: 1700px) {
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		[data-daynight-grid-panel='2'].active
+		> .grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+	}
+}
+
+@media (min-width: 1250px) and (max-width: 1499px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-columns: 270px minmax(0, 1fr);
+		gap: 22px;
+	}
+}
+
+@media (max-width: 1240px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-columns: 270px minmax(0, 1fr);
+		gap: 24px;
+		width: calc(100% - 40px);
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		[data-daynight-grid-panel].active
+		> .grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+
+/* Shared yellow route hero owns inventory discovery. The remaining band is filters only. */
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-band {
+	background: #f4f1ea !important;
+	margin-bottom: 0 !important;
+	padding: 22px 0 14px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-band::before {
+	content: none !important;
+	display: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-quick-form {
+	backdrop-filter: none !important;
+	background: #fff !important;
+	border: 1px solid #dcd8ce !important;
+	border-radius: 12px !important;
+	box-shadow: none !important;
+	padding: 12px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-yellow-route-hero
+	.daynight-inventory-search {
+	background: #fff !important;
+	border: 0 !important;
+	border-radius: 9px !important;
+	height: 54px !important;
+	min-height: 54px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-yellow-route-hero
+	.daynight-inventory-searchbar__submit {
+	background: var(--sa-red) !important;
+	border-color: var(--sa-red) !important;
+	border-radius: 7px !important;
+	color: #fff !important;
+	height: 46px !important;
+	min-height: 46px !important;
+}
+
+@media (max-width: 991px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		display: block;
+		width: calc(100% - 32px);
+	}
+
+	.inventory-template-shell .daynight-inventory-results-toolbar {
+		align-items: center;
+		grid-template-columns: minmax(0, 1fr) minmax(168px, auto) !important;
+		row-gap: 12px;
+	}
+
+	.inventory-template-shell .daynight-inventory-results-toolbar > .daynight-inventory-view-switch {
+		grid-column: 1 / -1 !important;
+		grid-row: 2 !important;
+		justify-self: center !important;
+		width: auto !important;
+		z-index: 2;
+	}
+
+	.inventory-template-shell .daynight-inventory-results-toolbar > .daynight-inventory-sort-control {
+		grid-column: 2 !important;
+		grid-row: 1 !important;
+		justify-self: end !important;
+		max-width: 100%;
+		min-width: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-band {
+		margin-bottom: 22px;
+		position: relative;
+		top: auto;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		.daynight-inventory-listings-shell {
+		margin-bottom: 34px;
+	}
+}
+
+.daynight-inventory-sidebar-search-band {
+	display: none;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar {
+	border-top: 0;
+	grid-template-areas:
+		'search toolbar'
+		'filters listings';
+	grid-template-columns: 280px minmax(0, 1fr);
+	padding-top: 0;
+	row-gap: 22px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-search-band {
+	background: #fff;
+	border: 1px solid #d8e6fb;
+	border-radius: 8px;
+	box-shadow: none;
+	display: block;
+	grid-area: search;
+	min-width: 0;
+	padding: 14px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-search-band
+	.daynight-inventory-search {
+	box-shadow: none;
+	height: 52px;
+	min-height: 52px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-search-band
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__label {
+	top: 8px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-search-band
+	.daynight-inventory-search
+	.daynight-inventory-search__input {
+	padding-bottom: 7px !important;
+	padding-top: 21px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-search-band
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit {
+	bottom: 6px;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filter-region {
+	grid-area: filters;
+	position: sticky;
+	top: 18px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filter-region
+	.daynight-inventory-searchbar {
+	display: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-listings-shell {
+	display: contents;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-listing-controls {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #d8e6fb;
+	border-radius: 8px;
+	box-shadow: none;
+	display: flex;
+	grid-area: toolbar;
+	margin: 0;
+	min-height: 80px;
+	min-width: 0;
+	padding: 14px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-results-toolbar {
+	column-gap: 14px;
+	grid-template-columns: auto auto minmax(180px, auto);
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-result-count {
+	font-size: var(--sa-text-base);
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-applied-filters {
+	grid-column: 1 / -1;
+	margin: -8px 0 0;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-empty {
+	grid-column: 2;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .content-tab {
+	grid-area: listings;
+	min-width: 0;
+}
+
+@media (max-width: 1499px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-columns: 270px minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 1240px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-areas:
+			'search'
+			'toolbar'
+			'filters'
+			'listings';
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		.daynight-inventory-filter-region {
+		position: relative;
+		top: auto;
+	}
+}
+
+.daynight-inventory-sidebar-hero,
+.daynight-inventory-sidebar-panel-head {
+	display: none;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar {
+	background: #f4f7fb;
+	border: 1px solid #dbe6f5;
+	border-radius: 12px;
+	box-shadow: none;
+	gap: 18px 24px;
+	grid-template-areas:
+		'hero hero'
+		'filters toolbar'
+		'filters listings';
+	grid-template-columns: 280px minmax(0, 1fr);
+	margin-top: 0;
+	padding: 16px;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-sidebar-hero {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #d6e4f6;
+	border-radius: 10px;
+	box-shadow: none;
+	column-gap: 24px;
+	display: grid;
+	grid-area: hero;
+	grid-template-columns: 280px minmax(0, 1fr);
+	min-width: 0;
+	padding: 18px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-searchbar {
+	display: block !important;
+	margin-left: 21px;
+	min-width: 0;
+	width: calc(100% - 21px);
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search {
+	background: #e4ecf6 !important;
+	border: 0 !important;
+	border-radius: 10px;
+	box-shadow: none;
+	height: 64px;
+	min-height: 64px;
+	overflow: visible;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search:hover {
+	background: #dfe8f3 !important;
+	box-shadow: none;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search:focus-within {
+	background: #e4ecf6 !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+	outline: 2px solid #b00000;
+	outline-offset: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__label {
+	color: #40516a;
+	font-weight: var(--sa-weight-semibold);
+	top: 11px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-search__input {
+	background: #e4ecf6 !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+	color: #172033 !important;
+	font-size: var(--sa-text-inventory-control) !important;
+	font-weight: var(--sa-weight-medium) !important;
+	padding-right: 150px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-search__input::placeholder {
+	color: #7b8796;
+	opacity: 1;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search:focus-within
+	.daynight-inventory-search__input {
+	background: #e4ecf6 !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+	outline: 0 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit {
+	background: #111827 !important;
+	border-radius: 8px;
+	bottom: auto !important;
+	color: #fff !important;
+	gap: 8px;
+	height: 44px;
+	min-width: 124px !important;
+	padding: 0 18px !important;
+	width: auto !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit
+	img {
+	filter: brightness(0) invert(1);
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-searchbar__submit
+	span {
+	display: inline;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
+	line-height: 1.1;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filter-region {
+	align-self: start;
+	background: #eaf0f8;
+	border: 1px solid #d4e1f0;
+	border-radius: 10px;
+	box-shadow: none;
+	padding: 12px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-panel-head {
+	align-items: center;
+	color: #344054;
+	display: flex;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-semibold);
+	justify-content: space-between;
+	line-height: 1.2;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-quick-form {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	gap: 13px;
+	padding: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown {
+	background: #edf3fa !important;
+	box-shadow: none !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-listing-controls {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	min-height: 48px;
+	padding: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-results-toolbar {
+	align-items: center;
+	grid-template-columns: minmax(0, 1fr) auto auto;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sort-control
+	.nice-select {
+	background: #fff;
+}
+
+@media (max-width: 1240px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-areas:
+			'hero'
+			'toolbar'
+			'filters'
+			'listings';
+		grid-template-columns: minmax(0, 1fr);
+		padding: 14px;
+	}
+
+	.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-sidebar-hero {
+		grid-template-columns: minmax(0, 1fr);
+		row-gap: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		border-radius: 0;
+		border-inline: 0;
+		margin-top: 18px;
+		width: 100%;
+	}
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar {
+	grid-template-columns: minmax(284px, 304px) minmax(0, 1fr) !important;
+	max-width: 1760px !important;
+	width: calc(100% - 48px) !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filter-region {
+	background: #fff !important;
+	border: 1px solid #d8e2ef !important;
+	border-radius: 10px !important;
+	box-shadow: none !important;
+	padding: 14px !important;
+	position: sticky !important;
+	top: 82px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filterbar {
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	display: grid !important;
+	gap: 10px !important;
+	grid-template-columns: 1fr !important;
+	padding: 0 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown {
+	background: #f6f8fb !important;
+	border: 1px solid #cbd8e8 !important;
+	border-radius: 10px !important;
+	box-shadow: none !important;
+	height: 56px !important;
+	min-height: 56px !important;
+	padding: 0 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected {
+	background: #eef4ff !important;
+	border-color: #8fb5f2 !important;
+	color: #164da8 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.daynight-inventory-filter-dropdown__label {
+	block-size: 1px !important;
+	clip: rect(0 0 0 0) !important;
+	clip-path: inset(50%) !important;
+	inline-size: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.filter-select-dropdown__text {
+	align-items: center !important;
+	color: #1f2937 !important;
+	display: flex !important;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-semibold) !important;
+	line-height: 1.2 !important;
+	padding: 0 42px 0 16px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	.filter-select-dropdown__text,
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	[data-daynight-quick-value] {
+	color: #164da8 !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid {
+	width: 100% !important;
+	max-width: none !important;
+	margin-inline: auto !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-inventory-controls-shell.container {
+	margin-inline: auto !important;
+	max-width: 1760px !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	width: calc(100% - 48px) !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-inventory-listings-shell.container {
+	margin-inline: auto !important;
+	max-width: 1760px !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	width: calc(100% - 48px) !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	[data-daynight-grid-panel='2'].active
+	> .grid {
+	gap: 32px 24px !important;
+	grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	[data-daynight-grid-panel='3'].active
+	> .grid {
+	gap: 32px 20px !important;
+	grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pills {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 8px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pill {
+	min-height: 40px !important;
+	padding: 8px 14px !important;
+}
+
+@media (max-width: 1499px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-columns: minmax(280px, 300px) minmax(0, 1fr) !important;
+	}
+}
+
+@media (max-width: 1240px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		grid-template-columns: minmax(0, 1fr) !important;
+		width: calc(100% - 40px) !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		> .grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		.daynight-inventory-filter-region {
+		position: relative !important;
+		top: auto !important;
+	}
+}
+
+/* The inventory hero is already the banner. Keep its task controls light so the
+   title, vehicle cutouts, and selected red state lead instead of stacked dark slabs. */
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-yellow-route-hero__deck {
+	background: #fff !important;
+	border-radius: 14px !important;
+	box-shadow: 0 12px 30px rgba(25, 31, 38, 0.14) !important;
+	padding: 8px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-yellow-route-hero__deck
+	.daynight-inventory-search {
+	border: 1px solid transparent !important;
+	border-radius: 9px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-yellow-route-hero__deck
+	.daynight-inventory-search:focus-within {
+	border-color: var(--sa-red) !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-quick-form {
+	backdrop-filter: none;
+	background: #f7f8fa !important;
+	border: 0 !important;
+	border-radius: 12px !important;
+	box-shadow: 0 12px 30px rgba(25, 31, 38, 0.14) !important;
+	gap: 10px !important;
+	padding: 12px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-search {
+	background: #fff !important;
+	border: 1px solid #d8e2ef !important;
+	border-radius: 8px !important;
+	box-shadow: none !important;
+	height: 58px !important;
+	min-height: 58px !important;
+	overflow: hidden !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-searchbar__label {
+	block-size: 1px !important;
+	clip: rect(0 0 0 0) !important;
+	clip-path: inset(50%) !important;
+	inline-size: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-search__input {
+	background: #fff !important;
+	border: 0 !important;
+	border-radius: 8px !important;
+	box-shadow: none !important;
+	color: #101828 !important;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-medium) !important;
+	height: 100% !important;
+	line-height: 1.4 !important;
+	padding: 0 130px 0 16px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid .daynight-inventory-searchbar__submit {
+	background: #b00000 !important;
+	border: 1px solid #b00000 !important;
+	border-radius: 7px !important;
+	box-shadow: none !important;
+	color: #fff !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
+	height: 46px !important;
+	min-height: 46px !important;
+	min-width: 112px !important;
+	padding: 0 18px !important;
+	position: absolute !important;
+	right: 6px !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+	width: auto !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-inventory-searchbar__submit
+	img {
+	display: none !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-inventory-searchbar__submit
+	span {
+	color: inherit !important;
+	display: inline !important;
+	font-size: var(--sa-button-font-size) !important;
+	font-weight: var(--sa-button-font-weight) !important;
+	line-height: 1 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-inventory-searchbar__submit:hover,
+.inventory-template-shell
+	.daynight-inventory-viewport--grid
+	.daynight-inventory-searchbar__submit:focus-visible {
+	background: #8a0000 !important;
+	border-color: #8a0000 !important;
+	outline: 0 !important;
+}
+
+@media (min-width: 1280px) {
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		> .grid {
+		gap: 32px 20px !important;
+		grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		.card-box.card-box-style-1[data-daynight-vehicle-card] {
+		border-radius: 8px !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		.card-box.card-box-style-1[data-daynight-vehicle-card]
+		.content {
+		min-height: 0 !important;
+		padding: 12px !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		.card-box.card-box-style-1[data-daynight-vehicle-card]
+		.card-box__title {
+		display: block !important;
+		font-size: var(--sa-text-xl) !important;
+		font-weight: var(--sa-weight-heading) !important;
+		height: auto !important;
+		min-height: 27px !important;
+		line-height: 1.35 !important;
+		max-height: 27px !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+		-webkit-line-clamp: 1 !important;
+		line-clamp: 1 !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		.card-box.card-box-style-1[data-daynight-vehicle-card]
+		.card-box__title
+		> a {
+		display: block !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		.card-box.card-box-style-1[data-daynight-vehicle-card]
+		.card-box__price {
+		column-gap: 10px !important;
+		font-size: var(--sa-text-lg) !important;
+		min-height: 38px !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		.card-box.card-box-style-1[data-daynight-vehicle-card]
+		.card-box__price
+		.daynight-card-price__value {
+		font-size: var(--sa-text-panel-title) !important;
+	}
+}
+
+/* Canonical alternate inventory view.
+   Keep the default banner/grid untouched; this block only resolves the legacy
+   sidebar cascade and makes its density/layout controls read as separate tools. */
+.inventory-template-shell .daynight-inventory-viewport--sidebar {
+	background: #f5f6f8 !important;
+	border: 1px solid #d9dee7 !important;
+	box-shadow: 0 16px 42px rgba(16, 24, 40, 0.07) !important;
+	gap: 18px 24px !important;
+	margin: 24px auto 48px !important;
+	padding: 18px !important;
+}
+
+.inventory-template-shell #main-content:has(.daynight-inventory-viewport--sidebar) {
+	background: #f5f6f8 !important;
+	display: flow-root;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-sidebar-hero {
+	border-color: #d9dee7 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search {
+	background: #eef0f4 !important;
+	height: 62px !important;
+	min-height: 62px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-hero
+	.daynight-inventory-search
+	.daynight-inventory-search__input {
+	background: #eef0f4 !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filter-region {
+	border-color: #d9dee7 !important;
+	padding: 13px !important;
+	top: 92px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-sidebar-panel-head {
+	color: #111827 !important;
+	font-size: var(--sa-text-caption) !important;
+	font-weight: var(--sa-weight-strong) !important;
+	letter-spacing: 0.06em !important;
+	margin-bottom: 10px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-quick-form {
+	gap: 10px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-filterbar {
+	gap: 8px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown {
+	background: #f7f8fa !important;
+	border-color: #d5dbe4 !important;
+	border-radius: 8px !important;
+	height: 50px !important;
+	min-height: 50px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.filter-select-dropdown__text {
+	color: #172033 !important;
+	font-size: var(--sa-text-base) !important;
+	font-weight: var(--sa-weight-semibold) !important;
+	padding: 0 40px 0 14px !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected {
+	background: #b00000 !important;
+	border-color: #b00000 !important;
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	.filter-select-dropdown__text,
+.inventory-template-shell
+	.daynight-inventory-viewport--sidebar
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	[data-daynight-quick-value] {
+	color: #fff !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pills {
+	gap: 7px !important;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--sidebar .daynight-inventory-type-pill {
+	font-size: var(--sa-text-caption) !important;
+	min-height: 36px !important;
+	padding: 7px 11px !important;
+}
+
+@media (max-width: 1240px) {
+	.inventory-template-shell .daynight-inventory-viewport--sidebar {
+		margin-top: 20px !important;
+		padding: 14px !important;
+	}
+
+	.inventory-template-shell
+		.daynight-inventory-viewport--sidebar
+		.daynight-inventory-filter-region {
+		position: relative !important;
+		top: auto !important;
+	}
+}
+
+/* TEMPLATE-HEAD: retained native card/layout contracts. */
+/* AUTO-EXTRACTED from static/assets/daynight-template-head.css: every rule scoped
+   to the inventory body classes, re-rooted onto the native shell hooks so the
+   desktop grid look survives the legacy template head CSS being dropped from the
+   route. Grid -> .inventory-template-shell, half-map -> .inventory-map-template-shell. */
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] {
+	display: flex !important;
+	flex-direction: column;
+	height: 100%;
+	min-height: 0;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .image {
+	flex: 0 0 auto;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .content {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__price {
+	margin-top: 0 !important;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2,
+.inventory-map-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 {
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+	justify-content: flex-start;
+	min-height: 30px;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 li,
+.inventory-map-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.tag.style2
+	li {
+	align-items: center;
+	background: #f6f8fb;
+	border: 1px solid #e4e8ef;
+	border-radius: 7px;
+	color: #344054;
+	display: inline-flex;
+	flex: 0 0 auto;
+	height: 30px;
+	min-width: 0;
+	padding: 0 7px;
+}
+
+.inventory-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.tag.style2
+	li:last-child,
+.inventory-map-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.tag.style2
+	li:last-child {
+	flex: 0 0 auto;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 li img,
+.inventory-map-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.tag.style2
+	li
+	img {
+	flex: 0 0 auto;
+	height: 13px;
+	margin-right: 4px;
+	opacity: 0.72;
+	width: 13px;
+}
+
+.inventory-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.tag.style2
+	li
+	span,
+.inventory-map-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.tag.style2
+	li
+	span {
+	color: #344054;
+	font-size: var(--sa-text-caption);
+	line-height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .btn-filter,
+.inventory-map-template-shell .btn-filter {
+	background: #b00000 !important;
+	border-color: #b00000 !important;
+	color: #fff !important;
+	box-shadow: none;
+}
+
+.inventory-template-shell .btn-filter svg path,
+.inventory-map-template-shell .btn-filter svg path {
+	fill: #fff !important;
+}
+
+.inventory-template-shell .btn-filter:hover,
+.inventory-map-template-shell .btn-filter:hover {
+	background: #e11c2a !important;
+	border-color: #e11c2a !important;
+	color: #fff !important;
+	box-shadow: none;
+}
+
+.inventory-template-shell .daynight-inventory-viewport--grid::before {
+	display: none;
+}
+
+.inventory-template-shell .site-chrome-nav-row {
+	border-color: transparent !important;
+	box-shadow: 0 14px 30px rgba(0, 0, 0, 0.48) !important;
+}
+
+.inventory-template-shell .daynight-inventory-band {
+	background: transparent;
+	background-color: transparent;
+	border-bottom: 0;
+	box-shadow: none;
+	isolation: isolate;
+	overflow: visible;
+	position: relative;
+	padding: 44px 0 18px;
+	margin-bottom: 16px;
+	/* Must sit above .daynight-inventory-listings-shell (also z-index:1, but later in
+		   the DOM) so an open filter dropdown overflows ABOVE the card grid instead of
+		   being trapped behind it. Stays well below the sticky header's z-index. */
+	z-index: 40;
+}
+
+.inventory-template-shell .daynight-inventory-band::before {
+	background:
+		radial-gradient(ellipse 50% 105% at 50% -48%, rgba(225, 28, 42, 0.34), transparent 68%),
+		radial-gradient(ellipse 34% 90% at 4% 116%, rgba(176, 0, 0, 0.3), transparent 72%),
+		radial-gradient(ellipse 34% 90% at 96% 116%, rgba(176, 0, 0, 0.3), transparent 72%),
+		linear-gradient(
+			112deg,
+			transparent 0 38%,
+			rgba(255, 255, 255, 0.045) 38.1% 38.3%,
+			transparent 38.4% 61.6%,
+			rgba(176, 0, 0, 0.18) 61.7% 61.9%,
+			transparent 62% 100%
+		),
+		repeating-linear-gradient(90deg, transparent 0 168px, rgba(255, 255, 255, 0.025) 169px 170px),
+		linear-gradient(180deg, #121317 0%, #07080a 58%, #090001 100%);
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.05),
+		inset 0 -1px rgba(0, 0, 0, 0.32);
+	content: '';
+	inset: 0 0 58px;
+	opacity: 1;
+	pointer-events: none;
+	position: absolute;
+	z-index: -1;
+}
+
+.inventory-template-shell .daynight-inventory-controls-shell {
+	box-sizing: border-box;
+	max-width: 1320px !important;
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+	width: calc(100% - 64px);
+	z-index: 2;
+}
+
+.inventory-template-shell .daynight-inventory-quick-form {
+	box-sizing: border-box;
+	display: grid;
+	gap: 10px;
+	background: #ffffff;
+	border: 1px solid #d8e1ee;
+	border-radius: 14px;
+	box-shadow: none;
+	min-width: 0;
+	overflow: visible;
+	padding: 14px;
+	width: 100%;
+}
+
+.inventory-template-shell #main-content,
+.inventory-template-shell section.pb-100,
+.inventory-template-shell main.pb-100 {
+	background: #f4f7fb;
+	padding-top: 0;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	max-width: 1440px !important;
+	padding: 0 0 34px;
+	position: relative;
+	width: calc(100% - 48px);
+	z-index: 1;
+}
+
+.inventory-template-shell .daynight-inventory-listing-controls {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 10px;
+	min-height: 44px;
+	padding: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-listings-shell--grid
+	.daynight-inventory-listing-controls {
+	margin-bottom: 8px;
+	min-height: 24px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-listings-shell--grid
+	.daynight-inventory-results-toolbar {
+	min-height: 24px;
+}
+
+.inventory-template-shell .daynight-inventory-results-toolbar {
+	align-items: center;
+	column-gap: 16px;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	margin-left: 0;
+	margin-right: 0;
+	min-height: 42px;
+	row-gap: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-results-toolbar
+	> .daynight-inventory-results-count-cell {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: start;
+	max-width: none;
+	min-width: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-result-summary {
+	align-items: center;
+	display: flex;
+	gap: 10px;
+	min-width: 0;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-result-count {
+	color: #344054;
+	flex: 0 0 auto;
+	font-size: var(--sa-text-inventory-control);
+	font-weight: var(--sa-weight-medium);
+	line-height: 1.35;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-results-toolbar > .daynight-inventory-view-switch {
+	grid-column: 2;
+	grid-row: 1;
+	justify-self: center;
+	max-width: none;
+	min-width: 0;
+	padding: 0;
+	width: auto;
+}
+
+.inventory-template-shell .daynight-inventory-sort-control {
+	align-items: center;
+	display: flex;
+	gap: 10px;
+	grid-column: 2;
+	grid-row: 1;
+	justify-self: end;
+	min-height: 44px;
+	min-width: 0;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell .listing-tabs.menu-tab {
+	background: #fff;
+	border: 1px solid #dbe5f1;
+	border-radius: 8px;
+	gap: 6px;
+	min-height: 42px;
+	padding: 4px;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell .listing-tabs .item-menu {
+	align-items: center;
+	border-radius: 6px;
+	height: 32px;
+	justify-content: center;
+	transition:
+		background 0.16s ease,
+		color 0.16s ease;
+	width: 36px;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell .listing-tabs .item-menu.active {
+	background: #101828;
+}
+
+.inventory-template-shell
+	.daynight-inventory-listings-shell
+	.listing-tabs
+	.item-menu:not(.active):hover {
+	background: #eef2f7;
+}
+
+.inventory-template-shell
+	.daynight-inventory-listings-shell
+	.listing-tabs
+	.item-menu.active
+	svg
+	circle {
+	fill: #fff !important;
+	stroke: #fff !important;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell .content-tab {
+	min-width: 0;
+}
+
+.inventory-template-shell .daynight-inventory-results-toolbar > .col-md-12.mb-8 {
+	display: none;
+}
+
+.inventory-template-shell .daynight-inventory-applied-filters {
+	align-content: center;
+	align-items: center;
+	display: none;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 0 22px;
+	min-height: 40px;
+	min-width: 0;
+	opacity: 0;
+	overflow: visible;
+	pointer-events: none;
+	visibility: hidden;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-applied-filters.is-active {
+	display: flex;
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.inventory-template-shell .daynight-inventory-applied-filters__tags {
+	display: contents;
+	scrollbar-width: none;
+}
+
+.inventory-template-shell .daynight-inventory-applied-filters__tags::-webkit-scrollbar {
+	display: none;
+}
+
+.inventory-template-shell #filterTags .select-item {
+	align-items: center;
+	background: #eaf2ff;
+	border: 1px solid #7aa7f7;
+	border-radius: 999px;
+	color: #123f91 !important;
+	cursor: pointer;
+	display: inline-flex;
+	flex: 0 1 auto;
+	font-size: var(--sa-text-inventory-control);
+	font-weight: var(--sa-weight-strong);
+	gap: 8px;
+	height: 42px;
+	justify-content: center;
+	line-height: 1;
+	margin: 0;
+	max-width: min(220px, 100%);
+	min-height: 42px;
+	min-width: 0;
+	overflow: hidden;
+	padding: 0 11px 0 14px;
+	white-space: nowrap;
+}
+
+.inventory-template-shell #filterTags .select-item__label {
+	color: #123f91 !important;
+	display: block;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.inventory-template-shell #filterTags .select-item:hover {
+	background: #dceaff;
+	border-color: #b00000;
+}
+
+.inventory-template-shell #filterTags .select-item:focus-visible {
+	border-color: #d51024;
+	outline: 2px solid #d51024;
+	outline-offset: 2px;
+}
+
+.inventory-template-shell #filterTags .select-item .filter-icon {
+	flex: 0 0 auto;
+	filter: none;
+	height: 16px;
+	opacity: 0.8;
+	width: 16px;
+}
+
+.inventory-template-shell #filterDivider {
+	display: none !important;
+}
+
+.inventory-template-shell #btnClearAll {
+	align-items: center;
+	background: #111827;
+	border: 1px solid #111827;
+	border-radius: 999px;
+	color: #fff;
+	display: inline-flex;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-strong);
+	gap: 8px;
+	flex: 0 0 auto;
+	height: 42px;
+	justify-content: center;
+	line-height: 1;
+	margin: 0;
+	min-height: 42px;
+	padding: 0 14px;
+	white-space: nowrap;
+}
+
+.inventory-template-shell #btnClearAll[hidden] {
+	display: none !important;
+}
+
+.inventory-template-shell #btnClearAll:hover {
+	background: #d51024;
+	border-color: #d51024;
+}
+
+.inventory-template-shell #btnClearAll:focus-visible {
+	border-color: #d51024;
+	outline: 2px solid #d51024;
+	outline-offset: 2px;
+}
+
+.inventory-template-shell #btnClearAll img {
+	filter: brightness(0) invert(1);
+	height: 12px;
+	width: 12px;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell #filterMatchesCount {
+	color: #101828;
+	font-weight: var(--sa-weight-semibold);
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell .core-dropdown__button {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	box-shadow: none;
+	color: #101828;
+	min-height: 42px;
+	min-width: 186px;
+	padding: 0 14px;
+}
+
+.inventory-template-shell .daynight-inventory-listings-shell .core-dropdown__button:hover,
+.inventory-template-shell
+	.daynight-inventory-listings-shell
+	.core-dropdown.active
+	.core-dropdown__button {
+	border-color: #b8c5d6;
+}
+
+.inventory-template-shell .daynight-inventory-results-toolbar .daynight-inventory-sort-control p {
+	color: #475467;
+	font-size: var(--sa-type-body);
+	font-weight: var(--sa-weight-medium);
+	margin: 0;
+}
+
+.inventory-template-shell .daynight-inventory-view-switch {
+	align-items: center;
+	display: inline-flex;
+	min-width: 0;
+}
+
+.inventory-template-shell [data-daynight-grid-panel][hidden] {
+	display: none !important;
+}
+
+@media (max-width: 991px) {
+	.inventory-template-shell .daynight-inventory-results-toolbar {
+		grid-template-columns: minmax(0, 1fr) auto;
+		row-gap: 12px;
+	}
+	.inventory-template-shell
+		.daynight-inventory-results-toolbar
+		> .daynight-inventory-results-count-cell {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.inventory-template-shell .daynight-inventory-view-switch {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		justify-self: center;
+	}
+	.inventory-template-shell .daynight-inventory-sort-control {
+		grid-column: 2;
+		grid-row: 1;
+	}
+	.inventory-template-shell .daynight-inventory-applied-filters {
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.inventory-template-shell .daynight-inventory-applied-filters__tags {
+		max-width: none;
+	}
+}
+
+.inventory-template-shell .daynight-inventory-top-spacer {
+	height: 0 !important;
+}
+
+.inventory-template-shell .daynight-inventory-controls {
+	position: relative;
+	z-index: 60;
+	margin-top: 0;
+}
+
+.inventory-template-shell .daynight-inventory-searchbar,
+.inventory-template-shell .daynight-inventory-filterbar {
+	align-items: center;
+	flex-wrap: nowrap;
+	background: transparent;
+	border: 0;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	overflow: visible;
+	padding: 0;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar {
+	box-sizing: border-box;
+	display: grid;
+	gap: 8px;
+	grid-template-columns:
+		minmax(104px, 0.78fr) minmax(132px, 1.08fr) minmax(132px, 1.08fr)
+		minmax(112px, 0.9fr) minmax(112px, 0.9fr) minmax(120px, 0.95fr)
+		minmax(124px, 1fr) minmax(112px, 0.9fr) minmax(124px, 1fr);
+	justify-content: stretch;
+	overflow: visible;
+	scrollbar-width: thin;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-quick-sidebar {
+	align-items: center;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-size: var(--sa-text-desktop-action, var(--sa-text-lg));
+	font-weight: var(--sa-weight-semibold);
+	gap: 8px;
+	align-self: stretch;
+	box-sizing: border-box;
+	height: 56px !important;
+	justify-content: center;
+	min-height: 56px;
+	padding: 0 12px !important;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-field {
+	flex: 1 1 128px;
+	min-width: 124px;
+}
+
+.inventory-template-shell #filterSidebarToggle {
+	display: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-quick-select {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-search {
+	flex: 1 1 auto;
+	position: relative;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-search__input {
+	background: #f8fafc !important;
+	border: 1px solid #e2e8f2;
+	border-radius: 8px;
+	box-sizing: border-box;
+	min-height: 56px;
+	padding-right: 112px !important;
+	outline: 0;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-medium);
+	line-height: 1.4;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.inventory-template-shell .daynight-inventory-search__input.active,
+.inventory-template-shell .daynight-inventory-search__input:active,
+.inventory-template-shell .daynight-inventory-search__input:focus,
+.inventory-template-shell
+	.daynight-inventory-search:focus-within
+	.daynight-inventory-search__input {
+	border-color: rgba(219, 227, 238, 0.96) !important;
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-search__input::placeholder {
+	color: #9fa1a4;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-medium);
+	line-height: 1.4;
+	opacity: 1;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-dropdown {
+	align-items: center;
+	background: #edf3fa !important;
+	border: 1px solid #cbd8e8;
+	border-radius: 8px;
+	box-sizing: border-box;
+	box-shadow: none;
+	display: flex;
+	height: 56px;
+	min-height: 56px;
+	padding: 0 10px;
+	position: relative;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-select-dropdown.active {
+	z-index: 90;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-select-dropdown__text {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	box-sizing: border-box;
+	color: inherit;
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	height: 100% !important;
+	inset: 0 !important;
+	min-width: 0;
+	padding: 0 28px 0 12px !important;
+	position: absolute !important;
+	text-align: left;
+	width: 100%;
+	z-index: 2;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-select-dropdown__text::after {
+	border-bottom: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+	content: '';
+	height: 7px;
+	position: absolute;
+	right: 10px !important;
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg) !important;
+	transition: transform 0.18s ease;
+	width: 7px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown:focus-within {
+	border-color: #b00000 !important;
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown
+	.filter-select-dropdown__text:focus-visible {
+	outline: 2px solid #b00000 !important;
+	outline-offset: -4px;
+	box-shadow: none !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.active:not(.is-selected),
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.filter-select-dropdown:not(.is-selected):has(
+		.filter-select-dropdown__toggle:checked
+	) {
+	background: #e6eef8 !important;
+	border-color: #b00000 !important;
+	box-shadow: none !important;
+	color: #111827 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.active:not(.is-selected)
+	> .filter-select-dropdown__text::after,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.filter-select-dropdown:not(.is-selected):has(
+		.filter-select-dropdown__toggle:checked
+	)
+	> .filter-select-dropdown__text::after {
+	border-color: #b00000 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected {
+	background: #b00000 !important;
+	background-color: #b00000 !important;
+	border: 1px solid #b00000 !important;
+	border-color: #b00000 !important;
+	box-shadow: none !important;
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.active,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.filter-select-dropdown:has(
+		.filter-select-dropdown__toggle:checked
+	) {
+	background: #8a0000 !important;
+	background-color: #8a0000 !important;
+	border-color: #8a0000 !important;
+	box-shadow: none !important;
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	.filter-select-dropdown__text,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	[data-daynight-quick-value] {
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.active
+	.filter-select-dropdown__text,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.active
+	[data-daynight-quick-value],
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.filter-select-dropdown:has(
+		.filter-select-dropdown__toggle:checked
+	)
+	.filter-select-dropdown__text,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.filter-select-dropdown:has(
+		.filter-select-dropdown__toggle:checked
+	)
+	[data-daynight-quick-value] {
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown.active
+	.filter-select-dropdown__text::after,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__toggle:checked
+	~ .filter-select-dropdown__text::after {
+	transform: translateY(-35%) rotate(225deg) !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected
+	> .filter-select-dropdown__text::after {
+	border-color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.active
+	> .filter-select-dropdown__text::after,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.is-selected.filter-select-dropdown:has(
+		.filter-select-dropdown__toggle:checked
+	)
+	> .filter-select-dropdown__text::after {
+	border-color: #fff !important;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-dropdown.active,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown:has(.filter-select-dropdown__toggle:checked) {
+	position: relative;
+	z-index: 1200 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown.active
+	> .filter-select-dropdown__menu,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-filter-dropdown:has(.filter-select-dropdown__toggle:checked)
+	> .filter-select-dropdown__menu {
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+	visibility: visible !important;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-select-dropdown__menu {
+	background: #fff;
+	border: 1px solid #ececec;
+	border-radius: 14px;
+	box-sizing: border-box;
+	box-shadow: 0 22px 46px rgba(12, 18, 24, 0.2);
+	left: 0;
+	max-height: min(360px, calc(100vh - 260px));
+	min-width: 100%;
+	max-width: calc(100vw - 64px);
+	overflow: hidden;
+	padding: 13px;
+	right: auto;
+	top: calc(100% + 8px);
+	width: min(360px, calc(100vw - 64px));
+	z-index: 1000 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-quick-field--brand
+	.filter-select-dropdown__menu,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-quick-field--model
+	.filter-select-dropdown__menu {
+	width: min(420px, calc(100vw - 64px));
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-quick-field--mileage
+	.filter-select-dropdown__menu,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-quick-field--body
+	.filter-select-dropdown__menu,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-quick-field--feature
+	.filter-select-dropdown__menu {
+	left: auto;
+	right: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.daynight-inventory-quick-field--feature
+	.filter-select-dropdown__menu {
+	width: min(520px, calc(100vw - 64px));
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-select-dropdown__list {
+	align-content: start;
+	box-sizing: border-box;
+	display: grid;
+	gap: 0;
+	grid-auto-rows: 40px;
+	max-height: min(300px, calc(100vh - 300px));
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	padding: 0;
+	scrollbar-width: thin;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox {
+	align-items: flex-start;
+	box-sizing: border-box;
+	color: #101828;
+	cursor: pointer;
+	min-height: 40px;
+	padding: 0;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox:hover,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox:focus-within {
+	background: transparent;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox
+	input {
+	accent-color: #d51024;
+	flex: 0 0 auto;
+	height: 18px;
+	margin-top: 1px;
+	width: 18px;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox
+	span {
+	align-items: center;
+	background: #fff;
+	border: 0;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #101828 !important;
+	display: flex !important;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-regular);
+	line-height: 22px;
+	min-height: 40px;
+	min-width: 0;
+	overflow: visible;
+	padding: 7px 12px 7px 40px !important;
+	position: relative;
+	transition:
+		background 120ms ease,
+		color 120ms ease;
+	overflow-wrap: normal;
+	white-space: normal;
+	width: 100% !important;
+	word-break: normal;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox:hover
+	span,
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox:focus-within
+	span {
+	background: #f5f8ff;
+	color: #101828 !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-filterbar
+	.filter-select-dropdown__list
+	.filter-checkbox
+	input:checked
+	+ span {
+	background: #eef4ff;
+	box-shadow: none;
+	color: #101828 !important;
+	font-weight: var(--sa-weight-semibold);
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-checkbox span {
+	overflow-wrap: normal;
+	white-space: normal;
+	word-break: normal;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .filter-select-dropdown__text span {
+	color: #1c1c1c;
+	display: block;
+	font-size: var(--sa-text-desktop-action, var(--sa-text-lg));
+	font-weight: var(--sa-weight-semibold);
+	line-height: 1.32;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-dropdown__label {
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.inventory-template-shell .daynight-inventory-searchbar .daynight-inventory-searchbar__submit {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	bottom: 6px;
+	left: auto;
+	box-sizing: border-box;
+	width: auto !important;
+	min-width: 0 !important;
+	max-width: none;
+	flex: 0 0 auto;
+	height: auto;
+	min-height: 0;
+	padding: 0 20px;
+	border-radius: 8px;
+	z-index: 2;
+	background: #111827 !important;
+	border-color: #111827 !important;
+	box-shadow: none;
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit::before {
+	content: none !important;
+	display: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-searchbar .daynight-inventory-searchbar__submit span {
+	color: #fff !important;
+}
+
+.inventory-template-shell .daynight-inventory-searchbar .daynight-inventory-searchbar__submit:hover,
+.inventory-template-shell .daynight-inventory-searchbar .daynight-inventory-searchbar__submit:focus,
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:active {
+	background: #020617 !important;
+	border-color: #020617 !important;
+	box-shadow: none !important;
+	color: #fff !important;
+}
+
+.inventory-template-shell .daynight-inventory-searchbar .daynight-inventory-searchbar__submit img {
+	filter: brightness(0) invert(1);
+}
+
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:hover
+	span,
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:focus
+	span,
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:active
+	span {
+	color: #fff !important;
+}
+
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:hover
+	img,
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:focus
+	img,
+.inventory-template-shell
+	.daynight-inventory-searchbar
+	.daynight-inventory-searchbar__submit:active
+	img {
+	filter: brightness(0) invert(1);
+}
+
+.inventory-template-shell .daynight-inventory-quick-sidebar {
+	align-items: center;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-semibold);
+	gap: 8px;
+	height: 56px !important;
+	justify-content: center;
+	min-height: 56px;
+	padding: 0 12px !important;
+	width: 100%;
+	background: #d51024 !important;
+	border: 1px solid #d51024 !important;
+	box-shadow: none;
+	color: #fff !important;
+}
+
+.inventory-template-shell .daynight-inventory-quick-sidebar__label {
+	color: inherit;
+	line-height: var(--sa-leading-inventory-control);
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-quick-sidebar:hover {
+	background: #b90f1f !important;
+	border-color: #b90f1f !important;
+	box-shadow: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-quick-sidebar:focus-visible {
+	background: #b90f1f !important;
+	border-color: #fff !important;
+	box-shadow: none !important;
+	outline: 2px solid #fff !important;
+	outline-offset: 2px;
+}
+
+.inventory-template-shell .daynight-inventory-quick-sidebar img {
+	height: 18px;
+	filter: brightness(0) invert(1) !important;
+	width: 18px;
+}
+
+.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-field {
+	min-width: 0;
+	width: 100%;
+}
+
+.inventory-template-shell .daynight-inventory-type-pills {
+	align-items: center;
+	display: flex;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+	gap: 8px;
+	min-height: 40px;
+	min-width: 0;
+	overflow: visible;
+}
+
+.inventory-template-shell .daynight-inventory-quick-form .daynight-inventory-type-pills {
+	border-top: 0;
+	padding-top: 2px;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #cbd5e1;
+	border-radius: 999px;
+	color: #344054;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-size: var(--sa-text-inventory-pill);
+	font-weight: var(--sa-weight-medium);
+	gap: 8px;
+	justify-content: center;
+	line-height: var(--sa-leading-inventory-control);
+	min-height: 40px;
+	min-width: 0;
+	padding: 0 12px;
+	text-decoration: none;
+	transition:
+		background-color 0.14s ease,
+		border-color 0.14s ease,
+		color 0.14s ease;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill[hidden] {
+	display: none !important;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill:hover {
+	background: #eef2f7;
+	border-color: #94a3b8;
+	color: #101828;
+	box-shadow: none;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill.is-active {
+	background: #b00000;
+	border-color: #b00000;
+	color: #fff;
+	box-shadow: none;
+}
+
+.inventory-template-shell .daynight-inventory-quick-form .daynight-inventory-type-pill.is-active {
+	background: #e11c2a;
+	border-color: #e11c2a;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill svg {
+	color: inherit !important;
+	height: 18px;
+	flex: 0 0 30px;
+	width: 30px;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill span {
+	color: inherit !important;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.inventory-template-shell .daynight-inventory-quick-form--grey-preview {
+	background: #f3f6fa;
+	border: 1px solid #c7d2e1;
+	border-radius: 16px;
+	box-shadow: none;
+	margin-top: 12px;
+	padding: 16px;
+}
+
+.inventory-template-shell .daynight-inventory-preview-searchbar {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: minmax(0, 1fr) 254px;
+}
+
+.inventory-template-shell .daynight-inventory-preview-search {
+	background: #fff;
+	border: 1px solid #b9c7d8;
+	border-radius: 8px;
+	box-shadow: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 62px;
+	min-width: 0;
+	padding: 9px 16px 8px;
+}
+
+.inventory-template-shell .daynight-inventory-preview-label {
+	color: #4b5563;
+	font-size: var(--sa-text-caption);
+	font-weight: var(--sa-weight-medium);
+	line-height: 1.25;
+}
+
+.inventory-template-shell .daynight-inventory-preview-placeholder {
+	color: #9ca3af;
+	display: block;
+	font-size: var(--sa-text-base);
+	line-height: 1.25;
+	margin-top: 7px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-preview-search-button,
+.inventory-template-shell .daynight-inventory-preview-sidebar {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #b00000;
+	border-radius: 8px;
+	color: #b00000;
+	display: inline-flex;
+	justify-content: center;
+	min-height: 62px;
+	transition:
+		background-color 0.16s ease,
+		border-color 0.16s ease,
+		box-shadow 0.16s ease;
+}
+
+.inventory-template-shell .daynight-inventory-preview-search-button {
+	gap: 10px;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
+}
+
+.inventory-template-shell .daynight-inventory-preview-search-button img,
+.inventory-template-shell .daynight-inventory-preview-sidebar img {
+	filter: brightness(0) saturate(100%) invert(31%) sepia(90%) saturate(2254%) hue-rotate(212deg)
+		brightness(86%) contrast(97%);
+}
+
+.inventory-template-shell .daynight-inventory-preview-search-button:hover,
+.inventory-template-shell .daynight-inventory-preview-sidebar:hover {
+	background: #e11c2a;
+	border-color: #e11c2a;
+	box-shadow: none;
+	color: #fff;
+}
+
+.inventory-template-shell .daynight-inventory-preview-search-button:hover img,
+.inventory-template-shell .daynight-inventory-preview-sidebar:hover img {
+	filter: brightness(0) invert(1);
+}
+
+.inventory-template-shell .daynight-inventory-preview-sidebar {
+	background: #111827;
+	border-color: #111827;
+	color: #fff;
+}
+
+.inventory-template-shell .daynight-inventory-preview-sidebar:hover {
+	background: #e11c2a;
+	border-color: #e11c2a;
+}
+
+.inventory-template-shell .daynight-inventory-preview-sidebar img,
+.inventory-template-shell .daynight-inventory-preview-sidebar:hover img {
+	filter: brightness(0) invert(1);
+}
+
+.inventory-template-shell .daynight-inventory-preview-filterbar {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: 62px repeat(8, minmax(0, 1fr));
+}
+
+.inventory-template-shell .daynight-inventory-preview-select {
+	background: #176ee8;
+	border: 1px solid #176ee8;
+	border-radius: 8px;
+	box-shadow: none;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 62px;
+	min-width: 0;
+	padding: 0 36px 0 14px;
+	position: relative;
+	text-align: left;
+	transition:
+		border-color 0.16s ease,
+		box-shadow 0.16s ease,
+		color 0.16s ease;
+}
+
+.inventory-template-shell .daynight-inventory-preview-select::after {
+	border-bottom: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+	content: '';
+	height: 8px;
+	position: absolute;
+	right: 17px;
+	top: 50%;
+	transform: translateY(-62%) rotate(45deg);
+	width: 8px;
+}
+
+.inventory-template-shell .daynight-inventory-preview-select:hover,
+.inventory-template-shell .daynight-inventory-preview-select:focus {
+	background: #e11c2a;
+	border-color: #e11c2a;
+	box-shadow: none;
+	color: #fff;
+}
+
+.inventory-template-shell .daynight-inventory-preview-select strong {
+	color: inherit;
+	display: block;
+	font-size: var(--sa-text-xl);
+	font-weight: var(--sa-weight-heading);
+	line-height: 1.05;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-preview-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.inventory-template-shell .daynight-inventory-preview-pill {
+	align-items: center;
+	background: #fff;
+	border: 1px solid rgba(176, 0, 0, 0.44);
+	border-radius: 8px;
+	box-shadow: none;
+	color: #b00000;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-medium);
+	gap: 8px;
+	line-height: 1;
+	min-height: 38px;
+	padding: 0 15px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.inventory-template-shell .daynight-inventory-preview-pill:hover,
+.inventory-template-shell .daynight-inventory-preview-pill.is-active {
+	background: #e11c2a;
+	border-color: #e11c2a;
+	box-shadow: none;
+	color: #fff;
+}
+
+.inventory-template-shell .daynight-inventory-preview-pill svg {
+	color: inherit !important;
+	height: 20px;
+	width: 42px;
+}
+
+.inventory-template-shell .daynight-inventory-preview-pill span {
+	color: inherit !important;
+}
+
+.inventory-template-shell .daynight-inventory-preview-pill svg [stroke='currentColor'] {
+	color: inherit !important;
+	stroke: currentColor !important;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill svg [stroke='currentColor'] {
+	color: inherit !important;
+	stroke: currentColor !important;
+}
+
+.inventory-template-shell .daynight-inventory-type-pill svg [fill='currentColor'] {
+	color: inherit !important;
+	fill: currentColor !important;
+}
+
+.inventory-template-shell .daynight-inventory-heading {
+	color: #fff;
+	font-size: var(--sa-text-desktop-hero-title);
+	font-weight: var(--sa-weight-semibold);
+	letter-spacing: 0;
+	line-height: 50px;
+	margin: 0 0 16px;
+	text-align: center;
+}
+
+@media (max-width: 1599px) {
+	.inventory-template-shell .daynight-inventory-heading {
+		font-size: var(--sa-heading-section);
+		line-height: 46px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.inventory-template-shell .daynight-inventory-heading {
+		font-size: var(--sa-heading-section);
+		line-height: 40px;
+	}
+}
+
+.inventory-template-shell .daynight-inventory-empty {
+	display: none;
+	width: 100%;
+	margin: -6px 0 24px;
+	background: transparent;
+	border: 0;
+	border-top: 1px solid #dbe5f1;
+	border-radius: 0;
+	box-shadow: none;
+	color: #344054;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-semibold);
+	line-height: 1.4;
+	padding: 16px 0 0;
+}
+
+.inventory-template-shell .daynight-inventory-empty.is-visible {
+	display: block;
+}
+
+.inventory-template-shell .daynight-inventory-empty[hidden] {
+	display: none !important;
+}
+
+.inventory-template-shell [data-daynight-filter-hidden='true'],
+.inventory-template-shell
+	.card-box.card-box-style-1[data-daynight-vehicle-card][data-daynight-filter-hidden='true'] {
+	display: none !important;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] {
+	background: #fff !important;
+	border: 1px solid #dfe7f2 !important;
+	border-radius: 8px;
+	box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+	overflow: hidden;
+}
+
+.inventory-template-shell
+	.daynight-inventory-viewport
+	.card-box.card-box-style-1[data-daynight-vehicle-card]:hover,
+.inventory-template-shell
+	.daynight-inventory-viewport
+	.card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within {
+	border-color: #cbd7e6 !important;
+	box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08) !important;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .image {
+	aspect-ratio: 1.34 / 1;
+	background: #eef2f7;
+	border-radius: 8px 8px 0 0;
+	height: auto;
+	overflow: hidden;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .content {
+	background: #fff !important;
+	border: 0 !important;
+	border-color: transparent !important;
+	border-radius: 0 0 8px 8px;
+	border-top: 0 !important;
+	padding: 14px;
+}
+
+.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card--img {
+	border-radius: 0 !important;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.inventory-template-shell .card-box.card-box-style-1 .card--img,
+.inventory-map-template-shell .card-box.card-box-style-1 .card--img,
+body.inner-page .card-box.card-box-style-1 .card--img {
+	transform: none !important;
+}
+
+@media (max-width: 1480px) {
+	.inventory-template-shell .daynight-inventory-filterbar {
+		grid-template-columns: minmax(118px, 0.72fr) repeat(4, minmax(0, 1fr));
+	}
+	.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-quick-sidebar {
+		grid-row: 1 / span 2;
+		height: auto !important;
+		min-height: 100%;
+	}
+	.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-field {
+		min-width: 0;
+	}
+}
+
+@media (max-width: 1240px) {
+	.inventory-template-shell .daynight-inventory-filterbar {
+		grid-template-columns: 62px repeat(4, minmax(0, 1fr));
+	}
+	.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-quick-sidebar {
+		grid-row: 1 / span 2;
+		height: auto !important;
+		min-height: 100%;
+	}
+	.inventory-template-shell .daynight-inventory-quick-sidebar {
+		padding: 0 !important;
+	}
+	.inventory-template-shell .daynight-inventory-quick-sidebar__label {
+		display: none;
+	}
+	.inventory-template-shell .daynight-inventory-type-pills {
+		flex: 1 1 100%;
+	}
+}
+
+@media (max-width: 575px) {
+	.inventory-template-shell section.pb-100 {
+		padding-top: 24px;
+	}
+	.inventory-template-shell .daynight-inventory-top-spacer {
+		height: 0 !important;
+	}
+	.inventory-template-shell .daynight-inventory-filterbar {
+		display: flex;
+		overflow-x: auto;
+		overflow-y: visible;
+	}
+	.inventory-template-shell .daynight-inventory-type-pills {
+		display: flex;
+		flex-wrap: nowrap;
+		margin-right: -16px;
+		overflow-x: auto;
+		padding-right: 16px;
+	}
+	.inventory-template-shell .daynight-inventory-searchbar {
+		align-items: stretch;
+		flex-direction: column;
+	}
+	.inventory-template-shell .daynight-inventory-searchbar .daynight-inventory-searchbar__submit {
+		width: 100%;
+	}
+	.inventory-template-shell .daynight-inventory-filterbar .daynight-inventory-filter-field {
+		flex-basis: 145px;
+		min-width: 145px;
+	}
+}
+
+@media (max-width: 575px) {
+	.inventory-template-shell .card-box.card-box-style-1 .card--img,
+	.inventory-map-template-shell .card-box.card-box-style-1 .card--img,
+	body.inner-page .card-box.card-box-style-1 .card--img {
+		transform: none !important;
+	}
+}
+
+/* NATIVE ROUTE OVERRIDES: ownership formerly split into InventoryDesktopPage. */
+
+.inventory-template-shell
+	.inventory-refined
+	.daynight-inventory-viewport
+	[data-daynight-grid-panel].active
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.card-box__title
+	> a {
+	font: inherit !important;
+	display: -webkit-box !important;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	white-space: normal !important;
+}
+
+.inventory-template-shell
+	.inventory-refined
+	.daynight-inventory-viewport
+	[data-daynight-grid-panel].active
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.card-box__title {
+	font: var(--sa-weight-semibold) var(--sa-text-control)/1.3 var(--sa-font) !important;
+	min-height: 45px !important;
+	max-height: 45px !important;
+	white-space: normal !important;
+}
+
+.inventory-refined .inventory-hero .daynight-yellow-route-hero__content {
+	padding-top: 30px;
+	padding-bottom: 24px;
+}
+
+.inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
+	margin-top: 18px !important;
+}
+
+.inventory-refined .daynight-inventory-viewport--grid [data-daynight-grid-panel].active > .grid {
+	gap: 20px !important;
+}
+
+.inventory-template-shell
+	.inventory-refined
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.image {
+	aspect-ratio: 1.5 / 1;
+}
+.inventory-refined [data-daynight-vehicle-card] .content {
+	justify-content: flex-start !important;
+	gap: 0 !important;
+}
+.inventory-refined [data-daynight-vehicle-card] .tag.style2 {
+	min-height: 22px !important;
+}
+@media (min-width: 1440px) {
+	.inventory-template-shell
+		.inventory-refined
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		> .grid {
+		grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1439px) {
+	.inventory-template-shell
+		.inventory-refined
+		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='3'].active
+		> .grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+	}
+}
+.inventory-refined .inventory-hero .daynight-yellow-route-hero {
+	min-height: 390px;
+}
+
+.inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
+	background: var(--discovery-panel) !important;
+	padding: 14px 18px !important;
+	border-radius: 12px;
+}
+.inventory-refined .inventory-hero .daynight-inventory-searchbar__label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+}
+.inventory-refined .inventory-hero .daynight-inventory-search {
+	min-height: 0 !important;
+	height: var(--discovery-search-height) !important;
+	display: flex !important;
+	align-items: center !important;
+	gap: 4px;
+	background: #fff !important;
+	border: 1px solid var(--discovery-control-border) !important;
+	border-radius: var(--discovery-control-radius) !important;
+	padding: 4px !important;
+}
+.inventory-refined .inventory-hero .daynight-inventory-search__input {
+	min-height: 0 !important;
+	position: static !important;
+	flex: 1;
+	min-width: 0;
+	width: 100% !important;
+	height: var(--discovery-search-action-size) !important;
+	border: 0 !important;
+	border-radius: 8px !important;
+	background: #fff !important;
+	padding: 0 9px !important;
+	font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font) !important;
+	color: #171b1e !important;
+}
+.inventory-refined .inventory-hero .daynight-inventory-search__input::placeholder,
+.inventory-refined .inventory-hero .daynight-inventory-search__trigger:not(.has-query) {
+	color: var(--discovery-muted) !important;
+	opacity: 1;
+}
+.inventory-refined .inventory-hero .daynight-inventory-searchbar__submit {
+	min-height: 0 !important;
+	position: static !important;
+	flex: 0 0 auto;
+	width: var(--discovery-search-action-size) !important;
+	min-width: var(--discovery-search-action-size);
+	height: var(--discovery-search-action-size) !important;
+	padding: 0 !important;
+	background: var(--discovery-action) !important;
+	border-radius: 5px !important;
+	color: #fff !important;
+	font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
+		var(--sa-font) !important;
+	transform: none !important;
+}
+
+.inventory-refined .inventory-hero .daynight-inventory-searchbar__submit :is(span, svg, svg *) {
+	color: inherit !important;
+}
+.inventory-refined .inventory-hero .daynight-inventory-searchbar__submit:hover {
+	background: var(--discovery-action-hover) !important;
+}
+
+.inventory-template-shell
+	.inventory-refined
+	.inventory-hero
+	.daynight-inventory-search
+	.daynight-inventory-search__input:focus-visible {
+	outline: none !important;
+	box-shadow: none !important;
+}
+.inventory-refined .inventory-hero .daynight-inventory-search:focus-within {
+	border-color: var(--discovery-action) !important;
+	box-shadow: none !important;
+	outline: 2px solid var(--discovery-action);
+	outline-offset: 2px;
+}
+.inventory-refined .inventory-hero .daynight-inventory-searchbar__submit:focus-visible {
+	outline: 2px solid var(--discovery-action) !important;
+	outline-offset: 3px;
+}
+.inventory-refined .daynight-inventory-viewport {
+	width: calc(100% - 64px) !important;
+	max-width: 1760px !important;
+	margin: 0 auto !important;
+	padding: 16px 0 0 !important;
+	border: 0 !important;
+}
+.inventory-refined .daynight-inventory-viewport--sidebar {
+	grid-template-columns: 260px minmax(0, 1fr) !important;
+	grid-template-areas: none !important;
+	grid-template-rows: auto !important;
+	align-items: start;
+	gap: 28px !important;
+}
+.inventory-refined .daynight-inventory-listings-shell {
+	display: block !important;
+	width: 100% !important;
+	max-width: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	min-width: 0;
+}
+.inventory-refined [data-daynight-vehicle-card] .content {
+	padding: 12px !important;
+}
+
+.inventory-refined .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__title {
+	font: var(--sa-weight-semibold) var(--sa-text-lg)/1.35 var(--sa-font) !important;
+	letter-spacing: -0.25px !important;
+	min-height: 0 !important;
+	max-height: 49px !important;
+	white-space: normal !important;
+	margin: 0 0 6px !important;
+}
+
+.inventory-refined .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__title > a {
+	display: -webkit-box !important;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	white-space: normal !important;
+}
+
+.inventory-template-shell
+	.inventory-refined
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.card-box__price
+	.daynight-card-price__value {
+	font: var(--sa-weight-strong) var(--sa-text-panel-title)/1.15 var(--sa-font) !important;
+	letter-spacing: -0.65px !important;
+	color: #171b1e !important;
+}
+
+.inventory-template-shell
+	.inventory-refined
+	.card-box.card-box-style-1[data-daynight-vehicle-card]
+	.card-box__price
+	.daynight-card-price__monthly {
+	font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font) !important;
+	color: #68717a !important;
+}
+.inventory-refined [data-daynight-vehicle-card] .tag.style2 {
+	gap: 10px !important;
+	flex-wrap: wrap !important;
+	margin-bottom: 8px !important;
+}
+.inventory-refined [data-daynight-vehicle-card] .tag.style2 li {
+	background: transparent !important;
+	border: 0 !important;
+	padding: 0 !important;
+	height: 22px !important;
+}
+.inventory-refined [data-daynight-vehicle-card] .tag.style2 li span {
+	font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font) !important;
+	color: #59636c !important;
+}
+.inventory-refined [data-daynight-vehicle-card] {
+	border-color: var(--discovery-control-border) !important;
+	box-shadow: none !important;
+	border-radius: 11px !important;
+}

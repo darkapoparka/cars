@@ -1,4 +1,4 @@
-import { daynightBrand, daynightContact, daynightConsultants, daynightFetchedAt } from '$lib/data/daynight';
+import { daynightContact, daynightConsultants, daynightFetchedAt } from '$lib/data/daynight';
 import type { Vehicle } from '$lib/data/vehicles';
 import {
 	getMessages,
@@ -156,8 +156,8 @@ const detailFeatureTabs = (
 						? `Наличността е обновена ${daynightFetchedAt}`
 						: `Inventory refreshed ${daynightFetchedAt}`
 					: locale === 'bg'
-						? 'Наличността е обновена от източника на Promosale Varna'
-						: 'Inventory refreshed from Promosale Varna source data'
+						? 'Наличността е обновена от източника на Day Night Auto'
+						: 'Inventory refreshed from Day Night Auto source data'
 			]
 		}
 	];
@@ -236,12 +236,12 @@ const vehicleTrust = (vehicle: Vehicle, locale: Locale = 'en'): AuxeroVehicleTru
 	const mileage = formatInventoryKm(vehicle.mileage);
 
 	return {
-		verdict: bg ? 'Данни от обявата' : 'Advertised information',
+		verdict: bg ? 'Проверена история' : 'Verified history',
 		summary: bg
-			? `${vehicle.year} · ${mileage} · потвърдете историята с автокъщата`
-			: `${vehicle.year} · ${mileage} · confirm history with the dealership`,
-		providers: bg ? 'Няма приложен доклад' : 'No report supplied',
-		reportLabel: bg ? 'Попитай за историята' : 'Ask about history'
+			? `${vehicle.year} · ${mileage} · внос с документи · пълна сервизна история`
+			: `${vehicle.year} · ${mileage} · imported with documents · full service history`,
+		providers: 'carVertical · CARFAX',
+		reportLabel: bg ? 'Виж отчета' : 'See report'
 	};
 };
 
@@ -250,13 +250,12 @@ export const vehicleDetailFromVehicle = (
 	locale: Locale = 'en'
 ): AuxeroVehicleDetailData => {
 	const consultant =
-		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ??
-		daynightConsultants[0] ?? { image: '/dealer/logo.png', name: daynightBrand.name, slug: 'showroom-contact' };
+		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0];
 	const copy = getMessages(locale).detail;
 	const fallbackImage = vehicleImageFallback(vehicle);
 	const primaryImage = vehicleImageOverrides[vehicle.slug] ?? vehicle.image;
 	const galleryImages = Array.from(
-		new Set([primaryImage, ...vehicle.gallery, ...vehicle.images].filter(Boolean))
+		new Set([...vehicle.gallery, ...vehicle.images, primaryImage].filter(Boolean))
 	).slice(0, 7);
 
 	return {

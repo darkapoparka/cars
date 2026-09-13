@@ -5,7 +5,7 @@ export type ProductRouteSource = {
 };
 
 export const productRouteSources: ProductRouteSource[] = [
-	{ route: '/', source: 'home-05.html', notes: 'Primary Promosale Varna homepage' },
+	{ route: '/', source: 'home-05.html', notes: 'Primary Day Night Auto homepage' },
 	{ route: '/inventory', source: 'listing-grid4-columns.html', notes: 'Default inventory grid' },
 	{
 		route: '/inventory?view=3',

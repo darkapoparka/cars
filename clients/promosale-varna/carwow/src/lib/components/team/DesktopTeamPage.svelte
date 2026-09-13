@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	// Native 1:1 rebuild of the localized /team (sale-agents.html) desktop content:
 	// breadcrumb + title + the consultant card grid (photo with social overlay +
 	// name/role/contact row). Self-contained scoped styles reproduce the effective
@@ -9,6 +10,7 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import {
 		daynightTeam,
 		daynightTeamDisclosure,
@@ -150,8 +152,8 @@
 			<li>
 				<a
 					href={`mailto:${member.email}`}
-					title="Имейл към Promosale Varna"
-					aria-label="Имейл към Promosale Varna"
+					title={`Имейл към ${daynightSite.shortName}`}
+					aria-label={`Имейл към ${daynightSite.shortName}`}
 				>
 					{@render mailIcon(24)}
 				</a>
@@ -185,6 +187,16 @@
 {/snippet}
 
 <div class="team-page">
+	<DesktopYellowRouteHero
+		headingId="team-route-title"
+		title={`Екипът на ${daynightSite.shortName}`}
+		copy={daynightTeamDisclosure}
+		panel="light"
+		primaryLabel="Свържете се"
+		primaryHref="/contact"
+		secondaryLabel="Виж автомобилите"
+		secondaryHref="/inventory"
+	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
@@ -201,7 +213,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на Promosale Varna</span>
+					<span>Екипът на {daynightSite.shortName}</span>
 				</li>
 			</ul>
 		</div>
@@ -209,7 +221,7 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на Promosale Varna</h1>
+			<h1>Екипът на {daynightSite.shortName}</h1>
 			<p class="team-disclosure">{daynightTeamDisclosure}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>
@@ -225,6 +237,18 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.team-page > .background-light,
+		.team-page > .pb-100 > .container > h1,
+		.team-disclosure {
+			display: none;
+		}
+
+		.team-page > .pb-100 > .tf-spacing-style3 {
+			height: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.team-disclosure {
 		margin-top: 12px;
 		color: var(--sa-muted);
@@ -243,9 +267,9 @@
 
 	.team-page {
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
-		font-size: 16px;
-		font-weight: 400;
+		font-family: var(--sa-font);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -270,8 +294,8 @@
 	/* Section title (verified #111827, clamp 32-48 -> 46.08 at 1440, weight 700). */
 	.team-page h1 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 	}
 
@@ -325,7 +349,7 @@
 	}
 
 	.font-weight-600 {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.text-secondary {
@@ -333,13 +357,13 @@
 	}
 
 	.text-sm {
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		line-height: 1.45;
 	}
 
 	.h5 {
-		font-size: 20px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
@@ -366,16 +390,16 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -500,7 +524,7 @@
 			padding: 0;
 		}
 		.team-page h1 {
-			font-size: 32px;
+			font-size: var(--sa-type-page);
 			line-height: 1.12;
 			text-align: left;
 		}
@@ -538,7 +562,7 @@
 			display: none;
 		}
 		.sale-agent-title {
-			font-size: 18px;
+			font-size: var(--sa-text-lg);
 		}
 
 		.sm-grid-cols-1.lg-grid-cols-2.gap-30.grid.grid-cols-4 {

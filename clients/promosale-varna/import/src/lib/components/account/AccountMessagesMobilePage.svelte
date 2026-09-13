@@ -43,14 +43,14 @@
 		<a
 			class="daynight-messages-mobile__brand"
 			href={resolve('/')}
-			aria-label="Promosale Varna начало"
+			aria-label="Day Night Auto начало"
 		>
-			<img src={daynightAssets.logoLight} alt="Promosale Varna" width="1285" height="235" />
+			<img src={daynightAssets.logoLight} alt="Day Night Auto" width="1285" height="235" />
 		</a>
 		<a
 			class="daynight-messages-mobile__call"
-			href="tel:+359892020208"
-			aria-label="Обади се на Promosale Varna"
+			href="tel:0877733110"
+			aria-label="Обади се на Day Night Auto"
 		>
 			<PhoneCall size={19} strokeWidth={2.2} aria-hidden="true" />
 		</a>
@@ -76,7 +76,7 @@
 			</header>
 
 			<div class="daynight-messages-mobile__thread" aria-live="polite">
-				<p class="daynight-messages-mobile__date">Разговор с Promosale Varna</p>
+				<p class="daynight-messages-mobile__date">Разговор с Day Night Auto</p>
 				{#each visibleMessages as message (message.id)}
 					<div class={['daynight-messages-mobile__message', message.sent && 'is-sent']}>
 						<p>{message.text}</p>

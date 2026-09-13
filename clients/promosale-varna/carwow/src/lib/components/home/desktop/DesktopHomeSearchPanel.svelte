@@ -184,7 +184,9 @@
 		isQuickFieldScrollLocked = false;
 	}
 
-	function openQuickField(field: DesktopHomeQuickField) {
+	function openQuickField(field: DesktopHomeQuickField, event: MouseEvent) {
+		if (event.currentTarget instanceof HTMLElement)
+			event.currentTarget.focus({ preventScroll: true });
 		activeQuickFieldName = field.name;
 		quickFilterQuery = '';
 		lockQuickFieldScroll();
@@ -308,7 +310,7 @@
 							aria-haspopup="dialog"
 							aria-expanded={activeQuickFieldName === field.name}
 							title={quickFullLabel(field)}
-							onclick={() => openQuickField(field)}
+							onclick={(event) => openQuickField(field, event)}
 						>
 							<span>{quickDisplayLabel(field)}</span>
 							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"
@@ -459,7 +461,7 @@
 					aria-haspopup="dialog"
 					aria-expanded={activeQuickFieldName === field.name}
 					title={quickFullLabel(field)}
-					onclick={() => openQuickField(field)}
+					onclick={(event) => openQuickField(field, event)}
 				>
 					<span data-daynight-quick-value="">{quickDisplayLabel(field)}</span>
 				</button>
@@ -610,9 +612,9 @@
 		color: #59616c;
 		cursor: pointer;
 		font: inherit;
-		font-size: 15px;
-		font-weight: 600;
-		min-height: 36px;
+		font-size: var(--sa-text-hero-tab);
+		font-weight: var(--sa-button-font-weight);
+		min-height: 44px;
 		padding: 0 18px;
 	}
 	.hero-intent__tabs button:hover {
@@ -636,8 +638,8 @@
 	.hero-intent__label {
 		color: var(--sa-ink);
 		display: grid;
-		font-size: 14px;
-		font-weight: 500;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		line-height: 20px;
 		margin: 0 0 8px;
@@ -662,7 +664,7 @@
 		box-shadow: none;
 		color: var(--sa-ink);
 		font: inherit;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		height: 46px;
 		line-height: 24px;
 		margin: 0;
@@ -683,8 +685,8 @@
 		cursor: pointer;
 		display: inline-flex;
 		font: inherit;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		height: 46px;
 		justify-content: center;
@@ -743,8 +745,8 @@
 		cursor: pointer;
 		display: flex;
 		font: inherit;
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		justify-content: space-between;
 		min-height: 46px;
@@ -781,7 +783,7 @@
 	}
 	.hero-intent__hint {
 		color: #59616c;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		margin: 12px 0 0;
 	}

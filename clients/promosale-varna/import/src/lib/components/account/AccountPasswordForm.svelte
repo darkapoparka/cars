@@ -12,13 +12,7 @@
 	};
 </script>
 
-<form
-	action="#"
-	class="dash-form"
-	novalidate
-	data-daynight-password-form
-	onsubmit={changePassword}
->
+<form action="#" class="dash-form" novalidate data-daynight-password-form onsubmit={changePassword}>
 	<input type="hidden" name="role" value={password.role} />
 	<input type="hidden" name="actorRole" value={password.role} />
 

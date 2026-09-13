@@ -1,0 +1,45 @@
+/* Shared shell and type hierarchy for the mobile Contact and About pages. */
+.mobile-info-page {
+	min-height: 100svh;
+	background: var(--sa-ink);
+	color: var(--sa-ink);
+	font-family: var(--sa-font);
+	font-size: var(--sa-type-body);
+	font-weight: var(--sa-weight-regular);
+	line-height: var(--sa-mobile-leading-body);
+}
+.mobile-info-page main {
+	position: relative;
+	display: grid;
+	gap: 28px;
+	margin-top: calc(-1 * var(--sa-mobile-panel-overlap));
+	padding: 22px var(--sa-mobile-gutter) 24px;
+	border-radius: var(--sa-r-xl) var(--sa-r-xl) 0 0;
+	background: var(--sa-surface);
+}
+.mobile-info-page main h2 {
+	margin: 0;
+	font-size: var(--sa-mobile-type-section-title);
+	font-weight: var(--sa-weight-medium);
+	line-height: var(--sa-mobile-leading-heading);
+}
+.mobile-info-page main p {
+	margin: 0;
+	color: var(--sa-ink-soft);
+}
+.mobile-info-page main a {
+	color: inherit;
+	text-decoration: none;
+}
+.mobile-info-page main a:focus-visible {
+	outline: 2px solid var(--sa-ink);
+	outline-offset: 3px;
+}
+.mobile-info-page .mh-footer {
+	margin-top: 0;
+}
+@media (min-width: 992px) {
+	.mobile-info-page {
+		display: none;
+	}
+}

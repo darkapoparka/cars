@@ -9,7 +9,8 @@ import type { PageServerLoad } from './$types';
 // route: the desktop shell renders on every viewport and the catch-all already
 // rendered the native DesktopTeamPage on it, so the +page.svelte below simply
 // mirrors the /terms shell with DesktopTeamPage as its content.
-export const prerender = true;
+// This response includes request-specific viewport chrome and live inventory context.
+export const prerender = false;
 
 export const load: PageServerLoad = () => ({
 	seo: routeSeo('team')

@@ -61,7 +61,7 @@ export const POST: RequestHandler = async ({ request, url }) => {
 	}
 
 	const messages = parsed.data.messages as UIMessage[];
-	const cms = buildCopilotContext();
+	const cms = await buildCopilotContext();
 	const fallbackMessage = fallbackCopilotChatResponse({
 		cms,
 		message: latestCopilotUserText(messages)

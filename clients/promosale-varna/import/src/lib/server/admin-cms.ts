@@ -1,7 +1,7 @@
 import { posts } from '$lib/data/blog';
 import type { DayNightCmsDocument } from '$lib/types/account';
 import { listManagedAgents } from './agents';
-import { listInquiriesForRole } from './inquiries';
+import { listStoredInquiriesForAdmin } from './inquiries';
 import { listInventoryForAdmin, listVehicleSubmissions } from './inventory';
 import { listMessagesForRole } from './messages';
 import { listManagedUsers } from './users';
@@ -138,9 +138,9 @@ export function getAdminInventoryRow(id: string) {
 	);
 }
 
-export function getAdminCmsOverview() {
+export async function getAdminCmsOverview() {
 	const inventory = getAdminInventoryRows();
-	const inquiries = listInquiriesForRole('admin');
+	const inquiries = await listStoredInquiriesForAdmin();
 	const messages = listMessagesForRole('admin');
 	const agents = listManagedAgents();
 	const users = listManagedUsers();
@@ -227,7 +227,7 @@ export function getAdminCmsOverview() {
 			},
 			{
 				description:
-					'Inventory CRUD uses local Promosale Varna server state before the Supabase migration.',
+					'Inventory CRUD uses local Day Night Auto server state before the Supabase migration.',
 				status: 'Prototype',
 				title: 'Inventory persistence'
 			},

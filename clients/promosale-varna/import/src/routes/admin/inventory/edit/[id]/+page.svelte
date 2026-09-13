@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Edit Listing</title>
+	<title>Day Night Auto Admin - Edit Listing</title>
 </svelte:head>
 
 <AdminShell title={listing?.title ?? 'Listing not found'} activePath="/admin/inventory">

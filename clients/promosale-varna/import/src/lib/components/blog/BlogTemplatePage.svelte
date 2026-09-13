@@ -39,13 +39,38 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Новини — Promosale Varna"
+	title="Новини — Day Night Auto"
 >
-	<section class="pb-100" data-daynight-blog-page>
-		<div class="container"><h1 class="h2">{blogPage.title}</h1></div>
-		<div class="tf-spacing-style3"></div>
-		<div class="container">
+	<section class="daynight-blog-page" data-daynight-blog-page>
+		<div class="bc-container daynight-blog-page__inner">
+			<header class="daynight-blog-page__header">
+				<h1 class="h2">{blogPage.title}</h1>
+			</header>
 			<BlogListGrid {posts} />
 		</div>
 	</section>
 </AuxeroPublicShell>
+
+<style>
+	.daynight-blog-page__inner {
+		padding-block: 56px 88px;
+	}
+
+	.daynight-blog-page__header {
+		margin-bottom: 40px;
+	}
+
+	.daynight-blog-page__header :global(h1) {
+		margin: 0;
+	}
+
+	@media (max-width: 767px) {
+		.daynight-blog-page__inner {
+			padding-block: 32px 56px;
+		}
+
+		.daynight-blog-page__header {
+			margin-bottom: 28px;
+		}
+	}
+</style>

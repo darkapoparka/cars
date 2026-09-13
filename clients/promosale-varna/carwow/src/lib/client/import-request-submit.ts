@@ -1,4 +1,10 @@
 import { resolve } from '$app/paths';
+import {
+	postIntake,
+	invalidIntakeResponse,
+	hasResponseId,
+	type IntakeOptions
+} from './intake-request';
 
 export type ImportRequestSubmitPayload = {
 	customerName: string;
@@ -35,72 +41,24 @@ export type ImportRequestSubmitResult =
 			details?: unknown;
 	  };
 
-function isJsonObject(value: unknown): value is Record<string, unknown> {
-	return Boolean(value && typeof value === 'object' && !Array.isArray(value));
-}
-
-function readResponseMessage(body: unknown, fallback: string) {
-	if (!isJsonObject(body) || typeof body.message !== 'string') {
-		return fallback;
-	}
-
-	return body.message;
-}
-
 export async function submitImportRequest(
-	payload: ImportRequestSubmitPayload
+	payload: ImportRequestSubmitPayload,
+	options: IntakeOptions = {}
 ): Promise<ImportRequestSubmitResult> {
-	try {
-		const response = await fetch(resolve('/api/import-requests'), {
-			method: 'POST',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(payload)
-		});
-		const body = await response.json().catch(() => null);
-
-		if (!response.ok) {
-			return {
-				ok: false,
-				status: response.status,
-				error: readResponseMessage(
-					body,
-					'Заявката не беше изпратена. Моля, обадете се или пишете във Viber.'
-				),
-				details: isJsonObject(body) ? body.details : undefined
-			};
-		}
-
-		if (
-			!isJsonObject(body) ||
-			typeof body.importRequestId !== 'string' ||
-			typeof body.leadId !== 'string' ||
-			typeof body.conversationId !== 'string'
-		) {
-			return {
-				ok: false,
-				status: response.status,
-				error: 'Получихме неочакван отговор. Моля, обадете се или пишете във Viber.'
-			};
-		}
-
-		return {
-			ok: true,
-			importRequestId: body.importRequestId,
-			leadId: body.leadId,
-			conversationId: body.conversationId,
-			status: typeof body.status === 'string' ? body.status : 'new'
-		};
-	} catch (error) {
-		return {
-			ok: false,
-			status: 0,
-			error:
-				error instanceof Error
-					? error.message
-					: 'Заявката не може да бъде изпратена. Моля, обадете се или пишете във Viber.'
-		};
-	}
+	const result = await postIntake(resolve('/api/import-requests'), payload, options);
+	if (!result.ok) return result;
+	const { body } = result;
+	if (
+		!hasResponseId(body, 'importRequestId') ||
+		!hasResponseId(body, 'leadId') ||
+		!hasResponseId(body, 'conversationId')
+	)
+		return invalidIntakeResponse(result.status);
+	return {
+		ok: true,
+		importRequestId: body.importRequestId,
+		leadId: body.leadId,
+		conversationId: body.conversationId,
+		status: typeof body.status === 'string' ? body.status : 'new'
+	};
 }

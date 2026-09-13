@@ -10,11 +10,15 @@ const OUTDIR = 'static/_previews';
 const W = 1900;
 mkdirSync(OUTDIR, { recursive: true });
 
-const { data: baseBuf, info } = await sharp(PLATE).resize({ width: W }).toBuffer({ resolveWithObject: true });
+const { data: baseBuf, info } = await sharp(PLATE)
+	.resize({ width: W })
+	.toBuffer({ resolveWithObject: true });
 const H = info.height;
 const s = W / 1600;
 const r = (n) => Math.round(n * s);
-const logo = await sharp(LOGO).resize({ height: r(42) }).toBuffer();
+const logo = await sharp(LOGO)
+	.resize({ height: r(42) })
+	.toBuffer();
 
 const F = 'font-family="Segoe UI, Arial, sans-serif"';
 const svg = `
@@ -43,5 +47,7 @@ await sharp(baseBuf)
 	])
 	.png()
 	.toFile(`${OUTDIR}/promo-banner-demo.png`);
-await sharp(`${OUTDIR}/promo-banner-demo.png`).webp({ quality: 86 }).toFile(`${OUTDIR}/promo-banner-demo.webp`);
+await sharp(`${OUTDIR}/promo-banner-demo.png`)
+	.webp({ quality: 86 })
+	.toFile(`${OUTDIR}/promo-banner-demo.webp`);
 console.log('wrote', `${OUTDIR}/promo-banner-demo.png`, W + 'x' + H);

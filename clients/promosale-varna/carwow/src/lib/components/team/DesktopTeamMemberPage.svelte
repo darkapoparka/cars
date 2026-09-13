@@ -9,6 +9,7 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { featuredDayNightVehicles } from '$lib/data/daynight-vehicles';
 	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
@@ -36,6 +37,16 @@
 </script>
 
 <div class="team-member-page">
+	<DesktopYellowRouteHero
+		headingId="team-member-route-title"
+		title={member.name}
+		copy={member.role}
+		primaryLabel="Виж автомобилите"
+		primaryHref="/inventory"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+		compact
+	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
@@ -82,7 +93,7 @@
 						{/if}
 						<div>
 							<span>Локация</span>
-							<a {...mapLinkProps}>Варна</a>
+							<a {...mapLinkProps}>{daynightSite.city}</a>
 						</div>
 					</div>
 				</div>
@@ -136,7 +147,7 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">Promosale Varna Варна</p>
+					<p class="eyebrow">{daynightSite.shortName} {daynightSite.city}</p>
 					<h2>Запази час за оглед</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
@@ -145,7 +156,11 @@
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Promosale Varna Варна" height="320" />
+				<LazyMapEmbed
+					src={mapEmbedSrc}
+					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+					height="320"
+				/>
 			</div>
 		</div>
 	</section>
@@ -171,6 +186,17 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.team-member-page > .background-light,
+		.team-member-profile__content > h1 {
+			display: none;
+		}
+
+		.team-member-profile {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.team-member-page,
 	.team-member-page * {
 		box-sizing: border-box;
@@ -184,9 +210,9 @@
 
 	.team-member-page {
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
-		font-size: 16px;
-		font-weight: 400;
+		font-family: var(--sa-font);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -211,16 +237,16 @@
 	   32-48 -> 46.08, left). */
 	.team-member-page h1 {
 		color: #111827;
-		font-size: clamp(36px, 4vw, 56px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 		text-align: center;
 	}
 
 	.team-member-page h2 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 	}
 
@@ -270,7 +296,7 @@
 	}
 
 	.font-weight-600 {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.text-secondary {
@@ -286,22 +312,22 @@
 	}
 
 	.h7 {
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
 	.h5 {
-		font-size: 20px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
 	.eyebrow {
 		margin-bottom: 12px;
 		color: var(--sa-red);
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -335,9 +361,9 @@
 		border-radius: 8px;
 		background: #fff;
 		color: #1c1c1c;
-		font-size: 18px;
+		font-size: var(--sa-text-lg);
 		padding: 0 24px;
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 	}
 
@@ -377,16 +403,16 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -468,7 +494,7 @@
 	.team-review-card span {
 		color: #6b7280;
 		display: block;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		margin-bottom: 4px;
 	}
 
@@ -534,7 +560,7 @@
 			border-radius: 12px;
 		}
 		.team-member-profile__content .h7 {
-			font-size: 16px;
+			font-size: var(--sa-text-base);
 			line-height: 1.6;
 		}
 		.team-member-profile__facts {
@@ -563,7 +589,7 @@
 		}
 		.team-vehicle-card .h5,
 		.team-teammate-card .h5 {
-			font-size: 18px;
+			font-size: var(--sa-text-lg);
 		}
 		.gap-24 {
 			gap: 16px;
@@ -575,12 +601,70 @@
 		}
 
 		.team-member-profile__content h1 {
-			font-size: 34px;
+			font-size: var(--sa-type-page);
 			line-height: 1.12;
 		}
 
 		.md-grid-cols-1.grid.grid-cols-3 {
 			grid-template-columns: 1fr;
+		}
+		.team-member-page h1,
+		.team-member-page .team-member-profile__content h1 {
+			font-size: var(--sa-mobile-type-page-title);
+			line-height: var(--sa-mobile-leading-heading);
+			overflow-wrap: anywhere;
+		}
+		.team-member-page h2 {
+			font-size: var(--sa-mobile-type-section-title);
+			line-height: 1.25;
+		}
+		.team-member-page .h7 {
+			font-size: var(--sa-mobile-type-body);
+			font-weight: var(--sa-weight-regular);
+			color: var(--sa-ink-soft);
+			line-height: var(--sa-leading-body);
+		}
+		.team-member-page .breadcrumb {
+			min-height: var(--sa-mobile-action-h);
+			padding-block: var(--sa-mobile-gap-xs);
+			gap: var(--sa-mobile-gap-sm);
+		}
+		.team-member-page .container {
+			min-width: 0;
+			width: calc(100% - 2 * var(--sa-mobile-gutter-wide));
+			padding: 0;
+		}
+		.team-member-page .container > *,
+		.team-member-page .grid > * {
+			min-width: 0;
+		}
+		.team-member-page .sa-cta {
+			max-width: 100%;
+			white-space: normal;
+			min-height: var(--sa-mobile-action-h);
+		}
+		.team-member-page .pb-80,
+		.team-member-page .pb-100 {
+			padding-bottom: var(--sa-space-8);
+		}
+		.team-member-page .py-80 {
+			padding-block: var(--sa-space-8);
+		}
+		.team-member-page .mb-32,
+		.team-member-page .mb-30,
+		.team-member-page .mb-24 {
+			margin-bottom: var(--sa-mobile-gap-lg);
+		}
+		.team-member-page .team-member-contact {
+			min-height: 0;
+			padding-block: var(--sa-space-8);
+		}
+		.team-member-page .team-vehicle-card .text-highlight {
+			color: var(--sa-price);
+		}
+		.team-member-page .team-member-profile__content .h7 {
+			font-size: var(--sa-mobile-type-body);
+			font-weight: var(--sa-weight-regular);
 		}
 	}
 </style>

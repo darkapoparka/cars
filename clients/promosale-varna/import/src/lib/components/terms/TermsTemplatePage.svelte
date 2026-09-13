@@ -38,7 +38,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Общи условия — Promosale Varna"
+	title="Общи условия — Day Night Auto"
 >
 	<TermsContent {sections} {title} />
 </AuxeroPublicShell>

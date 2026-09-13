@@ -21,7 +21,7 @@
 
 	const closeIcon = '/assets/icons/close-modal.svg';
 	const searchPlaceholder = $derived(
-		header?.ui.searchPlaceholder ?? 'Search Promosale Varna inventory'
+		header?.ui.searchPlaceholder ?? 'Search Day Night Auto inventory'
 	);
 	const garage = getGarageContext();
 	const isEnglish = $derived(copy.compareTitle === 'Compare Top Rated Vehicles');

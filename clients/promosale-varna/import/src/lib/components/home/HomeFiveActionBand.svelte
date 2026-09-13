@@ -3,7 +3,10 @@
 	import type { HomePageCopy } from '$lib/i18n/messages';
 	import { ArrowRight } from '@lucide/svelte';
 
-	let { copy, variant = 'guidance' }: { copy: HomePageCopy; variant?: 'guidance' | 'ownership' } =
+	let {
+		copy,
+		variant = 'guidance'
+	}: { copy: HomePageCopy; variant?: 'guidance' | 'ownership' | 'selection' | 'consultation' } =
 		$props();
 	const ownership = $derived(variant === 'ownership');
 	const english = $derived(copy.actionBand.importTitle === 'Import From Europe');
@@ -42,67 +45,90 @@
 <section
 	class="daynight-action-band py-100"
 	class:daynight-action-band--ownership={ownership}
+	class:daynight-action-band--guidance={variant === 'guidance'}
+	class:daynight-action-band--selection={variant === 'selection'}
+	class:daynight-action-band--consultation={variant === 'consultation'}
 	aria-labelledby={`daynight-action-band-${variant}-title`}
 >
 	<h2 id={`daynight-action-band-${variant}-title`} class="sr-only">
-		{firstTitle} · {secondTitle}
+		{#if variant === 'selection'}{firstTitle}{:else if variant === 'consultation'}{secondTitle}{:else}{firstTitle}
+			· {secondTitle}{/if}
 	</h2>
 	<div class="container">
 		<div class="daynight-action-grid wow fadeInUp" data-wow-delay="0.1s">
-			<a
-				class="daynight-action-card daynight-action-card--import"
-				href={resolve(ownership ? '/sell-your-car' : '/services')}
-			>
-				<div class="daynight-action-card__copy">
-					<h3 class="daynight-action-card__title">{firstTitle}</h3>
-					<p class="daynight-action-card__body">{firstBody}</p>
-					<span class="daynight-action-card__cta">
-						{firstCta}
-						<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
-					</span>
-				</div>
-				<img
-					class="daynight-action-card__img daynight-action-card__img--specialist"
-					src={ownership
-						? '/assets/daynight/banners/home-gclass-v1.png'
-						: '/assets/daynight/banners/home-gclass-v1.png'}
-					alt=""
-					width={ownership ? 1881 : 1774}
-					height={ownership ? 836 : 887}
-					loading="lazy"
-					decoding="async"
-				/>
-			</a>
-
-			<a
-				class="daynight-action-card daynight-action-card--consultation"
-				href={resolve(ownership ? '/financing' : '/contact')}
-			>
-				<div class="daynight-action-card__copy">
-					<h3 class="daynight-action-card__title">{secondTitle}</h3>
-					<p class="daynight-action-card__body">{secondBody}</p>
-					<span class="daynight-action-card__cta">
-						{secondCta}
-						<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
-					</span>
-				</div>
-				<img
-					class="daynight-action-card__img daynight-action-card__img--consultant"
-					src={ownership
-						? '/assets/daynight/banners/home-urus-v1.png'
-						: '/assets/daynight/banners/home-urus-v1.png'}
-					alt=""
-					width={ownership ? 2172 : 1774}
-					height={ownership ? 724 : 887}
-					loading="lazy"
-					decoding="async"
-				/>
-			</a>
+			{#if variant !== 'consultation'}
+				<a
+					class="daynight-action-card daynight-action-card--import"
+					class:daynight-action-card--photo={!ownership}
+					href={resolve(ownership ? '/sell-your-car' : '/services')}
+				>
+					<div class="daynight-action-card__copy">
+						<h3 class="daynight-action-card__title">{firstTitle}</h3>
+						<p class="daynight-action-card__body">{firstBody}</p>
+						<span class="daynight-action-card__cta">
+							{firstCta}
+							<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
+						</span>
+					</div>
+					<img
+						class="daynight-action-card__img daynight-action-card__img--specialist"
+						src={ownership
+							? '/assets/daynight/banners/home-gclass-v1.png'
+							: '/assets/daynight/banners/home-selection-v2.webp'}
+						alt=""
+						width={ownership ? 1881 : 1536}
+						height={ownership ? 836 : 512}
+						loading="lazy"
+						decoding="async"
+					/>
+				</a>
+			{/if}
+			{#if variant !== 'selection'}
+				<a
+					class="daynight-action-card daynight-action-card--consultation"
+					class:daynight-action-card--photo={!ownership}
+					href={resolve(ownership ? '/financing' : '/contact')}
+				>
+					<div class="daynight-action-card__copy">
+						<h3 class="daynight-action-card__title">{secondTitle}</h3>
+						<p class="daynight-action-card__body">{secondBody}</p>
+						<span class="daynight-action-card__cta">
+							{secondCta}
+							<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
+						</span>
+					</div>
+					<img
+						class="daynight-action-card__img daynight-action-card__img--consultant"
+						src={ownership
+							? '/assets/daynight/banners/home-urus-v1.png'
+							: '/assets/daynight/banners/home-consultation-v2.webp'}
+						alt=""
+						width={ownership ? 2172 : 1536}
+						height={ownership ? 724 : 512}
+						loading="lazy"
+						decoding="async"
+					/>
+				</a>
+			{/if}
 		</div>
 	</div>
 </section>
 
 <style>
+	.daynight-action-band--selection,
+	.daynight-action-band--consultation {
+		display: none;
+	}
+	@media (max-width: 767px) {
+		.daynight-action-band--selection,
+		.daynight-action-band--consultation {
+			display: block;
+		}
+		.daynight-action-band--selection .daynight-action-grid,
+		.daynight-action-band--consultation .daynight-action-grid {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
 	.daynight-action-band {
 		background: var(--bc-bg);
 		padding-top: 38px;
@@ -133,22 +159,22 @@
 
 	.daynight-action-card--import {
 		background: var(--bc-accent);
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.daynight-action-card--import:focus-visible {
 		background: var(--bc-accent);
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.daynight-action-card--consultation {
-		background: linear-gradient(135deg, #1c1c1c 0%, #050505 100%);
-		color: #ffffff;
+		background: linear-gradient(135deg, var(--bc-ink) 0%, var(--bc-showcase-dark-panel) 100%);
+		color: var(--bc-white);
 	}
 
 	.daynight-action-card--consultation:focus-visible {
-		background: linear-gradient(135deg, #1c1c1c 0%, #050505 100%);
-		color: #ffffff;
+		background: linear-gradient(135deg, var(--bc-ink) 0%, var(--bc-showcase-dark-panel) 100%);
+		color: var(--bc-white);
 	}
 
 	@media (hover: hover) and (pointer: fine) {
@@ -159,12 +185,12 @@
 
 		.daynight-action-card--import:hover {
 			background: var(--bc-accent);
-			color: #ffffff;
+			color: var(--bc-white);
 		}
 
 		.daynight-action-card--consultation:hover {
-			background: linear-gradient(135deg, #1c1c1c 0%, #050505 100%);
-			color: #ffffff;
+			background: linear-gradient(135deg, var(--bc-ink) 0%, var(--bc-showcase-dark-panel) 100%);
+			color: var(--bc-white);
 		}
 	}
 
@@ -223,24 +249,24 @@
 	}
 
 	.daynight-action-card--import .daynight-action-card__cta {
-		background: #ffffff;
-		color: #101010;
+		background: var(--bc-white);
+		color: var(--bc-ink);
 	}
 
 	.daynight-action-card--consultation .daynight-action-card__cta {
 		background: var(--bc-accent);
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	@media (hover: hover) and (pointer: fine) {
 		.daynight-action-card--import:hover .daynight-action-card__cta {
-			background: #f0f0f0;
-			color: #101010;
+			background: var(--bc-surface);
+			color: var(--bc-ink);
 		}
 
 		.daynight-action-card--consultation:hover .daynight-action-card__cta {
 			background: var(--bc-accent-hover);
-			color: #ffffff;
+			color: var(--bc-white);
 		}
 	}
 
@@ -318,53 +344,67 @@
 
 	@media (max-width: 767px) {
 		.daynight-action-band {
-			padding-top: 18px;
-			padding-bottom: 22px;
+			padding-top: 0;
+			padding-bottom: 0;
 		}
 
 		.daynight-action-grid {
-			gap: 14px;
+			gap: 12px;
 		}
 	}
 
 	@media (max-width: 575px) {
 		.daynight-action-card {
-			min-height: 204px;
-			padding: 20px 22px;
-			border-radius: 8px;
+			min-height: 136px;
+			padding: 16px 18px;
+			border: 1px solid rgb(255 255 255 / 0.08);
+			border-radius: 12px;
 		}
 
 		/* Title runs full width across the top; only the sub-copy sits in a
 		   left column so the car can take the whole right side of the card. */
 		.daynight-action-card__copy {
 			width: auto;
-			max-width: 100%;
-			gap: 7px;
+			max-width: 68%;
+			gap: 0;
 		}
 
 		.daynight-action-card--consultation .daynight-action-card__copy {
 			width: auto;
-			max-width: 100%;
+			max-width: 68%;
 		}
 
 		.daynight-action-card__title {
-			max-width: 220px;
-			font-size: 28px;
+			max-width: 100%;
+			color: var(--bc-white);
+			font-size: clamp(19.5px, 5.4vw, 22px);
+			line-height: 1.1;
+			white-space: nowrap;
 		}
 
 		.daynight-action-card__body {
-			max-width: 52%;
-			font-size: 16px;
+			display: none;
 		}
 
 		.daynight-action-card__cta {
 			width: max-content;
-			min-width: 184px;
-			height: 54px;
-			min-height: 54px;
-			margin-top: 14px;
-			padding: 0 20px;
-			font-size: 16px;
+			min-width: 142px;
+			height: 44px;
+			min-height: 44px;
+			margin-top: 18px;
+			padding: 0 15px;
+			border-radius: 10px;
+			font-size: 14px;
+		}
+
+		.daynight-action-card--import .daynight-action-card__cta {
+			background: var(--bc-showcase-dark-panel);
+			color: var(--bc-white);
+		}
+
+		.daynight-action-card--consultation .daynight-action-card__cta {
+			background: var(--bc-accent);
+			color: var(--bc-white);
 		}
 
 		/* Large cutout anchored into the bottom-right corner (clipped by the
@@ -441,28 +481,86 @@
 				linear-gradient(to bottom, transparent, black 12%, black 96%, transparent);
 			mask-composite: intersect;
 		}
-
-		.daynight-action-band:not(.daynight-action-band--ownership)
-			.daynight-action-card--import
-			.daynight-action-card__img {
-			top: auto;
-			bottom: 0;
-			height: 94%;
-		}
-
-		.daynight-action-band:not(.daynight-action-band--ownership)
-			.daynight-action-card--consultation
-			.daynight-action-card__img {
-			top: 6%;
-		}
 	}
 
 	@media (max-width: 575px) {
 		.daynight-action-card .daynight-action-card__img {
-			top: auto;
-			bottom: 0;
-			right: -16px;
-			height: 68%;
+			top: 0;
+			right: 0;
+			bottom: auto;
+			width: 92%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right center;
+			-webkit-mask-image: linear-gradient(
+				to right,
+				transparent 0 36%,
+				var(--bc-showcase-dark-panel) 58% 100%
+			);
+			mask-image: linear-gradient(
+				to right,
+				transparent 0 36%,
+				var(--bc-showcase-dark-panel) 58% 100%
+			);
+		}
+	}
+
+	.daynight-action-card.daynight-action-card--photo {
+		background: var(--bc-ink);
+		border: 0;
+		border-radius: var(--bc-radius-card);
+	}
+	.daynight-action-card--photo .daynight-action-card__img {
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		mask-image: none;
+		-webkit-mask-image: none;
+	}
+	.daynight-action-card--photo .daynight-action-card__copy {
+		width: 56%;
+		max-width: 56%;
+		align-content: center;
+		gap: 12px;
+	}
+	.daynight-action-card--photo .daynight-action-card__title {
+		white-space: normal;
+		text-wrap: balance;
+	}
+	.daynight-action-card--photo .daynight-action-card__body {
+		display: none;
+	}
+	.daynight-action-card--photo .daynight-action-card__cta,
+	.daynight-action-card--photo:hover .daynight-action-card__cta {
+		background: transparent;
+		color: var(--bc-white);
+		padding: 0;
+		min-width: 0;
+		width: fit-content;
+		justify-content: start;
+		font-size: 16px;
+		height: auto;
+		min-height: 0;
+		margin-top: 0;
+	}
+	@media (max-width: 767px) {
+		.daynight-action-card.daynight-action-card--photo {
+			min-height: 144px;
+			padding: 20px;
+		}
+		.daynight-action-card--photo .daynight-action-card__copy {
+			width: 56%;
+			max-width: 56%;
+		}
+		.daynight-action-card--photo .daynight-action-card__title {
+			font-size: 22px;
+			line-height: 25px;
+		}
+		.daynight-action-card--photo .daynight-action-card__cta {
+			font-size: 14px;
+			gap: 8px;
 		}
 	}
 </style>

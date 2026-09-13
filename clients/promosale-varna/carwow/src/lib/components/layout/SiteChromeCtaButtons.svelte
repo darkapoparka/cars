@@ -19,8 +19,8 @@
 			!mobile
 				? 'h-12 w-12 border-transparent bg-transparent p-0 text-sa-ink hover:bg-black/5'
 				: compact
-					? 'h-10 min-h-10 border-transparent bg-transparent px-3 text-[14px] hover:bg-white/12 focus-visible:bg-white/12'
-					: 'h-11 min-h-11 border-sa-red bg-sa-red px-5 text-[14px] hover:border-sa-dark hover:bg-sa-dark focus-visible:border-sa-dark focus-visible:bg-sa-dark max-[1180px]:px-4'
+					? 'h-10 min-h-10 border-transparent bg-transparent px-3 text-[length:var(--sa-text-caption)] hover:bg-white/12 focus-visible:bg-white/12'
+					: 'h-11 min-h-11 border-sa-red bg-sa-red px-5 text-[length:var(--sa-text-caption)] hover:border-sa-dark hover:bg-sa-dark focus-visible:border-sa-dark focus-visible:bg-sa-dark max-[1180px]:px-4'
 		]}
 		data-daynight-header-tool="sell"
 		aria-label={daynightSite.sellCarCta}

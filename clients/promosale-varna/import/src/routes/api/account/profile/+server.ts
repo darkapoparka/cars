@@ -18,7 +18,7 @@ export async function POST({ request }: { request: Request }) {
 	const phone = payloadString(payload, 'phone', 'Phone', 'SalesPhone');
 
 	if (!session) {
-		return errorJson('Promosale Varna account session is required', 401);
+		return errorJson('Day Night Auto account session is required', 401);
 	}
 
 	const user = updateDayNightUserProfile({
@@ -29,7 +29,7 @@ export async function POST({ request }: { request: Request }) {
 	});
 
 	if (!user) {
-		return errorJson('Promosale Varna account profile not found', 404);
+		return errorJson('Day Night Auto account profile not found', 404);
 	}
 
 	return okJson({

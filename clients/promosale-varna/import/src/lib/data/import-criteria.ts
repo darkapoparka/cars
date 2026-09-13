@@ -1,10 +1,10 @@
 export const importCountries = [
-	{ value: '', label: 'Всички' },
-	{ value: 'CN', label: 'Китай' },
-	{ value: 'DE', label: 'Германия' },
-	{ value: 'US', label: 'САЩ' },
-	{ value: 'JP', label: 'Япония' },
-	{ value: 'KR', label: 'Южна Корея' }
+	{ value: '', label: 'Всички', flagSrc: '/assets/daynight/flags/all.svg' },
+	{ value: 'CN', label: 'Китай', flagSrc: '/assets/daynight/flags/cn.svg' },
+	{ value: 'DE', label: 'Германия', flagSrc: '/assets/daynight/flags/de.svg' },
+	{ value: 'US', label: 'САЩ', flagSrc: '/assets/daynight/flags/us.svg' },
+	{ value: 'JP', label: 'Япония', flagSrc: '/assets/daynight/flags/jp.svg' },
+	{ value: 'KR', label: 'Южна Корея', flagSrc: '/assets/daynight/flags/kr.svg' }
 ] as const;
 
 export const importFuels = ['Бензин', 'Дизел', 'Хибрид', 'Електрически'];

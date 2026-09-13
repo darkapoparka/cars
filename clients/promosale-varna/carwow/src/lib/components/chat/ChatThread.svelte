@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import Send from '@lucide/svelte/icons/send';
 
 	export type ChatConversation = {
@@ -79,7 +80,7 @@
 <section class="chat-thread" aria-live="polite">
 	<header class="chat-thread__header">
 		<div>
-			<p class="chat-thread__eyebrow">Promosale Varna</p>
+			<p class="chat-thread__eyebrow">{daynightSite.shortName}</p>
 			<h2 id="daynight-chat-title">Чат с екипа</h2>
 		</div>
 		<span class="chat-thread__status">
@@ -118,7 +119,11 @@
 					>
 						<p>{message.body}</p>
 						<footer>
-							<span>{message.senderType === 'staff' ? 'Promosale Varna' : message.senderName}</span>
+							<span
+								>{message.senderType === 'staff'
+									? `${daynightSite.shortName}`
+									: message.senderName}</span
+							>
 							<time datetime={message.createdAt}>{formatTime(message.createdAt)}</time>
 						</footer>
 					</article>
@@ -170,16 +175,16 @@
 	.chat-thread__eyebrow {
 		margin: 0 0 2px;
 		color: rgba(255, 255, 255, 0.68);
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		text-transform: uppercase;
 	}
 
 	.chat-thread h2 {
 		margin: 0;
 		color: #fff;
-		font-size: 18px;
-		font-weight: 800;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 	}
 
@@ -188,8 +193,8 @@
 		background: transparent;
 		padding: 5px 10px;
 		color: #fff;
-		font-size: 12px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.chat-thread__error {
@@ -199,8 +204,8 @@
 		background: #fff1f2;
 		padding: 10px 12px;
 		color: #9f1239;
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.chat-thread__loading,
@@ -209,7 +214,7 @@
 		padding: 24px 16px;
 		color: #64748b;
 		text-align: center;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 	}
 
 	.chat-thread__start,
@@ -223,8 +228,8 @@
 		display: grid;
 		gap: 6px;
 		color: #334155;
-		font-size: 13px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.chat-thread input,
@@ -236,7 +241,7 @@
 		padding: 10px 11px;
 		color: #111827;
 		font: inherit;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		resize: vertical;
 	}
 
@@ -257,7 +262,7 @@
 		border-radius: 8px;
 		background: var(--sa-ink);
 		color: #fff;
-		font-weight: 800;
+		font-weight: var(--sa-button-font-weight);
 		cursor: pointer;
 	}
 
@@ -284,7 +289,7 @@
 		max-width: 86%;
 		border-radius: 8px;
 		padding: 9px 11px;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 1.45;
 	}
 
@@ -299,7 +304,7 @@
 		justify-content: space-between;
 		gap: 8px;
 		margin-top: 6px;
-		font-size: 11px;
+		font-size: var(--sa-text-xs);
 		opacity: 0.72;
 	}
 

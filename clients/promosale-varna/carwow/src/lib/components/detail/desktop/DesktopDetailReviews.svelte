@@ -57,9 +57,7 @@
 			{/each}
 		</div>
 		<div class="rating-box__button">
-			<a href="#reviewForm" class="sa-cta sa-cta-primary sa-cta-compact">
-				Добавете отзив
-			</a>
+			<a href="#reviewForm" class="sa-cta-compact sa-cta sa-cta-primary"> Добавете отзив </a>
 		</div>
 	</div>
 </div>
@@ -117,7 +115,7 @@
 
 	<a
 		href={resolve('/contact?intent=review')}
-		class="sa-cta sa-cta-primary sa-cta-compact"
+		class="sa-cta-compact sa-cta sa-cta-primary"
 		title="Отзивите се потвърждават от екипа преди публикуване."
 	>
 		Изпратете отзив

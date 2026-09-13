@@ -57,17 +57,17 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Marketplace | Home3</title>
+	<title>Day Night Auto Marketplace | Home3</title>
 	<meta
 		name="description"
-		content="A carwow-inspired Promosale Varna marketplace homepage for buying, selling and comparing cars."
+		content="A carwow-inspired Day Night Auto marketplace homepage for buying, selling and comparing cars."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>
 
-<main class="home3-shell">
+<main id="main-content" tabindex="-1" class="home3-shell">
 	<header class="home3-header" aria-label="Home3 navigation">
-		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Promosale Varna Home3">
+		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="Day Night Auto Home3">
 			<span>DAY</span>
 			<strong>AUTO</strong>
 		</a>
@@ -108,7 +108,7 @@
 		<div class="home3-hero__center">
 			<h1 id="home3-title">
 				<span>Changing your car?</span>
-				<span>Promosale Varna can help</span>
+				<span>Day Night Auto can help</span>
 			</h1>
 			<i aria-hidden="true"></i>
 
@@ -318,7 +318,7 @@
 	}
 
 	.home3-shell {
-		--blue: #8A0000;
+		--blue: #8a0000;
 		--blue-dark: #000000;
 		--red: #ed1b2f;
 		--ink: #070b14;
@@ -328,14 +328,7 @@
 		min-height: 100vh;
 		overflow: clip;
 		background: #fff;
-		font-family:
-			Inter,
-			ui-sans-serif,
-			system-ui,
-			-apple-system,
-			BlinkMacSystemFont,
-			'Segoe UI',
-			sans-serif;
+		font-family: var(--sa-font);
 	}
 
 	.home3-shell :where(a, button) {
@@ -383,8 +376,8 @@
 		align-items: baseline;
 		gap: 8px;
 		width: fit-content;
-		font-size: 31px;
-		font-weight: 1000;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		letter-spacing: -0.01em;
 	}
@@ -407,8 +400,8 @@
 		justify-content: center;
 		gap: 38px;
 		color: #070b14;
-		font-size: 14px;
-		font-weight: 720;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		white-space: nowrap;
 	}
 
@@ -425,8 +418,8 @@
 		gap: 2px;
 		min-width: 44px;
 		color: #07101f;
-		font-size: 11px;
-		font-weight: 760;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1;
 	}
 
@@ -444,8 +437,8 @@
 		border-radius: 5px;
 		background: var(--red);
 		color: white;
-		font-size: 14px;
-		font-weight: 900;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		box-shadow: 0 8px 16px rgb(237 27 47 / 0.17);
 	}
 
@@ -522,8 +515,8 @@
 		margin: 0;
 		color: #060b15;
 		text-align: center;
-		font-size: clamp(42px, 3.25vw, 52px);
-		font-weight: 1000;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.01em;
 		line-height: 0.98;
 	}
@@ -565,8 +558,8 @@
 		border: 0;
 		background: transparent;
 		color: white;
-		font-size: 16px;
-		font-weight: 900;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		cursor: pointer;
 	}
 
@@ -583,7 +576,7 @@
 	}
 
 	.home3-search__tabs .home3-search__tab--active::after {
-		width: 90px;
+		width: 100%;
 	}
 
 	.home3-search__input {
@@ -604,8 +597,8 @@
 		outline: 0;
 		padding: 0 18px;
 		color: #111827;
-		font-size: 16px;
-		font-weight: 650;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.home3-search__input input::placeholder {
@@ -632,8 +625,8 @@
 		gap: 16px;
 		margin: 0 0 12px;
 		color: white !important;
-		font-size: 14px;
-		font-weight: 720;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home3-search p a {
@@ -645,8 +638,8 @@
 		border-radius: 4px;
 		background: var(--blue);
 		color: white;
-		font-size: 14px;
-		font-weight: 900;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.home3-market {
@@ -676,8 +669,8 @@
 		background: #f8fafc;
 		color: #07101f;
 		box-shadow: 0 9px 17px rgb(15 23 42 / 0.07);
-		font-size: 14px;
-		font-weight: 780;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.home3-chips :global(svg) {
@@ -714,8 +707,8 @@
 	.home3-section-head h2 {
 		margin: 0;
 		color: inherit;
-		font-size: 22px;
-		font-weight: 1000;
+		font-size: var(--sa-text-card-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.01em;
 		line-height: 1.05;
 	}
@@ -724,8 +717,8 @@
 		max-width: 560px;
 		margin: 9px 0 0;
 		color: white !important;
-		font-size: 14px;
-		font-weight: 650;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.38;
 	}
 
@@ -739,8 +732,8 @@
 		border-radius: 4px;
 		background: var(--red);
 		color: white;
-		font-size: 14px;
-		font-weight: 900;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		box-shadow: 0 8px 18px rgb(237 27 47 / 0.24);
 	}
 
@@ -777,8 +770,8 @@
 		align-items: center;
 		gap: 12px;
 		color: #070b14;
-		font-size: 14px;
-		font-weight: 730;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.18;
 	}
 
@@ -842,15 +835,15 @@
 	}
 
 	.home3-budget-card strong {
-		font-size: 18px;
-		font-weight: 950;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.05;
 	}
 
 	.home3-budget-card small {
 		color: var(--muted);
-		font-size: 11px;
-		font-weight: 700;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home3-budget-card img {
@@ -901,8 +894,8 @@
 
 	.home3-section-head a {
 		color: var(--blue);
-		font-size: 14px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.home3-premium__grid {
@@ -947,8 +940,8 @@
 	.home3-premium-card h3 {
 		margin: 0;
 		color: #070b14;
-		font-size: 20px;
-		font-weight: 1000;
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.04;
 	}
 
@@ -957,10 +950,9 @@
 		margin: 8px 0 8px;
 		overflow: hidden;
 		color: #151b28;
-		font-size: 13px;
-		font-weight: 730;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
+		line-height: var(--sa-leading-normal);
 	}
 
 	.home3-premium-card__copy span {
@@ -972,8 +964,8 @@
 		border-radius: 3px;
 		background: var(--blue);
 		color: white;
-		font-size: 11px;
-		font-weight: 900;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 	}
 
@@ -1012,8 +1004,8 @@
 
 	.home3-premium-card__price small {
 		color: var(--muted);
-		font-size: 10px;
-		font-weight: 730;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.15;
 		justify-self: end;
 	}
@@ -1021,8 +1013,8 @@
 	.home3-premium-card__price strong,
 	.home3-premium-card__price b {
 		color: #070b14;
-		font-size: 16px;
-		font-weight: 1000;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.1;
 		white-space: nowrap;
 	}
@@ -1082,8 +1074,8 @@
 		right: 16px;
 		bottom: 15px;
 		color: white;
-		font-size: 16px;
-		font-weight: 1000;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.05;
 	}
 
@@ -1100,8 +1092,8 @@
 	.home3-browse-block h3 {
 		margin: 0 0 12px;
 		color: #070b14;
-		font-size: 23px;
-		font-weight: 1000;
+		font-size: var(--sa-text-2xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.05;
 	}
 
@@ -1132,8 +1124,8 @@
 		border-radius: 7px;
 		background: white;
 		color: var(--blue);
-		font-size: 26px;
-		font-weight: 1000;
+		font-size: var(--sa-text-2xl);
+		font-weight: var(--sa-weight-strong);
 		box-shadow: inset 0 0 0 1px #e3e9f1;
 	}
 
@@ -1154,8 +1146,8 @@
 	.home3-type-card strong {
 		overflow: hidden;
 		color: #070b14;
-		font-size: 18px;
-		font-weight: 950;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.1;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -1164,8 +1156,8 @@
 	.home3-brand-card__copy small,
 	.home3-type-card small {
 		color: var(--muted);
-		font-size: 12px;
-		font-weight: 780;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.home3-brand-card :global(svg) {
@@ -1299,12 +1291,12 @@
 		}
 
 		.home3-premium-card h3 {
-			font-size: 18px;
+			font-size: var(--sa-text-lg);
 		}
 
 		.home3-premium-card__price strong,
 		.home3-premium-card__price b {
-			font-size: 14px;
+			font-size: var(--sa-text-caption);
 		}
 
 		.home3-premium-card__price {
@@ -1353,7 +1345,7 @@
 		}
 
 		.home3-logo {
-			font-size: 24px;
+			font-size: var(--sa-text-2xl);
 		}
 
 		.home3-actions > a:not(.home3-sell-button),
@@ -1371,7 +1363,7 @@
 		}
 
 		.home3-hero h1 {
-			font-size: 39px;
+			font-size: var(--sa-heading-section);
 		}
 
 		.home3-hero__car {
@@ -1391,7 +1383,7 @@
 		}
 
 		.home3-search__tabs button {
-			font-size: 14px;
+			font-size: var(--sa-button-font-size);
 		}
 
 		.home3-market {

@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin - Add Listing</title>
+	<title>Day Night Auto Admin - Add Listing</title>
 </svelte:head>
 
 <AdminShell title="Add listing" activePath="/admin/inventory/new">

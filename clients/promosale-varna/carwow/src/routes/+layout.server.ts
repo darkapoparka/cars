@@ -1,4 +1,5 @@
 import { loadInventoryCountSummary } from '$lib/server/public-inventory-summary';
+import { isMobileUserAgent } from '$lib/server/device';
 import type { LayoutServerLoad } from './$types';
 
 function shouldLoadStorefrontInventorySummary(pathname: string) {
@@ -10,15 +11,20 @@ function shouldLoadStorefrontInventorySummary(pathname: string) {
 	);
 }
 
-export const load: LayoutServerLoad = async ({ locals, url }) => {
+export const load: LayoutServerLoad = async ({ locals, url, request }) => {
+	const initialViewport = isMobileUserAgent(request.headers.get('user-agent'))
+		? 'mobile'
+		: 'desktop';
 	if (!shouldLoadStorefrontInventorySummary(url.pathname)) {
 		return {
+			initialViewport,
 			storefrontInventorySummary: null
 		};
 	}
 
 	try {
 		return {
+			initialViewport,
 			storefrontInventorySummary: await loadInventoryCountSummary({ db: locals.db })
 		};
 	} catch (error) {
@@ -28,6 +34,7 @@ export const load: LayoutServerLoad = async ({ locals, url }) => {
 		});
 
 		return {
+			initialViewport,
 			storefrontInventorySummary: null
 		};
 	}

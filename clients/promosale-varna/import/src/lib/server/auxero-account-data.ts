@@ -407,10 +407,10 @@ const applyAccountShell = (
 	options: AuxeroRenderOptions = {}
 ) => {
 	const context = accountContext(templateFile, options);
-	const listingHeading = context.isAdmin ? 'Promosale Varna Inventory' : 'Моите автомобили';
+	const listingHeading = context.isAdmin ? 'Day Night Auto Inventory' : 'Моите автомобили';
 
 	let next = html
-		.replaceAll('Promosale Varna Admin', escapeHtml(context.session.name))
+		.replaceAll('Day Night Auto Admin', escapeHtml(context.session.name))
 		.replaceAll(
 			'/assets/images/dashboard/dashbroard_avatar.webp',
 			accountAvatarByRole[context.session.role]
@@ -785,7 +785,7 @@ const favoriteGrid = (context: AccountContext) => {
 	const content = savedVehicles.length
 		? savedVehicles.map((vehicle) => favoriteCard(vehicle)).join('\n')
 		: `<div class="dashboard-box bg-white" data-daynight-favorites-empty="true">
-			<p class="h4 mb-8">No saved Promosale Varna vehicles yet</p>
+			<p class="h4 mb-8">No saved Day Night Auto vehicles yet</p>
 			<p class="text-secondary">Use the heart action on inventory cards to build your saved list.</p>
 		</div>`;
 
@@ -938,7 +938,7 @@ const applyDashboardData = (
 	);
 	next = replaceFirstDivAfter(
 		next,
-		context.isAdmin ? 'Promosale Varna Inventory' : 'My Listings',
+		context.isAdmin ? 'Day Night Auto Inventory' : 'My Listings',
 		'<div class="cart-wrapper">',
 		cartWrapper(accountListingsData(context))
 	);
@@ -1175,11 +1175,11 @@ const applyAddListingData = (
 		.replaceAll('List Now', context.isAdmin ? 'Publish Locally' : 'Submit Draft')
 		.replace(
 			'<a href="#" class="btn btn-line-1 px-24 btn-large font-weight-600">',
-			'<a href="#" class="btn btn-line-1 px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing draft saved locally for Promosale Varna review" data-daynight-submit-form="true" data-daynight-listing-status="draft">'
+			'<a href="#" class="btn btn-line-1 px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing draft saved locally for Day Night Auto review" data-daynight-submit-form="true" data-daynight-listing-status="draft">'
 		)
 		.replace(
 			'<a href="#" class="btn btn-primary px-24 btn-large font-weight-600">',
-			`<a href="#" class="btn btn-primary px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing submitted locally for Promosale Varna" data-daynight-submit-form="true" data-daynight-listing-status="${primaryListingStatus}">`
+			`<a href="#" class="btn btn-primary px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing submitted locally for Day Night Auto" data-daynight-submit-form="true" data-daynight-listing-status="${primaryListingStatus}">`
 		)
 		.replaceAll('value="Audi A6 Avant E-Tron"', `value="${escapeHtml(title)}"`)
 		.replaceAll('placeholder="Years"', 'placeholder="Year"')
@@ -1257,17 +1257,17 @@ const replaceDashboardDemoText = (html: string) =>
 		.replaceAll('$44.900,00', vehicles[0]?.priceLabel ?? 'On request')
 		.replaceAll('$42.800,00', vehicles[1]?.priceLabel ?? 'On request')
 		.replaceAll('$45.500,00', vehicles[2]?.priceLabel ?? 'On request')
-		.replaceAll('Randynox', 'Promosale Varna Lead')
-		.replaceAll('Mista Nyroom', 'Promosale Varna Customer')
-		.replaceAll('Marvin McKinney', 'Promosale Varna Sales')
-		.replaceAll('John Smith', 'Promosale Varna Customer')
-		.replaceAll('Brooklyn Simmons', 'Promosale Varna Inspection')
-		.replaceAll('Arlene McCoy', 'Promosale Varna Import')
-		.replaceAll('Darrell Steward', 'Promosale Varna Admin')
-		.replaceAll('Theresa Webb', 'Promosale Varna Support')
+		.replaceAll('Randynox', 'Day Night Auto Lead')
+		.replaceAll('Mista Nyroom', 'Day Night Auto Customer')
+		.replaceAll('Marvin McKinney', 'Day Night Auto Sales')
+		.replaceAll('John Smith', 'Day Night Auto Customer')
+		.replaceAll('Brooklyn Simmons', 'Day Night Auto Inspection')
+		.replaceAll('Arlene McCoy', 'Day Night Auto Import')
+		.replaceAll('Darrell Steward', 'Day Night Auto Admin')
+		.replaceAll('Theresa Webb', 'Day Night Auto Support')
 		.replaceAll('grew-sra@gmail.com', daynightContact.emailLabel)
-		.replaceAll('Hey! there I&#39;m available', 'Promosale Varna follow-up is ready')
-		.replaceAll("Hey! there I'm available", 'Promosale Varna follow-up is ready');
+		.replaceAll('Hey! there I&#39;m available', 'Day Night Auto follow-up is ready')
+		.replaceAll("Hey! there I'm available", 'Day Night Auto follow-up is ready');
 
 export const applyAccountTemplateData = (
 	html: string,

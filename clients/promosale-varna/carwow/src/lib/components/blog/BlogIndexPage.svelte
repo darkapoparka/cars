@@ -11,7 +11,8 @@
 	// an exact visual match.
 
 	import { resolve } from '$app/paths';
-	import { Search } from '@lucide/svelte';
+	import { Search, X } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import type { DayNightArticle, DayNightArticleCategory } from '$lib/data/daynight-blog';
 
@@ -22,11 +23,6 @@
 		archive: string;
 	};
 
-	type CountedOption = {
-		value: string;
-		label: string;
-		count: number;
-	};
 	type BlogFilterHref = '/blog' | `/blog?${string}`;
 
 	const blogCategories: DayNightArticleCategory[] = [
@@ -97,16 +93,10 @@
 			.slice(0, 12)
 			.map((tag) => ({ value: tag, label: tag, count: countTag(tag) }))
 	);
-	const archiveOptions = $derived.by(() =>
-		[
-			...articles.reduce<Map<string, number>>((counts, article) => {
-				const value = articleArchiveValue(article);
-				counts.set(value, (counts.get(value) ?? 0) + 1);
-				return counts;
-			}, new Map())
-		]
-			.sort(([first], [second]) => second.localeCompare(first))
-			.map(([value, count]) => ({ value, label: formatArticleArchive(value), count }))
+	const heroTagOptions = $derived(
+		tagOptions
+			.filter((option) => !['покупка', 'продажба'].includes(normalize(option.value)))
+			.slice(0, 6)
 	);
 	const hasActiveFilters = $derived(
 		Boolean(filters.q || filters.category || filters.tag || filters.archive)
@@ -144,20 +134,13 @@
 		}).format(new Date(`${value}T00:00:00+02:00`));
 	}
 
-	function formatArticleArchive(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
-			month: 'long',
-			year: 'numeric'
-		}).format(new Date(`${value}-01T00:00:00+02:00`));
-	}
-
 	function filterHref(next: Partial<BlogFilters>): BlogFilterHref {
 		const params = new SvelteURLSearchParams();
 		const target = {
-			q: '',
-			category: '',
-			tag: '',
-			archive: '',
+			q: filters.q,
+			category: filters.category,
+			tag: filters.tag,
+			archive: filters.archive,
 			...next
 		};
 
@@ -183,36 +166,96 @@
 	}
 </script>
 
-{#snippet articleMeta(article: DayNightArticle, tone: 'light' | 'dark' = 'dark')}
-	<div class={tone === 'light' ? 'blog-meta blog-meta--light' : 'blog-meta'}>
+{#snippet articleMeta(article: DayNightArticle)}
+	<div class="blog-meta">
 		{#if article.author}<span>от {article.author}</span>{/if}
 		<span>{formatArticleDate(article.date)}</span>
-		<span class="text-highlight text-underline uppercase">{article.category}</span>
+		<span class="blog-meta__category">{article.category}</span>
 	</div>
 {/snippet}
 
 {#snippet featuredCard(article: DayNightArticle)}
 	<a
 		href={resolve('/blog/[slug]', { slug: article.slug })}
-		class="post-style-2 blog-featured-card mb-40 overflow-hidden"
+		class="blog-featured-card"
 		data-daynight-article-card
 		data-daynight-category={article.category}
 		data-daynight-tags={article.tags.join(' ')}
 		data-daynight-archive={articleArchiveValue(article)}
 		data-daynight-title={article.title}
 	>
-		<img
-			class="post--img flex"
-			src={article.image}
-			alt={article.title}
-			loading="eager"
-			decoding="async"
-		/>
-		<div class="content">
-			<h2 class="h3 mb-8 text-white capitalize">{article.title}</h2>
-			{@render articleMeta(article, 'light')}
+		<div class="blog-featured-card__image">
+			<img
+				class="post--img"
+				src={article.image}
+				alt={article.title}
+				loading="eager"
+				decoding="async"
+			/>
+		</div>
+		<div class="blog-featured-card__content">
+			{@render articleMeta(article)}
+			<h2 class="h3 mb-8">{article.title}</h2>
+			<p class="text-secondary">{article.description}</p>
 		</div>
 	</a>
+{/snippet}
+
+{#snippet blogHeroControls()}
+	<div class="blog-hero-controls">
+		<nav class="blog-category-switch" aria-label="Категории">
+			<a href={resolve('/blog')} class={!hasActiveFilters ? 'active' : ''}>Всички</a>
+			{#each categoryOptions as option (option.value)}
+				<a
+					href={resolve(
+						filterHref({ category: isActiveFilter('category', option.value) ? '' : option.value })
+					)}
+					class:active={isActiveFilter('category', option.value)}
+				>
+					{option.label}
+				</a>
+			{/each}
+		</nav>
+		<form action={resolve('/blog')} class="blog-hero-search" method="get">
+			<label class="sr-only" for="blog-hero-search">Търсене в публикациите</label>
+			<div class="blog-hero-search__field">
+				<input
+					id="blog-hero-search"
+					name="q"
+					type="search"
+					placeholder="Търси съвет, модел или тема..."
+					value={filters.q}
+				/>
+				<button type="submit" aria-label="Търси"><Search size={20} /></button>
+			</div>
+			{#each searchHiddenFilters() as [name, value] (name)}
+				<input type="hidden" {name} {value} />
+			{/each}
+		</form>
+		<div class="blog-quick-row">
+			<nav class="blog-quick-topics" aria-label="Бързи теми">
+				{#each heroTagOptions as option (option.value)}
+					<a
+						href={resolve(
+							filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value })
+						)}
+						class:active={isActiveFilter('tag', option.value)}
+					>
+						{option.label}<span>{option.count}</span>
+					</a>
+				{/each}
+			</nav>
+			<div class="blog-filter-status" aria-live="polite">
+				<span
+					>{visibleArticles.length}
+					{visibleArticles.length === 1 ? 'публикация' : 'публикации'}</span
+				>
+				{#if hasActiveFilters}<a href={resolve('/blog')} class="blog-clear-filters"
+						><X size={16} />Изчисти</a
+					>{/if}
+			</div>
+		</div>
+	</div>
 {/snippet}
 
 {#snippet articleCard(article: DayNightArticle)}
@@ -242,24 +285,14 @@
 	</a>
 {/snippet}
 
-{#snippet filterList(title: string, options: CountedOption[], name: 'category' | 'tag' | 'archive')}
-	<p class="h4 mb-16">{title}</p>
-	<ul class={name === 'tag' ? 'widget-tags mb-32' : 'widget-categories mb-32'}>
-		{#each options as option (option.value)}
-			<li>
-				<a
-					href={resolve(filterHref({ [name]: option.value }))}
-					class={isActiveFilter(name, option.value) ? 'active' : ''}
-				>
-					<span class="label">{option.label}</span>
-					<span>({option.count})</span>
-				</a>
-			</li>
-		{/each}
-	</ul>
-{/snippet}
-
 <div class="blog-page">
+	<DesktopYellowRouteHero
+		headingId="blog-route-title"
+		title="Съвети за покупка и продажба"
+		panel="light"
+		deckWidth="wide"
+		children={blogHeroControls}
+	/>
 	<section class="pb-100">
 		<div class="container">
 			<div class="blog-page-title">
@@ -277,111 +310,248 @@
 					<a class="sa-cta sa-cta-primary" href={resolve('/contact')}>Свържете се с нас</a>
 				</div>
 			{:else}
-			<div class="innerpage-container blog-index-layout">
-				<div class="blog-controls" aria-label="Търсене и категории">
-					<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
-						<label class="sr-only" for="blog-search">Търсене в публикациите</label>
-						<input
-							class="input-normal"
-							type="search"
-							name="q"
-							id="blog-search"
-							placeholder="Търсене в публикациите..."
-							value={filters.q}
-						/>
-						{#each searchHiddenFilters() as [name, value] (name)}
-							<input type="hidden" {name} {value} />
-						{/each}
-						<button type="submit" class="widget-search-btn" aria-label="Търси">
-							<Search size={22} />
-						</button>
-					</form>
-
-					<p class="h4 mb-16">Категории</p>
-					<ul class="widget-categories mb-32">
-						<li>
-							<a href={resolve(filterHref({}))} class={!hasActiveFilters ? 'active' : ''}>
-								<span class="label">Всички публикации</span>
-								<span>({articles.length})</span>
-							</a>
-						</li>
-						{#each categoryOptions as option (option.value)}
+				<div class="blog-index-layout">
+					<div class="blog-controls" role="search" aria-label="Търсене и категории">
+						<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
+							<label class="sr-only" for="blog-search">Търсене в публикациите</label>
+							<input
+								class="input-normal"
+								type="search"
+								name="q"
+								id="blog-search"
+								placeholder="Търсене в публикациите..."
+								value={filters.q}
+							/>
+							{#each searchHiddenFilters() as [name, value] (name)}
+								<input type="hidden" {name} {value} />
+							{/each}
+							<button type="submit" class="widget-search-btn" aria-label="Търси">
+								<Search size={22} />
+							</button>
+						</form>
+						<ul class="widget-categories blog-mobile-categories">
 							<li>
-								<a
-									href={resolve(filterHref({ category: option.value }))}
-									class={isActiveFilter('category', option.value) ? 'active' : ''}
-								>
-									<span class="label">{option.label}</span>
-									<span>({option.count})</span>
-								</a>
+								<a href={resolve('/blog')} class={!hasActiveFilters ? 'active' : ''}>Всички</a>
 							</li>
-						{/each}
-					</ul>
-				</div>
-				<div class="innerpage__content">
-					<div data-daynight-blog-index>
-						{#if featuredArticle}
-							{@render featuredCard(featuredArticle)}
-						{/if}
-
-						{#if cardArticles.length}
-							<div class="md-grid-cols-1 mb-40 grid grid-cols-2 gap-x-30 gap-y-40">
-								{#each cardArticles as article (article.slug)}
-									{@render articleCard(article)}
-								{/each}
-							</div>
-						{/if}
-
-						{#if !visibleArticles.length}
-							<p class="h5 text-secondary daynight-blog-empty mb-40">
-								Няма публикации по избраните филтри.
-							</p>
-						{/if}
+							{#each categoryOptions as option (option.value)}
+								<li>
+									<a
+										href={resolve(filterHref({ category: option.value }))}
+										class={isActiveFilter('category', option.value) ? 'active' : ''}
+										>{option.label}</a
+									>
+								</li>
+							{/each}
+						</ul>
 					</div>
-				</div>
 
-				<aside class="innerpage__sidebar" aria-label="Още публикации и филтри">
-					<div class="divider mb-32 w-full"></div>
-					<p class="h4 mb-16 capitalize">Последни публикации</p>
-					<div class="mb-32">
-						{#each articles.slice(0, 4) as article, index (article.slug)}
-							<a
-								href={resolve('/blog/[slug]', { slug: article.slug })}
-								class="recent-post mb-16 overflow-hidden"
-							>
-								<div class="image">
-									<img
-										class="post--img flex"
-										src={article.image}
-										alt={article.title}
-										loading="lazy"
-										decoding="async"
-									/>
+					<div class="innerpage__content">
+						<div data-daynight-blog-index>
+							{#if featuredArticle}
+								<div class="blog-magazine">
+									{@render featuredCard(featuredArticle)}
+									{#if cardArticles.length}
+										<div class="blog-magazine__side">
+											{#each cardArticles.slice(0, 2) as article (article.slug)}
+												{@render articleCard(article)}
+											{/each}
+										</div>
+									{/if}
 								</div>
-								<div class="content">
-									{@render articleMeta(article)}
-									<p class="title h7">{article.title}</p>
-								</div>
-							</a>
-							{#if index < Math.min(articles.length, 4) - 1}
-								<div class="divider mb-16 w-full"></div>
 							{/if}
-						{/each}
+
+							{#if cardArticles.length > 2}
+								<div class="blog-card-grid">
+									{#each cardArticles.slice(2) as article (article.slug)}
+										{@render articleCard(article)}
+									{/each}
+								</div>
+							{/if}
+
+							{#if !visibleArticles.length}
+								<p class="h5 text-secondary daynight-blog-empty mb-40">
+									Няма публикации по избраните филтри.
+								</p>
+							{/if}
+						</div>
 					</div>
-
-					<div class="divider mb-32 w-full"></div>
-					{@render filterList('Архив', archiveOptions, 'archive')}
-
-					<div class="divider mb-32 w-full"></div>
-					{@render filterList('Тагове', tagOptions, 'tag')}
-				</aside>
-			</div>
+				</div>
 			{/if}
 		</div>
 	</section>
 </div>
 
 <style>
+	.blog-hero-search {
+		display: grid;
+		gap: 0;
+		padding: 0;
+	}
+
+	.blog-hero-search__field {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 44px;
+		gap: 4px;
+		min-height: 54px;
+		padding: 4px;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 8px;
+		background: #fff;
+	}
+
+	.blog-hero-search__field input {
+		min-width: 0;
+		border: 0;
+		background: transparent;
+		color: var(--sa-ink);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
+		outline: 0;
+		padding: 0 12px;
+	}
+
+	.blog-hero-search__field button {
+		display: grid;
+		width: 44px;
+		height: 44px;
+		place-items: center;
+		border: 0;
+		border-radius: 6px;
+		background: var(--desktop-action);
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.blog-hero-search__field:focus-within {
+		outline: 2px solid var(--desktop-focus);
+		outline-offset: 2px;
+	}
+
+	.blog-hero-controls {
+		display: grid;
+		gap: 12px;
+	}
+
+	.blog-category-switch {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		width: min(100%, 360px);
+		margin-inline: auto;
+		padding: 4px;
+		border-radius: 8px;
+		background: var(--desktop-field, var(--sa-fill));
+	}
+
+	.blog-category-switch a {
+		display: inline-flex;
+		min-height: 36px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		color: var(--sa-muted);
+		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.2 var(--sa-font);
+	}
+
+	.blog-category-switch a:hover,
+	.blog-category-switch a:focus-visible {
+		color: var(--sa-ink);
+	}
+
+	.blog-category-switch a.active {
+		background: var(--desktop-action);
+		color: #fff;
+	}
+
+	.blog-quick-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	.blog-quick-topics {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		gap: 8px;
+		white-space: nowrap;
+	}
+
+	.blog-quick-topics a {
+		display: inline-flex;
+		min-height: 36px;
+		align-items: center;
+		gap: 6px;
+		padding: 0 12px;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 8px;
+		background: #fff;
+		color: var(--sa-ink);
+		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.2 var(--sa-font);
+	}
+
+	.blog-quick-topics a span {
+		color: var(--sa-muted);
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-button-font-weight);
+	}
+
+	.blog-quick-topics a.active {
+		border-color: var(--desktop-action);
+		background: var(--desktop-action);
+		color: #fff;
+	}
+
+	.blog-quick-topics a.active span {
+		color: rgb(255 255 255 / 72%);
+	}
+
+	.blog-filter-status {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-left: auto;
+		color: var(--sa-muted);
+		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.3 var(--sa-font);
+		white-space: nowrap;
+	}
+
+	.blog-clear-filters {
+		display: inline-flex;
+		min-height: 36px;
+		align-items: center;
+		gap: 6px;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 8px;
+		padding: 0 11px;
+		background: #fff;
+		color: var(--sa-ink) !important;
+	}
+
+	.blog-clear-filters:hover,
+	.blog-clear-filters:focus-visible {
+		border-color: var(--desktop-secondary-hover);
+		background: var(--desktop-secondary-hover, var(--sa-fill-2));
+	}
+
+	@media (min-width: 992px) {
+		.blog-controls .widget-search {
+			display: none;
+		}
+
+		.blog-page {
+			padding-top: 0;
+		}
+
+		.blog-page-title {
+			display: none;
+		}
+
+		.blog-page > .pb-100 {
+			background: #f4f5f6;
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	/* Self-contained scoped styles for /blog. These reproduce the rules the legacy
 	   app.css + StorefrontTemplateContent :global stylesheet provided for the verbatim
 	   class strings used above. Svelte scopes them to this component's markup, so no
@@ -393,18 +563,25 @@
 	   reset at low specificity so the .mb-* utilities below (declared later, equal
 	   specificity) still win for elements that carry them. */
 	.blog-page {
-		padding-top: var(--sa-space-8, 32px);
+		padding-top: 0;
 		box-sizing: border-box;
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
-		font-size: 16px;
-		font-weight: 400;
+		font-family: var(--sa-font);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 		letter-spacing: 0;
 	}
 
 	.blog-page :global(*) {
 		box-sizing: border-box;
+	}
+
+	.blog-page :global(h1),
+	.blog-page :global(h2),
+	.blog-page :global(h3),
+	.blog-page :global(p),
+	.blog-page :global(ul) {
 		margin: 0;
 	}
 
@@ -429,9 +606,18 @@
 		padding: 0 15px;
 	}
 
-	.blog-empty { max-width: 760px; margin: 0 auto; text-align: center; }
-	.blog-empty h2 { font-size: var(--sa-text-xl, 20px); line-height: 1.4; }
-	.blog-empty p { margin-block: 16px 24px; }
+	.blog-empty {
+		max-width: 760px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.blog-empty h2 {
+		font-size: var(--sa-text-xl, var(--sa-text-xl));
+		line-height: 1.4;
+	}
+	.blog-empty p {
+		margin-block: 16px 24px;
+	}
 
 	/* Section spacing */
 	.pb-100 {
@@ -446,14 +632,6 @@
 		margin-bottom: 12px;
 	}
 
-	.mb-16 {
-		margin-bottom: 16px;
-	}
-
-	.mb-32 {
-		margin-bottom: 32px;
-	}
-
 	.mb-34 {
 		margin-bottom: 34px;
 	}
@@ -466,23 +644,7 @@
 		width: 100%;
 	}
 
-	/* Grid / flex utilities */
-	.grid {
-		display: grid;
-	}
-
-	.grid-cols-2 {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.gap-y-40 {
-		row-gap: 40px;
-	}
-
-	.gap-x-30 {
-		column-gap: 30px;
-	}
-
+	/* Flex utilities used by article media/meta snippets. */
 	.flex {
 		display: flex;
 	}
@@ -492,29 +654,8 @@
 	}
 
 	/* Text utilities */
-	.capitalize {
-		text-transform: none;
-	}
-
-	.uppercase {
-		text-transform: uppercase;
-	}
-
 	.text-secondary {
 		color: #667085;
-	}
-
-	.text-highlight {
-		color: var(--sa-blue, #b00000);
-	}
-
-	.text-white {
-		color: #fff;
-	}
-
-	.text-underline {
-		text-decoration: underline;
-		text-underline-offset: 4px;
 	}
 
 	.line-height-28 {
@@ -525,26 +666,26 @@
 	   group; StorefrontTemplateContent re-set .h3/.h4/.h5 weights (winning at source
 	   order) while .h7 kept the 600. Reproduce the computed result. */
 	.h3 {
-		font-size: clamp(24px, 2.4vw, 32px);
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.16;
 	}
 
 	.h4 {
-		font-size: 22px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-card-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.25;
 	}
 
 	.h5 {
-		font-size: 18px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
 	.h7 {
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
@@ -560,8 +701,8 @@
 
 	.blog-page h1 {
 		color: #111827;
-		font-size: clamp(36px, 4vw, 56px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 		text-align: center;
 	}
@@ -577,95 +718,118 @@
 		margin-bottom: 14px;
 	}
 
-	/* Two-column innerpage layout: content + sticky filter sidebar. */
-	.innerpage-container {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-		gap: 42px;
-		align-items: start;
-	}
-
-	.blog-index-layout {
-		align-items: start;
-		grid-template-areas: 'articles controls' 'articles more';
-		grid-template-rows: max-content 1fr;
-		row-gap: 24px;
-	}
+	/* The blog is a full-width editorial stream. Search/category discovery lives in
+	   the Chroma hero; archive/tag discovery follows the stream instead of consuming
+	   a permanent sidebar column. */
+	.blog-index-layout,
 	.innerpage__content {
-		grid-area: articles;
-	}
-	.blog-controls {
-		grid-area: controls;
 		min-width: 0;
+		width: 100%;
 	}
 
-	.innerpage__sidebar {
-		grid-area: more;
+	.blog-controls {
+		display: none;
 	}
 
-	/* Blog cards (post-style-2 featured overlay + post-style-6 grid cards). */
-	.post-style-2,
-	.post-style-6,
-	.recent-post {
-		position: relative;
-		border-radius: 12px;
-		background: #fff;
-		color: #111827;
-		text-decoration: none;
+	.blog-magazine {
+		display: grid;
+		grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.8fr);
+		gap: 24px;
+		min-height: 500px;
+		margin-bottom: 24px;
+		align-items: stretch;
+	}
+
+	.blog-magazine > .blog-featured-card {
+		min-height: 100%;
+		margin-bottom: 0;
+	}
+
+	.blog-magazine__side {
+		display: grid;
+		grid-template-rows: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+
+	.blog-magazine__side .post-style-6 {
+		display: grid;
+		grid-template-columns: minmax(150px, 0.82fr) minmax(0, 1fr);
+		height: 100%;
+		min-height: 238px;
+		overflow: hidden;
+	}
+
+	.blog-magazine__side .post-style-6 .post--img {
+		height: 100%;
+		aspect-ratio: auto;
+	}
+
+	.blog-magazine__side .post-style-6 .content {
+		align-self: center;
+		padding: 18px;
+	}
+
+	.blog-magazine__side .post-style-6 .clamp-2 {
+		display: none;
+	}
+
+	.blog-card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 24px;
+		margin-bottom: 0;
 	}
 
 	.post--img {
 		width: 100%;
-		aspect-ratio: 1.55;
+		height: 100%;
 		object-fit: cover;
 	}
 
-	.post-style-2 {
+	.blog-featured-card,
+	.post-style-6 {
 		display: block;
-		min-height: 320px;
+		overflow: hidden;
+		border: 0;
+		border-radius: 16px;
+		background: #fff;
+		color: #111827;
+		box-shadow: 0 8px 24px rgb(15 23 42 / 7%);
+		text-decoration: none;
+		transition:
+			transform 160ms ease,
+			box-shadow 160ms ease;
+	}
+
+	.blog-featured-card:hover,
+	.blog-featured-card:focus-visible,
+	.post-style-6:hover,
+	.post-style-6:focus-visible {
+		transform: translateY(-2px);
+		box-shadow: 0 14px 30px rgb(15 23 42 / 10%);
+	}
+
+	.blog-featured-card__image {
+		height: 330px;
 		overflow: hidden;
 	}
 
-	.blog-featured-card {
-		display: block;
+	.blog-featured-card__content {
+		padding: 24px;
 	}
 
-	.post-style-2 .post--img {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
+	.blog-featured-card__content > p {
+		font-size: var(--sa-type-body);
+		line-height: 1.55;
 	}
 
-	.post-style-2::after {
-		position: absolute;
-		inset: 0;
-		background: rgba(8, 18, 37, 0.62);
-		content: '';
-	}
-
-	.post-style-2 .content {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 1;
-		padding: 26px;
-	}
-
-	.post-style-6 {
-		display: block;
-		border: 1px solid #e4e8ef;
-		box-shadow: none;
-	}
-
-	.post-style-6 .image,
-	.recent-post .image {
+	.post-style-6 .image {
+		height: 210px;
 		overflow: hidden;
 	}
 
 	.post-style-6 .content {
-		padding: 22px;
+		padding: 20px;
 	}
 
 	.clamp-2 {
@@ -691,22 +855,10 @@
 		line-height: 1.4;
 	}
 
-	.blog-meta--light span {
-		color: #fff;
-		font-size: var(--sa-text-sm);
-	}
-
-	/* Recent-post compact card in the sidebar */
-	.recent-post {
-		display: grid;
-		grid-template-columns: 92px minmax(0, 1fr);
-		gap: 14px;
-	}
-
-	.recent-post .post--img {
-		height: 78px;
-		aspect-ratio: auto;
-		border-radius: 8px;
+	.blog-meta__category {
+		color: var(--sa-red);
+		font-weight: var(--sa-weight-strong);
+		text-transform: uppercase;
 	}
 
 	/* Search widget */
@@ -722,7 +874,7 @@
 		background: #fff;
 		color: #111827;
 		font: inherit;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		outline: 0;
 		padding: 0 16px;
 	}
@@ -755,51 +907,34 @@
 		color: #1c1c1c;
 	}
 
-	/* Category / tag widgets */
-	.widget-categories,
-	.widget-tags {
+	/* Compact mobile category controls. Desktop discovery lives in the hero. */
+	.widget-categories {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 
-	.widget-categories a,
-	.widget-tags a {
+	.widget-categories a {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		min-height: 44px;
-		border: 1px solid #e4e8ef;
+		min-height: 40px;
+		border: 0;
 		border-radius: 8px;
-		background: #fff;
+		background: var(--desktop-field, var(--sa-fill));
 		color: #344054;
-		padding: 10px 12px;
-		font-weight: var(--sa-weight-semibold);
+		padding: 9px 12px;
+		font-weight: var(--sa-button-font-weight);
 	}
 
-	.widget-categories a.active,
-	.widget-tags a.active,
-	.widget-categories a:hover,
-	.widget-tags a:hover {
-		border-color: var(--sa-blue, #b00000);
-		background: var(--sa-line);
-		color: var(--sa-blue, #b00000);
+	.widget-categories a:hover {
+		background: var(--desktop-secondary-hover, var(--sa-fill-2));
+		color: var(--desktop-action);
 	}
 
-	.widget-tags {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-
-	.widget-tags a {
-		gap: 8px;
-		justify-content: center;
-	}
-
-	.divider {
-		height: 1px;
-		background: #e4e8ef;
+	.blog-page .widget-categories a.active {
+		background: var(--sa-ink);
+		color: #fff;
 	}
 
 	.sr-only {
@@ -811,26 +946,48 @@
 		white-space: nowrap;
 	}
 
-	@media (max-width: 1100px) {
-		.innerpage-container {
+	@media (max-width: 1199px) {
+		.blog-magazine {
 			grid-template-columns: 1fr;
-			grid-template-areas: 'controls' 'articles' 'more';
+			min-height: 0;
+		}
+
+		.blog-magazine > .blog-featured-card {
+			min-height: 360px;
+		}
+
+		.blog-magazine__side {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 			grid-template-rows: auto;
 		}
 
-		.innerpage__sidebar {
-			position: static;
+		.blog-magazine__side .post-style-6 {
+			grid-template-columns: 1fr;
+		}
+
+		.blog-magazine__side .post-style-6 .post--img {
+			height: auto;
+			aspect-ratio: 1.55;
+		}
+
+		.blog-card-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 
 	@media (max-width: 991px) {
+		.blog-controls {
+			display: block;
+			margin-bottom: 24px;
+		}
+
 		.blog-page-title {
 			margin-bottom: 28px;
 			text-align: left;
 		}
 
 		.blog-page-title h1 {
-			font-size: 32px;
+			font-size: var(--sa-type-page);
 			line-height: 1.12;
 		}
 	}
@@ -838,7 +995,7 @@
 	@media (max-width: 767px) {
 		.blog-page-title h1 {
 			text-align: left;
-			font-size: 28px;
+			font-size: var(--sa-text-panel-title);
 		}
 		.blog-page-title {
 			margin-bottom: 24px;
@@ -860,46 +1017,46 @@
 			gap: 8px;
 			white-space: nowrap;
 		}
-		.post-style-2 {
-			min-height: 240px;
+		.blog-magazine,
+		.blog-magazine__side,
+		.blog-card-grid {
+			grid-template-columns: 1fr;
 		}
-		.post-style-2 .content {
-			padding: 20px;
+		.blog-featured-card__image {
+			height: 220px;
 		}
-		.post-style-6 {
+		.blog-featured-card__content {
+			padding: 18px;
+		}
+		.post-style-6,
+		.blog-magazine__side .post-style-6 {
 			display: grid;
 			grid-template-columns: 96px minmax(0, 1fr);
+			min-height: 0;
 		}
-		.post-style-6 .post--img {
+		.post-style-6 .post--img,
+		.blog-magazine__side .post-style-6 .post--img {
 			height: 100%;
 			aspect-ratio: auto;
 		}
-		.post-style-6 .content {
+		.post-style-6 .content,
+		.blog-magazine__side .post-style-6 .content {
 			padding: 12px;
 		}
 		.post-style-6 .h4 {
-			font-size: 18px;
+			font-size: var(--sa-text-lg);
 		}
 		.post-style-6 .blog-meta {
 			gap: 4px 8px;
 			margin-bottom: 8px;
-		}
-		.gap-y-40 {
-			row-gap: 16px;
 		}
 
 		.container {
 			width: calc(100% - 32px);
 			padding: 0;
 		}
-
 		.pb-100 {
 			padding-bottom: 56px;
-		}
-
-		.md-grid-cols-1,
-		.grid-cols-2 {
-			grid-template-columns: 1fr;
 		}
 	}
 </style>

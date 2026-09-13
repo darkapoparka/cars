@@ -58,14 +58,14 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Консултанти — Promosale Varna"
+		title="Консултанти — Day Night Auto"
 	>
 		<section class="daynight-agents-hero background-light py-80">
 			<div class="container">
 				<div class="title-section mb-0 flex justify-between gap-30">
 					<div>
-						<p class="text-highlight font-weight-600 mb-8">Promosale Varna екип</p>
-						<h1 class="h2 mb-12">Консултанти на Promosale Varna</h1>
+						<p class="text-highlight font-weight-600 mb-8">Day Night Auto екип</p>
+						<h1 class="h2 mb-12">Консултанти на Day Night Auto</h1>
 						<p class="text-secondary h7">
 							Продажби и огледи, подбор на автомобили, документи и предаване с ясен следващ ход.
 						</p>
@@ -89,6 +89,11 @@
 	:global(body.auxero-template-sale-agents-html section.pb-100 h2),
 	:global(body.auxero-template-sale-agents-html section.pb-100 h2 + p) {
 		color: #1c1c1c !important;
+	}
+
+	:global(.daynight-agents-page .daynight-agent-grid) {
+		max-width: 1080px;
+		margin-inline: auto;
 	}
 
 	:global(.daynight-dashboard-agents .daynight-agent-grid) {

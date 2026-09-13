@@ -51,7 +51,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!agent) {
-		return errorJson('Promosale Varna agent not found', 404);
+		return errorJson('Day Night Auto agent not found', 404);
 	}
 
 	return okJson({ agent });

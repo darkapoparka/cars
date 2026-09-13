@@ -36,7 +36,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		beforeFavoritesHtml: favoritesSlot.beforeHtml,
 		cards: favoriteCardsFromVehicles(getDayNightFavoriteVehicles(session)),
 		dashboard: getAccountDashboardPageData('my-favorites.html', renderOptions, {
-			subtitle: 'Saved Promosale Varna vehicles stay in one quick review list.',
+			subtitle: 'Saved Day Night Auto vehicles stay in one quick review list.',
 			title: 'My Favorites'
 		}),
 		pageDocument: removeAuxeroPageDocumentBodyHtml(pageDocument)

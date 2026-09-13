@@ -5,12 +5,12 @@ import { requireDayNightPageSession } from '$lib/server/auth';
 import { mergeListingUploads, readInventoryListingFields } from '$lib/server/cms-listing-form';
 import { createInventoryListing, updateInventoryListing } from '$lib/server/inventory';
 
-export const load: PageServerLoad = ({ request, url }) => {
+export const load: PageServerLoad = async ({ request, url }) => {
 	const session = requireDayNightPageSession(request, 'admin/inventory/new', url.searchParams);
 
 	return {
 		auxeroFullPage: true,
-		cms: getAdminCmsOverview(),
+		cms: await getAdminCmsOverview(),
 		session
 	};
 };

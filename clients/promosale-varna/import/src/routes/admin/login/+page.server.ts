@@ -1,5 +1,6 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
+import { hasInquiryDatabase } from '$lib/server/inquiry-config';
 import {
 	authenticateDayNightUser,
 	daynightSessionCookieName,
@@ -14,6 +15,7 @@ const safeRedirectTo = (value: string | null) => {
 
 export const load: PageServerLoad = ({ url }) => ({
 	auxeroFullPage: true,
+	databaseMode: hasInquiryDatabase(),
 	redirectTo: safeRedirectTo(url.searchParams.get('redirectTo'))
 });
 
@@ -28,7 +30,7 @@ export const actions: Actions = {
 		if (!session?.token) {
 			return fail(400, {
 				email,
-				error: 'Invalid Promosale Varna staff credentials.'
+				error: 'Invalid Day Night Auto staff credentials.'
 			});
 		}
 

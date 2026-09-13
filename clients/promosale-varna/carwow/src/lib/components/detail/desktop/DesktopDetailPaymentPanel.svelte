@@ -159,15 +159,15 @@
 
 	.pdp-payment-price__cash {
 		color: #1c1c1c;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.08;
 	}
 
 	.pdp-payment-price__monthly {
 		color: #4b5563;
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.3;
 	}
 

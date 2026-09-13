@@ -21,10 +21,10 @@
 	aria-controls="daynight-about-mobile-contact-drawer"
 />
 
-<section class="daynight-about-mobile" aria-label="Promosale Varna мобилен преглед">
+<section class="daynight-about-mobile" aria-label="Day Night Auto мобилен преглед">
 	<header class="daynight-about-mobile__header">
-		<a class="daynight-about-mobile__logo" href={resolve('/')} aria-label="Promosale Varna начало">
-			<img src={daynightAssets.logoLight} alt="Promosale Varna" />
+		<a class="daynight-about-mobile__logo" href={resolve('/')} aria-label="Day Night Auto начало">
+			<img src={daynightAssets.logoLight} alt="Day Night Auto" />
 		</a>
 
 		<div class="daynight-about-mobile__actions">
@@ -88,7 +88,7 @@
 
 		<header>
 			<div>
-				<p>Promosale Varna</p>
+				<p>Day Night Auto</p>
 				<h2 id="daynight-about-mobile-contact-title">Контакти и локация</h2>
 			</div>
 			<label

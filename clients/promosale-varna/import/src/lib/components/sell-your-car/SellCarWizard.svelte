@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import { onDestroy } from 'svelte';
-	import { ArrowRight, Camera, Check, ChevronLeft, X } from '@lucide/svelte';
+	import { ArrowLeft, ArrowRight, Check, X } from '@lucide/svelte';
+	import { resolve } from '$app/paths';
 
 	type WizardInitial = {
 		make?: string;
@@ -23,7 +22,6 @@
 		onclose?: () => void;
 	} = $props();
 
-	const stepLabels = ['Автомобил', 'Състояние', 'Екстри', 'Снимки', 'Контакт'];
 	const makeOptions = [
 		'BMW',
 		'Mercedes-Benz',
@@ -31,57 +29,15 @@
 		'Volkswagen',
 		'Toyota',
 		'Volvo',
-		'Ford',
 		'Porsche',
-		'Honda',
 		'Друга'
 	];
-	const bodyOptions = ['Седан', 'Комби', 'SUV', 'Хечбек', 'Купе', 'Кабрио', 'Ван'];
-	const fuelOptions = ['Бензин', 'Дизел', 'Хибрид', 'Електрически', 'Газ/Бензин'];
-	const gearboxOptions = ['Автомат', 'Ръчни'];
-	const conditionOptions = ['Отлично', 'Много добро', 'Добро', 'За ремонт'];
-	const accidentOptions = ['Без щети', 'Козметични щети', 'Има удар'];
-	const runningOptions = ['В движение', 'Има проблем', 'Не е в движение'];
-	const serviceOptions = ['Пълна история', 'Частична история', 'Няма история'];
-	const inspectionOptions = ['Валиден преглед', 'Изтекъл преглед', 'Нерегистриран'];
-	const keyOptions = ['1 ключ', '2 ключа', '3+ ключа'];
-	const comfortFeatures = [
-		'Климатроник',
-		'Кожен салон',
-		'Подгрев на седалки',
-		'Ел. седалки',
-		'Панорамен покрив',
-		'Безключов достъп'
-	];
-	const technologyFeatures = [
-		'Навигация',
-		'Парктроник',
-		'Камера',
-		'Адаптивен круиз',
-		'LED / Ксенон',
-		'4x4',
-		'Теглич'
-	];
-	const colorOptions = [
-		'Черен',
-		'Бял',
-		'Сив',
-		'Сребърен',
-		'Син',
-		'Червен',
-		'Зелен',
-		'Кафяв',
-		'Друг'
-	];
-	const financeOptions = ['Без финансиране', 'Има кредит / лизинг'];
-	const timeOptions = ['9:00 – 12:00', '12:00 – 15:00', '15:00 – 18:00'];
-	const yearOptions = Array.from({ length: 37 }, (_, index) => String(2026 - index));
-
-	let step = $state(0);
+	let step = $state<0 | 1>(0);
 	let submitted = $state(false);
+	let submitting = $state(false);
+	let submitError = $state('');
 	let bodyElement = $state<HTMLElement>();
 
-	// The detailed flow owns editable copies of the values supplied by the quick entry point.
 	// svelte-ignore state_referenced_locally
 	let vin = $state(initial?.vin ?? '');
 	// svelte-ignore state_referenced_locally
@@ -90,941 +46,664 @@
 	let model = $state(initial?.model ?? '');
 	// svelte-ignore state_referenced_locally
 	let year = $state(initial?.year ?? '');
-	let bodyType = $state('');
-	let fuel = $state('');
-	let gearbox = $state('');
-	let engine = $state('');
-	let power = $state('');
 	// svelte-ignore state_referenced_locally
 	let mileage = $state(initial?.mileage ?? '');
-	let condition = $state('');
-	let accidents = $state('');
-	let runningCondition = $state('');
-	let serviceHistory = $state('');
-	let inspection = $state('');
-	let keys = $state('');
-	let color = $state('');
-	let selectedFeatures = $state<string[]>([]);
-	// svelte-ignore state_referenced_locally
-	let price = $state(initial?.price ?? '');
 	// svelte-ignore state_referenced_locally
 	let phone = $state(initial?.phone ?? '');
-	let location = $state('Варна');
-	let contactTime = $state('');
-	let financeStatus = $state('');
+	// svelte-ignore state_referenced_locally
+	let price = $state(initial?.price ?? '');
+	let location = $state('София');
 	let notes = $state('');
 
-	type PhotoSlot = { key: string; label: string; url: string | null };
-	const photoSlots = $state<PhotoSlot[]>([
-		{ key: 'front', label: 'Отпред', url: null },
-		{ key: 'rear', label: 'Отзад', url: null },
-		{ key: 'side', label: 'Отстрани', url: null },
-		{ key: 'interior', label: 'Интериор', url: null },
-		{ key: 'dash', label: 'Табло', url: null },
-		{ key: 'damage', label: 'Забележки', url: null }
-	]);
+	const vehicleTitle = $derived(
+		[make.trim(), model.trim(), year.trim()].filter(Boolean).join(' · ') ||
+			vin.trim() ||
+			'Автомобил'
+	);
+	const canContinue = $derived(
+		step === 0
+			? vin.trim().length >= 5 || (make.trim().length > 1 && model.trim().length > 1)
+			: phone.trim().length >= 6
+	);
+	const scrollTop = () => bodyElement?.scrollTo({ top: 0, behavior: 'smooth' });
 
-	const photoCount = $derived(photoSlots.filter((slot) => slot.url).length);
-	const carSummary = $derived(
-		[make, model, year].filter(Boolean).join(' · ') || 'Данните ще бъдат потвърдени по VIN'
-	);
-	const conditionSummary = $derived(
-		[condition, accidents, serviceHistory].filter(Boolean).join(' · ') || 'Не е посочено'
-	);
-	const canContinue = $derived.by(() => {
+	function goBack() {
+		if (step === 1) {
+			step = 0;
+			submitError = '';
+			scrollTop();
+		}
+	}
+
+	async function goNext() {
+		if (!canContinue || submitting) return;
 		if (step === 0) {
-			return (
-				vin.trim().length >= 5 || (manualEntry && make.trim().length > 1 && model.trim().length > 1)
-			);
-		}
-		if (step === 1) return mileage.trim().length >= 2;
-		if (step === 4) return phone.trim().length >= 6;
-		return true;
-	});
-
-	const toggleFeature = (feature: string) => {
-		if (selectedFeatures.includes(feature)) {
-			selectedFeatures = selectedFeatures.filter((item) => item !== feature);
+			step = 1;
+			submitError = '';
+			scrollTop();
 			return;
 		}
 
-		selectedFeatures = [...selectedFeatures, feature];
-	};
-
-	const setPhoto = (slot: PhotoSlot, files: FileList | null) => {
-		const file = files?.[0];
-		if (!file) return;
-		if (slot.url) URL.revokeObjectURL(slot.url);
-		slot.url = URL.createObjectURL(file);
-	};
-
-	const clearPhoto = (slot: PhotoSlot) => {
-		if (!slot.url) return;
-		URL.revokeObjectURL(slot.url);
-		slot.url = null;
-	};
-
-	const showStep = (nextStep: number) => {
-		step = nextStep;
-		bodyElement?.scrollTo({ top: 0, behavior: 'smooth' });
-		bodyElement
-			?.closest<HTMLElement>('.daynight-sell-wizard-drawer__sheet')
-			?.scrollTo({ top: 0, behavior: 'smooth' });
-	};
-
-	const goBack = () => {
-		if (step > 0) showStep(step - 1);
-	};
-
-	const goNext = () => {
-		if (!canContinue) return;
-		if (step < stepLabels.length - 1) {
-			showStep(step + 1);
-			return;
+		submitting = true;
+		submitError = '';
+		try {
+			const response = await fetch(resolve('/api/inventory/submissions'), {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					source: 'sell-your-car',
+					routePath: '/sell-your-car',
+					vin: vin.trim(),
+					title: vehicleTitle,
+					mileage: mileage.trim(),
+					expectedPrice: price.trim(),
+					phone: phone.trim(),
+					message: [location.trim() && `Град: ${location.trim()}`, notes.trim()]
+						.filter(Boolean)
+						.join('\n')
+				})
+			});
+			const result = await response.json();
+			if (!response.ok || !result.ok || !result.data?.submission?.id)
+				throw new Error('submission-failed');
+			submitted = true;
+		} catch {
+			submitError = 'Заявката не е изпратена. Опитай отново или се свържи по телефона.';
+		} finally {
+			submitting = false;
 		}
-
-		submitted = true;
-		if (browser) {
-			try {
-				localStorage.setItem(
-					'daynight:sell-wizard',
-					JSON.stringify({
-						accidents,
-						bodyType,
-						color,
-						condition,
-						contactTime,
-						engine,
-						financeStatus,
-						fuel,
-						gearbox,
-						inspection,
-						keys,
-						location,
-						make,
-						mileage,
-						model,
-						notes,
-						phone,
-						photoCount,
-						power,
-						price,
-						runningCondition,
-						selectedFeatures,
-						serviceHistory,
-						submittedAt: new Date().toISOString(),
-						vin,
-						year
-					})
-				);
-			} catch {
-				/* Prototype storage only. */
-			}
-		}
-	};
-
-	onDestroy(() => {
-		photoSlots.forEach((slot) => {
-			if (slot.url) URL.revokeObjectURL(slot.url);
-		});
-	});
+	}
 </script>
 
-<div class="bc-sell-wizard">
-	<header class="bc-sell-wizard__header">
-		<h2>Оценка на автомобила</h2>
-		{#if onclose}
-			<button type="button" aria-label="Затвори" onclick={onclose}>
-				<X size={20} strokeWidth={2.3} aria-hidden="true" />
-			</button>
-		{/if}
-	</header>
-
+<div class="sell-flow">
 	{#if submitted}
-		<div class="bc-sell-wizard__success">
-			<span aria-hidden="true"><Check size={26} strokeWidth={2.6} /></span>
-			<h3>Заявката е приета</h3>
-			<p>
-				Екипът ще прегледа данните и снимките и ще се свърже до 24 ч с конкретна оценка и следващ
-				ход.
-			</p>
+		<section class="sell-flow__success" role="status">
+			<span class="sell-flow__success-icon"><Check size={25} strokeWidth={2.5} /></span>
+			<h2>Заявката е приета</h2>
+			<p>Демо заявката е запазена временно. Не е изпратено съобщение до търговец.</p>
 			<button type="button" onclick={() => onclose?.()}>Готово</button>
-		</div>
+		</section>
 	{:else}
-		<div class="bc-sell-wizard__progress" aria-hidden="true">
-			{#each stepLabels as label, index (label)}
-				<span class:done={index <= step}></span>
-			{/each}
-		</div>
-		<p class="bc-sell-wizard__step-label">
-			Стъпка {step + 1} от {stepLabels.length} · <strong>{stepLabels[step]}</strong>
-		</p>
+		<header class="sell-flow__header">
+			<button type="button" class="sell-flow__close" aria-label="Затвори" onclick={onclose}>
+				<X size={21} strokeWidth={2.3} />
+			</button>
+			<div>
+				<span>Етап {step + 1} от 2</span>
+				<h2>{step === 0 ? 'Автомобил' : 'Контакт'}</h2>
+			</div>
+			<span class="sell-flow__header-spacer" aria-hidden="true"></span>
+		</header>
 
-		<div class="bc-sell-wizard__body" bind:this={bodyElement}>
+		<div class="sell-flow__progress" aria-label={`Стъпка ${step + 1} от 2`}>
+			<span style={`width:${step === 0 ? '50%' : '100%'}`}></span>
+		</div>
+		<div class="sell-flow__body" bind:this={bodyElement}>
 			{#if step === 0}
-				<div class="bc-sell-wizard__intro">
-					<h3>Кой автомобил продавате?</h3>
-					<p>
-						{manualEntry
-							? 'Въведете марка и модел. VIN може да добавите по-късно.'
-							: 'VIN е попълнен от началния екран. Допълнете данните, които разпознавате.'}
-					</p>
-				</div>
-				<div class="bc-sell-wizard__fields">
-					<label class="bc-sell-wizard__field--wide" for="sell-wizard-vin">
-						<span>{manualEntry ? 'VIN номер (по желание)' : 'VIN номер *'}</span>
-						<input
-							id="sell-wizard-vin"
-							type="text"
-							placeholder="Например WBA..."
-							autocomplete="off"
-							required={!manualEntry}
-							bind:value={vin}
-						/>
-					</label>
-					<label for="sell-wizard-make">
-						<span>Марка</span>
-						<select id="sell-wizard-make" bind:value={make}>
-							<option value="">Избери</option>
-							{#each makeOptions as option (option)}<option value={option}>{option}</option>{/each}
-						</select>
-					</label>
-					<label for="sell-wizard-model">
-						<span>Модел</span>
-						<input
-							id="sell-wizard-model"
-							type="text"
-							placeholder="Например X5"
-							bind:value={model}
-						/>
-					</label>
-					<label for="sell-wizard-year">
-						<span>Година</span>
-						<select id="sell-wizard-year" bind:value={year}>
-							<option value="">Избери</option>
-							{#each yearOptions as option (option)}<option value={option}>{option}</option>{/each}
-						</select>
-					</label>
-					<label for="sell-wizard-fuel">
-						<span>Гориво</span>
-						<select id="sell-wizard-fuel" bind:value={fuel}>
-							<option value="">Избери</option>
-							{#each fuelOptions as option (option)}<option value={option}>{option}</option>{/each}
-						</select>
-					</label>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Скорости</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each gearboxOptions as option (option)}
+				<section class="sell-flow__section" aria-labelledby="sell-flow-car-title">
+					<div class="sell-flow__intro">
+						<h3 id="sell-flow-car-title">Кой автомобил продавате?</h3>
+						<p>
+							{manualEntry
+								? 'Марка и модел са достатъчни за начало.'
+								: 'Провери VIN и добави основните данни.'}
+						</p>
+					</div>
+
+					{#if !manualEntry}
+						<label class="sell-field sell-field--wide">
+							<span>VIN</span>
+							<input bind:value={vin} type="text" placeholder="WBA..." autocomplete="off" />
+						</label>
+					{/if}
+
+					<fieldset class="sell-fieldset">
+						<legend>Марка</legend>
+						<div class="sell-brand-rail">
+							{#each makeOptions as option (option)}
 								<button
 									type="button"
-									class:active={gearbox === option}
-									aria-pressed={gearbox === option}
-									onclick={() => (gearbox = gearbox === option ? '' : option)}>{option}</button
+									class:active={make === option}
+									aria-pressed={make === option}
+									onclick={() => (make = option)}
 								>
+									{option}
+								</button>
 							{/each}
 						</div>
 					</fieldset>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Купе</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each bodyOptions as option (option)}
-								<button
-									type="button"
-									class:active={bodyType === option}
-									aria-pressed={bodyType === option}
-									onclick={() => (bodyType = bodyType === option ? '' : option)}>{option}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<label for="sell-wizard-engine">
-						<span>Двигател</span>
-						<input
-							id="sell-wizard-engine"
-							type="text"
-							placeholder="Напр. 2.0"
-							bind:value={engine}
-						/>
+					<div class="sell-field-grid">
+						<label class="sell-field">
+							<span>Модел</span>
+							<input bind:value={model} type="text" placeholder="X5" autocomplete="off" />
+						</label>
+						<label class="sell-field">
+							<span>Година</span>
+							<input
+								bind:value={year}
+								type="text"
+								inputmode="numeric"
+								maxlength="4"
+								placeholder="2021"
+							/>
+						</label>
+					</div>
+
+					<label class="sell-field sell-field--wide">
+						<span>Пробег</span>
+						<input bind:value={mileage} type="text" inputmode="numeric" placeholder="120 000 км" />
 					</label>
-					<label for="sell-wizard-power">
-						<span>Мощност</span>
-						<input
-							id="sell-wizard-power"
-							type="text"
-							inputmode="numeric"
-							placeholder="к.с."
-							bind:value={power}
-						/>
-					</label>
-				</div>
-			{:else if step === 1}
-				<div class="bc-sell-wizard__intro">
-					<h3>Състояние и история</h3>
-					<p>Точните данни помагат за реалистична оценка още преди огледа.</p>
-				</div>
-				<div class="bc-sell-wizard__fields">
-					<label class="bc-sell-wizard__field--wide" for="sell-wizard-mileage">
-						<span>Пробег в километри *</span>
-						<input
-							id="sell-wizard-mileage"
-							type="text"
-							inputmode="numeric"
-							placeholder="Например 125 000"
-							required
-							bind:value={mileage}
-						/>
-					</label>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Общо състояние</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each conditionOptions as option (option)}
-								<button
-									type="button"
-									class:active={condition === option}
-									aria-pressed={condition === option}
-									onclick={() => (condition = condition === option ? '' : option)}>{option}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Удари и забележки</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each accidentOptions as option (option)}
-								<button
-									type="button"
-									class:active={accidents === option}
-									aria-pressed={accidents === option}
-									onclick={() => (accidents = accidents === option ? '' : option)}>{option}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Автомобилът е</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each runningOptions as option (option)}
-								<button
-									type="button"
-									class:active={runningCondition === option}
-									aria-pressed={runningCondition === option}
-									onclick={() => (runningCondition = runningCondition === option ? '' : option)}
-									>{option}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<label for="sell-wizard-service">
-						<span>Сервизна история</span>
-						<select id="sell-wizard-service" bind:value={serviceHistory}>
-							<option value="">Избери</option>
-							{#each serviceOptions as option (option)}<option value={option}>{option}</option
-								>{/each}
-						</select>
-					</label>
-					<label for="sell-wizard-inspection">
-						<span>Регистрация / преглед</span>
-						<select id="sell-wizard-inspection" bind:value={inspection}>
-							<option value="">Избери</option>
-							{#each inspectionOptions as option (option)}<option value={option}>{option}</option
-								>{/each}
-						</select>
-					</label>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Налични ключове</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each keyOptions as option (option)}
-								<button
-									type="button"
-									class:active={keys === option}
-									aria-pressed={keys === option}
-									onclick={() => (keys = keys === option ? '' : option)}>{option}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-				</div>
-			{:else if step === 2}
-				<div class="bc-sell-wizard__intro">
-					<h3>Оборудване</h3>
-					<p>Изберете само наличното. Стъпката е по желание.</p>
-				</div>
-				<div class="bc-sell-wizard__fields">
-					<label class="bc-sell-wizard__field--wide" for="sell-wizard-color">
-						<span>Цвят</span>
-						<select id="sell-wizard-color" bind:value={color}>
-							<option value="">Избери цвят</option>
-							{#each colorOptions as option (option)}<option value={option}>{option}</option>{/each}
-						</select>
-					</label>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Комфорт</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each comfortFeatures as feature (feature)}
-								<button
-									type="button"
-									class:active={selectedFeatures.includes(feature)}
-									aria-pressed={selectedFeatures.includes(feature)}
-									onclick={() => toggleFeature(feature)}>{feature}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Технологии и практичност</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each technologyFeatures as feature (feature)}
-								<button
-									type="button"
-									class:active={selectedFeatures.includes(feature)}
-									aria-pressed={selectedFeatures.includes(feature)}
-									onclick={() => toggleFeature(feature)}>{feature}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-				</div>
-			{:else if step === 3}
-				<div class="bc-sell-wizard__intro">
-					<h3>Снимки за по-точна оценка</h3>
-					<p>Добавете ясни кадри на автомобила и отделно снимайте важните забележки.</p>
-				</div>
-				<div class="bc-sell-wizard__photos">
-					{#each photoSlots as slot (slot.key)}
-						{#if slot.url}
-							<div class="bc-sell-wizard__photo bc-sell-wizard__photo--filled">
-								<img src={slot.url} alt={slot.label} />
-								<button
-									type="button"
-									aria-label={`Премахни снимка: ${slot.label}`}
-									onclick={() => clearPhoto(slot)}
-									><X size={14} strokeWidth={2.5} aria-hidden="true" /></button
-								>
-								<span>{slot.label}</span>
-							</div>
-						{:else}
-							<label class="bc-sell-wizard__photo">
-								<input
-									type="file"
-									accept="image/*"
-									onchange={(event) => setPhoto(slot, event.currentTarget.files)}
-								/>
-								<Camera size={20} strokeWidth={2} aria-hidden="true" />
-								<span>{slot.label}</span>
-							</label>
-						{/if}
-					{/each}
-				</div>
-				<p class="bc-sell-wizard__hint">
-					{photoCount ? `${photoCount} снимки добавени` : 'Можете да продължите и без снимки.'}
-				</p>
+				</section>
 			{:else}
-				<div class="bc-sell-wizard__intro">
-					<h3>Оферта и контакт</h3>
-					<p>Последна проверка преди екипът да поеме заявката.</p>
-				</div>
-				<div class="bc-sell-wizard__fields">
-					<label for="sell-wizard-price">
-						<span>Очаквана цена</span>
+				<section class="sell-flow__section" aria-labelledby="sell-flow-contact-title">
+					<div class="sell-flow__intro">
+						<h3 id="sell-flow-contact-title">Къде да изпратим оценката?</h3>
+						<p>Само телефонът е задължителен.</p>
+					</div>
+					<div class="sell-summary">
+						<span>Автомобил</span>
+						<strong>{vehicleTitle}</strong>
+						<button type="button" onclick={goBack}>Редактирай</button>
+					</div>
+
+					<label class="sell-field sell-field--wide">
+						<span>Телефон *</span>
 						<input
-							id="sell-wizard-price"
-							type="text"
-							inputmode="numeric"
-							placeholder="Цена в EUR"
-							bind:value={price}
-						/>
-					</label>
-					<label for="sell-wizard-location">
-						<span>Град</span>
-						<input
-							id="sell-wizard-location"
-							type="text"
-							autocomplete="address-level2"
-							bind:value={location}
-						/>
-					</label>
-					<label class="bc-sell-wizard__field--wide" for="sell-wizard-phone">
-						<span>Телефон за контакт *</span>
-						<input
-							id="sell-wizard-phone"
+							bind:value={phone}
 							type="tel"
 							inputmode="tel"
 							autocomplete="tel"
-							placeholder="Вашият телефон"
+							placeholder="08..."
 							required
-							bind:value={phone}
 						/>
 					</label>
-					<label class="bc-sell-wizard__field--wide" for="sell-wizard-time">
-						<span>Удобно време за обаждане</span>
-						<select id="sell-wizard-time" bind:value={contactTime}>
-							<option value="">Без значение</option>
-							{#each timeOptions as option (option)}<option value={option}>{option}</option>{/each}
-						</select>
-					</label>
-					<fieldset class="bc-sell-wizard__field--wide">
-						<legend>Финансиране</legend>
-						<div class="bc-sell-wizard__chips">
-							{#each financeOptions as option (option)}
-								<button
-									type="button"
-									class:active={financeStatus === option}
-									aria-pressed={financeStatus === option}
-									onclick={() => (financeStatus = financeStatus === option ? '' : option)}
-									>{option}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<label class="bc-sell-wizard__field--wide" for="sell-wizard-notes">
-						<span>Допълнителна информация</span>
-						<textarea
-							id="sell-wizard-notes"
-							rows="3"
-							placeholder="Скорошни ремонти, документи или важни забележки"
-							bind:value={notes}
+
+					<div class="sell-field-grid">
+						<label class="sell-field">
+							<span>Очаквана цена</span>
+							<input bind:value={price} type="text" inputmode="numeric" placeholder="EUR" />
+						</label>
+						<label class="sell-field">
+							<span>Град</span>
+							<input bind:value={location} type="text" autocomplete="address-level2" />
+						</label>
+					</div>
+					<label class="sell-field sell-field--wide sell-field--notes">
+						<span>Бележка (по желание)</span>
+						<textarea bind:value={notes} rows="3" placeholder="Състояние, ремонти или друго важно"
 						></textarea>
 					</label>
-				</div>
-				<dl class="bc-sell-wizard__summary">
-					<div>
-						<dt>Автомобил</dt>
-						<dd>{carSummary}</dd>
-					</div>
-					<div>
-						<dt>Пробег</dt>
-						<dd>{mileage.trim() ? `${mileage.trim()} км` : '—'}</dd>
-					</div>
-					<div>
-						<dt>Състояние</dt>
-						<dd>{conditionSummary}</dd>
-					</div>
-					<div>
-						<dt>Екстри</dt>
-						<dd>{selectedFeatures.length || 'Не са избрани'}</dd>
-					</div>
-					<div>
-						<dt>Снимки</dt>
-						<dd>{photoCount ? `${photoCount} добавени` : 'Без снимки'}</dd>
-					</div>
-				</dl>
-				<p class="bc-sell-wizard__promise">Отговор до 24 ч · Без задължение за продажба</p>
+
+					{#if submitError}<p class="sell-flow__error" role="alert">{submitError}</p>{/if}
+				</section>
 			{/if}
 		</div>
 
-		<footer class="bc-sell-wizard__nav">
-			{#if step > 0}
-				<button type="button" class="bc-sell-wizard__back" onclick={goBack}
-					><ChevronLeft size={18} strokeWidth={2.4} aria-hidden="true" />Назад</button
-				>
+		<footer class="sell-flow__footer">
+			{#if step === 1}
+				<button type="button" class="sell-flow__back" onclick={goBack} disabled={submitting}>
+					<ArrowLeft size={18} strokeWidth={2.4} /> Назад
+				</button>
 			{/if}
-			<button type="button" class="bc-sell-wizard__next" disabled={!canContinue} onclick={goNext}>
-				{step < stepLabels.length - 1 ? 'Продължи' : 'Изпрати за оценка'}
-				<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
+			<button
+				type="button"
+				class="sell-flow__next"
+				onclick={goNext}
+				disabled={!canContinue || submitting}
+			>
+				{submitting ? 'Изпращане…' : step === 0 ? 'Продължи' : 'Изпрати за оценка'}
+				<ArrowRight size={18} strokeWidth={2.4} />
 			</button>
 		</footer>
 	{/if}
 </div>
 
 <style>
-	.bc-sell-wizard {
+	.sell-flow {
 		display: grid;
-		align-content: start;
-		height: auto;
-		min-height: 100%;
-		gap: 12px;
-		color: #111111;
+		grid-template-rows: auto auto minmax(0, 1fr) auto;
+		height: 100%;
+		min-height: 0;
+		background: #f3f5f7;
+		color: var(--bc-ink);
 	}
-	.bc-sell-wizard__header {
-		display: flex;
+	.sell-flow__header {
+		display: grid;
+		grid-template-columns: 44px minmax(0, 1fr) 44px;
 		align-items: center;
-		justify-content: space-between;
-		gap: 12px;
+		gap: 10px;
+		padding: 12px 14px 9px;
+		background: #08090b;
+		color: #fff;
 	}
-	.bc-sell-wizard__header h2 {
+	.sell-flow__header > div {
+		display: grid;
+		gap: 2px;
+		text-align: center;
+	}
+	.sell-flow__header h2 {
 		margin: 0;
-		color: #111111;
-		font-size: 22px;
-		font-weight: 700;
-		letter-spacing: -0.015em;
-		line-height: 27px;
+		font-size: var(--bc-mobile-section-title);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-section-title-leading);
 	}
-	.bc-sell-wizard__header button {
-		display: flex;
+	.sell-flow__header span {
+		color: rgba(255, 255, 255, 0.68);
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.sell-flow__close {
+		display: grid;
 		width: 44px;
 		height: 44px;
-		flex: 0 0 44px;
-		align-items: center;
-		justify-content: center;
+		place-items: center;
 		border: 0;
-		border-radius: 999px;
-		background: var(--bc-surface-soft);
-		color: #111111;
-		cursor: pointer;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.08);
+		color: #fff;
 		padding: 0;
+		cursor: pointer;
 	}
-	.bc-sell-wizard__progress {
-		display: grid;
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-		gap: 5px;
+	.sell-flow__progress {
+		height: 3px;
+		background: #24272b;
 	}
-	.bc-sell-wizard__progress span {
-		height: 5px;
-		border-radius: 999px;
-		background: var(--bc-border);
-	}
-	.bc-sell-wizard__progress span.done {
+	.sell-flow__progress span {
+		display: block;
+		height: 100%;
 		background: var(--bc-accent);
+		transition: width 180ms ease;
 	}
-	.bc-sell-wizard__step-label {
-		margin: -4px 0 0;
-		color: #59636f;
-		font-size: 13px;
-		font-weight: 500;
-		line-height: 17px;
-	}
-	.bc-sell-wizard__step-label strong {
-		color: #111111;
-		font-weight: 700;
-	}
-	.bc-sell-wizard__body {
-		display: grid;
+	.sell-flow__body {
 		min-height: 0;
-		gap: 14px;
-		overflow: visible;
-		padding: 2px 1px 8px;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		padding: 14px var(--bc-mobile-gutter) 20px;
+		scrollbar-width: none;
 	}
-	.bc-sell-wizard__intro {
+	.sell-flow__body::-webkit-scrollbar {
+		display: none;
+	}
+	.sell-flow__section {
 		display: grid;
-		gap: 4px;
+		gap: 12px;
 	}
-	.bc-sell-wizard__intro h3,
-	.bc-sell-wizard__intro p {
+	.sell-flow__intro {
+		display: grid;
+		gap: 3px;
+	}
+	.sell-flow__intro h3,
+	.sell-flow__intro p {
 		margin: 0;
 	}
-	.bc-sell-wizard__intro h3 {
-		font-size: 19px;
-		font-weight: 700;
-		line-height: 24px;
+	.sell-flow__intro h3 {
+		font-size: var(--bc-mobile-section-title);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-section-title-leading);
 	}
-	.bc-sell-wizard__intro p {
-		max-width: 54ch;
-		color: #59636f;
-		font-size: 13px;
-		font-weight: 500;
-		line-height: 18px;
+	.sell-flow__intro p {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-body);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-body-leading);
 	}
-	.bc-sell-wizard__fields {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 12px 9px;
-	}
-	.bc-sell-wizard__fields label,
-	.bc-sell-wizard__fields fieldset {
+	.sell-field,
+	.sell-fieldset {
 		display: grid;
 		min-width: 0;
-		gap: 6px;
+		gap: 5px;
 		margin: 0;
 		border: 0;
 		padding: 0;
 	}
-	.bc-sell-wizard__field--wide {
-		grid-column: 1 / -1;
-	}
-	.bc-sell-wizard__fields span,
-	.bc-sell-wizard__fields legend {
-		color: #4f5d57;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 15px;
+	.sell-field > span,
+	.sell-fieldset legend {
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
 		padding: 0;
 	}
-	.bc-sell-wizard__fields input,
-	.bc-sell-wizard__fields select,
-	.bc-sell-wizard__fields textarea {
-		display: block;
+	.sell-field input,
+	.sell-field textarea {
 		width: 100%;
+		min-width: 0;
 		border: 1px solid var(--bc-border) !important;
-		border-radius: var(--bc-radius-control) !important;
-		background: var(--bc-surface-soft) !important;
+		border-radius: 12px !important;
+		background: #fff !important;
 		box-shadow: none !important;
-		color: #111111;
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 22px;
+		color: var(--bc-ink);
+		font-family: inherit;
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
 		outline: 0;
 	}
-	.bc-sell-wizard__fields input,
-	.bc-sell-wizard__fields select {
-		height: 48px !important;
+	.sell-field input {
+		height: 48px;
 		padding: 0 12px !important;
 	}
-	.bc-sell-wizard__fields textarea {
-		min-height: 86px;
-		resize: vertical;
-		padding: 11px 12px !important;
+	.sell-field textarea {
+		min-height: 78px;
+		resize: none;
+		padding: 10px 12px !important;
 	}
-	.bc-sell-wizard__fields select {
-		appearance: auto;
-	}
-	.bc-sell-wizard__fields input::placeholder,
-	.bc-sell-wizard__fields textarea::placeholder {
-		color: #7c8794;
+	.sell-field input::placeholder,
+	.sell-field textarea::placeholder {
+		color: #8b95a1;
 		opacity: 1;
 	}
-	.bc-sell-wizard__fields input:focus-visible,
-	.bc-sell-wizard__fields select:focus-visible,
-	.bc-sell-wizard__fields textarea:focus-visible {
+	.sell-field input:focus,
+	.sell-field textarea:focus {
 		border-color: var(--bc-accent) !important;
-		background: #ffffff !important;
 	}
-	.bc-sell-wizard__chips {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 7px;
-	}
-	.bc-sell-wizard__chips button {
-		display: inline-flex;
-		min-height: 40px;
-		align-items: center;
-		border: 1px solid var(--bc-border);
-		border-radius: 999px;
-		background: #ffffff;
-		color: #111111;
-		cursor: pointer;
-		font-size: 13.5px;
-		font-weight: 600;
-		line-height: 17px;
-		padding: 0 14px;
-	}
-	.bc-sell-wizard__chips button.active {
-		border-color: var(--bc-accent);
-		background: rgba(196, 1, 1, 0.08);
-		color: #9f1117;
-		font-weight: 700;
-	}
-	.bc-sell-wizard__photos {
+	.sell-field-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 8px;
 	}
-	.bc-sell-wizard__photo {
+	.sell-brand-rail {
+		display: flex;
+		gap: 7px;
+		overflow-x: auto;
+		padding: 1px 0 3px;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
+	}
+	.sell-brand-rail::-webkit-scrollbar {
+		display: none;
+	}
+	.sell-brand-rail button {
+		min-height: 40px;
+		flex: 0 0 auto;
+		border: 1px solid var(--bc-border);
+		border-radius: 11px;
+		background: #fff;
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		padding: 0 13px;
+		cursor: pointer;
+		white-space: nowrap;
+		line-height: var(--bc-leading-control);
+	}
+	.sell-brand-rail button.active {
+		border-color: var(--bc-accent);
+		background: var(--bc-accent);
+		color: #fff;
+	}
+	.sell-summary {
 		position: relative;
 		display: grid;
-		gap: 5px;
-		aspect-ratio: 1;
-		align-content: center;
-		justify-items: center;
-		overflow: hidden;
-		margin: 0;
-		border: 1px dashed #bfc8d1;
-		border-radius: 12px;
-		background: var(--bc-surface-soft);
-		color: #59636f;
-		cursor: pointer;
-	}
-	.bc-sell-wizard__photo input {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
-	}
-	.bc-sell-wizard__photo span {
-		font-size: 12px;
-		font-weight: 600;
-		line-height: 15px;
-	}
-	.bc-sell-wizard__photo :global(svg) {
-		color: #626d7c;
-		stroke: #626d7c;
-	}
-	.bc-sell-wizard__photo--filled {
-		display: block;
-		border-style: solid;
-		cursor: default;
-	}
-	.bc-sell-wizard__photo--filled img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	.bc-sell-wizard__photo--filled span {
-		position: absolute;
-		bottom: 5px;
-		left: 5px;
-		border-radius: 999px;
-		background: rgba(28, 28, 28, 0.78);
-		color: #ffffff;
-		font-size: 10.5px;
-		line-height: 14px;
-		padding: 2px 8px;
-	}
-	.bc-sell-wizard__photo--filled button {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		display: flex;
-		width: 30px;
-		height: 30px;
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		border-radius: 999px;
-		background: #ffffff;
-		color: #111111;
-		cursor: pointer;
-		padding: 0;
-	}
-	.bc-sell-wizard__hint {
-		margin: -4px 0 0;
-		color: #59636f;
-		font-size: 13px;
-		font-weight: 600;
-		line-height: 18px;
-	}
-	.bc-sell-wizard__summary {
-		display: grid;
-		gap: 0;
-		margin: 0;
-		overflow: hidden;
+		gap: 2px;
 		border: 1px solid var(--bc-border);
 		border-radius: 12px;
-		background: #ffffff;
+		background: #fff;
+		padding: 10px 88px 10px 12px;
 	}
-	.bc-sell-wizard__summary div {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		gap: 12px;
-		padding: 10px 12px;
+	.sell-summary span {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-meta-leading);
 	}
-	.bc-sell-wizard__summary div + div {
-		border-top: 1px solid #edf0f2;
+	.sell-summary strong {
+		font-size: var(--bc-mobile-card-title);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-card-title-leading);
 	}
-	.bc-sell-wizard__summary dt {
-		color: #59636f;
-		font-size: 12.5px;
-		font-weight: 600;
-		line-height: 17px;
-		white-space: nowrap;
+	.sell-summary button {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		transform: translateY(-50%);
+		min-height: 36px;
+		border: 0;
+		border-radius: 9px;
+		background: var(--bc-surface-hover);
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		padding: 0 10px;
+		cursor: pointer;
+		line-height: var(--bc-mobile-label-leading);
 	}
-	.bc-sell-wizard__summary dd {
+	.sell-flow__error {
 		margin: 0;
-		color: #111111;
-		font-size: 13px;
-		font-weight: 700;
-		line-height: 18px;
-		overflow-wrap: anywhere;
-		text-align: right;
+		border-radius: 10px;
+		background: #fff0f1;
+		color: #9f1016;
+		font-size: var(--bc-mobile-body);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-body-leading);
+		padding: 9px 10px;
 	}
-	.bc-sell-wizard__promise {
-		margin: 0;
-		color: #9f1117;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 17px;
-	}
-	.bc-sell-wizard__nav {
-		display: flex;
+	.sell-flow__footer {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
 		gap: 8px;
-		padding-top: 0;
+		border-top: 1px solid var(--bc-border);
+		background: #fff;
+		padding: 10px var(--bc-mobile-gutter) calc(10px + env(safe-area-inset-bottom));
 	}
-	.bc-sell-wizard__back,
-	.bc-sell-wizard__next {
+	.sell-flow__footer > .sell-flow__next:only-child {
+		grid-column: 1 / -1;
+	}
+	.sell-flow__back,
+	.sell-flow__next {
 		display: inline-flex;
-		min-height: 46px;
+		min-height: 48px;
 		align-items: center;
 		justify-content: center;
 		gap: 6px;
-		border-radius: var(--bc-radius-control);
+		border-radius: 12px;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-heading);
 		cursor: pointer;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 18px;
+		line-height: var(--bc-leading-cta);
 	}
-	.bc-sell-wizard__back {
-		flex: 0 0 auto;
-		border: 1px solid var(--bc-border);
-		background: #ffffff;
-		color: #111111;
-		padding: 0 14px;
-	}
-	.bc-sell-wizard__next {
-		flex: 1 1 auto;
+	.sell-flow__back {
 		border: 0;
-		background: #1c1c1c;
-		color: #ffffff;
+		background: var(--bc-surface-hover);
+		color: var(--bc-ink);
+		padding: 0 13px;
+	}
+	.sell-flow__next {
+		border: 0;
+		background: var(--bc-accent);
+		color: #fff;
 		padding: 0 16px;
 	}
-	.bc-sell-wizard__next:disabled {
-		background: #d4d9de;
-		color: #67727e;
+	.sell-flow__next:disabled {
+		background: #cfd4da;
+		color: #7a8490;
 		cursor: not-allowed;
 	}
-	.bc-sell-wizard__nav :global(svg),
-	.bc-sell-wizard__header button :global(svg) {
-		color: currentColor;
-		stroke: currentColor;
-	}
-	.bc-sell-wizard__success {
+	.sell-flow__success {
 		display: grid;
+		height: 100%;
+		place-content: center;
+		justify-items: center;
 		gap: 10px;
-		justify-items: start;
-		padding: 8px 0 2px;
+		padding: 24px;
+		text-align: center;
 	}
-	.bc-sell-wizard__success > span {
-		display: flex;
+	.sell-flow__success-icon {
+		display: grid;
 		width: 52px;
 		height: 52px;
-		align-items: center;
-		justify-content: center;
-		border-radius: 999px;
-		background: rgba(196, 1, 1, 0.1);
-		color: #9f1117;
+		place-items: center;
+		border-radius: 50%;
+		background: #fff;
+		color: var(--bc-accent);
 	}
-	.bc-sell-wizard__success h3,
-	.bc-sell-wizard__success p {
+	.sell-flow__success h2,
+	.sell-flow__success p {
 		margin: 0;
 	}
-	.bc-sell-wizard__success h3 {
-		font-size: 21px;
-		font-weight: 700;
-		line-height: 26px;
+	.sell-flow__success h2 {
+		font-size: 22px;
+		font-weight: var(--bc-weight-heading);
 	}
-	.bc-sell-wizard__success p {
-		max-width: 52ch;
-		color: #59636f;
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
+	.sell-flow__success p {
+		max-width: 30ch;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
+		font-weight: var(--bc-weight-body);
 	}
-	.bc-sell-wizard__success button {
-		display: flex;
-		width: 100%;
+	.sell-flow__success button {
+		min-width: 160px;
 		min-height: 46px;
-		align-items: center;
-		justify-content: center;
 		margin-top: 4px;
 		border: 0;
-		border-radius: var(--bc-radius-control);
-		background: #1c1c1c;
-		color: #ffffff;
+		border-radius: 12px;
+		background: var(--bc-accent);
+		color: #fff;
+		font-size: 14px;
+		font-weight: var(--bc-weight-heading);
 		cursor: pointer;
-		font-size: 15px;
-		font-weight: 700;
+	}
+	.sell-flow button:focus-visible,
+	.sell-flow input:focus-visible,
+	.sell-flow textarea:focus-visible {
+		outline: 2px solid var(--bc-accent);
+		outline-offset: 2px;
 	}
 
-	@media (min-width: 768px) {
-		.bc-sell-wizard__body {
-			max-height: 560px;
-			overflow-y: auto;
-			scrollbar-width: none;
-		}
-		.bc-sell-wizard__body::-webkit-scrollbar {
-			display: none;
-		}
+	/* overlay-polish-v2: full-screen, storefront-consistent sell flow */
+	.sell-flow {
+		background: var(--bc-bg-strong);
+	}
+	.sell-flow__header {
+		grid-template-columns: 40px minmax(0, 1fr) 40px;
+		gap: 8px;
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+		padding: max(8px, env(safe-area-inset-top)) var(--bc-mobile-gutter) 7px;
+	}
+	.sell-flow__header > div {
+		gap: 1px;
+	}
+	.sell-flow__header h2 {
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.sell-flow__header span {
+		color: var(--bc-muted);
+		font-size: 11px;
+		line-height: 1.2;
+	}
+	.sell-flow__header-spacer {
+		width: 40px;
+		height: 40px;
+	}
+	.sell-flow__close {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: var(--bc-surface);
+		color: var(--bc-ink);
+	}
+	.sell-flow__progress {
+		height: 3px;
+		margin: 0 var(--bc-mobile-gutter) 8px;
+		border-radius: 999px;
+		background: var(--bc-border);
+		overflow: hidden;
+	}
+
+	.sell-flow__body {
+		background: var(--bc-bg-strong);
+		padding: 8px var(--bc-mobile-gutter) 18px;
+	}
+	.sell-flow__section {
+		gap: 10px;
+	}
+	.sell-flow__intro {
+		gap: 2px;
+	}
+	.sell-flow__intro h3 {
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.sell-flow__intro p {
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
+		font-weight: var(--bc-weight-body);
+	}
+	.sell-field,
+	.sell-fieldset {
+		gap: 5px;
+	}
+	.sell-field > span,
+	.sell-fieldset legend {
+		font-size: var(--bc-mobile-label);
+		line-height: var(--bc-mobile-label-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.sell-field input,
+	.sell-field textarea {
+		border: 0 !important;
+		border-radius: 10px !important;
+		background: var(--bc-white) !important;
+	}
+	.sell-field input {
+		height: 44px;
+		padding: 0 11px !important;
+	}
+	.sell-field textarea {
+		min-height: 70px;
+		padding: 9px 11px !important;
+	}
+	.sell-field input:focus,
+	.sell-field textarea:focus {
+		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent) !important;
+	}
+	.sell-brand-rail {
+		gap: 6px;
+	}
+	.sell-brand-rail button {
+		min-height: 38px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		padding: 0 12px;
+	}
+	.sell-brand-rail button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+
+	.sell-summary {
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+	}
+	.sell-summary button {
+		background: var(--bc-surface-hover);
+	}
+	.sell-flow__footer {
+		border-top: 1px solid var(--bc-border);
+		background: var(--bc-bg-strong);
+		padding: 9px var(--bc-mobile-gutter) calc(9px + env(safe-area-inset-bottom));
+	}
+	.sell-flow__back,
+	.sell-flow__next {
+		min-height: 46px;
+		border-radius: 11px;
+	}
+	.sell-flow__back {
+		background: var(--bc-white);
+	}
+	.sell-flow__next {
+		background: var(--bc-accent);
+	}
+	.sell-flow__next:disabled {
+		background: var(--bc-border);
+		color: var(--bc-muted);
 	}
 </style>

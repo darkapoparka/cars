@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+/* Restrict automatic utility discovery to application source, not audit/docs examples. */
+@import 'tailwindcss' source('../../');
 
 @source '../../routes/**/*.{svelte,ts}';
 @source '../components/**/*.{svelte,ts}';
@@ -6,6 +7,18 @@
 
 @theme inline {
 	--font-sa: var(--sa-font);
+	--font-sans: var(--sa-font);
+	--text-xs: var(--sa-text-xs);
+	--text-sm: var(--sa-text-caption);
+	--text-base: var(--sa-text-base);
+	--text-lg: var(--sa-text-lg);
+	--text-xl: var(--sa-text-xl);
+	--text-2xl: var(--sa-text-2xl);
+	--font-weight-normal: var(--sa-weight-regular);
+	--font-weight-medium: var(--sa-weight-medium);
+	--font-weight-semibold: var(--sa-weight-semibold);
+	--font-weight-bold: var(--sa-weight-strong);
+	--font-weight-extrabold: var(--sa-weight-display);
 
 	--color-sa-red: var(--sa-red);
 	--color-sa-red-strong: var(--sa-red-strong);
@@ -223,8 +236,8 @@
 	border-radius: var(--sa-r-xs, 8px);
 	appearance: none;
 	font-family: var(--sa-font);
-	font-size: var(--sa-cta-font-size, var(--sa-button-font-size, 1rem));
-	font-weight: var(--sa-button-font-weight, 600);
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	line-height: var(--sa-button-line-height, 1.15);
 	text-align: center;
 	text-decoration: none;
@@ -250,7 +263,7 @@
 
 @media (min-width: 992px) {
 	.sa-cta {
-		--sa-cta-font-size: var(--sa-text-desktop-action-sm, 1rem);
+		--sa-cta-font-size: var(--sa-button-font-size);
 		--sa-cta-height: 48px;
 		--sa-cta-pad-x: 20px;
 	}

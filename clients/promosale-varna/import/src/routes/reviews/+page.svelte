@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>Отзиви — Promosale Varna</title>
+	<title>Отзиви — Day Night Auto</title>
 	<meta
 		name="description"
-		content="Отзиви от клиенти на Promosale Varna — реални истории за покупка и внос на автомобили: ясен процес, уговорени срокове и без скрити такси."
+		content="Отзиви от клиенти на Day Night Auto — реални истории за покупка и внос на автомобили: ясен процес, уговорени срокове и без скрити такси."
 	/>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />

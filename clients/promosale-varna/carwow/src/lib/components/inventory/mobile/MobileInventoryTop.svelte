@@ -1,21 +1,37 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { MapPin, MessageCircle, PhoneCall, Search } from '@lucide/svelte';
+	import {
+		ArrowUpDown,
+		MapPin,
+		MessageCircle,
+		PhoneCall,
+		Search,
+		SlidersHorizontal
+	} from '@lucide/svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { Mode } from '$lib/types/mobile-inventory';
 
 	let {
 		mode,
 		query,
-		onOpenSearch
+		onOpenSearch,
+		onOpenFilters,
+		onOpenSort,
+		activeFilterCount,
+		sortLabel,
+		sortActive
 	}: {
 		mode: Mode;
 		query: string;
 		onOpenSearch: () => void;
+		onOpenFilters: () => void;
+		onOpenSort: () => void;
+		activeFilterCount: number;
+		sortLabel: string;
+		sortActive: boolean;
 	} = $props();
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const viberHref = `tel:+359892020208`;
+	const phoneHref = daynightSite.phoneHref;
+	const viberHref = daynightSite.viberHref;
 	const searchLabel = $derived(query.trim() ? `Търсене: ${query.trim()}` : 'Отвори търсене');
 </script>
 
@@ -30,7 +46,7 @@
 				</div>
 			</div>
 			<div class="mobile-map-card__actions">
-				<a class="is-primary" href={resolve('/contact')}>
+				<a class="is-primary" href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer">
 					<MapPin size={17} strokeWidth={2.4} />
 					Карта
 				</a>
@@ -46,25 +62,52 @@
 		</div>
 	{/if}
 
-	<button
-		id="mobile-inventory-search"
-		class="mobile-inventory-search"
-		type="button"
-		aria-label={searchLabel}
-		aria-haspopup="dialog"
-		onclick={onOpenSearch}
-	>
-		<span class="mobile-inventory-search__field">
-			<span
-				class={query
-					? 'mobile-inventory-search__label is-filled'
-					: 'mobile-inventory-search__label'}
-			>
-				{query || 'Търси автомобили'}
+	<div class="mobile-inventory-toolbar">
+		<button
+			id="mobile-inventory-search"
+			class="mobile-inventory-search"
+			type="button"
+			aria-label={searchLabel}
+			aria-haspopup="dialog"
+			onclick={onOpenSearch}
+		>
+			<span class="mobile-inventory-search__field">
+				<span
+					class={query
+						? 'mobile-inventory-search__label is-filled'
+						: 'mobile-inventory-search__label'}
+				>
+					{query || 'Търси коли'}
+				</span>
+				<span class="mobile-inventory-search__icon" aria-hidden="true">
+					<Search size={19} strokeWidth={2.55} />
+				</span>
 			</span>
-			<span class="mobile-inventory-search__icon" aria-hidden="true">
-				<Search size={19} strokeWidth={2.55} />
-			</span>
-		</span>
-	</button>
+		</button>
+		<button
+			class="mobile-inventory-tool"
+			class:is-active={activeFilterCount > 0}
+			type="button"
+			aria-label={activeFilterCount ? 'Филтри: ' + activeFilterCount + ' активни' : 'Филтри'}
+			title="Филтри"
+			aria-haspopup="dialog"
+			onclick={onOpenFilters}
+		>
+			<SlidersHorizontal size={22} strokeWidth={2} aria-hidden="true" />
+			{#if activeFilterCount}<span class="mobile-inventory-tool__count" aria-hidden="true"
+					>{activeFilterCount}</span
+				>{/if}
+		</button>
+		<button
+			class="mobile-inventory-tool"
+			class:is-active={sortActive}
+			type="button"
+			aria-label={'Сортиране: ' + sortLabel}
+			title={'Сортиране: ' + sortLabel}
+			aria-haspopup="dialog"
+			onclick={onOpenSort}
+		>
+			<ArrowUpDown size={22} strokeWidth={2} aria-hidden="true" />
+		</button>
+	</div>
 </section>

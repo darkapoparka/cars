@@ -8,12 +8,12 @@
 
 	let { data, form } = $props();
 	const emailValue = $derived(
-		form && 'email' in form ? String(form.email) : 'admin@daynight.local'
+		form && 'email' in form ? String(form.email) : data.databaseMode ? '' : 'admin@daynight.local'
 	);
 </script>
 
 <svelte:head>
-	<title>Promosale Varna Admin Login</title>
+	<title>Day Night Auto Admin Login</title>
 </svelte:head>
 
 <main class="admin-cms bg-background text-foreground min-h-svh">
@@ -27,7 +27,7 @@
 			<div class="absolute inset-0 bg-gradient-to-br from-black/75 via-black/45 to-black/75"></div>
 			<div class="relative flex h-full flex-col justify-between p-12">
 				<p class="w-fit rounded-full bg-white/10 px-3 py-1 text-xs font-semibold backdrop-blur">
-					Promosale Varna CMS
+					Day Night Auto CMS
 				</p>
 				<div class="max-w-xl">
 					<p class="mb-3 text-sm font-medium text-white/70">Protected workspace</p>
@@ -35,7 +35,7 @@
 						Inventory, leads, imports, and team work in one place.
 					</h1>
 					<p class="mt-5 max-w-lg text-base leading-7 text-white/75">
-						Use the admin CMS to manage Promosale Varna stock, customer requests, staff assignments,
+						Use the admin CMS to manage Day Night Auto stock, customer requests, staff assignments,
 						content, and operational signals.
 					</p>
 				</div>
@@ -49,7 +49,7 @@
 						<ShieldCheck aria-hidden="true" />
 					</div>
 					<Card.Title>Welcome back</Card.Title>
-					<Card.Description>Use the Promosale Varna admin account to open the CMS.</Card.Description>
+					<Card.Description>Use the Day Night Auto admin account to open the CMS.</Card.Description>
 				</Card.Header>
 				<Card.Content>
 					<form
@@ -82,7 +82,7 @@
 								name="password"
 								type="password"
 								autocomplete="current-password"
-								placeholder="At least 8 characters"
+								placeholder={data.databaseMode ? 'Your admin password' : 'At least 8 characters'}
 								required
 							/>
 						</div>
@@ -94,7 +94,11 @@
 					</form>
 				</Card.Content>
 				<Card.Footer class="text-muted-foreground text-sm">
-					Prototype account: admin@daynight.local with any intentional 8+ character password.
+					{#if data.databaseMode}
+						Sign in with the administrator credentials configured for this template.
+					{:else}
+						Prototype account: admin@daynight.local with any intentional 8+ character password.
+					{/if}
 				</Card.Footer>
 			</Card.Root>
 		</div>

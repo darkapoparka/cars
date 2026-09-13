@@ -13,13 +13,13 @@
 
 The app already lives in **two worlds**:
 
-| World | Routes | How it renders | Verdict |
-|---|---|---|---|
-| **Clean** (done) | ~20 — all of `/admin/*`, `/offer`, `/compare-clean`, `/account/vehicles/[slug]` | Svelte 5 + Tailwind v4 / shadcn, `bc-*` tokens, **no `pageDocument`, no `app.css`** | Keep |
-| **Auxero shell** (to migrate) | **28** — 19 public + 9 account | Server builds an HTML string → `{@html}` → splice Svelte children inside it → load 397 KB `app.css` + 2,553-line override sheet | **Replace** |
+| World                         | Routes                                                                          | How it renders                                                                                                                  | Verdict     |
+| ----------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| **Clean** (done)              | ~20 — all of `/admin/*`, `/offer`, `/compare-clean`, `/account/vehicles/[slug]` | Svelte 5 + Tailwind v4 / shadcn, `bc-*` tokens, **no `pageDocument`, no `app.css`**                                             | Keep        |
+| **Auxero shell** (to migrate) | **28** — 19 public + 9 account                                                  | Server builds an HTML string → `{@html}` → splice Svelte children inside it → load 397 KB `app.css` + 2,553-line override sheet | **Replace** |
 
 **The single most important finding:** the **data layer is already clean.** Every
-[`$lib/auxero/*.ts`](src/lib/auxero/) module is *typed view-model data with zero HTML strings*
+[`$lib/auxero/*.ts`](src/lib/auxero/) module is _typed view-model data with zero HTML strings_
 (`home-five.ts` = 1,566 lines of typed exports, `compare.ts`, `inventory-desktop.ts`, etc.).
 They already feed real Svelte components. **This is a view-layer rebuild, not a rewrite.**
 
@@ -37,17 +37,17 @@ themed compare page while loading **zero theme CSS and zero `!important`**. It i
 The Auxero theme is a vendored HTML template product wedged into SvelteKit by a
 server-side string pipeline. The cost, measured:
 
-| Cruft | Size / count | File |
-|---|---|---|
-| Vendored theme stylesheet | **397 KB · 18,758 lines · 149 `!important`** | [static/assets/app.css](static/assets/app.css) |
-| Theme-override sheet (specificity war) | **2,553 lines · 542 `!important`** | [src/routes/auxero-guards.css](src/routes/auxero-guards.css) |
-| Server HTML mutator | **3,350 lines · 14 regex passes · ~80 `.replaceAll` brand swaps** | [src/lib/server/auxero-template.ts](src/lib/server/auxero-template.ts) |
-| Raw theme HTML source | **8.1 MB · 61 files** | [.template-ref/](.template-ref) |
-| Legacy carousel bundle | **146 KB** | [static/assets/js/swiper-bundle.min.js](static/assets/js/swiper-bundle.min.js) |
-| `!important` total in `src/` | **1,840** | (component `<style>` blocks fighting `app.css`) |
-| `{@html}` server-blob injections | **17 across 9 files** | shells + 6 account/home2 pages |
-| Regex HTML→Bulgarian translation pairs | **210** | `auxeroBgReplacements` in [messages.ts](src/lib/i18n/messages.ts) |
-| Scattered inline `locale==='bg'?…` ternaries | **143 across 12 files** | builders + components |
+| Cruft                                        | Size / count                                                      | File                                                                           |
+| -------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Vendored theme stylesheet                    | **397 KB · 18,758 lines · 149 `!important`**                      | [static/assets/app.css](static/assets/app.css)                                 |
+| Theme-override sheet (specificity war)       | **2,553 lines · 542 `!important`**                                | [src/routes/auxero-guards.css](src/routes/auxero-guards.css)                   |
+| Server HTML mutator                          | **3,350 lines · 14 regex passes · ~80 `.replaceAll` brand swaps** | [src/lib/server/auxero-template.ts](src/lib/server/auxero-template.ts)         |
+| Raw theme HTML source                        | **8.1 MB · 61 files**                                             | [.template-ref/](.template-ref)                                                |
+| Legacy carousel bundle                       | **146 KB**                                                        | [static/assets/js/swiper-bundle.min.js](static/assets/js/swiper-bundle.min.js) |
+| `!important` total in `src/`                 | **1,840**                                                         | (component `<style>` blocks fighting `app.css`)                                |
+| `{@html}` server-blob injections             | **17 across 9 files**                                             | shells + 6 account/home2 pages                                                 |
+| Regex HTML→Bulgarian translation pairs       | **210**                                                           | `auxeroBgReplacements` in [messages.ts](src/lib/i18n/messages.ts)              |
+| Scattered inline `locale==='bg'?…` ternaries | **143 across 12 files**                                           | builders + components                                                          |
 
 ### The two cruft mechanisms (what we are deleting)
 
@@ -58,7 +58,7 @@ server-side string pipeline. The cost, measured:
 2. **Client string splicing** — [`AuxeroPageShell.svelte`](src/lib/components/layout/AuxeroPageShell.svelte) and
    [`AuxeroDashboardSlotShell.svelte`](src/lib/components/layout/AuxeroDashboardSlotShell.svelte) take that blob plus a Svelte
    `children` snippet and **count `<div>` depth with a regex to find where to slice** so Svelte renders
-   *inside* the theme's `<div id="wrapper">`. This is the literal "template shit" — it is fragile,
+   _inside_ the theme's `<div id="wrapper">`. This is the literal "template shit" — it is fragile,
    unobservable, and forces every real component to use `!important` to out-specify `app.css`.
 
 Neither survives the migration.
@@ -75,12 +75,13 @@ A route becomes clean the moment **its `+page.server.ts` stops producing a `page
   "this route owns its own header/footer, skip the global ones." Treat theme and chrome separately.
 - **Caveat — `auxero-guards.css` is NOT conditional.** Only `app.css` + swiper are gated by `pageDocument`
   ([+layout.svelte:83-85](src/routes/+layout.svelte#L83)). The 2,553-line / 542-`!important` guard sheet is
-  imported **unconditionally** at [+layout.svelte:3](src/routes/+layout.svelte#L3), so it ships on *every*
+  imported **unconditionally** at [+layout.svelte:3](src/routes/+layout.svelte#L3), so it ships on _every_
   route — including converted clean ones — until its import is scoped or deleted. "Clean" therefore means a
   route **does not _depend_ on** guards, not "guards no longer load." Phase 0a isolates the import (move it
   behind the Auxero path); Phase 6 deletes the file.
 
 This is precisely what [`/compare-clean/+page.server.ts`](src/routes/compare-clean/+page.server.ts) proves:
+
 > `// POC route: NO pageDocument → the theme app.css never loads → clean slate.`
 
 **Architecture decision — global clean chrome.** Converted public pages will **drop `auxeroFullPage`**
@@ -100,8 +101,8 @@ The clean global chrome path already exists and is exercised today by `/account/
    Every route ships only after passing the verification gate (§9). One route per PR, each independently revertable.
 3. **Delete the engine, not piecemeal.** `app.css`, the shells, and the template pipeline stay until the
    **last** route is off them, then delete in one Phase-6 commit — a half-migrated page still on `pageDocument`
-   still needs `app.css`, so don't pull it early. **Exception:** `auxero-guards.css` loads *globally* today
-   ([+layout.svelte:3](src/routes/+layout.svelte#L3)), so Phase 0a may *scope* its import behind the Auxero path
+   still needs `app.css`, so don't pull it early. **Exception:** `auxero-guards.css` loads _globally_ today
+   ([+layout.svelte:3](src/routes/+layout.svelte#L3)), so Phase 0a may _scope_ its import behind the Auxero path
    early (clean routes stop receiving it); final deletion is still Phase 6.
 4. **Compose, never re-inline.** Pages compose primitives from a shared `bc/` library. No page re-authors
    the same button/card/pill utility string. A token change propagates everywhere.
@@ -113,12 +114,12 @@ The clean global chrome path already exists and is exercised today by `/account/
 ### Definition of "done / clean / perfect"
 
 A route is **done** when: no `pageDocument`; **does not _depend_ on** `app.css` or `auxero-guards.css` (guards
-still *loads* globally until Phase 0a scopes it / Phase 6 deletes it — see §2 caveat); zero `!important` in its
+still _loads_ globally until Phase 0a scopes it / Phase 6 deletes it — see §2 caveat); zero `!important` in its
 own styles; composed from `bc/` primitives; copy via the typed catalog or `t()`; desktop+mobile 1:1;
 `svelte-check` clean; Lighthouse ≥ current. The **app** is **perfect** when all 28 are done and Phase 6 has
 deleted the engine.
 
-> **Scope note (your "entire app clean and perfect").** `/admin/*` and `/offer` are *already* clean
+> **Scope note (your "entire app clean and perfect").** `/admin/*` and `/offer` are _already_ clean
 > (shadcn + tokens). "Perfect" for them means they're done — rebuilding working admin would violate
 > no-regression for zero gain. They participate only in the final low-risk token-harmonization pass (Phase 7).
 > "Entire app" therefore = **migrate the 28 Auxero routes**, after which 100% of routes are clean.
@@ -163,21 +164,21 @@ reference these and nothing else.
 
 ### Tokens (from [daynight.css](src/lib/styles/daynight.css) → [daynight.tailwind.css](src/lib/styles/daynight.tailwind.css))
 
-| Concern | Token(s) | Value | Rule |
-|---|---|---|---|
-| Brand green | `bc-accent` | `#d71920` | CTAs, pills |
-| Green text/contrast | `bc-accent-contrast` | `#111827` | text on green; dark hero base |
-| Pale green wash | `bc-accent-soft` | `#fee2e2` | best-cell highlight, chips |
-| Page bg | `bc-bg` | `#fbfcfa` | off-white |
-| Ink / soft ink | `bc-ink` / `bc-ink-soft` | `#1c1c1c` / `#111827` | text, dark footer surface |
-| Border | `bc-border` | `#dde5d8` | the 1px flat-card border |
-| Muted / footer muted | `bc-muted` / `bc-muted-light` | `#696665` / `#9fa1a4` | secondary text |
-| Radius (default) | `rounded-bc-md` | 8px | cards, buttons |
-| Radius (pill) | `rounded-bc-pill` | 999px | pills, discs, nav buttons |
-| Radius (hero/section) | `rounded-bc-section` | 28px | big containers |
-| Type scale | `text-bc-h1…h7`, `text-bc-body` | 68→18px, body 16/26 | **headings are 600 (semibold), not bold** |
-| Font | `font-bc-body` | Manrope | **weight caps at 800** (900 silently clamps) |
-| Focus | `.bc-focus-ring` | green `rgb(215 25 32 / .5)` | all interactive |
+| Concern               | Token(s)                        | Value                       | Rule                                         |
+| --------------------- | ------------------------------- | --------------------------- | -------------------------------------------- |
+| Brand green           | `bc-accent`                     | `#d71920`                   | CTAs, pills                                  |
+| Green text/contrast   | `bc-accent-contrast`            | `#111827`                   | text on green; dark hero base                |
+| Pale green wash       | `bc-accent-soft`                | `#fee2e2`                   | best-cell highlight, chips                   |
+| Page bg               | `bc-bg`                         | `#fbfcfa`                   | off-white                                    |
+| Ink / soft ink        | `bc-ink` / `bc-ink-soft`        | `#1c1c1c` / `#111827`       | text, dark footer surface                    |
+| Border                | `bc-border`                     | `#dde5d8`                   | the 1px flat-card border                     |
+| Muted / footer muted  | `bc-muted` / `bc-muted-light`   | `#696665` / `#9fa1a4`       | secondary text                               |
+| Radius (default)      | `rounded-bc-md`                 | 8px                         | cards, buttons                               |
+| Radius (pill)         | `rounded-bc-pill`               | 999px                       | pills, discs, nav buttons                    |
+| Radius (hero/section) | `rounded-bc-section`            | 28px                        | big containers                               |
+| Type scale            | `text-bc-h1…h7`, `text-bc-body` | 68→18px, body 16/26         | **headings are 600 (semibold), not bold**    |
+| Font                  | `font-bc-body`                  | Manrope                     | **weight caps at 800** (900 silently clamps) |
+| Focus                 | `.bc-focus-ring`                | green `rgb(215 25 32 / .5)` | all interactive                              |
 
 ### Visual grammar (the non-negotiable "look")
 
@@ -200,25 +201,27 @@ reference these and nothing else.
 ## 5a. Tailwind v4 CSS architecture (and the `app.css` naming trap)
 
 > Grounded in the official v4 docs (CSS-first config: `@import "tailwindcss"` + `@theme`). The project is
-> **already idiomatic v4** — this section exists so the migration *consumes* it correctly, not re-invents it.
+> **already idiomatic v4** — this section exists so the migration _consumes_ it correctly, not re-invents it.
 
 **Naming trap — two unrelated "app.css" files; never confuse them:**
 
-| File | What it is | Fate |
-|---|---|---|
-| [static/assets/app.css](static/assets/app.css) | The **Auxero theme** (397 KB vendored framework). **Not Tailwind.** | Deleted (Phase 6) |
-| [daynight.tailwind-entry.css](src/lib/styles/daynight.tailwind-entry.css) | The **Tailwind v4 entry** (`@import 'tailwindcss'`) | Kept, extended to every page |
+| File                                                                      | What it is                                                          | Fate                         |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------- |
+| [static/assets/app.css](static/assets/app.css)                            | The **Auxero theme** (397 KB vendored framework). **Not Tailwind.** | Deleted (Phase 6)            |
+| [daynight.tailwind-entry.css](src/lib/styles/daynight.tailwind-entry.css) | The **Tailwind v4 entry** (`@import 'tailwindcss'`)                 | Kept, extended to every page |
 
 "Drop app.css" **always** means the Auxero one. The Tailwind entry is what we standardize on.
 
 **The token stack is already correct v4 — keep it, don't "modernize" it.** It mirrors Tailwind Labs' own
 `globals.css` (`@theme inline` pointing at `:root` vars). No `tailwind.config.js`; config lives in CSS:
+
 - [daynight.css](src/lib/styles/daynight.css) — raw `--bc-*` token **values** on `:root` (themeable layer).
 - [daynight.tailwind.css](src/lib/styles/daynight.tailwind.css) — `@theme inline { --color-bc-accent: var(--bc-accent); … }`
   maps tokens → utilities (`bg-bc-accent`, `rounded-bc-pill`, `text-bc-h2`).
 - [daynight.tailwind-entry.css](src/lib/styles/daynight.tailwind-entry.css) — `@import 'tailwindcss'` + the map = the entry.
 
 **Entry-import strategy — transitional vs end-state (this is the one real decision):**
+
 - **During migration (Auxero still coexists):** keep importing the Tailwind entry **per clean route** (exactly as
   [`/compare-clean`](src/routes/compare-clean/+page.svelte) does). Reason: `@import "tailwindcss"` ships
   **Preflight** (a base reset) that would collide with the Auxero `app.css` on un-migrated pages. Scoping the
@@ -263,8 +266,8 @@ then prove it on the known-good POC. **Build only what the next phase needs — 
    - `embla-carousel-svelte` — add **only** at Phase 3/4 when `bc/Carousel` is actually built. **Not** in Phase 0.
 4. **Global clean-chrome verification.** Confirm [`SiteHeader`](src/lib/components/layout/SiteHeader.svelte) +
    [`MobileAppbar`](src/lib/components/layout/MobileAppbar.svelte) + [`SiteFooter`](src/lib/components/layout/SiteFooter.svelte)
-   + `MobileBottomNav` render **1:1 against the current Auxero header/footer** on a throwaway clean route.
-   Highest-leverage task — all 28 pages inherit this chrome.
+   - `MobileBottomNav` render **1:1 against the current Auxero header/footer** on a throwaway clean route.
+     Highest-leverage task — all 28 pages inherit this chrome.
 5. **Guard-CSS isolation decision.** `auxero-guards.css` is imported globally (§2 caveat). Either **(a)** move its
    import out of [+layout.svelte:3](src/routes/+layout.svelte#L3) into the Auxero shell path so clean routes stop
    receiving it, or **(b)** accept it ships inert until Phase 6. Test the step-4 throwaway route with/without it:
@@ -308,12 +311,15 @@ Order is chosen so the recipe is validated on cheap pages first and the riskiest
 one PR. Pages **drop `auxeroFullPage`** (use global clean chrome) unless noted.
 
 ### Phase 1 — Pilots (validate recipe + global chrome end-to-end)
+
 Lowest-risk, mostly static. Proves the chrome integration that the POC didn't exercise.
+
 - `/terms`, `/faqs`, `/reviews`, `/contact`
 - Data already typed: [terms.ts](src/lib/auxero/terms.ts), [faqs.ts](src/lib/auxero/faqs.ts) (use `bc/Accordion`),
   [reviews.ts](src/lib/auxero/reviews.ts), [contact.ts](src/lib/auxero/contact.ts) (use `bc/FormField`).
 
 ### Phase 2 — Content pages (recipe at scale)
+
 - `/about`, `/services`, `/import`, `/financing`, `/calculator`, `/sell-your-car`,
   `/agents`, `/agents/[slug]`, `/blog`, `/blog/[slug]`
 - All have clean typed builders already ([about.ts](src/lib/auxero/about.ts), [services.ts](src/lib/auxero/services.ts),
@@ -322,11 +328,12 @@ Lowest-risk, mostly static. Proves the chrome integration that the POC didn't ex
   `EUR` price literals — centralize while here.
 
 ### Phase 3 — Composite pages (the heavy hitters)
+
 - **`/compare`** — fold the [`CompareCleanPage`](src/lib/components/compare/CompareCleanPage.svelte) POC into the real
   route, then **delete `/compare-clean`** and its server file. First "retire a duplicate" win.
 - **`/`** (home) — `HomeFiveTemplatePage` orchestrates 7+ sections; rebuild each on `bc/` primitives, convert
   the mobile CSS-`order` reflow to Tailwind responsive ordering. Many sections (`HomeFiveHeader/Hero/…`) are
-  *already* Svelte carrying 100+ `!important` each — those `!important` strip out once `app.css` is gone.
+  _already_ Svelte carrying 100+ `!important` each — those `!important` strip out once `app.css` is gone.
 - **`/home2`** — currently a raw `{@html runtimeHtml}` blob ([HomeTwoTemplatePage.svelte](src/lib/components/home2/HomeTwoTemplatePage.svelte))
   fed by the shared home page data ([home-five-page-data](src/lib/server/home-five-page-data.ts)); rebuild on the
   same home sections (it's an alt-homepage layout, not new content).
@@ -336,7 +343,9 @@ Lowest-risk, mostly static. Proves the chrome integration that the POC didn't ex
   not over-engineering — do **not** simplify them away).
 
 ### Phase 4 — The PDP (`/inventory/[slug]`) — hardest, isolated last
+
 The only true dual-tree split: desktop is Auxero-template HTML, mobile is the modern vaul snap-sheet.
+
 - **Desktop:** rebuild as clean Svelte from [detail.ts](src/lib/auxero/detail.ts) (gallery via `bc/Carousel`,
   buy-box tab state, spec tables).
 - **Mobile:** **keep the existing vaul drawer** ([AuxeroVehicleMobilePdp.svelte](src/lib/components/detail/AuxeroVehicleMobilePdp.svelte))
@@ -345,10 +354,12 @@ The only true dual-tree split: desktop is Auxero-template HTML, mobile is the mo
 - Highest verification bar: swiper→Embla gallery parity, `{#key}` re-render on variant change, sticky buy-box.
 
 ### Phase 5 — Account dashboard (mostly a shell swap)
+
 9 hybrid routes. The clean replacement **already exists and is proven**:
 [`DashliteDashboardShell`](src/lib/components/account/DashliteDashboardShell.svelte) (used by `/account/vehicles/[slug]`).
+
 - Swap `AuxeroDashboardSlotShell` → `DashliteDashboardShell` across `/account`, `/account/profile|password|
-  favorites|messages|listings|listings/new|listings/edit/[id]|compare`.
+favorites|messages|listings|listings/new|listings/edit/[id]|compare`.
 - Drop the 6 `{@html}` branches; the Svelte fallbacks (`AccountListingsTable`, `AccountListingForm`, …) already exist.
 - These keep `auxeroFullPage: true` (the dashboard owns its own sidebar chrome — correct use of the flag).
 
@@ -356,6 +367,7 @@ The only true dual-tree split: desktop is Auxero-template HTML, mobile is the mo
 
 **Hard gate first — prove zero references, then delete in one commit.** Each deletion must be preceded by an
 `rg` that returns nothing:
+
 ```
 rg -l "renderAuxeroPageDocument|renderAuxeroPageSlot|pageDocument|auxeroPublicShellData" src   # → empty
 rg -l "AuxeroPageShell|AuxeroPublicShell|AuxeroDashboardSlotShell|AuxeroRuntimeScripts|AuxeroHead" src  # → empty
@@ -371,8 +383,8 @@ rg -l "home-five-page-data|auxero-home-data|auxero-listing-data|auxero-support-d
 [AuxeroRuntimeScripts](src/lib/components/layout/AuxeroRuntimeScripts.svelte),
 [AuxeroHead](src/lib/components/layout/AuxeroHead.svelte).
 
-**Server `pageDocument`-builder family** (the whole mutator/wrapper layer — distinct from the *typed view-model
-builders* in `$lib/auxero/*.ts`, which are **KEPT**): [auxero-template.ts](src/lib/server/auxero-template.ts),
+**Server `pageDocument`-builder family** (the whole mutator/wrapper layer — distinct from the _typed view-model
+builders_ in `$lib/auxero/*.ts`, which are **KEPT**): [auxero-template.ts](src/lib/server/auxero-template.ts),
 [auxero-page.ts](src/lib/server/auxero-page.ts), [auxero-public-shell.ts](src/lib/server/auxero-public-shell.ts),
 [home-five-page-data.ts](src/lib/server/home-five-page-data.ts),
 [auxero-home-data.ts](src/lib/server/auxero-home-data.ts),
@@ -387,15 +399,17 @@ the `[...templatePath]` catch-all proxy, `auxeroBgReplacements` + `localizeAuxer
 
 > ⚠️ **Do not blanket-delete by `auxero-*` name.** The `$lib/auxero/*.ts` view-model builders (home-five,
 > inventory-desktop/mobile, compare, detail, …) are typed data the clean pages consume — **keep them.** Only the
-> *server* `pageDocument` wrappers above die. Confirm each target's importers are zero before removing it.
+> _server_ `pageDocument` wrappers above die. Confirm each target's importers are zero before removing it.
 
 **Then:** remove the `daynight:hydrated` / `daynight:svelte-mounted` hydration-gate plumbing from
 [+layout.svelte](src/routes/+layout.svelte); delete the `auxero-guards.css` import (line 3); and **promote the
 Tailwind entry to a single global import** in the root layout — `@import "tailwindcss"` now owns the only
 Preflight reset, so drop the per-route entry imports (§5a). **Acceptance test:** clean build + bundle-size drop
-+ full test suite green.
+
+- full test suite green.
 
 ### Phase 7 — Harmonize & polish
+
 - Strip any residual `!important` that survived in migrated component `<style>` blocks (most are already gone
   with `app.css`).
 - Retrofit the already-clean islands (`/offer`, admin) to consume `bc/` primitives where it reduces duplication
@@ -419,7 +433,7 @@ For each Auxero route `R`:
    footer data. **Drop `auxeroFullPage`** (public pages) so global chrome applies; keep it (account dashboards).
 4. **View:** rewrite `R/+page.svelte` to render a clean component composed from `bc/` primitives, fed by the
    typed data. No `{@html}`. No `AuxeroPublicShell`/`AuxeroPageShell`.
-4a. **CSR check:** read the route's `csr` (in `R/+page.ts`). These routes are **SSR-only by default
+   4a. **CSR check:** read the route's `csr` (in `R/+page.ts`). These routes are **SSR-only by default
    (`csr=false`)** — client-JS UI (Embla, JS toggles, `SvelteSet` state) silently dies there. Use native-HTML
    primitives (`<details>` accordion, `<form>` POST, CSS scroll-snap) for SSR-only pages; set `csr=true` **only**
    where interactivity is essential (compare remove, PDP gallery, inventory toggles).
@@ -433,7 +447,7 @@ For each Auxero route `R`:
 9. **Ship** only when the gate is green. Revertable PR.
 
 > The mechanics are identical for all 28 because the data is already typed and the chrome is global. The
-> per-route work is the *view markup*, sized by visual complexity (terms ≈ an hour; PDP ≈ the hard one).
+> per-route work is the _view markup_, sized by visual complexity (terms ≈ an hour; PDP ≈ the hard one).
 
 ---
 
@@ -442,7 +456,7 @@ For each Auxero route `R`:
 Non-negotiable for all `bc/` primitives and rebuilt page views (matches the project's `svelte-core-bestpractices`):
 
 - **Runes mode only** — `$props()`, `$state()`, `$derived()` / `$derived.by()`. No `export let`, no legacy `$:`.
-- **Prefer `$derived` over `$effect`.** Use `$effect` *only* for external/DOM-library integration (Embla, vaul,
+- **Prefer `$derived` over `$effect`.** Use `$effect` _only_ for external/DOM-library integration (Embla, vaul,
   IntersectionObserver) — never to compute state from props. (See the POC's `selected`/`rows` deriveds.)
 - **Keyed `{#each list as item (item.id)}`** everywhere — stable keys, never index keys on dynamic lists.
 - **`onclick={…}`**, not `on:click` (Svelte 5 event attributes); same for all `on*` handlers.
@@ -462,22 +476,23 @@ Non-negotiable for all `bc/` primitives and rebuilt page views (matches the proj
 
 A route does not merge until **all** pass:
 
-| Gate | Command / tool | Pass condition |
-|---|---|---|
-| Type safety | `npm run check` | 0 errors |
-| Lint + format | `npm run lint` | clean (prettier + eslint) |
-| Unit | `npm run test:unit -- --run` | green |
-| E2E | `npm run test:e2e` | green (update snapshots intentionally only) |
-| Build | `npm run build` | succeeds, no new warnings |
-| Visual 1:1 — desktop | Playwright / chrome-devtools-mcp @ 1440px | matches `before/` (manual diff) |
-| Visual 1:1 — mobile | Playwright / chrome-devtools-mcp @ 390px | matches `before/`; green chrome intact |
-| Lighthouse — mobile | `lighthouse_audit` (where available) | **stays 100** (perf/a11y/best-practices/SEO) |
-| Lighthouse — desktop | `lighthouse_audit` (where available) | ≥ baseline (target: improves vs `app.css`) |
-| `!important` count | `rg -c "!important"` on the route | route's own styles = 0 |
+| Gate                 | Command / tool                            | Pass condition                               |
+| -------------------- | ----------------------------------------- | -------------------------------------------- |
+| Type safety          | `npm run check`                           | 0 errors                                     |
+| Lint + format        | `npm run lint`                            | clean (prettier + eslint)                    |
+| Unit                 | `npm run test:unit -- --run`              | green                                        |
+| E2E                  | `npm run test:e2e`                        | green (update snapshots intentionally only)  |
+| Build                | `npm run build`                           | succeeds, no new warnings                    |
+| Visual 1:1 — desktop | Playwright / chrome-devtools-mcp @ 1440px | matches `before/` (manual diff)              |
+| Visual 1:1 — mobile  | Playwright / chrome-devtools-mcp @ 390px  | matches `before/`; green chrome intact       |
+| Lighthouse — mobile  | `lighthouse_audit` (where available)      | **stays 100** (perf/a11y/best-practices/SEO) |
+| Lighthouse — desktop | `lighthouse_audit` (where available)      | ≥ baseline (target: improves vs `app.css`)   |
+| `!important` count   | `rg -c "!important"` on the route         | route's own styles = 0                       |
 
 > `npm run verify` chains check + lint + unit in one shot. Run it (plus `build`) as the pre-merge sweep.
 
 **Operational footguns to respect during gating** (from project history):
+
 - **Stop the dev server before `svelte-kit sync` / `check` / `build`.** Running them against the live `:5174`
   dev server wedges it (500 ENOENT). Restart after.
 - chrome-devtools-mcp **`fullPage` screenshots fake broken lazy images** — use viewport captures + scroll.
@@ -489,7 +504,7 @@ A route does not merge until **all** pass:
 
 These are known traps documented from prior work on this exact codebase:
 
-1. **`auxeroFullPage` is overloaded** — it's chrome ownership, not theme. Dropping a page to clean does *not*
+1. **`auxeroFullPage` is overloaded** — it's chrome ownership, not theme. Dropping a page to clean does _not_
    always mean removing it (admin/offer/account keep it). Reason about header/footer ownership separately.
 2. **`pageDocument.bodyClass` body-scoped CSS dies silently** when a page drops `pageDocument`. Any
    `body.auxero-template-* { … }` rule must be ported to component scope (recipe step 7).
@@ -515,16 +530,16 @@ These are known traps documented from prior work on this exact codebase:
 
 ## 11. Risks & mitigations
 
-| Risk | Likelihood | Impact | Mitigation |
-|---|---|---|---|
-| Visual drift vs current theme | Med | High | Per-route before/after screenshot gate; tokens already encode the look |
-| Mobile Lighthouse regression | Low | High | Lighthouse-100 gate per route; fonts self-hosted (fewer requests) |
-| Pulling `app.css` too early breaks half-migrated pages | Med | High | Engine deleted **only** in Phase 6, after 0 routes use `pageDocument` |
-| PDP dual-tree complexity | High | Med | Isolated to Phase 4, last; mobile vaul sheet kept as-is |
-| Body-class-scoped CSS silently lost | Med | Med | Recipe step 7 explicit check; grep `body.auxero-template-` per route |
-| Scope creep into working admin | Low | Med | Admin explicitly out of rebuild scope (§3) |
-| Carousel parity (swiper→Embla) | Med | Med | Validate on home rails (Phase 3) before PDP gallery (Phase 4) |
-| i18n string loss during catalog move | Med | Low | Keep `auxeroBgReplacements` until Phase 6; diff copy in the visual gate |
+| Risk                                                   | Likelihood | Impact | Mitigation                                                              |
+| ------------------------------------------------------ | ---------- | ------ | ----------------------------------------------------------------------- |
+| Visual drift vs current theme                          | Med        | High   | Per-route before/after screenshot gate; tokens already encode the look  |
+| Mobile Lighthouse regression                           | Low        | High   | Lighthouse-100 gate per route; fonts self-hosted (fewer requests)       |
+| Pulling `app.css` too early breaks half-migrated pages | Med        | High   | Engine deleted **only** in Phase 6, after 0 routes use `pageDocument`   |
+| PDP dual-tree complexity                               | High       | Med    | Isolated to Phase 4, last; mobile vaul sheet kept as-is                 |
+| Body-class-scoped CSS silently lost                    | Med        | Med    | Recipe step 7 explicit check; grep `body.auxero-template-` per route    |
+| Scope creep into working admin                         | Low        | Med    | Admin explicitly out of rebuild scope (§3)                              |
+| Carousel parity (swiper→Embla)                         | Med        | Med    | Validate on home rails (Phase 3) before PDP gallery (Phase 4)           |
+| i18n string loss during catalog move                   | Med        | Low    | Keep `auxeroBgReplacements` until Phase 6; diff copy in the visual gate |
 
 ---
 
@@ -554,19 +569,23 @@ because the unlock (§2) is per-route and the engine is shared but inert for con
 **Legend:** ⬜ to migrate · ✅ already clean · 🔧 shell swap
 
 ### Public (Phase 1–4) — 19 routes, all ⬜
+
 `/` · `/home2` · `/inventory` · `/inventory/[slug]` · `/compare` · `/about` · `/services` · `/import` ·
 `/financing` · `/calculator` · `/sell-your-car` · `/contact` · `/agents` · `/agents/[slug]` · `/blog` ·
 `/blog/[slug]` · `/reviews` · `/faqs` · `/terms`
 
 ### Account (Phase 5) — 9 routes, all 🔧 (DashliteDashboardShell swap)
+
 `/account` · `/account/profile` · `/account/password` · `/account/favorites` · `/account/messages` ·
 `/account/listings` · `/account/listings/new` · `/account/listings/edit/[id]` · `/account/compare`
 
 ### Already clean (no rebuild) — ✅
-All of `/admin/*` (16, shadcn) · `/offer` · `/compare-clean` (POC — *deleted* in Phase 3 once folded into `/compare`) ·
+
+All of `/admin/*` (16, shadcn) · `/offer` · `/compare-clean` (POC — _deleted_ in Phase 3 once folded into `/compare`) ·
 `/account/vehicles/[slug]` (the DashliteDashboardShell reference impl)
 
 ### Keep (data layer) — the win, not cruft
+
 Every [`$lib/auxero/*.ts`](src/lib/auxero/) view-model builder (home-five, inventory-desktop/mobile, compare,
 detail, about, services, calculator, sell-your-car, contact, faqs, reviews, blog, agents, dashboard, …) —
 typed data, zero HTML strings. Feeds the clean components directly. (Optional `→ content/` rename in Phase 7.)

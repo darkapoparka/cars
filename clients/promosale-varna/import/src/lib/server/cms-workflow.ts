@@ -165,7 +165,7 @@ export const scoreInventoryCompleteness = (listing: CmsCompletenessInput): CmsCo
 	score += addMissing({
 		condition:
 			meaningful(listing.description) &&
-			!listing.description?.includes('queued in the Promosale Varna CMS'),
+			!listing.description?.includes('queued in the Day Night Auto CMS'),
 		missing,
 		name: 'description',
 		points: 8

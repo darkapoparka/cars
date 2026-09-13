@@ -11,11 +11,11 @@
 </script>
 
 {#if selectedVideos.length}
-	<section class="daynight-youtube" aria-label="Promosale Varna в YouTube">
+	<section class="daynight-youtube" aria-label="Day Night Auto в YouTube">
 		<div class="container">
 			<div class="daynight-youtube__heading">
 				<h2>
-					Promosale Varna {english ? 'on' : 'в'}
+					Day Night Auto {english ? 'on' : 'в'}
 					<span
 						><svg width="36" height="25" viewBox="0 0 36 25" aria-hidden="true"
 							><rect width="36" height="25" rx="7" fill="#ff0033" /><path

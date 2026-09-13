@@ -31,7 +31,7 @@
 	const banner = {
 		description:
 			'Ориентировъчна месечна вноска за избрания автомобил. Финалните условия се потвърждават с партньорска банка преди покупка.',
-		eyebrow: 'Promosale Varna финансиране',
+		eyebrow: 'Day Night Auto финансиране',
 		image: '/assets/daynight/services/evaluate-link-service.webp',
 		title: 'Финансиране на автомобил'
 	};
@@ -62,7 +62,7 @@
 	const formatEur = (value: number) =>
 		`${Math.round(value)
 			.toLocaleString('fr-FR')
-			.replace(/\u202f/g, ' ')} EUR`;
+			.replace(/\u202f/g, ' ')} €`;
 
 	const steps = [
 		{
@@ -70,7 +70,7 @@
 			title: 'Избери автомобил'
 		},
 		{
-			text: 'Изпрати запитване с избрания автомобил. Promosale Varna подготвя офертата с партньорска банка.',
+			text: 'Изпрати запитване с избрания автомобил. Day Night Auto подготвя офертата с партньорска банка.',
 			title: 'Заяви оферта'
 		},
 		{
@@ -87,7 +87,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Финансиране — Promosale Varna"
+	title="Финансиране — Day Night Auto"
 >
 	<div class="daynight-financing-page" data-daynight-financing>
 		<PageBanner {banner} />
@@ -185,7 +185,7 @@
 
 <style>
 	.daynight-financing-page {
-		background: var(--bc-bg);
+		background: var(--bc-bg-strong);
 	}
 
 	.daynight-financing-page :global(.background-light) {
@@ -200,19 +200,19 @@
 	}
 
 	.daynight-financing-page__eyebrow {
-		margin: 0 0 8px;
+		margin: 0 0 var(--bc-space-2);
 		color: var(--primary);
-		font-size: 12px;
+		font-size: var(--bc-mobile-meta);
 		font-weight: 700;
 		letter-spacing: 0.04em;
-		line-height: 18px;
+		line-height: var(--bc-mobile-label-leading);
 		text-transform: uppercase;
 	}
 
 	.daynight-financing-page__copy h2 {
 		max-width: 620px;
-		margin: 0 0 16px;
-		color: #111111;
+		margin: 0 0 var(--bc-space-4);
+		color: var(--bc-ink);
 		font-size: clamp(34px, 4vw, 52px);
 		font-weight: 700;
 		letter-spacing: 0;
@@ -222,14 +222,14 @@
 	.daynight-financing-page__steps {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 12px;
+		gap: var(--bc-space-3);
 	}
 
 	.daynight-financing-page__steps article {
 		border: 1px solid var(--bc-border);
-		border-radius: 8px;
-		background: var(--bc-surface);
-		padding: 18px;
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-surface-raised);
+		padding: var(--bc-space-4);
 	}
 
 	.daynight-financing-page__steps article:hover {
@@ -240,7 +240,7 @@
 		display: block;
 		margin-bottom: 8px;
 		color: var(--primary);
-		font-size: 12px;
+		font-size: var(--bc-mobile-meta);
 		font-weight: 700;
 		letter-spacing: 0.04em;
 		line-height: 16px;
@@ -248,38 +248,38 @@
 	}
 
 	.daynight-financing-page__steps h3 {
-		margin: 0 0 8px;
-		color: #111111;
-		font-size: 18px;
+		margin: 0 0 var(--bc-space-2);
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-card-title);
 		font-weight: 700;
 		letter-spacing: 0;
-		line-height: 24px;
+		line-height: var(--bc-mobile-card-title-leading);
 	}
 
 	.daynight-financing-page__steps p {
 		margin: 0;
-		color: #5f5f5f;
-		font-size: 14px;
-		line-height: 21px;
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
 	}
 
 	.daynight-financing-page__ctas {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 12px;
-		margin-top: 22px;
+		gap: var(--bc-space-3);
+		margin-top: var(--bc-space-5);
 	}
 
 	.daynight-financing-page__cta-primary,
 	.daynight-financing-page__cta-secondary {
 		display: inline-flex;
-		min-height: 48px;
+		min-height: var(--bc-control-height-primary);
 		align-items: center;
 		justify-content: center;
 		border-radius: var(--bc-radius-control);
-		font-size: 15px;
+		font-size: var(--bc-mobile-body);
 		font-weight: 600;
-		padding: 0 22px;
+		padding: 0 var(--bc-space-5);
 		text-decoration: none !important;
 		transition:
 			background-color 0.2s ease,
@@ -288,48 +288,48 @@
 	}
 
 	.daynight-financing-page__cta-primary {
-		background: #1c1c1c;
-		color: #ffffff !important;
+		background: var(--bc-ink);
+		color: var(--bc-white) !important;
 	}
 
 	.daynight-financing-page__cta-primary:hover,
 	.daynight-financing-page__cta-primary:focus-visible {
 		background: var(--bc-accent-hover);
-		color: #ffffff !important;
+		color: var(--bc-white) !important;
 	}
 
 	.daynight-financing-page__cta-secondary {
 		border: 1px solid var(--bc-border);
 		background: var(--bc-surface-soft);
-		color: #1c1c1c !important;
+		color: var(--bc-ink) !important;
 	}
 
 	.daynight-financing-page__cta-secondary:hover,
 	.daynight-financing-page__cta-secondary:focus-visible {
 		border-color: var(--bc-accent);
-		background: #ffffff;
-		color: #1c1c1c !important;
+		background: var(--bc-white);
+		color: var(--bc-ink) !important;
 	}
 
 	.daynight-financing-page__card {
 		border: 1px solid var(--bc-border);
-		border-radius: 8px;
-		background: #ffffff;
-		padding: 26px;
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-white);
+		padding: var(--bc-space-6);
 	}
 
 	.daynight-financing-page__card h3 {
-		margin: 0 0 18px;
-		color: #111111;
-		font-size: 22px;
+		margin: 0 0 var(--bc-space-4);
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-section-title);
 		font-weight: 700;
-		line-height: 28px;
+		line-height: var(--bc-mobile-section-title-leading);
 	}
 
 	.daynight-financing-page__fields {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 14px;
+		gap: var(--bc-space-3);
 	}
 
 	.daynight-financing-page__fields label {
@@ -338,56 +338,56 @@
 
 	.daynight-financing-page__fields span {
 		display: block;
-		margin-bottom: 6px;
-		color: #4b4b4b;
-		font-size: 13px;
+		margin-bottom: var(--bc-space-2);
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
 		font-weight: 600;
-		line-height: 18px;
+		line-height: var(--bc-mobile-label-leading);
 	}
 
 	.daynight-financing-page__fields input,
 	.daynight-financing-page__fields select {
 		width: 100%;
-		min-height: 48px;
+		min-height: var(--bc-control-height-primary);
 		border: 1px solid var(--bc-border);
-		border-radius: 8px;
+		border-radius: var(--bc-radius-card);
 		background: var(--bc-surface-soft);
-		color: #1c1c1c;
+		color: var(--bc-ink);
 		font-size: 16px;
 		font-weight: 600;
-		padding: 0 14px;
+		padding: 0 var(--bc-mobile-gutter);
 	}
 
 	.daynight-financing-page__fields input:focus-visible,
 	.daynight-financing-page__fields select:focus-visible {
 		border-color: var(--bc-accent);
-		background: #ffffff;
+		background: var(--bc-white);
 		outline: none;
 	}
 
 	.daynight-financing-page__summary {
-		margin: 20px 0 0;
+		margin: var(--bc-space-5) 0 0;
 		border-top: 1px solid var(--bc-border);
-		padding-top: 16px;
+		padding-top: var(--bc-space-4);
 	}
 
 	.daynight-financing-page__summary div {
 		display: flex;
 		align-items: baseline;
 		justify-content: space-between;
-		gap: 16px;
+		gap: var(--bc-space-4);
 		padding: 5px 0;
 	}
 
 	.daynight-financing-page__summary dt {
-		color: #5f5f5f;
-		font-size: 14px;
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-body);
 		line-height: 20px;
 	}
 
 	.daynight-financing-page__summary dd {
 		margin: 0;
-		color: #1c1c1c;
+		color: var(--bc-ink);
 		font-size: 16px;
 		font-weight: 600;
 		line-height: 22px;
@@ -395,30 +395,72 @@
 	}
 
 	.daynight-financing-page__summary-main {
-		margin-top: 8px;
+		margin-top: var(--bc-space-2);
 		border-top: 1px solid var(--bc-border);
-		padding-top: 12px !important;
+		padding-top: var(--bc-space-3) !important;
 	}
 
 	.daynight-financing-page__summary-main dd {
-		border-radius: 8px;
-		background: rgba(227, 6, 47, 0.16);
-		font-size: 26px;
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-accent-tint);
+		font-size: var(--bc-mobile-price);
 		font-weight: 700;
-		line-height: 34px;
-		padding: 2px 12px;
+		line-height: var(--bc-mobile-price-leading);
+		padding: 2px var(--bc-space-3);
 	}
 
 	.daynight-financing-page__summary-main dd small {
-		font-size: 15px;
+		font-size: var(--bc-mobile-body);
 		font-weight: 600;
 	}
 
 	.daynight-financing-page__note {
 		margin: 16px 0 0;
-		color: #6f6f6f;
-		font-size: 13px;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-label);
 		line-height: 19px;
+	}
+
+	@media (max-width: 767.98px) {
+		.daynight-financing-page :global(.background-light) {
+			padding-top: var(--bc-space-8) !important;
+			padding-bottom: var(--bc-space-8) !important;
+		}
+
+		.daynight-financing-page__grid {
+			gap: var(--bc-space-6);
+		}
+
+		.daynight-financing-page__copy h2 {
+			font-size: var(--bc-mobile-page-title);
+			line-height: var(--bc-mobile-page-title-leading);
+		}
+
+		.daynight-financing-page__steps article,
+		.daynight-financing-page__card {
+			padding: var(--bc-space-4);
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.daynight-financing-page :global(.background-light) {
+			padding-top: var(--bc-space-8) !important;
+			padding-bottom: var(--bc-space-8) !important;
+		}
+
+		.daynight-financing-page__grid {
+			gap: var(--bc-space-6);
+		}
+
+		.daynight-financing-page__copy h2 {
+			font-size: var(--bc-mobile-page-title);
+			line-height: var(--bc-mobile-page-title-leading);
+		}
+
+		.daynight-financing-page__steps article,
+		.daynight-financing-page__card {
+			padding: var(--bc-space-4);
+		}
 	}
 
 	@media (max-width: 991px) {

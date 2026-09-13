@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ChevronLeft, GitCompare, Heart, MapPin, PhoneCall, Share } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import DayNightSpecIcon, {
 		type DayNightSpecIconName
 	} from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
@@ -17,22 +18,24 @@
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
 
+	const returnToInventory = $derived(page.state.inventoryReturn);
 	const garage = getGarageContext();
 	const isSaved = $derived(garage.isFavorite(vehicle.slug));
 	const isCompared = $derived(garage.isCompared(vehicle.slug));
 
 	onMount(() => {
-		enhanceDayNightImageFallbacks();
+		const releaseImages = enhanceDayNightImageFallbacks();
 		syncViewportSnapPoints();
-		detailDrawerOpen = true;
+		return releaseImages;
 	});
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
-	const viberHref = `tel:+359892020208`;
+	const phoneHref = daynightSite.phoneHref;
+	const viberHref = daynightSite.viberHref;
 	let activePhoto = $state(0);
 	const photos = $derived(vehicle.gallery.length > 0 ? vehicle.gallery : [vehicle.image]);
 	const activePhotoSrc = $derived(photos[activePhoto] ?? photos[0] ?? vehicle.image);
-	const visiblePhotos = $derived(photos.slice(0, 6));
+	// Every supplied photo remains reachable; thumbnails load lazily.
+	const visiblePhotos = $derived(photos);
 	const specs = $derived<{ icon: DayNightSpecIconName; label: string; value: string }[]>([
 		{ icon: 'year', label: 'Година', value: String(vehicle.year) },
 		{ icon: 'mileage', label: 'Пробег', value: vehicle.mileage },
@@ -72,7 +75,8 @@
 	let activeSnapPoint = $state<DetailSnapPoint | null>(null);
 	let collapsedSnapPoint = $state<DetailSnapPoint>(initialSnapPoints.collapsed);
 	let contentRef = $state<HTMLElement | null>(null);
-	let detailDrawerOpen = $state(false);
+	// Open on the server too: title, price and contact remain available before hydration.
+	let detailDrawerOpen = $state(true);
 	let fullSnapPoint = $state<DetailSnapPoint>(initialSnapPoints.full);
 	let shareState = $state('');
 	// Two resting positions only: a collapsed peek (sheet edge meets the hero
@@ -123,6 +127,28 @@
 		activeSnapPoint = tab === 'info' ? collapsedSnapPoint : fullSnapPoint;
 		await tick();
 		contentRef?.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+	}
+
+	function handleTabKeydown(event: KeyboardEvent, key: (typeof tabs)[number]['key']) {
+		const index = tabs.findIndex((tab) => tab.key === key);
+		const next =
+			event.key === 'Home'
+				? 0
+				: event.key === 'End'
+					? tabs.length - 1
+					: event.key === 'ArrowRight'
+						? (index + 1) % tabs.length
+						: event.key === 'ArrowLeft'
+							? (index + tabs.length - 1) % tabs.length
+							: -1;
+		if (next < 0) return;
+		event.preventDefault();
+		void selectTab(tabs[next].key);
+		const tablist =
+			event.currentTarget instanceof HTMLElement
+				? event.currentTarget.closest('[role="tablist"]')
+				: null;
+		tablist?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next]?.focus();
 	}
 
 	function handleActiveSnapPointChange(snapPoint: number | string | null) {
@@ -194,7 +220,19 @@
 		<div class="mobile-detail__topbar">
 			<a
 				class="mobile-detail__nav-button mobile-detail__nav-button--back"
-				href={resolve('/inventory')}
+				href={resolve((returnToInventory ?? '/inventory') as '/inventory' | `/inventory?${string}`)}
+				onclick={(event) => {
+					if (
+						!returnToInventory ||
+						event.ctrlKey ||
+						event.metaKey ||
+						event.shiftKey ||
+						event.altKey
+					)
+						return;
+					event.preventDefault();
+					window.history.back();
+				}}
 				aria-label="Назад към автомобили"
 			>
 				<ChevronLeft size={22} strokeWidth={2.35} />
@@ -348,6 +386,8 @@
 						role="tab"
 						aria-controls="mobile-detail-panel"
 						aria-selected={activeTab === tab.key}
+						tabindex={activeTab === tab.key ? 0 : -1}
+						onkeydown={(event) => handleTabKeydown(event, tab.key)}
 						onclick={() => selectTab(tab.key)}
 					>
 						<span class="mobile-detail-tabs__label">{tab.label}</span>
@@ -367,7 +407,7 @@
 					<section class="mobile-detail__section">
 						<h2>Описание</h2>
 						<p class="mobile-detail__section-lead">{vehicle.conditionLine}</p>
-						<p>{vehicle.description}</p>
+						<p>{vehicle.description.replace(vehicle.conditionLine, '').trim()}</p>
 					</section>
 				{:else if activeTab === 'data'}
 					<div class="mobile-detail__spec-grid" aria-label="Основни данни">
@@ -405,12 +445,12 @@
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>Promosale Varna предлага</strong>
+					<strong>{daynightSite.shortName} предлага</strong>
 					<ul class="mobile-detail-sheet__offer-list">
 						<li>Финансиране и лизинг</li>
 						<li>Бартер и замяна</li>
 						<li>Съдействие с документите</li>
-						<li>Оглед във Варна</li>
+						<li>Оглед в {daynightSite.city}</li>
 					</ul>
 				</div>
 
@@ -425,8 +465,10 @@
 		</Drawer.Content>
 	</Drawer.Root>
 
-	{#if shareState}
-		<div class="mobile-detail__toast">{shareState}</div>
+	{#if garage.formMessage}
+		<div class="mobile-detail__toast" role="alert">{garage.formMessage}</div>
+	{:else if shareState}
+		<div class="mobile-detail__toast" role="status">{shareState}</div>
 	{/if}
 </main>
 
@@ -536,7 +578,7 @@
 		background: rgba(255, 255, 255, 0.97);
 		padding: 0;
 		color: #111315 !important;
-		font-size: 0;
+		font-size: var(--sa-button-font-size);
 		line-height: 0;
 		text-decoration: none;
 		appearance: none;
@@ -725,7 +767,7 @@
 		grid-area: brand;
 		color: var(--sa-faint);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0.075em;
 		line-height: 1;
 		text-transform: uppercase;
@@ -738,7 +780,7 @@
 		margin: 0;
 		color: var(--sa-ink);
 		font-size: var(--sa-text-xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.11;
 		padding: 1px 0 2px;
@@ -761,7 +803,7 @@
 		justify-self: end;
 		color: #66707a;
 		font-size: var(--sa-text-xs);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1;
 		white-space: nowrap;
 	}
@@ -769,7 +811,7 @@
 	.mobile-detail-sheet__price-eur {
 		color: var(--sa-price);
 		font-size: var(--sa-text-2xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0;
 		line-height: 1;
 		white-space: nowrap;
@@ -780,7 +822,7 @@
 		   --sa-muted #6a7480 lifts it to 4.75:1 while staying a quiet sub-line. */
 		color: var(--sa-muted);
 		font-size: var(--sa-text-sm);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1;
 		text-transform: none;
 		white-space: nowrap;
@@ -805,7 +847,7 @@
 		background: #eef1f6;
 		color: var(--sa-ink) !important;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-button-font-weight);
 		min-width: 0;
 		padding: 0 10px;
 		white-space: nowrap;
@@ -815,15 +857,14 @@
 	.mobile-detail-sheet__actions a.is-primary {
 		background: var(--sa-red);
 		color: #fff !important;
-		font-weight: 800;
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.mobile-detail-sheet__actions a.is-viber {
-		/* Viber purple, nudged from #7360f2 (4.48:1 white text — just under AA)
-		   to #6e5ce8 (4.82:1) so the label clears WCAG-AA while staying on-brand. */
-		background: #6e5ce8;
-		color: #fff !important;
-		font-weight: 800;
+		/* Secondary contact channel shares the neutral mobile action treatment. */
+		background: var(--sa-fill);
+		color: var(--sa-ink) !important;
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.mobile-detail-sheet__actions a :global(svg),
@@ -836,7 +877,7 @@
 	.mobile-detail-sheet__actions a.is-viber .mobile-detail-sheet__viber-mark * {
 		width: 18px;
 		height: 19px;
-		color: #fff !important;
+		color: inherit !important;
 		fill: currentColor !important;
 		stroke: currentColor !important;
 	}
@@ -869,8 +910,8 @@
 		border: 0;
 		background: transparent;
 		color: #667281;
-		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		letter-spacing: 0;
 		padding: 0 8px;
 		outline: none;
@@ -923,7 +964,7 @@
 
 	.mobile-detail-tabs button.is-active {
 		color: #8a0000;
-		font-weight: 800;
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.mobile-detail-tabs button.is-active::after {
@@ -997,7 +1038,7 @@
 	.mobile-detail__spec-grid span {
 		color: #7a838d;
 		font-size: var(--sa-text-xs);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1;
 		text-transform: none;
 	}
@@ -1007,7 +1048,7 @@
 		overflow: hidden;
 		color: #111315;
 		font-size: var(--sa-text-base);
-		font-weight: 700;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.15;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -1022,21 +1063,21 @@
 		margin: 0;
 		color: #111315;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.15;
 	}
 
 	.mobile-detail__section p {
 		margin: 0;
 		color: #626c76;
-		font-size: var(--sa-text-sm);
-		font-weight: 500;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.48;
 	}
 
 	.mobile-detail__section .mobile-detail__section-lead {
 		color: #4f5a65;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.38;
 	}
 
@@ -1056,23 +1097,24 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		border: 1px solid #e2e8ef;
-		border-radius: 9px;
-		background: #f7f9fb;
-		padding: 0 10px;
+		border: 0;
+		border-bottom: 1px solid var(--sa-line);
+		border-radius: 0;
+		background: transparent;
+		padding: 0;
 	}
 
 	.mobile-detail__section dt {
 		color: #7a838d;
 		font-size: var(--sa-text-xs);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.mobile-detail__section dd,
 	.mobile-detail__section li {
 		color: #111315;
 		font-size: var(--sa-text-sm);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.mobile-detail__section dd {
@@ -1114,7 +1156,7 @@
 	.mobile-detail-sheet__dealer strong {
 		color: #111315;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.18;
 	}
 
@@ -1122,7 +1164,7 @@
 		overflow: hidden;
 		color: #66707a;
 		font-size: var(--sa-text-xs);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.25;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -1141,7 +1183,7 @@
 	.mobile-detail-sheet__offer > strong {
 		color: #111315;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.1;
 	}
 
@@ -1159,7 +1201,7 @@
 		padding-left: 15px;
 		color: #4f5a65;
 		font-size: var(--sa-text-xs);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.25;
 	}
 
@@ -1184,7 +1226,73 @@
 		padding: 8px 12px;
 		color: #fff;
 		font-size: var(--sa-text-xs);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		transform: translateX(-50%);
+	}
+
+	/* Mobile typography contract */
+	.mobile-detail-sheet__brand {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-detail-sheet__title {
+		font-size: var(--sa-mobile-type-section-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-detail-sheet__price-monthly {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-detail-sheet__price-eur {
+		font-size: var(--sa-mobile-type-price-lg);
+		font-weight: var(--sa-weight-display);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-detail-sheet__price-bgn {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-detail-sheet__actions a {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-detail-tabs button {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-detail__spec-grid span,
+	.mobile-detail__section dt {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-detail__spec-grid strong {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-detail__section h2 {
+		font-size: var(--sa-mobile-type-feature-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-detail__section p {
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
+		line-height: 1.5;
+	}
+	.mobile-detail__section li {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-detail-sheet__dealer strong,
+	.mobile-detail-sheet__offer > strong {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-detail-sheet__dealer span,
+	.mobile-detail-sheet__offer li {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
 	}
 </style>

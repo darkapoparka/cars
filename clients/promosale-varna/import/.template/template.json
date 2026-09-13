@@ -1,0 +1,41 @@
+{
+	"key": "import",
+	"name": "Import",
+	"aliases": ["6518", "bohemcars-style", "auxero"],
+	"path": "templates/import",
+	"version": "2026.09.06-baseline",
+	"family": "auxero",
+	"stack": "sveltekit",
+	"sourcePort": 6518,
+	"libraryPort": 6464,
+	"entry": "/",
+	"homes": [
+		{
+			"id": "main",
+			"route": "/"
+		}
+	],
+	"desktop": 7.5,
+	"mobile": 8,
+	"priority": "reserve",
+	"readiness": "source-branded-candidate",
+	"reskinEffort": "medium",
+	"brandFiles": [
+		"src/lib/data/daynight.ts",
+		"src/lib/data/daynight-listings.json",
+		"src/lib/data/vehicles.ts",
+		"src/lib/styles",
+		"static"
+	],
+	"note": "Dark Day & Night source baseline with buy/import/sell journeys. Related to showroom; not an entirely independent template family.",
+	"sourceSnapshot": {
+		"source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\bohemcars-style",
+		"head": "48facd336a99647988bc55419eef2f4bbdfa362e",
+		"branch": "codex/about-contact-hero-refinement",
+		"includesDirtyFiles": true,
+		"files": 1447,
+		"bytes": 188044256
+	},
+	"personalizationRequired": true,
+	"crmRegistration": "not-performed"
+}

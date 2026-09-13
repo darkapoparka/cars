@@ -33,13 +33,13 @@ export const requireDayNightApiAccess = ({
 	const session = resolveDayNightApiSession(request, fallbackRole);
 
 	if (!session) {
-		return { response: errorJson('Promosale Varna account session is required', 401) };
+		return { response: errorJson('Day Night Auto account session is required', 401) };
 	}
 
 	if (allowedRoles && !allowedRoles.includes(session.role)) {
 		return {
 			response: errorJson(
-				`Promosale Varna ${daynightRoleLabel(session.role)} role cannot access this API`,
+				`Day Night Auto ${daynightRoleLabel(session.role)} role cannot access this API`,
 				403
 			)
 		};
@@ -47,7 +47,7 @@ export const requireDayNightApiAccess = ({
 
 	if (routePath && !canAccessDayNightRoute(session, routePath)) {
 		return {
-			response: errorJson('Promosale Varna account role cannot access this API route', 403)
+			response: errorJson('Day Night Auto account role cannot access this API route', 403)
 		};
 	}
 

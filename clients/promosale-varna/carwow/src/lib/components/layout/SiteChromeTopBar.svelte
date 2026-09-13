@@ -11,7 +11,7 @@
 		onLanguageToggle: () => void;
 	} = $props();
 
-	const locationShort = 'Варна, Варна';
+	const locationShort = `Студентски град, ${daynightSite.city}`;
 
 	const socialLinkBase =
 		'site-chrome-topbar__social-link inline-grid size-9 place-items-center text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-sa-surface/70 [&_img]:size-[22px] [&_svg]:size-[22px]';
@@ -20,7 +20,7 @@
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 </script>
 
 <div
@@ -28,10 +28,10 @@
 >
 	<div class="mx-auto flex h-full w-full max-w-none items-center justify-between px-6">
 		<div class="site-chrome-topbar__contact flex min-w-0 items-center">
-				<a
-					class="site-chrome-topbar__inventory mr-4 shrink-0 border-r border-sa-surface/25 pr-4 leading-none text-sa-surface no-underline hover:text-sa-surface/90"
-					href={resolve('/inventory')}>{daynightSite.primaryCta}</a
-				>
+			<a
+				class="site-chrome-topbar__inventory mr-4 shrink-0 border-r border-sa-surface/25 pr-4 leading-none text-sa-surface no-underline hover:text-sa-surface/90"
+				href={resolve('/inventory')}>{daynightSite.primaryCta}</a
+			>
 			<a
 				{...mapLinkProps}
 				class="site-chrome-topbar__location flex min-w-0 items-center gap-1.5 leading-none text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-4 [&_svg]:fill-current"
@@ -53,10 +53,26 @@
 		<div class="flex shrink-0 items-center gap-2.5">
 			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
 				<li>
-					
+					<a
+						href="https://www.facebook.com/61566304063141/"
+						aria-label="Facebook"
+						target="_blank"
+						rel="noopener"
+						class={`${socialLinkBase} site-chrome-topbar__social-link--facebook`}
+					>
+						<SiteChromeIcon name="facebook" />
+					</a>
 				</li>
 				<li>
-					
+					<a
+						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						aria-label="Instagram"
+						target="_blank"
+						rel="noopener"
+						class={`${socialLinkBase} site-chrome-topbar__social-link--instagram`}
+					>
+						<SiteChromeIcon name="instagram" />
+					</a>
 				</li>
 			</ul>
 			<div class="relative border-l border-sa-surface/25 pl-3" id="language-select">
@@ -112,8 +128,8 @@
 
 <style>
 	.site-chrome-topbar__inventory {
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: -0.01em;
 	}
 
@@ -124,22 +140,22 @@
 	}
 
 	.site-chrome-topbar__location {
-		font-size: 13px;
-		font-weight: 500;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
 		opacity: 1;
 	}
 
 	.site-chrome-topbar__phone {
-		font-size: 13px;
+		font-size: var(--sa-text-caption);
 		font-variant-numeric: tabular-nums;
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0.02em;
 	}
 
 	.site-chrome-topbar__dot {
 		color: #fff;
 		flex: none;
-		font-size: 15px;
+		font-size: var(--sa-text-base);
 		line-height: 1;
 		opacity: 0.4;
 		padding: 0 10px;
@@ -171,8 +187,8 @@
 	}
 
 	.site-chrome-topbar__language {
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0 !important;
 	}
 	.site-chrome-topbar__language span {

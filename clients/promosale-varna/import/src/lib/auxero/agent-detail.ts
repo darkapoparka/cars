@@ -31,7 +31,7 @@ export type AuxeroAgentDetailSidebar = {
 };
 
 const agentDetailSummary =
-	'Promosale Varna води всеки разговор практично: детайли за източника, оглед и състояние, стъпки по внос или регистрация и записване на огледи се потвърждават преди следващата стъпка.';
+	'Day Night Auto води всеки разговор практично: детайли за източника, оглед и състояние, стъпки по внос или регистрация и записване на огледи се потвърждават преди следващата стъпка.';
 
 export const agentDetailFromAgent = (agent: Agent): AuxeroAgentDetailContent => {
 	const matchingVehicles = vehicles.filter((vehicle) => vehicle.agentSlug === agent.slug);
@@ -43,29 +43,25 @@ export const agentDetailFromAgent = (agent: Agent): AuxeroAgentDetailContent => 
 		bio: agent.bio,
 		image: agent.image,
 		inventoryCards: inventoryCardsFromVehicles(inventoryVehicles),
-		inventoryHeading: `Автомобили в Promosale Varna (${inventoryCount})`,
+		inventoryHeading: `Автомобили в Day Night Auto (${inventoryCount})`,
 		name: agent.name,
 		sidebar: {
 			address: daynightContact.addressLabel,
 			callHref: daynightContact.primaryPhoneHref,
-			callLabel: 'Обади се на Promosale Varna',
+			callLabel: 'Обади се на Day Night Auto',
 			consentLabel:
 				'Да, искам да получавам известия за цени и полезна информация при избор на автомобил.',
 			formTitle: `Изпрати запитване до ${agent.name}`,
 			mapSrc: daynightContact.mapEmbedUrl,
 			messagePlaceholder: 'Напишете запитването си тук',
 			phone: daynightContact.primaryPhoneLabel,
-			subjectOptions: [
-				'Наличност на автомобила',
-				'Запазване на оглед',
-				'Внос и финансиране'
-			],
+			subjectOptions: ['Наличност на автомобила', 'Запазване на оглед', 'Внос и финансиране'],
 			submitLabel: 'Изпрати запитване',
 			termsLabel: 'Общи условия.',
 			viberHref: daynightContact.viberHref,
 			viberLabel: 'Пиши във Viber'
 		},
 		summary: agentDetailSummary,
-		verifiedLabel: 'Потвърден консултант на Promosale Varna'
+		verifiedLabel: 'Потвърден консултант на Day Night Auto'
 	};
 };

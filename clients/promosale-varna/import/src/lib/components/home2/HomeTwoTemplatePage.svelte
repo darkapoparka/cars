@@ -58,14 +58,14 @@
 	});
 </script>
 
-<AuxeroHead assets={pageDocument.headAssets} title="Promosale Varna Marketplace | Home2" />
+<AuxeroHead assets={pageDocument.headAssets} title="Day Night Auto Marketplace | Home2" />
 <svelte:element this={'script'}>
 	{bodyClassScript}
 </svelte:element>
 <svelte:head>
 	<meta
 		name="description"
-		content="Купи, продай или внеси автомобил с Promosale Varna през Carwow-вдъхновена marketplace начална страница."
+		content="Купи, продай или внеси автомобил с Day Night Auto през Carwow-вдъхновена marketplace начална страница."
 	/>
 </svelte:head>
 
